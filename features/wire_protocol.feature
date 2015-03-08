@@ -1,4 +1,6 @@
-@wire
+@[ИмяФичи]=wire_protocol;\features
+
+
 Feature: Wire Protocol
   In order to be allow Cucumber to touch my app in intimate places
   As a developer on platform which doesn't support Ruby
