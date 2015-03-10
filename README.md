@@ -6,18 +6,56 @@ BDD for 1S:Enterprise (snipets generator and runner based on OLE32Server for 1C)
 
 необходимы:
 
-1. [интерпретатор Ruby](http://rubyinstaller.org/)
-2. установить cucumber
+* [интерпретатор Ruby](http://rubyinstaller.org/)
+* установить cucumber
 ```sh
 gem install cucumber
 ```
-3. Установить [1Script](https://bitbucket.org/EvilBeaver/1script/wiki/Home)
+* Установить [1Script](https://bitbucket.org/EvilBeaver/1script/wiki/Home)
+```sh
+wget http://oscript.io/downloads/night-build/latest.zip
+```
 
 ## Описание простого использования
 
+* пишем feature файлы в формате Gherkin
+```Gherkin
+
+# encoding: utf-8
+# language: ru
+
+
+@[ИмяФичи]=EpfBehavePleer;\features\main
+
+
+Функционал: Запуск и получение результатов запуска сценариев
+    Как любой пользователь продукта
+    Я хочу иметь возможность запустить тестирование моих сценариев на конфигурации 1С:Предприятие 
+  Контекст:
+    Когда я указал 1 каталог feature файлов как '.\features\*'
+    Также в каталоге '.\features\step_definitions\' есть 1 файл с  расширением 'wire' 
+@Консоль
+  Сценарий: Запуск в консольном режиме
+    Допустим Запускаем командную строку для сервера тестирования 'onescript ./wire_server.os --daemon' 
+    Также Запускаем командную строку 'cucumber ./ -f html -o test_result.html'
+    То появляется файл с результатами 'test_result.html'
+    Также файл с результутами 'test_result.html' не пустой
+  Сценарий: Запуск тестовой процедуры в 1С
+    Допустим в feature файле определен шаг 'Когда существует процедура теста'
+    То в файле результата 'test_result.html' должен содераться текст '<ПравильноеИмяПроцеудры>' 
+    Также данный шаг с именем '<ПравильноеИмяПроцеудры>' должен числится пройденным успешно  
+    Также будет выдано сообщение 'Сообщение'
+
+
 ```
-//TODO
-```
+
+* генерируем тестовые обработки
+
+* наполняем обработки тестов кодом
+
+* запускаем тесты 
+
+* получаем отчет о тестировании
 
 ## Замечания:
 
@@ -25,3 +63,7 @@ gem install cucumber
 1. работа под linux не поддерживает, за счет применения OLE соединений с 1С. 
 2. решение вопроса с сертификатом для RubyGems, скопировать файл с расширением pem https://gist.github.com/luislavena/f064211759ee0f806c88
 
+
+## Известные публикации
+
+* habrahabr.ru/post/252473/
