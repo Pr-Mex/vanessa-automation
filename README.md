@@ -66,4 +66,4 @@ wget http://oscript.io/downloads/night-build/latest.zip
 
 ## Известные публикации
 
-* habrahabr.ru/post/252473/
+* [Первичная публикация](http://habrahabr.ru/post/252473/)
