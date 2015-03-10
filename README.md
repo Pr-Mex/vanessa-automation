@@ -11,9 +11,15 @@ BDD for 1S:Enterprise (snipets generator and runner based on OLE32Server for 1C)
 ```sh
 gem install cucumber
 ```
-* Установить [1Script](https://bitbucket.org/EvilBeaver/1script/wiki/Home)
+
+* Установить [1Script](https://bitbucket.org/EvilBeaver/1script/downloads) через инсталятор
+* Обновить 1Script до последней версии
+
 ```sh
-wget http://oscript.io/downloads/night-build/latest.zip
+cd c:\OScript\
+"C:\Program Files (x86)\GnuWin32\bin\wget.exe"  --continue http://oscript.io/downloads/night-build/latest.zip 
+unzip -o latest.zip -d .\
+oscript.exe
 ```
 
 ## Описание простого использования
