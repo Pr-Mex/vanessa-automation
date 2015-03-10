@@ -21,6 +21,16 @@ cd c:\OScript\
 unzip -o latest.zip -d .\
 oscript.exe
 ```
+* установить данный проект
+```
+git clone https://github.com/silverbulleters/vanessa-behavoir.git
+```
+
+* скопировать одну хитрую библиотеку в каталог 1Script
+```
+xcopy /y .\lib\Unpackv8.exe c:\OScript\
+```
+
 
 ## Описание простого использования
 
@@ -56,6 +66,10 @@ oscript.exe
 ```
 
 * генерируем тестовые обработки
+
+```
+oscript.exe vanessa-behavior.os --GenerateEpf
+```
 
 * наполняем обработки тестов кодом
 
