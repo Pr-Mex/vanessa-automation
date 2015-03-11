@@ -87,3 +87,4 @@ oscript.exe vanessa-behavior.os --GenerateEpf
 ## Известные публикации
 
 * [Первичная публикация](http://habrahabr.ru/post/252473/)
+* [Пример отчета Allure на основе тестов](http://youtu.be/982gF1wY8sM)
