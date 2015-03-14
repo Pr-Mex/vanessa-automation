@@ -139,7 +139,6 @@ Feature: Wire Protocol
 
   # ## Pending Steps
   #
-  @spawn
   Scenario: Invoke a step definition which is pending
     Given there is a wire server running on port 54321 which understands the following protocol:
       | request                                              | response                            |
@@ -194,7 +193,6 @@ Feature: Wire Protocol
   #
   # See the specs for Cucumber::WireSupport::WireException for more details
   #
-  @spawn
   Scenario: Invoke a step definition which fails
     Given there is a wire server running on port 54321 which understands the following protocol:
       | request                                              | response                                                                            |
@@ -293,7 +291,6 @@ Feature: Wire Protocol
   #
   # # Request: 'snippets'
   #
-  @spawn
   Scenario: Wire server returns snippets for a step that didn't match
     Given there is a wire server running on port 54321 which understands the following protocol:
       | request                                                                                          | response                         |
