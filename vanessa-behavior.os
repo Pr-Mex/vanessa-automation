@@ -1075,7 +1075,10 @@
 	
 	
 	//todo посмотреть в файл CucumberConsolErr, и если там есть ошибка - сделать exit code 1
-	СтрокаЗапускаКукумбер = "Cucumber --no-snippets --no-color """ + КаталогПроекта + "\features"" > " + КаталогПроекта + "\CucumberConsoleLog.txt" + " 2>" + КаталогПроекта + "\CucumberConsolErr.txt";
+	//СтрокаЗапускаКукумбер = "Cucumber --no-snippets --no-color """ + КаталогПроекта + "\features"" > " + КаталогПроекта + //"\CucumberConsoleLog.txt" + " 2>" + КаталогПроекта + "\CucumberConsolErr.txt";
+	СтрокаЗапускаКукумбер = "cucumber """ + КаталогПроекта + "\features"" > " + КаталогПроекта + "\CucumberConsoleLog.txt" + " 2>" + КаталогПроекта + "\CucumberConsolErr.txt";
+
+
 	Сообщить("Строка для запуска Cucumber: " + СтрокаЗапускаКукумбер);
 	ЗапуститьПриложение(СтрокаЗапускаКукумбер);
 	

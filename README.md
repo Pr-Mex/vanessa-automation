@@ -10,6 +10,7 @@ BDD for 1S:Enterprise (snipets generator and runner based on OLE32Server for 1C)
 * установить cucumber
 ```sh
 gem install cucumber
+gem install allure-cucumber
 ```
 
 * Установить [1Script](https://bitbucket.org/EvilBeaver/1script/downloads) через инсталятор
@@ -88,3 +89,13 @@ oscript.exe vanessa-behavior.os --GenerateEpf
 
 * [Первичная публикация](http://habrahabr.ru/post/252473/)
 * [Пример отчета Allure на основе тестов](http://youtu.be/982gF1wY8sM)
+
+
+## Вдохновение черпается 
+
+* [Огурец](https://cukes.info/)
+* [Автоматизированное тестирование 1С](http://v8.1c.ru/overview/Term_000000816.htm)
+* [Yandex Allure](http://allure.qatools.ru/)
+* [Silenium](http://docs.seleniumhq.org/)
+* [ТРИЗ](https://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D0%BE%D1%80%D0%B8%D1%8F_%D1%80%D0%B5%D1%88%D0%B5%D0%BD%D0%B8%D1%8F_%D0%B8%D0%B7%D0%BE%D0%B1%D1%80%D0%B5%D1%82%D0%B0%D1%82%D0%B5%D0%BB%D1%8C%D1%81%D0%BA%D0%B8%D1%85_%D0%B7%D0%B0%D0%B4%D0%B0%D1%87)
+* [Дэн Норт](http://en.wikipedia.org/wiki/Acceptance_test-driven_development) 
