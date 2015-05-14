@@ -375,7 +375,8 @@
 	
 	//найдём параметры числа
 	//RegExp.Pattern = "\d+"; 
-	RegExp.Pattern = "[-+]?\b[0-9]*\.?[0-9]+\b"; 
+	//RegExp.Pattern = "[-+]?\b[0-9]*\.?[0-9]+\b"; 
+	RegExp.Pattern = "(^)*([^\wа-яё+-\.][-+]?[0-9]+(\.[0-9]+)?)";
 	//RegExp.Pattern = "/^-{0,1}\d+\.{0,1}\d*$/"; 
 	ПараметрыRegExp=RegExp.Execute(стр); 
 	Для i=0 По ПараметрыRegExp.Count-1 Цикл
@@ -1355,7 +1356,7 @@ WinSocket1 = ЭлементыФормы.WinSocket;
 СтримAdobe = Новый COMОбъект("Adodb.Stream");
 
 RegExp            = Новый COMОбъект("VBScript.RegExp");
-RegExp.IgnoreCase = Ложь; //Игнорировать регистр
+RegExp.IgnoreCase = Истина; //Игнорировать регистр
 RegExp.Global     = Истина; //Поиск всех вхождений шаблона
 RegExp.MultiLine  = Ложь; //Многострочный режим
 
