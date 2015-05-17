@@ -2,7 +2,7 @@
 # language: ru
 
 
-@[ИмяФичи]=SimpleGenerateTest;\features\SelfTests
+@[ИмяФичи]=SimpleGenerateTest;E:\commons\Rep\vanessa-bdd\features\SelfTests\
 
 
 
@@ -15,11 +15,9 @@
 Сценарий: Генерация EPF в режиме толстых форм
  Когда Запущена сервисная база в режиме толстых форм
  И Нажата кнопка Выполнить
- Тогда в относительном каталоге проекта '\features\SelfTests' будет лежать файл '\features\SelfTests\step_definitions\SimpleGenerateTest.epf'
+ Тогда будет создан файл 'SimpleGenerateTest.epf'
  
 Сценарий: Проверка передачи в контекст основных параметров
  Когда Происходит выполение теста
  Тогда у объекта контекст есть свойство 'КаталогПроекта'
  И у объекта контекст есть свойство 'КаталогФич'
- 
- 
