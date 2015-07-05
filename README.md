@@ -1,4 +1,4 @@
-# vanessa-behavoir
+﻿# vanessa-behavoir
 
 BDD for 1S:Enterprise (snipets generator and runner based on OLE32Server for 1C)
 
@@ -6,32 +6,12 @@ BDD for 1S:Enterprise (snipets generator and runner based on OLE32Server for 1C)
 
 необходимы:
 
-* [интерпретатор Ruby](http://rubyinstaller.org/)
-* установить cucumber
-```sh
-gem install cucumber
-gem install allure-cucumber
-```
+* [интерпретатор Python3](https://www.python.org/) - для работы с иходными файлами 1С с помощью проекта precommit1C
 
-* Установить [1Script](https://bitbucket.org/EvilBeaver/1script/downloads) через инсталятор
-* Обновить 1Script до последней версии
-
-```sh
-cd c:\OScript\
-"C:\Program Files (x86)\GnuWin32\bin\wget.exe"  --continue http://oscript.io/downloads/night-build/latest.zip 
-unzip -o latest.zip -d .\
-oscript.exe
-```
 * установить данный проект
 ```
 git clone https://github.com/silverbulleters/vanessa-behavoir.git
 ```
-
-* скопировать одну хитрую библиотеку в каталог 1Script
-```
-xcopy /y .\lib\Unpackv8.exe c:\OScript\
-```
-
 
 ## Описание простого использования
 
@@ -67,29 +47,19 @@ xcopy /y .\lib\Unpackv8.exe c:\OScript\
 ```
 
 * генерируем тестовые обработки
-
-```
-oscript.exe vanessa-behavior.os --GenerateEpf
-```
-
 * наполняем обработки тестов кодом
-
 * запускаем тесты 
-
 * получаем отчет о тестировании
 
 ## Замечания:
 
-0. для Windows надо использовать только Ruby 2.0.0 по причине https://github.com/cucumber/gherkin/issues/257
-1. работа под linux не поддерживает, за счет применения OLE соединений с 1С. 
-2. решение вопроса с сертификатом для RubyGems, скопировать файл с расширением pem https://gist.github.com/luislavena/f064211759ee0f806c88
-
+* в процессе подготовки редакции 1.0 идут активные изменения, в следствии чего обратная совместимость с редакциями ниже 1.0 может не соблюдаться
+* пожелания к использованию можно фиксировать в виде Github Issues
 
 ## Известные публикации
 
 * [Первичная публикация](http://habrahabr.ru/post/252473/)
 * [Пример отчета Allure на основе тестов](http://youtu.be/982gF1wY8sM)
-
 
 ## Вдохновение черпается 
 
