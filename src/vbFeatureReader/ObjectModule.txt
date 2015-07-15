@@ -470,7 +470,9 @@
 	КонецЕсли;	 
 	
 	Если Стр = "when" Тогда
-		Если ТекущийТипСценария = "scenario" Тогда
+		Если ТекущийТипСценария = "background" Тогда
+			СледующаяСтрокаМожетБыть = "and,given,scenario,scenario_outline";
+		ИначеЕсли ТекущийТипСценария = "scenario" Тогда
 			СледующаяСтрокаМожетБыть = "when,then,but,and,given,scenario,scenario_outline";
 		ИначеЕсли ТекущийТипСценария = "scenario_outline" Тогда
 			СледующаяСтрокаМожетБыть = "when,then,but,and,given,examples";
