@@ -7,7 +7,7 @@ BDD for 1S:Enterprise (snipets generator and runner based on OLE32Server for 1C)
 необходимы:
 
 * [интерпретатор Python3](https://www.python.org/) - для работы с иходными файлами 1С с помощью проекта precommit1C
-* [утилита для сборки обработок 1С UnpackV8.exe] https://github.com/dmpas/v8unpack - утилита должна быть доступной в переменной Path окружения Windows
+* [утилита для сборки обработок 1С V8Unpack.exe] https://github.com/dmpas/v8unpack - утилита должна быть доступной в переменной Path окружения Windows
 
 * установить данный проект
 ```
