@@ -7,6 +7,7 @@ BDD for 1S:Enterprise (snipets generator and runner based on OLE32Server for 1C)
 необходимы:
 
 * [интерпретатор Python3](https://www.python.org/) - для работы с иходными файлами 1С с помощью проекта precommit1C
+* [утилита для сборки обработок 1С UnpackV8.exe] https://github.com/dmpas/v8unpack - утилита должна быть доступной в переменной Path окружения Windows
 
 * установить данный проект
 ```
@@ -22,8 +23,6 @@ git clone https://github.com/silverbulleters/vanessa-behavoir.git
 # language: ru
 
 
-@[ИмяФичи]=EpfBehavePleer;\features\main
-
 
 Функционал: Запуск и получение результатов запуска сценариев
     Как любой пользователь продукта
@@ -31,7 +30,6 @@ git clone https://github.com/silverbulleters/vanessa-behavoir.git
   Контекст:
     Когда я указал 1 каталог feature файлов как '.\features\*'
     Также в каталоге '.\features\step_definitions\' есть 1 файл с  расширением 'wire' 
-@Консоль
   Сценарий: Запуск в консольном режиме
     Допустим Запускаем командную строку для сервера тестирования 'onescript ./wire_server.os --daemon' 
     Также Запускаем командную строку 'cucumber ./ -f html -o test_result.html'
