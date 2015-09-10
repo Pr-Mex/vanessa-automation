@@ -26,6 +26,8 @@
 	ДобавитьШагВМассивТестов(ВсеТесты,"ЯОткрылВБраузереСайт(Парам01Строка)","ЯОткрылВБраузереСайт","Я открыл в браузере сайт ""https://www.sourcetreeapp.com/""");
 	ДобавитьШагВМассивТестов(ВсеТесты,"ЯНажалНаКнопкуDownloadНаСайтеSourcetree()","ЯНажалНаКнопкуDownloadНаСайтеSourcetree","Я нажал на кнопку Download на сайте sourcetree");
 	ДобавитьШагВМассивТестов(ВсеТесты,"ЯНажалНаКнопкуDownloadНаСайтеGit()","ЯНажалНаКнопкуDownloadНаСайтеGit","Я нажал на кнопку Download на сайте git");
+	ДобавитьШагВМассивТестов(ВсеТесты,"ЯНажимаюНаКнопкуDownloadPython3x()","ЯНажимаюНаКнопкуDownloadPython3x","Я нажимаю на кнопку Download Python 3x");
+	ДобавитьШагВМассивТестов(ВсеТесты,"ЯНажимаюНаКнопкуСохранить()","ЯНажимаюНаКнопкуСохранить","Я нажимаю на кнопку Сохранить");
 
 	Возврат ВсеТесты;
 КонецФункции
@@ -79,10 +81,15 @@
 КонецФункции
 
 &НаКлиенте
+Функция ПолучитьСтрокуВызоваSikuli()
+	Возврат """C:\Program Files (x86)\Java\jre6\bin\java.exe"" -Xms64M -Xmx512M -Dfile.encoding=UTF-8 -Dpython.path=""C:\Program Files (x86)\Sikuli X\sikuli-script.jar/"" -jar ""C:\Program Files (x86)\Sikuli X\sikuli-ide.jar"" -r ";
+КонецФункции	
+
+&НаКлиенте
 //Я нажал на кнопку Download на сайте sourcetree
 //@ЯНажалНаКнопкуDownloadНаСайтеSourcetree()
 Процедура ЯНажалНаКнопкуDownloadНаСайтеSourcetree() Экспорт
-	Команда = """C:\Program Files (x86)\Java\jre6\bin\java.exe"" -Xms64M -Xmx512M -Dfile.encoding=UTF-8 -Dpython.path=""C:\Program Files (x86)\Sikuli X\sikuli-script.jar/"" -jar ""C:\Program Files (x86)\Sikuli X\sikuli-ide.jar"" -r " + юТест.Объект.КаталогИнструментов + "\tests\AutoClick\Sikuli\SourceTree.sikuli";
+	Команда = ПолучитьСтрокуВызоваSikuli() + юТест.Объект.КаталогИнструментов + "\tests\AutoClick\Sikuli\SourceTree.sikuli";
 	Рез = ВыполнитьКомандуОС(Команда);
 	юТест.ПроверитьРавенство(Рез,0,"Был клик на кнопку большую синюю кнопку ""Скачать"".");
 	//КомандаСистемы(Команда + " > h:\temp\111.txt");
@@ -92,9 +99,31 @@
 //Я нажал на кнопку Download на сайте git
 //@ЯНажалНаКнопкуDownloadНаСайтеGit()
 Процедура ЯНажалНаКнопкуDownloadНаСайтеGit() Экспорт
-	Команда = """C:\Program Files (x86)\Java\jre6\bin\java.exe"" -Xms64M -Xmx512M -Dfile.encoding=UTF-8 -Dpython.path=""C:\Program Files (x86)\Sikuli X\sikuli-script.jar/"" -jar ""C:\Program Files (x86)\Sikuli X\sikuli-ide.jar"" -r " + юТест.Объект.КаталогИнструментов + "\tests\AutoClick\Sikuli\Git.sikuli";
+	//Команда = """C:\Program Files (x86)\Java\jre6\bin\java.exe"" -Xms64M -Xmx512M -Dfile.encoding=UTF-8 -Dpython.path=""C:\Program Files (x86)\Sikuli X\sikuli-script.jar/"" -jar ""C:\Program Files (x86)\Sikuli X\sikuli-ide.jar"" -r " + юТест.Объект.КаталогИнструментов + "\tests\AutoClick\Sikuli\Git.sikuli";
+	Команда = ПолучитьСтрокуВызоваSikuli() + юТест.Объект.КаталогИнструментов + "\tests\AutoClick\Sikuli\Git.sikuli";
 	Рез = ВыполнитьКомандуОС(Команда);
-	юТест.ПроверитьРавенство(Рез,0,"Был клик на кнопку большую синюю кнопку ""Скачать"".");
+	юТест.ПроверитьРавенство(Рез,0,"Был клик на кнопку ""Скачать"".");
+КонецПроцедуры
+
+&НаКлиенте
+//Я нажимаю на кнопку Сохранить
+//@ЯНажимаюНаКнопкуСохранить()
+Процедура ЯНажимаюНаКнопкуСохранить() Экспорт
+	//Команда = """C:\Program Files (x86)\Java\jre6\bin\java.exe"" -Xms64M -Xmx512M -Dfile.encoding=UTF-8 -Dpython.path=""C:\Program Files (x86)\Sikuli X\sikuli-script.jar/"" -jar ""C:\Program Files (x86)\Sikuli X\sikuli-ide.jar"" -r " + юТест.Объект.КаталогИнструментов + "\tests\AutoClick\Sikuli\ClickSaveFF.sikuli";
+	Команда = ПолучитьСтрокуВызоваSikuli() + юТест.Объект.КаталогИнструментов + "\tests\AutoClick\Sikuli\ClickSaveFF.sikuli";
+	Рез = ВыполнитьКомандуОС(Команда);
+	юТест.ПроверитьРавенство(Рез,0,"Был клик на кнопку ""Сохранить"" firefox.");
+КонецПроцедуры
+
+
+&НаКлиенте
+//Я нажимаю на кнопку Download Python 3x
+//@ЯНажимаюНаКнопкуDownloadPython3x()
+Процедура ЯНажимаюНаКнопкуDownloadPython3x() Экспорт
+	//Команда = """C:\Program Files (x86)\Java\jre6\bin\java.exe"" -Xms64M -Xmx512M -Dfile.encoding=UTF-8 -Dpython.path=""C:\Program Files (x86)\Sikuli X\sikuli-script.jar/"" -jar ""C:\Program Files (x86)\Sikuli X\sikuli-ide.jar"" -r " + юТест.Объект.КаталогИнструментов + "\tests\AutoClick\Sikuli\Python.sikuli";
+	Команда = ПолучитьСтрокуВызоваSikuli() + юТест.Объект.КаталогИнструментов + "\tests\AutoClick\Sikuli\Python.sikuli";
+	Рез = ВыполнитьКомандуОС(Команда);
+	юТест.ПроверитьРавенство(Рез,0,"Был клик на кнопку ""Скачать"".");
 КонецПроцедуры
 
 //окончание текста модуля
