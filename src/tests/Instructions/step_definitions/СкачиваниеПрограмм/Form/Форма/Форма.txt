@@ -44,6 +44,7 @@
 //Я открыл в браузере сайт "https://www.sourcetreeapp.com/"
 //@ЯОткрылВБраузереСайт(Парам01Строка)
 Процедура ЯОткрылВБраузереСайт(АдресСайта) Экспорт
+	//ВыполнитьКомандуОС(АдресСайта);
 	ЗапуститьПриложение(АдресСайта);
 КонецПроцедуры
 
@@ -55,13 +56,15 @@
 	//ЗТ = Новый ЗаписьТекста(ИмяВременногоBAT,"UTF-8",,Истина); 
 	ЗТ = Новый ЗаписьТекста(ИмяВременногоBAT,КодировкаТекста.ANSI,,Истина); 
 	//ЗТ.ЗаписатьСтроку("set JAVA_EXE=""C:\Program Files (x86)\Java\jre6\bin\java.exe"""); 
-	ЗТ.ЗаписатьСтроку("""C:\Program Files (x86)\Java\jre6\bin\java.exe"" -Xms64M -Xmx512M -Dfile.encoding=UTF-8 -Dpython.path=""C:\Program Files (x86)\Sikuli X\sikuli-script.jar/"" -jar ""C:\Program Files (x86)\Sikuli X\sikuli-ide.jar"" -r H:\Commons\vanessa-behavoir\tests\AutoClick\Sikuli\SourceTree.sikuli "); 
+	ЗТ.ЗаписатьСтроку(Стр); 
 	ЗТ.Закрыть();
 	
 	WshShell = Новый COMОбъект("WScript.Shell");
 	//Сообщить(Стр);
-	WshShell.Run(ИмяВременногоBAT,1,0);	
-	Сообщить(ИмяВременногоBAT);
+	Рез = WshShell.Run(ИмяВременногоBAT,7,-1);	
+	юТест.ПроверитьРавенство(Рез,0,"Был клик на кнопку большую синюю кнопку ""Скачать"".");
+	//Сообщить("Рез=" + Рез);
+	//Сообщить(ИмяВременногоBAT);
 	//УдалитьФайлы(ИмяВременногоBAT);
 КонецПроцедуры
 
@@ -71,8 +74,7 @@
 //Я нажал на кнопку Download на сайте sourcetree
 //@ЯНажалНаКнопкуDownloadНаСайтеSourcetree()
 Процедура ЯНажалНаКнопкуDownloadНаСайтеSourcetree() Экспорт
-	ПутьSikuliIDE = "C:\Program Files (x86)\Sikuli X\Sikuli-IDE.bat";
-	Команда = """" + ПутьSikuliIDE + """ -r " + юТест.Объект.КаталогИнструментов + "\tests\AutoClick\Sikuli\SourceTree.sikuli";
+	Команда = """C:\Program Files (x86)\Java\jre6\bin\java.exe"" -Xms64M -Xmx512M -Dfile.encoding=UTF-8 -Dpython.path=""C:\Program Files (x86)\Sikuli X\sikuli-script.jar/"" -jar ""C:\Program Files (x86)\Sikuli X\sikuli-ide.jar"" -r C:\Commons\Rep\vanessa-behavoir\tests\AutoClick\Sikuli\SourceTree.sikuli";
 	ВыполнитьКомандуОС(Команда);
 	//КомандаСистемы(Команда + " > h:\temp\111.txt");
 КонецПроцедуры
