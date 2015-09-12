@@ -1,4 +1,4 @@
-﻿# vanessa-behavoir
+﻿# vanessa-behavior
 
 [![Открытый чат проекта https://gitter.im/silverbulleters/vanessa-behavoir](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/silverbulleters/vanessa-behavoir?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) **Здесь вы можете задавать любые вопросы разработчикам и активным участникам** 
 
@@ -13,7 +13,7 @@ BDD for 1S:Enterprise (snipets generator and runner based on OLE32Server for 1C)
 
 * установить данный проект
 ```
-git clone https://github.com/silverbulleters/vanessa-behavoir.git
+git clone https://github.com/silverbulleters/vanessa-behavior.git
 ```
 
 ## Описание простого использования
