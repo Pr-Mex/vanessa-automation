@@ -1,8 +1,8 @@
 ﻿# vanessa-behavior
 
-[![Открытый чат проекта https://gitter.im/silverbulleters/vanessa-behavoir](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/silverbulleters/vanessa-behavoir?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) **Здесь вы можете задавать любые вопросы разработчикам и активным участникам** 
+[![Build Status](http://ci.silverbulleters.org/buildStatus/icon?job=Venessa-Behavior-Develop)](http://ci.silverbulleters.org/job/Venessa-Behavior-Develop/)
 
-BDD for 1S:Enterprise (snipets generator and runner based on OLE32Server for 1C)
+## BDD for 1S:Enterprise (snipets generator and runner)
 
 для Windows
 
@@ -50,6 +50,12 @@ git clone https://github.com/silverbulleters/vanessa-behavior.git
 * наполняем обработки тестов кодом
 * запускаем тесты 
 * получаем отчет о тестировании
+
+## Консультация, вопросы и задачи
+
+* [![Открытый чат проекта https://gitter.im/silverbulleters/vanessa-behavoir](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/silverbulleters/vanessa-behavoir?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) **Здесь вы можете задавать любые вопросы разработчикам и активным участникам** 
+* 
+
 
 ## Замечания:
 
