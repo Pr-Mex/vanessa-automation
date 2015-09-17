@@ -4,7 +4,7 @@
 
 #### модули по умолчанию
 
-* vanessa-behavior
-* vanessa-base-init
-* vanessa-bdd-editor
-* precommit1C
+* vanessa-behavior - для разработки через поведение
+* vanessa-base-init - для создания эталонных фиксированных конфигураций
+* vanessa-bdd-editor - для удобного управления требованиями заказчика
+* vanessa-unpack - для интеграции с хранилищем 1С
