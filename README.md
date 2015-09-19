@@ -22,7 +22,7 @@ git remote set-url origin git://new.url.here
 
 * не забудьте подписаться на обновление шаблона
 
-```
+```Shell
 git remote set-url bootstrap https://github.com/silverbulleters/vanessa-bootstrap.git
 ```
 
@@ -35,6 +35,23 @@ git remote set-url bootstrap https://github.com/silverbulleters/vanessa-bootstra
 ```Shell
 git pull bootstrap <ваша текущая ветка разработки>
 ```
+
+### Если вы уже ведете разработку на 1С при помощи Git репозиториев
+
+создайте как это положено в **git-flow** отдельную тематическую ветку
+
+```Shell
+git-flow new-feature new-catalog-structure
+```
+
+добавьте новый внешний репозиторий, как это указано выше
+
+```Shell
+git remote set-url bootstrap https://github.com/silverbulleters/vanessa-bootstrap.git
+```
+
+здесь необходимо обратить внимание на функционал "Стратегий объединения" (merge strategies)
+для этого используется файл .gitattributes в котором указано как файлы не объединять из основного репозитория с шаблоном
 
 ### Возможности доработки шаблона
 
@@ -59,3 +76,4 @@ git pull bootstrap <ваша текущая ветка разработки>
 
 * структура в перспективе будет содержать и адаптацию семантики каталогов для проектов на проекте Graphite от компании 1С после появления официального стабильного релиза - пример текущего каталога из проекта Grathite можно посмотреть тут https://github.com/1C-Company/dt-demo-configuration/tree/master/DemoConfDT
 
+* для GitFlow в Windows мы советуем использовать программу SourceTree от компании Atlassian, для GitFlow в linux следует использовать расширение git-flow для git
