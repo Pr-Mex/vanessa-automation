@@ -2030,6 +2030,7 @@
 	КонецЕсли;
 	
 	УбратьЗапрещенныеСимволыИзStepDefinition(StepDefinition);
+	ПроверкаКорректностиStepDefinition(StepDefinition);
 	
 	StepDefinition = StepDefinition + "(" + СтрокаПараметров + ")";
 	
@@ -2042,6 +2043,13 @@
 	Возврат StepDefinition;
 	//Сообщить(стр);
 КонецФункции
+
+Процедура ПроверкаКорректностиStepDefinition(StepDefinition)
+	ПервыйСимвол = Лев(StepDefinition,1);
+	Если ЭтоЧисло(ПервыйСимвол) Тогда
+		StepDefinition = "_" + StepDefinition;
+	КонецЕсли;	 
+КонецПроцедуры
 
 Функция СнипетыПолучитьСнипетыПоШагам(Шаги) Экспорт
 	МассивСнипетов = Новый Массив;
