@@ -1,7 +1,7 @@
 ﻿# encoding: utf-8
 # language: ru
 
-
+@IgnoreOnCIMainBuild
 
 Функционал: Проверка выполнения простого сценария
 	Как Разработчик

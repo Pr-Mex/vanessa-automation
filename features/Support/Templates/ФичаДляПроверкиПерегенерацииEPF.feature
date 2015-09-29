@@ -1,6 +1,7 @@
 ﻿# encoding: utf-8
 # language: ru
 
+@IgnoreOnCIMainBuild
 
 
 Функционал: Загрузить фичу в vanessa-behavior

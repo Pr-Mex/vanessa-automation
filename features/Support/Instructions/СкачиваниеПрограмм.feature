@@ -1,6 +1,7 @@
 ﻿# encoding: utf-8
 # language: ru
 
+@IgnoreOnCIMainBuild
 
 
 Функционал: Скачивание программ, необходимых для работы
