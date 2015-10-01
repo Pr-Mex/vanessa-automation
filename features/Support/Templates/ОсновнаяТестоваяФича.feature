@@ -2,6 +2,7 @@
 # language: ru
 
 @IgnoreOnCIMainBuild
+@SpecialTag
 
 Функционал: Загрузить фичу в vanessa-behavior
 	Как Разработчик
