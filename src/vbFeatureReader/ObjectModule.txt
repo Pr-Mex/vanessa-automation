@@ -289,6 +289,7 @@
 КонецПроцедуры
 
 Функция ПолучитьНовыйStepDefinition(Знач Стр)
+	
 	Стр = СтрЗаменить(Стр,"Строка)",")");
 	Стр = СтрЗаменить(Стр,"Дата)",")");
 	Стр = СтрЗаменить(Стр,"Число)",")");
@@ -370,10 +371,13 @@
 			
 			
 			
+			
 			НашелStepDefinitionВepf = Ложь;
 			
+			ИмяПроцедурыИзStepDefinition = Лев(НовыйStepDefinition,Найти(НовыйStepDefinition,"(")-1);
+			
 			Если Не НашелStepDefinitionВepf Тогда
-				СтрТаблицаИзвестныхStepDefinition = ТаблицаИзвестныхStepDefinition.Найти(НовыйStepDefinition,"ID");
+				СтрТаблицаИзвестныхStepDefinition = ТаблицаИзвестныхStepDefinition.Найти(ИмяПроцедурыИзStepDefinition,"СтрокаРеальнойПроцедуры");
 				Если СтрТаблицаИзвестныхStepDefinition <> Неопределено Тогда
 					СтрСтрокиШагов.Снипет   = НовыйStepDefinition;
 					НашелStepDefinitionВepf = Истина;
