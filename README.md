@@ -52,6 +52,28 @@ git clone https://github.com/silverbulleters/vanessa-behavior.git
 * запускаем тесты 
 * получаем отчет о тестировании
 
+## Передача параметров командной строкой
+1. Надо подготовить JSON файл вида:
+```
+{
+   "КаталогФич": "C:\vanessa-behavior\features",
+   "ВыполнитьСценарии": "Истина",
+   "ДелатьОтчетВФорматеАллюр": "Истина",
+   "КаталогOutputAllureБазовый": "C:\allurereport",
+   "ЗавершитьРаботуСистемы": "Истина",
+   "ВыгружатьСтатусВыполненияСценариевВФайл": "Истина",
+   "ПутьКФайлуДляВыгрузкиСтатуасВыполненияСценариев": "C:\BuildStatus.log",
+   "СписокТеговИсключение":[
+   "IgnoreOnCIMainBuild"
+   ]
+}
+```
+
+2. Передать параметр при запуске 1С
+```
+	/Execute C:\vanessa-behavior\vanessa-behavior.epf /C"StartFeaturePalyer;VBParams=C:\VBParams.json"
+```
+
 
 ## Замечания:
 
