@@ -1,7 +1,7 @@
 ﻿# encoding: utf-8
 # language: ru
 
-
+@IgnoreOn82Builds
 
 Функционал: Открыть ещё один сеанс 1С с ключом TESTCLIENT
 	Как Разработчик
