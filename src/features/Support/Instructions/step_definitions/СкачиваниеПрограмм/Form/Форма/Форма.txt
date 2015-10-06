@@ -37,29 +37,31 @@
 
 &НаКлиенте
 Процедура ПередНачаломСценария() Экспорт
-	WSH         = Новый COMobject("wscript.shell");
-	USERPROFILE = WSH.ExpandEnvironmentStrings("%USERPROFILE%");	
-	
-	ГдеИскать = USERPROFILE + "\Downloads";
-	
-	МассивМаска = Новый Массив;
-	МассивМаска.Добавить("GIT*.exe");
-	МассивМаска.Добавить("python*.exe");
-	МассивМаска.Добавить("SourceTreeSetup*.exe");
-	
-	Для каждого Маска Из МассивМаска Цикл
-		Файлы = НайтиФайлы(ГдеИскать,Маска,Ложь);
-		Для каждого Файл Из Файлы Цикл
-			Сообщить("Удаляю файл: " + Файл.ПолноеИмя);
-			УдалитьФайлы(Файл.ПолноеИмя);
-		КонецЦикла;
-	КонецЦикла;
-	
 КонецПроцедуры
 
 &НаКлиенте
 Процедура ПередОкончаниемСценария() Экспорт
 	
+КонецПроцедуры
+
+
+&НаКлиенте
+Процедура УдалитьСкаченныеФайлыПоМаске(Маска)
+	WSH         = Новый COMobject("wscript.shell");
+	USERPROFILE = WSH.ExpandEnvironmentStrings("%USERPROFILE%");	
+	
+	ГдеИскать = USERPROFILE + "\Downloads";
+	
+	//МассивМаска = Новый Массив;
+	//МассивМаска.Добавить("GIT*.exe");
+	//МассивМаска.Добавить("python*.exe");
+	//МассивМаска.Добавить("SourceTreeSetup*.exe");
+	
+	Файлы = НайтиФайлы(ГдеИскать,Маска,Ложь);
+	Для каждого Файл Из Файлы Цикл
+		Сообщить("Удаляю файл: " + Файл.ПолноеИмя);
+		УдалитьФайлы(Файл.ПолноеИмя);
+	КонецЦикла;
 КонецПроцедуры
 
 &НаКлиенте
@@ -125,6 +127,8 @@
 //Я нажал на кнопку Download на сайте sourcetree
 //@ЯНажалНаКнопкуDownloadНаСайтеSourcetree()
 Процедура ЯНажалНаКнопкуDownloadНаСайтеSourcetree() Экспорт
+	УдалитьСкаченныеФайлыПоМаске("SourceTreeSetup*.exe");
+	
 	Команда = ПолучитьСтрокуВызоваSikuli() + юТест.Объект.КаталогИнструментов + "\tools\Sikuli\SourceTree.sikuli";
 	Рез = ВыполнитьКомандуОС(Команда);
 	юТест.ПроверитьРавенство(Рез,0,"Был клик на кнопку большую синюю кнопку ""Скачать"".");
@@ -139,6 +143,9 @@
 //Я нажал на кнопку Download на сайте git
 //@ЯНажалНаКнопкуDownloadНаСайтеGit()
 Процедура ЯНажалНаКнопкуDownloadНаСайтеGit() Экспорт
+	УдалитьСкаченныеФайлыПоМаске("GIT*.exe");
+	
+	
 	//Команда = """C:\Program Files (x86)\Java\jre6\bin\java.exe"" -Xms64M -Xmx512M -Dfile.encoding=UTF-8 -Dpython.path=""C:\Program Files (x86)\Sikuli X\sikuli-script.jar/"" -jar ""C:\Program Files (x86)\Sikuli X\sikuli-ide.jar"" -r " + юТест.Объект.КаталогИнструментов + "\tools\Sikuli\Git.sikuli";
 	Команда = ПолучитьСтрокуВызоваSikuli() + юТест.Объект.КаталогИнструментов + "\tools\Sikuli\Git.sikuli";
 	Рез = ВыполнитьКомандуОС(Команда);
@@ -166,6 +173,8 @@
 //Я нажимаю на кнопку Download Python 3x
 //@ЯНажимаюНаКнопкуDownloadPython3x()
 Процедура ЯНажимаюНаКнопкуDownloadPython3x() Экспорт
+	УдалитьСкаченныеФайлыПоМаске("python*.exe");
+	
 	//Команда = """C:\Program Files (x86)\Java\jre6\bin\java.exe"" -Xms64M -Xmx512M -Dfile.encoding=UTF-8 -Dpython.path=""C:\Program Files (x86)\Sikuli X\sikuli-script.jar/"" -jar ""C:\Program Files (x86)\Sikuli X\sikuli-ide.jar"" -r " + юТест.Объект.КаталогИнструментов + "\tools\Sikuli\Python.sikuli";
 	Команда = ПолучитьСтрокуВызоваSikuli() + юТест.Объект.КаталогИнструментов + "\tools\Sikuli\Python.sikuli";
 	Рез = ВыполнитьКомандуОС(Команда);
