@@ -42,13 +42,11 @@
 		СтрокаКоманды = "TASKKILL /F /IM chrome.exe";
 		КомандаСистемы(СтрокаКоманды);
 		
+		ЗапуститьПриложение("https://github.com/silverbulleters/vanessa-behavior");
+		
 		Оболочка = Новый COMОбъект("Shell.Application");
 		Оболочка.MinimizeAll();
-		
-		ЗапуститьПриложение("https://github.com/silverbulleters/vanessa-behavior");
 	КонецЕсли;	 
-	
-	
 КонецПроцедуры
 
 &НаКлиенте
