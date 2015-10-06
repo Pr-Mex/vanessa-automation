@@ -2,6 +2,7 @@
 # language: ru
 
 @IgnoreOnCIMainBuild
+@DocumentationBuild
 
 
 Функционал: Скачивание программ, необходимых для работы
