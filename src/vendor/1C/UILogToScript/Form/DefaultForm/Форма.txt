@@ -67,7 +67,6 @@ Procedure ConversionVariantOnChange(Item)
 EndProcedure
 
 &AtClient
-
 Procedure ScriptVariantClearing(Item, StandardProcessing)
 
 	StandardProcessing = False;
@@ -80,6 +79,7 @@ Procedure ScriptVariantOnChange(Item)
 	Object.MainProcedureName = ? (Object.ScriptVariant = "en",  "TestScenario_", "ТестовыйСценарий_") + ClearDate(Format(CurrentDate(), "DLF=D"));
 
 EndProcedure
+
 &AtClient
 Procedure SourceFileOnStartChoice(Item, ChoiceData, StandardProcessing)
 
