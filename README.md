@@ -171,3 +171,13 @@ git clone https://github.com/silverbulleters/vanessa-behavior.git
 
 * основная лицензия продукта - BSD v3
 * лицензии стороннего кода - Apache License, Freeware, etc
+
+## Enterprise Support
+
+платная подддержка содержит в себе
+
+* обучение навыкам работы с BDD при разработке на 1С
+* обучение навыкам написания на языке Gherkin
+* обучение навыкам написания сценариев проверки поведения
+
+для заказа платной поддержки необходимо отравить заявку на адрес education@silverbulleters.org
