@@ -1,7 +1,7 @@
 ﻿# encoding: utf-8
 # language: ru
 
-
+@IgnoreOnLinux
 
 Функционал: Проверка перегенерации EPF
 	Как Разработчик
