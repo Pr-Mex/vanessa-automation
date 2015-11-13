@@ -98,6 +98,7 @@ step = sys.argv[<span class="dig">1</span>]
     exit(<span class="dig">0</span>)
 <span class="cmt"># Ввод текста
 </span><span class="kw">elif</span> step == <span class="str">"2"</span>:
+    <span class="skw">type</span>(<span class="str">'n'</span>, KeyModifier.CTRL)
     path2file = sys.argv[<span class="dig">2</span>]
     file = open(path2file, <span class="str">'r'</span>)
     <span class="kw">while</span> True:
@@ -116,6 +117,7 @@ step = sys.argv[<span class="dig">1</span>]
     paste(path2VanessaBehavoirFeature)
     <span class="skw">sleep</span>(BigBreak)
     <span class="skw">type</span>(Key.ENTER)
+    <span class="skw">type</span>(Key.F4, KeyModifier.ALT)
     <span class="skw">sleep</span>(BigBreak)
     exit(<span class="dig">0</span>)
 </pre>
