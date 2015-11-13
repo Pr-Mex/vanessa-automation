@@ -26,6 +26,7 @@ if step == "1":
     exit(0)
 # Ввод текста
 elif step == "2":
+    type('n', KeyModifier.CTRL)
     path2file = sys.argv[2]
     file = open(path2file, 'r')
     while True:
@@ -44,5 +45,6 @@ elif step == "3":
     paste(path2VanessaBehavoirFeature)
     sleep(BigBreak)
     type(Key.ENTER)
+    type(Key.F4, KeyModifier.ALT)
     sleep(BigBreak)
     exit(0)

@@ -1,6 +1,8 @@
 ﻿# encoding: utf-8
 # language: ru
 
+@IgnoreOnCIMainBuild
+
 Функционал: Создание нового feature-файла
 	Как Разработчик
 	Хочу Иметь возможность писать feature-файлы
