@@ -1,6 +1,8 @@
 ﻿# encoding: utf-8
 # language: ru
 
+@IgnoreOnCIMainBuild
+
 Функционал: Открытие обработки vanessa-behavior
 	Как Разработчик
 	Хочу Иметь возможность открыть обработку vanessa-behavior
