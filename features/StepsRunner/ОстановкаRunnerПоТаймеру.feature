@@ -1,8 +1,8 @@
 # encoding: utf-8
 # language: ru
 
-@IgnoreOn82Builds
-@IgnoreOnOFBuilds
+
+
 
 Функционал: Остановка выполнения шагов FeatureRunner
 	Как Разработчик
