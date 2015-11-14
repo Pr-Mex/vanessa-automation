@@ -2,6 +2,7 @@
 # language: ru
 
 @IgnoreOn82Builds
+@IgnoreOnOFBuilds
 
 Функционал: Я хочу работать с командным интерфейсом 1С 8.3.x
 
