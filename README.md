@@ -1,7 +1,7 @@
 ﻿# vanessa-behavior
 
 [![Открытый чат проекта https://gitter.im/silverbulleters/vanessa-behavoir](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/silverbulleters/vanessa-behavoir?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Build Status](http://ci.silverbulleters.org/buildStatus/icon?job=Venessa-Behavior-Develop)](http://ci.silverbulleters.org/job/Venessa-Behavior-Develop/)
+[![Build Status](http://ci.silverbulleters.org/buildStatus/icon?job=Vanessa-Behavior-Develop)](http://ci.silverbulleters.org/job/Venessa-Behavior-Develop/)
 
 ## BDD for 1S:Enterprise (snipets generator and runner)
 
@@ -19,6 +19,12 @@ git clone https://github.com/silverbulleters/vanessa-behavior.git
 ```
 
 Или используйте [шаблон работы по проекту 1С](https://github.com/silverbulleters/vanessa-bootstrap)
+
+
+```
+документация расширяется и накапливается на портале документации http://vanessa.services/docs/behavior
+
+```
 
 ## Описание простого использования
 
@@ -56,6 +62,8 @@ git clone https://github.com/silverbulleters/vanessa-behavior.git
 Также в каталоге ".\features" возникли epf файлы идентичные имени feature файла
 И при нажатии кнопки "Запустить сценарии" я вижу автоматизированный запуск обработок с признаком "pending" (ожидает реализации)
 ```
+
+Инструкции сгруппированы [в плейлисте YouTube](https://www.youtube.com/playlist?list=PL2zlgf113YhFG_uRARjDtP1_Obj55UmY4) 
 
 ### Классический вариант использования (без интерактивного режима)
 
@@ -167,7 +175,17 @@ git clone https://github.com/silverbulleters/vanessa-behavior.git
 * мы используем precommit1c для фиксации исходников Epf обработки в git
 * мы используем принцип самопроверки через feature файлы, поэтому перед разработкой новой функциональности мы также - разрабатываем feature файлы, генерируем шаблоны сценариев и наполняем их кодом для проверки. Поэтому к доработкам без feature файлов мы относимся "холодно".
 
-## Лизензии
+## Лицензии
 
 * основная лицензия продукта - BSD v3
 * лицензии стороннего кода - Apache License, Freeware, etc
+
+## Enterprise Support
+
+платная подддержка содержит в себе
+
+* обучение навыкам работы с BDD при разработке на 1С
+* обучение навыкам написания на языке Gherkin
+* обучение навыкам написания сценариев проверки поведения
+
+для заказа платной поддержки необходимо отравить заявку на адрес education@silverbulleters.org

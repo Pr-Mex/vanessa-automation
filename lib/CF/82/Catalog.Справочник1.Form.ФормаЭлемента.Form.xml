@@ -1,0 +1,182 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="BeforeWrite">ПередЗаписью</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="61"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="62"/>
+		</InputField>
+		<InputField name="Реквизит1" id="7">
+			<DataPath>Объект.Реквизит1</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="Реквизит1КонтекстноеМеню" id="8"/>
+			<ExtendedTooltip name="Реквизит1РасширеннаяПодсказка" id="63"/>
+		</InputField>
+		<InputField name="Реквизит2" id="10">
+			<DataPath>Объект.Реквизит2</DataPath>
+			<ContextMenu name="Реквизит2КонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="Реквизит2РасширеннаяПодсказка" id="64"/>
+		</InputField>
+		<InputField name="РеквизитЧисло" id="53">
+			<DataPath>Объект.РеквизитЧисло</DataPath>
+			<ContextMenu name="РеквизитЧислоКонтекстноеМеню" id="54"/>
+			<ExtendedTooltip name="РеквизитЧислоРасширеннаяПодсказка" id="65"/>
+		</InputField>
+		<InputField name="РеквизитСтрока" id="44">
+			<DataPath>Объект.РеквизитСтрока</DataPath>
+			<ContextMenu name="РеквизитСтрокаКонтекстноеМеню" id="45"/>
+			<ExtendedTooltip name="РеквизитСтрокаРасширеннаяПодсказка" id="66"/>
+		</InputField>
+		<InputField name="РеквизитДата" id="47">
+			<DataPath>Объект.РеквизитДата</DataPath>
+			<ContextMenu name="РеквизитДатаКонтекстноеМеню" id="48"/>
+			<ExtendedTooltip name="РеквизитДатаРасширеннаяПодсказка" id="67"/>
+		</InputField>
+		<CheckBoxField name="РеквизитБулево" id="50">
+			<DataPath>Объект.РеквизитБулево</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="РеквизитБулевоКонтекстноеМеню" id="51"/>
+			<ExtendedTooltip name="РеквизитБулевоРасширеннаяПодсказка" id="68"/>
+		</CheckBoxField>
+		<RadioButtonField name="РеквизитПереключатель" id="56">
+			<DataPath>Объект.РеквизитПереключатель</DataPath>
+			<RadioButtonType>Auto</RadioButtonType>
+			<ColumnsCount>2</ColumnsCount>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Первое значение</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">1</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Второе значение</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:decimal">2</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="РеквизитПереключательКонтекстноеМеню" id="57"/>
+			<ExtendedTooltip name="РеквизитПереключательРасширеннаяПодсказка" id="69"/>
+		</RadioButtonField>
+		<Table name="ТабличнаяЧасть1" id="13">
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>Объект.ТабличнаяЧасть1</DataPath>
+			<SearchStringLocation>None</SearchStringLocation>
+			<ViewStatusLocation>None</ViewStatusLocation>
+			<SearchControlLocation>None</SearchControlLocation>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТабличнаяЧасть1КонтекстноеМеню" id="14"/>
+			<AutoCommandBar name="ТабличнаяЧасть1КоманднаяПанель" id="15"/>
+			<ExtendedTooltip name="ТабличнаяЧасть1РасширеннаяПодсказка" id="70"/>
+			<SearchStringAddition name="ТабличнаяЧасть1СтрокаПоиска" id="71">
+				<Source>
+					<lf:elementId>13</lf:elementId>
+					<lf:additionId>0</lf:additionId>
+				</Source>
+				<ContextMenu name="ТабличнаяЧасть1СтрокаПоискаКонтекстноеМеню" id="72"/>
+				<ExtendedTooltip name="ТабличнаяЧасть1СтрокаПоискаРасширеннаяПодсказка" id="73"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТабличнаяЧасть1СостояниеПросмотра" id="74">
+				<Source>
+					<lf:elementId>13</lf:elementId>
+					<lf:additionId>1</lf:additionId>
+				</Source>
+				<ContextMenu name="ТабличнаяЧасть1СостояниеПросмотраКонтекстноеМеню" id="75"/>
+				<ExtendedTooltip name="ТабличнаяЧасть1СостояниеПросмотраРасширеннаяПодсказка" id="76"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТабличнаяЧасть1УправлениеПоиском" id="77">
+				<Source>
+					<lf:elementId>13</lf:elementId>
+					<lf:additionId>2</lf:additionId>
+				</Source>
+				<ContextMenu name="ТабличнаяЧасть1УправлениеПоискомКонтекстноеМеню" id="78"/>
+				<ExtendedTooltip name="ТабличнаяЧасть1УправлениеПоискомРасширеннаяПодсказка" id="79"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<LabelField name="ТабличнаяЧасть1НомерСтроки" id="26">
+					<DataPath>Объект.ТабличнаяЧасть1.LineNumber</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТабличнаяЧасть1НомерСтрокиКонтекстноеМеню" id="27"/>
+					<ExtendedTooltip name="ТабличнаяЧасть1НомерСтрокиРасширеннаяПодсказка" id="80"/>
+				</LabelField>
+				<InputField name="ТабличнаяЧасть1РеквизитЧисло" id="29">
+					<DataPath>Объект.ТабличнаяЧасть1.РеквизитЧисло</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТабличнаяЧасть1РеквизитЧислоКонтекстноеМеню" id="30"/>
+					<ExtendedTooltip name="ТабличнаяЧасть1РеквизитЧислоРасширеннаяПодсказка" id="81"/>
+				</InputField>
+				<InputField name="ТабличнаяЧасть1РеквизитСтрока" id="32">
+					<DataPath>Объект.ТабличнаяЧасть1.РеквизитСтрока</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТабличнаяЧасть1РеквизитСтрокаКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ТабличнаяЧасть1РеквизитСтрокаРасширеннаяПодсказка" id="82"/>
+				</InputField>
+				<InputField name="ТабличнаяЧасть1РеквизитДата" id="35">
+					<DataPath>Объект.ТабличнаяЧасть1.РеквизитДата</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТабличнаяЧасть1РеквизитДатаКонтекстноеМеню" id="36"/>
+					<ExtendedTooltip name="ТабличнаяЧасть1РеквизитДатаРасширеннаяПодсказка" id="83"/>
+				</InputField>
+				<InputField name="ТабличнаяЧасть1РеквизитСправочник" id="38">
+					<DataPath>Объект.ТабличнаяЧасть1.РеквизитСправочник</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТабличнаяЧасть1РеквизитСправочникКонтекстноеМеню" id="39"/>
+					<ExtendedTooltip name="ТабличнаяЧасть1РеквизитСправочникРасширеннаяПодсказка" id="84"/>
+				</InputField>
+				<CheckBoxField name="ТабличнаяЧасть1РеквизитБулево" id="41">
+					<DataPath>Объект.ТабличнаяЧасть1.РеквизитБулево</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ТабличнаяЧасть1РеквизитБулевоКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="ТабличнаяЧасть1РеквизитБулевоРасширеннаяПодсказка" id="85"/>
+				</CheckBoxField>
+				<InputField name="ТабличнаяЧасть1РеквизитСправочникВыборИзФормыСписка" id="59">
+					<DataPath>Объект.ТабличнаяЧасть1.РеквизитСправочникВыборИзФормыСписка</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТабличнаяЧасть1РеквизитСправочникВыборИзФормыСпискаКонтекстноеМеню" id="60"/>
+					<ExtendedTooltip name="ТабличнаяЧасть1РеквизитСправочникВыборИзФормыСпискаРасширеннаяПодсказка" id="86"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Справочник1</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+</Form>
