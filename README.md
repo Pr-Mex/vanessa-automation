@@ -1,7 +1,7 @@
 ﻿# vanessa-behavior
 
 [![Открытый чат проекта https://gitter.im/silverbulleters/vanessa-behavoir](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/silverbulleters/vanessa-behavoir?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Build Status](http://ci.silverbulleters.org/buildStatus/icon?job=Venessa-Behavior-Develop)](http://ci.silverbulleters.org/job/Venessa-Behavior-Develop/)
+[![Build Status](http://ci.silverbulleters.org/buildStatus/icon?job=Vanessa-Behavior-Develop)](http://ci.silverbulleters.org/job/Venessa-Behavior-Develop/)
 
 ## BDD for 1S:Enterprise (snipets generator and runner)
 
@@ -19,6 +19,12 @@ git clone https://github.com/silverbulleters/vanessa-behavior.git
 ```
 
 Или используйте [шаблон работы по проекту 1С](https://github.com/silverbulleters/vanessa-bootstrap)
+
+
+```
+документация расширяется и накапливается на портале документации http://vanessa.services/docs/behavior
+
+```
 
 ## Описание простого использования
 
