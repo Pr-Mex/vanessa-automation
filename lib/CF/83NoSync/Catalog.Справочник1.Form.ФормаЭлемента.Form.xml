@@ -346,6 +346,51 @@
 						</LabelDecoration>
 					</ChildItems>
 				</Page>
+				<Page name="Группа2" id="127">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Проверка кнопок</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="128"/>
+					<ChildItems>
+						<InputField name="РекСтрока1" id="129">
+							<DataPath>Объект.РекСтрока1</DataPath>
+							<ContextMenu name="РекСтрока1КонтекстноеМеню" id="130"/>
+							<ExtendedTooltip name="РекСтрока1РасширеннаяПодсказка" id="131"/>
+						</InputField>
+						<InputField name="РекСтрока2" id="132">
+							<DataPath>Объект.РекСтрока2</DataPath>
+							<ContextMenu name="РекСтрока2КонтекстноеМеню" id="133"/>
+							<ExtendedTooltip name="РекСтрока2РасширеннаяПодсказка" id="134"/>
+						</InputField>
+						<Button name="ЗаполнитьРекСтрока1" id="135">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ЗаполнитьРекСтрока1</CommandName>
+							<Parameter xsi:nil="true"/>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЗаполнитьРекСтрока</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ЗаполнитьРекСтрока1РасширеннаяПодсказка" id="136"/>
+						</Button>
+						<Button name="ЗаполнитьРекСтрока2" id="137">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ЗаполнитьРекСтрока2</CommandName>
+							<Parameter xsi:nil="true"/>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>ЗаполнитьРекСтрока</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="ЗаполнитьРекСтрока2РасширеннаяПодсказка" id="138"/>
+						</Button>
+					</ChildItems>
+				</Page>
 			</ChildItems>
 		</Pages>
 	</ChildItems>
@@ -358,4 +403,36 @@
 			<SavedData>true</SavedData>
 		</Attribute>
 	</Attributes>
+	<Commands>
+		<Command name="ЗаполнитьРекСтрока1" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить рек строка1</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить рек строка1</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьРекСтрока1</Action>
+		</Command>
+		<Command name="ЗаполнитьРекСтрока2" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить рек строка2</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить рек строка2</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьРекСтрока2</Action>
+		</Command>
+	</Commands>
 </Form>
