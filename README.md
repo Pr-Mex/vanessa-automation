@@ -134,7 +134,7 @@ git clone https://github.com/silverbulleters/vanessa-behavior.git
 "КаталогOutputAllureБазовый": "C:\allurereport",
 "ЗавершитьРаботуСистемы": "Истина",
 "ВыгружатьСтатусВыполненияСценариевВФайл": "Истина",
-"ПутьКФайлуДляВыгрузкиСтатуасВыполненияСценариев": "C:\BuildStatus.log",
+"ПутьКФайлуДляВыгрузкиСтатусаВыполненияСценариев": "C:\BuildStatus.log",
 "СписокТеговИсключение":[
 "IgnoreOnCIMainBuild",
 "Draft",
@@ -145,7 +145,7 @@ git clone https://github.com/silverbulleters/vanessa-behavior.git
 Профиль запуска предназначен для простого консольного запуска, пример подобной командной строки выглядит так:
 
 ```
-%V83PATH% /Execute C:\vanessa-behavior\vanessa-behavior.epf /C"StartFeaturePalyer;VBParams=C:\VBParams.json"
+%V83PATH% /Execute C:\vanessa-behavior\vanessa-behavior.epf /C"StartFeaturePlayer;VBParams=C:\VBParams.json"
 ```
 
 ## Замечания:
