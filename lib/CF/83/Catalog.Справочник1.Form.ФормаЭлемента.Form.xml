@@ -434,5 +434,30 @@
 			</ToolTip>
 			<Action>ЗаполнитьРекСтрока2</Action>
 		</Command>
+		<Command name="КомандаДляКомандногоИнтерфейса" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда для командного интерфейса</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда для командного интерфейса</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаДляКомандногоИнтерфейса</Action>
+		</Command>
 	</Commands>
+	<CommandInterface>
+		<NavigationPanel>
+			<Item>
+				<Command>CommonCommand.ОбщаяКомандаДляСправочника1</Command>
+				<Type>Added</Type>
+				<CommandGroup>FormNavigationPanelGoTo</CommandGroup>
+				<DefaultVisible>false</DefaultVisible>
+			</Item>
+		</NavigationPanel>
+	</CommandInterface>
 </Form>
