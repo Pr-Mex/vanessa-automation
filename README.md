@@ -189,3 +189,6 @@ git clone https://github.com/silverbulleters/vanessa-behavior.git
 * обучение навыкам написания сценариев проверки поведения
 
 для заказа платной поддержки необходимо отравить заявку на адрес education@silverbulleters.org
+
+
+[![ZenHub] (https://raw.githubusercontent.com/ZenHubIO/support/master/zenhub-badge.png)] (https://zenhub.io)
