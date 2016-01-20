@@ -168,17 +168,22 @@ git clone https://github.com/silverbulleters/vanessa-behavior.git
 * [ТРИЗ](https://ru.wikipedia.org/wiki/Теория_решения_изобретательских_задач)
 * [Дэн Норт](http://en.wikipedia.org/wiki/Acceptance_test-driven_development)
 
-
 ## Заметки для желающих поучаствовать в доработке
 
 * мы используем подход git-flow для реализации функциональности
 * мы используем precommit1c для фиксации исходников Epf обработки в git
 * мы используем принцип самопроверки через feature файлы, поэтому перед разработкой новой функциональности мы также - разрабатываем feature файлы, генерируем шаблоны сценариев и наполняем их кодом для проверки. Поэтому к доработкам без feature файлов мы относимся "холодно".
 
+более подробно в файле [CONTRIBUTING.md](https://github.com/silverbulleters/vanessa-behavior/blob/develop/CONTRIBUTING.md)
+
 ## Лицензии
 
 * основная лицензия продукта - BSD v3
-* лицензии стороннего кода - Apache License, Freeware, etc
+* лицензии стороннего кода - Apache License, GitHub CLA, Freeware, etc
+
+## Поддержка OpenSource команды
+
+* мы используем https://salt.bountysource.com/checkout/amount?team=silverbulleters
 
 ## Enterprise Support
 
