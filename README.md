@@ -20,6 +20,11 @@ git clone https://github.com/silverbulleters/vanessa-behavior.git
 
 Или используйте [шаблон работы по проекту 1С](https://github.com/silverbulleters/vanessa-bootstrap)
 
+Инициализируйте подмодули репозитория с помощью **ms-git**
+
+```
+git submodule update --init --recusrive
+```
 
 ```
 документация расширяется и накапливается на портале документации http://vanessa.services/docs/behavior
