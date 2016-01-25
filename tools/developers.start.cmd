@@ -2,6 +2,7 @@
 
 @echo sync and update precommit1c hook
 
+git submodule update --init --recursive
 cd .\..\vendor\precommit1c\
 
 xcopy .\ibService .\..\..\.git\hooks\ibService\ /Y /E /F
@@ -11,6 +12,5 @@ xcopy .\pyv8unpack.py .\..\..\.git\hooks\ /Y /F
 
 cd .\..\
 git config --local core.quotepath false
-git submodule update --init --recursive
 
 oscript .\tools\build-service-conf.os
