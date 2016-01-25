@@ -11,3 +11,5 @@ xcopy .\pyv8unpack.py .\..\..\.git\hooks\ /Y /F
 
 cd .\..\
 git config --local core.quotepath false
+
+oscript .\tools\
