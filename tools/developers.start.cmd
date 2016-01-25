@@ -11,5 +11,6 @@ xcopy .\pyv8unpack.py .\..\..\.git\hooks\ /Y /F
 
 cd .\..\
 git config --local core.quotepath false
+git submodule update --init --recursive
 
-oscript .\tools\
+oscript .\tools\build-service-conf.os

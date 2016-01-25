@@ -23,7 +23,7 @@ git clone https://github.com/silverbulleters/vanessa-behavior.git
 Инициализируйте подмодули репозитория с помощью **ms-git**
 
 ```
-git submodule update --init --recusrive
+git submodule update --init --recursive
 ```
 
 ```
