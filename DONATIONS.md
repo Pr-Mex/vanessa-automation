@@ -33,7 +33,7 @@
 
 > награда может субсидироваться несколькими спонсорами нескольким траншами
 
-![./docs/images/PostABounty.png]
+![](https://raw.githubusercontent.com/silverbulleters/vanessa-behavior/develop/doc/images/PostABounty.png)
 
 Для назначения награды можно использовать 2 способа:
 
