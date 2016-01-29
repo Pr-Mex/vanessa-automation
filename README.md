@@ -33,7 +33,7 @@ git submodule update --init --recursive
 
 Обязательно ознакомьтесь с:
 
-* руководством контрибьютора [./CONTRIBUTION.md](./CONTRIBUTION.md)
+* руководством контрибьютора [CONTRIBUTING.md](./CONTRIBUTING.md)
 * моделью спонсорства [DONATIONS.md](./DONATIONS.md)
 
 ## Описание простого использования
