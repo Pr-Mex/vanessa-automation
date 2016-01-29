@@ -2,7 +2,7 @@
 
 заполняется по данным https://salt.bountysource.com/teams/silverbulleters
 
-как попасть в этот список [./DONATIONS.md]
+как попасть в этот список, читайте [тут](./DONATIONS.md)
 
 ## Список поддержавших
 
