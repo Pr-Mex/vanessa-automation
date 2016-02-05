@@ -1,6 +1,8 @@
 # encoding: utf-8
 # language: ru
 
+@IgnoreOnCIMainBuild
+
 Функционал: Алгоритмы
 	
 	Как бухгалтер по расчету зарплаты
