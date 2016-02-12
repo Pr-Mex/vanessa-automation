@@ -31,3 +31,8 @@
 
 
 
+#### Как запускать проверку изменений
+Надо запустить по очереди три скрипта
+1 PrepareCheck.cmd
+2 CheckBehavior.cmd
+3 ViewAllureReport.cmd
