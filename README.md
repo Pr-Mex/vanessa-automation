@@ -33,13 +33,13 @@ git submodule update --init --recursive
 
 Обязательно ознакомьтесь с:
 
-* руководством контрибьютора [CONTRIBUTING.md](./CONTRIBUTING.md)
+* руководством контрибьютора [CONTRIBUTING.md](./.github/CONTRIBUTING.md)
 * моделью спонсорства [DONATIONS.md](./DONATIONS.md)
-* известные проблемы [KnownProblems.md](./KnownProblems.md)
+* известные проблемы [KNOWN-PROBLEMS.md](./doc/KNOWN-PROBLEMS.md)
 
 ## Описание простого использования
 
-* пишем feature файлы в формате Gherkin (обычно используется редактор Notepad++ или связанный проект **vanessa-bdd-editor**
+* пишем feature файлы в формате Gherkin (обычно используется редактор Notepad++, Sublime IDE (Vanessa Extension) или связанный проект **vanessa-bdd-editor**
 
 ```Gherkin
 
