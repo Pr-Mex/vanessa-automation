@@ -3,6 +3,8 @@
 
 #https://github.com/silverbulleters/vanessa-behavior/issues/252
 
+@IgnoreOn82Builds
+@IgnoreOnOFBuilds
 
 Функционал: Проверка работы остановки выполения шагов и оповещения обработки содержащий step_definitions
 	Как Разработчик
