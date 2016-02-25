@@ -29,6 +29,7 @@
 #### 3 ViewAllureReport.cmd
 * показывает отчет Allure в браузере
 * нужно скачать allure-commandline.zip отсюда (https://github.com/allure-framework/allure-core/releases), распаковать и прописать каталог bin в PATH
+* должна быть установлена java, которая нужна для работы allure (сейчас это java 8) 
 * в cmd должна выполнятся команда allure
 
 
