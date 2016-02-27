@@ -6,7 +6,7 @@
 
 
 Функция ПолучитьВерсиюОбработки(ДобавлятьНазвание = Истина) Экспорт
-	Версия = "0.900";
+	Версия = "0.901";
 	
 	Если ДобавлятьНазвание Тогда
 		Возврат "vanessa-behavior ver " + Версия;	
@@ -335,6 +335,24 @@
 				КонецЕсли; 
 				Сценарий.steps = СписокШагов;
 				
+				
+				Если РезультатПрохожденияТестовСценария.Свойство("МассивСкриншотов") Тогда
+					//значит есть скриншоты
+				
+					Типattachments    = Фабрика.Тип("urn:model.allure.qatools.yandex.ru", "attachments");
+					Списокattachments = Фабрика.Создать(Типattachments);
+					
+					Для каждого СтруктураСкриншот Из РезультатПрохожденияТестовСценария.МассивСкриншотов Цикл
+						Типattachment  = Фабрика.Тип("urn:model.allure.qatools.yandex.ru", "attachment");
+						attachment      = Фабрика.Создать(Типattachment);
+						
+						attachment.title  = "screenshot";
+						attachment.source = СтруктураСкриншот.ИмяФайла;
+						
+						Списокattachments.attachment.Добавить(attachment);
+					КонецЦикла;
+					Сценарий.attachments = Списокattachments;
+				КонецЕсли;	 
 				
 				
 				Типlabels   = Фабрика.Тип("urn:model.allure.qatools.yandex.ru", "labels");
