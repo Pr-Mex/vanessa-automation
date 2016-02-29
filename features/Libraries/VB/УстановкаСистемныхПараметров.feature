@@ -1,7 +1,8 @@
 ﻿# encoding: utf-8
 # language: ru
 
-
+@IgnoreOn82Builds
+@IgnoreOnOFBuilds
 
 Функционал: Установка системных параметров Vanessa-Behavoir
 	Как Разработчик
