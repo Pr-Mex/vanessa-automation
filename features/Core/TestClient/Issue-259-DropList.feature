@@ -2,6 +2,9 @@
 # encoding: utf-8
 # language: ru
 
+@IgnoreOn82Builds
+@IgnoreOnOFBuilds
+
 Функционал: Работа с выпадающим списоком формы
 
 Как разработчик
