@@ -414,7 +414,11 @@
 			Объект.СписокТеговИсключение.Добавить("IgnoreOnCIMainBuild");
 		КонецЕсли;	 
 		
-		Объект.КомандаСделатьСкриншот = """C:\Program Files (x86)\IrfanView\i_view32.exe"" /capture=2 /convert=";
+		Если ЭтоLinux Тогда
+			Объект.КомандаСделатьСкриншот = "import -window root";
+		Иначе
+			Объект.КомандаСделатьСкриншот = """C:\Program Files (x86)\IrfanView\i_view32.exe"" /capture=2 /convert=";
+		КонецЕсли;	 
 	КонецЕсли;
 
 КонецПроцедуры
