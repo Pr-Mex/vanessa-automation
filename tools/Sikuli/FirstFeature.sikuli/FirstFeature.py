@@ -5,6 +5,7 @@ def VyvestiStrokuPosimvolno(stroka):
     while i < dlina:
         tekSimvol = stroka[i]
         paste(tekSimvol)
+        sleep(0.05)
         i = i + 1
 
 # Паузы
@@ -19,14 +20,14 @@ if step == "1":
     type('r', KeyModifier.WIN)
     type(Key.DELETE)
     sleep(ShortBreak)
-    VyvestiStrokuPosimvolno(u"notepad++")
+    paste(u"notepad++ -nosession")
     sleep(MiddleBreak)
     type(Key.ENTER)
     sleep(MiddleBreak)
     exit(0)
 # Ввод текста
 elif step == "2":
-    type('n', KeyModifier.CTRL)
+    #type('n', KeyModifier.CTRL)
     path2file = sys.argv[2]
     file = open(path2file, 'r')
     while True:
@@ -41,7 +42,9 @@ elif step == "2":
 elif step == "3":
     path2VanessaBehavoirFeature = sys.argv[2]
     type('s', KeyModifier.CTRL)
+    sleep(1)
     type(Key.DELETE)
+    sleep(1)
     paste(path2VanessaBehavoirFeature)
     sleep(BigBreak)
     type(Key.ENTER)
