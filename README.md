@@ -61,7 +61,7 @@ git submodule update --init --recursive
 Сценарий: Запуск в консольном режиме
 Дано Пусть существует файл ".\vb-execute-profile.json"
 И в переменную окружения V83PATH установлено значение "C:\Program Files (x86)\1cv8\8.3.6.2151\bin\1cv8.exe"
-Когда я запускаю командную строку '%V83PATH% /Execute .\vanessa-behavior.epf /C"StartFeaturePalyer;VBParams=.\vb-execute-profile.json'
+Когда я запускаю командную строку '%V83PATH% /Execute .\vanessa-behavior.epf /C"StartFeaturePlayer;VBParams=.\vb-execute-profile.json'
 Тогда появляется файл с результатами '.\BuildStatus.log'
 И в каталоге ".\allurereport" существует HTML отчет о результатах проверки сценариев
 
