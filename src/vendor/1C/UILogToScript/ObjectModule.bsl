@@ -138,6 +138,8 @@ Function ConvertTitleIntoVariableName(ObjectType, ObjectTitle)
 		VariableName = ? (ScriptVariant = "en", "CommandInterfaceGroup", "ГруппаКомандногоИнтерфейса");
 	ElsIf ObjectType = "CommandInterfaceButton" Then
 		VariableName = ? (ScriptVariant = "en", "CommandInterfaceButton", "КнопкаКомандногоИнтерфейса");
+	ElsIf ObjectType = "setFileDialogResult" Then
+		VariableName = ? (ScriptVariant = "en", "setFileDialogResult", "РезультатОткрытияФайла");
 	Else
 		Raise NStr("en = 'Unknown node: '; ru = 'Неопознанный узел '") + ObjectType;
 	EndIf;
@@ -221,7 +223,7 @@ Procedure ConvertIntoScenario(Reader, Writer)
 
 	While Reader.NodeType <> XMLNodeType.EndElement Do
 
-		If Reader.Name = "ClientApplicationWindow" Then
+		If Reader.Name = "ClientApplicationWindow" или Reader.Name = "setFileDialogResult" Then
 
 			LocalProcedureName = "";
 			ConvertWindow(Reader, LocalWriter, LocalProcedureName);
@@ -1122,6 +1124,8 @@ Function ConvertCommand(Reader, Writer, VariableName, ObjectType = "")
 		LastProcessedCommand = ? (ScriptVariant = "en", "ExecureCommand", "ВыполнитьКоманду");
 		Reader.Read();
 
+	ElsIf Reader.Name = "filename" Then
+		Reader.Read();
 	Else
 		Return False;
 	EndIf;

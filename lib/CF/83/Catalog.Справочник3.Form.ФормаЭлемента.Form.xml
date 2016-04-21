@@ -22,6 +22,12 @@
 			<Parameter xsi:nil="true"/>
 			<ExtendedTooltip name="СформироватьОтчетРасширеннаяПодсказка" id="8"/>
 		</Button>
+		<Button name="ОткрытьФайл" id="12">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ОткрытьФайл</CommandName>
+			<Parameter xsi:nil="true"/>
+			<ExtendedTooltip name="ОткрытьФайлРасширеннаяПодсказка" id="13"/>
+		</Button>
 		<SpreadSheetDocumentField name="РеквизитТабличныйДокумент" id="9">
 			<DataPath>РеквизитТабличныйДокумент</DataPath>
 			<ContextMenu name="РеквизитТабличныйДокументКонтекстноеМеню" id="10"/>
@@ -63,6 +69,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СформироватьОтчет</Action>
+		</Command>
+		<Command name="ОткрытьФайл" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть файл</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть файл</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьФайл</Action>
 		</Command>
 	</Commands>
 </Form>
