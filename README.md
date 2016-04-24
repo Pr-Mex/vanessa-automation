@@ -3,14 +3,15 @@
 [![Открытый чат проекта https://gitter.im/silverbulleters/vanessa-behavoir](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/silverbulleters/vanessa-behavoir?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 [![Build Status](http://ci.silverbulleters.org/buildStatus/icon?job=Vanessa-Behavior-Develop)](http://ci.silverbulleters.org/job/Vanessa-Behavior-Develop/)
 
-## BDD for 1С:Enterprise (snipets generator and runner)
+## BDD for 1С:Enterprise
 
-Порядок установки под Windows
-
+Порядок установки под Windows:
 
 * [интерпретатор Python3](https://www.python.org/) - для работы с иходными файлами 1С с помощью проекта precommit1C
 * [утилита для сборки обработок 1С V8Unpack.exe](https://github.com/dmpas/v8unpack) - утилита должна быть доступной в переменной Path окружения Windows
 * [утилита для формирования отчётов о проверки Allure](http://allure.qatools.ru/)
+
+Все должно быть установлено так, чтобы быть доступным через переменную `%PATH%`
 
 Клонируйте данный репозиторий с помощью **ms-git**
 
@@ -26,10 +27,7 @@ git clone https://github.com/silverbulleters/vanessa-behavior.git
 git submodule update --init --recursive
 ```
 
-```
-документация расширяется и накапливается на портале документации http://vanessa.services/docs/behavior
-
-```
+при использовании `SourceTree` используйте команду `Clone (Клонировать)`
 
 Обязательно ознакомьтесь с:
 
@@ -111,7 +109,7 @@ git submodule update --init --recursive
 * ведущий разработки - если обнаружил, что требования недостаточно структурированы
 * архитектор или эксперт 1С - если текущие сценарии некорректно спроектированы с точки зрения метаданных
 
-Для редактирования feature файлов используется проект [По автоматизации сбора требований](https://github.com/silverbulleters/vanessa-bdd-editor) - на текущий момент имеет статус *pre-alpha*
+Для редактирования feature файлов используется проект [По автоматизации сбора требований](https://github.com/silverbulleters/vanessa-bdd-editor) - на текущий момент имеет статус *beta*
 
 Если вы не уверены в правильности ожидаемого поведения, используйте для этого системы тэгов, как то:
 
@@ -160,9 +158,11 @@ git submodule update --init --recursive
 %V83PATH% /Execute C:\vanessa-behavior\vanessa-behavior.epf /C"StartFeaturePlayer;VBParams=C:\VBParams.json"
 ```
 
-## Создается при поддержке
+примеры запуска можно увидеть в соседнем репозитории [Vanessa Runner](https://github.com/silverbulleters/vanessa-runner/blob/master/tools/vanessa.bat)
 
-как попасть в этот раздел [./DONATIONS.md]
+## Создается при финансовой поддержке
+
+как попасть в этот раздел ? смотри [DONATIONS.md](./DONATIONS.md)
 
 ## Замечания:
 
@@ -192,7 +192,6 @@ git submodule update --init --recursive
 
 более подробно в файле [CONTRIBUTING.md](https://github.com/silverbulleters/vanessa-behavior/blob/develop/CONTRIBUTING.md)
 
-
 ## Лицензии
 
 * основная лицензия продукта - BSD v3
@@ -201,6 +200,17 @@ git submodule update --init --recursive
 ## Поддержка OpenSource команды
 
 * мы используем https://salt.bountysource.com/checkout/amount?team=silverbulleters
+
+## FAQ
+
+* **Q: много ли команд используют такой подход ?**
+* **A:** из известных нам - 48 команд
+
+* **Q: можно ли тестировать производительность с помощью BDD ?**
+* **A:** для этого существует другой закрытый инструментарий, который использует vanessa-behavior как клиента тестирования.
+
+* **Q: Что вы думаете о сценарном тестировании ?**
+* **A:** сценарное тестирование слишком дорого по савокупной стоимости владения, поэтому пусть живет своей жизнью вместе с СППР
 
 ## Enterprise Support
 
@@ -211,6 +221,5 @@ git submodule update --init --recursive
 * обучение навыкам написания сценариев проверки поведения
 
 для заказа платной поддержки необходимо отравить заявку на адрес education@silverbulleters.org
-
 
 [![ZenHub] (https://raw.githubusercontent.com/ZenHubIO/support/master/zenhub-badge.png)] (https://zenhub.io)
