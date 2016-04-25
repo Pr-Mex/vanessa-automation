@@ -9152,7 +9152,7 @@
 	КонецЕсли;	 
 	
 	
-	Путь = Объект.КаталогСкриптовСборкиВидео + "\uihelper\FrameShow\FrameShow.exe -showframeofactivecontrol timeshowframe=3000";
+	Путь = Объект.КаталогСкриптовСборкиВидео + "\uihelper\FrameShow\FrameShow.exe -showframeofactivecontrol timeshowframe=2000";
 	ВыполнитьКомандуОСБезПоказаЧерногоОкна(Путь);
 КонецПроцедуры
 
