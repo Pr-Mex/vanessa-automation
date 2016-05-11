@@ -46,8 +46,10 @@ elif step == "3":
     type(Key.DELETE)
     sleep(1)
     paste(path2VanessaBehavoirFeature)
-    sleep(BigBreak)
+    exit(0)
+elif step == "4":
     type(Key.ENTER)
     type(Key.F4, KeyModifier.ALT)
     sleep(BigBreak)
     exit(0)
+    
