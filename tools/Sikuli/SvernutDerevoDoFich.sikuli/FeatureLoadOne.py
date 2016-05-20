@@ -1,0 +1,5 @@
+click("Sarnvzsm.png")
+sleep(1.5)
+hover("EIlD3HTbUHHH.png")
+sleep(1.5)
+exit(0)
