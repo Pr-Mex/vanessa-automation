@@ -21,7 +21,7 @@ if step == "1":
     type(Key.DELETE)
     sleep(ShortBreak)
 #    paste(u"notepad++ -nosession")
-    paste(u"atom")
+    paste(u"code")
     sleep(MiddleBreak)
     type(Key.ENTER)
     sleep(MiddleBreak)
