@@ -5,8 +5,23 @@ def VyvestiStrokuPosimvolno(stroka):
     while i < dlina:
         tekSimvol = stroka[i]
         paste(tekSimvol)
-        sleep(0.1)
+        sleep(0.05)
+        type('c', KeyModifier.CTRL)
         i = i + 1
+        buf = Env.getClipboard()
+        if i == dlina:
+            sleep(1)
+            continue
+        if buf == tekSimvol:
+            kkk = 0
+            while kkk < 5:
+                type('c', KeyModifier.CTRL)
+                buf = Env.getClipboard()
+                kkk = kkk + 1
+                sleep(0.7)
+                if buf == '':
+                    break
+            
 
 # Паузы
 ShortBreak = 1

@@ -5,9 +5,9 @@ click(Pattern("1464017836667.png").targetOffset(15,-1))
 
 #type("n",KeyModifier.CTRL)
 
-click("115LIl1lliZn.png")
-wait("Zufspnmpn2mx.png",30)
-click("Zufspnmpn2mx.png")
+click(Pattern("115LIl1lliZn.png").similar(0.60))
+wait(Pattern("Zufspnmpn2mx.png").similar(0.60),30)
+click(Pattern("Zufspnmpn2mx.png").similar(0.60))
 #click("SelectGramma.png")
 
 sleep(1)
