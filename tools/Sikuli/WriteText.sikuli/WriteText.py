@@ -6,7 +6,22 @@ def VyvestiStrokuPosimvolno(stroka):
         tekSimvol = stroka[i]
         paste(tekSimvol)
         sleep(0.05)
+        type('c', KeyModifier.CTRL)
         i = i + 1
+        buf = Env.getClipboard()
+        if i == dlina:
+            sleep(1)
+            continue
+        if buf == tekSimvol:
+            kkk = 0
+            while kkk < 5:
+                type('c', KeyModifier.CTRL)
+                buf = Env.getClipboard()
+                kkk = kkk + 1
+                sleep(0.7)
+                if buf == '':
+                    break
+            
 
 # Паузы
 ShortBreak = 1
@@ -21,7 +36,7 @@ if step == "1":
     type(Key.DELETE)
     sleep(ShortBreak)
 #    paste(u"notepad++ -nosession")
-    paste(u"atom")
+    paste(u"code")
     sleep(MiddleBreak)
     type(Key.ENTER)
     sleep(MiddleBreak)

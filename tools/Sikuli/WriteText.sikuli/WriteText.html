@@ -78,7 +78,22 @@
         tekSimvol = stroka[i]
         paste(tekSimvol)
         <span class="skw">sleep</span>(<span class="dig">0.05</span>)
+        <span class="skw">type</span>(<span class="str">'c'</span>, KeyModifier.CTRL)
         i = i + <span class="dig">1</span>
+        buf = Env.getClipboard()
+        <span class="kw">if</span> i == dlina:
+            <span class="skw">sleep</span>(<span class="dig">1</span>)
+            <span class="kw">continue</span>
+        <span class="kw">if</span> buf == tekSimvol:
+            kkk = <span class="dig">0</span>
+            <span class="kw">while</span> kkk &lt; <span class="dig">5</span>:
+                <span class="skw">type</span>(<span class="str">'c'</span>, KeyModifier.CTRL)
+                buf = Env.getClipboard()
+                kkk = kkk + <span class="dig">1</span>
+                <span class="skw">sleep</span>(<span class="dig">0.7</span>)
+                <span class="kw">if</span> buf == <span class="str">''</span>:
+                    <span class="kw">break</span>
+
 
 <span class="cmt"># Паузы
 </span>ShortBreak = <span class="dig">1</span>
@@ -93,7 +108,7 @@ step = sys.argv[<span class="dig">1</span>]
     <span class="skw">type</span>(Key.DELETE)
     <span class="skw">sleep</span>(ShortBreak)
 <span class="cmt">#    paste(u"notepad++ -nosession")
-</span>    paste(<span class="str">u"atom"</span>)
+</span>    paste(<span class="str">u"code"</span>)
     <span class="skw">sleep</span>(MiddleBreak)
     <span class="skw">type</span>(Key.ENTER)
     <span class="skw">sleep</span>(MiddleBreak)
