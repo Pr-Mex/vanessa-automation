@@ -58,10 +58,11 @@ elif step == "2":
 elif step == "3":
     path2VanessaBehavoirFeature = sys.argv[2]
     type('s', KeyModifier.CTRL)
-    sleep(1)
+    sleep(2)
     type(Key.DELETE)
     sleep(1)
     paste(path2VanessaBehavoirFeature)
+    sleep(1)
     exit(0)
 elif step == "4":
     type(Key.ENTER)
