@@ -1,4 +1,5 @@
-rightClick("1463774011187.png")
-hover("BBpHfTbADQJH.png")
+rightClick(Pattern("1463774011187.png").similar(0.60))
+sleep(1)
+hover(Pattern("BBpHfTbADQJH.png").similar(0.50))
 sleep(0.5)
 exit(0)
