@@ -67,31 +67,24 @@
    </head>
 <body>
 <div class="info">
-<h2>ConfiguratorIsOpen.sikuli\AtomIsOpen.sikuli</h2> <a href="ConfiguratorIsOpen.sikuli\AtomIsOpen.zip">(Download this script)</a>
+<h2>GoToProcedure.sikuli\AtomIsOpen.sikuli</h2> <a href="GoToProcedure.sikuli\AtomIsOpen.zip">(Download this script)</a>
 </div>
 <pre class="sikuli-code">
-kol = <span class="dig">0</span>
-<span class="kw">while</span> True:
-    <span class="kw">if</span> exists(Pattern(<img src="DrnaxmaAumuu.png" />).similar(<span class="dig">0.60</span>),<span class="dig">5</span>):
-        <span class="kw">break</span>
-    FindIm = findAll(<img src="1464643667457.png" />)
-    ArrOfImage = list(FindIm)
-    KolImages  = len(ArrOfImage)
-    <span class="kw">print</span> <span class="str">'KolImages='</span>+ str(KolImages)
-    <span class="kw">for</span> n <span class="kw">in</span> range(<span class="dig">0</span>, KolImages):
-        t = ArrOfImage[n]
-        <span class="kw">print</span> <span class="str">'t.x='</span>+ str(t.x)
-    <span class="kw">if</span> KolImages &gt; <span class="dig">0</span>:
-        t = ArrOfImage[KolImages-<span class="dig">1</span>]
-        <span class="kw">print</span> <span class="str">'click t.x='</span>+ str(t.x)
-        <span class="skw">click</span>(Location(t.x+<span class="dig">5</span>,t.y+<span class="dig">5</span>))
-        <span class="cmt">#click(t1)
-</span>        <span class="cmt">#click(ArrOfImage[KolImages-1])
-</span>    <span class="skw">sleep</span>(<span class="dig">1</span>)
-    kol = kol+<span class="dig">1</span>
-    <span class="kw">if</span> kol &gt; <span class="dig">5</span>:
-        exit(<span class="dig">1</span>)
+<span class="kw">if</span> <span class="kw">not</span> exists(Pattern(<img src="1463230028949.png" />).similar(<span class="dig">0.80</span>)):
+    exit(<span class="dig">1</span>)
 
+<span class="skw">click</span>(Pattern(<img src="1463230028949.png" />).similar(<span class="dig">0.80</span>).targetOffset(<span class="dig">10</span>,<span class="dig">0</span>))
+
+<span class="skw">type</span>(<span class="str">"n"</span>,KeyModifier.CTRL)
+
+<span class="skw">click</span>(<img src="Edit.png" />)
+<span class="skw">wait</span>(<img src="SelectGramma.png" />,<span class="dig">30</span>)
+<span class="skw">click</span>(<img src="SelectGramma.png" />)
+
+<span class="skw">sleep</span>(<span class="dig">2</span>)
+paste(<span class="str">"Gherkin-ru"</span>)
+<span class="skw">sleep</span>(<span class="dig">1</span>)
+<span class="skw">type</span>(Key.ENTER)
 exit(<span class="dig">0</span>)
 </pre>
 </body>

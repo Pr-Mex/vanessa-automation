@@ -1,6 +1,7 @@
 kol = 0
+sleep(3)
 while True:
-    if exists(Pattern("DrnaxmaAumuu.png").similar(0.60),5):
+    if exists(Pattern("DrnaxmaAumuu.png").similar(0.60),1):
         break
     FindIm = findAll("1464643667457.png") 
     ArrOfImage = list(FindIm)
