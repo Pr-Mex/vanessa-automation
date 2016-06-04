@@ -5,7 +5,7 @@
 @DocumentationBuild
 
 
-Функционал: Открытие формы vanessa-behavoir
+Функционал: Открытие формы vanessa-behavior
 	Как Разработчик
 	Я Хочу чтобы я мог открыть основную форму обработки Vanessa-behavior.epf 
 	Чтобы я мог использовать vanessa-behavior.epf в своей повседневной работе
