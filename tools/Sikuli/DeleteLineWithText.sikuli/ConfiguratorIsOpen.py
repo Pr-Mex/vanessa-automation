@@ -1,22 +1,21 @@
 kol = 0
+sleep(3)
 while True:
-    FindIm = findAll("HF.png") 
+    if exists(Pattern("DrnaxmaAumuu.png").similar(0.60),1):
+        break
+    FindIm = findAll("1464643667457.png") 
     ArrOfImage = list(FindIm)
     KolImages  = len(ArrOfImage)
-    id = -1
-    maxX = -1
     print 'KolImages='+ str(KolImages)
     for n in range(0, KolImages):
         t = ArrOfImage[n]
         print 't.x='+ str(t.x)
-        if t.x > maxX:
-            maxX = t.x
-            id = n
     if KolImages > 0:
-        t = ArrOfImage[id]
+        t = ArrOfImage[KolImages-1]
         print 'click t.x='+ str(t.x)
         click(Location(t.x+5,t.y+5))
-        break
+        #click(t1)
+        #click(ArrOfImage[KolImages-1])
     sleep(1)
     kol = kol+1
     if kol > 5:

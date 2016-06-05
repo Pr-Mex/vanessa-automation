@@ -67,32 +67,29 @@
    </head>
 <body>
 <div class="info">
-<h2>SwitchToTestClient.sikuli\AtomIsOpen.sikuli</h2> <a href="SwitchToTestClient.sikuli\AtomIsOpen.zip">(Download this script)</a>
+<h2>DeleteLineWithText.sikuli\AtomIsOpen.sikuli</h2> <a href="DeleteLineWithText.sikuli\AtomIsOpen.zip">(Download this script)</a>
 </div>
 <pre class="sikuli-code">
-kol = <span class="dig">0</span>
+path2file = sys.argv[<span class="dig">1</span>]
+file = open(path2file, <span class="str">'r'</span>)
 <span class="kw">while</span> True:
-    FindIm = findAll(<img src="HF.png" />)
-    ArrOfImage = list(FindIm)
-    KolImages  = len(ArrOfImage)
-    id = -<span class="dig">1</span>
-    maxX = -<span class="dig">1</span>
-    <span class="kw">print</span> <span class="str">'KolImages='</span>+ str(KolImages)
-    <span class="kw">for</span> n <span class="kw">in</span> range(<span class="dig">0</span>, KolImages):
-        t = ArrOfImage[n]
-        <span class="kw">print</span> <span class="str">'t.x='</span>+ str(t.x)
-        <span class="kw">if</span> t.x &gt; maxX:
-            maxX = t.x
-            id = n
-    <span class="kw">if</span> KolImages &gt; <span class="dig">0</span>:
-        t = ArrOfImage[id]
-        <span class="kw">print</span> <span class="str">'click t.x='</span>+ str(t.x)
-        <span class="skw">click</span>(Location(t.x+<span class="dig">5</span>,t.y+<span class="dig">5</span>))
+    line = file.readline()
+    <span class="kw">if</span> <span class="kw">not</span> line:
         <span class="kw">break</span>
+    stroka = unicode(line, <span class="str">'utf-8'</span>)
+    <span class="skw">type</span>(<span class="str">'f'</span>, KeyModifier.CTRL)
     <span class="skw">sleep</span>(<span class="dig">1</span>)
-    kol = kol+<span class="dig">1</span>
-    <span class="kw">if</span> kol &gt; <span class="dig">5</span>:
-        exit(<span class="dig">1</span>)
+    paste(stroka)
+    <span class="skw">sleep</span>(<span class="dig">1</span>)
+    <span class="skw">type</span>(Key.ENTER)
+    <span class="skw">sleep</span>(<span class="dig">1</span>)
+    <span class="skw">type</span>(Key.ESC)
+    <span class="skw">sleep</span>(<span class="dig">1</span>)
+    <span class="skw">type</span>(Key.HOME)
+    <span class="skw">type</span>(Key.HOME)
+    <span class="skw">sleep</span>(<span class="dig">1</span>)
+    <span class="skw">type</span>(<span class="str">'l'</span>, KeyModifier.CTRL)
+    <span class="kw">break</span>
 
 exit(<span class="dig">0</span>)
 </pre>
