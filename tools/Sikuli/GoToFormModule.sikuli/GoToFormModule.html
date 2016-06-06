@@ -70,11 +70,14 @@
 <h2>GoToFormModule.sikuli\GoToFormModule.sikuli</h2> <a href="GoToFormModule.sikuli\GoToFormModule.zip">(Download this script)</a>
 </div>
 <pre class="sikuli-code">
-<span class="kw">if</span> <span class="kw">not</span> exists(Pattern(<img src="EIMoaunb.png" />).similar(<span class="dig">0.60</span>)):
+FindIm = findAll(Pattern(<img src="EIMoaunb.png" />).similar(<span class="dig">0.50</span>))
+ArrOfImage = list(FindIm)
+KolImages  = len(ArrOfImage)
+<span class="kw">if</span> KolImages == <span class="dig">0</span>:
     exit(<span class="dig">1</span>)
-<span class="skw">click</span>(Pattern(<img src="EIMoaunb.png" />).similar(<span class="dig">0.60</span>))
+t = ArrOfImage[<span class="dig">0</span>]
+<span class="skw">click</span>(Location(t.x+<span class="dig">5</span>,t.y+<span class="dig">5</span>))
 <span class="skw">sleep</span>(<span class="dig">1</span>)
-
 exit(<span class="dig">0</span>)
 </pre>
 </body>
