@@ -6,6 +6,12 @@
 
 ## BDD for 1С:Enterprise
 
+
+Проект использует принцип формирования автодокументации в формате Markdown и видео.
+* Markdown инструкции лежат [здесь](https://github.com/silverbulleters/vanessa-services/tree/master/ru-RU/behavior/Features) 
+* Видео инструкции лежат [здесь](https://www.youtube.com/channel/UC2mJ4LlMG-FF4qkc_kqN_iQ) 
+* Прочие инструкции сгруппированы [в этом плейлисте YouTube](https://www.youtube.com/playlist?list=PL2zlgf113YhFG_uRARjDtP1_Obj55UmY4) 
+
 Порядок установки под Windows:
 
 * [интерпретатор Python3](https://www.python.org/) - для работы с иходными файлами 1С с помощью проекта precommit1C на python версии
@@ -73,7 +79,6 @@ git submodule update --init --recursive
 И при нажатии кнопки "Запустить сценарии" я вижу автоматизированный запуск обработок с признаком "pending" (ожидает реализации)
 ```
 
-Инструкции сгруппированы [в плейлисте YouTube](https://www.youtube.com/playlist?list=PL2zlgf113YhFG_uRARjDtP1_Obj55UmY4) 
 
 ### Классический вариант использования (без интерактивного режима)
 
