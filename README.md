@@ -153,7 +153,7 @@ git submodule update --init --recursive
 "ПутьКФайлуДляВыгрузкиСтатусаВыполненияСценариев": "C:\BuildStatus.log",
 "СписокТеговИсключение":[
 "IgnoreOnCIMainBuild",
-"Draft",
+"Draft"
 ]
 }
 ```
