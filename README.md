@@ -6,6 +6,8 @@
 
 ## BDD for 1С:Enterprise
 
+Текущий релиз в ветке [Master: 1.0](https://github.com/silverbulleters/vanessa-behavior/tree/master)
+Разработка ведется в ветке [Develop](https://github.com/silverbulleters/vanessa-behavior/tree/develop). Эта же ветка является основной.
 
 Проект использует принцип формирования автодокументации в формате Markdown и видео.
 * Markdown инструкции лежат [здесь](https://github.com/silverbulleters/vanessa-services/tree/master/ru-RU/behavior/Features) 
