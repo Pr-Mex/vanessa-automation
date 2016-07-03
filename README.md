@@ -1,16 +1,26 @@
 ﻿# vanessa-behavior
 
 [![Открытый чат проекта https://gitter.im/silverbulleters/vanessa-behavoir](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/silverbulleters/vanessa-behavoir?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Build Status](http://ci.silverbulleters.org/buildStatus/icon?job=Vanessa-Behavior-Develop)](http://ci.silverbulleters.org/job/Venessa-Behavior-Develop/)
+[![Build Status](http://ci.silverbulleters.org/buildStatus/icon?job=Vanessa-Behavior-Develop)](http://ci.silverbulleters.org/job/Vanessa-Behavior-Develop/)
+[![Crowdin](https://d322cqt584bo4o.cloudfront.net/vanessa-services/localized.svg)](https://crowdin.com/project/vanessa-services)
 
-## BDD for 1S:Enterprise (snipets generator and runner)
+## BDD for 1С:Enterprise
 
-Порядок установки под Windows
+Текущий релиз в ветке [Master: 1.0](https://github.com/silverbulleters/vanessa-behavior/tree/master)
+Разработка ведется в ветке [Develop](https://github.com/silverbulleters/vanessa-behavior/tree/develop). Эта же ветка является основной.
 
+Проект использует принцип формирования автодокументации в формате Markdown и видео.
+* Markdown инструкции лежат [здесь](https://github.com/silverbulleters/vanessa-services/tree/master/ru-RU/behavior/Features) 
+* Видео инструкции лежат [здесь](https://www.youtube.com/channel/UC2mJ4LlMG-FF4qkc_kqN_iQ) 
+* Прочие инструкции сгруппированы [в этом плейлисте YouTube](https://www.youtube.com/playlist?list=PL2zlgf113YhFG_uRARjDtP1_Obj55UmY4) 
 
-* [интерпретатор Python3](https://www.python.org/) - для работы с иходными файлами 1С с помощью проекта precommit1C
+Порядок установки под Windows:
+
+* [интерпретатор Python3](https://www.python.org/) - для работы с иходными файлами 1С с помощью проекта precommit1C на python версии
 * [утилита для сборки обработок 1С V8Unpack.exe](https://github.com/dmpas/v8unpack) - утилита должна быть доступной в переменной Path окружения Windows
 * [утилита для формирования отчётов о проверки Allure](http://allure.qatools.ru/)
+
+Все должно быть установлено так, чтобы быть доступным через переменную `%PATH%`
 
 Клонируйте данный репозиторий с помощью **ms-git**
 
@@ -20,15 +30,23 @@ git clone https://github.com/silverbulleters/vanessa-behavior.git
 
 Или используйте [шаблон работы по проекту 1С](https://github.com/silverbulleters/vanessa-bootstrap)
 
+Инициализируйте подмодули репозитория с помощью **ms-git**
 
 ```
-документация расширяется и накапливается на портале документации http://vanessa.services/docs/behavior
-
+git submodule update --init --recursive
 ```
+
+при использовании `SourceTree` используйте команду `Clone (Клонировать)`
+
+Обязательно ознакомьтесь с:
+
+* руководством контрибьютора [CONTRIBUTING.md](./.github/CONTRIBUTING.md)
+* моделью спонсорства [DONATIONS.md](./DONATIONS.md)
+* известные проблемы [KNOWN-PROBLEMS.md](./doc/KNOWN-PROBLEMS.md)
 
 ## Описание простого использования
 
-* пишем feature файлы в формате Gherkin (обычно используется редактор Notepad++ или связанный проект **vanessa-bdd-editor**
+* пишем feature файлы в формате Gherkin (обычно используется редактор Notepad++, Sublime IDE (Vanessa Extension) или связанный проект **vanessa-bdd-editor**
 
 ```Gherkin
 
@@ -50,7 +68,7 @@ git clone https://github.com/silverbulleters/vanessa-behavior.git
 Сценарий: Запуск в консольном режиме
 Дано Пусть существует файл ".\vb-execute-profile.json"
 И в переменную окружения V83PATH установлено значение "C:\Program Files (x86)\1cv8\8.3.6.2151\bin\1cv8.exe"
-Когда я запускаю командную строку '%V83PATH% /Execute .\vanessa-behavior.epf /C"StartFeaturePalyer;VBParams=.\vb-execute-profile.json'
+Когда я запускаю командную строку '%V83PATH% /Execute .\vanessa-behavior.epf /C"StartFeaturePlayer;VBParams=.\vb-execute-profile.json'
 Тогда появляется файл с результатами '.\BuildStatus.log'
 И в каталоге ".\allurereport" существует HTML отчет о результатах проверки сценариев
 
@@ -63,7 +81,6 @@ git clone https://github.com/silverbulleters/vanessa-behavior.git
 И при нажатии кнопки "Запустить сценарии" я вижу автоматизированный запуск обработок с признаком "pending" (ожидает реализации)
 ```
 
-Инструкции сгруппированы [в плейлисте YouTube](https://www.youtube.com/playlist?list=PL2zlgf113YhFG_uRARjDtP1_Obj55UmY4) 
 
 ### Классический вариант использования (без интерактивного режима)
 
@@ -100,7 +117,7 @@ git clone https://github.com/silverbulleters/vanessa-behavior.git
 * ведущий разработки - если обнаружил, что требования недостаточно структурированы
 * архитектор или эксперт 1С - если текущие сценарии некорректно спроектированы с точки зрения метаданных
 
-Для редактирования feature файлов используется проект [По автоматизации сбора требований](https://github.com/silverbulleters/vanessa-bdd-editor) - на текущий момент имеет статус *pre-alpha*
+Для редактирования feature файлов используется проект [По автоматизации сбора требований](https://github.com/silverbulleters/vanessa-bdd-editor) - на текущий момент имеет статус *beta*
 
 Если вы не уверены в правильности ожидаемого поведения, используйте для этого системы тэгов, как то:
 
@@ -123,6 +140,7 @@ git clone https://github.com/silverbulleters/vanessa-behavior.git
 * **ВыгружатьСтатусВыполненияСценариевВФайл** - признак, что необходимо формировать файл с финальным статусом проверки
 * **ПутьКФайлуДляВыгрузкиСтатуасВыполненияСценариев** - по данному пути будет сформирован файл со статусом проверки (обычно используется на серверах сборки для автоматизированного указания статуса сборки)
 * **СписокТеговИсключение** - массив текстовых тэгов, для исключения из проверки (используется например для черновиков сценариев и требований)
+* **СписокТеговОтбор** - массив текстовых тэгов для запуска проверки поведения по сценариям, содержащим любой из указанных тэгов
 
 Пример подобного JSON файла профиля:
 
@@ -134,10 +152,10 @@ git clone https://github.com/silverbulleters/vanessa-behavior.git
 "КаталогOutputAllureБазовый": "C:\allurereport",
 "ЗавершитьРаботуСистемы": "Истина",
 "ВыгружатьСтатусВыполненияСценариевВФайл": "Истина",
-"ПутьКФайлуДляВыгрузкиСтатуасВыполненияСценариев": "C:\BuildStatus.log",
+"ПутьКФайлуДляВыгрузкиСтатусаВыполненияСценариев": "C:\BuildStatus.log",
 "СписокТеговИсключение":[
 "IgnoreOnCIMainBuild",
-"Draft",
+"Draft"
 ]
 }
 ```
@@ -145,8 +163,14 @@ git clone https://github.com/silverbulleters/vanessa-behavior.git
 Профиль запуска предназначен для простого консольного запуска, пример подобной командной строки выглядит так:
 
 ```
-%V83PATH% /Execute C:\vanessa-behavior\vanessa-behavior.epf /C"StartFeaturePalyer;VBParams=C:\VBParams.json"
+%V83PATH% /Execute C:\vanessa-behavior\vanessa-behavior.epf /C"StartFeaturePlayer;VBParams=C:\VBParams.json"
 ```
+
+примеры запуска можно увидеть в соседнем репозитории [Vanessa Runner](https://github.com/silverbulleters/vanessa-runner/blob/master/tools/vanessa.bat)
+
+## Создается при финансовой поддержке
+
+как попасть в этот раздел ? смотри [DONATIONS.md](./DONATIONS.md)
 
 ## Замечания:
 
@@ -168,17 +192,33 @@ git clone https://github.com/silverbulleters/vanessa-behavior.git
 * [ТРИЗ](https://ru.wikipedia.org/wiki/Теория_решения_изобретательских_задач)
 * [Дэн Норт](http://en.wikipedia.org/wiki/Acceptance_test-driven_development)
 
-
 ## Заметки для желающих поучаствовать в доработке
 
 * мы используем подход git-flow для реализации функциональности
 * мы используем precommit1c для фиксации исходников Epf обработки в git
 * мы используем принцип самопроверки через feature файлы, поэтому перед разработкой новой функциональности мы также - разрабатываем feature файлы, генерируем шаблоны сценариев и наполняем их кодом для проверки. Поэтому к доработкам без feature файлов мы относимся "холодно".
 
+более подробно в файле [CONTRIBUTING.md](https://github.com/silverbulleters/vanessa-behavior/blob/develop/CONTRIBUTING.md)
+
 ## Лицензии
 
 * основная лицензия продукта - BSD v3
-* лицензии стороннего кода - Apache License, Freeware, etc
+* лицензии стороннего кода - Apache License, GitHub CLA, Freeware, etc
+
+## Поддержка OpenSource команды
+
+* мы используем https://salt.bountysource.com/checkout/amount?team=silverbulleters
+
+## FAQ
+
+* **Q: много ли команд используют такой подход ?**
+* **A:** из известных нам - 63 команды
+
+* **Q: можно ли тестировать производительность с помощью BDD ?**
+* **A:** для этого существует другой закрытый инструментарий, который использует vanessa-behavior как клиента тестирования - используется в Enterprise проектах.
+
+* **Q: Что вы думаете о сценарном тестировании ?**
+* **A:** сценарное тестирование слишком дорого по савокупной стоимости владения, поэтому пусть живет своей жизнью вместе с СППР, обратите внимание, что учебный центр №1 думает провести подготовку слушателей [по функционалу тестирования в 1С:Предприятии (ссылка на Facebook](https://www.facebook.com/1631718833760014/posts/1715544585377438/) - если Вас интересует функционал сценарного тестирования, возможно стоит записаться именно на этот курс, а не ходить по GitHub ссылкам.
 
 ## Enterprise Support
 
@@ -188,4 +228,7 @@ git clone https://github.com/silverbulleters/vanessa-behavior.git
 * обучение навыкам написания на языке Gherkin
 * обучение навыкам написания сценариев проверки поведения
 
-для заказа платной поддержки необходимо отравить заявку на адрес education@silverbulleters.org
+для заказа платной поддержки необходимо отравить заявку на адрес education@silverbulleters.org или по телефону +7-(499)-346-70-19.
+
+
+[![ZenHub] (https://raw.githubusercontent.com/ZenHubIO/support/master/zenhub-badge.png)] (https://zenhub.io)

@@ -77,6 +77,7 @@
     <span class="kw">while</span> i &lt; dlina:
         tekSimvol = stroka[i]
         paste(tekSimvol)
+        <span class="skw">sleep</span>(<span class="dig">0.05</span>)
         i = i + <span class="dig">1</span>
 
 <span class="cmt"># Паузы
@@ -91,15 +92,16 @@ step = sys.argv[<span class="dig">1</span>]
     <span class="skw">type</span>(<span class="str">'r'</span>, KeyModifier.WIN)
     <span class="skw">type</span>(Key.DELETE)
     <span class="skw">sleep</span>(ShortBreak)
-    VyvestiStrokuPosimvolno(<span class="str">u"notepad++"</span>)
+<span class="cmt">#    paste(u"notepad++ -nosession")
+</span>    paste(<span class="str">u"atom"</span>)
     <span class="skw">sleep</span>(MiddleBreak)
     <span class="skw">type</span>(Key.ENTER)
     <span class="skw">sleep</span>(MiddleBreak)
     exit(<span class="dig">0</span>)
 <span class="cmt"># Ввод текста
 </span><span class="kw">elif</span> step == <span class="str">"2"</span>:
-    <span class="skw">type</span>(<span class="str">'n'</span>, KeyModifier.CTRL)
-    path2file = sys.argv[<span class="dig">2</span>]
+    <span class="cmt">#type('n', KeyModifier.CTRL)
+</span>    path2file = sys.argv[<span class="dig">2</span>]
     file = open(path2file, <span class="str">'r'</span>)
     <span class="kw">while</span> True:
         line = file.readline()
@@ -113,9 +115,12 @@ step = sys.argv[<span class="dig">1</span>]
 </span><span class="kw">elif</span> step == <span class="str">"3"</span>:
     path2VanessaBehavoirFeature = sys.argv[<span class="dig">2</span>]
     <span class="skw">type</span>(<span class="str">'s'</span>, KeyModifier.CTRL)
+    <span class="skw">sleep</span>(<span class="dig">1</span>)
     <span class="skw">type</span>(Key.DELETE)
+    <span class="skw">sleep</span>(<span class="dig">1</span>)
     paste(path2VanessaBehavoirFeature)
-    <span class="skw">sleep</span>(BigBreak)
+    exit(<span class="dig">0</span>)
+<span class="kw">elif</span> step == <span class="str">"4"</span>:
     <span class="skw">type</span>(Key.ENTER)
     <span class="skw">type</span>(Key.F4, KeyModifier.ALT)
     <span class="skw">sleep</span>(BigBreak)

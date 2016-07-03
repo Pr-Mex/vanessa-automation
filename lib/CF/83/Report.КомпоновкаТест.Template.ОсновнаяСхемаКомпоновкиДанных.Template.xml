@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<DataCompositionSchema xmlns="http://v8.1c.ru/8.1/data-composition-system/schema" xmlns:dcscom="http://v8.1c.ru/8.1/data-composition-system/common" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<dataSource>
+		<name>ИсточникДанных1</name>
+		<dataSourceType>Local</dataSourceType>
+	</dataSource>
+	<dataSet xsi:type="DataSetQuery">
+		<name>НаборДанных1</name>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Предопределенный</dataPath>
+			<field>Предопределенный</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Реквизит2</dataPath>
+			<field>Реквизит2</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Наименование</dataPath>
+			<field>Наименование</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ПометкаУдаления</dataPath>
+			<field>ПометкаУдаления</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Родитель</dataPath>
+			<field>Родитель</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ВерсияДанных</dataPath>
+			<field>ВерсияДанных</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РекСтрока1</dataPath>
+			<field>РекСтрока1</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Код</dataPath>
+			<field>Код</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РеквизитПереключатель</dataPath>
+			<field>РеквизитПереключатель</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РеквизитСтрока</dataPath>
+			<field>РеквизитСтрока</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Реквизит1</dataPath>
+			<field>Реквизит1</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ИмяПредопределенныхДанных</dataPath>
+			<field>ИмяПредопределенныхДанных</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РеквизитБулево</dataPath>
+			<field>РеквизитБулево</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РеквизитЧисло</dataPath>
+			<field>РеквизитЧисло</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Реквизит3</dataPath>
+			<field>Реквизит3</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РеквизитДата</dataPath>
+			<field>РеквизитДата</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>Ссылка</dataPath>
+			<field>Ссылка</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>ЭтоГруппа</dataPath>
+			<field>ЭтоГруппа</field>
+		</field>
+		<field xsi:type="DataSetFieldField">
+			<dataPath>РекСтрока2</dataPath>
+			<field>РекСтрока2</field>
+		</field>
+		<dataSource>ИсточникДанных1</dataSource>
+		<query>ВЫБРАТЬ
+	Справочник1.Ссылка,
+	Справочник1.ВерсияДанных,
+	Справочник1.ПометкаУдаления,
+	Справочник1.Родитель,
+	Справочник1.ЭтоГруппа,
+	Справочник1.Код,
+	Справочник1.Наименование,
+	Справочник1.Реквизит1,
+	Справочник1.Реквизит2,
+	Справочник1.РеквизитСтрока,
+	Справочник1.РеквизитДата,
+	Справочник1.РеквизитБулево,
+	Справочник1.РеквизитЧисло,
+	Справочник1.РеквизитПереключатель,
+	Справочник1.Реквизит3,
+	Справочник1.РекСтрока1,
+	Справочник1.РекСтрока2,
+	Справочник1.Предопределенный,
+	Справочник1.ИмяПредопределенныхДанных
+ИЗ
+	Справочник.Справочник1 КАК Справочник1</query>
+	</dataSet>
+	<settingsVariant>
+		<dcsset:name>Основной</dcsset:name>
+		<dcsset:presentation xsi:type="xs:string">Основной</dcsset:presentation>
+		<dcsset:settings xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows">
+			<dcsset:selection>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>ВерсияДанных</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Код</dcsset:field>
+				</dcsset:item>
+				<dcsset:item xsi:type="dcsset:SelectedItemField">
+					<dcsset:field>Наименование</dcsset:field>
+				</dcsset:item>
+				<dcsset:userSettingID>0f66607d-8470-4a77-8240-ace7b3424776</dcsset:userSettingID>
+			</dcsset:selection>
+			<dcsset:filter>
+				<dcsset:userSettingID>a445618e-feaa-4216-94e9-790296b919e7</dcsset:userSettingID>
+			</dcsset:filter>
+			<dcsset:order>
+				<dcsset:item xsi:type="dcsset:OrderItemField">
+					<dcsset:field>Наименование</dcsset:field>
+					<dcsset:orderType>Asc</dcsset:orderType>
+				</dcsset:item>
+				<dcsset:userSettingID>0970d3b8-fed8-4e4b-a6eb-6324d79782ef</dcsset:userSettingID>
+			</dcsset:order>
+			<dcsset:conditionalAppearance>
+				<dcsset:userSettingID>d68203fa-d011-48ca-b9ae-d5b05d011d03</dcsset:userSettingID>
+			</dcsset:conditionalAppearance>
+			<dcsset:item xsi:type="dcsset:StructureItemGroup">
+				<dcsset:order>
+					<dcsset:item xsi:type="dcsset:OrderItemAuto"/>
+				</dcsset:order>
+				<dcsset:selection>
+					<dcsset:item xsi:type="dcsset:SelectedItemAuto"/>
+				</dcsset:selection>
+			</dcsset:item>
+			<dcsset:itemsUserSettingID>dd98f623-1e7b-486c-8364-9417a3d8b00d</dcsset:itemsUserSettingID>
+		</dcsset:settings>
+	</settingsVariant>
+</DataCompositionSchema>
