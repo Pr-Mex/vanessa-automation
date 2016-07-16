@@ -2196,7 +2196,7 @@
 	КонецЕсли;	 
 	
 	СтрЗапуска = СокрЛП(ПараметрЗапуска);
-	//СтрЗапуска = "StartFeaturePlayer;VBParams=H:\Commons\vanessa-behavoir\tools\JSON\VBParams837UF.json";
+	//СтрЗапуска = "StartFeaturePlayer;VBParams=C:\Commons\Rep\vanessa-behavoir\tools\JSON\VBParams836UF.json";
 	Если СтрЗапуска = "" Тогда
 		Возврат;
 	КонецЕсли;	
