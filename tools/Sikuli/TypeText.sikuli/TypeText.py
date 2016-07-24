@@ -12,6 +12,10 @@ while True:
         type(Key.ENTER)
     else:
         paste(stroka)
+        #App.setClipboard(stroka)
+        #rightClick(Env.getMouseLocation())
+        #sleep(0.5)
+        #click("Bcrasmu.png")
     sleep(0.5)
 sleep(1)    
 exit(0)
