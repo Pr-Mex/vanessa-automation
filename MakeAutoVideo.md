@@ -1,6 +1,7 @@
 ﻿# Как создать автовидеоинструкцию.
 
 Надо установить софт
+
 1. VLC 2.1.5.  [Ссылка](https://www.videolan.org/vlc/releases/2.1.5.html) 
 2. Пакет ImageMagick. [Ссылка](http://www.imagemagick.org/script/binary-releases.php) Необходимо прописать путь в Path.
 3. Oscript. [Ссылка](http://oscript.io/downloads) Необходимо прописать путь в Path.
