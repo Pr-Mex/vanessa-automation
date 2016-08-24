@@ -624,10 +624,11 @@
 			
 			НашелStepDefinitionВepf = Ложь;
 			
-			ИмяПроцедурыИзStepDefinition = Лев(НовыйStepDefinition,Найти(НовыйStepDefinition,"(")-1);
+			IDИзStepDefinition = НРег(Лев(НовыйStepDefinition,Найти(НовыйStepDefinition,"(")-1));
+			
 			
 			Если Не НашелStepDefinitionВepf Тогда
-				СтрТаблицаИзвестныхStepDefinition = ТаблицаИзвестныхStepDefinition.Найти(ИмяПроцедурыИзStepDefinition,"СтрокаРеальнойПроцедуры");
+				СтрТаблицаИзвестныхStepDefinition = ТаблицаИзвестныхStepDefinition.Найти(IDИзStepDefinition,"СтрокаДляПоиска");
 				Если СтрТаблицаИзвестныхStepDefinition <> Неопределено Тогда
 					СтрСтрокиШагов.Снипет   = НовыйStepDefinition;
 					НашелStepDefinitionВepf = Истина;
@@ -635,14 +636,23 @@
 			КонецЕсли;  
 			
 			
-			
-			Если Не НашелStepDefinitionВepf Тогда
-				СтрТаблицаИзвестныхStepDefinition = ТаблицаИзвестныхStepDefinition.Найти(НРег(СтарыйStepDefinition),"ID");
-				Если СтрТаблицаИзвестныхStepDefinition <> Неопределено Тогда
-					СтрСтрокиШагов.Снипет   = СтарыйStepDefinition;
-					НашелStepDefinitionВepf = Истина;
-				КонецЕсли;	 
-			КонецЕсли;  
+			//Если Не НашелStepDefinitionВepf Тогда
+			//	СтрТаблицаИзвестныхStepDefinition = ТаблицаИзвестныхStepDefinition.Найти(ИмяПроцедурыИзStepDefinition,"СтрокаРеальнойПроцедуры");
+			//	Если СтрТаблицаИзвестныхStepDefinition <> Неопределено Тогда
+			//		СтрСтрокиШагов.Снипет   = НовыйStepDefinition;
+			//		НашелStepDefinitionВepf = Истина;
+			//	КонецЕсли;	 
+			//КонецЕсли;  
+			//
+			//
+			//
+			//Если Не НашелStepDefinitionВepf Тогда
+			//	СтрТаблицаИзвестныхStepDefinition = ТаблицаИзвестныхStepDefinition.Найти(НРег(СтарыйStepDefinition),"ID");
+			//	Если СтрТаблицаИзвестныхStepDefinition <> Неопределено Тогда
+			//		СтрСтрокиШагов.Снипет   = СтарыйStepDefinition;
+			//		НашелStepDefinitionВepf = Истина;
+			//	КонецЕсли;	 
+			//КонецЕсли;  
 			
 			
 			Если НашелStepDefinitionВepf Тогда
@@ -2700,6 +2710,7 @@
 	СтрТаблицаИзвестныхStepDefinition.СтрокаРеальнойПроцедуры = СтрокаРеальнойПроцедуры;
 	СтрТаблицаИзвестныхStepDefinition.ИмяФайла                = ИмяФайла;
 	СтрТаблицаИзвестныхStepDefinition.Параметры               = МассивПараметров;
+	СтрТаблицаИзвестныхStepDefinition.СтрокаДляПоиска         = НРег(Лев(ID,Найти(ID,"(")-1));
 КонецПроцедуры
 
 Процедура ПолучитьУжеСуществующиеСнипетыИзОбработок(Знач КаталогФич,ТаблицаКонтекстовОбработок,ТаблицаИзвестныхStepDefinition,ТаблицаВерсийEPF,КонтекстVanessaBehavoir);

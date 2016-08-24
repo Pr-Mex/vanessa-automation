@@ -1,5 +1,5 @@
-if exists("O6ununi.png",15):
-    click("O6ununi.png")
+if exists(Pattern("O6ununi.png").similar(0.60),15):
+    click(Pattern("O6ununi.png").similar(0.60))
 else:
     exit(1)
     
