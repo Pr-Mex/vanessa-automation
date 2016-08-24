@@ -70,8 +70,8 @@
 <h2>ChooseGherkin.sikuli\AtomIsOpen.sikuli</h2> <a href="ChooseGherkin.sikuli\AtomIsOpen.zip">(Download this script)</a>
 </div>
 <pre class="sikuli-code">
-<span class="kw">if</span> exists(<img src="O6ununi.png" />,<span class="dig">15</span>):
-    <span class="skw">click</span>(<img src="O6ununi.png" />)
+<span class="kw">if</span> exists(Pattern(<img src="O6ununi.png" />).similar(<span class="dig">0.60</span>),<span class="dig">15</span>):
+    <span class="skw">click</span>(Pattern(<img src="O6ununi.png" />).similar(<span class="dig">0.60</span>))
 <span class="kw">else</span>:
     exit(<span class="dig">1</span>)
 
