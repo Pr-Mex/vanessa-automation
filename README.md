@@ -14,7 +14,7 @@
 * Видео инструкции лежат [здесь](https://www.youtube.com/channel/UC2mJ4LlMG-FF4qkc_kqN_iQ) 
 * Прочие инструкции сгруппированы [в этом плейлисте YouTube](https://www.youtube.com/playlist?list=PL2zlgf113YhFG_uRARjDtP1_Obj55UmY4) 
 * Также рекомендуется посмотреть вот [этот вебинар](http://infostart.ru/webinars/537546/) 
-* Возможно вам поможет [этот FAQ](https://github.com/silverbulleters/vanessa-behavior/tree/develop/F.A.Q.md)
+* Возможно вам поможет [этот FAQ](https://github.com/silverbulleters/vanessa-behavior/blob/develop/F.A.Q.MD)
 
 Чтобы у вас работало создание автовидеоинструкций необходимо установить дополнительный софт. Инструкция [здесь](https://github.com/silverbulleters/vanessa-behavior/blob/develop/MakeAutoVideo.md) 
 
