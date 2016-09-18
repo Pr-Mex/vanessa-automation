@@ -5,7 +5,7 @@
 @ExportScenarios
 
 
-Функционал: Открытие Visual studio code
+Функционал: Открытие Visual Studio Code
 	Как Разработчик
 	Я Хочу чтобы я мог открыть текстовый редактор Visual studio code
 	Чтобы я мог в нём набирать текст feature файлов
