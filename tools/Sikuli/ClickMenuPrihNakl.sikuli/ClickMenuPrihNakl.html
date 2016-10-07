@@ -70,10 +70,10 @@
 <h2>ClickMenuPrihNakl.sikuli\ClickMenuPrihNakl.sikuli</h2> <a href="ClickMenuPrihNakl.sikuli\ClickMenuPrihNakl.zip">(Download this script)</a>
 </div>
 <pre class="sikuli-code">
-<span class="kw">if</span> <span class="kw">not</span> exists(<img src="HQHXOLLHBHH3.png" />):
+<span class="kw">if</span> <span class="kw">not</span> exists(Pattern(<img src="HQHXOLLHBHH3.png" />).similar(<span class="dig">0.50</span>)):
     exit(<span class="dig">1</span>)
 
-<span class="skw">click</span>(<img src="HQHXOLLHBHH3.png" />)
+<span class="skw">click</span>(Pattern(<img src="HQHXOLLHBHH3.png" />).similar(<span class="dig">0.50</span>))
 <span class="skw">sleep</span>(<span class="dig">1</span>)
 exit(<span class="dig">0</span>)
 </pre>
