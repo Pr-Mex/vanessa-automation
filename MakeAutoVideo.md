@@ -3,9 +3,9 @@
 Какой надо установить софт
 
 1. VLC 2.1.5.  [Ссылка](https://www.videolan.org/vlc/releases/2.1.5.html) 
-2. Пакет ImageMagick. [Ссылка](http://www.imagemagick.org/script/binary-releases.php) Необходимо прописать путь в Path.
+2. Пакет ImageMagick. [Ссылка](http://www.imagemagick.org/script/binary-releases.php) Необходимо прописать путь в Path. Также при установке ImageMagick необходимо обязательно установить флаг "Install legacy utilities (e.g. convert)" , иначе convert.exe не будет установлен.
 3. Oscript. [Ссылка](http://oscript.io/downloads) Необходимо прописать путь в Path.
-4. (Не обязательно) Для озвучки голосом необходимо установить [Microsoft Speech Platform](https://www.microsoft.com/en-us/download/details.aspx?id=27225) и [Server Runtime Languages](https://www.microsoft.com/en-us/download/details.aspx?id=21924) MSSpeech_TTS_ru-RU_Elena или другую голосовую библиотеку. Если не хотите озучивать текст - надо **снять** флаг **Делать озвучку TTS**.
+4. (Не обязательно) Для озвучки голосом необходимо установить [Microsoft Speech Platform](https://www.microsoft.com/en-us/download/details.aspx?id=27225) и [Server Runtime Languages](https://www.microsoft.com/en-us/download/details.aspx?id=27224) MSSpeech_TTS_ru-RU_Elena или другую голосовую библиотеку. Если не хотите озучивать текст - надо **снять** флаг **Делать озвучку TTS**.
 5. (Не обязательно) Также понадобится голосовой движок Балаболка консольный вариант. [Ссылка](http://www.cross-plus-a.ru/bconsole.html) Необходимо прописать путь в Path.
 6. Если на компьютере нет аудиокарты (настоящей или виртуальной) - озвучка работать не будет из-за особенностей движка TTS.
 7. (Не обязательно) Для отрисовки рамки вокруг активного элемента формы и для перемещения курсора мыши надо скачать UItoolsFor1C.zip [отсюда](https://github.com/Pr-Mex/UItoolsFor1C/releases) и распаковать архив в каталог \vanessa-behavoir\tools\VideoTools. Если не хотите использовать эти утилиты - тогда надо **снять** флаги **Подсвечивать активные элементы формы** и **Перемещать курсор мышки к активному элементу формы**.
