@@ -26,7 +26,7 @@
 
 	Ванесса.ДобавитьШагВМассивТестов(ВсеТесты,"TestClientIsConnected()","TestClientIsConnected","Given TestClient is connected");
 	Ванесса.ДобавитьШагВМассивТестов(ВсеТесты,"ICreateNewPurchaseOrder()","ICreateNewPurchaseOrder","When I create new purchase order");
-	Ванесса.ДобавитьШагВМассивТестов(ВсеТесты,"IChooseVendor()","IChooseVendor","And I choose vendor");
+	Ванесса.ДобавитьШагВМассивТестов(ВсеТесты,"IChooseVendorNorcalDistributionCompany()","IChooseVendorNorcalDistributionCompany","And I choose vendor Norcal Distribution Company");
 	Ванесса.ДобавитьШагВМассивТестов(ВсеТесты,"IChooseDeliveryDate(Парам01)","IChooseDeliveryDate","And I choose delivery date 30.10.2016");
 	Ванесса.ДобавитьШагВМассивТестов(ВсеТесты,"IAddNewLineInOrder()","IAddNewLineInOrder","And I add new line in order");
 	Ванесса.ДобавитьШагВМассивТестов(ВсеТесты,"IChooseItem(Парам01)","IChooseItem","And I choose item ""Coleman 600W Wind Turbine""");
@@ -91,9 +91,9 @@
 КонецПроцедуры
 
 &НаКлиенте
-//And I choose vendor
-//@IChooseVendor()
-Процедура IChooseVendor() Экспорт
+//And I choose vendor Norcal Distribution Company
+//@IChooseVendorNorcalDistributionCompany()
+Процедура IChooseVendorNorcalDistributionCompany() Экспорт
 	Ванесса.Шаг("И     я открываю выпадающий список ""Vendor""");
 	Ванесса.Шаг("И     я выбираю значение реквизита ""Vendor"" из формы списка");
 	Ванесса.Шаг("И     в ТЧ ""List"" я активизирую поле ""Name""");

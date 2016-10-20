@@ -15,7 +15,7 @@ Background:
 Scenario: Create purchase order	
 	When I start to make document
 			When I create new purchase order	
-			And I choose vendor
+			And I choose vendor Norcal Distribution Company
 			
 	And I add some goods		
 			And I add new line in order
