@@ -17,8 +17,9 @@
 * Возможно вам поможет [этот FAQ](https://github.com/silverbulleters/vanessa-behavior/blob/develop/F.A.Q.MD)
 
 Чтобы у вас работало создание автовидеоинструкций необходимо установить дополнительный софт. Инструкция [здесь](https://github.com/silverbulleters/vanessa-behavior/blob/develop/MakeAutoVideo.md) 
+Также по автовидеоинструкциям есть вот это замечательное [видео](https://www.youtube.com/watch?v=BfXowJH5uP0)
 
-Порядок установки под Windows:
+Порядок установки Vanessa-Behavior под Windows:
 
 * [интерпретатор 1Script](http://oscript.io/downloads) - для работы с иходными файлами 1С с помощью проекта precommit1C
 * [утилита для формирования отчётов о проверки Allure](http://allure.qatools.ru/)
