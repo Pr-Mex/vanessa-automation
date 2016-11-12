@@ -8,6 +8,7 @@
 
 > он ждет только Вас !!!
 
+Большая благодарность:
 
-
-
+* https://github.com/rozhkovdmitriy
+* https://github.com/Hissin
