@@ -3,7 +3,7 @@
    "ВерсияПлатформы":"8.3.6",
    "ВыводитьСообщенияВФайл": ".\ServiceBases\Messages 8.3.6 UF.txt",
    "КаталогПоискаВерсииПлатформы":"C:\Program Files (x86)\1cv8",
-   "СтрокаПодключенияКБазе":"ENTERPRISE /F.\ServiceBases\v83ServiceBase",
+   "СтрокаПодключенияКБазе":"ENTERPRISE /F.\ServiceBases\v83ServiceBase836",
    "EpfДляИнициализацияБазы": "./epf/init.epf",
    "ПараметрыДляИнициализацияБазы": "./epf/init.json",
    "ПутьКVanessaBehavior": "./../vanessa-behavior.epf",
@@ -24,13 +24,13 @@
    "ВыгружатьСтатусВыполненияСценариевВФайл": "Истина",
    "ДобавлятьКИмениСценарияУловияВыгрузки": "Истина",
    "ПутьКФайлуДляВыгрузкиСтатусаВыполненияСценариев": "./tools/ServiceBases/BuildStatus.log",
-   "КаталогСкриптовСборкиВидео": "./tools/../../vanessa-ci/MakeVideoInstr",
    "СписокТеговИсключение":[
    "IgnoreOnCIMainBuild",
    "IgnoreOnOF836",
    "IgnoreOnUFBuilds",
    "Ignore"
    ],
+   "ВыполнятьШагиАссинхронно":"Ложь",
    "ЗаписьВидеоКомандаНачатьЗаписьВидео": '"C:\Program Files (x86)\VideoLAN\VLC\vlc.exe" screen://  -I rc --rc-quiet --rc-host=127.0.0.1:8082 --nommx :screen-mouse-image="<screenmouseimage>" :screen-fps=<fps> :screen-width=<screenwidth> :screen-height=<screenheight> :screen-top=0 :screen-left=0 :screen-caching=100 :sout=#transcode{vcodec=mp4v,vb=400,fps=<fps>,scale=1,width=<screenwidth>,height=<screenheight>,acodec=none}:duplicate{dst=std{access=file,mux=mp4,dst=<dst>}}',
    "ЗаписьВидеоФайлКурсораМышки": "./tools/VideoTools/mouse.png",
    "ЗаписьВидеоКаталогДляВременныхФайлов": "./tools/VideoTemp",
