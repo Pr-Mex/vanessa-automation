@@ -175,7 +175,7 @@
 Процедура ЯЗапускаюСеансTestManagerВСлужебнойБазе() Экспорт
 	Ванесса.СоздатьСлужебныеБазыЕслиИхНет();
 	
-	Ванесса.ЗапуститьСеансСлужебнойБазы("v83ServiceBase","ENTERPRISE","/TESTMANAGER /CLibsOnly");
+	Ванесса.ЗапуститьСеансСлужебнойБазы("v83ServiceBase836","ENTERPRISE","/TESTMANAGER /CLibsOnly");
 	
 	Ванесса.sleep(5);
 	
