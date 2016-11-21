@@ -2,6 +2,7 @@
 # language: ru
 
 @IgnoreOnOFBuilds
+@IgnoreOnCIMainBuild
 
 Функционал: Несколько клиентов тестирования
 	Как разработчик
