@@ -2,7 +2,7 @@
 
 @echo sync and update precommit1c hook
 
-rem git submodule update --init --recursive .\..\vendor\precommit1c 
+git submodule update --init --recursive .\..\vendor\precommit1c 
 rem cd .\..\vendor\precommit1c\
 
 rem xcopy .\ibService .\..\..\.git\hooks\ibService\ /Y /E /F
