@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<uilog xmlns:d1p1="http://v8.1c.ru/8.3/uilog">
+	<ClientApplicationWindow isMain="true">
+		<CommandInterface>
+			<CommandInterfaceGroup title="Панель разделов">
+				<CommandInterfaceButton title="Основная">
+					<click/>
+				</CommandInterfaceButton>
+			</CommandInterfaceGroup>
+			<CommandInterfaceGroup title="Меню функций">
+				<CommandInterfaceButton title="Справочник1">
+					<click/>
+				</CommandInterfaceButton>
+			</CommandInterfaceGroup>
+		</CommandInterface>
+	</ClientApplicationWindow>
+	<ClientApplicationWindow caption="Справочник1">
+		<Form title="Справочник1">
+			<FormGroup name="ФормаКоманднаяПанель" title="Командная панель">
+				<FormButton name="ФормаСоздать" title="Создать">
+					<click/>
+				</FormButton>
+			</FormGroup>
+		</Form>
+	</ClientApplicationWindow>
+	<ClientApplicationWindow caption="Справочник1 (создание)">
+		<Form title="Справочник1 (создание)">
+			<FormGroup name="Группа3" title="Группа3">
+				<FormGroup name="Группа1" title="Основа">
+					<FormField name="Наименование" title="Наименование">
+						<inputText text="Тест"/>
+					</FormField>
+				</FormGroup>
+			</FormGroup>
+			<FormGroup name="ФормаКоманднаяПанель" title="Командная панель">
+				<FormButton name="ФормаЗаписатьИЗакрыть" title="Записать и закрыть">
+					<click/>
+				</FormButton>
+			</FormGroup>
+		</Form>
+	</ClientApplicationWindow>
+</uilog>
