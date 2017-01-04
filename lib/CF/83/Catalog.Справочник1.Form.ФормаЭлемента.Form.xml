@@ -413,6 +413,12 @@
 							</Title>
 							<ExtendedTooltip name="ЗаполнитьРекСтрока2РасширеннаяПодсказка" id="138"/>
 						</Button>
+						<Button name="ВывестиПредупреждение" id="156">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ВывестиПредупреждение</CommandName>
+							<Parameter xsi:nil="true"/>
+							<ExtendedTooltip name="ВывестиПредупреждениеРасширеннаяПодсказка" id="157"/>
+						</Button>
 					</ChildItems>
 				</Page>
 				<Page name="ГруппаДекорацияФормы" id="139">
@@ -504,6 +510,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>КомандаДляКомандногоИнтерфейса</Action>
+		</Command>
+		<Command name="ВывестиПредупреждение" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вывести предупреждение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вывести предупреждение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВывестиПредупреждение</Action>
 		</Command>
 	</Commands>
 	<CommandInterface>
