@@ -1,7 +1,7 @@
 ﻿# language: ru
 
 @ExportScenarios
-
+@IgnoreOnCIMainBuild
 
 Функционал: Подключение сценария как шага
 	Как Разработчик
