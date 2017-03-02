@@ -126,27 +126,6 @@
 КонецПроцедуры
 
 &НаКлиенте
-Функция ВыполнитьКомандуОС(Стр)
-
-	ИмяВременногоBAT = ПолучитьИмяВременногоФайла("bat");
-	
-	//ЗТ = Новый ЗаписьТекста(ИмяВременногоBAT,"UTF-8",,Истина); 
-	ЗТ = Новый ЗаписьТекста(ИмяВременногоBAT,КодировкаТекста.ANSI,,Истина); 
-	//ЗТ.ЗаписатьСтроку("set JAVA_EXE=""C:\Program Files (x86)\Java\jre6\bin\java.exe"""); 
-	ЗТ.ЗаписатьСтроку(Стр); 
-	ЗТ.Закрыть();
-	
-	WshShell = Новый COMОбъект("WScript.Shell");
-	//Сообщить(Стр);
-	Рез = WshShell.Run(ИмяВременногоBAT,0,-1);
-	WshShell = Неопределено;
-	Возврат Рез;
-	//Сообщить("Рез=" + Рез);
-	//Сообщить(ИмяВременногоBAT);
-	//УдалитьФайлы(ИмяВременногоBAT);
-КонецФункции
-
-&НаКлиенте
 Функция ПолучитьСтрокуВызоваSikuli()
 	Возврат """C:\Program Files (x86)\Java\jre6\bin\java.exe"" -Xms64M -Xmx512M -Dfile.encoding=UTF-8 -Dpython.path=""C:\Program Files (x86)\Sikuli X\sikuli-script.jar/"" -jar ""C:\Program Files (x86)\Sikuli X\sikuli-ide.jar"" -r ";
 	//Возврат "java -Xms64M -Xmx512M -Dfile.encoding=UTF-8 -Dpython.path=""C:\Program Files (x86)\Sikuli X\sikuli-script.jar/"" -jar ""C:\Program Files (x86)\Sikuli X\sikuli-ide.jar"" -r ";
@@ -159,7 +138,7 @@
 	УдалитьСкаченныеФайлыПоМаске("SourceTreeSetup*.exe");
 	
 	Команда = ПолучитьСтрокуВызоваSikuli() + Ванесса.Объект.КаталогИнструментов + "\tools\Sikuli\SourceTree.sikuli";
-	Рез = ВыполнитьКомандуОС(Команда);
+	Рез = Ванесса.ВыполнитьКомандуОСБезПоказаЧерногоОкна(Команда);
 	Ванесса.ПроверитьРавенство(Рез,0,"Был клик на кнопку большую синюю кнопку ""Скачать"".");
 	//КомандаСистемы(Команда + " > h:\temp\111.txt");
 	
@@ -177,7 +156,7 @@
 	
 	//Команда = """C:\Program Files (x86)\Java\jre6\bin\java.exe"" -Xms64M -Xmx512M -Dfile.encoding=UTF-8 -Dpython.path=""C:\Program Files (x86)\Sikuli X\sikuli-script.jar/"" -jar ""C:\Program Files (x86)\Sikuli X\sikuli-ide.jar"" -r " + Ванесса.Объект.КаталогИнструментов + "\tools\Sikuli\Git.sikuli";
 	Команда = ПолучитьСтрокуВызоваSikuli() + Ванесса.Объект.КаталогИнструментов + "\tools\Sikuli\Git.sikuli";
-	Рез = ВыполнитьКомандуОС(Команда);
+	Рез = Ванесса.ВыполнитьКомандуОСБезПоказаЧерногоОкна(Команда);
 	Ванесса.ПроверитьРавенство(Рез,0,"Был клик на кнопку ""Скачать"".");
 	
 	Ванесса.ЗапретитьВыполнениеШагов();
@@ -190,7 +169,7 @@
 Процедура ЯНажимаюНаКнопкуСохранить() Экспорт
 	//Команда = """C:\Program Files (x86)\Java\jre6\bin\java.exe"" -Xms64M -Xmx512M -Dfile.encoding=UTF-8 -Dpython.path=""C:\Program Files (x86)\Sikuli X\sikuli-script.jar/"" -jar ""C:\Program Files (x86)\Sikuli X\sikuli-ide.jar"" -r " + Ванесса.Объект.КаталогИнструментов + "\tools\Sikuli\ClickSaveFF.sikuli";
 	Команда = ПолучитьСтрокуВызоваSikuli() + Ванесса.Объект.КаталогИнструментов + "\tools\Sikuli\ClickSaveFF.sikuli";
-	Рез = ВыполнитьКомандуОС(Команда);
+	Рез = Ванесса.ВыполнитьКомандуОСБезПоказаЧерногоОкна(Команда);
 	Ванесса.ПроверитьРавенство(Рез,0,"Был клик на кнопку ""Сохранить"" firefox.");
 	
 	Ванесса.ЗапретитьВыполнениеШагов();
@@ -206,7 +185,7 @@
 	
 	//Команда = """C:\Program Files (x86)\Java\jre6\bin\java.exe"" -Xms64M -Xmx512M -Dfile.encoding=UTF-8 -Dpython.path=""C:\Program Files (x86)\Sikuli X\sikuli-script.jar/"" -jar ""C:\Program Files (x86)\Sikuli X\sikuli-ide.jar"" -r " + Ванесса.Объект.КаталогИнструментов + "\tools\Sikuli\Python.sikuli";
 	Команда = ПолучитьСтрокуВызоваSikuli() + Ванесса.Объект.КаталогИнструментов + "\tools\Sikuli\Python.sikuli";
-	Рез = ВыполнитьКомандуОС(Команда);
+	Рез = Ванесса.ВыполнитьКомандуОСБезПоказаЧерногоОкна(Команда);
 	Ванесса.ПроверитьРавенство(Рез,0,"Был клик на кнопку ""Скачать"".");
 	
 	Ванесса.ЗапретитьВыполнениеШагов();

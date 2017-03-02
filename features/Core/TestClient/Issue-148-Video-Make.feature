@@ -1,8 +1,10 @@
-# encoding: utf-8
 # language: ru
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
+@IgnoreOn836
+@IgnoreOn837
+@IgnoreOn838
 
 
 

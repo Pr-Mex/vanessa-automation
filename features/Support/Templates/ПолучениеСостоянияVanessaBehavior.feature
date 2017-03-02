@@ -1,5 +1,3 @@
-
-# encoding: utf-8
 # language: ru
 
 #https://github.com/silverbulleters/vanessa-behavior/issues/261
