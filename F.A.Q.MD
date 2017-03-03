@@ -42,3 +42,9 @@
 13. Если вы используете версию платформы 8.3.9.2033 или новее, тогда может появиться окно **Предупреждение безопасности**. 
 	* Подробно этот механизм описан [здесь](http://its.1c.ru/db/v838doc#bookmark:dev:TI000001871).
 	* Если хотите выключить этот механизм для всех баз - пропишите в файле conf.cfg строку: **DisableUnsafeActionProtection=.***
+14. Как использовать Sikuli-скрипты. 
+	* Установите SikuliX согласно инструкции http://sikulix.com/quickstart/;
+	* Ознакомьтесь с http://sikulix-2014.readthedocs.io/en/latest/faq/010-command-line.html;
+	* Укажите через path путь к каталогу с runsikulix(.cmd);
+	* Разрабатывайте свои Sikuli-скрипты с помощью SikuiliX IDE (http://sikulix-2014.readthedocs.io/en/latest/index.html) либо используйте имеющиеся;
+	* Выполнение скрипта в реализации шага вызывайте через Ванесса.ВыполнитьSikuliСкрипт().
