@@ -48,3 +48,9 @@
 	* Укажите через path путь к каталогу с runsikulix(.cmd);
 	* Разрабатывайте свои Sikuli-скрипты с помощью SikuiliX IDE (http://sikulix-2014.readthedocs.io/en/latest/index.html) либо используйте имеющиеся;
 	* Выполнение скрипта в реализации шага вызывайте через Ванесса.ВыполнитьSikuliСкрипт().
+15. Как получить отчет Allure у себя на компьютере под Windows
+	* Надо скачать дистрибутив Allure [отсюда](https://github.com/allure-framework/allure1/releases) 
+	* Надо прописать в Path каталог где лежит allure.bat
+	* Вызвать команду **call allure generate {каталог где лежат ваши xml в формате Allure}**
+	* Вызвать команду **call allure report open**
+	
