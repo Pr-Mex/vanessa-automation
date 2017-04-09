@@ -1,0 +1,150 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="СоздатьКнопку" id="16">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.СоздатьКнопку</CommandName>
+				<Parameter xsi:nil="true"/>
+				<ExtendedTooltip name="СоздатьКнопкуРасширеннаяПодсказка" id="17"/>
+			</Button>
+			<Button name="УдалитьКнопку" id="18">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.УдалитьКнопку</CommandName>
+				<Parameter xsi:nil="true"/>
+				<ExtendedTooltip name="УдалитьКнопкуРасширеннаяПодсказка" id="19"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<InputField name="Реквизит1" id="1">
+			<DataPath>Реквизит1</DataPath>
+			<ContextMenu name="Реквизит1КонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="Реквизит1РасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Реквизит2" id="4">
+			<DataPath>Реквизит2</DataPath>
+			<Visible>false</Visible>
+			<ContextMenu name="Реквизит2КонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="Реквизит2РасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<InputField name="Реквизит3" id="20">
+			<DataPath>Реквизит3</DataPath>
+			<Enabled>false</Enabled>
+			<ContextMenu name="Реквизит3КонтекстноеМеню" id="21"/>
+			<ExtendedTooltip name="Реквизит3РасширеннаяПодсказка" id="22"/>
+		</InputField>
+		<InputField name="Реквизит4" id="10">
+			<DataPath>Реквизит4</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<ContextMenu name="Реквизит4КонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="Реквизит4РасширеннаяПодсказка" id="12"/>
+		</InputField>
+		<LabelDecoration name="Декорация1" id="13">
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизит1 - стандартный
+Реквизит2 - не видим
+Реквизит3 - не доступен
+Реквизит4 - только просмотр
+НоваяКнопка  - создается видимой
+НоваяКнопка2 - создается не видимой</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="Декорация1КонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="15"/>
+		</LabelDecoration>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПроверкаСостоянияЭлементов</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="Реквизит1" id="2">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Реквизит2" id="3">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Реквизит3" id="4">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Реквизит4" id="5">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СоздатьКнопку" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать кнопку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать кнопку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьКнопку</Action>
+		</Command>
+		<Command name="НоваяКнопка" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Новая кнопка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Новая кнопка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НоваяКнопка</Action>
+		</Command>
+		<Command name="УдалитьКнопку" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить кнопку</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить кнопку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УдалитьКнопку</Action>
+		</Command>
+	</Commands>
+</Form>

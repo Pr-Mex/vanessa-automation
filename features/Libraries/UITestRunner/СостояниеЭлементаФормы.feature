@@ -1,5 +1,10 @@
 ﻿# language: ru
 
+@IgnoreOn82Builds
+@IgnoreOnOFBuilds
+@IgnoreOn837
+@IgnoreOn836
+
 Функционал: Проверка текущего состояния элемента формы
 
 Как Разработчик я хочу
