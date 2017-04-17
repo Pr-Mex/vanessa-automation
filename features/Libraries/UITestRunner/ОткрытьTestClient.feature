@@ -1,6 +1,5 @@
 ﻿# language: ru
 
-@IgnoreOnCIMainBuild
 @ExportScenarios
 @TestClient
 

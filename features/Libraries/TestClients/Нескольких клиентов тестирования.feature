@@ -1,7 +1,6 @@
 ﻿# language: ru
 
 @IgnoreOnOFBuilds
-@IgnoreOnCIMainBuild
 @TestClient
 
 Функционал: Несколько клиентов тестирования
