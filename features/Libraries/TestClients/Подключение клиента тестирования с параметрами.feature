@@ -2,6 +2,7 @@
 
 @IgnoreOnOFBuilds
 @IgnoreOn82Builds
+@TestClient
 
 Функционал: Несколько клиентов тестирования
 	Как разработчик
