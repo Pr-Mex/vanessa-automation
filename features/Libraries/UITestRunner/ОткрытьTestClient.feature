@@ -1,6 +1,7 @@
 ﻿# language: ru
 
 @ExportScenarios
+@IgnoreOn82Builds
 @TestClient
 
 
