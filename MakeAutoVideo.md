@@ -2,7 +2,7 @@
 
 Какой надо установить софт
 
-1. VLC 2.1.5.  [Ссылка](https://www.videolan.org/vlc/releases/2.1.5.html) 
+1. VLC 2.1.5.  [Ссылка](https://www.videolan.org/vlc/releases/2.1.5.html) Версию 2.2 или выше СТАВИТЬ НЕЛЬЗЯ!!!
 2. Пакет ImageMagick. [Ссылка](http://www.imagemagick.org/script/binary-releases.php) Необходимо прописать путь в Path. Также при установке ImageMagick необходимо обязательно установить флаг "Install legacy utilities (e.g. convert)" , иначе convert.exe не будет установлен.
 3. Oscript. [Ссылка](http://oscript.io/downloads) Необходимо прописать путь в Path.
 4. (Не обязательно) Для озвучки голосом необходимо установить [Microsoft Speech Platform х32](https://www.microsoft.com/en-us/download/details.aspx?id=27225) и [Server Runtime Languages](https://www.microsoft.com/en-us/download/details.aspx?id=27224) MSSpeech_TTS_ru-RU_Elena или другую голосовую библиотеку. Если не хотите озучивать текст - надо **снять** флаг **Делать озвучку TTS**.
