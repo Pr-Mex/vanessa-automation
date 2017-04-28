@@ -2,6 +2,7 @@
 
 @ExportScenarios
 @IgnoreOn82Builds
+@IgnoreOnOFBuilds
 @TestClient
 
 
