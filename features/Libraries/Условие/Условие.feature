@@ -1,6 +1,7 @@
 ﻿# language: ru
 
 @tree
+@IgnoreOnOFBuilds
 
 
 Функционал: Выполнение условий
