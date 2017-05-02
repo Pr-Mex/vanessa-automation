@@ -38,4 +38,5 @@
 
     И я закрываю TestClient "Test 1"
     И я закрываю TestClient "Test 2"
+    И я закрываю TestClient "Test 2"
     
