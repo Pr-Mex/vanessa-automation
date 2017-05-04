@@ -45,8 +45,13 @@
 		//ЗапуститьПриложение("https://github.com/silverbulleters/vanessa-behavior");
 		ОткрытьСайт("https://github.com/silverbulleters/vanessa-behavior");
 		
-		Оболочка = Новый COMОбъект("Shell.Application");
-		Оболочка.MinimizeAll();
+		Попытка
+			Оболочка = Новый COMОбъект("Shell.Application");
+			Оболочка.MinimizeAll();
+		Исключение
+			ВызватьИсключение "Не удалось подключить COM объект <Shell.Application>";
+		КонецПопытки;		
+
 	КонецЕсли;	 
 КонецПроцедуры
 

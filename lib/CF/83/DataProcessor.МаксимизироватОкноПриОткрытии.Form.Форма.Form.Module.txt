@@ -23,7 +23,11 @@
 	//НадоМаксимизировать = Истина;
 	
 	Если НадоМаксимизировать Тогда
-		WSHShell = Новый COMОбъект("WScript.Shell");
+		Попытка
+			WSHShell = Новый COMОбъект("WScript.Shell");
+		Исключение
+			ВызватьИсключение "Не удалось подключенить COM объект <WScript.Shell>";
+		КонецПопытки;  
 		WSHShell.SendKeys("%");
 		WSHShell.SendKeys("{LEFT}{LEFT}{ENTER}");    
 		
