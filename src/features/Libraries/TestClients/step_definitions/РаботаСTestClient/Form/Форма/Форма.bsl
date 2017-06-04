@@ -403,7 +403,7 @@
 //И я активизирую TestClient "Кладовщик"
 //@ЯАктивизируюTestClient(Парам01)
 Процедура ЯАктивизируюTestClient(ИмяTestClient) Экспорт
-	Сообщить("ЯАктивизируюTestClient <" + ИмяTestClient + ">");
+	//Сообщить("ЯАктивизируюTestClient <" + ИмяTestClient + ">");
 	
 	СвойстваTestClient = ПолучитьСвойстваПодключенногоTestClient(ИмяTestClient);
 	Если СвойстваTestClient = Неопределено Тогда
