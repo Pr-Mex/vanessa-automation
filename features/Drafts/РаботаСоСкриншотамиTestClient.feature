@@ -3,6 +3,7 @@
 @IgnoreOnCIMainBuild
 @Proposal
 @WindowsOnly
+@ScreenShot
 
 Функционал: Добавление посветки активных элементов
 	Как пользователь vanessa-behavior
