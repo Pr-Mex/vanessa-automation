@@ -1,5 +1,6 @@
 ﻿# language: ru
 
+@IgnoreOnCIMainBuild
 @tree
 
 
