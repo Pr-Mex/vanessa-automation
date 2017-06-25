@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<ChildItems>
+		<InputField name="Код" id="1">
+			<DataPath>Объект.Code</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="Наименование" id="4">
+			<DataPath>Объект.Description</DataPath>
+			<EditMode>EnterOnInput</EditMode>
+			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+		</InputField>
+		<Button name="СформироватьОтчет" id="7">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.СформироватьОтчет</CommandName>
+			<Parameter xsi:nil="true"/>
+			<ExtendedTooltip name="СформироватьОтчетРасширеннаяПодсказка" id="8"/>
+		</Button>
+		<Button name="СформироватьОтчетСВертикальнойЧертой" id="14">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.СформироватьОтчетСВертикальнойЧертой</CommandName>
+			<Parameter xsi:nil="true"/>
+			<ExtendedTooltip name="СформироватьОтчетСВертикальнойЧертойРасширеннаяПодсказка" id="15"/>
+		</Button>
+		<Button name="ОткрытьФайл" id="12">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.ОткрытьФайл</CommandName>
+			<Parameter xsi:nil="true"/>
+			<ExtendedTooltip name="ОткрытьФайлРасширеннаяПодсказка" id="13"/>
+		</Button>
+		<Button name="СделатьСлужебноеСообщение" id="16">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.СделатьСлужебноеСообщение</CommandName>
+			<Parameter xsi:nil="true"/>
+			<ExtendedTooltip name="СделатьСлужебноеСообщениеРасширеннаяПодсказка" id="17"/>
+		</Button>
+		<SpreadSheetDocumentField name="РеквизитТабличныйДокумент" id="9">
+			<DataPath>РеквизитТабличныйДокумент</DataPath>
+			<ContextMenu name="РеквизитТабличныйДокументКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="РеквизитТабличныйДокументРасширеннаяПодсказка" id="11"/>
+		</SpreadSheetDocumentField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.Справочник3</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="РеквизитТабличныйДокумент" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизит табличный документ</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="СформироватьОтчет" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать отчет</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать отчет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СформироватьОтчет</Action>
+		</Command>
+		<Command name="ОткрытьФайл" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть файл</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть файл</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьФайл</Action>
+		</Command>
+		<Command name="СформироватьОтчетСВертикальнойЧертой" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать отчет с вертикальной чертой</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать отчет с вертикальной чертой</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СформироватьОтчетСВертикальнойЧертой</Action>
+		</Command>
+		<Command name="СделатьСлужебноеСообщение" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сделать служебное сообщение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сделать служебное сообщение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СделатьСлужебноеСообщение</Action>
+		</Command>
+	</Commands>
+</Form>
