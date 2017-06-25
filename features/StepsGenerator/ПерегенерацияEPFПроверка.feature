@@ -1,6 +1,7 @@
 ﻿# language: ru
 
 @IgnoreOnLinux
+@OneThread
 
 Функционал: Проверка перегенерации EPF
 	Как Разработчик
