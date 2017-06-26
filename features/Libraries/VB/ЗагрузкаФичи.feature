@@ -1,6 +1,6 @@
 ﻿# language: ru
 
-
+@IgnoreOnWeb
 
 Функционал: Загрузить фичу в vanessa-behavior
 	Как Разработчик

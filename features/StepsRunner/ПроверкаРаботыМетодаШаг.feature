@@ -1,6 +1,7 @@
 ﻿# language: ru
 
 @IgnoreOnOFBuilds
+@IgnoreOnWeb
 
 
 Функционал: Служебная фича для проверки работы метода Шаг

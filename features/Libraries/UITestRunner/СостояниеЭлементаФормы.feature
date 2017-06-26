@@ -4,6 +4,7 @@
 @IgnoreOnOFBuilds
 @IgnoreOn837
 @IgnoreOn836
+@IgnoreOnWeb
 
 Функционал: Проверка текущего состояния элемента формы
 

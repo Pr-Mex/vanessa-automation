@@ -2,6 +2,7 @@
 
 @IgnoreOnOFBuilds
 @IgnoreOn82Builds
+@IgnoreOnWeb
 @TestClient
 
 Функционал: Работа с несколькими TestClient

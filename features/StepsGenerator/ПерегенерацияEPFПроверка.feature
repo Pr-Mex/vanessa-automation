@@ -2,6 +2,7 @@
 
 @IgnoreOnLinux
 @OneThread
+@IgnoreOnWeb
 
 Функционал: Проверка перегенерации EPF
 	Как Разработчик

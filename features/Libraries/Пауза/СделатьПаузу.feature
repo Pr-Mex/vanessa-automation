@@ -2,6 +2,7 @@
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
+@IgnoreOnWeb
 
 
 Функционал: Сделать паузу в указанное число секунд

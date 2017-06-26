@@ -2,6 +2,7 @@
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
+@IgnoreOnWeb
 
 Функционал: Проверка обработки временных фич
 

@@ -2,6 +2,7 @@
 
 @IgnoreOnLinux
 @OneThread
+@IgnoreOnWeb
 
 Функционал: Проверка перегенерации EPF, когда в epf есть шаг без фичи
 	Как Разработчик

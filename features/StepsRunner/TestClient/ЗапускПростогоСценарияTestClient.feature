@@ -5,6 +5,7 @@
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
+@IgnoreOnWeb
 
 
 Функционал: Проверка запуска простого сценария TestClient

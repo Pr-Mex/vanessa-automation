@@ -2,6 +2,7 @@
 
 @IgnoreOnOFBuilds
 @IgnoreOn82Builds
+@IgnoreOnWeb
 
 Функционал: Передача параметра в сценарй
 	Как Разработчик

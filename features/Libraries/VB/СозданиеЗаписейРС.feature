@@ -1,6 +1,6 @@
 ﻿# language: ru
 
-
+@IgnoreOnWeb
 
 Функционал: Проверка создания fixtures
 	Как Разработчик

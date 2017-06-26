@@ -2,7 +2,7 @@
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
-
+@IgnoreOnWeb
 
 
 Функционал: Проверка парсинга фичи когда есть тег tree и используется комментарий

@@ -1,6 +1,7 @@
 ﻿# language: ru
 
 @IgnoreOnCIMainBuild
+@IgnoreOnWeb
 
 Функционал: Проверка работы областей в дереве
 	Как Разработчик

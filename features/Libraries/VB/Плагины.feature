@@ -2,6 +2,7 @@
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
+@IgnoreOnWeb
 # @IgnoreOn837
 # @IgnoreOn839
 

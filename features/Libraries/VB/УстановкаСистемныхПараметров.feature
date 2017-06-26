@@ -2,6 +2,7 @@
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
+@IgnoreOnWeb
 
 Функционал: Установка системных параметров Vanessa-Behavoir
 	Как Разработчик

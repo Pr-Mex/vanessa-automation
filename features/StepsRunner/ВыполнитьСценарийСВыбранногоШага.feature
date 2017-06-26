@@ -1,6 +1,7 @@
 ﻿# language: ru
 
 @IgnoreOnOFBuilds
+@IgnoreOnWeb
 @tree
 
 Функционал: Проверка выполнения сценария с выбранного шага

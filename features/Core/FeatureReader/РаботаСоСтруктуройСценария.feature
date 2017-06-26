@@ -2,6 +2,7 @@
 
 @IgnoreOnOFBuilds
 @IgnoreOn82Builds
+@IgnoreOnWeb
 
 Функционал: Проверка работы структуры сценария
 	Как Разработчик
