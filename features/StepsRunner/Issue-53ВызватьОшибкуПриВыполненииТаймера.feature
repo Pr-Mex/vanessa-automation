@@ -1,6 +1,6 @@
 # language: ru
 
-
+@IgnoreOnWeb
 
 
 Функционал: Остановка выполнения шагов FeatureRunner

@@ -2,6 +2,7 @@
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
+@IgnoreOnWeb
 
 Функционал: Остановка выполнения шагов FeatureRunner
 	Как Разработчик

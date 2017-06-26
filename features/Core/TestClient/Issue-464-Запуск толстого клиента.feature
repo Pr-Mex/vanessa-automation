@@ -3,6 +3,7 @@
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 @TestClient
+@IgnoreOnWeb
 
 
 Функционал: Проверка запуска приложения в режиме тонкого/толстого клиента

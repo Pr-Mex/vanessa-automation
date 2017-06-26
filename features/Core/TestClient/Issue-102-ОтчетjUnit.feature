@@ -2,7 +2,7 @@
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
-
+@IgnoreOnWeb
 
 Функционал: Проверка формирования отчета jUnit
 

@@ -1,5 +1,7 @@
 ﻿# language: ru
 
+@IgnoreOnWeb
+
 @ExportScenarios
 
 
