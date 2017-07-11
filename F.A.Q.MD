@@ -28,11 +28,12 @@
 		+ Закладка `Сервис`
 		+ далее `Автоинструкции`
 		+ поле `Консольная команда создания скриншотов`
+		  + после строки команды вставляется имя файла и в таком виде команда запускается!
 
 	Можно устанавливать 
 	+ как `NirCMD`
 	+ http://www.nirsoft.net/utils/nircmd.zip
-		+ команда `nircmd savescreenshot`
+		+ команда `nircmd savescreenshot `
 
 	+ так и `IrfanView`
 		+ команда `"C:\Program Files (x86)\IrfanView\i_view32.exe" /capture=1 /convert=`
