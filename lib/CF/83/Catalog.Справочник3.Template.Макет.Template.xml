@@ -13,9 +13,14 @@
 			<code>Русский</code>
 			<description>Русский</description>
 		</languageInfo>
+		<languageInfo>
+			<id>en</id>
+			<code>English</code>
+			<description>English</description>
+		</languageInfo>
 	</languageSettings>
 	<columns>
-		<size>5</size>
+		<size>6</size>
 		<columnsItem>
 			<index>0</index>
 			<column>
@@ -46,6 +51,12 @@
 				<formatIndex>4</formatIndex>
 			</column>
 		</columnsItem>
+		<columnsItem>
+			<index>5</index>
+			<column>
+				<formatIndex>4</formatIndex>
+			</column>
+		</columnsItem>
 	</columns>
 	<rowsItem>
 		<index>0</index>
@@ -54,6 +65,12 @@
 				<i>3</i>
 				<c>
 					<f>3</f>
+				</c>
+			</c>
+			<c>
+				<i>5</i>
+				<c>
+					<f>4</f>
 				</c>
 			</c>
 		</row>
@@ -67,6 +84,12 @@
 					<f>3</f>
 				</c>
 			</c>
+			<c>
+				<i>5</i>
+				<c>
+					<f>4</f>
+				</c>
+			</c>
 		</row>
 	</rowsItem>
 	<rowsItem>
@@ -76,6 +99,12 @@
 				<i>3</i>
 				<c>
 					<f>3</f>
+				</c>
+			</c>
+			<c>
+				<i>5</i>
+				<c>
+					<f>4</f>
 				</c>
 			</c>
 		</row>
@@ -128,6 +157,17 @@
 					</tl>
 				</c>
 			</c>
+			<c>
+				<c>
+					<f>7</f>
+					<tl>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ПараметрЧисло</v8:content>
+						</v8:item>
+					</tl>
+				</c>
+			</c>
 		</row>
 	</rowsItem>
 	<rowsItem>
@@ -136,26 +176,32 @@
 			<c>
 				<i>1</i>
 				<c>
-					<f>7</f>
+					<f>8</f>
 					<parameter>Наименование</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>7</f>
+					<f>8</f>
 					<parameter>Предопределенный</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>8</f>
+					<f>9</f>
 					<parameter>ВерсияДанных</parameter>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>7</f>
+					<f>8</f>
 					<parameter>ИмяПредопределенныхДанных</parameter>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>10</f>
+					<parameter>ПараметрЧисло</parameter>
 				</c>
 			</c>
 		</row>
@@ -166,22 +212,27 @@
 			<c>
 				<i>1</i>
 				<c>
-					<f>9</f>
+					<f>11</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>9</f>
+					<f>11</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>10</f>
+					<f>12</f>
 				</c>
 			</c>
 			<c>
 				<c>
-					<f>9</f>
+					<f>11</f>
+				</c>
+			</c>
+			<c>
+				<c>
+					<f>13</f>
 				</c>
 			</c>
 		</row>
@@ -195,10 +246,16 @@
 					<f>3</f>
 				</c>
 			</c>
+			<c>
+				<i>5</i>
+				<c>
+					<f>4</f>
+				</c>
+			</c>
 		</row>
 	</rowsItem>
 	<templateMode>true</templateMode>
-	<defaultFormatIndex>11</defaultFormatIndex>
+	<defaultFormatIndex>14</defaultFormatIndex>
 	<height>7</height>
 	<vgRows>7</vgRows>
 	<namedItem xsi:type="NamedItemCells">
@@ -265,7 +322,7 @@
 		<width>136</width>
 	</format>
 	<format>
-		<width>2056</width>
+		<width>240</width>
 	</format>
 	<format>
 		<font>0</font>
@@ -281,6 +338,13 @@
 		<textPlacement>Cut</textPlacement>
 	</format>
 	<format>
+		<font>0</font>
+		<border>0</border>
+		<width>240</width>
+		<verticalAlignment>Top</verticalAlignment>
+		<textPlacement>Cut</textPlacement>
+	</format>
+	<format>
 		<textPlacement>Wrap</textPlacement>
 		<fillType>Parameter</fillType>
 	</format>
@@ -290,11 +354,20 @@
 		<fillType>Parameter</fillType>
 	</format>
 	<format>
+		<width>240</width>
+		<textPlacement>Wrap</textPlacement>
+		<fillType>Parameter</fillType>
+	</format>
+	<format>
 		<topBorder>0</topBorder>
 	</format>
 	<format>
 		<topBorder>0</topBorder>
 		<width>136</width>
+	</format>
+	<format>
+		<topBorder>0</topBorder>
+		<width>240</width>
 	</format>
 	<format>
 		<width>72</width>
