@@ -4,6 +4,10 @@
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 
+#т.к. используется метод УстановитьРезультатДиалогаВыбораФайла
+@IgnoreOn836
+@IgnoreOn837
+
 
 
 
