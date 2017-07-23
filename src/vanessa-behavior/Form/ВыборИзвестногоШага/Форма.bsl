@@ -367,7 +367,7 @@
 
 &НаСервере
 Функция СоздатьFeatureReader(КаталогИнструментов, ДвДанныеvbFeatureReader, ВременноеИмяФайла)
-	ФайлvbFeatureReader = Новый Файл(КаталогИнструментов + "\vbFeatureReader.epf");
+	ФайлvbFeatureReader = Новый Файл(КаталогИнструментов + "\lib\FeatureReader\vbFeatureReader.epf");
 	ВременноеИмяФайла = Неопределено;
 	Если Не ФайлvbFeatureReader.Существует() Тогда
 		ВременноеИмяФайла = ПолучитьИмяВременногоФайла("epf");
