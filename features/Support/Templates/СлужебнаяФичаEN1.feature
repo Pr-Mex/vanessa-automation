@@ -1,5 +1,10 @@
 ﻿#language: en
 
+
+@IgnoreOnCIMainBuild
+
+
+
 Functionality: For test english feature
 
 As <Role>
