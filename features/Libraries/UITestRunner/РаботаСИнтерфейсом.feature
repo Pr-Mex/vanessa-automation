@@ -4,6 +4,7 @@
 @IgnoreOnOFBuilds
 @IgnoreOn837
 @IgnoreOn836
+@IgnoreOnWeb8310
 
 
 Функционал: Я хочу работать с командным интерфейсом 1С 8.3.x
