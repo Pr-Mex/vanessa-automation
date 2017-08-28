@@ -103,7 +103,7 @@
 	".\lib\CF\83\",".\tools\ServiceBases\v83ServiceBase8310", "8.3.10"));
 
 массивСервисныхБаз.Добавить(Новый Структура("ПутьКИсходникам,СоздаваемаяБаза, Версия",
-	".\lib\CF\83NoSync\",".\tools\ServiceBases\v83NoSyncServiceBase", "8.3.9"));
+	".\lib\CF\83NoSync\",".\tools\ServiceBases\v83NoSyncServiceBase", "8.3.10"));
 	
 
 УправлениеКонфигуратором = Новый УправлениеКонфигуратором();
