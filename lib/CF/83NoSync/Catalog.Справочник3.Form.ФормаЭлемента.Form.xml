@@ -16,6 +16,12 @@
 			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
 			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
 		</InputField>
+		<CheckBoxField name="СделатьМакетНедоступным" id="20">
+			<DataPath>СделатьМакетНедоступным</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="СделатьМакетНедоступнымКонтекстноеМеню" id="21"/>
+			<ExtendedTooltip name="СделатьМакетНедоступнымРасширеннаяПодсказка" id="22"/>
+		</CheckBoxField>
 		<Button name="СформироватьОтчет" id="7">
 			<Type>UsualButton</Type>
 			<CommandName>Form.Command.СформироватьОтчет</CommandName>
@@ -69,6 +75,17 @@
 			</Title>
 			<Type>
 				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СделатьМакетНедоступным" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сделать макет недоступным</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
 	</Attributes>
