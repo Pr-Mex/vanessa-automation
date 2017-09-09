@@ -52,6 +52,11 @@
 			<Parameter xsi:nil="true"/>
 			<ExtendedTooltip name="КомандаПоказатьВопросСНестандартнымДиалогомРасширеннаяПодсказка" id="19"/>
 		</Button>
+		<CalendarField name="Календарь" id="23">
+			<DataPath>Календарь</DataPath>
+			<ContextMenu name="КалендарьКонтекстноеМеню" id="24"/>
+			<ExtendedTooltip name="КалендарьРасширеннаяПодсказка" id="25"/>
+		</CalendarField>
 		<SpreadSheetDocumentField name="РеквизитТабличныйДокумент" id="9">
 			<DataPath>РеквизитТабличныйДокумент</DataPath>
 			<ContextMenu name="РеквизитТабличныйДокументКонтекстноеМеню" id="10"/>
@@ -86,6 +91,20 @@
 			</Title>
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Календарь" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Календарь</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
 			</Type>
 		</Attribute>
 	</Attributes>
