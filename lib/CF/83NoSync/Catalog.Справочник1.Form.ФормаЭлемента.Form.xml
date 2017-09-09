@@ -2,7 +2,17 @@
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаДобавитьМногострочнуюСтрокуВТЧ" id="171">
+				<Type>CommandBarButton</Type>
+				<OnlyInAllActions>false</OnlyInAllActions>
+				<CommandName>Form.Command.ДобавитьМногострочнуюСтрокуВТЧ</CommandName>
+				<Parameter xsi:nil="true"/>
+				<ExtendedTooltip name="ФормаДобавитьМногострочнуюСтрокуВТЧРасширеннаяПодсказка" id="172"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
 	<Events>
 		<Event name="BeforeWrite">ПередЗаписью</Event>
 		<Event name="OnClose">ПриЗакрытии</Event>
@@ -209,6 +219,13 @@
 									<ClearButton>true</ClearButton>
 									<ContextMenu name="ТабличнаяЧасть1РеквизитСправочникВыборИзФормыСпискаКонтекстноеМеню" id="60"/>
 									<ExtendedTooltip name="ТабличнаяЧасть1РеквизитСправочникВыборИзФормыСпискаРасширеннаяПодсказка" id="61"/>
+								</InputField>
+								<InputField name="ТабличнаяЧасть1МногострочнаяСтрока" id="168">
+									<DataPath>Объект.ТабличнаяЧасть1.МногострочнаяСтрока</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<MultiLine>true</MultiLine>
+									<ContextMenu name="ТабличнаяЧасть1МногострочнаяСтрокаКонтекстноеМеню" id="169"/>
+									<ExtendedTooltip name="ТабличнаяЧасть1МногострочнаяСтрокаРасширеннаяПодсказка" id="170"/>
 								</InputField>
 							</ChildItems>
 						</Table>
@@ -584,6 +601,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОткрытьСписокЗначениейСПометками</Action>
+		</Command>
+		<Command name="ДобавитьМногострочнуюСтрокуВТЧ" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить многострочную строку в ТЧ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить многострочную строку ВТЧ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьМногострочнуюСтрокуВТЧ</Action>
 		</Command>
 	</Commands>
 	<CommandInterface>
