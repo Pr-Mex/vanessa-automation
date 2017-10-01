@@ -3504,16 +3504,6 @@
 
 //для работы с файлами - конец
 
-
- 
- 
-//WinSocket1 = ЭлементыФормы.WinSocket;
-//СтримAdobe = Новый COMОбъект("Adodb.Stream");
- 
-//RegExp            = Новый COMОбъект("VBScript.RegExp");
-//RegExp.IgnoreCase = Истина; //Игнорировать регистр
-//RegExp.Global     = Истина; //Поиск всех вхождений шаблона
-//RegExp.MultiLine  = Ложь; //Многострочный режим
  
 ЭтоУФ = Ложь;
 ЭтоLinux = Ложь;
