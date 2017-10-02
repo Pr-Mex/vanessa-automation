@@ -184,7 +184,7 @@ git submodule update --init --recursive
 * [Огурец](https://cukes.info/)
 * [Автоматизированное тестирование 1С](http://v8.1c.ru/overview/Term_000000816.htm)
 * [Yandex Allure](http://allure.qatools.ru/)
-* [Silenium](http://docs.seleniumhq.org/)
+* [Selenium](http://docs.seleniumhq.org/)
 * [ТРИЗ](https://ru.wikipedia.org/wiki/Теория_решения_изобретательских_задач)
 * [Дэн Норт](http://en.wikipedia.org/wiki/Acceptance_test-driven_development)
 
