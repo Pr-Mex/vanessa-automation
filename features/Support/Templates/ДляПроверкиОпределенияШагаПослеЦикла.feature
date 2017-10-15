@@ -1,5 +1,4 @@
 ﻿@tree
-@ExportScenarios
 @IgnoreOnCIMainBuild
 
 Функциональность: Тест
