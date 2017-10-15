@@ -12,13 +12,11 @@ Background:
 
 Scenario: <description of the scenario>
 
-	When in command interface group I select "Основная"
-	And in the function panel I select "Справочник1"
+	And In the command interface I choose "Основная" "Справочник1"
 	Then I see the window "Справочник1"
 	And I click on the "Создать" button
 	Then I see the window "Справочник1 (создание)"
 	And in the field "Наименование" I enter "111"
-	And I open the drop-down list "Реквизит1"
 	And I press the Select button in the field "Реквизит1"
 	And from the dropdown list "Реквизит1" I choose "ЗначениеПеречисления1"
 	And in the field "Реквизит число" I enter "123,00"
