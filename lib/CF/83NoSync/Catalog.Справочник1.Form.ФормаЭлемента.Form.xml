@@ -407,6 +407,13 @@
 							<ContextMenu name="РеквизитСтандартныйПериодКонтекстноеМеню" id="174"/>
 							<ExtendedTooltip name="РеквизитСтандартныйПериодРасширеннаяПодсказка" id="175"/>
 						</InputField>
+						<InputField name="РеквизитМногострочнаяСтрока" id="176">
+							<DataPath>РеквизитМногострочнаяСтрока</DataPath>
+							<Height>1</Height>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="РеквизитМногострочнаяСтрокаКонтекстноеМеню" id="177"/>
+							<ExtendedTooltip name="РеквизитМногострочнаяСтрокаРасширеннаяПодсказка" id="178"/>
+						</InputField>
 					</ChildItems>
 				</Page>
 				<Page name="Группа2" id="127">
@@ -524,6 +531,21 @@
 			</Title>
 			<Type>
 				<v8:Type>v8:StandardPeriod</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РеквизитМногострочнаяСтрока" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизит многострочная строка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
 	</Attributes>
