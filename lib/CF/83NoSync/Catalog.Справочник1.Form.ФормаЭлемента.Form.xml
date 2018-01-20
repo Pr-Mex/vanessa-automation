@@ -11,6 +11,12 @@
 				<Parameter xsi:nil="true"/>
 				<ExtendedTooltip name="ФормаДобавитьМногострочнуюСтрокуВТЧРасширеннаяПодсказка" id="172"/>
 			</Button>
+			<Button name="ФормаКоманда1" id="179">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ВызватьИсключение</CommandName>
+				<Parameter xsi:nil="true"/>
+				<ExtendedTooltip name="ФормаКоманда1РасширеннаяПодсказка" id="180"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -39,7 +45,16 @@
 						<InputField name="Наименование" id="4">
 							<DataPath>Объект.Description</DataPath>
 							<EditMode>EnterOnInput</EditMode>
-							<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+							<ContextMenu name="НаименованиеКонтекстноеМеню" id="5">
+								<ChildItems>
+									<Button name="НаименованиеКонтекстноеМенюКонтекстноеМенюНаименование" id="181">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.КонтекстноеМенюНаименование</CommandName>
+										<Parameter xsi:nil="true"/>
+										<ExtendedTooltip name="НаименованиеКонтекстноеМенюКонтекстноеМенюНаименованиеРасширеннаяПодсказка" id="182"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
 							<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
 						</InputField>
 						<InputField name="Реквизит1" id="7">
@@ -72,6 +87,7 @@
 						</InputField>
 						<InputField name="РеквизитЧисло" id="53">
 							<DataPath>Объект.РеквизитЧисло</DataPath>
+							<SpinButton>true</SpinButton>
 							<ContextMenu name="РеквизитЧислоКонтекстноеМеню" id="54"/>
 							<ExtendedTooltip name="РеквизитЧислоРасширеннаяПодсказка" id="55"/>
 						</InputField>
@@ -139,7 +155,16 @@
 							<EnableDrag>true</EnableDrag>
 							<DataPath>Объект.ТабличнаяЧасть1</DataPath>
 							<RowFilter xsi:nil="true"/>
-							<ContextMenu name="ТабличнаяЧасть1КонтекстноеМеню" id="14"/>
+							<ContextMenu name="ТабличнаяЧасть1КонтекстноеМеню" id="14">
+								<ChildItems>
+									<Button name="ТабличнаяЧасть1КонтекстноеМенюКонтекстноеМенюТабличнаяЧасть1" id="183">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.КонтекстноеМенюТабличнаяЧасть1</CommandName>
+										<Parameter xsi:nil="true"/>
+										<ExtendedTooltip name="ТабличнаяЧасть1КонтекстноеМенюКонтекстноеМенюТабличнаяЧасть1РасширеннаяПодсказка" id="184"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
 							<AutoCommandBar name="ТабличнаяЧасть1КоманднаяПанель" id="15"/>
 							<ExtendedTooltip name="ТабличнаяЧасть1РасширеннаяПодсказка" id="16"/>
 							<SearchStringAddition name="ТабличнаяЧасть1СтрокаПоиска" id="17">
@@ -176,6 +201,7 @@
 								<InputField name="ТабличнаяЧасть1РеквизитЧисло" id="29">
 									<DataPath>Объект.ТабличнаяЧасть1.РеквизитЧисло</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<SpinButton>true</SpinButton>
 									<ContextMenu name="ТабличнаяЧасть1РеквизитЧислоКонтекстноеМеню" id="30"/>
 									<ExtendedTooltip name="ТабличнаяЧасть1РеквизитЧислоРасширеннаяПодсказка" id="31"/>
 								</InputField>
@@ -654,6 +680,51 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ДобавитьМногострочнуюСтрокуВТЧ</Action>
+		</Command>
+		<Command name="ВызватьИсключение" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вызвать исключение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вызвать исключение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВызватьИсключениеПроцедура</Action>
+		</Command>
+		<Command name="КонтекстноеМенюНаименование" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контекстное меню наименование</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контекстное меню наименование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КонтекстноеМенюНаименование</Action>
+		</Command>
+		<Command name="КонтекстноеМенюТабличнаяЧасть1" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контекстное меню табличная часть1</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контекстное меню табличная часть1</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КонтекстноеМенюТабличнаяЧасть1</Action>
 		</Command>
 	</Commands>
 	<CommandInterface>
