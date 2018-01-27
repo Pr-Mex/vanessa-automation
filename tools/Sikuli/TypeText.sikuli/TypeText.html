@@ -46,8 +46,8 @@
          h2 {
             display: inline;
             font-weight: normal;
-         }  
-         
+         }
+
          .info {
             border-bottom: 1px solid #ddd;
             padding-bottom: 5px;
@@ -67,14 +67,16 @@
    </head>
 <body>
 <div class="info">
-<h2>TypeText.sikuli\TypeText.sikuli</h2> <a href="TypeText.sikuli\TypeText.zip">(Download this script)</a>
+<h2>TypeText.sikuli</h2> <a href="TypeText.zip">(Download this script)</a>
 </div>
 <pre class="sikuli-code">
 <span class="kw">import</span> sys.argv
 
-<span class="cmt">#paste(unicode(sys.argv[1],'utf-8'))
-</span><span class="cmt">#sleep(1)
-</span>file = open(sys.argv[<span class="dig">1</span>], <span class="str">'r'</span>)
+<span class="cmt">#paste(unicode(sys.argv[1],'utf-8'))</span>
+<span class="cmt">#sleep(1)</span>
+
+<span class="cmt">#print sys.argv[0]</span>
+file = open(sys.argv[<span class="dig">1</span>], <span class="str">'r'</span>)
 <span class="kw">while</span> True:
     line = file.readline()
     <span class="kw">if</span> <span class="kw">not</span> line:
@@ -84,11 +86,11 @@
         <span class="skw">type</span>(Key.ENTER)
     <span class="kw">else</span>:
         paste(stroka)
-        <span class="cmt">#App.setClipboard(stroka)
-</span>        <span class="cmt">#rightClick(Env.getMouseLocation())
-</span>        <span class="cmt">#sleep(0.5)
-</span>        <span class="cmt">#click("Bcrasmu.png")
-</span>    <span class="skw">sleep</span>(<span class="dig">0.5</span>)
+        <span class="cmt">#App.setClipboard(stroka)</span>
+        <span class="cmt">#rightClick(Env.getMouseLocation())</span>
+        <span class="cmt">#sleep(0.5)</span>
+        <span class="cmt">#click("Bcrasmu.png")</span>
+    <span class="skw">sleep</span>(<span class="dig">0.5</span>)
 <span class="skw">sleep</span>(<span class="dig">1</span>)
 exit(<span class="dig">0</span>)
 </pre>
