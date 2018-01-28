@@ -2,6 +2,8 @@ import sys.argv
 
 #paste(unicode(sys.argv[1],'utf-8'))
 #sleep(1)
+
+#print sys.argv[0]
 file = open(sys.argv[1], 'r')
 while True:
     line = file.readline()
