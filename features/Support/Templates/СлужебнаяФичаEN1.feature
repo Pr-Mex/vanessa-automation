@@ -22,7 +22,7 @@ Scenario: Create record in spr1
 	Then I see the window "Справочник1"
 	And I click on the "Создать" button
 	Then I see the window "Справочник1 (создание)"
-	And I enter "111" in the field called "Наименование" 
+	And I enter "111" in the field named "Наименование" 
 	And I click on the "Записать и закрыть" button
 
 
