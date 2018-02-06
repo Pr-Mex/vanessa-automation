@@ -43,7 +43,7 @@
 		| 'Success' | 'Then I see the window "Справочник1"'                                  |
 		| 'Success' | 'And I click on the "Создать" button'                                  |
 		| 'Success' | 'Then I see the window "Справочник1 (создание)"'                       |
-		| 'Success' | 'And I enter "111" in the field called "Наименование"'                 |
+		| 'Success' | 'And I enter "111" in the field named "Наименование"'                 |
 		| 'Success' | 'And I click on the "Записать и закрыть" button'                       |
 		| 'Success' | 'Close TestClient'                                                     |
 		| 'Success' | 'Given I close the session TESTCLIENT'                                 |
