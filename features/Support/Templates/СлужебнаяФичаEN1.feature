@@ -12,19 +12,17 @@ I want <functional description>
 To <business effect>
 
 Background:
-	Given I connect to the TestClient or reconnect to existing
+	Given I launch TestClient opening script or connect the existing one
 
 
 Scenario: Create record in spr1
 
-	When in command interface group I select "Основная"
-	And in the function panel I select "Справочник1"
-	Then I see the window "Справочник1"
-	And I click on the "Создать" button
-	Then I see the window "Справочник1 (создание)"
-	And I enter "111" in the field named "Наименование" 
-	And I click on the "Записать и закрыть" button
-
+	And In the command interface I select "Основная" "Справочник1"
+	Then "Справочник1" window is opened
+	And I click the button named "ФормаСоздать"
+	Then "Справочник1 (создание)" window is opened
+	And I input "111" text in the field named "Наименование"
+	And I click "Записать и закрыть" button
 
 Scenario: Close TestClient
-	Given I close the session TESTCLIENT
+	And I close TestClient session
