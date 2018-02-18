@@ -16,7 +16,7 @@
 	
 
 Сценарий: Проверка таблицы перевода
-	
+	И я закрываю сеанс TESTCLIENT
 	Когда Я подключаю клиент тестирования с параметрами:
 		| 'Имя подключения' | 'Порт' | 'Строка соединения'  | 'Логин' | 'Пароль' |  'Дополнительные параметры строки запуска'  |
 		| 'TestEN'          | '1538' | ''                   | ''      | ''       |  '/TestManager'                                      |
@@ -29,24 +29,25 @@
 	И     Я нажимаю на кнопку перезагрузить сценарии в Vanessa-Behavior TestClient
 	И     Я нажимаю на кнопку выполнить сценарии в Vanessa-Behavior TestClient
 	
-	Тогда таблица формы с именем "ДеревоТестов" стала равной:
-		| 'Статус'  | 'Наименование'                                                         |
-		| ''        | 'СлужебнаяФичаEN1.feature'                                             |
-		| ''        | 'СлужебнаяФичаEN1'                                                     |
-		| ''        | 'Контекст'                                                             |
-		| ''        | 'Given I connect to the TestClient or reconnect to existing'           |
-		| 'Success' | 'Given I opened a new TestClient session or connected an existing one' |
-		| 'Success' | 'And I closed all the windows client application'                      |
-		| 'Success' | 'Create record in spr1'                                                |
-		| 'Success' | 'When in command interface group I select "Основная"'                  |
-		| 'Success' | 'And in the function panel I select "Справочник1"'                     |
-		| 'Success' | 'Then I see the window "Справочник1"'                                  |
-		| 'Success' | 'And I click on the "Создать" button'                                  |
-		| 'Success' | 'Then I see the window "Справочник1 (создание)"'                       |
-		| 'Success' | 'And I enter "111" in the field named "Наименование"'                 |
-		| 'Success' | 'And I click on the "Записать и закрыть" button'                       |
-		| 'Success' | 'Close TestClient'                                                     |
-		| 'Success' | 'Given I close the session TESTCLIENT'                                 |
+	Тогда таблица "ДеревоТестов" стала равной:
+		| 'Наименование'                                                         | 'Статус'  |
+		| 'СлужебнаяФичаEN1.feature'                                             | ''        |
+		| 'СлужебнаяФичаEN1'                                                     | ''        |
+		| 'Контекст'                                                             | ''        |
+		| 'Given I launch TestClient opening script or connect the existing one' | ''        |
+		| 'Given I open new TestClient session or connect the existing one'      | 'Success' |
+		| 'And I close all client application windows'                           | 'Success' |
+		| 'Create record in spr1'                                                | 'Success' |
+		| 'And In the command interface I select "Основная" "Справочник1"'       | 'Success' |
+		| 'Then "Справочник1" window is opened'                                  | 'Success' |
+		| 'And I click the button named "ФормаСоздать"'                          | 'Success' |
+		| 'Then "Справочник1 (создание)" window is opened'                       | 'Success' |
+		| 'And I input "111" text in the field named "Наименование"'             | 'Success' |
+		| 'And I click "Записать и закрыть" button'                              | 'Success' |
+		| 'Close TestClient'                                                     | 'Success' |
+		| 'And I close TestClient session'                                       | 'Success' |
+
+
 
 Сценарий: Закрытие слубеного сеанса TestEN
 	И я закрываю TestClient "TestEN"

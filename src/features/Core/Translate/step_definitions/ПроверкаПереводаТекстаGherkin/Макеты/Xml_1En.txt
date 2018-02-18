@@ -1,38 +1,38 @@
 ﻿#language: en
 
-Functionality: <description features>
+Functionality: <feature description>
 
 As <Role>
-I want <functional description>
+I want <functionality description>
 To <business effect>
 
-Background:
-	Given I connect to the TestClient or reconnect to existing
+Context:
+	Given I launch TestClient opening script or connect the existing one
 
 
-Scenario: <description of the scenario>
+Script: <script description>
 
-	And In the command interface I choose "Основная" "Справочник1"
-	Then I see the window "Справочник1"
-	And I click on the "Создать" button
-	Then I see the window "Справочник1 (создание)"
-	And in the field "Наименование" I enter "111"
-	And I press the Select button in the field "Реквизит1"
-	And from the dropdown list "Реквизит1" I choose "ЗначениеПеречисления1"
-	And in the field "Реквизит число" I enter "123,00"
-	And in the field "Реквизит строка" I enter "456"
-	And I press the Select button in the field "Реквизит дата"
-	And in the field "Реквизит дата" I enter "22.07.2017"
-	And I change the switch "Реквизит переключатель" on ""
-	And in the table "ТабличнаяЧасть1" I click on the "Добавить" button
-	And in the table "ТабличнаяЧасть1" in the field "Реквизит число" I enter the text "111,00"
-	And in the table "ТабличнаяЧасть1" I activates the "Реквизит строка"
-	And in the table "ТабличнаяЧасть1" in the field "Реквизит строка" I enter the text "222"
-	And in the table "ТабличнаяЧасть1" I activates the "Реквизит дата"
-	And Table "ТабличнаяЧасть1" I press the select button at the props "Реквизит дата"
-	And in the table "ТабличнаяЧасть1" I activates the "Реквизит булево"
-	And in the table "ТабличнаяЧасть1" I finish line editing
-	And in the table "ТабличнаяЧасть1" I change the flag "Реквизит булево"
-	And in the table "ТабличнаяЧасть1" I finish line editing
-	And I click on the "Записать и закрыть" button
+	And In the command interface I select "Основная" "Справочник1"
+	Then "Справочник1" window is opened
+	And I click "Создать" button
+	Then "Справочник1 (создание)" window is opened
+	And I input "111" text in "Наименование" field
+	And I click Select button of "Реквизит1" field
+	And I select "ЗначениеПеречисления1" value from "Реквизит1" drop-down list
+	And I input "123,00" text in "Реквизит число" field
+	And I input "456" text in "Реквизит строка" field
+	And I click Select button of "Реквизит дата" field
+	And I input "22.07.2017" text in "Реквизит дата" field
+	And I change "Реквизит переключатель" radio button value to ""
+	And in the table "ТабличнаяЧасть1" I click "Добавить" button
+	And I input "111,00" text in "Реквизит число" field of "ТабличнаяЧасть1" table
+	And I activate "Реквизит строка" field in "ТабличнаяЧасть1" table
+	And I input "222" text in "Реквизит строка" field of "ТабличнаяЧасть1" table
+	And I activate "Реквизит дата" field in "ТабличнаяЧасть1" table
+	And I click choice button of "Реквизит дата" attribute in "ТабличнаяЧасть1" table
+	And I activate "Реквизит булево" field in "ТабличнаяЧасть1" table
+	And I finish line editing in "ТабличнаяЧасть1" table
+	And I change "Реквизит булево" checkbox in "ТабличнаяЧасть1" table
+	And I finish line editing in "ТабличнаяЧасть1" table
+	And I click "Записать и закрыть" button
 

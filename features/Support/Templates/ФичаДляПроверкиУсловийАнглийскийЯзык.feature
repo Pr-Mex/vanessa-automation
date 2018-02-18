@@ -13,13 +13,13 @@ To <business effect>
 Scenario: First
 
 
-	And I remember the expression result "1" in the variable "KolichestvoNachalnoe"
-	If the variable "KolichestvoNachalnoe" is set to 1 Then
-		And I remember the expression result "2" in the variable "KolichestvoNachalnoe"
-		And the expression of the internal language "Контекст.KolichestvoNachalnoe = 2" is true
-		And I remember the expression result "Контекст.KolichestvoNachalnoe" in the variable "KolichestvoNachalnoe2" globally
+	And I save "1" in "KolichestvoNachalnoe" variable
+	If "KolichestvoNachalnoe" variable is equal to 1 Then
+		And I save "2" in "KolichestvoNachalnoe" variable
+		And 1C:Enterprise language expression "Контекст.KolichestvoNachalnoe = 2" is true
+		And I save "Контекст.KolichestvoNachalnoe" in "KolichestvoNachalnoe2" variable globally
 		
 		
 Scenario: Second
-	And the expression of the internal language "КонтекстСохраняемый.KolichestvoNachalnoe2 = 2" is true
+	And 1C:Enterprise language expression "КонтекстСохраняемый.KolichestvoNachalnoe2 = 2" is true
 
