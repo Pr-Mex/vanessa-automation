@@ -20,6 +20,29 @@
 	
 	
 	
+Сценарий: Проверка загрузки фичи
+	Когда Я открываю VanessaBehavior в режиме TestClient со стандартной библиотекой
+	
+	Когда В поле с именем "КаталогФичСлужебный" я указываю путь к служебной фиче "СлужебнаяФичаEN2"
+	И     Я нажимаю на кнопку перезагрузить сценарии в Vanessa-Behavior TestClient
+
+	Тогда таблица "ДеревоТестов" стала равной:
+		| 'Наименование'                                                         |
+		| 'СлужебнаяФичаEN2.feature'                                             |
+		| 'СлужебнаяФичаEN2'                                                     |
+		| 'Контекст'                                                             |
+		| 'Given I launch TestClient opening script or connect the existing one' |
+		| 'Given I open new TestClient session or connect the existing one'      |
+		| 'And I close all client application windows'                           |
+		| '<script description>'                                                 |
+		| 'And In the command interface I select "Основная" "Справочник1"'       |
+
+
+
+
+
+	
+	
 
 Сценарий: Проверка таблицы перевода
 	Когда Я открываю VanessaBehavior в режиме TestClient со стандартной библиотекой
