@@ -1,6 +1,11 @@
 # language: ru
 
 @IgnoreOn82Builds
+@IgnoreOn836
+@IgnoreOn837
+@IgnoreOn838
+@IgnoreOn839
+#из-за ошибки платформы ввода текста в текстовый документ
 @IgnoreOnOFBuilds
 @IgnoreOnWeb
 
