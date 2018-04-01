@@ -19,6 +19,30 @@
 	Дано Я запускаю сценарий открытия TestClient или подключаю уже существующий
 	
 	
+Сценарий: Проверка загрузки структуры сценария на другом языке
+	Когда Я открываю VanessaBehavior в режиме TestClient со стандартной библиотекой
+	
+	Когда В поле с именем "КаталогФичСлужебный" я указываю путь к служебной фиче "СлужебнаяФичаEN3"
+	И     Я нажимаю на кнопку перезагрузить сценарии в Vanessa-Behavior TestClient
+
+	Тогда таблица "ДеревоТестов" стала равной:
+		| 'Наименование'                                                         |
+		| 'СлужебнаяФичаEN3.feature'                                             |
+		| 'СлужебнаяФичаEN3'                                                     |
+		| 'Контекст'                                                             |
+		| 'Given I launch TestClient opening script or connect the existing one' |
+		| 'Given I open new TestClient session or connect the existing one'      |
+		| 'And I close all client application windows'                           |
+		| 'Indeplinire catalogului Parteneri'                                    |
+		| 'And I close "Clienți" window'                                         |
+		| 'Примеры'                                                              |
+		| '\| CUI       \|'                                                      |
+		| '\| RO9335522 \|'                                                      |
+		| 'And I close "Clienți" window'                                         |
+
+
+	
+	
 	
 Сценарий: Проверка загрузки фичи
 	Когда Я открываю VanessaBehavior в режиме TestClient со стандартной библиотекой
