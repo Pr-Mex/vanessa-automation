@@ -5,5 +5,3 @@
 -
 -
 -
-
-@silverbulleters/coloborators - просьба прокомментировать и проверить

@@ -1,20 +1,25 @@
 ﻿# vanessa-behavior
 
 [![Открытый чат проекта https://gitter.im/silverbulleters/vanessa-behavoir](https://badges.gitter.im/silverbulleters/vanessa-behavior.svg)](https://gitter.im/silverbulleters/vanessa-behavoir?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-[![Build Status](http://ci.silverbulleters.org/buildStatus/icon?job=Vanessa-Behavior-Develop)](http://ci.silverbulleters.org/job/Vanessa-Behavior-Develop/)
-[![Crowdin](https://d322cqt584bo4o.cloudfront.net/vanessa-services/localized.svg)](https://crowdin.com/project/vanessa-services)
 
 ## BDD for 1С:Enterprise
 
-Текущий релиз в ветке [Master: 1.1.131](https://github.com/silverbulleters/vanessa-behavior/tree/master)
-Разработка ведется в ветке [Develop](https://github.com/silverbulleters/vanessa-behavior/tree/develop). Эта же ветка является основной.
+Текущий релиз в ветке [Master: 1.2.001](https://github.com/Pr-Mex/vanessa-behavior/tree/master)
+Разработка ведется в ветке [Develop](https://github.com/Pr-Mex/vanessa-behavior/tree/develop). Эта же ветка является основной.
+
+В данном репозитории хранятся только исходники.
+Вы можете собрать необходимые файлы сами, либо скачать уже собранные в релизах.
+При первом скачивании репозитория необходимо собрать файлы обработок.
+Для этого надо запустить Compile.bat
+
+Чтобы зафиксировать изменения epf файлов, нужно запустить Decompile.bat.
 
 Проект использует принцип формирования автодокументации в формате Markdown и видео:
 * Markdown инструкции лежат [здесь](https://github.com/silverbulleters/vanessa-services/tree/master/ru-RU/behavior/Features) 
 * Видео инструкции лежат [здесь](https://www.youtube.com/channel/UC2mJ4LlMG-FF4qkc_kqN_iQ) 
 * Прочие инструкции сгруппированы [в этом плейлисте YouTube](https://www.youtube.com/playlist?list=PL2zlgf113YhFG_uRARjDtP1_Obj55UmY4) 
 * Также рекомендуется посмотреть вот [этот вебинар](http://infostart.ru/webinars/537546/) 
-* Возможно вам поможет [этот FAQ](https://github.com/silverbulleters/vanessa-behavior/blob/develop/F.A.Q.MD)
+* Возможно вам поможет [этот FAQ](https://github.com/Pr-Mex/vanessa-behavior/blob/develop/F.A.Q.MD)
 
 Чтобы у вас работало автосоздание видеоинструкций необходимо установить дополнительный софт. Инструкция [здесь](https://github.com/silverbulleters/vanessa-behavior/blob/develop/MakeAutoVideo.md) 
 Также по автовидеоинструкциям есть вот это замечательное [видео](https://www.youtube.com/watch?v=BfXowJH5uP0)
@@ -28,7 +33,7 @@
 Клонируйте данный репозиторий с помощью **ms-git**
 
 ```
-git clone https://github.com/silverbulleters/vanessa-behavior.git
+git clone https://github.com/Pr-Mex/vanessa-behavior.git
 ```
 
 Или используйте [шаблон работы по проекту 1С](https://github.com/silverbulleters/vanessa-bootstrap)
@@ -114,8 +119,7 @@ git submodule update --init --recursive
 * бизнес или системный аналитик - на основе собранных требований и технических заданий;
 * ведущий разработки - если обнаружил, что требования недостаточно структурированы;
 * архитектор или эксперт 1С - если текущие сценарии некорректно спроектированы с точки зрения метаданных.
-
-Для редактирования feature файлов используется проект  [по автоматизации сбора требований](https://github.com/silverbulleters/vanessa-bdd-editor) - на текущий момент имеет статус *beta*
+* тестироровщик - когда пишет сценарии для проверки поведения
 
 Если вы не уверены в правильности ожидаемого поведения, используйте для этого системы тэгов, как то:
 * "@Draft@"  - черновик требования
@@ -164,13 +168,9 @@ git submodule update --init --recursive
 
 Примеры запуска можно увидеть в соседнем репозитории [Vanessa Runner](https://github.com/silverbulleters/vanessa-runner/blob/master/tools/vanessa.bat)
 
-## Создается при финансовой поддержке
-
-как попасть в этот раздел ? смотри [DONATIONS.md](./DONATIONS.md)
 
 ## Замечания:
 
-* в процессе подготовки редакции 1.0 идут активные изменения, вследствие чего обратная совместимость с редакциями ниже 1.0 может не соблюдаться;
 * пожелания к использованию можно фиксировать в виде Github Issues;
 * структура каталогов проекта соответствует шаблону https://github.com/silverbulleters/vanessa-bootstrap
 
@@ -188,47 +188,11 @@ git submodule update --init --recursive
 * [ТРИЗ](https://ru.wikipedia.org/wiki/Теория_решения_изобретательских_задач)
 * [Дэн Норт](http://en.wikipedia.org/wiki/Acceptance_test-driven_development)
 
-## Заметки для желающих поучаствовать в доработке
 
-* мы используем подход git-flow для реализации функциональности;
-* мы используем precommit1c для фиксации исходников Epf обработки в git;
-* мы используем принцип самопроверки через feature файлы, поэтому перед разработкой новой функциональности мы также - разрабатываем feature файлы, генерируем шаблоны сценариев и наполняем их кодом для проверки. Поэтому к доработкам без feature файлов мы относимся "холодно".
-
-Более подробно в файле [CONTRIBUTING.md](https://github.com/silverbulleters/vanessa-behavior/blob/develop/CONTRIBUTING.md)
+Более подробно в файле [CONTRIBUTING.md](https://github.com/Pr-Mex/vanessa-behavior/blob/develop/CONTRIBUTING.md)
 
 ## Лицензии
 
 * основная лицензия продукта - BSD v3
 * лицензии стороннего кода - Apache License, GitHub CLA, Freeware, etc
 
-## Поддержка OpenSource команды
-
-* мы используем https://salt.bountysource.com/checkout/amount?team=silverbulleters
-
-## FAQ
-
-* **Q: много ли команд используют такой подход ?**
-* **A:** из известных нам - 63 команды
-
-* **Q: можно ли тестировать производительность с помощью BDD ?**
-* **A:** для этого существует другой закрытый инструментарий, который использует Vanessa-Behavior как клиента тестирования - используется в Enterprise проектах.
-
-* **Q: Что вы думаете об "1С:Сценарное Тестирование" ?**
-* **A:** на наш взгляд, "Сценарное Тестирование" слишком дорого по совокупной стоимости владения (TOC). Обратите внимание, "Учебный Центр №1" проводит подготовку слушателей по функционалу тестирования в 1С:Предприятии [(ссылка на Facebook)](https://www.facebook.com/1631718833760014/posts/1715544585377438/) - если Вас интересует функционал "Сценарного Тестирования", возможно стоит записаться именно на этот курс.
-
-## Enterprise Support
-
-Платная подддержка содержит в себе:
-* обучение навыкам работы с BDD при разработке на 1С;
-* обучение навыкам написания на языке Gherkin;
-* обучение навыкам написания сценариев проверки поведения.
-
-Для заказа платной поддержки необходимо отравить заявку на адрес education@silverbulleters.org 
-или 
-по телефону +7-(499)-346-70-19.
-
-[![ZenHub] (https://raw.githubusercontent.com/ZenHubIO/support/master/zenhub-badge.png)] (https://zenhub.io)
-
-Контура сборки предоставлены
-
-[![DOcean] (https://www.digitalocean.com/assets/media/logos-badges/png/DO_Logo_Horizontal_Blue-3db19536.png)](https://m.do.co/c/2a3a0769ac84)
