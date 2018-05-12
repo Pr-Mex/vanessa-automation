@@ -1,0 +1,38 @@
+﻿#language: en
+
+Feature: <feature description>
+
+As <Role>
+I want <functionality description>
+To <business effect>
+
+Background:
+	Given I launch TestClient opening script or connect the existing one
+
+
+Scenario: <script description>
+
+	And In the command interface I select "Основная" "Справочник1"
+	Then "Справочник1" window is opened
+	And I click "Создать" button
+	Then "Справочник1 (создание)" window is opened
+	And I input "111" text in "Наименование" field
+	And I select "ЗначениеПеречисления1" exact value from "Реквизит1" drop-down list
+	And I input "123,00" text in "Реквизит число" field
+	And I input "456" text in "Реквизит строка" field
+	And I click Select button of "Реквизит дата" field
+	And I input "22.07.2017" text in "Реквизит дата" field
+	And I change "Реквизит переключатель" radio button value to ""
+	And in the table "ТабличнаяЧасть1" I click "Добавить" button
+	And I input "111,00" text in "Реквизит число" field of "ТабличнаяЧасть1" table
+	And I activate "Реквизит строка" field in "ТабличнаяЧасть1" table
+	And I input "222" text in "Реквизит строка" field of "ТабличнаяЧасть1" table
+	And I activate "Реквизит дата" field in "ТабличнаяЧасть1" table
+	And I click choice button of "Реквизит дата" attribute in "ТабличнаяЧасть1" table
+	And I activate "Реквизит булево" field in "ТабличнаяЧасть1" table
+	And I finish line editing in "ТабличнаяЧасть1" table
+	And I change "Реквизит булево" checkbox in "ТабличнаяЧасть1" table
+	And I finish line editing in "ТабличнаяЧасть1" table
+	And I click "Записать и закрыть" button
+	And I wait "Справочник1 (создание)" window closing in 20 seconds
+

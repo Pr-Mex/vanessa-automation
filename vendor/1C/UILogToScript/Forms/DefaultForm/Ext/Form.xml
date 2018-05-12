@@ -1,0 +1,379 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<VerticalScroll>useIfNecessary</VerticalScroll>
+	<AutoCommandBar name="FormCommandBar" id="-1">
+		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="Convert" id="10">
+				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.Convert</CommandName>
+				<Font ref="sys:DefaultGUIFont" kind="WindowsFont"/>
+				<ExtendedTooltip name="ConvertExtendedToolTip" id="48"/>
+			</Button>
+			<Button name="FormHelp" id="44">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.StandardCommand.Help</CommandName>
+				<ExtendedTooltip name="HelpFormExtendedToolTip" id="49"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">OnOpen</Event>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+		<Event name="FillCheckProcessingAtServer">FillCheckProcessingAtServer</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ConversionParameters" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Conversion parameters</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры преобразования</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Conversion parameters</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры преобразования</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Representation>StrongSeparation</Representation>
+			<ExtendedTooltip name="ConversionParametersExtendedToolTip" id="50"/>
+			<ChildItems>
+				<InputField name="ScriptVariant" id="26">
+					<DataPath>Object.ScriptVariant</DataPath>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ContextMenu name="ScriptVariantContextMenu" id="27"/>
+					<ExtendedTooltip name="ScriptVariantExtendedTooltip" id="51"/>
+					<Events>
+						<Event name="OnChange">ScriptVariantOnChange</Event>
+						<Event name="Clearing">ScriptVariantClearing</Event>
+					</Events>
+				</InputField>
+				<InputField name="MainProcedureName" id="14">
+					<DataPath>Object.MainProcedureName</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Name of the procedure required for starting the scenario.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя процедуры, которую необходимо вызвать для запуска сценария.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ContextMenu name="MainProcedureNameContextMenu" id="15"/>
+					<ExtendedTooltip name="MainProcedureNameExtendedToolTip" id="16"/>
+				</InputField>
+				<CheckBoxField name="GenerateClientConnectionScript" id="23">
+					<DataPath>Object.GenerateClientConnectionScript</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Include the script to establish test client connection into the procedure.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вставлять процедуру код устанавливающий соединение с тестируемым клиентом.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="GenerateClientConnectionScriptContextMenu" id="24"/>
+					<ExtendedTooltip name="GenerateClientConnectionScriptEnhancedToolTip" id="53"/>
+				</CheckBoxField>
+				<CheckBoxField name="SplitScriptIntoProcedures" id="17">
+					<DataPath>Object.SplitScriptIntoProcedures</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Split the script scenario into procedures. Each procedure contains actions with a single window.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Разделять сценарий на процедуры, в каждой из которых есть только действия относящиеся к одному окну.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="SplitScriptIntoProceduresContextMenu" id="18"/>
+					<ExtendedTooltip name="SplitScriptIntoProceduresExtendedToolTip" id="54"/>
+				</CheckBoxField>
+				<CheckBoxField name="GetFullHierarchy" id="20">
+					<DataPath>Object.GetFullHierarchy</DataPath>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="GetFullHierarchyContextMenu" id="21"/>
+					<ExtendedTooltip name="GetFullHierarchyExtendedToolTip" id="22"/>
+				</CheckBoxField>
+				<RadioButtonField name="ObjectSearch" id="46">
+					<DataPath>Object.ObjectSearch</DataPath>
+					<RadioButtonType>Auto</RadioButtonType>
+					<ContextMenu name="ObjectSearchContextMenu" id="47"/>
+					<ExtendedTooltip name="ObjectSearchExtendedTooltip" id="56"/>
+				</RadioButtonField>
+			</ChildItems>
+		</UsualGroup>
+		<RadioButtonField name="ConversionVariant" id="29">
+			<DataPath>Object.ConversionVariant</DataPath>
+			<RadioButtonType>Auto</RadioButtonType>
+			<ContextMenu name="ConversionVariantContextMenu" id="30"/>
+			<ExtendedTooltip name="ConversionVariantExtendedToolTip" id="57"/>
+			<Events>
+				<Event name="OnChange">ConversionVariantOnChange</Event>
+			</Events>
+		</RadioButtonField>
+		<Pages name="SourceData" id="42">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Source data</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исходные данные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Source data</v8:content>
+				</v8:item>
+			</ToolTip>
+			<PagesRepresentation>None</PagesRepresentation>
+			<ExtendedTooltip name="SourceDataExtendedToolTip" id="43"/>
+			<ChildItems>
+				<Page name="SourceFiles" id="32">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Source files</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исходные файлы</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Source files</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исходные файлы</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="SourceFilesExtendedToolTip" id="59"/>
+					<ChildItems>
+						<InputField name="SourceFile" id="7">
+							<DataPath>SourceFile</DataPath>
+							<ChoiceButton>true</ChoiceButton>
+							<OpenButton>true</OpenButton>
+							<ContextMenu name="SourceFileContextMenu" id="8"/>
+							<ExtendedTooltip name="SourceFileExtendedToolTip" id="60"/>
+							<Events>
+								<Event name="StartChoice">SourceFileOnStartChoice</Event>
+								<Event name="Opening">SourceFileOnOpen</Event>
+							</Events>
+						</InputField>
+						<InputField name="ResultFile" id="4">
+							<DataPath>ResultFile</DataPath>
+							<ChoiceButton>true</ChoiceButton>
+							<OpenButton>true</OpenButton>
+							<ContextMenu name="ResultFileContextMenu" id="5"/>
+							<ExtendedTooltip name="ResultFileExtensionToolTip" id="61"/>
+							<Events>
+								<Event name="StartChoice">ResultFileOnStartChoice</Event>
+								<Event name="Opening">ResultFileOnOpen</Event>
+							</Events>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="SourceTexts" id="34">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Source texts</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исходные тексты</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Source texts</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Исходные тексты</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>Horizontal</Group>
+					<ExtendedTooltip name="SourceTextsExtendedToolTip" id="62"/>
+					<ChildItems>
+						<TextDocumentField name="SourceText" id="36">
+							<DataPath>SourceText</DataPath>
+							<ContextMenu name="SourceTextContextMenu" id="37"/>
+							<ExtendedTooltip name="SourceTextExtendedToolTip" id="63"/>
+						</TextDocumentField>
+						<TextDocumentField name="ResultText" id="39">
+							<DataPath>ResultText</DataPath>
+							<ContextMenu name="ResultTextContextMenu" id="40"/>
+							<ExtendedTooltip name="ResultTextExtendedToolTip" id="64"/>
+						</TextDocumentField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+		<LabelDecoration name="VersionCaption" id="65">
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Version 1.0.3.3</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Версия 1.0.3.1</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sys</v8:lang>
+					<v8:content>Версия 1.0.3.1</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="VersionCaptionContextMenu" id="66"/>
+			<ExtendedTooltip name="VersionCaptionExtendedTooltip" id="67"/>
+		</LabelDecoration>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Object" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.UILogToScript</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<Save>
+				<Field>Object.SplitScriptIntoProcedures</Field>
+				<Field>Object.ScriptVariant</Field>
+				<Field>Object.ObjectSearch</Field>
+				<Field>Object.MainProcedureName</Field>
+				<Field>Object.GetFullHierarchy</Field>
+				<Field>Object.GenerateClientConnectionScript</Field>
+				<Field>Object.ConversionVariant</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="SourceFile" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Source file</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Преобразовывать журнал</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>SourceFile</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ResultFile" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Result file</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранять результат в</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>ResultFile</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="SourceText" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>User action log</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Журнал действий пользователя</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/txtedt">d5p1:TextDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ResultText" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Scenario</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сценарий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/txtedt">d5p1:TextDocument</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="Convert" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Convert</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Преобразовать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Convert the user action log into the 1C:Enterprise script scenario</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Преобразовать журнал действий во встроенный язык</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.GenerateReport</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>Convert</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+	</Commands>
+</Form>
