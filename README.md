@@ -5,12 +5,14 @@
 ## BDD for 1С:Enterprise
 
 Текущий релиз в ветке [Master: 1.2.001](https://github.com/Pr-Mex/vanessa-behavior/tree/master)
-Разработка ведется в ветке [Develop](https://github.com/Pr-Mex/vanessa-behavior/tree/develop). Эта же ветка является основной.
+Разработка ведется в ветке [Develop](https://github.com/Pr-Mex/vanessa-behavior/tree/develop).
 
 В данном репозитории хранятся только исходники.
-Вы можете собрать необходимые файлы сами, либо скачать уже собранные в релизах.
+Вы можете собрать необходимые файлы сами, либо скачать готовую сборку в [релизах](https://github.com/Pr-Mex/vanessa-behavior/releases).
 При первом скачивании репозитория необходимо собрать файлы обработок.
-Для этого надо запустить Compile.bat
+* Для этого надо запустить Compile.bat
+* Также, чтобы работала сборка epf надо установить [OneScript](http://oscript.io).
+* Также, чтобы работала сборка epf надо установить платформу [1С:Предприятие 8.3.10](https://releases.1c.ru).
 
 Чтобы зафиксировать изменения epf файлов, нужно запустить Decompile.bat.
 
