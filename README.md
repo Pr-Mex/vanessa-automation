@@ -4,7 +4,7 @@
 
 ## BDD for 1С:Enterprise
 
-Текущий релиз в ветке [Master: 1.2.001](https://github.com/Pr-Mex/vanessa-behavior/tree/master)
+Текущий релиз в ветке [Master: 1.2.002](https://github.com/Pr-Mex/vanessa-behavior/tree/master)
 Разработка ведется в ветке [Develop](https://github.com/Pr-Mex/vanessa-behavior/tree/develop).
 
 В данном репозитории хранятся только исходники.
