@@ -1,14 +1,14 @@
 ﻿# vanessa-behavior
 
-[![Открытый чат проекта https://gitter.im/silverbulleters/vanessa-behavoir](https://badges.gitter.im/silverbulleters/vanessa-behavior.svg)](https://gitter.im/silverbulleters/vanessa-behavoir?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Открытый чат проекта https://gitter.im/vanessa-automation](https://badges.gitter.im/vanessa-automation.svg)](https://gitter.im/vanessa-automation?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ## BDD for 1С:Enterprise
 
-Текущий релиз в ветке [Master: 1.2.002](https://github.com/Pr-Mex/vanessa-behavior/tree/master)
-Разработка ведется в ветке [Develop](https://github.com/Pr-Mex/vanessa-behavior/tree/develop).
+Текущий релиз в ветке [Master: 1.2.002](https://github.com/Pr-Mex/vanessa-automation/tree/master)
+Разработка ведется в ветке [Develop](https://github.com/Pr-Mex/vanessa-automation/tree/develop).
 
 В данном репозитории хранятся только исходники.
-Вы можете собрать необходимые файлы сами, либо скачать готовую сборку в [релизах](https://github.com/Pr-Mex/vanessa-behavior/releases).
+Вы можете собрать необходимые файлы сами, либо скачать готовую сборку в [релизах](https://github.com/Pr-Mex/vanessa-automation/releases).
 При первом скачивании репозитория необходимо собрать файлы обработок.
 * 1. Чтобы работала сборка epf надо установить [OneScript](http://oscript.io) версии 1.0.20 или выше.
 * 2. Также, чтобы работала сборка epf надо установить платформу [1С:Предприятие 8.3.10](https://releases.1c.ru).
@@ -21,7 +21,7 @@
 * Видео инструкции лежат [здесь](https://www.youtube.com/channel/UC2mJ4LlMG-FF4qkc_kqN_iQ) 
 * Прочие инструкции сгруппированы [в этом плейлисте YouTube](https://www.youtube.com/playlist?list=PL2zlgf113YhFG_uRARjDtP1_Obj55UmY4) 
 * Также рекомендуется посмотреть вот [этот вебинар](http://infostart.ru/webinars/537546/) 
-* Возможно вам поможет [этот FAQ](https://github.com/Pr-Mex/vanessa-behavior/blob/develop/F.A.Q.MD)
+* Возможно вам поможет [этот FAQ](https://github.com/Pr-Mex/vanessa-automation/blob/develop/F.A.Q.MD)
 
 Чтобы у вас работало автосоздание видеоинструкций необходимо установить дополнительный софт. Инструкция [здесь](https://github.com/silverbulleters/vanessa-behavior/blob/develop/MakeAutoVideo.md) 
 Также по автовидеоинструкциям есть вот это замечательное [видео](https://www.youtube.com/watch?v=BfXowJH5uP0)
@@ -35,7 +35,7 @@
 Клонируйте данный репозиторий с помощью **ms-git**
 
 ```
-git clone https://github.com/Pr-Mex/vanessa-behavior.git
+git clone https://github.com/Pr-Mex/vanessa-automation.git
 ```
 
 Или используйте [шаблон работы по проекту 1С](https://github.com/silverbulleters/vanessa-bootstrap)
@@ -176,22 +176,22 @@ git submodule update --init --recursive
 * пожелания к использованию можно фиксировать в виде Github Issues;
 * структура каталогов проекта соответствует шаблону https://github.com/silverbulleters/vanessa-bootstrap
 
-## Известные публикации
 
-* [Первичная публикация](http://habrahabr.ru/post/252473/)
-* [Пример отчета Allure на основе тестов](http://youtu.be/982gF1wY8sM)
+## Родительский проект
 
-## Вдохновение черпается из:
+* Проект Vanessa-Automation является продолжением проекта [Vanessa-Behavior 1.1.131](https://github.com/silverbulleters/vanessa-behavior)
 
-* [Огурец](https://cukes.info/)
+## Полезные ссылки:
+
+* [Cucumber](https://cukes.info/)
 * [Автоматизированное тестирование 1С](http://v8.1c.ru/overview/Term_000000816.htm)
 * [Yandex Allure](http://allure.qatools.ru/)
 * [Selenium](http://docs.seleniumhq.org/)
-* [ТРИЗ](https://ru.wikipedia.org/wiki/Теория_решения_изобретательских_задач)
 * [Дэн Норт](http://en.wikipedia.org/wiki/Acceptance_test-driven_development)
 
+## Руководство контрибьютора
 
-Более подробно в файле [CONTRIBUTING.md](https://github.com/Pr-Mex/vanessa-behavior/blob/develop/CONTRIBUTING.md)
+[CONTRIBUTING.md](https://github.com/Pr-Mex/vanessa-automation/blob/develop/CONTRIBUTING.md)
 
 ## Лицензии
 
