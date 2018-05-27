@@ -9340,6 +9340,30 @@
 													<ContextMenu name="ЗагрузкаФичПриОткрытииКонтекстноеМеню" id="1033"/>
 													<ExtendedTooltip name="ЗагрузкаФичПриОткрытииРасширеннаяПодсказка" id="1386"/>
 												</InputField>
+												<InputField name="КомандаОткрытияФичиВТекстовомРедакторе" id="1776">
+													<DataPath>Объект.КомандаОткрытияФичиВТекстовомРедакторе</DataPath>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<ContextMenu name="КомандаОткрытияФичиВТекстовомРедактореКонтекстноеМеню" id="1777">
+														<ChildItems>
+															<Button name="ТекстовыйРедакторNotepadpp" id="1779">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.ТекстовыйРедакторNotepadpp</CommandName>
+																<Title>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Notepad++</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Notepad++</v8:content>
+																	</v8:item>
+																</Title>
+																<ExtendedTooltip name="ТекстовыйРедакторNotepadppРасширеннаяПодсказка" id="1780"/>
+															</Button>
+														</ChildItems>
+													</ContextMenu>
+													<ExtendedTooltip name="КомандаОткрытияФичиВТекстовомРедактореРасширеннаяПодсказка" id="1778"/>
+												</InputField>
 												<Button name="СброситьКешИзвестныхStepDefinition" id="1532">
 													<Type>UsualButton</Type>
 													<CommandName>Form.Command.СброситьКешИзвестныхStepDefinition</CommandName>
@@ -18259,6 +18283,25 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПеревестиТекстНаДругойЯзык</Action>
+		</Command>
+		<Command name="ТекстовыйРедакторNotepadpp" id="71">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Notepad++</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Notepad++</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текстовый редактор notepadpp</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ТекстовыйРедакторNotepadpp</Action>
 		</Command>
 	</Commands>
 </Form>
