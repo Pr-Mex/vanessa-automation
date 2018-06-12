@@ -2,6 +2,7 @@
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
+@IgnoreOnUFSovm82Builds
 
 Функционал: Создание фильтра формы списка
 
