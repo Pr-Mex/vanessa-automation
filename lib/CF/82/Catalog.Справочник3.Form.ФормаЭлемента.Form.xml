@@ -16,6 +16,12 @@
 			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
 			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
 		</InputField>
+		<CheckBoxField name="СделатьМакетНедоступным" id="20">
+			<DataPath>СделатьМакетНедоступным</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="СделатьМакетНедоступнымКонтекстноеМеню" id="21"/>
+			<ExtendedTooltip name="СделатьМакетНедоступнымРасширеннаяПодсказка" id="22"/>
+		</CheckBoxField>
 		<Button name="СформироватьОтчет" id="7">
 			<Type>UsualButton</Type>
 			<CommandName>Form.Command.СформироватьОтчет</CommandName>
@@ -27,6 +33,12 @@
 			<CommandName>Form.Command.СформироватьОтчетСВертикальнойЧертой</CommandName>
 			<Parameter xsi:nil="true"/>
 			<ExtendedTooltip name="СформироватьОтчетСВертикальнойЧертойРасширеннаяПодсказка" id="15"/>
+		</Button>
+		<Button name="СформироватьОтчетОбъединенныеЯчейки" id="26">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.СформироватьОтчетОбъединенныеЯчейки</CommandName>
+			<Parameter xsi:nil="true"/>
+			<ExtendedTooltip name="СформироватьОтчетОбъединенныеЯчейкиРасширеннаяПодсказка" id="27"/>
 		</Button>
 		<Button name="ОткрытьФайл" id="12">
 			<Type>UsualButton</Type>
@@ -40,6 +52,17 @@
 			<Parameter xsi:nil="true"/>
 			<ExtendedTooltip name="СделатьСлужебноеСообщениеРасширеннаяПодсказка" id="17"/>
 		</Button>
+		<Button name="КомандаПоказатьВопросСНестандартнымДиалогом" id="18">
+			<Type>UsualButton</Type>
+			<CommandName>Form.Command.КомандаПоказатьВопросСНестандартнымДиалогом</CommandName>
+			<Parameter xsi:nil="true"/>
+			<ExtendedTooltip name="КомандаПоказатьВопросСНестандартнымДиалогомРасширеннаяПодсказка" id="19"/>
+		</Button>
+		<CalendarField name="Календарь" id="23">
+			<DataPath>Календарь</DataPath>
+			<ContextMenu name="КалендарьКонтекстноеМеню" id="24"/>
+			<ExtendedTooltip name="КалендарьРасширеннаяПодсказка" id="25"/>
+		</CalendarField>
 		<SpreadSheetDocumentField name="РеквизитТабличныйДокумент" id="9">
 			<DataPath>РеквизитТабличныйДокумент</DataPath>
 			<ContextMenu name="РеквизитТабличныйДокументКонтекстноеМеню" id="10"/>
@@ -63,6 +86,31 @@
 			</Title>
 			<Type>
 				<v8:Type xmlns:mxl="http://v8.1c.ru/8.2/data/spreadsheet">mxl:SpreadsheetDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СделатьМакетНедоступным" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сделать макет недоступным</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Календарь" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Календарь</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:dateTime</v8:Type>
+				<v8:DateQualifiers>
+					<v8:DateFractions>Date</v8:DateFractions>
+				</v8:DateQualifiers>
 			</Type>
 		</Attribute>
 	</Attributes>
@@ -126,6 +174,36 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СделатьСлужебноеСообщение</Action>
+		</Command>
+		<Command name="КомандаПоказатьВопросСНестандартнымДиалогом" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать вопрос с нестандартным диалогом</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда показать вопрос с нестандартным диалогом</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаПоказатьВопросСНестандартнымДиалогом</Action>
+		</Command>
+		<Command name="СформироватьОтчетОбъединенныеЯчейки" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать отчет объединенные ячейки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать отчет объединенные ячейки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СформироватьОтчетОбъединенныеЯчейки</Action>
 		</Command>
 	</Commands>
 </Form>
