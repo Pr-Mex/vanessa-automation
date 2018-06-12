@@ -4,7 +4,7 @@
 
 ## BDD for 1С:Enterprise
 
-Текущий релиз в ветке [Master: 1.2.005](https://github.com/Pr-Mex/vanessa-automation/tree/master)
+Текущий релиз в ветке [Master: 1.2.006](https://github.com/Pr-Mex/vanessa-automation/tree/master)
 Разработка ведется в ветке [Develop](https://github.com/Pr-Mex/vanessa-automation/tree/develop).
 
 В данном репозитории хранятся только исходники.
@@ -13,6 +13,7 @@
 1. Чтобы работала сборка epf надо установить [OneScript](http://oscript.io) версии 1.0.20 или выше.
 2. Также, чтобы работала сборка epf надо установить платформу [1С:Предприятие 8.3.10](https://releases.1c.ru).
 3. Для запуска сборки epf из исходников надо запустить Compile.bat
+4. Скрипты по сборке/разборке файлов взяты [отсюда](https://github.com/Pr-Mex/ExternalModulesConverterFor1C)
 
 Чтобы зафиксировать изменения epf файлов, нужно запустить Decompile.bat.
 
