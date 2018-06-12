@@ -2,7 +2,23 @@
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаДобавитьМногострочнуюСтрокуВТЧ" id="171">
+				<Type>CommandBarButton</Type>
+				<OnlyInAllActions>false</OnlyInAllActions>
+				<CommandName>Form.Command.ДобавитьМногострочнуюСтрокуВТЧ</CommandName>
+				<Parameter xsi:nil="true"/>
+				<ExtendedTooltip name="ФормаДобавитьМногострочнуюСтрокуВТЧРасширеннаяПодсказка" id="172"/>
+			</Button>
+			<Button name="ФормаКоманда1" id="179">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ВызватьИсключение</CommandName>
+				<Parameter xsi:nil="true"/>
+				<ExtendedTooltip name="ФормаКоманда1РасширеннаяПодсказка" id="180"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
 	<Events>
 		<Event name="BeforeWrite">ПередЗаписью</Event>
 		<Event name="OnClose">ПриЗакрытии</Event>
@@ -29,7 +45,16 @@
 						<InputField name="Наименование" id="4">
 							<DataPath>Объект.Description</DataPath>
 							<EditMode>EnterOnInput</EditMode>
-							<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+							<ContextMenu name="НаименованиеКонтекстноеМеню" id="5">
+								<ChildItems>
+									<Button name="НаименованиеКонтекстноеМенюКонтекстноеМенюНаименование" id="181">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.КонтекстноеМенюНаименование</CommandName>
+										<Parameter xsi:nil="true"/>
+										<ExtendedTooltip name="НаименованиеКонтекстноеМенюКонтекстноеМенюНаименованиеРасширеннаяПодсказка" id="182"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
 							<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
 						</InputField>
 						<InputField name="Реквизит1" id="7">
@@ -62,6 +87,7 @@
 						</InputField>
 						<InputField name="РеквизитЧисло" id="53">
 							<DataPath>Объект.РеквизитЧисло</DataPath>
+							<SpinButton>true</SpinButton>
 							<ContextMenu name="РеквизитЧислоКонтекстноеМеню" id="54"/>
 							<ExtendedTooltip name="РеквизитЧислоРасширеннаяПодсказка" id="55"/>
 						</InputField>
@@ -129,7 +155,16 @@
 							<EnableDrag>true</EnableDrag>
 							<DataPath>Объект.ТабличнаяЧасть1</DataPath>
 							<RowFilter xsi:nil="true"/>
-							<ContextMenu name="ТабличнаяЧасть1КонтекстноеМеню" id="14"/>
+							<ContextMenu name="ТабличнаяЧасть1КонтекстноеМеню" id="14">
+								<ChildItems>
+									<Button name="ТабличнаяЧасть1КонтекстноеМенюКонтекстноеМенюТабличнаяЧасть1" id="183">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.КонтекстноеМенюТабличнаяЧасть1</CommandName>
+										<Parameter xsi:nil="true"/>
+										<ExtendedTooltip name="ТабличнаяЧасть1КонтекстноеМенюКонтекстноеМенюТабличнаяЧасть1РасширеннаяПодсказка" id="184"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
 							<AutoCommandBar name="ТабличнаяЧасть1КоманднаяПанель" id="15"/>
 							<ExtendedTooltip name="ТабличнаяЧасть1РасширеннаяПодсказка" id="16"/>
 							<SearchStringAddition name="ТабличнаяЧасть1СтрокаПоиска" id="17">
@@ -166,12 +201,14 @@
 								<InputField name="ТабличнаяЧасть1РеквизитЧисло" id="29">
 									<DataPath>Объект.ТабличнаяЧасть1.РеквизитЧисло</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<SpinButton>true</SpinButton>
 									<ContextMenu name="ТабличнаяЧасть1РеквизитЧислоКонтекстноеМеню" id="30"/>
 									<ExtendedTooltip name="ТабличнаяЧасть1РеквизитЧислоРасширеннаяПодсказка" id="31"/>
 								</InputField>
 								<InputField name="ТабличнаяЧасть1РеквизитСтрока" id="32">
 									<DataPath>Объект.ТабличнаяЧасть1.РеквизитСтрока</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<MultiLine>true</MultiLine>
 									<ContextMenu name="ТабличнаяЧасть1РеквизитСтрокаКонтекстноеМеню" id="33"/>
 									<ExtendedTooltip name="ТабличнаяЧасть1РеквизитСтрокаРасширеннаяПодсказка" id="34"/>
 								</InputField>
@@ -209,6 +246,13 @@
 									<ClearButton>true</ClearButton>
 									<ContextMenu name="ТабличнаяЧасть1РеквизитСправочникВыборИзФормыСпискаКонтекстноеМеню" id="60"/>
 									<ExtendedTooltip name="ТабличнаяЧасть1РеквизитСправочникВыборИзФормыСпискаРасширеннаяПодсказка" id="61"/>
+								</InputField>
+								<InputField name="ТабличнаяЧасть1МногострочнаяСтрока" id="168">
+									<DataPath>Объект.ТабличнаяЧасть1.МногострочнаяСтрока</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<MultiLine>true</MultiLine>
+									<ContextMenu name="ТабличнаяЧасть1МногострочнаяСтрокаКонтекстноеМеню" id="169"/>
+									<ExtendedTooltip name="ТабличнаяЧасть1МногострочнаяСтрокаРасширеннаяПодсказка" id="170"/>
 								</InputField>
 							</ChildItems>
 						</Table>
@@ -385,6 +429,18 @@
 								<Event name="StartChoice">РеквизитСписокНачалоВыбора</Event>
 							</Events>
 						</InputField>
+						<InputField name="РеквизитСтандартныйПериод" id="173">
+							<DataPath>РеквизитСтандартныйПериод</DataPath>
+							<ContextMenu name="РеквизитСтандартныйПериодКонтекстноеМеню" id="174"/>
+							<ExtendedTooltip name="РеквизитСтандартныйПериодРасширеннаяПодсказка" id="175"/>
+						</InputField>
+						<InputField name="РеквизитМногострочнаяСтрока" id="176">
+							<DataPath>РеквизитМногострочнаяСтрока</DataPath>
+							<Height>1</Height>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="РеквизитМногострочнаяСтрокаКонтекстноеМеню" id="177"/>
+							<ExtendedTooltip name="РеквизитМногострочнаяСтрокаРасширеннаяПодсказка" id="178"/>
+						</InputField>
 					</ChildItems>
 				</Page>
 				<Page name="Группа2" id="127">
@@ -480,6 +536,39 @@
 								<Event name="URLProcessing">Декорация2ОбработкаНавигационнойСсылки</Event>
 							</Events>
 						</LabelDecoration>
+						<LabelField name="НаименованиеНадписью" id="185">
+							<DataPath>Объект.Description</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Наименование надписью</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="НаименованиеНадписьюКонтекстноеМеню" id="186"/>
+							<ExtendedTooltip name="НаименованиеНадписьюРасширеннаяПодсказка" id="187"/>
+						</LabelField>
+					</ChildItems>
+				</Page>
+				<Page name="ФД" id="188">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ФД</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ФД</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ФДРасширеннаяПодсказка" id="189"/>
+					<ChildItems>
+						<FormattedDocumentField name="ФорматированныйДокументНаФорме" id="190">
+							<DataPath>ФорматированныйДокументНаФорме</DataPath>
+							<ContextMenu name="ФорматированныйДокументНаФормеКонтекстноеМеню" id="191"/>
+							<ExtendedTooltip name="ФорматированныйДокументНаФормеРасширеннаяПодсказка" id="192"/>
+						</FormattedDocumentField>
 					</ChildItems>
 				</Page>
 			</ChildItems>
@@ -492,6 +581,43 @@
 			</Type>
 			<MainAttribute>true</MainAttribute>
 			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="РеквизитСтандартныйПериод" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизит стандартный период</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:StandardPeriod</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РеквизитМногострочнаяСтрока" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизит многострочная строка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ФорматированныйДокументНаФорме" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Форматированный документ на форме</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:fd="http://v8.1c.ru/8.2/data/formatted-document">fd:FormattedDocument</v8:Type>
+			</Type>
 		</Attribute>
 	</Attributes>
 	<Commands>
@@ -584,6 +710,66 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОткрытьСписокЗначениейСПометками</Action>
+		</Command>
+		<Command name="ДобавитьМногострочнуюСтрокуВТЧ" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить многострочную строку в ТЧ</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить многострочную строку ВТЧ</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьМногострочнуюСтрокуВТЧ</Action>
+		</Command>
+		<Command name="ВызватьИсключение" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вызвать исключение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вызвать исключение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВызватьИсключениеПроцедура</Action>
+		</Command>
+		<Command name="КонтекстноеМенюНаименование" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контекстное меню наименование</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контекстное меню наименование</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КонтекстноеМенюНаименование</Action>
+		</Command>
+		<Command name="КонтекстноеМенюТабличнаяЧасть1" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контекстное меню табличная часть1</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контекстное меню табличная часть1</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КонтекстноеМенюТабличнаяЧасть1</Action>
 		</Command>
 	</Commands>
 	<CommandInterface>
