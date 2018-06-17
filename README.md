@@ -4,7 +4,7 @@
 
 ## BDD for 1С:Enterprise
 
-Текущий релиз в ветке [Master: 1.2.006](https://github.com/Pr-Mex/vanessa-automation/tree/master)
+Текущий релиз в ветке [Master: 1.2.007](https://github.com/Pr-Mex/vanessa-automation/tree/master)
 Разработка ведется в ветке [Develop](https://github.com/Pr-Mex/vanessa-automation/tree/develop).
 
 В данном репозитории хранятся только исходники.
