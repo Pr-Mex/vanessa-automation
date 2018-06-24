@@ -2,7 +2,7 @@
 
 @IgnoreOnCIMainBuild
 @ExportScenarios
-
+@ExternalUse
 @tree
 
 Функционал: Создание фильтра формы списка
