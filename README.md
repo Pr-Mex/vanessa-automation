@@ -171,6 +171,8 @@ git submodule update --init --recursive
 
 Примеры запуска можно увидеть в соседнем репозитории [Vanessa Runner](https://github.com/silverbulleters/vanessa-runner/blob/master/tools/vanessa.bat)
 
+## ЧаВо
+Находится [здесь](https://github.com/Pr-Mex/vanessa-automation/blob/develop/F.A.Q.MD)
 
 ## Замечания:
 
