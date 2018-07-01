@@ -4,7 +4,7 @@
 
 ## BDD for 1С:Enterprise
 
-Текущий релиз в ветке [Master: 1.2.008](https://github.com/Pr-Mex/vanessa-automation/tree/master)
+Текущий релиз в ветке [Master: 1.2.009](https://github.com/Pr-Mex/vanessa-automation/tree/master)
 Разработка ведется в ветке [Develop](https://github.com/Pr-Mex/vanessa-automation/tree/develop).
 
 В данном репозитории хранятся только исходники.
@@ -171,6 +171,8 @@ git submodule update --init --recursive
 
 Примеры запуска можно увидеть в соседнем репозитории [Vanessa Runner](https://github.com/silverbulleters/vanessa-runner/blob/master/tools/vanessa.bat)
 
+## ЧаВо
+Находится [здесь](https://github.com/Pr-Mex/vanessa-automation/blob/develop/F.A.Q.MD)
 
 ## Замечания:
 
