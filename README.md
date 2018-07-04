@@ -18,7 +18,6 @@
 Чтобы зафиксировать изменения epf файлов, нужно запустить Decompile.bat.
 
 Проект использует принцип формирования автодокументации в формате Markdown и видео:
-* Markdown инструкции лежат [здесь](https://github.com/silverbulleters/vanessa-services/tree/master/ru-RU/behavior/Features) 
 * Видео инструкции лежат [здесь](https://www.youtube.com/channel/UC2mJ4LlMG-FF4qkc_kqN_iQ) 
 * Прочие инструкции сгруппированы [в этом плейлисте YouTube](https://www.youtube.com/playlist?list=PL2zlgf113YhFG_uRARjDtP1_Obj55UmY4) 
 * Также рекомендуется посмотреть вот [этот вебинар](http://infostart.ru/webinars/537546/) 
@@ -38,8 +37,6 @@
 ```
 git clone https://github.com/Pr-Mex/vanessa-automation.git
 ```
-
-Или используйте [шаблон работы по проекту 1С](https://github.com/silverbulleters/vanessa-bootstrap)
 
 Инициализируйте подмодули репозитория с помощью **ms-git**
 
@@ -78,12 +75,12 @@ git submodule update --init --recursive
 Сценарий: Запуск в консольном режиме
 Дано Пусть существует файл ".\vb-execute-profile.json"
 И в переменную окружения V83PATH установлено значение "C:\Program Files (x86)\1cv8\8.3.6.2151\bin\1cv8.exe"
-Когда я запускаю командную строку '%V83PATH% /Execute .\vanessa-behavior.epf /C"StartFeaturePlayer;VBParams=.\vb-execute-profile.json'
+Когда я запускаю командную строку '%V83PATH% /Execute .\vanessa-automation.epf /C"StartFeaturePlayer;VBParams=.\vb-execute-profile.json'
 Тогда появляется файл с результатами '.\BuildStatus.log'
 И в каталоге ".\allurereport" существует HTML отчет о результатах проверки сценариев
 
 Сценарий: Запуск в интерактивном режиме
-Дано Пусть я открыл обработку "vanessa-behavior.epf"
+Дано Пусть я открыл обработку "vanessa-automation.epf"
 Когда Я нажал кнопку "Загрузить фичи из каталога"
 И указал каталог с требованиями заказчика равным ".\features"
 И затем нажал кнопку "Сгенерировать шаблоны обработок"
@@ -149,7 +146,7 @@ git submodule update --init --recursive
 
 ```
 {
-"КаталогФич": "C:\vanessa-behavior\features",
+"КаталогФич": "C:\vanessa-automation\features",
 "ВыполнитьСценарии": "Истина",
 "ДелатьОтчетВФорматеАллюр": "Истина",
 "КаталогOutputAllureБазовый": "C:\allurereport",
@@ -166,10 +163,10 @@ git submodule update --init --recursive
 Профиль запуска предназначен для простого консольного запуска, пример подобной командной строки выглядит так:
 
 ```
-%V83PATH% /Execute C:\vanessa-behavior\vanessa-behavior.epf /C"StartFeaturePlayer;VBParams=C:\VBParams.json"
+%V83PATH% /Execute C:\vanessa-automation\vanessa-automation.epf /C"StartFeaturePlayer;VBParams=C:\VBParams.json"
 ```
 
-Примеры запуска можно увидеть в соседнем репозитории [Vanessa Runner](https://github.com/silverbulleters/vanessa-runner/blob/master/tools/vanessa.bat)
+Примеры запуска можно увидеть в соседнем репозитории [Vanessa Runner](https://github.com/silverbulleters/vanessa-runner/)
 
 ## ЧаВо
 Находится [здесь](https://github.com/Pr-Mex/vanessa-automation/blob/develop/F.A.Q.MD)
@@ -177,8 +174,6 @@ git submodule update --init --recursive
 ## Замечания:
 
 * пожелания к использованию можно фиксировать в виде Github Issues;
-* структура каталогов проекта соответствует шаблону https://github.com/silverbulleters/vanessa-bootstrap
-
 
 ## Родительский проект
 
