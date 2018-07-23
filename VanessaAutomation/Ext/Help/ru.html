@@ -1,7 +1,7 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.9600.19003"></meta></head><body>
-<p><font size="3" face="Arial">Vanessa-Behavior - это фреймворк для разработки в 1С используя методологию BDD.</font></p>
-<p><font size="3" face="Arial">Страница проекта: <a href="https://github.com/silverbulleters/vanessa-behavior">https://github.com/silverbulleters/vanessa-behavior</a></font></p>
-<p><font size="3" face="Arial">Vanessa-Behavior является аналогом Cucumber для разработки на платформе 1С:Предприятие.</font></p>
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.9600.16518"></meta></head><body>
+<p><font size="3" face="Arial">Vanessa-Automation - это фреймворк для разработки в 1С используя методологию BDD.</font></p>
+<p><font size="3" face="Arial">Страница проекта: <a href="https://github.com/Pr-Mex/vanessa-automation">https://github.com/Pr-Mex/vanessa-automation</a></font></p>
+<p><font size="3" face="Arial">Vanessa-Automation является аналогом Cucumber для разработки на платформе 1С:Предприятие.</font></p>
 <p><font size="2" face="Arial">Поддерживаются версии платформы:</font></p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
 <p><font size="1" face="Arial"> 8.3.6 в режиме совместимости 8.2, 8.3.6, 8.3.7, 8.3.8, 8.3.9, 8.3.10.</font></p></blockquote>
@@ -41,7 +41,7 @@
 <p>15. <a href="#15. Как узнать детали ошибки.">Как узнать детали ошибки.</a></p>
 <p>16. <a href="#16. Работа со сценариями на других языках.">Работа со сценариями на других языках.</a></p>
 <p>17. Список экспортных процедур и функций.</p>
-<p>18. Запуск Vanessa-Behavior на CI.</p>
+<p>18. Запуск Vanessa-Automation на CI.</p>
 <p>19. Инструкция для контрибьютерров.</p>
 <p> </p>
 <p> </p>
@@ -101,7 +101,7 @@
 <p> </p></blockquote>
 <p dir="ltr"><a name="Тег @tree"><font size="2"><strong>1.2 Тег @tree</strong></font></a></p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<p>Vanessa-Behavior умеет работать с <strong>расширенным</strong> синтаксисом языка сценариев <strong>Gherkin</strong>. Назовём его <strong>Turbo Gherkin</strong>.</p>
+<p>Vanessa-Automation умеет работать с <strong>расширенным</strong> синтаксисом языка сценариев <strong>Gherkin</strong>. Назовём его <strong>Turbo Gherkin</strong>.</p>
 <p>Если в заголовке фичи указан тег <strong>@tree</strong>, тогда парсер фич будет особым образом интерпретировать отступы (символы Tab, пробелы недопустимы!!!) в тексте.</p>
 <p>Шаги будут образовывать дерево шагов. Т.е. шаги с большим значением отступа будут считаться вложенными. Как в python.</p>
 <p>Это помогает структурировать текст feature файла.</p>
@@ -118,7 +118,7 @@
 <p align="center"><img src="_files/export01.png"></img></p>
 <p align="left">И рядом с ним (или в подчиненном каталоге, или в каталоге библиотек) лежит другой feature файл, у которого указан тег <strong>@exportscenarios</strong> и в нём есть сценарий с именем <strong>"Я открываю Visual studio code"</strong>.</p>
 <p align="center"><img src="_files/export02.png"></img></p>
-<p align="left">Тогда если загрузить первый сценарий в Vanessa-Behavior - шаг <strong>"Когда Я открываю Visual Studio Code" </strong>загрузится как ветка дерева.</p>
+<p align="left">Тогда если загрузить первый сценарий в Vanessa-Automation - шаг <strong>"Когда Я открываю Visual Studio Code" </strong>загрузится как ветка дерева.</p>
 <p align="center"><img src="_files/export03.png"></img></p>
 <p align="left"> </p>
 <p align="left">Чтобы передать обычный параметр в подчиненный сценарий - надо чтобы строка с именем сценария содержала параметры. Например, есть вот такой сценарий:</p>
@@ -126,16 +126,16 @@
 <p align="left">В него можно передать свой параметр <strong>"ИмяФайла"</strong>. </p>
 <p align="center"><img src="_files/export06.png"></img></p>
 <p align="left"> </p>
-<p align="left">Тогда в Vanessa-Behavior это отобразится вот так:</p>
+<p align="left">Тогда в Vanessa-Automation это отобразится вот так:</p>
 <p align="center"><img src="_files/export07.png"></img></p>
 <p align="left"> </p>
 <p align="left"> </p>
 <p align="left"><font size="2"><strong>2. <a name="Как загрузить feature файл.">Как загрузить feature файл. Тэги.</a></strong></font></p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<p align="left"><font size="1">Vanessa-Behavior позволяет загрузить либо один feature файл (Ctrl+F2), либо feature файлы из каталога (Alt+F2).</font></p>
+<p align="left"><font size="1">Vanessa-Automation позволяет загрузить либо один feature файл (Ctrl+F2), либо feature файлы из каталога (Alt+F2).</font></p>
 <p align="center"><img src="_files/LoadFeature01.png"></img></p>
 <p align="left">Если выбран пункт "Загрузить один файл" - тогда feature файл будет загружен, не смотря на наличие в нём тегов.</p>
-<p align="left">Если выбран пункт "Загрузить файлы из каталога" - тогда возможны варианты, в зависимости от указанных тегов в настройках Vanessa-Behavior.</p>
+<p align="left">Если выбран пункт "Загрузить файлы из каталога" - тогда возможны варианты, в зависимости от указанных тегов в настройках Vanessa-Automation.</p>
 <p align="center"><img src="_files/Tags01.png"></img></p>
 <p align="left">Если заполнен список "Список исключаемых тэгов" - тогда если в feature файле указан такой тэг в заголовке feature, весь feature файл не будет загружен. Если тэг был указан у одного или нескольких сценариев, <br>данные сценарии не будет загружены, а остальные загрузятся.</p>
 <p align="left">Если заполнен список "Тэги для запуска" - тогда если в feature данный тэг не встречается нигде - весь feature файл будет проигнорирован. Если тэг есть в заголовке feature, тогда будут загружены все сценарии из feature.<br>Если тэг указан у одного или нескольких сценариев - тогда будут загружены только эти сценарии.<br><br></p></blockquote>
@@ -144,7 +144,7 @@
 <p dir="ltr" align="left"><font size="1">Что выполнить все сценарии надо нажать на кнопку "<strong>Выполнить сценарии</strong>".</font></p>
 <p dir="ltr" align="left"><font size="1">Если вы внесли изменения в epf или в фичу, тогда надо нажать на кнопку "<strong>Перезагрузить сценарии</strong>". Иначе будут использоваться старые версии фич и обработок.</font></p>
 <p dir="ltr" align="left"><font size="1">При постоянном внесении правок в фичу или в epf - удобно использовать кнопку "<strong>Перезагрузить и выполнить</strong>".</font></p>
-<p dir="ltr" align="left"><font size="1">Также в Vanessa-Behavior можно использовать следующие варианты запуска фич на выполнение (доступно в контекстном меню):</font></p>
+<p dir="ltr" align="left"><font size="1">Также в Vanessa-Automation можно использовать следующие варианты запуска фич на выполнение (доступно в контекстном меню):</font></p>
 <p dir="ltr" align="center"><img src="_files/debug01.png"></img></p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
 <p dir="ltr" align="left"><font size="1">1. <strong>Выполнить данный сценарий с текущего шага</strong> (Ctrl+F5). Позволяет выполнить сценарий с текущего шага и до конца данного сценария. Другие сценарии выполняться не будут.</font></p>
@@ -183,7 +183,7 @@
 <p dir="ltr" align="left"><strong><font size="3"></font></strong> </p>
 <h2><a name="Быстрое создание файла сценария">8. Запись</a> действий пользователя.</h2>
 <h3>Запись поведения пользователя</h3>
-<p>1. На вкладке «Работа с UI» имеется набор кнопок, отвечающих за взаимодействие с клиентом тестирования из Vanessa Behavior.</p>
+<p>1. На вкладке «Работа с UI» имеется набор кнопок, отвечающих за взаимодействие с клиентом тестирования из Vanessa Automation.</p>
 <p>«Подключит TestClient» - запуск клиента тестирования</p>
 <p>«Начать запись поведения» - запуск клиента тестирования и начало запись журнала действий пользователя.</p>
 <p>«Закончить запись поведения» - останавливает запись журнала действий пользователя и производит автоматическую конвертацию в сценарий на языке Gherkin.</p>
@@ -198,7 +198,7 @@
 <p align="center"><img id="Рисунок 4" src="_files/image004.jpg" width="492" height="82"></img></p>
 <p>4. Откроется файл журнала действий пользователя, который необходимо сохранить и передать разработчику</p>
 <p align="center"><img id="Рисунок 1" src="_files/image005.jpg" width="539" height="285"></img></p>
-<p>5. В дальнейшем для получения сценария на языке Gherkin необходимо в обработке Vanessa Behavior перейти на вкладку «Работа с UI -&gt; Исходный XML». Вставить содержимое журнала действий пользователя в соответствующее окно.</p>
+<p>5. В дальнейшем для получения сценария на языке Gherkin необходимо в обработке Vanessa Automation перейти на вкладку «Работа с UI -&gt; Исходный XML». Вставить содержимое журнала действий пользователя в соответствующее окно.</p>
 <p> </p>
 <p align="center"><img id="Рисунок 5" src="_files/image006.jpg" width="624" height="414"></img></p>
 <p>Нажать кнопку «Преобразовать исходный XML» и получить готовый сценарий.</p>
@@ -243,7 +243,7 @@
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
 <h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong>Первое что надо сделать:</strong></span></font></font></h2>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font size="+0"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong>1. Прочитать вот эту инструкцию <a href="https://github.com/silverbulleters/vanessa-behavior/blob/develop/MakeAutoVideo.md">https://github.com/silverbulleters/vanessa-behavior/blob/develop/MakeAutoVideo.md</a></strong></span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font size="+0"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong>1. Прочитать вот эту инструкцию <a href="https://github.com/silverbulleters/Vanessa-Automation/blob/develop/MakeAutoVideo.md">https://github.com/silverbulleters/Vanessa-Automation/blob/develop/MakeAutoVideo.md</a></strong></span></font></font></h2>
 <h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font size="+0"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong>2. Посмотреть вот это видео <a href="https://www.youtube.com/watch?v=BfXowJH5uP0">https://www.youtube.com/watch?v=BfXowJH5uP0</a></strong></span></font></font></h2></blockquote>
 <h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong>Далее изложу основные принципы:</strong></span></font></font></h2>
 <h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong>1. Каждый шаг в видеоинструкции будет озвучен и к нему будут добавлены субтитры.</strong></span></font></font></h2>
@@ -303,7 +303,7 @@
 <p dir="ltr"> </p>
 <h2 dir="ltr"><font style="BACKGROUND-COLOR: #ffffff"><a name="16. Работа со сценариями на других языках.">16. Работа со сценариями на других языках.</a></font></h2>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<p dir="ltr">Vanessa-Behavior позволяет работать со сценариями на разных яхыках.</p>
+<p dir="ltr">Vanessa-Automation позволяет работать со сценариями на разных яхыках.</p>
 <p dir="ltr">1. Чтобы выбрать язык, на котором вы хотите накликать фичу - надо использовать соответствующую настройку.</p>
 <p dir="ltr"><img src="_files/06.png"></img></p>
 <p dir="ltr">2. Далее, при накликиванни фичи ваш сценарий будет автоматически переводится на выбранный язык. Чтобы работал перевод - должен быть заполнен файл перевода шагов, расположенный тут</p>
