@@ -29,7 +29,7 @@
 		| 'Наименование'                                                         |
 		| 'СлужебнаяФичаEN3.feature'                                             |
 		| 'СлужебнаяФичаEN3'                                                     |
-		| 'Контекст'                                                             |
+		| 'Background'                                                           |
 		| 'Given I launch TestClient opening script or connect the existing one' |
 		| 'Given I open new TestClient session or connect the existing one'      |
 		| 'And I close all client application windows'                           |
@@ -54,7 +54,7 @@
 		| 'Наименование'                                                         |
 		| 'СлужебнаяФичаEN2.feature'                                             |
 		| 'СлужебнаяФичаEN2'                                                     |
-		| 'Контекст'                                                             |
+		| 'Background'                                                           |
 		| 'Given I launch TestClient opening script or connect the existing one' |
 		| 'Given I open new TestClient session or connect the existing one'      |
 		| 'And I close all client application windows'                           |
@@ -68,7 +68,7 @@
 	
 	
 
-Сценарий: Проверка таблицы перевода
+Сценарий: Проверка таблицы перевода. Загрузка фичи на другом языке.
 	Когда Я открываю VanessaBehavior в режиме TestClient со стандартной библиотекой
 	
 	Когда В поле с именем "КаталогФичСлужебный" я указываю путь к служебной фиче "СлужебнаяФичаEN1"
