@@ -34,7 +34,7 @@
 		| 'Наименование'                                                         | 'Статус'  |
 		| 'СлужебнаяФичаEN1.feature'                                             | ''        |
 		| 'СлужебнаяФичаEN1'                                                     | ''        |
-		| 'Контекст'                                                             | ''        |
+		| 'Background'                                                           | ''        |
 		| 'Given I launch TestClient opening script or connect the existing one' | ''        |
 		| 'Given I open new TestClient session or connect the existing one'      | 'Success' |
 		| 'And I close all client application windows'                           | 'Success' |
