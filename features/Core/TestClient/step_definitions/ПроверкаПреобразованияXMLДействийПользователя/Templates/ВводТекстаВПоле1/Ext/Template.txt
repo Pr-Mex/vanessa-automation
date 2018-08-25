@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<uilog xmlns:d1p1="http://v8.1c.ru/8.3/uilog">
+	<ClientApplicationWindow caption="Условия кредита или займа (создание)">
+		<Form title="Условия кредита или займа (создание)">
+			<FormGroup name="ГруппаСтраницы" title="Страницы">
+				<FormGroup name="СтраницаОсновное" title="Основное">
+					<FormGroup name="ГруппаШапкаДоговора" title="Шапка договора">
+						<FormGroup name="ГруппаШапкаЛево" title="Шапка лево">
+							<FormGroup name="ГруппаНомерДата" title="Номер дата">
+								<FormField name="Номер" title="Номер">
+									<activate/>
+									<inputText text="5"/>
+								</FormField>
+								<FormField name="Дата" title="от">
+									<activate/>
+									<startChoosing/>
+									<inputText text="06.07.2018"/>
+								</FormField>
+							</FormGroup>
+							<FormField name="Наименование" title="Рабочее наименование">
+								<activate/>
+								<inputText text="Дог. 5"/>
+							</FormField>
+						</FormGroup>
+						<FormGroup name="ГруппаШапкаПраво" title="Шапка право">
+							<FormField name="Статус" title="Статус">
+								<activate/>
+								<openDropList/>
+								<executeChoiceFromChoiceList presentation="Действует"/>
+							</FormField>
+						</FormGroup>
+					</FormGroup>
+				</FormGroup>
+			</FormGroup>
+		</Form>
+	</ClientApplicationWindow>
+</uilog>
