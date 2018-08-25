@@ -1126,6 +1126,8 @@ Function ConvertCommand(Reader, Writer, VariableName, ObjectType = "")
 
 	ElsIf Reader.Name = "filename" Then
 		Reader.Read();
+	ElsIf Reader.Name = "clickFormattedStringHyperlink" Then
+		Reader.Read();
 	Else
 		Return False;
 	EndIf;

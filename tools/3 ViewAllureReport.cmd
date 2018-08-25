@@ -1,3 +1,4 @@
 @echo allure.bat must be in the PATH
-call allure generate .\ServiceBases\allurereport
-call allure report open
+cd .\ServiceBases\allurereport
+call allure generate --clean .\*
+call allure open .\allure-report

@@ -9,6 +9,7 @@
 	<Events>
 		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
 		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 		<Event name="OnClose">ПриЗакрытии</Event>
 	</Events>
@@ -8155,6 +8156,7 @@
 													</ChildItems>
 												</UsualGroup>
 												<UsualGroup name="ГруппаОтладкаTestClient" id="859">
+													<Visible>false</Visible>
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
@@ -9140,87 +9142,11 @@
 																	<Title>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>Проверка работы Vanessa-Behavior в режиме test client</v8:content>
+																			<v8:content>Проверка работы Vanessa-Automation в режиме test client</v8:content>
 																		</v8:item>
 																		<v8:item>
 																			<v8:lang>en</v8:lang>
-																			<v8:content>Check Vanessa-Behavior on 1C test client session</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>am</v8:lang>
-																			<v8:content>አዳዲስ ግምገማዎች ሆኖ ነው በጣም-ባህሪ የሚሰጡዋቸውን ቅድሚያ የታዘዘ</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>az</v8:lang>
-																			<v8:content>Yoxlama iş Vanessa-Behavior rejimində test client</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>bg</v8:lang>
-																			<v8:content>Проверка на работата на Ванеса-Behavior в режим client test</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>et</v8:lang>
-																			<v8:content>Kontroll töö Vanessa-Behavior-režiimis test client</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>fr</v8:lang>
-																			<v8:content>Vérifier le fonctionnement de Vanessa-Behavior en mode de test client</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>ka</v8:lang>
-																			<v8:content>შეამოწმეთ ოპერაციის Vanessa-ქცევა რეჟიმი ტესტი კლიენტი</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>de</v8:lang>
-																			<v8:content>Überprüfung der Arbeit von Vanessa-Behavior im Modus test client</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>hu</v8:lang>
-																			<v8:content>Ellenőrizze, hogy a művelet a Vanessa-Viselkedés mód teszt ügyfél</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>it</v8:lang>
-																			<v8:content>Il lavoro di verifica Vanessa-Behavior in modalità test client</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>lv</v8:lang>
-																			<v8:content>Pārbaudes darbs "Vanessa" -Behavior režīmā test client</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>lt</v8:lang>
-																			<v8:content>Veikimo tikrinimas Vanessa-Behavior režimu test client</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>mn</v8:lang>
-																			<v8:content>Шалгах үйл ажиллагаанд Vanessa-Зан үйлийн горим туршилтын үйлчлүүлэгч</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>pl</v8:lang>
-																			<v8:content>Sprawdzenie działania Vanessa-Behavior w trybie test client</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>ro</v8:lang>
-																			<v8:content>Verificarea funcționării Vanessa-Behavior în modul de test client</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>sl</v8:lang>
-																			<v8:content>Preverite delovanje Vanessa-Vedenje načinu test odjemalec</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>es</v8:lang>
-																			<v8:content>Verificación del funcionamiento de Vanessa-Behavior en el modo de test client</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>sv</v8:lang>
-																			<v8:content>Kontrollera driften av Vanessa-Beteende läge testet klienten</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>tr</v8:lang>
-																			<v8:content>Çalışma kontrol Vanessa-Behavior modunda test client</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>vi</v8:lang>
-																			<v8:content>Kiểm tra Hành vi Vanessa trong chế độ 1C trên máy trạm thử nghiệm</v8:content>
+																			<v8:content>Check Vanessa-Automation on 1C test client session</v8:content>
 																		</v8:item>
 																	</Title>
 																	<TitleLocation>Right</TitleLocation>
@@ -9284,86 +9210,6 @@
 														<v8:item>
 															<v8:lang>ru</v8:lang>
 															<v8:content>Каталог инструментов</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>en</v8:lang>
-															<v8:content>directory for Vanessa Stack</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>am</v8:lang>
-															<v8:content>መሣሪያዎች የታዘዘ</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>az</v8:lang>
-															<v8:content>Kataloq alətləri</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>bg</v8:lang>
-															<v8:content>Каталог за инструменти</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>et</v8:lang>
-															<v8:content>Vahendid kataloogi</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>fr</v8:lang>
-															<v8:content>Catalogue d'outils</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>ka</v8:lang>
-															<v8:content>ინსტრუმენტი კატალოგი</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>de</v8:lang>
-															<v8:content>Werkzeugkatalog</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>hu</v8:lang>
-															<v8:content>Az eszközök katalógus</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>it</v8:lang>
-															<v8:content>Catalogo degli strumenti</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>lv</v8:lang>
-															<v8:content>Instrumentu katalogs</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>lt</v8:lang>
-															<v8:content>Įrankių katalogas</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>mn</v8:lang>
-															<v8:content>Багаж хэрэгсэл каталог</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>pl</v8:lang>
-															<v8:content>Katalog narzędzi</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>ro</v8:lang>
-															<v8:content>Catalog de instrumente</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>sl</v8:lang>
-															<v8:content>Orodja katalog</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>es</v8:lang>
-															<v8:content>Catálogo de herramientas</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>sv</v8:lang>
-															<v8:content>De verktyg katalog</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>tr</v8:lang>
-															<v8:content>Katalog, araç</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>vi</v8:lang>
-															<v8:content>Thư mục công cụ</v8:content>
 														</v8:item>
 													</Title>
 													<AutoMaxWidth>false</AutoMaxWidth>
@@ -9666,7 +9512,7 @@
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Загрузка фичи при открытии VB</v8:content>
+															<v8:content>Загрузка фичи при открытии VA</v8:content>
 														</v8:item>
 														<v8:item>
 															<v8:lang>en</v8:lang>
@@ -10128,6 +9974,49 @@
 													</ChoiceList>
 													<ContextMenu name="ЗагрузкаФичПриОткрытииКонтекстноеМеню" id="1033"/>
 													<ExtendedTooltip name="ЗагрузкаФичПриОткрытииРасширеннаяПодсказка" id="1386"/>
+												</InputField>
+												<InputField name="ЗапрашиватьПодтверждениеПриЗакрытии" id="1791">
+													<DataPath>ЗапрашиватьПодтверждениеПриЗакрытии</DataPath>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<ListChoiceMode>true</ListChoiceMode>
+													<ChoiceList>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Да</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Yes</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:string">Да</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Нет</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>No</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:string">Нет</Value>
+															</xr:Value>
+														</xr:Item>
+													</ChoiceList>
+													<ContextMenu name="ЗапрашиватьПодтверждениеПриЗакрытииКонтекстноеМеню" id="1792"/>
+													<ExtendedTooltip name="ЗапрашиватьПодтверждениеПриЗакрытииРасширеннаяПодсказка" id="1793"/>
 												</InputField>
 												<InputField name="КомандаОткрытияФичиВТекстовомРедакторе" id="1776">
 													<DataPath>Объект.КомандаОткрытияФичиВТекстовомРедакторе</DataPath>
@@ -14651,6 +14540,11 @@
 													</Title>
 													<ExtendedTooltip name="ДляВызоваКонфигуратораРасширеннаяПодсказка" id="1442"/>
 												</Button>
+												<Button name="РазвернутьВсеСтрокиДереваСлужебный" id="1809">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.РазвернутьВсеСтрокиДереваСлужебный</CommandName>
+													<ExtendedTooltip name="РазвернутьВсеСтрокиДереваСлужебныйРасширеннаяПодсказка" id="1810"/>
+												</Button>
 												<InputField name="КаталогИнструментовСлужебный" id="494">
 													<DataPath>Объект.КаталогИнструментов</DataPath>
 													<Title>
@@ -14739,6 +14633,7 @@
 															<v8:content>Thư mục công cụ (hệ thống)</v8:content>
 														</v8:item>
 													</Title>
+													<AutoMaxWidth>false</AutoMaxWidth>
 													<ContextMenu name="КаталогИнструментовСлужебныйКонтекстноеМеню" id="495"/>
 													<ExtendedTooltip name="КаталогИнструментовСлужебныйРасширеннаяПодсказка" id="1441"/>
 													<Events>
@@ -14833,11 +14728,13 @@
 															<v8:content>Thư mục tính năng (hệ thống)</v8:content>
 														</v8:item>
 													</Title>
+													<AutoMaxWidth>false</AutoMaxWidth>
 													<ContextMenu name="КаталогФичСлужебныйКонтекстноеМеню" id="490"/>
 													<ExtendedTooltip name="КаталогФичСлужебныйРасширеннаяПодсказка" id="1440"/>
 												</InputField>
 												<InputField name="ФйлФлагВыполненияСценариев" id="1680">
 													<DataPath>ФайлФлагВыполненияСценариев</DataPath>
+													<AutoMaxWidth>false</AutoMaxWidth>
 													<ContextMenu name="ФйлФлагВыполненияСценариевКонтекстноеМеню" id="1681"/>
 													<ExtendedTooltip name="ФйлФлагВыполненияСценариевРасширеннаяПодсказка" id="1682"/>
 												</InputField>
@@ -14849,13 +14746,39 @@
 															<v8:content>ИД раннера</v8:content>
 														</v8:item>
 													</Title>
+													<AutoMaxWidth>false</AutoMaxWidth>
 													<ContextMenu name="ИДПотокаКонтекстноеМеню" id="1687"/>
 													<ExtendedTooltip name="ИДПотокаРасширеннаяПодсказка" id="1688"/>
 												</InputField>
 												<InputField name="ВерсияПоставки" id="1781">
 													<DataPath>Объект.ВерсияПоставки</DataPath>
+													<AutoMaxWidth>false</AutoMaxWidth>
 													<ContextMenu name="ВерсияПоставкиКонтекстноеМеню" id="1782"/>
 													<ExtendedTooltip name="ВерсияПоставкиРасширеннаяПодсказка" id="1783"/>
+												</InputField>
+												<InputField name="КаталогОтносительноКоторогоНадоСтроитьИерархию" id="1797">
+													<DataPath>Объект.КаталогОтносительноКоторогоНадоСтроитьИерархию</DataPath>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<ContextMenu name="КаталогОтносительноКоторогоНадоСтроитьИерархиюКонтекстноеМеню" id="1798"/>
+													<ExtendedTooltip name="КаталогОтносительноКоторогоНадоСтроитьИерархиюРасширеннаяПодсказка" id="1799"/>
+												</InputField>
+												<InputField name="УровеньОтчета1" id="1800">
+													<DataPath>Объект.УровеньОтчета1</DataPath>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<ContextMenu name="УровеньОтчета1КонтекстноеМеню" id="1801"/>
+													<ExtendedTooltip name="УровеньОтчета1РасширеннаяПодсказка" id="1802"/>
+												</InputField>
+												<InputField name="УровеньОтчета2" id="1803">
+													<DataPath>Объект.УровеньОтчета2</DataPath>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<ContextMenu name="УровеньОтчета2КонтекстноеМеню" id="1804"/>
+													<ExtendedTooltip name="УровеньОтчета2РасширеннаяПодсказка" id="1805"/>
+												</InputField>
+												<InputField name="УровеньОтчета3" id="1806">
+													<DataPath>Объект.УровеньОтчета3</DataPath>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<ContextMenu name="УровеньОтчета3КонтекстноеМеню" id="1807"/>
+													<ExtendedTooltip name="УровеньОтчета3РасширеннаяПодсказка" id="1808"/>
 												</InputField>
 												<CheckBoxField name="РежимСамотестирования" id="1667">
 													<DataPath>Объект.РежимСамотестирования</DataPath>
@@ -15483,15 +15406,6 @@
 							<v8:item>
 								<v8:lang>ru</v8:lang>
 								<v8:content>Массив сценариев защита от зацикливания</v8:content>
-							</v8:item>
-						</Title>
-						<Type/>
-					</Column>
-					<Column name="МассивТегов" id="29">
-						<Title>
-							<v8:item>
-								<v8:lang>ru</v8:lang>
-								<v8:content>Массив тегов</v8:content>
 							</v8:item>
 						</Title>
 						<Type/>
@@ -17199,6 +17113,32 @@
 					<v8:Length>0</v8:Length>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗапрашиватьПодтверждениеПриЗакрытии" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запрашивать подтверждение при закрытии</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗакрытьФормуVA" id="41">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть форму VA</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
 		<ConditionalAppearance>
@@ -20851,6 +20791,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ТекстовыйРедакторVsCode</Action>
+		</Command>
+		<Command name="РазвернутьВсеСтрокиДереваСлужебный" id="73">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Развернуть все строки дерева служебный</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Развернуть все строки дерева служебный</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>РазвернутьВсеСтрокиДереваСлужебный</Action>
 		</Command>
 	</Commands>
 </Form>
