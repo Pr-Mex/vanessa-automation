@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.9600.16518"></meta></head><body>
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.9600.19081"></meta></head><body>
 <p><font size="3" face="Arial">Vanessa-Automation - это фреймворк для разработки в 1С используя методологию BDD.</font></p>
 <p><font size="3" face="Arial">Страница проекта: <a href="https://github.com/Pr-Mex/vanessa-automation">https://github.com/Pr-Mex/vanessa-automation</a></font></p>
 <p><font size="3" face="Arial">Vanessa-Automation является аналогом Cucumber для разработки на платформе 1С:Предприятие.</font></p>
@@ -30,7 +30,7 @@
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
 <p>* Открытие фичи в текстовом редакторе</p></blockquote>
 <p>6. Асинхронные вызовы</p>
-<p>7. Как получить отчет Allure, jUnit, Cucmber report.</p>
+<p>7. <a href="#Как получить отчет Allure, jUnit, Cucmber report.">Как получить отчет Allure, jUnit, Cucmber report.</a></p>
 <p>8. <a href="#Быстрое создание файла сценария">Запись действий пользователя.</a></p>
 <p>9. <a href="#Как получить состояние формы TestClient">Как получить состояние формы TestClient.</a></p>
 <p>10. Как подключить свою библиотеку.</p>
@@ -196,7 +196,23 @@
 <p dir="ltr">Примеры команд также доступны из контекстного меню поля.</p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
 <p dir="ltr"><img src="_files/КонтекстноеМенюПолеКомандаТекстовогоРедактора.png"></img></p></blockquote>
+<p> </p>
 <p> </p></blockquote></blockquote>
+<h2>7<a name="Как получить отчет Allure, jUnit, Cucmber report.">. Как получить отчет Allure, jUnit, Cucmber report.</a></h2>
+<p> </p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p>1. Для формирования отчета в формате Yandex Allure нужно заполнить данные настройки</p>
+<p><img src="_files/Allure.png"></img></p>
+<p>2. При формировании отчета поддерживаются директивы, которые можно указать в feature файле.</p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p>#report.feature=уровень1<br>#report.story=уровень2</p>
+<p dir="ltr">Таким образом можно задать нужную иерархию отчета (первый и второй уровень дерева).</p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p dir="ltr"><img src="_files/Allure2.png"></img></p></blockquote></blockquote>
+<p dir="ltr">3. Отчеты в формате jUnit и Cucumber report формируются аналогично.</p>
+<p dir="ltr">4. Параметры формирования отчета также можно задать через json файл, когда ванесса запускается в режиме командной строки.</p>
+<p> </p>
+<p> </p></blockquote>
 <h2><a name="Быстрое создание файла сценария">8. Запись</a> действий пользователя.</h2>
 <h3>Запись поведения пользователя</h3>
 <p>1. На вкладке «Работа с UI» имеется набор кнопок, отвечающих за взаимодействие с клиентом тестирования из Vanessa Automation.</p>
