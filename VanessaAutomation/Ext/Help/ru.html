@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.9600.19081"></meta></head><body>
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.9600.19104"></meta></head><body>
 <p><font size="3" face="Arial">Vanessa-Automation - это фреймворк для разработки в 1С используя методологию BDD.</font></p>
 <p><font size="3" face="Arial">Страница проекта: <a href="https://github.com/Pr-Mex/vanessa-automation">https://github.com/Pr-Mex/vanessa-automation</a></font></p>
 <p><font size="3" face="Arial">Vanessa-Automation является аналогом Cucumber для разработки на платформе 1С:Предприятие.</font></p>
@@ -205,10 +205,19 @@
 <p><img src="_files/Allure.png"></img></p>
 <p>2. При формировании отчета поддерживаются директивы, которые можно указать в feature файле.</p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<p>#report.feature=уровень1<br>#report.story=уровень2</p>
-<p dir="ltr">Таким образом можно задать нужную иерархию отчета (первый и второй уровень дерева).</p>
+<p>Например:<br>#report.feature=уровень1<br>#report.story=уровень2</p>
+<p>Значения таких директив могут быть любыми.</p>
+<p dir="ltr">Таким образом можно задать нужную иерархию отчета (первый, второй и третий уровень дерева).</p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<p dir="ltr"><img src="_files/Allure2.png"></img></p></blockquote></blockquote>
+<p dir="ltr"><img src="_files/Allure2.png"></img></p></blockquote>
+<p dir="ltr">Чтобы иерархия отчета строилась верно, нужно в управляющем json файле задать параметры. Например:</p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p style="MARGIN-RIGHT: 0px" dir="ltr"><em><font style="BACKGROUND-COLOR: #ffe100">"КаталогОтносительноКоторогоНадоСтроитьИерархию": "./features",<br>"УровеньОтчета1": "#report.epic=;Каталог1",<br>"УровеньОтчета2": "#report.feature=;Каталог2",<br>"УровеньОтчета3": "#report.story=;ИмяСценария"</font></em></p>
+<p dir="ltr">В данном примере, для вычислеения первого уровня иерархии отчета сначала будет попытка найти в тексте фича файла строку вида "<font style="BACKGROUND-COLOR: #ffe100">#report.feature=уровень1</font>". Если не получится найти такую строку, тогда будет попытка вычислить имя каталога первого уровня относительно каталога (параметр КаталогОтносительноКоторогоНадоСтроитьИерархию), в котром лежат фича файлы (второе значение параметра "УровеньОтчета1" =  Каталог1).</p>
+<p dir="ltr">Также для параметров "УровеньОтчетаX" можно использовать значения "<font style="BACKGROUND-COLOR: #ffe100">ИмяФичи</font>" и "<font style="BACKGROUND-COLOR: #ffe100">ИмяСценария</font>".</p>
+<p dir="ltr">Также, если в управляюхем json указано значение параметра <em><font style="BACKGROUND-COLOR: #ffe100">"ДобавлятьКИмениСценарияУсловияВыгрузки": "Истина"</font></em>, то к имени сценария будет добавлятся имя сборки. Это полезно, когда один и тот же сценарий запускается в разных окружениях (сборках) и надо получить единый отчет по всем сборкам.</p>
+<p dir="ltr"><br> </p></blockquote>
+<p style="MARGIN-RIGHT: 0px" dir="ltr"></p></blockquote>
 <p dir="ltr">3. Отчеты в формате jUnit и Cucumber report формируются аналогично.</p>
 <p dir="ltr">4. Параметры формирования отчета также можно задать через json файл, когда ванесса запускается в режиме командной строки.</p>
 <p> </p>
