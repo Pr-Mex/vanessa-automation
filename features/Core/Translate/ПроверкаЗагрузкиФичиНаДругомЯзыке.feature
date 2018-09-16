@@ -28,7 +28,7 @@
 	Тогда таблица "ДеревоТестов" стала равной:
 		| 'Наименование'                                                         |
 		| 'СлужебнаяФичаEN3.feature'                                             |
-		| 'СлужебнаяФичаEN3'                                                     |
+		| 'Creare Clientii pe CUI'                                               |
 		| 'Background'                                                           |
 		| 'Given I launch TestClient opening script or connect the existing one' |
 		| 'Given I open new TestClient session or connect the existing one'      |
@@ -53,7 +53,7 @@
 	Тогда таблица "ДеревоТестов" стала равной:
 		| 'Наименование'                                                         |
 		| 'СлужебнаяФичаEN2.feature'                                             |
-		| 'СлужебнаяФичаEN2'                                                     |
+		| '<feature description>'                                                |
 		| 'Background'                                                           |
 		| 'Given I launch TestClient opening script or connect the existing one' |
 		| 'Given I open new TestClient session or connect the existing one'      |

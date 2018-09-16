@@ -23,7 +23,7 @@
 	Тогда таблица формы с именем "ДеревоТестов" содержит строки:
 		| 'Наименование'                         |
 		| 'ДляПроверкаТегаTreeПеревод.feature'   |
-		| 'ДляПроверкаТегаTreeПеревод'           |
+		| '<descrierea funcționalității>'        |
 		| '<descrierea scenariului>'             |
 		| 'Și Eu butonez "Salvare şi închidere"' |
 		| 'Comentariu 001'                       |
