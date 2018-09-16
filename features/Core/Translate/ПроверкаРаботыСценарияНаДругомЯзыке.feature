@@ -33,7 +33,7 @@
 	Тогда таблица "ДеревоТестов" стала равной:
 		| 'Наименование'                                                         | 'Статус'  |
 		| 'СлужебнаяФичаEN1.feature'                                             | ''        |
-		| 'СлужебнаяФичаEN1'                                                     | ''        |
+		| 'For test english feature'                                             | ''        |
 		| 'Background'                                                           | ''        |
 		| 'Given I launch TestClient opening script or connect the existing one' | ''        |
 		| 'Given I open new TestClient session or connect the existing one'      | 'Success' |
