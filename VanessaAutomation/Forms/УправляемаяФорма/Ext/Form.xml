@@ -2837,8 +2837,6 @@
 											</Title>
 											<EditMode>EnterOnInput</EditMode>
 											<Width>3</Width>
-											<AutoMaxWidth>false</AutoMaxWidth>
-											<MaxWidth>3</MaxWidth>
 											<HorizontalStretch>false</HorizontalStretch>
 											<ValuesPicture>
 												<xr:Abs>ValuesPicture.png</xr:Abs>
@@ -3495,8 +3493,6 @@
 											</Title>
 											<EditMode>EnterOnInput</EditMode>
 											<Width>3</Width>
-											<AutoMaxWidth>false</AutoMaxWidth>
-											<MaxWidth>3</MaxWidth>
 											<ContextMenu name="ДеревоТестовИДСтрокиКонтекстноеМеню" id="1612"/>
 											<ExtendedTooltip name="ДеревоТестовИДСтрокиРасширеннаяПодсказка" id="1613"/>
 										</InputField>
@@ -7952,6 +7948,7 @@
 													<v8:content>Страницы сервис основные</v8:content>
 												</v8:item>
 											</ToolTip>
+											<HorizontalStretch>true</HorizontalStretch>
 											<ExtendedTooltip name="СтраницыСервисОсновныеРасширеннаяПодсказка" id="1361"/>
 											<ChildItems>
 												<UsualGroup name="РаботаСТэгами" id="304">
@@ -8468,6 +8465,7 @@
 															<ChildItems>
 																<CheckBoxField name="ПодключитьВнешниеОбработкиДляОтладки" id="341">
 																	<DataPath>Объект.ПодключитьВнешниеОбработкиДляОтладки</DataPath>
+																	<Visible>false</Visible>
 																	<Title>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
@@ -9182,25 +9180,27 @@
 												</UsualGroup>
 												<InputField name="ТаймаутЗапуска1С" id="1672">
 													<DataPath>Объект.ТаймаутЗапуска1С</DataPath>
-													<AutoMaxWidth>false</AutoMaxWidth>
 													<ContextMenu name="ТаймаутЗапуска1СКонтекстноеМеню" id="1673"/>
 													<ExtendedTooltip name="ТаймаутЗапуска1СРасширеннаяПодсказка" id="1674"/>
 												</InputField>
 												<InputField name="ТаймаутДляАсинхронныхШагов" id="1773">
 													<DataPath>Объект.ТаймаутДляАсинхронныхШагов</DataPath>
-													<AutoMaxWidth>false</AutoMaxWidth>
 													<ContextMenu name="ТаймаутДляАсинхронныхШаговКонтекстноеМеню" id="1774"/>
 													<ExtendedTooltip name="ТаймаутДляАсинхронныхШаговРасширеннаяПодсказка" id="1775"/>
 												</InputField>
 												<InputField name="КоличествоСекундПоискаОкна" id="1747">
 													<DataPath>Объект.КоличествоСекундПоискаОкна</DataPath>
-													<AutoMaxWidth>false</AutoMaxWidth>
 													<ContextMenu name="КоличествоСекундПоискаОкнаКонтекстноеМеню" id="1748"/>
 													<ExtendedTooltip name="КоличествоСекундПоискаОкнаРасширеннаяПодсказка" id="1749"/>
 												</InputField>
+												<InputField name="КоличествоПопытокВыполненияДействия" id="1819">
+													<DataPath>Объект.КоличествоПопытокВыполненияДействия</DataPath>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<ContextMenu name="КоличествоПопытокВыполненияДействияКонтекстноеМеню" id="1820"/>
+													<ExtendedTooltip name="КоличествоПопытокВыполненияДействияРасширеннаяПодсказка" id="1821"/>
+												</InputField>
 												<InputField name="ДиапазонПортовTestclient" id="1683">
 													<DataPath>Объект.ДиапазонПортовTestclient</DataPath>
-													<AutoMaxWidth>false</AutoMaxWidth>
 													<ContextMenu name="ДиапазонПортовTestclientКонтекстноеМеню" id="1684"/>
 													<ExtendedTooltip name="ДиапазонПортовTestclientРасширеннаяПодсказка" id="1685"/>
 												</InputField>
@@ -9212,7 +9212,6 @@
 															<v8:content>Каталог инструментов</v8:content>
 														</v8:item>
 													</Title>
-													<AutoMaxWidth>false</AutoMaxWidth>
 													<ChoiceButton>true</ChoiceButton>
 													<ClearButton>true</ClearButton>
 													<ContextMenu name="КаталогИнструментовКонтекстноеМеню" id="381"/>
@@ -9406,7 +9405,6 @@
 															<v8:content>Thư mục dự án</v8:content>
 														</v8:item>
 													</Title>
-													<AutoMaxWidth>false</AutoMaxWidth>
 													<ChoiceButton>true</ChoiceButton>
 													<ClearButton>true</ClearButton>
 													<ContextMenu name="КаталогПроектаКонтекстноеМеню" id="718"/>
@@ -9503,7 +9501,6 @@
 															<v8:content>Khoảng thực hiện của bước</v8:content>
 														</v8:item>
 													</Title>
-													<AutoMaxWidth>false</AutoMaxWidth>
 													<ContextMenu name="ИнтервалВыполненияШагаЗаданныйПользователемКонтекстноеМеню" id="524"/>
 													<ExtendedTooltip name="ИнтервалВыполненияШагаЗаданныйПользователемРасширеннаяПодсказка" id="1385"/>
 												</InputField>
@@ -9596,7 +9593,6 @@
 														</v8:item>
 													</Title>
 													<HorizontalAlign>Left</HorizontalAlign>
-													<AutoMaxWidth>false</AutoMaxWidth>
 													<ListChoiceMode>true</ListChoiceMode>
 													<ChoiceList>
 														<xr:Item>
@@ -9977,7 +9973,6 @@
 												</InputField>
 												<InputField name="ЗапрашиватьПодтверждениеПриЗакрытии" id="1791">
 													<DataPath>ЗапрашиватьПодтверждениеПриЗакрытии</DataPath>
-													<AutoMaxWidth>false</AutoMaxWidth>
 													<ListChoiceMode>true</ListChoiceMode>
 													<ChoiceList>
 														<xr:Item>
@@ -10020,7 +10015,6 @@
 												</InputField>
 												<InputField name="КомандаОткрытияФичиВТекстовомРедакторе" id="1776">
 													<DataPath>Объект.КомандаОткрытияФичиВТекстовомРедакторе</DataPath>
-													<AutoMaxWidth>false</AutoMaxWidth>
 													<ContextMenu name="КомандаОткрытияФичиВТекстовомРедактореКонтекстноеМеню" id="1777">
 														<ChildItems>
 															<ButtonGroup name="ГруппаТекстовыеРедакторы" id="1789">
@@ -11528,6 +11522,38 @@
 														</InputField>
 													</ChildItems>
 												</UsualGroup>
+												<UsualGroup name="ГруппаSikuliXServer" id="1814">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>SikuliX server</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>SikuliX server</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Vertical</Group>
+													<Behavior>Collapsible</Behavior>
+													<ControlRepresentation>Picture</ControlRepresentation>
+													<ExtendedTooltip name="ГруппаSikuliXServerРасширеннаяПодсказка" id="1815"/>
+													<ChildItems>
+														<CheckBoxField name="ИспользоватьSikuliXСервер" id="1811">
+															<DataPath>Объект.ИспользоватьSikuliXСервер</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ИспользоватьSikuliXСерверКонтекстноеМеню" id="1812"/>
+															<ExtendedTooltip name="ИспользоватьSikuliXСерверРасширеннаяПодсказка" id="1813"/>
+														</CheckBoxField>
+														<InputField name="КаталогиСкриптовSikuliX" id="1816">
+															<DataPath>Объект.КаталогиСкриптовSikuliX</DataPath>
+															<ContextMenu name="КаталогиСкриптовSikuliXКонтекстноеМеню" id="1817"/>
+															<ExtendedTooltip name="КаталогиСкриптовSikuliXРасширеннаяПодсказка" id="1818"/>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
 												<UsualGroup name="HTMLИMarkdown" id="658">
 													<Title>
 														<v8:item>
@@ -11538,7 +11564,7 @@
 													<ToolTip>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>HTMLИMarkdown</v8:content>
+															<v8:content>HTML и Markdown</v8:content>
 														</v8:item>
 													</ToolTip>
 													<Group>Vertical</Group>
@@ -14633,7 +14659,6 @@
 															<v8:content>Thư mục công cụ (hệ thống)</v8:content>
 														</v8:item>
 													</Title>
-													<AutoMaxWidth>false</AutoMaxWidth>
 													<ContextMenu name="КаталогИнструментовСлужебныйКонтекстноеМеню" id="495"/>
 													<ExtendedTooltip name="КаталогИнструментовСлужебныйРасширеннаяПодсказка" id="1441"/>
 													<Events>
@@ -14728,13 +14753,11 @@
 															<v8:content>Thư mục tính năng (hệ thống)</v8:content>
 														</v8:item>
 													</Title>
-													<AutoMaxWidth>false</AutoMaxWidth>
 													<ContextMenu name="КаталогФичСлужебныйКонтекстноеМеню" id="490"/>
 													<ExtendedTooltip name="КаталогФичСлужебныйРасширеннаяПодсказка" id="1440"/>
 												</InputField>
 												<InputField name="ФйлФлагВыполненияСценариев" id="1680">
 													<DataPath>ФайлФлагВыполненияСценариев</DataPath>
-													<AutoMaxWidth>false</AutoMaxWidth>
 													<ContextMenu name="ФйлФлагВыполненияСценариевКонтекстноеМеню" id="1681"/>
 													<ExtendedTooltip name="ФйлФлагВыполненияСценариевРасширеннаяПодсказка" id="1682"/>
 												</InputField>
@@ -14746,37 +14769,31 @@
 															<v8:content>ИД раннера</v8:content>
 														</v8:item>
 													</Title>
-													<AutoMaxWidth>false</AutoMaxWidth>
 													<ContextMenu name="ИДПотокаКонтекстноеМеню" id="1687"/>
 													<ExtendedTooltip name="ИДПотокаРасширеннаяПодсказка" id="1688"/>
 												</InputField>
 												<InputField name="ВерсияПоставки" id="1781">
 													<DataPath>Объект.ВерсияПоставки</DataPath>
-													<AutoMaxWidth>false</AutoMaxWidth>
 													<ContextMenu name="ВерсияПоставкиКонтекстноеМеню" id="1782"/>
 													<ExtendedTooltip name="ВерсияПоставкиРасширеннаяПодсказка" id="1783"/>
 												</InputField>
 												<InputField name="КаталогОтносительноКоторогоНадоСтроитьИерархию" id="1797">
 													<DataPath>Объект.КаталогОтносительноКоторогоНадоСтроитьИерархию</DataPath>
-													<AutoMaxWidth>false</AutoMaxWidth>
 													<ContextMenu name="КаталогОтносительноКоторогоНадоСтроитьИерархиюКонтекстноеМеню" id="1798"/>
 													<ExtendedTooltip name="КаталогОтносительноКоторогоНадоСтроитьИерархиюРасширеннаяПодсказка" id="1799"/>
 												</InputField>
 												<InputField name="УровеньОтчета1" id="1800">
 													<DataPath>Объект.УровеньОтчета1</DataPath>
-													<AutoMaxWidth>false</AutoMaxWidth>
 													<ContextMenu name="УровеньОтчета1КонтекстноеМеню" id="1801"/>
 													<ExtendedTooltip name="УровеньОтчета1РасширеннаяПодсказка" id="1802"/>
 												</InputField>
 												<InputField name="УровеньОтчета2" id="1803">
 													<DataPath>Объект.УровеньОтчета2</DataPath>
-													<AutoMaxWidth>false</AutoMaxWidth>
 													<ContextMenu name="УровеньОтчета2КонтекстноеМеню" id="1804"/>
 													<ExtendedTooltip name="УровеньОтчета2РасширеннаяПодсказка" id="1805"/>
 												</InputField>
 												<InputField name="УровеньОтчета3" id="1806">
 													<DataPath>Объект.УровеньОтчета3</DataPath>
-													<AutoMaxWidth>false</AutoMaxWidth>
 													<ContextMenu name="УровеньОтчета3КонтекстноеМеню" id="1807"/>
 													<ExtendedTooltip name="УровеньОтчета3РасширеннаяПодсказка" id="1808"/>
 												</InputField>
@@ -14830,6 +14847,7 @@
 															<v8:content>Произвольный код</v8:content>
 														</v8:item>
 													</Title>
+													<AutoMaxWidth>false</AutoMaxWidth>
 													<MultiLine>true</MultiLine>
 													<ContextMenu name="РеквизитПроизвольныйКодКонтекстноеМеню" id="1642"/>
 													<ExtendedTooltip name="РеквизитПроизвольныйКодРасширеннаяПодсказка" id="1643"/>
@@ -14968,7 +14986,6 @@
 					<Visible>false</Visible>
 					<ReadOnly>true</ReadOnly>
 					<TitleLocation>None</TitleLocation>
-					<AutoMaxWidth>false</AutoMaxWidth>
 					<ContextMenu name="СтрокаСтатусаКонтекстноеМеню" id="1718"/>
 					<ExtendedTooltip name="СтрокаСтатусаРасширеннаяПодсказка" id="1719"/>
 				</InputField>
@@ -20705,83 +20722,7 @@
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
-					<v8:content>Notepad++</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>am</v8:lang>
-					<v8:content>ደረጃ </v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>az</v8:lang>
-					<v8:content>Notepad </v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>bg</v8:lang>
-					<v8:content>Notepad </v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>et</v8:lang>
-					<v8:content>Notepad </v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>fr</v8:lang>
-					<v8:content>Notepad </v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ka</v8:lang>
-					<v8:content>Notepad </v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>de</v8:lang>
-					<v8:content>Notepad </v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>hu</v8:lang>
-					<v8:content>Jegyzettömb </v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>it</v8:lang>
-					<v8:content>Notepad </v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>lv</v8:lang>
-					<v8:content>Notepad </v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>lt</v8:lang>
-					<v8:content>Užrašų knygelė </v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>mn</v8:lang>
-					<v8:content>Notepad </v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>pl</v8:lang>
-					<v8:content>Notepad </v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ro</v8:lang>
-					<v8:content>Notepad </v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>sl</v8:lang>
-					<v8:content>Beležnica </v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>es</v8:lang>
-					<v8:content>El bloc de notas </v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>sv</v8:lang>
-					<v8:content>Anteckningar </v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>tr</v8:lang>
-					<v8:content>Notepad </v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>vi</v8:lang>
-					<v8:content>Notepad++</v8:content>
+					<v8:content>Visual Studio Code</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
