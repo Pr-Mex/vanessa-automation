@@ -4335,10 +4335,7 @@
 //
 &НаКлиенте
 Функция ВыполнитьSikuliСкрипт(СтрокаКоманды, ЖдатьОкончания = -1, ЗапускЧерезСкрипт = Истина,ОписаниеОшибки = Неопределено) Экспорт
-	//Стр = ПолучитьСтрокуВызоваSikuli(ЗапускЧерезСкрипт) + " " + СтрокаКоманды;
-	//БИТ Кудаков начало
-	Стр = ПолучитьСтрокуВызоваSikuli(ЗапускЧерезСкрипт) + """" + СтрокаКоманды + """";
-	//БИТ Кудаков конец
+	Стр = ПолучитьСтрокуВызоваSikuli(ЗапускЧерезСкрипт) + " " + СтрокаКоманды;
 	
 	Если ОписаниеОшибки <> Неопределено Тогда
 		ВременныйФайл = ПолучитьИмяВременногоФайла("txt");
@@ -7095,15 +7092,7 @@
 			Возврат "call runsikulix -r ";
 		КонецЕсли;
 	Иначе
-		//Возврат """C:\Program Files (x86)\Java\jre6\bin\java.exe"" -Xms64M -Xmx512M -Dfile.encoding=UTF-8 -Dpython.path=""C:\Program Files (x86)\Sikuli X\sikuli-script.jar/"" -jar ""C:\Program Files (x86)\Sikuli X\sikuli-ide.jar"" -r ";
-		// БИТ Кудаков начало
-		ПутьКФайлу = "";
-		СостояниеVanessaBehavior = ПолучитьСостояниеVanessaBehavior();
-		ПутьКТекущемуFeatureФайлу = СостояниеVanessaBehavior.ТекущаяФича.ПолныйПуть;
-		ПутьКФайлу = """" + Лев(ПутьКТекущемуFeatureФайлу, СтрНайти(ПутьКТекущемуFeatureФайлу, "features", НаправлениеПоиска.СКонца) - 1) + "tools\SikuliX\runsikulix.cmd"" -r ";
-
-		Возврат "call " + ПутьКФайлу;
-		// БИТ Кудаков конец
+		Возврат """C:\Program Files (x86)\Java\jre6\bin\java.exe"" -Xms64M -Xmx512M -Dfile.encoding=UTF-8 -Dpython.path=""C:\Program Files (x86)\Sikuli X\sikuli-script.jar/"" -jar ""C:\Program Files (x86)\Sikuli X\sikuli-ide.jar"" -r ";
 	КонецЕсли;
 	
 КонецФункции
