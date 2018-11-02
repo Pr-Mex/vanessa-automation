@@ -1,6 +1,7 @@
 ﻿# vanessa-automation
 
 [![Открытый чат проекта https://gitter.im/vanessa-automation](https://badges.gitter.im/vanessa-automation.svg)](https://gitter.im/vanessa-automation?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Build Status](http://84.237.195.35:32005/buildStatus/icon?job=VAFullCheck)](http://84.237.195.35:32005/job/VAFullCheck/)
 
 ## BDD for 1С:Enterprise
 
