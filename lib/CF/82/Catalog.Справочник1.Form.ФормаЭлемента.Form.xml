@@ -306,6 +306,18 @@
 							<ContextMenu name="РеквизитБыстрыйВыборКонтекстноеМеню" id="161"/>
 							<ExtendedTooltip name="РеквизитБыстрыйВыборРасширеннаяПодсказка" id="162"/>
 						</InputField>
+						<CheckBoxField name="РеквизитЧисло1" id="275">
+							<DataPath>Объект.РеквизитЧисло</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Флаг три значения</v8:content>
+								</v8:item>
+							</Title>
+							<ThreeState>true</ThreeState>
+							<ContextMenu name="РеквизитЧисло1КонтекстноеМеню" id="276"/>
+							<ExtendedTooltip name="РеквизитЧисло1РасширеннаяПодсказка" id="277"/>
+						</CheckBoxField>
 						<Table name="ТабличнаяЧасть1" id="13">
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
@@ -939,6 +951,52 @@
 						</UsualGroup>
 					</ChildItems>
 				</Page>
+				<Page name="ДоступностьЭлементов" id="266">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доступность элементов</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доступность элементов</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ДоступностьЭлементовРасширеннаяПодсказка" id="267"/>
+					<ChildItems>
+						<Button name="СделатьГруппуНедоступной" id="273">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.СделатьГруппуНедоступной</CommandName>
+							<Parameter xsi:nil="true"/>
+							<ExtendedTooltip name="СделатьГруппуНедоступнойРасширеннаяПодсказка" id="274"/>
+						</Button>
+						<UsualGroup name="НедоступнаяГруппа1" id="268">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Недоступная группа1</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Недоступная группа1</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<ExtendedTooltip name="НедоступнаяГруппа1РасширеннаяПодсказка" id="269"/>
+							<ChildItems>
+								<InputField name="ЭлементНедоступнаяГруппа1" id="270">
+									<DataPath>ЭлементНедоступнаяГруппа1</DataPath>
+									<ContextMenu name="ЭлементНедоступнаяГруппа1КонтекстноеМеню" id="271"/>
+									<ExtendedTooltip name="ЭлементНедоступнаяГруппа1РасширеннаяПодсказка" id="272"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
 			</ChildItems>
 		</Pages>
 	</ChildItems>
@@ -1058,6 +1116,21 @@
 					</Type>
 				</Column>
 			</Columns>
+		</Attribute>
+		<Attribute name="ЭлементНедоступнаяГруппа1" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Элемент недоступная группа1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
 		</Attribute>
 	</Attributes>
 	<Commands>
@@ -1300,6 +1373,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>НедоступнаяКоманда</Action>
+		</Command>
+		<Command name="СделатьГруппуНедоступной" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сделать группу недоступной</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сделать группу недоступной</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СделатьГруппуНедоступной</Action>
 		</Command>
 	</Commands>
 	<CommandInterface>
