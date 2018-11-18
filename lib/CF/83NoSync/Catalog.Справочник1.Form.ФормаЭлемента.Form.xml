@@ -637,15 +637,85 @@
 						</UsualGroup>
 					</ChildItems>
 				</Page>
-				<Page name="Группа2" id="127">
+				<Page name="НевидимаяСтраница" id="289">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Невидимая страница</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Невидимая страница</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="НевидимаяСтраницаРасширеннаяПодсказка" id="290"/>
+					<ChildItems>
+						<PictureDecoration name="ГиперссылкаТолькоПросмотр" id="281">
+							<Width>24</Width>
+							<Height>2</Height>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Гиперссылка только просмотр</v8:content>
+								</v8:item>
+							</Title>
+							<Hyperlink>true</Hyperlink>
+							<Picture>
+								<xr:Ref>StdPicture.CalculationType</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<Border width="1">
+								<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+							</Border>
+							<ContextMenu name="ГиперссылкаТолькоПросмотрКонтекстноеМеню" id="282"/>
+							<ExtendedTooltip name="ГиперссылкаТолькоПросмотрРасширеннаяПодсказка" id="283"/>
+							<Events>
+								<Event name="Click">ГиперссылкаТолькоПросмотрНажатие</Event>
+							</Events>
+						</PictureDecoration>
+					</ChildItems>
+				</Page>
+				<Page name="Группа2ПроверкаКнопок" id="127">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Проверка кнопок</v8:content>
 						</v8:item>
 					</Title>
-					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="128"/>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа2 проверка кнопок</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="Группа2ПроверкаКнопокРасширеннаяПодсказка" id="128"/>
 					<ChildItems>
+						<PictureDecoration name="ГиперссылкаТолькоПросмотр1" id="284">
+							<Width>24</Width>
+							<Height>2</Height>
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Гиперссылка только просмотр</v8:content>
+								</v8:item>
+							</Title>
+							<Hyperlink>true</Hyperlink>
+							<Picture>
+								<xr:Ref>StdPicture.CalculationType</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<Border width="1">
+								<v8ui:style xsi:type="v8ui:ControlBorderType">Single</v8ui:style>
+							</Border>
+							<ContextMenu name="ГиперссылкаТолькоПросмотр1КонтекстноеМеню" id="285"/>
+							<ExtendedTooltip name="ГиперссылкаТолькоПросмотр1РасширеннаяПодсказка" id="286"/>
+							<Events>
+								<Event name="Click">ГиперссылкаТолькоПросмотрНажатие</Event>
+							</Events>
+						</PictureDecoration>
 						<InputField name="РекСтрока1" id="129">
 							<DataPath>Объект.РекСтрока1</DataPath>
 							<ContextMenu name="РекСтрока1КонтекстноеМеню" id="130"/>
