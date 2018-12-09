@@ -1,4 +1,9 @@
-findAll("1492761928555.png")
+if exists("1492761928555.png"):
+    findAll("1492761928555.png")
+elif exists("1543849229768.png"):
+    findAll("1543849229768.png")
+
+    
 mm = SCREEN.getLastMatches()
 while mm.hasNext(): # loop as long there is a first and more matches
     TekMatch = mm.next()
