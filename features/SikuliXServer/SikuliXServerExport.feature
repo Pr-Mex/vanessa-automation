@@ -1,10 +1,6 @@
 # language: ru
 
-@IgnoreOn82Builds
-@IgnoreOnOFBuilds
-@IgnoreOnWeb
-@IgnoreOnFastCheck
-@IgnoreOnUFSovm82Builds
+@IgnoreOnCIMainBuild
 @ExportScenarios
 
 
