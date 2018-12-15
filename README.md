@@ -5,7 +5,7 @@
 
 ## BDD for 1С:Enterprise
 
-Текущий релиз в ветке [Master: 1.2.016](https://github.com/Pr-Mex/vanessa-automation/tree/master)
+Текущий релиз в ветке [Master: 1.2.017](https://github.com/Pr-Mex/vanessa-automation/tree/master)
 Разработка ведется в ветке [Develop](https://github.com/Pr-Mex/vanessa-automation/tree/develop).
 
 В данном репозитории хранятся только исходники.
@@ -208,6 +208,7 @@ git submodule update --init --recursive
 * [Yandex Allure](http://allure.qatools.ru/)
 * [Selenium](http://docs.seleniumhq.org/)
 * [Дэн Норт](http://en.wikipedia.org/wiki/Acceptance_test-driven_development)
+* [Vanessa-Automation — инструмент тестирования прикладных решений на платформе «1С: Предприятие» @Хабрахабр](https://habr.com/post/418303/)
 
 ## Руководство контрибьютора
 

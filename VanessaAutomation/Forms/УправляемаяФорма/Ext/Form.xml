@@ -5224,12 +5224,6 @@
 													<v8:content>Biểu mẫu</v8:content>
 												</v8:item>
 											</Title>
-											<ToolTip>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Группа командная панель</v8:content>
-												</v8:item>
-											</ToolTip>
 											<ExtendedTooltip name="ГруппаКоманднаяПанельРасширеннаяПодсказка" id="1313"/>
 											<ChildItems>
 												<ButtonGroup name="ГруппаПодменюСостояниеTestClient" id="351">
@@ -5779,7 +5773,7 @@
 																		</v8:item>
 																		<v8:item>
 																			<v8:lang>en</v8:lang>
-																			<v8:content>Pepare scenario for run</v8:content>
+																			<v8:content>Prepare scenario for run</v8:content>
 																		</v8:item>
 																		<v8:item>
 																			<v8:lang>am</v8:lang>
@@ -9183,6 +9177,13 @@
 														</InputField>
 													</ChildItems>
 												</UsualGroup>
+												<CheckBoxField name="ИскатьЭлементыФормыПоИмени" id="1824">
+													<DataPath>Объект.ИскатьЭлементыФормыПоИмени</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ИскатьЭлементыФормыПоИмениКонтекстноеМеню" id="1825"/>
+													<ExtendedTooltip name="ИскатьЭлементыФормыПоИмениРасширеннаяПодсказка" id="1826"/>
+												</CheckBoxField>
 												<InputField name="ТаймаутЗапуска1С" id="1672">
 													<DataPath>Объект.ТаймаутЗапуска1С</DataPath>
 													<ContextMenu name="ТаймаутЗапуска1СКонтекстноеМеню" id="1673"/>
@@ -11560,6 +11561,11 @@
 														</InputField>
 													</ChildItems>
 												</UsualGroup>
+												<Button name="СброситьПодключениеSikuliXСервера" id="1822">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.СброситьПодключениеSikuliXСервера</CommandName>
+													<ExtendedTooltip name="СброситьПодключениеSikuliXСервераРасширеннаяПодсказка" id="1823"/>
+												</Button>
 												<UsualGroup name="HTMLИMarkdown" id="658">
 													<Title>
 														<v8:item>
@@ -20760,6 +20766,25 @@
 				</v8:item>
 			</ToolTip>
 			<Action>РазвернутьВсеСтрокиДереваСлужебный</Action>
+		</Command>
+		<Command name="СброситьПодключениеSikuliXСервера" id="74">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сбросить подключение SikuliX сервера</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Reset SikuliX server connection</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сбросить подключение sikuli x сервера</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СброситьПодключениеSikuliXСервера</Action>
 		</Command>
 	</Commands>
 </Form>
