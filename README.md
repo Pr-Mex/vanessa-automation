@@ -27,7 +27,7 @@
 Чтобы у вас работало автосоздание видеоинструкций необходимо установить дополнительный софт. Инструкция [здесь](https://github.com/Pr-Mex/vanessa-automation/blob/develop/MakeAutoVideo.md) 
 Также по автовидеоинструкциям есть вот это замечательное [видео](https://www.youtube.com/watch?v=BfXowJH5uP0)
 
-Список отличий проекта Vanessa-automation от проекта ADD можно посмотреть [тут](https://github.com/Pr-Mex/vanessa-automation/NotAdd.MD)
+Список отличий проекта Vanessa-automation от проекта ADD можно посмотреть [тут](https://github.com/Pr-Mex/vanessa-automation/blob/develop/NotAdd.MD)
 
 Порядок установки Vanessa-Automation под Windows:
 * [интерпретатор 1Script](http://oscript.io/downloads) - для работы с иходными файлами 1С с помощью проекта Precommit1C
