@@ -12,10 +12,10 @@
 	
 	
 Сценарий: Подключение экспортного сценария на английском языке
-	Дано Я открываю VanessaBehavior в режиме TestClient 
+	Дано Я открываю VanessaAutomation в режиме TestClient 
 	
 	И В поле с именем "КаталогФичСлужебный" я указываю путь к служебной фиче "ПроверкаExportScenariosEN"
-	И Я нажимаю на кнопку перезагрузить сценарии в Vanessa-Behavior TestClient
+	И Я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
 	Тогда таблица "ДеревоТестов" стала равной:
 		| 'Наименование'                                                               |
 		| 'ПроверкаExportScenariosEN.feature'                                          |
