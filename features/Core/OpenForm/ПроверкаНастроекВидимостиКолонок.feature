@@ -1,8 +1,9 @@
 ﻿# language: ru
 
-@IgnoreOnLinux
-@OneThread
+@IgnoreOn82Builds
+@IgnoreOnOFBuilds
 @IgnoreOnWeb
+
 
 Функциональность: Проверка, что при открытии формы корректно выставлены настройки видимости колонок
 	Как Разработчик
