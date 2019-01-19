@@ -16,14 +16,14 @@
  
 
 	Контекст:
-		Дано в Константе "ПутьКVanessaBehavior" указан существующий файл
+		Дано в Константе "ПутьКVanessaAutomation" указан существующий файл
 		Дано Я запускаю сценарий открытия TestClient или подключаю уже существующий
 		
 	Сценарий: Генерации снипета TestClient
 
 		Когда я открыл форму VanessaBehavoir в TestClient
 				Когда В панели разделов я выбираю "Основная"
-				И В панели функций я выбираю "Открыть vanessa behavior"
+				И В панели функций я выбираю "Открыть vanessa automation"
 				Тогда открылось окно "* Vanessa Automation"
 		
 		И установил флаг в  VanessaBehavoir в TestClient ПроверкаРаботыVanessaBehaviorВРежимеTestClient
