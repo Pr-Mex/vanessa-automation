@@ -1,7 +1,7 @@
 ﻿# language: ru
 
-@IgnoreOnLinux
-@OneThread
+@IgnoreOn82Builds
+@IgnoreOnOFBuilds
 @IgnoreOnWeb
 
 Функционал: Проверка создания EPF из фичи на английском языке
