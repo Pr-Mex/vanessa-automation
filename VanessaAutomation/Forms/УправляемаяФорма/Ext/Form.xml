@@ -1313,6 +1313,7 @@
 												</Button>
 												<Button name="ПоказатьСкрытьИДСтроки" id="1614">
 													<Type>CommandBarButton</Type>
+													<Visible>false</Visible>
 													<CommandName>Form.Command.ПоказатьСкрытьИДСтроки</CommandName>
 													<Picture>
 														<xr:Ref>StdPicture.CheckAll</xr:Ref>
@@ -1817,7 +1818,7 @@
 															</v8:item>
 															<v8:item>
 																<v8:lang>en</v8:lang>
-																<v8:content>Run scenarios of rhat feature</v8:content>
+																<v8:content>Run scenarios of that feature</v8:content>
 															</v8:item>
 															<v8:item>
 																<v8:lang>am</v8:lang>
@@ -8928,6 +8929,13 @@
 																	<ContextMenu name="БезапасноеВыполнениеШаговКонтекстноеМеню" id="1785"/>
 																	<ExtendedTooltip name="БезапасноеВыполнениеШаговРасширеннаяПодсказка" id="1786"/>
 																</CheckBoxField>
+																<CheckBoxField name="ИскатьЭлементыФормыПоИмени" id="1824">
+																	<DataPath>Объект.ИскатьЭлементыФормыПоИмени</DataPath>
+																	<TitleLocation>Right</TitleLocation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="ИскатьЭлементыФормыПоИмениКонтекстноеМеню" id="1825"/>
+																	<ExtendedTooltip name="ИскатьЭлементыФормыПоИмениРасширеннаяПодсказка" id="1826"/>
+																</CheckBoxField>
 															</ChildItems>
 														</UsualGroup>
 														<UsualGroup name="ПраваяЧастьФлажковНастроек" id="914">
@@ -9177,13 +9185,6 @@
 														</InputField>
 													</ChildItems>
 												</UsualGroup>
-												<CheckBoxField name="ИскатьЭлементыФормыПоИмени" id="1824">
-													<DataPath>Объект.ИскатьЭлементыФормыПоИмени</DataPath>
-													<TitleLocation>Right</TitleLocation>
-													<CheckBoxType>Auto</CheckBoxType>
-													<ContextMenu name="ИскатьЭлементыФормыПоИмениКонтекстноеМеню" id="1825"/>
-													<ExtendedTooltip name="ИскатьЭлементыФормыПоИмениРасширеннаяПодсказка" id="1826"/>
-												</CheckBoxField>
 												<InputField name="ТаймаутЗапуска1С" id="1672">
 													<DataPath>Объект.ТаймаутЗапуска1С</DataPath>
 													<ContextMenu name="ТаймаутЗапуска1СКонтекстноеМеню" id="1673"/>
@@ -14226,6 +14227,20 @@
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="ЗаписьВидеоПеремещатьКурсорМышкиКАктивномуЭлементуФормыКонтекстноеМеню" id="713"/>
 																			<ExtendedTooltip name="ЗаписьВидеоПеремещатьКурсорМышкиКАктивномуЭлементуФормыРасширеннаяПодсказка" id="1438"/>
+																		</CheckBoxField>
+																		<CheckBoxField name="ЗаписьВидеоГруппаШаговКакШаг" id="1827">
+																			<DataPath>Объект.ЗаписьВидеоГруппаШаговКакШаг</DataPath>
+																			<TitleLocation>Right</TitleLocation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="ЗаписьВидеоГруппаШаговКакШагКонтекстноеМеню" id="1828"/>
+																			<ExtendedTooltip name="ЗаписьВидеоГруппаШаговКакШагРасширеннаяПодсказка" id="1829"/>
+																		</CheckBoxField>
+																		<CheckBoxField name="ЗаписьВидеоОтключитьМасштабированиеШаговПоВремени" id="1830">
+																			<DataPath>Объект.ЗаписьВидеоОтключитьМасштабированиеШаговПоВремени</DataPath>
+																			<TitleLocation>Right</TitleLocation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="ЗаписьВидеоОтключитьМасштабированиеШаговПоВремениКонтекстноеМеню" id="1831"/>
+																			<ExtendedTooltip name="ЗаписьВидеоОтключитьМасштабированиеШаговПоВремениРасширеннаяПодсказка" id="1832"/>
 																		</CheckBoxField>
 																	</ChildItems>
 																</Page>
