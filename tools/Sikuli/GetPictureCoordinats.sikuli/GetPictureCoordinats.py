@@ -15,4 +15,5 @@ data['Y2'] = match.getBottomRight().y
 
 with open(temp_name, 'w') as outfile:
     json.dump(data, outfile)
+exit(0)    
 #print ("X="+str(match.x))
