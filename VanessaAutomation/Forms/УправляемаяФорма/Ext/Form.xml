@@ -1036,7 +1036,7 @@
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Имя снипета</v8:content>
+															<v8:content>Снипет</v8:content>
 														</v8:item>
 														<v8:item>
 															<v8:lang>en</v8:lang>
@@ -1131,7 +1131,7 @@
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Обработка вызова</v8:content>
+															<v8:content>Обработка</v8:content>
 														</v8:item>
 														<v8:item>
 															<v8:lang>en</v8:lang>
@@ -1226,7 +1226,7 @@
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Строка реальной процедуры</v8:content>
+															<v8:content>Имя процедуры</v8:content>
 														</v8:item>
 														<v8:item>
 															<v8:lang>en</v8:lang>
@@ -1322,7 +1322,7 @@
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>№ строки</v8:content>
+															<v8:content>№</v8:content>
 														</v8:item>
 														<v8:item>
 															<v8:lang>en</v8:lang>
@@ -3228,7 +3228,7 @@
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Обработка вызова</v8:content>
+													<v8:content>Обработка</v8:content>
 												</v8:item>
 												<v8:item>
 													<v8:lang>en</v8:lang>
@@ -3321,7 +3321,7 @@
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>Строка процедуры вызова шага</v8:content>
+													<v8:content>Имя процедуры</v8:content>
 												</v8:item>
 												<v8:item>
 													<v8:lang>en</v8:lang>
@@ -3414,7 +3414,7 @@
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
-													<v8:content>№ строки</v8:content>
+													<v8:content>№</v8:content>
 												</v8:item>
 												<v8:item>
 													<v8:lang>en</v8:lang>
@@ -6886,7 +6886,7 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Test clients</v8:content>
+									<v8:content>Клиенты тестирования</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>en</v8:lang>
@@ -7955,7 +7955,11 @@
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Работа с тэгами</v8:content>
+															<v8:content>Тэги</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Tags</v8:content>
 														</v8:item>
 													</Title>
 													<ToolTip>
@@ -8056,6 +8060,7 @@
 																	<v8:content>Danh sách các tag bị loại trừ</v8:content>
 																</v8:item>
 															</Title>
+															<AutoMaxWidth>false</AutoMaxWidth>
 															<ContextMenu name="СписокТеговИсключение1КонтекстноеМеню" id="222"/>
 															<ExtendedTooltip name="СписокТеговИсключение1РасширеннаяПодсказка" id="1363"/>
 														</InputField>
@@ -8147,6 +8152,7 @@
 																	<v8:content>Tag để khởi động</v8:content>
 																</v8:item>
 															</Title>
+															<AutoMaxWidth>false</AutoMaxWidth>
 															<ContextMenu name="СписокТеговОтбор1КонтекстноеМеню" id="225"/>
 															<ExtendedTooltip name="СписокТеговОтбор1РасширеннаяПодсказка" id="1364"/>
 														</InputField>
@@ -8301,6 +8307,7 @@
 															<v8:content>Язык генератора Gherkin</v8:content>
 														</v8:item>
 													</Title>
+													<AutoMaxWidth>false</AutoMaxWidth>
 													<ListChoiceMode>true</ListChoiceMode>
 													<ChoiceList>
 														<xr:Item>
@@ -8559,6 +8566,7 @@
 																</CheckBoxField>
 																<CheckBoxField name="СохранятьКонтекстыПередВыполнениемШагов" id="344">
 																	<DataPath>Объект.СохранятьКонтекстыПередВыполнениемШагов</DataPath>
+																	<Visible>false</Visible>
 																	<Title>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
@@ -8649,292 +8657,6 @@
 																	<CheckBoxType>Auto</CheckBoxType>
 																	<ContextMenu name="СохранятьКонтекстыПередВыполнениемШаговКонтекстноеМеню" id="345"/>
 																	<ExtendedTooltip name="СохранятьКонтекстыПередВыполнениемШаговРасширеннаяПодсказка" id="1373"/>
-																</CheckBoxField>
-																<CheckBoxField name="ВыполнятьШагиАссинхронно" id="335">
-																	<DataPath>Объект.ВыполнятьШагиАссинхронно</DataPath>
-																	<Title>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Обновлять состояние дерева при выполнении шагов</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>en</v8:lang>
-																			<v8:content>Invoke steps as async procedure</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>am</v8:lang>
-																			<v8:content>አዳዲስ ግምገማዎች በይፋ ዛፍ አሁን stepping</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>az</v8:lang>
-																			<v8:content>Yeniləmə vəziyyəti ağac yerinə yetirərkən addımlar</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>bg</v8:lang>
-																			<v8:content>Актуализира състоянието на дърво при извършване на стъпки</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>et</v8:lang>
-																			<v8:content>Värskenda olek puu, kui teed sammu</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>fr</v8:lang>
-																			<v8:content>Mettre à jour l'état de l'arborescence lors de l'étape</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>ka</v8:lang>
-																			<v8:content>განაახლოს სტატუსი ხე, როცა stepping</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>de</v8:lang>
-																			<v8:content>Aktualisieren Sie den Zustand des Baumes bei der Ausführung der Schritte</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>hu</v8:lang>
-																			<v8:content>Az állapot frissítéséhez a fát, amikor lépek</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>it</v8:lang>
-																			<v8:content>Aggiornare lo stato di un albero per i passaggi</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>lv</v8:lang>
-																			<v8:content>Atjaunināt statusu koka veicot pasākumus</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>lt</v8:lang>
-																			<v8:content>Atnaujinti būseną medžio atliekant veiksmus</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>mn</v8:lang>
-																			<v8:content>Шинэчлэх байдал модны үед орохдоо</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>pl</v8:lang>
-																			<v8:content>Aktualizować stan drzewa w krokach</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>ro</v8:lang>
-																			<v8:content>Pentru a actualiza starea de copac când efectuați pași</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>sl</v8:lang>
-																			<v8:content>Posodobitev stanja drevesa, ko stopam</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>es</v8:lang>
-																			<v8:content>Actualizar el estado de la madera, al seguir los pasos</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>sv</v8:lang>
-																			<v8:content>Uppdatera status träd när man går</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>tr</v8:lang>
-																			<v8:content>Güncelleme durumunu ahşap adımda</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>vi</v8:lang>
-																			<v8:content>Cập nhật trạng thái cây khi thực hiện các bước</v8:content>
-																		</v8:item>
-																	</Title>
-																	<TitleLocation>Right</TitleLocation>
-																	<ToolTip>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Если флаг выставлен - то это замедляет выполнение шагов, но позоволяет обновлять состояние дерева при выполнении каждого шага.</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>en</v8:lang>
-																			<v8:content>If the flag is set, it slows down the execution of the steps, but it allows you to update the state of the tree at each step.</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>am</v8:lang>
-																			<v8:content>በቀዳሚ ግምገማዎች ላይ ጠቋሚ ነው አንድ አንድ ለማየት ቅድሚያ የሚሰጡዋቸውን በአፈጻጸም ነው. ነገር ግን አሁን የሚከተሉትን እንዲያደርጉ ያስችልዎታል. የግዛት ዛፍ በያንዳንዱ.</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>az</v8:lang>
-																			<v8:content>Əgər bayrağı kəsilib - bu, aşağı yavaşlatır yerinə addımlar, amma позоволяет yeniləmə vəziyyəti ağac yerinə yetirilərkən hər bir addım.</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>bg</v8:lang>
-																			<v8:content>Ако флаг забелязан това забавя изпълнението на стъпки, но позоволяет актуализира състоянието на дърво при изпълнение на всяка стъпка.</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>et</v8:lang>
-																			<v8:content>Kui lipp on pandud - siis see aeglustab rakendamise samme, kuid позоволяет uuendada riik puust, täites iga sammu.</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>fr</v8:lang>
-																			<v8:content>Si l'indicateur est exposé, c'ralentit l'exécution des étapes, mais permet de mettre à jour l'état de l'arborescence lors de l'exécution de chaque étape.</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>ka</v8:lang>
-																			<v8:content>თუ დროშა არის მითითებული, მაშინ ეს ანელებს აღსრულების ნაბიჯები, მაგრამ ჩვენების საშუალებას გაძლევთ განაახლოთ ქალაქი ხე ყოველი ნაბიჯი.</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>de</v8:lang>
-																			<v8:content>Wenn die Option aktiviert ist - dann ist es verlangsamt die Ausführung der Schritte, sondern ermöglicht Aktualisierung des Baumes bei der Ausführung der einzelnen Schritte.</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>hu</v8:lang>
-																			<v8:content>Ha a flag be van állítva, akkor ez lassítja a végrehajtás a lépéseket, de a kijelző lehetővé teszi, hogy a frissítés az állam, a fa minden egyes lépésnél.</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>it</v8:lang>
-																			<v8:content>Se il flag esposto questo rallenta le operazioni, ma позоволяет aggiornare lo stato di un albero per ogni fase.</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>lv</v8:lang>
-																			<v8:content>Ja karogs ir iestādīts - tas palēnina izpildes pasākumus, bet позоволяет atjaunināt savu statusu, koka veicot katra soļa.</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>lt</v8:lang>
-																			<v8:content>Jei vėliava pateikta - tai lėtina atlikti veiksmus, bet позоволяет atnaujinti būseną medžio atliekant kiekvieną žingsnį.</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>mn</v8:lang>
-																			<v8:content>Хэрэв туг нь тогтоож, дараа нь энэ нь удаашруулдаг хэрэгжүүлэх арга хэмжээ, гэхдээ харуулах боломжийг олгодог шинэчлэх төрийн модны бүр алхам.</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>pl</v8:lang>
-																			<v8:content>Jeśli flaga jest wystawiony to spowalnia wykonanie kroków, ale позоволяет aktualizować stan drzewa podczas wykonywania każdego kroku.</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>ro</v8:lang>
-																			<v8:content>În cazul în care pavilion expus - atunci acesta încetinește performanța de pași, dar позоволяет actualiza starea lemn când efectuați fiecare pas.</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>sl</v8:lang>
-																			<v8:content>Če zastavo nastavljena, potem je to upočasni izvajanje navodila, vendar zaslona vam omogoča, da posodobite stanje drevesa na vsakem koraku.</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>es</v8:lang>
-																			<v8:content>Si habilitada esto ralentiza la ejecución de pasos, pero pozovolyaet actualizar el estado de la madera cuando la ejecución de cada paso.</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>sv</v8:lang>
-																			<v8:content>Om flaggan är satt, så det saktar ner för genomförandet av åtgärder, men displayen låter dig uppdatera staten av trädet vid varje steg.</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>tr</v8:lang>
-																			<v8:content>Bir bayrak koymak bu yavaşlar adımları, ama bağlantısı uzaktan güncelleme durumunu ahşap çalıştırdığınızda, her bir adımda.</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>vi</v8:lang>
-																			<v8:content>Nếu thiết lập hộp kiểm thì điều này làm chậm việc thực hiện các bước, nhưng cho phép cập nhật tình trạng cây khi thực hiện mỗi bước.</v8:content>
-																		</v8:item>
-																	</ToolTip>
-																	<CheckBoxType>Auto</CheckBoxType>
-																	<ContextMenu name="ВыполнятьШагиАссинхронноКонтекстноеМеню" id="336"/>
-																	<ExtendedTooltip name="ВыполнятьШагиАссинхронноРасширеннаяПодсказка" id="1374"/>
-																</CheckBoxField>
-																<CheckBoxField name="ОстановкаПриВозникновенииОшибки" id="954">
-																	<DataPath>Объект.ОстановкаПриВозникновенииОшибки</DataPath>
-																	<Title>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Остановка при возникновении ошибки</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>en</v8:lang>
-																			<v8:content>Stop on error</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>am</v8:lang>
-																			<v8:content>ቅድሚያ የሚሰጡዋቸውን ስህተት ይኖራል</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>az</v8:lang>
-																			<v8:content>Stop yarandıqda səhvlər</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>bg</v8:lang>
-																			<v8:content>Спирка при възникване на грешка</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>et</v8:lang>
-																			<v8:content>Stop vea ilmnemisel</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>fr</v8:lang>
-																			<v8:content>Arrêt en cas d'erreur</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>ka</v8:lang>
-																			<v8:content>შეწყდეს, როდესაც შეცდომა ხდება</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>de</v8:lang>
-																			<v8:content>Stop wenn ein Fehler Auftritt</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>hu</v8:lang>
-																			<v8:content>Állj meg, amikor hiba fordul elő</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>it</v8:lang>
-																			<v8:content>Stop in caso di errore</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>lv</v8:lang>
-																			<v8:content>Apstāšanās, ja rodas kļūda</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>lt</v8:lang>
-																			<v8:content>Stotelė kai įvyksta klaida</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>mn</v8:lang>
-																			<v8:content>Зогсоох үед алдаа гардаг</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>pl</v8:lang>
-																			<v8:content>Przystanek w przypadku wystąpienia błędu</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>ro</v8:lang>
-																			<v8:content>Oprire atunci când apare o eroare</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>sl</v8:lang>
-																			<v8:content>Ustavi, ko pride do napake</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>es</v8:lang>
-																			<v8:content>La parada cuando se produce un error</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>sv</v8:lang>
-																			<v8:content>Sluta när fel uppstår</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>tr</v8:lang>
-																			<v8:content>Durdurma bir hata oluştuğunda</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>vi</v8:lang>
-																			<v8:content>Dừng khi xảy ra lỗi</v8:content>
-																		</v8:item>
-																	</Title>
-																	<TitleLocation>Right</TitleLocation>
-																	<CheckBoxType>Auto</CheckBoxType>
-																	<ContextMenu name="ОстановкаПриВозникновенииОшибкиКонтекстноеМеню" id="955"/>
-																	<ExtendedTooltip name="ОстановкаПриВозникновенииОшибкиРасширеннаяПодсказка" id="1375"/>
-																</CheckBoxField>
-																<CheckBoxField name="БезапасноеВыполнениеШагов" id="1784">
-																	<DataPath>Объект.БезопасноеВыполнениеШагов</DataPath>
-																	<TitleLocation>Right</TitleLocation>
-																	<CheckBoxType>Auto</CheckBoxType>
-																	<ContextMenu name="БезапасноеВыполнениеШаговКонтекстноеМеню" id="1785"/>
-																	<ExtendedTooltip name="БезапасноеВыполнениеШаговРасширеннаяПодсказка" id="1786"/>
-																</CheckBoxField>
-																<CheckBoxField name="ИскатьЭлементыФормыПоИмени" id="1824">
-																	<DataPath>Объект.ИскатьЭлементыФормыПоИмени</DataPath>
-																	<TitleLocation>Right</TitleLocation>
-																	<CheckBoxType>Auto</CheckBoxType>
-																	<ContextMenu name="ИскатьЭлементыФормыПоИмениКонтекстноеМеню" id="1825"/>
-																	<ExtendedTooltip name="ИскатьЭлементыФормыПоИмениРасширеннаяПодсказка" id="1826"/>
 																</CheckBoxField>
 															</ChildItems>
 														</UsualGroup>
@@ -9049,101 +8771,8 @@
 																	<ContextMenu name="DebugLog2КонтекстноеМеню" id="290"/>
 																	<ExtendedTooltip name="DebugLog2РасширеннаяПодсказка" id="1377"/>
 																</CheckBoxField>
-																<CheckBoxField name="ДелатьЛогВыполненияСценариевВЖР" id="338">
-																	<DataPath>Объект.ДелатьЛогВыполненияСценариевВЖР</DataPath>
-																	<Title>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Записывать лог выполнения в журнал регистрации</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>en</v8:lang>
-																			<v8:content>Output log to 1C registration journal</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>am</v8:lang>
-																			<v8:content>አዳዲስ ግምገማዎች በአፈጻጸም ላይ ስለጀመሩ ቅድሚያ የሚሰጡዋቸውን</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>az</v8:lang>
-																			<v8:content>Qeyd günlük yerinə yetirilməsi qeydiyyatı jurnalı</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>bg</v8:lang>
-																			<v8:content>Записва лог изпълнение в списание регистрация</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>et</v8:lang>
-																			<v8:content>Kirjutada logifaili error log registreerimine</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>fr</v8:lang>
-																			<v8:content>Enregistrer le journal d'exécution dans le journal de l'enregistrement</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>ka</v8:lang>
-																			<v8:content>ჩანაწერი აღსრულების შესვლა შესვლა</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>de</v8:lang>
-																			<v8:content>Aufzeichnen der log-Ausführung in Protokolldatei</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>hu</v8:lang>
-																			<v8:content>Rekord a végrehajtási napló a napló</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>it</v8:lang>
-																			<v8:content>Registrare un log di esecuzione nel registro</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>lv</v8:lang>
-																			<v8:content>Ierakstīt log veiktu reģistrācijas žurnāls</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>lt</v8:lang>
-																			<v8:content>Įrašyti failą, atlikti registracijos žurnalas</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>mn</v8:lang>
-																			<v8:content>Бичлэг гүйцэтгэх нэвтрэх бүртгэлийн</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>pl</v8:lang>
-																			<v8:content>Zapisywać log z wykonania w dzienniku</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>ro</v8:lang>
-																			<v8:content>Scrie jurnal de execuție în jurnalul de înregistrare a</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>sl</v8:lang>
-																			<v8:content>Snemanje izvedbo dnevnik v dnevniku</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>es</v8:lang>
-																			<v8:content>Grabar un log de ejecución en el registro de horas</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>sv</v8:lang>
-																			<v8:content>Registrera utförande i logg</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>tr</v8:lang>
-																			<v8:content>Kaydetmek için bir günlük çalışma günlüğü</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>vi</v8:lang>
-																			<v8:content>Ghi nhật ký thực hiện vào nhật ký đăng ký 1C</v8:content>
-																		</v8:item>
-																	</Title>
-																	<TitleLocation>Right</TitleLocation>
-																	<CheckBoxType>Auto</CheckBoxType>
-																	<ContextMenu name="ДелатьЛогВыполненияСценариевВЖРКонтекстноеМеню" id="339"/>
-																	<ExtendedTooltip name="ДелатьЛогВыполненияСценариевВЖРРасширеннаяПодсказка" id="1378"/>
-																</CheckBoxField>
-																<CheckBoxField name="ПроверкаРаботыVanessaBehaviorВРежимеTestClient" id="481">
-																	<DataPath>Объект.ПроверкаРаботыVanessaBehaviorВРежимеTestClient</DataPath>
+																<CheckBoxField name="ПроверкаРаботыVanessaAutomationВРежимеTestClient" id="481">
+																	<DataPath>Объект.ПроверкаРаботыVanessaAutomationВРежимеTestClient</DataPath>
 																	<Title>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
@@ -9156,18 +8785,11 @@
 																	</Title>
 																	<TitleLocation>Right</TitleLocation>
 																	<CheckBoxType>Auto</CheckBoxType>
-																	<ContextMenu name="ПроверкаРаботыVanessaBehaviorВРежимеTestClientКонтекстноеМеню" id="482"/>
-																	<ExtendedTooltip name="ПроверкаРаботыVanessaBehaviorВРежимеTestClientРасширеннаяПодсказка" id="1379"/>
+																	<ContextMenu name="ПроверкаРаботыVanessaAutomationВРежимеTestClientКонтекстноеМеню" id="482"/>
+																	<ExtendedTooltip name="ПроверкаРаботыVanessaAutomationВРежимеTestClientРасширеннаяПодсказка" id="1379"/>
 																	<Events>
-																		<Event name="OnChange">ПроверкаРаботыVanessaBehaviorВРежимеTestClientПриИзменении</Event>
+																		<Event name="OnChange">ПроверкаРаботыVanessaAutomationВРежимеTestClientПриИзменении</Event>
 																	</Events>
-																</CheckBoxField>
-																<CheckBoxField name="ПоказыватьНомерСтрокиДереваПриВозникновенииОшибки" id="1750">
-																	<DataPath>Объект.ПоказыватьНомерСтрокиДереваПриВозникновенииОшибки</DataPath>
-																	<TitleLocation>Right</TitleLocation>
-																	<CheckBoxType>Auto</CheckBoxType>
-																	<ContextMenu name="ПоказыватьНомерСтрокиДереваПриВозникновенииОшибкиКонтекстноеМеню" id="1751"/>
-																	<ExtendedTooltip name="ПоказыватьНомерСтрокиДереваПриВозникновенииОшибкиРасширеннаяПодсказка" id="1752"/>
 																</CheckBoxField>
 															</ChildItems>
 														</UsualGroup>
@@ -9185,32 +8807,295 @@
 														</InputField>
 													</ChildItems>
 												</UsualGroup>
-												<InputField name="ТаймаутЗапуска1С" id="1672">
-													<DataPath>Объект.ТаймаутЗапуска1С</DataPath>
-													<ContextMenu name="ТаймаутЗапуска1СКонтекстноеМеню" id="1673"/>
-													<ExtendedTooltip name="ТаймаутЗапуска1СРасширеннаяПодсказка" id="1674"/>
-												</InputField>
-												<InputField name="ТаймаутДляАсинхронныхШагов" id="1773">
-													<DataPath>Объект.ТаймаутДляАсинхронныхШагов</DataPath>
-													<ContextMenu name="ТаймаутДляАсинхронныхШаговКонтекстноеМеню" id="1774"/>
-													<ExtendedTooltip name="ТаймаутДляАсинхронныхШаговРасширеннаяПодсказка" id="1775"/>
-												</InputField>
-												<InputField name="КоличествоСекундПоискаОкна" id="1747">
-													<DataPath>Объект.КоличествоСекундПоискаОкна</DataPath>
-													<ContextMenu name="КоличествоСекундПоискаОкнаКонтекстноеМеню" id="1748"/>
-													<ExtendedTooltip name="КоличествоСекундПоискаОкнаРасширеннаяПодсказка" id="1749"/>
-												</InputField>
-												<InputField name="КоличествоПопытокВыполненияДействия" id="1819">
-													<DataPath>Объект.КоличествоПопытокВыполненияДействия</DataPath>
-													<AutoMaxWidth>false</AutoMaxWidth>
-													<ContextMenu name="КоличествоПопытокВыполненияДействияКонтекстноеМеню" id="1820"/>
-													<ExtendedTooltip name="КоличествоПопытокВыполненияДействияРасширеннаяПодсказка" id="1821"/>
-												</InputField>
-												<InputField name="ДиапазонПортовTestclient" id="1683">
-													<DataPath>Объект.ДиапазонПортовTestclient</DataPath>
-													<ContextMenu name="ДиапазонПортовTestclientКонтекстноеМеню" id="1684"/>
-													<ExtendedTooltip name="ДиапазонПортовTestclientРасширеннаяПодсказка" id="1685"/>
-												</InputField>
+												<CheckBoxField name="ИскатьЭлементыФормыПоИмени" id="1824">
+													<DataPath>Объект.ИскатьЭлементыФормыПоИмени</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ИскатьЭлементыФормыПоИмениКонтекстноеМеню" id="1825"/>
+													<ExtendedTooltip name="ИскатьЭлементыФормыПоИмениРасширеннаяПодсказка" id="1826"/>
+												</CheckBoxField>
+												<UsualGroup name="ГруппаОбновлятьДерево" id="1836">
+													<Group>Vertical</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаОбновлятьДеревоРасширеннаяПодсказка" id="1837"/>
+													<ChildItems>
+														<CheckBoxField name="ВыполнятьШагиАссинхронно" id="335">
+															<DataPath>Объект.ВыполнятьШагиАссинхронно</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Обновлять состояние дерева при выполнении шагов</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Invoke steps as async procedure</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>am</v8:lang>
+																	<v8:content>አዳዲስ ግምገማዎች በይፋ ዛፍ አሁን stepping</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>az</v8:lang>
+																	<v8:content>Yeniləmə vəziyyəti ağac yerinə yetirərkən addımlar</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>bg</v8:lang>
+																	<v8:content>Актуализира състоянието на дърво при извършване на стъпки</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>et</v8:lang>
+																	<v8:content>Värskenda olek puu, kui teed sammu</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>fr</v8:lang>
+																	<v8:content>Mettre à jour l'état de l'arborescence lors de l'étape</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>ka</v8:lang>
+																	<v8:content>განაახლოს სტატუსი ხე, როცა stepping</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>de</v8:lang>
+																	<v8:content>Aktualisieren Sie den Zustand des Baumes bei der Ausführung der Schritte</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>hu</v8:lang>
+																	<v8:content>Az állapot frissítéséhez a fát, amikor lépek</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>it</v8:lang>
+																	<v8:content>Aggiornare lo stato di un albero per i passaggi</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>lv</v8:lang>
+																	<v8:content>Atjaunināt statusu koka veicot pasākumus</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>lt</v8:lang>
+																	<v8:content>Atnaujinti būseną medžio atliekant veiksmus</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>mn</v8:lang>
+																	<v8:content>Шинэчлэх байдал модны үед орохдоо</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>pl</v8:lang>
+																	<v8:content>Aktualizować stan drzewa w krokach</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>ro</v8:lang>
+																	<v8:content>Pentru a actualiza starea de copac când efectuați pași</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>sl</v8:lang>
+																	<v8:content>Posodobitev stanja drevesa, ko stopam</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>es</v8:lang>
+																	<v8:content>Actualizar el estado de la madera, al seguir los pasos</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>sv</v8:lang>
+																	<v8:content>Uppdatera status träd när man går</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>tr</v8:lang>
+																	<v8:content>Güncelleme durumunu ahşap adımda</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>vi</v8:lang>
+																	<v8:content>Cập nhật trạng thái cây khi thực hiện các bước</v8:content>
+																</v8:item>
+															</Title>
+															<TitleLocation>Right</TitleLocation>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Если флаг выставлен - то это замедляет выполнение шагов, но позоволяет обновлять состояние дерева при выполнении каждого шага.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>If the flag is set, it slows down the execution of the steps, but it allows you to update the state of the tree at each step.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>am</v8:lang>
+																	<v8:content>በቀዳሚ ግምገማዎች ላይ ጠቋሚ ነው አንድ አንድ ለማየት ቅድሚያ የሚሰጡዋቸውን በአፈጻጸም ነው. ነገር ግን አሁን የሚከተሉትን እንዲያደርጉ ያስችልዎታል. የግዛት ዛፍ በያንዳንዱ.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>az</v8:lang>
+																	<v8:content>Əgər bayrağı kəsilib - bu, aşağı yavaşlatır yerinə addımlar, amma позоволяет yeniləmə vəziyyəti ağac yerinə yetirilərkən hər bir addım.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>bg</v8:lang>
+																	<v8:content>Ако флаг забелязан това забавя изпълнението на стъпки, но позоволяет актуализира състоянието на дърво при изпълнение на всяка стъпка.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>et</v8:lang>
+																	<v8:content>Kui lipp on pandud - siis see aeglustab rakendamise samme, kuid позоволяет uuendada riik puust, täites iga sammu.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>fr</v8:lang>
+																	<v8:content>Si l'indicateur est exposé, c'ralentit l'exécution des étapes, mais permet de mettre à jour l'état de l'arborescence lors de l'exécution de chaque étape.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>ka</v8:lang>
+																	<v8:content>თუ დროშა არის მითითებული, მაშინ ეს ანელებს აღსრულების ნაბიჯები, მაგრამ ჩვენების საშუალებას გაძლევთ განაახლოთ ქალაქი ხე ყოველი ნაბიჯი.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>de</v8:lang>
+																	<v8:content>Wenn die Option aktiviert ist - dann ist es verlangsamt die Ausführung der Schritte, sondern ermöglicht Aktualisierung des Baumes bei der Ausführung der einzelnen Schritte.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>hu</v8:lang>
+																	<v8:content>Ha a flag be van állítva, akkor ez lassítja a végrehajtás a lépéseket, de a kijelző lehetővé teszi, hogy a frissítés az állam, a fa minden egyes lépésnél.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>it</v8:lang>
+																	<v8:content>Se il flag esposto questo rallenta le operazioni, ma позоволяет aggiornare lo stato di un albero per ogni fase.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>lv</v8:lang>
+																	<v8:content>Ja karogs ir iestādīts - tas palēnina izpildes pasākumus, bet позоволяет atjaunināt savu statusu, koka veicot katra soļa.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>lt</v8:lang>
+																	<v8:content>Jei vėliava pateikta - tai lėtina atlikti veiksmus, bet позоволяет atnaujinti būseną medžio atliekant kiekvieną žingsnį.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>mn</v8:lang>
+																	<v8:content>Хэрэв туг нь тогтоож, дараа нь энэ нь удаашруулдаг хэрэгжүүлэх арга хэмжээ, гэхдээ харуулах боломжийг олгодог шинэчлэх төрийн модны бүр алхам.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>pl</v8:lang>
+																	<v8:content>Jeśli flaga jest wystawiony to spowalnia wykonanie kroków, ale позоволяет aktualizować stan drzewa podczas wykonywania każdego kroku.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>ro</v8:lang>
+																	<v8:content>În cazul în care pavilion expus - atunci acesta încetinește performanța de pași, dar позоволяет actualiza starea lemn când efectuați fiecare pas.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>sl</v8:lang>
+																	<v8:content>Če zastavo nastavljena, potem je to upočasni izvajanje navodila, vendar zaslona vam omogoča, da posodobite stanje drevesa na vsakem koraku.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>es</v8:lang>
+																	<v8:content>Si habilitada esto ralentiza la ejecución de pasos, pero pozovolyaet actualizar el estado de la madera cuando la ejecución de cada paso.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>sv</v8:lang>
+																	<v8:content>Om flaggan är satt, så det saktar ner för genomförandet av åtgärder, men displayen låter dig uppdatera staten av trädet vid varje steg.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>tr</v8:lang>
+																	<v8:content>Bir bayrak koymak bu yavaşlar adımları, ama bağlantısı uzaktan güncelleme durumunu ahşap çalıştırdığınızda, her bir adımda.</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>vi</v8:lang>
+																	<v8:content>Nếu thiết lập hộp kiểm thì điều này làm chậm việc thực hiện các bước, nhưng cho phép cập nhật tình trạng cây khi thực hiện mỗi bước.</v8:content>
+																</v8:item>
+															</ToolTip>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ВыполнятьШагиАссинхронноКонтекстноеМеню" id="336"/>
+															<ExtendedTooltip name="ВыполнятьШагиАссинхронноРасширеннаяПодсказка" id="1374"/>
+															<Events>
+																<Event name="OnChange">ВыполнятьШагиАссинхронноПриИзменении</Event>
+															</Events>
+														</CheckBoxField>
+														<InputField name="ИнтервалВыполненияШагаЗаданныйПользователем" id="523">
+															<DataPath>Объект.ИнтервалВыполненияШагаЗаданныйПользователем</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Интервал выполнения шага</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Step invoke sleep interval</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>am</v8:lang>
+																	<v8:content>በ ደረጃ</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>az</v8:lang>
+																	<v8:content>İnterval yerinə yetirilməsi addım</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>bg</v8:lang>
+																	<v8:content>Интервалът на извършване на стъпки</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>et</v8:lang>
+																	<v8:content>Intervall teha samm</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>fr</v8:lang>
+																	<v8:content>L'intervalle d'exécution de l'étape</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>ka</v8:lang>
+																	<v8:content>ინტერვალი ნაბიჯი</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>de</v8:lang>
+																	<v8:content>Intervall Schritt</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>hu</v8:lang>
+																	<v8:content>Intervallum lépés</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>it</v8:lang>
+																	<v8:content>L'intervallo di passaggio</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>lv</v8:lang>
+																	<v8:content>Intervāls veiktu soli</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>lt</v8:lang>
+																	<v8:content>Intervalas atlikti žingsnis</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>mn</v8:lang>
+																	<v8:content>Интервал алхам</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>pl</v8:lang>
+																	<v8:content>Interwał wykonywania kroku</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>ro</v8:lang>
+																	<v8:content>Intervalul pasul</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>sl</v8:lang>
+																	<v8:content>Interval korak</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>es</v8:lang>
+																	<v8:content>El intervalo de paso</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>sv</v8:lang>
+																	<v8:content>Intervall steg</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>tr</v8:lang>
+																	<v8:content>Aralık adım</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>vi</v8:lang>
+																	<v8:content>Khoảng thực hiện của bước</v8:content>
+																</v8:item>
+															</Title>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<ContextMenu name="ИнтервалВыполненияШагаЗаданныйПользователемКонтекстноеМеню" id="524"/>
+															<ExtendedTooltip name="ИнтервалВыполненияШагаЗаданныйПользователемРасширеннаяПодсказка" id="1385"/>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
 												<InputField name="КаталогИнструментов" id="380">
 													<DataPath>Объект.КаталогИнструментов</DataPath>
 													<Title>
@@ -9219,6 +9104,7 @@
 															<v8:content>Каталог инструментов</v8:content>
 														</v8:item>
 													</Title>
+													<AutoMaxWidth>false</AutoMaxWidth>
 													<ChoiceButton>true</ChoiceButton>
 													<ClearButton>true</ClearButton>
 													<ContextMenu name="КаталогИнструментовКонтекстноеМеню" id="381"/>
@@ -9228,7 +9114,6 @@
 													</Events>
 												</InputField>
 												<InputField name="VanessaStackCommons" id="364">
-													<DataPath>Объект.VanessaStackCommons</DataPath>
 													<Visible>false</Visible>
 													<Title>
 														<v8:item>
@@ -9412,6 +9297,7 @@
 															<v8:content>Thư mục dự án</v8:content>
 														</v8:item>
 													</Title>
+													<AutoMaxWidth>false</AutoMaxWidth>
 													<ChoiceButton>true</ChoiceButton>
 													<ClearButton>true</ClearButton>
 													<ContextMenu name="КаталогПроектаКонтекстноеМеню" id="718"/>
@@ -9420,97 +9306,6 @@
 														<Event name="OnChange">КаталогПроектаПриИзменении</Event>
 														<Event name="StartChoice">КаталогПроектаНачалоВыбора</Event>
 													</Events>
-												</InputField>
-												<InputField name="ИнтервалВыполненияШагаЗаданныйПользователем" id="523">
-													<DataPath>Объект.ИнтервалВыполненияШагаЗаданныйПользователем</DataPath>
-													<Title>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Интервал выполнения шага</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>en</v8:lang>
-															<v8:content>Step invoke sleep interval</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>am</v8:lang>
-															<v8:content>በ ደረጃ</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>az</v8:lang>
-															<v8:content>İnterval yerinə yetirilməsi addım</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>bg</v8:lang>
-															<v8:content>Интервалът на извършване на стъпки</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>et</v8:lang>
-															<v8:content>Intervall teha samm</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>fr</v8:lang>
-															<v8:content>L'intervalle d'exécution de l'étape</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>ka</v8:lang>
-															<v8:content>ინტერვალი ნაბიჯი</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>de</v8:lang>
-															<v8:content>Intervall Schritt</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>hu</v8:lang>
-															<v8:content>Intervallum lépés</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>it</v8:lang>
-															<v8:content>L'intervallo di passaggio</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>lv</v8:lang>
-															<v8:content>Intervāls veiktu soli</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>lt</v8:lang>
-															<v8:content>Intervalas atlikti žingsnis</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>mn</v8:lang>
-															<v8:content>Интервал алхам</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>pl</v8:lang>
-															<v8:content>Interwał wykonywania kroku</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>ro</v8:lang>
-															<v8:content>Intervalul pasul</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>sl</v8:lang>
-															<v8:content>Interval korak</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>es</v8:lang>
-															<v8:content>El intervalo de paso</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>sv</v8:lang>
-															<v8:content>Intervall steg</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>tr</v8:lang>
-															<v8:content>Aralık adım</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>vi</v8:lang>
-															<v8:content>Khoảng thực hiện của bước</v8:content>
-														</v8:item>
-													</Title>
-													<ContextMenu name="ИнтервалВыполненияШагаЗаданныйПользователемКонтекстноеМеню" id="524"/>
-													<ExtendedTooltip name="ИнтервалВыполненияШагаЗаданныйПользователемРасширеннаяПодсказка" id="1385"/>
 												</InputField>
 												<InputField name="ЗагрузкаФичПриОткрытии" id="1032">
 													<DataPath>Объект.ЗагрузкаФичПриОткрытии</DataPath>
@@ -9601,6 +9396,7 @@
 														</v8:item>
 													</Title>
 													<HorizontalAlign>Left</HorizontalAlign>
+													<AutoMaxWidth>false</AutoMaxWidth>
 													<ListChoiceMode>true</ListChoiceMode>
 													<ChoiceList>
 														<xr:Item>
@@ -9981,6 +9777,7 @@
 												</InputField>
 												<InputField name="ЗапрашиватьПодтверждениеПриЗакрытии" id="1791">
 													<DataPath>ЗапрашиватьПодтверждениеПриЗакрытии</DataPath>
+													<AutoMaxWidth>false</AutoMaxWidth>
 													<ListChoiceMode>true</ListChoiceMode>
 													<ChoiceList>
 														<xr:Item>
@@ -10023,6 +9820,7 @@
 												</InputField>
 												<InputField name="КомандаОткрытияФичиВТекстовомРедакторе" id="1776">
 													<DataPath>Объект.КомандаОткрытияФичиВТекстовомРедакторе</DataPath>
+													<AutoMaxWidth>false</AutoMaxWidth>
 													<ContextMenu name="КомандаОткрытияФичиВТекстовомРедактореКонтекстноеМеню" id="1777">
 														<ChildItems>
 															<ButtonGroup name="ГруппаТекстовыеРедакторы" id="1789">
@@ -10143,6 +9941,179 @@
 												</Button>
 											</ChildItems>
 										</Page>
+										<Page name="СтраницаКлиентыТестирования" id="1838">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Настройки клиентов тестирования</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Test clients</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="СтраницаКлиентыТестированияРасширеннаяПодсказка" id="1839"/>
+											<ChildItems>
+												<CheckBoxField name="ЗапускатьКлиентТестированияСМаксимизированнымОкном" id="1842">
+													<DataPath>Объект.ЗапускатьКлиентТестированияСМаксимизированнымОкном</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ЗапускатьКлиентТестированияСМаксимизированнымОкномКонтекстноеМеню" id="1843"/>
+													<ExtendedTooltip name="ЗапускатьКлиентТестированияСМаксимизированнымОкномРасширеннаяПодсказка" id="1844"/>
+												</CheckBoxField>
+												<InputField name="ТаймаутЗапуска1С" id="1672">
+													<DataPath>Объект.ТаймаутЗапуска1С</DataPath>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<ContextMenu name="ТаймаутЗапуска1СКонтекстноеМеню" id="1673"/>
+													<ExtendedTooltip name="ТаймаутЗапуска1СРасширеннаяПодсказка" id="1674"/>
+												</InputField>
+												<InputField name="ДиапазонПортовTestclient" id="1683">
+													<DataPath>Объект.ДиапазонПортовTestclient</DataPath>
+													<ContextMenu name="ДиапазонПортовTestclientКонтекстноеМеню" id="1684"/>
+													<ExtendedTooltip name="ДиапазонПортовTestclientРасширеннаяПодсказка" id="1685"/>
+												</InputField>
+											</ChildItems>
+										</Page>
+										<Page name="СтраницаВыполнениеСценариев" id="1840">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Выполнение сценариев</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Running scenarios</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="СтраницаВыполнениеСценариевРасширеннаяПодсказка" id="1841"/>
+											<ChildItems>
+												<CheckBoxField name="БезапасноеВыполнениеШагов" id="1784">
+													<DataPath>Объект.БезопасноеВыполнениеШагов</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="БезапасноеВыполнениеШаговКонтекстноеМеню" id="1785"/>
+													<ExtendedTooltip name="БезапасноеВыполнениеШаговРасширеннаяПодсказка" id="1786"/>
+												</CheckBoxField>
+												<CheckBoxField name="ОстановкаПриВозникновенииОшибки" id="954">
+													<DataPath>Объект.ОстановкаПриВозникновенииОшибки</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Остановка при возникновении ошибки</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Stop on error</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>am</v8:lang>
+															<v8:content>ቅድሚያ የሚሰጡዋቸውን ስህተት ይኖራል</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>az</v8:lang>
+															<v8:content>Stop yarandıqda səhvlər</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>bg</v8:lang>
+															<v8:content>Спирка при възникване на грешка</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>et</v8:lang>
+															<v8:content>Stop vea ilmnemisel</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>fr</v8:lang>
+															<v8:content>Arrêt en cas d'erreur</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ka</v8:lang>
+															<v8:content>შეწყდეს, როდესაც შეცდომა ხდება</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>de</v8:lang>
+															<v8:content>Stop wenn ein Fehler Auftritt</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>hu</v8:lang>
+															<v8:content>Állj meg, amikor hiba fordul elő</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>it</v8:lang>
+															<v8:content>Stop in caso di errore</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>lv</v8:lang>
+															<v8:content>Apstāšanās, ja rodas kļūda</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>lt</v8:lang>
+															<v8:content>Stotelė kai įvyksta klaida</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>mn</v8:lang>
+															<v8:content>Зогсоох үед алдаа гардаг</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>pl</v8:lang>
+															<v8:content>Przystanek w przypadku wystąpienia błędu</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ro</v8:lang>
+															<v8:content>Oprire atunci când apare o eroare</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>sl</v8:lang>
+															<v8:content>Ustavi, ko pride do napake</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>es</v8:lang>
+															<v8:content>La parada cuando se produce un error</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>sv</v8:lang>
+															<v8:content>Sluta när fel uppstår</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>tr</v8:lang>
+															<v8:content>Durdurma bir hata oluştuğunda</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>vi</v8:lang>
+															<v8:content>Dừng khi xảy ra lỗi</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ОстановкаПриВозникновенииОшибкиКонтекстноеМеню" id="955"/>
+													<ExtendedTooltip name="ОстановкаПриВозникновенииОшибкиРасширеннаяПодсказка" id="1375"/>
+												</CheckBoxField>
+												<CheckBoxField name="ПоказыватьНомерСтрокиДереваПриВозникновенииОшибки" id="1750">
+													<DataPath>Объект.ПоказыватьНомерСтрокиДереваПриВозникновенииОшибки</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ПоказыватьНомерСтрокиДереваПриВозникновенииОшибкиКонтекстноеМеню" id="1751"/>
+													<ExtendedTooltip name="ПоказыватьНомерСтрокиДереваПриВозникновенииОшибкиРасширеннаяПодсказка" id="1752"/>
+												</CheckBoxField>
+												<InputField name="ТаймаутДляАсинхронныхШагов" id="1773">
+													<DataPath>Объект.ТаймаутДляАсинхронныхШагов</DataPath>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<ContextMenu name="ТаймаутДляАсинхронныхШаговКонтекстноеМеню" id="1774"/>
+													<ExtendedTooltip name="ТаймаутДляАсинхронныхШаговРасширеннаяПодсказка" id="1775"/>
+												</InputField>
+												<InputField name="КоличествоСекундПоискаОкна" id="1747">
+													<DataPath>Объект.КоличествоСекундПоискаОкна</DataPath>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<ContextMenu name="КоличествоСекундПоискаОкнаКонтекстноеМеню" id="1748"/>
+													<ExtendedTooltip name="КоличествоСекундПоискаОкнаРасширеннаяПодсказка" id="1749"/>
+												</InputField>
+												<InputField name="КоличествоПопытокВыполненияДействия" id="1819">
+													<DataPath>Объект.КоличествоПопытокВыполненияДействия</DataPath>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<ContextMenu name="КоличествоПопытокВыполненияДействияКонтекстноеМеню" id="1820"/>
+													<ExtendedTooltip name="КоличествоПопытокВыполненияДействияРасширеннаяПодсказка" id="1821"/>
+												</InputField>
+											</ChildItems>
+										</Page>
 										<Page name="СтраницыОтчетыОЗапуске" id="654">
 											<Title>
 												<v8:item>
@@ -10238,6 +10209,99 @@
 											</ToolTip>
 											<ExtendedTooltip name="СтраницыОтчетыОЗапускеРасширеннаяПодсказка" id="1387"/>
 											<ChildItems>
+												<CheckBoxField name="ДелатьЛогВыполненияСценариевВЖР" id="338">
+													<DataPath>Объект.ДелатьЛогВыполненияСценариевВЖР</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Записывать лог выполнения в журнал регистрации</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Output log to 1C registration journal</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>am</v8:lang>
+															<v8:content>አዳዲስ ግምገማዎች በአፈጻጸም ላይ ስለጀመሩ ቅድሚያ የሚሰጡዋቸውን</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>az</v8:lang>
+															<v8:content>Qeyd günlük yerinə yetirilməsi qeydiyyatı jurnalı</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>bg</v8:lang>
+															<v8:content>Записва лог изпълнение в списание регистрация</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>et</v8:lang>
+															<v8:content>Kirjutada logifaili error log registreerimine</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>fr</v8:lang>
+															<v8:content>Enregistrer le journal d'exécution dans le journal de l'enregistrement</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ka</v8:lang>
+															<v8:content>ჩანაწერი აღსრულების შესვლა შესვლა</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>de</v8:lang>
+															<v8:content>Aufzeichnen der log-Ausführung in Protokolldatei</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>hu</v8:lang>
+															<v8:content>Rekord a végrehajtási napló a napló</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>it</v8:lang>
+															<v8:content>Registrare un log di esecuzione nel registro</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>lv</v8:lang>
+															<v8:content>Ierakstīt log veiktu reģistrācijas žurnāls</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>lt</v8:lang>
+															<v8:content>Įrašyti failą, atlikti registracijos žurnalas</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>mn</v8:lang>
+															<v8:content>Бичлэг гүйцэтгэх нэвтрэх бүртгэлийн</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>pl</v8:lang>
+															<v8:content>Zapisywać log z wykonania w dzienniku</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ro</v8:lang>
+															<v8:content>Scrie jurnal de execuție în jurnalul de înregistrare a</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>sl</v8:lang>
+															<v8:content>Snemanje izvedbo dnevnik v dnevniku</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>es</v8:lang>
+															<v8:content>Grabar un log de ejecución en el registro de horas</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>sv</v8:lang>
+															<v8:content>Registrera utförande i logg</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>tr</v8:lang>
+															<v8:content>Kaydetmek için bir günlük çalışma günlüğü</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>vi</v8:lang>
+															<v8:content>Ghi nhật ký thực hiện vào nhật ký đăng ký 1C</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ДелатьЛогВыполненияСценариевВЖРКонтекстноеМеню" id="339"/>
+													<ExtendedTooltip name="ДелатьЛогВыполненияСценариевВЖРРасширеннаяПодсказка" id="1378"/>
+												</CheckBoxField>
 												<UsualGroup name="ГруппаСкриншоты" id="1534">
 													<ToolTip>
 														<v8:item>
@@ -10527,6 +10591,7 @@
 																	<v8:content>Thư mục tạm thời lưu ảnh chụp màn hình</v8:content>
 																</v8:item>
 															</Title>
+															<AutoMaxWidth>false</AutoMaxWidth>
 															<ChoiceButton>true</ChoiceButton>
 															<ClearButton>true</ClearButton>
 															<ContextMenu name="КаталогOutputСкриншотыКонтекстноеМеню" id="511"/>
@@ -10733,6 +10798,7 @@
 																	<v8:content>Thư mục tạm thời của các tệp kết quả Allure</v8:content>
 																</v8:item>
 															</Title>
+															<AutoMaxWidth>false</AutoMaxWidth>
 															<ChoiceButton>true</ChoiceButton>
 															<ClearButton>true</ClearButton>
 															<ContextMenu name="КаталогOutputAllureКонтекстноеМеню" id="142"/>
@@ -10939,6 +11005,7 @@
 																	<v8:content>Thư mục tạm thời dành cho các tệp tin JUnit</v8:content>
 																</v8:item>
 															</Title>
+															<AutoMaxWidth>false</AutoMaxWidth>
 															<ChoiceButton>true</ChoiceButton>
 															<ClearButton>true</ClearButton>
 															<ContextMenu name="КаталогOutputjUnitКонтекстноеМеню" id="371"/>
@@ -11145,6 +11212,7 @@
 																	<v8:content>Thư mục tạm thời dành cho các tệp tin Cucumber</v8:content>
 																</v8:item>
 															</Title>
+															<AutoMaxWidth>false</AutoMaxWidth>
 															<ChoiceButton>true</ChoiceButton>
 															<ClearButton>true</ClearButton>
 															<ContextMenu name="КаталогOutputCucumberJsonКонтекстноеМеню" id="1465"/>
@@ -11186,6 +11254,7 @@
 														</CheckBoxField>
 														<InputField name="ИмяФайлаЛогВыполненияСценариев" id="1547">
 															<DataPath>Объект.ИмяФайлаЛогВыполненияСценариев</DataPath>
+															<AutoMaxWidth>false</AutoMaxWidth>
 															<ChoiceButton>true</ChoiceButton>
 															<ContextMenu name="ИмяФайлаЛогВыполненияСценариевКонтекстноеМеню" id="1548"/>
 															<ExtendedTooltip name="ИмяФайлаЛогВыполненияСценариевРасширеннаяПодсказка" id="1549"/>
@@ -11219,6 +11288,7 @@
 														</CheckBoxField>
 														<InputField name="ИмяКаталогаЛогОшибок" id="1758">
 															<DataPath>Объект.ИмяКаталогаЛогОшибок</DataPath>
+															<AutoMaxWidth>false</AutoMaxWidth>
 															<ChoiceButton>true</ChoiceButton>
 															<ContextMenu name="ИмяКаталогаЛогОшибокКонтекстноеМеню" id="1759"/>
 															<ExtendedTooltip name="ИмяКаталогаЛогОшибокРасширеннаяПодсказка" id="1760"/>
@@ -11442,7 +11512,7 @@
 															<Title>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
-																	<v8:content>Консольная команда создания скриншотов</v8:content>
+																	<v8:content>Команда создания скриншотов</v8:content>
 																</v8:item>
 																<v8:item>
 																	<v8:lang>en</v8:lang>
@@ -11525,6 +11595,7 @@
 																	<v8:content>Lệnh điều khiển tạo ảnh chụp màn hình</v8:content>
 																</v8:item>
 															</Title>
+															<AutoMaxWidth>false</AutoMaxWidth>
 															<ContextMenu name="КомандаСделатьСкриншотКонтекстноеМеню" id="501"/>
 															<ExtendedTooltip name="КомандаСделатьСкриншотРасширеннаяПодсказка" id="1402"/>
 														</InputField>
@@ -11554,19 +11625,23 @@
 															<CheckBoxType>Auto</CheckBoxType>
 															<ContextMenu name="ИспользоватьSikuliXСерверКонтекстноеМеню" id="1812"/>
 															<ExtendedTooltip name="ИспользоватьSikuliXСерверРасширеннаяПодсказка" id="1813"/>
+															<Events>
+																<Event name="OnChange">ИспользоватьSikuliXСерверПриИзменении</Event>
+															</Events>
 														</CheckBoxField>
 														<InputField name="КаталогиСкриптовSikuliX" id="1816">
 															<DataPath>Объект.КаталогиСкриптовSikuliX</DataPath>
+															<AutoMaxWidth>false</AutoMaxWidth>
 															<ContextMenu name="КаталогиСкриптовSikuliXКонтекстноеМеню" id="1817"/>
 															<ExtendedTooltip name="КаталогиСкриптовSikuliXРасширеннаяПодсказка" id="1818"/>
 														</InputField>
+														<Button name="СброситьПодключениеSikuliXСервера" id="1822">
+															<Type>UsualButton</Type>
+															<CommandName>Form.Command.СброситьПодключениеSikuliXСервера</CommandName>
+															<ExtendedTooltip name="СброситьПодключениеSikuliXСервераРасширеннаяПодсказка" id="1823"/>
+														</Button>
 													</ChildItems>
 												</UsualGroup>
-												<Button name="СброситьПодключениеSikuliXСервера" id="1822">
-													<Type>UsualButton</Type>
-													<CommandName>Form.Command.СброситьПодключениеSikuliXСервера</CommandName>
-													<ExtendedTooltip name="СброситьПодключениеSikuliXСервераРасширеннаяПодсказка" id="1823"/>
-												</Button>
 												<UsualGroup name="HTMLИMarkdown" id="658">
 													<Title>
 														<v8:item>
@@ -11781,6 +11856,7 @@
 																			<v8:content>Thư mục để tạo bản hướng dẫn HTML</v8:content>
 																		</v8:item>
 																	</Title>
+																	<AutoMaxWidth>false</AutoMaxWidth>
 																	<ChoiceButton>true</ChoiceButton>
 																	<ClearButton>true</ClearButton>
 																	<ContextMenu name="КаталогOutputИнструкцияHTMLКонтекстноеМеню" id="149"/>
@@ -11987,6 +12063,7 @@
 																			<v8:content>Thư mục để tạo bản hướng dẫn Markdown</v8:content>
 																		</v8:item>
 																	</Title>
+																	<AutoMaxWidth>false</AutoMaxWidth>
 																	<ChoiceButton>true</ChoiceButton>
 																	<ClearButton>true</ClearButton>
 																	<ContextMenu name="КаталогOutputИнструкцияMarkdownКонтекстноеМеню" id="648"/>
@@ -12213,6 +12290,7 @@
 																			<v8:content>Thư mục để tạo bản hướng dẫn Video</v8:content>
 																		</v8:item>
 																	</Title>
+																	<AutoMaxWidth>false</AutoMaxWidth>
 																	<ChoiceButton>true</ChoiceButton>
 																	<ClearButton>true</ClearButton>
 																	<ContextMenu name="КаталогOutputИнструкцияВидеоКонтекстноеМеню" id="521"/>
@@ -12750,6 +12828,7 @@
 																					<v8:content>Lệnh bắt đầu ghi video</v8:content>
 																				</v8:item>
 																			</Title>
+																			<AutoMaxWidth>false</AutoMaxWidth>
 																			<ContextMenu name="ЗаписьВидеоКомандаНачатьЗаписьВидеоКонтекстноеМеню" id="663"/>
 																			<ExtendedTooltip name="ЗаписьВидеоКомандаНачатьЗаписьВидеоРасширеннаяПодсказка" id="1423"/>
 																		</InputField>
@@ -12841,6 +12920,7 @@
 																					<v8:content>Thư mục dành cho tệp tạm thời</v8:content>
 																				</v8:item>
 																			</Title>
+																			<AutoMaxWidth>false</AutoMaxWidth>
 																			<ContextMenu name="ЗаписьВидеоКаталогДляВременныхФайловКонтекстноеМеню" id="672"/>
 																			<ExtendedTooltip name="ЗаписьВидеоКаталогДляВременныхФайловРасширеннаяПодсказка" id="1424"/>
 																		</InputField>
@@ -12932,6 +13012,7 @@
 																					<v8:content>Lệnh ffmpeg</v8:content>
 																				</v8:item>
 																			</Title>
+																			<AutoMaxWidth>false</AutoMaxWidth>
 																			<ContextMenu name="ЗаписьВидеоКомандаFfmpegКонтекстноеМеню" id="678"/>
 																			<ExtendedTooltip name="ЗаписьВидеоКомандаFfmpegРасширеннаяПодсказка" id="1425"/>
 																		</InputField>
@@ -13023,6 +13104,7 @@
 																					<v8:content>Lệnh Chuyển đổi</v8:content>
 																				</v8:item>
 																			</Title>
+																			<AutoMaxWidth>false</AutoMaxWidth>
 																			<ContextMenu name="ЗаписьВидеоКомандаConvertКонтекстноеМеню" id="681"/>
 																			<ExtendedTooltip name="ЗаписьВидеоКомандаConvertРасширеннаяПодсказка" id="1426"/>
 																		</InputField>
@@ -13215,6 +13297,7 @@
 																					<v8:content>Thư mục âm nhạc</v8:content>
 																				</v8:item>
 																			</Title>
+																			<AutoMaxWidth>false</AutoMaxWidth>
 																			<ChoiceButton>true</ChoiceButton>
 																			<ClearButton>true</ClearButton>
 																			<ContextMenu name="ЗаписьВидеоКаталогМузыкиКонтекстноеМеню" id="684"/>
@@ -13222,6 +13305,12 @@
 																			<Events>
 																				<Event name="StartChoice">ЗаписьВидеоКаталогМузыкиНачалоВыбора</Event>
 																			</Events>
+																		</InputField>
+																		<InputField name="ЗаписьВидеоГромкостьАудиоТрека" id="1833">
+																			<DataPath>Объект.ЗаписьВидеоГромкостьМузыки</DataPath>
+																			<AutoMaxWidth>false</AutoMaxWidth>
+																			<ContextMenu name="ЗаписьВидеоГромкостьАудиоТрекаКонтекстноеМеню" id="1834"/>
+																			<ExtendedTooltip name="ЗаписьВидеоГромкостьАудиоТрекаРасширеннаяПодсказка" id="1835"/>
 																		</InputField>
 																		<UsualGroup name="ОзвучкаГолосом" id="698">
 																			<Title>
@@ -13425,89 +13514,14 @@
 																					<Title>
 																						<v8:item>
 																							<v8:lang>ru</v8:lang>
-																							<v8:content>Путь к движку TTS</v8:content>
+																							<v8:content>Команда TTS</v8:content>
 																						</v8:item>
 																						<v8:item>
 																							<v8:lang>en</v8:lang>
-																							<v8:content>Path to TTS engine</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>am</v8:lang>
-																							<v8:content>መንገዱ ወደ ተጠቃሚ.</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>az</v8:lang>
-																							<v8:content>Yol движку TTS</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>bg</v8:lang>
-																							<v8:content>Пътят към движку TTS</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>et</v8:lang>
-																							<v8:content>Tee движку TTS</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>fr</v8:lang>
-																							<v8:content>Le chemin d'accès au moteur TTS</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>ka</v8:lang>
-																							<v8:content>გზა TTS ძრავის</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>de</v8:lang>
-																							<v8:content>Der Weg zum TTS-Engine</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>hu</v8:lang>
-																							<v8:content>Az út a TTS motor</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>it</v8:lang>
-																							<v8:content>Percorso a motore TTS</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>lv</v8:lang>
-																							<v8:content>Ceļš uz движку TTS</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>lt</v8:lang>
-																							<v8:content>Kelias į движку TTS</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>mn</v8:lang>
-																							<v8:content>Зам нь TTS хөдөлгүүр</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>pl</v8:lang>
-																							<v8:content>Droga do silnika TTS</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>ro</v8:lang>
-																							<v8:content>Calea TTS engine</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>sl</v8:lang>
-																							<v8:content>Pot do TTS motor</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>es</v8:lang>
-																							<v8:content>La ruta de acceso al motor de TTS</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>sv</v8:lang>
-																							<v8:content>Vägen till TTS-motor</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>tr</v8:lang>
-																							<v8:content>Yol TTS motoru</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>vi</v8:lang>
-																							<v8:content>Đường dẫn đến công cụ TTS</v8:content>
+																							<v8:content>TTS comand</v8:content>
 																						</v8:item>
 																					</Title>
+																					<AutoMaxWidth>false</AutoMaxWidth>
 																					<ChoiceButton>true</ChoiceButton>
 																					<ClearButton>true</ClearButton>
 																					<ContextMenu name="ЗаписьВидеоПутьКДвижкуTTSКонтекстноеМеню" id="690"/>
@@ -13604,6 +13618,7 @@
 																							<v8:content>Tên giọng nói TTS</v8:content>
 																						</v8:item>
 																					</Title>
+																					<AutoMaxWidth>false</AutoMaxWidth>
 																					<ContextMenu name="ЗаписьВидеоИмяTTSКонтекстноеМеню" id="693"/>
 																					<ExtendedTooltip name="ЗаписьВидеоИмяTTSРасширеннаяПодсказка" id="1432"/>
 																				</InputField>
@@ -13855,7 +13870,7 @@
 																			<Title>
 																				<v8:item>
 																					<v8:lang>ru</v8:lang>
-																					<v8:content>Файл курсор мыши</v8:content>
+																					<v8:content>Курсор мыши</v8:content>
 																				</v8:item>
 																				<v8:item>
 																					<v8:lang>en</v8:lang>
@@ -13938,6 +13953,7 @@
 																					<v8:content>Tệp con trỏ chuột</v8:content>
 																				</v8:item>
 																			</Title>
+																			<AutoMaxWidth>false</AutoMaxWidth>
 																			<ChoiceButton>true</ChoiceButton>
 																			<ClearButton>true</ClearButton>
 																			<ContextMenu name="ЗаписьВидеоФайлКурсораМышкиКонтекстноеМеню" id="666"/>
@@ -13951,7 +13967,7 @@
 																			<Title>
 																				<v8:item>
 																					<v8:lang>ru</v8:lang>
-																					<v8:content>Файл водяной знак</v8:content>
+																					<v8:content>Водяной знак</v8:content>
 																				</v8:item>
 																				<v8:item>
 																					<v8:lang>en</v8:lang>
@@ -14034,6 +14050,7 @@
 																					<v8:content>Tệp hình mờ</v8:content>
 																				</v8:item>
 																			</Title>
+																			<AutoMaxWidth>false</AutoMaxWidth>
 																			<ChoiceButton>true</ChoiceButton>
 																			<ClearButton>true</ClearButton>
 																			<ContextMenu name="ЗаписьВидеоФайлВодянойЗнакКонтекстноеМеню" id="675"/>
@@ -14047,7 +14064,7 @@
 																			<Title>
 																				<v8:item>
 																					<v8:lang>ru</v8:lang>
-																					<v8:content>Подсвечивать активные элементы форм</v8:content>
+																					<v8:content>(устарело) Подсвечивать активные элементы форм</v8:content>
 																				</v8:item>
 																				<v8:item>
 																					<v8:lang>en</v8:lang>
@@ -14140,7 +14157,7 @@
 																			<Title>
 																				<v8:item>
 																					<v8:lang>ru</v8:lang>
-																					<v8:content>Перемещать курсор мышки к активному элементу формы</v8:content>
+																					<v8:content>(устарело) Перемещать курсор мышки к активному элементу формы</v8:content>
 																				</v8:item>
 																				<v8:item>
 																					<v8:lang>en</v8:lang>
@@ -14235,12 +14252,40 @@
 																			<ContextMenu name="ЗаписьВидеоГруппаШаговКакШагКонтекстноеМеню" id="1828"/>
 																			<ExtendedTooltip name="ЗаписьВидеоГруппаШаговКакШагРасширеннаяПодсказка" id="1829"/>
 																		</CheckBoxField>
+																		<CheckBoxField name="ЗаписьВидеоПодсвечиватьНажатияМышки" id="1845">
+																			<DataPath>Объект.ЗаписьВидеоПодсвечиватьНажатияМышки</DataPath>
+																			<TitleLocation>Right</TitleLocation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="ЗаписьВидеоПодсвечиватьНажатияМышкиКонтекстноеМеню" id="1846"/>
+																			<ExtendedTooltip name="ЗаписьВидеоПодсвечиватьНажатияМышкиРасширеннаяПодсказка" id="1847"/>
+																		</CheckBoxField>
+																		<CheckBoxField name="ЗаписьВидеоЭмулироватьВводСКлавиатуры" id="1854">
+																			<DataPath>Объект.ЗаписьВидеоЭмулироватьВводСКлавиатуры</DataPath>
+																			<TitleLocation>Right</TitleLocation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="ЗаписьВидеоЭмулироватьВводСКлавиатурыКонтекстноеМеню" id="1855"/>
+																			<ExtendedTooltip name="ЗаписьВидеоЭмулироватьВводСКлавиатурыРасширеннаяПодсказка" id="1856"/>
+																		</CheckBoxField>
 																		<CheckBoxField name="ЗаписьВидеоОтключитьМасштабированиеШаговПоВремени" id="1830">
 																			<DataPath>Объект.ЗаписьВидеоОтключитьМасштабированиеШаговПоВремени</DataPath>
 																			<TitleLocation>Right</TitleLocation>
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="ЗаписьВидеоОтключитьМасштабированиеШаговПоВремениКонтекстноеМеню" id="1831"/>
 																			<ExtendedTooltip name="ЗаписьВидеоОтключитьМасштабированиеШаговПоВремениРасширеннаяПодсказка" id="1832"/>
+																		</CheckBoxField>
+																		<CheckBoxField name="ЗаписьВидеоОтключитьСлайдСЗаголовкомФичи" id="1848">
+																			<DataPath>Объект.ЗаписьВидеоОтключитьСлайдСЗаголовкомФичи</DataPath>
+																			<TitleLocation>Right</TitleLocation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="ЗаписьВидеоОтключитьСлайдСЗаголовкомФичиКонтекстноеМеню" id="1849"/>
+																			<ExtendedTooltip name="ЗаписьВидеоОтключитьСлайдСЗаголовкомФичиРасширеннаяПодсказка" id="1850"/>
+																		</CheckBoxField>
+																		<CheckBoxField name="ЗаписьВидеоОтключитьСлайдСценария" id="1851">
+																			<DataPath>Объект.ЗаписьВидеоОтключитьСлайдСценария</DataPath>
+																			<TitleLocation>Right</TitleLocation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="ЗаписьВидеоОтключитьСлайдСценарияКонтекстноеМеню" id="1852"/>
+																			<ExtendedTooltip name="ЗаписьВидеоОтключитьСлайдСценарияРасширеннаяПодсказка" id="1853"/>
 																		</CheckBoxField>
 																	</ChildItems>
 																</Page>
