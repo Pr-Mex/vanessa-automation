@@ -5,7 +5,7 @@
 
 ## BDD for 1С:Enterprise
 
-Текущий релиз в ветке [Master: 1.2.020](https://github.com/Pr-Mex/vanessa-automation/tree/master)
+Текущий релиз в ветке [Master: 1.2.019](https://github.com/Pr-Mex/vanessa-automation/tree/master)
 Разработка ведется в ветке [Develop](https://github.com/Pr-Mex/vanessa-automation/tree/develop).
 
 В данном репозитории хранятся только исходники.
@@ -19,8 +19,7 @@
 Чтобы зафиксировать изменения epf файлов, нужно запустить Decompile.bat.
 
 Проект использует принцип формирования автодокументации в формате Markdown и видео:
-* Видео инструкции лежат [здесь](https://www.youtube.com/channel/UC2mJ4LlMG-FF4qkc_kqN_iQ) 
-* Прочие инструкции сгруппированы [в этом плейлисте YouTube](https://www.youtube.com/playlist?list=PL2zlgf113YhFG_uRARjDtP1_Obj55UmY4) 
+* Видео инструкции лежат [здесь](https://www.youtube.com/channel/UC114RqHhG__1gET8pzs3AHA/playlists) 
 * Также рекомендуется посмотреть вот [этот вебинар](http://infostart.ru/webinars/537546/) 
 * Возможно вам поможет [этот FAQ](https://github.com/Pr-Mex/vanessa-automation/blob/develop/F.A.Q.MD)
 
@@ -51,7 +50,6 @@ git submodule update --init --recursive
 
 Обязательно ознакомьтесь с:
 * руководством контрибьютора [CONTRIBUTING.md](./.github/CONTRIBUTING.md)
-* моделью спонсорства [DONATIONS.md](./DONATIONS.md)
 * известные проблемы [KNOWN-PROBLEMS.md](./doc/KNOWN-PROBLEMS.md)
 
 ## Описание простого использования
@@ -213,9 +211,6 @@ git submodule update --init --recursive
 * [Vanessa-Automation — инструмент тестирования прикладных решений на платформе «1С: Предприятие» @Хабрахабр](https://habr.com/post/418303/)
 * [Vanessa-Automation — инструмент автодокументирования прикладных решений на платформе «1С: Предприятие». Кино и BDD. @Хабрахабр](https://habr.com/post/420175/)
 
-## Руководство контрибьютора
-
-[CONTRIBUTING.md](https://github.com/Pr-Mex/vanessa-automation/blob/develop/CONTRIBUTING.md)
 
 ## Лицензии
 
