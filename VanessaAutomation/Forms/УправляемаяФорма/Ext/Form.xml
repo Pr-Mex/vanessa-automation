@@ -7362,6 +7362,7 @@
 										<ExtendedTooltip name="ДанныеКлиентовТестированияУправлениеПоискомРасширеннаяПодсказка" id="1350"/>
 									</SearchControlAddition>
 									<Events>
+										<Event name="OnEditEnd">ДанныеКлиентовТестированияПриОкончанииРедактирования</Event>
 										<Event name="BeforeEditEnd">ДанныеКлиентовТестированияПередОкончаниемРедактирования</Event>
 										<Event name="BeforeRowChange">ДанныеКлиентовТестированияПередНачаломИзменения</Event>
 										<Event name="AfterDeleteRow">ДанныеКлиентовТестированияПослеУдаления</Event>
@@ -9001,6 +9002,13 @@
 															<Events>
 																<Event name="OnChange">ВыполнятьШагиАссинхронноПриИзменении</Event>
 															</Events>
+														</CheckBoxField>
+														<CheckBoxField name="ТегTreeВключенПоУмолчанию" id="1860">
+															<DataPath>Объект.ТегTreeВключенПоУмолчанию</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ТегTreeВключенПоУмолчаниюКонтекстноеМеню" id="1861"/>
+															<ExtendedTooltip name="ТегTreeВключенПоУмолчаниюРасширеннаяПодсказка" id="1862"/>
 														</CheckBoxField>
 														<InputField name="ИнтервалВыполненияШагаЗаданныйПользователем" id="523">
 															<DataPath>Объект.ИнтервалВыполненияШагаЗаданныйПользователем</DataPath>
@@ -12322,7 +12330,7 @@
 																	<Title>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>Настроки видео</v8:content>
+																			<v8:content>Настройки видео</v8:content>
 																		</v8:item>
 																		<v8:item>
 																			<v8:lang>en</v8:lang>
@@ -13870,7 +13878,7 @@
 																			<Title>
 																				<v8:item>
 																					<v8:lang>ru</v8:lang>
-																					<v8:content>Курсор мыши</v8:content>
+																					<v8:content>Курсор мышки</v8:content>
 																				</v8:item>
 																				<v8:item>
 																					<v8:lang>en</v8:lang>
@@ -14059,98 +14067,54 @@
 																				<Event name="StartChoice">ЗаписьВидеоФайлВодянойЗнакНачалоВыбора</Event>
 																			</Events>
 																		</InputField>
-																		<CheckBoxField name="ЗаписьВидеоПодсвечиватьАктивныеЭлементыФорм" id="709">
-																			<DataPath>Объект.ЗаписьВидеоПодсвечиватьАктивныеЭлементыФорм</DataPath>
-																			<Title>
-																				<v8:item>
-																					<v8:lang>ru</v8:lang>
-																					<v8:content>(устарело) Подсвечивать активные элементы форм</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>en</v8:lang>
-																					<v8:content>Show active form controls</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>am</v8:lang>
-																					<v8:content>መገለጫዎ ንቁ ቅጽ ይታያል</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>az</v8:lang>
-																					<v8:content>Подсвечивать aktiv maddələr formaları</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>bg</v8:lang>
-																					<v8:content>Осветяване на активни елементи форми</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>et</v8:lang>
-																					<v8:content>Rõhutada aktiivsete üksuste vormid</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>fr</v8:lang>
-																					<v8:content>Mettre en évidence les éléments actifs des formes</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>ka</v8:lang>
-																					<v8:content>მონიშნეთ აქტიური ფორმის ელემენტები</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>de</v8:lang>
-																					<v8:content>Aktive Elemente hervorheben Formen</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>hu</v8:lang>
-																					<v8:content>Jelölje ki a aktív formában elemek</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>it</v8:lang>
-																					<v8:content>Evidenziare gli elementi attivi di forme</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>lv</v8:lang>
-																					<v8:content>Izcelt aktīvie elementi formu</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>lt</v8:lang>
-																					<v8:content>Paryškinti aktyvūs elementai formų</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>mn</v8:lang>
-																					<v8:content>Тодруулах идэвхтэй хэлбэр элемент</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>pl</v8:lang>
-																					<v8:content>Podświetl elementy aktywne formy</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>ro</v8:lang>
-																					<v8:content>Pentru a evidenția elementele active forme de</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>sl</v8:lang>
-																					<v8:content>Označite aktivno obliko elementov</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>es</v8:lang>
-																					<v8:content>Resaltar los elementos activos de las formas de</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>sv</v8:lang>
-																					<v8:content>Markera aktiv form element</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>tr</v8:lang>
-																					<v8:content>Parlat aktif öğeleri şekil</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>vi</v8:lang>
-																					<v8:content>Hiển thị phần tử biểu mẫu hiện hoạt</v8:content>
-																				</v8:item>
-																			</Title>
+																		<CheckBoxField name="ЗаписьВидеоГруппаШаговКакШаг" id="1827">
+																			<DataPath>Объект.ЗаписьВидеоГруппаШаговКакШаг</DataPath>
 																			<TitleLocation>Right</TitleLocation>
 																			<CheckBoxType>Auto</CheckBoxType>
-																			<ContextMenu name="ЗаписьВидеоПодсвечиватьАктивныеЭлементыФормКонтекстноеМеню" id="710"/>
-																			<ExtendedTooltip name="ЗаписьВидеоПодсвечиватьАктивныеЭлементыФормРасширеннаяПодсказка" id="1437"/>
+																			<ContextMenu name="ЗаписьВидеоГруппаШаговКакШагКонтекстноеМеню" id="1828"/>
+																			<ExtendedTooltip name="ЗаписьВидеоГруппаШаговКакШагРасширеннаяПодсказка" id="1829"/>
+																		</CheckBoxField>
+																		<CheckBoxField name="ЗаписьВидеоПодсвечиватьНажатияМышки" id="1845">
+																			<DataPath>Объект.ЗаписьВидеоПодсвечиватьНажатияМышки</DataPath>
+																			<TitleLocation>Right</TitleLocation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="ЗаписьВидеоПодсвечиватьНажатияМышкиКонтекстноеМеню" id="1846"/>
+																			<ExtendedTooltip name="ЗаписьВидеоПодсвечиватьНажатияМышкиРасширеннаяПодсказка" id="1847"/>
+																		</CheckBoxField>
+																		<CheckBoxField name="ЗаписьВидеоЭмулироватьВводСКлавиатуры" id="1854">
+																			<DataPath>Объект.ЗаписьВидеоЭмулироватьВводСКлавиатуры</DataPath>
+																			<TitleLocation>Right</TitleLocation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="ЗаписьВидеоЭмулироватьВводСКлавиатурыКонтекстноеМеню" id="1855"/>
+																			<ExtendedTooltip name="ЗаписьВидеоЭмулироватьВводСКлавиатурыРасширеннаяПодсказка" id="1856"/>
+																		</CheckBoxField>
+																		<CheckBoxField name="ЗаписьВидеоОтключитьМасштабированиеШаговПоВремени" id="1830">
+																			<DataPath>Объект.ЗаписьВидеоОтключитьМасштабированиеШаговПоВремени</DataPath>
+																			<TitleLocation>Right</TitleLocation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="ЗаписьВидеоОтключитьМасштабированиеШаговПоВремениКонтекстноеМеню" id="1831"/>
+																			<ExtendedTooltip name="ЗаписьВидеоОтключитьМасштабированиеШаговПоВремениРасширеннаяПодсказка" id="1832"/>
+																		</CheckBoxField>
+																		<CheckBoxField name="ЗаписьВидеоОтключитьСлайдСЗаголовкомФичи" id="1848">
+																			<DataPath>Объект.ЗаписьВидеоОтключитьСлайдСЗаголовкомФичи</DataPath>
+																			<TitleLocation>Right</TitleLocation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="ЗаписьВидеоОтключитьСлайдСЗаголовкомФичиКонтекстноеМеню" id="1849"/>
+																			<ExtendedTooltip name="ЗаписьВидеоОтключитьСлайдСЗаголовкомФичиРасширеннаяПодсказка" id="1850"/>
+																		</CheckBoxField>
+																		<CheckBoxField name="ЗаписьВидеоОтключитьСлайдСценария" id="1851">
+																			<DataPath>Объект.ЗаписьВидеоОтключитьСлайдСценария</DataPath>
+																			<TitleLocation>Right</TitleLocation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="ЗаписьВидеоОтключитьСлайдСценарияКонтекстноеМеню" id="1852"/>
+																			<ExtendedTooltip name="ЗаписьВидеоОтключитьСлайдСценарияРасширеннаяПодсказка" id="1853"/>
+																		</CheckBoxField>
+																		<CheckBoxField name="ЗаписьВидеоСкрытьСлужебныеОкна" id="1857">
+																			<DataPath>Объект.ЗаписьВидеоСкрытьСлужебныеОкна</DataPath>
+																			<TitleLocation>Right</TitleLocation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="ЗаписьВидеоСкрытьСлужебныеОкнаКонтекстноеМеню" id="1858"/>
+																			<ExtendedTooltip name="ЗаписьВидеоСкрытьСлужебныеОкнаРасширеннаяПодсказка" id="1859"/>
 																		</CheckBoxField>
 																		<CheckBoxField name="ЗаписьВидеоПеремещатьКурсорМышкиКАктивномуЭлементуФормы" id="712">
 																			<DataPath>Объект.ЗаписьВидеоПеремещатьКурсорМышкиКАктивномуЭлементуФормы</DataPath>
@@ -14245,47 +14209,98 @@
 																			<ContextMenu name="ЗаписьВидеоПеремещатьКурсорМышкиКАктивномуЭлементуФормыКонтекстноеМеню" id="713"/>
 																			<ExtendedTooltip name="ЗаписьВидеоПеремещатьКурсорМышкиКАктивномуЭлементуФормыРасширеннаяПодсказка" id="1438"/>
 																		</CheckBoxField>
-																		<CheckBoxField name="ЗаписьВидеоГруппаШаговКакШаг" id="1827">
-																			<DataPath>Объект.ЗаписьВидеоГруппаШаговКакШаг</DataPath>
+																		<CheckBoxField name="ЗаписьВидеоПодсвечиватьАктивныеЭлементыФорм" id="709">
+																			<DataPath>Объект.ЗаписьВидеоПодсвечиватьАктивныеЭлементыФорм</DataPath>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>(устарело) Подсвечивать активные элементы форм</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>Show active form controls</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>am</v8:lang>
+																					<v8:content>መገለጫዎ ንቁ ቅጽ ይታያል</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>az</v8:lang>
+																					<v8:content>Подсвечивать aktiv maddələr formaları</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>bg</v8:lang>
+																					<v8:content>Осветяване на активни елементи форми</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>et</v8:lang>
+																					<v8:content>Rõhutada aktiivsete üksuste vormid</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>fr</v8:lang>
+																					<v8:content>Mettre en évidence les éléments actifs des formes</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>ka</v8:lang>
+																					<v8:content>მონიშნეთ აქტიური ფორმის ელემენტები</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>de</v8:lang>
+																					<v8:content>Aktive Elemente hervorheben Formen</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>hu</v8:lang>
+																					<v8:content>Jelölje ki a aktív formában elemek</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>it</v8:lang>
+																					<v8:content>Evidenziare gli elementi attivi di forme</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>lv</v8:lang>
+																					<v8:content>Izcelt aktīvie elementi formu</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>lt</v8:lang>
+																					<v8:content>Paryškinti aktyvūs elementai formų</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>mn</v8:lang>
+																					<v8:content>Тодруулах идэвхтэй хэлбэр элемент</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>pl</v8:lang>
+																					<v8:content>Podświetl elementy aktywne formy</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>ro</v8:lang>
+																					<v8:content>Pentru a evidenția elementele active forme de</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>sl</v8:lang>
+																					<v8:content>Označite aktivno obliko elementov</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>es</v8:lang>
+																					<v8:content>Resaltar los elementos activos de las formas de</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>sv</v8:lang>
+																					<v8:content>Markera aktiv form element</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>tr</v8:lang>
+																					<v8:content>Parlat aktif öğeleri şekil</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>vi</v8:lang>
+																					<v8:content>Hiển thị phần tử biểu mẫu hiện hoạt</v8:content>
+																				</v8:item>
+																			</Title>
 																			<TitleLocation>Right</TitleLocation>
 																			<CheckBoxType>Auto</CheckBoxType>
-																			<ContextMenu name="ЗаписьВидеоГруппаШаговКакШагКонтекстноеМеню" id="1828"/>
-																			<ExtendedTooltip name="ЗаписьВидеоГруппаШаговКакШагРасширеннаяПодсказка" id="1829"/>
-																		</CheckBoxField>
-																		<CheckBoxField name="ЗаписьВидеоПодсвечиватьНажатияМышки" id="1845">
-																			<DataPath>Объект.ЗаписьВидеоПодсвечиватьНажатияМышки</DataPath>
-																			<TitleLocation>Right</TitleLocation>
-																			<CheckBoxType>Auto</CheckBoxType>
-																			<ContextMenu name="ЗаписьВидеоПодсвечиватьНажатияМышкиКонтекстноеМеню" id="1846"/>
-																			<ExtendedTooltip name="ЗаписьВидеоПодсвечиватьНажатияМышкиРасширеннаяПодсказка" id="1847"/>
-																		</CheckBoxField>
-																		<CheckBoxField name="ЗаписьВидеоЭмулироватьВводСКлавиатуры" id="1854">
-																			<DataPath>Объект.ЗаписьВидеоЭмулироватьВводСКлавиатуры</DataPath>
-																			<TitleLocation>Right</TitleLocation>
-																			<CheckBoxType>Auto</CheckBoxType>
-																			<ContextMenu name="ЗаписьВидеоЭмулироватьВводСКлавиатурыКонтекстноеМеню" id="1855"/>
-																			<ExtendedTooltip name="ЗаписьВидеоЭмулироватьВводСКлавиатурыРасширеннаяПодсказка" id="1856"/>
-																		</CheckBoxField>
-																		<CheckBoxField name="ЗаписьВидеоОтключитьМасштабированиеШаговПоВремени" id="1830">
-																			<DataPath>Объект.ЗаписьВидеоОтключитьМасштабированиеШаговПоВремени</DataPath>
-																			<TitleLocation>Right</TitleLocation>
-																			<CheckBoxType>Auto</CheckBoxType>
-																			<ContextMenu name="ЗаписьВидеоОтключитьМасштабированиеШаговПоВремениКонтекстноеМеню" id="1831"/>
-																			<ExtendedTooltip name="ЗаписьВидеоОтключитьМасштабированиеШаговПоВремениРасширеннаяПодсказка" id="1832"/>
-																		</CheckBoxField>
-																		<CheckBoxField name="ЗаписьВидеоОтключитьСлайдСЗаголовкомФичи" id="1848">
-																			<DataPath>Объект.ЗаписьВидеоОтключитьСлайдСЗаголовкомФичи</DataPath>
-																			<TitleLocation>Right</TitleLocation>
-																			<CheckBoxType>Auto</CheckBoxType>
-																			<ContextMenu name="ЗаписьВидеоОтключитьСлайдСЗаголовкомФичиКонтекстноеМеню" id="1849"/>
-																			<ExtendedTooltip name="ЗаписьВидеоОтключитьСлайдСЗаголовкомФичиРасширеннаяПодсказка" id="1850"/>
-																		</CheckBoxField>
-																		<CheckBoxField name="ЗаписьВидеоОтключитьСлайдСценария" id="1851">
-																			<DataPath>Объект.ЗаписьВидеоОтключитьСлайдСценария</DataPath>
-																			<TitleLocation>Right</TitleLocation>
-																			<CheckBoxType>Auto</CheckBoxType>
-																			<ContextMenu name="ЗаписьВидеоОтключитьСлайдСценарияКонтекстноеМеню" id="1852"/>
-																			<ExtendedTooltip name="ЗаписьВидеоОтключитьСлайдСценарияРасширеннаяПодсказка" id="1853"/>
+																			<ContextMenu name="ЗаписьВидеоПодсвечиватьАктивныеЭлементыФормКонтекстноеМеню" id="710"/>
+																			<ExtendedTooltip name="ЗаписьВидеоПодсвечиватьАктивныеЭлементыФормРасширеннаяПодсказка" id="1437"/>
 																		</CheckBoxField>
 																	</ChildItems>
 																</Page>
