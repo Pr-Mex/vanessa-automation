@@ -113,6 +113,13 @@
 			<ContextMenu name="ТолькоТекстЯчеекКонтекстноеМеню" id="10"/>
 			<ExtendedTooltip name="ТолькоТекстЯчеекРасширеннаяПодсказка" id="11"/>
 		</CheckBoxField>
+		<CheckBoxField name="СУчетомРегулярныхВыражений" id="12">
+			<DataPath>СУчетомРегулярныхВыражений</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="СУчетомРегулярныхВыраженийКонтекстноеМеню" id="13"/>
+			<ExtendedTooltip name="СУчетомРегулярныхВыраженийРасширеннаяПодсказка" id="14"/>
+		</CheckBoxField>
 		<InputField name="ТекстОшибки" id="4">
 			<DataPath>ТекстОшибки</DataPath>
 			<TitleLocation>None</TitleLocation>
@@ -274,6 +281,21 @@
 			<Save>
 				<Field>ТолькоТекстЯчеек</Field>
 			</Save>
+		</Attribute>
+		<Attribute name="СУчетомРегулярныхВыражений" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сравнение с учетом символа *</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Taking into *</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
 		</Attribute>
 	</Attributes>
 	<Commands>

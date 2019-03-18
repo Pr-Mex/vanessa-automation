@@ -1,0 +1,94 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<uilog xmlns:d1p1="http://v8.1c.ru/8.3/uilog">
+	<ClientApplicationWindow isMain="true">
+		<CommandInterface>
+			<CommandInterfaceGroup title="Панель разделов">
+				<CommandInterfaceButton title="Основная">
+					<click/>
+				</CommandInterfaceButton>
+			</CommandInterfaceGroup>
+			<CommandInterfaceGroup title="Меню функций">
+				<CommandInterfaceButton title="Справочник1">
+					<click/>
+				</CommandInterfaceButton>
+			</CommandInterfaceGroup>
+		</CommandInterface>
+	</ClientApplicationWindow>
+	<ClientApplicationWindow caption="Справочник1">
+		<Form title="Справочник1">
+			<FormGroup name="ФормаКоманднаяПанель" title="Командная панель">
+				<FormButton name="ФормаСоздать" title="Создать">
+					<click/>
+				</FormButton>
+			</FormGroup>
+		</Form>
+	</ClientApplicationWindow>
+	<ClientApplicationWindow caption="Справочник1 (создание)">
+		<Form title="Справочник1 (создание)">
+			<FormGroup name="Группа3" title="Группа3">
+				<FormGroup name="Группа1" title="Основа">
+					<FormField name="Наименование" title="Наименование">
+						<inputText text="111"/>
+					</FormField>
+					<FormField name="Реквизит1" title="Реквизит1">
+						<activate/>
+						<openDropList/>
+						<startChoosing/>
+						<closeDropList/>
+						<executeChoiceFromChoiceList presentation="ЗначениеПеречисления1"/>
+					</FormField>
+					<FormField name="РеквизитЧисло" title="Реквизит число">
+						<activate/>
+						<inputText text="123,00"/>
+					</FormField>
+					<FormField name="РеквизитСтрока" title="Реквизит строка">
+						<activate/>
+						<inputText text="456"/>
+					</FormField>
+					<FormField name="РеквизитДата" title="Реквизит дата">
+						<activate/>
+						<startChoosing/>
+						<inputText text="22.07.2017"/>
+					</FormField>
+					<FormField name="РеквизитПереключатель" title="Реквизит переключатель">
+						<activate/>
+						<selectOption presentation=""/>
+					</FormField>
+					<FormTable name="ТабличнаяЧасть1" title="ТабличнаяЧасть1">
+						<FormGroup name="ТабличнаяЧасть1КоманднаяПанель" title="Командная панель">
+							<FormButton name="ТабличнаяЧасть1Добавить" title="Добавить">
+								<click/>
+							</FormButton>
+						</FormGroup>
+						<FormField name="ТабличнаяЧасть1РеквизитЧисло" title="Реквизит число">
+							<inputText text="111,00"/>
+						</FormField>
+						<FormField name="ТабличнаяЧасть1РеквизитСтрока" title="Реквизит строка">
+							<activate/>
+							<inputText text="222"/>
+						</FormField>
+						<FormField name="ТабличнаяЧасть1РеквизитДата" title="Реквизит дата">
+							<activate/>
+							<startChoosing/>
+						</FormField>
+						<FormField name="ТабличнаяЧасть1РеквизитБулево" title="Реквизит булево">
+							<activate/>
+						</FormField>
+						<endEditRow cancel="false"/>
+						<gotoRow/>
+						<changeRow/>
+						<FormField name="ТабличнаяЧасть1РеквизитБулево" title="Реквизит булево">
+							<setCheck/>
+						</FormField>
+						<endEditRow cancel="false"/>
+					</FormTable>
+				</FormGroup>
+			</FormGroup>
+			<FormGroup name="ФормаКоманднаяПанель" title="Командная панель">
+				<FormButton name="ФормаЗаписатьИЗакрыть" title="Записать и закрыть">
+					<click/>
+				</FormButton>
+			</FormGroup>
+		</Form>
+	</ClientApplicationWindow>
+</uilog>

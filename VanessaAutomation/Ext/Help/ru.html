@@ -1,10 +1,10 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html; charset=utf-8" http-equiv="Content-Type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.9600.19104"></meta></head><body>
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html;charset=utf-8" http-equiv="content-type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta></head><body>
 <p><font size="3" face="Arial">Vanessa-Automation - это фреймворк для разработки в 1С используя методологию BDD.</font></p>
 <p><font size="3" face="Arial">Страница проекта: <a href="https://github.com/Pr-Mex/vanessa-automation">https://github.com/Pr-Mex/vanessa-automation</a></font></p>
 <p><font size="3" face="Arial">Vanessa-Automation является аналогом Cucumber для разработки на платформе 1С:Предприятие.</font></p>
 <p><font size="2" face="Arial">Поддерживаются версии платформы:</font></p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<p><font size="1" face="Arial"> 8.3.6 в режиме совместимости 8.2, 8.3.6, 8.3.7, 8.3.8, 8.3.9, 8.3.10.</font></p></blockquote>
+<p><font size="1" face="Arial"> 8.3.6 в режиме совместимости 8.2, 8.3.6, 8.3.7, 8.3.8, 8.3.9, 8.3.10, 8.3.11, 8.3.12, 8.3.13, 8.3.14.</font></p></blockquote>
 <p><font size="2" face="Arial">У обработки есть <strong>Управляемая форма</strong> (она является основой) и <strong>Обычная форма</strong>.</font></p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
 <p><font size="1" face="Arial">Обычная форма поддерживается в <strong>ограниченном</strong> формате. Т.е. ошибки исправляются - новые фичи добавляются редко. Но вы можете добавить в неё нужные Вам фичи самостоятельно.</font></p></blockquote>
@@ -45,6 +45,7 @@
 <p>17. Список экспортных процедур и функций.</p>
 <p>18. Запуск Vanessa-Automation на CI.</p>
 <p>19. Инструкция для контрибьютерров.</p>
+<p>20. <a href="#20. SikuliX сервер.">SikuliX сервер.</a></p>
 <p> </p>
 <p> </p>
 <p><a name="ПравилаНаписанияfeatureФайлов"><font size="4">1 . Правила написания feature файлов.</font></a></p>
@@ -213,7 +214,7 @@
 <p dir="ltr">Чтобы иерархия отчета строилась верно, нужно в управляющем json файле задать параметры. Например:</p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
 <p style="MARGIN-RIGHT: 0px" dir="ltr"><em><font style="BACKGROUND-COLOR: #ffe100">"КаталогОтносительноКоторогоНадоСтроитьИерархию": "./features",<br>"УровеньОтчета1": "#report.epic=;Каталог1",<br>"УровеньОтчета2": "#report.feature=;Каталог2",<br>"УровеньОтчета3": "#report.story=;ИмяСценария"</font></em></p>
-<p dir="ltr">В данном примере, для вычислеения первого уровня иерархии отчета сначала будет попытка найти в тексте фича файла строку вида "<font style="BACKGROUND-COLOR: #ffe100">#report.feature=уровень1</font>". Если не получится найти такую строку, тогда будет попытка вычислить имя каталога первого уровня относительно каталога (параметр КаталогОтносительноКоторогоНадоСтроитьИерархию), в котром лежат фича файлы (второе значение параметра "УровеньОтчета1" =  Каталог1).</p>
+<p dir="ltr">В данном примере, для вычисления первого уровня иерархии отчета сначала будет попытка найти в тексте фича файла строку вида "<font style="BACKGROUND-COLOR: #ffe100">#report.feature=уровень1</font>". Если не получится найти такую строку, тогда будет попытка вычислить имя каталога первого уровня относительно каталога (параметр КаталогОтносительноКоторогоНадоСтроитьИерархию), в котром лежат фича файлы (второе значение параметра "УровеньОтчета1" =  Каталог1).</p>
 <p dir="ltr">Также для параметров "УровеньОтчетаX" можно использовать значения "<font style="BACKGROUND-COLOR: #ffe100">ИмяФичи</font>" и "<font style="BACKGROUND-COLOR: #ffe100">ИмяСценария</font>".</p>
 <p dir="ltr">Также, если в управляюхем json указано значение параметра <em><font style="BACKGROUND-COLOR: #ffe100">"ДобавлятьКИмениСценарияУсловияВыгрузки": "Истина"</font></em>, то к имени сценария будет добавлятся имя сборки. Это полезно, когда один и тот же сценарий запускается в разных окружениях (сборках) и надо получить единый отчет по всем сборкам.</p>
 <p dir="ltr"><br> </p></blockquote>
@@ -284,7 +285,7 @@
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
 <h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong>Первое что надо сделать:</strong></span></font></font></h2>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font size="+0"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong>1. Прочитать вот эту инструкцию <a href="https://github.com/silverbulleters/Vanessa-Automation/blob/develop/MakeAutoVideo.md">https://github.com/silverbulleters/Vanessa-Automation/blob/develop/MakeAutoVideo.md</a></strong></span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font size="+0"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong>1. Прочитать вот эту инструкцию <a href="https://github.com/Pr-Mex/vanessa-automation/blob/develop/MakeAutoVideo.md">https://github.com/Pr-Mex/vanessa-automation/blob/develop/MakeAutoVideo.md</a></strong></span></font></font></h2>
 <h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font size="+0"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong>2. Посмотреть вот это видео <a href="https://www.youtube.com/watch?v=BfXowJH5uP0">https://www.youtube.com/watch?v=BfXowJH5uP0</a></strong></span></font></font></h2></blockquote>
 <h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong>Далее изложу основные принципы:</strong></span></font></font></h2>
 <h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong>1. Каждый шаг в видеоинструкции будет озвучен и к нему будут добавлены субтитры.</strong></span></font></font></h2>
@@ -357,4 +358,17 @@
 <p dir="ltr">5. Также Исследователь форм будет предлагать вам шаги на том яызке, который указан в настройках.</p>
 <p dir="ltr"><img src="_files/10.png"></img></p>
 <p dir="ltr"> </p></blockquote>
+<p dir="ltr"> </p>
+<h2 dir="ltr"><font style="BACKGROUND-COLOR: #ffffff"><a name="20. SikuliX сервер.">20. SikuliX сервер.</a></font></h2>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p dir="ltr"><br>1. SikuliX сервер нужен, чтобы ускорить работу сценариев, которые многократно вызывают скрипты SikuliX. Таким образом с помощью Vanessa Automation можно писать быстрые сценарии, которые могут интерактивно работать с экраном пользователя.</p>
+<p dir="ltr">2. Большая часть скриптов SikuliX не требует специальной адаптации для работы на SikuliX сервере.</p>
+<p dir="ltr">3. Чтобы использовать SikuliX сервер нужно установить флаг "Использовать SikuliX сервер" и указать каталоги (через точку с запятой) скриптов SikuliX.</p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p dir="ltr"><img src="_files/SikuliXСервер01.png"></img></p></blockquote>
+<p dir="ltr"><br>4. При такой настройке вызов <strong>Ванесса.ВыполнитьSikuliСкрипт()</strong> будет перенаправлен в метод <strong>Ванесса.ВыполнитьSikuliСкриптЧерезSikuliXСервер()</strong> (поэтому большую часть сценариев, которые уже используют SikuliX скрипты переделывать не надо).</p>
+<p dir="ltr">5. При этом будет запущен специальный сеанс SikuliX, если его ещё нет.</p>
+<p dir="ltr">6. Будет собран специальный SikuliX скрипт, который представляет собой компиляцию всех скриптов, которые были в каталоге (каталогах) в параметра "Каталоги скриптов SikuliX". Скрипт будет размещён в первом каталоге с именем <strong>SikuliXServer.sikuli</strong>.</p>
+<p dir="ltr">7. Скрипты, принимающие аргрументы вида "<strong>sys.argv[1]</strong>" также будут корректно обработаны.</p>
+<p dir="ltr">8. Запуск SikuliX сервера доступен через управляющий json файл. Параметры: "<strong>КаталогиСкриптовSikuliX</strong>" и "<strong>ИспользоватьSikuliXСервер</strong>".</p></blockquote>
 <p dir="ltr"> </p></span></font></font></font></h2></blockquote></blockquote></body></html>

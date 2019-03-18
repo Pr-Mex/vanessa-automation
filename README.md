@@ -1,10 +1,11 @@
 ﻿# vanessa-automation
 
 [![Открытый чат проекта https://gitter.im/vanessa-automation](https://badges.gitter.im/vanessa-automation.svg)](https://gitter.im/vanessa-automation?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Build Status](http://84.237.195.35:32005/buildStatus/icon?job=VAFullCheck)](http://84.237.195.35:32005/job/VAFullCheck/)
 
 ## BDD for 1С:Enterprise
 
-Текущий релиз в ветке [Master: 1.2.013](https://github.com/Pr-Mex/vanessa-automation/tree/master)
+Текущий релиз в ветке [Master: 1.2.021](https://github.com/Pr-Mex/vanessa-automation/tree/master)
 Разработка ведется в ветке [Develop](https://github.com/Pr-Mex/vanessa-automation/tree/develop).
 
 В данном репозитории хранятся только исходники.
@@ -18,13 +19,14 @@
 Чтобы зафиксировать изменения epf файлов, нужно запустить Decompile.bat.
 
 Проект использует принцип формирования автодокументации в формате Markdown и видео:
-* Видео инструкции лежат [здесь](https://www.youtube.com/channel/UC2mJ4LlMG-FF4qkc_kqN_iQ) 
-* Прочие инструкции сгруппированы [в этом плейлисте YouTube](https://www.youtube.com/playlist?list=PL2zlgf113YhFG_uRARjDtP1_Obj55UmY4) 
+* Видео инструкции лежат [здесь](https://www.youtube.com/channel/UC114RqHhG__1gET8pzs3AHA/playlists) 
 * Также рекомендуется посмотреть вот [этот вебинар](http://infostart.ru/webinars/537546/) 
 * Возможно вам поможет [этот FAQ](https://github.com/Pr-Mex/vanessa-automation/blob/develop/F.A.Q.MD)
 
 Чтобы у вас работало автосоздание видеоинструкций необходимо установить дополнительный софт. Инструкция [здесь](https://github.com/Pr-Mex/vanessa-automation/blob/develop/MakeAutoVideo.md) 
 Также по автовидеоинструкциям есть вот это замечательное [видео](https://www.youtube.com/watch?v=BfXowJH5uP0)
+
+Список отличий проекта Vanessa-automation от проекта ADD можно посмотреть [тут](https://github.com/Pr-Mex/vanessa-automation/blob/develop/NotAdd.MD)
 
 Порядок установки Vanessa-Automation под Windows:
 * [интерпретатор 1Script](http://oscript.io/downloads) - для работы с иходными файлами 1С с помощью проекта Precommit1C
@@ -48,7 +50,6 @@ git submodule update --init --recursive
 
 Обязательно ознакомьтесь с:
 * руководством контрибьютора [CONTRIBUTING.md](./.github/CONTRIBUTING.md)
-* моделью спонсорства [DONATIONS.md](./DONATIONS.md)
 * известные проблемы [KNOWN-PROBLEMS.md](./doc/KNOWN-PROBLEMS.md)
 
 ## Описание простого использования
@@ -142,7 +143,7 @@ git submodule update --init --recursive
 * **СписокТеговИсключение** - массив текстовых тэгов, для исключения из проверки (используется например для черновиков сценариев и требований)
 * **СписокТеговОтбор** - массив текстовых тэгов для запуска проверки поведения по сценариям, содержащим любой из указанных тэгов
 
-Пример подобного JSON файла профиля можно найти [здесь](https://github.com/Pr-Mex/vanessa-automation/tree/develop/tools/JSON)
+Пример подобного JSON файла можно найти [здесь](https://github.com/Pr-Mex/vanessa-automation/tree/develop/tools/JSON)
 
 
 Профиль запуска предназначен для простого консольного запуска, пример подобной командной строки выглядит так:
@@ -151,7 +152,43 @@ git submodule update --init --recursive
 %V83PATH% /Execute C:\vanessa-automation\vanessa-automation.epf /C"StartFeaturePlayer;VBParams=C:\VBParams.json"
 ```
 
-Примеры запуска можно увидеть в соседнем репозитории [Vanessa Runner](https://github.com/silverbulleters/vanessa-runner/)
+Примеры запуска можно увидеть в [данном каталоге](https://github.com/Pr-Mex/vanessa-automation/tree/develop/tools/JSON)
+
+## Загрузка глобальных переменных из внешнего файла
+Чтобы не зашивать в тесты все плавающие пользовательские переменные, такие как имена баз, строки подключения, логины, пароли и др., имеется возможность вынести эти переменные во внешний файл user_settings.json. Это может быть особенно полезно, когда над фичами работает команда, и у каждого участника существуют свои настройки подключения к базам.
+   
+Чтобы воспользоваться этой функциональности, нужно выполнить следующее:
+
+ 1.  У себя в каталоге с обработкой ванессы создать файл user_settings.json. Сам файл user_settings.json должен отвечать специальному формату:
+``` json
+{
+    "userSettings": [
+        {
+            "user": "USERNAME_1",
+            "settings": {
+                "ИМЯ_ПЕРЕМЕННОЙ_1": "ЗНАЧЕНИЕ_ПЕРЕМЕННОЙ_1",
+                "ИМЯ_ПЕРЕМЕННОЙ_2": "ЗНАЧЕНИЕ_ПЕРЕМЕННОЙ_2",
+            }
+        },
+        {
+            "user": "USERNAME_2",
+            "settings": {
+                "ИМЯ_ПЕРЕМЕННОЙ_1": "ЗНАЧЕНИЕ_ПЕРЕМЕННОЙ_1",
+                "ИМЯ_ПЕРЕМЕННОЙ_2": "ЗНАЧЕНИЕ_ПЕРЕМЕННОЙ_2",
+            }
+        }
+    ]
+}
+```
+
+2. В свойства user поставить доменное (локальное) имя пользователя, для которого должны применяться настройки. Именно по этому свойству будет определяться, какие пользовательские настройки нужно загружать.
+
+3. В свойстве settings прописать конкретные настройки для каждого пользователя. Состав настроек необязательно должен совпадать между пользователями, для какого-то пользователя настройки могут отсутствовать. 
+
+4. Открыть обработку AD - файл user_settings.json подтянется автоматически из каталога, в котором находится AD (поле каталог инструментов на вкладке Сервис). Если такого файла нет, то загрузка молча игнорируется. Имеется возможность указать свой каталог загрузки настроек, он подчиняется свойству Каталог проекта на вкладке Сервис.
+    
+Если файл найден, то на основании текущего имени пользователя компьютера или домена (которое определяется через WShell скрипт), ищутся настройки текущего пользователя и загружаются только они. Если настройки не найдены, то выводится предупредительное сообщение.
+
 
 ## ЧаВо
 Находится [здесь](https://github.com/Pr-Mex/vanessa-automation/blob/develop/F.A.Q.MD)
@@ -171,10 +208,9 @@ git submodule update --init --recursive
 * [Yandex Allure](http://allure.qatools.ru/)
 * [Selenium](http://docs.seleniumhq.org/)
 * [Дэн Норт](http://en.wikipedia.org/wiki/Acceptance_test-driven_development)
+* [Vanessa-Automation — инструмент тестирования прикладных решений на платформе «1С: Предприятие» @Хабрахабр](https://habr.com/post/418303/)
+* [Vanessa-Automation — инструмент автодокументирования прикладных решений на платформе «1С: Предприятие». Кино и BDD. @Хабрахабр](https://habr.com/post/420175/)
 
-## Руководство контрибьютора
-
-[CONTRIBUTING.md](https://github.com/Pr-Mex/vanessa-automation/blob/develop/CONTRIBUTING.md)
 
 ## Лицензии
 
