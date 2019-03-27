@@ -1,4 +1,6 @@
 #language: ru
+
+@IgnoreOnCIMainBuild
 @tree
 
 Функционал: ДляПроверкаКешаСценариев
