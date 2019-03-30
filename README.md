@@ -7,6 +7,7 @@
 
 Текущий релиз в ветке [Master: 1.2.021](https://github.com/Pr-Mex/vanessa-automation/tree/master)
 Разработка ведется в ветке [Develop](https://github.com/Pr-Mex/vanessa-automation/tree/develop).
+[Телеграм канал](https://t.me/testspro1c), где можно обсудить Ванессу и всё, что связано с тестированием в 1С.
 
 В данном репозитории хранятся только исходники.
 Вы можете собрать необходимые файлы сами, либо скачать готовую сборку в [релизах](https://github.com/Pr-Mex/vanessa-automation/releases).
