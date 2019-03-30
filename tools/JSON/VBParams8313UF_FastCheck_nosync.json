@@ -15,34 +15,51 @@
    "КаталогиБиблиотек":[
    "./features/Libraries"
    ],
+     "КлиентыТестирования":[
+     {
+       "Имя": "Этот клиент",
+       "ПутьКИнфобазе": "/F.\\ServiceBases\\v83NoSyncServiceBase",
+       "ДопПараметры": "",
+       "ТипКлиента": "Тонкий",
+       "ИмяКомпьютера": "localhost",
+       "ПортЗапускаТестКлиента": "1538",
+	   "АктивизироватьСтроку": "Истина"
+     }
+   ],
    "ВыполнитьСценарии": "Истина",
    "ЗавершитьРаботуСистемы": "Истина",
    "ЗакрытьTestClientПослеЗапускаСценариев": "Истина",
+   "ЗапускатьКлиентТестированияСМаксимизированнымОкном": "Истина",
    "ДелатьЛогВыполненияСценариевВЖР": "Ложь",
    "ДелатьОтчетВФорматеАллюр": "Истина",
    "ДелатьОтчетВФорматеjUnit": "Истина",
    "ДелатьОтчетВФорматеCucumberJson": "Истина",
    "ДелатьЛогВыполненияСценариевВТекстовыйФайл": "Истина",
+   "ВыводитьВЛогВыполнениеШагов": "Истина",
    "КаталогOutputAllureБазовый": "./tools/ServiceBases/allurereport",
    "КаталогOutputjUnit": "./tools/ServiceBases/junitreport",
    "КаталогOutputCucumberJson": "./tools/ServiceBases/cucumber",
    "СоздаватьПодкаталогВКаталогеAllureДляЭтойСборки": "Истина",
    "ДелатьСкриншотПриВозникновенииОшибки": "Истина",
    "ОстановкаПриВозникновенииОшибки": "Ложь",
-   "СниматьСкриншотКаждогоОкна1С": "Истина",
+   "СниматьСкриншотКаждогоОкна1С": "Ложь",
    "КаталогOutputСкриншоты": "./tools/ServiceBases/ScreenShots",
-   "ИмяФайлаЛогВыполненияСценариев": "./tools/ServiceBases/log8313nosync.txt",
+   "ИмяФайлаЛогВыполненияСценариев": "./tools/ServiceBases/log8313_nosync.txt",
    "КомандаСделатьСкриншот": '"C:\\Program Files (x86)\\IrfanView\\i_view32.exe" /capture=1 /convert=',
    "ВыгружатьСтатусВыполненияСценариевВФайл": "Истина",
    "ДобавлятьКИмениСценарияУсловияВыгрузки": "Истина",
    "ПутьКФайлуДляВыгрузкиСтатусаВыполненияСценариев": "./tools/ServiceBases/BuildStatus.log",
    "ВерсияПлатформыДляГенерацииEPF": "C:/Program Files (x86)/1cv8/8.3.10.2772/bin",
+   "ТаймаутЗапуска1С": 30,
    "СписокТеговИсключение":[
    "IgnoreOnCIMainBuild",
-   "IgnoreOn8312",
-   "IgnoreOnUFBuilds",
-   "Ignore"
+   "IgnoreOn8313",
+   "IgnoreOnUFBuilds", 
+   "IgnoreOnFastCheck",
+   "Ignore",
+   "Video"
    ],
+   "ВыполнятьШагиАссинхронно":"Ложь",
    "ЗаписьВидеоКомандаНачатьЗаписьВидео": '"C:\\Program Files (x86)\\VideoLAN\\VLC\\vlc.exe" screen://  -I rc --rc-quiet --rc-host=127.0.0.1:8082 --nommx :screen-mouse-image="<screenmouseimage>" :screen-fps=<fps> :screen-width=<screenwidth> :screen-height=<screenheight> :screen-top=0 :screen-left=0 :screen-caching=100 :sout=#transcode{vcodec=mp4v,vb=400,fps=<fps>,scale=1,width=<screenwidth>,height=<screenheight>,acodec=none}:duplicate{dst=std{access=file,mux=mp4,dst=<dst>}}',
    "ЗаписьВидеоФайлКурсораМышки": "./tools/VideoTools/mouse.png",
    "ЗаписьВидеоКаталогДляВременныхФайлов": "./tools/VideoTemp",
@@ -55,6 +72,9 @@
    "ЗаписьВидеоИмяTTS": "Elena",
    "ЗаписьВидеоСкоростьПроизношения": "1",
    "ЗаписьВидеоСловарьЗамен": "./tools/VideoTools/libtts.txt",
+   "ЗаписьВидеоСловарьЗаменСписок":[
+   "./tools/VideoTools/libtts.txt"
+   ],
    "ЗаписьВидеоЭкранШирина": "1920",
    "ЗаписьВидеоЭкранВысота": "1080",
    "ЗаписьВидеоКоличествоКадров": "5",
