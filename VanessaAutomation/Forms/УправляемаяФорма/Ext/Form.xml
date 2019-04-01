@@ -2587,6 +2587,21 @@
 														</Title>
 														<ExtendedTooltip name="ДеревоТестовКонтекстноеМенюСвернутьДоСценариевРасширеннаяПодсказка" id="1272"/>
 													</Button>
+													<Button name="ДеревоТестовКонтекстноеМенюСвернутьДоШагов" id="1875">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.СвернутьДеревоДоШагов</CommandName>
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Свернуть до шагов первого уровня</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Switch to first level steps</v8:content>
+															</v8:item>
+														</Title>
+														<ExtendedTooltip name="ДеревоТестовКонтекстноеМенюСвернутьДоШаговРасширеннаяПодсказка" id="1876"/>
+													</Button>
 												</ChildItems>
 											</ButtonGroup>
 											<ButtonGroup name="Брейпоинты" id="1478">
@@ -10815,6 +10830,35 @@
 																<Event name="StartChoice">КаталогOutputAllureНачалоВыбора</Event>
 															</Events>
 														</InputField>
+														<InputField name="УровеньОтчета1" id="1863">
+															<DataPath>Объект.УровеньОтчета1</DataPath>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<ContextMenu name="УровеньОтчета1КонтекстноеМеню" id="1864"/>
+															<ExtendedTooltip name="УровеньОтчета1РасширеннаяПодсказка" id="1865"/>
+														</InputField>
+														<InputField name="УровеньОтчета2" id="1866">
+															<DataPath>Объект.УровеньОтчета2</DataPath>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<ContextMenu name="УровеньОтчета2КонтекстноеМеню" id="1867"/>
+															<ExtendedTooltip name="УровеньОтчета2РасширеннаяПодсказка" id="1868"/>
+														</InputField>
+														<InputField name="УровеньОтчета3" id="1869">
+															<DataPath>Объект.УровеньОтчета3</DataPath>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<ContextMenu name="УровеньОтчета3КонтекстноеМеню" id="1870"/>
+															<ExtendedTooltip name="УровеньОтчета3РасширеннаяПодсказка" id="1871"/>
+														</InputField>
+														<InputField name="КаталогОтносительноКоторогоНадоСтроитьИерархию" id="1872">
+															<DataPath>Объект.КаталогОтносительноКоторогоНадоСтроитьИерархию</DataPath>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<ChoiceButton>true</ChoiceButton>
+															<ClearButton>true</ClearButton>
+															<ContextMenu name="КаталогОтносительноКоторогоНадоСтроитьИерархиюКонтекстноеМеню" id="1873"/>
+															<ExtendedTooltip name="КаталогОтносительноКоторогоНадоСтроитьИерархиюРасширеннаяПодсказка" id="1874"/>
+															<Events>
+																<Event name="StartChoice">КаталогОтносительноКоторогоНадоСтроитьИерархию1НачалоВыбора</Event>
+															</Events>
+														</InputField>
 													</ChildItems>
 												</UsualGroup>
 												<UsualGroup name="ГруппаjUnit" id="1538">
@@ -13630,6 +13674,12 @@
 																					<ContextMenu name="ЗаписьВидеоИмяTTSКонтекстноеМеню" id="693"/>
 																					<ExtendedTooltip name="ЗаписьВидеоИмяTTSРасширеннаяПодсказка" id="1432"/>
 																				</InputField>
+																				<InputField name="ЗаписьВидеоСкоростьПроизношения" id="1877">
+																					<DataPath>Объект.ЗаписьВидеоСкоростьПроизношения</DataPath>
+																					<AutoMaxWidth>false</AutoMaxWidth>
+																					<ContextMenu name="ЗаписьВидеоСкоростьПроизношенияКонтекстноеМеню" id="1878"/>
+																					<ExtendedTooltip name="ЗаписьВидеоСкоростьПроизношенияРасширеннаяПодсказка" id="1879"/>
+																				</InputField>
 																				<Table name="ЗаписьВидеоСловарьЗамен" id="1727">
 																					<Representation>List</Representation>
 																					<TitleLocation>Top</TitleLocation>
@@ -14865,25 +14915,25 @@
 													<ContextMenu name="ВерсияПоставкиКонтекстноеМеню" id="1782"/>
 													<ExtendedTooltip name="ВерсияПоставкиРасширеннаяПодсказка" id="1783"/>
 												</InputField>
-												<InputField name="КаталогОтносительноКоторогоНадоСтроитьИерархию" id="1797">
+												<InputField name="КаталогОтносительноКоторогоНадоСтроитьИерархию1" id="1797">
 													<DataPath>Объект.КаталогОтносительноКоторогоНадоСтроитьИерархию</DataPath>
-													<ContextMenu name="КаталогОтносительноКоторогоНадоСтроитьИерархиюКонтекстноеМеню" id="1798"/>
-													<ExtendedTooltip name="КаталогОтносительноКоторогоНадоСтроитьИерархиюРасширеннаяПодсказка" id="1799"/>
+													<ContextMenu name="КаталогОтносительноКоторогоНадоСтроитьИерархию1КонтекстноеМеню" id="1798"/>
+													<ExtendedTooltip name="КаталогОтносительноКоторогоНадоСтроитьИерархию1РасширеннаяПодсказка" id="1799"/>
 												</InputField>
-												<InputField name="УровеньОтчета1" id="1800">
+												<InputField name="УровеньОтчета1Служебный" id="1800">
 													<DataPath>Объект.УровеньОтчета1</DataPath>
-													<ContextMenu name="УровеньОтчета1КонтекстноеМеню" id="1801"/>
-													<ExtendedTooltip name="УровеньОтчета1РасширеннаяПодсказка" id="1802"/>
+													<ContextMenu name="УровеньОтчета1СлужебныйКонтекстноеМеню" id="1801"/>
+													<ExtendedTooltip name="УровеньОтчета1СлужебныйРасширеннаяПодсказка" id="1802"/>
 												</InputField>
-												<InputField name="УровеньОтчета2" id="1803">
+												<InputField name="УровеньОтчета2Служебный" id="1803">
 													<DataPath>Объект.УровеньОтчета2</DataPath>
-													<ContextMenu name="УровеньОтчета2КонтекстноеМеню" id="1804"/>
-													<ExtendedTooltip name="УровеньОтчета2РасширеннаяПодсказка" id="1805"/>
+													<ContextMenu name="УровеньОтчета2СлужебныйКонтекстноеМеню" id="1804"/>
+													<ExtendedTooltip name="УровеньОтчета2СлужебныйРасширеннаяПодсказка" id="1805"/>
 												</InputField>
-												<InputField name="УровеньОтчета3" id="1806">
+												<InputField name="УровеньОтчета3Служебный" id="1806">
 													<DataPath>Объект.УровеньОтчета3</DataPath>
-													<ContextMenu name="УровеньОтчета3КонтекстноеМеню" id="1807"/>
-													<ExtendedTooltip name="УровеньОтчета3РасширеннаяПодсказка" id="1808"/>
+													<ContextMenu name="УровеньОтчета3СлужебныйКонтекстноеМеню" id="1807"/>
+													<ExtendedTooltip name="УровеньОтчета3СлужебныйРасширеннаяПодсказка" id="1808"/>
 												</InputField>
 												<CheckBoxField name="РежимСамотестирования" id="1667">
 													<DataPath>Объект.РежимСамотестирования</DataPath>
@@ -20860,6 +20910,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СброситьПодключениеSikuliXСервера</Action>
+		</Command>
+		<Command name="СвернутьДеревоДоШагов" id="75">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свернуть дерево до шагов</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Свернуть дерево до шагов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СвернутьДеревоДоШагов</Action>
 		</Command>
 	</Commands>
 </Form>
