@@ -16,6 +16,8 @@
 2. Также, чтобы работала сборка epf надо установить платформу [1С:Предприятие 8.3.10](https://releases.1c.ru).
 3. Для запуска сборки epf из исходников надо запустить Compile.bat
 4. Скрипты по сборке/разборке файлов взяты [отсюда](https://github.com/Pr-Mex/ExternalModulesConverterFor1C)
+5. Также скачать Vanessa-Automation можно с помощью команды: opm install vanessa-automation
+6. Сборку Vanessa-Automation-Single можно скачать с помощью команды: opm install vanessa-automation-single
 
 Чтобы зафиксировать изменения epf файлов, нужно запустить Decompile.bat.
 
