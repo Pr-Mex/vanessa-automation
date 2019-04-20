@@ -5,17 +5,19 @@
 
 ## BDD for 1С:Enterprise
 
-Текущий релиз в ветке [Master: 1.2.022](https://github.com/Pr-Mex/vanessa-automation/tree/master)
-Разработка ведется в ветке [Develop](https://github.com/Pr-Mex/vanessa-automation/tree/develop).
-[Телеграм канал](https://t.me/testspro1c), где можно обсудить Ванессу и всё, что связано с тестированием в 1С.
+* Текущий релиз в ветке [Master: 1.2.023](https://github.com/Pr-Mex/vanessa-automation/tree/master)
+* Разработка ведется в ветке [Develop](https://github.com/Pr-Mex/vanessa-automation/tree/develop).
+* [Телеграм канал](https://t.me/testspro1c), где можно обсудить Ванессу и всё, что связано с тестированием в 1С.
 
 В данном репозитории хранятся только исходники.
 Вы можете собрать необходимые файлы сами, либо скачать готовую сборку в [релизах](https://github.com/Pr-Mex/vanessa-automation/releases).
 При первом скачивании репозитория необходимо собрать файлы обработок.
 1. Чтобы работала сборка epf надо установить [OneScript](http://oscript.io) версии 1.0.20 или выше.
-2. Также, чтобы работала сборка epf надо установить платформу [1С:Предприятие 8.3.10](https://releases.1c.ru).
-3. Для запуска сборки epf из исходников надо запустить Compile.bat
-4. Скрипты по сборке/разборке файлов взяты [отсюда](https://github.com/Pr-Mex/ExternalModulesConverterFor1C)
+2. Также, чтобы работала разборка epf надо установить платформу [1С:Предприятие 8.3.10](https://releases.1c.ru).
+3. Для запуска сборки epf из исходников надо запустить Compile.bat.
+4. Скрипты по сборке/разборке файлов взяты [отсюда](https://github.com/Pr-Mex/ExternalModulesConverterFor1C).
+5. Также скачать Vanessa-Automation можно с помощью команды: opm install vanessa-automation
+6. Сборку Vanessa-Automation-Single можно скачать с помощью команды: opm install vanessa-automation-single
 
 Чтобы зафиксировать изменения epf файлов, нужно запустить Decompile.bat.
 
@@ -24,10 +26,10 @@
 * Также рекомендуется посмотреть вот [этот вебинар](http://infostart.ru/webinars/537546/) 
 * Возможно вам поможет [этот FAQ](https://github.com/Pr-Mex/vanessa-automation/blob/develop/F.A.Q.MD)
 
-Чтобы у вас работало автосоздание видеоинструкций необходимо установить дополнительный софт. Инструкция [здесь](https://github.com/Pr-Mex/vanessa-automation/blob/develop/MakeAutoVideo.md) 
-Также по автовидеоинструкциям есть вот это замечательное [видео](https://www.youtube.com/watch?v=BfXowJH5uP0)
+Чтобы у вас работало автосоздание видеоинструкций необходимо установить дополнительный софт. Инструкция [здесь](https://github.com/Pr-Mex/vanessa-automation/blob/develop/MakeAutoVideo.md).
+Также по автовидеоинструкциям есть вот это замечательное [видео](https://www.youtube.com/watch?v=BfXowJH5uP0).
 
-Список отличий проекта Vanessa-automation от проекта ADD можно посмотреть [тут](https://github.com/Pr-Mex/vanessa-automation/blob/develop/NotAdd.MD)
+Список отличий проекта Vanessa-automation от проекта ADD можно посмотреть [тут](https://github.com/Pr-Mex/vanessa-automation/blob/develop/NotAdd.MD).
 
 Порядок установки Vanessa-Automation под Windows:
 * [интерпретатор 1Script](http://oscript.io/downloads) - для работы с иходными файлами 1С с помощью проекта Precommit1C

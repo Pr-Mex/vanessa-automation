@@ -731,6 +731,12 @@
 											</Title>
 											<ExtendedTooltip name="ФормаПерезагрузитьИВыполнитьРасширеннаяПодсказка" id="1259"/>
 										</Button>
+										<Button name="ПоказатьСкрытьТаблоПеременных" id="1910">
+											<Type>CommandBarButton</Type>
+											<OnlyInAllActions>false</OnlyInAllActions>
+											<CommandName>Form.Command.ПоказатьСкрытьТаблоПеременных</CommandName>
+											<ExtendedTooltip name="ПоказатьСкрытьТаблоПеременныхРасширеннаяПодсказка" id="1911"/>
+										</Button>
 										<Button name="ФормаСправка" id="1552">
 											<Type>CommandBarButton</Type>
 											<CommandName>Form.StandardCommand.Help</CommandName>
@@ -8823,12 +8829,36 @@
 														</InputField>
 													</ChildItems>
 												</UsualGroup>
+												<CheckBoxField name="ДобавлятьПриНакликиванииМетаИнформацию" id="1912">
+													<DataPath>Объект.ДобавлятьПриНакликиванииМетаИнформацию</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Add meta information when clicking</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Добавлять при накликивании мета информацию</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ДобавлятьПриНакликиванииМетаИнформациюContextMenu" id="1913"/>
+													<ExtendedTooltip name="ДобавлятьПриНакликиванииМетаИнформациюExtendedTooltip" id="1914"/>
+												</CheckBoxField>
 												<CheckBoxField name="ИскатьЭлементыФормыПоИмени" id="1824">
 													<DataPath>Объект.ИскатьЭлементыФормыПоИмени</DataPath>
 													<TitleLocation>Right</TitleLocation>
 													<CheckBoxType>Auto</CheckBoxType>
 													<ContextMenu name="ИскатьЭлементыФормыПоИмениКонтекстноеМеню" id="1825"/>
 													<ExtendedTooltip name="ИскатьЭлементыФормыПоИмениРасширеннаяПодсказка" id="1826"/>
+												</CheckBoxField>
+												<CheckBoxField name="ТегTreeВключенПоУмолчанию" id="1860">
+													<DataPath>Объект.ТегTreeВключенПоУмолчанию</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ТегTreeВключенПоУмолчаниюКонтекстноеМеню" id="1861"/>
+													<ExtendedTooltip name="ТегTreeВключенПоУмолчаниюРасширеннаяПодсказка" id="1862"/>
 												</CheckBoxField>
 												<UsualGroup name="ГруппаОбновлятьДерево" id="1836">
 													<Group>Vertical</Group>
@@ -9017,13 +9047,6 @@
 															<Events>
 																<Event name="OnChange">ВыполнятьШагиАссинхронноПриИзменении</Event>
 															</Events>
-														</CheckBoxField>
-														<CheckBoxField name="ТегTreeВключенПоУмолчанию" id="1860">
-															<DataPath>Объект.ТегTreeВключенПоУмолчанию</DataPath>
-															<TitleLocation>Right</TitleLocation>
-															<CheckBoxType>Auto</CheckBoxType>
-															<ContextMenu name="ТегTreeВключенПоУмолчаниюКонтекстноеМеню" id="1861"/>
-															<ExtendedTooltip name="ТегTreeВключенПоУмолчаниюРасширеннаяПодсказка" id="1862"/>
 														</CheckBoxField>
 														<InputField name="ИнтервалВыполненияШагаЗаданныйПользователем" id="523">
 															<DataPath>Объект.ИнтервалВыполненияШагаЗаданныйПользователем</DataPath>
@@ -10117,6 +10140,18 @@
 													<ContextMenu name="ПоказыватьНомерСтрокиДереваПриВозникновенииОшибкиКонтекстноеМеню" id="1751"/>
 													<ExtendedTooltip name="ПоказыватьНомерСтрокиДереваПриВозникновенииОшибкиРасширеннаяПодсказка" id="1752"/>
 												</CheckBoxField>
+												<CheckBoxField name="ОбновлятьСтатистикуВДереве" id="1880">
+													<DataPath>Объект.ОбновлятьСтатистикуВДереве</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ОбновлятьСтатистикуВДеревеКонтекстноеМеню" id="1881"/>
+													<ExtendedTooltip name="ОбновлятьСтатистикуВДеревеРасширеннаяПодсказка" id="1882"/>
+												</CheckBoxField>
+												<InputField name="ПаузаПриОткрытииОкна" id="1883">
+													<DataPath>Объект.ПаузаПриОткрытииОкна</DataPath>
+													<ContextMenu name="ПаузаПриОткрытииОкнаКонтекстноеМеню" id="1884"/>
+													<ExtendedTooltip name="ПаузаПриОткрытииОкнаРасширеннаяПодсказка" id="1885"/>
+												</InputField>
 												<InputField name="ТаймаутДляАсинхронныхШагов" id="1773">
 													<DataPath>Объект.ТаймаутДляАсинхронныхШагов</DataPath>
 													<AutoMaxWidth>false</AutoMaxWidth>
@@ -13160,6 +13195,27 @@
 																			<ContextMenu name="ЗаписьВидеоКомандаConvertКонтекстноеМеню" id="681"/>
 																			<ExtendedTooltip name="ЗаписьВидеоКомандаConvertРасширеннаяПодсказка" id="1426"/>
 																		</InputField>
+																		<CheckBoxField name="ЗаписьВидеоКэшироватьВидеоВставки" id="1951">
+																			<DataPath>Объект.ЗаписьВидеоКэшироватьВидеоВставки</DataPath>
+																			<TitleLocation>Right</TitleLocation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="ЗаписьВидеоКэшироватьВидеоВставкиКонтекстноеМеню" id="1952"/>
+																			<ExtendedTooltip name="ЗаписьВидеоКэшироватьВидеоВставкиРасширеннаяПодсказка" id="1953"/>
+																			<Events>
+																				<Event name="OnChange">ЗаписьВидеоКэшироватьВидеоВставкиПриИзменении</Event>
+																			</Events>
+																		</CheckBoxField>
+																		<InputField name="ЗаписьВидеоКэшВидеоВставок" id="1954">
+																			<DataPath>Объект.ЗаписьВидеоКэшВидеоВставок</DataPath>
+																			<AutoMaxWidth>false</AutoMaxWidth>
+																			<ChoiceButton>true</ChoiceButton>
+																			<ClearButton>true</ClearButton>
+																			<ContextMenu name="ЗаписьВидеоКэшВидеоВставокКонтекстноеМеню" id="1955"/>
+																			<ExtendedTooltip name="ЗаписьВидеоКэшВидеоВставокРасширеннаяПодсказка" id="1956"/>
+																			<Events>
+																				<Event name="StartChoice">ЗаписьВидеоКэшВидеоВставокНачалоВыбора</Event>
+																			</Events>
+																		</InputField>
 																	</ChildItems>
 																</Page>
 																<Page name="НастройкиАудио" id="908">
@@ -13673,6 +13729,27 @@
 																					<AutoMaxWidth>false</AutoMaxWidth>
 																					<ContextMenu name="ЗаписьВидеоИмяTTSКонтекстноеМеню" id="693"/>
 																					<ExtendedTooltip name="ЗаписьВидеоИмяTTSРасширеннаяПодсказка" id="1432"/>
+																				</InputField>
+																				<CheckBoxField name="ЗаписьВидеоКэшироватьФайлыTTS" id="1945">
+																					<DataPath>Объект.ЗаписьВидеоКэшироватьФайлыTTS</DataPath>
+																					<TitleLocation>Right</TitleLocation>
+																					<CheckBoxType>Auto</CheckBoxType>
+																					<ContextMenu name="ЗаписьВидеоКэшироватьФайлыTTSКонтекстноеМеню" id="1946"/>
+																					<ExtendedTooltip name="ЗаписьВидеоКэшироватьФайлыTTSРасширеннаяПодсказка" id="1947"/>
+																					<Events>
+																						<Event name="OnChange">ЗаписьВидеоКэшироватьФайлыTTSПриИзменении</Event>
+																					</Events>
+																				</CheckBoxField>
+																				<InputField name="ЗаписьВидеоКэшФайловTTS" id="1948">
+																					<DataPath>Объект.ЗаписьВидеоКэшФайловTTS</DataPath>
+																					<AutoMaxWidth>false</AutoMaxWidth>
+																					<ChoiceButton>true</ChoiceButton>
+																					<ClearButton>true</ClearButton>
+																					<ContextMenu name="ЗаписьВидеоКэшФайловTTSКонтекстноеМеню" id="1949"/>
+																					<ExtendedTooltip name="ЗаписьВидеоКэшФайловTTSРасширеннаяПодсказка" id="1950"/>
+																					<Events>
+																						<Event name="StartChoice">ЗаписьВидеоКэшФайловTTSНачалоВыбора</Event>
+																					</Events>
 																				</InputField>
 																				<InputField name="ЗаписьВидеоСкоростьПроизношения" id="1877">
 																					<DataPath>Объект.ЗаписьВидеоСкоростьПроизношения</DataPath>
@@ -15127,6 +15204,119 @@
 					<ContextMenu name="СтрокаСтатусаКонтекстноеМеню" id="1718"/>
 					<ExtendedTooltip name="СтрокаСтатусаРасширеннаяПодсказка" id="1719"/>
 				</InputField>
+				<UsualGroup name="ГруппаПросмотрПеременных" id="1886">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа просмотр переменных</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа просмотр переменных</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаПросмотрПеременныхРасширеннаяПодсказка" id="1887"/>
+					<ChildItems>
+						<Table name="ТаблоПеременных" id="1915">
+							<Representation>Tree</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>ТаблоПеременных</DataPath>
+							<ContextMenu name="ТаблоПеременныхКонтекстноеМеню" id="1916"/>
+							<AutoCommandBar name="ТаблоПеременныхКоманднаяПанель" id="1917">
+								<Autofill>false</Autofill>
+								<ChildItems>
+									<Button name="ТаблоПеременныхОбновитьТаблоПеременных" id="1943">
+										<Type>CommandBarButton</Type>
+										<Representation>Picture</Representation>
+										<CommandName>Form.Command.ОбновитьТаблоПеременных</CommandName>
+										<Picture>
+											<xr:Ref>StdPicture.Refresh</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="ТаблоПеременныхОбновитьТаблоПеременныхРасширеннаяПодсказка" id="1944"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="ТаблоПеременныхРасширеннаяПодсказка" id="1918"/>
+							<SearchStringAddition name="ТаблоПеременныхСтрокаПоиска" id="1919">
+								<AdditionSource>
+									<Item>ТаблоПеременных</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблоПеременныхСтрокаПоискаКонтекстноеМеню" id="1920"/>
+								<ExtendedTooltip name="ТаблоПеременныхСтрокаПоискаРасширеннаяПодсказка" id="1921"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТаблоПеременныхСостояниеПросмотра" id="1922">
+								<AdditionSource>
+									<Item>ТаблоПеременных</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблоПеременныхСостояниеПросмотраКонтекстноеМеню" id="1923"/>
+								<ExtendedTooltip name="ТаблоПеременныхСостояниеПросмотраРасширеннаяПодсказка" id="1924"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТаблоПеременныхУправлениеПоиском" id="1925">
+								<AdditionSource>
+									<Item>ТаблоПеременных</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблоПеременныхУправлениеПоискомКонтекстноеМеню" id="1926"/>
+								<ExtendedTooltip name="ТаблоПеременныхУправлениеПоискомРасширеннаяПодсказка" id="1927"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="BeforeAddRow">ТаблоПеременныхПередНачаломДобавления</Event>
+								<Event name="BeforeDeleteRow">ТаблоПеременныхПередУдалением</Event>
+								<Event name="BeforeRowChange">ТаблоПеременныхПередНачаломИзменения</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="ТаблоПеременныхИмя" id="1928">
+									<DataPath>ТаблоПеременных.Имя</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблоПеременныхИмяКонтекстноеМеню" id="1929"/>
+									<ExtendedTooltip name="ТаблоПеременныхИмяРасширеннаяПодсказка" id="1930"/>
+								</InputField>
+								<InputField name="ТаблоПеременныхЗначение" id="1931">
+									<DataPath>ТаблоПеременных.Значение</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблоПеременныхЗначениеКонтекстноеМеню" id="1932"/>
+									<ExtendedTooltip name="ТаблоПеременныхЗначениеРасширеннаяПодсказка" id="1933"/>
+									<Events>
+										<Event name="OnChange">ТаблоПеременныхЗначениеПриИзменении</Event>
+									</Events>
+								</InputField>
+								<InputField name="ТаблоПеременныхТип" id="1934">
+									<DataPath>ТаблоПеременных.Тип</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблоПеременныхТипКонтекстноеМеню" id="1935"/>
+									<ExtendedTooltip name="ТаблоПеременныхТипРасширеннаяПодсказка" id="1936"/>
+								</InputField>
+								<InputField name="ТаблоПеременныхИсточникДанных" id="1937">
+									<DataPath>ТаблоПеременных.ИсточникДанных</DataPath>
+									<Visible>false</Visible>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблоПеременныхИсточникДанныхКонтекстноеМеню" id="1938"/>
+									<ExtendedTooltip name="ТаблоПеременныхИсточникДанныхРасширеннаяПодсказка" id="1939"/>
+								</InputField>
+								<CheckBoxField name="ТаблоПеременныхСлужебнаяСтрока" id="1940">
+									<DataPath>ТаблоПеременных.СлужебнаяСтрока</DataPath>
+									<Visible>false</Visible>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ТаблоПеременныхСлужебнаяСтрокаКонтекстноеМеню" id="1941"/>
+									<ExtendedTooltip name="ТаблоПеременныхСлужебнаяСтрокаРасширеннаяПодсказка" id="1942"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
 				<UsualGroup name="ГруппаИнформация" id="1596">
 					<Title>
 						<v8:item>
@@ -17301,6 +17491,102 @@
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
+		</Attribute>
+		<Attribute name="ТаблоПеременных" id="42">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Табло переменных</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Имя" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Name</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Значение" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Value</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Тип" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Type</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИсточникДанных" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Источник данных</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="СлужебнаяСтрока" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Служебная строка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
 		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
@@ -20925,6 +21211,45 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СвернутьДеревоДоШагов</Action>
+		</Command>
+		<Command name="ПоказатьСкрытьТаблоПеременных" id="76">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать/Скрыть табло переменных</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Show/Hide variable</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать скрыть табло переменных</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+Alt+W</Shortcut>
+			<Action>ПоказатьСкрытьТаблоПеременных</Action>
+		</Command>
+		<Command name="ОбновитьТаблоПеременных" id="77">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить табло переменных</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Refresh variables</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить табло переменных</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбновитьТаблоПеременных</Action>
 		</Command>
 	</Commands>
 </Form>
