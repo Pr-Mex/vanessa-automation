@@ -219,6 +219,16 @@
 				<Event name="OnChange">ПоказатьШагиНаРусскомПриИзменении</Event>
 			</Events>
 		</CheckBoxField>
+		<CheckBoxField name="ПоказыватьУстаревшиеШаги" id="85">
+			<DataPath>ПоказыватьУстаревшиеШаги</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ПоказыватьУстаревшиеШагиКонтекстноеМеню" id="86"/>
+			<ExtendedTooltip name="ПоказыватьУстаревшиеШагиРасширеннаяПодсказка" id="87"/>
+			<Events>
+				<Event name="OnChange">ПоказыватьУстаревшиеШагиПриИзменении</Event>
+			</Events>
+		</CheckBoxField>
 		<Button name="ПоказатьПеревод" id="68">
 			<Type>UsualButton</Type>
 			<CommandName>Form.Command.ПоказатьПеревод</CommandName>
@@ -1606,6 +1616,21 @@
 				<v8:item>
 					<v8:lang>vi</v8:lang>
 					<v8:content>Hiển thị các bước bằng tiếng Nga</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоказыватьУстаревшиеШаги" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать устаревшие шаги</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Show outdated steps</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
