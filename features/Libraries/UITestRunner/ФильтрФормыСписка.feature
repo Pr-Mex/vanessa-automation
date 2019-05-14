@@ -3,6 +3,8 @@
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 @IgnoreOnUFSovm82Builds
+@IgnoreOn837
+@IgnoreOn838
 
 Функционал: Создание фильтра формы списка
 
