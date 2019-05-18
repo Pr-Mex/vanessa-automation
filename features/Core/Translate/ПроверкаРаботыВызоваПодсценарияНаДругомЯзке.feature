@@ -51,17 +51,19 @@
 		| 'And In the command interface I select "Основная" "Справочник1"'       | 'Success' |
 		| 'Then "Справочник1" window is opened'                                  | 'Success' |
 		| 'And I click the button named "ФормаСоздать"'                          | 'Success' |
-		| 'Then "Справочник1 (создание)" window is opened'                       | 'Success' |
+		| 'Then "Справочник1 (create)" window is opened'                         | 'Success' |
 		| 'And I input "111" text in the field named "Наименование"'             | 'Success' |
 		| 'And I move to the next attribute'                                     | 'Success' |
-		| 'Then the form attribute named "Наименование" became equal to '111''   | 'Success' |
+		| 'Then the form attribute named "Наименование" became equal to \'111\'' | 'Success' |
 		| 'And I call english subscenario "222"'                                 | ''        |
-		| 'And I input '222' text in the field named "Наименование"'             | 'Success' |
+		| 'And I input \'222\' text in the field named "Наименование"'           | 'Success' |
 		| 'And I move to the next attribute'                                     | 'Success' |
-		| 'Then the form attribute named "Наименование" became equal to '222''   | 'Success' |
-		| 'And I close "Справочник1 (создание)*" window'                         | 'Success' |
-		| 'Then "1С:Предприятие" window is opened'                               | 'Success' |
-		| 'And I click "Нет" button'                                             | 'Success' |
+		| 'Then the form attribute named "Наименование" became equal to \'222\'' | 'Success' |
+		| 'And I close "Справочник1 (create)*" window'                           | 'Success' |
+		| 'Then "1C:Enterprise" window is opened'                                | 'Success' |
+		| 'And I click "No" button'                                              | 'Success' |
+
+
 
 
 
