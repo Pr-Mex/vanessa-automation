@@ -10370,6 +10370,40 @@
 													<ContextMenu name="ДелатьЛогВыполненияСценариевВЖРКонтекстноеМеню" id="339"/>
 													<ExtendedTooltip name="ДелатьЛогВыполненияСценариевВЖРРасширеннаяПодсказка" id="1378"/>
 												</CheckBoxField>
+												<UsualGroup name="ГруппаУсловияВыгрузки" id="1996">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа условия выгрузки</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа условия выгрузки</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаУсловияВыгрузкиРасширеннаяПодсказка" id="1997"/>
+													<ChildItems>
+														<CheckBoxField name="ДобавлятьКИмениСценарияУсловияВыгрузки" id="1993">
+															<DataPath>Объект.ДобавлятьКИмениСценарияУсловияВыгрузки</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ДобавлятьКИмениСценарияУсловияВыгрузкиКонтекстноеМеню" id="1994"/>
+															<ExtendedTooltip name="ДобавлятьКИмениСценарияУсловияВыгрузкиРасширеннаяПодсказка" id="1995"/>
+															<Events>
+																<Event name="OnChange">ДобавлятьКИмениСценарияУсловияВыгрузкиПриИзменении</Event>
+															</Events>
+														</CheckBoxField>
+													</ChildItems>
+												</UsualGroup>
+												<InputField name="ИмяТекущейСборки" id="1998">
+													<DataPath>Объект.ИмяТекущейСборки</DataPath>
+													<ContextMenu name="ИмяТекущейСборкиКонтекстноеМеню" id="1999"/>
+													<ExtendedTooltip name="ИмяТекущейСборкиРасширеннаяПодсказка" id="2000"/>
+												</InputField>
 												<UsualGroup name="ГруппаСкриншоты" id="1534">
 													<ToolTip>
 														<v8:item>
