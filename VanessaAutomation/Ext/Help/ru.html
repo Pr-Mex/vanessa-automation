@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html;charset=utf-8" http-equiv="content-type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.10570.1001"></meta></head><body>
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html;charset=utf-8" http-equiv="content-type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.9600.16518"></meta></head><body>
 <p><font size="3" face="Arial">Vanessa-Automation - это фреймворк для разработки в 1С используя методологию BDD.</font></p>
 <p><font size="3" face="Arial">Страница проекта: <a href="https://github.com/Pr-Mex/vanessa-automation">https://github.com/Pr-Mex/vanessa-automation</a></font></p>
 <p><font size="3" face="Arial">Vanessa-Automation является аналогом Cucumber для разработки на платформе 1С:Предприятие.</font></p>
@@ -46,6 +46,7 @@
 <p>18. Запуск Vanessa-Automation на CI.</p>
 <p>19. Инструкция для контрибьютерров.</p>
 <p>20. <a href="#20. SikuliX сервер.">SikuliX сервер.</a></p>
+<p>21. <a href="#Работа с глобальными переменными.">Работа с глобальными переменными.</a></p>
 <p> </p>
 <p> </p>
 <p><a name="ПравилаНаписанияfeatureФайлов"><font size="4">1 . Правила написания feature файлов.</font></a></p>
@@ -371,4 +372,26 @@
 <p dir="ltr">6. Будет собран специальный SikuliX скрипт, который представляет собой компиляцию всех скриптов, которые были в каталоге (каталогах) в параметра "Каталоги скриптов SikuliX". Скрипт будет размещён в первом каталоге с именем <strong>SikuliXServer.sikuli</strong>.</p>
 <p dir="ltr">7. Скрипты, принимающие аргрументы вида "<strong>sys.argv[1]</strong>" также будут корректно обработаны.</p>
 <p dir="ltr">8. Запуск SikuliX сервера доступен через управляющий json файл. Параметры: "<strong>КаталогиСкриптовSikuliX</strong>" и "<strong>ИспользоватьSikuliXСервер</strong>".</p></blockquote>
-<p dir="ltr"> </p></span></font></font></font></h2></blockquote></blockquote></body></html>
+<p dir="ltr"> </p>
+<h2 dir="ltr"><font style="BACKGROUND-COLOR: #ffffff"><a name="Работа с глобальными переменными.">21. Работа с глобальными переменными.</a></font></h2>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p dir="ltr"><br>1. В Vanessa Automation есть возможность работать с глобальными переменными. Они бывают двух типов.</p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p dir="ltr">1) Переменные, которые хранятся в служебной структуре <strong>Контекст</strong>. Они существуют на время жизни одного сценария.</p>
+<p dir="ltr">2) Переменные, которые хранятся в служебной структуре <strong>КонтекстСохраняемый</strong>. Они существуют, пока открыта форма Vanessa Automation. </p></blockquote>
+<p dir="ltr">2. В стандартной библиоетке шагов Vanessa Automation есть готовые шаги, которые позволяют сохранить нужное значение в переменную, а затем его использовать. Например:</p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p dir="ltr"><em>И я запоминаю значение текущего поля как "ИмяПеременной"</em></p>
+<p dir="ltr"><em>И в поле с именем "ИмяПоля" ввожу значение переменной "ИмяПеременной"</em></p></blockquote>
+<p dir="ltr">3. Возможные варианты синтаксиса для сохранения значения переменной:</p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p dir="ltr"><em>И я запоминаю значение текущего поля как "ИмяПеременной" - </em>Переменная будет сохранена в Контекст</p>
+<p dir="ltr"><em>И я запоминаю значение текущего поля как "$ИмяПеременной$" - </em>Переменная будет сохранена в Контекст</p>
+<p dir="ltr"><em>И я запоминаю значение текущего поля как "$$ИмяПеременной$$" - </em>Переменная будет сохранена в КонтекстСохраняемый</p></blockquote>
+<p dir="ltr">4. Возможные варианты синтаксиса для чтения значения переменной:</p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p dir="ltr"><em>И в поле с именем "ИмяПоля" ввожу значение переменной "ИмяПеременной" - </em>значение переменной будет взято из Контекста</p>
+<p dir="ltr"><em>И в поле с именем "ИмяПоля" ввожу значение переменной "$ИмяПеременной$" - </em>значение переменной будет взято из Контекста</p>
+<p dir="ltr"><em>И в поле с именем "ИмяПоля" ввожу значение переменной "$$ИмяПеременной$$" - </em>значение переменной будет взято из КонтекстаСохраняемого</p></blockquote>
+<p dir="ltr">5. Имена переменных должны соответствовать правилам помещения значений в Структуру (нельзя использовать пробелы, спецсимволы и т.д.)</p>
+<p dir="ltr"> </p></blockquote></span></font></font></font></h2></blockquote></blockquote></body></html>
