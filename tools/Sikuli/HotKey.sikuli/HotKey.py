@@ -26,6 +26,10 @@ elif lowerHotKey == 'f11':
     HotKey = Key.F11
 elif lowerHotKey == 'f12':
     HotKey = Key.F12
+elif lowerHotKey == 'del':
+    HotKey = Key.DELETE
+elif lowerHotKey == 'delete':
+    HotKey = Key.DELETE
 
 if Modif == 'win':
     type(HotKey, KeyModifier.WIN)
