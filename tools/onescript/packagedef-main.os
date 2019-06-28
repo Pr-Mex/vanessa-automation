@@ -29,5 +29,6 @@
 		.ВключитьФайл("locales")
 		.ВключитьФайл("plugins")
 		.ВключитьФайл("tools")
+		.ВключитьФайл("vendor")
 		.ВключитьФайл("vanessa-automation.epf")
 ;

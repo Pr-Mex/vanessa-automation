@@ -12392,7 +12392,7 @@
 																	<Title>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>Каталог для формирования инструкций Видео</v8:content>
+																			<v8:content>Каталог для формирования инструкций</v8:content>
 																		</v8:item>
 																		<v8:item>
 																			<v8:lang>en</v8:lang>
@@ -12484,6 +12484,57 @@
 																		<Event name="StartChoice">КаталогOutputИнструкцияВидеоНачалоВыбора</Event>
 																	</Events>
 																</InputField>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="ГруппаТипВидеоИнструкций" id="2016">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа тип видео инструкций</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа тип видео инструкций</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Group>Horizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаТипВидеоИнструкцийРасширеннаяПодсказка" id="2017"/>
+															<ChildItems>
+																<CheckBoxField name="ЗаписьВидеоФормироватьИнструкциюТипВидео" id="2018">
+																	<DataPath>Объект.ЗаписьВидеоФормироватьИнструкциюТипВидео</DataPath>
+																	<TitleLocation>Right</TitleLocation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="ЗаписьВидеоФормироватьИнструкциюТипВидеоКонтекстноеМеню" id="2019"/>
+																	<ExtendedTooltip name="ЗаписьВидеоФормироватьИнструкциюТипВидеоРасширеннаяПодсказка" id="2020"/>
+																	<Events>
+																		<Event name="OnChange">ЗаписьВидеоФормироватьИнструкциюТипВидеоПриИзменении</Event>
+																	</Events>
+																</CheckBoxField>
+																<CheckBoxField name="ЗаписьВидеоФормироватьИнструкциюТипHTML" id="2021">
+																	<DataPath>Объект.ЗаписьВидеоФормироватьИнструкциюТипHTML</DataPath>
+																	<TitleLocation>Right</TitleLocation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="ЗаписьВидеоФормироватьИнструкциюТипHTMLКонтекстноеМеню" id="2022"/>
+																	<ExtendedTooltip name="ЗаписьВидеоФормироватьИнструкциюТипHTMLРасширеннаяПодсказка" id="2023"/>
+																	<Events>
+																		<Event name="OnChange">ЗаписьВидеоФормироватьИнструкциюТипHTMLПриИзменении</Event>
+																	</Events>
+																</CheckBoxField>
+																<CheckBoxField name="ЗаписьВидеоФормироватьИнструкциюТипMarkdown" id="2024">
+																	<DataPath>Объект.ЗаписьВидеоФормироватьИнструкциюТипMarkdown</DataPath>
+																	<Visible>false</Visible>
+																	<TitleLocation>Right</TitleLocation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="ЗаписьВидеоФормироватьИнструкциюТипMarkdownКонтекстноеМеню" id="2025"/>
+																	<ExtendedTooltip name="ЗаписьВидеоФормироватьИнструкциюТипMarkdownРасширеннаяПодсказка" id="2026"/>
+																	<Events>
+																		<Event name="OnChange">ЗаписьВидеоФормироватьИнструкциюТипMarkdownПриИзменении</Event>
+																	</Events>
+																</CheckBoxField>
 															</ChildItems>
 														</UsualGroup>
 														<Pages name="НастройкиВидеоИнструкций" id="904">
@@ -14644,6 +14695,12 @@
 																			<Events>
 																				<Event name="StartChoice">ЗаписьВидеоФайлВодянойЗнакНачалоВыбора</Event>
 																			</Events>
+																		</InputField>
+																		<InputField name="ЗаписьВидеоПроцентУскорения" id="2013">
+																			<DataPath>Объект.ЗаписьВидеоПроцентУскорения</DataPath>
+																			<AutoMaxWidth>false</AutoMaxWidth>
+																			<ContextMenu name="ЗаписьВидеоПроцентУскоренияКонтекстноеМеню" id="2014"/>
+																			<ExtendedTooltip name="ЗаписьВидеоПроцентУскоренияРасширеннаяПодсказка" id="2015"/>
 																		</InputField>
 																		<CheckBoxField name="ЗаписьВидеоДобавлятьСубтитры" id="2004">
 																			<DataPath>Объект.ЗаписьВидеоДобавлятьСубтитры</DataPath>
