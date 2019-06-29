@@ -2,6 +2,7 @@
 
 @IgnoreOnOFBuilds
 @IgnoreOn82Builds
+@IgnoreOnWeb
 
 
 @tree
