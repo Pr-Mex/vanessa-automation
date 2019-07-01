@@ -55,7 +55,7 @@
 								</v8:item>
 								<v8:item>
 									<v8:lang>en</v8:lang>
-									<v8:content>Run and Invoke</v8:content>
+									<v8:content>Run scenarios</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>am</v8:lang>
@@ -4388,7 +4388,7 @@
 								</v8:item>
 								<v8:item>
 									<v8:lang>en</v8:lang>
-									<v8:content>Libs and Canned steps</v8:content>
+									<v8:content>Libraries</v8:content>
 								</v8:item>
 								<v8:item>
 									<v8:lang>am</v8:lang>
@@ -8865,100 +8865,6 @@
 													<Representation>None</Representation>
 													<ShowTitle>false</ShowTitle>
 													<ExtendedTooltip name="ГруппаОбновлятьДеревоРасширеннаяПодсказка" id="1837"/>
-													<ChildItems>
-														<InputField name="ИнтервалВыполненияШагаЗаданныйПользователем" id="523">
-															<DataPath>Объект.ИнтервалВыполненияШагаЗаданныйПользователем</DataPath>
-															<Title>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Интервал выполнения шага</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>en</v8:lang>
-																	<v8:content>Step invoke sleep interval</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>am</v8:lang>
-																	<v8:content>በ ደረጃ</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>az</v8:lang>
-																	<v8:content>İnterval yerinə yetirilməsi addım</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>bg</v8:lang>
-																	<v8:content>Интервалът на извършване на стъпки</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>et</v8:lang>
-																	<v8:content>Intervall teha samm</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>fr</v8:lang>
-																	<v8:content>L'intervalle d'exécution de l'étape</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>ka</v8:lang>
-																	<v8:content>ინტერვალი ნაბიჯი</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>de</v8:lang>
-																	<v8:content>Intervall Schritt</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>hu</v8:lang>
-																	<v8:content>Intervallum lépés</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>it</v8:lang>
-																	<v8:content>L'intervallo di passaggio</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>lv</v8:lang>
-																	<v8:content>Intervāls veiktu soli</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>lt</v8:lang>
-																	<v8:content>Intervalas atlikti žingsnis</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>mn</v8:lang>
-																	<v8:content>Интервал алхам</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>pl</v8:lang>
-																	<v8:content>Interwał wykonywania kroku</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>ro</v8:lang>
-																	<v8:content>Intervalul pasul</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>sl</v8:lang>
-																	<v8:content>Interval korak</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>es</v8:lang>
-																	<v8:content>El intervalo de paso</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>sv</v8:lang>
-																	<v8:content>Intervall steg</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>tr</v8:lang>
-																	<v8:content>Aralık adım</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>vi</v8:lang>
-																	<v8:content>Khoảng thực hiện của bước</v8:content>
-																</v8:item>
-															</Title>
-															<AutoMaxWidth>false</AutoMaxWidth>
-															<ContextMenu name="ИнтервалВыполненияШагаЗаданныйПользователемКонтекстноеМеню" id="524"/>
-															<ExtendedTooltip name="ИнтервалВыполненияШагаЗаданныйПользователемРасширеннаяПодсказка" id="1385"/>
-														</InputField>
-													</ChildItems>
 												</UsualGroup>
 												<InputField name="КаталогИнструментов" id="380">
 													<DataPath>Объект.КаталогИнструментов</DataPath>
@@ -10033,6 +9939,98 @@
 														<Event name="OnChange">ВыполнятьШагиАссинхронноПриИзменении</Event>
 													</Events>
 												</CheckBoxField>
+												<InputField name="ИнтервалВыполненияШагаЗаданныйПользователем" id="2001">
+													<DataPath>Объект.ИнтервалВыполненияШагаЗаданныйПользователем</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Интервал выполнения шага</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Step invoke sleep interval</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>am</v8:lang>
+															<v8:content>በ ደረጃ</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>az</v8:lang>
+															<v8:content>İnterval yerinə yetirilməsi addım</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>bg</v8:lang>
+															<v8:content>Интервалът на извършване на стъпки</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>et</v8:lang>
+															<v8:content>Intervall teha samm</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>fr</v8:lang>
+															<v8:content>L'intervalle d'exécution de l'étape</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ka</v8:lang>
+															<v8:content>ინტერვალი ნაბიჯი</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>de</v8:lang>
+															<v8:content>Intervall Schritt</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>hu</v8:lang>
+															<v8:content>Intervallum lépés</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>it</v8:lang>
+															<v8:content>L'intervallo di passaggio</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>lv</v8:lang>
+															<v8:content>Intervāls veiktu soli</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>lt</v8:lang>
+															<v8:content>Intervalas atlikti žingsnis</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>mn</v8:lang>
+															<v8:content>Интервал алхам</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>pl</v8:lang>
+															<v8:content>Interwał wykonywania kroku</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ro</v8:lang>
+															<v8:content>Intervalul pasul</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>sl</v8:lang>
+															<v8:content>Interval korak</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>es</v8:lang>
+															<v8:content>El intervalo de paso</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>sv</v8:lang>
+															<v8:content>Intervall steg</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>tr</v8:lang>
+															<v8:content>Aralık adım</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>vi</v8:lang>
+															<v8:content>Khoảng thực hiện của bước</v8:content>
+														</v8:item>
+													</Title>
+													<AutoMaxWidth>false</AutoMaxWidth>
+													<ContextMenu name="ИнтервалВыполненияШагаЗаданныйПользователемКонтекстноеМеню" id="2002"/>
+													<ExtendedTooltip name="ИнтервалВыполненияШагаЗаданныйПользователемРасширеннаяПодсказка" id="2003"/>
+												</InputField>
 												<CheckBoxField name="ОбновлятьСтатистикуВДереве" id="1880">
 													<DataPath>Объект.ОбновлятьСтатистикуВДереве</DataPath>
 													<TitleLocation>Right</TitleLocation>
@@ -10370,6 +10368,40 @@
 													<ContextMenu name="ДелатьЛогВыполненияСценариевВЖРКонтекстноеМеню" id="339"/>
 													<ExtendedTooltip name="ДелатьЛогВыполненияСценариевВЖРРасширеннаяПодсказка" id="1378"/>
 												</CheckBoxField>
+												<UsualGroup name="ГруппаУсловияВыгрузки" id="1996">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа условия выгрузки</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа условия выгрузки</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаУсловияВыгрузкиРасширеннаяПодсказка" id="1997"/>
+													<ChildItems>
+														<CheckBoxField name="ДобавлятьКИмениСценарияУсловияВыгрузки" id="1993">
+															<DataPath>Объект.ДобавлятьКИмениСценарияУсловияВыгрузки</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ДобавлятьКИмениСценарияУсловияВыгрузкиКонтекстноеМеню" id="1994"/>
+															<ExtendedTooltip name="ДобавлятьКИмениСценарияУсловияВыгрузкиРасширеннаяПодсказка" id="1995"/>
+															<Events>
+																<Event name="OnChange">ДобавлятьКИмениСценарияУсловияВыгрузкиПриИзменении</Event>
+															</Events>
+														</CheckBoxField>
+													</ChildItems>
+												</UsualGroup>
+												<InputField name="ИмяТекущейСборки" id="1998">
+													<DataPath>Объект.ИмяТекущейСборки</DataPath>
+													<ContextMenu name="ИмяТекущейСборкиКонтекстноеМеню" id="1999"/>
+													<ExtendedTooltip name="ИмяТекущейСборкиРасширеннаяПодсказка" id="2000"/>
+												</InputField>
 												<UsualGroup name="ГруппаСкриншоты" id="1534">
 													<ToolTip>
 														<v8:item>
@@ -12360,7 +12392,7 @@
 																	<Title>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>Каталог для формирования инструкций Видео</v8:content>
+																			<v8:content>Каталог для формирования инструкций</v8:content>
 																		</v8:item>
 																		<v8:item>
 																			<v8:lang>en</v8:lang>
@@ -12452,6 +12484,57 @@
 																		<Event name="StartChoice">КаталогOutputИнструкцияВидеоНачалоВыбора</Event>
 																	</Events>
 																</InputField>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="ГруппаТипВидеоИнструкций" id="2016">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа тип видео инструкций</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа тип видео инструкций</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Group>Horizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаТипВидеоИнструкцийРасширеннаяПодсказка" id="2017"/>
+															<ChildItems>
+																<CheckBoxField name="ЗаписьВидеоФормироватьИнструкциюТипВидео" id="2018">
+																	<DataPath>Объект.ЗаписьВидеоФормироватьИнструкциюТипВидео</DataPath>
+																	<TitleLocation>Right</TitleLocation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="ЗаписьВидеоФормироватьИнструкциюТипВидеоКонтекстноеМеню" id="2019"/>
+																	<ExtendedTooltip name="ЗаписьВидеоФормироватьИнструкциюТипВидеоРасширеннаяПодсказка" id="2020"/>
+																	<Events>
+																		<Event name="OnChange">ЗаписьВидеоФормироватьИнструкциюТипВидеоПриИзменении</Event>
+																	</Events>
+																</CheckBoxField>
+																<CheckBoxField name="ЗаписьВидеоФормироватьИнструкциюТипHTML" id="2021">
+																	<DataPath>Объект.ЗаписьВидеоФормироватьИнструкциюТипHTML</DataPath>
+																	<TitleLocation>Right</TitleLocation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="ЗаписьВидеоФормироватьИнструкциюТипHTMLКонтекстноеМеню" id="2022"/>
+																	<ExtendedTooltip name="ЗаписьВидеоФормироватьИнструкциюТипHTMLРасширеннаяПодсказка" id="2023"/>
+																	<Events>
+																		<Event name="OnChange">ЗаписьВидеоФормироватьИнструкциюТипHTMLПриИзменении</Event>
+																	</Events>
+																</CheckBoxField>
+																<CheckBoxField name="ЗаписьВидеоФормироватьИнструкциюТипMarkdown" id="2024">
+																	<DataPath>Объект.ЗаписьВидеоФормироватьИнструкциюТипMarkdown</DataPath>
+																	<Visible>false</Visible>
+																	<TitleLocation>Right</TitleLocation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="ЗаписьВидеоФормироватьИнструкциюТипMarkdownКонтекстноеМеню" id="2025"/>
+																	<ExtendedTooltip name="ЗаписьВидеоФормироватьИнструкциюТипMarkdownРасширеннаяПодсказка" id="2026"/>
+																	<Events>
+																		<Event name="OnChange">ЗаписьВидеоФормироватьИнструкциюТипMarkdownПриИзменении</Event>
+																	</Events>
+																</CheckBoxField>
 															</ChildItems>
 														</UsualGroup>
 														<Pages name="НастройкиВидеоИнструкций" id="904">
@@ -13383,109 +13466,130 @@
 																	</ToolTip>
 																	<ExtendedTooltip name="НастройкиАудиоРасширеннаяПодсказка" id="1427"/>
 																	<ChildItems>
-																		<InputField name="ЗаписьВидеоКаталогМузыки" id="683">
-																			<DataPath>Объект.ЗаписьВидеоКаталогМузыки</DataPath>
+																		<UsualGroup name="ГруппаМузыка" id="2007">
 																			<Title>
 																				<v8:item>
 																					<v8:lang>ru</v8:lang>
-																					<v8:content>Каталог музыки</v8:content>
+																					<v8:content>Музыка</v8:content>
 																				</v8:item>
 																				<v8:item>
 																					<v8:lang>en</v8:lang>
-																					<v8:content>Music path</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>am</v8:lang>
-																					<v8:content>ቅድሚያ የታዘዘ</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>az</v8:lang>
-																					<v8:content>Musiqi kataloq</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>bg</v8:lang>
-																					<v8:content>Каталог музика</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>et</v8:lang>
-																					<v8:content>Kataloog muusika</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>fr</v8:lang>
-																					<v8:content>Catalogue de musique</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>ka</v8:lang>
-																					<v8:content>მუსიკა კატალოგი</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>de</v8:lang>
-																					<v8:content>Musik-Katalog</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>hu</v8:lang>
-																					<v8:content>Zene katalógus</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>it</v8:lang>
-																					<v8:content>Catalogo di musica</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>lv</v8:lang>
-																					<v8:content>Katalogs mūziku</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>lt</v8:lang>
-																					<v8:content>Muzikos katalogas</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>mn</v8:lang>
-																					<v8:content>Хөгжим каталог</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>pl</v8:lang>
-																					<v8:content>Katalog muzyki</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>ro</v8:lang>
-																					<v8:content>Catalog de muzică</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>sl</v8:lang>
-																					<v8:content>Glasba katalog</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>es</v8:lang>
-																					<v8:content>Catálogo de música</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>sv</v8:lang>
-																					<v8:content>Musik katalog</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>tr</v8:lang>
-																					<v8:content>Müzik kataloğu</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>vi</v8:lang>
-																					<v8:content>Thư mục âm nhạc</v8:content>
+																					<v8:content>Music</v8:content>
 																				</v8:item>
 																			</Title>
-																			<AutoMaxWidth>false</AutoMaxWidth>
-																			<ChoiceButton>true</ChoiceButton>
-																			<ClearButton>true</ClearButton>
-																			<ContextMenu name="ЗаписьВидеоКаталогМузыкиКонтекстноеМеню" id="684"/>
-																			<ExtendedTooltip name="ЗаписьВидеоКаталогМузыкиРасширеннаяПодсказка" id="1428"/>
-																			<Events>
-																				<Event name="StartChoice">ЗаписьВидеоКаталогМузыкиНачалоВыбора</Event>
-																			</Events>
-																		</InputField>
-																		<InputField name="ЗаписьВидеоГромкостьАудиоТрека" id="1833">
-																			<DataPath>Объект.ЗаписьВидеоГромкостьМузыки</DataPath>
-																			<AutoMaxWidth>false</AutoMaxWidth>
-																			<ContextMenu name="ЗаписьВидеоГромкостьАудиоТрекаКонтекстноеМеню" id="1834"/>
-																			<ExtendedTooltip name="ЗаписьВидеоГромкостьАудиоТрекаРасширеннаяПодсказка" id="1835"/>
-																		</InputField>
+																			<ToolTip>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Группа музыка</v8:content>
+																				</v8:item>
+																			</ToolTip>
+																			<ExtendedTooltip name="ГруппаМузыкаРасширеннаяПодсказка" id="2008"/>
+																			<ChildItems>
+																				<InputField name="ЗаписьВидеоКаталогМузыки" id="683">
+																					<DataPath>Объект.ЗаписьВидеоКаталогМузыки</DataPath>
+																					<Title>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Каталог музыки</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>en</v8:lang>
+																							<v8:content>Music path</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>am</v8:lang>
+																							<v8:content>ቅድሚያ የታዘዘ</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>az</v8:lang>
+																							<v8:content>Musiqi kataloq</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>bg</v8:lang>
+																							<v8:content>Каталог музика</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>et</v8:lang>
+																							<v8:content>Kataloog muusika</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>fr</v8:lang>
+																							<v8:content>Catalogue de musique</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>ka</v8:lang>
+																							<v8:content>მუსიკა კატალოგი</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>de</v8:lang>
+																							<v8:content>Musik-Katalog</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>hu</v8:lang>
+																							<v8:content>Zene katalógus</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>it</v8:lang>
+																							<v8:content>Catalogo di musica</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>lv</v8:lang>
+																							<v8:content>Katalogs mūziku</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>lt</v8:lang>
+																							<v8:content>Muzikos katalogas</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>mn</v8:lang>
+																							<v8:content>Хөгжим каталог</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>pl</v8:lang>
+																							<v8:content>Katalog muzyki</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>ro</v8:lang>
+																							<v8:content>Catalog de muzică</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>sl</v8:lang>
+																							<v8:content>Glasba katalog</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>es</v8:lang>
+																							<v8:content>Catálogo de música</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>sv</v8:lang>
+																							<v8:content>Musik katalog</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>tr</v8:lang>
+																							<v8:content>Müzik kataloğu</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>vi</v8:lang>
+																							<v8:content>Thư mục âm nhạc</v8:content>
+																						</v8:item>
+																					</Title>
+																					<AutoMaxWidth>false</AutoMaxWidth>
+																					<ChoiceButton>true</ChoiceButton>
+																					<ClearButton>true</ClearButton>
+																					<ContextMenu name="ЗаписьВидеоКаталогМузыкиКонтекстноеМеню" id="684"/>
+																					<ExtendedTooltip name="ЗаписьВидеоКаталогМузыкиРасширеннаяПодсказка" id="1428"/>
+																					<Events>
+																						<Event name="StartChoice">ЗаписьВидеоКаталогМузыкиНачалоВыбора</Event>
+																					</Events>
+																				</InputField>
+																				<InputField name="ЗаписьВидеоГромкостьАудиоТрека" id="1833">
+																					<DataPath>Объект.ЗаписьВидеоГромкостьМузыки</DataPath>
+																					<AutoMaxWidth>false</AutoMaxWidth>
+																					<ContextMenu name="ЗаписьВидеоГромкостьАудиоТрекаКонтекстноеМеню" id="1834"/>
+																					<ExtendedTooltip name="ЗаписьВидеоГромкостьАудиоТрекаРасширеннаяПодсказка" id="1835"/>
+																				</InputField>
+																			</ChildItems>
+																		</UsualGroup>
 																		<UsualGroup name="ОзвучкаГолосом" id="698">
 																			<Title>
 																				<v8:item>
@@ -13573,7 +13677,6 @@
 																					<v8:content>Tạo giọng nói</v8:content>
 																				</v8:item>
 																			</Title>
-																			<TitleTextColor>#0000FF</TitleTextColor>
 																			<ToolTip>
 																				<v8:item>
 																					<v8:lang>ru</v8:lang>
@@ -13696,6 +13799,10 @@
 																										<v8:lang>ru</v8:lang>
 																										<v8:content>Microsoft TTS</v8:content>
 																									</v8:item>
+																									<v8:item>
+																										<v8:lang>en</v8:lang>
+																										<v8:content>Microsoft TTS</v8:content>
+																									</v8:item>
 																								</Presentation>
 																								<Value xsi:type="xs:decimal">0</Value>
 																							</xr:Value>
@@ -13707,6 +13814,10 @@
 																								<Presentation>
 																									<v8:item>
 																										<v8:lang>ru</v8:lang>
+																										<v8:content>Yandex speechkit</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>en</v8:lang>
 																										<v8:content>Yandex speechkit</v8:content>
 																									</v8:item>
 																								</Presentation>
@@ -14085,6 +14196,28 @@
 																						</InputField>
 																					</ChildItems>
 																				</UsualGroup>
+																			</ChildItems>
+																		</UsualGroup>
+																		<UsualGroup name="КешАудио" id="2009">
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Кеш аудио</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>Audio cache</v8:content>
+																				</v8:item>
+																			</Title>
+																			<ToolTip>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Кеш аудио</v8:content>
+																				</v8:item>
+																			</ToolTip>
+																			<Group>Vertical</Group>
+																			<ExtendedTooltip name="КешАудиоРасширеннаяПодсказка" id="2010"/>
+																			<ChildItems>
 																				<CheckBoxField name="ЗаписьВидеоКэшироватьФайлыTTS" id="1945">
 																					<DataPath>Объект.ЗаписьВидеоКэшироватьФайлыTTS</DataPath>
 																					<TitleLocation>Right</TitleLocation>
@@ -14106,9 +14239,29 @@
 																						<Event name="StartChoice">ЗаписьВидеоКэшФайловTTSНачалоВыбора</Event>
 																					</Events>
 																				</InputField>
+																			</ChildItems>
+																		</UsualGroup>
+																		<UsualGroup name="ГруппаСловариЗамен" id="2011">
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Словари замен</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>Substitution dictionaries</v8:content>
+																				</v8:item>
+																			</Title>
+																			<ToolTip>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Группа словари замен</v8:content>
+																				</v8:item>
+																			</ToolTip>
+																			<ExtendedTooltip name="ГруппаСловариЗаменРасширеннаяПодсказка" id="2012"/>
+																			<ChildItems>
 																				<Table name="ЗаписьВидеоСловарьЗамен" id="1727">
 																					<Representation>List</Representation>
-																					<TitleLocation>Top</TitleLocation>
 																					<Header>false</Header>
 																					<HorizontalLines>false</HorizontalLines>
 																					<VerticalLines>false</VerticalLines>
@@ -14543,6 +14696,19 @@
 																				<Event name="StartChoice">ЗаписьВидеоФайлВодянойЗнакНачалоВыбора</Event>
 																			</Events>
 																		</InputField>
+																		<InputField name="ЗаписьВидеоПроцентУскорения" id="2013">
+																			<DataPath>Объект.ЗаписьВидеоПроцентУскорения</DataPath>
+																			<AutoMaxWidth>false</AutoMaxWidth>
+																			<ContextMenu name="ЗаписьВидеоПроцентУскоренияКонтекстноеМеню" id="2014"/>
+																			<ExtendedTooltip name="ЗаписьВидеоПроцентУскоренияРасширеннаяПодсказка" id="2015"/>
+																		</InputField>
+																		<CheckBoxField name="ЗаписьВидеоДобавлятьСубтитры" id="2004">
+																			<DataPath>Объект.ЗаписьВидеоДобавлятьСубтитры</DataPath>
+																			<TitleLocation>Right</TitleLocation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="ЗаписьВидеоДобавлятьСубтитрыКонтекстноеМеню" id="2005"/>
+																			<ExtendedTooltip name="ЗаписьВидеоДобавлятьСубтитрыРасширеннаяПодсказка" id="2006"/>
+																		</CheckBoxField>
 																		<CheckBoxField name="ЗаписьВидеоГруппаШаговКакШаг" id="1827">
 																			<DataPath>Объект.ЗаписьВидеоГруппаШаговКакШаг</DataPath>
 																			<TitleLocation>Right</TitleLocation>
