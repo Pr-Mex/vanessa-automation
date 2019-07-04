@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.7">
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<Group>Horizontal</Group>
 	<VerticalScroll>useIfNecessary</VerticalScroll>
@@ -44,7 +44,6 @@
 							<v8:content>Функциональность закладки</v8:content>
 						</v8:item>
 					</ToolTip>
-					<PagesRepresentation>TabsOnRightHorizontal</PagesRepresentation>
 					<ExtendedTooltip name="ФункциональностьЗакладкиРасширеннаяПодсказка" id="1261"/>
 					<ChildItems>
 						<Page name="ГруппаЗапускТестов" id="44">
@@ -10267,12 +10266,6 @@
 													<v8:content>Báo cáo về khởi động các kịch bản</v8:content>
 												</v8:item>
 											</Title>
-											<ToolTip>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Страницы отчеты о запуске</v8:content>
-												</v8:item>
-											</ToolTip>
 											<ExtendedTooltip name="СтраницыОтчетыОЗапускеРасширеннаяПодсказка" id="1387"/>
 											<ChildItems>
 												<CheckBoxField name="ДелатьЛогВыполненияСценариевВЖР" id="338">
@@ -10375,12 +10368,6 @@
 															<v8:content>Группа условия выгрузки</v8:content>
 														</v8:item>
 													</Title>
-													<ToolTip>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Группа условия выгрузки</v8:content>
-														</v8:item>
-													</ToolTip>
 													<Representation>None</Representation>
 													<ShowTitle>false</ShowTitle>
 													<ExtendedTooltip name="ГруппаУсловияВыгрузкиРасширеннаяПодсказка" id="1997"/>
@@ -10403,14 +10390,8 @@
 													<ExtendedTooltip name="ИмяТекущейСборкиРасширеннаяПодсказка" id="2000"/>
 												</InputField>
 												<UsualGroup name="ГруппаСкриншоты" id="1534">
-													<ToolTip>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Группа скриншоты</v8:content>
-														</v8:item>
-													</ToolTip>
 													<Group>Vertical</Group>
-													<Representation>StrongSeparation</Representation>
+													<Representation>NormalSeparation</Representation>
 													<ShowTitle>false</ShowTitle>
 													<ExtendedTooltip name="ГруппаСкриншотыРасширеннаяПодсказка" id="1535"/>
 													<ChildItems>
@@ -10604,7 +10585,7 @@
 															<ExtendedTooltip name="СниматьСкриншотКаждогоОкна1СРасширеннаяПодсказка" id="1583"/>
 														</CheckBoxField>
 														<InputField name="КаталогOutputСкриншоты" id="510">
-															<DataPath>Объект.КаталогOutputСкриншоты</DataPath>
+															<DataPath>Объект.КаталогвыгрузкиСкриншотов</DataPath>
 															<Title>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
@@ -10703,15 +10684,14 @@
 													</ChildItems>
 												</UsualGroup>
 												<UsualGroup name="ГруппаAllure" id="1536">
-													<ToolTip>
+													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Группа allure</v8:content>
+															<v8:content>Allure</v8:content>
 														</v8:item>
-													</ToolTip>
+													</Title>
 													<Group>Vertical</Group>
-													<Representation>StrongSeparation</Representation>
-													<ShowTitle>false</ShowTitle>
+													<Representation>NormalSeparation</Representation>
 													<ExtendedTooltip name="ГруппаAllureРасширеннаяПодсказка" id="1537"/>
 													<ChildItems>
 														<CheckBoxField name="ДелатьОтчетВФорматеАллюр" id="138">
@@ -10810,13 +10790,9 @@
 																<Event name="OnChange">ДелатьОтчетВФорматеАллюрПриИзменении</Event>
 															</Events>
 														</CheckBoxField>
-														<InputField name="КаталогOutputAllure" id="141">
-															<DataPath>Объект.КаталогOutputAllure</DataPath>
+														<InputField name="КаталогВыгрузкиAllure" id="141">
+															<DataPath>Объект.КаталогВыгрузкиAllure</DataPath>
 															<Title>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Временный каталог файлов результатов Allure</v8:content>
-																</v8:item>
 																<v8:item>
 																	<v8:lang>en</v8:lang>
 																	<v8:content>Temp dir for Allure test suite files</v8:content>
@@ -10897,12 +10873,22 @@
 																	<v8:lang>vi</v8:lang>
 																	<v8:content>Thư mục tạm thời của các tệp kết quả Allure</v8:content>
 																</v8:item>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Каталог</v8:content>
+																</v8:item>
 															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Временный каталог файлов результатов Allure</v8:content>
+																</v8:item>
+															</ToolTip>
 															<AutoMaxWidth>false</AutoMaxWidth>
 															<ChoiceButton>true</ChoiceButton>
 															<ClearButton>true</ClearButton>
-															<ContextMenu name="КаталогOutputAllureКонтекстноеМеню" id="142"/>
-															<ExtendedTooltip name="КаталогOutputAllureРасширеннаяПодсказка" id="1396"/>
+															<ContextMenu name="КаталогВыгрузкиAllureКонтекстноеМеню" id="142"/>
+															<ExtendedTooltip name="КаталогВыгрузкиAllureРасширеннаяПодсказка" id="1396"/>
 															<Events>
 																<Event name="StartChoice">КаталогOutputAllureНачалоВыбора</Event>
 															</Events>
@@ -10995,15 +10981,14 @@
 													</ChildItems>
 												</UsualGroup>
 												<UsualGroup name="ГруппаjUnit" id="1538">
-													<ToolTip>
+													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Группаj unit</v8:content>
+															<v8:content>JUnit</v8:content>
 														</v8:item>
-													</ToolTip>
+													</Title>
 													<Group>Vertical</Group>
-													<Representation>StrongSeparation</Representation>
-													<ShowTitle>false</ShowTitle>
+													<Representation>NormalSeparation</Representation>
 													<ExtendedTooltip name="ГруппаjUnitРасширеннаяПодсказка" id="1539"/>
 													<ChildItems>
 														<CheckBoxField name="ДелатьОтчетВФорматеxUnit" id="367">
@@ -11102,13 +11087,9 @@
 																<Event name="OnChange">ДелатьОтчетВФорматеxUnitПриИзменении</Event>
 															</Events>
 														</CheckBoxField>
-														<InputField name="КаталогOutputjUnit" id="370">
-															<DataPath>Объект.КаталогOutputjUnit</DataPath>
+														<InputField name="КаталогВыгрузкиJUnit" id="370">
+															<DataPath>Объект.КаталогВыгрузкиJUnit</DataPath>
 															<Title>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Временный каталог для файлов JUnit</v8:content>
-																</v8:item>
 																<v8:item>
 																	<v8:lang>en</v8:lang>
 																	<v8:content>Temp dir for JUnit xml files</v8:content>
@@ -11189,12 +11170,22 @@
 																	<v8:lang>vi</v8:lang>
 																	<v8:content>Thư mục tạm thời dành cho các tệp tin JUnit</v8:content>
 																</v8:item>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Каталог</v8:content>
+																</v8:item>
 															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Временный каталог для файлов JUnit</v8:content>
+																</v8:item>
+															</ToolTip>
 															<AutoMaxWidth>false</AutoMaxWidth>
 															<ChoiceButton>true</ChoiceButton>
 															<ClearButton>true</ClearButton>
-															<ContextMenu name="КаталогOutputjUnitКонтекстноеМеню" id="371"/>
-															<ExtendedTooltip name="КаталогOutputjUnitРасширеннаяПодсказка" id="1397"/>
+															<ContextMenu name="КаталогВыгрузкиJUnitКонтекстноеМеню" id="371"/>
+															<ExtendedTooltip name="КаталогВыгрузкиJUnitРасширеннаяПодсказка" id="1397"/>
 															<Events>
 																<Event name="StartChoice">КаталогOutputjUnitНачалоВыбора</Event>
 															</Events>
@@ -11202,15 +11193,14 @@
 													</ChildItems>
 												</UsualGroup>
 												<UsualGroup name="ГруппаCucumber" id="1540">
-													<ToolTip>
+													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Группа cucumber</v8:content>
+															<v8:content>Cucumber</v8:content>
 														</v8:item>
-													</ToolTip>
+													</Title>
 													<Group>Vertical</Group>
-													<Representation>StrongSeparation</Representation>
-													<ShowTitle>false</ShowTitle>
+													<Representation>NormalSeparation</Representation>
 													<ExtendedTooltip name="ГруппаCucumberРасширеннаяПодсказка" id="1541"/>
 													<ChildItems>
 														<CheckBoxField name="ДелатьОтчетВФорматеCucumberJson" id="1461">
@@ -11309,13 +11299,9 @@
 																<Event name="OnChange">ДелатьОтчетВФорматеCucumberJsonПриИзменении</Event>
 															</Events>
 														</CheckBoxField>
-														<InputField name="КаталогOutputCucumberJson" id="1464">
-															<DataPath>Объект.КаталогOutputCucumberJson</DataPath>
+														<InputField name="КаталогВыгрузкиCucumberJson" id="1464">
+															<DataPath>Объект.КаталогВыгрузкиCucumberJson</DataPath>
 															<Title>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Временный каталог для файлов Cucumber</v8:content>
-																</v8:item>
 																<v8:item>
 																	<v8:lang>en</v8:lang>
 																	<v8:content>Temp dir for JUnit xml files</v8:content>
@@ -11396,12 +11382,22 @@
 																	<v8:lang>vi</v8:lang>
 																	<v8:content>Thư mục tạm thời dành cho các tệp tin Cucumber</v8:content>
 																</v8:item>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Каталог</v8:content>
+																</v8:item>
 															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Временный каталог для файлов Cucumber</v8:content>
+																</v8:item>
+															</ToolTip>
 															<AutoMaxWidth>false</AutoMaxWidth>
 															<ChoiceButton>true</ChoiceButton>
 															<ClearButton>true</ClearButton>
-															<ContextMenu name="КаталогOutputCucumberJsonКонтекстноеМеню" id="1465"/>
-															<ExtendedTooltip name="КаталогOutputCucumberJsonРасширеннаяПодсказка" id="1466"/>
+															<ContextMenu name="КаталогВыгрузкиCucumberJsonКонтекстноеМеню" id="1465"/>
+															<ExtendedTooltip name="КаталогВыгрузкиCucumberJsonРасширеннаяПодсказка" id="1466"/>
 															<Events>
 																<Event name="StartChoice">КаталогOutputCucumberJsonНачалоВыбора</Event>
 															</Events>
@@ -11409,14 +11405,8 @@
 													</ChildItems>
 												</UsualGroup>
 												<UsualGroup name="ГруппаЛогТекст" id="1542">
-													<ToolTip>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Группа лог текст</v8:content>
-														</v8:item>
-													</ToolTip>
 													<Group>Vertical</Group>
-													<Representation>StrongSeparation</Representation>
+													<Representation>NormalSeparation</Representation>
 													<ShowTitle>false</ShowTitle>
 													<ExtendedTooltip name="ГруппаЛогТекстРасширеннаяПодсказка" id="1543"/>
 													<ChildItems>
@@ -11450,14 +11440,8 @@
 													</ChildItems>
 												</UsualGroup>
 												<UsualGroup name="ГруппаЛогОшибокТекст" id="1753">
-													<ToolTip>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Группа лог текст</v8:content>
-														</v8:item>
-													</ToolTip>
 													<Group>Vertical</Group>
-													<Representation>StrongSeparation</Representation>
+													<Representation>NormalSeparation</Representation>
 													<ShowTitle>false</ShowTitle>
 													<ExtendedTooltip name="ГруппаЛогОшибокТекстРасширеннаяПодсказка" id="1754"/>
 													<ChildItems>
@@ -11954,7 +11938,7 @@
 																	</Events>
 																</CheckBoxField>
 																<InputField name="КаталогOutputИнструкцияHTML" id="148">
-																	<DataPath>Объект.КаталогOutputИнструкцияHTML</DataPath>
+																	<DataPath>Объект.КаталогВыгрузкиИнструкцийHTML</DataPath>
 																	<Title>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
@@ -12161,7 +12145,7 @@
 																	</Events>
 																</CheckBoxField>
 																<InputField name="КаталогOutputИнструкцияMarkdown" id="647">
-																	<DataPath>Объект.КаталогOutputИнструкцияMarkdown</DataPath>
+																	<DataPath>Объект.КаталогВыгрузкиИнструкцийMarkdown</DataPath>
 																	<Title>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
@@ -12388,7 +12372,7 @@
 																	</Events>
 																</CheckBoxField>
 																<InputField name="КаталогOutputИнструкцияВидео" id="520">
-																	<DataPath>Объект.КаталогOutputИнструкцияВидео</DataPath>
+																	<DataPath>Объект.КаталогВыгрузкиИнструкцийВидео</DataPath>
 																	<Title>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
@@ -12499,7 +12483,7 @@
 																	<v8:content>Группа тип видео инструкций</v8:content>
 																</v8:item>
 															</ToolTip>
-															<Group>Horizontal</Group>
+															<Group>AlwaysHorizontal</Group>
 															<Representation>None</Representation>
 															<ShowTitle>false</ShowTitle>
 															<ExtendedTooltip name="ГруппаТипВидеоИнструкцийРасширеннаяПодсказка" id="2017"/>
@@ -18486,6 +18470,7 @@
 			</ToolTip>
 			<Shortcut>F5</Shortcut>
 			<Action>ВыполнитьСценарииФорма</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Перезагрузить" id="2">
 			<Title>
@@ -18502,6 +18487,7 @@
 			</ToolTip>
 			<Shortcut>F4</Shortcut>
 			<Action>Перезагрузить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗагрузитьФичиИзКаталога" id="3">
 			<Title>
@@ -18518,6 +18504,7 @@
 			</ToolTip>
 			<Shortcut>Alt+F2</Shortcut>
 			<Action>ЗагрузитьФичиИзКаталога</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗагрузитьОднуФичу" id="4">
 			<Title>
@@ -18534,6 +18521,7 @@
 			</ToolTip>
 			<Shortcut>Ctrl+F2</Shortcut>
 			<Action>ЗагрузитьОднуФичу</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СоздатьШаблоныОбработок" id="5">
 			<Title>
@@ -18549,6 +18537,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СоздатьШаблоныОбработокКоманда</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ВыполнитьВыделенныйСценарий" id="6">
 			<Title>
@@ -18645,6 +18634,7 @@
 			</ToolTip>
 			<Shortcut>Alt+F5</Shortcut>
 			<Action>ВыполнитьВыделенныйСценарийФорма</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПерезагрузитьИВыполнить" id="7">
 			<Title>
@@ -18669,6 +18659,7 @@
 			</ToolTip>
 			<Shortcut>F6</Shortcut>
 			<Action>ПерезагрузитьИВыполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОткрытьФичаФайл" id="8">
 			<Title>
@@ -18684,6 +18675,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОткрытьФичаФайл</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="НачатьЗаписьДействийПользователя" id="9">
 			<Title>
@@ -18700,6 +18692,7 @@
 			</ToolTip>
 			<Shortcut>Ctrl+R</Shortcut>
 			<Action>НачатьЗаписьДействийПользователяКнопка</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗавершитьЗаписьДействийПользователя" id="10">
 			<Title>
@@ -18715,6 +18708,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗавершитьЗаписьДействийПользователяКнопка</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОткрытьПодключитьTestClient" id="11">
 			<Title>
@@ -18739,6 +18733,7 @@
 			</ToolTip>
 			<Shortcut>Ctrl+T</Shortcut>
 			<Action>ОткрытьПодключитьTestClient</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="УстановитьПометкуВыполнятьСценарийСЭтогоШага" id="12">
 			<Title>
@@ -18838,6 +18833,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>УстановитьПометкуВыполнятьСценарийСЭтогоШага</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СнятьПометкуВыполнятьСценарийСЭтогоШага" id="13">
 			<Title>
@@ -18937,6 +18933,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СнятьПометкуВыполнятьСценарийСЭтогоШага</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗапомнитьСостояниеФормыTestClient" id="14">
 			<Title>
@@ -18952,6 +18949,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗапомнитьСостояниеФормыTestClientКнопка</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗабытьСостояниеФормыTestClient" id="15">
 			<Title>
@@ -18967,6 +18965,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗабытьСостояниеФормыTestClientКнопка</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПолучитьИзмененияФормыGherkin" id="16">
 			<Title>
@@ -18982,6 +18981,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПолучитьИзмененияФормыGherkinКнопка</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПолучитьИзмененияФормыJSON" id="17">
 			<Title>
@@ -18996,6 +18996,7 @@
 					<v8:content>Получить изменения формы JSON</v8:content>
 				</v8:item>
 			</ToolTip>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ДляВызоваКонфигуратора" id="18">
 			<Title>
@@ -19095,6 +19096,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ДляВызоваКонфигуратора</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СвернутьДеревоДоФич" id="19">
 			<Title>
@@ -19110,6 +19112,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СвернутьДеревоДоФич</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СвернутьДеревоДоСценариев" id="20">
 			<Title>
@@ -19125,6 +19128,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СвернутьДеревоДоСценариев</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПроверитьЧтоЗаписьВидеоБудетРаботать" id="21">
 			<Title>
@@ -19224,6 +19228,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПроверитьЧтоЗаписьВидеоБудетРаботать</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="КомандаСохранитьНастройки" id="22">
 			<Title>
@@ -19327,6 +19332,7 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>КомандаСохранитьНастройки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗагрузитьНастройкиПоУмолчанию" id="23">
 			<Title>
@@ -19426,6 +19432,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗагрузитьНастройкиПоУмолчанию</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СохранитьКлиентовТестирования" id="24">
 			<Title>
@@ -19521,6 +19528,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СохранитьКлиентовТестированияКоманда</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПодключитьВыбранногоКлиентаТестирования" id="25">
 			<Title>
@@ -19696,6 +19704,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПодключитьВыбранногоКлиентаТестирования</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="НачатьЗаписьДействийПользлователяВВыбранномКлиентеТестирования" id="26">
 			<Title>
@@ -19791,6 +19800,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>НачатьЗаписьДействийПользлователяВВыбранномКлиентеТестирования</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОтключитьВыбранногоКлиентаТестирования" id="27">
 			<Title>
@@ -19966,6 +19976,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОтключитьВыбранногоКлиентаТестирования</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СвернутьДеревоИзвестныхФич" id="29">
 			<Title>
@@ -19981,6 +19992,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СвернутьДеревоИзвестныхФич</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СвернутьДеревоИзвестныхШагов" id="30">
 			<Title>
@@ -19996,6 +20008,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СвернутьДеревоИзвестныхШагов</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПреобразоватьИсходныйXML" id="31">
 			<Title>
@@ -20095,6 +20108,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПреобразоватьИсходныйXML</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПодготовитьСценарийКВыполнению" id="32">
 			<Title>
@@ -20118,6 +20132,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПодготовитьСценарийКВыполнению</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ВыполнитьФичу" id="33">
 			<Title>
@@ -20134,6 +20149,7 @@
 			</ToolTip>
 			<Shortcut>Ctrl+Alt+F5</Shortcut>
 			<Action>ВыполнитьФичуФорма</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗагрузитьНедавнююФичу1" id="34">
 			<Title>
@@ -20149,6 +20165,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗагрузитьНедавнююФичу1</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗагрузитьНедавнююФичу2" id="35">
 			<Title>
@@ -20164,6 +20181,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗагрузитьНедавнююФичу2</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗагрузитьНедавнююФичу3" id="36">
 			<Title>
@@ -20179,6 +20197,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗагрузитьНедавнююФичу3</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗагрузитьНедавнююФичу4" id="37">
 			<Title>
@@ -20194,6 +20213,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗагрузитьНедавнююФичу4</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗагрузитьНедавнююФичу5" id="38">
 			<Title>
@@ -20209,6 +20229,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗагрузитьНедавнююФичу5</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗагрузитьНедавнююФичу6" id="39">
 			<Title>
@@ -20224,6 +20245,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗагрузитьНедавнююФичу6</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗагрузитьНедавнююФичу7" id="40">
 			<Title>
@@ -20239,6 +20261,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗагрузитьНедавнююФичу7</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗагрузитьНедавнююФичу8" id="41">
 			<Title>
@@ -20254,6 +20277,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗагрузитьНедавнююФичу8</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗагрузитьНедавнююФичу9" id="42">
 			<Title>
@@ -20269,6 +20293,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗагрузитьНедавнююФичу9</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ДобавитьИзвестныйШаг" id="43">
 			<Title>
@@ -20293,6 +20318,7 @@
 			</ToolTip>
 			<Shortcut>Ctrl+I</Shortcut>
 			<Action>ДобавитьИзвестныйШаг</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ВыполнитьДанныйСценарийСТекущегоШага" id="44">
 			<Title>
@@ -20309,6 +20335,7 @@
 			</ToolTip>
 			<Shortcut>Ctrl+F5</Shortcut>
 			<Action>ВыполнитьДанныйСценарийСТекущегоШагаФорма</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ВыполнитьДанныйСценарийСТекущегоШагаСПродолжением" id="45">
 			<Title>
@@ -20325,6 +20352,7 @@
 			</ToolTip>
 			<Shortcut>Ctrl+Shift+F5</Shortcut>
 			<Action>ВыполнитьДанныйСценарийСТекущегоШагаСПродолжениемФорма</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Брейкпоинт" id="46">
 			<Title>
@@ -20349,6 +20377,7 @@
 			</ToolTip>
 			<Shortcut>F9</Shortcut>
 			<Action>Брейкпоинт</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="БрейкпоинтУбратьВсе" id="47">
 			<Title>
@@ -20373,6 +20402,7 @@
 			</ToolTip>
 			<Shortcut>Ctrl+F9</Shortcut>
 			<Action>БрейкпоинтУбратьВсе</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ВыполнитьОдинШаг" id="48">
 			<Title>
@@ -20473,6 +20503,7 @@
 			</ToolTip>
 			<Shortcut>F11</Shortcut>
 			<Action>ВыполнитьОдинШагФорма</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СброситьКешИзвестныхStepDefinition" id="49">
 			<Title>
@@ -20572,6 +20603,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СброситьКешИзвестныхStepDefinition</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОткрытьКаталогФичи" id="50">
 			<Title>
@@ -20587,6 +20619,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОткрытьКаталогФичи</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПерезагрузитьИВыполнитьДанныйСценарий" id="51">
 			<Title>
@@ -20603,6 +20636,7 @@
 			</ToolTip>
 			<Shortcut>Alt+F6</Shortcut>
 			<Action>ПерезагрузитьИВыполнитьДанныйСценарийФорма</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПриостановитьЗаписьДействийПользователя" id="52">
 			<Title>
@@ -20618,6 +20652,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПриостановитьЗаписьДействийПользователя</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПродолжитьЗаписьДействийПользователя" id="53">
 			<Title>
@@ -20633,6 +20668,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПродолжитьЗаписьДействийПользователя</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПоказатьСкрытьПутьКФайлу" id="54">
 			<Title>
@@ -20648,6 +20684,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПоказатьСкрытьПутьКФайлу</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПоказатьСкрытьСнипет" id="55">
 			<Title>
@@ -20663,6 +20700,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПоказатьСкрытьСнипет</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПоказатьСкрытьАдресСнипета" id="56">
 			<Title>
@@ -20678,6 +20716,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПоказатьСкрытьАдресСнипета</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПоказатьСкрытьСтрокаРеальнойПроцедуры" id="57">
 			<Title>
@@ -20693,6 +20732,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПоказатьСкрытьСтрокаРеальнойПроцедуры</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПоказатьСкрытьВсеКолонки" id="58">
 			<Title>
@@ -20708,6 +20748,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПоказатьСкрытьВсеКолонки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="КлиентТестированияТекущейИнфобазы" id="28">
 			<Title>
@@ -20807,6 +20848,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>КлиентТестированияТекущейИнфобазы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="РедактироватьТаблицуТекст" id="59">
 			<Title>
@@ -20906,6 +20948,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>РедактироватьТаблицуТекст</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПоказатьСкрытьИДСтроки" id="60">
 			<Title>
@@ -20921,6 +20964,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПоказатьСкрытьИДСтроки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ВыполнитьПроизвольныйКод" id="61">
 			<Title>
@@ -20936,6 +20980,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ВыполнитьПроизвольныйКод</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ВычислитьPIDЭтогоСеанса" id="62">
 			<Title>
@@ -21035,6 +21080,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ВычислитьPIDЭтогоСеанса</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СохранитьНастройкиКлиент" id="63">
 			<Title>
@@ -21050,6 +21096,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СохранитьНастройкиКлиент</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ДобавитьСтрокуВСписокБиблиотек" id="64">
 			<Title>
@@ -21065,6 +21112,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ДобавитьСтрокуВСписокБиблиотек</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ИсследовательФормы" id="65">
 			<Title>
@@ -21165,6 +21213,7 @@
 			</ToolTip>
 			<Shortcut>Alt+E</Shortcut>
 			<Action>ИсследовательФормы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПолучитьМакетПоТаблице" id="66">
 			<Title>
@@ -21264,6 +21313,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПолучитьМакетПоТаблице</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ДобавитьСтрокуВСписокСловарейЗамен" id="67">
 			<Title>
@@ -21359,6 +21409,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ДобавитьСтрокуВСписокСловарейЗамен</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОчиститьСгенерированныйСценарий" id="68">
 			<Title>
@@ -21454,6 +21505,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОчиститьСгенерированныйСценарий</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПолучитьСостояниеТекущегоЭлементаФормы" id="69">
 			<Title>
@@ -21549,6 +21601,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПолучитьСостояниеТекущегоЭлементаФормыКнопка</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПеревестиТекстНаДругойЯзык" id="70">
 			<Title>
@@ -21644,6 +21697,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПеревестиТекстНаДругойЯзык</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ТекстовыйРедакторNotepadpp" id="71">
 			<Title>
@@ -21739,6 +21793,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ТекстовыйРедакторNotepadpp</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ТекстовыйРедакторVsCode" id="72">
 			<Title>
@@ -21758,6 +21813,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ТекстовыйРедакторVsCode</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="РазвернутьВсеСтрокиДереваСлужебный" id="73">
 			<Title>
@@ -21773,6 +21829,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>РазвернутьВсеСтрокиДереваСлужебный</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СброситьПодключениеSikuliXСервера" id="74">
 			<Title>
@@ -21792,6 +21849,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СброситьПодключениеSikuliXСервера</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СвернутьДеревоДоШагов" id="75">
 			<Title>
@@ -21807,6 +21865,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СвернутьДеревоДоШагов</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПоказатьСкрытьТаблоПеременных" id="76">
 			<Title>
@@ -21827,6 +21886,7 @@
 			</ToolTip>
 			<Shortcut>Ctrl+Alt+W</Shortcut>
 			<Action>ПоказатьСкрытьТаблоПеременных</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОбновитьТаблоПеременных" id="77">
 			<Title>
@@ -21846,6 +21906,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОбновитьТаблоПеременных</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 </Form>
