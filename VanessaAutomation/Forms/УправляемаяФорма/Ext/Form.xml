@@ -3557,6 +3557,8 @@
 							<ChildItems>
 								<UsualGroup name="Группа7" id="1620">
 									<Group>Horizontal</Group>
+									<Representation>NormalSeparation</Representation>
+									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="1621"/>
 									<ChildItems>
 										<Button name="кнСоздатьШаблоныОбработок" id="47">
@@ -7924,7 +7926,8 @@
 														</v8:item>
 													</ToolTip>
 													<Group>Vertical</Group>
-													<Representation>StrongSeparation</Representation>
+													<Representation>NormalSeparation</Representation>
+													<ThroughAlign>Use</ThroughAlign>
 													<ExtendedTooltip name="РаботаСТэгамиРасширеннаяПодсказка" id="1362"/>
 													<ChildItems>
 														<InputField name="СписокТеговИсключение1" id="221">
@@ -8015,7 +8018,6 @@
 																	<v8:content>Danh sách các tag bị loại trừ</v8:content>
 																</v8:item>
 															</Title>
-															<AutoMaxWidth>false</AutoMaxWidth>
 															<ContextMenu name="СписокТеговИсключение1КонтекстноеМеню" id="222"/>
 															<ExtendedTooltip name="СписокТеговИсключение1РасширеннаяПодсказка" id="1363"/>
 														</InputField>
@@ -8107,7 +8109,6 @@
 																	<v8:content>Tag để khởi động</v8:content>
 																</v8:item>
 															</Title>
-															<AutoMaxWidth>false</AutoMaxWidth>
 															<ContextMenu name="СписокТеговОтбор1КонтекстноеМеню" id="225"/>
 															<ExtendedTooltip name="СписокТеговОтбор1РасширеннаяПодсказка" id="1364"/>
 														</InputField>
@@ -8210,6 +8211,7 @@
 													<HorizontalStretch>true</HorizontalStretch>
 													<Group>Vertical</Group>
 													<Representation>StrongSeparation</Representation>
+													<ThroughAlign>Use</ThroughAlign>
 													<ExtendedTooltip name="ГруппаОтладкаTestClientРасширеннаяПодсказка" id="1365"/>
 													<ChildItems>
 														<CheckBoxField name="ЗапускатьТестКлиентВРежимеОтладки" id="867">
@@ -8262,7 +8264,6 @@
 															<v8:content>Язык генератора Gherkin</v8:content>
 														</v8:item>
 													</Title>
-													<AutoMaxWidth>false</AutoMaxWidth>
 													<ListChoiceMode>true</ListChoiceMode>
 													<ChoiceList>
 														<xr:Item>
@@ -8789,7 +8790,6 @@
 															<v8:content>Каталог инструментов</v8:content>
 														</v8:item>
 													</Title>
-													<AutoMaxWidth>false</AutoMaxWidth>
 													<ChoiceButton>true</ChoiceButton>
 													<ClearButton>true</ClearButton>
 													<ContextMenu name="КаталогИнструментовКонтекстноеМеню" id="381"/>
@@ -8982,7 +8982,6 @@
 															<v8:content>Thư mục dự án</v8:content>
 														</v8:item>
 													</Title>
-													<AutoMaxWidth>false</AutoMaxWidth>
 													<ChoiceButton>true</ChoiceButton>
 													<ClearButton>true</ClearButton>
 													<ContextMenu name="КаталогПроектаКонтекстноеМеню" id="718"/>
@@ -9081,7 +9080,6 @@
 														</v8:item>
 													</Title>
 													<HorizontalAlign>Left</HorizontalAlign>
-													<AutoMaxWidth>false</AutoMaxWidth>
 													<ListChoiceMode>true</ListChoiceMode>
 													<ChoiceList>
 														<xr:Item>
@@ -9462,7 +9460,6 @@
 												</InputField>
 												<InputField name="ЗапрашиватьПодтверждениеПриЗакрытии" id="1791">
 													<DataPath>ЗапрашиватьПодтверждениеПриЗакрытии</DataPath>
-													<AutoMaxWidth>false</AutoMaxWidth>
 													<ListChoiceMode>true</ListChoiceMode>
 													<ChoiceList>
 														<xr:Item>
@@ -9505,112 +9502,8 @@
 												</InputField>
 												<InputField name="КомандаОткрытияФичиВТекстовомРедакторе" id="1776">
 													<DataPath>Объект.КомандаОткрытияФичиВТекстовомРедакторе</DataPath>
-													<AutoMaxWidth>false</AutoMaxWidth>
-													<ContextMenu name="КомандаОткрытияФичиВТекстовомРедактореКонтекстноеМеню" id="1777">
-														<ChildItems>
-															<ButtonGroup name="ГруппаТекстовыеРедакторы" id="1789">
-																<ExtendedTooltip name="ГруппаТекстовыеРедакторыРасширеннаяПодсказка" id="1790"/>
-																<ChildItems>
-																	<Button name="ТекстовыйРедакторNotepadpp" id="1779">
-																		<Type>CommandBarButton</Type>
-																		<CommandName>Form.Command.ТекстовыйРедакторNotepadpp</CommandName>
-																		<Title>
-																			<v8:item>
-																				<v8:lang>ru</v8:lang>
-																				<v8:content>Notepad++</v8:content>
-																			</v8:item>
-																			<v8:item>
-																				<v8:lang>en</v8:lang>
-																				<v8:content>Notepad++</v8:content>
-																			</v8:item>
-																			<v8:item>
-																				<v8:lang>am</v8:lang>
-																				<v8:content>ደረጃ </v8:content>
-																			</v8:item>
-																			<v8:item>
-																				<v8:lang>az</v8:lang>
-																				<v8:content>Notepad </v8:content>
-																			</v8:item>
-																			<v8:item>
-																				<v8:lang>bg</v8:lang>
-																				<v8:content>Notepad </v8:content>
-																			</v8:item>
-																			<v8:item>
-																				<v8:lang>et</v8:lang>
-																				<v8:content>Notepad </v8:content>
-																			</v8:item>
-																			<v8:item>
-																				<v8:lang>fr</v8:lang>
-																				<v8:content>Notepad </v8:content>
-																			</v8:item>
-																			<v8:item>
-																				<v8:lang>ka</v8:lang>
-																				<v8:content>Notepad </v8:content>
-																			</v8:item>
-																			<v8:item>
-																				<v8:lang>de</v8:lang>
-																				<v8:content>Notepad </v8:content>
-																			</v8:item>
-																			<v8:item>
-																				<v8:lang>hu</v8:lang>
-																				<v8:content>Jegyzettömb </v8:content>
-																			</v8:item>
-																			<v8:item>
-																				<v8:lang>it</v8:lang>
-																				<v8:content>Notepad </v8:content>
-																			</v8:item>
-																			<v8:item>
-																				<v8:lang>lv</v8:lang>
-																				<v8:content>Notepad </v8:content>
-																			</v8:item>
-																			<v8:item>
-																				<v8:lang>lt</v8:lang>
-																				<v8:content>Užrašų knygelė </v8:content>
-																			</v8:item>
-																			<v8:item>
-																				<v8:lang>mn</v8:lang>
-																				<v8:content>Notepad </v8:content>
-																			</v8:item>
-																			<v8:item>
-																				<v8:lang>pl</v8:lang>
-																				<v8:content>Notepad </v8:content>
-																			</v8:item>
-																			<v8:item>
-																				<v8:lang>ro</v8:lang>
-																				<v8:content>Notepad </v8:content>
-																			</v8:item>
-																			<v8:item>
-																				<v8:lang>sl</v8:lang>
-																				<v8:content>Beležnica </v8:content>
-																			</v8:item>
-																			<v8:item>
-																				<v8:lang>es</v8:lang>
-																				<v8:content>El bloc de notas </v8:content>
-																			</v8:item>
-																			<v8:item>
-																				<v8:lang>sv</v8:lang>
-																				<v8:content>Anteckningar </v8:content>
-																			</v8:item>
-																			<v8:item>
-																				<v8:lang>tr</v8:lang>
-																				<v8:content>Notepad </v8:content>
-																			</v8:item>
-																			<v8:item>
-																				<v8:lang>vi</v8:lang>
-																				<v8:content>Notepad++</v8:content>
-																			</v8:item>
-																		</Title>
-																		<ExtendedTooltip name="ТекстовыйРедакторNotepadppРасширеннаяПодсказка" id="1780"/>
-																	</Button>
-																	<Button name="ТекстовыйРедакторVsCode" id="1787">
-																		<Type>CommandBarButton</Type>
-																		<CommandName>Form.Command.ТекстовыйРедакторVsCode</CommandName>
-																		<ExtendedTooltip name="ТекстовыйРедакторVsCodeРасширеннаяПодсказка" id="1788"/>
-																	</Button>
-																</ChildItems>
-															</ButtonGroup>
-														</ChildItems>
-													</ContextMenu>
+													<DropListButton>true</DropListButton>
+													<ContextMenu name="КомандаОткрытияФичиВТекстовомРедактореКонтекстноеМеню" id="1777"/>
 													<ExtendedTooltip name="КомандаОткрытияФичиВТекстовомРедактореРасширеннаяПодсказка" id="1778"/>
 												</InputField>
 												<Button name="СброситьКешИзвестныхStepDefinition" id="1532">
@@ -21427,122 +21320,6 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПеревестиТекстНаДругойЯзык</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
-		<Command name="ТекстовыйРедакторNotepadpp" id="71">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Notepad++</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Notepad++</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>am</v8:lang>
-					<v8:content>ደረጃ </v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>az</v8:lang>
-					<v8:content>Notepad </v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>bg</v8:lang>
-					<v8:content>Notepad </v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>et</v8:lang>
-					<v8:content>Notepad </v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>fr</v8:lang>
-					<v8:content>Notepad </v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ka</v8:lang>
-					<v8:content>Notepad </v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>de</v8:lang>
-					<v8:content>Notepad </v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>hu</v8:lang>
-					<v8:content>Jegyzettömb </v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>it</v8:lang>
-					<v8:content>Notepad </v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>lv</v8:lang>
-					<v8:content>Notepad </v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>lt</v8:lang>
-					<v8:content>Užrašų knygelė </v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>mn</v8:lang>
-					<v8:content>Notepad </v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>pl</v8:lang>
-					<v8:content>Notepad </v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ro</v8:lang>
-					<v8:content>Notepad </v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>sl</v8:lang>
-					<v8:content>Beležnica </v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>es</v8:lang>
-					<v8:content>El bloc de notas </v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>sv</v8:lang>
-					<v8:content>Anteckningar </v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>tr</v8:lang>
-					<v8:content>Notepad </v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>vi</v8:lang>
-					<v8:content>Notepad++</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Текстовый редактор notepadpp</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>ТекстовыйРедакторNotepadpp</Action>
-			<CurrentRowUse>DontUse</CurrentRowUse>
-		</Command>
-		<Command name="ТекстовыйРедакторVsCode" id="72">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Visual Studio Code</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Visual Studio Code</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Текстовый редактор notepadpp</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>ТекстовыйРедакторVsCode</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="РазвернутьВсеСтрокиДереваСлужебный" id="73">
