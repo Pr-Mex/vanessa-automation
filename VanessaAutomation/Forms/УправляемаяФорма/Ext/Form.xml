@@ -215,7 +215,7 @@
 												</v8:item>
 											</Title>
 											<Picture>
-												<xr:Abs>Picture.png</xr:Abs>
+												<xr:Ref>StdPicture.OpenFile</xr:Ref>
 												<xr:LoadTransparent>false</xr:LoadTransparent>
 											</Picture>
 											<ExtendedTooltip name="ПодменюЗагрузитьФичиРасширеннаяПодсказка" id="1252"/>
@@ -416,10 +416,6 @@
 											<Type>CommandBarButton</Type>
 											<Representation>PictureAndText</Representation>
 											<CommandName>Form.Command.Перезагрузить</CommandName>
-											<Picture>
-												<xr:Abs>Picture.png</xr:Abs>
-												<xr:LoadTransparent>false</xr:LoadTransparent>
-											</Picture>
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -508,19 +504,11 @@
 											</Title>
 											<ExtendedTooltip name="ПерезагрузитьРасширеннаяПодсказка" id="1257"/>
 										</Button>
-										<Button name="кнВыполнитьСценарии" id="61">
+										<Button name="ВыполнитьСценарии" id="61">
 											<Type>CommandBarButton</Type>
 											<Representation>PictureAndText</Representation>
 											<CommandName>Form.Command.ВыполнитьСценарии</CommandName>
-											<Picture>
-												<xr:Abs>Picture.png</xr:Abs>
-												<xr:LoadTransparent>false</xr:LoadTransparent>
-											</Picture>
 											<Title>
-												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Выполнить сценарии</v8:content>
-												</v8:item>
 												<v8:item>
 													<v8:lang>en</v8:lang>
 													<v8:content>Run scenario</v8:content>
@@ -602,7 +590,13 @@
 													<v8:content>Thực hiện kịch bản</v8:content>
 												</v8:item>
 											</Title>
-											<ExtendedTooltip name="кнВыполнитьСценарииРасширеннаяПодсказка" id="1258"/>
+											<ExtendedTooltip name="ВыполнитьСценарииРасширеннаяПодсказка" id="1258"/>
+										</Button>
+										<Button name="ОстановитьСценарии" id="2027">
+											<Type>CommandBarButton</Type>
+											<Representation>PictureAndText</Representation>
+											<CommandName>Form.Command.ОстановитьСценарии</CommandName>
+											<ExtendedTooltip name="ОстановитьСценарииРасширеннаяПодсказка" id="2028"/>
 										</Button>
 										<Button name="ФормаПерезагрузитьИВыполнить" id="151">
 											<Type>CommandBarButton</Type>
@@ -1971,7 +1965,7 @@
 														<Title>
 															<v8:item>
 																<v8:lang>ru</v8:lang>
-																<v8:content>Открыть feature файл в редакторе</v8:content>
+																<v8:content>Открыть .feature файл в редакторе</v8:content>
 															</v8:item>
 															<v8:item>
 																<v8:lang>en</v8:lang>
@@ -2062,7 +2056,7 @@
 														<Title>
 															<v8:item>
 																<v8:lang>ru</v8:lang>
-																<v8:content>Открыть каталог feature</v8:content>
+																<v8:content>Открыть каталог .feature файлов</v8:content>
 															</v8:item>
 															<v8:item>
 																<v8:lang>en</v8:lang>
@@ -18027,7 +18021,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Выполнить сценарии</v8:content>
+					<v8:content>Выполнить</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
@@ -18112,15 +18106,15 @@
 			</Title>
 			<ToolTip>
 				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Выполнить сценарии</v8:content>
-				</v8:item>
-				<v8:item>
 					<v8:lang>vi</v8:lang>
 					<v8:content>Thực hiện kịch bản</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Shortcut>F5</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.GenerateReport</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>ВыполнитьСценарииФорма</Action>
 		</Command>
 		<Command name="Перезагрузить" id="2">
@@ -18137,6 +18131,10 @@
 				</v8:item>
 			</ToolTip>
 			<Shortcut>F4</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>Перезагрузить</Action>
 		</Command>
 		<Command name="ЗагрузитьФичиИзКаталога" id="3">
@@ -18319,6 +18317,7 @@
 					<v8:content>Открыть фича файл</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Shortcut>F4</Shortcut>
 			<Action>ОткрытьФичаФайл</Action>
 		</Command>
 		<Command name="НачатьЗаписьДействийПользователя" id="9">
@@ -19762,12 +19761,6 @@
 					<v8:content>Выполнить фичу</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Выполнить фичу</v8:content>
-				</v8:item>
-			</ToolTip>
 			<Shortcut>Ctrl+Alt+F5</Shortcut>
 			<Action>ВыполнитьФичуФорма</Action>
 		</Command>
@@ -20222,6 +20215,7 @@
 					<v8:content>Открыть каталог фичи</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Shortcut>Ctrl+F4</Shortcut>
 			<Action>ОткрытьКаталогФичи</Action>
 		</Command>
 		<Command name="ПерезагрузитьИВыполнитьДанныйСценарий" id="51">
@@ -21368,6 +21362,20 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОбновитьТаблоПеременных</Action>
+		</Command>
+		<Command name="ОстановитьСценарии" id="71">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остановить</v8:content>
+				</v8:item>
+			</Title>
+			<Shortcut>Ctrl+F5</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.Stop</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОстановитьСценарии</Action>
 		</Command>
 		<Command name="ПерейтиКСтрокеСОшибкой" id="71">
 			<Title>
