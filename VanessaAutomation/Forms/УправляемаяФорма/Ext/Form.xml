@@ -2584,10 +2584,10 @@
 												</Title>
 												<ExtendedTooltip name="РаботаСОшибкамиРасширеннаяПодсказка" id="2028"/>
 												<ChildItems>
-													<Button name="ДеревоТестовКонтекстноеМенюОстановитьСценарии" id="2033">
+													<Button name="ДеревоПерейтиКСтрокеСОшибкой" id="2033">
 														<Type>CommandBarButton</Type>
 														<CommandName>Form.Command.ПерейтиКСтрокеСОшибкой</CommandName>
-														<ExtendedTooltip name="ДеревоТестовКонтекстноеМенюОстановитьСценарииРасширеннаяПодсказка" id="2034"/>
+														<ExtendedTooltip name="ДеревоПерейтиКСтрокеСОшибкойРасширеннаяПодсказка" id="2034"/>
 													</Button>
 												</ChildItems>
 											</ButtonGroup>
@@ -10528,8 +10528,8 @@
 															<AutoMaxWidth>false</AutoMaxWidth>
 															<ChoiceButton>true</ChoiceButton>
 															<ClearButton>true</ClearButton>
-															<ContextMenu name="КаталогOutputСкриншотыКонтекстноеМеню" id="511"/>
-															<ExtendedTooltip name="КаталогOutputСкриншотыРасширеннаяПодсказка" id="1395"/>
+															<ContextMenu name="КаталогВыгрузкиСкриншотовКонтекстноеМеню" id="511"/>
+															<ExtendedTooltip name="КаталогВыгрузкиСкриншотовРасширеннаяПодсказка" id="1395"/>
 															<Events>
 																<Event name="StartChoice">КаталогOutputСкриншотыНачалоВыбора</Event>
 															</Events>
@@ -12180,7 +12180,7 @@
 																		<Event name="OnChange">СоздаватьИнструкциюВидеоПриИзменении</Event>
 																	</Events>
 																</CheckBoxField>
-																<InputField name="КаталогOutputИнструкцияВидео" id="520">
+																<InputField name="КаталогВыгрузкиИнструкцийВидео" id="520">
 																	<DataPath>Объект.КаталогВыгрузкиИнструкцийВидео</DataPath>
 																	<Title>
 																		<v8:item>
@@ -12271,8 +12271,8 @@
 																	<AutoMaxWidth>false</AutoMaxWidth>
 																	<ChoiceButton>true</ChoiceButton>
 																	<ClearButton>true</ClearButton>
-																	<ContextMenu name="КаталогOutputИнструкцияВидеоКонтекстноеМеню" id="521"/>
-																	<ExtendedTooltip name="КаталогOutputИнструкцияВидеоРасширеннаяПодсказка" id="1413"/>
+																	<ContextMenu name="КаталогВыгрузкиИнструкцийВидеоКонтекстноеМеню" id="521"/>
+																	<ExtendedTooltip name="КаталогВыгрузкиИнструкцийВидеоРасширеннаяПодсказка" id="1413"/>
 																	<Events>
 																		<Event name="StartChoice">КаталогOutputИнструкцияВидеоНачалоВыбора</Event>
 																	</Events>
@@ -21396,6 +21396,10 @@
 					<v8:lang>ru</v8:lang>
 					<v8:content>Остановить</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Stop</v8:content>
+				</v8:item>
 			</Title>
 			<Shortcut>Ctrl+F5</Shortcut>
 			<Picture>
@@ -21409,6 +21413,10 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Перейти к строке с ошибкой</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Go to next error</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
