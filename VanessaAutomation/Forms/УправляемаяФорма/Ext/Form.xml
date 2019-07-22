@@ -4,37 +4,40 @@
 	<Group>Horizontal</Group>
 	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<HorizontalAlign>Right</HorizontalAlign>
 		<Autofill>false</Autofill>
 		<ChildItems>
-			<ButtonGroup name="ФормаГруппаНастройки" id="2035">
+			<Popup name="ФормаГруппаНастройки" id="2035">
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
 						<v8:content>Группа настройки</v8:content>
 					</v8:item>
 				</Title>
+				<Picture>
+					<xr:Ref>StdPicture.Write</xr:Ref>
+					<xr:LoadTransparent>true</xr:LoadTransparent>
+				</Picture>
+				<Representation>Picture</Representation>
 				<ExtendedTooltip name="ФормаГруппаНастройкиРасширеннаяПодсказка" id="2036"/>
 				<ChildItems>
 					<Button name="ФормаСохранитьНастройки" id="2037">
 						<Type>CommandBarButton</Type>
-						<OnlyInAllActions>false</OnlyInAllActions>
 						<CommandName>Form.Command.СохранитьНастройки</CommandName>
 						<ExtendedTooltip name="ФормаСохранитьНастройкиРасширеннаяПодсказка" id="2038"/>
 					</Button>
 					<Button name="ФормаВыгрузитьНастройкиВФайл" id="2039">
 						<Type>CommandBarButton</Type>
-						<OnlyInAllActions>false</OnlyInAllActions>
 						<CommandName>Form.Command.ВыгрузитьНастройкиВФайл</CommandName>
 						<ExtendedTooltip name="ФормаВыгрузитьНастройкиВФайлРасширеннаяПодсказка" id="2040"/>
 					</Button>
 					<Button name="ФормаЗагрузитьНастройкиИзФайла" id="2041">
 						<Type>CommandBarButton</Type>
-						<OnlyInAllActions>false</OnlyInAllActions>
 						<CommandName>Form.Command.ЗагрузитьНастройкиИзФайла</CommandName>
 						<ExtendedTooltip name="ФормаЗагрузитьНастройкиИзФайлаРасширеннаяПодсказка" id="2042"/>
 					</Button>
 				</ChildItems>
-			</ButtonGroup>
+			</Popup>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -18984,10 +18987,6 @@
 					<v8:content>Lệnh lưu cài đặt</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Picture>
-				<xr:Ref>StdPicture.Write</xr:Ref>
-				<xr:LoadTransparent>true</xr:LoadTransparent>
-			</Picture>
 			<Action>КомандаСохранитьНастройки</Action>
 		</Command>
 		<Command name="ЗагрузитьНастройкиПоУмолчанию" id="23">
@@ -21423,7 +21422,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Выгрузить настройки в файл</v8:content>
+					<v8:content>Выгрузить настройки в файл...</v8:content>
 				</v8:item>
 			</Title>
 			<Action>ВыгрузитьНастройкиВФайл</Action>
@@ -21432,7 +21431,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Загрузить настройки из файла</v8:content>
+					<v8:content>Загрузить настройки из файла...</v8:content>
 				</v8:item>
 			</Title>
 			<Action>ЗагрузитьНастройкиИзФайла</Action>
