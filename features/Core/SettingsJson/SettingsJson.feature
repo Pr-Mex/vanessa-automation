@@ -4,6 +4,9 @@
 @IgnoreOnOFBuilds
 @IgnoreOnWeb
 
+@IgnoreOn836
+@IgnoreOn837
+
 Функционал: Проверка работы с файлами настройки
 
 Как разработчик
