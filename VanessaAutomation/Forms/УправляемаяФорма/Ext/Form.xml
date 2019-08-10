@@ -11408,6 +11408,20 @@
 																<Event name="OnChange">ДелатьЛогОшибокВТекстовыйФайлПриИзменении</Event>
 															</Events>
 														</CheckBoxField>
+														<CheckBoxField name="СобиратьДанныеОСостоянииАктивнойФормыПриОшибке" id="2060">
+															<DataPath>Объект.СобиратьДанныеОСостоянииАктивнойФормыПриОшибке</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="СобиратьДанныеОСостоянииАктивнойФормыПриОшибкеКонтекстноеМеню" id="2061"/>
+															<ExtendedTooltip name="СобиратьДанныеОСостоянииАктивнойФормыПриОшибкеРасширеннаяПодсказка" id="2062"/>
+														</CheckBoxField>
+														<CheckBoxField name="СобиратьДанныеОСостоянииВсехФормПриОшибке" id="2063">
+															<DataPath>Объект.СобиратьДанныеОСостоянииВсехФормПриОшибке</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="СобиратьДанныеОСостоянииВсехФормПриОшибкеКонтекстноеМеню" id="2064"/>
+															<ExtendedTooltip name="СобиратьДанныеОСостоянииВсехФормПриОшибкеРасширеннаяПодсказка" id="2065"/>
+														</CheckBoxField>
 														<InputField name="ИмяКаталогаЛогОшибок" id="1758">
 															<DataPath>Объект.ИмяКаталогаЛогОшибок</DataPath>
 															<AutoMaxWidth>false</AutoMaxWidth>
@@ -15542,6 +15556,11 @@
 											<xr:LoadTransparent>true</xr:LoadTransparent>
 										</Picture>
 										<ExtendedTooltip name="ТаблоПеременныхОбновитьТаблоПеременныхРасширеннаяПодсказка" id="1944"/>
+									</Button>
+									<Button name="ТаблоПеременныхЗакрытьТаблоПеременных" id="2058">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ЗакрытьТаблоПеременных</CommandName>
+										<ExtendedTooltip name="ТаблоПеременныхЗакрытьТаблоПеременныхРасширеннаяПодсказка" id="2059"/>
 									</Button>
 								</ChildItems>
 							</AutoCommandBar>
@@ -21555,6 +21574,25 @@
 				</v8:item>
 			</Title>
 			<Action>ЗагрузитьНастройкиИзФайла</Action>
+		</Command>
+		<Command name="ЗакрытьТаблоПеременных" id="80">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Close</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть табло переменных</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗакрытьТаблоПеременных</Action>
 		</Command>
 	</Commands>
 </Form>
