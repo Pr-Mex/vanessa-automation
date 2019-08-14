@@ -33,8 +33,8 @@
 
 Сценарий: Загрузка настроек из файла ru
 
-	Если файл "$КаталогИнструментов$/features/Core/files/VAParams_test_ru.json" существует
-		Тогда Я буду выбирать внешний файл "$КаталогИнструментов$/features/Core/files/VAParams_test_ru.json"
+	Если файл "$КаталогИнструментов$/features/Core/SettingsJson/VAParams_test_ru.json" существует
+		Тогда Я буду выбирать внешний файл "$КаталогИнструментов$/features/Core/SettingsJson/VAParams_test_ru.json"
 		И я нажимаю на кнопку "Загрузить настройки из файла..."
 		И пауза 2
 		Тогда элемент формы "Команда создания скриншотов" стал равен "TestVAParams"
@@ -57,8 +57,8 @@
 	
 Сценарий: Загрузка настроек из файла en
 
-	Если файл "$КаталогИнструментов$/features/Core/files/VAParams_test_en.json" существует
-		Тогда Я буду выбирать внешний файл "$КаталогИнструментов$/features/Core/files/VAParams_test_en.json"
+	Если файл "$КаталогИнструментов$/features/Core/SettingsJson/VAParams_test_en.json" существует
+		Тогда Я буду выбирать внешний файл "$КаталогИнструментов$/features/Core/SettingsJson/VAParams_test_en.json"
 		И я нажимаю на кнопку "Загрузить настройки из файла..."
 		И пауза 2
 		Тогда элемент формы "Команда создания скриншотов" стал равен "TestVAParams"
