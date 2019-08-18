@@ -61,6 +61,35 @@
 					</ButtonGroup>
 				</ChildItems>
 			</Popup>
+			<ButtonGroup name="ФормаГруппаНастройки" id="110">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Форма группа настройки</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Форма группа настройки</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="ФормаГруппаНастройкиРасширеннаяПодсказка" id="111"/>
+				<ChildItems>
+					<Button name="ФормаВыгрузитьНастройки" id="112">
+						<Type>CommandBarButton</Type>
+						<OnlyInAllActions>false</OnlyInAllActions>
+						<CommandName>Form.Command.ВыгрузитьНастройки</CommandName>
+						<ExtendedTooltip name="ФормаВыгрузитьНастройкиРасширеннаяПодсказка" id="113"/>
+					</Button>
+					<Button name="ФормаЗагрузитьНастройки" id="114">
+						<Type>CommandBarButton</Type>
+						<OnlyInAllActions>false</OnlyInAllActions>
+						<CommandName>Form.Command.ЗагрузитьНастройки</CommandName>
+						<ExtendedTooltip name="ФормаЗагрузитьНастройкиРасширеннаяПодсказка" id="115"/>
+					</Button>
+				</ChildItems>
+			</ButtonGroup>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -573,6 +602,28 @@
 				</v8:item>
 			</Title>
 			<Action>ПодготовитьСценарииКВыполнению</Action>
+		</Command>
+		<Command name="ВыгрузитьНастройки" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить настройки...</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.SaveReportSettings</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ВыгрузитьНастройки</Action>
+		</Command>
+		<Command name="ЗагрузитьНастройки" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить настройки...</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЗагрузитьНастройки</Action>
 		</Command>
 	</Commands>
 </Form>
