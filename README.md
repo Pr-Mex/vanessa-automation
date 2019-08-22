@@ -7,7 +7,7 @@
 
 ## BDD for 1С:Enterprise
 
-* Текущий релиз в ветке [Master: 1.2.025](https://github.com/Pr-Mex/vanessa-automation/tree/master)
+* Текущий релиз в ветке [Master: 1.2.026](https://github.com/Pr-Mex/vanessa-automation/tree/master)
 * Разработка ведется в ветке [Develop](https://github.com/Pr-Mex/vanessa-automation/tree/develop).
 * [Телеграм канал](https://t.me/testspro1c), где можно обсудить Ванессу и всё, что связано с тестированием в 1С.
 * [Телеграм канал](https://t.me/VanessaAutomation), где можно подписаться на новости о проекте.
@@ -34,25 +34,8 @@
 
 Список отличий проекта Vanessa-automation от проекта ADD можно посмотреть [тут](https://github.com/Pr-Mex/vanessa-automation/blob/develop/NotAdd.MD).
 
-Порядок установки Vanessa-Automation под Windows:
-* [интерпретатор 1Script](http://oscript.io/downloads) - для работы с иходными файлами 1С с помощью проекта Precommit1C
-* [утилита Allure](http://allure.qatools.ru/) - для формирования отчётов о результатах прохождения тестов
-
-Все должно быть установлено так, чтобы быть доступным через переменную `%PATH%`
-
-Клонируйте данный репозиторий с помощью **ms-git**
-
-```
-git clone https://github.com/Pr-Mex/vanessa-automation.git
-```
-
-Инициализируйте подмодули репозитория с помощью **ms-git**
-
-```
-git submodule update --init --recursive
-```
-
-При использовании `SourceTree` используйте команду `Clone (Клонировать)`
+Порядок установки Vanessa-Automation. Плюс как стать контрибьютерром:
+* [Статья на Инфостарте](https://infostart.ru/public/1092009/)
 
 Обязательно ознакомьтесь с:
 * руководством контрибьютора [CONTRIBUTING.md](./.github/CONTRIBUTING.md)
@@ -216,7 +199,8 @@ git submodule update --init --recursive
 * [Дэн Норт](http://en.wikipedia.org/wiki/Acceptance_test-driven_development)
 * [Vanessa-Automation — инструмент тестирования прикладных решений на платформе «1С: Предприятие» @Хабрахабр](https://habr.com/post/418303/)
 * [Vanessa-Automation — инструмент автодокументирования прикладных решений на платформе «1С: Предприятие». Кино и BDD. @Хабрахабр](https://habr.com/post/420175/)
-
+* [Как стать контрибьютерром VA](https://infostart.ru/public/1092009/)
+ 
 
 ## Лицензии
 
