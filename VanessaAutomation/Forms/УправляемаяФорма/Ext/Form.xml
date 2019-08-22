@@ -13494,7 +13494,7 @@
 																					<Title>
 																						<v8:item>
 																							<v8:lang>ru</v8:lang>
-																							<v8:content>Озвучка голосом</v8:content>
+																							<v8:content>Озвучивание голосом</v8:content>
 																						</v8:item>
 																						<v8:item>
 																							<v8:lang>en</v8:lang>
@@ -13722,7 +13722,7 @@
 																												<Presentation>
 																													<v8:item>
 																														<v8:lang>ru</v8:lang>
-																														<v8:content>Yandex speechkit</v8:content>
+																														<v8:content>Yandex SpeechKit</v8:content>
 																													</v8:item>
 																													<v8:item>
 																														<v8:lang>en</v8:lang>
@@ -13739,357 +13739,432 @@
 																										<Event name="OnChange">ЗаписьВидеоТипОзвучкиTTSПриИзменении</Event>
 																									</Events>
 																								</RadioButtonField>
-																								<UsualGroup name="ГруппаMicrosoftTTS" id="1963">
+																								<Pages name="СтраницыНастроектОзвучания" id="2079">
 																									<Title>
 																										<v8:item>
 																											<v8:lang>ru</v8:lang>
-																											<v8:content>Группа microsoft TTS</v8:content>
+																											<v8:content>Страницы настроект озвучания</v8:content>
 																										</v8:item>
 																									</Title>
-																									<Group>Vertical</Group>
-																									<Representation>None</Representation>
-																									<ShowTitle>false</ShowTitle>
-																									<ExtendedTooltip name="ГруппаMicrosoftTTSРасширеннаяПодсказка" id="1964"/>
+																									<PagesRepresentation>None</PagesRepresentation>
+																									<ExtendedTooltip name="СтраницыНастроектОзвучанияРасширеннаяПодсказка" id="2080"/>
 																									<ChildItems>
-																										<InputField name="ЗаписьВидеоПутьКДвижкуTTS" id="689">
-																											<DataPath>Объект.ЗаписьВидеоПутьКДвижкуTTS</DataPath>
+																										<Page name="ГруппаMicrosoftTTS" id="1963">
 																											<Title>
 																												<v8:item>
 																													<v8:lang>ru</v8:lang>
-																													<v8:content>Команда TTS</v8:content>
-																												</v8:item>
-																												<v8:item>
-																													<v8:lang>en</v8:lang>
-																													<v8:content>TTS comand</v8:content>
+																													<v8:content>Группа microsoft TTS</v8:content>
 																												</v8:item>
 																											</Title>
-																											<ChoiceButton>true</ChoiceButton>
-																											<ClearButton>true</ClearButton>
-																											<ContextMenu name="ЗаписьВидеоПутьКДвижкуTTSКонтекстноеМеню" id="690"/>
-																											<ExtendedTooltip name="ЗаписьВидеоПутьКДвижкуTTSРасширеннаяПодсказка" id="1431"/>
-																											<Events>
-																												<Event name="StartChoice">ЗаписьВидеоПутьКДвижкуTTSНачалоВыбора</Event>
-																											</Events>
-																										</InputField>
-																										<InputField name="ЗаписьВидеоИмяTTS" id="692">
-																											<DataPath>Объект.ЗаписьВидеоИмяTTS</DataPath>
+																											<ExtendedTooltip name="ГруппаMicrosoftTTSРасширеннаяПодсказка" id="1964"/>
+																											<ChildItems>
+																												<InputField name="ЗаписьВидеоПутьКДвижкуTTS" id="689">
+																													<DataPath>Объект.ЗаписьВидеоПутьКДвижкуTTS</DataPath>
+																													<Title>
+																														<v8:item>
+																															<v8:lang>ru</v8:lang>
+																															<v8:content>Команда TTS</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>en</v8:lang>
+																															<v8:content>TTS comand</v8:content>
+																														</v8:item>
+																													</Title>
+																													<ChoiceButton>true</ChoiceButton>
+																													<ClearButton>true</ClearButton>
+																													<ContextMenu name="ЗаписьВидеоПутьКДвижкуTTSКонтекстноеМеню" id="690"/>
+																													<ExtendedTooltip name="ЗаписьВидеоПутьКДвижкуTTSРасширеннаяПодсказка" id="1431"/>
+																													<Events>
+																														<Event name="StartChoice">ЗаписьВидеоПутьКДвижкуTTSНачалоВыбора</Event>
+																													</Events>
+																												</InputField>
+																												<InputField name="ЗаписьВидеоИмяTTS" id="692">
+																													<DataPath>Объект.ЗаписьВидеоИмяTTS</DataPath>
+																													<Title>
+																														<v8:item>
+																															<v8:lang>ru</v8:lang>
+																															<v8:content>Имя голоса TTS</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>en</v8:lang>
+																															<v8:content>TTS Voice</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>am</v8:lang>
+																															<v8:content>ስም ቅድሚያ</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>az</v8:lang>
+																															<v8:content>Adı səs TTS</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>bg</v8:lang>
+																															<v8:content>Име на глас TTS</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>et</v8:lang>
+																															<v8:content>Nimi häält TTS</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>fr</v8:lang>
+																															<v8:content>Le nom de la voix TTS</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>ka</v8:lang>
+																															<v8:content>სახელი TTS ხმა</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>de</v8:lang>
+																															<v8:content>Name TTS Stimme</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>hu</v8:lang>
+																															<v8:content>A név a TTS hang</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>it</v8:lang>
+																															<v8:content>Il nome di una voce TTS</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>lv</v8:lang>
+																															<v8:content>Vārds balss TTS</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>lt</v8:lang>
+																															<v8:content>Vardas balso TTS</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>mn</v8:lang>
+																															<v8:content>Нэр TTS дуу хоолой</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>pl</v8:lang>
+																															<v8:content>Nazwa głosy TTS</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>ro</v8:lang>
+																															<v8:content>Numele de voce TTS</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>sl</v8:lang>
+																															<v8:content>Ime TTS glas</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>es</v8:lang>
+																															<v8:content>El nombre de la voz del TTS</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>sv</v8:lang>
+																															<v8:content>Namnet på TTS-rösten</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>tr</v8:lang>
+																															<v8:content>Adı ses TTS</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>vi</v8:lang>
+																															<v8:content>Tên giọng nói TTS</v8:content>
+																														</v8:item>
+																													</Title>
+																													<ContextMenu name="ЗаписьВидеоИмяTTSКонтекстноеМеню" id="693"/>
+																													<ExtendedTooltip name="ЗаписьВидеоИмяTTSРасширеннаяПодсказка" id="1432"/>
+																												</InputField>
+																												<InputField name="ЗаписьВидеоСкоростьПроизношения" id="1877">
+																													<DataPath>Объект.ЗаписьВидеоСкоростьПроизношения</DataPath>
+																													<Width>3</Width>
+																													<AutoMaxWidth>false</AutoMaxWidth>
+																													<ContextMenu name="ЗаписьВидеоСкоростьПроизношенияКонтекстноеМеню" id="1878"/>
+																													<ExtendedTooltip name="ЗаписьВидеоСкоростьПроизношенияРасширеннаяПодсказка" id="1879"/>
+																												</InputField>
+																											</ChildItems>
+																										</Page>
+																										<Page name="ГруппаYandexTTS" id="1965">
 																											<Title>
 																												<v8:item>
 																													<v8:lang>ru</v8:lang>
-																													<v8:content>Имя голоса TTS</v8:content>
-																												</v8:item>
-																												<v8:item>
-																													<v8:lang>en</v8:lang>
-																													<v8:content>TTS Voice</v8:content>
-																												</v8:item>
-																												<v8:item>
-																													<v8:lang>am</v8:lang>
-																													<v8:content>ስም ቅድሚያ</v8:content>
-																												</v8:item>
-																												<v8:item>
-																													<v8:lang>az</v8:lang>
-																													<v8:content>Adı səs TTS</v8:content>
-																												</v8:item>
-																												<v8:item>
-																													<v8:lang>bg</v8:lang>
-																													<v8:content>Име на глас TTS</v8:content>
-																												</v8:item>
-																												<v8:item>
-																													<v8:lang>et</v8:lang>
-																													<v8:content>Nimi häält TTS</v8:content>
-																												</v8:item>
-																												<v8:item>
-																													<v8:lang>fr</v8:lang>
-																													<v8:content>Le nom de la voix TTS</v8:content>
-																												</v8:item>
-																												<v8:item>
-																													<v8:lang>ka</v8:lang>
-																													<v8:content>სახელი TTS ხმა</v8:content>
-																												</v8:item>
-																												<v8:item>
-																													<v8:lang>de</v8:lang>
-																													<v8:content>Name TTS Stimme</v8:content>
-																												</v8:item>
-																												<v8:item>
-																													<v8:lang>hu</v8:lang>
-																													<v8:content>A név a TTS hang</v8:content>
-																												</v8:item>
-																												<v8:item>
-																													<v8:lang>it</v8:lang>
-																													<v8:content>Il nome di una voce TTS</v8:content>
-																												</v8:item>
-																												<v8:item>
-																													<v8:lang>lv</v8:lang>
-																													<v8:content>Vārds balss TTS</v8:content>
-																												</v8:item>
-																												<v8:item>
-																													<v8:lang>lt</v8:lang>
-																													<v8:content>Vardas balso TTS</v8:content>
-																												</v8:item>
-																												<v8:item>
-																													<v8:lang>mn</v8:lang>
-																													<v8:content>Нэр TTS дуу хоолой</v8:content>
-																												</v8:item>
-																												<v8:item>
-																													<v8:lang>pl</v8:lang>
-																													<v8:content>Nazwa głosy TTS</v8:content>
-																												</v8:item>
-																												<v8:item>
-																													<v8:lang>ro</v8:lang>
-																													<v8:content>Numele de voce TTS</v8:content>
-																												</v8:item>
-																												<v8:item>
-																													<v8:lang>sl</v8:lang>
-																													<v8:content>Ime TTS glas</v8:content>
-																												</v8:item>
-																												<v8:item>
-																													<v8:lang>es</v8:lang>
-																													<v8:content>El nombre de la voz del TTS</v8:content>
-																												</v8:item>
-																												<v8:item>
-																													<v8:lang>sv</v8:lang>
-																													<v8:content>Namnet på TTS-rösten</v8:content>
-																												</v8:item>
-																												<v8:item>
-																													<v8:lang>tr</v8:lang>
-																													<v8:content>Adı ses TTS</v8:content>
-																												</v8:item>
-																												<v8:item>
-																													<v8:lang>vi</v8:lang>
-																													<v8:content>Tên giọng nói TTS</v8:content>
+																													<v8:content>Группа yandex TTS</v8:content>
 																												</v8:item>
 																											</Title>
-																											<ContextMenu name="ЗаписьВидеоИмяTTSКонтекстноеМеню" id="693"/>
-																											<ExtendedTooltip name="ЗаписьВидеоИмяTTSРасширеннаяПодсказка" id="1432"/>
-																										</InputField>
-																										<InputField name="ЗаписьВидеоСкоростьПроизношения" id="1877">
-																											<DataPath>Объект.ЗаписьВидеоСкоростьПроизношения</DataPath>
-																											<AutoMaxWidth>false</AutoMaxWidth>
-																											<ContextMenu name="ЗаписьВидеоСкоростьПроизношенияКонтекстноеМеню" id="1878"/>
-																											<ExtendedTooltip name="ЗаписьВидеоСкоростьПроизношенияРасширеннаяПодсказка" id="1879"/>
-																										</InputField>
+																											<ExtendedTooltip name="ГруппаYandexTTSРасширеннаяПодсказка" id="1966"/>
+																											<ChildItems>
+																												<InputField name="ЗаписьВидеоYandexTTSЯзык" id="1967">
+																													<DataPath>Объект.ЗаписьВидеоYandexTTSЯзык</DataPath>
+																													<DropListButton>true</DropListButton>
+																													<ListChoiceMode>true</ListChoiceMode>
+																													<ChooseType>false</ChooseType>
+																													<ChoiceList>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation>
+																																	<v8:item>
+																																		<v8:lang>ru</v8:lang>
+																																		<v8:content>Руский (ru-RU)</v8:content>
+																																	</v8:item>
+																																</Presentation>
+																																<Value xsi:type="xs:string">ru-RU</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation>
+																																	<v8:item>
+																																		<v8:lang>ru</v8:lang>
+																																		<v8:content>Английский (en-US)</v8:content>
+																																	</v8:item>
+																																</Presentation>
+																																<Value xsi:type="xs:string">en-US</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation>
+																																	<v8:item>
+																																		<v8:lang>ru</v8:lang>
+																																		<v8:content>Турецкий (tr-TR)</v8:content>
+																																	</v8:item>
+																																</Presentation>
+																																<Value xsi:type="xs:string">tr-TR</Value>
+																															</xr:Value>
+																														</xr:Item>
+																													</ChoiceList>
+																													<ContextMenu name="ЗаписьВидеоYandexTTSЯзыкКонтекстноеМеню" id="1968"/>
+																													<ExtendedTooltip name="ЗаписьВидеоYandexTTSЯзыкРасширеннаяПодсказка" id="1969"/>
+																												</InputField>
+																												<InputField name="ЗаписьВидеоYandexTTSГолос" id="1970">
+																													<DataPath>Объект.ЗаписьВидеоYandexTTSГолос</DataPath>
+																													<ToolTip>
+																														<v8:item>
+																															<v8:lang>ru</v8:lang>
+																															<v8:content>Голос синтезированной речи.
+
+- женские голоса: alyss, jane, oksana и omazh;
+- мужские голоса: zahar и ermil.</v8:content>
+																														</v8:item>
+																													</ToolTip>
+																													<DropListButton>true</DropListButton>
+																													<ListChoiceMode>true</ListChoiceMode>
+																													<ChooseType>false</ChooseType>
+																													<ChoiceList>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation>
+																																	<v8:item>
+																																		<v8:lang>ru</v8:lang>
+																																		<v8:content>Элис (alyss)</v8:content>
+																																	</v8:item>
+																																</Presentation>
+																																<Value xsi:type="xs:string">alyss</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation>
+																																	<v8:item>
+																																		<v8:lang>ru</v8:lang>
+																																		<v8:content>Джейн (jane)</v8:content>
+																																	</v8:item>
+																																</Presentation>
+																																<Value xsi:type="xs:string">jane</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation>
+																																	<v8:item>
+																																		<v8:lang>ru</v8:lang>
+																																		<v8:content>Оксана (oksana)</v8:content>
+																																	</v8:item>
+																																</Presentation>
+																																<Value xsi:type="xs:string">oksana</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation>
+																																	<v8:item>
+																																		<v8:lang>ru</v8:lang>
+																																		<v8:content>Омаж (omazh)</v8:content>
+																																	</v8:item>
+																																</Presentation>
+																																<Value xsi:type="xs:string">omazh</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation>
+																																	<v8:item>
+																																		<v8:lang>ru</v8:lang>
+																																		<v8:content>Захар (zahar)</v8:content>
+																																	</v8:item>
+																																</Presentation>
+																																<Value xsi:type="xs:string">zahar</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation>
+																																	<v8:item>
+																																		<v8:lang>ru</v8:lang>
+																																		<v8:content>Ермил (ermil)</v8:content>
+																																	</v8:item>
+																																</Presentation>
+																																<Value xsi:type="xs:string">ermil</Value>
+																															</xr:Value>
+																														</xr:Item>
+																													</ChoiceList>
+																													<ContextMenu name="ЗаписьВидеоYandexTTSГолосКонтекстноеМеню" id="1971"/>
+																													<ExtendedTooltip name="ЗаписьВидеоYandexTTSГолосРасширеннаяПодсказка" id="1972"/>
+																												</InputField>
+																												<InputField name="ЗаписьВидеоYandexTTSЭмоция" id="1973">
+																													<DataPath>Объект.ЗаписьВидеоYandexTTSЭмоция</DataPath>
+																													<ToolTip>
+																														<v8:item>
+																															<v8:lang>ru</v8:lang>
+																															<v8:content>Эмоциональная окраска голоса.
+
+- good — радостный, доброжелательный;
+- evil — раздраженный;
+- neutral — нейтральный.</v8:content>
+																														</v8:item>
+																													</ToolTip>
+																													<DropListButton>true</DropListButton>
+																													<ListChoiceMode>true</ListChoiceMode>
+																													<ChooseType>false</ChooseType>
+																													<ChoiceList>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation>
+																																	<v8:item>
+																																		<v8:lang>ru</v8:lang>
+																																		<v8:content>Радостный (good)</v8:content>
+																																	</v8:item>
+																																</Presentation>
+																																<Value xsi:type="xs:string">good</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation>
+																																	<v8:item>
+																																		<v8:lang>ru</v8:lang>
+																																		<v8:content>Раздраженный (evil)</v8:content>
+																																	</v8:item>
+																																</Presentation>
+																																<Value xsi:type="xs:string">evil</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation>
+																																	<v8:item>
+																																		<v8:lang>ru</v8:lang>
+																																		<v8:content>Нейтральный (neutral)</v8:content>
+																																	</v8:item>
+																																</Presentation>
+																																<Value xsi:type="xs:string">neutral</Value>
+																															</xr:Value>
+																														</xr:Item>
+																													</ChoiceList>
+																													<ContextMenu name="ЗаписьВидеоYandexTTSЭмоцияКонтекстноеМеню" id="1974"/>
+																													<ExtendedTooltip name="ЗаписьВидеоYandexTTSЭмоцияРасширеннаяПодсказка" id="1975"/>
+																												</InputField>
+																												<InputField name="ЗаписьВидеоYandexTTSСкорость" id="1976">
+																													<DataPath>Объект.ЗаписьВидеоYandexTTSСкорость</DataPath>
+																													<ToolTip>
+																														<v8:item>
+																															<v8:lang>ru</v8:lang>
+																															<v8:content>Скорость (темп) синтезированной речи.
+
+Скорость речи задается дробным числом в диапазоне от 0.1 до 3.0.</v8:content>
+																														</v8:item>
+																													</ToolTip>
+																													<ToolTipRepresentation>Button</ToolTipRepresentation>
+																													<Width>5</Width>
+																													<ChoiceButton>false</ChoiceButton>
+																													<SpinButton>true</SpinButton>
+																													<MinValue xsi:type="xs:decimal">0.1</MinValue>
+																													<MaxValue xsi:type="xs:decimal">3</MaxValue>
+																													<ContextMenu name="ЗаписьВидеоYandexTTSСкоростьКонтекстноеМеню" id="1977"/>
+																													<ExtendedTooltip name="ЗаписьВидеоYandexTTSСкоростьРасширеннаяПодсказка" id="1978"/>
+																													<Events>
+																														<Event name="Tuning">ЗаписьВидеоYandexTTSСкоростьРегулирование</Event>
+																													</Events>
+																												</InputField>
+																												<InputField name="ЗаписьВидеоYandexTTSИдентификаторКаталога" id="1979">
+																													<DataPath>Объект.ЗаписьВидеоYandexTTSИдентификаторКаталога</DataPath>
+																													<ToolTipRepresentation>Button</ToolTipRepresentation>
+																													<ContextMenu name="ЗаписьВидеоYandexTTSИдентификаторКаталогаКонтекстноеМеню" id="1980"/>
+																													<ExtendedTooltip name="ЗаписьВидеоYandexTTSИдентификаторКаталогаРасширеннаяПодсказка" id="1981">
+																														<Title formatted="true">
+																															<v8:item>
+																																<v8:lang>ru</v8:lang>
+																																<v8:content>Последняя часть пути строки адреса в интернет браузере. &lt;colorstyle -14&gt;https://console.cloud.yandex.ru/folders/ИдентификаторКаталога&lt;/&gt;
+
+Требуется:
+1. В главном окне Яндекс.Облако нажать на &lt;colorstyle -3&gt;ссылку "&lt;/&gt;&lt;colorstyle -3&gt;Перейти в текущий каталог&lt;/&gt;&lt;colorstyle -3&gt;".&lt;/&gt;
+2. Скопировать последнюю часть путь из строки адреса
+
+Пример: 
+&lt;colorstyle -14&gt;https://console.cloud.yandex.ru/folders/b1gheo81t4a6eаafe5vd&lt;/&gt;
+(Идентификатор каталога - b1gheo81t4a6eаafe5vd)
+</v8:content>
+																															</v8:item>
+																														</Title>
+																													</ExtendedTooltip>
+																												</InputField>
+																												<InputField name="ЗаписьВидеоYandexTTSOauthToken" id="1982">
+																													<DataPath>Объект.ЗаписьВидеоYandexTTSOauthToken</DataPath>
+																													<ToolTipRepresentation>Button</ToolTipRepresentation>
+																													<ChoiceButton>true</ChoiceButton>
+																													<ClearButton>true</ClearButton>
+																													<ContextMenu name="ЗаписьВидеоYandexTTSOauthTokenКонтекстноеМеню" id="1983"/>
+																													<ExtendedTooltip name="ЗаписьВидеоYandexTTSOauthTokenРасширеннаяПодсказка" id="1984">
+																														<Title formatted="true">
+																															<v8:item>
+																																<v8:lang>ru</v8:lang>
+																																<v8:content>OAuth-токен используется в процедуре аутентификации в Яндекс.Облаке
+
+Для получения OAuth-токена требуется:
+1. Перейсти по ссылке &lt;link https://cloud.yandex.ru/docs/iam/concepts/authorization/oauth-token&gt;https://cloud.yandex.ru/docs/iam/concepts/authorization/oauth-token&lt;/&gt;;
+2. Сгенерировать токен;
+3. Сохранить его в текстовый файл;
+4. Указать путь к текстоговому файлу с токеном.
+</v8:content>
+																															</v8:item>
+																														</Title>
+																													</ExtendedTooltip>
+																													<Events>
+																														<Event name="StartChoice">ЗаписьВидеоYandexTTSOauthTokenНачалоВыбора</Event>
+																													</Events>
+																												</InputField>
+																											</ChildItems>
+																										</Page>
 																									</ChildItems>
-																								</UsualGroup>
-																								<UsualGroup name="ГруппаYandexTTS" id="1965">
-																									<Title>
-																										<v8:item>
-																											<v8:lang>ru</v8:lang>
-																											<v8:content>Группа yandex TTS</v8:content>
-																										</v8:item>
-																									</Title>
-																									<Group>Vertical</Group>
-																									<Representation>None</Representation>
-																									<ShowTitle>false</ShowTitle>
-																									<ExtendedTooltip name="ГруппаYandexTTSРасширеннаяПодсказка" id="1966"/>
-																									<ChildItems>
-																										<InputField name="ЗаписьВидеоYandexTTSЯзык" id="1967">
-																											<DataPath>Объект.ЗаписьВидеоYandexTTSЯзык</DataPath>
-																											<DropListButton>true</DropListButton>
-																											<ListChoiceMode>true</ListChoiceMode>
-																											<ChooseType>false</ChooseType>
-																											<ChoiceList>
-																												<xr:Item>
-																													<xr:Presentation/>
-																													<xr:CheckState>0</xr:CheckState>
-																													<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																														<Presentation>
-																															<v8:item>
-																																<v8:lang>ru</v8:lang>
-																																<v8:content>ru-RU</v8:content>
-																															</v8:item>
-																														</Presentation>
-																														<Value xsi:type="xs:string">ru-RU</Value>
-																													</xr:Value>
-																												</xr:Item>
-																												<xr:Item>
-																													<xr:Presentation/>
-																													<xr:CheckState>0</xr:CheckState>
-																													<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																														<Presentation>
-																															<v8:item>
-																																<v8:lang>ru</v8:lang>
-																																<v8:content>en-US</v8:content>
-																															</v8:item>
-																														</Presentation>
-																														<Value xsi:type="xs:string">en-US</Value>
-																													</xr:Value>
-																												</xr:Item>
-																												<xr:Item>
-																													<xr:Presentation/>
-																													<xr:CheckState>0</xr:CheckState>
-																													<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																														<Presentation>
-																															<v8:item>
-																																<v8:lang>ru</v8:lang>
-																																<v8:content>tr-TR</v8:content>
-																															</v8:item>
-																														</Presentation>
-																														<Value xsi:type="xs:string">tr-TR</Value>
-																													</xr:Value>
-																												</xr:Item>
-																											</ChoiceList>
-																											<ContextMenu name="ЗаписьВидеоYandexTTSЯзыкКонтекстноеМеню" id="1968"/>
-																											<ExtendedTooltip name="ЗаписьВидеоYandexTTSЯзыкРасширеннаяПодсказка" id="1969"/>
-																										</InputField>
-																										<InputField name="ЗаписьВидеоYandexTTSГолос" id="1970">
-																											<DataPath>Объект.ЗаписьВидеоYandexTTSГолос</DataPath>
-																											<DropListButton>true</DropListButton>
-																											<ListChoiceMode>true</ListChoiceMode>
-																											<ChooseType>false</ChooseType>
-																											<ChoiceList>
-																												<xr:Item>
-																													<xr:Presentation/>
-																													<xr:CheckState>0</xr:CheckState>
-																													<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																														<Presentation>
-																															<v8:item>
-																																<v8:lang>ru</v8:lang>
-																																<v8:content>alyss</v8:content>
-																															</v8:item>
-																														</Presentation>
-																														<Value xsi:type="xs:string">alyss</Value>
-																													</xr:Value>
-																												</xr:Item>
-																												<xr:Item>
-																													<xr:Presentation/>
-																													<xr:CheckState>0</xr:CheckState>
-																													<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																														<Presentation>
-																															<v8:item>
-																																<v8:lang>ru</v8:lang>
-																																<v8:content>jane</v8:content>
-																															</v8:item>
-																														</Presentation>
-																														<Value xsi:type="xs:string">jane</Value>
-																													</xr:Value>
-																												</xr:Item>
-																												<xr:Item>
-																													<xr:Presentation/>
-																													<xr:CheckState>0</xr:CheckState>
-																													<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																														<Presentation>
-																															<v8:item>
-																																<v8:lang>ru</v8:lang>
-																																<v8:content>oksana</v8:content>
-																															</v8:item>
-																														</Presentation>
-																														<Value xsi:type="xs:string">oksana</Value>
-																													</xr:Value>
-																												</xr:Item>
-																												<xr:Item>
-																													<xr:Presentation/>
-																													<xr:CheckState>0</xr:CheckState>
-																													<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																														<Presentation>
-																															<v8:item>
-																																<v8:lang>ru</v8:lang>
-																																<v8:content>omazh</v8:content>
-																															</v8:item>
-																														</Presentation>
-																														<Value xsi:type="xs:string">omazh</Value>
-																													</xr:Value>
-																												</xr:Item>
-																												<xr:Item>
-																													<xr:Presentation/>
-																													<xr:CheckState>0</xr:CheckState>
-																													<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																														<Presentation>
-																															<v8:item>
-																																<v8:lang>ru</v8:lang>
-																																<v8:content>zahar</v8:content>
-																															</v8:item>
-																														</Presentation>
-																														<Value xsi:type="xs:string">zahar</Value>
-																													</xr:Value>
-																												</xr:Item>
-																												<xr:Item>
-																													<xr:Presentation/>
-																													<xr:CheckState>0</xr:CheckState>
-																													<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																														<Presentation>
-																															<v8:item>
-																																<v8:lang>ru</v8:lang>
-																																<v8:content>ermil</v8:content>
-																															</v8:item>
-																														</Presentation>
-																														<Value xsi:type="xs:string">ermil</Value>
-																													</xr:Value>
-																												</xr:Item>
-																											</ChoiceList>
-																											<ContextMenu name="ЗаписьВидеоYandexTTSГолосКонтекстноеМеню" id="1971"/>
-																											<ExtendedTooltip name="ЗаписьВидеоYandexTTSГолосРасширеннаяПодсказка" id="1972"/>
-																										</InputField>
-																										<InputField name="ЗаписьВидеоYandexTTSЭмоция" id="1973">
-																											<DataPath>Объект.ЗаписьВидеоYandexTTSЭмоция</DataPath>
-																											<DropListButton>true</DropListButton>
-																											<ListChoiceMode>true</ListChoiceMode>
-																											<ChooseType>false</ChooseType>
-																											<ChoiceList>
-																												<xr:Item>
-																													<xr:Presentation/>
-																													<xr:CheckState>0</xr:CheckState>
-																													<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																														<Presentation>
-																															<v8:item>
-																																<v8:lang>ru</v8:lang>
-																																<v8:content>good</v8:content>
-																															</v8:item>
-																														</Presentation>
-																														<Value xsi:type="xs:string">good</Value>
-																													</xr:Value>
-																												</xr:Item>
-																												<xr:Item>
-																													<xr:Presentation/>
-																													<xr:CheckState>0</xr:CheckState>
-																													<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																														<Presentation>
-																															<v8:item>
-																																<v8:lang>ru</v8:lang>
-																																<v8:content>evil</v8:content>
-																															</v8:item>
-																														</Presentation>
-																														<Value xsi:type="xs:string">evil</Value>
-																													</xr:Value>
-																												</xr:Item>
-																												<xr:Item>
-																													<xr:Presentation/>
-																													<xr:CheckState>0</xr:CheckState>
-																													<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																														<Presentation>
-																															<v8:item>
-																																<v8:lang>ru</v8:lang>
-																																<v8:content>neutral</v8:content>
-																															</v8:item>
-																														</Presentation>
-																														<Value xsi:type="xs:string">neutral</Value>
-																													</xr:Value>
-																												</xr:Item>
-																											</ChoiceList>
-																											<ContextMenu name="ЗаписьВидеоYandexTTSЭмоцияКонтекстноеМеню" id="1974"/>
-																											<ExtendedTooltip name="ЗаписьВидеоYandexTTSЭмоцияРасширеннаяПодсказка" id="1975"/>
-																										</InputField>
-																										<InputField name="ЗаписьВидеоYandexTTSСкорость" id="1976">
-																											<DataPath>Объект.ЗаписьВидеоYandexTTSСкорость</DataPath>
-																											<ContextMenu name="ЗаписьВидеоYandexTTSСкоростьКонтекстноеМеню" id="1977"/>
-																											<ExtendedTooltip name="ЗаписьВидеоYandexTTSСкоростьРасширеннаяПодсказка" id="1978"/>
-																										</InputField>
-																										<InputField name="ЗаписьВидеоYandexTTSИдентификаторКаталога" id="1979">
-																											<DataPath>Объект.ЗаписьВидеоYandexTTSИдентификаторКаталога</DataPath>
-																											<ContextMenu name="ЗаписьВидеоYandexTTSИдентификаторКаталогаКонтекстноеМеню" id="1980"/>
-																											<ExtendedTooltip name="ЗаписьВидеоYandexTTSИдентификаторКаталогаРасширеннаяПодсказка" id="1981"/>
-																										</InputField>
-																										<InputField name="ЗаписьВидеоYandexTTSOauthToken" id="1982">
-																											<DataPath>Объект.ЗаписьВидеоYandexTTSOauthToken</DataPath>
-																											<ChoiceButton>true</ChoiceButton>
-																											<ClearButton>true</ClearButton>
-																											<ContextMenu name="ЗаписьВидеоYandexTTSOauthTokenКонтекстноеМеню" id="1983"/>
-																											<ExtendedTooltip name="ЗаписьВидеоYandexTTSOauthTokenРасширеннаяПодсказка" id="1984"/>
-																											<Events>
-																												<Event name="StartChoice">ЗаписьВидеоYandexTTSOauthTokenНачалоВыбора</Event>
-																											</Events>
-																										</InputField>
-																									</ChildItems>
-																								</UsualGroup>
+																								</Pages>
 																							</ChildItems>
 																						</UsualGroup>
 																					</ChildItems>
