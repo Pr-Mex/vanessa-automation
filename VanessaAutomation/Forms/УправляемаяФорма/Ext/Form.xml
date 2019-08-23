@@ -12975,7 +12975,7 @@
 																					<Title>
 																						<v8:item>
 																							<v8:lang>ru</v8:lang>
-																							<v8:content>Каталог для временных файлов</v8:content>
+																							<v8:content>Каталог временных файлов</v8:content>
 																						</v8:item>
 																						<v8:item>
 																							<v8:lang>en</v8:lang>
@@ -13058,9 +13058,19 @@
 																							<v8:content>Thư mục dành cho tệp tạm thời</v8:content>
 																						</v8:item>
 																					</Title>
+																					<ToolTip>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Каталог в которой будут сохранены файлы на время формирования видеоинструкций.</v8:content>
+																						</v8:item>
+																					</ToolTip>
 																					<AutoMaxWidth>false</AutoMaxWidth>
+																					<ChoiceButton>true</ChoiceButton>
 																					<ContextMenu name="ЗаписьВидеоКаталогДляВременныхФайловКонтекстноеМеню" id="672"/>
 																					<ExtendedTooltip name="ЗаписьВидеоКаталогДляВременныхФайловРасширеннаяПодсказка" id="1424"/>
+																					<Events>
+																						<Event name="StartChoice">ЗаписьВидеоКаталогДляВременныхФайловНачалоВыбора</Event>
+																					</Events>
 																				</InputField>
 																				<InputField name="ЗаписьВидеоКомандаFfmpeg" id="677">
 																					<DataPath>Объект.ЗаписьВидеоКомандаFfmpeg</DataPath>
@@ -13246,12 +13256,18 @@
 																						<v8:item>
 																							<v8:lang>ru</v8:lang>
 																							<v8:content>Путь к исполняемому файлу convert.exe в каталоге с программой ImageMagick.
-Пример: "C:\Program Files\ImageMagick-Х.Х.Х-Q16\convert.exe"</v8:content>
+
+Пример:
+"C:\Program Files\ImageMagick-Х.Х.Х-Q16\convert.exe"</v8:content>
 																						</v8:item>
 																					</ToolTip>
 																					<AutoMaxWidth>false</AutoMaxWidth>
+																					<ChoiceButton>true</ChoiceButton>
 																					<ContextMenu name="ЗаписьВидеоКомандаConvertКонтекстноеМеню" id="681"/>
 																					<ExtendedTooltip name="ЗаписьВидеоКомандаConvertРасширеннаяПодсказка" id="1426"/>
+																					<Events>
+																						<Event name="StartChoice">ЗаписьВидеоКомандаConvertНачалоВыбора</Event>
+																					</Events>
 																				</InputField>
 																				<CheckBoxField name="ЗаписьВидеоКэшироватьВидеоВставки" id="1951">
 																					<DataPath>Объект.ЗаписьВидеоКэшироватьВидеоВставки</DataPath>
