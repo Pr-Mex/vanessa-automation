@@ -5621,6 +5621,11 @@
 												</Button>
 											</ChildItems>
 										</Popup>
+										<Button name="ОткрытьФормуГенератораСценариев" id="2066">
+											<Type>CommandBarButton</Type>
+											<CommandName>Form.Command.ОткрытьФормуГенератораСценариев</CommandName>
+											<ExtendedTooltip name="ОткрытьФормуГенератораСценариевРасширеннаяПодсказка" id="2067"/>
+										</Button>
 									</ChildItems>
 								</CommandBar>
 								<UsualGroup name="АвтоматизированноеСозданиеСценариев" id="308">
@@ -12312,7 +12317,7 @@
 																	<Title>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>Каталог для формирования инструкций</v8:content>
+																			<v8:content>Каталог видео инструкций</v8:content>
 																		</v8:item>
 																		<v8:item>
 																			<v8:lang>en</v8:lang>
@@ -12679,6 +12684,7 @@
 																									<v8:content>Số khuôn hình trong một giây</v8:content>
 																								</v8:item>
 																							</Title>
+																							<Width>3</Width>
 																							<ContextMenu name="ЗаписьВидеоКоличествоКадровКонтекстноеМеню" id="707"/>
 																							<ExtendedTooltip name="ЗаписьВидеоКоличествоКадровРасширеннаяПодсказка" id="1420"/>
 																						</InputField>
@@ -12770,6 +12776,7 @@
 																									<v8:content>Màn hình rộng</v8:content>
 																								</v8:item>
 																							</Title>
+																							<Width>4</Width>
 																							<ContextMenu name="ЗаписьВидеоЭкранШиринаКонтекстноеМеню" id="701"/>
 																							<ExtendedTooltip name="ЗаписьВидеоЭкранШиринаРасширеннаяПодсказка" id="1421"/>
 																						</InputField>
@@ -12778,7 +12785,7 @@
 																							<Title>
 																								<v8:item>
 																									<v8:lang>ru</v8:lang>
-																									<v8:content>Экран высота</v8:content>
+																									<v8:content>высота</v8:content>
 																								</v8:item>
 																								<v8:item>
 																									<v8:lang>en</v8:lang>
@@ -12861,6 +12868,7 @@
 																									<v8:content>Chiều cao màn hình</v8:content>
 																								</v8:item>
 																							</Title>
+																							<Width>4</Width>
 																							<ContextMenu name="ЗаписьВидеоЭкранВысотаКонтекстноеМеню" id="704"/>
 																							<ExtendedTooltip name="ЗаписьВидеоЭкранВысотаРасширеннаяПодсказка" id="1422"/>
 																						</InputField>
@@ -12954,7 +12962,11 @@
 																							<v8:content>Lệnh bắt đầu ghi video</v8:content>
 																						</v8:item>
 																					</Title>
+																					<TitleLocation>Left</TitleLocation>
 																					<AutoMaxWidth>false</AutoMaxWidth>
+																					<Height>2</Height>
+																					<VerticalStretch>false</VerticalStretch>
+																					<MultiLine>true</MultiLine>
 																					<ContextMenu name="ЗаписьВидеоКомандаНачатьЗаписьВидеоКонтекстноеМеню" id="663"/>
 																					<ExtendedTooltip name="ЗаписьВидеоКомандаНачатьЗаписьВидеоРасширеннаяПодсказка" id="1423"/>
 																				</InputField>
@@ -13230,6 +13242,13 @@
 																							<v8:content>Lệnh Chuyển đổi</v8:content>
 																						</v8:item>
 																					</Title>
+																					<ToolTip>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Путь к исполняемому файлу convert.exe в каталоге с программой ImageMagick.
+Пример: "C:\Program Files\ImageMagick-Х.Х.Х-Q16\convert.exe"</v8:content>
+																						</v8:item>
+																					</ToolTip>
 																					<AutoMaxWidth>false</AutoMaxWidth>
 																					<ContextMenu name="ЗаписьВидеоКомандаConvertКонтекстноеМеню" id="681"/>
 																					<ExtendedTooltip name="ЗаписьВидеоКомандаConvertРасширеннаяПодсказка" id="1426"/>
@@ -13363,6 +13382,7 @@
 																							<v8:content>Music</v8:content>
 																						</v8:item>
 																					</Title>
+																					<Group>Horizontal</Group>
 																					<ExtendedTooltip name="ГруппаМузыкаРасширеннаяПодсказка" id="2008"/>
 																					<ChildItems>
 																						<InputField name="ЗаписьВидеоКаталогМузыки" id="683">
@@ -13474,7 +13494,7 @@
 																					<Title>
 																						<v8:item>
 																							<v8:lang>ru</v8:lang>
-																							<v8:content>Озвучка голосом</v8:content>
+																							<v8:content>Озвучивание голосом</v8:content>
 																						</v8:item>
 																						<v8:item>
 																							<v8:lang>en</v8:lang>
@@ -13662,402 +13682,489 @@
 																								<Event name="OnChange">ЗаписьВидеоДелатьНаложениеTTSПриИзменении</Event>
 																							</Events>
 																						</CheckBoxField>
-																						<RadioButtonField name="ЗаписьВидеоТипОзвучкиTTS" id="1960">
-																							<DataPath>Объект.ЗаписьВидеоТипОзвучкиTTS</DataPath>
-																							<RadioButtonType>Auto</RadioButtonType>
-																							<ChoiceList>
-																								<xr:Item>
-																									<xr:Presentation/>
-																									<xr:CheckState>0</xr:CheckState>
-																									<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																										<Presentation>
-																											<v8:item>
-																												<v8:lang>ru</v8:lang>
-																												<v8:content>Microsoft TTS</v8:content>
-																											</v8:item>
-																											<v8:item>
-																												<v8:lang>en</v8:lang>
-																												<v8:content>Microsoft TTS</v8:content>
-																											</v8:item>
-																										</Presentation>
-																										<Value xsi:type="xs:decimal">0</Value>
-																									</xr:Value>
-																								</xr:Item>
-																								<xr:Item>
-																									<xr:Presentation/>
-																									<xr:CheckState>0</xr:CheckState>
-																									<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																										<Presentation>
-																											<v8:item>
-																												<v8:lang>ru</v8:lang>
-																												<v8:content>Yandex speechkit</v8:content>
-																											</v8:item>
-																											<v8:item>
-																												<v8:lang>en</v8:lang>
-																												<v8:content>Yandex speechkit</v8:content>
-																											</v8:item>
-																										</Presentation>
-																										<Value xsi:type="xs:decimal">1</Value>
-																									</xr:Value>
-																								</xr:Item>
-																							</ChoiceList>
-																							<ContextMenu name="ЗаписьВидеоТипОзвучкиTTSКонтекстноеМеню" id="1961"/>
-																							<ExtendedTooltip name="ЗаписьВидеоТипОзвучкиTTSРасширеннаяПодсказка" id="1962"/>
-																							<Events>
-																								<Event name="OnChange">ЗаписьВидеоТипОзвучкиTTSПриИзменении</Event>
-																							</Events>
-																						</RadioButtonField>
-																						<UsualGroup name="ГруппаMicrosoftTTS" id="1963">
+																						<UsualGroup name="ГруппаОзвучкаГолосомВнутренняя" id="2077">
 																							<Title>
 																								<v8:item>
 																									<v8:lang>ru</v8:lang>
-																									<v8:content>Группа microsoft TTS</v8:content>
+																									<v8:content>Группа озвучка голосом внутренняя</v8:content>
 																								</v8:item>
 																							</Title>
 																							<Group>Vertical</Group>
 																							<Representation>None</Representation>
 																							<ShowTitle>false</ShowTitle>
-																							<ExtendedTooltip name="ГруппаMicrosoftTTSРасширеннаяПодсказка" id="1964"/>
+																							<ExtendedTooltip name="ГруппаОзвучкаГолосомВнутренняяРасширеннаяПодсказка" id="2078"/>
 																							<ChildItems>
-																								<InputField name="ЗаписьВидеоПутьКДвижкуTTS" id="689">
-																									<DataPath>Объект.ЗаписьВидеоПутьКДвижкуTTS</DataPath>
+																								<RadioButtonField name="ЗаписьВидеоТипОзвучкиTTS" id="1960">
+																									<DataPath>Объект.ЗаписьВидеоТипОзвучкиTTS</DataPath>
+																									<RadioButtonType>Auto</RadioButtonType>
+																									<ChoiceList>
+																										<xr:Item>
+																											<xr:Presentation/>
+																											<xr:CheckState>0</xr:CheckState>
+																											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																												<Presentation>
+																													<v8:item>
+																														<v8:lang>ru</v8:lang>
+																														<v8:content>Microsoft TTS</v8:content>
+																													</v8:item>
+																													<v8:item>
+																														<v8:lang>en</v8:lang>
+																														<v8:content>Microsoft TTS</v8:content>
+																													</v8:item>
+																												</Presentation>
+																												<Value xsi:type="xs:decimal">0</Value>
+																											</xr:Value>
+																										</xr:Item>
+																										<xr:Item>
+																											<xr:Presentation/>
+																											<xr:CheckState>0</xr:CheckState>
+																											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																												<Presentation>
+																													<v8:item>
+																														<v8:lang>ru</v8:lang>
+																														<v8:content>Yandex SpeechKit</v8:content>
+																													</v8:item>
+																													<v8:item>
+																														<v8:lang>en</v8:lang>
+																														<v8:content>Yandex speechkit</v8:content>
+																													</v8:item>
+																												</Presentation>
+																												<Value xsi:type="xs:decimal">1</Value>
+																											</xr:Value>
+																										</xr:Item>
+																									</ChoiceList>
+																									<ContextMenu name="ЗаписьВидеоТипОзвучкиTTSКонтекстноеМеню" id="1961"/>
+																									<ExtendedTooltip name="ЗаписьВидеоТипОзвучкиTTSРасширеннаяПодсказка" id="1962"/>
+																									<Events>
+																										<Event name="OnChange">ЗаписьВидеоТипОзвучкиTTSПриИзменении</Event>
+																									</Events>
+																								</RadioButtonField>
+																								<Pages name="СтраницыНастроектОзвучания" id="2079">
 																									<Title>
 																										<v8:item>
 																											<v8:lang>ru</v8:lang>
-																											<v8:content>Команда TTS</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>en</v8:lang>
-																											<v8:content>TTS comand</v8:content>
+																											<v8:content>Страницы настроект озвучания</v8:content>
 																										</v8:item>
 																									</Title>
-																									<AutoMaxWidth>false</AutoMaxWidth>
-																									<ChoiceButton>true</ChoiceButton>
-																									<ClearButton>true</ClearButton>
-																									<ContextMenu name="ЗаписьВидеоПутьКДвижкуTTSКонтекстноеМеню" id="690"/>
-																									<ExtendedTooltip name="ЗаписьВидеоПутьКДвижкуTTSРасширеннаяПодсказка" id="1431"/>
-																									<Events>
-																										<Event name="StartChoice">ЗаписьВидеоПутьКДвижкуTTSНачалоВыбора</Event>
-																									</Events>
-																								</InputField>
-																								<InputField name="ЗаписьВидеоИмяTTS" id="692">
-																									<DataPath>Объект.ЗаписьВидеоИмяTTS</DataPath>
-																									<Title>
-																										<v8:item>
-																											<v8:lang>ru</v8:lang>
-																											<v8:content>Имя голоса TTS</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>en</v8:lang>
-																											<v8:content>TTS Voice</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>am</v8:lang>
-																											<v8:content>ስም ቅድሚያ</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>az</v8:lang>
-																											<v8:content>Adı səs TTS</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>bg</v8:lang>
-																											<v8:content>Име на глас TTS</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>et</v8:lang>
-																											<v8:content>Nimi häält TTS</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>fr</v8:lang>
-																											<v8:content>Le nom de la voix TTS</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>ka</v8:lang>
-																											<v8:content>სახელი TTS ხმა</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>de</v8:lang>
-																											<v8:content>Name TTS Stimme</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>hu</v8:lang>
-																											<v8:content>A név a TTS hang</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>it</v8:lang>
-																											<v8:content>Il nome di una voce TTS</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>lv</v8:lang>
-																											<v8:content>Vārds balss TTS</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>lt</v8:lang>
-																											<v8:content>Vardas balso TTS</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>mn</v8:lang>
-																											<v8:content>Нэр TTS дуу хоолой</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>pl</v8:lang>
-																											<v8:content>Nazwa głosy TTS</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>ro</v8:lang>
-																											<v8:content>Numele de voce TTS</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>sl</v8:lang>
-																											<v8:content>Ime TTS glas</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>es</v8:lang>
-																											<v8:content>El nombre de la voz del TTS</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>sv</v8:lang>
-																											<v8:content>Namnet på TTS-rösten</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>tr</v8:lang>
-																											<v8:content>Adı ses TTS</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>vi</v8:lang>
-																											<v8:content>Tên giọng nói TTS</v8:content>
-																										</v8:item>
-																									</Title>
-																									<AutoMaxWidth>false</AutoMaxWidth>
-																									<ContextMenu name="ЗаписьВидеоИмяTTSКонтекстноеМеню" id="693"/>
-																									<ExtendedTooltip name="ЗаписьВидеоИмяTTSРасширеннаяПодсказка" id="1432"/>
-																								</InputField>
-																								<InputField name="ЗаписьВидеоСкоростьПроизношения" id="1877">
-																									<DataPath>Объект.ЗаписьВидеоСкоростьПроизношения</DataPath>
-																									<AutoMaxWidth>false</AutoMaxWidth>
-																									<ContextMenu name="ЗаписьВидеоСкоростьПроизношенияКонтекстноеМеню" id="1878"/>
-																									<ExtendedTooltip name="ЗаписьВидеоСкоростьПроизношенияРасширеннаяПодсказка" id="1879"/>
-																								</InputField>
-																							</ChildItems>
-																						</UsualGroup>
-																						<UsualGroup name="ГруппаYandexTTS" id="1965">
-																							<Title>
-																								<v8:item>
-																									<v8:lang>ru</v8:lang>
-																									<v8:content>Группа yandex TTS</v8:content>
-																								</v8:item>
-																							</Title>
-																							<Group>Vertical</Group>
-																							<Representation>None</Representation>
-																							<ShowTitle>false</ShowTitle>
-																							<ExtendedTooltip name="ГруппаYandexTTSРасширеннаяПодсказка" id="1966"/>
-																							<ChildItems>
-																								<InputField name="ЗаписьВидеоYandexTTSЯзык" id="1967">
-																									<DataPath>Объект.ЗаписьВидеоYandexTTSЯзык</DataPath>
-																									<DropListButton>true</DropListButton>
-																									<ListChoiceMode>true</ListChoiceMode>
-																									<ChooseType>false</ChooseType>
-																									<ChoiceList>
-																										<xr:Item>
-																											<xr:Presentation/>
-																											<xr:CheckState>0</xr:CheckState>
-																											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																												<Presentation>
-																													<v8:item>
-																														<v8:lang>ru</v8:lang>
-																														<v8:content>ru-RU</v8:content>
-																													</v8:item>
-																												</Presentation>
-																												<Value xsi:type="xs:string">ru-RU</Value>
-																											</xr:Value>
-																										</xr:Item>
-																										<xr:Item>
-																											<xr:Presentation/>
-																											<xr:CheckState>0</xr:CheckState>
-																											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																												<Presentation>
-																													<v8:item>
-																														<v8:lang>ru</v8:lang>
-																														<v8:content>en-US</v8:content>
-																													</v8:item>
-																												</Presentation>
-																												<Value xsi:type="xs:string">en-US</Value>
-																											</xr:Value>
-																										</xr:Item>
-																										<xr:Item>
-																											<xr:Presentation/>
-																											<xr:CheckState>0</xr:CheckState>
-																											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																												<Presentation>
-																													<v8:item>
-																														<v8:lang>ru</v8:lang>
-																														<v8:content>tr-TR</v8:content>
-																													</v8:item>
-																												</Presentation>
-																												<Value xsi:type="xs:string">tr-TR</Value>
-																											</xr:Value>
-																										</xr:Item>
-																									</ChoiceList>
-																									<ContextMenu name="ЗаписьВидеоYandexTTSЯзыкКонтекстноеМеню" id="1968"/>
-																									<ExtendedTooltip name="ЗаписьВидеоYandexTTSЯзыкРасширеннаяПодсказка" id="1969"/>
-																								</InputField>
-																								<InputField name="ЗаписьВидеоYandexTTSГолос" id="1970">
-																									<DataPath>Объект.ЗаписьВидеоYandexTTSГолос</DataPath>
-																									<DropListButton>true</DropListButton>
-																									<ListChoiceMode>true</ListChoiceMode>
-																									<ChooseType>false</ChooseType>
-																									<ChoiceList>
-																										<xr:Item>
-																											<xr:Presentation/>
-																											<xr:CheckState>0</xr:CheckState>
-																											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																												<Presentation>
-																													<v8:item>
-																														<v8:lang>ru</v8:lang>
-																														<v8:content>alyss</v8:content>
-																													</v8:item>
-																												</Presentation>
-																												<Value xsi:type="xs:string">alyss</Value>
-																											</xr:Value>
-																										</xr:Item>
-																										<xr:Item>
-																											<xr:Presentation/>
-																											<xr:CheckState>0</xr:CheckState>
-																											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																												<Presentation>
-																													<v8:item>
-																														<v8:lang>ru</v8:lang>
-																														<v8:content>jane</v8:content>
-																													</v8:item>
-																												</Presentation>
-																												<Value xsi:type="xs:string">jane</Value>
-																											</xr:Value>
-																										</xr:Item>
-																										<xr:Item>
-																											<xr:Presentation/>
-																											<xr:CheckState>0</xr:CheckState>
-																											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																												<Presentation>
-																													<v8:item>
-																														<v8:lang>ru</v8:lang>
-																														<v8:content>oksana</v8:content>
-																													</v8:item>
-																												</Presentation>
-																												<Value xsi:type="xs:string">oksana</Value>
-																											</xr:Value>
-																										</xr:Item>
-																										<xr:Item>
-																											<xr:Presentation/>
-																											<xr:CheckState>0</xr:CheckState>
-																											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																												<Presentation>
-																													<v8:item>
-																														<v8:lang>ru</v8:lang>
-																														<v8:content>omazh</v8:content>
-																													</v8:item>
-																												</Presentation>
-																												<Value xsi:type="xs:string">omazh</Value>
-																											</xr:Value>
-																										</xr:Item>
-																										<xr:Item>
-																											<xr:Presentation/>
-																											<xr:CheckState>0</xr:CheckState>
-																											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																												<Presentation>
-																													<v8:item>
-																														<v8:lang>ru</v8:lang>
-																														<v8:content>zahar</v8:content>
-																													</v8:item>
-																												</Presentation>
-																												<Value xsi:type="xs:string">zahar</Value>
-																											</xr:Value>
-																										</xr:Item>
-																										<xr:Item>
-																											<xr:Presentation/>
-																											<xr:CheckState>0</xr:CheckState>
-																											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																												<Presentation>
-																													<v8:item>
-																														<v8:lang>ru</v8:lang>
-																														<v8:content>ermil</v8:content>
-																													</v8:item>
-																												</Presentation>
-																												<Value xsi:type="xs:string">ermil</Value>
-																											</xr:Value>
-																										</xr:Item>
-																									</ChoiceList>
-																									<ContextMenu name="ЗаписьВидеоYandexTTSГолосКонтекстноеМеню" id="1971"/>
-																									<ExtendedTooltip name="ЗаписьВидеоYandexTTSГолосРасширеннаяПодсказка" id="1972"/>
-																								</InputField>
-																								<InputField name="ЗаписьВидеоYandexTTSЭмоция" id="1973">
-																									<DataPath>Объект.ЗаписьВидеоYandexTTSЭмоция</DataPath>
-																									<DropListButton>true</DropListButton>
-																									<ListChoiceMode>true</ListChoiceMode>
-																									<ChooseType>false</ChooseType>
-																									<ChoiceList>
-																										<xr:Item>
-																											<xr:Presentation/>
-																											<xr:CheckState>0</xr:CheckState>
-																											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																												<Presentation>
-																													<v8:item>
-																														<v8:lang>ru</v8:lang>
-																														<v8:content>good</v8:content>
-																													</v8:item>
-																												</Presentation>
-																												<Value xsi:type="xs:string">good</Value>
-																											</xr:Value>
-																										</xr:Item>
-																										<xr:Item>
-																											<xr:Presentation/>
-																											<xr:CheckState>0</xr:CheckState>
-																											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																												<Presentation>
-																													<v8:item>
-																														<v8:lang>ru</v8:lang>
-																														<v8:content>evil</v8:content>
-																													</v8:item>
-																												</Presentation>
-																												<Value xsi:type="xs:string">evil</Value>
-																											</xr:Value>
-																										</xr:Item>
-																										<xr:Item>
-																											<xr:Presentation/>
-																											<xr:CheckState>0</xr:CheckState>
-																											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																												<Presentation>
-																													<v8:item>
-																														<v8:lang>ru</v8:lang>
-																														<v8:content>neutral</v8:content>
-																													</v8:item>
-																												</Presentation>
-																												<Value xsi:type="xs:string">neutral</Value>
-																											</xr:Value>
-																										</xr:Item>
-																									</ChoiceList>
-																									<ContextMenu name="ЗаписьВидеоYandexTTSЭмоцияКонтекстноеМеню" id="1974"/>
-																									<ExtendedTooltip name="ЗаписьВидеоYandexTTSЭмоцияРасширеннаяПодсказка" id="1975"/>
-																								</InputField>
-																								<InputField name="ЗаписьВидеоYandexTTSСкорость" id="1976">
-																									<DataPath>Объект.ЗаписьВидеоYandexTTSСкорость</DataPath>
-																									<ContextMenu name="ЗаписьВидеоYandexTTSСкоростьКонтекстноеМеню" id="1977"/>
-																									<ExtendedTooltip name="ЗаписьВидеоYandexTTSСкоростьРасширеннаяПодсказка" id="1978"/>
-																								</InputField>
-																								<InputField name="ЗаписьВидеоYandexTTSИдентификаторКаталога" id="1979">
-																									<DataPath>Объект.ЗаписьВидеоYandexTTSИдентификаторКаталога</DataPath>
-																									<ContextMenu name="ЗаписьВидеоYandexTTSИдентификаторКаталогаКонтекстноеМеню" id="1980"/>
-																									<ExtendedTooltip name="ЗаписьВидеоYandexTTSИдентификаторКаталогаРасширеннаяПодсказка" id="1981"/>
-																								</InputField>
-																								<InputField name="ЗаписьВидеоYandexTTSOauthToken" id="1982">
-																									<DataPath>Объект.ЗаписьВидеоYandexTTSOauthToken</DataPath>
-																									<ChoiceButton>true</ChoiceButton>
-																									<ClearButton>true</ClearButton>
-																									<ContextMenu name="ЗаписьВидеоYandexTTSOauthTokenКонтекстноеМеню" id="1983"/>
-																									<ExtendedTooltip name="ЗаписьВидеоYandexTTSOauthTokenРасширеннаяПодсказка" id="1984"/>
-																									<Events>
-																										<Event name="StartChoice">ЗаписьВидеоYandexTTSOauthTokenНачалоВыбора</Event>
-																									</Events>
-																								</InputField>
+																									<PagesRepresentation>None</PagesRepresentation>
+																									<ExtendedTooltip name="СтраницыНастроектОзвучанияРасширеннаяПодсказка" id="2080"/>
+																									<ChildItems>
+																										<Page name="ГруппаMicrosoftTTS" id="1963">
+																											<Title>
+																												<v8:item>
+																													<v8:lang>ru</v8:lang>
+																													<v8:content>Группа microsoft TTS</v8:content>
+																												</v8:item>
+																											</Title>
+																											<ExtendedTooltip name="ГруппаMicrosoftTTSРасширеннаяПодсказка" id="1964"/>
+																											<ChildItems>
+																												<InputField name="ЗаписьВидеоПутьКДвижкуTTS" id="689">
+																													<DataPath>Объект.ЗаписьВидеоПутьКДвижкуTTS</DataPath>
+																													<Title>
+																														<v8:item>
+																															<v8:lang>ru</v8:lang>
+																															<v8:content>Команда TTS</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>en</v8:lang>
+																															<v8:content>TTS comand</v8:content>
+																														</v8:item>
+																													</Title>
+																													<ChoiceButton>true</ChoiceButton>
+																													<ClearButton>true</ClearButton>
+																													<ContextMenu name="ЗаписьВидеоПутьКДвижкуTTSКонтекстноеМеню" id="690"/>
+																													<ExtendedTooltip name="ЗаписьВидеоПутьКДвижкуTTSРасширеннаяПодсказка" id="1431"/>
+																													<Events>
+																														<Event name="StartChoice">ЗаписьВидеоПутьКДвижкуTTSНачалоВыбора</Event>
+																													</Events>
+																												</InputField>
+																												<InputField name="ЗаписьВидеоИмяTTS" id="692">
+																													<DataPath>Объект.ЗаписьВидеоИмяTTS</DataPath>
+																													<Title>
+																														<v8:item>
+																															<v8:lang>ru</v8:lang>
+																															<v8:content>Имя голоса TTS</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>en</v8:lang>
+																															<v8:content>TTS Voice</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>am</v8:lang>
+																															<v8:content>ስም ቅድሚያ</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>az</v8:lang>
+																															<v8:content>Adı səs TTS</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>bg</v8:lang>
+																															<v8:content>Име на глас TTS</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>et</v8:lang>
+																															<v8:content>Nimi häält TTS</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>fr</v8:lang>
+																															<v8:content>Le nom de la voix TTS</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>ka</v8:lang>
+																															<v8:content>სახელი TTS ხმა</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>de</v8:lang>
+																															<v8:content>Name TTS Stimme</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>hu</v8:lang>
+																															<v8:content>A név a TTS hang</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>it</v8:lang>
+																															<v8:content>Il nome di una voce TTS</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>lv</v8:lang>
+																															<v8:content>Vārds balss TTS</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>lt</v8:lang>
+																															<v8:content>Vardas balso TTS</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>mn</v8:lang>
+																															<v8:content>Нэр TTS дуу хоолой</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>pl</v8:lang>
+																															<v8:content>Nazwa głosy TTS</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>ro</v8:lang>
+																															<v8:content>Numele de voce TTS</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>sl</v8:lang>
+																															<v8:content>Ime TTS glas</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>es</v8:lang>
+																															<v8:content>El nombre de la voz del TTS</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>sv</v8:lang>
+																															<v8:content>Namnet på TTS-rösten</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>tr</v8:lang>
+																															<v8:content>Adı ses TTS</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>vi</v8:lang>
+																															<v8:content>Tên giọng nói TTS</v8:content>
+																														</v8:item>
+																													</Title>
+																													<ContextMenu name="ЗаписьВидеоИмяTTSКонтекстноеМеню" id="693"/>
+																													<ExtendedTooltip name="ЗаписьВидеоИмяTTSРасширеннаяПодсказка" id="1432"/>
+																												</InputField>
+																												<InputField name="ЗаписьВидеоСкоростьПроизношения" id="1877">
+																													<DataPath>Объект.ЗаписьВидеоСкоростьПроизношения</DataPath>
+																													<Width>3</Width>
+																													<AutoMaxWidth>false</AutoMaxWidth>
+																													<ContextMenu name="ЗаписьВидеоСкоростьПроизношенияКонтекстноеМеню" id="1878"/>
+																													<ExtendedTooltip name="ЗаписьВидеоСкоростьПроизношенияРасширеннаяПодсказка" id="1879"/>
+																												</InputField>
+																											</ChildItems>
+																										</Page>
+																										<Page name="ГруппаYandexTTS" id="1965">
+																											<Title>
+																												<v8:item>
+																													<v8:lang>ru</v8:lang>
+																													<v8:content>Группа yandex TTS</v8:content>
+																												</v8:item>
+																											</Title>
+																											<ExtendedTooltip name="ГруппаYandexTTSРасширеннаяПодсказка" id="1966"/>
+																											<ChildItems>
+																												<InputField name="ЗаписьВидеоYandexTTSЯзык" id="1967">
+																													<DataPath>Объект.ЗаписьВидеоYandexTTSЯзык</DataPath>
+																													<DropListButton>true</DropListButton>
+																													<ListChoiceMode>true</ListChoiceMode>
+																													<ChooseType>false</ChooseType>
+																													<ChoiceList>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation>
+																																	<v8:item>
+																																		<v8:lang>ru</v8:lang>
+																																		<v8:content>Руский (ru-RU)</v8:content>
+																																	</v8:item>
+																																</Presentation>
+																																<Value xsi:type="xs:string">ru-RU</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation>
+																																	<v8:item>
+																																		<v8:lang>ru</v8:lang>
+																																		<v8:content>Английский (en-US)</v8:content>
+																																	</v8:item>
+																																</Presentation>
+																																<Value xsi:type="xs:string">en-US</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation>
+																																	<v8:item>
+																																		<v8:lang>ru</v8:lang>
+																																		<v8:content>Турецкий (tr-TR)</v8:content>
+																																	</v8:item>
+																																</Presentation>
+																																<Value xsi:type="xs:string">tr-TR</Value>
+																															</xr:Value>
+																														</xr:Item>
+																													</ChoiceList>
+																													<ContextMenu name="ЗаписьВидеоYandexTTSЯзыкКонтекстноеМеню" id="1968"/>
+																													<ExtendedTooltip name="ЗаписьВидеоYandexTTSЯзыкРасширеннаяПодсказка" id="1969"/>
+																												</InputField>
+																												<InputField name="ЗаписьВидеоYandexTTSГолос" id="1970">
+																													<DataPath>Объект.ЗаписьВидеоYandexTTSГолос</DataPath>
+																													<ToolTip>
+																														<v8:item>
+																															<v8:lang>ru</v8:lang>
+																															<v8:content>Голос синтезированной речи.
+
+- женские голоса: alyss, jane, oksana и omazh;
+- мужские голоса: zahar и ermil.</v8:content>
+																														</v8:item>
+																													</ToolTip>
+																													<DropListButton>true</DropListButton>
+																													<ListChoiceMode>true</ListChoiceMode>
+																													<ChooseType>false</ChooseType>
+																													<ChoiceList>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation>
+																																	<v8:item>
+																																		<v8:lang>ru</v8:lang>
+																																		<v8:content>Элис (alyss)</v8:content>
+																																	</v8:item>
+																																</Presentation>
+																																<Value xsi:type="xs:string">alyss</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation>
+																																	<v8:item>
+																																		<v8:lang>ru</v8:lang>
+																																		<v8:content>Джейн (jane)</v8:content>
+																																	</v8:item>
+																																</Presentation>
+																																<Value xsi:type="xs:string">jane</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation>
+																																	<v8:item>
+																																		<v8:lang>ru</v8:lang>
+																																		<v8:content>Оксана (oksana)</v8:content>
+																																	</v8:item>
+																																</Presentation>
+																																<Value xsi:type="xs:string">oksana</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation>
+																																	<v8:item>
+																																		<v8:lang>ru</v8:lang>
+																																		<v8:content>Омаж (omazh)</v8:content>
+																																	</v8:item>
+																																</Presentation>
+																																<Value xsi:type="xs:string">omazh</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation>
+																																	<v8:item>
+																																		<v8:lang>ru</v8:lang>
+																																		<v8:content>Захар (zahar)</v8:content>
+																																	</v8:item>
+																																</Presentation>
+																																<Value xsi:type="xs:string">zahar</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation>
+																																	<v8:item>
+																																		<v8:lang>ru</v8:lang>
+																																		<v8:content>Ермил (ermil)</v8:content>
+																																	</v8:item>
+																																</Presentation>
+																																<Value xsi:type="xs:string">ermil</Value>
+																															</xr:Value>
+																														</xr:Item>
+																													</ChoiceList>
+																													<ContextMenu name="ЗаписьВидеоYandexTTSГолосКонтекстноеМеню" id="1971"/>
+																													<ExtendedTooltip name="ЗаписьВидеоYandexTTSГолосРасширеннаяПодсказка" id="1972"/>
+																												</InputField>
+																												<InputField name="ЗаписьВидеоYandexTTSЭмоция" id="1973">
+																													<DataPath>Объект.ЗаписьВидеоYandexTTSЭмоция</DataPath>
+																													<ToolTip>
+																														<v8:item>
+																															<v8:lang>ru</v8:lang>
+																															<v8:content>Эмоциональная окраска голоса.
+
+- good — радостный, доброжелательный;
+- evil — раздраженный;
+- neutral — нейтральный.</v8:content>
+																														</v8:item>
+																													</ToolTip>
+																													<DropListButton>true</DropListButton>
+																													<ListChoiceMode>true</ListChoiceMode>
+																													<ChooseType>false</ChooseType>
+																													<ChoiceList>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation>
+																																	<v8:item>
+																																		<v8:lang>ru</v8:lang>
+																																		<v8:content>Радостный (good)</v8:content>
+																																	</v8:item>
+																																</Presentation>
+																																<Value xsi:type="xs:string">good</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation>
+																																	<v8:item>
+																																		<v8:lang>ru</v8:lang>
+																																		<v8:content>Раздраженный (evil)</v8:content>
+																																	</v8:item>
+																																</Presentation>
+																																<Value xsi:type="xs:string">evil</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation>
+																																	<v8:item>
+																																		<v8:lang>ru</v8:lang>
+																																		<v8:content>Нейтральный (neutral)</v8:content>
+																																	</v8:item>
+																																</Presentation>
+																																<Value xsi:type="xs:string">neutral</Value>
+																															</xr:Value>
+																														</xr:Item>
+																													</ChoiceList>
+																													<ContextMenu name="ЗаписьВидеоYandexTTSЭмоцияКонтекстноеМеню" id="1974"/>
+																													<ExtendedTooltip name="ЗаписьВидеоYandexTTSЭмоцияРасширеннаяПодсказка" id="1975"/>
+																												</InputField>
+																												<InputField name="ЗаписьВидеоYandexTTSСкорость" id="1976">
+																													<DataPath>Объект.ЗаписьВидеоYandexTTSСкорость</DataPath>
+																													<ToolTip>
+																														<v8:item>
+																															<v8:lang>ru</v8:lang>
+																															<v8:content>Скорость (темп) синтезированной речи.
+
+Скорость речи задается дробным числом в диапазоне от 0.1 до 3.0.</v8:content>
+																														</v8:item>
+																													</ToolTip>
+																													<ToolTipRepresentation>Button</ToolTipRepresentation>
+																													<Width>5</Width>
+																													<ChoiceButton>false</ChoiceButton>
+																													<SpinButton>true</SpinButton>
+																													<MinValue xsi:type="xs:decimal">0.1</MinValue>
+																													<MaxValue xsi:type="xs:decimal">3</MaxValue>
+																													<ContextMenu name="ЗаписьВидеоYandexTTSСкоростьКонтекстноеМеню" id="1977"/>
+																													<ExtendedTooltip name="ЗаписьВидеоYandexTTSСкоростьРасширеннаяПодсказка" id="1978"/>
+																													<Events>
+																														<Event name="Tuning">ЗаписьВидеоYandexTTSСкоростьРегулирование</Event>
+																													</Events>
+																												</InputField>
+																												<InputField name="ЗаписьВидеоYandexTTSИдентификаторКаталога" id="1979">
+																													<DataPath>Объект.ЗаписьВидеоYandexTTSИдентификаторКаталога</DataPath>
+																													<ToolTipRepresentation>Button</ToolTipRepresentation>
+																													<ContextMenu name="ЗаписьВидеоYandexTTSИдентификаторКаталогаКонтекстноеМеню" id="1980"/>
+																													<ExtendedTooltip name="ЗаписьВидеоYandexTTSИдентификаторКаталогаРасширеннаяПодсказка" id="1981">
+																														<Title formatted="true">
+																															<v8:item>
+																																<v8:lang>ru</v8:lang>
+																																<v8:content>Последняя часть пути строки адреса в интернет браузере. &lt;colorstyle -14&gt;https://console.cloud.yandex.ru/folders/ИдентификаторКаталога&lt;/&gt;
+
+Требуется:
+1. В главном окне Яндекс.Облако нажать на &lt;colorstyle -3&gt;ссылку "&lt;/&gt;&lt;colorstyle -3&gt;Перейти в текущий каталог&lt;/&gt;&lt;colorstyle -3&gt;".&lt;/&gt;
+2. Скопировать последнюю часть путь из строки адреса
+
+Пример: 
+&lt;colorstyle -14&gt;https://console.cloud.yandex.ru/folders/b1gheo81t4a6eаafe5vd&lt;/&gt;
+(Идентификатор каталога - b1gheo81t4a6eаafe5vd)
+</v8:content>
+																															</v8:item>
+																														</Title>
+																													</ExtendedTooltip>
+																												</InputField>
+																												<InputField name="ЗаписьВидеоYandexTTSOauthToken" id="1982">
+																													<DataPath>Объект.ЗаписьВидеоYandexTTSOauthToken</DataPath>
+																													<ToolTipRepresentation>Button</ToolTipRepresentation>
+																													<ChoiceButton>true</ChoiceButton>
+																													<ClearButton>true</ClearButton>
+																													<ContextMenu name="ЗаписьВидеоYandexTTSOauthTokenКонтекстноеМеню" id="1983"/>
+																													<ExtendedTooltip name="ЗаписьВидеоYandexTTSOauthTokenРасширеннаяПодсказка" id="1984">
+																														<Title formatted="true">
+																															<v8:item>
+																																<v8:lang>ru</v8:lang>
+																																<v8:content>OAuth-токен используется в процедуре аутентификации в Яндекс.Облаке
+
+Для получения OAuth-токена требуется:
+1. Перейсти по ссылке &lt;link https://cloud.yandex.ru/docs/iam/concepts/authorization/oauth-token&gt;https://cloud.yandex.ru/docs/iam/concepts/authorization/oauth-token&lt;/&gt;;
+2. Сгенерировать токен;
+3. Сохранить его в текстовый файл;
+4. Указать путь к текстоговому файлу с токеном.
+</v8:content>
+																															</v8:item>
+																														</Title>
+																													</ExtendedTooltip>
+																													<Events>
+																														<Event name="StartChoice">ЗаписьВидеоYandexTTSOauthTokenНачалоВыбора</Event>
+																													</Events>
+																												</InputField>
+																											</ChildItems>
+																										</Page>
+																									</ChildItems>
+																								</Pages>
 																							</ChildItems>
 																						</UsualGroup>
 																					</ChildItems>
@@ -14545,251 +14652,321 @@
 																				<InputField name="ЗаписьВидеоПроцентУскорения" id="2013">
 																					<DataPath>Объект.ЗаписьВидеоПроцентУскорения</DataPath>
 																					<AutoMaxWidth>false</AutoMaxWidth>
+																					<SpinButton>true</SpinButton>
+																					<MaxValue xsi:type="xs:decimal">100</MaxValue>
 																					<ContextMenu name="ЗаписьВидеоПроцентУскоренияКонтекстноеМеню" id="2014"/>
 																					<ExtendedTooltip name="ЗаписьВидеоПроцентУскоренияРасширеннаяПодсказка" id="2015"/>
 																				</InputField>
-																				<CheckBoxField name="ЗаписьВидеоДобавлятьСубтитры" id="2004">
-																					<DataPath>Объект.ЗаписьВидеоДобавлятьСубтитры</DataPath>
-																					<TitleLocation>Right</TitleLocation>
-																					<CheckBoxType>Auto</CheckBoxType>
-																					<ContextMenu name="ЗаписьВидеоДобавлятьСубтитрыКонтекстноеМеню" id="2005"/>
-																					<ExtendedTooltip name="ЗаписьВидеоДобавлятьСубтитрыРасширеннаяПодсказка" id="2006"/>
-																				</CheckBoxField>
-																				<CheckBoxField name="ЗаписьВидеоГруппаШаговКакШаг" id="1827">
-																					<DataPath>Объект.ЗаписьВидеоГруппаШаговКакШаг</DataPath>
-																					<TitleLocation>Right</TitleLocation>
-																					<CheckBoxType>Auto</CheckBoxType>
-																					<ContextMenu name="ЗаписьВидеоГруппаШаговКакШагКонтекстноеМеню" id="1828"/>
-																					<ExtendedTooltip name="ЗаписьВидеоГруппаШаговКакШагРасширеннаяПодсказка" id="1829"/>
-																				</CheckBoxField>
-																				<CheckBoxField name="ЗаписьВидеоПодсвечиватьНажатияМышки" id="1845">
-																					<DataPath>Объект.ЗаписьВидеоПодсвечиватьНажатияМышки</DataPath>
-																					<TitleLocation>Right</TitleLocation>
-																					<CheckBoxType>Auto</CheckBoxType>
-																					<ContextMenu name="ЗаписьВидеоПодсвечиватьНажатияМышкиКонтекстноеМеню" id="1846"/>
-																					<ExtendedTooltip name="ЗаписьВидеоПодсвечиватьНажатияМышкиРасширеннаяПодсказка" id="1847"/>
-																				</CheckBoxField>
-																				<CheckBoxField name="ЗаписьВидеоЭмулироватьВводСКлавиатуры" id="1854">
-																					<DataPath>Объект.ЗаписьВидеоЭмулироватьВводСКлавиатуры</DataPath>
-																					<TitleLocation>Right</TitleLocation>
-																					<CheckBoxType>Auto</CheckBoxType>
-																					<ContextMenu name="ЗаписьВидеоЭмулироватьВводСКлавиатурыКонтекстноеМеню" id="1855"/>
-																					<ExtendedTooltip name="ЗаписьВидеоЭмулироватьВводСКлавиатурыРасширеннаяПодсказка" id="1856"/>
-																				</CheckBoxField>
-																				<CheckBoxField name="ЗаписьВидеоОтключитьМасштабированиеШаговПоВремени" id="1830">
-																					<DataPath>Объект.ЗаписьВидеоОтключитьМасштабированиеШаговПоВремени</DataPath>
-																					<TitleLocation>Right</TitleLocation>
-																					<CheckBoxType>Auto</CheckBoxType>
-																					<ContextMenu name="ЗаписьВидеоОтключитьМасштабированиеШаговПоВремениКонтекстноеМеню" id="1831"/>
-																					<ExtendedTooltip name="ЗаписьВидеоОтключитьМасштабированиеШаговПоВремениРасширеннаяПодсказка" id="1832"/>
-																				</CheckBoxField>
-																				<CheckBoxField name="ЗаписьВидеоОтключитьСлайдСЗаголовкомФичи" id="1848">
-																					<DataPath>Объект.ЗаписьВидеоОтключитьСлайдСЗаголовкомФичи</DataPath>
-																					<TitleLocation>Right</TitleLocation>
-																					<CheckBoxType>Auto</CheckBoxType>
-																					<ContextMenu name="ЗаписьВидеоОтключитьСлайдСЗаголовкомФичиКонтекстноеМеню" id="1849"/>
-																					<ExtendedTooltip name="ЗаписьВидеоОтключитьСлайдСЗаголовкомФичиРасширеннаяПодсказка" id="1850"/>
-																				</CheckBoxField>
-																				<CheckBoxField name="ЗаписьВидеоОтключитьСлайдСценария" id="1851">
-																					<DataPath>Объект.ЗаписьВидеоОтключитьСлайдСценария</DataPath>
-																					<TitleLocation>Right</TitleLocation>
-																					<CheckBoxType>Auto</CheckBoxType>
-																					<ContextMenu name="ЗаписьВидеоОтключитьСлайдСценарияКонтекстноеМеню" id="1852"/>
-																					<ExtendedTooltip name="ЗаписьВидеоОтключитьСлайдСценарияРасширеннаяПодсказка" id="1853"/>
-																				</CheckBoxField>
-																				<CheckBoxField name="ЗаписьВидеоСкрытьСлужебныеОкна" id="1857">
-																					<DataPath>Объект.ЗаписьВидеоСкрытьСлужебныеОкна</DataPath>
-																					<TitleLocation>Right</TitleLocation>
-																					<CheckBoxType>Auto</CheckBoxType>
-																					<ContextMenu name="ЗаписьВидеоСкрытьСлужебныеОкнаКонтекстноеМеню" id="1858"/>
-																					<ExtendedTooltip name="ЗаписьВидеоСкрытьСлужебныеОкнаРасширеннаяПодсказка" id="1859"/>
-																				</CheckBoxField>
-																				<CheckBoxField name="ЗаписьВидеоПеремещатьКурсорМышкиКАктивномуЭлементуФормы" id="712">
-																					<DataPath>Объект.ЗаписьВидеоПеремещатьКурсорМышкиКАктивномуЭлементуФормы</DataPath>
-																					<Title>
-																						<v8:item>
-																							<v8:lang>ru</v8:lang>
-																							<v8:content>(устарело) Перемещать курсор мышки к активному элементу формы</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>en</v8:lang>
-																							<v8:content>Move mouse to active control</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>am</v8:lang>
-																							<v8:content>አዳዲስ ቅድሚያ ነጥብ ጋር ንቁ ቅጽ እንዳሏቸውም</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>az</v8:lang>
-																							<v8:content>Hərəkət kursor siçan fəal element formaları</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>bg</v8:lang>
-																							<v8:content>Преместване на курсора на мишката до активен елемент на формуляра</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>et</v8:lang>
-																							<v8:content>Liiguta hiirega sellele üksusele vormi</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>fr</v8:lang>
-																							<v8:content>Déplacer le curseur de la souris à l'élément actif de la forme</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>ka</v8:lang>
-																							<v8:content>გადატანა მაუსის მაჩვენებელი აქტიური ფორმის ელემენტი</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>de</v8:lang>
-																							<v8:content>Bewegen Sie den Mauszeiger auf das aktive Element der Form</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>hu</v8:lang>
-																							<v8:content>Vigye az egérmutatót a aktív formában elem</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>it</v8:lang>
-																							<v8:content>Spostare il cursore del mouse verso un elemento attivo di forma</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>lv</v8:lang>
-																							<v8:content>Pārvietot kursoru uz aktīvo elementu formas</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>lt</v8:lang>
-																							<v8:content>Perkelti pelės žymeklį į aktyvų elementą formos</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>mn</v8:lang>
-																							<v8:content>Хулганы заагчийг шилжүүлэх идэвхтэй хэлбэр элемент</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>pl</v8:lang>
-																							<v8:content>Przesunąć kursor myszy do aktywnego elementu formularza</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>ro</v8:lang>
-																							<v8:content>Muta cursorul mouse-ului la activ element de formular</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>sl</v8:lang>
-																							<v8:content>Premaknite kazalec miške na aktivno obliko element</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>es</v8:lang>
-																							<v8:content>Mover el cursor del ratón a la ventana activa un elemento de formulario</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>sv</v8:lang>
-																							<v8:content>Flytta muspekaren till den aktiva formen element</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>tr</v8:lang>
-																							<v8:content>Taşımak için fare imleci etkin öğeye formu</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>vi</v8:lang>
-																							<v8:content>Di chuyển con trỏ chuột đến phần tử biểu mẫu hiện hoạt</v8:content>
-																						</v8:item>
-																					</Title>
-																					<TitleLocation>Right</TitleLocation>
-																					<CheckBoxType>Auto</CheckBoxType>
-																					<ContextMenu name="ЗаписьВидеоПеремещатьКурсорМышкиКАктивномуЭлементуФормыКонтекстноеМеню" id="713"/>
-																					<ExtendedTooltip name="ЗаписьВидеоПеремещатьКурсорМышкиКАктивномуЭлементуФормыРасширеннаяПодсказка" id="1438"/>
-																				</CheckBoxField>
-																				<CheckBoxField name="ЗаписьВидеоПодсвечиватьАктивныеЭлементыФорм" id="709">
-																					<DataPath>Объект.ЗаписьВидеоПодсвечиватьАктивныеЭлементыФорм</DataPath>
-																					<Title>
-																						<v8:item>
-																							<v8:lang>ru</v8:lang>
-																							<v8:content>(устарело) Подсвечивать активные элементы форм</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>en</v8:lang>
-																							<v8:content>Show active form controls</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>am</v8:lang>
-																							<v8:content>መገለጫዎ ንቁ ቅጽ ይታያል</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>az</v8:lang>
-																							<v8:content>Подсвечивать aktiv maddələr formaları</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>bg</v8:lang>
-																							<v8:content>Осветяване на активни елементи форми</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>et</v8:lang>
-																							<v8:content>Rõhutada aktiivsete üksuste vormid</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>fr</v8:lang>
-																							<v8:content>Mettre en évidence les éléments actifs des formes</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>ka</v8:lang>
-																							<v8:content>მონიშნეთ აქტიური ფორმის ელემენტები</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>de</v8:lang>
-																							<v8:content>Aktive Elemente hervorheben Formen</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>hu</v8:lang>
-																							<v8:content>Jelölje ki a aktív formában elemek</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>it</v8:lang>
-																							<v8:content>Evidenziare gli elementi attivi di forme</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>lv</v8:lang>
-																							<v8:content>Izcelt aktīvie elementi formu</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>lt</v8:lang>
-																							<v8:content>Paryškinti aktyvūs elementai formų</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>mn</v8:lang>
-																							<v8:content>Тодруулах идэвхтэй хэлбэр элемент</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>pl</v8:lang>
-																							<v8:content>Podświetl elementy aktywne formy</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>ro</v8:lang>
-																							<v8:content>Pentru a evidenția elementele active forme de</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>sl</v8:lang>
-																							<v8:content>Označite aktivno obliko elementov</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>es</v8:lang>
-																							<v8:content>Resaltar los elementos activos de las formas de</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>sv</v8:lang>
-																							<v8:content>Markera aktiv form element</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>tr</v8:lang>
-																							<v8:content>Parlat aktif öğeleri şekil</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>vi</v8:lang>
-																							<v8:content>Hiển thị phần tử biểu mẫu hiện hoạt</v8:content>
-																						</v8:item>
-																					</Title>
-																					<TitleLocation>Right</TitleLocation>
-																					<CheckBoxType>Auto</CheckBoxType>
-																					<ContextMenu name="ЗаписьВидеоПодсвечиватьАктивныеЭлементыФормКонтекстноеМеню" id="710"/>
-																					<ExtendedTooltip name="ЗаписьВидеоПодсвечиватьАктивныеЭлементыФормРасширеннаяПодсказка" id="1437"/>
-																				</CheckBoxField>
+																				<UsualGroup name="Группа2" id="2075">
+																					<VerticalStretch>false</VerticalStretch>
+																					<Group>Horizontal</Group>
+																					<Representation>None</Representation>
+																					<ShowTitle>false</ShowTitle>
+																					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="2076"/>
+																					<ChildItems>
+																						<UsualGroup name="НастройкиВидеоДополнительныеЛевая" id="2071">
+																							<Title>
+																								<v8:item>
+																									<v8:lang>ru</v8:lang>
+																									<v8:content>Настройки видео дополнительные левая</v8:content>
+																								</v8:item>
+																							</Title>
+																							<Representation>None</Representation>
+																							<ShowTitle>false</ShowTitle>
+																							<ExtendedTooltip name="НастройкиВидеоДополнительныеЛеваяРасширеннаяПодсказка" id="2072"/>
+																							<ChildItems>
+																								<CheckBoxField name="ЗаписьВидеоДобавлятьСубтитры" id="2004">
+																									<DataPath>Объект.ЗаписьВидеоДобавлятьСубтитры</DataPath>
+																									<TitleLocation>Right</TitleLocation>
+																									<ToolTip>
+																										<v8:item>
+																											<v8:lang>ru</v8:lang>
+																											<v8:content>Добавляет в видео текстовые субтитры с описанием выполняемых шагов</v8:content>
+																										</v8:item>
+																									</ToolTip>
+																									<CheckBoxType>Auto</CheckBoxType>
+																									<ContextMenu name="ЗаписьВидеоДобавлятьСубтитрыКонтекстноеМеню" id="2005"/>
+																									<ExtendedTooltip name="ЗаписьВидеоДобавлятьСубтитрыРасширеннаяПодсказка" id="2006"/>
+																								</CheckBoxField>
+																								<CheckBoxField name="ЗаписьВидеоГруппаШаговКакШаг" id="1827">
+																									<DataPath>Объект.ЗаписьВидеоГруппаШаговКакШаг</DataPath>
+																									<TitleLocation>Right</TitleLocation>
+																									<CheckBoxType>Auto</CheckBoxType>
+																									<ContextMenu name="ЗаписьВидеоГруппаШаговКакШагКонтекстноеМеню" id="1828"/>
+																									<ExtendedTooltip name="ЗаписьВидеоГруппаШаговКакШагРасширеннаяПодсказка" id="1829"/>
+																								</CheckBoxField>
+																								<CheckBoxField name="ЗаписьВидеоПодсвечиватьНажатияМышки" id="1845">
+																									<DataPath>Объект.ЗаписьВидеоПодсвечиватьНажатияМышки</DataPath>
+																									<TitleLocation>Right</TitleLocation>
+																									<CheckBoxType>Auto</CheckBoxType>
+																									<ContextMenu name="ЗаписьВидеоПодсвечиватьНажатияМышкиКонтекстноеМеню" id="1846"/>
+																									<ExtendedTooltip name="ЗаписьВидеоПодсвечиватьНажатияМышкиРасширеннаяПодсказка" id="1847"/>
+																								</CheckBoxField>
+																								<CheckBoxField name="ЗаписьВидеоЭмулироватьВводСКлавиатуры" id="1854">
+																									<DataPath>Объект.ЗаписьВидеоЭмулироватьВводСКлавиатуры</DataPath>
+																									<TitleLocation>Right</TitleLocation>
+																									<CheckBoxType>Auto</CheckBoxType>
+																									<ContextMenu name="ЗаписьВидеоЭмулироватьВводСКлавиатурыКонтекстноеМеню" id="1855"/>
+																									<ExtendedTooltip name="ЗаписьВидеоЭмулироватьВводСКлавиатурыРасширеннаяПодсказка" id="1856"/>
+																								</CheckBoxField>
+																								<CheckBoxField name="ЗаписьВидеоСкрытьСлужебныеОкна" id="1857">
+																									<DataPath>Объект.ЗаписьВидеоСкрытьСлужебныеОкна</DataPath>
+																									<TitleLocation>Right</TitleLocation>
+																									<CheckBoxType>Auto</CheckBoxType>
+																									<ContextMenu name="ЗаписьВидеоСкрытьСлужебныеОкнаКонтекстноеМеню" id="1858"/>
+																									<ExtendedTooltip name="ЗаписьВидеоСкрытьСлужебныеОкнаРасширеннаяПодсказка" id="1859"/>
+																								</CheckBoxField>
+																								<CheckBoxField name="ЗаписьВидеоОтключитьМасштабированиеШаговПоВремени" id="1830">
+																									<DataPath>Объект.ЗаписьВидеоОтключитьМасштабированиеШаговПоВремени</DataPath>
+																									<TitleLocation>Right</TitleLocation>
+																									<CheckBoxType>Auto</CheckBoxType>
+																									<ContextMenu name="ЗаписьВидеоОтключитьМасштабированиеШаговПоВремениКонтекстноеМеню" id="1831"/>
+																									<ExtendedTooltip name="ЗаписьВидеоОтключитьМасштабированиеШаговПоВремениРасширеннаяПодсказка" id="1832"/>
+																								</CheckBoxField>
+																							</ChildItems>
+																						</UsualGroup>
+																						<UsualGroup name="НастройкиВидеоДополнительныеПравая" id="2073">
+																							<Title>
+																								<v8:item>
+																									<v8:lang>ru</v8:lang>
+																									<v8:content>Настройки видео дополнительные правая</v8:content>
+																								</v8:item>
+																							</Title>
+																							<Representation>None</Representation>
+																							<ShowTitle>false</ShowTitle>
+																							<ExtendedTooltip name="НастройкиВидеоДополнительныеПраваяРасширеннаяПодсказка" id="2074"/>
+																							<ChildItems>
+																								<CheckBoxField name="ЗаписьВидеоОтключитьСлайдСЗаголовкомФичи" id="1848">
+																									<DataPath>Объект.ЗаписьВидеоОтключитьСлайдСЗаголовкомФичи</DataPath>
+																									<TitleLocation>Right</TitleLocation>
+																									<ToolTip>
+																										<v8:item>
+																											<v8:lang>ru</v8:lang>
+																											<v8:content>Отключает слайд видеоинструкции в начале видео с информацией из блока "Функционал" файла фичи</v8:content>
+																										</v8:item>
+																									</ToolTip>
+																									<CheckBoxType>Auto</CheckBoxType>
+																									<ContextMenu name="ЗаписьВидеоОтключитьСлайдСЗаголовкомФичиКонтекстноеМеню" id="1849"/>
+																									<ExtendedTooltip name="ЗаписьВидеоОтключитьСлайдСЗаголовкомФичиРасширеннаяПодсказка" id="1850"/>
+																								</CheckBoxField>
+																								<CheckBoxField name="ЗаписьВидеоОтключитьСлайдСценария" id="1851">
+																									<DataPath>Объект.ЗаписьВидеоОтключитьСлайдСценария</DataPath>
+																									<TitleLocation>Right</TitleLocation>
+																									<ToolTip>
+																										<v8:item>
+																											<v8:lang>ru</v8:lang>
+																											<v8:content>Отключает слайд видеоинструкции с информацией о заголовке сценария</v8:content>
+																										</v8:item>
+																									</ToolTip>
+																									<CheckBoxType>Auto</CheckBoxType>
+																									<ContextMenu name="ЗаписьВидеоОтключитьСлайдСценарияКонтекстноеМеню" id="1852"/>
+																									<ExtendedTooltip name="ЗаписьВидеоОтключитьСлайдСценарияРасширеннаяПодсказка" id="1853"/>
+																								</CheckBoxField>
+																								<CheckBoxField name="ЗаписьВидеоОтключитьСлайдФинал" id="2068">
+																									<DataPath>Объект.ЗаписьВидеоОтключитьСлайдФинал</DataPath>
+																									<TitleLocation>Right</TitleLocation>
+																									<ToolTip>
+																										<v8:item>
+																											<v8:lang>ru</v8:lang>
+																											<v8:content>Отключает слайд видеоинструкции в конце видео с инфорамцией по сборке сценария</v8:content>
+																										</v8:item>
+																									</ToolTip>
+																									<CheckBoxType>Auto</CheckBoxType>
+																									<ContextMenu name="ЗаписьВидеоОтключитьСлайдФиналКонтекстноеМеню" id="2069"/>
+																									<ExtendedTooltip name="ЗаписьВидеоОтключитьСлайдФиналРасширеннаяПодсказка" id="2070"/>
+																								</CheckBoxField>
+																								<CheckBoxField name="ЗаписьВидеоПеремещатьКурсорМышкиКАктивномуЭлементуФормы" id="712">
+																									<DataPath>Объект.ЗаписьВидеоПеремещатьКурсорМышкиКАктивномуЭлементуФормы</DataPath>
+																									<Title>
+																										<v8:item>
+																											<v8:lang>ru</v8:lang>
+																											<v8:content>Устарело. Перемещать курсор мышки к активному элементу формы</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>en</v8:lang>
+																											<v8:content>Move mouse to active control</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>am</v8:lang>
+																											<v8:content>አዳዲስ ቅድሚያ ነጥብ ጋር ንቁ ቅጽ እንዳሏቸውም</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>az</v8:lang>
+																											<v8:content>Hərəkət kursor siçan fəal element formaları</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>bg</v8:lang>
+																											<v8:content>Преместване на курсора на мишката до активен елемент на формуляра</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>et</v8:lang>
+																											<v8:content>Liiguta hiirega sellele üksusele vormi</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>fr</v8:lang>
+																											<v8:content>Déplacer le curseur de la souris à l'élément actif de la forme</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>ka</v8:lang>
+																											<v8:content>გადატანა მაუსის მაჩვენებელი აქტიური ფორმის ელემენტი</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>de</v8:lang>
+																											<v8:content>Bewegen Sie den Mauszeiger auf das aktive Element der Form</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>hu</v8:lang>
+																											<v8:content>Vigye az egérmutatót a aktív formában elem</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>it</v8:lang>
+																											<v8:content>Spostare il cursore del mouse verso un elemento attivo di forma</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>lv</v8:lang>
+																											<v8:content>Pārvietot kursoru uz aktīvo elementu formas</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>lt</v8:lang>
+																											<v8:content>Perkelti pelės žymeklį į aktyvų elementą formos</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>mn</v8:lang>
+																											<v8:content>Хулганы заагчийг шилжүүлэх идэвхтэй хэлбэр элемент</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>pl</v8:lang>
+																											<v8:content>Przesunąć kursor myszy do aktywnego elementu formularza</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>ro</v8:lang>
+																											<v8:content>Muta cursorul mouse-ului la activ element de formular</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>sl</v8:lang>
+																											<v8:content>Premaknite kazalec miške na aktivno obliko element</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>es</v8:lang>
+																											<v8:content>Mover el cursor del ratón a la ventana activa un elemento de formulario</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>sv</v8:lang>
+																											<v8:content>Flytta muspekaren till den aktiva formen element</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>tr</v8:lang>
+																											<v8:content>Taşımak için fare imleci etkin öğeye formu</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>vi</v8:lang>
+																											<v8:content>Di chuyển con trỏ chuột đến phần tử biểu mẫu hiện hoạt</v8:content>
+																										</v8:item>
+																									</Title>
+																									<TitleTextColor>style:BorderColor</TitleTextColor>
+																									<TitleLocation>Right</TitleLocation>
+																									<CheckBoxType>Auto</CheckBoxType>
+																									<ContextMenu name="ЗаписьВидеоПеремещатьКурсорМышкиКАктивномуЭлементуФормыКонтекстноеМеню" id="713"/>
+																									<ExtendedTooltip name="ЗаписьВидеоПеремещатьКурсорМышкиКАктивномуЭлементуФормыРасширеннаяПодсказка" id="1438"/>
+																								</CheckBoxField>
+																								<CheckBoxField name="ЗаписьВидеоПодсвечиватьАктивныеЭлементыФорм" id="709">
+																									<DataPath>Объект.ЗаписьВидеоПодсвечиватьАктивныеЭлементыФорм</DataPath>
+																									<Title>
+																										<v8:item>
+																											<v8:lang>ru</v8:lang>
+																											<v8:content>Устарело. Подсвечивать активные элементы форм</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>en</v8:lang>
+																											<v8:content>Show active form controls</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>am</v8:lang>
+																											<v8:content>መገለጫዎ ንቁ ቅጽ ይታያል</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>az</v8:lang>
+																											<v8:content>Подсвечивать aktiv maddələr formaları</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>bg</v8:lang>
+																											<v8:content>Осветяване на активни елементи форми</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>et</v8:lang>
+																											<v8:content>Rõhutada aktiivsete üksuste vormid</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>fr</v8:lang>
+																											<v8:content>Mettre en évidence les éléments actifs des formes</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>ka</v8:lang>
+																											<v8:content>მონიშნეთ აქტიური ფორმის ელემენტები</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>de</v8:lang>
+																											<v8:content>Aktive Elemente hervorheben Formen</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>hu</v8:lang>
+																											<v8:content>Jelölje ki a aktív formában elemek</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>it</v8:lang>
+																											<v8:content>Evidenziare gli elementi attivi di forme</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>lv</v8:lang>
+																											<v8:content>Izcelt aktīvie elementi formu</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>lt</v8:lang>
+																											<v8:content>Paryškinti aktyvūs elementai formų</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>mn</v8:lang>
+																											<v8:content>Тодруулах идэвхтэй хэлбэр элемент</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>pl</v8:lang>
+																											<v8:content>Podświetl elementy aktywne formy</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>ro</v8:lang>
+																											<v8:content>Pentru a evidenția elementele active forme de</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>sl</v8:lang>
+																											<v8:content>Označite aktivno obliko elementov</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>es</v8:lang>
+																											<v8:content>Resaltar los elementos activos de las formas de</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>sv</v8:lang>
+																											<v8:content>Markera aktiv form element</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>tr</v8:lang>
+																											<v8:content>Parlat aktif öğeleri şekil</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>vi</v8:lang>
+																											<v8:content>Hiển thị phần tử biểu mẫu hiện hoạt</v8:content>
+																										</v8:item>
+																									</Title>
+																									<TitleTextColor>style:BorderColor</TitleTextColor>
+																									<TitleLocation>Right</TitleLocation>
+																									<CheckBoxType>Auto</CheckBoxType>
+																									<ContextMenu name="ЗаписьВидеоПодсвечиватьАктивныеЭлементыФормКонтекстноеМеню" id="710"/>
+																									<ExtendedTooltip name="ЗаписьВидеоПодсвечиватьАктивныеЭлементыФормРасширеннаяПодсказка" id="1437"/>
+																								</CheckBoxField>
+																							</ChildItems>
+																						</UsualGroup>
+																					</ChildItems>
+																				</UsualGroup>
 																			</ChildItems>
 																		</Page>
 																	</ChildItems>
@@ -18168,6 +18345,31 @@
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>ЦветФона</dcscor:parameter>
 						<dcscor:value xsi:type="v8ui:Color">#FFCC00</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоТестов</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">Объект.ДеревоТестов.Имя</dcsset:left>
+						<dcsset:comparisonType>BeginsWith</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:string">*</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветТекста</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">style:FieldSelectionBackColor</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="false" italic="false" underline="true" strikeout="false" kind="WindowsFont"/>
 					</dcscor:item>
 				</dcsset:appearance>
 			</dcsset:item>
@@ -21593,6 +21795,15 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗакрытьТаблоПеременных</Action>
+		</Command>
+		<Command name="ОткрытьФормуГенератораСценариев" id="81">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Генератор сценариев</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОткрытьФормуГенератораСценариев</Action>
 		</Command>
 	</Commands>
 </Form>
