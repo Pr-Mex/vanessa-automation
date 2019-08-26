@@ -11756,17 +11756,61 @@
 																<Event name="OnChange">ИспользоватьSikuliXСерверПриИзменении</Event>
 															</Events>
 														</CheckBoxField>
-														<InputField name="КаталогиСкриптовSikuliX" id="1816">
-															<DataPath>Объект.КаталогиСкриптовSikuliX</DataPath>
-															<AutoMaxWidth>false</AutoMaxWidth>
-															<ContextMenu name="КаталогиСкриптовSikuliXКонтекстноеМеню" id="1817"/>
-															<ExtendedTooltip name="КаталогиСкриптовSikuliXРасширеннаяПодсказка" id="1818"/>
-														</InputField>
-														<Button name="СброситьПодключениеSikuliXСервера" id="1822">
-															<Type>UsualButton</Type>
-															<CommandName>Form.Command.СброситьПодключениеSikuliXСервера</CommandName>
-															<ExtendedTooltip name="СброситьПодключениеSikuliXСервераРасширеннаяПодсказка" id="1823"/>
-														</Button>
+														<UsualGroup name="ГруппаSikuliXServerПодробно" id="2085">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа sikuli x server подробно</v8:content>
+																</v8:item>
+															</Title>
+															<Group>Vertical</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ThroughAlign>Use</ThroughAlign>
+															<ExtendedTooltip name="ГруппаSikuliXServerПодробноРасширеннаяПодсказка" id="2086"/>
+															<ChildItems>
+																<UsualGroup name="ПутьККаталогуСкриптовSikuliX" id="2081">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Путь к каталогу скриптов sikuli X</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Group>Horizontal</Group>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ПутьККаталогуСкриптовSikuliXРасширеннаяПодсказка" id="2082"/>
+																	<ChildItems>
+																		<InputField name="КаталогиСкриптовSikuliX" id="1816">
+																			<DataPath>Объект.КаталогиСкриптовSikuliX</DataPath>
+																			<ToolTip>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Каталог в котором расположены скрипты SikuliX</v8:content>
+																				</v8:item>
+																			</ToolTip>
+																			<ChoiceButton>true</ChoiceButton>
+																			<ContextMenu name="КаталогиСкриптовSikuliXКонтекстноеМеню" id="1817"/>
+																			<ExtendedTooltip name="КаталогиСкриптовSikuliXРасширеннаяПодсказка" id="1818"/>
+																			<Events>
+																				<Event name="StartChoice">КаталогиСкриптовSikuliXНачалоВыбора</Event>
+																			</Events>
+																		</InputField>
+																		<Button name="КаталогиСкриптовSikuliXПоУмолчанию" id="2083">
+																			<Type>UsualButton</Type>
+																			<Representation>Picture</Representation>
+																			<CommandName>Form.Command.КаталогиСкриптовSikuliXПоУмолчанию</CommandName>
+																			<ExtendedTooltip name="КаталогиСкриптовSikuliXПоУмолчаниюРасширеннаяПодсказка" id="2084"/>
+																		</Button>
+																	</ChildItems>
+																</UsualGroup>
+																<Button name="СброситьПодключениеSikuliXСервера" id="1822">
+																	<Type>UsualButton</Type>
+																	<CommandName>Form.Command.СброситьПодключениеSikuliXСервера</CommandName>
+																	<ExtendedTooltip name="СброситьПодключениеSikuliXСервераРасширеннаяПодсказка" id="1823"/>
+																</Button>
+															</ChildItems>
+														</UsualGroup>
 													</ChildItems>
 												</UsualGroup>
 												<UsualGroup name="HTMLИMarkdown" id="658">
@@ -21820,6 +21864,19 @@
 				</v8:item>
 			</Title>
 			<Action>ОткрытьФормуГенератораСценариев</Action>
+		</Command>
+		<Command name="КаталогиСкриптовSikuliXПоУмолчанию" id="82">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>по умолчанию</v8:content>
+				</v8:item>
+			</Title>
+			<Picture>
+				<xr:Ref>StdPicture.MoveLeft</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КаталогиСкриптовSikuliXПоУмолчанию</Action>
 		</Command>
 	</Commands>
 </Form>
