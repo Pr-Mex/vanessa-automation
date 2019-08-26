@@ -12453,6 +12453,15 @@
 																		<Event name="StartChoice">КаталогOutputИнструкцияВидеоНачалоВыбора</Event>
 																	</Events>
 																</InputField>
+																<InputField name="КаталогПроекта1" id="2081">
+																	<DataPath>Объект.КаталогПроекта</DataPath>
+																	<ChoiceButton>true</ChoiceButton>
+																	<ContextMenu name="КаталогПроекта1КонтекстноеМеню" id="2082"/>
+																	<ExtendedTooltip name="КаталогПроекта1РасширеннаяПодсказка" id="2083"/>
+																	<Events>
+																		<Event name="StartChoice">КаталогПроектаНачалоВыбора</Event>
+																	</Events>
+																</InputField>
 																<UsualGroup name="ГруппаТипВидеоИнструкций" id="2016">
 																	<Title>
 																		<v8:item>
@@ -13102,12 +13111,6 @@
 																							<v8:content>Thư mục dành cho tệp tạm thời</v8:content>
 																						</v8:item>
 																					</Title>
-																					<ToolTip>
-																						<v8:item>
-																							<v8:lang>ru</v8:lang>
-																							<v8:content>Каталог в которой будут сохранены файлы на время формирования видеоинструкций.</v8:content>
-																						</v8:item>
-																					</ToolTip>
 																					<AutoMaxWidth>false</AutoMaxWidth>
 																					<ChoiceButton>true</ChoiceButton>
 																					<ContextMenu name="ЗаписьВидеоКаталогДляВременныхФайловКонтекстноеМеню" id="672"/>
@@ -13296,15 +13299,6 @@
 																							<v8:content>Lệnh Chuyển đổi</v8:content>
 																						</v8:item>
 																					</Title>
-																					<ToolTip>
-																						<v8:item>
-																							<v8:lang>ru</v8:lang>
-																							<v8:content>Путь к исполняемому файлу convert.exe в каталоге с программой ImageMagick.
-
-Пример:
-"C:\Program Files\ImageMagick-Х.Х.Х-Q16\convert.exe"</v8:content>
-																						</v8:item>
-																					</ToolTip>
 																					<AutoMaxWidth>false</AutoMaxWidth>
 																					<ChoiceButton>true</ChoiceButton>
 																					<ContextMenu name="ЗаписьВидеоКомандаConvertКонтекстноеМеню" id="681"/>
@@ -13931,8 +13925,9 @@
 																												</InputField>
 																												<InputField name="ЗаписьВидеоСкоростьПроизношения" id="1877">
 																													<DataPath>Объект.ЗаписьВидеоСкоростьПроизношения</DataPath>
-																													<Width>3</Width>
+																													<Width>5</Width>
 																													<AutoMaxWidth>false</AutoMaxWidth>
+																													<SpinButton>true</SpinButton>
 																													<ContextMenu name="ЗаписьВидеоСкоростьПроизношенияКонтекстноеМеню" id="1878"/>
 																													<ExtendedTooltip name="ЗаписьВидеоСкоростьПроизношенияРасширеннаяПодсказка" id="1879"/>
 																												</InputField>
@@ -13998,15 +13993,6 @@
 																												</InputField>
 																												<InputField name="ЗаписьВидеоYandexTTSГолос" id="1970">
 																													<DataPath>Объект.ЗаписьВидеоYandexTTSГолос</DataPath>
-																													<ToolTip>
-																														<v8:item>
-																															<v8:lang>ru</v8:lang>
-																															<v8:content>Голос синтезированной речи.
-
-- женские голоса: alyss, jane, oksana и omazh;
-- мужские голоса: zahar и ermil.</v8:content>
-																														</v8:item>
-																													</ToolTip>
 																													<DropListButton>true</DropListButton>
 																													<ListChoiceMode>true</ListChoiceMode>
 																													<ChooseType>false</ChooseType>
@@ -14095,16 +14081,6 @@
 																												</InputField>
 																												<InputField name="ЗаписьВидеоYandexTTSЭмоция" id="1973">
 																													<DataPath>Объект.ЗаписьВидеоYandexTTSЭмоция</DataPath>
-																													<ToolTip>
-																														<v8:item>
-																															<v8:lang>ru</v8:lang>
-																															<v8:content>Эмоциональная окраска голоса.
-
-- good — радостный, доброжелательный;
-- evil — раздраженный;
-- neutral — нейтральный.</v8:content>
-																														</v8:item>
-																													</ToolTip>
 																													<DropListButton>true</DropListButton>
 																													<ListChoiceMode>true</ListChoiceMode>
 																													<ChooseType>false</ChooseType>
@@ -14154,14 +14130,6 @@
 																												</InputField>
 																												<InputField name="ЗаписьВидеоYandexTTSСкорость" id="1976">
 																													<DataPath>Объект.ЗаписьВидеоYandexTTSСкорость</DataPath>
-																													<ToolTip>
-																														<v8:item>
-																															<v8:lang>ru</v8:lang>
-																															<v8:content>Скорость (темп) синтезированной речи.
-
-Скорость речи задается дробным числом в диапазоне от 0.1 до 3.0.</v8:content>
-																														</v8:item>
-																													</ToolTip>
 																													<ToolTipRepresentation>Button</ToolTipRepresentation>
 																													<Width>5</Width>
 																													<ChoiceButton>false</ChoiceButton>
@@ -14738,12 +14706,6 @@
 																								<CheckBoxField name="ЗаписьВидеоДобавлятьСубтитры" id="2004">
 																									<DataPath>Объект.ЗаписьВидеоДобавлятьСубтитры</DataPath>
 																									<TitleLocation>Right</TitleLocation>
-																									<ToolTip>
-																										<v8:item>
-																											<v8:lang>ru</v8:lang>
-																											<v8:content>Добавляет в видео текстовые субтитры с описанием выполняемых шагов</v8:content>
-																										</v8:item>
-																									</ToolTip>
 																									<CheckBoxType>Auto</CheckBoxType>
 																									<ContextMenu name="ЗаписьВидеоДобавлятьСубтитрыКонтекстноеМеню" id="2005"/>
 																									<ExtendedTooltip name="ЗаписьВидеоДобавлятьСубтитрыРасширеннаяПодсказка" id="2006"/>
@@ -14799,12 +14761,6 @@
 																								<CheckBoxField name="ЗаписьВидеоОтключитьСлайдСЗаголовкомФичи" id="1848">
 																									<DataPath>Объект.ЗаписьВидеоОтключитьСлайдСЗаголовкомФичи</DataPath>
 																									<TitleLocation>Right</TitleLocation>
-																									<ToolTip>
-																										<v8:item>
-																											<v8:lang>ru</v8:lang>
-																											<v8:content>Отключает слайд видеоинструкции в начале видео с информацией из блока "Функционал" файла фичи</v8:content>
-																										</v8:item>
-																									</ToolTip>
 																									<CheckBoxType>Auto</CheckBoxType>
 																									<ContextMenu name="ЗаписьВидеоОтключитьСлайдСЗаголовкомФичиКонтекстноеМеню" id="1849"/>
 																									<ExtendedTooltip name="ЗаписьВидеоОтключитьСлайдСЗаголовкомФичиРасширеннаяПодсказка" id="1850"/>
@@ -14812,12 +14768,6 @@
 																								<CheckBoxField name="ЗаписьВидеоОтключитьСлайдСценария" id="1851">
 																									<DataPath>Объект.ЗаписьВидеоОтключитьСлайдСценария</DataPath>
 																									<TitleLocation>Right</TitleLocation>
-																									<ToolTip>
-																										<v8:item>
-																											<v8:lang>ru</v8:lang>
-																											<v8:content>Отключает слайд видеоинструкции с информацией о заголовке сценария</v8:content>
-																										</v8:item>
-																									</ToolTip>
 																									<CheckBoxType>Auto</CheckBoxType>
 																									<ContextMenu name="ЗаписьВидеоОтключитьСлайдСценарияКонтекстноеМеню" id="1852"/>
 																									<ExtendedTooltip name="ЗаписьВидеоОтключитьСлайдСценарияРасширеннаяПодсказка" id="1853"/>
@@ -14825,12 +14775,6 @@
 																								<CheckBoxField name="ЗаписьВидеоОтключитьСлайдФинал" id="2068">
 																									<DataPath>Объект.ЗаписьВидеоОтключитьСлайдФинал</DataPath>
 																									<TitleLocation>Right</TitleLocation>
-																									<ToolTip>
-																										<v8:item>
-																											<v8:lang>ru</v8:lang>
-																											<v8:content>Отключает слайд видеоинструкции в конце видео с инфорамцией по сборке сценария</v8:content>
-																										</v8:item>
-																									</ToolTip>
 																									<CheckBoxType>Auto</CheckBoxType>
 																									<ContextMenu name="ЗаписьВидеоОтключитьСлайдФиналКонтекстноеМеню" id="2069"/>
 																									<ExtendedTooltip name="ЗаписьВидеоОтключитьСлайдФиналРасширеннаяПодсказка" id="2070"/>
