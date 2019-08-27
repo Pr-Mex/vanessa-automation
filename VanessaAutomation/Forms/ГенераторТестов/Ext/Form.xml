@@ -68,12 +68,6 @@
 						<v8:content>Форма группа настройки</v8:content>
 					</v8:item>
 				</Title>
-				<ToolTip>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Форма группа настройки</v8:content>
-					</v8:item>
-				</ToolTip>
 				<ExtendedTooltip name="ФормаГруппаНастройкиРасширеннаяПодсказка" id="111"/>
 				<ChildItems>
 					<Button name="ФормаВыгрузитьНастройки" id="112">
@@ -100,7 +94,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Группа страницы</v8:content>
+					<v8:content>Страницы</v8:content>
 				</v8:item>
 			</Title>
 			<ExtendedTooltip name="ГруппаСтраницыРасширеннаяПодсказка" id="100"/>
@@ -121,6 +115,12 @@
 							<ChangeRowOrder>false</ChangeRowOrder>
 							<InitialTreeView>ExpandTopLevel</InitialTreeView>
 							<DataPath>ДеревоОбъектовМетаданных</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Дерево объектов метаданных</v8:content>
+								</v8:item>
+							</Title>
 							<ContextMenu name="ДеревоОбъектовМетаданныхКонтекстноеМеню" id="3">
 								<Autofill>false</Autofill>
 								<ChildItems>
@@ -145,6 +145,12 @@
 										<ExtendedTooltip name="КМ_УстановитьВводНаОснованииРасширеннаяПодсказка" id="87"/>
 									</Button>
 									<ButtonGroup name="ДеревоОбъектовКонтекстноеМенюГруппаПоУмолчанию" id="78">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Дерево объектов контекстное меню группа по умолчанию</v8:content>
+											</v8:item>
+										</Title>
 										<ExtendedTooltip name="ДеревоОбъектовКонтекстноеМенюГруппаПоУмолчаниюРасширеннаяПодсказка" id="79"/>
 										<ChildItems>
 											<Button name="КМ_УстановитьПоУмолчанию" id="88">
@@ -189,7 +195,7 @@
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Дерево объектов группа1</v8:content>
+											<v8:content>Дерево объектов группа 1</v8:content>
 										</v8:item>
 									</Title>
 									<Group>InCell</Group>
@@ -321,12 +327,6 @@
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Объект</v8:content>
-				</v8:item>
-			</Title>
 			<Type>
 				<v8:Type>cfg:ExternalDataProcessorObject.VanessaAutomation</v8:Type>
 			</Type>
@@ -359,12 +359,6 @@
 					</Type>
 				</Column>
 				<Column name="Имя" id="6">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Имя</v8:content>
-						</v8:item>
-					</Title>
 					<Type>
 						<v8:Type>xs:string</v8:Type>
 						<v8:StringQualifiers>
@@ -385,12 +379,6 @@
 					</Type>
 				</Column>
 				<Column name="ПолноеИмя" id="8">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Полное имя</v8:content>
-						</v8:item>
-					</Title>
 					<Type>
 						<v8:Type>xs:string</v8:Type>
 						<v8:StringQualifiers>
@@ -400,12 +388,6 @@
 					</Type>
 				</Column>
 				<Column name="ЭтоОбъектМетаданных" id="9">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Это объект метаданных</v8:content>
-						</v8:item>
-					</Title>
 					<Type>
 						<v8:Type>xs:boolean</v8:Type>
 					</Type>
@@ -491,12 +473,6 @@
 					</Type>
 				</Column>
 				<Column name="Тип" id="19">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Тип</v8:content>
-						</v8:item>
-					</Title>
 					<Type>
 						<v8:Type>xs:string</v8:Type>
 						<v8:StringQualifiers>
@@ -508,12 +484,6 @@
 			</Columns>
 		</Attribute>
 		<Attribute name="ЭлементыПодсистемСКоманднымИнтерфейсом" id="5">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Элементы подсистем с командным интерфейсом</v8:content>
-				</v8:item>
-			</Title>
 			<Type>
 				<v8:Type>v8:ValueListType</v8:Type>
 			</Type>
@@ -533,15 +503,6 @@
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
-		</Attribute>
-		<Attribute name="СоответствиеТекстовСообщений" id="19">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Соответствие текстов сообщений</v8:content>
-				</v8:item>
-			</Title>
-			<Type/>
 		</Attribute>
 	</Attributes>
 	<Commands>
