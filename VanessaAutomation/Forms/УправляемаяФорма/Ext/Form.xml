@@ -11709,6 +11709,127 @@
 											</Title>
 											<ExtendedTooltip name="СтраницаАвтоИнструкцииРасширеннаяПодсказка" id="1400"/>
 											<ChildItems>
+												<UsualGroup name="ГруппаSikuliXServer" id="2130">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>SikuliX server</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>SikuliX server</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Подсказка</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Vertical</Group>
+													<Behavior>Collapsible</Behavior>
+													<ControlRepresentation>Picture</ControlRepresentation>
+													<ExtendedTooltip name="ГруппаSikuliXServerРасширеннаяПодсказка" id="2131"/>
+													<ChildItems>
+														<CheckBoxField name="ИспользоватьSikuliXСервер" id="2132">
+															<DataPath>Объект.ИспользоватьSikuliXСервер</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>пвапвп</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ИспользоватьSikuliXСерверКонтекстноеМеню" id="2133"/>
+															<ExtendedTooltip name="ИспользоватьSikuliXСерверРасширеннаяПодсказка" id="2134">
+																<Title formatted="true">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>SikuliX это Java приложение, которое позволяет управлять перемещением и нажатиями мыши на экране, а также эмулировать нажатие кнопок клавиатуры.
+
+SikuliX Server - это специальная программная оптимизация работы с SikuliX. Если опция включена VA собирает один большой скрипт из множества скриптов SikuliX, который можно запустить один раз и быстро выполнять необходимые команды, которые раньше приходилось запускать по одной.  Это позволяет существенно сэкономить время на выполнение одного скрипта SikuliX, т.к. не тратится время на запуск SikuliX и его выгрузку из памяти.
+
+Описание установки и настройки SikuliX и SikuliX Server приведено в разделе справки 20.1
+
+&lt;link #&gt;Открыть справку&lt;/&gt;</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+															<Events>
+																<Event name="OnChange">ИспользоватьSikuliXСерверПриИзменении</Event>
+															</Events>
+														</CheckBoxField>
+														<UsualGroup name="ГруппаSikuliXServerПодробно" id="2135">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Sikuli x server подробно</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа sikuli x server подробно</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Group>Vertical</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ThroughAlign>Use</ThroughAlign>
+															<ExtendedTooltip name="ГруппаSikuliXServerПодробноРасширеннаяПодсказка" id="2136"/>
+															<ChildItems>
+																<UsualGroup name="ПутьККаталогуСкриптовSikuliX" id="2137">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Путь к каталогу скриптов sikuli x</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ToolTip>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Путь к каталогу скриптов sikuli X</v8:content>
+																		</v8:item>
+																	</ToolTip>
+																	<Group>Horizontal</Group>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ПутьККаталогуСкриптовSikuliXРасширеннаяПодсказка" id="2138"/>
+																	<ChildItems>
+																		<InputField name="КаталогиСкриптовSikuliX" id="2139">
+																			<DataPath>Объект.КаталогиСкриптовSikuliX</DataPath>
+																			<ToolTip>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Каталог в котором расположены скрипты SikuliX</v8:content>
+																				</v8:item>
+																			</ToolTip>
+																			<ChoiceButton>true</ChoiceButton>
+																			<ContextMenu name="КаталогиСкриптовSikuliXКонтекстноеМеню" id="2140"/>
+																			<ExtendedTooltip name="КаталогиСкриптовSikuliXРасширеннаяПодсказка" id="2141"/>
+																			<Events>
+																				<Event name="StartChoice">КаталогиСкриптовSikuliXНачалоВыбора</Event>
+																			</Events>
+																		</InputField>
+																		<Button name="КаталогиСкриптовSikuliXПоУмолчанию" id="2142">
+																			<Type>UsualButton</Type>
+																			<Representation>Picture</Representation>
+																			<CommandName>Form.Command.КаталогиСкриптовSikuliXПоУмолчанию</CommandName>
+																			<ExtendedTooltip name="КаталогиСкриптовSikuliXПоУмолчаниюРасширеннаяПодсказка" id="2143"/>
+																		</Button>
+																	</ChildItems>
+																</UsualGroup>
+																<Button name="СброситьПодключениеSikuliXСервера" id="2144">
+																	<Type>UsualButton</Type>
+																	<CommandName>Form.Command.СброситьПодключениеSikuliXСервера</CommandName>
+																	<ExtendedTooltip name="СброситьПодключениеSikuliXСервераРасширеннаяПодсказка" id="2145"/>
+																</Button>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
 												<UsualGroup name="HTMLИMarkdown" id="658">
 													<Title>
 														<v8:item>
@@ -13723,6 +13844,23 @@
 																												<Value xsi:type="xs:decimal">1</Value>
 																											</xr:Value>
 																										</xr:Item>
+																										<xr:Item>
+																											<xr:Presentation/>
+																											<xr:CheckState>0</xr:CheckState>
+																											<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																												<Presentation>
+																													<v8:item>
+																														<v8:lang>ru</v8:lang>
+																														<v8:content>Amazon Polly</v8:content>
+																													</v8:item>
+																													<v8:item>
+																														<v8:lang>en</v8:lang>
+																														<v8:content>Amazon Polly</v8:content>
+																													</v8:item>
+																												</Presentation>
+																												<Value xsi:type="xs:decimal">2</Value>
+																											</xr:Value>
+																										</xr:Item>
 																									</ChoiceList>
 																									<ContextMenu name="ЗаписьВидеоТипОзвучкиTTSКонтекстноеМеню" id="1961"/>
 																									<ExtendedTooltip name="ЗаписьВидеоТипОзвучкиTTSРасширеннаяПодсказка" id="1962"/>
@@ -14129,8 +14267,834 @@
 																												</InputField>
 																											</ChildItems>
 																										</Page>
+																										<Page name="ГруппаAmazonTTS" id="2104">
+																											<Title>
+																												<v8:item>
+																													<v8:lang>ru</v8:lang>
+																													<v8:content>Группа amazon TTS</v8:content>
+																												</v8:item>
+																											</Title>
+																											<ToolTip>
+																												<v8:item>
+																													<v8:lang>ru</v8:lang>
+																													<v8:content>Группа amazon TTS</v8:content>
+																												</v8:item>
+																											</ToolTip>
+																											<ExtendedTooltip name="ГруппаAmazonTTSРасширеннаяПодсказка" id="2105"/>
+																											<ChildItems>
+																												<InputField name="ЗаписьВидеоAmazonЯзык" id="2112">
+																													<DataPath>Объект.ЗаписьВидеоAmazonЯзык</DataPath>
+																													<ToolTipRepresentation>Button</ToolTipRepresentation>
+																													<DropListButton>true</DropListButton>
+																													<ListChoiceMode>true</ListChoiceMode>
+																													<ChooseType>false</ChooseType>
+																													<ChoiceList>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">arb</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">cmn-CN</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">cy-GB</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">da-DK</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">de-DE</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">en-AU</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">en-GB</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">en-GB-WLS</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">en-IN</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">en-US</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">es-ES</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">es-MX</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">es-US</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">fr-CA</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">fr-FR</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">is-IS</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">it-IT</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">ja-JP</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">hi-IN</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">ko-KR</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">nb-NO</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">nl-NL</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">pl-PL</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">pt-BR</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">pt-PT</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">ro-RO</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">ru-RU</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">sv-SE</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">tr-TR</Value>
+																															</xr:Value>
+																														</xr:Item>
+																													</ChoiceList>
+																													<ContextMenu name="ЗаписьВидеоAmazonЯзыкКонтекстноеМеню" id="2113"/>
+																													<ExtendedTooltip name="ЗаписьВидеоAmazonЯзыкРасширеннаяПодсказка" id="2114">
+																														<Title formatted="true">
+																															<v8:item>
+																																<v8:lang>ru</v8:lang>
+																																<v8:content>Соответствие языка и голоса смотрите &lt;link https://docs.aws.amazon.com/en_us/polly/latest/dg/voicelist.html&gt;здесь&lt;/&gt;.</v8:content>
+																															</v8:item>
+																														</Title>
+																													</ExtendedTooltip>
+																												</InputField>
+																												<InputField name="ЗаписьВидеоAmazonГолос" id="2106">
+																													<DataPath>Объект.ЗаписьВидеоAmazonГолос</DataPath>
+																													<ToolTipRepresentation>Button</ToolTipRepresentation>
+																													<DropListButton>true</DropListButton>
+																													<ListChoiceMode>true</ListChoiceMode>
+																													<ChooseType>false</ChooseType>
+																													<ChoiceList>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Aditi</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Amy</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Astrid</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Bianca</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Brian</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Carla</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Carmen</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Celine</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Chantal</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Conchita</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Cristiano</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Dora</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Emma</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Enrique</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Ewa</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Filiz</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Geraint</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Giorgio</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Gwyneth</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Hans</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Ines</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Ivy</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Jacek</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Jan</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Joanna</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Joey</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Justin</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Karl</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Kendra</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Kimberly</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Lea</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Liv</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Lotte</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Lucia</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Mads</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Maja</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Marlene</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Mathieu</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Matthew</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Maxim</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Mia</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Miguel</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Mizuki</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Naja</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Nicole</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Penelope</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Raveena</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Ricardo</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Ruben</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Russell</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Salli</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Seoyeon</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Takumi</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Tatyana</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Vicki</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Vitoria</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Zeina</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">Zhiyu</Value>
+																															</xr:Value>
+																														</xr:Item>
+																													</ChoiceList>
+																													<ContextMenu name="ЗаписьВидеоAmazonГолосКонтекстноеМеню" id="2107"/>
+																													<ExtendedTooltip name="ЗаписьВидеоAmazonГолосРасширеннаяПодсказка" id="2108">
+																														<Title formatted="true">
+																															<v8:item>
+																																<v8:lang>ru</v8:lang>
+																																<v8:content>Соответствие языка и голоса смотрите &lt;link https://docs.aws.amazon.com/en_us/polly/latest/dg/voicelist.html&gt;здесь&lt;/&gt;.</v8:content>
+																															</v8:item>
+																														</Title>
+																													</ExtendedTooltip>
+																												</InputField>
+																												<InputField name="ЗаписьВидеоAmazonДвижок" id="2109">
+																													<DataPath>Объект.ЗаписьВидеоAmazonДвижок</DataPath>
+																													<DropListButton>true</DropListButton>
+																													<ListChoiceMode>true</ListChoiceMode>
+																													<ChooseType>false</ChooseType>
+																													<ChoiceList>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">standard</Value>
+																															</xr:Value>
+																														</xr:Item>
+																														<xr:Item>
+																															<xr:Presentation/>
+																															<xr:CheckState>0</xr:CheckState>
+																															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																<Presentation/>
+																																<Value xsi:type="xs:string">neural</Value>
+																															</xr:Value>
+																														</xr:Item>
+																													</ChoiceList>
+																													<ContextMenu name="ЗаписьВидеоAmazonДвижокКонтекстноеМеню" id="2110"/>
+																													<ExtendedTooltip name="ЗаписьВидеоAmazonДвижокРасширеннаяПодсказка" id="2111"/>
+																												</InputField>
+																												<InputField name="ЗаписьВидеоAmazonКлючДоступа" id="2115">
+																													<DataPath>Объект.ЗаписьВидеоAmazonКлючДоступа</DataPath>
+																													<ContextMenu name="ЗаписьВидеоAmazonКлючДоступаКонтекстноеМеню" id="2116"/>
+																													<ExtendedTooltip name="ЗаписьВидеоAmazonКлючДоступаРасширеннаяПодсказка" id="2117"/>
+																												</InputField>
+																												<InputField name="ЗаписьВидеоAmazonСекретныйКлюч" id="2118">
+																													<DataPath>Объект.ЗаписьВидеоAmazonСекретныйКлюч</DataPath>
+																													<ChoiceButton>true</ChoiceButton>
+																													<ClearButton>true</ClearButton>
+																													<ContextMenu name="ЗаписьВидеоAmazonСекретныйКлючКонтекстноеМеню" id="2119"/>
+																													<ExtendedTooltip name="ЗаписьВидеоAmazonСекретныйКлючРасширеннаяПодсказка" id="2120"/>
+																													<Events>
+																														<Event name="StartChoice">ЗаписьВидеоAmazonСекретныйКлючНачалоВыбора</Event>
+																													</Events>
+																												</InputField>
+																											</ChildItems>
+																										</Page>
 																									</ChildItems>
 																								</Pages>
+																							</ChildItems>
+																						</UsualGroup>
+																						<UsualGroup name="ГруппаТестГолоса" id="2121">
+																							<Title>
+																								<v8:item>
+																									<v8:lang>ru</v8:lang>
+																									<v8:content>Тест голоса</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>en</v8:lang>
+																									<v8:content>Voice test</v8:content>
+																								</v8:item>
+																							</Title>
+																							<ToolTip>
+																								<v8:item>
+																									<v8:lang>ru</v8:lang>
+																									<v8:content>Группа тест голоса</v8:content>
+																								</v8:item>
+																							</ToolTip>
+																							<Group>Vertical</Group>
+																							<ExtendedTooltip name="ГруппаТестГолосаРасширеннаяПодсказка" id="2122"/>
+																							<ChildItems>
+																								<Button name="ТестГолоса" id="2126">
+																									<Type>UsualButton</Type>
+																									<CommandName>Form.Command.ТестГолоса</CommandName>
+																									<ExtendedTooltip name="ТестГолосаРасширеннаяПодсказка" id="2127"/>
+																								</Button>
+																								<InputField name="ТекстДляТестаГолоса" id="2123">
+																									<DataPath>ТекстДляТестаГолоса</DataPath>
+																									<Width>50</Width>
+																									<MaxHeight>3</MaxHeight>
+																									<MultiLine>true</MultiLine>
+																									<HeightControlVariant>UseContentHeight</HeightControlVariant>
+																									<ContextMenu name="ТекстДляТестаГолосаКонтекстноеМеню" id="2124"/>
+																									<ExtendedTooltip name="ТекстДляТестаГолосаРасширеннаяПодсказка" id="2125"/>
+																								</InputField>
 																							</ChildItems>
 																						</UsualGroup>
 																					</ChildItems>
@@ -14913,106 +15877,6 @@
 																								</CheckBoxField>
 																							</ChildItems>
 																						</UsualGroup>
-																					</ChildItems>
-																				</UsualGroup>
-																			</ChildItems>
-																		</Page>
-																		<Page name="СтраницаSikuliX" id="1814">
-																			<Title>
-																				<v8:item>
-																					<v8:lang>ru</v8:lang>
-																					<v8:content>SikuliX</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>en</v8:lang>
-																					<v8:content>SikuliX server</v8:content>
-																				</v8:item>
-																			</Title>
-																			<ToolTipRepresentation>Button</ToolTipRepresentation>
-																			<HorizontalStretch>true</HorizontalStretch>
-																			<ExtendedTooltip name="СтраницаSikuliXРасширеннаяПодсказка" id="1815">
-																				<Title formatted="true">
-																					<v8:item>
-																						<v8:lang>ru</v8:lang>
-																						<v8:content>SikuliX позволяет управлять перемещением мыши на экране, а также эмулировать нажатие кнопок клавиатуры.
-
-Описание установки и настройки SikuliX приведено в разделе справки 20.1
-
-&lt;link #&gt;Открыть справку&lt;/&gt;</v8:content>
-																					</v8:item>
-																				</Title>
-																			</ExtendedTooltip>
-																			<ChildItems>
-																				<CheckBoxField name="ИспользоватьSikuliXСервер" id="1811">
-																					<DataPath>Объект.ИспользоватьSikuliXСервер</DataPath>
-																					<TitleLocation>Right</TitleLocation>
-																					<ToolTip>
-																						<v8:item>
-																							<v8:lang>ru</v8:lang>
-																							<v8:content>пвапвп</v8:content>
-																						</v8:item>
-																					</ToolTip>
-																					<ToolTipRepresentation>Button</ToolTipRepresentation>
-																					<CheckBoxType>Auto</CheckBoxType>
-																					<ContextMenu name="ИспользоватьSikuliXСерверКонтекстноеМеню" id="1812"/>
-																					<ExtendedTooltip name="ИспользоватьSikuliXСерверРасширеннаяПодсказка" id="1813"/>
-																					<Events>
-																						<Event name="OnChange">ИспользоватьSikuliXСерверПриИзменении</Event>
-																					</Events>
-																				</CheckBoxField>
-																				<UsualGroup name="ГруппаSikuliXServerПодробно" id="2085">
-																					<Title>
-																						<v8:item>
-																							<v8:lang>ru</v8:lang>
-																							<v8:content>Sikuli x server подробно</v8:content>
-																						</v8:item>
-																					</Title>
-																					<Group>Vertical</Group>
-																					<Representation>None</Representation>
-																					<ShowTitle>false</ShowTitle>
-																					<ThroughAlign>Use</ThroughAlign>
-																					<ExtendedTooltip name="ГруппаSikuliXServerПодробноРасширеннаяПодсказка" id="2086"/>
-																					<ChildItems>
-																						<UsualGroup name="ПутьККаталогуСкриптовSikuliX" id="2087">
-																							<Title>
-																								<v8:item>
-																									<v8:lang>ru</v8:lang>
-																									<v8:content>Путь к каталогу скриптов sikuli x</v8:content>
-																								</v8:item>
-																							</Title>
-																							<Group>Horizontal</Group>
-																							<Representation>None</Representation>
-																							<ShowTitle>false</ShowTitle>
-																							<ExtendedTooltip name="ПутьККаталогуСкриптовSikuliXРасширеннаяПодсказка" id="2088"/>
-																							<ChildItems>
-																								<InputField name="КаталогиСкриптовSikuliX" id="1816">
-																									<DataPath>Объект.КаталогиСкриптовSikuliX</DataPath>
-																									<ToolTip>
-																										<v8:item>
-																											<v8:lang>ru</v8:lang>
-																											<v8:content>Каталог в котором расположены скрипты SikuliX</v8:content>
-																										</v8:item>
-																									</ToolTip>
-																									<ChoiceButton>true</ChoiceButton>
-																									<ContextMenu name="КаталогиСкриптовSikuliXКонтекстноеМеню" id="1817"/>
-																									<ExtendedTooltip name="КаталогиСкриптовSikuliXРасширеннаяПодсказка" id="1818"/>
-																									<Events>
-																										<Event name="StartChoice">КаталогиСкриптовSikuliXНачалоВыбора</Event>
-																									</Events>
-																								</InputField>
-																								<Button name="КаталогиСкриптовSikuliXПоУмолчанию" id="2089">
-																									<Type>UsualButton</Type>
-																									<Representation>Picture</Representation>
-																									<CommandName>Form.Command.КаталогиСкриптовSikuliXПоУмолчанию</CommandName>
-																									<ExtendedTooltip name="КаталогиСкриптовSikuliXПоУмолчаниюРасширеннаяПодсказка" id="2084"/>
-																								</Button>
-																							</ChildItems>
-																						</UsualGroup>
-																						<Button name="СброситьПодключениеSikuliXСервера" id="1822">
-																							<Type>UsualButton</Type>
-																							<CommandName>Form.Command.СброситьПодключениеSikuliXСервера</CommandName>
-																							<ExtendedTooltip name="СброситьПодключениеSikuliXСервераРасширеннаяПодсказка" id="1823"/>
-																						</Button>
 																					</ChildItems>
 																				</UsualGroup>
 																			</ChildItems>
@@ -18063,6 +18927,21 @@
 					</Type>
 				</Column>
 			</Columns>
+		</Attribute>
+		<Attribute name="ТекстДляТестаГолоса" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст для теста голоса</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
 		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
@@ -21604,6 +22483,25 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>КаталогиСкриптовSikuliXПоУмолчанию</Action>
+		</Command>
+		<Command name="ТестГолоса" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Произнести текст</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Speak text</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тест голоса</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ТестГолоса</Action>
 		</Command>
 	</Commands>
 </Form>
