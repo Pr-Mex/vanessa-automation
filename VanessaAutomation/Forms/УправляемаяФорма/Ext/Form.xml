@@ -307,10 +307,6 @@
 				<Type>CommandBarButton</Type>
 				<Representation>PictureAndText</Representation>
 				<CommandName>Form.Command.Перезагрузить</CommandName>
-				<Picture>
-					<xr:Abs>Picture.png</xr:Abs>
-					<xr:LoadTransparent>false</xr:LoadTransparent>
-				</Picture>
 				<Title>
 					<v8:item>
 						<v8:lang>bg</v8:lang>
@@ -11756,6 +11752,9 @@ SikuliX Server - это специальная программная оптим
 &lt;link #&gt;Открыть справку&lt;/&gt;</v8:content>
 																	</v8:item>
 																</Title>
+																<Events>
+																	<Event name="URLProcessing">ИспользоватьSikuliXСерверРасширеннаяПодсказкаОбработкаНавигационнойСсылки</Event>
+																</Events>
 															</ExtendedTooltip>
 															<Events>
 																<Event name="OnChange">ИспользоватьSikuliXСерверПриИзменении</Event>
