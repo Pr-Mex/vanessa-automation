@@ -1,6 +1,7 @@
 # language: ru
 
 @IgnoreOnWeb
+@IgnoreOnOFBuilds
 
 
 Функционал: Проверка метода ДобавитьОшибкуСценария
