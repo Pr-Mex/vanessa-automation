@@ -10398,39 +10398,86 @@
 												</CheckBoxField>
 												<InputField name="ТаймаутДляАсинхронныхШагов" id="1773">
 													<DataPath>Объект.ТаймаутДляАсинхронныхШагов</DataPath>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
 													<Width>5</Width>
 													<AutoMaxWidth>false</AutoMaxWidth>
 													<ContextMenu name="ТаймаутДляАсинхронныхШаговКонтекстноеМеню" id="1774"/>
-													<ExtendedTooltip name="ТаймаутДляАсинхронныхШаговРасширеннаяПодсказка" id="1775"/>
+													<ExtendedTooltip name="ТаймаутДляАсинхронныхШаговРасширеннаяПодсказка" id="1775">
+														<Title formatted="true">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Указывает максимальное время ожидания для асинхронного шага.
+Например, если задано значение параметра равное 20 секунд и используется шаг
+&lt;i&gt;И я жду, что поле с именем "ИмяПоля" перестанет быть пустым в течение 10 секунд&lt;/&gt;
+тогда в рельности максимальное время работы шага будет 20 секунд, а не 10.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
 												</InputField>
 												<InputField name="КоличествоСекундПоискаОкна" id="1747">
 													<DataPath>Объект.КоличествоСекундПоискаОкна</DataPath>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
 													<AutoMaxWidth>false</AutoMaxWidth>
 													<ContextMenu name="КоличествоСекундПоискаОкнаКонтекстноеМеню" id="1748"/>
-													<ExtendedTooltip name="КоличествоСекундПоискаОкнаРасширеннаяПодсказка" id="1749"/>
+													<ExtendedTooltip name="КоличествоСекундПоискаОкнаРасширеннаяПодсказка" id="1749">
+														<Title formatted="true">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Максимальное время для поиска окна в шаге
+&lt;i&gt;И тогда открылось окно "ИмяОкна"&lt;/&gt;</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
 												</InputField>
 												<InputField name="КоличествоПопытокВыполненияДействия" id="1819">
 													<DataPath>Объект.КоличествоПопытокВыполненияДействия</DataPath>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
 													<Width>5</Width>
 													<AutoMaxWidth>false</AutoMaxWidth>
 													<ContextMenu name="КоличествоПопытокВыполненияДействияКонтекстноеМеню" id="1820"/>
-													<ExtendedTooltip name="КоличествоПопытокВыполненияДействияРасширеннаяПодсказка" id="1821"/>
+													<ExtendedTooltip name="КоличествоПопытокВыполненияДействияРасширеннаяПодсказка" id="1821">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Устанавливает количество попыток выполнения действий для многих шагов.
+Увеличение значения параметра может повысить стабильность выполннения сценариев на медленном железе.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
 												</InputField>
 												<CheckBoxField name="БезопасноеВыполнениеШагов" id="1784">
 													<DataPath>Объект.БезопасноеВыполнениеШагов</DataPath>
 													<TitleLocation>Right</TitleLocation>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
 													<CheckBoxType>Auto</CheckBoxType>
 													<ContextMenu name="БезопасноеВыполнениеШаговКонтекстноеМеню" id="1785"/>
-													<ExtendedTooltip name="БезопасноеВыполнениеШаговРасширеннаяПодсказка" id="1786"/>
+													<ExtendedTooltip name="БезопасноеВыполнениеШаговРасширеннаяПодсказка" id="1786">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Добавляет паузу при выполнении многих действий, которые потенциально могут приводить к не стабильному выполнению сценариев, например: переход к строке, проверка значения поля и т.д.
+Данная опция существенно замедляет выполнение сценариев.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
 													<Events>
 														<Event name="OnChange">БезопасноеВыполнениеШаговПриИзменении</Event>
 													</Events>
 												</CheckBoxField>
 												<InputField name="ПаузаПриОткрытииОкна" id="1883">
 													<DataPath>Объект.ПаузаПриОткрытииОкна</DataPath>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
 													<Width>5</Width>
 													<ContextMenu name="ПаузаПриОткрытииОкнаКонтекстноеМеню" id="1884"/>
-													<ExtendedTooltip name="ПаузаПриОткрытииОкнаРасширеннаяПодсказка" id="1885"/>
+													<ExtendedTooltip name="ПаузаПриОткрытииОкнаРасширеннаяПодсказка" id="1885">
+														<Title formatted="true">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Значение дополнительной паузы, которая будет всегда применяться в шаге
+&lt;i&gt;И тогда открылось окно "ИмяОкна"&lt;/&gt;</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
 												</InputField>
 											</ChildItems>
 										</Page>
@@ -10537,9 +10584,17 @@
 														<CheckBoxField name="ДобавлятьКИмениСценарияУсловияВыгрузки" id="1993">
 															<DataPath>Объект.ДобавлятьКИмениСценарияУсловияВыгрузки</DataPath>
 															<TitleLocation>Right</TitleLocation>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
 															<CheckBoxType>Auto</CheckBoxType>
 															<ContextMenu name="ДобавлятьКИмениСценарияУсловияВыгрузкиКонтекстноеМеню" id="1994"/>
-															<ExtendedTooltip name="ДобавлятьКИмениСценарияУсловияВыгрузкиРасширеннаяПодсказка" id="1995"/>
+															<ExtendedTooltip name="ДобавлятьКИмениСценарияУсловияВыгрузкиРасширеннаяПодсказка" id="1995">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Данная опция используется, когда для нескольких похожих сборок (например запуск одних и техже тестов) формируется один отчет (например Allure). Тогда, чтобы избежать неуникальности имен сценариев к имени сценария будет добавляться значение поля "Имя текущей сборки".</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
 															<Events>
 																<Event name="OnChange">ДобавлятьКИмениСценарияУсловияВыгрузкиПриИзменении</Event>
 															</Events>
@@ -10548,8 +10603,16 @@
 												</UsualGroup>
 												<InputField name="ИмяТекущейСборки" id="1998">
 													<DataPath>Объект.ИмяТекущейСборки</DataPath>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
 													<ContextMenu name="ИмяТекущейСборкиКонтекстноеМеню" id="1999"/>
-													<ExtendedTooltip name="ИмяТекущейСборкиРасширеннаяПодсказка" id="2000"/>
+													<ExtendedTooltip name="ИмяТекущейСборкиРасширеннаяПодсказка" id="2000">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Уникальное имя сборки, которое используется совместно с параметром "Добавлять у имени сценария условия выгрузки".</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
 												</InputField>
 												<UsualGroup name="ГруппаСкриншоты" id="1534">
 													<Title>
@@ -10656,9 +10719,18 @@
 																</v8:item>
 															</Title>
 															<TitleLocation>Right</TitleLocation>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
 															<CheckBoxType>Auto</CheckBoxType>
 															<ContextMenu name="ДелатьСкриншотПриВозникновенииОшибкиКонтекстноеМеню" id="508"/>
-															<ExtendedTooltip name="ДелатьСкриншотПриВозникновенииОшибкиРасширеннаяПодсказка" id="1391"/>
+															<ExtendedTooltip name="ДелатьСкриншотПриВозникновенииОшибкиРасширеннаяПодсказка" id="1391">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Включает снятие скриншотов при возникновении ошибки.
+Для работы опции необходимо, чтобы было заполнено поле "Команда создания скриншотов".</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
 															<Events>
 																<Event name="OnChange">ДелатьСкриншотПриВозникновенииОшибкиПриИзменении</Event>
 															</Events>
@@ -10765,9 +10837,18 @@
 																		</v8:item>
 																	</Title>
 																	<TitleLocation>Right</TitleLocation>
+																	<ToolTipRepresentation>Button</ToolTipRepresentation>
 																	<CheckBoxType>Auto</CheckBoxType>
 																	<ContextMenu name="СниматьСкриншотКаждогоОкна1СКонтекстноеМеню" id="1582"/>
-																	<ExtendedTooltip name="СниматьСкриншотКаждогоОкна1СРасширеннаяПодсказка" id="1583"/>
+																	<ExtendedTooltip name="СниматьСкриншотКаждогоОкна1СРасширеннаяПодсказка" id="1583">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Включает снятие скриншотов с каждого окна 1С.
+Для работы опции используется SikuliX.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
 																</CheckBoxField>
 																<InputField name="КаталогВыгрузкиСкриншотов" id="510">
 																	<DataPath>Объект.КаталогВыгрузкиСкриншотов</DataPath>
@@ -10857,10 +10938,18 @@
 																			<v8:content>Временный каталог скриншотов</v8:content>
 																		</v8:item>
 																	</Title>
+																	<ToolTipRepresentation>Button</ToolTipRepresentation>
 																	<ChoiceButton>true</ChoiceButton>
 																	<ClearButton>true</ClearButton>
 																	<ContextMenu name="КаталогВыгрузкиСкриншотовКонтекстноеМеню" id="511"/>
-																	<ExtendedTooltip name="КаталогВыгрузкиСкриншотовРасширеннаяПодсказка" id="1395"/>
+																	<ExtendedTooltip name="КаталогВыгрузкиСкриншотовРасширеннаяПодсказка" id="1395">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Каталог, в который будут складываться скриншоты.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
 																	<Events>
 																		<Event name="StartChoice">КаталогOutputСкриншотыНачалоВыбора</Event>
 																	</Events>
@@ -10890,9 +10979,20 @@
 														<CheckBoxField name="ДелатьЛогВыполненияСценариевВТекстовыйФайл" id="1544">
 															<DataPath>Объект.ДелатьЛогВыполненияСценариевВТекстовыйФайл</DataPath>
 															<TitleLocation>Right</TitleLocation>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
 															<CheckBoxType>Auto</CheckBoxType>
 															<ContextMenu name="ДелатьЛогВыполненияСценариевВТекстовыйФайлКонтекстноеМеню" id="1545"/>
-															<ExtendedTooltip name="ДелатьЛогВыполненияСценариевВТекстовыйФайлРасширеннаяПодсказка" id="1546"/>
+															<ExtendedTooltip name="ДелатьЛогВыполненияСценариевВТекстовыйФайлРасширеннаяПодсказка" id="1546">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Включает вывод лога выполнения сценариев.
+В лог записываются события:
+1. Начало выполнения сценария
+2. Событие возникновения ошибки</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
 															<Events>
 																<Event name="OnChange">ДелатьЛогВыполненияСценариевВТекстовыйФайлПриИзменении</Event>
 															</Events>
@@ -10913,15 +11013,31 @@
 																<CheckBoxField name="ВыводитьВЛогВыполнениеШагов" id="1770">
 																	<DataPath>Объект.ВыводитьВЛогВыполнениеШагов</DataPath>
 																	<TitleLocation>Right</TitleLocation>
+																	<ToolTipRepresentation>Button</ToolTipRepresentation>
 																	<CheckBoxType>Auto</CheckBoxType>
 																	<ContextMenu name="ВыводитьВЛогВыполнениеШаговКонтекстноеМеню" id="1771"/>
-																	<ExtendedTooltip name="ВыводитьВЛогВыполнениеШаговРасширеннаяПодсказка" id="1772"/>
+																	<ExtendedTooltip name="ВыводитьВЛогВыполнениеШаговРасширеннаяПодсказка" id="1772">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Выводит в лог событие: начало выполнения шага.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
 																</CheckBoxField>
 																<InputField name="ИмяФайлаЛогВыполненияСценариев" id="1547">
 																	<DataPath>Объект.ИмяФайлаЛогВыполненияСценариев</DataPath>
+																	<ToolTipRepresentation>Button</ToolTipRepresentation>
 																	<ChoiceButton>true</ChoiceButton>
 																	<ContextMenu name="ИмяФайлаЛогВыполненияСценариевКонтекстноеМеню" id="1548"/>
-																	<ExtendedTooltip name="ИмяФайлаЛогВыполненияСценариевРасширеннаяПодсказка" id="1549"/>
+																	<ExtendedTooltip name="ИмяФайлаЛогВыполненияСценариевРасширеннаяПодсказка" id="1549">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Имя файла, куда будет выводиться лог Vanessa Automation.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
 																	<Events>
 																		<Event name="StartChoice">КаталогOutputВнутреннийФорматНачалоВыбора</Event>
 																	</Events>
@@ -10945,9 +11061,17 @@
 														<CheckBoxField name="ДелатьЛогОшибокВТекстовыйФайл" id="1755">
 															<DataPath>Объект.ДелатьЛогОшибокВТекстовыйФайл</DataPath>
 															<TitleLocation>Right</TitleLocation>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
 															<CheckBoxType>Auto</CheckBoxType>
 															<ContextMenu name="ДелатьЛогОшибокВТекстовыйФайлКонтекстноеМеню" id="1756"/>
-															<ExtendedTooltip name="ДелатьЛогОшибокВТекстовыйФайлРасширеннаяПодсказка" id="1757"/>
+															<ExtendedTooltip name="ДелатьЛогОшибокВТекстовыйФайлРасширеннаяПодсказка" id="1757">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Формировать json файл для каждой ошибки, в котором будет подробная информация об ошибке.</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
 															<Events>
 																<Event name="OnChange">ДелатьЛогОшибокВТекстовыйФайлПриИзменении</Event>
 															</Events>
