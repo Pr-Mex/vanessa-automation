@@ -9705,20 +9705,44 @@
 												<CheckBoxField name="ЗапускатьКлиентТестированияСМаксимизированнымОкном" id="1842">
 													<DataPath>Объект.ЗапускатьКлиентТестированияСМаксимизированнымОкном</DataPath>
 													<TitleLocation>Right</TitleLocation>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
 													<CheckBoxType>Auto</CheckBoxType>
 													<ContextMenu name="ЗапускатьКлиентТестированияСМаксимизированнымОкномКонтекстноеМеню" id="1843"/>
-													<ExtendedTooltip name="ЗапускатьКлиентТестированияСМаксимизированнымОкномРасширеннаяПодсказка" id="1844"/>
+													<ExtendedTooltip name="ЗапускатьКлиентТестированияСМаксимизированнымОкномРасширеннаяПодсказка" id="1844">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Если опция включена клиент тестирования будет запущен развёрнутым на весь экран.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
 												</CheckBoxField>
 												<InputField name="ТаймаутЗапуска1С" id="1672">
 													<DataPath>Объект.ТаймаутЗапуска1С</DataPath>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
 													<AutoMaxWidth>false</AutoMaxWidth>
 													<ContextMenu name="ТаймаутЗапуска1СКонтекстноеМеню" id="1673"/>
-													<ExtendedTooltip name="ТаймаутЗапуска1СРасширеннаяПодсказка" id="1674"/>
+													<ExtendedTooltip name="ТаймаутЗапуска1СРасширеннаяПодсказка" id="1674">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Устанавливает макимальное время, в течение которого Vanessa Automation будет ждать запуска клиента тестирования. По истечении времени будет вызвано исключение.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
 												</InputField>
 												<InputField name="ДиапазонПортовTestclient" id="1683">
 													<DataPath>Объект.ДиапазонПортовTestclient</DataPath>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
 													<ContextMenu name="ДиапазонПортовTestclientКонтекстноеМеню" id="1684"/>
-													<ExtendedTooltip name="ДиапазонПортовTestclientРасширеннаяПодсказка" id="1685"/>
+													<ExtendedTooltip name="ДиапазонПортовTestclientРасширеннаяПодсказка" id="1685">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Устанавливает диапазон портов, в котором будет производиться поиск свободного порта в системе для запуска клиента тестирования.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
 												</InputField>
 												<UsualGroup name="ГруппаОтладкаКлиентаТестирования" id="859">
 													<Title>
@@ -9825,9 +9849,17 @@
 																</v8:item>
 															</Title>
 															<TitleLocation>Right</TitleLocation>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
 															<CheckBoxType>Auto</CheckBoxType>
 															<ContextMenu name="ЗапускатьТестКлиентВРежимеОтладкиКонтекстноеМеню" id="868"/>
-															<ExtendedTooltip name="ЗапускатьТестКлиентВРежимеОтладкиРасширеннаяПодсказка" id="1366"/>
+															<ExtendedTooltip name="ЗапускатьТестКлиентВРежимеОтладкиРасширеннаяПодсказка" id="1366">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Если флаг установлен, то при запуске клиента тестирования уму будут переданы дополнительные ключи запуска /debug и /debuggerURL</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
 															<Events>
 																<Event name="OnChange">ЗапускатьТестКлиентВРежимеОтладкиПриИзменении</Event>
 															</Events>
@@ -9858,8 +9890,16 @@
 																			<v8:content>http://localhost:1560</v8:content>
 																		</v8:item>
 																	</ToolTip>
+																	<ToolTipRepresentation>Button</ToolTipRepresentation>
 																	<ContextMenu name="АдресОтладчикаКонтекстноеМеню" id="865"/>
-																	<ExtendedTooltip name="АдресОтладчикаРасширеннаяПодсказка" id="1369"/>
+																	<ExtendedTooltip name="АдресОтладчикаРасширеннаяПодсказка" id="1369">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Адрес отладчика, который будет передан клиенту тестирования.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
 																</InputField>
 																<InputField name="КлючиОтладки" id="861">
 																	<DataPath>Объект.КлючиОтладки</DataPath>
@@ -9869,8 +9909,16 @@
 																			<v8:content>-http -attach</v8:content>
 																		</v8:item>
 																	</ToolTip>
+																	<ToolTipRepresentation>Button</ToolTipRepresentation>
 																	<ContextMenu name="КлючиОтладкиКонтекстноеМеню" id="862"/>
-																	<ExtendedTooltip name="КлючиОтладкиРасширеннаяПодсказка" id="1368"/>
+																	<ExtendedTooltip name="КлючиОтладкиРасширеннаяПодсказка" id="1368">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Ключи отладки, которые будут переданы клиенту тестирования при запуске.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
 																</InputField>
 															</ChildItems>
 														</UsualGroup>
@@ -10066,9 +10114,19 @@
 															<v8:content>Если флаг выставлен - то это замедляет выполнение шагов, но позоволяет обновлять состояние дерева при выполнении каждого шага.</v8:content>
 														</v8:item>
 													</ToolTip>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
 													<CheckBoxType>Auto</CheckBoxType>
 													<ContextMenu name="ВыполнятьШагиАссинхронноКонтекстноеМеню" id="336"/>
-													<ExtendedTooltip name="ВыполнятьШагиАссинхронноРасширеннаяПодсказка" id="1374"/>
+													<ExtendedTooltip name="ВыполнятьШагиАссинхронноРасширеннаяПодсказка" id="1374">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Если флаг установлен, то каждый шаг сценария будет выполняться асинхронно с указанным интервалом.
+Если флаг снят, то шаги будут выполняться синхронно. Дерево шагов при этом будет обновлять своё состояние каждый сотый шаг.
+При снятом флаге сценарий будет выполняються в несколько раз быстрее.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
 													<Events>
 														<Event name="OnChange">ВыполнятьШагиАссинхронноПриИзменении</Event>
 													</Events>
@@ -10161,24 +10219,49 @@
 															<v8:content>Интервал выполнения шага</v8:content>
 														</v8:item>
 													</Title>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
 													<Width>7</Width>
 													<AutoMaxWidth>false</AutoMaxWidth>
 													<ContextMenu name="ИнтервалВыполненияШагаЗаданныйПользователемКонтекстноеМеню" id="2002"/>
-													<ExtendedTooltip name="ИнтервалВыполненияШагаЗаданныйПользователемРасширеннаяПодсказка" id="2003"/>
+													<ExtendedTooltip name="ИнтервалВыполненияШагаЗаданныйПользователемРасширеннаяПодсказка" id="2003">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Задаёт интервал выполнение между шагами сценария при асинхронном режиме выполнения шагов.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
 												</InputField>
 												<CheckBoxField name="ОбновлятьСтатистикуВДереве" id="1880">
 													<DataPath>Объект.ОбновлятьСтатистикуВДереве</DataPath>
 													<TitleLocation>Right</TitleLocation>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
 													<CheckBoxType>Auto</CheckBoxType>
 													<ContextMenu name="ОбновлятьСтатистикуВДеревеКонтекстноеМеню" id="1881"/>
-													<ExtendedTooltip name="ОбновлятьСтатистикуВДеревеРасширеннаяПодсказка" id="1882"/>
+													<ExtendedTooltip name="ОбновлятьСтатистикуВДеревеРасширеннаяПодсказка" id="1882">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Если флаг установлен, то во время выполнения сценария происходит обновление статистики: сколько шагов сценария прошло, сколько сценариев упало и подобное.
+</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
 												</CheckBoxField>
 												<CheckBoxField name="ОбновлятьДеревоПриНачалеВыполненияСценария" id="1957">
 													<DataPath>Объект.ОбновлятьДеревоПриНачалеВыполненияСценария</DataPath>
 													<TitleLocation>Right</TitleLocation>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
 													<CheckBoxType>Auto</CheckBoxType>
 													<ContextMenu name="ОбновлятьДеревоПриНачалеВыполненияСценарияКонтекстноеМеню" id="1958"/>
-													<ExtendedTooltip name="ОбновлятьДеревоПриНачалеВыполненияСценарияРасширеннаяПодсказка" id="1959"/>
+													<ExtendedTooltip name="ОбновлятьДеревоПриНачалеВыполненияСценарияРасширеннаяПодсказка" id="1959">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Если флаг установлен, то при обновлении дерева шагов будет активизироваться текущая строка дерева. Допускатеся снимать флаг при выполнении сценариев на CI сервере для ускорения.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
 												</CheckBoxField>
 												<CheckBoxField name="ОстановкаПриВозникновенииОшибки" id="954">
 													<DataPath>Объект.ОстановкаПриВозникновенииОшибки</DataPath>
@@ -10269,23 +10352,49 @@
 														</v8:item>
 													</Title>
 													<TitleLocation>Right</TitleLocation>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
 													<CheckBoxType>Auto</CheckBoxType>
 													<ContextMenu name="ОстановкаПриВозникновенииОшибкиКонтекстноеМеню" id="955"/>
-													<ExtendedTooltip name="ОстановкаПриВозникновенииОшибкиРасширеннаяПодсказка" id="1375"/>
+													<ExtendedTooltip name="ОстановкаПриВозникновенииОшибкиРасширеннаяПодсказка" id="1375">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Если флаг установлен, то сценарии будут выполняться до первой ошибки.
+Все последующие сценарии выполняться не будут.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
 												</CheckBoxField>
 												<CheckBoxField name="ПоказыватьНомерСтрокиДереваПриВозникновенииОшибки" id="1750">
 													<DataPath>Объект.ПоказыватьНомерСтрокиДереваПриВозникновенииОшибки</DataPath>
 													<TitleLocation>Right</TitleLocation>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
 													<CheckBoxType>Auto</CheckBoxType>
 													<ContextMenu name="ПоказыватьНомерСтрокиДереваПриВозникновенииОшибкиКонтекстноеМеню" id="1751"/>
-													<ExtendedTooltip name="ПоказыватьНомерСтрокиДереваПриВозникновенииОшибкиРасширеннаяПодсказка" id="1752"/>
+													<ExtendedTooltip name="ПоказыватьНомерСтрокиДереваПриВозникновенииОшибкиРасширеннаяПодсказка" id="1752">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Если флаг установлен, то при возникновении ошибки в дереве шагов будет показана колонка с номером строки в дереве, если эта колонка была скрыта.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
 												</CheckBoxField>
 												<CheckBoxField name="ПриравниватьPendingКFailed" id="2055">
 													<DataPath>Объект.ПриравниватьPendingКFailed</DataPath>
 													<TitleLocation>Right</TitleLocation>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
 													<CheckBoxType>Auto</CheckBoxType>
 													<ContextMenu name="ПриравниватьPendingКFailedКонтекстноеМеню" id="2056"/>
-													<ExtendedTooltip name="ПриравниватьPendingКFailedРасширеннаяПодсказка" id="2057"/>
+													<ExtendedTooltip name="ПриравниватьPendingКFailedРасширеннаяПодсказка" id="2057">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Если флаг установлен, то при выполнении сценариев на CI сервере, если будут найдены нереализованные шаги ("pending") статус сборки всё равно будет "failed".
+Флаг рекомендуется устанавливать.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
 												</CheckBoxField>
 												<InputField name="ТаймаутДляАсинхронныхШагов" id="1773">
 													<DataPath>Объект.ТаймаутДляАсинхронныхШагов</DataPath>
