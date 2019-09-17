@@ -11079,23 +11079,47 @@
 														<CheckBoxField name="СобиратьДанныеОСостоянииАктивнойФормыПриОшибке" id="2060">
 															<DataPath>Объект.СобиратьДанныеОСостоянииАктивнойФормыПриОшибке</DataPath>
 															<TitleLocation>Right</TitleLocation>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
 															<CheckBoxType>Auto</CheckBoxType>
 															<ContextMenu name="СобиратьДанныеОСостоянииАктивнойФормыПриОшибкеКонтекстноеМеню" id="2061"/>
-															<ExtendedTooltip name="СобиратьДанныеОСостоянииАктивнойФормыПриОшибкеРасширеннаяПодсказка" id="2062"/>
+															<ExtendedTooltip name="СобиратьДанныеОСостоянииАктивнойФормыПриОшибкеРасширеннаяПодсказка" id="2062">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Если опция включена, то при возникновении ошибки будут собраны данные о состоянии элементов активной формы в формате mxl.</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
 														</CheckBoxField>
 														<CheckBoxField name="СобиратьДанныеОСостоянииВсехФормПриОшибке" id="2063">
 															<DataPath>Объект.СобиратьДанныеОСостоянииВсехФормПриОшибке</DataPath>
 															<TitleLocation>Right</TitleLocation>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
 															<CheckBoxType>Auto</CheckBoxType>
 															<ContextMenu name="СобиратьДанныеОСостоянииВсехФормПриОшибкеКонтекстноеМеню" id="2064"/>
-															<ExtendedTooltip name="СобиратьДанныеОСостоянииВсехФормПриОшибкеРасширеннаяПодсказка" id="2065"/>
+															<ExtendedTooltip name="СобиратьДанныеОСостоянииВсехФормПриОшибкеРасширеннаяПодсказка" id="2065">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Если опция включена, то при возникновении ошибки будут собраны данные о состоянии элементов всех форм открытых в клиенте тестирования в формате mxl.</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
 														</CheckBoxField>
 														<InputField name="ИмяКаталогаЛогОшибок" id="1758">
 															<DataPath>Объект.ИмяКаталогаЛогОшибок</DataPath>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
 															<AutoMaxWidth>false</AutoMaxWidth>
 															<ChoiceButton>true</ChoiceButton>
 															<ContextMenu name="ИмяКаталогаЛогОшибокКонтекстноеМеню" id="1759"/>
-															<ExtendedTooltip name="ИмяКаталогаЛогОшибокРасширеннаяПодсказка" id="1760"/>
+															<ExtendedTooltip name="ИмяКаталогаЛогОшибокРасширеннаяПодсказка" id="1760">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Каталог, для формирования файлов с данными об ошибках и состоянии элементов форм.</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
 															<Events>
 																<Event name="StartChoice">ИмяКаталогаЛогОшибокНачалоВыбора</Event>
 															</Events>
@@ -11197,9 +11221,17 @@
 																</v8:item>
 															</Title>
 															<TitleLocation>Right</TitleLocation>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
 															<CheckBoxType>Auto</CheckBoxType>
 															<ContextMenu name="ДелатьОтчетВоВнутреннемФорматеКонтекстноеМеню" id="376"/>
-															<ExtendedTooltip name="ДелатьОтчетВоВнутреннемФорматеРасширеннаяПодсказка" id="1399"/>
+															<ExtendedTooltip name="ДелатьОтчетВоВнутреннемФорматеРасширеннаяПодсказка" id="1399">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Включаеи вывод отчет о запуске сценариев во внутреннем формате.</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
 														</CheckBoxField>
 													</ChildItems>
 												</UsualGroup>
@@ -11326,7 +11358,14 @@
 																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="ДелатьОтчетВФорматеАллюрКонтекстноеМеню" id="139"/>
-																			<ExtendedTooltip name="ДелатьОтчетВФорматеАллюрРасширеннаяПодсказка" id="1392"/>
+																			<ExtendedTooltip name="ДелатьОтчетВФорматеАллюрРасширеннаяПодсказка" id="1392">
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Формировать отчет в формате Allure по результатам выполнения сценариев.</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
 																			<Events>
 																				<Event name="OnChange">ДелатьОтчетВФорматеАллюрПриИзменении</Event>
 																			</Events>
@@ -11437,28 +11476,60 @@
 																							<v8:content>Временный каталог файлов результатов Allure</v8:content>
 																						</v8:item>
 																					</ToolTip>
+																					<ToolTipRepresentation>Button</ToolTipRepresentation>
 																					<ChoiceButton>true</ChoiceButton>
 																					<ClearButton>true</ClearButton>
 																					<ContextMenu name="КаталогВыгрузкиAllureКонтекстноеМеню" id="142"/>
-																					<ExtendedTooltip name="КаталогВыгрузкиAllureРасширеннаяПодсказка" id="1396"/>
+																					<ExtendedTooltip name="КаталогВыгрузкиAllureРасширеннаяПодсказка" id="1396">
+																						<Title formatted="false">
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Каталог, в котором формируются данные отчета в формате Allure.</v8:content>
+																							</v8:item>
+																						</Title>
+																					</ExtendedTooltip>
 																					<Events>
 																						<Event name="StartChoice">КаталогOutputAllureНачалоВыбора</Event>
 																					</Events>
 																				</InputField>
 																				<InputField name="УровеньОтчета1" id="1863">
 																					<DataPath>Объект.УровеньОтчета1</DataPath>
+																					<ToolTipRepresentation>Button</ToolTipRepresentation>
 																					<ContextMenu name="УровеньОтчета1КонтекстноеМеню" id="1864"/>
-																					<ExtendedTooltip name="УровеньОтчета1РасширеннаяПодсказка" id="1865"/>
+																					<ExtendedTooltip name="УровеньОтчета1РасширеннаяПодсказка" id="1865">
+																						<Title formatted="false">
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Задаёт первый уровень группировки в отчете Allure на закладке Behaviors. Подробности описаны в справке.</v8:content>
+																							</v8:item>
+																						</Title>
+																					</ExtendedTooltip>
 																				</InputField>
 																				<InputField name="УровеньОтчета2" id="1866">
 																					<DataPath>Объект.УровеньОтчета2</DataPath>
+																					<ToolTipRepresentation>Button</ToolTipRepresentation>
 																					<ContextMenu name="УровеньОтчета2КонтекстноеМеню" id="1867"/>
-																					<ExtendedTooltip name="УровеньОтчета2РасширеннаяПодсказка" id="1868"/>
+																					<ExtendedTooltip name="УровеньОтчета2РасширеннаяПодсказка" id="1868">
+																						<Title formatted="false">
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Задаёт второй уровень группировки в отчете Allure на закладке Behaviors. Подробности описаны в справке.</v8:content>
+																							</v8:item>
+																						</Title>
+																					</ExtendedTooltip>
 																				</InputField>
 																				<InputField name="УровеньОтчета3" id="1869">
 																					<DataPath>Объект.УровеньОтчета3</DataPath>
+																					<ToolTipRepresentation>Button</ToolTipRepresentation>
 																					<ContextMenu name="УровеньОтчета3КонтекстноеМеню" id="1870"/>
-																					<ExtendedTooltip name="УровеньОтчета3РасширеннаяПодсказка" id="1871"/>
+																					<ExtendedTooltip name="УровеньОтчета3РасширеннаяПодсказка" id="1871">
+																						<Title formatted="false">
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Задаёт третий уровень группировки в отчете Allure на закладке Behaviors. Подробности описаны в справке.</v8:content>
+																							</v8:item>
+																						</Title>
+																					</ExtendedTooltip>
 																				</InputField>
 																				<InputField name="КаталогОтносительноКоторогоНадоСтроитьИерархию" id="1872">
 																					<DataPath>Объект.КаталогОтносительноКоторогоНадоСтроитьИерархию</DataPath>
@@ -11474,18 +11545,34 @@
 																							<v8:content>Каталог, относительно которого нужно строить иерархию</v8:content>
 																						</v8:item>
 																					</ToolTip>
+																					<ToolTipRepresentation>Button</ToolTipRepresentation>
 																					<ChoiceButton>true</ChoiceButton>
 																					<ClearButton>true</ClearButton>
 																					<ContextMenu name="КаталогОтносительноКоторогоНадоСтроитьИерархиюКонтекстноеМеню" id="1873"/>
-																					<ExtendedTooltip name="КаталогОтносительноКоторогоНадоСтроитьИерархиюРасширеннаяПодсказка" id="1874"/>
+																					<ExtendedTooltip name="КаталогОтносительноКоторогоНадоСтроитьИерархиюРасширеннаяПодсказка" id="1874">
+																						<Title formatted="false">
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Каталог, относительно которого рассчитывается иерархия фич. Подробности описаны в справке.</v8:content>
+																							</v8:item>
+																						</Title>
+																					</ExtendedTooltip>
 																					<Events>
 																						<Event name="StartChoice">КаталогОтносительноКоторогоНадоСтроитьИерархию1НачалоВыбора</Event>
 																					</Events>
 																				</InputField>
 																				<InputField name="ГруппировкаTestSuites" id="2148">
 																					<DataPath>Объект.ГруппировкаTestSuites</DataPath>
+																					<ToolTipRepresentation>Button</ToolTipRepresentation>
 																					<ContextMenu name="ГруппировкаTestSuitesКонтекстноеМеню" id="2149"/>
-																					<ExtendedTooltip name="ГруппировкаTestSuitesРасширеннаяПодсказка" id="2150"/>
+																					<ExtendedTooltip name="ГруппировкаTestSuitesРасширеннаяПодсказка" id="2150">
+																						<Title formatted="false">
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Задаёт значение группировки в отчете Allure на закладке Suites. Подробности описаны в справке.</v8:content>
+																							</v8:item>
+																						</Title>
+																					</ExtendedTooltip>
 																				</InputField>
 																				<Table name="ДанныеАллюрМеток" id="1985">
 																					<Representation>List</Representation>
@@ -11501,10 +11588,18 @@
 																							<v8:content>Данные аллюр меток</v8:content>
 																						</v8:item>
 																					</Title>
+																					<ToolTipRepresentation>Button</ToolTipRepresentation>
 																					<RowFilter xsi:nil="true"/>
 																					<ContextMenu name="ДанныеАллюрМетокКонтекстноеМеню" id="1986"/>
 																					<AutoCommandBar name="ДанныеАллюрМетокКоманднаяПанель" id="1987"/>
-																					<ExtendedTooltip name="ДанныеАллюрМетокРасширеннаяПодсказка" id="1988"/>
+																					<ExtendedTooltip name="ДанныеАллюрМетокРасширеннаяПодсказка" id="1988">
+																						<Title formatted="false">
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>В таблице указываются метки Allure.</v8:content>
+																							</v8:item>
+																						</Title>
+																					</ExtendedTooltip>
 																					<SearchStringAddition name="ДанныеАллюрМетокСтрокаПоиска" id="1989">
 																						<AdditionSource>
 																							<Item>ДанныеАллюрМеток</Item>
@@ -11767,10 +11862,18 @@
 																							<v8:content>Временный каталог для файлов Cucumber</v8:content>
 																						</v8:item>
 																					</ToolTip>
+																					<ToolTipRepresentation>Button</ToolTipRepresentation>
 																					<ChoiceButton>true</ChoiceButton>
 																					<ClearButton>true</ClearButton>
 																					<ContextMenu name="КаталогВыгрузкиCucumberJsonКонтекстноеМеню" id="1465"/>
-																					<ExtendedTooltip name="КаталогВыгрузкиCucumberJsonРасширеннаяПодсказка" id="1466"/>
+																					<ExtendedTooltip name="КаталогВыгрузкиCucumberJsonРасширеннаяПодсказка" id="1466">
+																						<Title formatted="false">
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Каталог для формирования отчета.</v8:content>
+																							</v8:item>
+																						</Title>
+																					</ExtendedTooltip>
 																					<Events>
 																						<Event name="StartChoice">КаталогOutputCucumberJsonНачалоВыбора</Event>
 																					</Events>
@@ -11991,10 +12094,18 @@
 																							<v8:content>Временный каталог для файлов JUnit</v8:content>
 																						</v8:item>
 																					</ToolTip>
+																					<ToolTipRepresentation>Button</ToolTipRepresentation>
 																					<ChoiceButton>true</ChoiceButton>
 																					<ClearButton>true</ClearButton>
 																					<ContextMenu name="КаталогВыгрузкиJUnitКонтекстноеМеню" id="371"/>
-																					<ExtendedTooltip name="КаталогВыгрузкиJUnitРасширеннаяПодсказка" id="1397"/>
+																					<ExtendedTooltip name="КаталогВыгрузкиJUnitРасширеннаяПодсказка" id="1397">
+																						<Title formatted="false">
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Каталог для формирования отчета.</v8:content>
+																							</v8:item>
+																						</Title>
+																					</ExtendedTooltip>
 																					<Events>
 																						<Event name="StartChoice">КаталогВыгрузкиJUnitНачалоВыбора</Event>
 																					</Events>
@@ -12042,10 +12153,18 @@
 																			<ChildItems>
 																				<InputField name="КаталогВыгрузкиСППР" id="2099">
 																					<DataPath>Объект.КаталогВыгрузкиСППР</DataPath>
+																					<ToolTipRepresentation>Button</ToolTipRepresentation>
 																					<ChoiceButton>true</ChoiceButton>
 																					<ClearButton>true</ClearButton>
 																					<ContextMenu name="КаталогВыгрузкиСППРКонтекстноеМеню" id="2100"/>
-																					<ExtendedTooltip name="КаталогВыгрузкиСППРРасширеннаяПодсказка" id="2101"/>
+																					<ExtendedTooltip name="КаталогВыгрузкиСППРРасширеннаяПодсказка" id="2101">
+																						<Title formatted="false">
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Каталог для формирования отчета.</v8:content>
+																							</v8:item>
+																						</Title>
+																					</ExtendedTooltip>
 																					<Events>
 																						<Event name="StartChoice">КаталогВыгрузкиСППРНачалоВыбора</Event>
 																					</Events>
@@ -16825,7 +16944,15 @@ SikuliX Server - это специальная программная оптим
 															<v8:content>Вычислить PID</v8:content>
 														</v8:item>
 													</Title>
-													<ExtendedTooltip name="ВычислитьPIDЭтогоСеанса1РасширеннаяПодсказка" id="1663"/>
+													<ToolTipRepresentation>Balloon</ToolTipRepresentation>
+													<ExtendedTooltip name="ВычислитьPIDЭтогоСеанса1РасширеннаяПодсказка" id="1663">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Вычисляет PID данного сеанса 1С, в котором запущена Vanessa Automation.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
 												</Button>
 												<InputField name="PIDЭтогоСеанса" id="1664">
 													<DataPath>PIDЭтогоСеанса</DataPath>
