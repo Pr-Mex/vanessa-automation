@@ -1290,6 +1290,12 @@
 					</Button>
 				</ChildItems>
 			</Popup>
+			<Button name="ФормаОткрытьОпределениеШага" id="2151">
+				<Type>CommandBarButton</Type>
+				<OnlyInAllActions>false</OnlyInAllActions>
+				<CommandName>Form.Command.ОткрытьОпределениеШага</CommandName>
+				<ExtendedTooltip name="ФормаОткрытьОпределениеШагаРасширеннаяПодсказка" id="2152"/>
+			</Button>
 			<Button name="ФормаСправка" id="1552">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.StandardCommand.Help</CommandName>
@@ -22001,7 +22007,6 @@ SikuliX Server - это специальная программная оптим
 					<v8:content>Thêm một bước nhất định</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Shortcut>Ctrl+I</Shortcut>
 			<Action>ДобавитьИзвестныйШаг</Action>
 		</Command>
 		<Command name="ВыполнитьДанныйСценарийСТекущегоШага" id="44">
@@ -23482,6 +23487,27 @@ SikuliX Server - это специальная программная оптим
 				</v8:item>
 			</ToolTip>
 			<Action>УстановитьСервисныеУтилиты</Action>
+		</Command>
+		<Command name="ОткрытьОпределениеШага" id="30">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть определение шага</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Open step description</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть определение шага</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+I</Shortcut>
+			<Action>ОткрытьОпределениеШага</Action>
+			<AssociatedTableElementId>66</AssociatedTableElementId>
 		</Command>
 	</Commands>
 </Form>
