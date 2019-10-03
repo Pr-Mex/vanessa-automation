@@ -1,8 +1,8 @@
 # language: ru
 
-@IgnoreOnCIMainBuild
-@DocumentationBuild
-@tree
+@IgnoreOn82Builds
+@IgnoreOnOFBuilds
+@IgnoreOnWeb
 
 Функционал: Проверка работы генератора дымовых сценариев
     Как Разработчик
