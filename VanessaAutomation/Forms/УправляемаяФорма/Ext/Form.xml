@@ -12727,6 +12727,97 @@ See SikuliX и SikuliX Server Installation and Settings Guide in Help, section 2
 																</Button>
 															</ChildItems>
 														</UsualGroup>
+														<UsualGroup name="ГруппаПрофилиЦветов" id="2158">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа профили цветов</v8:content>
+																</v8:item>
+															</Title>
+															<Group>Vertical</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаПрофилиЦветовРасширеннаяПодсказка" id="2159"/>
+															<ChildItems>
+																<Table name="ПрофилиЦветов" id="2160">
+																	<Representation>List</Representation>
+																	<Height>4</Height>
+																	<AutoInsertNewRow>true</AutoInsertNewRow>
+																	<VerticalStretch>false</VerticalStretch>
+																	<EnableStartDrag>true</EnableStartDrag>
+																	<EnableDrag>true</EnableDrag>
+																	<DataPath>ПрофилиЦветов</DataPath>
+																	<RowFilter xsi:nil="true"/>
+																	<ContextMenu name="ПрофилиЦветовКонтекстноеМеню" id="2161"/>
+																	<AutoCommandBar name="ПрофилиЦветовКоманднаяПанель" id="2162">
+																		<ChildItems>
+																			<Button name="ПрофилиЦветовЗаполнитьТиповыеПрофилиЦветов" id="2185">
+																				<Type>CommandBarButton</Type>
+																				<CommandName>Form.Command.ЗаполнитьТиповыеПрофилиЦветов</CommandName>
+																				<ExtendedTooltip name="ПрофилиЦветовЗаполнитьТиповыеПрофилиЦветовРасширеннаяПодсказка" id="2186"/>
+																			</Button>
+																		</ChildItems>
+																	</AutoCommandBar>
+																	<ExtendedTooltip name="ПрофилиЦветовРасширеннаяПодсказка" id="2163"/>
+																	<SearchStringAddition name="ПрофилиЦветовСтрокаПоиска" id="2164">
+																		<AdditionSource>
+																			<Item>ПрофилиЦветов</Item>
+																			<Type>SearchStringRepresentation</Type>
+																		</AdditionSource>
+																		<ContextMenu name="ПрофилиЦветовСтрокаПоискаКонтекстноеМеню" id="2165"/>
+																		<ExtendedTooltip name="ПрофилиЦветовСтрокаПоискаРасширеннаяПодсказка" id="2166"/>
+																	</SearchStringAddition>
+																	<ViewStatusAddition name="ПрофилиЦветовСостояниеПросмотра" id="2167">
+																		<AdditionSource>
+																			<Item>ПрофилиЦветов</Item>
+																			<Type>ViewStatusRepresentation</Type>
+																		</AdditionSource>
+																		<ContextMenu name="ПрофилиЦветовСостояниеПросмотраКонтекстноеМеню" id="2168"/>
+																		<ExtendedTooltip name="ПрофилиЦветовСостояниеПросмотраРасширеннаяПодсказка" id="2169"/>
+																	</ViewStatusAddition>
+																	<SearchControlAddition name="ПрофилиЦветовУправлениеПоиском" id="2170">
+																		<AdditionSource>
+																			<Item>ПрофилиЦветов</Item>
+																			<Type>SearchControl</Type>
+																		</AdditionSource>
+																		<ContextMenu name="ПрофилиЦветовУправлениеПоискомКонтекстноеМеню" id="2171"/>
+																		<ExtendedTooltip name="ПрофилиЦветовУправлениеПоискомРасширеннаяПодсказка" id="2172"/>
+																	</SearchControlAddition>
+																	<ChildItems>
+																		<InputField name="ПрофилиЦветовИмя" id="2187">
+																			<DataPath>ПрофилиЦветов.Имя</DataPath>
+																			<EditMode>EnterOnInput</EditMode>
+																			<ContextMenu name="ПрофилиЦветовИмяКонтекстноеМеню" id="2188"/>
+																			<ExtendedTooltip name="ПрофилиЦветовИмяРасширеннаяПодсказка" id="2189"/>
+																		</InputField>
+																		<InputField name="ПрофилиЦветовШрифт" id="2173">
+																			<DataPath>ПрофилиЦветов.Шрифт</DataPath>
+																			<EditMode>EnterOnInput</EditMode>
+																			<ContextMenu name="ПрофилиЦветовШрифтКонтекстноеМеню" id="2174"/>
+																			<ExtendedTooltip name="ПрофилиЦветовШрифтРасширеннаяПодсказка" id="2175"/>
+																		</InputField>
+																		<InputField name="ПрофилиЦветовЦветФона" id="2176">
+																			<DataPath>ПрофилиЦветов.ЦветФона</DataPath>
+																			<EditMode>EnterOnInput</EditMode>
+																			<ContextMenu name="ПрофилиЦветовЦветФонаКонтекстноеМеню" id="2177"/>
+																			<ExtendedTooltip name="ПрофилиЦветовЦветФонаРасширеннаяПодсказка" id="2178"/>
+																		</InputField>
+																		<InputField name="ПрофилиЦветовЦветШрифта" id="2179">
+																			<DataPath>ПрофилиЦветов.ЦветШрифта</DataPath>
+																			<EditMode>EnterOnInput</EditMode>
+																			<ContextMenu name="ПрофилиЦветовЦветШрифтаКонтекстноеМеню" id="2180"/>
+																			<ExtendedTooltip name="ПрофилиЦветовЦветШрифтаРасширеннаяПодсказка" id="2181"/>
+																		</InputField>
+																		<InputField name="ПрофилиЦветовРазмер" id="2182">
+																			<DataPath>ПрофилиЦветов.Размер</DataPath>
+																			<EditMode>EnterOnInput</EditMode>
+																			<ContextMenu name="ПрофилиЦветовРазмерКонтекстноеМеню" id="2183"/>
+																			<ExtendedTooltip name="ПрофилиЦветовРазмерРасширеннаяПодсказка" id="2184"/>
+																		</InputField>
+																	</ChildItems>
+																</Table>
+															</ChildItems>
+														</UsualGroup>
 													</ChildItems>
 												</UsualGroup>
 												<UsualGroup name="HTMLИMarkdown" id="658">
@@ -20509,6 +20600,99 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="ПрофилиЦветов" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Профили цветов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Color scheme</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Шрифт" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Шрифт</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЦветФона" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цвет фона</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЦветШрифта" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Цвет шрифта</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Размер" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Размер</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>3</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Имя" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -24111,6 +24295,25 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 			<Shortcut>Ctrl+I</Shortcut>
 			<Action>ОткрытьОпределениеШага</Action>
 			<AssociatedTableElementId>66</AssociatedTableElementId>
+		</Command>
+		<Command name="ЗаполнитьТиповыеПрофилиЦветов" id="83">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить типовые профили цветов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Create main scheme</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить типовые профили цветов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаполнитьТиповыеПрофилиЦветов</Action>
 		</Command>
 	</Commands>
 </Form>
