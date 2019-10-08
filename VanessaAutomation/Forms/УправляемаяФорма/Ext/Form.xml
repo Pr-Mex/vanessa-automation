@@ -12669,6 +12669,12 @@ See SikuliX и SikuliX Server Installation and Settings Guide in Help, section 2
 															<ThroughAlign>Use</ThroughAlign>
 															<ExtendedTooltip name="ГруппаSikuliXServerПодробноРасширеннаяПодсказка" id="2136"/>
 															<ChildItems>
+																<Button name="УстановитьСервисныеПрограммы" id="2146">
+																	<Type>UsualButton</Type>
+																	<CommandName>Form.Command.УстановитьСервисныеУтилиты</CommandName>
+																	<ToolTipRepresentation>Button</ToolTipRepresentation>
+																	<ExtendedTooltip name="УстановитьСервисныеПрограммыРасширеннаяПодсказка" id="2147"/>
+																</Button>
 																<UsualGroup name="ПутьККаталогуСкриптовSikuliX" id="2137">
 																	<Title>
 																		<v8:item>
@@ -12709,24 +12715,40 @@ See SikuliX и SikuliX Server Installation and Settings Guide in Help, section 2
 																		<Button name="КаталогиСкриптовSikuliXПоУмолчанию" id="2142">
 																			<Type>UsualButton</Type>
 																			<Representation>Picture</Representation>
+																			<Width>4</Width>
 																			<CommandName>Form.Command.КаталогиСкриптовSikuliXПоУмолчанию</CommandName>
 																			<ExtendedTooltip name="КаталогиСкриптовSikuliXПоУмолчаниюРасширеннаяПодсказка" id="2143"/>
 																		</Button>
+																		<Button name="СброситьПодключениеSikuliXСервера" id="2144">
+																			<Type>UsualButton</Type>
+																			<CommandName>Form.Command.СброситьПодключениеSikuliXСервера</CommandName>
+																			<ExtendedTooltip name="СброситьПодключениеSikuliXСервераРасширеннаяПодсказка" id="2145"/>
+																		</Button>
 																	</ChildItems>
 																</UsualGroup>
-																<Button name="СброситьПодключениеSikuliXСервера" id="2144">
-																	<Type>UsualButton</Type>
-																	<CommandName>Form.Command.СброситьПодключениеSikuliXСервера</CommandName>
-																	<ExtendedTooltip name="СброситьПодключениеSikuliXСервераРасширеннаяПодсказка" id="2145"/>
-																</Button>
-																<Button name="УстановитьСервисныеПрограммы" id="2146">
-																	<Type>UsualButton</Type>
-																	<CommandName>Form.Command.УстановитьСервисныеУтилиты</CommandName>
-																	<ToolTipRepresentation>Button</ToolTipRepresentation>
-																	<ExtendedTooltip name="УстановитьСервисныеПрограммыРасширеннаяПодсказка" id="2147"/>
-																</Button>
 															</ChildItems>
 														</UsualGroup>
+														<InputField name="КаталогДляГенерацииКартинок" id="2190">
+															<DataPath>Объект.КаталогДляГенерацииКартинок</DataPath>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<ChoiceButton>true</ChoiceButton>
+															<ContextMenu name="КаталогДляГенерацииКартинокКонтекстноеМеню" id="2191"/>
+															<ExtendedTooltip name="КаталогДляГенерацииКартинокРасширеннаяПодсказка" id="2192">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Каталог, в котором будут программно создаваться картинки для поиска их на экране.</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>The directory in which pictures will be programmatically created to search for them on the screen.</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+															<Events>
+																<Event name="StartChoice">КаталогДляГенерацииКартинокНачалоВыбора</Event>
+															</Events>
+														</InputField>
 														<UsualGroup name="ГруппаПрофилиЦветов" id="2158">
 															<Title>
 																<v8:item>
@@ -12739,77 +12761,77 @@ See SikuliX и SikuliX Server Installation and Settings Guide in Help, section 2
 															<ShowTitle>false</ShowTitle>
 															<ExtendedTooltip name="ГруппаПрофилиЦветовРасширеннаяПодсказка" id="2159"/>
 															<ChildItems>
-																<Table name="ПрофилиЦветов" id="2160">
+																<Table name="ПрофилиПоискаКартинокСТекстом" id="2160">
 																	<Representation>List</Representation>
 																	<Height>4</Height>
 																	<AutoInsertNewRow>true</AutoInsertNewRow>
 																	<VerticalStretch>false</VerticalStretch>
 																	<EnableStartDrag>true</EnableStartDrag>
 																	<EnableDrag>true</EnableDrag>
-																	<DataPath>ПрофилиЦветов</DataPath>
+																	<DataPath>ПрофилиПоискаКартинокСТекстом</DataPath>
 																	<RowFilter xsi:nil="true"/>
-																	<ContextMenu name="ПрофилиЦветовКонтекстноеМеню" id="2161"/>
-																	<AutoCommandBar name="ПрофилиЦветовКоманднаяПанель" id="2162">
+																	<ContextMenu name="ПрофилиПоискаКартинокСТекстомКонтекстноеМеню" id="2161"/>
+																	<AutoCommandBar name="ПрофилиПоискаКартинокСТекстомКоманднаяПанель" id="2162">
 																		<ChildItems>
 																			<Button name="ПрофилиЦветовЗаполнитьТиповыеПрофилиЦветов" id="2185">
 																				<Type>CommandBarButton</Type>
-																				<CommandName>Form.Command.ЗаполнитьТиповыеПрофилиЦветов</CommandName>
+																				<CommandName>Form.Command.ЗаполнитьТиповыеПрофилиПоиска</CommandName>
 																				<ExtendedTooltip name="ПрофилиЦветовЗаполнитьТиповыеПрофилиЦветовРасширеннаяПодсказка" id="2186"/>
 																			</Button>
 																		</ChildItems>
 																	</AutoCommandBar>
-																	<ExtendedTooltip name="ПрофилиЦветовРасширеннаяПодсказка" id="2163"/>
-																	<SearchStringAddition name="ПрофилиЦветовСтрокаПоиска" id="2164">
+																	<ExtendedTooltip name="ПрофилиПоискаКартинокСТекстомРасширеннаяПодсказка" id="2163"/>
+																	<SearchStringAddition name="ПрофилиПоискаКартинокСТекстомСтрокаПоиска" id="2164">
 																		<AdditionSource>
-																			<Item>ПрофилиЦветов</Item>
+																			<Item>ПрофилиПоискаКартинокСТекстом</Item>
 																			<Type>SearchStringRepresentation</Type>
 																		</AdditionSource>
-																		<ContextMenu name="ПрофилиЦветовСтрокаПоискаКонтекстноеМеню" id="2165"/>
-																		<ExtendedTooltip name="ПрофилиЦветовСтрокаПоискаРасширеннаяПодсказка" id="2166"/>
+																		<ContextMenu name="ПрофилиПоискаКартинокСТекстомСтрокаПоискаКонтекстноеМеню" id="2165"/>
+																		<ExtendedTooltip name="ПрофилиПоискаКартинокСТекстомСтрокаПоискаРасширеннаяПодсказка" id="2166"/>
 																	</SearchStringAddition>
-																	<ViewStatusAddition name="ПрофилиЦветовСостояниеПросмотра" id="2167">
+																	<ViewStatusAddition name="ПрофилиПоискаКартинокСТекстомСостояниеПросмотра" id="2167">
 																		<AdditionSource>
-																			<Item>ПрофилиЦветов</Item>
+																			<Item>ПрофилиПоискаКартинокСТекстом</Item>
 																			<Type>ViewStatusRepresentation</Type>
 																		</AdditionSource>
-																		<ContextMenu name="ПрофилиЦветовСостояниеПросмотраКонтекстноеМеню" id="2168"/>
-																		<ExtendedTooltip name="ПрофилиЦветовСостояниеПросмотраРасширеннаяПодсказка" id="2169"/>
+																		<ContextMenu name="ПрофилиПоискаКартинокСТекстомСостояниеПросмотраКонтекстноеМеню" id="2168"/>
+																		<ExtendedTooltip name="ПрофилиПоискаКартинокСТекстомСостояниеПросмотраРасширеннаяПодсказка" id="2169"/>
 																	</ViewStatusAddition>
-																	<SearchControlAddition name="ПрофилиЦветовУправлениеПоиском" id="2170">
+																	<SearchControlAddition name="ПрофилиПоискаКартинокСТекстомУправлениеПоиском" id="2170">
 																		<AdditionSource>
-																			<Item>ПрофилиЦветов</Item>
+																			<Item>ПрофилиПоискаКартинокСТекстом</Item>
 																			<Type>SearchControl</Type>
 																		</AdditionSource>
-																		<ContextMenu name="ПрофилиЦветовУправлениеПоискомКонтекстноеМеню" id="2171"/>
-																		<ExtendedTooltip name="ПрофилиЦветовУправлениеПоискомРасширеннаяПодсказка" id="2172"/>
+																		<ContextMenu name="ПрофилиПоискаКартинокСТекстомУправлениеПоискомКонтекстноеМеню" id="2171"/>
+																		<ExtendedTooltip name="ПрофилиПоискаКартинокСТекстомУправлениеПоискомРасширеннаяПодсказка" id="2172"/>
 																	</SearchControlAddition>
 																	<ChildItems>
 																		<InputField name="ПрофилиЦветовИмя" id="2187">
-																			<DataPath>ПрофилиЦветов.Имя</DataPath>
+																			<DataPath>ПрофилиПоискаКартинокСТекстом.Имя</DataPath>
 																			<EditMode>EnterOnInput</EditMode>
 																			<ContextMenu name="ПрофилиЦветовИмяКонтекстноеМеню" id="2188"/>
 																			<ExtendedTooltip name="ПрофилиЦветовИмяРасширеннаяПодсказка" id="2189"/>
 																		</InputField>
 																		<InputField name="ПрофилиЦветовШрифт" id="2173">
-																			<DataPath>ПрофилиЦветов.Шрифт</DataPath>
+																			<DataPath>ПрофилиПоискаКартинокСТекстом.Шрифт</DataPath>
 																			<EditMode>EnterOnInput</EditMode>
 																			<ContextMenu name="ПрофилиЦветовШрифтКонтекстноеМеню" id="2174"/>
 																			<ExtendedTooltip name="ПрофилиЦветовШрифтРасширеннаяПодсказка" id="2175"/>
 																		</InputField>
 																		<InputField name="ПрофилиЦветовЦветФона" id="2176">
-																			<DataPath>ПрофилиЦветов.ЦветФона</DataPath>
+																			<DataPath>ПрофилиПоискаКартинокСТекстом.ЦветФона</DataPath>
 																			<EditMode>EnterOnInput</EditMode>
 																			<ContextMenu name="ПрофилиЦветовЦветФонаКонтекстноеМеню" id="2177"/>
 																			<ExtendedTooltip name="ПрофилиЦветовЦветФонаРасширеннаяПодсказка" id="2178"/>
 																		</InputField>
 																		<InputField name="ПрофилиЦветовЦветШрифта" id="2179">
-																			<DataPath>ПрофилиЦветов.ЦветШрифта</DataPath>
+																			<DataPath>ПрофилиПоискаКартинокСТекстом.ЦветШрифта</DataPath>
 																			<EditMode>EnterOnInput</EditMode>
 																			<ContextMenu name="ПрофилиЦветовЦветШрифтаКонтекстноеМеню" id="2180"/>
 																			<ExtendedTooltip name="ПрофилиЦветовЦветШрифтаРасширеннаяПодсказка" id="2181"/>
 																		</InputField>
 																		<InputField name="ПрофилиЦветовРазмер" id="2182">
-																			<DataPath>ПрофилиЦветов.Размер</DataPath>
+																			<DataPath>ПрофилиПоискаКартинокСТекстом.Размер</DataPath>
 																			<EditMode>EnterOnInput</EditMode>
 																			<ContextMenu name="ПрофилиЦветовРазмерКонтекстноеМеню" id="2183"/>
 																			<ExtendedTooltip name="ПрофилиЦветовРазмерРасширеннаяПодсказка" id="2184"/>
@@ -17513,6 +17535,22 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 																						</UsualGroup>
 																					</ChildItems>
 																				</UsualGroup>
+																				<CheckBoxField name="ЗаписьВидеоЭмулироватьДвиженияМышки" id="2193">
+																					<DataPath>Объект.ЗаписьВидеоЭмулироватьДвиженияМышки</DataPath>
+																					<TitleLocation>Right</TitleLocation>
+																					<ToolTipRepresentation>Button</ToolTipRepresentation>
+																					<CheckBoxType>Auto</CheckBoxType>
+																					<ContextMenu name="ЗаписьВидеоЭмулироватьДвиженияМышкиКонтекстноеМеню" id="2194"/>
+																					<ExtendedTooltip name="ЗаписьВидеоЭмулироватьДвиженияМышкиРасширеннаяПодсказка" id="2195">
+																						<Title formatted="false">
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Если флаг установлен, то при выполнении шагов будет выполняться попытка найти элмент формы или элемент управления на экране и переместить курсор мышки к нему.
+Для поиска картинки и передвижения мышки используется SikuliX. Картинка для поиска будет сгенерирована по тексту, полученному из элемента формы.</v8:content>
+																							</v8:item>
+																						</Title>
+																					</ExtendedTooltip>
+																				</CheckBoxField>
 																			</ChildItems>
 																		</Page>
 																	</ChildItems>
@@ -20600,15 +20638,15 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="ПрофилиЦветов" id="5">
+		<Attribute name="ПрофилиПоискаКартинокСТекстом" id="5">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Профили цветов</v8:content>
+					<v8:content>Профили поиска</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
-					<v8:content>Color scheme</v8:content>
+					<v8:content>Search profiles</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -24060,7 +24098,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Сбросить подключение SikuliX сервера</v8:content>
+					<v8:content>Сбросить подключение</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
@@ -24070,7 +24108,11 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Сбросить подключение sikuli x сервера</v8:content>
+					<v8:content>Сбросить подключение SikuliX сервера</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Reset connection SikuliX server</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>СброситьПодключениеSikuliXСервера</Action>
@@ -24227,6 +24269,16 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 					<v8:content>по умолчанию</v8:content>
 				</v8:item>
 			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значение по умолчанию</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Default value</v8:content>
+				</v8:item>
+			</ToolTip>
 			<Picture>
 				<xr:Ref>StdPicture.MoveLeft</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
@@ -24296,11 +24348,11 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 			<Action>ОткрытьОпределениеШага</Action>
 			<AssociatedTableElementId>66</AssociatedTableElementId>
 		</Command>
-		<Command name="ЗаполнитьТиповыеПрофилиЦветов" id="83">
+		<Command name="ЗаполнитьТиповыеПрофилиПоиска" id="83">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Заполнить типовые профили цветов</v8:content>
+					<v8:content>Заполнить типовые профили поиска</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
@@ -24310,7 +24362,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Заполнить типовые профили цветов</v8:content>
+					<v8:content>Заполнить типовые профили поиска</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ЗаполнитьТиповыеПрофилиЦветов</Action>
