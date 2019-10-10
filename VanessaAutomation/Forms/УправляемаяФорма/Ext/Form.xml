@@ -17557,6 +17557,126 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 																						</UsualGroup>
 																					</ChildItems>
 																				</UsualGroup>
+																				<UsualGroup name="ГруппаНастройкиСлайдов" id="2196">
+																					<Title>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Группа настройки слайдов</v8:content>
+																						</v8:item>
+																					</Title>
+																					<ToolTip>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Группа настройки слайдов</v8:content>
+																						</v8:item>
+																					</ToolTip>
+																					<Group>Vertical</Group>
+																					<Representation>None</Representation>
+																					<ShowTitle>false</ShowTitle>
+																					<ExtendedTooltip name="ГруппаНастройкиСлайдовРасширеннаяПодсказка" id="2197"/>
+																					<ChildItems>
+																						<UsualGroup name="ГруппаНастройкиIntroФайла" id="2198">
+																							<Title>
+																								<v8:item>
+																									<v8:lang>ru</v8:lang>
+																									<v8:content>Настройки  слайда с заголовком фичи</v8:content>
+																								</v8:item>
+																							</Title>
+																							<ToolTip>
+																								<v8:item>
+																									<v8:lang>ru</v8:lang>
+																									<v8:content>Группа настройки intro файла</v8:content>
+																								</v8:item>
+																							</ToolTip>
+																							<Group>Vertical</Group>
+																							<Behavior>Collapsible</Behavior>
+																							<ExtendedTooltip name="ГруппаНастройкиIntroФайлаРасширеннаяПодсказка" id="2199"/>
+																							<ChildItems>
+																								<CheckBoxField name="ЗаписьВидеоЗаменитьIntroФайл" id="2200">
+																									<DataPath>Объект.ЗаписьВидеоЗаменитьIntroФайл</DataPath>
+																									<TitleLocation>Right</TitleLocation>
+																									<ToolTipRepresentation>Button</ToolTipRepresentation>
+																									<CheckBoxType>Auto</CheckBoxType>
+																									<ContextMenu name="ЗаписьВидеоЗаменитьIntroФайлКонтекстноеМеню" id="2201"/>
+																									<ExtendedTooltip name="ЗаписьВидеоЗаменитьIntroФайлРасширеннаяПодсказка" id="2202"/>
+																									<Events>
+																										<Event name="OnChange">ЗаписьВидеоЗаменитьIntroФайлПриИзменении</Event>
+																									</Events>
+																								</CheckBoxField>
+																								<CheckBoxField name="ЗаписьВидеоДобавитьМузыкуКIntroВидеоФайлу" id="2203">
+																									<DataPath>Объект.ЗаписьВидеоДобавитьМузыкуКIntroВидеоФайлу</DataPath>
+																									<TitleLocation>Right</TitleLocation>
+																									<ToolTipRepresentation>Button</ToolTipRepresentation>
+																									<CheckBoxType>Auto</CheckBoxType>
+																									<ContextMenu name="ЗаписьВидеоДобавитьМузыкуКIntroВидеоФайлуКонтекстноеМеню" id="2204"/>
+																									<ExtendedTooltip name="ЗаписьВидеоДобавитьМузыкуКIntroВидеоФайлуРасширеннаяПодсказка" id="2205"/>
+																								</CheckBoxField>
+																								<InputField name="ЗаписьВидеоПутьКIntroВидеоФайлу" id="2206">
+																									<DataPath>Объект.ЗаписьВидеоПутьКIntroВидеоФайлу</DataPath>
+																									<TitleLocation>Top</TitleLocation>
+																									<ToolTipRepresentation>Button</ToolTipRepresentation>
+																									<ChoiceButton>true</ChoiceButton>
+																									<ClearButton>true</ClearButton>
+																									<ContextMenu name="ЗаписьВидеоПутьКIntroВидеоФайлуКонтекстноеМеню" id="2207"/>
+																									<ExtendedTooltip name="ЗаписьВидеоПутьКIntroВидеоФайлуРасширеннаяПодсказка" id="2208"/>
+																									<Events>
+																										<Event name="StartChoice">ЗаписьВидеоПутьКIntroВидеоФайлуНачалоВыбора</Event>
+																									</Events>
+																								</InputField>
+																							</ChildItems>
+																						</UsualGroup>
+																						<UsualGroup name="ГруппаНастройкиOutroФайла" id="2209">
+																							<Title>
+																								<v8:item>
+																									<v8:lang>ru</v8:lang>
+																									<v8:content>Настройки финального слайда</v8:content>
+																								</v8:item>
+																							</Title>
+																							<ToolTip>
+																								<v8:item>
+																									<v8:lang>ru</v8:lang>
+																									<v8:content>Группа настройки outro файла</v8:content>
+																								</v8:item>
+																							</ToolTip>
+																							<Group>Vertical</Group>
+																							<Behavior>Collapsible</Behavior>
+																							<ExtendedTooltip name="ГруппаНастройкиOutroФайлаРасширеннаяПодсказка" id="2210"/>
+																							<ChildItems>
+																								<CheckBoxField name="ЗаписьВидеоЗаменитьOutroФайл" id="2211">
+																									<DataPath>Объект.ЗаписьВидеоЗаменитьOutroФайл</DataPath>
+																									<TitleLocation>Right</TitleLocation>
+																									<ToolTipRepresentation>Button</ToolTipRepresentation>
+																									<CheckBoxType>Auto</CheckBoxType>
+																									<ContextMenu name="ЗаписьВидеоЗаменитьOutroФайлКонтекстноеМеню" id="2212"/>
+																									<ExtendedTooltip name="ЗаписьВидеоЗаменитьOutroФайлРасширеннаяПодсказка" id="2213"/>
+																									<Events>
+																										<Event name="OnChange">ЗаписьВидеоЗаменитьOutroФайлПриИзменении</Event>
+																									</Events>
+																								</CheckBoxField>
+																								<CheckBoxField name="ЗаписьВидеоДобавитьМузыкуКOutroВидеоФайлу" id="2214">
+																									<DataPath>Объект.ЗаписьВидеоДобавитьМузыкуКOutroВидеоФайлу</DataPath>
+																									<TitleLocation>Right</TitleLocation>
+																									<ToolTipRepresentation>Button</ToolTipRepresentation>
+																									<CheckBoxType>Auto</CheckBoxType>
+																									<ContextMenu name="ЗаписьВидеоДобавитьМузыкуКOutroВидеоФайлуКонтекстноеМеню" id="2215"/>
+																									<ExtendedTooltip name="ЗаписьВидеоДобавитьМузыкуКOutroВидеоФайлуРасширеннаяПодсказка" id="2216"/>
+																								</CheckBoxField>
+																								<InputField name="ЗаписьВидеоПутьКOutroВидеоФайлу" id="2217">
+																									<DataPath>Объект.ЗаписьВидеоПутьКOutroВидеоФайлу</DataPath>
+																									<TitleLocation>Top</TitleLocation>
+																									<ToolTipRepresentation>Button</ToolTipRepresentation>
+																									<ChoiceButton>true</ChoiceButton>
+																									<ClearButton>true</ClearButton>
+																									<ContextMenu name="ЗаписьВидеоПутьКOutroВидеоФайлуКонтекстноеМеню" id="2218"/>
+																									<ExtendedTooltip name="ЗаписьВидеоПутьКOutroВидеоФайлуРасширеннаяПодсказка" id="2219"/>
+																									<Events>
+																										<Event name="StartChoice">ЗаписьВидеоПутьКOutroВидеоФайлуНачалоВыбора</Event>
+																									</Events>
+																								</InputField>
+																							</ChildItems>
+																						</UsualGroup>
+																					</ChildItems>
+																				</UsualGroup>
 																			</ChildItems>
 																		</Page>
 																	</ChildItems>
@@ -21064,6 +21184,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ВыполнитьСценарииФорма</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Перезагрузить" id="2">
 			<Title>
@@ -21084,6 +21205,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>Перезагрузить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗагрузитьФичиИзКаталога" id="3">
 			<Title>
@@ -21100,6 +21222,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 			</ToolTip>
 			<Shortcut>Alt+F2</Shortcut>
 			<Action>ЗагрузитьФичиИзКаталога</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗагрузитьОднуФичу" id="4">
 			<Title>
@@ -21116,6 +21239,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 			</ToolTip>
 			<Shortcut>Ctrl+F2</Shortcut>
 			<Action>ЗагрузитьОднуФичу</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СоздатьШаблоныОбработок" id="5">
 			<Title>
@@ -21131,6 +21255,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>СоздатьШаблоныОбработокКоманда</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ВыполнитьВыделенныйСценарий" id="6">
 			<Title>
@@ -21227,6 +21352,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 			</ToolTip>
 			<Shortcut>Alt+F5</Shortcut>
 			<Action>ВыполнитьВыделенныйСценарийФорма</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПерезагрузитьИВыполнить" id="7">
 			<Title>
@@ -21251,6 +21377,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 			</ToolTip>
 			<Shortcut>F6</Shortcut>
 			<Action>ПерезагрузитьИВыполнить</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОткрытьФичаФайл" id="8">
 			<Title>
@@ -21267,6 +21394,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 			</ToolTip>
 			<Shortcut>F7</Shortcut>
 			<Action>ОткрытьФичаФайл</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="НачатьЗаписьДействийПользователя" id="9">
 			<Title>
@@ -21283,6 +21411,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 			</ToolTip>
 			<Shortcut>Ctrl+R</Shortcut>
 			<Action>НачатьЗаписьДействийПользователяКнопка</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗавершитьЗаписьДействийПользователя" id="10">
 			<Title>
@@ -21298,6 +21427,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ЗавершитьЗаписьДействийПользователяКнопка</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОткрытьПодключитьTestClient" id="11">
 			<Title>
@@ -21322,6 +21452,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 			</ToolTip>
 			<Shortcut>Ctrl+T</Shortcut>
 			<Action>ОткрытьПодключитьTestClient</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="УстановитьПометкуВыполнятьСценарийСЭтогоШага" id="12">
 			<Title>
@@ -21421,6 +21552,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>УстановитьПометкуВыполнятьСценарийСЭтогоШага</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СнятьПометкуВыполнятьСценарийСЭтогоШага" id="13">
 			<Title>
@@ -21520,6 +21652,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>СнятьПометкуВыполнятьСценарийСЭтогоШага</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗапомнитьСостояниеФормыTestClient" id="14">
 			<Title>
@@ -21535,6 +21668,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ЗапомнитьСостояниеФормыTestClientКнопка</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗабытьСостояниеФормыTestClient" id="15">
 			<Title>
@@ -21550,6 +21684,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ЗабытьСостояниеФормыTestClientКнопка</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПолучитьИзмененияФормыGherkin" id="16">
 			<Title>
@@ -21565,6 +21700,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПолучитьИзмененияФормыGherkinКнопка</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПолучитьИзмененияФормыJSON" id="17">
 			<Title>
@@ -21579,6 +21715,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 					<v8:content>Получить изменения формы JSON</v8:content>
 				</v8:item>
 			</ToolTip>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ДляВызоваКонфигуратора" id="18">
 			<Title>
@@ -21678,6 +21815,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ДляВызоваКонфигуратора</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СвернутьДеревоДоФич" id="19">
 			<Title>
@@ -21693,6 +21831,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>СвернутьДеревоДоФич</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СвернутьДеревоДоСценариев" id="20">
 			<Title>
@@ -21708,6 +21847,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>СвернутьДеревоДоСценариев</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПроверитьЧтоЗаписьВидеоБудетРаботать" id="21">
 			<Title>
@@ -21807,6 +21947,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПроверитьЧтоЗаписьВидеоБудетРаботать</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СохранитьНастройки" id="22">
 			<Title>
@@ -21902,6 +22043,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>КомандаСохранитьНастройки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗагрузитьНастройкиПоУмолчанию" id="23">
 			<Title>
@@ -22001,6 +22143,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ЗагрузитьНастройкиПоУмолчанию</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СохранитьКлиентовТестирования" id="24">
 			<Title>
@@ -22096,6 +22239,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>СохранитьКлиентовТестированияКоманда</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПодключитьВыбранногоКлиентаТестирования" id="25">
 			<Title>
@@ -22271,6 +22415,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПодключитьВыбранногоКлиентаТестирования</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="НачатьЗаписьДействийПользователяВВыбранномКлиентеТестирования" id="26">
 			<Title>
@@ -22366,6 +22511,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>НачатьЗаписьДействийПользователяВВыбранномКлиентеТестирования</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОтключитьВыбранногоКлиентаТестирования" id="27">
 			<Title>
@@ -22541,6 +22687,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ОтключитьВыбранногоКлиентаТестирования</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПреобразоватьИсходныйXML" id="31">
 			<Title>
@@ -22640,6 +22787,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПреобразоватьИсходныйXML</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПодготовитьСценарийКВыполнению" id="32">
 			<Title>
@@ -22663,6 +22811,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПодготовитьСценарийКВыполнению</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ВыполнитьФичу" id="33">
 			<Title>
@@ -22673,6 +22822,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 			</Title>
 			<Shortcut>Ctrl+Alt+F5</Shortcut>
 			<Action>ВыполнитьФичуФорма</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗагрузитьНедавнююФичу1" id="34">
 			<Title>
@@ -22688,6 +22838,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ЗагрузитьНедавнююФичу1</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗагрузитьНедавнююФичу2" id="35">
 			<Title>
@@ -22703,6 +22854,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ЗагрузитьНедавнююФичу2</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗагрузитьНедавнююФичу3" id="36">
 			<Title>
@@ -22718,6 +22870,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ЗагрузитьНедавнююФичу3</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗагрузитьНедавнююФичу4" id="37">
 			<Title>
@@ -22733,6 +22886,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ЗагрузитьНедавнююФичу4</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗагрузитьНедавнююФичу5" id="38">
 			<Title>
@@ -22748,6 +22902,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ЗагрузитьНедавнююФичу5</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗагрузитьНедавнююФичу6" id="39">
 			<Title>
@@ -22763,6 +22918,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ЗагрузитьНедавнююФичу6</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗагрузитьНедавнююФичу7" id="40">
 			<Title>
@@ -22778,6 +22934,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ЗагрузитьНедавнююФичу7</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗагрузитьНедавнююФичу8" id="41">
 			<Title>
@@ -22793,6 +22950,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ЗагрузитьНедавнююФичу8</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗагрузитьНедавнююФичу9" id="42">
 			<Title>
@@ -22808,6 +22966,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ЗагрузитьНедавнююФичу9</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ДобавитьИзвестныйШаг" id="43">
 			<Title>
@@ -22831,6 +22990,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ДобавитьИзвестныйШаг</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ВыполнитьДанныйСценарийСТекущегоШага" id="44">
 			<Title>
@@ -22847,6 +23007,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 			</ToolTip>
 			<Shortcut>Ctrl+F5</Shortcut>
 			<Action>ВыполнитьДанныйСценарийСТекущегоШагаФорма</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ВыполнитьДанныйСценарийСТекущегоШагаСПродолжением" id="45">
 			<Title>
@@ -22863,6 +23024,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 			</ToolTip>
 			<Shortcut>Ctrl+Shift+F5</Shortcut>
 			<Action>ВыполнитьДанныйСценарийСТекущегоШагаСПродолжениемФорма</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="Брейкпоинт" id="46">
 			<Title>
@@ -22887,6 +23049,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 			</ToolTip>
 			<Shortcut>F9</Shortcut>
 			<Action>Брейкпоинт</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="БрейкпоинтУбратьВсе" id="47">
 			<Title>
@@ -22911,6 +23074,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 			</ToolTip>
 			<Shortcut>Ctrl+F9</Shortcut>
 			<Action>БрейкпоинтУбратьВсе</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ВыполнитьОдинШаг" id="48">
 			<Title>
@@ -23011,6 +23175,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 			</ToolTip>
 			<Shortcut>F11</Shortcut>
 			<Action>ВыполнитьОдинШагФорма</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СброситьКешИзвестныхStepDefinition" id="49">
 			<Title>
@@ -23110,6 +23275,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>СброситьКешИзвестныхStepDefinition</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОткрытьКаталогФичи" id="50">
 			<Title>
@@ -23126,6 +23292,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 			</ToolTip>
 			<Shortcut>Ctrl+F7</Shortcut>
 			<Action>ОткрытьКаталогФичи</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПерезагрузитьИВыполнитьДанныйСценарий" id="51">
 			<Title>
@@ -23142,6 +23309,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 			</ToolTip>
 			<Shortcut>Alt+F6</Shortcut>
 			<Action>ПерезагрузитьИВыполнитьДанныйСценарийФорма</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПриостановитьЗаписьДействийПользователя" id="52">
 			<Title>
@@ -23157,6 +23325,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПриостановитьЗаписьДействийПользователя</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПродолжитьЗаписьДействийПользователя" id="53">
 			<Title>
@@ -23172,6 +23341,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПродолжитьЗаписьДействийПользователя</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПоказатьСкрытьПутьКФайлу" id="54">
 			<Title>
@@ -23187,6 +23357,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПоказатьСкрытьПутьКФайлу</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПоказатьСкрытьСнипет" id="55">
 			<Title>
@@ -23202,6 +23373,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПоказатьСкрытьСнипет</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПоказатьСкрытьАдресСнипета" id="56">
 			<Title>
@@ -23217,6 +23389,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПоказатьСкрытьАдресСнипета</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПоказатьСкрытьСтрокаРеальнойПроцедуры" id="57">
 			<Title>
@@ -23232,6 +23405,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПоказатьСкрытьСтрокаРеальнойПроцедуры</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПоказатьСкрытьВсеКолонки" id="58">
 			<Title>
@@ -23247,6 +23421,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПоказатьСкрытьВсеКолонки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="РедактироватьТаблицуТекст" id="59">
 			<Title>
@@ -23346,6 +23521,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>РедактироватьТаблицуТекст</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПоказатьСкрытьИДСтроки" id="60">
 			<Title>
@@ -23361,6 +23537,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПоказатьСкрытьИДСтроки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ВыполнитьПроизвольныйКод" id="61">
 			<Title>
@@ -23376,6 +23553,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ВыполнитьПроизвольныйКод</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ВычислитьPIDЭтогоСеанса" id="62">
 			<Title>
@@ -23475,6 +23653,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ВычислитьPIDЭтогоСеанса</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СохранитьНастройкиКлиент" id="63">
 			<Title>
@@ -23490,6 +23669,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>СохранитьНастройкиКлиент</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ДобавитьСтрокуВСписокБиблиотек" id="64">
 			<Title>
@@ -23505,6 +23685,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ДобавитьСтрокуВСписокБиблиотек</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ИсследовательФормы" id="65">
 			<Title>
@@ -23605,6 +23786,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 			</ToolTip>
 			<Shortcut>Alt+E</Shortcut>
 			<Action>ИсследовательФормы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПолучитьМакетПоТаблице" id="66">
 			<Title>
@@ -23704,6 +23886,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПолучитьМакетПоТаблице</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ДобавитьСтрокуВСписокСловарейЗамен" id="67">
 			<Title>
@@ -23799,6 +23982,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ДобавитьСтрокуВСписокСловарейЗамен</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОчиститьСгенерированныйСценарий" id="68">
 			<Title>
@@ -23894,6 +24078,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ОчиститьСгенерированныйСценарий</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПолучитьСостояниеТекущегоЭлементаФормы" id="69">
 			<Title>
@@ -23989,6 +24174,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПолучитьСостояниеТекущегоЭлементаФормыКнопка</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПеревестиТекстНаДругойЯзык" id="70">
 			<Title>
@@ -24084,6 +24270,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПеревестиТекстНаДругойЯзык</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="РазвернутьВсеСтрокиДереваСлужебный" id="73">
 			<Title>
@@ -24099,6 +24286,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>РазвернутьВсеСтрокиДереваСлужебный</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СброситьПодключениеSikuliXСервера" id="74">
 			<Title>
@@ -24122,6 +24310,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>СброситьПодключениеSikuliXСервера</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СвернутьДеревоДоШагов" id="75">
 			<Title>
@@ -24137,6 +24326,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>СвернутьДеревоДоШагов</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПоказатьСкрытьТаблоПеременных" id="76">
 			<Title>
@@ -24157,6 +24347,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 			</ToolTip>
 			<Shortcut>Ctrl+Alt+W</Shortcut>
 			<Action>ПоказатьСкрытьТаблоПеременных</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОбновитьТаблоПеременных" id="77">
 			<Title>
@@ -24176,6 +24367,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ОбновитьТаблоПеременных</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОстановитьСценарии" id="71">
 			<Title>
@@ -24194,6 +24386,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ОстановитьСценарии</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПерейтиКСтрокеСОшибкой" id="72">
 			<Title>
@@ -24213,6 +24406,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПерейтиКСтрокеСОшибкой</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ВыгрузитьНастройкиВФайл" id="78">
 			<Title>
@@ -24226,6 +24420,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</Title>
 			<Action>ВыгрузитьНастройкиВФайл</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗагрузитьНастройкиИзФайла" id="79">
 			<Title>
@@ -24239,6 +24434,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</Title>
 			<Action>ЗагрузитьНастройкиИзФайла</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗакрытьТаблоПеременных" id="80">
 			<Title>
@@ -24258,6 +24454,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ЗакрытьТаблоПеременных</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОткрытьФормуГенератораСценариев" id="81">
 			<Title>
@@ -24267,6 +24464,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</Title>
 			<Action>ОткрытьФормуГенератораСценариев</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="КаталогиСкриптовSikuliXПоУмолчанию" id="82">
 			<Title>
@@ -24290,6 +24488,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>КаталогиСкриптовSikuliXПоУмолчанию</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ТестГолоса" id="28">
 			<Title>
@@ -24313,6 +24512,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ТестГолоса</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="УстановитьСервисныеУтилиты" id="29">
 			<Title>
@@ -24332,6 +24532,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>УстановитьСервисныеУтилиты</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОткрытьОпределениеШага" id="30">
 			<Title>
@@ -24352,6 +24553,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 			</ToolTip>
 			<Shortcut>Ctrl+I</Shortcut>
 			<Action>ОткрытьОпределениеШага</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 			<AssociatedTableElementId>66</AssociatedTableElementId>
 		</Command>
 		<Command name="ЗаполнитьТиповыеПрофилиПоиска" id="83">
@@ -24372,6 +24574,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ЗаполнитьТиповыеПрофилиЦветов</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 </Form>
