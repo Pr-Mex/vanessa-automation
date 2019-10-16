@@ -49,9 +49,12 @@
 <blockquote style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: medium none; MARGIN: 0px 0px 0px 40px; PADDING-RIGHT: 0px">
 <p>20.1 <a href="#20.1 Установка SikuliX">Установка SikuliX</a></p>
 <p>20.2 <a href="#20.2 SikuliX сервер">SikuliX сервер</a></p></blockquote>
-<p>21. <a href="#Работа с глобальными переменными.">Работа с глобальными переменными.</a></p>
-<p> </p>
-<p> </p>
+<p>21. <a href="#Работа с глобальными переменными.">Глобальные переменные.</a></p>
+<blockquote style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: medium none; MARGIN: 0px 0px 0px 40px; PADDING-RIGHT: 0px">
+<p>21.1 Работа с глобальными переменными.</p></blockquote>
+<blockquote style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: medium none; MARGIN: 0px 0px 0px 40px; PADDING-RIGHT: 0px">
+<p>21.2 Загрузка глобальных переменных.</p></blockquote>
+<p>  </p>
 <p><a name="ПравилаНаписанияfeatureФайлов"><font size="4">1 . Правила написания feature файлов.</font></a></p>
 <p><font size="2"><a name="Основные секции feature файла."><strong>1.1 Основные секции feature файла.</strong></a></font></p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
@@ -395,13 +398,16 @@
 <p dir="ltr">7. Скрипты, принимающие аргрументы вида "<strong>sys.argv[1]</strong>" также будут корректно обработаны.</p>
 <p dir="ltr">8. Запуск SikuliX сервера доступен через управляющий json файл. Параметры: "<strong>КаталогиСкриптовSikuliX</strong>" и "<strong>ИспользоватьSikuliXСервер</strong>".</p></blockquote>
 <p dir="ltr"> </p>
-<h2 dir="ltr"><font style="BACKGROUND-COLOR: #ffffff"><a name="Работа с глобальными переменными.">21. Работа с глобальными переменными.</a></font></h2>
+<h2 dir="ltr"><font style="BACKGROUND-COLOR: #ffffff"><a name="Работа с глобальными переменными.">21 Глобальные переменные</a></font></h2></span></font></font></font></h2>
+<h2 style="FONT-SIZE: 21px; ORPHANS: 2; WIDOWS: 2" dir="ltr"><a name="Работа с глобальными переменными.">21.1 Работа с глобальными переменными</a></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font face="Verdana"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">
+<div><font style="BACKGROUND-COLOR: #ffffff"><a name="Работа с глобальными переменными."></a></font></div>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
 <p dir="ltr"><br>1. В Vanessa Automation есть возможность работать с глобальными переменными. Они бывают двух типов.</p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
 <p dir="ltr">1) Переменные, которые хранятся в служебной структуре <strong>Контекст</strong>. Они существуют на время жизни одного сценария.</p>
 <p dir="ltr">2) Переменные, которые хранятся в служебной структуре <strong>КонтекстСохраняемый</strong>. Они существуют, пока открыта форма Vanessa Automation. </p></blockquote>
-<p dir="ltr">2. В стандартной библиоетке шагов Vanessa Automation есть готовые шаги, которые позволяют сохранить нужное значение в переменную, а затем его использовать. Например:</p>
+<p dir="ltr">2. В стандартной библиотeке шагов Vanessa Automation есть готовые шаги, которые позволяют сохранить нужное значение в переменную, а затем его использовать. Например:</p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
 <p dir="ltr"><em>И я запоминаю значение текущего поля как "ИмяПеременной"</em></p>
 <p dir="ltr"><em>И в поле с именем "ИмяПоля" ввожу значение переменной "ИмяПеременной"</em></p></blockquote>
@@ -416,4 +422,82 @@
 <p dir="ltr"><em>И в поле с именем "ИмяПоля" ввожу значение переменной "$ИмяПеременной$" - </em>значение переменной будет взято из Контекста</p>
 <p dir="ltr"><em>И в поле с именем "ИмяПоля" ввожу значение переменной "$$ИмяПеременной$$" - </em>значение переменной будет взято из КонтекстаСохраняемого</p></blockquote>
 <p dir="ltr">5. Имена переменных должны соответствовать правилам помещения значений в Структуру (нельзя использовать пробелы, спецсимволы и т.д.)</p>
-<p dir="ltr"> </p></blockquote></span></font></font></font></h2></blockquote></blockquote></body></html>
+<p dir="ltr"> </p></blockquote></span></font></font></font></h2>
+<h2 style="FONT-SIZE: 21px; ORPHANS: 2; WIDOWS: 2" dir="ltr"><a name="Работа с глобальными переменными.">21.2 Загрузка глобальных переменных</a></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font face="Verdana"><font size="+0"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; FONT-WEIGHT: normal; ORPHANS: 2; WIDOWS: 2; font-variant-ligatures: normal">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr"></blockquote></span></font></font></h2>
+<h2 style="FONT-SIZE: 15px; MARGIN-RIGHT: 0px" dir="ltr"><font face="Verdana"><font size="+0"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; ORPHANS: 2; WIDOWS: 2; font-variant-ligatures: normal">
+<div style="FONT-WEIGHT: normal"><a name="Работа с глобальными переменными."></a></div>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p style="FONT-WEIGHT: normal" dir="ltr"><br>1. В Vanessa Automation есть возможность загружать глобальные переменные, при этом переменные загружаются в структуру <strong>КонтекстСохраняемый. </strong> Это может быть полезно в том случае, когда есть команда разработчиков, и у каждого должен быть набор переменных с одинаковыми именами, но индивидуальными настойками (например имена баз TestClient). Загружать переменные можно двумя способами.</p>
+<blockquote style="FONT-WEIGHT: normal; MARGIN-RIGHT: 0px" dir="ltr">
+<p dir="ltr">1) Из внешнего файла;</p>
+<p dir="ltr">2) Из внешнего key-value хранилища по http протоколу ( поддерживается 'Consul' ).</p></blockquote>
+<p dir="ltr"><span style="FONT-WEIGHT: normal">2. Чтобы воспользоваться этой функциональностью для </span>файлового режима<span style="FONT-WEIGHT: normal">, нужно выполнить следующее:</span></p></blockquote></span></font></font></h2></blockquote></blockquote>
+<blockquote style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: medium none; MARGIN: 0px 0px 0px 40px; PADDING-RIGHT: 0px">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<h2 style="FONT-SIZE: 15px; MARGIN-RIGHT: 0px" dir="ltr"><font face="Verdana"><font size="+0"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; ORPHANS: 2; WIDOWS: 2; font-variant-ligatures: normal">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr"><span style="FONT-WEIGHT: normal">1) В своем каталоге проекта создать файл </span>user_settings.json<span style="FONT-WEIGHT: normal"> следующего формата:</span></blockquote></span></font></font></h2></blockquote></blockquote></blockquote>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<h2 style="FONT-SIZE: 15px; MARGIN-RIGHT: 0px" dir="ltr"><font face="Verdana"><font size="+0"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; FONT-WEIGHT: normal; ORPHANS: 2; WIDOWS: 2; font-variant-ligatures: normal">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr"><pre class="unchanged rich-diff-level-one" style="BOX-SIZING: border-box; FONT-SIZE: 13px; OVERFLOW: auto; MARGIN-BOTTOM: 16px; FONT-FAMILY: SFMono-Regular, Consolas, &quot;Liberation Mono&quot;, Menlo, monospace; MARGIN-TOP: 0px; COLOR: rgb(36,41,46); PADDING-BOTTOM: 10px; PADDING-TOP: 10px; PADDING-LEFT: 20px; LINE-HEIGHT: 1.45; PADDING-RIGHT: 20px; BACKGROUND-COLOR: rgb(246,248,250); font-variant-ligatures: normal; overflow-wrap: normal; border-top-left-radius: 3px; border-top-right-radius: 3px; border-bottom-right-radius: 3px; border-bottom-left-radius: 3px">{
+  <span class="pl-s" style="BOX-SIZING: border-box; COLOR: rgb(3,47,98)"><span class="pl-pds" style="BOX-SIZING: border-box">"</span>userSettings<span class="pl-pds" style="BOX-SIZING: border-box">"</span></span>: [
+      {
+        <span class="pl-s" style="BOX-SIZING: border-box; COLOR: rgb(3,47,98)"><span class="pl-pds" style="BOX-SIZING: border-box">"</span>user<span class="pl-pds" style="BOX-SIZING: border-box">"</span></span>: <span class="pl-s" style="BOX-SIZING: border-box; COLOR: rgb(3,47,98)"><span class="pl-pds" style="BOX-SIZING: border-box">"</span>USERNAME_1<span class="pl-pds" style="BOX-SIZING: border-box">"</span></span>,
+        <span class="pl-s" style="BOX-SIZING: border-box; COLOR: rgb(3,47,98)"><span class="pl-pds" style="BOX-SIZING: border-box">"</span>settings<span class="pl-pds" style="BOX-SIZING: border-box">"</span></span>: {
+            <span class="pl-s" style="BOX-SIZING: border-box; COLOR: rgb(3,47,98)"><span class="pl-pds" style="BOX-SIZING: border-box">"</span>ИМЯ_ПЕРЕМЕННОЙ_1<span class="pl-pds" style="BOX-SIZING: border-box">"</span></span>: <span class="pl-s" style="BOX-SIZING: border-box; COLOR: rgb(3,47,98)"><span class="pl-pds" style="BOX-SIZING: border-box">"</span>ЗНАЧЕНИЕ_ПЕРЕМЕННОЙ_1<span class="pl-pds" style="BOX-SIZING: border-box">"</span></span>,
+            <span class="pl-s" style="BOX-SIZING: border-box; COLOR: rgb(3,47,98)"><span class="pl-pds" style="BOX-SIZING: border-box">"</span>ИМЯ_ПЕРЕМЕННОЙ_2<span class="pl-pds" style="BOX-SIZING: border-box">"</span></span>: <span class="pl-s" style="BOX-SIZING: border-box; COLOR: rgb(3,47,98)"><span class="pl-pds" style="BOX-SIZING: border-box">"</span>ЗНАЧЕНИЕ_ПЕРЕМЕННОЙ_2<span class="pl-pds" style="BOX-SIZING: border-box">"</span></span>,
+        }
+      },
+      {
+        <span class="pl-s" style="BOX-SIZING: border-box; COLOR: rgb(3,47,98)"><span class="pl-pds" style="BOX-SIZING: border-box">"</span>user<span class="pl-pds" style="BOX-SIZING: border-box">"</span></span>: <span class="pl-s" style="BOX-SIZING: border-box; COLOR: rgb(3,47,98)"><span class="pl-pds" style="BOX-SIZING: border-box">"</span>USERNAME_2<span class="pl-pds" style="BOX-SIZING: border-box">"</span></span>,
+        <span class="pl-s" style="BOX-SIZING: border-box; COLOR: rgb(3,47,98)"><span class="pl-pds" style="BOX-SIZING: border-box">"</span>settings<span class="pl-pds" style="BOX-SIZING: border-box">"</span></span>: {
+            <span class="pl-s" style="BOX-SIZING: border-box; COLOR: rgb(3,47,98)"><span class="pl-pds" style="BOX-SIZING: border-box">"</span>ИМЯ_ПЕРЕМЕННОЙ_1<span class="pl-pds" style="BOX-SIZING: border-box">"</span></span>: <span class="pl-s" style="BOX-SIZING: border-box; COLOR: rgb(3,47,98)"><span class="pl-pds" style="BOX-SIZING: border-box">"</span>ЗНАЧЕНИЕ_ПЕРЕМЕННОЙ_1<span class="pl-pds" style="BOX-SIZING: border-box">"</span></span>,
+            <span class="pl-s" style="BOX-SIZING: border-box; COLOR: rgb(3,47,98)"><span class="pl-pds" style="BOX-SIZING: border-box">"</span>ИМЯ_ПЕРЕМЕННОЙ_2<span class="pl-pds" style="BOX-SIZING: border-box">"</span></span>: <span class="pl-s" style="BOX-SIZING: border-box; COLOR: rgb(3,47,98)"><span class="pl-pds" style="BOX-SIZING: border-box">"</span>ЗНАЧЕНИЕ_ПЕРЕМЕННОЙ_2<span class="pl-pds" style="BOX-SIZING: border-box">"</span></span>,
+        }
+      }
+  ]
+}</pre></blockquote></span></font></font></h2></blockquote></blockquote>
+<blockquote style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: medium none; MARGIN: 0px 0px 0px 40px; PADDING-RIGHT: 0px">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<h2 style="FONT-SIZE: 15px; MARGIN-RIGHT: 0px" dir="ltr"><font face="Verdana"><font size="+0"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; ORPHANS: 2; WIDOWS: 2; font-variant-ligatures: normal">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p dir="ltr"><span style="FONT-WEIGHT: normal">2) В свойства </span>user<span style="FONT-WEIGHT: normal"> поставить доменное (локальное) имя пользователя, для которого должны применяться настройки. Именно по этому свойству будет определяться, какие пользовательские настройки нужно загружать.</span></p></blockquote></span></font></font></h2></blockquote></blockquote></blockquote>
+<blockquote style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: medium none; MARGIN: 0px 0px 0px 40px; PADDING-RIGHT: 0px">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<h2 style="FONT-SIZE: 15px; MARGIN-RIGHT: 0px" dir="ltr"><font face="Verdana"><font size="+0"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; ORPHANS: 2; WIDOWS: 2; font-variant-ligatures: normal">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p dir="ltr"><span style="FONT-WEIGHT: normal">3) В свойстве </span>settings<span style="FONT-WEIGHT: normal"> прописать конкретные настройки для каждого пользователя. Состав настроек необязательно должен совпадать между пользователями, для какого-то пользователя настройки могут отсутствовать.</span></p></blockquote></span></font></font></h2></blockquote></blockquote></blockquote>
+<blockquote style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: medium none; MARGIN: 0px 0px 0px 40px; PADDING-RIGHT: 0px">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<h2 style="FONT-SIZE: 15px; MARGIN-RIGHT: 0px" dir="ltr"><font face="Verdana"><font size="+0"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; ORPHANS: 2; WIDOWS: 2; font-variant-ligatures: normal">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p dir="ltr"><span style="FONT-WEIGHT: normal">4) Открыть обработку</span> vanessa-automation.epf <span style="FONT-WEIGHT: normal">из корня vanessa-automation - файл </span>user_settings.json<span style="FONT-WEIGHT: normal"> подтянется автоматически из каталога, в котором находится vanessa-automation (поле </span>Каталог<span style="FONT-WEIGHT: normal"> </span>инструментов<span style="FONT-WEIGHT: normal"> на вкладке </span>Сервис<span style="FONT-WEIGHT: normal">). Если такого файла нет, то загрузка не выполняется. Имеется возможность указать свой каталог загрузки настроек, он подчиняется свойству </span>Каталог проекта<span style="FONT-WEIGHT: normal"> на вкладке </span>Сервис<span style="FONT-WEIGHT: normal">.</span></p></blockquote></span></font></font></h2></blockquote></blockquote></blockquote>
+<blockquote style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: medium none; MARGIN: 0px 0px 0px 40px; PADDING-RIGHT: 0px">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<h2 style="FONT-SIZE: 15px; MARGIN-RIGHT: 0px" dir="ltr"><font face="Verdana"><font size="+0"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; FONT-WEIGHT: normal; ORPHANS: 2; WIDOWS: 2; font-variant-ligatures: normal">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p dir="ltr">5) Если файл найден, то на основании текущего имени пользователя компьютера или домена (которое определяется через WShell скрипт), ищутся настройки текущего пользователя и загружаются только они. Если настройки не найдены, то выводится предупреждающее сообщение.</p></blockquote></span></font></font></h2></blockquote></blockquote></blockquote>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<h2 style="FONT-SIZE: 15px; MARGIN-RIGHT: 0px" dir="ltr"><font face="Verdana"><font size="+0"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; ORPHANS: 2; WIDOWS: 2; font-variant-ligatures: normal">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p dir="ltr"><span style="FONT-WEIGHT: normal">3. Чтобы воспользоваться этой функциональностью для </span>Consul-a<span style="FONT-WEIGHT: normal"> нужно:</span></p></blockquote></span></font></font></h2></blockquote></blockquote>
+<blockquote style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: medium none; MARGIN: 0px 0px 0px 40px; PADDING-RIGHT: 0px">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<h2 style="FONT-SIZE: 15px; MARGIN-RIGHT: 0px" dir="ltr"><font face="Verdana"><font size="+0"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; FONT-WEIGHT: normal; ORPHANS: 2; WIDOWS: 2; font-variant-ligatures: normal">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p dir="ltr">1) Развернуть единый сервер консула и установить агентов консула на каждой машине, на которой запускается vanessa-automation .</p></blockquote></span></font></font></h2></blockquote></blockquote></blockquote>
+<blockquote style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; BORDER-LEFT: medium none; MARGIN: 0px 0px 0px 40px; PADDING-RIGHT: 0px">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<h2 style="FONT-SIZE: 15px; MARGIN-RIGHT: 0px" dir="ltr"><font face="Verdana"><font size="+0"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; ORPHANS: 2; WIDOWS: 2; font-variant-ligatures: normal">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p dir="ltr"><span style="FONT-WEIGHT: normal">2) На вкладке </span>Сервис<span style="FONT-WEIGHT: normal"> в vanessa-automation указать Поставщик пользовательских настроек равным </span>CONSUL<span style="FONT-WEIGHT: normal">, а в поле Адрес пользовательских настроек указать полный url к настройкам на сервере. Url должен содержать путь, доступный через REST интерфейс консула, например http://127.0.0.1:8500/v1/kv/ivanov</span></p></blockquote></span></font></font></h2></blockquote></blockquote></blockquote></body></html>

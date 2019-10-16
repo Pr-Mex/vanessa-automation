@@ -9679,6 +9679,61 @@
 														</Title>
 													</ExtendedTooltip>
 												</InputField>
+												<InputField name="ПоставщикUserSettings" id="2153">
+													<DataPath>Объект.ПоставщикПользовательскихНастроек</DataPath>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<ListChoiceMode>true</ListChoiceMode>
+													<ChoiceList>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>CONSUL</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:string">CONSUL</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>FILE</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:string">FILE</Value>
+															</xr:Value>
+														</xr:Item>
+													</ChoiceList>
+													<ContextMenu name="ПоставщикUserSettingsКонтекстноеМеню" id="2154"/>
+													<ExtendedTooltip name="ПоставщикUserSettingsРасширеннаяПодсказка" id="2155">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Источник получения пользовательских настроек</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+												</InputField>
+												<InputField name="АдресUserSettings" id="2156">
+													<DataPath>Объект.АдресПользовательскихНастроек</DataPath>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<ContextMenu name="АдресUserSettingsКонтекстноеМеню" id="2157"/>
+													<ExtendedTooltip name="АдресUserSettingsРасширеннаяПодсказка" id="2158">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>файловый путь или url по которому находятся настройки. По умолчанию каталог проекта (имя файлы по умолчанию user_settings.json)  или localhost</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+												</InputField>
 												<Button name="СброситьКешИзвестныхStepDefinition" id="1532">
 													<Type>UsualButton</Type>
 													<CommandName>Form.Command.СброситьКешИзвестныхStepDefinition</CommandName>
