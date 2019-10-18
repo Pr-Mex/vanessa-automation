@@ -5798,6 +5798,7 @@
 													<ExtendedTooltip name="СценарийПоведенияРасширеннаяПодсказка" id="1322"/>
 													<ChildItems>
 														<UsualGroup name="Группа4" id="1245">
+															<HorizontalStretch>false</HorizontalStretch>
 															<Group>Horizontal</Group>
 															<Representation>None</Representation>
 															<ShowTitle>false</ShowTitle>
@@ -5990,51 +5991,51 @@
 																	<CommandName>Form.Command.ПеревестиТекстНаДругойЯзык</CommandName>
 																	<ExtendedTooltip name="ПеревестиТекстНаДругойЯзыкРасширеннаяПодсказка" id="1767"/>
 																</Button>
-																<CommandBar name="ГруппаДействияСКодомСценария" id="2220">
+																<UsualGroup name="ГруппаДействияСКодом" id="2228">
 																	<Title>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>Код</v8:content>
+																			<v8:content>Группа действия с кодом</v8:content>
 																		</v8:item>
 																	</Title>
-																	<ToolTip>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Действия с кодом</v8:content>
-																		</v8:item>
-																	</ToolTip>
-																	<ExtendedTooltip name="ГруппаДействияСКодомСценарияРасширеннаяПодсказка" id="2221"/>
+																	<Group>Horizontal</Group>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаДействияСКодомРасширеннаяПодсказка" id="2229"/>
 																	<ChildItems>
-																		<Popup name="ГруппаПодменюДействияСКодомСценария" id="2222">
-																			<Title>
-																				<v8:item>
-																					<v8:lang>ru</v8:lang>
-																					<v8:content>Код</v8:content>
-																				</v8:item>
-																			</Title>
-																			<ToolTip>
-																				<v8:item>
-																					<v8:lang>ru</v8:lang>
-																					<v8:content>Группа подменю действия с кодом сценария</v8:content>
-																				</v8:item>
-																			</ToolTip>
-																			<ExtendedTooltip name="ГруппаПодменюДействияСКодомСценарияРасширеннаяПодсказка" id="2223"/>
-																			<ChildItems>
-																				<Button name="КомментироватьРаскомментироватьСтрокиСценария" id="2224">
-																					<Type>CommandBarButton</Type>
-																					<OnlyInAllActions>true</OnlyInAllActions>
-																					<CommandName>Form.Command.КомментироватьРаскомментироватьСтрокиСценария</CommandName>
-																					<ExtendedTooltip name="КомментироватьРаскомментироватьСтрокиСценарияРасширеннаяПодсказка" id="2225"/>
-																				</Button>
-																				<Button name="ВыделитьСтрокиСценарияКакКодВстроенногоЯзыка" id="2226">
-																					<Type>CommandBarButton</Type>
-																					<CommandName>Form.Command.ВыделитьСтрокиСценарияКакКодВстроенногоЯзыка</CommandName>
-																					<ExtendedTooltip name="ВыделитьСтрокиСценарияКакКодВстроенногоЯзыкаРасширеннаяПодсказка" id="2227"/>
-																				</Button>
-																			</ChildItems>
-																		</Popup>
+																		<Button name="КомментироватьСтрокиСценария" id="2224">
+																			<Type>UsualButton</Type>
+																			<Representation>Picture</Representation>
+																			<AutoMaxWidth>false</AutoMaxWidth>
+																			<CommandName>Form.Command.КомментироватьСтрокиСценария</CommandName>
+																			<Picture>
+																				<xr:Abs>Picture.png</xr:Abs>
+																				<xr:LoadTransparent>false</xr:LoadTransparent>
+																			</Picture>
+																			<ExtendedTooltip name="КомментироватьСтрокиСценарияРасширеннаяПодсказка" id="2225"/>
+																		</Button>
+																		<Button name="РаскомментироватьСтрокиСценария" id="2230">
+																			<Type>UsualButton</Type>
+																			<Representation>Picture</Representation>
+																			<CommandName>Form.Command.РаскомментироватьСтрокиСценария</CommandName>
+																			<Picture>
+																				<xr:Abs>Picture.png</xr:Abs>
+																				<xr:LoadTransparent>false</xr:LoadTransparent>
+																			</Picture>
+																			<ExtendedTooltip name="РаскомментироватьСтрокиСценарияРасширеннаяПодсказка" id="2231"/>
+																		</Button>
+																		<Button name="ВыделитьСтрокиСценария" id="2226">
+																			<Type>UsualButton</Type>
+																			<Representation>Picture</Representation>
+																			<CommandName>Form.Command.ВыделитьСтрокиСценария</CommandName>
+																			<Picture>
+																				<xr:Abs>Picture.png</xr:Abs>
+																				<xr:LoadTransparent>false</xr:LoadTransparent>
+																			</Picture>
+																			<ExtendedTooltip name="ВыделитьСтрокиСценарияРасширеннаяПодсказка" id="2227"/>
+																		</Button>
 																	</ChildItems>
-																</CommandBar>
+																</UsualGroup>
 															</ChildItems>
 														</UsualGroup>
 														<TextDocumentField name="СгенерированныйСценарий" id="314">
@@ -6067,6 +6068,50 @@
 																		<CommandName>Form.Command.ОчиститьСгенерированныйСценарий</CommandName>
 																		<ExtendedTooltip name="СгенерированныйСценарийКонтекстноеМенюОчиститьСгенерированныйСценарийРасширеннаяПодсказка" id="1746"/>
 																	</Button>
+																	<ButtonGroup name="СгенерированныйСценарийКонтекстноеМенюДействияСКодом" id="2232">
+																		<Title>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Сгенерированный сценарий контекстное меню действия с кодом</v8:content>
+																			</v8:item>
+																		</Title>
+																		<ToolTip>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Сгенерированный сценарий контекстное меню действия с кодом</v8:content>
+																			</v8:item>
+																		</ToolTip>
+																		<ExtendedTooltip name="СгенерированныйСценарийКонтекстноеМенюДействияСКодомРасширеннаяПодсказка" id="2233"/>
+																		<ChildItems>
+																			<Button name="СгенерированныйСценарийКонтекстноеМенюКомментироватьСтрокиСценария" id="2236">
+																				<Type>CommandBarButton</Type>
+																				<CommandName>Form.Command.КомментироватьСтрокиСценария</CommandName>
+																				<Picture>
+																					<xr:Abs>Picture.png</xr:Abs>
+																					<xr:LoadTransparent>false</xr:LoadTransparent>
+																				</Picture>
+																				<ExtendedTooltip name="СгенерированныйСценарийКонтекстноеМенюКомментироватьСтрокиСценарияРасширеннаяПодсказка" id="2237"/>
+																			</Button>
+																			<Button name="СгенерированныйСценарийКонтекстноеМенюРаскомментироватьСтрокиСценария" id="2234">
+																				<Type>CommandBarButton</Type>
+																				<CommandName>Form.Command.РаскомментироватьСтрокиСценария</CommandName>
+																				<Picture>
+																					<xr:Abs>Picture.png</xr:Abs>
+																					<xr:LoadTransparent>false</xr:LoadTransparent>
+																				</Picture>
+																				<ExtendedTooltip name="СгенерированныйСценарийКонтекстноеМенюРаскомментироватьСтрокиСценарияРасширеннаяПодсказка" id="2235"/>
+																			</Button>
+																			<Button name="СгенерированныйСценарийКонтекстноеМенюВыделитьСтрокиСценария" id="2238">
+																				<Type>CommandBarButton</Type>
+																				<CommandName>Form.Command.ВыделитьСтрокиСценария</CommandName>
+																				<Picture>
+																					<xr:Abs>Picture.png</xr:Abs>
+																					<xr:LoadTransparent>false</xr:LoadTransparent>
+																				</Picture>
+																				<ExtendedTooltip name="СгенерированныйСценарийКонтекстноеМенюВыделитьСтрокиСценарияРасширеннаяПодсказка" id="2239"/>
+																			</Button>
+																		</ChildItems>
+																	</ButtonGroup>
 																</ChildItems>
 															</ContextMenu>
 															<ExtendedTooltip name="СгенерированныйСценарийРасширеннаяПодсказка" id="1325"/>
@@ -12763,7 +12808,6 @@ To disable mouse movement at a specific step, you should use the @DoNotMoveMouse
 																			<v8:content>Установить сервисные программы</v8:content>
 																		</v8:item>
 																	</Title>
-																	<CommandName>Form.Command.УстановитьСервисныеУтилиты</CommandName>
 																	<ToolTipRepresentation>Button</ToolTipRepresentation>
 																	<ExtendedTooltip name="УстановитьСервисныеПрограммыРасширеннаяПодсказка" id="2147"/>
 																</Button>
@@ -24563,7 +24607,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 			</ToolTip>
 			<Action>ЗаполнитьТиповыеПрофилиЦветов</Action>
 		</Command>
-		<Command name="ВыделитьСтрокиСценарияКакКодВстроенногоЯзыка" id="84">
+		<Command name="ВыделитьСтрокиСценария" id="84">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -24579,21 +24623,37 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 			<Shortcut>Ctrl+Shift+C</Shortcut>
 			<Action>ВыделитьСтрокиСценарияКакКодВстроенногоЯзыка</Action>
 		</Command>
-		<Command name="КомментироватьРаскомментироватьСтрокиСценария" id="85">
+		<Command name="КомментироватьСтрокиСценария" id="85">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Комментировать / раскомментировать</v8:content>
+					<v8:content>Комментировать</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Комментировать / раскомментировать строки сценария (Ctrl + Num /)</v8:content>
+					<v8:content>Комментировать строки сценария</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Shortcut>Ctrl+Num /</Shortcut>
-			<Action>КомментироватьРаскомментироватьСтрокиСценария</Action>
+			<Action>КомментироватьСтрокиСценария</Action>
+		</Command>
+		<Command name="РаскомментироватьСтрокиСценария" id="86">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Раскомментировать строки сценария</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Раскомментировать строки сценария</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+Shift+Num /</Shortcut>
+			<Action>РаскомментироватьСтрокиСценария</Action>
 		</Command>
 	</Commands>
 </Form>
