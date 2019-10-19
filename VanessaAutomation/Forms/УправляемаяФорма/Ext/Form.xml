@@ -9855,6 +9855,61 @@ E.g.:
 														</Title>
 													</ExtendedTooltip>
 												</InputField>
+												<InputField name="ПоставщикUserSettings" id="2228">
+													<DataPath>Объект.ПоставщикПользовательскихНастроек</DataPath>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<ListChoiceMode>true</ListChoiceMode>
+													<ChoiceList>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>CONSUL</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:string">CONSUL</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>FILE</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:string">FILE</Value>
+															</xr:Value>
+														</xr:Item>
+													</ChoiceList>
+													<ContextMenu name="ПоставщикUserSettingsКонтекстноеМеню" id="2229"/>
+													<ExtendedTooltip name="ПоставщикUserSettingsРасширеннаяПодсказка" id="2230">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Добавить описание</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+												</InputField>
+												<InputField name="АдресUserSettings" id="2231">
+													<DataPath>Объект.АдресПользовательскихНастроек</DataPath>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<ContextMenu name="АдресUserSettingsКонтекстноеМеню" id="2232"/>
+													<ExtendedTooltip name="АдресUserSettingsРасширеннаяПодсказка" id="2233">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>файловый путь или url по которому находятся настройки. По умолчанию каталог проекта (имя файлы по умолчанию user_settings.json)  или localhost</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+												</InputField>
 												<Button name="СброситьКешИзвестныхStepDefinition" id="1532">
 													<Type>UsualButton</Type>
 													<CommandName>Form.Command.СброситьКешИзвестныхStepDefinition</CommandName>
@@ -12752,17 +12807,6 @@ To disable mouse movement at a specific step, you should use the @DoNotMoveMouse
 															<ChildItems>
 																<Button name="УстановитьСервисныеПрограммы" id="2146">
 																	<Type>UsualButton</Type>
-																	<CommandName>Form.Command.УстановитьСервисныеУтилиты</CommandName>
-																	<Title>
-																		<v8:item>
-																			<v8:lang>en</v8:lang>
-																			<v8:content>Install service programs</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Установить сервисные программы</v8:content>
-																		</v8:item>
-																	</Title>
 																	<CommandName>Form.Command.УстановитьСервисныеУтилиты</CommandName>
 																	<ToolTipRepresentation>Button</ToolTipRepresentation>
 																	<ExtendedTooltip name="УстановитьСервисныеПрограммыРасширеннаяПодсказка" id="2147"/>
