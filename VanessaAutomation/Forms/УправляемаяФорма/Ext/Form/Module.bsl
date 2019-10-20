@@ -9530,7 +9530,7 @@
 		Возврат;	
 	КонецЕсли;	
 
-	НомерРелиза = "1.02";
+	НомерРелиза = "1.03";
 	АдресСервера = "//github.com/";
 	
 	ПутьНаСервере = "//github.com/Pr-Mex/UItoolsFor1C/releases/download/%НомерРелиза%/UItoolsFor1C.zip";
