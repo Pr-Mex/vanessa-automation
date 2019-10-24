@@ -193,6 +193,7 @@
 						</v8:item>
 					</Title>
 					<TitleLocation>None</TitleLocation>
+					<ClearButton>true</ClearButton>
 					<InputHint>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -207,6 +208,7 @@
 					<ExtendedTooltip name="НайтиШагиРасширеннаяПодсказка" id="51"/>
 					<Events>
 						<Event name="OnChange">НайтиШагиПриИзменении</Event>
+						<Event name="Clearing">НайтиШагиОчистка</Event>
 					</Events>
 				</InputField>
 				<Button name="КнопкаНайтиШаги" id="94">
@@ -1161,6 +1163,21 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
+				<Column name="Снипет" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Снипет</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
 			</Columns>
 		</Attribute>
 		<Attribute name="ТаблицаИзвестныхStepDefinition" id="3">
@@ -1636,6 +1653,21 @@
 			</Title>
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПараметрСнипет" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметр снипет</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
 		<ConditionalAppearance>

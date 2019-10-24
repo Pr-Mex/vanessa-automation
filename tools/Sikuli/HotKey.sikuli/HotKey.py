@@ -30,6 +30,14 @@ elif lowerHotKey == 'del':
     HotKey = Key.DELETE
 elif lowerHotKey == 'delete':
     HotKey = Key.DELETE
+elif lowerHotKey == 'left':
+    HotKey = Key.LEFT
+elif lowerHotKey == 'right':
+    HotKey = Key.RIGHT
+elif lowerHotKey == 'up':
+    HotKey = Key.UP
+elif lowerHotKey == 'down':
+    HotKey = Key.DOWN
 
 if Modif == 'win':
     type(HotKey, KeyModifier.WIN)
