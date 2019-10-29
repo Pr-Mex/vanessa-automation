@@ -1,16 +1,18 @@
 name: sonar-scanner
+
 on:
 #   pull_request:
 #     branches: 
 #       - develop  
-  push:
+  push: 
       branches: 
         - develop  
 
 jobs:
-   
+  
   SonarScanner:
-   
+  
+    if: github.repository == 'Pr-Mex/vanessa-automation'
     runs-on: ubuntu-latest
    
     steps:
@@ -20,7 +22,7 @@ jobs:
     - name: Setup sonarqube
       uses: warchant/setup-sonar-scanner@v1
     - name: Run sonarqube on push
-      if: github.event_name == 'push' 
+      if: github.event_name == 'push'
       env: 
       # to get access to secrets.SONAR_TOKEN, provide GITHUB_TOKEN
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

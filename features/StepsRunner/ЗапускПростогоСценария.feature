@@ -1,7 +1,7 @@
 ﻿# language: ru
 
-
-@IgnoreOnWeb
+@MiddleCheck
+@FastCheck
 
 Функционал: Проверка запуска простого сценария
 	Как Разработчик
