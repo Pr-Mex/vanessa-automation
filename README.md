@@ -202,6 +202,7 @@
 * [Как стать контрибьютерром VA](https://infostart.ru/public/1092009/)
 * [Vanessa, хочу все и сразу. Новые возможности автоинструкций.](https://infostart.ru/public/1133932/)
 * [Vanessa, улучшаем инструкции.](https://infostart.ru/public/1147009/)
+* [Vanessa Automation + СППР.](https://infostart.ru/public/1150505/)
  
 
 ## Лицензии
