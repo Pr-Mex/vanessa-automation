@@ -5,7 +5,7 @@
 
 ## Документация
 
-https://pr-mex.github.io/vanessa-automation
+https://pr-mex.github.io/vanessa-automation/dev
 
 ## Лицензии
 
