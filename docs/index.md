@@ -29,8 +29,6 @@
 * [Видео инструкции](https://www.youtube.com/channel/UC114RqHhG__1gET8pzs3AHA/playlists).
 * [Вебинар](http://infostart.ru/webinars/537546/). 
 
-[Список отличий проекта Vanessa-automation от проекта ADD](NotAdd.md).
-
 [Порядок установки Vanessa-Automation](https://infostart.ru/public/1092009/).
 
 ## Описание простого использования
