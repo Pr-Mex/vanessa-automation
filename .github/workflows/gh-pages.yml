@@ -48,7 +48,7 @@ jobs:
     - name: Patch Develop
       if: github.ref == 'refs/heads/develop'
       run: |         
-        sed -i "s%Vanessa Automation%Vanessa Automation &beta;%g" mkdocs.yml
+        sed -i "s%Vanessa Automation%Vanessa Automation Dev%g" mkdocs.yml
         sed -i "s%https://pr-mex.github.io/vanessa-automatio%https://pr-mex.github.io/vanessa-automatio/dev%g" mkdocs.yml
     
     - name: Build Russian
