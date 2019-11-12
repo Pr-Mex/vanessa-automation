@@ -9733,7 +9733,7 @@
 		Возврат;	
 	КонецЕсли;	
 
-	НомерРелиза = "1.04";
+	НомерРелиза = "1.05";
 	АдресРесурса = "//github.com/";
 	
 	Адрес = "//github.com/Pr-Mex/UItoolsFor1C/releases/download/%НомерРелиза%/UItoolsFor1C.zip";
