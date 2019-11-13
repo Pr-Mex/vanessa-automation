@@ -1,0 +1,77 @@
+name: GitHub Pages
+
+on:
+  push:
+    branches:
+    - master
+    - develop
+    paths:
+    - 'docs/**'
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v1
+
+    - name: Set up Python
+      uses: actions/setup-python@v1
+      with:
+        python-version: '3.6'
+        architecture: 'x64'
+
+    - name: Install dependencies
+      run: |
+        pip install --upgrade pip
+        pip install mkdocs mkdocs-material pygments-bsl
+    
+    - name: Dowload latest GitHub Pages
+      run: |
+        wget https://github.com/${{ github.repository }}/archive/gh-pages.zip || true
+        unzip gh-pages.zip || true
+    
+    - name: Save latest Develop
+      if: github.ref == 'refs/heads/master'
+      run: |
+        mkdir public
+        mkdir public/dev
+        cp -R ${GITHUB_REPOSITORY#*/}-gh-pages/dev/. public/dev || true
+        
+    - name: Save latest Master
+      if: github.ref == 'refs/heads/develop'
+      run: |
+        mkdir public
+        cp -R ${GITHUB_REPOSITORY#*/}-gh-pages/. public || true
+        rm -rf public/dev || true
+        mkdir public/dev
+            
+    - name: Patch Develop
+      if: github.ref == 'refs/heads/develop'
+      run: |         
+        sed -i "s%Vanessa Automation%Vanessa Automation Dev%g" mkdocs.yml
+        sed -i "s%https://pr-mex.github.io/vanessa-automation%https://pr-mex.github.io/vanessa-automation/dev%g" mkdocs.yml
+    
+    - name: Build Russian
+      run: |
+        mkdir temp
+        cp mkdocs.yml temp
+        cp -R docs/. temp/docs
+        cd temp
+        mkdocs build
+    
+    - name: Public Russian Master
+      if: github.ref == 'refs/heads/master'
+      run: |
+        cp -R temp/site/. public
+    
+    - name: Public Russian Develop
+      if: github.ref == 'refs/heads/develop'
+      run: |
+        cp -R temp/site/. public/dev
+    
+    - name: Deploy
+      uses: peaceiris/actions-gh-pages@v2.5.0
+      env:
+        ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: ./public
