@@ -11953,6 +11953,35 @@ Log events:
 																						<Event name="StartChoice">КаталогOutputAllureНачалоВыбора</Event>
 																					</Events>
 																				</InputField>
+																				<InputField name="КаталогВыгрузкиAllureБазовый" id="2243">
+																					<DataPath>Объект.КаталогВыгрузкиAllureБазовый</DataPath>
+																					<Title>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Каталог отчета Allure (несколько сборок)</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>en</v8:lang>
+																							<v8:content>Temp dir for Allure test suite files for many runs</v8:content>
+																						</v8:item>
+																					</Title>
+																					<ToolTipRepresentation>Button</ToolTipRepresentation>
+																					<ChoiceButton>true</ChoiceButton>
+																					<ClearButton>true</ClearButton>
+																					<ContextMenu name="КаталогВыгрузкиAllureБазовыйКонтекстноеМеню" id="2244"/>
+																					<ExtendedTooltip name="КаталогВыгрузкиAllureБазовыйРасширеннаяПодсказка" id="2245">
+																						<Title formatted="false">
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>The directory in which report data is generated in Allure format, and subdirectories will be created for each assembly. This parameter takes precedence and the value of the "Allure Report Catalog" parameter will be ignored.</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Каталог, в котором формируются данные отчета в формате Allure, при этом для каждой сборки будет создаваться подкаталоги. Данный параметр имеет приоритет и значение параметра "Каталог отчета Allure" будет проигнорировано.</v8:content>
+																							</v8:item>
+																						</Title>
+																					</ExtendedTooltip>
+																				</InputField>
 																				<InputField name="УровеньОтчета1" id="1863">
 																					<DataPath>Объект.УровеньОтчета1</DataPath>
 																					<ToolTipRepresentation>Button</ToolTipRepresentation>
@@ -18034,6 +18063,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 							</ChildItems>
 						</Page>
 						<Page name="ГруппаСлужебная" id="484">
+							<Visible>false</Visible>
 							<Title>
 								<v8:item>
 									<v8:lang>bg</v8:lang>
