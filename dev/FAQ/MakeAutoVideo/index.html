@@ -417,7 +417,7 @@
 <p>Версию 2.2 или выше СТАВИТЬ НЕЛЬЗЯ!!!</p>
 </div>
 <ol>
-<li><a href="http://www.imagemagick.org/script/download.php">Пакет ImageMagick</a> Выбирать пакет, в котором есть "dll", например <code>ImageMagick-7.0.7-22-Q16-x64-dll.exe</code>. Необходимо прописать путь в Path. Также при установке ImageMagick необходимо обязательно установить флаг <code>Install legacy utilities (e.g. convert)</code> , иначе convert.exe не будет установлен.</li>
+<li><a href="https://imagemagick.org/download/windows/releases/">Пакет ImageMagick</a> Выбирать пакет 6 версии, в котором есть "dll", например <code>ImageMagick-6.9.3-7-Q16-x64-dll.exe</code>. Необходимо прописать путь в Path. Также при установке ImageMagick необходимо обязательно установить флаг <code>Install legacy utilities (e.g. convert)</code> , иначе convert.exe не будет установлен.</li>
 <li><a href="http://oscript.io/downloads">Oscript</a> Необходимо прописать путь в Path.</li>
 <li>(Озвучка от Microsoft. Не обязательно) Для озвучки голосом необходимо установить <a href="https://www.microsoft.com/en-us/download/details.aspx?id=27225">Microsoft Speech Platform х32</a> и <a href="https://www.microsoft.com/en-us/download/details.aspx?id=27224">Server Runtime Languages</a> <code>MSSpeech_TTS_ru-RU_Elena</code> или другую голосовую библиотеку. Если не хотите озучивать текст - надо <strong>снять</strong> флаг <strong>Делать озвучку TTS</strong>.</li>
 <li>(Озвучка от Microsoft. Не обязательно) Также понадобится голосовой движок <a href="http://www.cross-plus-a.ru/bconsole.html">Балаболка консольный вариант</a> Необходимо прописать путь в Path.</li>
@@ -439,7 +439,7 @@
 <li><strong>Количество кадров в секунду</strong> - минимум 5, я ставлю 10. Чем больше кадров тем больше нагружается процессор.</li>
 <li><strong>Команда начать запись видео</strong> - вызов VLC для старта записи видео. Да, VLC умеет записывать видео и он управляется по tcp с (помощью OneScript). Поэтому используется именно он. Пример команды: </li>
 </ol>
-<div class="codehilite"><pre><span></span><span class="ss">&quot;C:\Program Files (x86)\VideoLAN\VLC\vlc.exe&quot;</span> <span class="n">screen</span><span class="p">:</span><span class="o">//</span>  <span class="o">-</span><span class="n">I</span> <span class="n">rc</span> <span class="c1">--rc-quiet --rc-host=127.0.0.1:8082 --nommx :screen-mouse-image=&quot;&lt;screenmouseimage&gt;&quot; :screen-fps=&lt;fps&gt; :screen-width=&lt;screenwidth&gt; :screen-height=&lt;screenheight&gt; :screen-top=0 :screen-left=0 :screen-caching=100 :sout=#transcode{vcodec=mp4v,vb=400,fps=&lt;fps&gt;,scale=1,width=&lt;screenwidth&gt;,height=&lt;screenheight&gt;,acodec=none}:duplicate{dst=std{access=file,mux=mp4,dst=&lt;dst&gt;}}</span>
+<div class="codehilite"><pre><span></span><span class="err">&quot;C:\Program Files (x86)\VideoLAN\VLC\vlc.exe&quot; screen://  -I rc --rc-quiet --rc-host=127.0.0.1:8082 --nommx :screen-mouse-image=&quot;&lt;screenmouseimage&gt;&quot; :screen-fps=&lt;fps&gt; :screen-width=&lt;screenwidth&gt; :screen-height=&lt;screenheight&gt; :screen-top=0 :screen-left=0 :screen-caching=100 :sout=#transcode{vcodec=mp4v,vb=400,fps=&lt;fps&gt;,scale=1,width=&lt;screenwidth&gt;,height=&lt;screenheight&gt;,acodec=none}:duplicate{dst=std{access=file,mux=mp4,dst=&lt;dst&gt;}}</span>
 </pre></div>
 
 
