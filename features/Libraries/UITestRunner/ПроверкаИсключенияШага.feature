@@ -6,6 +6,7 @@
 @IgnoreOn836
 
 @IgnoreOnWeb8310
+@IgnoreOnServer
 
 Функционал: Проверка негативного поведения шага 
 
