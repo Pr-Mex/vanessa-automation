@@ -23105,7 +23105,33 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
-		<ConditionalAppearance>
+    <Attribute name="МестоположениеВнешнейКомпонентыДляСкриншотов" id="7">
+      <Title>
+        <v8:item>
+          <v8:lang>ru</v8:lang>
+          <v8:content>Местоположение внешней компоненты для скриншотов</v8:content>
+        </v8:item>
+      </Title>
+      <Type>
+        <v8:Type>xs:string</v8:Type>
+        <v8:StringQualifiers>
+          <v8:Length>0</v8:Length>
+          <v8:AllowedLength>Variable</v8:AllowedLength>
+        </v8:StringQualifiers>
+      </Type>
+    </Attribute>
+    <Attribute name="ИспользоватьВнешнююКомпонентуДляСкриншотов" id="11">
+      <Title>
+        <v8:item>
+          <v8:lang>ru</v8:lang>
+          <v8:content>Использовать внешнюю компоненту для скриншотов</v8:content>
+        </v8:item>
+      </Title>
+      <Type>
+        <v8:Type>xs:boolean</v8:Type>
+      </Type>
+    </Attribute>
+    <ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
 					<dcsset:item>
@@ -29317,5 +29343,20 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 			<Shortcut>Ctrl+Num /</Shortcut>
 			<Action>КомментарийСтрокиСценария</Action>
 		</Command>
-	</Commands>
+    <Command name="УстановитьВнешнююКомпонентуДляСкриншотов" id="86">
+      <Title>
+        <v8:item>
+          <v8:lang>ru</v8:lang>
+          <v8:content>Установить внешнюю компоненту для скриншотов</v8:content>
+        </v8:item>
+      </Title>
+      <ToolTip>
+        <v8:item>
+          <v8:lang>ru</v8:lang>
+          <v8:content>Установить внешнюю компоненту для скриншотов</v8:content>
+        </v8:item>
+      </ToolTip>
+      <Action>УстановитьВнешнююКомпонентуДляСкриншотов</Action>
+    </Command>
+  </Commands>
 </Form>
