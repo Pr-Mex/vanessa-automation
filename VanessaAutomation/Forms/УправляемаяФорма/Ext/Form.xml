@@ -10309,6 +10309,54 @@ E.g.:
                               <ContextMenu name="ИспользоватьВнешнююКомпонентуДляСкриншотовКонтекстноеМеню" id="2249"/>
                               <ExtendedTooltip name="ИспользоватьВнешнююКомпонентуДляСкриншотовРасширеннаяПодсказка" id="2250"/>
                             </CheckBoxField>
+                            <InputField name="СпособСнятияСкриншотовВнешнейКомпонентой" id="2253">
+                              <DataPath>СпособСнятияСкриншотовВнешнейКомпонентой</DataPath>
+                              <TitleLocation>None</TitleLocation>
+                              <ListChoiceMode>true</ListChoiceMode>
+                              <ChoiceList>
+                                <xr:Item>
+                                  <xr:Presentation/>
+                                  <xr:CheckState>0</xr:CheckState>
+                                  <xr:Value xsi:type="FormChoiceListDesTimeValue">
+                                    <Presentation>
+                                      <v8:item>
+                                        <v8:lang>ru</v8:lang>
+                                        <v8:content>Весь экран</v8:content>
+                                      </v8:item>
+                                    </Presentation>
+                                    <Value xsi:type="xs:decimal">0</Value>
+                                  </xr:Value>
+                                </xr:Item>
+                                <xr:Item>
+                                  <xr:Presentation/>
+                                  <xr:CheckState>0</xr:CheckState>
+                                  <xr:Value xsi:type="FormChoiceListDesTimeValue">
+                                    <Presentation>
+                                      <v8:item>
+                                        <v8:lang>ru</v8:lang>
+                                        <v8:content>Область активного окна</v8:content>
+                                      </v8:item>
+                                    </Presentation>
+                                    <Value xsi:type="xs:decimal">1</Value>
+                                  </xr:Value>
+                                </xr:Item>
+                                <xr:Item>
+                                  <xr:Presentation/>
+                                  <xr:CheckState>0</xr:CheckState>
+                                  <xr:Value xsi:type="FormChoiceListDesTimeValue">
+                                    <Presentation>
+                                      <v8:item>
+                                        <v8:lang>ru</v8:lang>
+                                        <v8:content>Только активное окно</v8:content>
+                                      </v8:item>
+                                    </Presentation>
+                                    <Value xsi:type="xs:decimal">2</Value>
+                                  </xr:Value>
+                                </xr:Item>
+                              </ChoiceList>
+                              <ContextMenu name="СпособСнятияСкриншотовВнешнейКомпонентойКонтекстноеМеню" id="2254"/>
+                              <ExtendedTooltip name="СпособСнятияСкриншотовВнешнейКомпонентойРасширеннаяПодсказка" id="2255"/>
+                            </InputField>
                             <Button name="УстановитьВнешнююКомпонентуДляСкриншотов" id="2251">
                               <Type>UsualButton</Type>
                               <CommandName>Form.Command.УстановитьВнешнююКомпонентуДляСкриншотов</CommandName>
@@ -23166,6 +23214,22 @@ Speeds up video assembly. This mode is recommended.</v8:content>
       </Title>
       <Type>
         <v8:Type>xs:boolean</v8:Type>
+      </Type>
+    </Attribute>
+    <Attribute name="СпособСнятияСкриншотовВнешнейКомпонентой" id="12">
+      <Title>
+        <v8:item>
+          <v8:lang>ru</v8:lang>
+          <v8:content>Способ снятия скриншотов внешней компонентой</v8:content>
+        </v8:item>
+      </Title>
+      <Type>
+        <v8:Type>xs:decimal</v8:Type>
+        <v8:NumberQualifiers>
+          <v8:Digits>10</v8:Digits>
+          <v8:FractionDigits>0</v8:FractionDigits>
+          <v8:AllowedSign>Any</v8:AllowedSign>
+        </v8:NumberQualifiers>
       </Type>
     </Attribute>
     <ConditionalAppearance>
