@@ -3089,6 +3089,114 @@
 
 КонецФункции
 
+// Для 1Unit
+
+Функция ПолучитьСостояниеVanessaAutomation() Экспорт
+	Возврат Новый Структура;
+КонецФункции
+
+Процедура ДобавитьОшибкуСценария(ТекстОшибки) Экспорт
+	
+КонецПроцедуры
+
+// Asserts
+
+Процедура AssertTrue(Condition, Message = "") Экспорт
+	ПроверитьИстину(Condition, Message);
+КонецПроцедуры
+
+Процедура AssertFalse(Condition, Message = "") Экспорт
+	ПроверитьЛожь(Condition, Message);
+КонецПроцедуры
+
+Процедура AssertDate(Period, Date, Message = "") Экспорт
+	ПроверитьДату(Period, Date, Message);
+КонецПроцедуры
+
+Процедура AssertDateWithin2Seconds(ExpectedDate, ActualDate, Message = "") Экспорт
+	ПроверитьРавенствоДатСТочностью2Секунды(ExpectedDate, ActualDate, Message);
+КонецПроцедуры
+
+Процедура AssertEqual(Expected, Actual, Message = "") Экспорт
+	ПроверитьРавенство(Expected, Actual, Message);
+КонецПроцедуры
+
+Процедура AssertEqual(NotExpected, Actual, Message = "") Экспорт
+	ПроверитьНеРавенство(NotExpected, Actual, Message);
+КонецПроцедуры
+
+Процедура AssertGreater(ExpectedNumber, ActualNumber, Message = "") Экспорт
+	ПроверитьБольше(ExpectedNumber, ActualNumber, Message);
+КонецПроцедуры
+
+Процедура AssertGreaterOrEqual(ExpectedNumber, ActualNumber, Message = "") Экспорт
+	ПроверитьБольшеИлиРавно(ExpectedNumber, ActualNumber, Message);
+КонецПроцедуры
+
+Процедура AssertLess(ExpectedNumber, ActualNumber, Message = "") Экспорт
+	ПроверитьМеньше(ExpectedNumber, ActualNumber, Message);
+КонецПроцедуры
+
+Процедура AssertLessOrEqual(ExpectedNumber, ActualNumber, Message = "") Экспорт
+	ПроверитьМеньшеИлиРавно(ExpectedNumber, ActualNumber, Message);
+КонецПроцедуры
+
+Процедура AssertExecuted(Знач Algorithm, ArgsOrMessage = Неопределено, Знач Message = "") Экспорт
+	ПроверитьВыполнилось(Algorithm, ArgsOrMessage, Message);
+КонецПроцедуры
+
+Процедура AssertMethodExecuted(Object, Знач MethodName, ArgsOrMessage = Неопределено, Знач Message = "") Экспорт
+	ПроверитьМетодВыполнился(Object, MethodName, ArgsOrMessage, Message);
+КонецПроцедуры
+
+Процедура AssertNotExecuted(Знач Algorithm, ArgsOrThrowsException, Знач ThrowsExceptionOrMessage = "", Знач ДопСообщениеОшибки = "") Экспорт
+	ПроверитьНеВыполнилось(Algorithm, ArgsOrThrowsException, ThrowsExceptionOrMessage, Message);
+КонецПроцедуры
+
+Процедура AssertNotMethodExecuted(Object, MethodName, ArgsOrThrowsException, Знач ThrowsExceptionOrMessage = "", Знач Message = "") Экспорт
+	ПроверитьМетодНеВыполнился(Object, MethodName, ArgsOrThrowsException, ThrowsExceptionOrMessage, Message);
+КонецПроцедуры
+
+Процедура AssertFilled(Value, Message = "") Экспорт
+	ПроверитьЗаполненность(Value, Message);
+КонецПроцедуры
+
+Процедура AssertNotFilled(Value, Message = "") Экспорт
+	ПроверитьНеЗаполненность(Value, Message);
+КонецПроцедуры
+
+Процедура AssertType(Value, TypeOrTypeName, Message = "") Экспорт
+	ПроверитьТип(Value, TypeOrTypeName, Message);
+КонецПроцедуры
+
+Процедура AssertStringContains(String, Substring, Message = "") Экспорт
+	ПроверитьВхождение(String, Substring, Message);
+КонецПроцедуры
+
+Процедура AssertCollectionContains(Collection, Item, Message = "") Экспорт
+	ПроверитьВхождениеВКоллекцию(Collection, Item, Message);
+КонецПроцедуры
+
+Процедура AssertEqualValueTable(ExpectedValueTable, ActualValueTable, Message = "", Params) Экспорт
+	ПроверитьРавенствоТаблиц(ExpectedValueTable, ActualValueTable, Message, Params);
+КонецПроцедуры
+
+Функция GetVanessaAutomationState() Экспорт
+	Возврат ПолучитьСостояниеVanessaAutomation();
+КонецФункции
+
+Процедура StopRunning() Экспорт
+	ЗапретитьВыполнениеШагов();
+КонецПроцедуры
+
+Процедура ContinueRunning(IsError = Ложь, ErrorDescription = "") Экспорт
+	ПродолжитьВыполнениеШагов(IsError);
+КонецПроцедуры
+
+Процедура AddError(ErrorDescription) Экспорт
+	ДобавитьОшибкуСценария(ErrorDescription);
+КонецПроцедуры
+
 // Портирован блок ассертов из проекта xUnitFor1C (https://github.com/xDrivenDevelopment/xUnitFor1C)
 // был взят релиз 3.0.0.3
 // { МЕТОДЫ ДЛЯ ПРОВЕРКИ ЗНАЧЕНИЙ (assertions). 
