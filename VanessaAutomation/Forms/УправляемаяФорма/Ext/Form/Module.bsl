@@ -8616,6 +8616,128 @@
 
 #КонецОбласти
 
+// Asserts
+
+&НаКлиенте
+Процедура AssertTrue(Condition, Message = "") Экспорт
+	ПроверитьИстину(Condition, Message);
+КонецПроцедуры
+
+&НаКлиенте
+Процедура AssertFalse(Condition, Message = "") Экспорт
+	ПроверитьЛожь(Condition, Message);
+КонецПроцедуры
+
+&НаКлиенте
+Процедура AssertDate(Period, Date, Message = "") Экспорт
+	ПроверитьДату(Period, Date, Message);
+КонецПроцедуры
+
+&НаКлиенте
+Процедура AssertDateWithin2Seconds(ExpectedDate, ActualDate, Message = "") Экспорт
+	ПроверитьРавенствоДатСТочностью2Секунды(ExpectedDate, ActualDate, Message);
+КонецПроцедуры
+
+&НаКлиенте
+Процедура AssertEqual(Expected, Actual, Message = "") Экспорт
+	ПроверитьРавенство(Expected, Actual, Message);
+КонецПроцедуры
+
+&НаКлиенте
+Процедура AssertNotEqual(NotExpected, Actual, Message = "") Экспорт
+	ПроверитьНеРавенство(NotExpected, Actual, Message);
+КонецПроцедуры
+
+&НаКлиенте
+Процедура AssertGreater(ExpectedNumber, ActualNumber, Message = "") Экспорт
+	ПроверитьБольше(ExpectedNumber, ActualNumber, Message);
+КонецПроцедуры
+
+&НаКлиенте
+Процедура AssertGreaterOrEqual(ExpectedNumber, ActualNumber, Message = "") Экспорт
+	ПроверитьБольшеИлиРавно(ExpectedNumber, ActualNumber, Message);
+КонецПроцедуры
+
+&НаКлиенте
+Процедура AssertLess(ExpectedNumber, ActualNumber, Message = "") Экспорт
+	ПроверитьМеньше(ExpectedNumber, ActualNumber, Message);
+КонецПроцедуры
+
+&НаКлиенте
+Процедура AssertLessOrEqual(ExpectedNumber, ActualNumber, Message = "") Экспорт
+	ПроверитьМеньшеИлиРавно(ExpectedNumber, ActualNumber, Message);
+КонецПроцедуры
+
+&НаКлиенте
+Процедура AssertExecuted(Знач Algorithm, ArgsOrMessage = Неопределено, Знач Message = "") Экспорт
+	ПроверитьВыполнилось(Algorithm, ArgsOrMessage, Message);
+КонецПроцедуры
+
+&НаКлиенте
+Процедура AssertMethodExecuted(Object, Знач MethodName, ArgsOrMessage = Неопределено, Знач Message = "") Экспорт
+	ПроверитьМетодВыполнился(Object, MethodName, ArgsOrMessage, Message);
+КонецПроцедуры
+
+&НаКлиенте
+Процедура AssertNotExecuted(Знач Algorithm, ArgsOrThrowsException, Знач ThrowsExceptionOrMessage = "", Знач ДопСообщениеОшибки = "") Экспорт
+	ПроверитьНеВыполнилось(Algorithm, ArgsOrThrowsException, ThrowsExceptionOrMessage, Message);
+КонецПроцедуры
+
+&НаКлиенте
+Процедура AssertMethodNotExecuted(Object, MethodName, ArgsOrThrowsException, Знач ThrowsExceptionOrMessage = "", Знач Message = "") Экспорт
+	ПроверитьМетодНеВыполнился(Object, MethodName, ArgsOrThrowsException, ThrowsExceptionOrMessage, Message);
+КонецПроцедуры
+
+&НаКлиенте
+Процедура AssertFilled(Value, Message = "") Экспорт
+	ПроверитьЗаполненность(Value, Message);
+КонецПроцедуры
+
+&НаКлиенте
+Процедура AssertNotFilled(Value, Message = "") Экспорт
+	ПроверитьНеЗаполненность(Value, Message);
+КонецПроцедуры
+
+&НаКлиенте
+Процедура AssertType(Value, TypeOrTypeName, Message = "") Экспорт
+	ПроверитьТип(Value, TypeOrTypeName, Message);
+КонецПроцедуры
+
+&НаКлиенте
+Процедура AssertStringContains(String, Substring, Message = "") Экспорт
+	ПроверитьВхождение(String, Substring, Message);
+КонецПроцедуры
+
+&НаКлиенте
+Процедура AssertCollectionContains(Collection, Item, Message = "") Экспорт
+	ПроверитьВхождениеВКоллекцию(Collection, Item, Message);
+КонецПроцедуры
+
+&НаКлиенте
+Процедура AssertEqualValueTable(ExpectedValueTable, ActualValueTable, Message = "", Params) Экспорт
+	ПроверитьРавенствоТаблиц(ExpectedValueTable, ActualValueTable, Message, Params);
+КонецПроцедуры
+
+&НаКлиенте
+Функция GetVanessaAutomationState() Экспорт
+	Возврат ПолучитьСостояниеVanessaAutomation();
+КонецФункции
+
+&НаКлиенте
+Процедура StopRunning() Экспорт
+	ЗапретитьВыполнениеШагов();
+КонецПроцедуры
+
+&НаКлиенте
+Процедура ContinueRunning(IsError = Ложь, ErrorDescription = "") Экспорт
+	ПродолжитьВыполнениеШагов(IsError);
+КонецПроцедуры
+
+&НаКлиенте
+Процедура AddError(ErrorDescription) Экспорт
+	ДобавитьОшибкуСценария(ErrorDescription);
+КонецПроцедуры
+
 #Область Ассерты
 // Портирован блок генерации данных из проекта xUnitFor1C (https://github.com/xDrivenDevelopment/xUnitFor1C)
 // взят релиз 3.0.0.3
@@ -8978,7 +9100,7 @@
 
 // Коллекция - Массив, Структура, Соответствие, ФиксированныйМассив, ФиксированнаяСтруктура, ФиксированноеСоответствие, СписокЗначений
 &НаКлиенте
-Функция ПроверитьВхождениеВКоллекцию(Элемент, Коллекция, ДопСообщениеОшибки = "") Экспорт
+Функция ПроверитьВхождениеВКоллекцию(Коллекция, Элемент, ДопСообщениеОшибки = "") Экспорт
 	Нашли = Неопределено;
 	ТипКоллекции = ТипЗнч(Коллекция);
 	Если ТипКоллекции = Тип("Массив") ИЛИ ТипКоллекции = Тип("ФиксированныйМассив") Тогда

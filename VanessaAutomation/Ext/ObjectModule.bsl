@@ -3121,7 +3121,7 @@
 	ПроверитьРавенство(Expected, Actual, Message);
 КонецПроцедуры
 
-Процедура AssertEqual(NotExpected, Actual, Message = "") Экспорт
+Процедура AssertNotEqual(NotExpected, Actual, Message = "") Экспорт
 	ПроверитьНеРавенство(NotExpected, Actual, Message);
 КонецПроцедуры
 
@@ -3153,7 +3153,7 @@
 	ПроверитьНеВыполнилось(Algorithm, ArgsOrThrowsException, ThrowsExceptionOrMessage, Message);
 КонецПроцедуры
 
-Процедура AssertNotMethodExecuted(Object, MethodName, ArgsOrThrowsException, Знач ThrowsExceptionOrMessage = "", Знач Message = "") Экспорт
+Процедура AssertMethodNotExecuted(Object, MethodName, ArgsOrThrowsException, Знач ThrowsExceptionOrMessage = "", Знач Message = "") Экспорт
 	ПроверитьМетодНеВыполнился(Object, MethodName, ArgsOrThrowsException, ThrowsExceptionOrMessage, Message);
 КонецПроцедуры
 
