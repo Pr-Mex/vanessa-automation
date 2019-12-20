@@ -3149,7 +3149,7 @@
 	ПроверитьМетодВыполнился(Object, MethodName, ArgsOrMessage, Message);
 КонецПроцедуры
 
-Процедура AssertNotExecuted(Знач Algorithm, ArgsOrThrowsException, Знач ThrowsExceptionOrMessage = "", Знач ДопСообщениеОшибки = "") Экспорт
+Процедура AssertNotExecuted(Знач Algorithm, ArgsOrThrowsException, Знач ThrowsExceptionOrMessage = "", Знач Message = "") Экспорт
 	ПроверитьНеВыполнилось(Algorithm, ArgsOrThrowsException, ThrowsExceptionOrMessage, Message);
 КонецПроцедуры
 

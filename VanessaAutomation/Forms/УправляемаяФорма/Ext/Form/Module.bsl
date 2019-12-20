@@ -8679,7 +8679,7 @@
 КонецПроцедуры
 
 &НаКлиенте
-Процедура AssertNotExecuted(Знач Algorithm, ArgsOrThrowsException, Знач ThrowsExceptionOrMessage = "", Знач ДопСообщениеОшибки = "") Экспорт
+Процедура AssertNotExecuted(Знач Algorithm, ArgsOrThrowsException, Знач ThrowsExceptionOrMessage = "", Знач Message = "") Экспорт
 	ПроверитьНеВыполнилось(Algorithm, ArgsOrThrowsException, ThrowsExceptionOrMessage, Message);
 КонецПроцедуры
 
