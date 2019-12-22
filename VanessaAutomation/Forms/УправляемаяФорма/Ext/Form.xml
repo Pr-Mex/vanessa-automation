@@ -10285,7 +10285,92 @@ E.g.:
 														</Title>
 													</ExtendedTooltip>
 												</InputField>
-												<InputField name="КомандаОткрытияФичиВТекстовомРедакторе" id="1776">
+                        <UsualGroup name="ГруппаВнешняяКомпонента" id="2246">
+                          <Title>
+                            <v8:item>
+                              <v8:lang>ru</v8:lang>
+                              <v8:content>Группа внешняя компонента</v8:content>
+                            </v8:item>
+                          </Title>
+                          <ToolTip>
+                            <v8:item>
+                              <v8:lang>ru</v8:lang>
+                              <v8:content>Группа внешняя компонента</v8:content>
+                            </v8:item>
+                          </ToolTip>
+                          <Representation>None</Representation>
+                          <ShowTitle>false</ShowTitle>
+                          <ExtendedTooltip name="ГруппаВнешняяКомпонентаРасширеннаяПодсказка" id="2247"/>
+                          <ChildItems>
+                            <CheckBoxField name="ИспользоватьВнешнююКомпонентуДляСкриншотов" id="2248">
+                              <DataPath>Объект.ИспользоватьВнешнююКомпонентуДляСкриншотов</DataPath>
+                              <TitleLocation>Right</TitleLocation>
+                              <CheckBoxType>Auto</CheckBoxType>
+                              <ContextMenu name="ИспользоватьВнешнююКомпонентуДляСкриншотовКонтекстноеМеню" id="2249"/>
+                              <ExtendedTooltip name="ИспользоватьВнешнююКомпонентуДляСкриншотовРасширеннаяПодсказка" id="2250"/>
+                            </CheckBoxField>
+                            <InputField name="СпособСнятияСкриншотовВнешнейКомпонентой" id="2253">
+                              <DataPath>Объект.СпособСнятияСкриншотовВнешнейКомпонентой</DataPath>
+                              <TitleLocation>None</TitleLocation>
+                              <ListChoiceMode>true</ListChoiceMode>
+                              <ChoiceList>
+                                <xr:Item>
+                                  <xr:Presentation/>
+                                  <xr:CheckState>0</xr:CheckState>
+                                  <xr:Value xsi:type="FormChoiceListDesTimeValue">
+                                    <Presentation>
+                                      <v8:item>
+                                        <v8:lang>ru</v8:lang>
+                                        <v8:content>Весь экран</v8:content>
+                                      </v8:item>
+                                    </Presentation>
+                                    <Value xsi:type="xs:decimal">0</Value>
+                                  </xr:Value>
+                                </xr:Item>
+                                <xr:Item>
+                                  <xr:Presentation/>
+                                  <xr:CheckState>0</xr:CheckState>
+                                  <xr:Value xsi:type="FormChoiceListDesTimeValue">
+                                    <Presentation>
+                                      <v8:item>
+                                        <v8:lang>ru</v8:lang>
+                                        <v8:content>Область активного окна</v8:content>
+                                      </v8:item>
+                                    </Presentation>
+                                    <Value xsi:type="xs:decimal">1</Value>
+                                  </xr:Value>
+                                </xr:Item>
+                                <xr:Item>
+                                  <xr:Presentation/>
+                                  <xr:CheckState>0</xr:CheckState>
+                                  <xr:Value xsi:type="FormChoiceListDesTimeValue">
+                                    <Presentation>
+                                      <v8:item>
+                                        <v8:lang>ru</v8:lang>
+                                        <v8:content>Только активное окно</v8:content>
+                                      </v8:item>
+                                    </Presentation>
+                                    <Value xsi:type="xs:decimal">2</Value>
+                                  </xr:Value>
+                                </xr:Item>
+                              </ChoiceList>
+                              <ContextMenu name="СпособСнятияСкриншотовВнешнейКомпонентойКонтекстноеМеню" id="2254"/>
+                              <ExtendedTooltip name="СпособСнятияСкриншотовВнешнейКомпонентойРасширеннаяПодсказка" id="2255"/>
+                            </InputField>
+                            <Button name="УстановитьВнешнююКомпонентуДляСкриншотов" id="2251">
+                              <Type>UsualButton</Type>
+                              <CommandName>Form.Command.УстановитьВнешнююКомпонентуДляСкриншотов</CommandName>
+                              <Title>
+                                <v8:item>
+                                  <v8:lang>ru</v8:lang>
+                                  <v8:content>Установить компоненту</v8:content>
+                                </v8:item>
+                              </Title>
+                              <ExtendedTooltip name="УстановитьВнешнююКомпонентуДляСкриншотовРасширеннаяПодсказка" id="2252"/>
+                            </Button>
+                          </ChildItems>
+                        </UsualGroup>
+                        <InputField name="КомандаОткрытияФичиВТекстовомРедакторе" id="1776">
 													<DataPath>Объект.КомандаОткрытияФичиВТекстовомРедакторе</DataPath>
 													<ToolTipRepresentation>Button</ToolTipRepresentation>
 													<DropListButton>true</DropListButton>
@@ -23105,7 +23190,22 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
-		<ConditionalAppearance>
+    <Attribute name="МестоположениеВнешнейКомпонентыДляСкриншотов" id="7">
+      <Title>
+        <v8:item>
+          <v8:lang>ru</v8:lang>
+          <v8:content>Местоположение внешней компоненты для скриншотов</v8:content>
+        </v8:item>
+      </Title>
+      <Type>
+        <v8:Type>xs:string</v8:Type>
+        <v8:StringQualifiers>
+          <v8:Length>0</v8:Length>
+          <v8:AllowedLength>Variable</v8:AllowedLength>
+        </v8:StringQualifiers>
+      </Type>
+    </Attribute>
+    <ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
 					<dcsset:item>
@@ -29317,5 +29417,20 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 			<Shortcut>Ctrl+Num /</Shortcut>
 			<Action>КомментарийСтрокиСценария</Action>
 		</Command>
-	</Commands>
+    <Command name="УстановитьВнешнююКомпонентуДляСкриншотов" id="86">
+      <Title>
+        <v8:item>
+          <v8:lang>ru</v8:lang>
+          <v8:content>Установить внешнюю компоненту для скриншотов</v8:content>
+        </v8:item>
+      </Title>
+      <ToolTip>
+        <v8:item>
+          <v8:lang>ru</v8:lang>
+          <v8:content>Установить внешнюю компоненту для скриншотов</v8:content>
+        </v8:item>
+      </ToolTip>
+      <Action>УстановитьВнешнююКомпонентуДляСкриншотов</Action>
+    </Command>
+  </Commands>
 </Form>
