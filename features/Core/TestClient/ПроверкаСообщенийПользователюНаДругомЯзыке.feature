@@ -19,7 +19,7 @@
 		| 'Имя подключения' | 'Порт' | 'Логин'         | 'Пароль' |  'Дополнительные параметры строки запуска'  |
 		| 'VanessaUserEN'   | '1'    | 'VanessaUserEN' | '1'      |   '/Len /Vlen'                              |	
 	И Я подключаю клиент тестирования "VanessaUserEN" из таблицы клиентов тестирования
-	И В командном интерфейсе я выбираю 'Основная' 'ОткрытьVanessaAutomation'
+	И В командном интерфейсе я выбираю 'Main' 'Open vanessa automation'
 	Когда открылось окно '*autotest: Vanessa Automation'
 	И я перехожу к закладке "Service and Settings"
 	И я изменяю флаг 'Check Vanessa-Automation on 1C test client session'
