@@ -1,6 +1,6 @@
-  
 # language: ru
 
+@IgnoreOnCIMainBuild
 @tree
 @classname=ModuleExceptionPath
 
