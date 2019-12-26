@@ -195,6 +195,7 @@
 * [Vanessa, хочу все и сразу. Новые возможности автоинструкций.](https://infostart.ru/public/1133932/)
 * [Vanessa, улучшаем инструкции.](https://infostart.ru/public/1147009/)
 * [Vanessa Automation + СППР.](https://infostart.ru/public/1150505/)
+* [Суровая практика BDD или: BDDSM-практики, или 50 оттенков желтого.](https://infostart.ru/public/1173711/)
  
 
 ## Лицензии
