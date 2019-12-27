@@ -1,6 +1,7 @@
 # language: ru
 
 @IgnoreOn82Builds
+@IgnoreOn836
 @IgnoreOnOFBuilds
 @IgnoreOnWeb
 

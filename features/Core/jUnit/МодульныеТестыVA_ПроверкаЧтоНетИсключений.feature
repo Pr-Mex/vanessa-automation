@@ -1,8 +1,10 @@
 # language: ru
 
 @IgnoreOn82Builds
+@IgnoreOn836
 @IgnoreOnOFBuilds
 @IgnoreOnWeb
+@IgnoreOnUFSovm82Builds
 
 Функционал: Проверка формирования отчета jUnit при работе из EDT. Проверка, что нет исключений.
 
