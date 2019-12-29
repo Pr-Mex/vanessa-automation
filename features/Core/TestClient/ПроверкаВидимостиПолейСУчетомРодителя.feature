@@ -9,6 +9,7 @@
 @IgnoreOn8310
 @IgnoreOn8311
 @IgnoreOn8312
+@IgnoreOnUFSovm82Builds
 
 //Фича корректно работает только на 8.3.13 и выше.
 

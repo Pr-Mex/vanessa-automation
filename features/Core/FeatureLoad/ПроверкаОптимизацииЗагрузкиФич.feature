@@ -3,6 +3,9 @@
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 @IgnoreOnWeb
+@IgnoreOn839
+@IgnoreOn8310
+@IgnoreOn8311
 
 Функциональность: Проверка оптимизации загрузки фич
 
