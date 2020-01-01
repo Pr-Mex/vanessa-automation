@@ -5,6 +5,7 @@
 @IgnoreOn839
 @IgnoreOnWeb
 @IgnoreOnUFSovm82Builds
+@IgnoreOn82Builds
 
 
 Функционал: Я хочу проверить создание и изменение объектов ИБ
