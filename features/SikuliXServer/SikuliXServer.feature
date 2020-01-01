@@ -9,6 +9,11 @@
 @IgnoreOn837
 @IgnoreOn838
 @IgnoreOn839
+@IgnoreOn8310
+@IgnoreOn8311
+@IgnoreOn8312
+@IgnoreOn8313
+@IgnoreOn8314
 
 
 @tree
@@ -42,7 +47,13 @@
 	И Я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
 	И Я нажимаю на кнопку выполнить сценарии в Vanessa-Automation TestClient
 	
-	И     элемент формы с именем "Статистика" стал равен '1/1/1, 0/1/0'
+	И элемент формы с именем "Статистика" стал равен '1/1/1, 0/1/0'
+	И пауза 30
+
+	И Я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
+	И Я нажимаю на кнопку выполнить сценарии в Vanessa-Automation TestClient
+	И элемент формы с именем "Статистика" стал равен '1/1/1, 0/1/0'
+
 	И в таблице "ДеревоТестов" я перехожу к строке:
 		| 'Наименование'                                                |
 		| 'Затем я выполняю скрипт SikuliX "ClickToVspomogatelnayaTab"' |
