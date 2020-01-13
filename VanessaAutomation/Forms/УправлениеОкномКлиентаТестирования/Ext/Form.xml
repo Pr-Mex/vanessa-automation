@@ -25,10 +25,16 @@
 			<ExtendedTooltip name="ГруппаЗаголовокРасширеннаяПодсказка" id="93"/>
 			<ChildItems>
 				<InputField name="ДескрипторОкна" id="89">
-					<DataPath>ДескрипторОкна</DataPath>
+					<DataPath>ДескрипторОсновногоОкна</DataPath>
 					<ReadOnly>true</ReadOnly>
 					<ContextMenu name="ДескрипторОкнаКонтекстноеМеню" id="90"/>
 					<ExtendedTooltip name="ДескрипторОкнаРасширеннаяПодсказка" id="91"/>
+				</InputField>
+				<InputField name="PID" id="141">
+					<DataPath>PID</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="PIDКонтекстноеМеню" id="142"/>
+					<ExtendedTooltip name="PIDРасширеннаяПодсказка" id="143"/>
 				</InputField>
 			</ChildItems>
 		</UsualGroup>
@@ -455,11 +461,11 @@
 				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="ДескрипторОкна" id="3">
+		<Attribute name="ДескрипторОсновногоОкна" id="3">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Дескриптор окна</v8:content>
+					<v8:content>Дескриптор основного окна</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -599,6 +605,22 @@
 					</Type>
 				</Column>
 			</Columns>
+		</Attribute>
+		<Attribute name="PID" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>PID</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
 		</Attribute>
 	</Attributes>
 	<Commands>
@@ -769,7 +791,16 @@
 		</Command>
 	</Commands>
 	<Parameters>
-		<Parameter name="ДескрипторОкнаКлиентаТестирования">
+		<Parameter name="МестоположениеВнешнейКомпонентыДляСкриншотов">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="PIDТекущегоКлиентаТестирования">
 			<Type>
 				<v8:Type>xs:decimal</v8:Type>
 				<v8:NumberQualifiers>
@@ -779,13 +810,14 @@
 				</v8:NumberQualifiers>
 			</Type>
 		</Parameter>
-		<Parameter name="МестоположениеВнешнейКомпонентыДляСкриншотов">
+		<Parameter name="ДескрипторОсновногоОкна">
 			<Type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:StringQualifiers>
-					<v8:Length>0</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
 			</Type>
 		</Parameter>
 	</Parameters>
