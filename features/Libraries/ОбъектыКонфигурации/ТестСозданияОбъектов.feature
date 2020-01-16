@@ -1,3 +1,13 @@
+# language: ru
+
+@IgnoreOnOFBuilds
+@IgnoreOn836
+@IgnoreOn839
+@IgnoreOnWeb
+@IgnoreOnUFSovm82Builds
+@IgnoreOn82Builds
+
+
 Функционал: Я хочу проверить создание и изменение объектов ИБ
 
 Как автотестировщик я хочу иметь возможность 

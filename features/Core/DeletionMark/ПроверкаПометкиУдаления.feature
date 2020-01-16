@@ -1,6 +1,13 @@
 # language: ru
 
 @IgnoreOn82Builds
+@IgnoreOn836
+@IgnoreOn839
+@IgnoreOn8310
+@IgnoreOn8311
+@IgnoreOn8312
+@IgnoreOn8313
+@IgnoreOn8314
 @IgnoreOnOFBuilds
 @IgnoreOnWeb
 

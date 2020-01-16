@@ -47,46 +47,6 @@
 				"AddItionalParameters": "  /TestManager",
 				"ClientType": "Thin",
 				"ComputerName": ""
-			},
-			{
-				"Name": "ПроверкаШагаЯПодключаюУжеЗапущенныйКлиентТестированияСПараметрами",
-				"PathToInfobase": "File=\"C:\\Bases\\Тестовая база Егоров\";",
-				"PortTestClient": 48004,
-				"AddItionalParameters": "/NАдминистратор",
-				"ClientType": "Thin",
-				"ComputerName": "localhost"
-			},
-			{
-				"Name": "VanessaUserEN",
-				"PathToInfobase": "File=\"C:\\Bases\\8.3.15\";",
-				"PortTestClient": 48001,
-				"AddItionalParameters": "/N\"VanessaUserEN\" /P\"1\"  /Len /Vlen",
-				"ClientType": "Thin",
-				"ComputerName": "localhost"
-			},
-			{
-				"Name": "ИмяПрофиля",
-				"PathToInfobase": "File=\"C:\\Bases\\8.3.15\";",
-				"PortTestClient": 48000,
-				"AddItionalParameters": "/N\"Админ\" /P\"Админ\" ",
-				"ClientType": "Thin",
-				"ComputerName": "localhost"
-			},
-			{
-				"Name": "TestEN",
-				"PathToInfobase": "File=\"C:\\Bases\\8.3.15\";",
-				"PortTestClient": 48008,
-				"AddItionalParameters": "/TestManager ",
-				"ClientType": "Thin",
-				"ComputerName": ""
-			},
-			{
-				"Name": "ТестПодключенияRu",
-				"PathToInfobase": "File=\"C:\\Bases\\8.3.15\";",
-				"PortTestClient": 48111,
-				"AddItionalParameters": " ",
-				"ClientType": "Thin",
-				"ComputerName": ""
 			}
 		]
 	},
@@ -110,7 +70,10 @@
 		"cucumberreportpath": ".\\tools\\ServiceBases\\cucumber_test"
 	},
 	"ModelingCreateReport": false,
-	"htmlcreate": false,
+	"htmlcreate": true,
+	"HTMLInstruction": {
+		"htmlpath": "C:\\Temp\\HTML"
+	},
 	"markdowncreate": false,
 	"simplereport": false,
 	"librarycatalogs": [

@@ -6,7 +6,7 @@
 
 ## BDD for 1С:Enterprise
 
-* Текущий релиз в ветке [Master: 1.2.028](https://github.com/Pr-Mex/vanessa-automation/tree/master)
+* Текущий релиз в ветке [Master: 1.2.029](https://github.com/Pr-Mex/vanessa-automation/tree/master)
 * Разработка ведется в ветке [Develop](https://github.com/Pr-Mex/vanessa-automation/tree/develop).
 * [Обсудить Ванессу](https://t.me/testspro1c) в телеграмм группе, и обсудить всё, что связано с тестированием в 1С.
 * [Подписаться на новости о проекте](https://t.me/VanessaAutomation) в телеграмм каналле.
@@ -195,6 +195,7 @@
 * [Vanessa, хочу все и сразу. Новые возможности автоинструкций.](https://infostart.ru/public/1133932/)
 * [Vanessa, улучшаем инструкции.](https://infostart.ru/public/1147009/)
 * [Vanessa Automation + СППР.](https://infostart.ru/public/1150505/)
+* [Суровая практика BDD или: BDDSM-практики, или 50 оттенков желтого.](https://infostart.ru/public/1173711/)
  
 
 ## Лицензии
