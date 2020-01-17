@@ -9399,12 +9399,37 @@ This is available only if the form contains only one element with the specified 
 														</Title>
 													</ExtendedTooltip>
 												</CheckBoxField>
+												<CheckBoxField name="ИспользоватьКомпоненту1cWinCtrl" id="2261">
+													<DataPath>Объект.ИспользоватьКомпоненту1cWinCtrl</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ИспользоватьКомпоненту1cWinCtrlКонтекстноеМеню" id="2262"/>
+													<ExtendedTooltip name="ИспользоватьКомпоненту1cWinCtrlРасширеннаяПодсказка" id="2263">
+														<Title formatted="true">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Предназначена для управления окнами Windows и Linux. 
+Возможности:
+- Получение списка окон и списка процессов
+- Управление размерами и положением окна
+- Получение снимка окна и снимка экрана
+
+&lt;link https://github.com/lintest/1cWinCtrl&gt;https://github.com/lintest/1cWinCtrl&lt;/&gt;
+</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+													<Events>
+														<Event name="OnChange">ИспользоватьКомпоненту1cWinCtrlПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
 												<CheckBoxField name="ИспользоватьВнешнююКомпонентуДляСкриншотов" id="2248">
 													<DataPath>Объект.ИспользоватьВнешнююКомпонентуДляСкриншотов</DataPath>
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Скриншоты внешним модулем</v8:content>
+															<v8:content>Скриншоты внешней компонентой</v8:content>
 														</v8:item>
 													</Title>
 													<TitleLocation>Right</TitleLocation>
@@ -9415,13 +9440,10 @@ This is available only if the form contains only one element with the specified 
 														<Title formatted="false">
 															<v8:item>
 																<v8:lang>ru</v8:lang>
-																<v8:content>Для снятия скриншотов используется внешний модуль (компонента) "WindowCaptureComponent" вместо приложения IrfanView.</v8:content>
+																<v8:content>Для снятия скриншотов используется компонента 1cWinCtrl вместо приложения IrfanView.</v8:content>
 															</v8:item>
 														</Title>
 													</ExtendedTooltip>
-													<Events>
-														<Event name="OnChange">ИспользоватьВнешнююКомпонентуДляСкриншотовПриИзменении</Event>
-													</Events>
 												</CheckBoxField>
 												<InputField name="СпособСнятияСкриншотовВнешнейКомпонентой" id="2253">
 													<DataPath>Объект.СпособСнятияСкриншотовВнешнейКомпонентой</DataPath>
@@ -16829,20 +16851,6 @@ Value range is from -10 to 10.</v8:content>
 (Идентификатор каталога - b1gheo81t4a6eаafe5vd)
 
 &lt;link https://cloud.yandex.ru/docs/resource-manager/operations/folder/get-id&gt;Получение идентификатора каталога &lt;/&gt;</v8:content>
-																																	</v8:item>
-																																	<v8:item>
-																																		<v8:lang>en</v8:lang>
-																																		<v8:content>The last part of the path in the address bar in the Internet browser. &lt;colorstyle -14&gt;https://console.cloud.yandex.ru/folders/ИдентификаторКаталога&lt;/&gt;
-
-Required:
-1. In the main window of Yandex.Cloud click &lt;colorstyle -3&gt;link "&lt;/&gt;&lt;colorstyle -3&gt;Go to the current directory&lt;/&gt;&lt;colorstyle -3&gt;".&lt;/&gt;
-2. Copy the last part of the path from address bar
-
-Example: 
-&lt;colorstyle -14&gt;https://console.cloud.yandex.ru/folders/b1gheo81t4a6eаafe5vd&lt;/&gt;
-(The ID of the catalog b1gheo81t4a6eаafe5vd)
-
-&lt;link https://cloud.yandex.ru/docs/resource-manager/operations/folder/get-id&gt;getting a directory identifier &lt;/&gt;</v8:content>
 																																	</v8:item>
 																																</Title>
 																															</ExtendedTooltip>
