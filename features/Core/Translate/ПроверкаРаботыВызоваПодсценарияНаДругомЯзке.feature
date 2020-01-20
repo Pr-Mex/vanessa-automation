@@ -14,9 +14,12 @@
 Сценарий: Проверка вызова подсценария на другом языке
 	Дано Я закрыл все окна клиентского приложения
 	И я закрываю сеанс TESTCLIENT
+	
+	И Я запоминаю значение выражения 'ИмяПользователя()' в переменную "ИмяПользователя"
+	
 	Когда Я подключаю клиент тестирования с параметрами:
-		| 'Имя подключения' | 'Порт' | 'Строка соединения'  | 'Логин' | 'Пароль' |  'Дополнительные параметры строки запуска'  |
-		| 'TestEN'          | '1538' | ''                   | ''      | ''       |  '/TestManager'                             |
+		| 'Имя подключения' | 'Порт' | 'Строка соединения'  | 'Логин'             | 'Пароль' |  'Дополнительные параметры строки запуска'  |
+		| 'TestEN'          | '1538' | ''                   | '$ИмяПользователя$' | ''       |  '/TestManager'                             |
 
 	Когда Я открываю VanessaAutomation в режиме TestClient со стандартной библиотекой
 	
@@ -51,17 +54,19 @@
 		| 'And In the command interface I select "Основная" "Справочник1"'       | 'Success' |
 		| 'Then "Справочник1" window is opened'                                  | 'Success' |
 		| 'And I click the button named "ФормаСоздать"'                          | 'Success' |
-		| 'Then "Справочник1 (создание)" window is opened'                       | 'Success' |
+		| 'Then "Справочник1 (create)" window is opened'                         | 'Success' |
 		| 'And I input "111" text in the field named "Наименование"'             | 'Success' |
 		| 'And I move to the next attribute'                                     | 'Success' |
-		| 'Then the form attribute named "Наименование" became equal to '111''   | 'Success' |
+		| 'Then the form attribute named "Наименование" became equal to \'111\'' | 'Success' |
 		| 'And I call english subscenario "222"'                                 | ''        |
-		| 'And I input '222' text in the field named "Наименование"'             | 'Success' |
+		| 'And I input \'222\' text in the field named "Наименование"'           | 'Success' |
 		| 'And I move to the next attribute'                                     | 'Success' |
-		| 'Then the form attribute named "Наименование" became equal to '222''   | 'Success' |
-		| 'And I close "Справочник1 (создание)*" window'                         | 'Success' |
-		| 'Then "1С:Предприятие" window is opened'                               | 'Success' |
-		| 'And I click "Нет" button'                                             | 'Success' |
+		| 'Then the form attribute named "Наименование" became equal to \'222\'' | 'Success' |
+		| 'And I close "Справочник1 (create)*" window'                           | 'Success' |
+		| 'Then "1C:Enterprise" window is opened'                                | 'Success' |
+		| 'And I click "No" button'                                              | 'Success' |
+
+
 
 
 
@@ -74,4 +79,5 @@
 	
 Сценарий: Закрытие служебного сеанса TestEN
 	И я закрываю TestClient "TestEN"
+	И в таблице клиентов тестирования я активизирую строку 'Этот клиент'
 	
