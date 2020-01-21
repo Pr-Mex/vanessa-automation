@@ -1,4 +1,8 @@
-﻿# language: ru
+# language: ru
+#parent uf:
+@UF4_Библиотека_шагов
+#parent ua:
+@UA4_Использовать_в_фичах_встроенный_язык
 
 
 @IgnoreOnOFBuilds

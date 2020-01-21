@@ -1,4 +1,8 @@
-﻿# language: ru
+# language: ru
+#parent uf:
+@UF2_запуск_сценариев_на_выполнение
+#parent ua:
+@UA13_управлять_Test-clients
 
 @IgnoreOnOFBuilds
 @IgnoreOn82Builds
@@ -20,4 +24,3 @@
 	И я закрываю TestClient "ТестовыйСинонимЗакрыть"
 	И в таблице клиентов тестирования я активизирую строку 'Этот клиент'
 	
-

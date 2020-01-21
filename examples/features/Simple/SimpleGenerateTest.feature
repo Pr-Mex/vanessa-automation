@@ -1,4 +1,8 @@
 # language: ru
+#parent uf:
+@UF1_загрузка_фиче-файлов
+#parent ua:
+@UA10_генерировать_EPF-файлы
 
 
 @[ИмяФичи]=SimpleGenerateTest;E:\commons\Rep\vanessa-bdd\features\SelfTests\

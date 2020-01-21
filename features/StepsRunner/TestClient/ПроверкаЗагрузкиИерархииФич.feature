@@ -1,4 +1,8 @@
-﻿# language: ru
+# language: ru
+#parent uf:
+@UF1_загрузка_фиче-файлов
+#parent ua:
+@UA9_загружать_фиче-файлы
 
 
 @tree

@@ -1,4 +1,10 @@
-﻿@tree
+# language: ru
+# encoding: utf-8
+#parent uf:
+@UF2_запуск_сценариев_на_выполнение
+#parent ua:
+@UA12_пошагово_выполнять_сценарии
+@tree
 @ExportScenarios
 @IgnoreOnCIMainBuild
 
