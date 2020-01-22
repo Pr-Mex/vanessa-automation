@@ -1,4 +1,8 @@
 # language: ru
+#parent uf:
+@UF4_Библиотека_шагов
+#parent ua:
+@UA6_Работать_с_подключением_Test-client
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds

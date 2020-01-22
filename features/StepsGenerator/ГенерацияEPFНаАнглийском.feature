@@ -1,4 +1,9 @@
-﻿# language: ru
+# language: ru
+# encoding: utf-8
+#parent uf:
+@UF1_загрузка_features
+#parent ua:
+@UA10_генерировать_EPF_файлы
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds

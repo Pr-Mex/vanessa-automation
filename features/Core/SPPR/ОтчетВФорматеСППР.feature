@@ -1,4 +1,8 @@
 # language: ru
+#parent uf:
+@UF5_формирование_результатов_выполнения_сценариев
+#parent ua:
+@UA20_формировать_прочие_отчеты
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds

@@ -1,4 +1,8 @@
-﻿# language: ru
+# language: ru
+#parent uf:
+@UF2_запуск_сценариев_на_выполнение
+#parent ua:
+@UA13_управлять_Test-clients
 
 @IgnoreOnCIMainBuild
 @DocumentationBuild

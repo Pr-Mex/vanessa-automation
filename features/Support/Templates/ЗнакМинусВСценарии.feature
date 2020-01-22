@@ -1,4 +1,9 @@
-﻿# language: ru
+# language: ru
+# encoding: utf-8
+#parent uf:
+@UF1_загрузка_features
+#parent ua:
+@UA16_парсить_features
 
 @IgnoreOnCIMainBuild
 
@@ -14,4 +19,3 @@
 
 	Сценарий: Подстановка в текст 2
 		Когда Я перехожу к тексту feature-файла в поле "Текст"	
-

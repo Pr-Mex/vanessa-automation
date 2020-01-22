@@ -1,4 +1,9 @@
-﻿# language: ru
+# language: ru
+# encoding: utf-8
+#parent uf:
+@UF1_загрузка_features
+#parent ua:
+@UA10_генерировать_EPF_файлы
 
 @IgnoreOnLinux
 @OneThread
@@ -32,4 +37,3 @@
 		И Пауза 9
 		Тогда я получил сгенерированный epf файл в ожидаемом каталоге
 		И сгенерированный epf ЗнакМинусВСценарии прошел проверку на корректность
-

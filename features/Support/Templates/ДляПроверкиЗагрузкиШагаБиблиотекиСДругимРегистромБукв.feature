@@ -1,4 +1,8 @@
 # language: ru
+#parent uf:
+@UF1_загрузка_features
+#parent ua:
+@UA9_загружать_features
 
 
 
@@ -14,4 +18,3 @@
 		И     я закрываю сеанс TestClient
 		И     я закрываю сеанс TESTCLIENT
 	
-

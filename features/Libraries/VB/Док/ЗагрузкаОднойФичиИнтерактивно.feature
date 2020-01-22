@@ -1,8 +1,9 @@
 # language: ru
+# encoding: utf-8
 #parent uf:
-@UF1_загрузка_фиче-файлов
+@UF1_загрузка_features
 #parent ua:
-@UA9_загружать_фиче-файлы
+@UA9_загружать_features
 
 @IgnoreOnCIMainBuild
 @ExportScenarios

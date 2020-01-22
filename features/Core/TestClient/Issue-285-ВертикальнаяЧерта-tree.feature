@@ -1,4 +1,9 @@
 # language: ru
+# encoding: utf-8
+#parent uf:
+@UF1_загрузка_features
+#parent ua:
+@UA16_парсить_features
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
@@ -37,5 +42,3 @@
 		| '\| \'000000002\' \| \'Тестовый Элемент 2\' \| \'Нет\'             \|'        |
 		| 'И тот же уровень'                                                            |
 		| 'И Шаг два'                                                                   |
-
-

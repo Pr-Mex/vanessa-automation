@@ -1,4 +1,8 @@
 # language: ru
+#parent uf:
+@UF1_загрузка_features
+#parent ua:
+@UA9_загружать_features
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
@@ -99,6 +103,5 @@
 		| 'ПеременнаяИмеетЗначение'                                |
 		| ''                                                       |
 		| 'ЯЗакрываюСеансTESTCLIENT'                               |
-
 
 

@@ -1,4 +1,8 @@
 # language: ru
+#parent uf:
+@UF1_загрузка_features
+#parent ua:
+@UA16_парсить_features
 
 
 

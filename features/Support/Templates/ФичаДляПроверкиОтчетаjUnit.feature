@@ -1,4 +1,8 @@
 # language: ru
+#parent uf:
+@UF5_формирование_результатов_выполнения_сценариев
+#parent ua:
+@UA21_формировать_отчет_jUnit
 
 #https://github.com/silverbulleters/vanessa-behavior/issues/102
 

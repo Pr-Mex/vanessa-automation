@@ -1,8 +1,8 @@
 # encoding: utf-8
 # language: ru
+#parent uf:
+@UF1_загрузка_features
 
 #type:ua
-#parent uf:
-@UF1_загрузка_фиче-файлов
-Функция: UA9 загружать фиче-файлы
+Функция: UA9 загружать features
 Описание ключевого действия UA9 загружать фиче-файлы

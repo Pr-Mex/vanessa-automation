@@ -1,4 +1,8 @@
-﻿# language: ru
+# language: ru
+#parent uf:
+@UF6_видео-инструкции
+#parent ua:
+@UA17_что_нового_в_версии
 
 @IgnoreOnCIMainBuild
 
