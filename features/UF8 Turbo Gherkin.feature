@@ -2,5 +2,5 @@
 # language: ru
 
 #type:uf
-Функция: UF7 системные настройки VA
+Функция: UF8 Turbo Gherkin
 Описание ценности или цели.
