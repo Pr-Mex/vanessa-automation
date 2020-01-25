@@ -1,5 +1,9 @@
-﻿# encoding: utf-8
 # language: ru
+# encoding: utf-8
+#parent ua:
+@UA24_Макеты_для_условий
+#parent uf:
+@UF9_Вспомогательные_фичи
 
 @tree
 @IgnoreOnCIMainBuild

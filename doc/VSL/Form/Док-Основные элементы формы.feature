@@ -1,4 +1,9 @@
-﻿# language: ru
+# language: ru
+# encoding: utf-8
+#parent ua:
+@UA31_описание_настроек
+#parent uf:
+@UF6_текстовые_и_видео_инструкции
 
 @IgnoreOnCIMainBuild
 @DocumentationBuild

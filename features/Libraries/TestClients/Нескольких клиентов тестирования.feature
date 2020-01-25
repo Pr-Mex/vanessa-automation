@@ -1,8 +1,9 @@
 # language: ru
+# encoding: utf-8
 #parent uf:
-@UF4_Библиотека_шагов
+@UF2_запуск_сценариев_на_выполнение
 #parent ua:
-@UA6_Работать_с_подключением_Test-client
+@UA13_управлять_Test_clients
 
 @IgnoreOnOFBuilds
 @IgnoreOn82Builds

@@ -1,9 +1,9 @@
 # language: ru
 # encoding: utf-8
 #parent uf:
-@UF2_запуск_сценариев_на_выполнение
+@UF8_Turbo_Gherkin
 #parent ua:
-@UA12_пошагово_выполнять_сценарии
+@UA22_Использовать_циклы_в_сценариях
 @tree
 @ExportScenarios
 @IgnoreOnCIMainBuild

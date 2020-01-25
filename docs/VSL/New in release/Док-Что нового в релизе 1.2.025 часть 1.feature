@@ -1,8 +1,9 @@
 # language: ru
-#parent uf:
-@UF6_видео-инструкции
+# encoding: utf-8
 #parent ua:
 @UA17_что_нового_в_версии
+#parent uf:
+@UF6_текстовые_и_видео_инструкции
 
 @IgnoreOnCIMainBuild
 

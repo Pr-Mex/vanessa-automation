@@ -1,8 +1,7 @@
 # language: ru
-#parent uf:
-@UF5_формирование_результатов_выполнения_сценариев
+# encoding: utf-8
 #parent ua:
-@UA21_формировать_отчет_jUnit
+@UA25_Макеты_для_отчетов_о_выполнении
 
 #https://github.com/silverbulleters/vanessa-behavior/issues/102
 

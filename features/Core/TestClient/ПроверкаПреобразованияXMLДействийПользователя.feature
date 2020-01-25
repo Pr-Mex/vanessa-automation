@@ -1,4 +1,9 @@
 # language: ru
+# encoding: utf-8
+#parent uf:
+@UF3_запись_действий_пользователя
+#parent ua:
+@UA33_преобразование_XML_в_Gherkin
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds

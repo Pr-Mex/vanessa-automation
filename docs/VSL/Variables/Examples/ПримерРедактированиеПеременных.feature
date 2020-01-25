@@ -1,4 +1,5 @@
-﻿# language: ru
+# language: ru
+# encoding: utf-8
 
 @IgnoreOnCIMainBuild
 @tree

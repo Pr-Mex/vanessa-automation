@@ -1,8 +1,9 @@
 # language: ru
+# encoding: utf-8
 #parent uf:
-@UF4_Библиотека_шагов
+@UF9_Фичи_макеты
 #parent ua:
-@UA6_Работать_с_подключением_Test-client
+@UA26_Макеты_для_проверки_test_client
 
 @IgnoreOnCIMainBuild
 @Тест

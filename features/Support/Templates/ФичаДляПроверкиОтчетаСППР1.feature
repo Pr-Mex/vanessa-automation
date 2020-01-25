@@ -1,8 +1,7 @@
 # language: ru
-#parent uf:
-@UF5_формирование_результатов_выполнения_сценариев
+# encoding: utf-8
 #parent ua:
-@UA20_формировать_прочие_отчеты
+@UA25_Макеты_для_отчетов_о_выполнении
 
 
 @IgnoreOnCIMainBuild

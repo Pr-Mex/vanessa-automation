@@ -1,4 +1,9 @@
-﻿# language: ru
+# language: ru
+# encoding: utf-8
+#parent uf:
+@UF10_Запуск_VA
+#parent ua:
+@UA35_запускать_интерактивно
 
 @IgnoreOnWeb
 
@@ -12,4 +17,3 @@
 	Когда я работаю с vanessa-automation.epf
 	Тогда я открыл форму VanessaBehavoir в режиме самотестирования
 	И я могу закрыть форму обработки
-
