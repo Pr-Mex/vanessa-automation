@@ -9399,12 +9399,37 @@ This is available only if the form contains only one element with the specified 
 														</Title>
 													</ExtendedTooltip>
 												</CheckBoxField>
+												<CheckBoxField name="ИспользоватьКомпоненту1cWinCtrl" id="2261">
+													<DataPath>Объект.ИспользоватьКомпоненту1cWinCtrl</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ИспользоватьКомпоненту1cWinCtrlКонтекстноеМеню" id="2262"/>
+													<ExtendedTooltip name="ИспользоватьКомпоненту1cWinCtrlРасширеннаяПодсказка" id="2263">
+														<Title formatted="true">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Предназначена для управления окнами Windows и Linux. 
+Возможности:
+- Получение списка окон и списка процессов
+- Управление размерами и положением окна
+- Получение снимка окна и снимка экрана
+
+&lt;link https://github.com/lintest/1cWinCtrl&gt;https://github.com/lintest/1cWinCtrl&lt;/&gt;
+</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+													<Events>
+														<Event name="OnChange">ИспользоватьКомпоненту1cWinCtrlПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
 												<CheckBoxField name="ИспользоватьВнешнююКомпонентуДляСкриншотов" id="2248">
 													<DataPath>Объект.ИспользоватьВнешнююКомпонентуДляСкриншотов</DataPath>
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Скриншоты внешним модулем</v8:content>
+															<v8:content>Скриншоты внешней компонентой</v8:content>
 														</v8:item>
 													</Title>
 													<TitleLocation>Right</TitleLocation>
@@ -9415,13 +9440,10 @@ This is available only if the form contains only one element with the specified 
 														<Title formatted="false">
 															<v8:item>
 																<v8:lang>ru</v8:lang>
-																<v8:content>Для снятия скриншотов используется внешний модуль (компонента) "WindowCaptureComponent" вместо приложения IrfanView.</v8:content>
+																<v8:content>Для снятия скриншотов используется компонента 1cWinCtrl вместо приложения IrfanView.</v8:content>
 															</v8:item>
 														</Title>
 													</ExtendedTooltip>
-													<Events>
-														<Event name="OnChange">ИспользоватьВнешнююКомпонентуДляСкриншотовПриИзменении</Event>
-													</Events>
 												</CheckBoxField>
 												<InputField name="СпособСнятияСкриншотовВнешнейКомпонентой" id="2253">
 													<DataPath>Объект.СпособСнятияСкриншотовВнешнейКомпонентой</DataPath>
@@ -9501,6 +9523,115 @@ This is available only if the form contains only one element with the specified 
 													<ShowTitle>false</ShowTitle>
 													<ExtendedTooltip name="ГруппаОбновлятьДеревоРасширеннаяПодсказка" id="1837"/>
 												</UsualGroup>
+												<InputField name="КомандаСделатьСкриншот" id="500">
+													<DataPath>Объект.КомандаСделатьСкриншот</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Команда создания скриншотов</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Console command on screenshots create</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>am</v8:lang>
+															<v8:content>መሥሪያ ትዕዛዝ ለመፍጠር ቅጽበታዊ ገጽ እይታዎች</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>az</v8:lang>
+															<v8:content>Консольная komanda yaratmaq ekran</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>bg</v8:lang>
+															<v8:content>Конзолната команда създаване на скрийншоти</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>et</v8:lang>
+															<v8:content>Konsooli käsk luua ekraanikuvasid</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>fr</v8:lang>
+															<v8:content>La commande de création de captures d'écran</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ka</v8:lang>
+															<v8:content>Console command შექმნათ პროფესიონალური</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>de</v8:lang>
+															<v8:content>Konsolenbefehl erstellen von screenshots</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>hu</v8:lang>
+															<v8:content>Konzol parancs, hogy hozzon létre screenshotok</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>it</v8:lang>
+															<v8:content>Riga di comando per la creazione di screenshot</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>lv</v8:lang>
+															<v8:content>Konsole komanda radītu ekrānšāviņi</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>lt</v8:lang>
+															<v8:content>Konsolės komanda sukurti vaizdus</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>mn</v8:lang>
+															<v8:content>Консол тушаал бий болгох дэлгэцийн</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>pl</v8:lang>
+															<v8:content>Konsola drużyna tworzenia zrzutów ekranu</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ro</v8:lang>
+															<v8:content>Consola de comanda a crea capturi de ecran</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>sl</v8:lang>
+															<v8:content>Konzola ukaz, da ustvarite screenshots</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>es</v8:lang>
+															<v8:content>Comando de consola crear capturas de pantalla</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>sv</v8:lang>
+															<v8:content>Console för att skapa skärmdumpar</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>tr</v8:lang>
+															<v8:content>Konsol komutu oluşturmak ekran görüntüleri</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>vi</v8:lang>
+															<v8:content>Lệnh điều khiển tạo ảnh chụp màn hình</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<ContextMenu name="КомандаСделатьСкриншотКонтекстноеМеню" id="501"/>
+													<ExtendedTooltip name="КомандаСделатьСкриншотРасширеннаяПодсказка" id="1402">
+														<Title formatted="true">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>В поле указывается консольная команда, которая будет использоваться при снятии скриншотов.
+Например:
+1. &lt;b&gt;"C:\Program Files (x86)\IrfanView\i_view32.exe" /capture=1 /convert=&lt;/&gt;
+2. &lt;b&gt;nircmd savescreenshot&lt;/&gt;</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Specify the command line used to create the screenshots.
+E.g.:
+1. &lt;b&gt;"C:\Program Files (x86)\IrfanView\i_view32.exe" /capture=1 /convert=&lt;/&gt;
+2. &lt;b&gt;nircmd savescreenshot&lt;/&gt;</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+												</InputField>
 												<InputField name="КаталогИнструментов" id="380">
 													<DataPath>Объект.КаталогИнструментов</DataPath>
 													<Title>
@@ -10274,115 +10405,6 @@ When working with Vanessa Automation Single it is allowed to leave the field bla
 														</Title>
 													</ExtendedTooltip>
 												</InputField>
-												<InputField name="КомандаСделатьСкриншот" id="500">
-													<DataPath>Объект.КомандаСделатьСкриншот</DataPath>
-													<Title>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Команда создания скриншотов</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>en</v8:lang>
-															<v8:content>Console command on screenshots create</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>am</v8:lang>
-															<v8:content>መሥሪያ ትዕዛዝ ለመፍጠር ቅጽበታዊ ገጽ እይታዎች</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>az</v8:lang>
-															<v8:content>Консольная komanda yaratmaq ekran</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>bg</v8:lang>
-															<v8:content>Конзолната команда създаване на скрийншоти</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>et</v8:lang>
-															<v8:content>Konsooli käsk luua ekraanikuvasid</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>fr</v8:lang>
-															<v8:content>La commande de création de captures d'écran</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>ka</v8:lang>
-															<v8:content>Console command შექმნათ პროფესიონალური</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>de</v8:lang>
-															<v8:content>Konsolenbefehl erstellen von screenshots</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>hu</v8:lang>
-															<v8:content>Konzol parancs, hogy hozzon létre screenshotok</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>it</v8:lang>
-															<v8:content>Riga di comando per la creazione di screenshot</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>lv</v8:lang>
-															<v8:content>Konsole komanda radītu ekrānšāviņi</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>lt</v8:lang>
-															<v8:content>Konsolės komanda sukurti vaizdus</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>mn</v8:lang>
-															<v8:content>Консол тушаал бий болгох дэлгэцийн</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>pl</v8:lang>
-															<v8:content>Konsola drużyna tworzenia zrzutów ekranu</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>ro</v8:lang>
-															<v8:content>Consola de comanda a crea capturi de ecran</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>sl</v8:lang>
-															<v8:content>Konzola ukaz, da ustvarite screenshots</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>es</v8:lang>
-															<v8:content>Comando de consola crear capturas de pantalla</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>sv</v8:lang>
-															<v8:content>Console för att skapa skärmdumpar</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>tr</v8:lang>
-															<v8:content>Konsol komutu oluşturmak ekran görüntüleri</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>vi</v8:lang>
-															<v8:content>Lệnh điều khiển tạo ảnh chụp màn hình</v8:content>
-														</v8:item>
-													</Title>
-													<ToolTipRepresentation>Button</ToolTipRepresentation>
-													<ContextMenu name="КомандаСделатьСкриншотКонтекстноеМеню" id="501"/>
-													<ExtendedTooltip name="КомандаСделатьСкриншотРасширеннаяПодсказка" id="1402">
-														<Title formatted="true">
-															<v8:item>
-																<v8:lang>ru</v8:lang>
-																<v8:content>В поле указывается консольная команда, которая будет использоваться при снятии скриншотов.
-Например:
-1. &lt;b&gt;"C:\Program Files (x86)\IrfanView\i_view32.exe" /capture=1 /convert=&lt;/&gt;
-2. &lt;b&gt;nircmd savescreenshot&lt;/&gt;</v8:content>
-															</v8:item>
-															<v8:item>
-																<v8:lang>en</v8:lang>
-																<v8:content>Specify the command line used to create the screenshots.
-E.g.:
-1. &lt;b&gt;"C:\Program Files (x86)\IrfanView\i_view32.exe" /capture=1 /convert=&lt;/&gt;
-2. &lt;b&gt;nircmd savescreenshot&lt;/&gt;</v8:content>
-															</v8:item>
-														</Title>
-													</ExtendedTooltip>
-												</InputField>
 												<InputField name="КомандаОткрытияФичиВТекстовомРедакторе" id="1776">
 													<DataPath>Объект.КомандаОткрытияФичиВТекстовомРедакторе</DataPath>
 													<ToolTipRepresentation>Button</ToolTipRepresentation>
@@ -10400,6 +10422,9 @@ E.g.:
 															</v8:item>
 														</Title>
 													</ExtendedTooltip>
+													<Events>
+														<Event name="AutoComplete">КомандаОткрытияФичиВТекстовомРедактореАвтоПодбор</Event>
+													</Events>
 												</InputField>
 												<InputField name="ПоставщикПользовательскихНастроек" id="2228">
 													<DataPath>Объект.ПоставщикПользовательскихНастроек</DataPath>
@@ -29239,6 +29264,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 					<v8:content>Go to the line with the error step</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Shortcut>F8</Shortcut>
 			<Action>ПерейтиКСтрокеСОшибкой</Action>
 		</Command>
 		<Command name="ВыгрузитьНастройкиВФайл" id="78">
