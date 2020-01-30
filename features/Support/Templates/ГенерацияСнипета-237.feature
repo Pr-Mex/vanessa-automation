@@ -1,9 +1,9 @@
 # language: ru
 # encoding: utf-8
 #parent uf:
-@UF1_загрузка_и_обработка_features
+@UF9_Вспомогательные_фичи
 #parent ua:
-@UA10_генерировать_EPF_файлы
+@UA42_Тестовые_фичи
 
 #https://github.com/silverbulleters/vanessa-behavior/issues/237
 
