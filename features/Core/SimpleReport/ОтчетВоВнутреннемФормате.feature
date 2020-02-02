@@ -2,6 +2,7 @@
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
+@IgnoreOnUFSovm82Builds
 @IgnoreOnWeb
 
 @IgnoreOn836
@@ -11,6 +12,8 @@
 @IgnoreOn8310
 @IgnoreOn8311
 @IgnoreOn8312
+@IgnoreOn8313
+@IgnoreOn8314
 
 
 
