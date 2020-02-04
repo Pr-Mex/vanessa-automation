@@ -1,8 +1,9 @@
 # language: ru
+# encoding: utf-8
 #parent uf:
-@UF8_Turbo_Gherkin
+@UF9_Вспомогательные_фичи
 #parent ua:
-@UA23_Использовать_условия_в_сценариях
+@UA24_Макеты_для_условий
 
 @IgnoreOnCIMainBuild
 @tree
