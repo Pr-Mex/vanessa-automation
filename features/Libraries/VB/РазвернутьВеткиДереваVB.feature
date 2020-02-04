@@ -1,4 +1,9 @@
-﻿# language: ru
+# language: ru
+# encoding: utf-8
+#parent uf:
+@UF1_загрузка_и_обработка_features
+#parent ua:
+@UA38_манипулировать_загруженными_фичами
 
 @IgnoreOnCIMainBuild
 
@@ -10,4 +15,3 @@
 
 Сценарий: Развернуть все ветки дерева VB
 	Когда я развернул все ветки дерева VB
-
