@@ -133,7 +133,7 @@
 Профиль запуска предназначен для простого консольного запуска, пример подобной командной строки выглядит так:
 
 ```
-%V83PATH% /Execute C:\vanessa-automation\vanessa-automation.epf /C"StartFeaturePlayer;VBParams=C:\VBParams.json"
+%V83PATH% /Execute C:\vanessa-automation\vanessa-automation.epf /TESTMANAGER /C"StartFeaturePlayer;VBParams=C:\VBParams.json"
 ```
 
 [Примеры запуска](https://github.com/Pr-Mex/vanessa-automation/tree/develop/tools/JSON)
