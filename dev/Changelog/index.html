@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/logo.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.2">
     
     
       
@@ -42,7 +42,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.1b62728e.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
       
         <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -53,7 +53,7 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.268332fc.js"></script>
+      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
     
     
       
@@ -87,7 +87,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#_1" tabindex="1" class="md-skip">
+      <a href="#_1" tabindex="0" class="md-skip">
         Перейти к содержанию
       </a>
     
@@ -96,9 +96,9 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://pr-mex.github.io/vanessa-automation/dev" title="Vanessa Automation Dev" class="md-header-nav__button md-logo">
+        <a href="https://pr-mex.github.io/vanessa-automation/dev" title="Vanessa Automation Dev" aria-label="Vanessa Automation Dev" class="md-header-nav__button md-logo">
           
-            <img src="../assets/images/logo.png" width="24" height="24">
+            <img alt="logo" src="../assets/images/logo.png" width="24" height="24">
           
         </a>
       </div>
@@ -127,7 +127,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
@@ -227,7 +227,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="https://pr-mex.github.io/vanessa-automation/dev" title="Vanessa Automation Dev" class="md-nav__button md-logo">
       
-        <img src="../assets/images/logo.png" width="48" height="48">
+        <img alt="logo" src="../assets/images/logo.png" width="48" height="48">
       
     </a>
     Vanessa Automation Dev
@@ -2164,53 +2164,53 @@ VA не должна использовать Попытка Исключени�
 <ul>
 <li>Добавлен шаг условие, проверяющий наличие команды в панели разделов #277</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    </span><span class="k">Если </span><span class="nf">в панели разделов есть команда &quot;</span><span class="s">ИмяКоманды</span><span class="nf">&quot; Тогда</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">Если </span><span class="nf">в панели разделов есть команда &quot;</span><span class="s">ИмяКоманды</span><span class="nf">&quot; Тогда</span>
+</code></pre></div>
 
 
 <ul>
 <li>Добавлен шаг условие, проверяющий наличие команды в панели функций #277</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    </span><span class="k">Если </span><span class="nf">в панели функций есть команда &quot;</span><span class="s">ИмяКоманды</span><span class="nf">&quot; Тогда</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">Если </span><span class="nf">в панели функций есть команда &quot;</span><span class="s">ИмяКоманды</span><span class="nf">&quot; Тогда</span>
+</code></pre></div>
 
 
 <ul>
 <li>Добавлен шаг условие, проверяющий наличие команды в панели открытых #277</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    </span><span class="k">Если </span><span class="nf">в панели открытых есть команда &quot;</span><span class="s">ИмяКоманды</span><span class="nf">&quot; Тогда</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">Если </span><span class="nf">в панели открытых есть команда &quot;</span><span class="s">ИмяКоманды</span><span class="nf">&quot; Тогда</span>
+</code></pre></div>
 
 
 <ul>
 <li>Добавлены шаги условия, проверяющие наличие колонки в таблице #278</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    </span><span class="k">Если </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; есть колонка &quot;</span><span class="s">Заголовок колонки</span><span class="nf">&quot; Тогда</span>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">Если </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; есть колонка &quot;</span><span class="s">Заголовок колонки</span><span class="nf">&quot; Тогда</span>
 <span class="nf">    </span><span class="k">Если </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; есть колонка с именем &quot;</span><span class="s">ИмяКолонки</span><span class="nf">&quot; Тогда</span>
-</pre></div>
+</code></pre></div>
 
 
 <ul>
 <li>Добавлены шаги условия, проверяющие отсутствие колонки в таблице #278</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    </span><span class="k">Если </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; нет колонки &quot;</span><span class="s">Заголовок колонки</span><span class="nf">&quot; Тогда</span>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">Если </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; нет колонки &quot;</span><span class="s">Заголовок колонки</span><span class="nf">&quot; Тогда</span>
 <span class="nf">    </span><span class="k">Если </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; нет колонки с именем &quot;</span><span class="s">ИмяКолонки</span><span class="nf">&quot; Тогда</span>
-</pre></div>
+</code></pre></div>
 
 
 <ul>
 <li>Добавлены шаги условия, проверяющие заполненность ячейки таблицы #279</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    </span><span class="k">Если </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; поле &quot;</span><span class="s">Заголовок поля</span><span class="nf">&quot; заполнено Тогда</span>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">Если </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; поле &quot;</span><span class="s">Заголовок поля</span><span class="nf">&quot; заполнено Тогда</span>
 <span class="nf">    </span><span class="k">Если </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; поле с именем &quot;</span><span class="s">ИмяПоля</span><span class="nf">&quot; заполнено Тогда</span>
-</pre></div>
+</code></pre></div>
 
 
 <ul>
 <li>Добавлен шаг условие, проверяющий содержание платформенного сообщения #280</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    </span><span class="k">Если </span><span class="nf">появилось предупреждение, содержащее текст &quot;</span><span class="s">Текст</span><span class="nf">&quot; тогда</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">Если </span><span class="nf">появилось предупреждение, содержащее текст &quot;</span><span class="s">Текст</span><span class="nf">&quot; тогда</span>
+</code></pre></div>
 
 
 <h3 id="_29">Разные доработки<a class="headerlink" href="#_29" title="Permanent link">&para;</a></h3>
@@ -2234,28 +2234,28 @@ VA не должна использовать Попытка Исключени�
 <ul>
 <li>Добавлен шаг, устанавливающий значение константы. Спасибо @nixel2007.</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    </span><span class="k">И </span><span class="nf">я устанавливаю в константу &quot;</span><span class="s">ИмяКонстанты</span><span class="nf">&quot; значение &quot;</span><span class="s">ЗначениеКонстанты</span><span class="nf">&quot;</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я устанавливаю в константу &quot;</span><span class="s">ИмяКонстанты</span><span class="nf">&quot; значение &quot;</span><span class="s">ЗначениеКонстанты</span><span class="nf">&quot;</span>
+</code></pre></div>
 
 
 <ul>
 <li>Добавлен шаг, ожидающий закрытия TestClient. Спасибо @zeegin.</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    </span><span class="k">И </span><span class="nf">я жду когда закроется TestClient &quot;</span><span class="s">ИмяПрофиля</span><span class="nf">&quot; в течение </span><span class="s">10</span><span class="nf"> секунд</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я жду когда закроется TestClient &quot;</span><span class="s">ИмяПрофиля</span><span class="nf">&quot; в течение </span><span class="s">10</span><span class="nf"> секунд</span>
+</code></pre></div>
 
 
 <ul>
 <li>Добавлен шаг, ожидающий завершения процесса. Спасибо @zeegin.</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    </span><span class="k">И </span><span class="nf">я жду когда завершится процесс с ИД процесса &quot;</span><span class="s">PID</span><span class="nf">&quot; в течение </span><span class="s">10</span><span class="nf"> секунд</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я жду когда завершится процесс с ИД процесса &quot;</span><span class="s">PID</span><span class="nf">&quot; в течение </span><span class="s">10</span><span class="nf"> секунд</span>
+</code></pre></div>
 
 
 <ul>
 <li>Добавлены шаги, проверяющие содержание выпадающего списка элемента, принадлежащего таблице #250</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; выпадающий список &quot;</span><span class="s">Заголовок элемента</span><span class="nf">&quot; содержит значения</span>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; выпадающий список &quot;</span><span class="s">Заголовок элемента</span><span class="nf">&quot; содержит значения</span>
 <span class="k">        |</span><span class="s"> &#39;Значение1&#39;</span><span class="k"> |</span><span class="nf"></span>
 <span class="k">        |</span><span class="s"> &#39;Значение2&#39;</span><span class="k"> |</span><span class="nf"></span>
 <span class="nf">    </span><span class="k">И </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; выпадающий список с именем &quot;</span><span class="s">ИмяЭлемента</span><span class="nf">&quot; содержит значения</span>
@@ -2273,29 +2273,29 @@ VA не должна использовать Попытка Исключени�
 <span class="nf">    </span><span class="k">И </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; выпадающий список с именем &quot;</span><span class="s">ИмяЭлемента</span><span class="nf">&quot; не содержит значения</span>
 <span class="k">        |</span><span class="s"> &#39;Значение1&#39;</span><span class="k"> |</span><span class="nf"></span>
 <span class="k">        |</span><span class="s"> &#39;Значение2&#39;</span><span class="k"> |</span>
-</pre></div>
+</code></pre></div>
 
 
 <ul>
 <li>Добавлены шаги, открывающие выпадающий список в таблице #251</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; я открываю выпадающий список &quot;</span><span class="s">Заголовок списка</span><span class="nf">&quot;</span>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; я открываю выпадающий список &quot;</span><span class="s">Заголовок списка</span><span class="nf">&quot;</span>
 <span class="nf">    </span><span class="k">И </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; я открываю выпадающий список с именем &quot;</span><span class="s">ИмяРеквизита</span><span class="nf">&quot;</span>
-</pre></div>
+</code></pre></div>
 
 
 <ul>
 <li>Добавлен шаг, копирующий файл #252</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    Тогда я копирую файл &quot;</span><span class="s">ИмяФайлаИсточник</span><span class="nf">&quot; &quot;</span><span class="s">ИмяФайлаПриемник</span><span class="nf">&quot;</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nf">    Тогда я копирую файл &quot;</span><span class="s">ИмяФайлаИсточник</span><span class="nf">&quot; &quot;</span><span class="s">ИмяФайлаПриемник</span><span class="nf">&quot;</span>
+</code></pre></div>
 
 
 <ul>
 <li>Добавлен шаг, перемещающий файл #252</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    Тогда я перемещаю файл &quot;</span><span class="s">ИмяФайлаИсточник</span><span class="nf">&quot; &quot;</span><span class="s">ИмяФайлаПриемник</span><span class="nf">&quot;</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nf">    Тогда я перемещаю файл &quot;</span><span class="s">ИмяФайлаИсточник</span><span class="nf">&quot; &quot;</span><span class="s">ИмяФайлаПриемник</span><span class="nf">&quot;</span>
+</code></pre></div>
 
 
 <h3 id="_33">Разные доработки<a class="headerlink" href="#_33" title="Permanent link">&para;</a></h3>
@@ -2323,50 +2323,50 @@ VA не должна использовать Попытка Исключени�
 <ul>
 <li>Добавлен шаг, подключающий клиент тестирования, запущенный из другого приложения. #223</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    Затем Я подключаю уже запущенный клиент тестирования &quot;</span><span class="s">ИмяПрофиля</span><span class="nf">&quot;</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nf">    Затем Я подключаю уже запущенный клиент тестирования &quot;</span><span class="s">ИмяПрофиля</span><span class="nf">&quot;</span>
+</code></pre></div>
 
 
 <ul>
 <li>Добавлен шаг, запоминающий строку в переменную. #224</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    </span><span class="k">И </span><span class="nf">я запоминаю строку &#39;НужнаяСтрока&#39; в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot;</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я запоминаю строку &#39;НужнаяСтрока&#39; в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot;</span>
+</code></pre></div>
 
 
 <ul>
 <li>Добавлен шаг, делающий двойной клик на картинку. #235</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    Дано двойной клик на картинку &quot;</span><span class="s">ИмяКартинки</span><span class="nf">&quot;</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nf">    Дано двойной клик на картинку &quot;</span><span class="s">ИмяКартинки</span><span class="nf">&quot;</span>
+</code></pre></div>
 
 
 <ul>
 <li>Добавлен шаг, эмулирующий вращение колеса мышки с зажатой клавишей ctrl. Нужно для эмуляции изменения масштаба. #236</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    </span><span class="k">И </span><span class="nf">я вращаю колесо мышки &quot;</span><span class="s">Направление</span><span class="nf">&quot; </span><span class="s">5</span><span class="nf"> раз с зажатой клавишей ctrl</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я вращаю колесо мышки &quot;</span><span class="s">Направление</span><span class="nf">&quot; </span><span class="s">5</span><span class="nf"> раз с зажатой клавишей ctrl</span>
+</code></pre></div>
 
 
 <ul>
 <li>Добавлен шаг условие, проверяющий наличие картинки на экране #237</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    </span><span class="k">Если </span><span class="nf">есть картинка &quot;</span><span class="s">ИмяКартинки</span><span class="nf">&quot; тогда</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">Если </span><span class="nf">есть картинка &quot;</span><span class="s">ИмяКартинки</span><span class="nf">&quot; тогда</span>
+</code></pre></div>
 
 
 <ul>
 <li>Добавлен шаг, эмулирующий клик правой кнопки на картинке #242</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    Дано клик правой кнопкой на картинку &quot;</span><span class="s">ИмяКартинки</span><span class="nf">&quot;</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nf">    Дано клик правой кнопкой на картинку &quot;</span><span class="s">ИмяКартинки</span><span class="nf">&quot;</span>
+</code></pre></div>
 
 
 <ul>
 <li>Добавлен шаг, эмулирующий перемещение курсора мышки к картинке #243</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    Дано курсор к картинке &quot;</span><span class="s">ИмяКартинки</span><span class="nf">&quot;</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nf">    Дано курсор к картинке &quot;</span><span class="s">ИмяКартинки</span><span class="nf">&quot;</span>
+</code></pre></div>
 
 
 <h3 id="_37">Исправление ошибок<a class="headerlink" href="#_37" title="Permanent link">&para;</a></h3>
@@ -2394,41 +2394,41 @@ VA не должна использовать Попытка Исключени�
 <ul>
 <li>Добавлен шаг, помещающий текст в буфер обмена. #202</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    </span><span class="k">И </span><span class="nf">я помещаю в буфер обмена строку &quot;</span><span class="s">Нужная строка</span><span class="nf">&quot;</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я помещаю в буфер обмена строку &quot;</span><span class="s">Нужная строка</span><span class="nf">&quot;</span>
+</code></pre></div>
 
 
 <ul>
 <li>Добавлен шаг, получающий версию конфигурации #200</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    </span><span class="k">И </span><span class="nf">я запоминаю версию конфигурации &quot;</span><span class="s">ИмяПодсистемы</span><span class="nf">&quot; как &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot;</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я запоминаю версию конфигурации &quot;</span><span class="s">ИмяПодсистемы</span><span class="nf">&quot; как &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot;</span>
+</code></pre></div>
 
 
 <ul>
 <li>Добавлены шаги, раскрывающие узлы дерева вместе с подчиненными узлами. Нужен режим совместимости 8.3.13 или выше. #201</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    </span><span class="k">И </span><span class="nf">   в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; я разворачиваю текущую строку с подчиненными</span>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">   в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; я разворачиваю текущую строку с подчиненными</span>
 <span class="nf">    </span><span class="k">И </span><span class="nf">   в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; я разворачиваю строку с подчиненными:</span>
 <span class="k">        |</span><span class="s"> &#39;ИмяКолонки&#39;</span><span class="k"> |</span><span class="nf"></span>
 <span class="k">        |</span><span class="s"> &#39;ЗначениеКолонки&#39;</span><span class="k"> |</span>
-</pre></div>
+</code></pre></div>
 
 
 <ul>
 <li>Добавлен шаг, подключающий раннее запущенный клиент тестирования. Если сеанс не найден, то выдаётся исключение. Добавлен тест. #199</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    Когда Я подключаю уже запущенный клиент тестирования с параметрами:</span>
+<div class="codehilite"><pre><span></span><code><span class="nf">    Когда Я подключаю уже запущенный клиент тестирования с параметрами:</span>
 <span class="k">        |</span><span class="s"> &#39;Имя подключения&#39;</span><span class="k"> |</span><span class="s">  &#39;Порт&#39;</span><span class="k"> |</span><span class="s"> &#39;Строка соединения&#39;</span><span class="k"> |</span><span class="s"> &#39;Логин&#39;</span><span class="k"> |</span><span class="s"> &#39;Пароль&#39;</span><span class="k"> |</span><span class="nf"></span>
 <span class="k">        |</span><span class="s"> &#39;ИмяПрофиля&#39;</span><span class="k">      |</span><span class="s">  &#39;1538&#39;</span><span class="k"> |</span><span class="s"> &#39;СтрокаСоединения&#39;</span><span class="k">  |</span><span class="s"> &#39;Админ&#39;</span><span class="k"> |</span><span class="s"> &#39;Админ&#39;</span><span class="k">  |</span>
-</pre></div>
+</code></pre></div>
 
 
 <ul>
 <li>Добавлен шаг, который активизирует строку таблице клиентов тестирования. Это может быть нужно для корректной работы шага "Дано Я открыл новый сеанс TestClient или подключил уже существующий", т.к. он подключает клиент тестирования, соответствующий активной строке таблицы клиентов.</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице клиентов тестирования я активизирую строку &#39;Этот клиент&#39;</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице клиентов тестирования я активизирую строку &#39;Этот клиент&#39;</span>
+</code></pre></div>
 
 
 <h3 id="_40">Разные доработки<a class="headerlink" href="#_40" title="Permanent link">&para;</a></h3>
@@ -2460,36 +2460,36 @@ VA не должна использовать Попытка Исключени�
 <ul>
 <li>Вывод произвольной информации в лог с помощью шага #166</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    </span><span class="k">И </span><span class="nf">я добавляю информацию в лог &quot;</span><span class="s">Текст</span><span class="nf">&quot;</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я добавляю информацию в лог &quot;</span><span class="s">Текст</span><span class="nf">&quot;</span>
+</code></pre></div>
 
 
 <ul>
 <li>Добавлен шаг, ожидающий появления картинки на экране #171</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    </span><span class="k">И </span><span class="nf">я жду картинки &quot;</span><span class="s">ИмяКартинки</span><span class="nf">&quot; в течение </span><span class="s">20</span><span class="nf"> секунд</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я жду картинки &quot;</span><span class="s">ИмяКартинки</span><span class="nf">&quot; в течение </span><span class="s">20</span><span class="nf"> секунд</span>
+</code></pre></div>
 
 
 <ul>
 <li>Добавлен шаг, эмулирующий нажатия хоткеев #181</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    Дано я нажимаю хоткей &quot;</span><span class="s">o</span><span class="nf">&quot; &quot;</span><span class="s">ctrl</span><span class="nf">&quot;</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nf">    Дано я нажимаю хоткей &quot;</span><span class="s">o</span><span class="nf">&quot; &quot;</span><span class="s">ctrl</span><span class="nf">&quot;</span>
+</code></pre></div>
 
 
 <ul>
 <li>Добавлен шаг, эмулирующий нажатие ENTER #182</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    Дано я нажимаю ENTER</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nf">    Дано я нажимаю ENTER</span>
+</code></pre></div>
 
 
 <ul>
 <li>Добавлен шаг, определяющий координаты картинки на экране #172</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    </span><span class="k">И </span><span class="nf">я определяю координаты картинки &quot;</span><span class="s">ИмяКартинки</span><span class="nf">&quot; как &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot;</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я определяю координаты картинки &quot;</span><span class="s">ИмяКартинки</span><span class="nf">&quot; как &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot;</span>
+</code></pre></div>
 
 
 <h3 id="_45">Исправление ошибок<a class="headerlink" href="#_45" title="Permanent link">&para;</a></h3>
@@ -2500,8 +2500,8 @@ VA не должна использовать Попытка Исключени�
 <li>Рефакторинг интерфейса. #165</li>
 <li>Исправлена ошибка в шаге #173</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    </span><span class="k">И </span><span class="nf">я подключаю TestClient &quot;</span><span class="s">ИмяКлиента</span><span class="nf">&quot; логин &quot;</span><span class="s">Логин</span><span class="nf">&quot; пароль &quot;</span><span class="s">Пароль</span><span class="nf">&quot;</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я подключаю TestClient &quot;</span><span class="s">ИмяКлиента</span><span class="nf">&quot; логин &quot;</span><span class="s">Логин</span><span class="nf">&quot; пароль &quot;</span><span class="s">Пароль</span><span class="nf">&quot;</span>
+</code></pre></div>
 
 
 <h3 id="_46">Разные доработки<a class="headerlink" href="#_46" title="Permanent link">&para;</a></h3>
@@ -2517,12 +2517,12 @@ VA не должна использовать Попытка Исключени�
 <li>Добавлена опция при записи автовидео: Группа шагов как шаг. #137</li>
 <li>Добавлен шаг, рисующий стрелку от одной картинки до другой #138</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">        Затем я рисую стрелку от &quot;</span><span class="s">Картинка1</span><span class="nf">&quot; до &quot;</span><span class="s">Картинка2</span><span class="nf">&quot;</span>
+<div class="codehilite"><pre><span></span><code><span class="nf">        Затем я рисую стрелку от &quot;</span><span class="s">Картинка1</span><span class="nf">&quot; до &quot;</span><span class="s">Картинка2</span><span class="nf">&quot;</span>
 <span class="k">            |</span><span class="s">&#39;Цвет&#39;</span><span class="k">          |</span><span class="s"> &#39;Золотистый&#39;</span><span class="k">   |</span><span class="nf"></span>
 <span class="k">            |</span><span class="s">&#39;Длительность&#39;</span><span class="k">  |</span><span class="s"> &#39;5000&#39;</span><span class="k">         |</span><span class="nf"></span>
 <span class="k">            |</span><span class="s">&#39;ТочкаОткуда&#39;</span><span class="k">   |</span><span class="s"> &#39;СерединаПраво&#39;</span><span class="k">|</span>
 <span class="k">            |</span><span class="s">&#39;ТочкаКуда&#39;</span><span class="k">     |</span><span class="s"> &#39;СерединаЛево&#39;</span><span class="k"> |</span>
-</pre></div>
+</code></pre></div>
 
 
 <ul>
@@ -2540,8 +2540,8 @@ VA не должна использовать Попытка Исключени�
 <ul>
 <li>Добавлен шаг #117</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    </span><span class="k">И </span><span class="nf">Файл &quot;</span><span class="s">ИмяФайла</span><span class="nf">&quot; существует</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">Файл &quot;</span><span class="s">ИмяФайла</span><span class="nf">&quot; существует</span>
+</code></pre></div>
 
 
 <ul>
@@ -2549,53 +2549,53 @@ VA не должна использовать Попытка Исключени�
 <li>Добавлен файл с описанием отличий от проекта ADD.</li>
 <li>Добавлен шаг #125</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    Затем я выгружаю базу &#39;СтрокаСоединения&#39; в DT &quot;</span><span class="s">ПутьКDT</span><span class="nf">&quot;</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nf">    Затем я выгружаю базу &#39;СтрокаСоединения&#39; в DT &quot;</span><span class="s">ПутьКDT</span><span class="nf">&quot;</span>
+</code></pre></div>
 
 
 <p>Рефакторинг шагов, предназначенных для работы с подключениями TestClient. Лишние шаги удалены из справки, но совместимость с ними поддерживается. #122
 Исправлена ошибка копирования профиля, когда неверно формировалась строка дополнительных параметров.
 * Добавлены шаги #121</p>
-<div class="codehilite"><pre><span></span><span class="nf">    Тогда значение поля &quot;</span><span class="s">ИмяПоля</span><span class="nf">&quot; не содержит текст &quot;</span><span class="s">Подстрока</span><span class="nf">&quot;</span>
+<div class="codehilite"><pre><span></span><code><span class="nf">    Тогда значение поля &quot;</span><span class="s">ИмяПоля</span><span class="nf">&quot; не содержит текст &quot;</span><span class="s">Подстрока</span><span class="nf">&quot;</span>
 <span class="nf">    Тогда значение поля с именем &quot;</span><span class="s">ИмяПоля</span><span class="nf">&quot; не содержит текст &quot;</span><span class="s">Подстрока</span><span class="nf">&quot;</span>
-</pre></div>
+</code></pre></div>
 
 
 <ul>
 <li>Добавлен шаг условие #126</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    </span><span class="k">Если </span><span class="nf">Файл &quot;</span><span class="s">ИмяФайла</span><span class="nf">&quot; существует тогда</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">Если </span><span class="nf">Файл &quot;</span><span class="s">ИмяФайла</span><span class="nf">&quot; существует тогда</span>
+</code></pre></div>
 
 
 <ul>
 <li>Добавлен шаг #126</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    Тогда я удаляю файл &quot;</span><span class="s">ИмяФайла</span><span class="nf">&quot;</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nf">    Тогда я удаляю файл &quot;</span><span class="s">ИмяФайла</span><span class="nf">&quot;</span>
+</code></pre></div>
 
 
 <ul>
 <li>Добавлен шаг #123</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    </span><span class="k">И </span><span class="nf">у текущего элемента формы я вызываю запись содержимого в файл</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">у текущего элемента формы я вызываю запись содержимого в файл</span>
+</code></pre></div>
 
 
 <ul>
 <li>Добавлены шаги #124</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; я активизирую колонку &quot;</span><span class="s">ИмяКолонки</span><span class="nf">&quot; в группе &quot;</span><span class="s">ИмяГруппы</span><span class="nf">&quot;</span>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; я активизирую колонку &quot;</span><span class="s">ИмяКолонки</span><span class="nf">&quot; в группе &quot;</span><span class="s">ИмяГруппы</span><span class="nf">&quot;</span>
 <span class="nf">    </span><span class="k">И </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; я активизирую колонку с именем &quot;</span><span class="s">ИмяКолонки</span><span class="nf">&quot; в группе &quot;</span><span class="s">ИмяГруппы</span><span class="nf">&quot;</span>
-</pre></div>
+</code></pre></div>
 
 
 <ul>
 <li>Рефакторинг шагов работы с клиентом тестирования. #122</li>
 <li>Добавлен шаг</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; в текущее поле я ввожу текст &#39;НужныйТекст&#39;</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; в текущее поле я ввожу текст &#39;НужныйТекст&#39;</span>
+</code></pre></div>
 
 
 <h3 id="12017">1.2.017<a class="headerlink" href="#12017" title="Permanent link">&para;</a></h3>
@@ -2605,36 +2605,36 @@ VA не должна использовать Попытка Исключени�
 <li>Исправление ошибки генерации шага при нажатии на контекстное меню отчета. #108</li>
 <li>Добавлен шаг #101</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    </span><span class="k">И </span><span class="nf">затем я выполняю код встроенного языка на сервере</span>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">затем я выполняю код встроенного языка на сервере</span>
 <span class="k">        |</span><span class="s"> &#39;Сообщить(&quot;Hello world!&quot;);&#39;</span><span class="k"> |</span>
-</pre></div>
+</code></pre></div>
 
 
 <p>*Добавлен шаг #103</p>
-<div class="codehilite"><pre><span></span><span class="nf">    </span><span class="k">И </span><span class="nf">поле таблицы &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; с именем &quot;</span><span class="s">ИмяПоля</span><span class="nf">&quot; имеет заголовок &quot;</span><span class="s">Текст заголовка</span><span class="nf">&quot;</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">поле таблицы &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; с именем &quot;</span><span class="s">ИмяПоля</span><span class="nf">&quot; имеет заголовок &quot;</span><span class="s">Текст заголовка</span><span class="nf">&quot;</span>
+</code></pre></div>
 
 
 <p>*Добавлен шаг #104</p>
-<div class="codehilite"><pre><span></span><span class="nf">    </span><span class="k">И </span><span class="nf">у поля таблицы &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; с именем &quot;</span><span class="s">ИмяПоля</span><span class="nf">&quot; текст подсказки равен &quot;</span><span class="s">Текст подсказки</span><span class="nf">&quot;</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">у поля таблицы &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; с именем &quot;</span><span class="s">ИмяПоля</span><span class="nf">&quot; текст подсказки равен &quot;</span><span class="s">Текст подсказки</span><span class="nf">&quot;</span>
+</code></pre></div>
 
 
 <ul>
 <li>Добавлен шаг для установки значения переключателя по части строки, используя символ *. Работает в 8.3.12 и выше. #109</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    </span><span class="k">И </span><span class="nf">я меняю значение переключателя &#39;ИмяРеквизита&#39; на &#39;Значение*&#39; по шаблону</span>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я меняю значение переключателя &#39;ИмяРеквизита&#39; на &#39;Значение*&#39; по шаблону</span>
 <span class="nf">    </span><span class="k">И </span><span class="nf">я меняю значение переключателя с именем &#39;ИмяРеквизита&#39; на &#39;Значение*&#39; по шаблону</span>
-</pre></div>
+</code></pre></div>
 
 
 <ul>
 <li>Добавлен шаг для заполнения таблицы формы #110</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    </span><span class="k">И </span><span class="nf">я заполняю таблицу &quot;</span><span class="s">ТабличнаяЧасть1</span><span class="nf">&quot; данными</span>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я заполняю таблицу &quot;</span><span class="s">ТабличнаяЧасть1</span><span class="nf">&quot; данными</span>
 <span class="k">    |</span><span class="s"> &#39;ИмяКолонки1&#39;</span><span class="k"> |</span><span class="s"> &#39;ИмяКолонки2&#39;</span><span class="k"> |</span><span class="nf"></span>
 <span class="k">    |</span><span class="s"> &#39;Значение1&#39;</span><span class="k">   |</span><span class="s"> &#39;Значение2&#39;</span><span class="k">   |</span>
-</pre></div>
+</code></pre></div>
 
 
 <ul>
@@ -2656,8 +2656,8 @@ VA не должна использовать Попытка Исключени�
 <li>Тег @tree теперь не обязателен для указания и включен по умолчанию. #92.</li>
 <li>Добавлен шаг условие, который проверяет режим совместимости в базе. #93</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    </span><span class="k">Если </span><span class="nf">установлен режим совместимости &quot;</span><span class="s">8.3.12</span><span class="nf">&quot; Тогда</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">Если </span><span class="nf">установлен режим совместимости &quot;</span><span class="s">8.3.12</span><span class="nf">&quot; Тогда</span>
+</code></pre></div>
 
 
 <ul>
@@ -2684,14 +2684,14 @@ VA не должна использовать Попытка Исключени�
 <li>Рефакторинг. Уменьшение количества серверных вызовов при открытии обработки. #81</li>
 <li>Добавлен забытый шаг #82</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    </span><span class="k">И </span><span class="nf">я жду, что поле с именем &quot;</span><span class="s">ИмяПоля</span><span class="nf">&quot; перестанет быть пустым в течение </span><span class="s">30</span><span class="nf"> секунд</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я жду, что поле с именем &quot;</span><span class="s">ИмяПоля</span><span class="nf">&quot; перестанет быть пустым в течение </span><span class="s">30</span><span class="nf"> секунд</span>
+</code></pre></div>
 
 
 <ul>
 <li>Добавлены шаги для проверки вхождения элементов формы в группы: #83</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    </span><span class="k">И </span><span class="nf">в группе &quot;</span><span class="s">ИмяГруппы</span><span class="nf">&quot; содержатся элементы</span>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">в группе &quot;</span><span class="s">ИмяГруппы</span><span class="nf">&quot; содержатся элементы</span>
 <span class="k">        |</span><span class="s"> &#39;ГруппаРеквизит1&#39;</span><span class="k"> |</span><span class="nf"></span>
 <span class="k">        |</span><span class="s"> &#39;ГруппаРеквизит2&#39;</span><span class="k"> |</span>
 
@@ -2706,31 +2706,31 @@ VA не должна использовать Попытка Исключени�
 <span class="nf">    </span><span class="k">И </span><span class="nf">в группе с именем &quot;</span><span class="s">ИмяГруппы</span><span class="nf">&quot; не содержатся элементы</span>
 <span class="k">        |</span><span class="s"> &#39;НеСуществующаяГруппаРеквизит1&#39;</span><span class="k"> |</span><span class="nf"></span>
 <span class="k">        |</span><span class="s"> &#39;НеСуществующаяГруппаРеквизит2&#39;</span><span class="k"> |</span>
-</pre></div>
+</code></pre></div>
 
 
 <ul>
 <li>Добавлены шаги, для ожидания, что поле в таблице изменит значение: #84</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; у поля &quot;</span><span class="s">Имя элемента</span><span class="nf">&quot; я жду значения отличного от &quot;</span><span class="s">Значение</span><span class="nf">&quot; в течение </span><span class="s">20</span><span class="nf"> секунд</span>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; у поля &quot;</span><span class="s">Имя элемента</span><span class="nf">&quot; я жду значения отличного от &quot;</span><span class="s">Значение</span><span class="nf">&quot; в течение </span><span class="s">20</span><span class="nf"> секунд</span>
 
 <span class="nf">    </span><span class="k">И </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; у поля с именем &quot;</span><span class="s">ИмяЭлемента</span><span class="nf">&quot; я жду значения отличного от &quot;</span><span class="s">Значение</span><span class="nf">&quot; в течение </span><span class="s">20</span><span class="nf"> секунд</span>
-</pre></div>
+</code></pre></div>
 
 
 <ul>
 <li>Добавлены шаги, проверяющие, что поле существует на форме и невидимо пользователю #85</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    </span><span class="k">И </span><span class="nf">элемент формы &quot;</span><span class="s">Имя поля</span><span class="nf">&quot; существует и невидим на форме</span>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">элемент формы &quot;</span><span class="s">Имя поля</span><span class="nf">&quot; существует и невидим на форме</span>
 
 <span class="nf">    </span><span class="k">И </span><span class="nf">элемент формы с именем &quot;</span><span class="s">ИмяПоля</span><span class="nf">&quot; существует и невидим на форме</span>
-</pre></div>
+</code></pre></div>
 
 
 <ul>
 <li>Добавлены шаги, для проверки командного интерфейса #86</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="nf">    </span><span class="k">И </span><span class="nf">панель разделов равна</span>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">панель разделов равна</span>
 <span class="k">        |</span><span class="s"> &#39;ПунктМеню1&#39;</span><span class="k"> |</span><span class="nf"></span>
 <span class="k">        |</span><span class="s"> &#39;ПунктМеню1&#39;</span><span class="k"> |</span>
 
@@ -2761,7 +2761,7 @@ VA не должна использовать Попытка Исключени�
 <span class="nf">    </span><span class="k">И </span><span class="nf">группа &quot;</span><span class="s">ЗаголовокГруппы</span><span class="nf">&quot; в панели функций не содержит пункты меню </span>
 <span class="k">        |</span><span class="s"> &#39;ПунктМеню1&#39;</span><span class="k"> |</span><span class="nf"></span>
 <span class="k">        |</span><span class="s"> &#39;ПунктМеню1&#39;</span><span class="k"> |</span>
-</pre></div>
+</code></pre></div>
 
 
 <h3 id="12014">1.2.014<a class="headerlink" href="#12014" title="Permanent link">&para;</a></h3>
@@ -3048,10 +3048,10 @@ VA не должна использовать Попытка Исключени�
 <ul>
 <li>Добавил шаг, чтобы можно было переходить к строке таблицы, когда значения заданы с использованием символа *</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="k">И </span><span class="nf">    в таблице &quot;</span><span class="s">Список</span><span class="nf">&quot; я перехожу к строке по шаблону</span>
+<div class="codehilite"><pre><span></span><code><span class="k">И </span><span class="nf">    в таблице &quot;</span><span class="s">Список</span><span class="nf">&quot; я перехожу к строке по шаблону</span>
 <span class="k">  |</span><span class="s"> Код</span><span class="k">       |</span><span class="s"> Наименование</span><span class="k">       |</span><span class="nf"></span>
 <span class="k">  |</span><span class="s"> &quot;00000000*&quot;</span><span class="k"> |</span><span class="s"> &#39;*Элемент*2&#39;</span><span class="k">             |</span>
-</pre></div>
+</code></pre></div>
 
 
 <ul>
@@ -3068,11 +3068,11 @@ VA не должна использовать Попытка Исключени�
 <li>Убрал из epf явное использование СтрШаблон.</li>
 <li>Добавил шаги условий:</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="k">Если </span><span class="nf">таблица &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; равна макету &quot;</span><span class="s">ИмяМакета</span><span class="nf">&quot; тогда</span>
+<div class="codehilite"><pre><span></span><code><span class="k">Если </span><span class="nf">таблица &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; равна макету &quot;</span><span class="s">ИмяМакета</span><span class="nf">&quot; тогда</span>
 <span class="k">Если </span><span class="nf">таблица &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; равна переданной тогда</span>
 <span class="k">        |</span><span class="s"> &#39;Имя колонки&#39;</span><span class="k"> |</span><span class="nf"></span>
 <span class="k">        |</span><span class="s"> &#39;Значение&#39;</span><span class="k">    |</span>
-</pre></div>
+</code></pre></div>
 
 
 <ul>
@@ -3094,9 +3094,9 @@ VA не должна использовать Попытка Исключени�
 <em>Работа со сценариями на других языках.</em></li>
 <li>Добавил шаги для фиксирования формы, в которой надо искать элементы</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="k">И </span><span class="nf">я фиксирую форму &quot;</span><span class="s">ИмяФормы</span><span class="nf">&quot;</span>
+<div class="codehilite"><pre><span></span><code><span class="k">И </span><span class="nf">я фиксирую форму &quot;</span><span class="s">ИмяФормы</span><span class="nf">&quot;</span>
 <span class="k">И </span><span class="nf">я отменяю фиксирование формы</span>
-</pre></div>
+</code></pre></div>
 
 
 <h3 id="11121">1.1.121<a class="headerlink" href="#11121" title="Permanent link">&para;</a></h3>
@@ -3111,9 +3111,9 @@ VA не должна использовать Попытка Исключени�
 <li>Переделал работу с шагами выбора из списка.
 Теперь генерируются шаги вида</li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="k">И </span><span class="nf">из выпадающего списка &quot;</span><span class="s">ИмяПоля</span><span class="nf">&quot; я выбираю точное значение &quot;</span><span class="s">ЗначениеПоля</span><span class="nf">&quot;</span>
+<div class="codehilite"><pre><span></span><code><span class="k">И </span><span class="nf">из выпадающего списка &quot;</span><span class="s">ИмяПоля</span><span class="nf">&quot; я выбираю точное значение &quot;</span><span class="s">ЗначениеПоля</span><span class="nf">&quot;</span>
 <span class="k">И </span><span class="nf">из выпадающего списка &quot;</span><span class="s">ИмяПоля</span><span class="nf">&quot; я выбираю по строке &quot;</span><span class="s">ЧастьСтроки</span><span class="nf">&quot;</span>
-</pre></div>
+</code></pre></div>
 
 
 <h3 id="11119">1.1.119<a class="headerlink" href="#11119" title="Permanent link">&para;</a></h3>
@@ -3187,18 +3187,18 @@ VA не должна использовать Попытка Исключени�
       <div class="md-footer-copyright">
         
         powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
         and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs</a>
       </div>
       
   <div class="md-footer-social">
     <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
     
-      <a href="https://github.com/Pr-Mex/vanessa-automation" class="md-footer-social__link fa fa-github"></a>
+      <a href="https://github.com/Pr-Mex/vanessa-automation" target="_blank" rel="noopener" title="github" class="md-footer-social__link fa fa-github"></a>
     
-      <a href="https://t.me/VanessaAutomation" class="md-footer-social__link fa fa-telegram"></a>
+      <a href="https://t.me/VanessaAutomation" target="_blank" rel="noopener" title="telegram" class="md-footer-social__link fa fa-telegram"></a>
     
   </div>
 
@@ -3208,7 +3208,7 @@ VA не должна использовать Попытка Исключени�
       
     </div>
     
-      <script src="../assets/javascripts/application.808e90bb.js"></script>
+      <script src="../assets/javascripts/application.c33a9706.js"></script>
       
         
         
