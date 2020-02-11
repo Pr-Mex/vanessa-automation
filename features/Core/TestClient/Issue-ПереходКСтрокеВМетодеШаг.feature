@@ -7,7 +7,7 @@
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
-
+@ServerCodeCoverage
 
 
 Функционал: Проверка работы метода шаг при переходе к строке
