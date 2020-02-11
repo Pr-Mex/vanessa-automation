@@ -1,3 +1,9 @@
+# language: ru
+# encoding: utf-8
+#parent uf:
+@UF11_Прочее
+#parent ua:
+@UA45_Прочая_активность_вообще
 #encoding: utf-8
 #language: ru
 

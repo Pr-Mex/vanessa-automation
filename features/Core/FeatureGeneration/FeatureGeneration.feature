@@ -1,4 +1,9 @@
 # language: ru
+# encoding: utf-8
+#parent ua:
+@UA32_Создание_фиче_файлов
+#parent uf:
+@UF3_формирование_features
 
 @IgnoreOn82Builds
 @IgnoreOnUFSovm82Builds
@@ -141,6 +146,3 @@
 		| 'Контекст'							| ''	   |
 		| 'Открытие формы списка "Справочник1"' | ''	   |
 		| 'Открытие формы объкта "Справочник1"' | ''	   |
-
-
-	

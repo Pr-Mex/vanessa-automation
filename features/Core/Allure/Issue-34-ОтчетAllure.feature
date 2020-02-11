@@ -1,4 +1,8 @@
 # language: ru
+#parent uf:
+@UF5_формирование_результатов_выполнения_сценариев
+#parent ua:
+@UA18_формировать_отчёт_Allure
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds

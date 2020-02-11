@@ -1,4 +1,8 @@
 # language: ru
+#parent uf:
+@UF4_Библиотека_шагов
+#parent ua:
+@UA3_Работать_с_UI_Выпадающий_список
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds

@@ -1,4 +1,8 @@
 # language: ru
+#parent uf:
+@UF4_Библиотека_шагов
+#parent ua:
+@UA7_Работать_с_файлами_из_фич
 
 @IgnoreOnCIMainBuild
 

@@ -1,4 +1,10 @@
-﻿#language: ru
+# language: ru
+# encoding: utf-8
+#parent uf:
+@UF7_системные_настройки_VA
+#parent ua:
+@UA34_указывать_настройки_выполнения_сценариев
+#language: ru
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
