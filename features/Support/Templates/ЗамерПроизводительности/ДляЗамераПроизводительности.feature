@@ -1,8 +1,7 @@
 ﻿# language: ru
 
-@IgnoreOn82Builds
-@IgnoreOnOFBuilds
-@IgnoreOnWeb
+
+@IgnoreOnCIMainBuild
 
 
 Функционал: Включение Выключение замеров
