@@ -4,6 +4,7 @@
 @IgnoreOnOFBuilds
 @IgnoreOnWeb
 
+@SingleCodeCoverage
 
 
 

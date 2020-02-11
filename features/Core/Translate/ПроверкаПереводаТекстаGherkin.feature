@@ -14,6 +14,9 @@
 @IgnoreOnOFBuilds
 @IgnoreOnWeb
 
+@SingleCodeCoverage
+
+
 
 
 Функционал: Проверка перевода сгенерированного текста Gherkin

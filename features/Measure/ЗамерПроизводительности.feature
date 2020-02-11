@@ -12,6 +12,7 @@
 @IgnoreOn837
 @IgnoreOn838
 @IgnoreOn839
+@IgnoreOnServer
 @tree
 
 Функционал: Обработка оповещений
