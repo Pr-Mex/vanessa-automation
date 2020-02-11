@@ -9,6 +9,9 @@
 @IgnoreOnOFBuilds
 @IgnoreOnWeb
 
+@SingleCodeCoverage
+
+
 
 
 Функционал: Проверка работы сценария на другом языке, когда изменен порядок параметров
