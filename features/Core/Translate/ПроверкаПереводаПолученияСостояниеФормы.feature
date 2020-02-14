@@ -1,4 +1,9 @@
 # language: ru
+# encoding: utf-8
+#parent uf:
+@UF11_Прочее
+#parent ua:
+@UA44_Прочая_активность_по_проверке
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
@@ -79,7 +84,7 @@
 
 
 
-	И В поле с именем "КаталогФичСлужебный" я указываю путь к служебной фиче "ЗакрытьПодключенныйTestClient"
+	И В поле с именем "КаталогФичСлужебный" я указываю путь к служебной фиче "ЗакрытьПодключенныйTestClient/ЗакрытьПодключенныйTestClient"
 	И Я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
 	И Я нажимаю на кнопку выполнить сценарии в Vanessa-Automation TestClient
 

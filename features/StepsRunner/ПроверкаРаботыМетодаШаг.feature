@@ -1,15 +1,20 @@
-﻿# language: ru
+# language: ru
+# encoding: utf-8
+#parent uf:
+@UF11_Прочее
+#parent ua:
+@UA44_Прочая_активность_по_проверке
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 @IgnoreOnWeb
-
+@ServerCodeCoverage
 
 Функциональность: Проверка работы метода Шаг
  
  
 //https://github.com/Pr-Mex/vanessa-automation/issues/139
-Сценарий: Исправление ошибки: Некорректная работа Ванесса.Шаг для многострочного шага сравнения таблиц
+Сценарий: Исправление ошибки: Некорректная работа Ванесса. Шаг для многострочного шага сравнения таблиц
 	Дано Я закрыл все окна клиентского приложения
 	И я закрываю сеанс TESTCLIENT
 	Когда я запускаю служебный сеанс TestClient с ключом TestManager в той же базе

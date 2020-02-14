@@ -1,4 +1,9 @@
 # language: ru
+# encoding: utf-8
+#parent uf:
+@UF11_Прочее
+#parent ua:
+@UA45_Прочая_активность_вообще
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
@@ -7,6 +12,7 @@
 @IgnoreOn837
 @IgnoreOn838
 @IgnoreOn839
+@IgnoreOnServer
 @tree
 
 Функционал: Обработка оповещений

@@ -1,8 +1,17 @@
 # language: ru
+# encoding: utf-8
+#parent uf:
+@UF11_Прочее
+#parent ua:
+@UA44_Прочая_активность_по_проверке
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 @IgnoreOnWeb
+@IgnoreOn836
+@IgnoreOn837
+@IgnoreOn838
+@IgnoreOn839
 
 
 

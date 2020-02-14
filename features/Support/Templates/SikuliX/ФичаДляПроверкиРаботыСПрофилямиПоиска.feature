@@ -1,4 +1,9 @@
-﻿# language: ru
+# language: ru
+# encoding: utf-8
+#parent ua:
+@UA30_Прочие_макеты
+#parent uf:
+@UF9_Вспомогательные_фичи
 
 @IgnoreOnCIMainBuild
 
@@ -24,3 +29,4 @@
 
 
 	И я устанавливаю основной профиль цвета "Тест1"
+	И я устанавливаю основной профиль цвета "CommandInterface"

@@ -1,4 +1,9 @@
 # language: ru
+# encoding: utf-8
+#parent ua:
+@UA33_преобразование_XML_в_Gherkin
+#parent uf:
+@UF3_формирование_features
 
 @IgnoreOn82Builds
 @IgnoreOn836
@@ -8,6 +13,9 @@
 #из-за ошибки платформы ввода текста в текстовый документ
 @IgnoreOnOFBuilds
 @IgnoreOnWeb
+
+@SingleCodeCoverage
+
 
 
 
@@ -41,4 +49,3 @@
 	И я нажимаю на кнопку 'Перевести'
 	И пауза 1
 	И значение поля "СгенерированныйСценарий" равно значению из макета "Xml_1En_2"
-
