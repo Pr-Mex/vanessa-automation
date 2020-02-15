@@ -11,6 +11,8 @@
 @IgnoreOn839
 @IgnoreOn8310
 
+@SingleCodeCoverage
+
 
 
 

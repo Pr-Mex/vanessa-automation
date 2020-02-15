@@ -3,6 +3,7 @@
 @tree
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
+@IgnoreOnUFSovm82Builds
 @IgnoreOn836
 @IgnoreOn837
 @IgnoreOn838

@@ -9,6 +9,9 @@
 @IgnoreOnOFBuilds
 @IgnoreOnWeb
 
+@SingleCodeCoverage
+
+
 
 
 Функционал: Проверка дерева известных шагов

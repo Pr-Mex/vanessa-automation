@@ -8,6 +8,8 @@
 @IgnoreOnLinux
 @OneThread
 @IgnoreOnWeb
+@SingleCodeCoverage
+
 
 Функционал: Проверка перегенерации EPF в режиме обычных форм
 	Как Разработчик
