@@ -3,7 +3,7 @@
 #parent uf:
 @UF3_формирование_features
 #parent ua:
-@UA33_преобразование_XML_в_Gherkin
+@UA32_Создание_фиче_файлов
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
