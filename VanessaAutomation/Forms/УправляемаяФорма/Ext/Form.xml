@@ -1316,6 +1316,12 @@
 				<CommandName>Form.Command.ОткрытьОпределениеШага</CommandName>
 				<ExtendedTooltip name="ФормаОткрытьОпределениеШагаРасширеннаяПодсказка" id="2152"/>
 			</Button>
+			<Button name="ФормаПроверитьДублированиеСценариев" id="2267">
+				<Type>CommandBarButton</Type>
+				<OnlyInAllActions>false</OnlyInAllActions>
+				<CommandName>Form.Command.ПроверитьДублированиеСценариев</CommandName>
+				<ExtendedTooltip name="ФормаПроверитьДублированиеСценариевРасширеннаяПодсказка" id="2268"/>
+			</Button>
 			<Button name="ФормаСправка" id="1552">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.StandardCommand.Help</CommandName>
@@ -9169,12 +9175,6 @@
 Если флаг снят, то при генерации текста сценария после накликивания, шаги в сценарии будут искать элементы формы &lt;b&gt;по заголовку&lt;/&gt;, &lt;b&gt;если это возможно&lt;/&gt;.
 Это возможно в том случае, если в данной форме есть только один элемент с данным заголовком.</v8:content>
 															</v8:item>
-															<v8:item>
-																<v8:lang>en</v8:lang>
-																<v8:content>If the checkbox is on, scenario steps will define form elements &lt;b&gt;by internal name&lt;/&gt; when generating scenario text.
-If the checkbox is off, scenario steps will define form elements &lt;b&gt;by header&lt;/&gt;, &lt;b&gt;if possible&lt;/&gt;.
-This is available only if the form contains only one element with the specified header.</v8:content>
-															</v8:item>
 														</Title>
 													</ExtendedTooltip>
 												</CheckBoxField>
@@ -9406,13 +9406,6 @@ This is available only if the form contains only one element with the specified 
 																<v8:lang>ru</v8:lang>
 																<v8:content>В поле указывается консольная команда, которая будет использоваться при снятии скриншотов.
 Например:
-1. &lt;b&gt;"C:\Program Files (x86)\IrfanView\i_view32.exe" /capture=1 /convert=&lt;/&gt;
-2. &lt;b&gt;nircmd savescreenshot&lt;/&gt;</v8:content>
-															</v8:item>
-															<v8:item>
-																<v8:lang>en</v8:lang>
-																<v8:content>Specify the command line used to create the screenshots.
-E.g.:
 1. &lt;b&gt;"C:\Program Files (x86)\IrfanView\i_view32.exe" /capture=1 /convert=&lt;/&gt;
 2. &lt;b&gt;nircmd savescreenshot&lt;/&gt;</v8:content>
 															</v8:item>
@@ -11130,13 +11123,6 @@ It is recommended to set this checkbox on.</v8:content>
 &lt;i&gt;И я жду, что поле с именем "ИмяПоля" перестанет быть пустым в течение 10 секунд&lt;/&gt;
 тогда в рельности максимальное время работы шага будет 20 секунд, а не 10.</v8:content>
 															</v8:item>
-															<v8:item>
-																<v8:lang>en</v8:lang>
-																<v8:content>Specifies maximum timeout for async step.
-E.g., is the parameter is set to 20 seconds and the step 
-&lt;i&gt;And I wait for the field named "FieldName" to be filled in 10 seconds&lt;/&gt; is called
-then the real time of this step execution will be 20 seconds but not 10.</v8:content>
-															</v8:item>
 														</Title>
 													</ExtendedTooltip>
 												</InputField>
@@ -11151,11 +11137,6 @@ then the real time of this step execution will be 20 seconds but not 10.</v8:con
 																<v8:lang>ru</v8:lang>
 																<v8:content>Максимальное время для поиска окна в шаге
 &lt;i&gt;И тогда открылось окно "ИмяОкна"&lt;/&gt;</v8:content>
-															</v8:item>
-															<v8:item>
-																<v8:lang>en</v8:lang>
-																<v8:content>Maximum timeout for window search in the step
-&lt;i&gt;And then "WindowName" window is opened&lt;/&gt;</v8:content>
 															</v8:item>
 														</Title>
 													</ExtendedTooltip>
@@ -11216,11 +11197,6 @@ This option slow the execution down .</v8:content>
 																<v8:lang>ru</v8:lang>
 																<v8:content>Значение дополнительной паузы, которая будет всегда применяться в шаге
 &lt;i&gt;И тогда открылось окно "ИмяОкна"&lt;/&gt;</v8:content>
-															</v8:item>
-															<v8:item>
-																<v8:lang>en</v8:lang>
-																<v8:content>The value of the additional delay to be applied in the step
-&lt;i&gt;And then the window "WindowName" is opened&lt;/&gt;</v8:content>
 															</v8:item>
 														</Title>
 													</ExtendedTooltip>
@@ -13315,16 +13291,6 @@ SikuliX Server - это специальная программная оптим
 
 &lt;link #&gt;Открыть справку&lt;/&gt;</v8:content>
 																	</v8:item>
-																	<v8:item>
-																		<v8:lang>en</v8:lang>
-																		<v8:content>SikuliX is Java application for mouse pointer moving and clicking management, and keyboard buttons press emulation.
-
-SikuliX Server is software for SikuliX optimization. If the option is on, VA composes one script from multiple SikuliX scripts to launch it once and execute commands instead on launching each command one by one. It helps to save time on SikuliX script execution, because there is no need to repeat scripts start and unloading.
-
-See SikuliX и SikuliX Server Installation and Settings Guide in Help, section 20.1
-
-&lt;link #&gt;Help Info&lt;/&gt;</v8:content>
-																	</v8:item>
 																</Title>
 																<Events>
 																	<Event name="URLProcessing">ИспользоватьSikuliXСерверРасширеннаяПодсказкаОбработкаНавигационнойСсылки</Event>
@@ -14167,11 +14133,6 @@ Also use special instructions in the script, see Help info.</v8:content>
 																		<v8:lang>ru</v8:lang>
 																		<v8:content>Позволяет создавать видео инструкции.
 Видео по описанию настроек находится в этом &lt;link https://www.youtube.com/watch?v=QSDvDQDLyLk&amp;list=PLalsS95_a3a_m9ieRJgD3XPWCP9goa9GC&gt;плей листе&lt;/&gt;.</v8:content>
-																	</v8:item>
-																	<v8:item>
-																		<v8:lang>en</v8:lang>
-																		<v8:content>Video manuals creation.
-See &lt;link https://www.youtube.com/watch?v=QSDvDQDLyLk&amp;list=PLalsS95_a3a_m9ieRJgD3XPWCP9goa9GC&gt;playlist &lt;/&gt; for settings manual.</v8:content>
 																	</v8:item>
 																</Title>
 															</ExtendedTooltip>
@@ -15329,16 +15290,6 @@ See &lt;link https://www.youtube.com/watch?v=QSDvDQDLyLk&amp;list=PLalsS95_a3a_m
 Скачать: &lt;link https://imagemagick.org/script/download.php&gt;ссылка&lt;/&gt;
 В процессе установки обязательным к установке является пункт: I&lt;b&gt;nstall legacy utilities (e. g. convert)&lt;/&gt;</v8:content>
 																							</v8:item>
-																							<v8:item>
-																								<v8:lang>en</v8:lang>
-																								<v8:content>Path to executed file convert.exe in ImageMagick directory.
-
-Example:
-"C:\Program Files\ImageMagick-Х.Х.Х-Q16\convert.exe"
-
-Download: &lt;link https://imagemagick.org/script/download.php&gt;link&lt;/&gt;
-This item must be installed: I&lt;b&gt;nstall legacy utilities (e. g. convert)&lt;/&gt;</v8:content>
-																							</v8:item>
 																						</Title>
 																					</ExtendedTooltip>
 																					<Events>
@@ -15361,15 +15312,6 @@ This item must be installed: I&lt;b&gt;nstall legacy utilities (e. g. convert)&l
 Если в кеш фрагмента нет - он будет туда добавлен.
 Если фрагмент есть - то он будет взят из кеш.
 Установка флага ускоряет сборку видео.</v8:content>
-																							</v8:item>
-																							<v8:item>
-																								<v8:lang>en</v8:lang>
-																								<v8:content>If the checkbox is on, then during the execution of step
-&lt;i&gt;And videoinsertion "InsertionText"&lt;/&gt;
-will be checked if this video snippet has been cashed already.
-If this snippet is not cached, it will be added to the cash.
-Otherwise the snippet will be retrieved from the cashed data.
-Selecting of this checkbox makes the video assembly process faster.</v8:content>
 																							</v8:item>
 																						</Title>
 																					</ExtendedTooltip>
@@ -16162,11 +16104,6 @@ Recommended value is 0.1 or less.</v8:content>
 																																		<v8:content>Консольная команда, которая будет использована при конвертации текста в речь.
 Используется программа &lt;link http://www.cross-plus-a.ru/bconsole.html&gt;balabolka_console&lt;/&gt;.</v8:content>
 																																	</v8:item>
-																																	<v8:item>
-																																		<v8:lang>en</v8:lang>
-																																		<v8:content>Console command for converting text to voice.
-Used software &lt;link http://www.cross-plus-a.ru/bconsole.html&gt;balabolka_console&lt;/&gt;.</v8:content>
-																																	</v8:item>
 																																</Title>
 																															</ExtendedTooltip>
 																															<Events>
@@ -16381,10 +16318,6 @@ Value range is from -10 to 10.</v8:content>
 																																		<v8:lang>ru</v8:lang>
 																																		<v8:content>Задаёт язык, на котором будет говорить диктор. Подробности &lt;link https://cloud.yandex.ru/docs/speechkit/tts/request&gt;здесь&lt;/&gt;.</v8:content>
 																																	</v8:item>
-																																	<v8:item>
-																																		<v8:lang>en</v8:lang>
-																																		<v8:content>Specifies narrator's language. See details &lt;link https://cloud.yandex.ru/docs/speechkit/tts/request&gt;here&lt;/&gt;.</v8:content>
-																																	</v8:item>
 																																</Title>
 																															</ExtendedTooltip>
 																														</InputField>
@@ -16531,10 +16464,6 @@ Value range is from -10 to 10.</v8:content>
 																																		<v8:lang>ru</v8:lang>
 																																		<v8:content>Задаёт голос, которым будет говорить диктор. Подробности &lt;link https://cloud.yandex.ru/docs/speechkit/tts/request&gt;здесь&lt;/&gt;.</v8:content>
 																																	</v8:item>
-																																	<v8:item>
-																																		<v8:lang>en</v8:lang>
-																																		<v8:content>Specifies narrator's voice. See details &lt;link https://cloud.yandex.ru/docs/speechkit/tts/request&gt;here&lt;/&gt;.</v8:content>
-																																	</v8:item>
 																																</Title>
 																															</ExtendedTooltip>
 																														</InputField>
@@ -16604,10 +16533,6 @@ Value range is from -10 to 10.</v8:content>
 																																		<v8:lang>ru</v8:lang>
 																																		<v8:content>Задаёт эмоцию, с которой будет говорить диктор. Подробности &lt;link https://cloud.yandex.ru/docs/speechkit/tts/request&gt;здесь&lt;/&gt;.</v8:content>
 																																	</v8:item>
-																																	<v8:item>
-																																		<v8:lang>en</v8:lang>
-																																		<v8:content>Specifies narrator's emotion. See details &lt;link https://cloud.yandex.ru/docs/speechkit/tts/request&gt;here&lt;/&gt;.</v8:content>
-																																	</v8:item>
 																																</Title>
 																															</ExtendedTooltip>
 																														</InputField>
@@ -16645,20 +16570,6 @@ Value range is from -10 to 10.</v8:content>
 
 &lt;link https://cloud.yandex.ru/docs/resource-manager/operations/folder/get-id&gt;Получение идентификатора каталога &lt;/&gt;</v8:content>
 																																	</v8:item>
-																																	<v8:item>
-																																		<v8:lang>en</v8:lang>
-																																		<v8:content>The last part of the path in the address bar in the Internet browser. &lt;colorstyle -14&gt;https://console.cloud.yandex.ru/folders/ИдентификаторКаталога&lt;/&gt;
-
-Required:
-1. In the main window of Yandex.Cloud click &lt;colorstyle -3&gt;link "&lt;/&gt;&lt;colorstyle -3&gt;Go to the current directory&lt;/&gt;&lt;colorstyle -3&gt;".&lt;/&gt;
-2. Copy the last part of the path from address bar
-
-Example: 
-&lt;colorstyle -14&gt;https://console.cloud.yandex.ru/folders/b1gheo81t4a6eаafe5vd&lt;/&gt;
-(The ID of the catalog b1gheo81t4a6eаafe5vd)
-
-&lt;link https://cloud.yandex.ru/docs/resource-manager/operations/folder/get-id&gt;getting a directory identifier &lt;/&gt;</v8:content>
-																																	</v8:item>
 																																</Title>
 																															</ExtendedTooltip>
 																														</InputField>
@@ -16679,17 +16590,6 @@ Example:
 2. Сгенерировать токен;
 3. Сохранить его в текстовый файл;
 4. Указать путь к текстоговому файлу с токеном.
-</v8:content>
-																																	</v8:item>
-																																	<v8:item>
-																																		<v8:lang>en</v8:lang>
-																																		<v8:content>OAuth-token is used in Yandex.Cloud authentication
-
-To get the OAuth-token:
-1. Go to &lt;link https://cloud.yandex.ru/docs/iam/concepts/authorization/oauth-token&gt;https://cloud.yandex.ru/docs/iam/concepts/authorization/oauth-token&lt;/&gt;;
-2. generate the token;
-3. Save it to the text file;
-4. Specify text file full path.
 </v8:content>
 																																	</v8:item>
 																																</Title>
@@ -16969,10 +16869,6 @@ To get the OAuth-token:
 																																	<v8:item>
 																																		<v8:lang>ru</v8:lang>
 																																		<v8:content>Соответствие языка и голоса смотрите &lt;link https://docs.aws.amazon.com/en_us/polly/latest/dg/voicelist.html&gt;здесь&lt;/&gt;.</v8:content>
-																																	</v8:item>
-																																	<v8:item>
-																																		<v8:lang>en</v8:lang>
-																																		<v8:content>See voice and language mapping &lt;link https://docs.aws.amazon.com/en_us/polly/latest/dg/voicelist.html&gt;here&lt;/&gt;.</v8:content>
 																																	</v8:item>
 																																</Title>
 																															</ExtendedTooltip>
@@ -17456,10 +17352,6 @@ To get the OAuth-token:
 																																		<v8:lang>ru</v8:lang>
 																																		<v8:content>Соответствие языка и голоса смотрите &lt;link https://docs.aws.amazon.com/en_us/polly/latest/dg/voicelist.html&gt;здесь&lt;/&gt;.</v8:content>
 																																	</v8:item>
-																																	<v8:item>
-																																		<v8:lang>en</v8:lang>
-																																		<v8:content>See voice and language mapping &lt;link https://docs.aws.amazon.com/en_us/polly/latest/dg/voicelist.html&gt;here&lt;/&gt;.</v8:content>
-																																	</v8:item>
 																																</Title>
 																															</ExtendedTooltip>
 																														</InputField>
@@ -17493,10 +17385,6 @@ To get the OAuth-token:
 																																	<v8:item>
 																																		<v8:lang>ru</v8:lang>
 																																		<v8:content>Варианты значения для поля "Движок" смотрите &lt;link https://docs.aws.amazon.com/en_us/polly/latest/dg/voicelist.html&gt;здесь&lt;/&gt;.</v8:content>
-																																	</v8:item>
-																																	<v8:item>
-																																		<v8:lang>en</v8:lang>
-																																		<v8:content>"Driver" field available values see &lt;link https://docs.aws.amazon.com/en_us/polly/latest/dg/voicelist.html&gt;here&lt;/&gt;.</v8:content>
 																																	</v8:item>
 																																</Title>
 																															</ExtendedTooltip>
@@ -19855,10 +19743,6 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
 											<v8:content>Статистика</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>en</v8:lang>
-											<v8:content>Statistics</v8:content>
 										</v8:item>
 									</Title>
 									<HorizontalAlign>Right</HorizontalAlign>
@@ -28485,6 +28369,21 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ЗадатьРазмерОкнаКлиентаТестирования</Action>
+		</Command>
+		<Command name="ПроверитьДублированиеСценариев" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить дублирование сценариев</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить дублирование сценариев</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверитьДублированиеСценариев</Action>
 		</Command>
 	</Commands>
 </Form>
