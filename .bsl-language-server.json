@@ -1,6 +1,7 @@
 ﻿{
   "$schema": "https://raw.githubusercontent.com/1c-syntax/bsl-language-server/master/src/main/resources/com/github/_1c_syntax/bsl/languageserver/configuration/schema.json",
   "diagnosticLanguage": "ru",
+  "computeDiagnosticsTrigger": "onSave",
   "diagnostics": {
     "LineLength": {
       "maxLineLength": 150
@@ -9,10 +10,17 @@
       "complexityThreshold": 30,
       "checkModuleBody" : true
     },
+    "CyclomaticComplexity": {
+      "complexityThreshold": 30
+    },
     "MissingSpace" : {
       "allowMultipleCommas" : true
     },
     "IfElseDuplicatedCodeBlock": false,
-    "IfElseIfEndsWithElse": false
+    "IfElseIfEndsWithElse": false,
+    "NumberOfOptionalParams": {
+      "maxOptionalParamsCount": 5
+    },
+    "GetFormMethod": false
   }
 }
