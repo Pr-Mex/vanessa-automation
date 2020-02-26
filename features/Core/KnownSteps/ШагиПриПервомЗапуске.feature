@@ -12,6 +12,7 @@
 @IgnoreOn8310
 
 @SingleCodeCoverage
+@ServerCodeCoverage
 
 
 
