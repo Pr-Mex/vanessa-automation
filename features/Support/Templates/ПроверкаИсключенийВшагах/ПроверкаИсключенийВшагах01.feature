@@ -1,4 +1,10 @@
-﻿#language: ru
+# language: ru
+# encoding: utf-8
+#parent uf:
+@UF11_Прочее
+#parent ua:
+@UA44_Прочая_активность_по_проверке
+#language: ru
 @tree
 
 @IgnoreOnCIMainBuild
@@ -62,4 +68,3 @@
 Сценарий: ВВод текста в поле с неуникальным заголовком.
 
 	И в поле 'Наименование' я ввожу текст '222'
-
