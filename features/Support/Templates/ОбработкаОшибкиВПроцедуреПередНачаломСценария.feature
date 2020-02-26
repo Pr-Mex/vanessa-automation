@@ -3,7 +3,7 @@
 @IgnoreOnCIMainBuild
 @SpecialTag
 
-Функционал: Загрузить фичу в vanessa-behavior
+Функционал: Загрузить фичу в vanessa-behavior 5
 	Как Разработчик
 	Я Хочу чтобы чтобы у меня была возможность загрузить произвольную тестовую фичу в vanessa-behavior
  

@@ -5,7 +5,7 @@
 @ExportScenarios
 
 
-Функционал: Загрузить фичу в vanessa-behavior
+Функционал: Загрузить фичу в vanessa-behavior 3
 	Как Разработчик
 	Я Хочу чтобы чтобы у меня был сценарий для открытия Vanessa-Behavior в TestClient
 	Чтобы я мог его переиспользовать
