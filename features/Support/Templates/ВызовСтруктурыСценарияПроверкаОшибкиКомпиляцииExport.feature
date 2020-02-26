@@ -5,7 +5,7 @@
 @ExportScenarios
 @IgnoreOnCIMainBuild
 
-Функционал: Тест
+Функционал: Тест 2
 
 
 
