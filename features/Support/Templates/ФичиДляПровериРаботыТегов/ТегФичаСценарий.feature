@@ -1,4 +1,9 @@
-﻿# language: ru
+# language: ru
+# encoding: utf-8
+#parent uf:
+@UF1_загрузка_и_обработка_features
+#parent ua:
+@UA9_загружать_features
 
 @IgnoreOnCIMainBuild
 @TagFeature
@@ -17,4 +22,3 @@
 
 Сценарий: У второго сценария нет тега а у фичи есть
 	Когда я развернул все ветки дерева VB
-

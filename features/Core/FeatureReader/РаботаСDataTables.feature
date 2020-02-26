@@ -1,9 +1,9 @@
 # language: ru
 # encoding: utf-8
 #parent uf:
-@UF1_загрузка_и_обработка_features
+@UF11_Прочее
 #parent ua:
-@UA10_генерировать_EPF_файлы
+@UA45_Прочая_активность_вообще
 
 @IgnoreOnWeb
 

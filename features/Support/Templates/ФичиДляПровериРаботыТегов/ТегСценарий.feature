@@ -1,4 +1,9 @@
-﻿# language: ru
+# language: ru
+# encoding: utf-8
+#parent uf:
+@UF1_загрузка_и_обработка_features
+#parent ua:
+@UA9_загружать_features
 
 @IgnoreOnCIMainBuild
 
@@ -17,7 +22,6 @@
 
 Сценарий: Второй сценарий без тега, а первый с тегом
 	Когда я развернул все ветки дерева VB
-
 
 
 

@@ -1,4 +1,9 @@
-﻿# language: ru
+# language: ru
+# encoding: utf-8
+#parent uf:
+@UF1_загрузка_и_обработка_features
+#parent ua:
+@UA9_загружать_features
 
 @IgnoreOnCIMainBuild
 
@@ -15,4 +20,3 @@
 	И в epf появился шаг, которого не было раньше
 	И есть простой шаг
 	Тогда epf по фиче создается корректно
-
