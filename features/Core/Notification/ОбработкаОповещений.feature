@@ -1,4 +1,9 @@
 # language: ru
+# encoding: utf-8
+#parent uf:
+@UF11_Прочее
+#parent ua:
+@UA45_Прочая_активность_вообще
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
@@ -69,6 +74,5 @@
 		| 'ПростаяФича01'                                                       | ''        |
 		| 'ПростаяФича01'                                                       | 'Success' |
 		| 'И Я запоминаю значение выражения \'1\' в переменную "ИмяПеременной"' | 'Success' |
-
 
 

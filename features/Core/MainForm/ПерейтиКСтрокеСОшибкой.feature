@@ -1,4 +1,9 @@
 # language: ru
+# encoding: utf-8
+#parent uf:
+@UF2_запуск_сценариев_на_выполнение
+#parent ua:
+@UA11_запускать_сценарии_на_выполнение
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
