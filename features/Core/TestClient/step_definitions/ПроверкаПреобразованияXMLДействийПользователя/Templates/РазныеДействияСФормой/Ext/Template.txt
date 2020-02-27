@@ -1,0 +1,163 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<uilog xmlns:d1p1="http://v8.1c.ru/8.3/uilog">
+	<ClientApplicationWindow isMain="true">
+		<CommandInterface>
+			<CommandInterfaceGroup title="Панель разделов">
+				<CommandInterfaceButton title="Основная">
+					<click/>
+				</CommandInterfaceButton>
+			</CommandInterfaceGroup>
+			<CommandInterfaceGroup title="Меню функций">
+				<CommandInterfaceButton title="Справочник1">
+					<click/>
+				</CommandInterfaceButton>
+			</CommandInterfaceGroup>
+			<CommandInterfaceGroup title="Панель разделов">
+				<CommandInterfaceButton title="Основная">
+					<click/>
+				</CommandInterfaceButton>
+			</CommandInterfaceGroup>
+			<CommandInterfaceGroup title="Меню функций">
+				<CommandInterfaceButton title="Справочник2">
+					<click/>
+				</CommandInterfaceButton>
+			</CommandInterfaceGroup>
+			<CommandInterfaceGroup title="Панель открытых">
+				<CommandInterfaceButton title="Справочник1">
+					<click/>
+				</CommandInterfaceButton>
+			</CommandInterfaceGroup>
+		</CommandInterface>
+	</ClientApplicationWindow>
+	<ClientApplicationWindow caption="Справочник1">
+		<Form title="Справочник1">
+			<activate/>
+		</Form>
+	</ClientApplicationWindow>
+	<ClientApplicationWindow isMain="true">
+		<CommandInterface>
+			<CommandInterfaceGroup title="Панель открытых">
+				<CommandInterfaceButton title="Справочник2">
+					<click/>
+				</CommandInterfaceButton>
+			</CommandInterfaceGroup>
+		</CommandInterface>
+	</ClientApplicationWindow>
+	<ClientApplicationWindow caption="Справочник2">
+		<Form title="Справочник2">
+			<activate/>
+		</Form>
+		<close/>
+	</ClientApplicationWindow>
+	<ClientApplicationWindow caption="Справочник1">
+		<Form title="Справочник1">
+			<FormGroup name="ФормаКоманднаяПанель" title="Командная панель">
+				<FormButton name="ФормаСоздать" title="Создать">
+					<click/>
+				</FormButton>
+			</FormGroup>
+		</Form>
+	</ClientApplicationWindow>
+	<ClientApplicationWindow caption="Справочник1 (создание)">
+		<CommandInterface>
+			<CommandInterfaceGroup title="Панель навигации">
+				<CommandInterfaceButton title="Общая команда для справочника1">
+					<click/>
+				</CommandInterfaceButton>
+			</CommandInterfaceGroup>
+			<CommandInterfaceButton title="Основное">
+				<click/>
+			</CommandInterfaceButton>
+		</CommandInterface>
+		<Form title="Справочник1 (создание)">
+			<FormGroup name="Группа3" title="Группа3">
+				<FormGroup name="Группа4" title="Вспомогательная">
+					<activate/>
+					<FormField name="Код1" title="Код">
+						<activate/>
+					</FormField>
+				</FormGroup>
+				<FormGroup name="Группа2ПроверкаКнопок" title="Проверка кнопок">
+					<activate/>
+					<FormGroup name="ГруппаСЭлементамиСОдинаковымЗаголовком1" title="Группа с элементами с одинаковым заголовком1">
+						<FormDecoration name="ГиперссылкаТолькоПросмотр1" title="Гиперссылка только просмотр картинка">
+							<activate/>
+						</FormDecoration>
+					</FormGroup>
+					<FormGroup name="ГруппаСЭлементамиСОдинаковымЗаголовком2" title="Группа с элементами с одинаковым заголовком2">
+						<FormDecoration name="ГиперссылкаТолькоПросмотр2" title="Гиперссылка только просмотр надпись">
+							<activate/>
+							<click/>
+						</FormDecoration>
+					</FormGroup>
+				</FormGroup>
+				<FormGroup name="Группа1" title="Основа">
+					<activate/>
+					<FormField name="Наименование" title="Наименование">
+						<activate/>
+					</FormField>
+					<FormTable name="ТабличнаяЧасть1" title="ТабличнаяЧасть1">
+						<FormGroup name="ТабличнаяЧасть1КоманднаяПанель" title="Командная панель">
+							<FormButton name="ТабличнаяЧасть1Добавить" title="Добавить">
+								<click/>
+							</FormButton>
+						</FormGroup>
+					</FormTable>
+				</FormGroup>
+			</FormGroup>
+		</Form>
+	</ClientApplicationWindow>
+	<ClientApplicationWindow caption="Справочник1 (создание) *">
+		<Form title="Справочник1 (создание) *">
+			<FormGroup name="Группа3" title="Группа3">
+				<FormGroup name="Группа1" title="Основа">
+					<FormTable name="ТабличнаяЧасть1" title="ТабличнаяЧасть1">
+						<endEditRow cancel="false"/>
+						<FormGroup name="ТабличнаяЧасть1КоманднаяПанель" title="Командная панель">
+							<FormButton name="ТабличнаяЧасть1Добавить" title="Добавить">
+								<click/>
+							</FormButton>
+						</FormGroup>
+						<endEditRow cancel="false"/>
+						<selectAllRows/>
+						<gotoRow/>
+						<gotoLastRow/>
+						<gotoFirstRow/>
+						<gotoRow/>
+						<deleteRow/>
+					</FormTable>
+					<FormField name="Реквизит1" title="Реквизит1">
+						<activate/>
+						<openDropList/>
+						<executeChoiceFromChoiceList presentation="ЗначениеПеречисления1"/>
+						<clear/>
+					</FormField>
+					<FormField name="Реквизит2" title="Реквизит2">
+						<activate/>
+						<openDropList/>
+						<executeChoiceFromChoiceList presentation="ТестовыйЭлемент21"/>
+						<open/>
+					</FormField>
+				</FormGroup>
+			</FormGroup>
+		</Form>
+	</ClientApplicationWindow>
+	<ClientApplicationWindow caption="ТестовыйЭлемент21 (Справочник2)">
+		<close/>
+	</ClientApplicationWindow>
+	<ClientApplicationWindow caption="Справочник1 (создание) *">
+		<Form title="Справочник1 (создание) *">
+			<FormGroup name="Группа3" title="Группа3">
+				<FormGroup name="Группа1" title="Основа">
+					<FormField name="РеквизитЧисло" title="Реквизит число">
+						<activate/>
+						<increaseValue/>
+						<inputText text="1,00"/>
+						<decreaseValue/>
+						<inputText text="0,00"/>
+					</FormField>
+				</FormGroup>
+			</FormGroup>
+		</Form>
+	</ClientApplicationWindow>
+</uilog>
