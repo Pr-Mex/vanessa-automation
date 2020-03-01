@@ -1,9 +1,9 @@
 # language: ru
 # encoding: utf-8
 #parent uf:
-@UF1_загрузка_и_обработка_features
+@UF9_Вспомогательные_фичи
 #parent ua:
-@UA16_парсить_features
+@UA27_Макеты_для_проверки_парсинга
 
 @ExportScenarios
 @IgnoreOnCIMainBuild

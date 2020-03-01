@@ -1,9 +1,9 @@
 # language: ru
 # encoding: utf-8
 #parent uf:
-@UF1_загрузка_и_обработка_features
+@UF9_Вспомогательные_фичи
 #parent ua:
-@UA9_загружать_features
+@UA46_Макеты_для_загрузки_фич
 
 @IgnoreOnCIMainBuild
 @TagFeature
@@ -18,4 +18,3 @@
 
 Сценарий: Тег только у фичи
 	Когда я развернул все ветки дерева VB
-
