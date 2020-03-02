@@ -23,6 +23,7 @@
 
 
 @IgnoreOnServer
+@IgnoreOnUFSovm82Builds
 Сценарий: Вызов некоторых процедур напрямую. ЗаполнитьКаталогИнструментовЕслиОнПустой.
 	Когда Я открываю VanessaAutomation в режиме TestClient со стандартной библиотекой
 
@@ -46,6 +47,7 @@
 
 
 @IgnoreOnServer
+@IgnoreOnUFSovm82Builds
 Сценарий: Вызов некоторых процедур напрямую. ПодключитьБиблиотекуРаботыСВидео.
 	Когда Я открываю VanessaAutomation в режиме TestClient со стандартной библиотекой
 
