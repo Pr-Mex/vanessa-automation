@@ -1,14 +1,14 @@
 # language: ru
 # encoding: utf-8
-#parent ua:
-@UA9_загружать_features
 #parent uf:
-@UF1_загрузка_и_обработка_features
+@UF9_Вспомогательные_фичи
+#parent ua:
+@UA46_Макеты_для_загрузки_фич
 
 @IgnoreOnCIMainBuild
 
 
-Функционал: Загрузить фичу в vanessa-behavior
+Функционал: Загрузить фичу в vanessa-behavior 4
 	Как Разработчик
 	Я Хочу чтобы чтобы у меня была возможность выполнить один сценарий структуры сценария
  

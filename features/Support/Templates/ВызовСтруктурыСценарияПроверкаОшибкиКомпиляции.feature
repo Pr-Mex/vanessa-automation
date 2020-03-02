@@ -1,14 +1,14 @@
 # language: ru
 # encoding: utf-8
 #parent uf:
-@UF11_Прочее
+@UF9_Вспомогательные_фичи
 #parent ua:
-@UA45_Прочая_активность_вообще
+@UA30_Прочие_макеты
 
 @tree
 @IgnoreOnCIMainBuild
 
-Функционал: Тест
+Функционал: Тест 1
 
 
 Контекст: 

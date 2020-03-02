@@ -1,4 +1,9 @@
 # language: ru
+# encoding: utf-8
+#parent uf:
+@UF11_Прочее
+#parent ua:
+@UA45_Прочая_активность_вообще
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
@@ -489,5 +494,4 @@
 	Тогда не появилось окно предупреждения системы
 	И я закрываю окно "Справка"
 	
-
 

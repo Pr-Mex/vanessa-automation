@@ -1,4 +1,9 @@
 # language: ru
+# encoding: utf-8
+#parent uf:
+@UF1_загрузка_и_обработка_features
+#parent ua:
+@UA9_загружать_features
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
@@ -111,4 +116,3 @@
 		| 'Наименование'                     | 'Статус' |
 		| 'НедавноЗагруженныеФичи01.feature' | ''       |
 		| 'НедавноЗагруженныеФичи01'         | ''       |
-
