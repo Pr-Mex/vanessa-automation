@@ -1,0 +1,236 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<uilog xmlns:d1p1="http://v8.1c.ru/8.3/uilog">
+	<ClientApplicationWindow caption="* (Справочник1)">
+		<Form title="* (Справочник1)">
+			<FormGroup name="Группа3" title="Группа3">
+				<FormGroup name="Группа1" title="Основа">
+					<FormTable name="ТабличнаяЧасть1" title="ТабличнаяЧасть1">
+						<FormGroup name="ТабличнаяЧасть1КоманднаяПанель" title="Командная панель">
+							<FormButton name="ТабличнаяЧасть1Добавить" title="Добавить">
+								<click/>
+							</FormButton>
+						</FormGroup>
+					</FormTable>
+				</FormGroup>
+			</FormGroup>
+		</Form>
+	</ClientApplicationWindow>
+	<ClientApplicationWindow caption="* (Справочник1) *">
+		<Form title="* (Справочник1) *">
+			<FormGroup name="Группа3" title="Группа3">
+				<FormGroup name="Группа1" title="Основа">
+					<FormTable name="ТабличнаяЧасть1" title="ТабличнаяЧасть1">
+						<FormField name="ТабличнаяЧасть1РеквизитСправочник" title="Реквизит справочник">
+							<activate/>
+							<executeChoiceFromChoiceList presentation="ТестовыйЭлемент21"/>
+						</FormField>
+						<gotoNextItem/>
+						<endEditRow cancel="false"/>
+						<gotoRow/>
+						<FormField name="ТабличнаяЧасть1РеквизитСправочник" title="Реквизит справочник">
+							<activate/>
+						</FormField>
+						<gotoRow/>
+						<choose/>
+						<FormField name="ТабличнаяЧасть1РеквизитСправочник" title="Реквизит справочник">
+							<closeDropList/>
+							<clear/>
+						</FormField>
+						<endEditRow cancel="false"/>
+					</FormTable>
+					<FormField name="Реквизит2" title="Реквизит2">
+						<activate/>
+						<openDropList/>
+						<create/>
+						<closeDropList/>
+					</FormField>
+				</FormGroup>
+			</FormGroup>
+		</Form>
+	</ClientApplicationWindow>
+	<ClientApplicationWindow caption="Справочник2 (создание)">
+		<close/>
+	</ClientApplicationWindow>
+	<ClientApplicationWindow caption="* (Справочник1) *">
+		<Form title="* (Справочник1) *">
+			<FormGroup name="Группа3" title="Группа3">
+				<FormGroup name="Группа1" title="Основа">
+					<FormTable name="ТабличнаяЧасть1" title="ТабличнаяЧасть1">
+						<activate/>
+						<gotoRow/>
+						<choose/>
+						<FormField name="ТабличнаяЧасть1РеквизитСправочник" title="Реквизит справочник">
+							<create/>
+							<closeDropList/>
+						</FormField>
+					</FormTable>
+				</FormGroup>
+			</FormGroup>
+		</Form>
+	</ClientApplicationWindow>
+	<ClientApplicationWindow caption="Справочник2 (создание)">
+		<close/>
+	</ClientApplicationWindow>
+	<ClientApplicationWindow caption="* (Справочник1) *">
+		<Form title="* (Справочник1) *">
+			<FormGroup name="Группа3" title="Группа3">
+				<FormGroup name="Группа1" title="Основа">
+					<FormTable name="ТабличнаяЧасть1" title="ТабличнаяЧасть1">
+						<endEditRow cancel="true"/>
+						<gotoRow/>
+						<FormField name="ТабличнаяЧасть1РеквизитЧисло" title="Реквизит число">
+							<activate/>
+						</FormField>
+						<choose/>
+						<FormField name="ТабличнаяЧасть1РеквизитЧисло" title="Реквизит число">
+							<increaseValue/>
+							<inputText text="1,00"/>
+							<decreaseValue/>
+							<inputText text="0,00"/>
+						</FormField>
+						<endEditRow cancel="false"/>
+						<gotoRow/>
+						<FormField name="ТабличнаяЧасть1РеквизитБыстрыйВыборТЧ" title="Реквизит быстрый выбор ТЧ">
+							<activate/>
+						</FormField>
+						<choose/>
+						<FormField name="ТабличнаяЧасть1РеквизитБыстрыйВыборТЧ" title="Реквизит быстрый выбор ТЧ">
+							<startChoosing/>
+							<executeChoiceFromChoiceList presentation="Группа1Элем1"/>
+						</FormField>
+						<endEditRow cancel="false"/>
+						<gotoRow/>
+						<FormField name="ТабличнаяЧасть1РеквизитСправочникВыборИзФормыСписка" title="Реквизит справочник выбор из формы списка">
+							<activate/>
+						</FormField>
+						<choose/>
+						<FormField name="ТабличнаяЧасть1РеквизитСправочникВыборИзФормыСписка" title="Реквизит справочник выбор из формы списка">
+							<executeChoiceFromChoiceList presentation="ТестовыйЭлемент21"/>
+						</FormField>
+						<endEditRow cancel="false"/>
+					</FormTable>
+				</FormGroup>
+			</FormGroup>
+			<FormGroup name="ФормаКоманднаяПанель" title="Командная панель">
+				<FormButton name="ФормаЗаписатьИЗакрыть" title="Записать и закрыть">
+					<click/>
+				</FormButton>
+			</FormGroup>
+		</Form>
+	</ClientApplicationWindow>
+	<ClientApplicationWindow caption="Справочник1">
+		<Form title="Справочник1">
+			<FormGroup name="ФормаКоманднаяПанель" title="Командная панель">
+				<FormButton name="ФормаСоздатьГруппу" title="Создать группу">
+					<click/>
+				</FormButton>
+			</FormGroup>
+		</Form>
+	</ClientApplicationWindow>
+	<ClientApplicationWindow caption="Справочник1 (создание группы)">
+		<Form title="Справочник1 (создание группы)">
+			<FormField name="Наименование" title="Наименование">
+				<inputText text="111"/>
+			</FormField>
+		</Form>
+	</ClientApplicationWindow>
+	<ClientApplicationWindow caption="Справочник1 (создание группы) *">
+		<Form title="Справочник1 (создание группы) *">
+			<FormGroup name="ФормаКоманднаяПанель" title="Командная панель">
+				<FormButton name="ФормаЗаписатьИЗакрыть" title="Записать и закрыть">
+					<click/>
+				</FormButton>
+			</FormGroup>
+		</Form>
+	</ClientApplicationWindow>
+	<ClientApplicationWindow caption="Справочник1">
+		<Form title="Справочник1">
+			<FormTable name="Список" title="Список">
+				<goOneLevelDown/>
+				<goOneLevelUp>
+					<Field title="Код" cellText="000000002"/>
+					<Field title="Наименование" cellText="111"/>
+					<Field title="Рек строка1" cellText=""/>
+					<Field title="Рек строка2" cellText=""/>
+					<Field title="Реквизит булево" cellText="Нет"/>
+					<Field title="Реквизит быстрый выбор" cellText=""/>
+					<Field title="Реквизит дата" cellText=""/>
+					<Field title="Реквизит меню" cellText=""/>
+					<Field title="Реквизит переключатель" cellText=""/>
+					<Field title="Реквизит список" cellText=""/>
+					<Field title="Реквизит строка" cellText=""/>
+					<Field title="Реквизит текстовый документ" cellText=""/>
+					<Field title="Реквизит число" cellText=""/>
+					<Field title="Реквизит1" cellText=""/>
+					<Field title="Реквизит1 копия" cellText=""/>
+					<Field title="Реквизит2" cellText=""/>
+					<Field title="Реквизит3" cellText=""/>
+					<Field title="Составной реквизит" cellText=""/>
+				</goOneLevelUp>
+			</FormTable>
+			<FormGroup name="ФормаКоманднаяПанель" title="Командная панель">
+				<FormGroup name="ФормаРежимПросмотра" title="Режим просмотра">
+					<FormButton name="ФормаДерево" title="Дерево">
+						<click/>
+					</FormButton>
+				</FormGroup>
+			</FormGroup>
+			<FormTable name="Список" title="Список">
+				<expand withSubordinates="true"/>
+				<gotoRow direction="down">
+					<Field title="Код" cellText="000000001"/>
+					<Field title="Наименование" cellText="111"/>
+					<Field title="Рек строка1" cellText=""/>
+					<Field title="Рек строка2" cellText=""/>
+					<Field title="Реквизит булево" cellText="Нет"/>
+					<Field title="Реквизит быстрый выбор" cellText=""/>
+					<Field title="Реквизит дата" cellText=""/>
+					<Field title="Реквизит меню" cellText=""/>
+					<Field title="Реквизит переключатель" cellText=""/>
+					<Field title="Реквизит список" cellText=""/>
+					<Field title="Реквизит строка" cellText=""/>
+					<Field title="Реквизит текстовый документ" cellText=""/>
+					<Field title="Реквизит число" cellText=""/>
+					<Field title="Реквизит1" cellText=""/>
+					<Field title="Реквизит1 копия" cellText=""/>
+					<Field title="Реквизит2" cellText=""/>
+					<Field title="Реквизит3" cellText=""/>
+					<Field title="Составной реквизит" cellText=""/>
+				</gotoRow>
+				<collapse/>
+				<expand withSubordinates="true"/>
+			</FormTable>
+			<FormGroup name="ФормаКоманднаяПанель" title="Командная панель">
+				<FormGroup name="ФормаРежимПросмотра" title="Режим просмотра">
+					<FormButton name="ФормаИерархическийСписок" title="Иерархический список">
+						<click/>
+					</FormButton>
+				</FormGroup>
+			</FormGroup>
+			<FormTable name="Список" title="Список">
+				<goOneLevelDown/>
+				<gotoRow/>
+				<goOneLevelUp>
+					<Field title="Код" cellText="000000002"/>
+					<Field title="Наименование" cellText="111"/>
+					<Field title="Рек строка1" cellText=""/>
+					<Field title="Рек строка2" cellText=""/>
+					<Field title="Реквизит булево" cellText="Нет"/>
+					<Field title="Реквизит быстрый выбор" cellText=""/>
+					<Field title="Реквизит дата" cellText=""/>
+					<Field title="Реквизит меню" cellText=""/>
+					<Field title="Реквизит переключатель" cellText=""/>
+					<Field title="Реквизит список" cellText=""/>
+					<Field title="Реквизит строка" cellText=""/>
+					<Field title="Реквизит текстовый документ" cellText=""/>
+					<Field title="Реквизит число" cellText=""/>
+					<Field title="Реквизит1" cellText=""/>
+					<Field title="Реквизит1 копия" cellText=""/>
+					<Field title="Реквизит2" cellText=""/>
+					<Field title="Реквизит3" cellText=""/>
+					<Field title="Составной реквизит" cellText=""/>
+				</goOneLevelUp>
+			</FormTable>
+		</Form>
+	</ClientApplicationWindow>
+</uilog>
