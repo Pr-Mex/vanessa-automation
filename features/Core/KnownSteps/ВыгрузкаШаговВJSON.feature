@@ -1,4 +1,9 @@
 # language: ru
+# encoding: utf-8
+#parent uf:
+@UF3_формирование_features
+#parent ua:
+@UA32_Создание_фиче_файлов
 
 @IgnoreOn82Builds
 @IgnoreOn836

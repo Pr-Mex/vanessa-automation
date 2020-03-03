@@ -1,11 +1,16 @@
-﻿# language: ru
+# language: ru
+# encoding: utf-8
+#parent uf:
+@UF9_Вспомогательные_фичи
+#parent ua:
+@UA46_Макеты_для_загрузки_фич
 
 @IgnoreOnCIMainBuild
 @tree
 @ExportScenarios
 
 
-Функционал: Загрузить фичу в vanessa-behavior
+Функционал: Загрузить фичу в vanessa-behavior 3
 	Как Разработчик
 	Я Хочу чтобы чтобы у меня был сценарий для открытия Vanessa-Behavior в TestClient
 	Чтобы я мог его переиспользовать

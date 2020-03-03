@@ -1,4 +1,9 @@
 # language: ru
+# encoding: utf-8
+#parent uf:
+@UF1_загрузка_и_обработка_features
+#parent ua:
+@UA16_парсить_features
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
@@ -190,4 +195,3 @@
 	И В поле с именем "КаталогФичСлужебный" я указываю путь к служебной фиче "ФичаДляПроверкиТег_tree1"
 	И Я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
 	И элемент формы с именем "Статистика" стал равен '1/1/37'
-
