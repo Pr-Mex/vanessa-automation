@@ -7,6 +7,7 @@
 
 @IgnoreOnWeb
 @IgnoreOnOFBuilds
+@IgnoreOnUFSovm82Builds
 @ServerCodeCoverage
 
 
