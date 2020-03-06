@@ -3,7 +3,7 @@
 #parent uf:
 @UF9_Вспомогательные_фичи
 #parent ua:
-@UA30_Прочие_макеты
+@UA27_Макеты_для_проверки_парсинга
 
 @IgnoreOnCIMainBuild
 @Proposal

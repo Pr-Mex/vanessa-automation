@@ -1,9 +1,9 @@
 # language: ru
 # encoding: utf-8
 #parent uf:
-@UF10_Запуск_VA
+@UF9_Вспомогательные_фичи
 #parent ua:
-@UA35_запускать_интерактивно
+@UA47_Макеты_запуска_VA
 
 @IgnoreOnCIMainBuild
 

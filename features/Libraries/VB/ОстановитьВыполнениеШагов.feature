@@ -1,8 +1,9 @@
 # language: ru
+# encoding: utf-8
 #parent uf:
-@UF2_запуск_сценариев_на_выполнение
+@UF9_Вспомогательные_фичи
 #parent ua:
-@UA14_Останавливать_выполнение_сценариев
+@UA49_макеты_для_запуска_сценариев
 
 @IgnoreOnCIMainBuild
 @tree

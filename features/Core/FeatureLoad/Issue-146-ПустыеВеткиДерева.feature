@@ -1,9 +1,9 @@
 # language: ru
 # encoding: utf-8
 #parent uf:
-@UF11_Прочее
+@UF1_загрузка_и_обработка_features
 #parent ua:
-@UA44_Прочая_активность_по_проверке
+@UA9_загружать_features
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds

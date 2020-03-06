@@ -3,7 +3,7 @@
 #parent uf:
 @UF9_Вспомогательные_фичи
 #parent ua:
-@UA30_Прочие_макеты
+@UA49_макеты_для_запуска_сценариев
 #language: ru
 
 @IgnoreOnCIMainBuild

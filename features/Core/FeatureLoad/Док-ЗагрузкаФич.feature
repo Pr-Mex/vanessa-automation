@@ -1,9 +1,9 @@
 # language: ru
 # encoding: utf-8
-#parent ua:
-@UA9_загружать_features
 #parent uf:
-@UF1_загрузка_и_обработка_features
+@UF6_текстовые_и_видео_инструкции
+#parent ua:
+@UA31_описание_настроек_и_инструкции
 
 @IgnoreOnCIMainBuild
 @DocumentationBuild

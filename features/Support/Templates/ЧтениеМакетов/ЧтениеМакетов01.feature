@@ -1,9 +1,9 @@
 # language: ru
 # encoding: utf-8
 #parent uf:
-@UF4_Библиотека_шагов
+@UF9_Вспомогательные_фичи
 #parent ua:
-@UA1_Работать_с_макетами_данных
+@UA50_Макеты_для_библиотеки_шагов
 
 @IgnoreOnCIMainBuild
 @tree
