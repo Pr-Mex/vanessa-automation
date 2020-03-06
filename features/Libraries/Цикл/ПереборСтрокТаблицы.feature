@@ -1,9 +1,9 @@
 # language: ru
 # encoding: utf-8
 #parent uf:
-@UF11_Прочее
+@UF8_Turbo_Gherkin
 #parent ua:
-@UA45_Прочая_активность_вообще
+@UA22_Использовать_циклы_в_сценариях
 
 @IgnoreOnOFBuilds
 @IgnoreOn82Builds

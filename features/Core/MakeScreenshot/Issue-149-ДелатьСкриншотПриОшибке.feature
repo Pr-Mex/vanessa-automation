@@ -1,9 +1,9 @@
 # language: ru
 # encoding: utf-8
 #parent uf:
-@UF11_Прочее
+@UF5_формирование_результатов_выполнения_сценариев
 #parent ua:
-@UA45_Прочая_активность_вообще
+@UA20_формировать_прочие_отчеты
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
