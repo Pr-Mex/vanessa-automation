@@ -7,6 +7,12 @@
 
 @IgnoreOn82Builds
 @IgnoreOn836
+@IgnoreOn837
+@IgnoreOn838
+@IgnoreOn839
+@IgnoreOn8310
+@IgnoreOn8311
+@IgnoreOn8312
 @IgnoreOnOFBuilds
 @TestClient
 @IgnoreOnWeb
