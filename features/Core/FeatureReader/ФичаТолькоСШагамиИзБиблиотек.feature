@@ -1,9 +1,9 @@
 # language: ru
 # encoding: utf-8
 #parent uf:
-@UF11_Прочее
+@UF8_Turbo_Gherkin
 #parent ua:
-@UA44_Прочая_активность_по_проверке
+@UA39_использовать_экспортные_и_параметризованные_сценарии
 
 @IgnoreOnWeb
 

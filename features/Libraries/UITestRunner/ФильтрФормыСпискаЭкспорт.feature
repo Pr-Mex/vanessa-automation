@@ -3,7 +3,7 @@
 #parent uf:
 @UF8_Turbo_Gherkin
 #parent ua:
-@UA39_использовать_экспортные_сценарии
+@UA39_использовать_экспортные_и_параметризованные_сценарии
 
 @IgnoreOnCIMainBuild
 @ExportScenarios
