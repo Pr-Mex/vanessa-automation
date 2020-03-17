@@ -1316,6 +1316,12 @@
 				<CommandName>Form.Command.ОткрытьОпределениеШага</CommandName>
 				<ExtendedTooltip name="ФормаОткрытьОпределениеШагаРасширеннаяПодсказка" id="2152"/>
 			</Button>
+			<Button name="ФормаПроверитьДублированиеСценариев" id="2267">
+				<Type>CommandBarButton</Type>
+				<OnlyInAllActions>false</OnlyInAllActions>
+				<CommandName>Form.Command.ПроверитьДублированиеСценариев</CommandName>
+				<ExtendedTooltip name="ФормаПроверитьДублированиеСценариевРасширеннаяПодсказка" id="2268"/>
+			</Button>
 			<Button name="ФормаСправка" id="1552">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.StandardCommand.Help</CommandName>
@@ -12524,6 +12530,25 @@ Log events:
 																						</Title>
 																					</ExtendedTooltip>
 																				</InputField>
+																				<CheckBoxField name="ПрикладыватьКОтчетуAllureЖурналРегистрацииВыполненияСценария" id="2272">
+																					<DataPath>Объект.ПрикладыватьКОтчетуAllureЖурналРегистрацииВыполненияСценария</DataPath>
+																					<TitleLocation>Right</TitleLocation>
+																					<ToolTipRepresentation>Button</ToolTipRepresentation>
+																					<CheckBoxType>Auto</CheckBoxType>
+																					<ContextMenu name="ПрикладыватьКОтчетуAllureЖурналРегистрацииВыполненияСценарияКонтекстноеМеню" id="2273"/>
+																					<ExtendedTooltip name="ПрикладыватьКОтчетуAllureЖурналРегистрацииВыполненияСценарияРасширеннаяПодсказка" id="2274">
+																						<Title formatted="false">
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Прикладывает к сценарию данные журнала регистрации. Данные берутся с момента начала выполнения сценария.</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>Applies the event log to the scenario. Data is taken from the moment the scenario starts.</v8:content>
+																							</v8:item>
+																						</Title>
+																					</ExtendedTooltip>
+																				</CheckBoxField>
 																				<Table name="ДанныеАллюрМеток" id="1985">
 																					<Representation>List</Representation>
 																					<Height>4</Height>
@@ -28508,6 +28533,21 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ЗадатьРазмерОкнаКлиентаТестирования</Action>
+		</Command>
+		<Command name="ПроверитьДублированиеСценариев" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить дублирование сценариев</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверить дублирование сценариев</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверитьДублированиеСценариев</Action>
 		</Command>
 	</Commands>
 </Form>

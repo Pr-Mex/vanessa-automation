@@ -6,6 +6,7 @@
 @UA44_Прочая_активность_по_проверке
 
 @IgnoreOn82Builds
+@IgnoreOn836
 @IgnoreOnOFBuilds
 @IgnoreOnWeb
 
