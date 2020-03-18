@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="../assets/images/logo.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
     
     
       
@@ -42,7 +42,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/application.1b62728e.css">
+      <link rel="stylesheet" href="../assets/stylesheets/application.adb8469c.css">
       
         <link rel="stylesheet" href="../assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -53,7 +53,7 @@
       
     
     
-      <script src="../assets/javascripts/modernizr.268332fc.js"></script>
+      <script src="../assets/javascripts/modernizr.86422ebf.js"></script>
     
     
       
@@ -87,7 +87,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#_1" tabindex="1" class="md-skip">
+      <a href="#_1" tabindex="0" class="md-skip">
         Перейти к содержанию
       </a>
     
@@ -96,9 +96,9 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://pr-mex.github.io/vanessa-automation" title="Vanessa Automation" class="md-header-nav__button md-logo">
+        <a href="https://pr-mex.github.io/vanessa-automation" title="Vanessa Automation" aria-label="Vanessa Automation" class="md-header-nav__button md-logo">
           
-            <img src="../assets/images/logo.png" width="24" height="24">
+            <img alt="logo" src="../assets/images/logo.png" width="24" height="24">
           
         </a>
       </div>
@@ -127,7 +127,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
@@ -227,7 +227,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="https://pr-mex.github.io/vanessa-automation" title="Vanessa Automation" class="md-nav__button md-logo">
       
-        <img src="../assets/images/logo.png" width="48" height="48">
+        <img alt="logo" src="../assets/images/logo.png" width="48" height="48">
       
     </a>
     Vanessa Automation
@@ -418,16 +418,6 @@
 <td>Основной параметр определяющий запуск из командной строки.</td>
 </tr>
 <tr>
-<td>Debug</td>
-<td>Булево</td>
-<td>Режим отладки. В данном режиме не происходит автоматическое завершение обработки VA.</td>
-</tr>
-<tr>
-<td>DebugOnError</td>
-<td>Булево</td>
-<td>Режим отладки. В данном режим завершение обработки не произойдет только в случаее обнаружения ошибки в сценарии выполнения. В случае указания двух параметров в строке запуска, имеет приоритет над параметром Debug.</td>
-</tr>
-<tr>
 <td>Lang</td>
 <td>Строка</td>
 <td>Устарел. Определяет язык локализации. (Данный параметр внесен в файл с основными настройками).</td>
@@ -450,8 +440,8 @@
 </tbody>
 </table>
 <p>Порядок параметров не важен. Значения параметров указываются через равно, например:</p>
-<div class="codehilite"><pre><span></span><span class="err">StartFeaturePlayer;VBParams=C:\Temp\features\VAParams.json;Debug</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="err">StartFeaturePlayer;VBParams=C:\Temp\features\VAParams.json;Debug</span>
+</code></pre></div>
 
 
 <p>У параметра с типом булево можно записывать не указывая значение. По умолчанию считается Истина.</p>
@@ -513,18 +503,18 @@
       <div class="md-footer-copyright">
         
         powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
         and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs</a>
       </div>
       
   <div class="md-footer-social">
     <link rel="stylesheet" href="../assets/fonts/font-awesome.css">
     
-      <a href="https://github.com/Pr-Mex/vanessa-automation" class="md-footer-social__link fa fa-github"></a>
+      <a href="https://github.com/Pr-Mex/vanessa-automation" target="_blank" rel="noopener" title="github" class="md-footer-social__link fa fa-github"></a>
     
-      <a href="https://t.me/VanessaAutomation" class="md-footer-social__link fa fa-telegram"></a>
+      <a href="https://t.me/VanessaAutomation" target="_blank" rel="noopener" title="telegram" class="md-footer-social__link fa fa-telegram"></a>
     
   </div>
 
@@ -534,7 +524,7 @@
       
     </div>
     
-      <script src="../assets/javascripts/application.808e90bb.js"></script>
+      <script src="../assets/javascripts/application.c33a9706.js"></script>
       
         
         
@@ -555,7 +545,7 @@
           
         
       
-      <script>app.initialize({version:"1.0.4",url:{base:".."}})</script>
+      <script>app.initialize({version:"1.1",url:{base:".."}})</script>
       
     
   </body>

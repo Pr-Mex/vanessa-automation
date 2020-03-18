@@ -34,7 +34,7 @@
         <meta name="lang:search.tokenizer" content="[\s\-]+">
       
       <link rel="shortcut icon" href="assets/images/logo.png">
-      <meta name="generator" content="mkdocs-1.0.4, mkdocs-material-4.6.0">
+      <meta name="generator" content="mkdocs-1.1, mkdocs-material-4.6.3">
     
     
       
@@ -42,7 +42,7 @@
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/application.1b62728e.css">
+      <link rel="stylesheet" href="assets/stylesheets/application.adb8469c.css">
       
         <link rel="stylesheet" href="assets/stylesheets/application-palette.a8b3c06d.css">
       
@@ -53,7 +53,7 @@
       
     
     
-      <script src="assets/javascripts/modernizr.268332fc.js"></script>
+      <script src="assets/javascripts/modernizr.86422ebf.js"></script>
     
     
       
@@ -87,7 +87,7 @@
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
     
-      <a href="#vanessa-automation" tabindex="1" class="md-skip">
+      <a href="#vanessa-automation" tabindex="0" class="md-skip">
         Перейти к содержанию
       </a>
     
@@ -96,9 +96,9 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="https://pr-mex.github.io/vanessa-automation" title="Vanessa Automation" class="md-header-nav__button md-logo">
+        <a href="https://pr-mex.github.io/vanessa-automation" title="Vanessa Automation" aria-label="Vanessa Automation" class="md-header-nav__button md-logo">
           
-            <img src="assets/images/logo.png" width="24" height="24">
+            <img alt="logo" src="assets/images/logo.png" width="24" height="24">
           
         </a>
       </div>
@@ -120,7 +120,7 @@
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
+      <input type="text" class="md-search__input" aria-label="search" name="query" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="query" data-md-state="active">
       <label class="md-icon md-search__icon" for="__search"></label>
       <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
         &#xE5CD;
@@ -220,7 +220,7 @@
   <label class="md-nav__title md-nav__title--site" for="__drawer">
     <a href="https://pr-mex.github.io/vanessa-automation" title="Vanessa Automation" class="md-nav__button md-logo">
       
-        <img src="assets/images/logo.png" width="48" height="48">
+        <img alt="logo" src="assets/images/logo.png" width="48" height="48">
       
     </a>
     Vanessa Automation
@@ -597,7 +597,7 @@
 <a href="http://84.237.195.35:32005/job/VAFullCheck/"><img alt="Build Status" src="http://84.237.195.35:32005/buildStatus/icon?job=VAFullCheck" /></a></p>
 <h2 id="bdd-for-1enterprise">BDD for 1С:Enterprise<a class="headerlink" href="#bdd-for-1enterprise" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Текущий релиз в ветке <a href="https://github.com/Pr-Mex/vanessa-automation/tree/master">Master: 1.2.029</a></li>
+<li>Текущий релиз в ветке <a href="https://github.com/Pr-Mex/vanessa-automation/tree/master">Master: 1.2.030</a></li>
 <li>Разработка ведется в ветке <a href="https://github.com/Pr-Mex/vanessa-automation/tree/develop">Develop</a>.</li>
 <li><a href="https://t.me/testspro1c">Обсудить Ванессу</a> в телеграмм группе, и обсудить всё, что связано с тестированием в 1С.</li>
 <li><a href="https://t.me/VanessaAutomation">Подписаться на новости о проекте</a> в телеграмм каналле.</li>
@@ -624,7 +624,7 @@
 <ul>
 <li>пишем feature файлы в формате Gherkin - обычно используется редактор Notepad++, Sublime IDE (Vanessa Extension) или связанный проект <strong>vanessa-bdd-editor</strong></li>
 </ul>
-<div class="codehilite"><pre><span></span><span class="c"># encoding: utf-8</span><span class="nf"></span>
+<div class="codehilite"><pre><span></span><code><span class="c"># encoding: utf-8</span><span class="nf"></span>
 <span class="c"># language: ru</span><span class="nf"></span>
 
 <span class="k">Функционал:</span><span class="nf"> Запуск и получение результатов запуска сценариев</span>
@@ -653,7 +653,7 @@
 <span class="s">И затем нажал кнопку </span><span class="nf">&quot;Сгенерировать шаблоны обработок&quot;</span><span class="s"></span>
 <span class="s">Также в каталоге </span><span class="nf">&quot;.\features&quot;</span><span class="s"> возникли epf файлы идентичные имени feature файла</span>
 <span class="s">И при нажатии кнопки </span><span class="nf">&quot;Запустить сценарии&quot;</span><span class="s"> я вижу автоматизированный запуск обработок с признаком </span><span class="nf">&quot;pending&quot;</span><span class="s"> (ожидает реализации)</span>
-</pre></div>
+</code></pre></div>
 
 
 <h3 id="_2">Классический вариант использования (без интерактивного режима)<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
@@ -711,8 +711,8 @@
 </ul>
 <p><a href="https://github.com/Pr-Mex/vanessa-automation/tree/develop/tools/JSON">Пример JSON файла</a></p>
 <p>Профиль запуска предназначен для простого консольного запуска, пример подобной командной строки выглядит так:</p>
-<div class="codehilite"><pre><span></span><span class="c">%V83PATH% /Execute C:\vanessa-automation\vanessa-automation.epf /C&quot;StartFeaturePlayer;VBParams=C:\VBParams.json&quot;</span>
-</pre></div>
+<div class="codehilite"><pre><span></span><code><span class="c">%V83PATH% /Execute C:\vanessa-automation\vanessa-automation.epf /TESTMANAGER /C&quot;StartFeaturePlayer;VBParams=C:\VBParams.json&quot;</span>
+</code></pre></div>
 
 
 <p><a href="https://github.com/Pr-Mex/vanessa-automation/tree/develop/tools/JSON">Примеры запуска</a></p>
@@ -722,7 +722,7 @@
 <ol>
 <li>У себя в каталоге с обработкой ванессы создать файл user_settings.json. Сам файл user_settings.json должен отвечать специальному формату:</li>
 </ol>
-<div class="codehilite"><pre><span></span><span class="p">{</span>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;userSettings&quot;</span><span class="p">:</span> <span class="p">[</span>
         <span class="p">{</span>
             <span class="nt">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;USERNAME_1&quot;</span><span class="p">,</span>
@@ -740,7 +740,7 @@
         <span class="p">}</span>
     <span class="p">]</span>
 <span class="p">}</span>
-</pre></div>
+</code></pre></div>
 
 
 <ol>
@@ -827,18 +827,18 @@
       <div class="md-footer-copyright">
         
         powered by
-        <a href="https://www.mkdocs.org">MkDocs</a>
+        <a href="https://www.mkdocs.org" target="_blank" rel="noopener">MkDocs</a>
         and
-        <a href="https://squidfunk.github.io/mkdocs-material/">
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
           Material for MkDocs</a>
       </div>
       
   <div class="md-footer-social">
     <link rel="stylesheet" href="assets/fonts/font-awesome.css">
     
-      <a href="https://github.com/Pr-Mex/vanessa-automation" class="md-footer-social__link fa fa-github"></a>
+      <a href="https://github.com/Pr-Mex/vanessa-automation" target="_blank" rel="noopener" title="github" class="md-footer-social__link fa fa-github"></a>
     
-      <a href="https://t.me/VanessaAutomation" class="md-footer-social__link fa fa-telegram"></a>
+      <a href="https://t.me/VanessaAutomation" target="_blank" rel="noopener" title="telegram" class="md-footer-social__link fa fa-telegram"></a>
     
   </div>
 
@@ -848,7 +848,7 @@
       
     </div>
     
-      <script src="assets/javascripts/application.808e90bb.js"></script>
+      <script src="assets/javascripts/application.c33a9706.js"></script>
       
         
         
@@ -869,7 +869,7 @@
           
         
       
-      <script>app.initialize({version:"1.0.4",url:{base:"."}})</script>
+      <script>app.initialize({version:"1.1",url:{base:"."}})</script>
       
     
   </body>
