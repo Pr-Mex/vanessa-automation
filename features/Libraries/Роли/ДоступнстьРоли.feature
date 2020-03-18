@@ -1,4 +1,9 @@
-﻿# language: ru
+# language: ru
+# encoding: utf-8
+#parent uf:
+@UF11_Прочее
+#parent ua:
+@UA44_Прочая_активность_по_проверке
 
 @IgnoreOnCIMainBuild
 
@@ -12,4 +17,3 @@
 
 Сценарий: Роль не доступна
 	Когда Мне не доступна роль "НедоступнаяРоль"
-

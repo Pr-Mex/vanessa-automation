@@ -1,10 +1,16 @@
-﻿#language: ru
+# language: ru
+# encoding: utf-8
+#parent uf:
+@UF9_Вспомогательные_фичи
+#parent ua:
+@UA30_Прочие_макеты
+#language: ru
 
 @IgnoreOnCIMainBuild
 @tree
 
 
-Функционал: Тест
+Функционал: Тест 3
 
 
 Структура сценария: Тест 

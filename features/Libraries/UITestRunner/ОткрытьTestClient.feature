@@ -1,4 +1,9 @@
-﻿# language: ru
+# language: ru
+# encoding: utf-8
+#parent uf:
+@UF4_Библиотека_шагов
+#parent ua:
+@UA6_Работать_с_подключением_Test_client
 
 @ExportScenarios
 @IgnoreOn82Builds
@@ -7,7 +12,7 @@
 @TestClient
 
 
-Функциональность: Я хочу работать с командным интерфейсом 1С 8.3.x
+Функциональность: Я хочу работать с командным интерфейсом 1С 8.3.x запуск TestClient
 
 Как Разработчик я хочу
 Чтобы у меня был стандартный сценарий для открытия TestClient

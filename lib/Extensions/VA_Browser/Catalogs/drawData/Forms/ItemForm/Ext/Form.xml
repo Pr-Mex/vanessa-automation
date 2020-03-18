@@ -1,0 +1,165 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.9">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
+	<AutoCommandBar name="FormCommandBar" id="-1">
+		<ChildItems>
+			<Button name="FormTry" id="40">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.TryIt</CommandName>
+				<ExtendedTooltip name="FormTryExtendedTooltip" id="41"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<UsualGroup name="Group1" id="30">
+			<Group>AlwaysHorizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="Group1ExtendedTooltip" id="31"/>
+			<ChildItems>
+				<UsualGroup name="Group2" id="28">
+					<Width>30</Width>
+					<Group>Vertical</Group>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Group2ExtendedTooltip" id="29"/>
+					<ChildItems>
+						<InputField name="Description" id="4">
+							<DataPath>Object.Description</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<EditMode>EnterOnInput</EditMode>
+							<InputHint>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Description</v8:content>
+								</v8:item>
+							</InputHint>
+							<ContextMenu name="DescriptionContextMenu" id="5"/>
+							<ExtendedTooltip name="DescriptionExtendedTooltip" id="6"/>
+						</InputField>
+						<Table name="Steps" id="7">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>Object.Steps</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="StepsContextMenu" id="8"/>
+							<AutoCommandBar name="StepsCommandBar" id="9"/>
+							<ExtendedTooltip name="StepsExtendedTooltip" id="10"/>
+							<SearchStringAddition name="StepsSearchString" id="11">
+								<AdditionSource>
+									<Item>Steps</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="StepsSearchStringContextMenu" id="12"/>
+								<ExtendedTooltip name="StepsSearchStringExtendedTooltip" id="13"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="StepsViewStatus" id="14">
+								<AdditionSource>
+									<Item>Steps</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="StepsViewStatusContextMenu" id="15"/>
+								<ExtendedTooltip name="StepsViewStatusExtendedTooltip" id="16"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="StepsSearchControl" id="17">
+								<AdditionSource>
+									<Item>Steps</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="StepsSearchControlContextMenu" id="18"/>
+								<ExtendedTooltip name="StepsSearchControlExtendedTooltip" id="19"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<LabelField name="StepsLineNumber" id="20">
+									<DataPath>Object.Steps.LineNumber</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="StepsLineNumberContextMenu" id="21"/>
+									<ExtendedTooltip name="StepsLineNumberExtendedTooltip" id="22"/>
+								</LabelField>
+								<InputField name="StepsDelay" id="42">
+									<DataPath>Object.Steps.Delay</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="StepsDelayContextMenu" id="43"/>
+									<ExtendedTooltip name="StepsDelayExtendedTooltip" id="44"/>
+								</InputField>
+								<InputField name="StepsDeleteAfter" id="45">
+									<DataPath>Object.Steps.DeleteAfter</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="StepsDeleteAfterContextMenu" id="46"/>
+									<ExtendedTooltip name="StepsDeleteAfterExtendedTooltip" id="47"/>
+								</InputField>
+								<InputField name="Stepsx" id="48">
+									<DataPath>Object.Steps.x</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="StepsxContextMenu" id="49"/>
+									<ExtendedTooltip name="StepsxExtendedTooltip" id="50"/>
+								</InputField>
+								<InputField name="Stepsy" id="51">
+									<DataPath>Object.Steps.y</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="StepsyContextMenu" id="52"/>
+									<ExtendedTooltip name="StepsyExtendedTooltip" id="53"/>
+								</InputField>
+								<InputField name="StepsStep" id="23">
+									<DataPath>Object.Steps.Step</DataPath>
+									<Visible>false</Visible>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="StepsStepContextMenu" id="24"/>
+									<ExtendedTooltip name="StepsStepExtendedTooltip" id="25"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Group3" id="32">
+					<Group>Vertical</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Group3ExtendedTooltip" id="33"/>
+					<ChildItems>
+						<TextDocumentField name="StepsStep1" id="34">
+							<DataPath>Items.Steps.CurrentData.Step</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="StepsStep1ContextMenu" id="35"/>
+							<ExtendedTooltip name="StepsStep1ExtendedTooltip" id="36"/>
+						</TextDocumentField>
+						<HTMLDocumentField name="StepsStep2" id="37">
+							<DataPath>Items.Steps.CurrentData.Step</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="StepsStep2ContextMenu" id="38"/>
+							<ExtendedTooltip name="StepsStep2ExtendedTooltip" id="39"/>
+						</HTMLDocumentField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Object" id="1">
+			<Type>
+				<v8:Type>cfg:CatalogObject.drawData</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+			<SavedData>true</SavedData>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="TryIt" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Try it</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Try it</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>TryIt</Action>
+		</Command>
+	</Commands>
+</Form>

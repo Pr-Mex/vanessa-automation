@@ -25,10 +25,16 @@
 			<ExtendedTooltip name="ГруппаЗаголовокРасширеннаяПодсказка" id="93"/>
 			<ChildItems>
 				<InputField name="ДескрипторОкна" id="89">
-					<DataPath>ДескрипторОкна</DataPath>
+					<DataPath>ДескрипторОсновногоОкна</DataPath>
 					<ReadOnly>true</ReadOnly>
 					<ContextMenu name="ДескрипторОкнаКонтекстноеМеню" id="90"/>
 					<ExtendedTooltip name="ДескрипторОкнаРасширеннаяПодсказка" id="91"/>
+				</InputField>
+				<InputField name="PID" id="141">
+					<DataPath>PID</DataPath>
+					<ReadOnly>true</ReadOnly>
+					<ContextMenu name="PIDКонтекстноеМеню" id="142"/>
+					<ExtendedTooltip name="PIDРасширеннаяПодсказка" id="143"/>
 				</InputField>
 			</ChildItems>
 		</UsualGroup>
@@ -250,17 +256,209 @@
 					</ToolTip>
 					<ExtendedTooltip name="ГруппаКартинкаРасширеннаяПодсказка" id="100"/>
 					<ChildItems>
-						<Button name="СделатьСнимок" id="104">
-							<Type>UsualButton</Type>
-							<CommandName>Form.Command.СделатьСнимок</CommandName>
-							<ExtendedTooltip name="СделатьСнимокРасширеннаяПодсказка" id="105"/>
-						</Button>
+						<UsualGroup name="Группа2" id="146">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="147"/>
+							<ChildItems>
+								<Button name="СделатьСнимок" id="104">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.СделатьСнимок</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сделать снимок основного окна</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="СделатьСнимокРасширеннаяПодсказка" id="105"/>
+								</Button>
+								<Button name="Масштаб50" id="144">
+									<Type>UsualButton</Type>
+									<Width>10</Width>
+									<CommandName>Form.Command.Масштаб50</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>50%</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="Масштаб50РасширеннаяПодсказка" id="145"/>
+								</Button>
+								<Button name="Масштаб75" id="156">
+									<Type>UsualButton</Type>
+									<Width>10</Width>
+									<CommandName>Form.Command.Масштаб75</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>75%</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="Масштаб75РасширеннаяПодсказка" id="157"/>
+								</Button>
+								<Button name="Масштаб100" id="152">
+									<Type>UsualButton</Type>
+									<Width>10</Width>
+									<CommandName>Form.Command.Масштаб100</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>100%</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="Масштаб100РасширеннаяПодсказка" id="153"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
 						<PictureField name="ДанныеКартинки" id="101">
 							<DataPath>ДанныеКартинки</DataPath>
 							<TitleLocation>None</TitleLocation>
 							<Zoomable>true</Zoomable>
 							<ContextMenu name="ДанныеКартинкиКонтекстноеМеню" id="102"/>
 							<ExtendedTooltip name="ДанныеКартинкиРасширеннаяПодсказка" id="103"/>
+						</PictureField>
+					</ChildItems>
+				</Page>
+				<Page name="Группа1" id="108">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Снимки окон процесса</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="109"/>
+					<ChildItems>
+						<UsualGroup name="Группа3" id="150">
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="151"/>
+							<ChildItems>
+								<Button name="СделатьСнимкиДочернихОкон" id="106">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.СделатьСнимкиДочернихОкон</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сделать снимки окон процесса</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="СделатьСнимкиДочернихОконРасширеннаяПодсказка" id="107"/>
+								</Button>
+								<Button name="Масштаб50_1" id="148">
+									<Type>UsualButton</Type>
+									<Width>10</Width>
+									<CommandName>Form.Command.Масштаб50_1</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>50%</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="Масштаб50_1РасширеннаяПодсказка" id="149"/>
+								</Button>
+								<Button name="Масштаб75_1" id="158">
+									<Type>UsualButton</Type>
+									<Width>10</Width>
+									<CommandName>Form.Command.Масштаб75_1</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>75%</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="Масштаб75_1РасширеннаяПодсказка" id="159"/>
+								</Button>
+								<Button name="Масштаб100_1" id="154">
+									<Type>UsualButton</Type>
+									<Width>10</Width>
+									<CommandName>Form.Command.Масштаб100_1</CommandName>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>100%</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="Масштаб100_1РасширеннаяПодсказка" id="155"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<Table name="СписокОкон" id="113">
+							<Representation>List</Representation>
+							<CommandBarLocation>None</CommandBarLocation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>СписокОкон</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="СписокОконКонтекстноеМеню" id="114"/>
+							<AutoCommandBar name="СписокОконКоманднаяПанель" id="115"/>
+							<ExtendedTooltip name="СписокОконРасширеннаяПодсказка" id="116"/>
+							<SearchStringAddition name="СписокОконСтрокаПоиска" id="117">
+								<AdditionSource>
+									<Item>СписокОкон</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокОконСтрокаПоискаКонтекстноеМеню" id="118"/>
+								<ExtendedTooltip name="СписокОконСтрокаПоискаРасширеннаяПодсказка" id="119"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="СписокОконСостояниеПросмотра" id="120">
+								<AdditionSource>
+									<Item>СписокОкон</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокОконСостояниеПросмотраКонтекстноеМеню" id="121"/>
+								<ExtendedTooltip name="СписокОконСостояниеПросмотраРасширеннаяПодсказка" id="122"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="СписокОконУправлениеПоиском" id="123">
+								<AdditionSource>
+									<Item>СписокОкон</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="СписокОконУправлениеПоискомКонтекстноеМеню" id="124"/>
+								<ExtendedTooltip name="СписокОконУправлениеПоискомРасширеннаяПодсказка" id="125"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnActivateRow">СписокОконПриАктивизацииСтроки</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="СписокОконWindow" id="126">
+									<DataPath>СписокОкон.window</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокОконWindowКонтекстноеМеню" id="127"/>
+									<ExtendedTooltip name="СписокОконWindowРасширеннаяПодсказка" id="128"/>
+								</InputField>
+								<InputField name="СписокОконClass" id="129">
+									<DataPath>СписокОкон.class</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокОконClassКонтекстноеМеню" id="130"/>
+									<ExtendedTooltip name="СписокОконClassРасширеннаяПодсказка" id="131"/>
+								</InputField>
+								<InputField name="СписокОконTitle" id="132">
+									<DataPath>СписокОкон.title</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокОконTitleКонтекстноеМеню" id="133"/>
+									<ExtendedTooltip name="СписокОконTitleРасширеннаяПодсказка" id="134"/>
+								</InputField>
+								<InputField name="СписокОконenabled" id="135">
+									<DataPath>СписокОкон.enabled</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокОконenabledКонтекстноеМеню" id="136"/>
+									<ExtendedTooltip name="СписокОконenabledРасширеннаяПодсказка" id="137"/>
+								</InputField>
+								<InputField name="СписокОконДвоичныеДанныеКартинки" id="138">
+									<DataPath>СписокОкон.ДвоичныеДанныеКартинки</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="СписокОконДвоичныеДанныеКартинкиКонтекстноеМеню" id="139"/>
+									<ExtendedTooltip name="СписокОконДвоичныеДанныеКартинкиРасширеннаяПодсказка" id="140"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+						<PictureField name="ДанныеКартинки1" id="110">
+							<DataPath>ДанныеКартинки1</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<Zoomable>true</Zoomable>
+							<ContextMenu name="ДанныеКартинки1КонтекстноеМеню" id="111"/>
+							<ExtendedTooltip name="ДанныеКартинки1РасширеннаяПодсказка" id="112"/>
 						</PictureField>
 					</ChildItems>
 				</Page>
@@ -355,11 +553,11 @@
 				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="ДескрипторОкна" id="3">
+		<Attribute name="ДескрипторОсновногоОкна" id="3">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Дескриптор окна</v8:content>
+					<v8:content>Дескриптор основного окна</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -399,6 +597,132 @@
 					<v8:Length>0</v8:Length>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ДанныеКартинки1" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные картинки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СписокОкон" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список окон</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="window" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>window</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="class" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Class</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="title" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Title</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДвоичныеДанныеКартинки" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Двоичные данные картинки</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+				<Column name="enabled" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Enabled</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="PID" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>PID</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЭтоLinux" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Это linux</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
 	</Attributes>
@@ -553,9 +877,123 @@
 			</ToolTip>
 			<Action>СделатьСнимок</Action>
 		</Command>
+		<Command name="СделатьСнимкиДочернихОкон" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сделать снимки дочерних окон</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сделать снимки дочерних окон</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СделатьСнимкиДочернихОкон</Action>
+		</Command>
+		<Command name="Масштаб50" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Масштаб50</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Масштаб50</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Масштаб50</Action>
+		</Command>
+		<Command name="Масштаб50_1" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Масштаб50_1</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Масштаб50 1</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Масштаб50_1</Action>
+		</Command>
+		<Command name="Масштаб100" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Масштаб100</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Масштаб100</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Масштаб100</Action>
+		</Command>
+		<Command name="Масштаб100_1" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Масштаб100 1</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Масштаб100 1</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Масштаб100_1</Action>
+		</Command>
+		<Command name="Масштаб75" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Масштаб75</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Масштаб75</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Масштаб75</Action>
+		</Command>
+		<Command name="Масштаб75_1" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Масштаб75 1</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Масштаб75 1</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>Масштаб75_1</Action>
+		</Command>
 	</Commands>
 	<Parameters>
-		<Parameter name="ДескрипторОкнаКлиентаТестирования">
+		<Parameter name="МестоположениеВнешнейКомпонентыДляСкриншотов">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="PIDТекущегоКлиентаТестирования">
 			<Type>
 				<v8:Type>xs:decimal</v8:Type>
 				<v8:NumberQualifiers>
@@ -565,13 +1003,19 @@
 				</v8:NumberQualifiers>
 			</Type>
 		</Parameter>
-		<Parameter name="МестоположениеВнешнейКомпонентыДляСкриншотов">
+		<Parameter name="ДескрипторОсновногоОкна">
 			<Type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:StringQualifiers>
-					<v8:Length>0</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Parameter>
+		<Parameter name="ЭтоLinux">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Parameter>
 	</Parameters>

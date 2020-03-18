@@ -1,4 +1,9 @@
-﻿# language: ru
+# language: ru
+# encoding: utf-8
+#parent ua:
+@UA9_загружать_features
+#parent uf:
+@UF1_загрузка_и_обработка_features
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
@@ -18,7 +23,112 @@
 	Когда Я открываю VanessaAutomation в режиме TestClient со стандартной библиотекой
 
 
-Сценарий: Проверка оптимизации загрузки фич ru
+
+
+Сценарий: Проверка оптимизации загрузки фич ru 03
+	Если Файл "C:\Temp\Optimization\Test.feature" существует тогда
+		Тогда я удаляю файл "C:\Temp\Optimization\Test.feature"
+		
+	И Я запоминаю значение выражения 'ПолучитьСостояниеVanessaAutomation().ТекущаяФича.Каталог + "files\Test4_1.feature"' в переменную "TestFeature"	
+	Тогда я копирую файл "$TestFeature$" "C:\Temp\Optimization\Test.feature"
+
+	И я перехожу к закладке "Служебная"
+	И в поле 'Каталог фич (служебный)' я ввожу текст 'C:\Temp\Optimization\Test.feature'
+	
+	И Я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
+	
+	Тогда в логе сообщений TestClient есть строка "ВозможнаОптимизацияЗагрузкиФичи=Нет"
+	
+	И я очищаю окно сообщений пользователю
+
+
+
+
+	Если Файл "C:\Temp\Optimization\Test.feature" существует тогда
+		Тогда я удаляю файл "C:\Temp\Optimization\Test.feature"
+	И Я запоминаю значение выражения 'ПолучитьСостояниеVanessaAutomation().ТекущаяФича.Каталог + "files\Test4_2.feature"' в переменную "TestFeature"	
+	Тогда я копирую файл "$TestFeature$" "C:\Temp\Optimization\Test.feature"
+	
+	И я обновляю время изменения у файла "C:\Temp\Optimization\Test.feature"
+
+	И Я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
+
+	Тогда в логе сообщений TestClient есть строка "ВозможнаОптимизацияЗагрузкиФичи=Нет"
+
+	И элемент формы с именем "Статистика" стал равен '1/1/3'
+	
+	И я перехожу к закладке с именем "ГруппаСлужебная"
+	И я нажимаю на кнопку с именем 'РазвернутьВсеСтрокиДереваСлужебный'
+	И я перехожу к закладке с именем "ГруппаЗапускТестов"
+	
+	
+	Тогда таблица "ДеревоТестов" стала равной:
+		| 'Наименование'                                      | 'Статус' |
+		| 'Test.feature'                                      | ''       |
+		| 'Тест4_2'                                   | ''       |
+		| 'Тестовый сценарий 04. Оптимизация.'                | ''       |
+		| 'И в поле с именем <ИмяПоля> я ввожу текст <Текст>' | ''       |
+		| 'Примеры'                                           | ''       |
+		| '\| ИмяПоля   \| Текст  \|'                         | ''       |
+		| '\| "Поле011" \| "1111" \|'                         | ''       |
+		| 'И в поле с именем "Поле011" я ввожу текст "1111"'  | ''       |
+		| '\| "Поле022" \| "2222" \|'                         | ''       |
+		| 'И в поле с именем "Поле022" я ввожу текст "2222"'  | ''       |
+
+
+
+
+
+
+
+
+Сценарий: Проверка оптимизации загрузки фич ru 02
+	Если Файл "C:\Temp\Optimization\Test.feature" существует тогда
+		Тогда я удаляю файл "C:\Temp\Optimization\Test.feature"
+		
+	И Я запоминаю значение выражения 'ПолучитьСостояниеVanessaAutomation().ТекущаяФича.Каталог + "files\Test3_1.feature"' в переменную "TestFeature"	
+	Тогда я копирую файл "$TestFeature$" "C:\Temp\Optimization\Test.feature"
+
+	И я перехожу к закладке "Служебная"
+	И в поле 'Каталог фич (служебный)' я ввожу текст 'C:\Temp\Optimization\Test.feature'
+	
+	И     Я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
+	
+	Тогда в логе сообщений TestClient есть строка "ВозможнаОптимизацияЗагрузкиФичи=Нет"
+	
+	И я очищаю окно сообщений пользователю
+
+
+
+
+	Если Файл "C:\Temp\Optimization\Test.feature" существует тогда
+		Тогда я удаляю файл "C:\Temp\Optimization\Test.feature"
+	И Я запоминаю значение выражения 'ПолучитьСостояниеVanessaAutomation().ТекущаяФича.Каталог + "files\Test3_2.feature"' в переменную "TestFeature"	
+	Тогда я копирую файл "$TestFeature$" "C:\Temp\Optimization\Test.feature"
+	
+	И я обновляю время изменения у файла "C:\Temp\Optimization\Test.feature"
+	И я заменяю строку в файле "C:\Temp\Optimization\Test.feature"
+		|'Тест3_2'|'Тест3_1'|
+
+	И     Я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
+
+	Тогда в логе сообщений TestClient есть строка "ВозможнаОптимизацияЗагрузкиФичи=Да"
+
+
+	И элемент формы с именем "Статистика" стал равен '1/1/3'
+	
+	Тогда таблица "ДеревоТестов" стала равной:
+		| 'Наименование'                                                 | 'Статус' |
+		| 'Test.feature'                                                 | ''       |
+		| 'Тест3_1'                                              | ''       |
+		| '<описание сценария>'                                          | ''       |
+		| 'И в поле с именем \'ИмяПоля\' я ввожу текст \'1111\'        ' | ''       |
+		| 'И в поле с именем \'ИмяПоля\' я ввожу текст 2222'             | ''       |
+		| 'И в поле с именем \'ИмяПоля\' я ввожу текст 08.04.1981'       | ''       |
+
+
+
+Сценарий: Проверка оптимизации загрузки фич ru 01
 	Если Файл "C:\Temp\Optimization\Test.feature" существует тогда
 		Тогда я удаляю файл "C:\Temp\Optimization\Test.feature"
 		
@@ -52,6 +162,10 @@
 		Тогда я удаляю файл "C:\Temp\Optimization\Test.feature"
 	И Я запоминаю значение выражения 'ПолучитьСостояниеVanessaAutomation().ТекущаяФича.Каталог + "files\Test1_2.feature"' в переменную "TestFeature"	
 	Тогда я копирую файл "$TestFeature$" "C:\Temp\Optimization\Test.feature"
+	
+	И я обновляю время изменения у файла "C:\Temp\Optimization\Test.feature"
+	И я заменяю строку в файле "C:\Temp\Optimization\Test.feature"
+		|'Тест1_2'|'Тест1_1'|
 
 	И     Я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
 	И     Я нажимаю на кнопку выполнить сценарии в Vanessa-Automation TestClient
@@ -115,6 +229,8 @@
 		Тогда я удаляю файл "C:\Temp\Optimization\Test.feature"
 	И Я запоминаю значение выражения 'ПолучитьСостояниеVanessaAutomation().ТекущаяФича.Каталог + "files\Test2_2.feature"' в переменную "TestFeature"	
 	Тогда я копирую файл "$TestFeature$" "C:\Temp\Optimization\Test.feature"
+	
+	И я обновляю время изменения у файла "C:\Temp\Optimization\Test.feature"
 
 	И     Я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
 	И     Я нажимаю на кнопку выполнить сценарии в Vanessa-Automation TestClient
