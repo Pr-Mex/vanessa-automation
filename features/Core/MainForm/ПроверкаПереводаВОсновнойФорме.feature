@@ -28,7 +28,6 @@
 	
 
 	И файл "$ИмяФайла$" содержит строки
-		| '1. In the main window of Yandex.Cloud click'|
 		|'Upload buttons features'|
 		|'Load features files from directory'|
 		|'Load one feature file'|
@@ -240,7 +239,6 @@
 		|'Screenshots'|
 		|'Create screnshoots on exception'|
 		|'Switches on snapshot creating on error.'|
-		|'Screenshots of the settings'|
 		|'Take every window screenshot'|
 		|'Switches on snapshot creation for each 1C window.'|
 		|'Temp directory for screenshoots'|
@@ -389,7 +387,6 @@
 		|'Annoyed (evil)'|
 		|'Neutral (neutral)'|
 		|'Specifies narrator\'s emotion. See details &lt;link https://cloud.yandex.ru/docs/speechkit/tts/request&gt;here&lt;/&gt;.'|
-		|'The last part of the path in the address bar in the Internet browser. &lt;colorstyle -14&gt;https://console.cloud.yandex.ru/folders/ИдентификаторКаталога&lt;/&gt;'|
 		|'OAuth-token is used in Yandex.Cloud authentication'|
 		|'Group amazon TTS'|
 		|'Group amazon TTS'|
