@@ -1,9 +1,9 @@
 # language: ru
 # encoding: utf-8
 #parent uf:
-@UF4_Библиотека_шагов
+@UF9_Вспомогательные_фичи
 #parent ua:
-@UA6_Работать_с_подключением_Test_client
+@UA26_Макеты_для_проверки_test_client
 
 @IgnoreOnCIMainBuild
 @VBManager

@@ -1,8 +1,9 @@
 # language: ru
+# encoding: utf-8
 #parent uf:
-@UF5_формирование_результатов_выполнения_сценариев
+@UF9_Вспомогательные_фичи
 #parent ua:
-@UA18_формировать_отчёт_Allure
+@UA25_Макеты_для_отчетов_о_выполнении
 
 @IgnoreOnCIMainBuild
 @tree

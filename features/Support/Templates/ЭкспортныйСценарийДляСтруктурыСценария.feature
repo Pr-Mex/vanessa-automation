@@ -1,9 +1,9 @@
 # language: ru
 # encoding: utf-8
 #parent uf:
-@UF8_Turbo_Gherkin
+@UF9_Вспомогательные_фичи
 #parent ua:
-@UA39_использовать_экспортные_сценарии
+@UA51_Макеты_для_ТурбоГеркин
 
 @IgnoreOnCIMainBuild
 @ExportScenarios

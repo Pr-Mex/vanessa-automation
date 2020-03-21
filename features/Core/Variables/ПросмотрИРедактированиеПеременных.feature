@@ -1,9 +1,9 @@
 # language: ru
 # encoding: utf-8
 #parent uf:
-@UF11_Прочее
+@UF4_Библиотека_шагов
 #parent ua:
-@UA45_Прочая_активность_вообще
+@UA5_Работать_с_контекстом_фич
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds

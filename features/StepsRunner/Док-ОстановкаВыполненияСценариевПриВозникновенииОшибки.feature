@@ -1,8 +1,9 @@
 # language: ru
+# encoding: utf-8
 #parent uf:
-@UF2_запуск_сценариев_на_выполнение
+@UF6_текстовые_и_видео_инструкции
 #parent ua:
-@UA14_Останавливать_выполнение_сценариев
+@UA31_описание_настроек_и_инструкции
 
 @IgnoreOnCIMainBuild
 @DocumentationBuild
