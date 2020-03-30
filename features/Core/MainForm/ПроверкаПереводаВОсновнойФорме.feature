@@ -240,7 +240,7 @@
 		|'Create screnshoots on exception'|
 		|'Switches on snapshot creating on error.'|
 		|'Take every window screenshot'|
-		|'Switches on snapshot creation for each 1C window.'|
+		|'Switches on snapshot creation for each 1C window when an error occurs.'|
 		|'Temp directory for screenshoots'|
 		|'Snapshots directory.'|
 		|'Logs'|
