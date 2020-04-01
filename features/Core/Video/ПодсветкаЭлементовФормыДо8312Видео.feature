@@ -16,6 +16,7 @@
 @IgnoreOn8311
 @IgnoreOn8312
 @IgnoreOnWeb
+@IgnoreOnUFSovm82Builds
 @Video
 
 
