@@ -1,5 +1,9 @@
 # language: ru
 # encoding: utf-8
+#parent uf:
+@UF5_формирование_результатов_выполнения_сценариев
+#parent ua:
+@UA19_формировать_отчет_Cucumber
 
 
 @IgnoreOn82Builds

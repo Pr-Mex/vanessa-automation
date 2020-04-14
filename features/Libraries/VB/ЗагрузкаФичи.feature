@@ -1,9 +1,9 @@
 # language: ru
 # encoding: utf-8
 #parent uf:
-@UF9_Вспомогательные_фичи
+@UF1_загрузка_и_обработка_features
 #parent ua:
-@UA46_Макеты_для_загрузки_фич
+@UA9_загружать_features
 
 @IgnoreOnWeb
 

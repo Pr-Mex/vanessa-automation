@@ -3,7 +3,7 @@
 #parent uf:
 @UF9_Вспомогательные_фичи
 #parent ua:
-@UA30_Прочие_макеты
+@UA25_Макеты_для_отчетов_о_выполнении
 
 @IgnoreOnCIMainBuild
 

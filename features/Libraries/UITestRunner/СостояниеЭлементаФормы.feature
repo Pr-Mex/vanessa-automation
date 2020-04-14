@@ -1,9 +1,9 @@
 # language: ru
 # encoding: utf-8
 #parent uf:
-@UF11_Прочее
+@UF4_Библиотека_шагов
 #parent ua:
-@UA44_Прочая_активность_по_проверке
+@UA52_Работать_с_UI_прочее
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
@@ -13,6 +13,7 @@
 
 //из-за ошибки платформы
 @IgnoreOn8316
+@IgnoreOn8317
 
 
 Функционал: Проверка текущего состояния элемента формы

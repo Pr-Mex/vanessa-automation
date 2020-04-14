@@ -1,9 +1,9 @@
 # language: ru
 # encoding: utf-8
 #parent uf:
-@UF11_Прочее
+@UF9_Вспомогательные_фичи
 #parent ua:
-@UA44_Прочая_активность_по_проверке
+@UA30_Прочие_макеты
 #language: ru
 @tree
 

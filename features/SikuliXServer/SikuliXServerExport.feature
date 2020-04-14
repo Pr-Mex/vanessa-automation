@@ -1,8 +1,9 @@
 # language: ru
+# encoding: utf-8
 #parent uf:
-@UF2_запуск_сценариев_на_выполнение
+@UF9_Вспомогательные_фичи
 #parent ua:
-@UA15_управлять_SikuliX
+@UA28_Макеты_для_SikuliX
 
 @IgnoreOnCIMainBuild
 @ExportScenarios

@@ -9203,6 +9203,40 @@ This is available only if the form contains only one element with the specified 
 														</Title>
 													</ExtendedTooltip>
 												</CheckBoxField>
+												<CheckBoxField name="ИспользоватьКомпоненту1cWinCtrl" id="2320">
+													<DataPath>Объект.ИспользоватьКомпоненту1cWinCtrl</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ИспользоватьКомпоненту1cWinCtrlКонтекстноеМеню" id="2321"/>
+													<ExtendedTooltip name="ИспользоватьКомпоненту1cWinCtrlРасширеннаяПодсказка" id="2322">
+														<Title formatted="true">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Предназначена для управления окнами Windows и Linux. 
+Возможности:
+- Получение списка окон и списка процессов
+- Управление размерами и положением окна
+- Получение снимка окна и снимка экрана
+
+https://github.com/lintest/1cWinCtrl</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Designed to manage windows in Win and Linux.
+Opportunities:
+- Getting a list of windows and a list of processes
+- Control the size and position of the window
+- Getting a screenshot of the window and screenshot
+
+&lt;link https://github.com/lintest/1cWinCtrl&gt;https://github.com/lintest/1cWinCtrl&lt;/&gt;</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+													<Events>
+														<Event name="OnChange">ИспользоватьКомпоненту1cWinCtrlПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
 												<UsualGroup name="Группа1cWinCtrl" id="2267">
 													<Title>
 														<v8:item>
@@ -9220,109 +9254,12 @@ This is available only if the form contains only one element with the specified 
 													<ShowTitle>false</ShowTitle>
 													<ExtendedTooltip name="Группа1cWinCtrlРасширеннаяПодсказка" id="2268"/>
 													<ChildItems>
-														<CheckBoxField name="ИспользоватьКомпоненту1cWinCtrl" id="2261">
-															<DataPath>Объект.ИспользоватьКомпоненту1cWinCtrl</DataPath>
-															<TitleLocation>Right</TitleLocation>
-															<ToolTipRepresentation>Button</ToolTipRepresentation>
-															<CheckBoxType>Auto</CheckBoxType>
-															<ContextMenu name="ИспользоватьКомпоненту1cWinCtrlКонтекстноеМеню" id="2262"/>
-															<ExtendedTooltip name="ИспользоватьКомпоненту1cWinCtrlРасширеннаяПодсказка" id="2263">
-																<Title formatted="true">
-																	<v8:item>
-																		<v8:lang>ru</v8:lang>
-																		<v8:content>Предназначена для управления окнами Windows и Linux. 
-Возможности:
-- Получение списка окон и списка процессов
-- Управление размерами и положением окна
-- Получение снимка окна и снимка экрана
-
-&lt;link https://github.com/lintest/1cWinCtrl&gt;https://github.com/lintest/1cWinCtrl&lt;/&gt;
-</v8:content>
-																	</v8:item>
-																</Title>
-															</ExtendedTooltip>
-															<Events>
-																<Event name="OnChange">ИспользоватьКомпоненту1cWinCtrlПриИзменении</Event>
-															</Events>
-														</CheckBoxField>
 														<LabelDecoration name="ДекорацияВерсия1cWinCtrl" id="2269">
 															<ContextMenu name="ДекорацияВерсия1cWinCtrlКонтекстноеМеню" id="2270"/>
 															<ExtendedTooltip name="ДекорацияВерсия1cWinCtrlРасширеннаяПодсказка" id="2271"/>
 														</LabelDecoration>
 													</ChildItems>
 												</UsualGroup>
-												<CheckBoxField name="ИспользоватьВнешнююКомпонентуДляСкриншотов" id="2248">
-													<DataPath>Объект.ИспользоватьВнешнююКомпонентуДляСкриншотов</DataPath>
-													<Title>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Скриншоты внешней компонентой</v8:content>
-														</v8:item>
-													</Title>
-													<TitleLocation>Right</TitleLocation>
-													<ToolTipRepresentation>Button</ToolTipRepresentation>
-													<CheckBoxType>Auto</CheckBoxType>
-													<ContextMenu name="ИспользоватьВнешнююКомпонентуДляСкриншотовКонтекстноеМеню" id="2249"/>
-													<ExtendedTooltip name="ИспользоватьВнешнююКомпонентуДляСкриншотовРасширеннаяПодсказка" id="2250">
-														<Title formatted="false">
-															<v8:item>
-																<v8:lang>ru</v8:lang>
-																<v8:content>Для снятия скриншотов используется компонента 1cWinCtrl вместо приложения IrfanView.</v8:content>
-															</v8:item>
-														</Title>
-													</ExtendedTooltip>
-												</CheckBoxField>
-												<InputField name="СпособСнятияСкриншотовВнешнейКомпонентой" id="2253">
-													<DataPath>Объект.СпособСнятияСкриншотовВнешнейКомпонентой</DataPath>
-													<Title>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Способ снятия скриншотов внешним модулем</v8:content>
-														</v8:item>
-													</Title>
-													<TitleLocation>Left</TitleLocation>
-													<ToolTipRepresentation>Button</ToolTipRepresentation>
-													<Width>40</Width>
-													<ListChoiceMode>true</ListChoiceMode>
-													<ChoiceList>
-														<xr:Item>
-															<xr:Presentation/>
-															<xr:CheckState>0</xr:CheckState>
-															<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																<Presentation>
-																	<v8:item>
-																		<v8:lang>ru</v8:lang>
-																		<v8:content>Весь экран</v8:content>
-																	</v8:item>
-																</Presentation>
-																<Value xsi:type="xs:decimal">0</Value>
-															</xr:Value>
-														</xr:Item>
-														<xr:Item>
-															<xr:Presentation/>
-															<xr:CheckState>0</xr:CheckState>
-															<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																<Presentation>
-																	<v8:item>
-																		<v8:lang>ru</v8:lang>
-																		<v8:content>Текущее окно клиента тестирования</v8:content>
-																	</v8:item>
-																</Presentation>
-																<Value xsi:type="xs:decimal">1</Value>
-															</xr:Value>
-														</xr:Item>
-													</ChoiceList>
-													<ContextMenu name="СпособСнятияСкриншотовВнешнейКомпонентойКонтекстноеМеню" id="2254"/>
-													<ExtendedTooltip name="СпособСнятияСкриншотовВнешнейКомпонентойРасширеннаяПодсказка" id="2255">
-														<Title formatted="true">
-															<v8:item>
-																<v8:lang>ru</v8:lang>
-																<v8:content>&lt;b&gt;Весь экран&lt;/&gt; - получает скриншот всего экрана, включая панель задач Windows.
-&lt;b&gt;Текущее окно клиента тестирования&lt;/&gt; - получает скриншот только активного окна клиента тестирования.</v8:content>
-															</v8:item>
-														</Title>
-													</ExtendedTooltip>
-												</InputField>
 												<UsualGroup name="ГруппаОбновлятьДерево" id="1836">
 													<Title>
 														<v8:item>
@@ -9339,115 +9276,6 @@ This is available only if the form contains only one element with the specified 
 													<ShowTitle>false</ShowTitle>
 													<ExtendedTooltip name="ГруппаОбновлятьДеревоРасширеннаяПодсказка" id="1837"/>
 												</UsualGroup>
-												<InputField name="КомандаСделатьСкриншот" id="500">
-													<DataPath>Объект.КомандаСделатьСкриншот</DataPath>
-													<Title>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Команда создания скриншотов</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>en</v8:lang>
-															<v8:content>Console command on screenshots create</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>am</v8:lang>
-															<v8:content>መሥሪያ ትዕዛዝ ለመፍጠር ቅጽበታዊ ገጽ እይታዎች</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>az</v8:lang>
-															<v8:content>Консольная komanda yaratmaq ekran</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>bg</v8:lang>
-															<v8:content>Конзолната команда създаване на скрийншоти</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>et</v8:lang>
-															<v8:content>Konsooli käsk luua ekraanikuvasid</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>fr</v8:lang>
-															<v8:content>La commande de création de captures d'écran</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>ka</v8:lang>
-															<v8:content>Console command შექმნათ პროფესიონალური</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>de</v8:lang>
-															<v8:content>Konsolenbefehl erstellen von screenshots</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>hu</v8:lang>
-															<v8:content>Konzol parancs, hogy hozzon létre screenshotok</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>it</v8:lang>
-															<v8:content>Riga di comando per la creazione di screenshot</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>lv</v8:lang>
-															<v8:content>Konsole komanda radītu ekrānšāviņi</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>lt</v8:lang>
-															<v8:content>Konsolės komanda sukurti vaizdus</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>mn</v8:lang>
-															<v8:content>Консол тушаал бий болгох дэлгэцийн</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>pl</v8:lang>
-															<v8:content>Konsola drużyna tworzenia zrzutów ekranu</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>ro</v8:lang>
-															<v8:content>Consola de comanda a crea capturi de ecran</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>sl</v8:lang>
-															<v8:content>Konzola ukaz, da ustvarite screenshots</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>es</v8:lang>
-															<v8:content>Comando de consola crear capturas de pantalla</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>sv</v8:lang>
-															<v8:content>Console för att skapa skärmdumpar</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>tr</v8:lang>
-															<v8:content>Konsol komutu oluşturmak ekran görüntüleri</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>vi</v8:lang>
-															<v8:content>Lệnh điều khiển tạo ảnh chụp màn hình</v8:content>
-														</v8:item>
-													</Title>
-													<ToolTipRepresentation>Button</ToolTipRepresentation>
-													<ContextMenu name="КомандаСделатьСкриншотКонтекстноеМеню" id="501"/>
-													<ExtendedTooltip name="КомандаСделатьСкриншотРасширеннаяПодсказка" id="1402">
-														<Title formatted="true">
-															<v8:item>
-																<v8:lang>ru</v8:lang>
-																<v8:content>В поле указывается консольная команда, которая будет использоваться при снятии скриншотов.
-Например:
-1. &lt;b&gt;"C:\Program Files (x86)\IrfanView\i_view32.exe" /capture=1 /convert=&lt;/&gt;
-2. &lt;b&gt;nircmd savescreenshot&lt;/&gt;</v8:content>
-															</v8:item>
-															<v8:item>
-																<v8:lang>en</v8:lang>
-																<v8:content>Specify the command line used to create the screenshots.
-E.g.:
-1. &lt;b&gt;"C:\Program Files (x86)\IrfanView\i_view32.exe" /capture=1 /convert=&lt;/&gt;
-2. &lt;b&gt;nircmd savescreenshot&lt;/&gt;</v8:content>
-															</v8:item>
-														</Title>
-													</ExtendedTooltip>
-												</InputField>
 												<InputField name="КаталогИнструментов" id="380">
 													<DataPath>Объект.КаталогИнструментов</DataPath>
 													<Title>
@@ -10543,7 +10371,7 @@ When working with Vanessa Automation Single it is allowed to leave the field bla
 																<Title formatted="false">
 																	<v8:item>
 																		<v8:lang>ru</v8:lang>
-																		<v8:content>Если флаг установлен, то при запуске клиента тестирования уму будут переданы дополнительные ключи запуска /debug и /debuggerURL</v8:content>
+																		<v8:content>Если флаг установлен, то при запуске клиента тестирования ему будут переданы дополнительные ключи запуска /debug и /debuggerURL</v8:content>
 																	</v8:item>
 																	<v8:item>
 																		<v8:lang>en</v8:lang>
@@ -11256,6 +11084,610 @@ This option slow the execution down .</v8:content>
 												</InputField>
 											</ChildItems>
 										</Page>
+										<Page name="СтраницаСкриншоты" id="2275">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Скриншоты</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>ScreenShots</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страница скриншоты</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="СтраницаСкриншотыРасширеннаяПодсказка" id="2276"/>
+											<ChildItems>
+												<CheckBoxField name="ДелатьСкриншотПриВозникновенииОшибки" id="2279">
+													<DataPath>Объект.ДелатьСкриншотПриВозникновенииОшибки</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Формировать скриншот при ошибке</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Create screnshoots on exception</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>am</v8:lang>
+															<v8:content>አንድ ግምገማ ቅድሚያ ከሌሎች ስህተት</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>az</v8:lang>
+															<v8:content>Formalaşdırmaq ekran zamanı səhv</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>bg</v8:lang>
+															<v8:content>Формиране на екрана при грешка</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>et</v8:lang>
+															<v8:content>Kujundada screenshot kui viga</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>fr</v8:lang>
+															<v8:content>Former une capture d'écran en cas d'erreur</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ka</v8:lang>
+															<v8:content>გენერირება screenshot შეცდომა</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>de</v8:lang>
+															<v8:content>Formung, wenn eine Fehlermeldung Screenshot</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>hu</v8:lang>
+															<v8:content>Hogy létrehoz egy screenshot a hiba</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>it</v8:lang>
+															<v8:content>Formazione screenshot in caso di errore</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>lv</v8:lang>
+															<v8:content>Formēt screenshot, kad kļūda</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>lt</v8:lang>
+															<v8:content>Formuoti screenshot, kai klaida</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>mn</v8:lang>
+															<v8:content>Бий болгох нь дэлгэцийн алдаа</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>pl</v8:lang>
+															<v8:content>Kształtować zrzut ekranu w błędzie</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ro</v8:lang>
+															<v8:content>Pentru a forma o captură de ecran în caz de eroare</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>sl</v8:lang>
+															<v8:content>Za ustvarjanje screenshot z napako</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>es</v8:lang>
+															<v8:content>Formar una captura de pantalla en caso de error</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>sv</v8:lang>
+															<v8:content>För att skapa en skärmdump med felet</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>tr</v8:lang>
+															<v8:content>Şekillendirme ekran hatası</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>vi</v8:lang>
+															<v8:content>Tạo ảnh chụp màn hình khi lỗi</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Right</TitleLocation>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ДелатьСкриншотПриВозникновенииОшибкиКонтекстноеМеню" id="2280"/>
+													<ExtendedTooltip name="ДелатьСкриншотПриВозникновенииОшибкиРасширеннаяПодсказка" id="2281">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Включает снятие скриншотов при возникновении ошибки.
+Для работы опции необходимо, чтобы было заполнено поле "Команда создания скриншотов" либо подключена внешняя компонента 1cWinCtrl в зависимости от настроек.</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Switches on snapshot creating on error.
+The field "Snapshot creation command" must be filled for this option, or 1cWinCtrl is used for this option.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+													<Events>
+														<Event name="OnChange">ДелатьСкриншотПриВозникновенииОшибкиПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<CheckBoxField name="СниматьСкриншотКаждогоОкна1С" id="2284">
+													<DataPath>Объект.СниматьСкриншотКаждогоОкна1С</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Снимать скриншот каждого окна 1С</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Take every window screenshot</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>am</v8:lang>
+															<v8:content>ማስጠንቀቂያ ቅድሚያ የሚሰጡዋቸውን መስኮት 1C</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>az</v8:lang>
+															<v8:content>Şəkil çəkmək üçün ekran və hər bir windows, 1C</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>bg</v8:lang>
+															<v8:content>Снима екрана на всеки прозорец 1C</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>et</v8:lang>
+															<v8:content>Tulistada screenshot iga akna 1S</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>fr</v8:lang>
+															<v8:content>Retirer la capture d'écran de chaque fenêtre 1S</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ka</v8:lang>
+															<v8:content>მიიღოს სკრინშოტი თითოეული ფანჯარა 1C</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>de</v8:lang>
+															<v8:content>Schießen Screenshot jedes Fenster 1S</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>hu</v8:lang>
+															<v8:content>Egy screenshot minden ablak 1C</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>it</v8:lang>
+															<v8:content>Scattare uno screenshot di ogni finestra 1S</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>lv</v8:lang>
+															<v8:content>Uzņemt screenshot no katra loga 1C</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>lt</v8:lang>
+															<v8:content>Šaudyti screenshot kiekvieno lango 1</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>mn</v8:lang>
+															<v8:content>Онцлог нь дэлгэцийн авах, тус бүрийн цонх 1C</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>pl</v8:lang>
+															<v8:content>Zrob zrzut ekranu z każdego okna 1C</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ro</v8:lang>
+															<v8:content>Pentru a trage un screenshot de la fiecare fereastră 1C</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>sl</v8:lang>
+															<v8:content>Posnetek zaslona vsako okno 1C</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>es</v8:lang>
+															<v8:content>Retirar la captura de pantalla de cada una de las ventanas 1S</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>sv</v8:lang>
+															<v8:content>Ta en skärmdump av varje fönster 1C</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>tr</v8:lang>
+															<v8:content>Ateş ekran görüntüsü her pencere 1C</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>vi</v8:lang>
+															<v8:content>Lấy ra ảnh chụp màn hình mỗi cửa sổ 1C</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Right</TitleLocation>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="СниматьСкриншотКаждогоОкна1СКонтекстноеМеню" id="2285"/>
+													<ExtendedTooltip name="СниматьСкриншотКаждогоОкна1СРасширеннаяПодсказка" id="2286">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Включает снятие скриншотов с каждого окна 1С при возникновении ошибки.
+Для работы опции используется SikuliX либо внешняя компонента 1cWinCtrl в зависимости от настроек.</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Switches on snapshot creation for each 1C window when an error occurs.
+SikuliX or 1cWinCtrl is used for this option.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+												</CheckBoxField>
+												<CheckBoxField name="ИспользоватьКомпоненту1cWinCtrl1" id="2299">
+													<DataPath>Объект.ИспользоватьКомпоненту1cWinCtrl</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ИспользоватьКомпоненту1cWinCtrl1КонтекстноеМеню" id="2300"/>
+													<ExtendedTooltip name="ИспользоватьКомпоненту1cWinCtrl1РасширеннаяПодсказка" id="2301">
+														<Title formatted="true">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Предназначена для управления окнами Windows и Linux. 
+Возможности:
+- Получение списка окон и списка процессов
+- Управление размерами и положением окна
+- Получение снимка окна и снимка экрана
+
+&lt;link https://github.com/lintest/1cWinCtrl&gt;https://github.com/lintest/1cWinCtrl&lt;/&gt;</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Designed to manage windows in Win and Linux.
+Opportunities:
+- Getting a list of windows and a list of processes
+- Control the size and position of the window
+- Getting a screenshot of the window and screenshot
+
+&lt;link https://github.com/lintest/1cWinCtrl&gt;https://github.com/lintest/1cWinCtrl&lt;/&gt;</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+													<Events>
+														<Event name="OnChange">ИспользоватьКомпоненту1cWinCtrlПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<CheckBoxField name="ИспользоватьВнешнююКомпонентуДляСкриншотов" id="2290">
+													<DataPath>Объект.ИспользоватьВнешнююКомпонентуДляСкриншотов</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Скриншоты внешней компонентой</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Right</TitleLocation>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ИспользоватьВнешнююКомпонентуДляСкриншотовКонтекстноеМеню" id="2291"/>
+													<ExtendedTooltip name="ИспользоватьВнешнююКомпонентуДляСкриншотовРасширеннаяПодсказка" id="2292">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Для снятия скриншотов используется компонента 1cWinCtrl вместо команды создания скриншотов.</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>To take screenshots, use the 1cWinCtrl component instead of the screenshot creation command.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+													<Events>
+														<Event name="OnChange">ИспользоватьВнешнююКомпонентуДляСкриншотовПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<InputField name="СпособСнятияСкриншотовВнешнейКомпонентой" id="2296">
+													<DataPath>Объект.СпособСнятияСкриншотовВнешнейКомпонентой</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Способ снятия скриншотов внешним модулем.</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Method for taking screenshots by an external module.</v8:content>
+														</v8:item>
+													</Title>
+													<TitleLocation>Left</TitleLocation>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<Width>40</Width>
+													<ListChoiceMode>true</ListChoiceMode>
+													<ChoiceList>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Весь экран</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Full Screen</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">0</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Текущее окно клиента тестирования</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Current test client window</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">1</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Все окна клиента тестирования</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>All test client windows</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">2</Value>
+															</xr:Value>
+														</xr:Item>
+													</ChoiceList>
+													<ContextMenu name="СпособСнятияСкриншотовВнешнейКомпонентойКонтекстноеМеню" id="2297"/>
+													<ExtendedTooltip name="СпособСнятияСкриншотовВнешнейКомпонентойРасширеннаяПодсказка" id="2298">
+														<Title formatted="true">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>&lt;b&gt;Весь экран&lt;/&gt; - получает скриншот всего экрана, включая панель задач Windows.
+&lt;b&gt;Текущее окно клиента тестирования&lt;/&gt; - получает скриншот только активного окна клиента тестирования.
+&lt;b&gt;Все окна клиента тестирования&lt;/&gt; - получает скриншот всех окон клиента тестирования</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>&lt;b&gt;Full Screen&lt;/&gt; - Gets a screenshot of the entire screen, including the Windows taskbar.
+&lt;b&gt;Current test client window&lt;/&gt; - receives a screenshot of only the active test client window.
+&lt;b&gt;All test client windows&lt;/&gt; - gets a screenshot of all test client windows.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+												</InputField>
+												<InputField name="КомандаСделатьСкриншот" id="2293">
+													<DataPath>Объект.КомандаСделатьСкриншот</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Команда создания скриншотов</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Console command on screenshots create</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>am</v8:lang>
+															<v8:content>መሥሪያ ትዕዛዝ ለመፍጠር ቅጽበታዊ ገጽ እይታዎች</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>az</v8:lang>
+															<v8:content>Консольная komanda yaratmaq ekran</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>bg</v8:lang>
+															<v8:content>Конзолната команда създаване на скрийншоти</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>et</v8:lang>
+															<v8:content>Konsooli käsk luua ekraanikuvasid</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>fr</v8:lang>
+															<v8:content>La commande de création de captures d'écran</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ka</v8:lang>
+															<v8:content>Console command შექმნათ პროფესიონალური</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>de</v8:lang>
+															<v8:content>Konsolenbefehl erstellen von screenshots</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>hu</v8:lang>
+															<v8:content>Konzol parancs, hogy hozzon létre screenshotok</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>it</v8:lang>
+															<v8:content>Riga di comando per la creazione di screenshot</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>lv</v8:lang>
+															<v8:content>Konsole komanda radītu ekrānšāviņi</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>lt</v8:lang>
+															<v8:content>Konsolės komanda sukurti vaizdus</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>mn</v8:lang>
+															<v8:content>Консол тушаал бий болгох дэлгэцийн</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>pl</v8:lang>
+															<v8:content>Konsola drużyna tworzenia zrzutów ekranu</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ro</v8:lang>
+															<v8:content>Consola de comanda a crea capturi de ecran</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>sl</v8:lang>
+															<v8:content>Konzola ukaz, da ustvarite screenshots</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>es</v8:lang>
+															<v8:content>Comando de consola crear capturas de pantalla</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>sv</v8:lang>
+															<v8:content>Console för att skapa skärmdumpar</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>tr</v8:lang>
+															<v8:content>Konsol komutu oluşturmak ekran görüntüleri</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>vi</v8:lang>
+															<v8:content>Lệnh điều khiển tạo ảnh chụp màn hình</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<ContextMenu name="КомандаСделатьСкриншотКонтекстноеМеню" id="2294"/>
+													<ExtendedTooltip name="КомандаСделатьСкриншотРасширеннаяПодсказка" id="2295">
+														<Title formatted="true">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>В поле указывается консольная команда, которая будет использоваться при снятии скриншотов.
+Например:
+1. &lt;b&gt;"C:\Program Files (x86)\IrfanView\i_view32.exe" /capture=1 /convert=&lt;/&gt;
+2. &lt;b&gt;nircmd savescreenshot&lt;/&gt;</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Specify the command line used to create the screenshots.
+E.g.:
+1. &lt;b&gt;"C:\Program Files (x86)\IrfanView\i_view32.exe" /capture=1 /convert=&lt;/&gt;
+2. &lt;b&gt;nircmd savescreenshot&lt;/&gt;</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+												</InputField>
+												<InputField name="КаталогВыгрузкиСкриншотов" id="2287">
+													<DataPath>Объект.КаталогВыгрузкиСкриншотов</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Временный каталог скриншотов</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Temp directory for screenshoots</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>am</v8:lang>
+															<v8:content>ጊዜያዊ ማውጫ ጋር ቅጽበታዊ ገጽ እይታዎች</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>az</v8:lang>
+															<v8:content>Müvəqqəti kataloq ekran saxlamaq</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>bg</v8:lang>
+															<v8:content>Временната директория за запазване на скрийншотове</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>et</v8:lang>
+															<v8:content>Temp kataloogi salvestada pildid</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>fr</v8:lang>
+															<v8:content>Un répertoire temporaire enregistrer des captures d'écran</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ka</v8:lang>
+															<v8:content>დროებითი დირექტორია გადარჩენა ეკრანის</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>de</v8:lang>
+															<v8:content>Temporäres Verzeichnis speichern screenshots</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>hu</v8:lang>
+															<v8:content>Ideiglenes könyvtárba menteni screenshotok</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>it</v8:lang>
+															<v8:content>Una directory temporanea salvare gli screenshot</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>lv</v8:lang>
+															<v8:content>Pagaidu direktoriju saglabātu ekrānšāviņi</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>lt</v8:lang>
+															<v8:content>Laikiną katalogą išsaugoti vaizdus</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>mn</v8:lang>
+															<v8:content>Түр зуурын сан аврахын тулд дэлгэцийн</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>pl</v8:lang>
+															<v8:content>Tymczasowy katalog zapisywania zrzutów ekranu</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ro</v8:lang>
+															<v8:content>Directorul temporar a salva capturi de ecran</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>sl</v8:lang>
+															<v8:content>Začasno mapo za shranjevanje posnetkov zaslona</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>es</v8:lang>
+															<v8:content>Un directorio temporal para guardar capturas de pantalla</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>sv</v8:lang>
+															<v8:content>Temporär katalog för att spara skärmdumparna</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>tr</v8:lang>
+															<v8:content>Geçici bir dizine ekran görüntülerini kaydetmek</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>vi</v8:lang>
+															<v8:content>Thư mục tạm thời lưu ảnh chụp màn hình</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<ChoiceButton>true</ChoiceButton>
+													<ClearButton>true</ClearButton>
+													<ContextMenu name="КаталогВыгрузкиСкриншотовКонтекстноеМеню" id="2288"/>
+													<ExtendedTooltip name="КаталогВыгрузкиСкриншотовРасширеннаяПодсказка" id="2289">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Каталог, в который будут складываться скриншоты.</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Snapshots directory.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+													<Events>
+														<Event name="StartChoice">КаталогOutputСкриншотыНачалоВыбора</Event>
+													</Events>
+												</InputField>
+											</ChildItems>
+										</Page>
 										<Page name="СтраницаОтчетыОЗапуске" id="654">
 											<Title>
 												<v8:item>
@@ -11421,368 +11853,6 @@ This option slow the execution down .</v8:content>
 														</Title>
 													</ExtendedTooltip>
 												</InputField>
-												<UsualGroup name="ГруппаСкриншоты" id="1534">
-													<Title>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Скриншоты</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>en</v8:lang>
-															<v8:content>Screenshots</v8:content>
-														</v8:item>
-													</Title>
-													<Group>Vertical</Group>
-													<Behavior>Collapsible</Behavior>
-													<ControlRepresentation>Picture</ControlRepresentation>
-													<ExtendedTooltip name="ГруппаСкриншотыРасширеннаяПодсказка" id="1535"/>
-													<ChildItems>
-														<CheckBoxField name="ДелатьСкриншотПриВозникновенииОшибки" id="507">
-															<DataPath>Объект.ДелатьСкриншотПриВозникновенииОшибки</DataPath>
-															<Title>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Формировать скриншот при ошибке</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>en</v8:lang>
-																	<v8:content>Create screnshoots on exception</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>am</v8:lang>
-																	<v8:content>አንድ ግምገማ ቅድሚያ ከሌሎች ስህተት</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>az</v8:lang>
-																	<v8:content>Formalaşdırmaq ekran zamanı səhv</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>bg</v8:lang>
-																	<v8:content>Формиране на екрана при грешка</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>et</v8:lang>
-																	<v8:content>Kujundada screenshot kui viga</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>fr</v8:lang>
-																	<v8:content>Former une capture d'écran en cas d'erreur</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>ka</v8:lang>
-																	<v8:content>გენერირება screenshot შეცდომა</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>de</v8:lang>
-																	<v8:content>Formung, wenn eine Fehlermeldung Screenshot</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>hu</v8:lang>
-																	<v8:content>Hogy létrehoz egy screenshot a hiba</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>it</v8:lang>
-																	<v8:content>Formazione screenshot in caso di errore</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>lv</v8:lang>
-																	<v8:content>Formēt screenshot, kad kļūda</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>lt</v8:lang>
-																	<v8:content>Formuoti screenshot, kai klaida</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>mn</v8:lang>
-																	<v8:content>Бий болгох нь дэлгэцийн алдаа</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>pl</v8:lang>
-																	<v8:content>Kształtować zrzut ekranu w błędzie</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>ro</v8:lang>
-																	<v8:content>Pentru a forma o captură de ecran în caz de eroare</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>sl</v8:lang>
-																	<v8:content>Za ustvarjanje screenshot z napako</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>es</v8:lang>
-																	<v8:content>Formar una captura de pantalla en caso de error</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>sv</v8:lang>
-																	<v8:content>För att skapa en skärmdump med felet</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>tr</v8:lang>
-																	<v8:content>Şekillendirme ekran hatası</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>vi</v8:lang>
-																	<v8:content>Tạo ảnh chụp màn hình khi lỗi</v8:content>
-																</v8:item>
-															</Title>
-															<TitleLocation>Right</TitleLocation>
-															<ToolTipRepresentation>Button</ToolTipRepresentation>
-															<CheckBoxType>Auto</CheckBoxType>
-															<ContextMenu name="ДелатьСкриншотПриВозникновенииОшибкиКонтекстноеМеню" id="508"/>
-															<ExtendedTooltip name="ДелатьСкриншотПриВозникновенииОшибкиРасширеннаяПодсказка" id="1391">
-																<Title formatted="false">
-																	<v8:item>
-																		<v8:lang>ru</v8:lang>
-																		<v8:content>Включает снятие скриншотов при возникновении ошибки.
-Для работы опции необходимо, чтобы было заполнено поле "Команда создания скриншотов".</v8:content>
-																	</v8:item>
-																	<v8:item>
-																		<v8:lang>en</v8:lang>
-																		<v8:content>Switches on snapshot creating on error.
-The field "Snapshot creation command" must be filled for this option.</v8:content>
-																	</v8:item>
-																</Title>
-															</ExtendedTooltip>
-															<Events>
-																<Event name="OnChange">ДелатьСкриншотПриВозникновенииОшибкиПриИзменении</Event>
-															</Events>
-														</CheckBoxField>
-														<UsualGroup name="ГруппаСкриншотыНастройки" id="2045">
-															<Title>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Скриншоты настройки</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>en</v8:lang>
-																	<v8:content>Screenshots of the settings</v8:content>
-																</v8:item>
-															</Title>
-															<Group>Vertical</Group>
-															<Representation>None</Representation>
-															<ShowTitle>false</ShowTitle>
-															<ThroughAlign>Use</ThroughAlign>
-															<ExtendedTooltip name="ГруппаСкриншотыНастройкиРасширеннаяПодсказка" id="2046"/>
-															<ChildItems>
-																<CheckBoxField name="СниматьСкриншотКаждогоОкна1С" id="1581">
-																	<DataPath>Объект.СниматьСкриншотКаждогоОкна1С</DataPath>
-																	<Title>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Снимать скриншот каждого окна 1С</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>en</v8:lang>
-																			<v8:content>Take every window screenshot</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>am</v8:lang>
-																			<v8:content>ማስጠንቀቂያ ቅድሚያ የሚሰጡዋቸውን መስኮት 1C</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>az</v8:lang>
-																			<v8:content>Şəkil çəkmək üçün ekran və hər bir windows, 1C</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>bg</v8:lang>
-																			<v8:content>Снима екрана на всеки прозорец 1C</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>et</v8:lang>
-																			<v8:content>Tulistada screenshot iga akna 1S</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>fr</v8:lang>
-																			<v8:content>Retirer la capture d'écran de chaque fenêtre 1S</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>ka</v8:lang>
-																			<v8:content>მიიღოს სკრინშოტი თითოეული ფანჯარა 1C</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>de</v8:lang>
-																			<v8:content>Schießen Screenshot jedes Fenster 1S</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>hu</v8:lang>
-																			<v8:content>Egy screenshot minden ablak 1C</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>it</v8:lang>
-																			<v8:content>Scattare uno screenshot di ogni finestra 1S</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>lv</v8:lang>
-																			<v8:content>Uzņemt screenshot no katra loga 1C</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>lt</v8:lang>
-																			<v8:content>Šaudyti screenshot kiekvieno lango 1</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>mn</v8:lang>
-																			<v8:content>Онцлог нь дэлгэцийн авах, тус бүрийн цонх 1C</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>pl</v8:lang>
-																			<v8:content>Zrob zrzut ekranu z każdego okna 1C</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>ro</v8:lang>
-																			<v8:content>Pentru a trage un screenshot de la fiecare fereastră 1C</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>sl</v8:lang>
-																			<v8:content>Posnetek zaslona vsako okno 1C</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>es</v8:lang>
-																			<v8:content>Retirar la captura de pantalla de cada una de las ventanas 1S</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>sv</v8:lang>
-																			<v8:content>Ta en skärmdump av varje fönster 1C</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>tr</v8:lang>
-																			<v8:content>Ateş ekran görüntüsü her pencere 1C</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>vi</v8:lang>
-																			<v8:content>Lấy ra ảnh chụp màn hình mỗi cửa sổ 1C</v8:content>
-																		</v8:item>
-																	</Title>
-																	<TitleLocation>Right</TitleLocation>
-																	<ToolTipRepresentation>Button</ToolTipRepresentation>
-																	<CheckBoxType>Auto</CheckBoxType>
-																	<ContextMenu name="СниматьСкриншотКаждогоОкна1СКонтекстноеМеню" id="1582"/>
-																	<ExtendedTooltip name="СниматьСкриншотКаждогоОкна1СРасширеннаяПодсказка" id="1583">
-																		<Title formatted="false">
-																			<v8:item>
-																				<v8:lang>ru</v8:lang>
-																				<v8:content>Включает снятие скриншотов с каждого окна 1С.
-Для работы опции используется SikuliX.</v8:content>
-																			</v8:item>
-																			<v8:item>
-																				<v8:lang>en</v8:lang>
-																				<v8:content>Switches on snapshot creation for each 1C window.
-SikuliX is used for this option.</v8:content>
-																			</v8:item>
-																		</Title>
-																	</ExtendedTooltip>
-																</CheckBoxField>
-																<InputField name="КаталогВыгрузкиСкриншотов" id="510">
-																	<DataPath>Объект.КаталогВыгрузкиСкриншотов</DataPath>
-																	<Title>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Временный каталог скриншотов</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>en</v8:lang>
-																			<v8:content>Temp directory for screenshoots</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>am</v8:lang>
-																			<v8:content>ጊዜያዊ ማውጫ ጋር ቅጽበታዊ ገጽ እይታዎች</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>az</v8:lang>
-																			<v8:content>Müvəqqəti kataloq ekran saxlamaq</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>bg</v8:lang>
-																			<v8:content>Временната директория за запазване на скрийншотове</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>et</v8:lang>
-																			<v8:content>Temp kataloogi salvestada pildid</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>fr</v8:lang>
-																			<v8:content>Un répertoire temporaire enregistrer des captures d'écran</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>ka</v8:lang>
-																			<v8:content>დროებითი დირექტორია გადარჩენა ეკრანის</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>de</v8:lang>
-																			<v8:content>Temporäres Verzeichnis speichern screenshots</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>hu</v8:lang>
-																			<v8:content>Ideiglenes könyvtárba menteni screenshotok</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>it</v8:lang>
-																			<v8:content>Una directory temporanea salvare gli screenshot</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>lv</v8:lang>
-																			<v8:content>Pagaidu direktoriju saglabātu ekrānšāviņi</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>lt</v8:lang>
-																			<v8:content>Laikiną katalogą išsaugoti vaizdus</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>mn</v8:lang>
-																			<v8:content>Түр зуурын сан аврахын тулд дэлгэцийн</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>pl</v8:lang>
-																			<v8:content>Tymczasowy katalog zapisywania zrzutów ekranu</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>ro</v8:lang>
-																			<v8:content>Directorul temporar a salva capturi de ecran</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>sl</v8:lang>
-																			<v8:content>Začasno mapo za shranjevanje posnetkov zaslona</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>es</v8:lang>
-																			<v8:content>Un directorio temporal para guardar capturas de pantalla</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>sv</v8:lang>
-																			<v8:content>Temporär katalog för att spara skärmdumparna</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>tr</v8:lang>
-																			<v8:content>Geçici bir dizine ekran görüntülerini kaydetmek</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>vi</v8:lang>
-																			<v8:content>Thư mục tạm thời lưu ảnh chụp màn hình</v8:content>
-																		</v8:item>
-																	</Title>
-																	<ToolTipRepresentation>Button</ToolTipRepresentation>
-																	<ChoiceButton>true</ChoiceButton>
-																	<ClearButton>true</ClearButton>
-																	<ContextMenu name="КаталогВыгрузкиСкриншотовКонтекстноеМеню" id="511"/>
-																	<ExtendedTooltip name="КаталогВыгрузкиСкриншотовРасширеннаяПодсказка" id="1395">
-																		<Title formatted="false">
-																			<v8:item>
-																				<v8:lang>ru</v8:lang>
-																				<v8:content>Каталог, в который будут складываться скриншоты.</v8:content>
-																			</v8:item>
-																			<v8:item>
-																				<v8:lang>en</v8:lang>
-																				<v8:content>Snapshots directory.</v8:content>
-																			</v8:item>
-																		</Title>
-																	</ExtendedTooltip>
-																	<Events>
-																		<Event name="StartChoice">КаталогOutputСкриншотыНачалоВыбора</Event>
-																	</Events>
-																</InputField>
-															</ChildItems>
-														</UsualGroup>
-													</ChildItems>
-												</UsualGroup>
 												<UsualGroup name="ГруппаЛогТекст" id="1542">
 													<Title>
 														<v8:item>
@@ -11966,6 +12036,42 @@ Log events:
 																</Title>
 															</ExtendedTooltip>
 														</CheckBoxField>
+														<CheckBoxField name="СобиратьДанныеОСетевыхСоединениях" id="2308">
+															<DataPath>Объект.СобиратьДанныеОСетевыхСоединениях</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="СобиратьДанныеОСетевыхСоединенияхКонтекстноеМеню" id="2309"/>
+															<ExtendedTooltip name="СобиратьДанныеОСетевыхСоединенияхРасширеннаяПодсказка" id="2310">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>If the option is enabled, then when an error occurs, data will be collected on the network connections of the PC on which the tests were run.</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Если опция включена, то при возникновении ошибки будут собраны данные о сетевых соединениях ПК, на котором запускались тесты.</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+														</CheckBoxField>
+														<CheckBoxField name="СобиратьДанныеОПроцессахОС" id="2311">
+															<DataPath>Объект.СобиратьДанныеОПроцессахОС</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="СобиратьДанныеОПроцессахОСКонтекстноеМеню" id="2312"/>
+															<ExtendedTooltip name="СобиратьДанныеОПроцессахОСРасширеннаяПодсказка" id="2313">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>If the option is enabled, then when an error occurs, data on running OS processes will be collected.</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Если опция включена, то при возникновении ошибки будут собраны данные о запущенных процессах ОС.</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+														</CheckBoxField>
 														<InputField name="ИмяКаталогаЛогОшибок" id="1758">
 															<DataPath>Объект.ИмяКаталогаЛогОшибок</DataPath>
 															<ToolTipRepresentation>Button</ToolTipRepresentation>
@@ -12092,7 +12198,7 @@ Log events:
 																<Title formatted="false">
 																	<v8:item>
 																		<v8:lang>ru</v8:lang>
-																		<v8:content>Включаеи вывод отчет о запуске сценариев во внутреннем формате.</v8:content>
+																		<v8:content>Включает вывод отчет о запуске сценариев во внутреннем формате.</v8:content>
 																	</v8:item>
 																	<v8:item>
 																		<v8:lang>en</v8:lang>
@@ -12545,6 +12651,82 @@ Log events:
 																							<v8:item>
 																								<v8:lang>en</v8:lang>
 																								<v8:content>Applies the event log to the scenario. Data is taken from the moment the scenario starts.</v8:content>
+																							</v8:item>
+																						</Title>
+																					</ExtendedTooltip>
+																				</CheckBoxField>
+																				<CheckBoxField name="ПрикладыватьКОтчетуAllureДанныеОСостоянииАктивнойФормы" id="2302">
+																					<DataPath>Объект.ПрикладыватьКОтчетуAllureДанныеОСостоянииАктивнойФормы</DataPath>
+																					<TitleLocation>Right</TitleLocation>
+																					<ToolTipRepresentation>Button</ToolTipRepresentation>
+																					<CheckBoxType>Auto</CheckBoxType>
+																					<ContextMenu name="ПрикладыватьКОтчетуAllureДанныеОСостоянииАктивнойФормыКонтекстноеМеню" id="2303"/>
+																					<ExtendedTooltip name="ПрикладыватьКОтчетуAllureДанныеОСостоянииАктивнойФормыРасширеннаяПодсказка" id="2304">
+																						<Title formatted="false">
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Если опция включена, то при возникновении ошибки будут собраны данные о состоянии элементов активной формы в формате xlsx.</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>If the option is on, the status of the elements of the active form will be collected in xlsx format.</v8:content>
+																							</v8:item>
+																						</Title>
+																					</ExtendedTooltip>
+																				</CheckBoxField>
+																				<CheckBoxField name="ПрикладыватьКОтчетуAllureДанныеОСостоянииВсехФорм" id="2305">
+																					<DataPath>Объект.ПрикладыватьКОтчетуAllureДанныеОСостоянииВсехФорм</DataPath>
+																					<TitleLocation>Right</TitleLocation>
+																					<ToolTipRepresentation>Button</ToolTipRepresentation>
+																					<CheckBoxType>Auto</CheckBoxType>
+																					<ContextMenu name="ПрикладыватьКОтчетуAllureДанныеОСостоянииВсехФормКонтекстноеМеню" id="2306"/>
+																					<ExtendedTooltip name="ПрикладыватьКОтчетуAllureДанныеОСостоянииВсехФормРасширеннаяПодсказка" id="2307">
+																						<Title formatted="false">
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Если опция включена, то при возникновении ошибки будут собраны данные о состоянии элементов всех форм открытых в клиенте тестирования в формате xlsx.</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>If the option is on, the status of the elements of all forms opened in TestClient will be collected in xlsx format.</v8:content>
+																							</v8:item>
+																						</Title>
+																					</ExtendedTooltip>
+																				</CheckBoxField>
+																				<CheckBoxField name="ПрикладыватьКОтчетуAllureДанныеОСетевыхСоединениях" id="2314">
+																					<DataPath>Объект.ПрикладыватьКОтчетуAllureДанныеОСетевыхСоединениях</DataPath>
+																					<TitleLocation>Right</TitleLocation>
+																					<ToolTipRepresentation>Button</ToolTipRepresentation>
+																					<CheckBoxType>Auto</CheckBoxType>
+																					<ContextMenu name="ПрикладыватьКОтчетуAllureДанныеОСетевыхСоединенияхКонтекстноеМеню" id="2315"/>
+																					<ExtendedTooltip name="ПрикладыватьКОтчетуAllureДанныеОСетевыхСоединенияхРасширеннаяПодсказка" id="2316">
+																						<Title formatted="false">
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Если опция включена, то при возникновении ошибки будут собраны данные о сетевых соединениях ПК, на котором запускались тесты.</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>If the option is enabled, then when an error occurs, data will be collected on the network connections of the PC on which the tests were run.</v8:content>
+																							</v8:item>
+																						</Title>
+																					</ExtendedTooltip>
+																				</CheckBoxField>
+																				<CheckBoxField name="ПрикладыватьКОтчетуAllureДанныеОПроцессахОС" id="2317">
+																					<DataPath>Объект.ПрикладыватьКОтчетуAllureДанныеОПроцессахОС</DataPath>
+																					<TitleLocation>Right</TitleLocation>
+																					<ToolTipRepresentation>Button</ToolTipRepresentation>
+																					<CheckBoxType>Auto</CheckBoxType>
+																					<ContextMenu name="ПрикладыватьКОтчетуAllureДанныеОПроцессахОСКонтекстноеМеню" id="2318"/>
+																					<ExtendedTooltip name="ПрикладыватьКОтчетуAllureДанныеОПроцессахОСРасширеннаяПодсказка" id="2319">
+																						<Title formatted="false">
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Если опция включена, то при возникновении ошибки будут собраны данные о запущенных процессах ОС.</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>If the option is enabled, then when an error occurs, data on running OS processes will be collected.</v8:content>
 																							</v8:item>
 																						</Title>
 																					</ExtendedTooltip>
@@ -16692,20 +16874,6 @@ Value range is from -10 to 10.</v8:content>
 (Идентификатор каталога - b1gheo81t4a6eаafe5vd)
 
 &lt;link https://cloud.yandex.ru/docs/resource-manager/operations/folder/get-id&gt;Получение идентификатора каталога &lt;/&gt;</v8:content>
-																																	</v8:item>
-																																	<v8:item>
-																																		<v8:lang>en</v8:lang>
-																																		<v8:content>The last part of the path in the address bar in the Internet browser. &lt;colorstyle -14&gt;https://console.cloud.yandex.ru/folders/ИдентификаторКаталога&lt;/&gt;
-
-Required:
-1. In the main window of Yandex.Cloud click &lt;colorstyle -3&gt;link "&lt;/&gt;&lt;colorstyle -3&gt;Go to the current directory&lt;/&gt;&lt;colorstyle -3&gt;".&lt;/&gt;
-2. Copy the last part of the path from address bar
-
-Example: 
-&lt;colorstyle -14&gt;https://console.cloud.yandex.ru/folders/b1gheo81t4a6eаafe5vd&lt;/&gt;
-(The ID of the catalog b1gheo81t4a6eаafe5vd)
-
-&lt;link https://cloud.yandex.ru/docs/resource-manager/operations/folder/get-id&gt;getting a directory identifier &lt;/&gt;</v8:content>
 																																	</v8:item>
 																																</Title>
 																															</ExtendedTooltip>
@@ -21073,7 +21241,13 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 		<Attribute name="СтатусыРезультатаТестирования" id="3">
 			<Type/>
 		</Attribute>
-		<Attribute name="ЕстьПоддержкаАсинхронныхВызовов" id="10">
+		<Attribute name="ЗапрещеныСинхронныеВызовы" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запрещены синхронные вызовы</v8:content>
+				</v8:item>
+			</Title>
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
