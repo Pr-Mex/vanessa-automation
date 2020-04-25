@@ -10467,6 +10467,75 @@ When working with Vanessa Automation Single it is allowed to leave the field bla
 														</UsualGroup>
 													</ChildItems>
 												</UsualGroup>
+												<UsualGroup name="НастройкиЗапускаБраузера" id="2326">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Настройки запуска браузера</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Browser launch settings</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Настройки запуска браузера</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Vertical</Group>
+													<ExtendedTooltip name="НастройкиЗапускаБраузераРасширеннаяПодсказка" id="2327"/>
+													<ChildItems>
+														<UsualGroup name="ГруппаКомандыУстановкиСтрокиЗапускаБраузера" id="2330">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа команды установки строки запуска браузера</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа команды установки строки запуска браузера</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Group>Horizontal</Group>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаКомандыУстановкиСтрокиЗапускаБраузераРасширеннаяПодсказка" id="2331"/>
+															<ChildItems>
+																<Button name="КомандаЗапускаChrome" id="2328">
+																	<Type>UsualButton</Type>
+																	<CommandName>Form.Command.КомандаЗапускаChrome</CommandName>
+																	<ExtendedTooltip name="КомандаЗапускаChromeРасширеннаяПодсказка" id="2329"/>
+																</Button>
+																<Button name="КомандаЗапускаChromeСОтладкой" id="2332">
+																	<Type>UsualButton</Type>
+																	<CommandName>Form.Command.КомандаЗапускаChromeСОтладкой</CommandName>
+																	<ExtendedTooltip name="КомандаЗапускаChromeСОтладкойРасширеннаяПодсказка" id="2333"/>
+																</Button>
+															</ChildItems>
+														</UsualGroup>
+														<InputField name="КомандаЗапускаБраузера" id="2323">
+															<DataPath>Объект.КомандаЗапускаБраузера</DataPath>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<ContextMenu name="КомандаЗапускаБраузераКонтекстноеМеню" id="2324"/>
+															<ExtendedTooltip name="КомандаЗапускаБраузераРасширеннаяПодсказка" id="2325">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>This field indicates the command to launch the browser. If the field is empty, then the default browser will be used to start the web client.</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>В данном поле указывается команда запуска браузера. Если поле пустое, тогда для запуска web клиента будет использован браузер по умолчанию.</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
 											</ChildItems>
 										</Page>
 										<Page name="СтраницаВыполнениеСценариев" id="1840">
@@ -13491,6 +13560,87 @@ Log events:
 											</Title>
 											<ExtendedTooltip name="СтраницаАвтоИнструкцииРасширеннаяПодсказка" id="1400"/>
 											<ChildItems>
+												<UsualGroup name="ГруппаАвтоинструкции1CWinCtrl" id="2337">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Компонента 1CWinCtrl</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>1CWinCtrl component</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа автоинструкции1 c win ctrl</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Vertical</Group>
+													<Behavior>Collapsible</Behavior>
+													<ControlRepresentation>Picture</ControlRepresentation>
+													<ExtendedTooltip name="ГруппаАвтоинструкции1CWinCtrlРасширеннаяПодсказка" id="2338"/>
+													<ChildItems>
+														<CheckBoxField name="ИспользоватьБраузерПлюсWebSocket" id="2334">
+															<DataPath>Объект.ИспользоватьБраузерПлюсWebSocket</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ИспользоватьБраузерПлюсWebSocketКонтекстноеМеню" id="2335"/>
+															<ExtendedTooltip name="ИспользоватьБраузерПлюсWebSocketРасширеннаяПодсказка" id="2336">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Allows to execute external commands for the browser through WebSocket.</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Позволяет выполнять внешние команды для барузера через WebSocket.</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+														</CheckBoxField>
+														<CheckBoxField name="ЭмулироватьДвиженияМышки1CWinCtrl" id="2339">
+															<DataPath>Объект.ЭмулироватьДвиженияМышки1CWinCtrl</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ЭмулироватьДвиженияМышки1CWinCtrlКонтекстноеМеню" id="2340"/>
+															<ExtendedTooltip name="ЭмулироватьДвиженияМышки1CWinCtrlРасширеннаяПодсказка" id="2341">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Enables mouse movement emulation using 1CWinCtrl component</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Включает эмуляцию движения мышки с помощью компоненты 1CWinCtrl</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+														</CheckBoxField>
+														<CheckBoxField name="ЭмулироватьВводКлавиатуры1CWinCtrl" id="2342">
+															<DataPath>Объект.ЭмулироватьВводКлавиатуры1CWinCtrl</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ЭмулироватьВводКлавиатуры1CWinCtrlКонтекстноеМеню" id="2343"/>
+															<ExtendedTooltip name="ЭмулироватьВводКлавиатуры1CWinCtrlРасширеннаяПодсказка" id="2344">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Enables emulation of keyboard input using 1CWinCtrl component</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Включает эмуляцию ввода клавиатуры с помощью компоненты 1CWinCtrl</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+														</CheckBoxField>
+													</ChildItems>
+												</UsualGroup>
 												<UsualGroup name="ГруппаSikuliXServer" id="2130">
 													<Title>
 														<v8:item>
@@ -13514,6 +13664,7 @@ Log events:
 													</ToolTip>
 													<Group>Vertical</Group>
 													<Behavior>Collapsible</Behavior>
+													<Collapsed>true</Collapsed>
 													<ControlRepresentation>Picture</ControlRepresentation>
 													<ExtendedTooltip name="ГруппаSikuliXServerРасширеннаяПодсказка" id="2131"/>
 													<ChildItems>
@@ -28722,6 +28873,44 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПроверитьДублированиеСценариев</Action>
+		</Command>
+		<Command name="КомандаЗапускаChrome" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Chrome</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Chrome</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда запуска chrome</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗапускаChrome</Action>
+		</Command>
+		<Command name="КомандаЗапускаChromeСОтладкой" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Chrome+debug</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Chrome+debug</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда запуска chrome с отладкой</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗапускаChromeСОтладкой</Action>
 		</Command>
 	</Commands>
 </Form>
