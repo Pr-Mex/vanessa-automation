@@ -390,7 +390,7 @@
 Перем ИгнорируемыеВидыЭлементовФорм;
 
 &НаКлиенте
-Перем АдресВебСокет, ИдентификаторФрейма, КонтекстJavaScript;
+Перем АдресВебСокет, ИдентификаторФрейма, КонтекстJavaScript, РазмерыВиртуальногоЭкрана;
 
 #КонецОбласти
 
@@ -27730,6 +27730,10 @@
 	|
 	|");	
 	
+	ТекстJSON = ВнешняяКомпонентаДляСкриншотов.СвойстваЭкрана;
+	ЧтениеJSON = Новый ЧтениеJSON;
+	ЧтениеJSON.УстановитьСтроку(ТекстJSON);
+	РазмерыВиртуальногоЭкрана = ПрочитатьJSON(ЧтениеJSON);
 	
 КонецПроцедуры 
 
@@ -27777,17 +27781,17 @@
 &НаКлиенте
 Функция ПереместитьМышкуКЭлементуБраузерСлужебный(Кнопка, ИмяФункции)
 	ТекстJavaScript = "
-		|{
-		|function pos(id){
-		|    let r = %2(id).getBoundingClientRect();
-		|    return {
-	    |        x: Math.round(r.left + r.width / 2) + window.screenLeft,
-	    |        y: Math.round(r.top + r.height / 2) + window.screenTop + window.outerHeight - window.innerHeight,		
-	    |        sw: screen.width, 
-	    |        sh:screen.height,		
-		|    }
-		|}; JSON.stringify(pos('%1'))
-		|}
+	|{
+	|function pos(id){
+	|    let r = %2(id).getBoundingClientRect();
+	|    return {
+    |        x: Math.round(r.left + r.width / 2) + window.screenLeft,
+    |        y: Math.round(r.top + r.height / 2) + window.screenTop + window.outerHeight - window.innerHeight,		
+    |        sw: screen.width, 
+    |        sh:screen.height,		
+	|    }
+	|}; JSON.stringify(pos('%1'))
+	|}
 	|";
 	ТекстJavaScript = СтрЗаменить(ТекстJavaScript,"%1", Кнопка.ТекстЗаголовка);
 	ТекстJavaScript = СтрЗаменить(ТекстJavaScript,"%2", ИмяФункции);
@@ -27823,7 +27827,10 @@
 		);
 	КонецЕсли;	 
 	
-	ВнешняяКомпонентаДляСкриншотов.ЭмуляцияДвиженияМыши(ДанныеКоординат.X, ДанныеКоординат.Y, 200, 3);
+	X = ДанныеКоординат.X * РазмерыВиртуальногоЭкрана.Width / ДанныеКоординат.SW;
+	Y = ДанныеКоординат.Y * РазмерыВиртуальногоЭкрана.Height / ДанныеКоординат.SH;
+	ВнешняяКомпонентаДляСкриншотов.ЭмуляцияДвиженияМыши(X, Y, 200, 3);
+	
 	Кнопка.Нажать();
 КонецФункции	 
 
