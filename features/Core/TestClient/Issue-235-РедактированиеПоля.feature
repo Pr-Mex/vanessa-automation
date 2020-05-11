@@ -8,6 +8,7 @@
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 @IgnoreOn839
+@IgnoreOnUFSovm82Builds
 
 
 
