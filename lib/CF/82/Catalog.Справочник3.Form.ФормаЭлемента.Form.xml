@@ -4,18 +4,37 @@
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
 	<ChildItems>
-		<InputField name="Код" id="1">
-			<DataPath>Объект.Code</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<ContextMenu name="КодКонтекстноеМеню" id="2"/>
-			<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
-		</InputField>
-		<InputField name="Наименование" id="4">
-			<DataPath>Объект.Description</DataPath>
-			<EditMode>EnterOnInput</EditMode>
-			<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
-			<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
-		</InputField>
+		<UsualGroup name="ГруппаНаименованиеКод" id="40">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа наименование код</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа наименование код</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Horizontal</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНаименованиеКодРасширеннаяПодсказка" id="41"/>
+			<ChildItems>
+				<InputField name="Код" id="1">
+					<DataPath>Объект.Code</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="КодКонтекстноеМеню" id="2"/>
+					<ExtendedTooltip name="КодРасширеннаяПодсказка" id="3"/>
+				</InputField>
+				<InputField name="Наименование" id="4">
+					<DataPath>Объект.Description</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="НаименованиеКонтекстноеМеню" id="5"/>
+					<ExtendedTooltip name="НаименованиеРасширеннаяПодсказка" id="6"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
 		<CheckBoxField name="СделатьМакетНедоступным" id="20">
 			<DataPath>СделатьМакетНедоступным</DataPath>
 			<CheckBoxType>Auto</CheckBoxType>
@@ -88,6 +107,12 @@
 					<CommandName>Form.Command.СформироватьОтчетСЗадержкой</CommandName>
 					<Parameter xsi:nil="true"/>
 					<ExtendedTooltip name="СформироватьОтчетСЗадержкойРасширеннаяПодсказка" id="37"/>
+				</Button>
+				<Button name="СформироватьОтчетСВертикальнойПереносомСтроки" id="38">
+					<Type>UsualButton</Type>
+					<CommandName>Form.Command.ОтчетСПереносомСтроки</CommandName>
+					<Parameter xsi:nil="true"/>
+					<ExtendedTooltip name="СформироватьОтчетСВертикальнойПереносомСтрокиРасширеннаяПодсказка" id="39"/>
 				</Button>
 			</ChildItems>
 		</UsualGroup>
@@ -337,6 +362,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СформироватьОтчетСЗадержкой</Action>
+		</Command>
+		<Command name="ОтчетСПереносомСтроки" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет с переносом строки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отчет с переносом строки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОтчетСПереносомСтроки</Action>
 		</Command>
 	</Commands>
 </Form>
