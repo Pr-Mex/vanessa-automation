@@ -7,16 +7,21 @@ theme:
   palette:
     primary: 'white'
     accent: 'red'
-  feature:
-    tabs: true
+  features:
+    - tabs
+    - instant
+plugins:
+  - search:
+      separator: '[\s\-\.]+'
+      lang:
+        - en
+        - ru
 extra:
-  search:
-    language: 'en, ru'
   social:
-    - type: 'github'
-      link: 'https://github.com/Pr-Mex/vanessa-automation'
-    - type: 'telegram'
-      link: 'https://t.me/VanessaAutomation'
+    - icon: fontawesome/brands/github-alt
+      link: https://github.com/Pr-Mex/vanessa-automation
+    - type: fontawesome/brands/telegram
+      link: https://t.me/VanessaAutomation
 markdown_extensions:
   - admonition
   - codehilite

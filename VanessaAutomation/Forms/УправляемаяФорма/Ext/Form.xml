@@ -9203,13 +9203,13 @@ This is available only if the form contains only one element with the specified 
 														</Title>
 													</ExtendedTooltip>
 												</CheckBoxField>
-												<CheckBoxField name="ИспользоватьКомпоненту1cWinCtrl" id="2320">
-													<DataPath>Объект.ИспользоватьКомпоненту1cWinCtrl</DataPath>
+												<CheckBoxField name="ИспользоватьКомпонентуVanessaExt" id="2320">
+													<DataPath>Объект.ИспользоватьКомпонентуVanessaExt</DataPath>
 													<TitleLocation>Right</TitleLocation>
 													<ToolTipRepresentation>Button</ToolTipRepresentation>
 													<CheckBoxType>Auto</CheckBoxType>
-													<ContextMenu name="ИспользоватьКомпоненту1cWinCtrlКонтекстноеМеню" id="2321"/>
-													<ExtendedTooltip name="ИспользоватьКомпоненту1cWinCtrlРасширеннаяПодсказка" id="2322">
+													<ContextMenu name="ИспользоватьКомпонентуVanessaExtКонтекстноеМеню" id="2321"/>
+													<ExtendedTooltip name="ИспользоватьКомпонентуVanessaExtРасширеннаяПодсказка" id="2322">
 														<Title formatted="true">
 															<v8:item>
 																<v8:lang>ru</v8:lang>
@@ -9219,7 +9219,7 @@ This is available only if the form contains only one element with the specified 
 - Управление размерами и положением окна
 - Получение снимка окна и снимка экрана
 
-https://github.com/lintest/1cWinCtrl</v8:content>
+https://github.com/lintest/VanessaExt</v8:content>
 															</v8:item>
 															<v8:item>
 																<v8:lang>en</v8:lang>
@@ -9229,15 +9229,15 @@ Opportunities:
 - Control the size and position of the window
 - Getting a screenshot of the window and screenshot
 
-&lt;link https://github.com/lintest/1cWinCtrl&gt;https://github.com/lintest/1cWinCtrl&lt;/&gt;</v8:content>
+&lt;link https://github.com/lintest/VanessaExt&gt;https://github.com/lintest/VanessaExt&lt;/&gt;</v8:content>
 															</v8:item>
 														</Title>
 													</ExtendedTooltip>
 													<Events>
-														<Event name="OnChange">ИспользоватьКомпоненту1cWinCtrlПриИзменении</Event>
+														<Event name="OnChange">ИспользоватьКомпонентуVanessaExtПриИзменении</Event>
 													</Events>
 												</CheckBoxField>
-												<UsualGroup name="Группа1cWinCtrl" id="2267">
+												<UsualGroup name="ГруппаVanessaExt" id="2267">
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
@@ -9252,11 +9252,11 @@ Opportunities:
 													</ToolTip>
 													<Representation>None</Representation>
 													<ShowTitle>false</ShowTitle>
-													<ExtendedTooltip name="Группа1cWinCtrlРасширеннаяПодсказка" id="2268"/>
+													<ExtendedTooltip name="ГруппаVanessaExtРасширеннаяПодсказка" id="2268"/>
 													<ChildItems>
-														<LabelDecoration name="ДекорацияВерсия1cWinCtrl" id="2269">
-															<ContextMenu name="ДекорацияВерсия1cWinCtrlКонтекстноеМеню" id="2270"/>
-															<ExtendedTooltip name="ДекорацияВерсия1cWinCtrlРасширеннаяПодсказка" id="2271"/>
+														<LabelDecoration name="ДекорацияВерсияVanessaExt" id="2269">
+															<ContextMenu name="ДекорацияВерсияVanessaExtКонтекстноеМеню" id="2270"/>
+															<ExtendedTooltip name="ДекорацияВерсияVanessaExtРасширеннаяПодсказка" id="2271"/>
 														</LabelDecoration>
 													</ChildItems>
 												</UsualGroup>
@@ -10467,6 +10467,75 @@ When working with Vanessa Automation Single it is allowed to leave the field bla
 														</UsualGroup>
 													</ChildItems>
 												</UsualGroup>
+												<UsualGroup name="НастройкиЗапускаБраузера" id="2326">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Настройки запуска браузера</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Browser launch settings</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Настройки запуска браузера</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Vertical</Group>
+													<ExtendedTooltip name="НастройкиЗапускаБраузераРасширеннаяПодсказка" id="2327"/>
+													<ChildItems>
+														<UsualGroup name="ГруппаКомандыУстановкиСтрокиЗапускаБраузера" id="2330">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа команды установки строки запуска браузера</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа команды установки строки запуска браузера</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Group>Horizontal</Group>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаКомандыУстановкиСтрокиЗапускаБраузераРасширеннаяПодсказка" id="2331"/>
+															<ChildItems>
+																<Button name="КомандаЗапускаChrome" id="2328">
+																	<Type>UsualButton</Type>
+																	<CommandName>Form.Command.КомандаЗапускаChrome</CommandName>
+																	<ExtendedTooltip name="КомандаЗапускаChromeРасширеннаяПодсказка" id="2329"/>
+																</Button>
+																<Button name="КомандаЗапускаChromeСОтладкой" id="2332">
+																	<Type>UsualButton</Type>
+																	<CommandName>Form.Command.КомандаЗапускаChromeСОтладкой</CommandName>
+																	<ExtendedTooltip name="КомандаЗапускаChromeСОтладкойРасширеннаяПодсказка" id="2333"/>
+																</Button>
+															</ChildItems>
+														</UsualGroup>
+														<InputField name="КомандаЗапускаБраузера" id="2323">
+															<DataPath>Объект.КомандаЗапускаБраузера</DataPath>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<AutoMaxWidth>false</AutoMaxWidth>
+															<ContextMenu name="КомандаЗапускаБраузераКонтекстноеМеню" id="2324"/>
+															<ExtendedTooltip name="КомандаЗапускаБраузераРасширеннаяПодсказка" id="2325">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>This field indicates the command to launch the browser. If the field is empty, then the default browser will be used to start the web client.</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>В данном поле указывается команда запуска браузера. Если поле пустое, тогда для запуска web клиента будет использован браузер по умолчанию.</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
 											</ChildItems>
 										</Page>
 										<Page name="СтраницаВыполнениеСценариев" id="1840">
@@ -11200,12 +11269,12 @@ This option slow the execution down .</v8:content>
 															<v8:item>
 																<v8:lang>ru</v8:lang>
 																<v8:content>Включает снятие скриншотов при возникновении ошибки.
-Для работы опции необходимо, чтобы было заполнено поле "Команда создания скриншотов" либо подключена внешняя компонента 1cWinCtrl в зависимости от настроек.</v8:content>
+Для работы опции необходимо, чтобы было заполнено поле "Команда создания скриншотов" либо подключена внешняя компонента VanessaExt в зависимости от настроек.</v8:content>
 															</v8:item>
 															<v8:item>
 																<v8:lang>en</v8:lang>
 																<v8:content>Switches on snapshot creating on error.
-The field "Snapshot creation command" must be filled for this option, or 1cWinCtrl is used for this option.</v8:content>
+The field "Snapshot creation command" must be filled for this option, or VanessaExt is used for this option.</v8:content>
 															</v8:item>
 														</Title>
 													</ExtendedTooltip>
@@ -11310,23 +11379,23 @@ The field "Snapshot creation command" must be filled for this option, or 1cWinCt
 															<v8:item>
 																<v8:lang>ru</v8:lang>
 																<v8:content>Включает снятие скриншотов с каждого окна 1С при возникновении ошибки.
-Для работы опции используется SikuliX либо внешняя компонента 1cWinCtrl в зависимости от настроек.</v8:content>
+Для работы опции используется SikuliX либо внешняя компонента VanessaExt в зависимости от настроек.</v8:content>
 															</v8:item>
 															<v8:item>
 																<v8:lang>en</v8:lang>
 																<v8:content>Switches on snapshot creation for each 1C window when an error occurs.
-SikuliX or 1cWinCtrl is used for this option.</v8:content>
+SikuliX or VanessaExt is used for this option.</v8:content>
 															</v8:item>
 														</Title>
 													</ExtendedTooltip>
 												</CheckBoxField>
-												<CheckBoxField name="ИспользоватьКомпоненту1cWinCtrl1" id="2299">
-													<DataPath>Объект.ИспользоватьКомпоненту1cWinCtrl</DataPath>
+												<CheckBoxField name="ИспользоватьКомпонентуVanessaExt1" id="2299">
+													<DataPath>Объект.ИспользоватьКомпонентуVanessaExt</DataPath>
 													<TitleLocation>Right</TitleLocation>
 													<ToolTipRepresentation>Button</ToolTipRepresentation>
 													<CheckBoxType>Auto</CheckBoxType>
-													<ContextMenu name="ИспользоватьКомпоненту1cWinCtrl1КонтекстноеМеню" id="2300"/>
-													<ExtendedTooltip name="ИспользоватьКомпоненту1cWinCtrl1РасширеннаяПодсказка" id="2301">
+													<ContextMenu name="ИспользоватьКомпонентуVanessaExt1КонтекстноеМеню" id="2300"/>
+													<ExtendedTooltip name="ИспользоватьКомпонентуVanessaExt1РасширеннаяПодсказка" id="2301">
 														<Title formatted="true">
 															<v8:item>
 																<v8:lang>ru</v8:lang>
@@ -11336,7 +11405,7 @@ SikuliX or 1cWinCtrl is used for this option.</v8:content>
 - Управление размерами и положением окна
 - Получение снимка окна и снимка экрана
 
-&lt;link https://github.com/lintest/1cWinCtrl&gt;https://github.com/lintest/1cWinCtrl&lt;/&gt;</v8:content>
+&lt;link https://github.com/lintest/VanessaExt&gt;https://github.com/lintest/VanessaExt&lt;/&gt;</v8:content>
 															</v8:item>
 															<v8:item>
 																<v8:lang>en</v8:lang>
@@ -11346,12 +11415,12 @@ Opportunities:
 - Control the size and position of the window
 - Getting a screenshot of the window and screenshot
 
-&lt;link https://github.com/lintest/1cWinCtrl&gt;https://github.com/lintest/1cWinCtrl&lt;/&gt;</v8:content>
+&lt;link https://github.com/lintest/VanessaExt&gt;https://github.com/lintest/VanessaExt&lt;/&gt;</v8:content>
 															</v8:item>
 														</Title>
 													</ExtendedTooltip>
 													<Events>
-														<Event name="OnChange">ИспользоватьКомпоненту1cWinCtrlПриИзменении</Event>
+														<Event name="OnChange">ИспользоватьКомпонентуVanessaExtПриИзменении</Event>
 													</Events>
 												</CheckBoxField>
 												<CheckBoxField name="ИспользоватьВнешнююКомпонентуДляСкриншотов" id="2290">
@@ -11370,11 +11439,11 @@ Opportunities:
 														<Title formatted="false">
 															<v8:item>
 																<v8:lang>ru</v8:lang>
-																<v8:content>Для снятия скриншотов используется компонента 1cWinCtrl вместо команды создания скриншотов.</v8:content>
+																<v8:content>Для снятия скриншотов используется компонента VanessaExt вместо команды создания скриншотов.</v8:content>
 															</v8:item>
 															<v8:item>
 																<v8:lang>en</v8:lang>
-																<v8:content>To take screenshots, use the 1cWinCtrl component instead of the screenshot creation command.</v8:content>
+																<v8:content>To take screenshots, use the VanessaExt component instead of the screenshot creation command.</v8:content>
 															</v8:item>
 														</Title>
 													</ExtendedTooltip>
@@ -12636,101 +12705,143 @@ Log events:
 																						</Title>
 																					</ExtendedTooltip>
 																				</InputField>
-																				<CheckBoxField name="ПрикладыватьКОтчетуAllureЖурналРегистрацииВыполненияСценария" id="2272">
-																					<DataPath>Объект.ПрикладыватьКОтчетуAllureЖурналРегистрацииВыполненияСценария</DataPath>
-																					<TitleLocation>Right</TitleLocation>
-																					<ToolTipRepresentation>Button</ToolTipRepresentation>
-																					<CheckBoxType>Auto</CheckBoxType>
-																					<ContextMenu name="ПрикладыватьКОтчетуAllureЖурналРегистрацииВыполненияСценарияКонтекстноеМеню" id="2273"/>
-																					<ExtendedTooltip name="ПрикладыватьКОтчетуAllureЖурналРегистрацииВыполненияСценарияРасширеннаяПодсказка" id="2274">
-																						<Title formatted="false">
-																							<v8:item>
-																								<v8:lang>ru</v8:lang>
-																								<v8:content>Прикладывает к сценарию данные журнала регистрации. Данные берутся с момента начала выполнения сценария.</v8:content>
-																							</v8:item>
-																							<v8:item>
-																								<v8:lang>en</v8:lang>
-																								<v8:content>Applies the event log to the scenario. Data is taken from the moment the scenario starts.</v8:content>
-																							</v8:item>
-																						</Title>
-																					</ExtendedTooltip>
-																				</CheckBoxField>
-																				<CheckBoxField name="ПрикладыватьКОтчетуAllureДанныеОСостоянииАктивнойФормы" id="2302">
-																					<DataPath>Объект.ПрикладыватьКОтчетуAllureДанныеОСостоянииАктивнойФормы</DataPath>
-																					<TitleLocation>Right</TitleLocation>
-																					<ToolTipRepresentation>Button</ToolTipRepresentation>
-																					<CheckBoxType>Auto</CheckBoxType>
-																					<ContextMenu name="ПрикладыватьКОтчетуAllureДанныеОСостоянииАктивнойФормыКонтекстноеМеню" id="2303"/>
-																					<ExtendedTooltip name="ПрикладыватьКОтчетуAllureДанныеОСостоянииАктивнойФормыРасширеннаяПодсказка" id="2304">
-																						<Title formatted="false">
-																							<v8:item>
-																								<v8:lang>ru</v8:lang>
-																								<v8:content>Если опция включена, то при возникновении ошибки будут собраны данные о состоянии элементов активной формы в формате xlsx.</v8:content>
-																							</v8:item>
-																							<v8:item>
-																								<v8:lang>en</v8:lang>
-																								<v8:content>If the option is on, the status of the elements of the active form will be collected in xlsx format.</v8:content>
-																							</v8:item>
-																						</Title>
-																					</ExtendedTooltip>
-																				</CheckBoxField>
-																				<CheckBoxField name="ПрикладыватьКОтчетуAllureДанныеОСостоянииВсехФорм" id="2305">
-																					<DataPath>Объект.ПрикладыватьКОтчетуAllureДанныеОСостоянииВсехФорм</DataPath>
-																					<TitleLocation>Right</TitleLocation>
-																					<ToolTipRepresentation>Button</ToolTipRepresentation>
-																					<CheckBoxType>Auto</CheckBoxType>
-																					<ContextMenu name="ПрикладыватьКОтчетуAllureДанныеОСостоянииВсехФормКонтекстноеМеню" id="2306"/>
-																					<ExtendedTooltip name="ПрикладыватьКОтчетуAllureДанныеОСостоянииВсехФормРасширеннаяПодсказка" id="2307">
-																						<Title formatted="false">
-																							<v8:item>
-																								<v8:lang>ru</v8:lang>
-																								<v8:content>Если опция включена, то при возникновении ошибки будут собраны данные о состоянии элементов всех форм открытых в клиенте тестирования в формате xlsx.</v8:content>
-																							</v8:item>
-																							<v8:item>
-																								<v8:lang>en</v8:lang>
-																								<v8:content>If the option is on, the status of the elements of all forms opened in TestClient will be collected in xlsx format.</v8:content>
-																							</v8:item>
-																						</Title>
-																					</ExtendedTooltip>
-																				</CheckBoxField>
-																				<CheckBoxField name="ПрикладыватьКОтчетуAllureДанныеОСетевыхСоединениях" id="2314">
-																					<DataPath>Объект.ПрикладыватьКОтчетуAllureДанныеОСетевыхСоединениях</DataPath>
-																					<TitleLocation>Right</TitleLocation>
-																					<ToolTipRepresentation>Button</ToolTipRepresentation>
-																					<CheckBoxType>Auto</CheckBoxType>
-																					<ContextMenu name="ПрикладыватьКОтчетуAllureДанныеОСетевыхСоединенияхКонтекстноеМеню" id="2315"/>
-																					<ExtendedTooltip name="ПрикладыватьКОтчетуAllureДанныеОСетевыхСоединенияхРасширеннаяПодсказка" id="2316">
-																						<Title formatted="false">
-																							<v8:item>
-																								<v8:lang>ru</v8:lang>
-																								<v8:content>Если опция включена, то при возникновении ошибки будут собраны данные о сетевых соединениях ПК, на котором запускались тесты.</v8:content>
-																							</v8:item>
-																							<v8:item>
-																								<v8:lang>en</v8:lang>
-																								<v8:content>If the option is enabled, then when an error occurs, data will be collected on the network connections of the PC on which the tests were run.</v8:content>
-																							</v8:item>
-																						</Title>
-																					</ExtendedTooltip>
-																				</CheckBoxField>
-																				<CheckBoxField name="ПрикладыватьКОтчетуAllureДанныеОПроцессахОС" id="2317">
-																					<DataPath>Объект.ПрикладыватьКОтчетуAllureДанныеОПроцессахОС</DataPath>
-																					<TitleLocation>Right</TitleLocation>
-																					<ToolTipRepresentation>Button</ToolTipRepresentation>
-																					<CheckBoxType>Auto</CheckBoxType>
-																					<ContextMenu name="ПрикладыватьКОтчетуAllureДанныеОПроцессахОСКонтекстноеМеню" id="2318"/>
-																					<ExtendedTooltip name="ПрикладыватьКОтчетуAllureДанныеОПроцессахОСРасширеннаяПодсказка" id="2319">
-																						<Title formatted="false">
-																							<v8:item>
-																								<v8:lang>ru</v8:lang>
-																								<v8:content>Если опция включена, то при возникновении ошибки будут собраны данные о запущенных процессах ОС.</v8:content>
-																							</v8:item>
-																							<v8:item>
-																								<v8:lang>en</v8:lang>
-																								<v8:content>If the option is enabled, then when an error occurs, data on running OS processes will be collected.</v8:content>
-																							</v8:item>
-																						</Title>
-																					</ExtendedTooltip>
-																				</CheckBoxField>
+																				<UsualGroup name="ГруппаПриложенияКОтчетуAllure" id="2348">
+																					<Title>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Приложения к отчету Allure</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>en</v8:lang>
+																							<v8:content>Customize the title slide features</v8:content>
+																						</v8:item>
+																					</Title>
+																					<ToolTip>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Приложения к отчету Allure</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>en</v8:lang>
+																							<v8:content>Group intro file settings</v8:content>
+																						</v8:item>
+																					</ToolTip>
+																					<Group>Vertical</Group>
+																					<Behavior>Collapsible</Behavior>
+																					<ExtendedTooltip name="ГруппаПриложенияКОтчетуAllureРасширеннаяПодсказка" id="2349"/>
+																					<ChildItems>
+																						<CheckBoxField name="ПрикладыватьКОтчетуAllureЖурналРегистрацииВыполненияСценария" id="2272">
+																							<DataPath>Объект.ПрикладыватьКОтчетуAllureЖурналРегистрацииВыполненияСценария</DataPath>
+																							<TitleLocation>Right</TitleLocation>
+																							<ToolTipRepresentation>Button</ToolTipRepresentation>
+																							<CheckBoxType>Auto</CheckBoxType>
+																							<ContextMenu name="ПрикладыватьКОтчетуAllureЖурналРегистрацииВыполненияСценарияКонтекстноеМеню" id="2273"/>
+																							<ExtendedTooltip name="ПрикладыватьКОтчетуAllureЖурналРегистрацииВыполненияСценарияРасширеннаяПодсказка" id="2274">
+																								<Title formatted="false">
+																									<v8:item>
+																										<v8:lang>ru</v8:lang>
+																										<v8:content>Прикладывает к сценарию данные журнала регистрации. Данные берутся с момента начала выполнения сценария.</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>en</v8:lang>
+																										<v8:content>Applies the event log to the scenario. Data is taken from the moment the scenario starts.</v8:content>
+																									</v8:item>
+																								</Title>
+																							</ExtendedTooltip>
+																						</CheckBoxField>
+																						<CheckBoxField name="ПрикладыватьКОтчетуAllureДанныеОСостоянииАктивнойФормы" id="2302">
+																							<DataPath>Объект.ПрикладыватьКОтчетуAllureДанныеОСостоянииАктивнойФормы</DataPath>
+																							<TitleLocation>Right</TitleLocation>
+																							<ToolTipRepresentation>Button</ToolTipRepresentation>
+																							<CheckBoxType>Auto</CheckBoxType>
+																							<ContextMenu name="ПрикладыватьКОтчетуAllureДанныеОСостоянииАктивнойФормыКонтекстноеМеню" id="2303"/>
+																							<ExtendedTooltip name="ПрикладыватьКОтчетуAllureДанныеОСостоянииАктивнойФормыРасширеннаяПодсказка" id="2304">
+																								<Title formatted="false">
+																									<v8:item>
+																										<v8:lang>ru</v8:lang>
+																										<v8:content>Если опция включена, то при возникновении ошибки будут собраны данные о состоянии элементов активной формы в формате xlsx.</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>en</v8:lang>
+																										<v8:content>If the option is on, the status of the elements of the active form will be collected in xlsx format.</v8:content>
+																									</v8:item>
+																								</Title>
+																							</ExtendedTooltip>
+																						</CheckBoxField>
+																						<CheckBoxField name="ПрикладыватьКОтчетуAllureДанныеОСостоянииВсехФорм" id="2305">
+																							<DataPath>Объект.ПрикладыватьКОтчетуAllureДанныеОСостоянииВсехФорм</DataPath>
+																							<TitleLocation>Right</TitleLocation>
+																							<ToolTipRepresentation>Button</ToolTipRepresentation>
+																							<CheckBoxType>Auto</CheckBoxType>
+																							<ContextMenu name="ПрикладыватьКОтчетуAllureДанныеОСостоянииВсехФормКонтекстноеМеню" id="2306"/>
+																							<ExtendedTooltip name="ПрикладыватьКОтчетуAllureДанныеОСостоянииВсехФормРасширеннаяПодсказка" id="2307">
+																								<Title formatted="false">
+																									<v8:item>
+																										<v8:lang>ru</v8:lang>
+																										<v8:content>Если опция включена, то при возникновении ошибки будут собраны данные о состоянии элементов всех форм открытых в клиенте тестирования в формате xlsx.</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>en</v8:lang>
+																										<v8:content>If the option is on, the status of the elements of all forms opened in TestClient will be collected in xlsx format.</v8:content>
+																									</v8:item>
+																								</Title>
+																							</ExtendedTooltip>
+																						</CheckBoxField>
+																						<CheckBoxField name="ПрикладыватьКОтчетуAllureДанныеОСетевыхСоединениях" id="2314">
+																							<DataPath>Объект.ПрикладыватьКОтчетуAllureДанныеОСетевыхСоединениях</DataPath>
+																							<TitleLocation>Right</TitleLocation>
+																							<ToolTipRepresentation>Button</ToolTipRepresentation>
+																							<CheckBoxType>Auto</CheckBoxType>
+																							<ContextMenu name="ПрикладыватьКОтчетуAllureДанныеОСетевыхСоединенияхКонтекстноеМеню" id="2315"/>
+																							<ExtendedTooltip name="ПрикладыватьКОтчетуAllureДанныеОСетевыхСоединенияхРасширеннаяПодсказка" id="2316">
+																								<Title formatted="false">
+																									<v8:item>
+																										<v8:lang>ru</v8:lang>
+																										<v8:content>Если опция включена, то при возникновении ошибки будут собраны данные о сетевых соединениях ПК, на котором запускались тесты.</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>en</v8:lang>
+																										<v8:content>If the option is enabled, then when an error occurs, data will be collected on the network connections of the PC on which the tests were run.</v8:content>
+																									</v8:item>
+																								</Title>
+																							</ExtendedTooltip>
+																						</CheckBoxField>
+																						<CheckBoxField name="ПрикладыватьКОтчетуAllureДанныеОПроцессахОС" id="2317">
+																							<DataPath>Объект.ПрикладыватьКОтчетуAllureДанныеОПроцессахОС</DataPath>
+																							<TitleLocation>Right</TitleLocation>
+																							<ToolTipRepresentation>Button</ToolTipRepresentation>
+																							<CheckBoxType>Auto</CheckBoxType>
+																							<ContextMenu name="ПрикладыватьКОтчетуAllureДанныеОПроцессахОСКонтекстноеМеню" id="2318"/>
+																							<ExtendedTooltip name="ПрикладыватьКОтчетуAllureДанныеОПроцессахОСРасширеннаяПодсказка" id="2319">
+																								<Title formatted="false">
+																									<v8:item>
+																										<v8:lang>ru</v8:lang>
+																										<v8:content>Если опция включена, то при возникновении ошибки будут собраны данные о запущенных процессах ОС.</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>en</v8:lang>
+																										<v8:content>If the option is enabled, then when an error occurs, data on running OS processes will be collected.</v8:content>
+																									</v8:item>
+																								</Title>
+																							</ExtendedTooltip>
+																						</CheckBoxField>
+																						<CheckBoxField name="ПрикладыватьКОтчетуAllureДанныеОЗначенияхПеременных" id="2362">
+																							<DataPath>Объект.ПрикладыватьКОтчетуAllureДанныеОЗначенияхПеременных</DataPath>
+																							<TitleLocation>Right</TitleLocation>
+																							<ToolTipRepresentation>Button</ToolTipRepresentation>
+																							<CheckBoxType>Auto</CheckBoxType>
+																							<ContextMenu name="ПрикладыватьКОтчетуAllureДанныеОЗначенияхПеременныхКонтекстноеМеню" id="2363"/>
+																							<ExtendedTooltip name="ПрикладыватьКОтчетуAllureДанныеОЗначенияхПеременныхРасширеннаяПодсказка" id="2364">
+																								<Title formatted="false">
+																									<v8:item>
+																										<v8:lang>ru</v8:lang>
+																										<v8:content>Если опция включена, то при возникновении ошибки будут собраны данные со значениями переменных Контекста и Контекста глобального.</v8:content>
+																									</v8:item>
+																								</Title>
+																							</ExtendedTooltip>
+																						</CheckBoxField>
+																					</ChildItems>
+																				</UsualGroup>
 																				<Table name="ДанныеАллюрМеток" id="1985">
 																					<Representation>List</Representation>
 																					<Height>4</Height>
@@ -13491,6 +13602,106 @@ Log events:
 											</Title>
 											<ExtendedTooltip name="СтраницаАвтоИнструкцииРасширеннаяПодсказка" id="1400"/>
 											<ChildItems>
+												<UsualGroup name="ГруппаАвтоинструкцииVanessaExt" id="2337">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Компонента VanessaExt</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>VanessaExt component</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа автоинструкции VanessaExt</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Vertical</Group>
+													<Behavior>Collapsible</Behavior>
+													<ControlRepresentation>Picture</ControlRepresentation>
+													<ExtendedTooltip name="ГруппаАвтоинструкцииVanessaExtРасширеннаяПодсказка" id="2338"/>
+													<ChildItems>
+														<CheckBoxField name="ИспользоватьБраузерПлюсWebSocket" id="2334">
+															<DataPath>Объект.ИспользоватьБраузерПлюсWebSocket</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ИспользоватьБраузерПлюсWebSocketКонтекстноеМеню" id="2335"/>
+															<ExtendedTooltip name="ИспользоватьБраузерПлюсWebSocketРасширеннаяПодсказка" id="2336">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Allows to execute external commands for the browser through WebSocket.</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Позволяет выполнять внешние команды для барузера через WebSocket.</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+														</CheckBoxField>
+														<CheckBoxField name="ЭмулироватьДвиженияМышкиVanessaExt" id="2339">
+															<DataPath>Объект.ЭмулироватьДвиженияМышкиVanessaExt</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ЭмулироватьДвиженияМышкиVanessaExtКонтекстноеМеню" id="2340"/>
+															<ExtendedTooltip name="ЭмулироватьДвиженияМышкиVanessaExtРасширеннаяПодсказка" id="2341">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Enables mouse movement emulation using VanessaExt component</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Включает эмуляцию движения мышки с помощью компоненты VanessaExt</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+														</CheckBoxField>
+														<CheckBoxField name="ЭмулироватьВводКлавиатурыVanessaExt" id="2342">
+															<DataPath>Объект.ЭмулироватьВводКлавиатурыVanessaExt</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ЭмулироватьВводКлавиатурыVanessaExtКонтекстноеМеню" id="2343"/>
+															<ExtendedTooltip name="ЭмулироватьВводКлавиатурыVanessaExtРасширеннаяПодсказка" id="2344">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Enables emulation of keyboard input using VanessaExt component</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Включает эмуляцию ввода клавиатуры с помощью компоненты VanessaExt</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+														</CheckBoxField>
+														<CheckBoxField name="ИгнорироватьОшибкиПоискаЭлементовВБраузере" id="2345">
+															<DataPath>Объект.ИгнорироватьОшибкиПоискаЭлементовВБраузере</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ИгнорироватьОшибкиПоискаЭлементовВБраузереКонтекстноеМеню" id="2346"/>
+															<ExtendedTooltip name="ИгнорироватьОшибкиПоискаЭлементовВБраузереРасширеннаяПодсказка" id="2347">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Allows to continue running the script if the form element was not found in the browser.</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Поволяет не останавливать выполнение сценария если элемент формы не был найден в браузере.</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+														</CheckBoxField>
+													</ChildItems>
+												</UsualGroup>
 												<UsualGroup name="ГруппаSikuliXServer" id="2130">
 													<Title>
 														<v8:item>
@@ -13514,6 +13725,7 @@ Log events:
 													</ToolTip>
 													<Group>Vertical</Group>
 													<Behavior>Collapsible</Behavior>
+													<Collapsed>true</Collapsed>
 													<ControlRepresentation>Picture</ControlRepresentation>
 													<ExtendedTooltip name="ГруппаSikuliXServerРасширеннаяПодсказка" id="2131"/>
 													<ChildItems>
@@ -14925,216 +15137,365 @@ See &lt;link https://www.youtube.com/watch?v=QSDvDQDLyLk&amp;list=PLalsS95_a3a_m
 																								</Title>
 																							</ExtendedTooltip>
 																						</InputField>
-																						<InputField name="ЗаписьВидеоЭкранШирина" id="700">
-																							<DataPath>Объект.ЗаписьВидеоЭкранШирина</DataPath>
+																						<UsualGroup name="ПараметрыЭкранаКадр" id="2375">
 																							<Title>
 																								<v8:item>
 																									<v8:lang>ru</v8:lang>
-																									<v8:content>Экран ширина</v8:content>
-																								</v8:item>
-																								<v8:item>
-																									<v8:lang>en</v8:lang>
-																									<v8:content>Width</v8:content>
-																								</v8:item>
-																								<v8:item>
-																									<v8:lang>am</v8:lang>
-																									<v8:content>የሚሰጡዋቸውን ይታያል</v8:content>
-																								</v8:item>
-																								<v8:item>
-																									<v8:lang>az</v8:lang>
-																									<v8:content>Ekran eni</v8:content>
-																								</v8:item>
-																								<v8:item>
-																									<v8:lang>bg</v8:lang>
-																									<v8:content>На екрана широчина -</v8:content>
-																								</v8:item>
-																								<v8:item>
-																									<v8:lang>et</v8:lang>
-																									<v8:content>Ekraani laius</v8:content>
-																								</v8:item>
-																								<v8:item>
-																									<v8:lang>fr</v8:lang>
-																									<v8:content>La largeur de l'écran</v8:content>
-																								</v8:item>
-																								<v8:item>
-																									<v8:lang>ka</v8:lang>
-																									<v8:content>ეკრანის სიგანე</v8:content>
-																								</v8:item>
-																								<v8:item>
-																									<v8:lang>de</v8:lang>
-																									<v8:content>Bildschirm Breite</v8:content>
-																								</v8:item>
-																								<v8:item>
-																									<v8:lang>hu</v8:lang>
-																									<v8:content>Képernyő szélessége</v8:content>
-																								</v8:item>
-																								<v8:item>
-																									<v8:lang>it</v8:lang>
-																									<v8:content>Schermo di larghezza</v8:content>
-																								</v8:item>
-																								<v8:item>
-																									<v8:lang>lv</v8:lang>
-																									<v8:content>Ekrāna platums</v8:content>
-																								</v8:item>
-																								<v8:item>
-																									<v8:lang>lt</v8:lang>
-																									<v8:content>Ekranas plotis</v8:content>
-																								</v8:item>
-																								<v8:item>
-																									<v8:lang>mn</v8:lang>
-																									<v8:content>Өргөн дэлгэц</v8:content>
-																								</v8:item>
-																								<v8:item>
-																									<v8:lang>pl</v8:lang>
-																									<v8:content>Ekran szerokość</v8:content>
-																								</v8:item>
-																								<v8:item>
-																									<v8:lang>ro</v8:lang>
-																									<v8:content>Ecranul lățime</v8:content>
-																								</v8:item>
-																								<v8:item>
-																									<v8:lang>sl</v8:lang>
-																									<v8:content>Širine zaslona</v8:content>
-																								</v8:item>
-																								<v8:item>
-																									<v8:lang>es</v8:lang>
-																									<v8:content>El ancho de la pantalla</v8:content>
-																								</v8:item>
-																								<v8:item>
-																									<v8:lang>sv</v8:lang>
-																									<v8:content>Skärmens bredd</v8:content>
-																								</v8:item>
-																								<v8:item>
-																									<v8:lang>tr</v8:lang>
-																									<v8:content>Ekran genişliği</v8:content>
-																								</v8:item>
-																								<v8:item>
-																									<v8:lang>vi</v8:lang>
-																									<v8:content>Màn hình rộng</v8:content>
+																									<v8:content>Параметры экрана кадр</v8:content>
 																								</v8:item>
 																							</Title>
-																							<ToolTipRepresentation>Button</ToolTipRepresentation>
-																							<Width>4</Width>
-																							<ContextMenu name="ЗаписьВидеоЭкранШиринаКонтекстноеМеню" id="701"/>
-																							<ExtendedTooltip name="ЗаписьВидеоЭкранШиринаРасширеннаяПодсказка" id="1421">
-																								<Title formatted="false">
-																									<v8:item>
-																										<v8:lang>ru</v8:lang>
-																										<v8:content>Задаёт ширину экрана для записи видео. Значение не может быть больше чем ширина в текущем разрешении экрана. Если указать значение меньше, то в видео будет записываться часть экрана, начиная с верхнего левого угла.</v8:content>
-																									</v8:item>
-																									<v8:item>
-																										<v8:lang>en</v8:lang>
-																										<v8:content>Sets screen width for the recording. Maximum value is screen width for the current resolution. If the specified value is less than screen width, screen area beginning from upper left corner will be recorded.</v8:content>
-																									</v8:item>
-																								</Title>
-																							</ExtendedTooltip>
-																						</InputField>
-																						<InputField name="ЗаписьВидеоЭкранВысота" id="703">
-																							<DataPath>Объект.ЗаписьВидеоЭкранВысота</DataPath>
-																							<Title>
+																							<ToolTip>
 																								<v8:item>
 																									<v8:lang>ru</v8:lang>
-																									<v8:content>высота</v8:content>
+																									<v8:content>Параметры экрана кадр</v8:content>
 																								</v8:item>
-																								<v8:item>
-																									<v8:lang>en</v8:lang>
-																									<v8:content>Height</v8:content>
-																								</v8:item>
-																								<v8:item>
-																									<v8:lang>am</v8:lang>
-																									<v8:content>የሚሰጡዋቸውን እርዝማኔ</v8:content>
-																								</v8:item>
-																								<v8:item>
-																									<v8:lang>az</v8:lang>
-																									<v8:content>Ekran hündürlüyü</v8:content>
-																								</v8:item>
-																								<v8:item>
-																									<v8:lang>bg</v8:lang>
-																									<v8:content>Височина на екрана</v8:content>
-																								</v8:item>
-																								<v8:item>
-																									<v8:lang>et</v8:lang>
-																									<v8:content>Ekraani kõrgus</v8:content>
-																								</v8:item>
-																								<v8:item>
-																									<v8:lang>fr</v8:lang>
-																									<v8:content>La hauteur de l'écran</v8:content>
-																								</v8:item>
-																								<v8:item>
-																									<v8:lang>ka</v8:lang>
-																									<v8:content>ეკრანზე სიმაღლე</v8:content>
-																								</v8:item>
-																								<v8:item>
-																									<v8:lang>de</v8:lang>
-																									<v8:content>Bildschirm Höhe</v8:content>
-																								</v8:item>
-																								<v8:item>
-																									<v8:lang>hu</v8:lang>
-																									<v8:content>Képernyő magassága</v8:content>
-																								</v8:item>
-																								<v8:item>
-																									<v8:lang>it</v8:lang>
-																									<v8:content>Schermo di altezza</v8:content>
-																								</v8:item>
-																								<v8:item>
-																									<v8:lang>lv</v8:lang>
-																									<v8:content>Ekrāna augstums</v8:content>
-																								</v8:item>
-																								<v8:item>
-																									<v8:lang>lt</v8:lang>
-																									<v8:content>Ekranas aukštis</v8:content>
-																								</v8:item>
-																								<v8:item>
-																									<v8:lang>mn</v8:lang>
-																									<v8:content>Дэлгэц өндөр</v8:content>
-																								</v8:item>
-																								<v8:item>
-																									<v8:lang>pl</v8:lang>
-																									<v8:content>Ekran wysokość</v8:content>
-																								</v8:item>
-																								<v8:item>
-																									<v8:lang>ro</v8:lang>
-																									<v8:content>Ecran înălțime</v8:content>
-																								</v8:item>
-																								<v8:item>
-																									<v8:lang>sl</v8:lang>
-																									<v8:content>Višino zaslona</v8:content>
-																								</v8:item>
-																								<v8:item>
-																									<v8:lang>es</v8:lang>
-																									<v8:content>La altura de la pantalla</v8:content>
-																								</v8:item>
-																								<v8:item>
-																									<v8:lang>sv</v8:lang>
-																									<v8:content>Skärmens höjd</v8:content>
-																								</v8:item>
-																								<v8:item>
-																									<v8:lang>tr</v8:lang>
-																									<v8:content>Ekran yüksekliği</v8:content>
-																								</v8:item>
-																								<v8:item>
-																									<v8:lang>vi</v8:lang>
-																									<v8:content>Chiều cao màn hình</v8:content>
-																								</v8:item>
-																							</Title>
-																							<ToolTipRepresentation>Button</ToolTipRepresentation>
-																							<Width>4</Width>
-																							<ContextMenu name="ЗаписьВидеоЭкранВысотаКонтекстноеМеню" id="704"/>
-																							<ExtendedTooltip name="ЗаписьВидеоЭкранВысотаРасширеннаяПодсказка" id="1422">
-																								<Title formatted="false">
-																									<v8:item>
-																										<v8:lang>ru</v8:lang>
-																										<v8:content>Задаёт высоту экрана для записи видео. Значение не может быть больше чем высота в текущем разрешении экрана. Если указать значение меньше, то в видео будет записываться часть экрана, начиная с верхнего левого угла.</v8:content>
-																									</v8:item>
-																									<v8:item>
-																										<v8:lang>en</v8:lang>
-																										<v8:content>Sets screen height for the recording. Maximum value is screen height for the current resolution. If the specified value is less than screen height, screen area beginning from upper left corner will be recorded.</v8:content>
-																									</v8:item>
-																								</Title>
-																							</ExtendedTooltip>
-																						</InputField>
+																							</ToolTip>
+																							<Group>Horizontal</Group>
+																							<Representation>None</Representation>
+																							<ShowTitle>false</ShowTitle>
+																							<ExtendedTooltip name="ПараметрыЭкранаКадрРасширеннаяПодсказка" id="2376"/>
+																							<ChildItems>
+																								<UsualGroup name="ПараметрыЭкранаОтступ" id="2373">
+																									<Title>
+																										<v8:item>
+																											<v8:lang>ru</v8:lang>
+																											<v8:content>Параметры экрана отступ</v8:content>
+																										</v8:item>
+																									</Title>
+																									<ToolTip>
+																										<v8:item>
+																											<v8:lang>ru</v8:lang>
+																											<v8:content>Параметры экрана отступ</v8:content>
+																										</v8:item>
+																									</ToolTip>
+																									<Group>Vertical</Group>
+																									<Representation>None</Representation>
+																									<ShowTitle>false</ShowTitle>
+																									<ExtendedTooltip name="ПараметрыЭкранаОтступРасширеннаяПодсказка" id="2374"/>
+																									<ChildItems>
+																										<InputField name="ЗаписьВидеоЭкранШирина" id="700">
+																											<DataPath>Объект.ЗаписьВидеоЭкранШирина</DataPath>
+																											<Title>
+																												<v8:item>
+																													<v8:lang>ru</v8:lang>
+																													<v8:content>Экран ширина</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>en</v8:lang>
+																													<v8:content>Width</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>am</v8:lang>
+																													<v8:content>የሚሰጡዋቸውን ይታያል</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>az</v8:lang>
+																													<v8:content>Ekran eni</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>bg</v8:lang>
+																													<v8:content>На екрана широчина -</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>et</v8:lang>
+																													<v8:content>Ekraani laius</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>fr</v8:lang>
+																													<v8:content>La largeur de l'écran</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>ka</v8:lang>
+																													<v8:content>ეკრანის სიგანე</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>de</v8:lang>
+																													<v8:content>Bildschirm Breite</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>hu</v8:lang>
+																													<v8:content>Képernyő szélessége</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>it</v8:lang>
+																													<v8:content>Schermo di larghezza</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>lv</v8:lang>
+																													<v8:content>Ekrāna platums</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>lt</v8:lang>
+																													<v8:content>Ekranas plotis</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>mn</v8:lang>
+																													<v8:content>Өргөн дэлгэц</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>pl</v8:lang>
+																													<v8:content>Ekran szerokość</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>ro</v8:lang>
+																													<v8:content>Ecranul lățime</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>sl</v8:lang>
+																													<v8:content>Širine zaslona</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>es</v8:lang>
+																													<v8:content>El ancho de la pantalla</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>sv</v8:lang>
+																													<v8:content>Skärmens bredd</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>tr</v8:lang>
+																													<v8:content>Ekran genişliği</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>vi</v8:lang>
+																													<v8:content>Màn hình rộng</v8:content>
+																												</v8:item>
+																											</Title>
+																											<ToolTipRepresentation>Button</ToolTipRepresentation>
+																											<Width>4</Width>
+																											<ContextMenu name="ЗаписьВидеоЭкранШиринаКонтекстноеМеню" id="701"/>
+																											<ExtendedTooltip name="ЗаписьВидеоЭкранШиринаРасширеннаяПодсказка" id="1421">
+																												<Title formatted="false">
+																													<v8:item>
+																														<v8:lang>ru</v8:lang>
+																														<v8:content>Задаёт ширину экрана для записи видео. Значение не может быть больше чем ширина в текущем разрешении экрана. Если указать значение меньше, то в видео будет записываться часть экрана, начиная с верхнего левого угла.</v8:content>
+																													</v8:item>
+																													<v8:item>
+																														<v8:lang>en</v8:lang>
+																														<v8:content>Sets screen width for the recording. Maximum value is screen width for the current resolution. If the specified value is less than screen width, screen area beginning from upper left corner will be recorded.</v8:content>
+																													</v8:item>
+																												</Title>
+																											</ExtendedTooltip>
+																										</InputField>
+																										<InputField name="ЗаписьВидеоЭкранСлева" id="2365">
+																											<DataPath>Объект.ЗаписьВидеоЭкранСлева</DataPath>
+																											<Title>
+																												<v8:item>
+																													<v8:lang>ru</v8:lang>
+																													<v8:content>Отступ слева</v8:content>
+																												</v8:item>
+																											</Title>
+																											<ToolTipRepresentation>Button</ToolTipRepresentation>
+																											<Width>4</Width>
+																											<ContextMenu name="ЗаписьВидеоЭкранСлеваКонтекстноеМеню" id="2366"/>
+																											<ExtendedTooltip name="ЗаписьВидеоЭкранСлеваРасширеннаяПодсказка" id="2367">
+																												<Title formatted="false">
+																													<v8:item>
+																														<v8:lang>ru</v8:lang>
+																														<v8:content>Задает отступ слева</v8:content>
+																													</v8:item>
+																												</Title>
+																											</ExtendedTooltip>
+																										</InputField>
+																									</ChildItems>
+																								</UsualGroup>
+																								<UsualGroup name="ПараметрыЭкранаРазмеры" id="2371">
+																									<Title>
+																										<v8:item>
+																											<v8:lang>ru</v8:lang>
+																											<v8:content>Параметры экрана размеры</v8:content>
+																										</v8:item>
+																									</Title>
+																									<ToolTip>
+																										<v8:item>
+																											<v8:lang>ru</v8:lang>
+																											<v8:content>Параметры экрана размеры</v8:content>
+																										</v8:item>
+																									</ToolTip>
+																									<Group>Vertical</Group>
+																									<Representation>None</Representation>
+																									<ShowTitle>false</ShowTitle>
+																									<ExtendedTooltip name="ПараметрыЭкранаРазмерыРасширеннаяПодсказка" id="2372"/>
+																									<ChildItems>
+																										<InputField name="ЗаписьВидеоЭкранВысота" id="703">
+																											<DataPath>Объект.ЗаписьВидеоЭкранВысота</DataPath>
+																											<Title>
+																												<v8:item>
+																													<v8:lang>ru</v8:lang>
+																													<v8:content>высота</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>en</v8:lang>
+																													<v8:content>Height</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>am</v8:lang>
+																													<v8:content>የሚሰጡዋቸውን እርዝማኔ</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>az</v8:lang>
+																													<v8:content>Ekran hündürlüyü</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>bg</v8:lang>
+																													<v8:content>Височина на екрана</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>et</v8:lang>
+																													<v8:content>Ekraani kõrgus</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>fr</v8:lang>
+																													<v8:content>La hauteur de l'écran</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>ka</v8:lang>
+																													<v8:content>ეკრანზე სიმაღლე</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>de</v8:lang>
+																													<v8:content>Bildschirm Höhe</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>hu</v8:lang>
+																													<v8:content>Képernyő magassága</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>it</v8:lang>
+																													<v8:content>Schermo di altezza</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>lv</v8:lang>
+																													<v8:content>Ekrāna augstums</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>lt</v8:lang>
+																													<v8:content>Ekranas aukštis</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>mn</v8:lang>
+																													<v8:content>Дэлгэц өндөр</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>pl</v8:lang>
+																													<v8:content>Ekran wysokość</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>ro</v8:lang>
+																													<v8:content>Ecran înălțime</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>sl</v8:lang>
+																													<v8:content>Višino zaslona</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>es</v8:lang>
+																													<v8:content>La altura de la pantalla</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>sv</v8:lang>
+																													<v8:content>Skärmens höjd</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>tr</v8:lang>
+																													<v8:content>Ekran yüksekliği</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>vi</v8:lang>
+																													<v8:content>Chiều cao màn hình</v8:content>
+																												</v8:item>
+																											</Title>
+																											<ToolTipRepresentation>Button</ToolTipRepresentation>
+																											<Width>4</Width>
+																											<ContextMenu name="ЗаписьВидеоЭкранВысотаКонтекстноеМеню" id="704"/>
+																											<ExtendedTooltip name="ЗаписьВидеоЭкранВысотаРасширеннаяПодсказка" id="1422">
+																												<Title formatted="false">
+																													<v8:item>
+																														<v8:lang>ru</v8:lang>
+																														<v8:content>Задаёт высоту экрана для записи видео. Значение не может быть больше чем высота в текущем разрешении экрана. Если указать значение меньше, то в видео будет записываться часть экрана, начиная с верхнего левого угла.</v8:content>
+																													</v8:item>
+																													<v8:item>
+																														<v8:lang>en</v8:lang>
+																														<v8:content>Sets screen height for the recording. Maximum value is screen height for the current resolution. If the specified value is less than screen height, screen area beginning from upper left corner will be recorded.</v8:content>
+																													</v8:item>
+																												</Title>
+																											</ExtendedTooltip>
+																										</InputField>
+																										<InputField name="ЗаписьВидеоЭкранСверху" id="2368">
+																											<DataPath>Объект.ЗаписьВидеоЭкранСверху</DataPath>
+																											<Title>
+																												<v8:item>
+																													<v8:lang>ru</v8:lang>
+																													<v8:content>сверху</v8:content>
+																												</v8:item>
+																											</Title>
+																											<ToolTipRepresentation>Button</ToolTipRepresentation>
+																											<Width>4</Width>
+																											<ContextMenu name="ЗаписьВидеоЭкранСверхуКонтекстноеМеню" id="2369"/>
+																											<ExtendedTooltip name="ЗаписьВидеоЭкранСверхуРасширеннаяПодсказка" id="2370">
+																												<Title formatted="false">
+																													<v8:item>
+																														<v8:lang>ru</v8:lang>
+																														<v8:content>Задает отступ сверху</v8:content>
+																													</v8:item>
+																												</Title>
+																											</ExtendedTooltip>
+																										</InputField>
+																									</ChildItems>
+																								</UsualGroup>
+																							</ChildItems>
+																						</UsualGroup>
 																					</ChildItems>
 																				</UsualGroup>
+																				<RadioButtonField name="ЗаписьВидеоИнструмент" id="2377">
+																					<DataPath>Объект.ЗаписьВидеоИнструмент</DataPath>
+																					<ToolTipRepresentation>Button</ToolTipRepresentation>
+																					<RadioButtonType>Auto</RadioButtonType>
+																					<ChoiceList>
+																						<xr:Item>
+																							<xr:Presentation/>
+																							<xr:CheckState>0</xr:CheckState>
+																							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																								<Presentation>
+																									<v8:item>
+																										<v8:lang>ru</v8:lang>
+																										<v8:content>VLC media player</v8:content>
+																									</v8:item>
+																								</Presentation>
+																								<Value xsi:type="xs:string">vlc</Value>
+																							</xr:Value>
+																						</xr:Item>
+																						<xr:Item>
+																							<xr:Presentation/>
+																							<xr:CheckState>0</xr:CheckState>
+																							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																								<Presentation>
+																									<v8:item>
+																										<v8:lang>ru</v8:lang>
+																										<v8:content>FFmpeg</v8:content>
+																									</v8:item>
+																								</Presentation>
+																								<Value xsi:type="xs:string">ffmpeg</Value>
+																							</xr:Value>
+																						</xr:Item>
+																					</ChoiceList>
+																					<ContextMenu name="ЗаписьВидеоИнструментКонтекстноеМеню" id="2378"/>
+																					<ExtendedTooltip name="ЗаписьВидеоИнструментРасширеннаяПодсказка" id="2379">
+																						<Title formatted="false">
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>If VLC selected, then the VLC tool will be called up for video recording. Otherwise, the external VanessaExt component will be used, which will call ffmpeg.</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Если выбран вариант VLC, тогда для записи видео будет вызываться иснтрумент VLC. Иначе будет использована внешняя компонента VanessaExt, которая будет вызывать ffmpeg.</v8:content>
+																							</v8:item>
+																						</Title>
+																					</ExtendedTooltip>
+																					<Events>
+																						<Event name="OnChange">ЗаписьВидеоИнструментПриИзменении</Event>
+																					</Events>
+																				</RadioButtonField>
 																				<InputField name="ЗаписьВидеоКомандаНачатьЗаписьВидео" id="662">
 																					<DataPath>Объект.ЗаписьВидеоКомандаНачатьЗаписьВидео</DataPath>
 																					<Title>
@@ -15454,6 +15815,9 @@ See &lt;link https://www.youtube.com/watch?v=QSDvDQDLyLk&amp;list=PLalsS95_a3a_m
 																					<ChoiceButton>true</ChoiceButton>
 																					<ContextMenu name="ЗаписьВидеоКомандаFfmpegКонтекстноеМеню" id="678"/>
 																					<ExtendedTooltip name="ЗаписьВидеоКомандаFfmpegРасширеннаяПодсказка" id="1425"/>
+																					<Events>
+																						<Event name="StartChoice">ЗаписьВидеоКомандаFfmpegНачалоВыбора</Event>
+																					</Events>
 																				</InputField>
 																				<InputField name="ЗаписьВидеоКомандаConvert" id="680">
 																					<DataPath>Объект.ЗаписьВидеоКомандаConvert</DataPath>
@@ -28722,6 +29086,44 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПроверитьДублированиеСценариев</Action>
+		</Command>
+		<Command name="КомандаЗапускаChrome" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Chrome</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Chrome</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда запуска chrome</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗапускаChrome</Action>
+		</Command>
+		<Command name="КомандаЗапускаChromeСОтладкой" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Chrome+debug</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Chrome+debug</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда запуска chrome с отладкой</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаЗапускаChromeСОтладкой</Action>
 		</Command>
 	</Commands>
 </Form>

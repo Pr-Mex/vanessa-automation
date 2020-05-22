@@ -23,6 +23,75 @@
 				<Parameter xsi:nil="true"/>
 				<ExtendedTooltip name="ФормаКнопкаСПометкойРасширеннаяПодсказка" id="322"/>
 			</Button>
+			<Popup name="ФормаГруппаКоманднаяПанель" id="332">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Форма группа командная панель</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Форма группа командная панель</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="ФормаГруппаКоманднаяПанельРасширеннаяПодсказка" id="333"/>
+				<ChildItems>
+					<Button name="ФормаКомандаВГруппеКомаднойПанели1" id="334">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.КомандаВГруппеКомаднойПанели1</CommandName>
+						<Parameter xsi:nil="true"/>
+						<ExtendedTooltip name="ФормаКомандаВГруппеКомаднойПанели1РасширеннаяПодсказка" id="335"/>
+					</Button>
+					<Button name="ФормаКомандаВГруппеКомаднойПанели2" id="336">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.КомандаВГруппеКомаднойПанели2</CommandName>
+						<Parameter xsi:nil="true"/>
+						<ExtendedTooltip name="ФормаКомандаВГруппеКомаднойПанели2РасширеннаяПодсказка" id="337"/>
+					</Button>
+					<Popup name="ФормаГруппаКоманднаяПанельПодменю1" id="338">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Форма группа командная панель подменю1</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Форма группа командная панель подменю1</v8:content>
+							</v8:item>
+						</ToolTip>
+						<ExtendedTooltip name="ФормаГруппаКоманднаяПанельПодменю1РасширеннаяПодсказка" id="339"/>
+						<ChildItems>
+							<Popup name="ФормаГруппаКоманднаяПанельПодменю2" id="340">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Форма группа командная панель подменю2</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Форма группа командная панель подменю2</v8:content>
+									</v8:item>
+								</ToolTip>
+								<ExtendedTooltip name="ФормаГруппаКоманднаяПанельПодменю2РасширеннаяПодсказка" id="341"/>
+								<ChildItems>
+									<Button name="ФормаКомандаВГруппеКомаднойПанели3" id="342">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.КомандаВГруппеКомаднойПанели3</CommandName>
+										<Parameter xsi:nil="true"/>
+										<ExtendedTooltip name="ФормаКомандаВГруппеКомаднойПанели3РасширеннаяПодсказка" id="343"/>
+									</Button>
+								</ChildItems>
+							</Popup>
+						</ChildItems>
+					</Popup>
+				</ChildItems>
+			</Popup>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -55,6 +124,12 @@
 						</InputField>
 						<InputField name="Наименование" id="4">
 							<DataPath>Объект.Description</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Это подсказка наименование.</v8:content>
+								</v8:item>
+							</ToolTip>
 							<EditMode>EnterOnInput</EditMode>
 							<ContextMenu name="НаименованиеКонтекстноеМеню" id="5">
 								<ChildItems>
@@ -94,6 +169,13 @@
 						</UsualGroup>
 						<InputField name="Реквизит1" id="7">
 							<DataPath>Объект.Реквизит1</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Это подсказка реквизит1.</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>Balloon</ToolTipRepresentation>
 							<EditMode>EnterOnInput</EditMode>
 							<ChoiceButton>true</ChoiceButton>
 							<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
@@ -128,6 +210,13 @@
 						</UsualGroup>
 						<InputField name="Реквизит2" id="10">
 							<DataPath>Объект.Реквизит2</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Это подсказка реквизит2.</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
 							<ChoiceButton>true</ChoiceButton>
 							<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
 							<ClearButton>true</ClearButton>
@@ -161,8 +250,15 @@
 						</UsualGroup>
 						<InputField name="Реквизит4" id="87">
 							<DataPath>Объект.Реквизит3</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Это подсказка реквизит3.</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>ShowAuto</ToolTipRepresentation>
 							<ChoiceButton>true</ChoiceButton>
-							<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+							<ChoiceButtonRepresentation>ShowInDropList</ChoiceButtonRepresentation>
 							<ClearButton>true</ClearButton>
 							<OpenButton>true</OpenButton>
 							<ContextMenu name="Реквизит4КонтекстноеМеню" id="88"/>
@@ -194,6 +290,13 @@
 						</UsualGroup>
 						<InputField name="РеквизитЧисло" id="53">
 							<DataPath>Объект.РеквизитЧисло</DataPath>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Это подсказка реквизит число.</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ToolTipRepresentation>ShowRight</ToolTipRepresentation>
 							<SpinButton>true</SpinButton>
 							<ContextMenu name="РеквизитЧислоКонтекстноеМеню" id="54"/>
 							<ExtendedTooltip name="РеквизитЧислоРасширеннаяПодсказка" id="55"/>
@@ -225,7 +328,14 @@
 						<InputField name="РеквизитСтрока" id="44">
 							<DataPath>Объект.РеквизитСтрока</DataPath>
 							<ContextMenu name="РеквизитСтрокаКонтекстноеМеню" id="45"/>
-							<ExtendedTooltip name="РеквизитСтрокаРасширеннаяПодсказка" id="46"/>
+							<ExtendedTooltip name="РеквизитСтрокаРасширеннаяПодсказка" id="46">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Это подсказка реквизит строка.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
 						</InputField>
 						<UsualGroup name="ГруппаРеквизитДата" id="251">
 							<Title>
@@ -251,6 +361,52 @@
 							<Group>Horizontal</Group>
 							<ExtendedTooltip name="ГруппаРеквизитДатаРасширеннаяПодсказка" id="252"/>
 						</UsualGroup>
+						<UsualGroup name="ГруппаСразуОткрываетсяФормаВыбора" id="326">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа сразу открывается форма выбора</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа сразу открывается форма выбора</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Horizontal</Group>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаСразуОткрываетсяФормаВыбораРасширеннаяПодсказка" id="327"/>
+							<ChildItems>
+								<InputField name="РеквизитОткрываетсяСразуФормаВыбора" id="323">
+									<DataPath>Объект.Реквизит3</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Реквизит открывается сразу форма выбора</v8:content>
+										</v8:item>
+									</Title>
+									<ChoiceButton>true</ChoiceButton>
+									<ChoiceButtonRepresentation>ShowInInputField</ChoiceButtonRepresentation>
+									<AutoChoiceIncomplete>true</AutoChoiceIncomplete>
+									<IncompleteChoiceMode>OnActivate</IncompleteChoiceMode>
+									<ContextMenu name="РеквизитОткрываетсяСразуФормаВыбораКонтекстноеМеню" id="324"/>
+									<ExtendedTooltip name="РеквизитОткрываетсяСразуФормаВыбораРасширеннаяПодсказка" id="325"/>
+								</InputField>
+								<Button name="СкрытьРеквизитОткрываетсяСразуФормаВыбора" id="328">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.СкрытьРеквизитОткрываетсяСразуФормаВыбора</CommandName>
+									<Parameter xsi:nil="true"/>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Скрыть</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="СкрытьРеквизитОткрываетсяСразуФормаВыбораРасширеннаяПодсказка" id="329"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
 						<InputField name="РеквизитСтрокаНеДоступныйДляРедактирования" id="261">
 							<DataPath>Объект.РеквизитСтрока</DataPath>
 							<Enabled>false</Enabled>
@@ -269,8 +425,16 @@
 						</InputField>
 						<InputField name="РеквизитДата" id="47">
 							<DataPath>Объект.РеквизитДата</DataPath>
+							<ToolTipRepresentation>Balloon</ToolTipRepresentation>
 							<ContextMenu name="РеквизитДатаКонтекстноеМеню" id="48"/>
-							<ExtendedTooltip name="РеквизитДатаРасширеннаяПодсказка" id="49"/>
+							<ExtendedTooltip name="РеквизитДатаРасширеннаяПодсказка" id="49">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Это подсказка реквизит дата.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
 						</InputField>
 						<UsualGroup name="ГруппаРеквизитБулево" id="247">
 							<Title>
@@ -298,9 +462,17 @@
 						</UsualGroup>
 						<CheckBoxField name="РеквизитБулево" id="50">
 							<DataPath>Объект.РеквизитБулево</DataPath>
+							<ToolTipRepresentation>Button</ToolTipRepresentation>
 							<CheckBoxType>Auto</CheckBoxType>
 							<ContextMenu name="РеквизитБулевоКонтекстноеМеню" id="51"/>
-							<ExtendedTooltip name="РеквизитБулевоРасширеннаяПодсказка" id="52"/>
+							<ExtendedTooltip name="РеквизитБулевоРасширеннаяПодсказка" id="52">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Это подсказка реквизит булево.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
 						</CheckBoxField>
 						<UsualGroup name="ГруппаРеквизитПереключатель" id="249">
 							<Title>
@@ -328,6 +500,7 @@
 						</UsualGroup>
 						<RadioButtonField name="РеквизитПереключатель" id="56">
 							<DataPath>Объект.РеквизитПереключатель</DataPath>
+							<ToolTipRepresentation>ShowRight</ToolTipRepresentation>
 							<RadioButtonType>Auto</RadioButtonType>
 							<ColumnsCount>2</ColumnsCount>
 							<ChoiceList>
@@ -367,7 +540,14 @@
 								</xr:Item>
 							</ChoiceList>
 							<ContextMenu name="РеквизитПереключательКонтекстноеМеню" id="57"/>
-							<ExtendedTooltip name="РеквизитПереключательРасширеннаяПодсказка" id="58"/>
+							<ExtendedTooltip name="РеквизитПереключательРасширеннаяПодсказка" id="58">
+								<Title formatted="false">
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Это подсказка реквизит переключатель.</v8:content>
+									</v8:item>
+								</Title>
+							</ExtendedTooltip>
 						</RadioButtonField>
 						<UsualGroup name="ГруппаРеквизитБыстрыйВыбор" id="257">
 							<Title>
@@ -416,6 +596,23 @@
 							<ContextMenu name="РеквизитЧисло1КонтекстноеМеню" id="276"/>
 							<ExtendedTooltip name="РеквизитЧисло1РасширеннаяПодсказка" id="277"/>
 						</CheckBoxField>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаТЧ" id="330">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>ТЧ</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница ТЧ</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаТЧРасширеннаяПодсказка" id="331"/>
+					<ChildItems>
 						<Table name="ТабличнаяЧасть1" id="13">
 							<HeaderHeight>2</HeaderHeight>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
@@ -489,6 +686,8 @@
 								<InputField name="ТабличнаяЧасть1РеквизитСправочник" id="38">
 									<DataPath>Объект.ТабличнаяЧасть1.РеквизитСправочник</DataPath>
 									<EditMode>EnterOnInput</EditMode>
+									<ChoiceButton>true</ChoiceButton>
+									<ChoiceButtonRepresentation>ShowInDropListAndInInputField</ChoiceButtonRepresentation>
 									<ClearButton>true</ClearButton>
 									<ContextMenu name="ТабличнаяЧасть1РеквизитСправочникКонтекстноеМеню" id="39"/>
 									<ExtendedTooltip name="ТабличнаяЧасть1РеквизитСправочникРасширеннаяПодсказка" id="40"/>
@@ -500,6 +699,12 @@
 									<ContextMenu name="ТабличнаяЧасть1РеквизитБулевоКонтекстноеМеню" id="42"/>
 									<ExtendedTooltip name="ТабличнаяЧасть1РеквизитБулевоРасширеннаяПодсказка" id="43"/>
 								</CheckBoxField>
+								<InputField name="ТабличнаяЧасть1РеквизитЧислоПеречисление" id="344">
+									<DataPath>Объект.ТабличнаяЧасть1.РеквизитПеречисление</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТабличнаяЧасть1РеквизитЧислоПеречислениеКонтекстноеМеню" id="345"/>
+									<ExtendedTooltip name="ТабличнаяЧасть1РеквизитЧислоПеречислениеРасширеннаяПодсказка" id="346"/>
+								</InputField>
 								<InputField name="ТабличнаяЧасть1РеквизитБыстрыйВыборТЧ" id="163">
 									<DataPath>Объект.ТабличнаяЧасть1.РеквизитБыстрыйВыборТЧ</DataPath>
 									<EditMode>EnterOnInput</EditMode>
@@ -2170,6 +2375,66 @@
 				</v8:item>
 			</ToolTip>
 			<Action>КнопкаСПометкой</Action>
+		</Command>
+		<Command name="СкрытьРеквизитОткрываетсяСразуФормаВыбора" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скрыть реквизит открывается сразу форма выбора</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скрыть реквизит открывается сразу форма выбора</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СкрытьРеквизитОткрываетсяСразуФормаВыбора</Action>
+		</Command>
+		<Command name="КомандаВГруппеКомаднойПанели1" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда в группе комадной панели1</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда в группе комадной панели1</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаВГруппеКомаднойПанели1</Action>
+		</Command>
+		<Command name="КомандаВГруппеКомаднойПанели2" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда в группе комадной панели2</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда в группе комадной панели1</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаВГруппеКомаднойПанели2</Action>
+		</Command>
+		<Command name="КомандаВГруппеКомаднойПанели3" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда в группе комадной панели3</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда в группе комадной панели1</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КомандаВГруппеКомаднойПанели3</Action>
 		</Command>
 	</Commands>
 	<CommandInterface>
