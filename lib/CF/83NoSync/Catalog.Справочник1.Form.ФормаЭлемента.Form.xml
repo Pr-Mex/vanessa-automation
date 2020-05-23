@@ -1090,6 +1090,14 @@
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаСЭлементамиСОдинаковымЗаголовком1РасширеннаяПодсказка" id="298"/>
 							<ChildItems>
+								<Button name="КнопкаКомандаКартинка" id="347">
+									<Type>Hyperlink</Type>
+									<Representation>Picture</Representation>
+									<Width>2</Width>
+									<CommandName>Form.Command.КомандаКартинка</CommandName>
+									<Parameter xsi:nil="true"/>
+									<ExtendedTooltip name="КнопкаКомандаКартинкаРасширеннаяПодсказка" id="348"/>
+								</Button>
 								<PictureDecoration name="ГиперссылкаТолькоПросмотр1" id="284">
 									<Width>24</Width>
 									<Height>2</Height>
@@ -2435,6 +2443,25 @@
 				</v8:item>
 			</ToolTip>
 			<Action>КомандаВГруппеКомаднойПанели3</Action>
+		</Command>
+		<Command name="КомандаКартинка" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда картинка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда картинка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.BusinessProcess</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаКартинка</Action>
 		</Command>
 	</Commands>
 	<CommandInterface>
