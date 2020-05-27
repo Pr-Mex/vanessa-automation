@@ -26,8 +26,8 @@
 	И Я подключаю клиент тестирования "VanessaUserEN" из таблицы клиентов тестирования
 	И В командном интерфейсе я выбираю 'Main' 'Open vanessa automation'
 	Когда открылось окно '*autotest: Vanessa Automation'
-	И я перехожу к закладке "Service and Settings"
-	И я изменяю флаг 'Check Vanessa-Automation on 1C test client session'
+	И я перехожу к закладке "Service"
+	И я устанавливаю флаг 'Check Vanessa Automation in test client mode'
 	И я перехожу к закладке "Extended"
 	И я активизирую поле с именем "КаталогИнструментовСлужебный"
 	И В поле с именем "КаталогИнструментовСлужебный" я указываю значение реквизита объекта обработки "КаталогИнструментов"
