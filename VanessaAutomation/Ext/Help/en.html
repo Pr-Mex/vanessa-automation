@@ -1,354 +1,354 @@
 ﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html;charset=utf-8" http-equiv="content-type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.9600.16518"></meta></head><body>
-<p><font size="3" face="Arial">Vanessa-Automation - это фреймворк для разработки в 1С используя методологию BDD.</font></p>
-<p><font size="3" face="Arial">Страница проекта: <a href="https://github.com/Pr-Mex/vanessa-automation">https://github.com/Pr-Mex/vanessa-automation</a></font></p>
-<p><font size="3" face="Arial">Vanessa-Automation является аналогом Cucumber для разработки на платформе 1С:Предприятие.</font></p>
-<p><font size="2" face="Arial">Поддерживаются версии платформы:</font></p>
+<p><font size="3" face="Arial">449845CC-3E6A-7212-2E00-0B6683C08B40</font></p>
+<p><font size="3" face="Arial">AF184D42-483F-9C1D-D467-7757F754AF6F<a href="https://github.com/Pr-Mex/vanessa-automation">46F50E94-C2B3-DAE7-7A04-40288C0CA420</a></font></p>
+<p><font size="3" face="Arial">C5597177-0CB5-4D6B-BAB6-6381919008DE</font></p>
+<p><font size="2" face="Arial">456B2D87-58FB-5478-8DE6-60301B339E03</font></p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<p><font size="1" face="Arial"> 8.3.6 в режиме совместимости 8.2, 8.3.6, 8.3.7, 8.3.8, 8.3.9, 8.3.10, 8.3.11, 8.3.12, 8.3.13, 8.3.14, </font></p><span style="FONT-SIZE: x-small; FONT-FAMILY: Arial">8.3.15, </span><span style="FONT-SIZE: x-small; FONT-FAMILY: Arial">8.3.16.</span></blockquote>
-<p><font size="2" face="Arial">У обработки есть <strong>Managed form</strong> (она является основой) и <strong>Обычная форма</strong>.</font></p>
+<p><font size="1" face="Arial">C31928E3-2F2D-7530-07B6-6FD9CCEA0FB1</font></p><span style="FONT-SIZE: x-small; FONT-FAMILY: Arial">F384FC57-FBF8-52F5-5AEB-BBB4C25D02B4</span><span style="FONT-SIZE: x-small; FONT-FAMILY: Arial">4368093B-9064-B089-9A18-8669E732DD15</span></blockquote>
+<p><font size="2" face="Arial">5C539B1B-DC62-C878-824C-C9ED6E98B0F2<strong>AEA71E05-3940-2A08-8345-55D5BDF6055C</strong>804A50D0-FCE2-4BDC-C5C9-92525BEC76C8<strong>944851ED-179F-0C45-5DC4-4317CFEA2AB7</strong>640C79AC-4D52-9C45-504F-F12085C4AD9D</font></p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<p><font size="1" face="Arial">Обычная форма поддерживается в <strong>ограниченном</strong> формате. Т.е. ошибки исправляются - новые фичи добавляются редко. Но вы можете добавить в неё нужные Вам фичи самостоятельно.</font></p></blockquote>
-<p><font size="2" face="Arial"></font> </p>
-<p><font size="3" face="Arial"></font> </p>
-<p><font size="3" face="Arial">Разделы справки:</font></p>
-<p>1 . <a href="#ПравилаНаписанияfeatureФайлов">Правила написания feature файлов.</a></p>
+<p><font size="1" face="Arial">D7F374D6-EBA0-639D-D271-15A9B3C8B541<strong>8BBB8365-8894-5BD6-68C1-19A850264249</strong>3737E3E8-2BE8-09BE-E724-45F44EF2ABDE</font></p></blockquote>
+<p><font size="2" face="Arial"></font>2607A4AB-22B4-BC68-8681-1016DE100EAF</p>
+<p><font size="3" face="Arial"></font>4D673236-C3B9-CA84-4BC0-03E688C789E9</p>
+<p><font size="3" face="Arial">DEB1E198-F5A2-4DDF-FF00-098E4620EFFE</font></p>
+<p>C9040DA2-0C47-270B-BA29-9DB4A72CC561<a href="#ПравилаНаписанияfeatureФайлов">BAD01F15-556A-ED2A-ADD1-1A33FEC48E4E</a></p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<p><a href="#Основные секции feature файла.">1.1 Основные секции feature файла.</a></p>
+<p><a href="#Основные секции feature файла.">FEF00CE0-59B8-5305-5EC0-02523CDCC66B</a></p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<p><a href="#Заголовок">1.1.1 Заголовок feature</a></p>
-<p><a href="#Сценарии">1.1.2 Сценарии</a></p>
-<p><a href="#Структура сценария">1.1.3 Структура сценария</a></p></blockquote>
-<p dir="ltr"><a href="#Тег @tree">#Тег @tree</a></p>
-<p><a href="#Тег @exportscenarios">#Тег @exportscenarios</a></p>
-<p>1.4 Передача в шаг таблицы.</p>
-<p>1.5 Вызов структуры сценария как вложенного сценария.</p>
-<p>1.6 Передача параметра таблицы (таблиц) во вложенный сценарий.</p></blockquote>
-<p dir="ltr">2. <a href="#Как загрузить feature файл.">Как загрузить feature файл. Тэги.</a></p>
-<p>3. <a href="#Как запустить feature файл на выполнение. Отладка.">Как запустить feature файл на выполнение. Отладка.</a></p>
-<p>4. <a href="#Как создать epf файл на основе feature файла.">Как создать epf файл на основе feature файла.</a></p>
-<p>5. <a href="#Описание настроек на закладке Сервис.">Описание настроек на закладке Сервис.</a></p>
+<p><a href="#Заголовок">BBD9AC76-1542-D029-9547-74FEC35B43B8</a></p>
+<p><a href="#Сценарии">3FE26D23-8968-28DF-F1F8-820AA3235239</a></p>
+<p><a href="#Структура сценария">7B58DBB8-52CE-4B0A-A931-153A6A54AA48</a></p></blockquote>
+<p dir="ltr"><a href="#Тег @tree">E798BEA1-9916-D50F-F571-1C513ED5BC69</a></p>
+<p><a href="#Тег @exportscenarios">8600B29D-7477-6E7F-F45E-EA4C368D54B1</a></p>
+<p>48C63471-258A-F9C5-5DB9-975766A02EC8</p>
+<p>EEB39305-CFD7-A7F0-05C2-2382FEE7AECE</p>
+<p>188D2169-C1B5-63F2-2D76-630C9058A5EA</p></blockquote>
+<p dir="ltr">71E06013-B4A5-1052-283D-DA41EE74F07B<a href="#Как загрузить feature файл.">6CE49A9F-A588-A839-985B-B051D9FACA9C</a></p>
+<p>5E444287-C985-1056-6354-4627BFF01409<a href="#Как запустить feature файл на выполнение. Отладка.">9815C4E4-99B5-8742-2C83-3FB694B59A7B</a></p>
+<p>5588531B-D1C5-BD74-473B-BBD10F217AA0<a href="#Как создать epf файл на основе feature файла.">7C51DD53-82A1-FAA0-0680-0B8E5594B6EA</a></p>
+<p>1A776E86-9EF2-EDA5-54C3-37869FDE5DDA<a href="#Описание настроек на закладке Сервис.">503F279A-A72C-5EF0-0870-0FCDF35200AF</a></p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<p>* Открытие фичи в текстовом редакторе</p></blockquote>
-<p>6. Асинхронные вызовы</p>
-<p>7. <a href="#Как получить отчет Allure, jUnit, Cucmber report.">Как получить отчет Allure, jUnit, Cucmber report.</a></p>
-<p>8. <a href="#Быстрое создание файла сценария">Запись действий пользователя.</a></p>
-<p>9. <a href="#Как получить состояние формы TestClient">Как получить состояние формы TestClient.</a></p>
-<p>10. Как подключить свою библиотеку.</p>
-<p>11. Как поделиться своими шагами с коллегами при групповой разработке.</p>
-<p>12. Основные операции при работе с TestClient.</p>
+<p>52A340B3-F016-22B1-10B7-7FEB76C43CB6</p></blockquote>
+<p>11F2A655-6823-46BE-E8E9-9CC8852B4C4C</p>
+<p>69ECA92D-7F6E-0998-839D-DC7A766F669C<a href="#Как получить отчет Allure, jUnit, Cucmber report.">71702EB3-0DCA-C05F-FC25-54413D749B5D</a></p>
+<p>73E6F789-B8DB-12CD-DF0D-D02959B86F39<a href="#Быстрое создание файла сценария">48DCDF34-D77F-5F31-1350-062F81D3FBB1</a></p>
+<p>FB71E754-7E32-AC32-2F30-0E5E52CB1D09<a href="#Как получить состояние формы TestClient">499ADEE7-5ECD-2772-2691-1390329DBC1B</a></p>
+<p>DC1D253F-0DAD-D694-4779-913DF1FB584F</p>
+<p>6C4804A8-4BD5-4E22-2B7E-E36B22F0420A</p>
+<p>0A0A3F6E-9FED-9ED3-34AC-C51CC7CB9DDD</p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<p>12.1 <a href="#Как сравнить табличный документ с эталоном.">Как сравнить табличный документ с эталоном.</a></p></blockquote>
-<p>13. Как создать автоинструкцию в формате HTML, MD.</p>
-<p>14. <a href="#14. Как создать автовидеоинструкцию.">Как создать автовидеоинструкцию.</a></p>
-<p>15. <a href="#15. Как узнать детали ошибки.">Как узнать детали ошибки.</a></p>
-<p>16. <a href="#16. Работа со сценариями на других языках.">Работа со сценариями на других языках.</a></p>
-<p>17. Список экспортных процедур и функций.</p>
-<p>18. Запуск Vanessa-Automation на CI.</p>
-<p>19. Инструкция для контрибьютерров.</p>
-<p>20. <a>SikuliX.</a></p>
+<p>4FDB3A12-BE4A-6439-9CF0-0054515C1607<a href="#Как сравнить табличный документ с эталоном.">CED540A2-2DDD-66A8-8944-459B1747E958</a></p></blockquote>
+<p>F203FEBB-6CA6-69C5-5AD9-9E56F023754B</p>
+<p>366B9C58-8CC9-28C9-984D-DC9015C31B9D<a href="#14. Как создать автовидеоинструкцию.">113F6D54-D751-318B-B7DA-A66E652D19D4</a></p>
+<p>61170FEC-4109-8E8E-E947-758879CA344B<a href="#15. Как узнать детали ошибки.">A89CC39F-97FD-BB07-740E-ECBA0880CF92</a></p>
+<p>E75F0300-5A16-2A28-82C2-23CB7BFB0444<a href="#16. Работа со сценариями на других языках.">E701386C-A7DF-151B-BCC2-2320BE242D38</a></p>
+<p>2565FD34-42E8-DDB6-6B02-28569AFA1187</p>
+<p>68DC30D9-3AAF-8096-6337-7EDE2C8D1879</p>
+<p>EC3EDA30-C7B7-49CA-AFFC-C172B4502A84</p>
+<p>2B772CAC-9239-9037-733E-E93121A1AE9C<a>8D88CA44-BC40-EF3F-F0EE-E993A5557ADE</a></p>
 <blockquote style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 0px 40px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">
-<p>20.1 <a href="#20.1 Установка SikuliX">Установка SikuliX</a></p>
-<p>20.2 <a href="#20.2 SikuliX сервер">SikuliX сервер</a></p></blockquote>
-<p>21. <a href="#Работа с глобальными переменными.">Работа с глобальными переменными.</a></p>
-<p> </p>
-<p> </p>
-<p><a name="ПравилаНаписанияfeatureФайлов"><font size="4">1 . Правила написания feature файлов.</font></a></p>
-<p><font size="2"><a name="Основные секции feature файла."><strong>1.1 Основные секции feature файла.</strong></a></font></p>
+<p>957E8DFA-923A-F4A0-0D33-33D2ECE11D8C<a href="#20.1 Установка SikuliX">BDA7EB46-1DDD-EFD3-386F-FF455C77A1A3</a></p>
+<p>F4FFF11B-8823-3E48-8262-27E9E6FB367A<a href="#20.2 SikuliX сервер">F0FFCF69-7189-9211-1511-1F19D1A26C2E</a></p></blockquote>
+<p>76438B1D-B847-935C-CAF4-414ED174E293<a href="#Работа с глобальными переменными.">B7510D17-E8CC-BC45-5BC0-0A88FC3DF3EB</a></p>
+<p>CC35FB7F-DFF8-0860-0F75-5C251EA01A31</p>
+<p>E889C1B4-C59C-FDF2-2C55-5D844AEF54BF</p>
+<p><a name="ПравилаНаписанияfeatureФайлов"><font size="4">A9FEADD9-1A70-6782-2AA5-58E2D11E288C</font></a></p>
+<p><font size="2"><a name="Основные секции feature файла."><strong>8CEE23BA-55EA-1ABC-CED0-09BA65141A07</strong></a></font></p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<p><font size="1">Feature файл должен быть написан на языке <strong>Gherkin</strong>.</font></p>
-<p>Feature файл содержит в себе две основные секции - это заголовок фичи и её сценарии.</p>
-<p align="center"><strong><font size="5"><a name="Заголовок">Заголовок</a></font>.</strong></p>
-<p>Заголовок фичи содержит в себе служебную секцию с директивой, указывающей на язык (русский, английский и т.д.) фичи.</p>
+<p><font size="1">23EEBAA4-C197-9613-3313-3C8FCB7AF2DC<strong>09B11CEC-3C60-E944-40BB-B19508ECB3EB</strong>E5E70E8B-9BFD-6650-0031-13E1E7218CCB</font></p>
+<p>31385E9D-BC5E-F8E7-7397-71DFB2159990</p>
+<p align="center"><strong><font size="5"><a name="Заголовок">45874163-A6DC-081E-ECEE-ED5E7C456C8F</a></font>3D15DB57-1496-F62D-D662-2C6DA25629E9</strong></p>
+<p>3F01FF7D-A399-521E-E59B-B555C6714BC5</p>
 <p align="center"><img src="_files/Директива.png"></img></p>
-<p>Далее в заголовке обычно идут теги, которые относятся ко всей фиче (ещё бывают теги, которые относятся к конкретному сценарию).</p>
+<p>E97BA601-12F8-1851-1C03-3C6162D842ED</p>
 <p align="center"><img src="_files/Теги.png"></img></p>
-<p>Далее идёт часть, в которой используется ключевое слово <strong>Функционал</strong> или <strong>Функциональность </strong>и далее идёт название фичи.</p>
+<p>5FD567E2-4E46-2EF9-9C43-3E9A0A89C4C8<strong>A056641F-5AB5-7D31-143A-A00CCA79E49D</strong>281BF530-0C89-BA0B-B8AE-E32BE93269E7<strong>0B0A5904-DEDF-EE82-2B71-130CEE8F4F3D</strong>03CC92D8-8B85-F317-71A5-57A3AFA42C6B</p>
 <p align="center"><img src="_files/ИмяФичи.png"></img></p>
-<p>Далее идёт часть, в которой коротко даётся ответ на три вопроса: кто хочет, что он хочет и зачем это надо (бизнес польза).</p>
+<p>D6E97C20-9F70-DAD3-31BD-D5B5459C179F</p>
 <p align="center"><img src="_files/КтоЧтоЗачем.png"></img></p>
-<p>Далее идёт необязательная секция <strong>Контекст</strong>. В ней обычно описывают шаги, которые подготавливают выполнения сценария, но непосредственно к нему не относятся.</p>
-<p>В одном feature файле может быть много сценариев, и секция <strong>Контекст</strong> будет выполняться перед каждым сценарием.</p>
+<p>CEA293AF-1927-563D-D2EA-AC336974BC25<strong>0290EB9A-4142-04A2-2DC0-036ACB32A689</strong>505320E4-C171-514C-C045-5D91B16AB411</p>
+<p>449233CF-A18D-32FD-D1E7-738B4CF2612A<strong>EE98B1C3-6863-CD9F-FE09-9450532364B0</strong>BC153C5B-B97E-A596-6CBD-D573765B6CD5</p>
 <p align="center"><img src="_files/Контекст.png"></img></p>
-<p> </p>
-<p>Далее идёт часть, в которой могут располагаться либо простые сценарии, либо сценарии специального формата, которые в русском переводе "<strong>Scenario Outline"</strong> получили название "<strong>Структура сценария"</strong>.</p>
-<p> </p>
-<p align="center"><font size="5"><strong><a name="Сценарии">Scenarios</a></strong></font>.</p>
-<p>Обычный сценарий начинается с ключевого слова "<strong>Сценарий:</strong>", затем идёт имя сценария.</p>
+<p>E76F4747-810F-F72A-A18C-CC47EB279148</p>
+<p>AB3FD5E8-8B1A-C352-22AE-E1357921B5F8<strong>D8ED179F-C29D-04C5-5DF2-24B9CC186DD9</strong>52F0AC4F-6E07-8E50-06C2-2AE5914C5919<strong>F90691E9-21AD-71C3-33AD-D10B6E140679</strong>9CC2D803-54FB-D2D8-8DCC-C28F2BFE1769</p>
+<p>0D76467E-51ED-83FC-C2BD-D35F3FC70A80</p>
+<p align="center"><font size="5"><strong><a name="Сценарии">A14C5F03-BDD1-2284-4C44-42FB28587A32</a></strong></font>02E9310D-A577-F25F-F814-467C476E258A</p>
+<p>AD7F2387-847F-9531-15FA-A4863110A6AC<strong>EE816119-FBAD-A607-788E-E52F674F122A</strong>23A3DBB2-B1DC-5797-7C60-00A759E0B48E</p>
 <p align="center"><img src="_files/ИмяСценария.png"></img></p>
-<p> </p>
-<p>Далее идут шаги сценария. Каждый шаг должен начинаться с ключевого слова, такого как <strong>Дано</strong>, <strong>Когда</strong>, <strong>Тогда</strong>, <strong>И</strong>, <strong>Затем</strong> и т.д.</p>
-<p>Полный список ключевых слов для каждого языка можно посмотреть здесь: <a href="https://github.com/cucumber/gherkin/blob/master/gherkin-languages.json#L2372">https://github.com/cucumber/gherkin/blob/master/gherkin-languages.json#L2372</a></p>
-<p>Ограничений на количество использований ключевых слов шагов нет. </p>
+<p>94B8958A-F6F1-107B-B0AA-AE38FECD528F</p>
+<p>0B5E886B-A2EB-815E-E9E0-0033DF43A7E3<strong>1B0D2BFE-5EBC-D237-78D9-9DFBDD4D5C88</strong>796173B0-54CB-4FF7-7A62-2EEAB94036F1<strong>CCCA4F41-06C0-E627-7298-8DE408DB2E1C</strong>796173B0-54CB-4FF7-7A62-2EEAB94036F1<strong>E043546F-4E84-6230-01AF-F9E95570CDEA</strong>796173B0-54CB-4FF7-7A62-2EEAB94036F1<strong>8A6CF3A1-4C6C-D3BD-DF0D-D276C7FF0157</strong>796173B0-54CB-4FF7-7A62-2EEAB94036F1<strong>A2541A49-399A-235C-CBA0-01C53CC7AD88</strong>BA68DED6-F637-354E-EE91-1EEE1E2A6CE6</p>
+<p>144A735F-A006-FC0B-B0FC-C35F9AADFFEA<a href="https://github.com/cucumber/gherkin/blob/master/gherkin-languages.json#L2372">750D6C84-441E-344D-D1D0-0BAF347EF3AC</a></p>
+<p>5E245E8C-DF99-864B-B447-7FCB141BAAE3</p>
 <p align="center"><img src="_files/Шаги.png"></img></p>
-<p>У шагов могут быть параметры простых типов - число, строка, дата.</p>
-<p dir="ltr">Числа записываются как есть.</p>
+<p>6D5111FA-9B74-FA36-608F-FC87C22D53A6</p>
+<p dir="ltr">C67E1E22-8FE0-2C2E-ED80-0509D8C6FC1B</p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
 <p align="center"><img src="_files/Числа.png"></img></p>
-<p> </p></blockquote>
-<p dir="ltr">Даты могут быть указаны в двух форматах</p>
+<p>040B3ECD-654C-40D3-3FE2-2E47514C5BDB</p></blockquote>
+<p dir="ltr">7AEBC832-2287-4A8F-FF99-95D6CFEB9497</p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
 <p align="center"><img src="_files/Даты.png"></img></p></blockquote>
-<p dir="ltr">Строки должны быть заключены либо в апострофы, либо в кавычки.</p>
+<p dir="ltr">01375D08-5C98-4684-482F-F978D0A780A7</p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
 <p align="center"><img src="_files/Строки2.png"></img></p></blockquote>
-<p> </p>
-<p><font size="2"><strong>Для строк действуют правила экранирования спецсимволов.</strong></font></p>
-<p><font size="2"><strong>\' - означает апостроф</strong></font></p>
-<p><font size="2"><strong>\" - означает кавычку</strong></font></p>
-<p><font size="2"><strong>\\ - означает одинарный слеш (\)</strong></font></p>
+<p>4FA12DE1-1813-DD66-6D0E-EA28A9C228C6</p>
+<p><font size="2"><strong>8BD167C2-2FE2-5FE3-393E-E0CB6AD558DA</strong></font></p>
+<p><font size="2"><strong>92F0ABD1-7BDC-8F9D-D297-73BDE673628B</strong></font></p>
+<p><font size="2"><strong>38C8D30A-7786-B53A-A42F-F66A3E59C53C</strong></font></p>
+<p><font size="2"><strong>7C325A09-23A2-EE2A-AEE4-4F657FB69415</strong></font></p>
 <p align="center"><img src="_files/Апостроф.png"></img></p>
-<p> </p>
-<p align="center"><strong><font size="5"><a name="Структура сценария">Структура сценария</a></font></strong></p><font size="1">
-<p dir="ltr">Структура сценария допускает, что некоторые параметры в шагах указываются в специальных скобках.</p>
-<p dir="ltr">Такие параметры должны быть описаны в таблице, которая идёт после структуры сценария и начинается с ключевого слова <strong>"Примеры"</strong>.</p>
-<p dir="ltr">Таким образом, для каждой строки таблицы <strong>Примеров</strong> будет выполнен <strong>свой</strong> сценарий со <strong>своим</strong> набором параметров.</p>
+<p>C6C899E2-E871-026E-E6F3-3D950C1D2382</p>
+<p align="center"><strong><font size="5"><a name="Структура сценария">21D2C614-D370-2BD2-2CA7-7F3F3F89496E</a></font></strong></p><font size="1">
+<p dir="ltr">1E7CCE17-E87E-7BFA-A97A-AB3E15E4FB69</p>
+<p dir="ltr">3E0ECA83-FA19-3A9E-E968-8DF28527D5F2<strong>D67F4FD4-2D87-EC17-7B2A-A60A57B3DC29</strong>1210B4CE-AA6E-4876-6386-69DE0A717554</p>
+<p dir="ltr">C609B3F8-2FF4-E2A4-4006-68554CCA3F70<strong>5B8F0CC3-18B4-1401-1D9D-D29EEF1A6BAC</strong>C478BFC9-BFC2-7D81-1B0D-DF2E9FA6BD95<strong>ECA30A00-6658-C8AE-E97C-CF6579F99308</strong>CD0E60C8-E3A6-69BA-A3DC-C451E8EA9F01<strong>8D0F9542-ED95-0A22-2033-330EACA33901</strong>E109A68B-1E5B-5760-01F4-4E31CA15F3B1</p>
 <p dir="ltr" align="center"><img src="_files/Outline01.png"></img></p></font>
-<p align="center"><strong><font size="5"></font></strong> </p>
-<p align="center"><strong><font size="5"></font></strong> </p>
-<p> </p></blockquote>
-<p dir="ltr"><a name="Тег @tree"><font size="2"><strong>1.2 Тег @tree</strong></font></a></p>
+<p align="center"><strong><font size="5"></font></strong>76CF81D0-6EEE-6DB8-8015-585DF8102631</p>
+<p align="center"><strong><font size="5"></font></strong>78C987B3-B6CB-A7B7-7D3F-FCCDD9D7290E</p>
+<p>6028594E-64B6-E83C-C0CF-FF26C3B4C6FD</p></blockquote>
+<p dir="ltr"><a name="Тег @tree"><font size="2"><strong>4F7C2FEE-0E3F-A88F-FF6B-B593F07AD29B</strong></font></a></p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<p>Vanessa-Automation умеет работать с <strong>расширенным</strong> синтаксисом языка сценариев <strong>Gherkin</strong>. Назовём его <strong>Turbo Gherkin</strong>.</p>
-<p>Если в заголовке фичи указан тег <strong>@tree</strong>, тогда парсер фич будет особым образом интерпретировать отступы (символы Tab, пробелы недопустимы!!!) в тексте.</p>
-<p>Шаги будут образовывать дерево шагов. Т.е. шаги с большим значением отступа будут считаться вложенными. Как в python.</p>
-<p>Это помогает структурировать текст feature файла.</p>
+<p>B2B19563-C3B7-F314-48B5-57C817C1D533<strong>B0796178-7E01-6D24-4FDE-EA491B792D8C</strong>97C3C9DE-D380-B4C3-39F1-1E6C90C0AA4F<strong>1502A276-C7E5-9471-1CB9-90F4DAEF61CA</strong>3B2BF01F-2ABC-9236-641A-A45EDDB40DD2<strong>89311DCA-8CCF-65B3-3C2D-D21A99AD1A18</strong>52279F0F-A836-6DC9-969B-B2B64F87D5FB</p>
+<p>8445A357-261D-D226-6A1E-E57D737D7806<strong>7B35C467-9546-F891-1316-689B041DCC12</strong>5EC4A39D-56FD-C4F4-4E30-03737A987311</p>
+<p>CC340417-D9C4-3E15-5916-68AD7268A3F8</p>
+<p>D83AB798-1896-BBD9-9A67-765704B1C0DB</p>
 <p align="center"><img src="_files/tree.png" width="1160" height="258"></img></p>
-<p> </p>
+<p>C32571B3-1FB9-6717-7E3C-C0F72D65AE4E</p>
 <p align="center"><img src="_files/tree2.png"></img></p>
-<p> </p>
-<p>Таким образом, часть шагов оказалась внутри других шагов. Шаг, который является веткой дерева (выделен рамкой на картинке) - выполняться не будет.</p>
-<p> </p></blockquote>
-<p dir="ltr"><a name="Тег @exportscenarios"><font size="2"><strong>1.3 Тег @exportscenarios</strong></font></a></p>
+<p>34D82927-7E12-C2AC-C1F5-539CB4CEB500</p>
+<p>B84D499B-70A7-8DE0-09BF-F7AFF23FCEE0</p>
+<p>A864EF10-5839-01CA-A891-16DFC76D8901</p></blockquote>
+<p dir="ltr"><a name="Тег @exportscenarios"><font size="2"><strong>C5DC003A-1AB4-74F2-2631-149003C382E7</strong></font></a></p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<p>Если в заголовке фичи указан тег @exportscenarios, тогда становится возможным вызывать один сценарий из другого (и передавать в него свои параметры).</p>
-<p>Например, есть такой сценарий, содержащий шаг <strong>"Когда Я открываю Visual Studio Code"</strong>:</p>
+<p>6A021BE1-4A0A-17F9-9DE1-1B296B519F65</p>
+<p>E585E050-233E-7911-1902-2B4A0DF678BF<strong>D0F8F4D8-6BA2-1C8F-F3B4-4F2FD4FC20E2</strong>1D9A21F6-7FFB-4B29-9DAC-C8B93176B312</p>
 <p align="center"><img src="_files/export01.png"></img></p>
-<p align="left">И рядом с ним (или в подчиненном каталоге, или в каталоге библиотек) лежит другой feature файл, у которого указан тег <strong>@exportscenarios</strong> и в нём есть сценарий с именем <strong>"Я открываю Visual studio code"</strong>.</p>
+<p align="left">FBB1C1A9-9DF1-843D-D5C8-8A97B6FF9B13<strong>4C117DA1-4323-005F-F71C-CC88F7AA9954</strong>44C87578-8B60-858B-BA30-0A87304C9530<strong>C7940710-C0CF-A967-7515-5B35F80C9469</strong>0B5E90AB-BFBE-8270-08FC-C8DAA30F0D75</p>
 <p align="center"><img src="_files/export02.png"></img></p>
-<p align="left">Тогда если загрузить первый сценарий в Vanessa-Automation - шаг <strong>"Когда Я открываю Visual Studio Code" </strong>загрузится как ветка дерева.</p>
+<p align="left">29AD1F63-8B83-3208-8093-300DE85F5C9C<strong>23DF325F-F376-2B54-4983-33DA4E238346</strong>52B234B6-9459-88CF-F8F5-5BC8C9176BA1</p>
 <p align="center"><img src="_files/export03.png"></img></p>
-<p align="left"> </p>
-<p align="left">Чтобы передать обычный параметр в подчиненный сценарий - надо чтобы строка с именем сценария содержала параметры. Например, есть вот такой сценарий:</p>
+<p align="left">C4331EC0-3D70-1611-1D4E-E8E9AAEE5A8D</p>
+<p align="left">30D08448-F31E-4CFE-EFDE-E6DF746515F9</p>
 <p align="center"><img src="_files/export05.png"></img></p>
-<p align="left">В него можно передать свой параметр <strong>"ИмяФайла"</strong>. </p>
+<p align="left">6476DFE9-C19A-DB94-48D8-811751826086<strong>888CC443-5076-16F8-820C-C5B69DC8C8F7</strong>9B1B5A05-F0E9-AB22-258A-A7FFA24E643C</p>
 <p align="center"><img src="_files/export06.png"></img></p>
-<p align="left"> </p>
-<p align="left">Тогда в Vanessa-Automation это отобразится вот так:</p>
+<p align="left">C6834907-A714-B9AA-A932-224F4ED50782</p>
+<p align="left">038B5EDC-CFFC-10E5-5DFD-DEF9AF606B08</p>
 <p align="center"><img src="_files/export07.png"></img></p>
-<p align="left"> </p>
-<p align="left"> </p>
-<p align="left"><font size="2"><strong>2. <a name="Как загрузить feature файл.">Как загрузить feature файл. Тэги.</a></strong></font></p>
+<p align="left">4988C33F-4952-6E2B-B712-2A6D121DFA18</p>
+<p align="left">A68E3137-85C8-346C-CCF0-04C1614ACC8B</p>
+<p align="left"><font size="2"><strong>8F3BC9A6-7403-5BF3-3B20-0CDD34F12DBC<a name="Как загрузить feature файл.">8C2E002D-BA33-8B92-2DCB-B5C736E2D818</a></strong></font></p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<p align="left"><font size="1">Vanessa-Automation позволяет загрузить либо один feature файл (Ctrl+F2), либо feature файлы из каталога (Alt+F2).</font></p>
+<p align="left"><font size="1">2162E79A-E3D9-7F2B-BCF5-5343BEEA0A8B</font></p>
 <p align="center"><img src="_files/LoadFeature01.png"></img></p>
-<p align="left">Если выбран пункт "Загрузить один файл" - тогда feature файл будет загружен, не смотря на наличие в нём тегов.</p>
-<p align="left">Если выбран пункт "Загрузить файлы из каталога" - тогда возможны варианты, в зависимости от указанных тегов в настройках Vanessa-Automation.</p>
+<p align="left">B9E096DF-A59B-444C-CD20-0E76A17D8D85</p>
+<p align="left">EB9F603F-6C19-0778-8588-89198A646375</p>
 <p align="center"><img src="_files/Tags01.png"></img></p>
-<p align="left">Если заполнен список "Список исключаемых тэгов" - тогда если в feature файле указан такой тэг в заголовке feature, весь feature файл не будет загружен. Если тэг был указан у одного или нескольких сценариев, <br>данные сценарии не будет загружены, а остальные загрузятся.</p>
-<p align="left">Если заполнен список "Тэги для запуска" - тогда если в feature данный тэг не встречается нигде - весь feature файл будет проигнорирован. Если тэг есть в заголовке feature, тогда будут загружены все сценарии из feature.<br>Если тэг указан у одного или нескольких сценариев - тогда будут загружены только эти сценарии.<br><br></p></blockquote>
-<p dir="ltr" align="left"><strong><font size="2">3. <a name="Как запустить feature файл на выполнение. Отладка.">Как запустить feature файл на выполнение. Отладка.</a></font></strong></p>
+<p align="left">AD14640F-0E5D-8500-0C68-85424D7F05BA<br>2F4D3CE3-3935-4A64-4C07-798A596F3354</p>
+<p align="left">AD95A4BE-2ABA-BB27-7D2D-D5BECE68DAEF<br>90FCC089-407C-9B35-516E-EB8CD53F69C5<br><br></p></blockquote>
+<p dir="ltr" align="left"><strong><font size="2">488133A4-6D7A-5167-7AD5-5135CF3EDD9C<a name="Как запустить feature файл на выполнение. Отладка.">F878A259-762B-5622-289B-BD3E93CC849D</a></font></strong></p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<p dir="ltr" align="left"><font size="1">Что выполнить все сценарии надо нажать на кнопку "<strong>Run scenarios</strong>".</font></p>
-<p dir="ltr" align="left"><font size="1">Если вы внесли изменения в epf или в фичу, тогда надо нажать на кнопку "<strong>Перезагрузить сценарии</strong>". Иначе будут использоваться старые версии фич и обработок.</font></p>
-<p dir="ltr" align="left"><font size="1">При постоянном внесении правок в фичу или в epf - удобно использовать кнопку "<strong>Reload and run</strong>".</font></p>
-<p dir="ltr" align="left"><font size="1">Также в Vanessa-Automation можно использовать следующие варианты запуска фич на выполнение (доступно в контекстном меню):</font></p>
+<p dir="ltr" align="left"><font size="1">3BCE9741-A443-12D1-173B-B3CE696BC95A<strong>84702CE9-5B80-C9C7-7D1A-A40C84E994B1</strong>FA524EDC-0EAC-959D-DC1C-C706B103F988</font></p>
+<p dir="ltr" align="left"><font size="1">2B79B9BF-2902-D1EF-F759-9A386A66E461<strong>B20BBC3E-02C7-3428-8D2B-BBD017A7F915</strong>D78E343B-4EA1-B5A7-7C59-9A2270DD65FD</font></p>
+<p dir="ltr" align="left"><font size="1">5FE207E6-5571-9D96-63F4-470A94D6FAA2<strong>00EE523C-93CB-8F8B-B627-765EE798B913</strong>229E0062-7FB2-108A-ABC5-583899C56EA0</font></p>
+<p dir="ltr" align="left"><font size="1">B9CE5683-941E-2BF8-824A-A78F2379AFDA</font></p>
 <p dir="ltr" align="center"><img src="_files/debug01.png"></img></p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<p dir="ltr" align="left"><font size="1">1. <strong>Run this scenario from current step</strong> (Ctrl+F5). Позволяет выполнить сценарий с текущего шага и до конца данного сценария. Другие сценарии выполняться не будут.</font></p>
-<p dir="ltr" align="left"><font size="1">2. <strong>Выполнить данный сценарий с текущего шага с продолжением</strong> (Ctrl+Shift+F5). Позволяет выполнить сценарий с текущего шага. Также будут выполнены сценарии, следующие за данным.</font></p>
-<p dir="ltr" align="left"><font size="1">3. <strong>Run selected scenario from beginning</strong> (Alt+F5).  Будет выполнен только данный сценарий начиная с первого шага.</font></p>
-<p dir="ltr" align="left"><font size="1">4. <strong>Перезагрузить и выполнить данный сценарий </strong>(Alt+F6).  Будут перечитаны данные фича файлов, epf файлов и будет выполнен только данный сценарий, начиная с первого шага.</font></p>
-<p dir="ltr" align="left"><font size="1">5. <strong>Run scenarios of this feature</strong> (Ctrl+Alt+F5). Будут выполнены все сценарии данной фичи.</font></p>
-<p dir="ltr" align="left"><font size="1">6. <strong>Run one step</strong> (F11). Будет выполнен только один шаг фичи. Можно выбрать любой шаг в дереве фич и выполнить его, включая шаги секции Контекст. Удобно использовать при отладке.</font></p>
-<p dir="ltr" align="left"><font size="1">7. <strong>Открыть feature файл в редакторе</strong>. Откроет приложение, которое ассоциировано с расширением <strong>feature</strong>.</font></p>
-<p dir="ltr" align="left"><font size="1">8. <strong>Открыть каталог feature</strong>. Откроет проводник с каталогом, где лежит feature файл.</font></p>
-<p dir="ltr" align="left"><font size="1">9. <strong>Run scenario from this step and save contexts</strong>. Будет выполнен сценарий с текущего шага. При этом будет выставлен флаг <strong>Save contexts before going through steps</strong> на закладке <strong>Service</strong>, т.е. при выполнении сценария будут запоминаться значения контекстов шагов. При таком режиме запуска удобно делать отладку сценария, когда шаги зависят от значений переменных <strong>Контекст</strong> и <strong>КонтекстСохраняемый</strong>. При первом запуске сценария с данной опцией возможно выполнение сценария с начала, если флаг <strong>Save contexts before going through steps</strong> ранее не был равен <strong>Истина</strong>. При последующих запусках сценарий будет выполняться с нужного шага.</font></p>
-<p dir="ltr" align="left"><font size="1">10. <strong>Collapse to features</strong>. Дерево фич будет свёрнуто до строк фич.</font></p>
-<p dir="ltr" align="left"><font size="1">11. <strong>Collapse to scenarios</strong>. Дерево фич будет свёрнуто до строк сценариев.</font></p>
+<p dir="ltr" align="left"><font size="1">326991DF-1D5B-CB51-1D98-80251E41B101<strong>8213D920-DD3E-1125-5CFE-EC6BD3D91DB0</strong>7DD12D6B-47B2-2D71-10E3-399FAA63C518</font></p>
+<p dir="ltr" align="left"><font size="1">3F348390-29C5-8D1A-AEE9-9F03E0CB9C7F<strong>519D5924-37D6-7931-155C-CA6D61C84867</strong>10AF52F0-9A26-D0C3-34BE-EC9AE669A554</font></p>
+<p dir="ltr" align="left"><font size="1">4D3111C9-FBEC-6AF8-81FB-B813F198FBCC<strong>37171265-8EBF-2EF4-45D5-5A981EEE9D7A</strong>F5C3702C-C089-28FE-EDCE-EB56DEA2C7B4</font></p>
+<p dir="ltr" align="left"><font size="1">A10073F1-4E53-D36E-EAA8-8F44F17BC789<strong>DA08DEF6-1138-4A0C-CD64-4705718F9A1D</strong>98DA0746-ECA8-A30A-AC31-145B634F9DF9</font></p>
+<p dir="ltr" align="left"><font size="1">3C18E579-77EB-3333-3D21-124B0298F87C<strong>C67447DA-805C-90E8-8F1D-DC099C189CEF</strong>26CF1A76-66F6-B5FE-E0EB-B22961610D2E</font></p>
+<p dir="ltr" align="left"><font size="1">D7B97FA3-EB61-67E7-7C04-4F76291B801F<strong>58214FAA-4329-75A9-9FE0-0C770AE7FC82</strong>C3AB4452-771A-AAE0-0116-6B259DDC1917</font></p>
+<p dir="ltr" align="left"><font size="1">0D921256-31E0-A6A4-4408-833F66EB08A5<strong>8B53B0B9-1FAB-D027-7114-43A8F1974EE4</strong>D4B9E0A6-6B2E-D542-2435-54AE547066CB<strong>983AC6DD-81B0-444C-CCA5-55716F3BA524</strong>38DAD138-9E7F-054C-C59D-DB557E7ED484</font></p>
+<p dir="ltr" align="left"><font size="1">A4B7E686-8088-64A9-9C6F-FB713A0C0BE2<strong>2C45D9E4-7D12-4E70-0E18-89FF0A1A225F</strong>6226161C-6CA8-A9A6-674A-A5756C331A01</font></p>
+<p dir="ltr" align="left"><font size="1">4FCA0382-BA12-387B-B391-1F51679E2446<strong>85A20ACA-4F95-6B08-85A3-3500863FC981</strong>42FFBF7F-55B4-2E61-1776-65B23D37AAB2<strong>7DAA3E5A-1681-A798-8C82-299C49BABE08</strong>1CA31ABD-E988-CCF8-8D12-2EB4B4AF1F37<strong>5EAC6A66-CB3E-392E-E452-256AFA61D181</strong>359BE502-B879-FCF4-45D6-622288789D13<strong>0D50D245-D348-162C-CFE7-77EB50D96811</strong>A6693B70-89EC-0C25-5D2D-DD0E742F5064<strong>8026CA55-8ADD-2A80-0D27-7E0FE1045656</strong>A0CC8735-98C5-6053-36C4-44ACD7C30F4F<strong>AD1C82B1-AE44-D136-681A-A1A1C5471780</strong>2D36DF52-807B-13EE-ED5A-AB5C95785A79<strong>9B3136F0-EC65-9E01-18CC-C5AC8D3928A2</strong>E5F74E3B-C8D7-AAD1-1F3B-BFE00BA4AB76</font></p>
+<p dir="ltr" align="left"><font size="1">52E93293-B278-0F56-69BF-FC559269B0AF<strong>88735716-6F1E-A010-04EB-B4A11C09F271</strong>844950C6-53B1-0C58-81BB-BBEF950EB4DC</font></p>
+<p dir="ltr" align="left"><font size="1">D44FB5ED-4796-BC3D-D96D-D157EF323DCC<strong>DB795BEE-435A-2C48-862B-B49077690234</strong>93592A8E-3FB0-8828-8F9A-A45651D3F360</font></p>
 <p dir="ltr" align="center"><img src="_files/Run04.png"></img></p>
-<p dir="ltr" align="left"><font size="1">12. <strong>Breakpoint</strong> (F9). У строки шага будет установлена отметка брейкпоинта. Выполнение сценариев будет прервано на этом шаге, при этом сам шаг выполнен не будет. Далее удобно выполнять отладку по одному шагу (F11).</font></p>
-<p dir="ltr" align="left"><font size="1">13. <strong>Remove all breakpoints</strong> (Ctrl+F9). Убирает все брейкпоинты из дерева.</font></p></blockquote>
-<p dir="ltr" align="left"><font size="1"></font> </p>
-<p dir="ltr" align="left"><font size="1"></font> </p>
-<p dir="ltr" align="left"><font size="1"></font> </p></blockquote>
-<p dir="ltr" align="left"><font size="3"><strong>4. <a name="Как создать epf файл на основе feature файла.">Как создать epf файл на основе feature файла.</a></strong></font></p>
+<p dir="ltr" align="left"><font size="1">371635A4-6910-8F9B-B926-692CD7ADF031<strong>B8E49296-1614-8AF0-04CF-F9232279017E</strong>4766E3C6-FDBC-E662-207E-E6580C0F82AC</font></p>
+<p dir="ltr" align="left"><font size="1">DBB72612-5780-5F33-3D8C-C7A18570403C<strong>16E5097F-5B4C-44E0-01C1-1F2BE58FD4C0</strong>BFCFF839-2DA3-3730-0D76-6031EB5D4F62</font></p></blockquote>
+<p dir="ltr" align="left"><font size="1"></font>36E25AFE-4507-0C19-9329-941233DF0350</p>
+<p dir="ltr" align="left"><font size="1"></font>817F2FB4-1330-6FF1-1583-343AE51DFA1B</p>
+<p dir="ltr" align="left"><font size="1"></font>5A71D445-1761-81EB-B506-60053CB0ED64</p></blockquote>
+<p dir="ltr" align="left"><font size="3"><strong>2015E641-98B7-35E4-4990-03110C361A09<a name="Как создать epf файл на основе feature файла.">BB50F29B-FE42-21EE-E2A5-586F099E0782</a></strong></font></p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
 <p dir="ltr" align="center"><font size="1"><img src="_files/Gen05.png"></img></font></p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<p dir="ltr" align="left"><font size="1">1. Если мы работаем в режиме управляемых форм - надо выставить флаг "<strong>Generate managed form</strong>".</font></p>
-<p dir="ltr" align="left"><font size="1">2. Если выставить флаг "<strong>Create regions when generating code</strong>"  - внутри epf будут созданы области кода.</font></p>
+<p dir="ltr" align="left"><font size="1">4EFDBF71-DB20-D5A2-2BE1-1EF8A334F8FB<strong>EB43890B-DD8B-BF4A-A4C8-84BAF6C5C5BA</strong>F8B324B7-6C7F-6FDB-BFCB-B1B8BB7F753C</font></p>
+<p dir="ltr" align="left"><font size="1">549942A6-1944-CE5B-BBA3-366CE90A9701<strong>8AAACA64-CD71-0DF0-0F64-4F2BAFD86272</strong>BF6C5A46-8A74-DE15-5AAE-E8FF72F18296</font></p>
 <p dir="ltr" align="center"><img src="_files/Gen03.png"></img></p>
-<p dir="ltr" align="left">3.  Флаг "<strong>Создавать закомментированный код для переиспользуемых процедур</strong>" сейчас не используется.</p>
-<p dir="ltr" align="left">4. Флаг "<strong>Put text module. instead regenerate and update step defintion</strong>" - позволяет вывести модуль в текстовый документ, не создавая epf.</p>
-<p dir="ltr" align="left">5. Если epf уже существует, тогда в неё будут добавлены новые шаги. При этом существующие процедуры, функции, макеты и т.д. в epf сохранятся.</p>
-<p dir="ltr" align="left">6. Epf будет создана с тем же именем файла, что и feature файл.</p>
-<p dir="ltr" align="left">7. EPF создаётся с помощью штатных средств платформы. В поле "<strong>Версия платформы для генерации EPF</strong>" надо указать путь к каталогу <strong>bin</strong> нужной версии платформы 8.3.10 или выше.</p>
-<p dir="ltr" align="left">8. Epf будет создана в каталоге "<strong>step_definitions</strong>", который будет находится в каталоге feature файла.</p>
-<p dir="ltr" align="left">9. Каждая epf должная обладать уникальным значением в поле "<strong>Name</strong>".  Если вы копируете (а не перемещаете) epf в другой каталог, тогда надо обеспечить уникальность этого поля.</p>
+<p dir="ltr" align="left">2BB81A07-23F0-886E-EC19-9BF043B47807<strong>C8A98768-3C4A-2F60-09CE-EBCB987C909A</strong>5AA9A1E8-8EAA-AEEC-CFCD-DFC140DC6E7A</p>
+<p dir="ltr" align="left">BBC8BA2C-F763-8E56-6EBC-C41A8AF2A1C4<strong>DBA6FFB6-6594-8B1A-A2CF-F0E57DFBD512</strong>A4E635D9-6DEE-844E-E231-140BF0CF44E6</p>
+<p dir="ltr" align="left">D726054E-392E-A0F0-002B-B1347F3A6F61</p>
+<p dir="ltr" align="left">F25B0ADC-CFE0-5F44-41B5-58CFFA23AB32</p>
+<p dir="ltr" align="left">F7D8E608-0B55-9235-5B6D-DA53C0140B7E<strong>170A9E98-2250-4FAB-B8ED-D066B66C3646</strong>CB9397B9-30E6-058D-D67D-DD089297E7C7<strong>B654A7F2-9EBC-51DD-DE48-8AE8AA633643</strong>525E2ADC-61C4-A169-955F-F768470DB37E</p>
+<p dir="ltr" align="left">FA55ACC1-BC28-5847-70E4-4A5F2232BCEB<strong>C06669C1-B1C6-F515-5AE5-5CE9CF185F4F</strong>FD71D0C6-516A-0CA4-4FCB-B66B361AA315</p>
+<p dir="ltr" align="left">1B6842C6-3C01-205D-D083-3E1183D695AA<strong>3CD2B8EA-A139-5B60-034D-D44B536BA5A6</strong>31B26695-E295-A1B4-4305-566CB9BE8DF6</p>
 <p dir="ltr" align="center"><img src="_files/Gen04.png"></img></p></blockquote></blockquote>
-<p dir="ltr" align="left"><strong><font size="3"></font></strong> </p>
-<p dir="ltr" align="left"><strong><font size="3"></font></strong> </p>
-<h2><a name="Описание настроек на закладке Сервис"></a>5. <a name="Описание настроек на закладке Сервис.">Описание настроек на закладке Сервис.</a></h2>
+<p dir="ltr" align="left"><strong><font size="3"></font></strong>F6D458F8-CD47-7345-5FF3-3087E2F204DC</p>
+<p dir="ltr" align="left"><strong><font size="3"></font></strong>C8878F22-734C-EE63-3FFA-A1875A8C5929</p>
+<h2><a name="Описание настроек на закладке Сервис"></a>785C1FB3-039E-B873-394A-A0229A04FB00<a name="Описание настроек на закладке Сервис.">46A8DD48-4511-D3A1-1EF7-7ACF7E8E35A2</a></h2>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<p>Поле "Команда открытия фичи в текстовом редакторе".</p>
+<p>2D92E7C7-6956-CD3F-F349-9DE888F3AC9D</p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<p>Позволяет указать команду, которая будет вызываться для открытия фичи в текстовом редакторе.</p>
-<p>В отличии от простого открытия файла, позволяет перейти сразу к нужной строке файла.</p>
-<p>Пример команд:</p>
+<p>7A0F99CC-E553-7831-17B9-9A2DA1B84F48</p>
+<p>BAE46042-3B87-8778-891C-CBAB22B45D5A</p>
+<p>53A2F859-3DCC-2435-5AE4-45BBA65D28B1</p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<p>NotePad++: "C:\Program Files (x86)\Notepad++\notepad++.exe" %Feature% -n%LineNumber%</p>
-<p>VsCode: "C:\Program Files (x86)\Microsoft VS Code\code.exe" -g %Feature%:%LineNumber%</p></blockquote>
-<p dir="ltr">Примеры команд также доступны из контекстного меню поля.</p>
+<p>D837BAF0-AE81-3898-8325-5522DBE07B36</p>
+<p>1BFBFD23-1567-6AC0-0D62-2B9643280E2A</p></blockquote>
+<p dir="ltr">BBAA0184-3782-B4E8-816F-F2FCB13103D2</p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
 <p dir="ltr"><img src="_files/КонтекстноеМенюПолеКомандаТекстовогоРедактора.png"></img></p></blockquote>
-<p> </p>
-<p> </p></blockquote></blockquote>
-<h2>7<a name="Как получить отчет Allure, jUnit, Cucmber report.">. Как получить отчет Allure, jUnit, Cucmber report.</a></h2>
-<p> </p>
+<p>948D2AE7-8839-73B2-2410-04A169507790</p>
+<p>7077A8E0-7CA2-6729-9BC3-3EE7ABF9D0F9</p></blockquote></blockquote>
+<h2>3B614976-71A4-6CC9-9CA3-3CEDCC78279E<a name="Как получить отчет Allure, jUnit, Cucmber report.">9786B278-8D50-6197-7F24-44A67A13F263</a></h2>
+<p>B7B147D7-127D-1E22-2EC1-1B4265D99426</p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<p>1. Для формирования отчета в формате Yandex Allure нужно заполнить данные настройки</p>
+<p>D2B5107D-07B6-455B-B6AF-FE75D8FD2529</p>
 <p><img src="_files/Allure.png"></img></p>
-<p>2. При формировании отчета поддерживаются директивы, которые можно указать в feature файле.</p>
+<p>757F6644-7B14-534C-C3B6-63D9D5B27CD0</p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<p>Например:<br>#report.feature=уровень1<br>#report.story=уровень2</p>
-<p>Значения таких директив могут быть любыми.</p>
-<p dir="ltr">Таким образом можно задать нужную иерархию отчета (первый, второй и третий уровень дерева).</p>
+<p>AC194D8C-692B-0085-57C9-962FE0E2C85A<br>414626F9-E04F-1729-976C-CD8DD456D6EC<br>F3FBD813-EA73-5209-9C0E-E72C7B4A0E32</p>
+<p>8847E5ED-8C8A-879C-C6C1-105669FB068F</p>
+<p dir="ltr">AF1579B3-00B0-3FEB-BDE2-2F7CF5A9A7B3</p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
 <p dir="ltr"><img src="_files/Allure2.png"></img></p></blockquote>
-<p dir="ltr">Чтобы иерархия отчета строилась верно, нужно в управляющем json файле задать параметры. Например:</p>
+<p dir="ltr">9F0BF0C4-BA79-2AC2-2107-75DA862AE38B</p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<p style="MARGIN-RIGHT: 0px" dir="ltr"><em><font style="BACKGROUND-COLOR: #ffe100">"КаталогОтносительноКоторогоНадоСтроитьИерархию": "./features",<br>"УровеньОтчета1": "#report.epic=;Каталог1",<br>"УровеньОтчета2": "#report.feature=;Каталог2",<br>"УровеньОтчета3": "#report.story=;ИмяСценария"</font></em></p>
-<p dir="ltr">В данном примере, для вычисления первого уровня иерархии отчета сначала будет попытка найти в тексте фича файла строку вида "<font style="BACKGROUND-COLOR: #ffe100">#report.feature=уровень1</font>". Если не получится найти такую строку, тогда будет попытка вычислить имя каталога первого уровня относительно каталога (параметр КаталогОтносительноКоторогоНадоСтроитьИерархию), в котром лежат фича файлы (второе значение параметра "УровеньОтчета1" =  Каталог1).</p>
-<p dir="ltr">Также для параметров "УровеньОтчетаX" можно использовать значения "<font style="BACKGROUND-COLOR: #ffe100">ИмяФичи</font>" и "<font style="BACKGROUND-COLOR: #ffe100">ИмяСценария</font>".</p>
-<p dir="ltr">Такие же правила распространяются на поле "Группировка test suites".</p>
-<p dir="ltr">Также, если в управляюхем json указано значение параметра <em><font style="BACKGROUND-COLOR: #ffe100">"ДобавлятьКИмениСценарияУсловияВыгрузки": "Истина"</font></em>, то к имени сценария будет добавлятся имя сборки. Это полезно, когда один и тот же сценарий запускается в разных окружениях (сборках) и надо получить единый отчет по всем сборкам.</p>
-<p dir="ltr"><br> </p></blockquote>
+<p style="MARGIN-RIGHT: 0px" dir="ltr"><em><font style="BACKGROUND-COLOR: #ffe100">9C0C4E3C-1F31-0B0B-B00C-C746216A5137<br>F8F2C6F6-84D8-7CA7-7B44-4D3BF73B69D1<br>D8FE4FE9-9544-4104-4A6B-B624873B9317<br>834673BE-9E50-BBE6-6A25-54A55731EF35</font></em></p>
+<p dir="ltr">7D6FADCF-9EF5-3B8B-B2F4-4570F2579A1E<font style="BACKGROUND-COLOR: #ffe100">55AA2E83-FA84-B554-4964-4FCE564C9D1D</font>52CC9E56-D7FE-EEDD-DAA9-91F94E0167DA</p>
+<p dir="ltr">32043751-91A2-0089-98B0-065257383766<font style="BACKGROUND-COLOR: #ffe100">2CD452C3-54F8-F431-1B7E-EAEE99F81417</font>41B45644-C9D6-4295-5AA7-7EE4CB979B35<font style="BACKGROUND-COLOR: #ffe100">29931689-31FD-A288-880D-D66FF5ACAE67</font>C7A68873-E771-5D64-40FC-CCC99C3E7D2F</p>
+<p dir="ltr">88A92589-6A29-79A8-879A-A801F7A8D31D</p>
+<p dir="ltr">45FB4C9C-0E65-446D-DDE1-1E8565C16104<em><font style="BACKGROUND-COLOR: #ffe100">448D764D-87D2-C1E6-6D3C-C555D6E208EE</font></em>DEE2BBA4-A4BB-B4C7-7976-6D967F12BAEF</p>
+<p dir="ltr"><br>9E55FBE6-6CD3-9C05-56A4-4F7355A79F6F</p></blockquote>
 <p style="MARGIN-RIGHT: 0px" dir="ltr"></p></blockquote>
-<p dir="ltr">3. Отчеты в формате jUnit и Cucumber report формируются аналогично.</p>
-<p dir="ltr">4. Параметры формирования отчета также можно задать через json файл, когда ванесса запускается в режиме командной строки.</p>
-<p dir="ltr">5. Для структуры сценария имя "примера" будет взято из колоноки "Description" или "Описание".  Если такой колонки нет, тогда имя "примера" будет взято из определения примера в структуре сценария.</p>
-<p> </p></blockquote>
-<h2><a name="Быстрое создание файла сценария">8. Запись</a> действий пользователя.</h2>
-<h3>Запись поведения пользователя</h3>
-<p>1. На вкладке «Работа с UI» имеется набор кнопок, отвечающих за взаимодействие с клиентом тестирования из Vanessa Automation.</p>
-<p>«Подключит TestClient» - запуск клиента тестирования</p>
-<p>«Начать запись поведения» - запуск клиента тестирования и начало запись журнала действий пользователя.</p>
-<p>«Закончить запись поведения» - останавливает запись журнала действий пользователя и производит автоматическую конвертацию в сценарий на языке Gherkin.</p>
+<p dir="ltr">53F39D89-E89C-6F5C-C951-1CEB684004C3</p>
+<p dir="ltr">1347A1E1-5914-580A-A8DF-F563027318AF</p>
+<p dir="ltr">263E4062-9B8B-0099-9997-7DB360C09CD6</p>
+<p>751C52E4-9818-27D8-81E4-415A14F76430</p></blockquote>
+<h2><a name="Быстрое создание файла сценария">5895D619-6741-3DDC-C779-9EC2F3DED715</a>AD385DE4-81EB-1EB6-67AE-E243F8AE6742</h2>
+<h3>0D01B49D-08E0-3DD8-8B43-3C4CB09D2F51</h3>
+<p>5859D9AA-ECBC-CED8-8BA0-090F4029DBF4</p>
+<p>273E2B2B-C01D-4C25-5203-343089DEECCA</p>
+<p>59743716-13EE-0E34-46B5-533E2575E49A</p>
+<p>263B3613-A0A5-7728-8881-18A0F8485AA9</p>
 <p align="center"><img id="Рисунок 10" src="_files/image001.jpg" width="624" height="414"></img></p>
-<h3>Создание сценария через запись действий пользователя.</h3>
-<p>Используя данную последовательность шагов удобно просить сотрудников компании воспроизвести ошибку в конфигурации или порядок рабочий действий для создания фичи и уменьшения технического долга.</p>
-<p>1.На рабочем месте пользователя запускаем конфигурацию в режиме предприятия с установленным параметром запуска <strong>/UILogRecorder</strong></p>
+<h3>77D36A15-FFEC-3C76-6584-4C2CA28A4C2C</h3>
+<p>8C52BD62-F86E-1712-2678-8703CF1D6E42</p>
+<p>3CE56805-D3A5-F2BD-D678-8CBFDBA3E419<strong>B27AF23A-1D26-580F-FA88-88B81466FAE9</strong></p>
 <p align="center"><img id="Рисунок 2" src="_files/image002.png" width="458" height="448"></img></p>
-<p>2. Нажимаем «Начать запись»</p>
+<p>2E8C7C04-A0E8-E5A1-1B99-93C54327738E</p>
 <p align="center"><img id="Рисунок 3" src="_files/image003.png" width="493" height="69"></img></p>
-<p>3. Просим пользователя воспроизвести последовательность действий и по окончании нажимаем кнопку «Завершить»</p>
+<p>D9C8C4AD-0E6F-50DA-A795-5CBFC6780C56</p>
 <p align="center"><img id="Рисунок 4" src="_files/image004.jpg" width="492" height="82"></img></p>
-<p>4. Откроется файл журнала действий пользователя, который необходимо сохранить и передать разработчику</p>
+<p>E7D22D0D-FE19-7AAF-F80B-B997691B5511</p>
 <p align="center"><img id="Рисунок 1" src="_files/image005.jpg" width="539" height="285"></img></p>
-<p>5. В дальнейшем для получения сценария на языке Gherkin необходимо в обработке Vanessa Automation перейти на вкладку «Работа с UI -&gt; Исходный XML». Вставить содержимое журнала действий пользователя в соответствующее окно.</p>
-<p> </p>
+<p>D3574FF0-68B2-0064-4E3F-F71F396F376A</p>
+<p>B215CA0E-5E0D-A853-3EB2-26AB520B8417</p>
 <p align="center"><img id="Рисунок 5" src="_files/image006.jpg" width="624" height="414"></img></p>
-<p>Нажать кнопку «Преобразовать исходный XML» и получить готовый сценарий.</p>
+<p>26EE2DC8-B563-2F73-3323-3BA7DE2C2F72</p>
 <p align="center"><img id="Рисунок 6" src="_files/image007.jpg" width="624" height="414"></img></p>
-<p>В дальнейшем полученный сценарий нужно отредактировать – заполнив описательную часть сценария.</p>
-<h3>Используя уже существующие шаги</h3>
-<p>Для добавления шагов в сценарий достаточно нажать кнопку «Добавить известный шаг» и добавить нужный функционал сценария двойным кликом мышки на нужной строке.</p>
+<p>A31A8A8D-0295-6433-35C6-627E31CFBA49</p>
+<h3>3FCF54AD-7543-C6C4-4B75-5FC3C07ECBAC</h3>
+<p>B62BEA6D-46CD-4919-9666-63A16C3F963B</p>
 <p align="center"><img id="Рисунок 7" src="_files/image008.jpg" width="624" height="414"></img></p>
-<h3>Запуск полученного сценария</h3>
-<p>1. Сохраняем полученный сценарий и запускаем так, как описано в разделе <a href="#Как загрузить feature файл.">Как загрузить feature файл. Тэги.</a></p>
-<p>2. Для быстрой проверки корректности сценария нажимаем кнопку «Подготовить сценарий к выполнению». В этом случае произойдет загрузка сценария аналогично использованию команды «Загрузить фичи -&gt; Загрузить один файл»</p>
-<p><span style="BACKGROUND: yellow"><b>Внимание. </b>Полученный сценарий сохраняется в файл во временной директории операционной системы. В случае использования функции «<a href="#Как создать epf файл на основе feature файла.">Генерация EPF</a>», полученная таким образом обработка сохраниться рядом с файлом фичи.</span></p>
-<h2><span style="BACKGROUND: yellow"></span> </h2>
-<h2><span style="BACKGROUND: yellow"></span> </h2>
-<h2><span style="BACKGROUND: yellow"></span> </h2>
-<h1> </h1>
-<h1>9. <a name="Как получить состояние формы TestClient"><font style="BACKGROUND-COLOR: #ffffff">Как получить состояние формы TestClient.</font></a></h1></blockquote>
+<h3>F663D711-8FA9-8607-7509-9945AB9F7E0E</h3>
+<p>B95D5C29-BDE0-3ED3-3ACF-F709C757445C<a href="#Как загрузить feature файл.">72655580-D660-447B-BA9F-F51CA5DD7BF4</a></p>
+<p>E7F218E5-3080-7EB8-83F8-8702250AF8DF</p>
+<p><span style="BACKGROUND: yellow"><b>361CF6CB-D208-7669-9F64-4672103043DF</b>D24EF446-1BC0-7B51-1CF9-9C37DE79494D<a href="#Как создать epf файл на основе feature файла.">22E2C34A-F185-9C16-6B2D-D1554FC4E164</a>37943E80-1754-3B7D-D60C-C2C89B730CF6</span></p>
+<h2><span style="BACKGROUND: yellow"></span>76C320B3-E4A2-BC51-1BF1-1472108FCE85</h2>
+<h2><span style="BACKGROUND: yellow"></span>FA86585F-2255-4BD9-915A-A9F168450CFB</h2>
+<h2><span style="BACKGROUND: yellow"></span>B57E1404-4461-78A6-635E-E86B4EBF76CB</h2>
+<h1>D5258836-6B66-2945-5190-00408494A11B</h1>
+<h1>1795E2B8-B4C9-35FE-ECEA-AE3B87D1BBA2<a name="Как получить состояние формы TestClient"><font style="BACKGROUND-COLOR: #ffffff">C4F58E83-76B8-600E-EA43-35FF7016B5F7</font></a></h1></blockquote>
 <blockquote></blockquote>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<p dir="ltr"><span style="BACKGROUND: yellow"><font style="BACKGROUND-COLOR: #ffffff">1. Выбрать опцию - Получить изменения формы. При этом будет сгенерирован текст шагов, которые описывают состояние активной формы TestClient.</font></span></p>
-<p dir="ltr"><span style="BACKGROUND: yellow"><font style="BACKGROUND-COLOR: #ffffff">2. Если перед получением состояние формы была выбрана опция - "Запомнить состояние формы TestClient", тогда при генерации шагов будут учитваться только изменения между сохраненным состоянием формы и текущим.</font></span></p>
+<p dir="ltr"><span style="BACKGROUND: yellow"><font style="BACKGROUND-COLOR: #ffffff">85C0C990-D72A-38B7-7C9D-D5E2A8F860CC</font></span></p>
+<p dir="ltr"><span style="BACKGROUND: yellow"><font style="BACKGROUND-COLOR: #ffffff">0E9037AD-69BF-3BDD-DE10-0123A82F74AD</font></span></p>
 <h1><span style="BACKGROUND: yellow"><font style="BACKGROUND-COLOR: #ffffff"><img src="_files/izm.png"></img></font></span></h1>
-<p dir="ltr"><span style="BACKGROUND: yellow"><font style="BACKGROUND-COLOR: #ffffff"></font></span> </p>
-<p dir="ltr"><span style="BACKGROUND: yellow"><font style="BACKGROUND-COLOR: #ffffff">3. Также для исследования состояния формы можно выбрать опцию "Исследователь формы".  Данный компонент позволяет определить какой элемент формы в данный момент активен, получить сведения по нему и варианты текста шагов.</font></span></p>
+<p dir="ltr"><span style="BACKGROUND: yellow"><font style="BACKGROUND-COLOR: #ffffff"></font></span>E7EB926A-B40C-4944-4EA1-19C0EFD54DB2</p>
+<p dir="ltr"><span style="BACKGROUND: yellow"><font style="BACKGROUND-COLOR: #ffffff">EFCF8796-200B-362E-EDE2-2964447FC8FF</font></span></p>
 <p dir="ltr"><span style="BACKGROUND: yellow"><font style="BACKGROUND-COLOR: #ffffff"><img src="_files/exp.png"></img></font></span><span style="BACKGROUND: yellow"><font style="BACKGROUND-COLOR: #ffffff"></font></span></p>
-<p dir="ltr"><span style="BACKGROUND: yellow"><font style="BACKGROUND-COLOR: #ffffff"></font></span> </p>
-<p dir="ltr"><span style="BACKGROUND: yellow"><font size="3"></font></span> </p></blockquote>
-<h2><span style="BACKGROUND: yellow"><font style="BACKGROUND-COLOR: #ffffff">12. Основные операции при работе с TestClient.</font></span></h2>
+<p dir="ltr"><span style="BACKGROUND: yellow"><font style="BACKGROUND-COLOR: #ffffff"></font></span>EED9C578-9873-32CF-FFF5-58DF31353F6E</p>
+<p dir="ltr"><span style="BACKGROUND: yellow"><font size="3"></font></span>AF97C299-898F-416D-D472-2FCE353F8396</p></blockquote>
+<h2><span style="BACKGROUND: yellow"><font style="BACKGROUND-COLOR: #ffffff">EE2F5313-A836-FA8A-A58E-EBD04AD946DA</font></span></h2>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<h3><span style="BACKGROUND: yellow"><a name="Как сравнить табличный документ с эталоном."><font style="BACKGROUND-COLOR: #ffffff">Как сравнить табличный документ с эталоном.</font></a></span></h3>
-<h3><span style="BACKGROUND: yellow"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><font face="Verdana">Надо понимать следующее. У платформы есть разные способы получить данные табличного документа из TestClient.</font></span></span></h3><span style="BACKGROUND: yellow"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><font face="Verdana">
+<h3><span style="BACKGROUND: yellow"><a name="Как сравнить табличный документ с эталоном."><font style="BACKGROUND-COLOR: #ffffff">1CC74B70-2EE4-BDE9-96B0-03AB32414B74</font></a></span></h3>
+<h3><span style="BACKGROUND: yellow"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><font face="Verdana">DD7D8709-E606-8E1A-AC38-8F470611DA75</font></span></span></h3><span style="BACKGROUND: yellow"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><font face="Verdana">
 <ul dir="ltr"><li>
-<div>Если у вас версия платформы 8.3.8 и выше, тогда вам доступен метод <strong>ЗаписатьСодержимоеВФайл</strong>().<br>Этот метод позволяет сэмулировать сохранение табличного документа в файл. И таким образом его может получить TestManager для обработки.<br>Но этот метод не работет, когда TestClient запущен как Web клиент.<br>Плюс этот метод не сработает, если табличный документ не доступен для редактирования.<br><br>Поэтому у платформы есть второй метод: <strong>ПолучитьТекстОбласти</strong>(&lt;Область&gt;).<br><br><em>Хорошая новость</em>: этот метод позволяет обратиться к нужной ячейке по её адресу и получить её текст.<br><br><em>Плохая новость</em>: для обхода табличного документа таким способом нужно знать его высоту и ширину.<br><br><em>Хорошая новость</em>: в режиме Web клиента при вызове <strong>УстановитьТекущуюОбласть</strong>(&lt;Область&gt;), при попытке выйти за границы макета происходит возврат на его край.<br>Таким образом можно нащупать где заканчивается макет, и пользователю необязательно указывать его границы.<br><br><em>Плохая новость</em>: в тонком клиенте такой трюк не работает. При попытке активизировать ячейку за границей макета - это и проихсодит.<br><br>Поэтому пользователю надо знать границы макета заранее, чтобы прочитать его по ячейкам в тонком клиенте.<br><br></div>
+<div>8A8DB474-8714-CBD3-3225-5398C5275A14<strong>D0AD5537-508B-1482-290F-F2D4D57690CA</strong>AEFE776D-B722-4D79-916D-DC67D5D12C4B<br>2ACBEB7D-8B34-C643-3297-7D4078685E8E<br>68CE8152-FD45-B7DA-A9B6-67B0DE633B95<br>D028FCE7-FEE5-C9F1-1A18-81462681E792<br><br>1A817EDA-0E46-D3A5-5642-2445C1B04B3C<strong>BFCA159B-FF1B-F78B-B054-489959EB1177</strong>BA3503E2-B2B3-C006-674C-C57CF85A6CB7<br><br><em>2A04CB16-9BA3-771B-B4AC-C6692F4977F6</em>61A00EF2-1119-574C-CFEF-FE114CE641BE<br><br><em>B2D66F13-6915-90A3-34B3-376796E4A23F</em>00E9DD28-D707-DCB2-250C-C8265133E180<br><br><em>7729B064-7951-1AA1-1800-0359F14E6970</em>152C4D2D-DEE2-EBED-D414-45140CC5DA8A<strong>2B5287AB-3B01-40B4-4D44-43720CCCB080</strong>82C9888A-C554-BB56-683B-BDEC44FD0DA4<br>B16F50D8-2207-7A4C-C645-50D85397B171<br><br><em>6AD9E006-FAE1-7FBD-D691-1BFBE36990EF</em>7C75AAAD-324C-CF62-2578-81CE366A7B8C<br><br>74171E82-9E48-E744-4CCA-AFC82329CB46<br><br></div>
 </li><li>
-<div>Как прочитать табличный документ в своём сценарии и сравнить с ожидаемым значением:<br>Для чтения макетов VB использует следущие методы:<br><strong>ПолучитьТабличныйДокументTestClient</strong> - возвращает ТабличныйДокумент <br><strong>ПолучитьТабДокИзTestClientКакМассив</strong> - возвращает массив<br><br>Вы можете использовать типовые шаги из поставки VB, такие как:<br><em>И Табличный документ "РеквизитТабличныйДокумент" стал равен макету "ИмяМакета"<br><br>И область "R1C1:R10C10" табличного документа "РеквизитТабличныйДокумент" равна макету "ИмяМакета"<br><br>И табличный документ "РеквизитТабличныйДокумент" стал равен:<br>| Значение1 | Значение2 |<br>| Значение3 | Значение4 |</em></div>
+<div>409C6722-1684-9655-5B25-5838118F791D<br>B6734FA6-4ABC-41F9-9A9D-DA1D8BFAE283<br><strong>B4AA2807-F729-4EB5-593B-BE1A7F103FD0</strong>A294C8F7-D817-69E8-8121-164B9958F400<br><strong>934A8273-9EE8-0C2A-A27F-FD1BF5875153</strong>5B096C14-02CC-9BF1-13B0-09F09143A71A<br><br>09DF2FDB-1A83-F422-24C4-43BBFBD84017<br><em>E4E85649-DE78-CCA5-57A2-2205C19F6EA2<br><br>02517B33-D35B-7296-6BB8-8615094B341E<br><br>7B0DB1BA-A813-67F7-7663-3477D522EBC8<br>5460182D-093D-D128-8D4F-F4F429BA9778<br>9D8026A7-04D1-4358-8CB9-9CE61C38FC02</em></div>
 </li><li>
-<div>Подведем итог выше сказанного:<br>1. Если у вас 8.3.8 и выше (<strong>лучше 8.3.10 и выше</strong>), тогда <strong>вы можете не указывать область чтения макетов</strong>.<br>VB будет их считывать целиком как в тонком клиенте так и в Web.<br><strong>Т.е. вам не придётся делать разные сценарии для тонкого клиента и web клиента.</strong><br>Но макет должнен быть "Доступен" пользователю (метод ТекущаяДоступность()).<br><br>2. Если вы хотите сравнить часть макета с эталоном - используйте шаг<br> <em>И область "R1C1:R10C10" табличного документа "РеквизитТабличныйДокумент" равна макету "ИмяМакета"</em> или подобные шаги<br><br>3. Если у вас версия платформы меньше 8.3.8 (<strong>не рекомендуется</strong>), тогда даже перед чтением макета целиком, надо будет указывать область чтения через специальный шаг <br> <em>Когда Я задаю параметры чтения области макета "R1C1:R100C20"<br></em>По умолчанию область чтения задана как "R1C1:R30C20" (30 рядов и 20 колонок).<br><strong>Важно! Если вы изменили область чтения, то она применится и при чтении следующих табличных документов.</strong></div></li></ul><p dir="ltr"><span style="BACKGROUND: yellow"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"></span></span> </p><span style="BACKGROUND: yellow"><font style="BACKGROUND-COLOR: #ffffff"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"></span></font></span></font>
+<div>8085AB1B-781E-3393-3581-10363F22101C<br>E85097EE-0537-5123-37D8-859F18409A89<strong>409A5696-BF05-1F6B-B36D-D446B502DD44</strong>DE07B242-A9D3-F349-9A3D-DA549F920D0E<strong>D1011BC0-2B9E-FD16-6637-7A9038D9FC5E</strong>7554AA05-6EA2-DF9E-E45D-D95B15222DC9<br>694031FA-9F3D-8AB5-5277-722D4883663D<br><strong>0120E0FC-7ED6-E27B-B123-36DD6DE57BA2</strong><br>CDE68A1F-BFAA-6061-19EC-CB4A4EE55C71<br><br>59B54E82-DBD8-DB69-9EA1-197A90C82B54<br>41988DFA-1009-9574-4C42-2E0D387E0EAA<em>A4CCDA97-1905-B9FC-C787-70A82F31F7FB</em>5030E897-9E8C-6627-7ABA-A5B459D5DFA9<br><br>7D75650D-D0A6-7E9B-B8FD-DAB0A546B716<strong>7284EBB1-207A-4AD7-7563-3C2C6EADA1AD</strong>B9752BDF-2CB3-540D-DD91-108B13F635AF<br>41988DFA-1009-9574-4C42-2E0D387E0EAA<em>034B272C-9C6F-BC16-6101-131893B47F75<br></em>0367C8D3-C2C0-0EC7-7074-4F0280B72AFA<br><strong>85449391-AB52-F238-8B9E-E0AA5934E8FF</strong></div></li></ul><p dir="ltr"><span style="BACKGROUND: yellow"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"></span></span>DEECB64B-F447-0634-4C90-03999BB96EA2</p><span style="BACKGROUND: yellow"><font style="BACKGROUND-COLOR: #ffffff"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"></span></font></span></font>
 <h2><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><span style="BACKGROUND: yellow">
-<p dir="ltr"><font size="3"></font></p></span> </span></h2></span></span></blockquote>
-<h2 dir="ltr"><font style="BACKGROUND-COLOR: #ffffff"><a name="14. Как создать автовидеоинструкцию.">14. Как создать автовидеоинструкцию.</a></font></h2>
+<p dir="ltr"><font size="3"></font></p></span>DE40DFCD-4273-AC05-515F-F0988ADDBEFA</span></h2></span></span></blockquote>
+<h2 dir="ltr"><font style="BACKGROUND-COLOR: #ffffff"><a name="14. Как создать автовидеоинструкцию.">91F5B41B-56C9-A9FA-A5DB-B4FC0F06344B</a></font></h2>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong>Первое что надо сделать:</strong></span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong>2FF1A623-5364-D01E-E530-04533A7EB48A</strong></span></font></font></h2>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font size="+0"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong>1. Прочитать вот эту инструкцию <a href="https://github.com/Pr-Mex/vanessa-automation/blob/develop/MakeAutoVideo.md">https://github.com/Pr-Mex/vanessa-automation/blob/develop/MakeAutoVideo.md</a></strong></span></font></font></h2>
-<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font size="+0"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong>2. Посмотреть вот это видео <a href="https://www.youtube.com/watch?v=BfXowJH5uP0">https://www.youtube.com/watch?v=BfXowJH5uP0</a></strong></span></font></font></h2></blockquote>
-<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong>Далее изложу основные принципы:</strong></span></font></font></h2>
-<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong>1. Каждый шаг в видеоинструкции будет озвучен и к нему будут добавлены субтитры.</strong></span></font></font></h2>
-<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong>2. Каждый шаг видео может масштабироваться по времени (т.е. стать длиннее или короче). Это нужно, чтобы синхронизировать видеоряд и озвучку.</strong></span></font></font></h2>
-<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong>3. Чтобы сделать видео вставку в произвольном месте нужно использовать шаг</strong></span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font size="+0"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong>9D1F52AB-AC2A-060F-F6A6-64B89FAF19EE<a href="https://github.com/Pr-Mex/vanessa-automation/blob/develop/MakeAutoVideo.md">04D13466-43B9-3026-672B-B3542BF7BF15</a></strong></span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font size="+0"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong>D186448D-1E4D-D3AD-DADB-B8A06CED7AC0<a href="https://www.youtube.com/watch?v=BfXowJH5uP0">3B1DFF77-06CC-123E-E3CC-CF8BE67CFB2E</a></strong></span></font></font></h2></blockquote>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong>477C12A7-E152-9E54-41AA-A9A13EA76888</strong></span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong>B56C13F3-4FED-F361-1709-9BEBB73263F1</strong></span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong>07A8E6CD-ABAC-7375-51EE-EC48607B682C</strong></span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong>4FCC0422-6DEE-B117-72D0-07BBA155707C</strong></span></font></font></h2>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font style="BACKGROUND-COLOR: #faebd7" face="Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><em>И обратите внимание "Текст видеовставки."</em></span></font></h2></blockquote>
-<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong>4. Все группы шагов будут автоматически преобразованы в видеовставку (белый текст на черном фоне). Вот пример.</strong></span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font style="BACKGROUND-COLOR: #faebd7" face="Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><em>FEA975F5-531C-3A5F-FD05-59EF2B69B7E0</em></span></font></h2></blockquote>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong>894C901B-D2A8-F017-764D-D0BB4B1777D8</strong></span></font></font></h2>
 <h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong><img src="_files/ПримерШагаГруппы.png"></img></strong></span></font></font></h2>
-<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong>5. Есть специальные управляющие конструкции, которые надо указывать в тексте сценария перед нужным шагом или группой.</strong></span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong>83259CC1-B3CE-1410-0A3F-F21F0A48574D</strong></span></font></font></h2>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">1) <strong>Произвольный текст шага</strong>. <em><font style="BACKGROUND-COLOR: #faebd7">autodoc.text</font></em> </span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">AF136E74-8BCA-A1AD-D23F-F26B8F5B0D6D<strong>188E18AE-DAFC-BED6-6593-31AE49812168</strong>F650A1D9-2B83-8049-9BEC-C451684BE251<em><font style="BACKGROUND-COLOR: #faebd7">C3E29226-1184-E27E-EB95-59BC3F9B1383</font></em> </span></font></font></h2>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">Пусть в сценарии есть шаг: <em><font style="BACKGROUND-COLOR: #faebd7">Когда В командном интерфейсе я выбираю "Основная" "Справочник1"</font></em></span></font></font></h2>
-<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">Тогда если перед ним (т.е. строкой выше) написать: <em><font style="BACKGROUND-COLOR: #faebd7">#[autodoc.text] В интерфейсе \[я\] выбираю %2 и %1 ["" + ТекущаяДата()]</font></em></span></font></font></h2>
-<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">тогда при формировании инструкции текст шага будет таким:</span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">E4D18C21-999A-3549-9917-71170CF55FF7<em><font style="BACKGROUND-COLOR: #faebd7">79987702-D6DE-969F-F18D-D77AC68D2C64</font></em></span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">4E26AB6B-39FD-FBB8-82E2-22C33000CA9F<em><font style="BACKGROUND-COLOR: #faebd7">A74D15E9-C3A8-4B97-7B41-11D800FD2F4F</font></em></span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">3233B891-7CB6-75E0-0E1D-D455BB2CE7D4</span></font></font></h2>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font style="BACKGROUND-COLOR: #faebd7" face="Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><em>В интерфейсе [я] выбираю "Справочник1" и "Основная" 08.04.1981 01:00</em></span></font></h2></blockquote>
-<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">Т.е. <em>%2 </em>и<em> %1 </em>были заменены на параметры шага. Выражение <em>["" + ТекущаяДата()] </em>было вычислено через метод <em>Вычислить()</em>.</span></font></font></h2>
-<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">А текст <em><font style="BACKGROUND-COLOR: #faebd7">\[я\]</font> </em>содержал в себе экранирование квадратных скобок.</span></font></font></h2></blockquote>
-<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">2) <strong>Не включать шаг в инструкцию.</strong> <em><font style="BACKGROUND-COLOR: #faebd7">autodoc.ignorestep</font></em> Если перед шагом или группой шагов написать <em><font style="BACKGROUND-COLOR: #faebd7">#[autodoc.ignorestep]</font></em>, тогда он/они будет выполнен, но не попадёт в финальный видео файл.</span></font></font></h2>
-<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">3) <strong>Отключить автомасштабирование шага или группы.</strong> <em><font style="BACKGROUND-COLOR: #faebd7">autodoc.donotscale</font></em> Если перед шагом или группой написать<font style="BACKGROUND-COLOR: #faebd7"> <em>#[autodoc.donotscale],</em></font> тогда он не будет сжиматься по времени для синхронизации голоса и видео.</span></font></font></h2>
-<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">4) <strong>Сделать из группы шагов один шаг.</strong> <em><font style="BACKGROUND-COLOR: #faebd7">autodoc.groupsteps</font></em> </span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font style="BACKGROUND-COLOR: #faebd7" face="Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><em>3C5E8267-9835-9078-81C9-901FEE82CCE8</em></span></font></h2></blockquote>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">C6CD8C06-C27A-6843-3444-4F7ED5347066<em>BC21BFAA-1A54-6813-3473-3D9D95FFA25A</em>6710BED9-B2CB-461D-D9B3-3C24DABB7C2D<em>8191C43D-60CE-BAC1-1AB7-798CE23AF7A1</em>7D064404-A128-03B8-8AAA-A66DFD7CF618<em>0ACB411B-9AFF-FAA7-7004-4079EC170BF5</em>D16285FC-0E38-F11D-D144-4A4C3A8653D5<em>69767D97-F8AC-4486-6D2B-B06B2B8D61E9</em>782BC0BA-A627-6CEE-EC39-925B1389C55C</span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">C8843B7A-2693-F187-73BC-CD9C0AA8B648<em><font style="BACKGROUND-COLOR: #faebd7">0CCA3515-9A1D-11C0-05E1-1C61A5D2220E</font> </em>28B9ACC0-75DE-593D-DF52-24B7B6207E31</span></font></font></h2></blockquote>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">8A51D8CB-6415-0C68-89AC-C4CD1065D4C5<strong>0920BDC1-DABF-F1D0-0DB1-14FB9572FE4D</strong>7ADA7AD9-FA65-C237-74E7-774212A50039<em><font style="BACKGROUND-COLOR: #faebd7">0274C6AD-AA02-9B2B-BC51-1A8B6605DA7F</font></em>0944BC2B-414F-0C46-6E3F-FB342D4CDB93<em><font style="BACKGROUND-COLOR: #faebd7">599ECB2E-3EEA-009B-B709-9B48C9C4FA79</font></em>9E1A9F5A-9968-AA4F-F986-6F15A8A14890</span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">3C10BB36-2A8F-6BA4-42D5-5AA19B91AD7C<strong>ACA5E429-062C-0381-180B-B764402F82A3</strong>A7F1E76D-02B7-CEB6-6B32-2F0AA71CC941<em><font style="BACKGROUND-COLOR: #faebd7">D982D058-FD66-D96C-C992-2F5A706DA925</font></em>C7EED9EC-0599-9FCC-C134-4776320BF381<font style="BACKGROUND-COLOR: #faebd7"> <em>DB286F44-C6BF-3F3F-F59F-FE99345134E3</em></font>75C7D2A0-632C-F214-48CC-C26FBB5F4F48</span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">402039BF-4227-C985-5D88-8E1280D24B6F<strong>73BD5D82-AABD-5CB3-3808-81DE8AD423F5</strong>36FABCDC-F6C1-41C8-82C9-9069344BF237<em><font style="BACKGROUND-COLOR: #faebd7">CFEAA9FE-EC7E-1392-25DB-B6DF40E599F6</font></em>36FABCDC-F6C1-41C8-82C9-9069344BF237</span></font></font></h2>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">Пусть в сценарии есть группа шагов с текстом: <em><font style="BACKGROUND-COLOR: #faebd7">Просто группа шагов</font></em></span></font></font></h2>
-<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">Если перед ней написать <font style="BACKGROUND-COLOR: #faebd7"><em>#[autodoc.groupsteps] В интерфейсе я выбираю Справочник1 и Справочник2 ["" + 11 + 22]</em></font><font style="BACKGROUND-COLOR: #ffffff"> тогда</font></span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">CE46AEB5-0A88-CAF3-3B92-273407775163<em><font style="BACKGROUND-COLOR: #faebd7">D1DBE0BE-59C1-B01E-E328-8F4CDCFEF877</font></em></span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">A65520B0-C573-8522-2F5D-DC4B94C31D5E<font style="BACKGROUND-COLOR: #faebd7"><em>A2F5585D-7BDA-E021-14DF-F94F72655AA3</em></font><font style="BACKGROUND-COLOR: #ffffff">07C155F2-EFF3-040B-B3B6-67F283E723E6</font></span></font></font></h2>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">а) Вся группа шагов будет восприниматься как один шаг.</span></font></font></h2>
-<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">б) Специальная видеовставка для группы создаваться не будет.</span></font></font></h2>
-<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">в) В финальном видео эта группа станет одним шагом с текстом <em><font style="BACKGROUND-COLOR: #faebd7">В интерфейсе я выбираю Справочник1 и Справочник2 1122</font></em></span></font></font></h2>
-<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="BACKGROUND-COLOR: #faebd7; face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">г) Если после директивы <em><font style="BACKGROUND-COLOR: #faebd7">#[autodoc.groupsteps] </font></em> не указан текст, тогда будет использовано текущее имя группы.</span></font></font></h2></blockquote></blockquote><font size="+0"><font style="BACKGROUND-COLOR: #faebd7; face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">
-<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">5) <strong>Исключить слайд сценария.</strong> <font style="BACKGROUND-COLOR: #faebd7"><em>autodoc.ignore.scenarioslide</em></font></span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">CFE6D80B-FB7E-5D31-14F1-187AFE89B9D5</span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">64135E9E-0039-F8F0-07D6-631FA49ED2A9</span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">78F97B6D-5C4E-9844-4C5B-B96FC31F52CD<em><font style="BACKGROUND-COLOR: #faebd7">AB069E34-BE81-7D1F-F368-8CEA6F53664C</font></em></span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="BACKGROUND-COLOR: #faebd7; face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">379415B5-9AD5-6E1C-CF10-0E2874F2AA7B<em><font style="BACKGROUND-COLOR: #faebd7">9AF67652-0B30-71C8-837F-FA4CF2E8D771</font></em>2B799A7A-AEBA-02A5-5054-46BD86E4471C</span></font></font></h2></blockquote></blockquote><font size="+0"><font style="BACKGROUND-COLOR: #faebd7; face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">9374613A-6D8D-F703-3993-3C6521B6D6C9<strong>C4C71EBB-EB69-3E64-4078-888CECB84D24</strong>F6E6F0FF-D2B1-0E3F-FC9D-D0DE0450D423<font style="BACKGROUND-COLOR: #faebd7"><em>54E2BDA4-BF7E-23BE-EE07-7225BF067A33</em></font></span></font></font></h2>
 <h2 style="MARGIN-RIGHT: 0px" dir="ltr">
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><font style="BACKGROUND-COLOR: #faebd7"><font style="BACKGROUND-COLOR: #ffffff"> Для исключения слайда сценария с текстом <em><font style="BACKGROUND-COLOR: #faebd7">Сценарий. &lt;Текст сценария&gt;</font></em> надо перед строкой, где объявляется сценарий написать  <font style="BACKGROUND-COLOR: #faebd7"><em>#[autodoc.ignore.scenarioslide]</em></font></font></font></span></font></font></h2></blockquote></h2></span></font></font><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">
-<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">6) <strong>Исключить слайд с заголовком фичи.</strong> <font style="BACKGROUND-COLOR: #faebd7"><em>autodoc.ignore.featureslide</em></font></span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><font style="BACKGROUND-COLOR: #faebd7"><font style="BACKGROUND-COLOR: #ffffff">C06F20B6-D55C-6D52-24F3-379C6B15B657<em><font style="BACKGROUND-COLOR: #faebd7">5B6B65B9-452F-2063-3378-8EFBEB0DD21C</font></em>8A8A988B-7232-1402-2E2D-D66A2AF6C348<font style="BACKGROUND-COLOR: #faebd7"><em>894DE6AD-F68C-982D-D8D8-8DBBFA755F01</em></font></font></font></span></font></font></h2></blockquote></h2></span></font></font><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">6E0E3F6F-31AE-8900-0371-1D6FC1E720D5<strong>E847E708-5DCA-ED67-7FE7-7FD94CEF3102</strong>1684AC15-44DD-1BE9-9CCF-FF45DE0D7EA9<font style="BACKGROUND-COLOR: #faebd7"><em>31603E2F-6485-C667-7EDB-B5C0784B76EB</em></font></span></font></font></h2>
 <h2 style="MARGIN-RIGHT: 0px" dir="ltr">
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">Для исключения слайда с заголовком фича файла надо перед строкой, где объявляется имя функциональности написать  <font style="BACKGROUND-COLOR: #faebd7"><em>#[autodoc.ignore.featureslide]</em></font></span></font></font></h2></blockquote></h2></span></font></font>
-<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font face="Verdana"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">7<font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">) <strong>Исключить финальный слайд, где указана данные по сборке сценария.</strong> <font style="BACKGROUND-COLOR: #faebd7"><em>autodoc.ignore.finalslide</em></font></span></font></font> 
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">C0D03B7C-2016-1443-3A4D-D0CDD4A17F28<font style="BACKGROUND-COLOR: #faebd7"><em>F75CBFD2-A98A-F721-1CF3-32A52C426D79</em></font></span></font></font></h2></blockquote></h2></span></font></font>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font face="Verdana"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">36364F5C-79D3-E6CA-AF54-421C9A668DD5<font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">FB3128E9-1E27-8B89-9FA5-57550A3EF1AE<strong>B436BB4F-5446-1608-87E9-9C632C1EA621</strong>56C4CA8C-D409-23E4-4D1C-CBB25A340CB6<font style="BACKGROUND-COLOR: #faebd7"><em>F5046BD4-F13A-3D16-6B97-735219DB0F3B</em></font></span></font></font> 
 <h2 style="MARGIN-RIGHT: 0px" dir="ltr">
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">Для исключения слайда с заголовком фича файла надо перед строкой, где объявляется имя функциональности написать  <font style="BACKGROUND-COLOR: #faebd7"><em>#[autodoc.ignore.finalslide]</em></font></span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">91AEB7DB-1258-6A17-7C7D-D71A61A36D22<font style="BACKGROUND-COLOR: #faebd7"><em>5DED5CD2-072E-D6D2-2202-27A74F67A8D7</em></font></span></font></font></h2>
 <div></div></blockquote></h2></span></span></font></font></font></h2>
-<h2 style="FONT-SIZE: 15px; MARGIN-RIGHT: 0px" dir="ltr"><font face="Verdana"><font size="+0"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; FONT-WEIGHT: normal; ORPHANS: 2; WIDOWS: 2; font-variant-ligatures: normal"><span style="font-variant-ligatures: normal"><font size="+0"><span style="FONT-SIZE: 15px; font-variant-ligatures: normal">8) <strong>Изменить голос, для конкретного шага.</strong></span></font></span></span></font></font></h2></blockquote></blockquote></blockquote>
+<h2 style="FONT-SIZE: 15px; MARGIN-RIGHT: 0px" dir="ltr"><font face="Verdana"><font size="+0"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; FONT-WEIGHT: normal; ORPHANS: 2; WIDOWS: 2; font-variant-ligatures: normal"><span style="font-variant-ligatures: normal"><font size="+0"><span style="FONT-SIZE: 15px; font-variant-ligatures: normal">EB521390-0218-3D19-9F96-624DAA7E11C7<strong>EC27C3BB-53AF-2850-0E76-6B51BDDCD31A</strong></span></font></span></span></font></font></h2></blockquote></blockquote></blockquote>
 <blockquote style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 0px 40px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<h2 style="FONT-SIZE: 15px; MARGIN-RIGHT: 0px" dir="ltr"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; FONT-WEIGHT: normal; ORPHANS: 2; WIDOWS: 2">В настройках видео задается основной голосовой движок и голос, который будет использоваться для озвучивания инструкции. </span></h2>
-<h2 style="FONT-SIZE: 15px; MARGIN-RIGHT: 0px" dir="ltr"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; FONT-WEIGHT: normal; ORPHANS: 2; WIDOWS: 2">Для изменения голоса перед шагом необходимо указать голосовой движок, голос и интонацию (для amazon можно указать язык). Параметры могут задаваться:</span></h2></blockquote></blockquote></blockquote></blockquote>
+<h2 style="FONT-SIZE: 15px; MARGIN-RIGHT: 0px" dir="ltr"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; FONT-WEIGHT: normal; ORPHANS: 2; WIDOWS: 2">2AF5E192-DD68-4DA9-98B5-570AE14D507D</span></h2>
+<h2 style="FONT-SIZE: 15px; MARGIN-RIGHT: 0px" dir="ltr"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; FONT-WEIGHT: normal; ORPHANS: 2; WIDOWS: 2">D951508B-7E5E-DF21-1E75-583BC71CC05F</span></h2></blockquote></blockquote></blockquote></blockquote>
 <blockquote style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 0px 40px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">
 <blockquote style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 0px 40px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<h2 style="FONT-SIZE: 15px; MARGIN-RIGHT: 0px" dir="ltr"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; FONT-WEIGHT: normal; ORPHANS: 2; WIDOWS: 2">- кратко (для Уandex): </span><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; ORPHANS: 2; WIDOWS: 2">@YandexTTS: ermil,evil </span></h2>
-<div><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; ORPHANS: 2; WIDOWS: 2">- развернуто </span><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; FONT-WEIGHT: bold; ORPHANS: 2; WIDOWS: 2">@YandexTTS: voice = ermil; emotion = evil</span></div></blockquote></blockquote></blockquote></blockquote></blockquote>
+<h2 style="FONT-SIZE: 15px; MARGIN-RIGHT: 0px" dir="ltr"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; FONT-WEIGHT: normal; ORPHANS: 2; WIDOWS: 2">BCF45E1A-8E50-254D-D727-704943C60D34</span><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; ORPHANS: 2; WIDOWS: 2">37BAE4DA-5F35-94C4-48A2-2A96E6266A86</span></h2>
+<div><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; ORPHANS: 2; WIDOWS: 2">0DE8C15B-42B4-3B0D-D6FC-CD5D515F344B</span><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; FONT-WEIGHT: bold; ORPHANS: 2; WIDOWS: 2">09EF20D7-F502-78C9-9CBC-C2D50EA19FCB</span></div></blockquote></blockquote></blockquote></blockquote></blockquote>
 <blockquote style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 0px 40px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">
 <blockquote style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 0px 40px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">
 <blockquote style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 0px 40px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">
@@ -357,109 +357,109 @@
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
 <div>
-<h2 style="FONT-SIZE: 15px; MARGIN-RIGHT: 0px" dir="ltr"><span style="FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; ORPHANS: 2; WIDOWS: 2">@AmazonTTS: voice = Kimberly; lang = en-US</span></h2></div></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote>
+<h2 style="FONT-SIZE: 15px; MARGIN-RIGHT: 0px" dir="ltr"><span style="FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; ORPHANS: 2; WIDOWS: 2">DFE25800-F500-5B1E-E50E-E80806501141</span></h2></div></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote>
 <blockquote style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 0px 40px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<h2 style="FONT-SIZE: 15px; MARGIN-RIGHT: 0px" dir="ltr"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; FONT-WEIGHT: normal; ORPHANS: 2; WIDOWS: 2">При краткой записи первый параметр - голос, второй эмоция, при развернутой записи порядок не важен, параметры разделяются </span><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; ORPHANS: 2; WIDOWS: 2">;</span><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; FONT-WEIGHT: normal; ORPHANS: 2; WIDOWS: 2"> .</span></h2>
-<h2 style="FONT-SIZE: 15px; MARGIN-RIGHT: 0px" dir="ltr"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; FONT-WEIGHT: normal; ORPHANS: 2; WIDOWS: 2">У Yandex шесть голосов и три эмоции, у Amazon голосов намного больше, полный список можно увидеть на странице настройки аудио в выпадающих списках</span><span style="FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; FONT-WEIGHT: normal; ORPHANS: 2; WIDOWS: 2">. </span></h2></blockquote>
-<h2 style="FONT-SIZE: 15px; MARGIN-RIGHT: 0px" dir="ltr"><font face="Verdana"><font size="+0"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; ORPHANS: 2; WIDOWS: 2; font-variant-ligatures: normal"><span style="font-variant-ligatures: normal"><font size="+0"><span style="FONT-SIZE: 15px; font-variant-ligatures: normal"><span style="FONT-WEIGHT: normal">9) </span>Автоперемещение курсора мышки к элементу формы или элементу интерфейса.</span></font></span></span></font></font></h2></blockquote></blockquote></blockquote>
+<h2 style="FONT-SIZE: 15px; MARGIN-RIGHT: 0px" dir="ltr"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; FONT-WEIGHT: normal; ORPHANS: 2; WIDOWS: 2">6C63AB74-A208-7139-9FE7-736D0B22B308</span><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; ORPHANS: 2; WIDOWS: 2">8431030E-2969-7DF7-7202-2155523CE854</span><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; FONT-WEIGHT: normal; ORPHANS: 2; WIDOWS: 2">B1ED06B4-F716-02D0-08BD-D1727378E6FC</span></h2>
+<h2 style="FONT-SIZE: 15px; MARGIN-RIGHT: 0px" dir="ltr"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; FONT-WEIGHT: normal; ORPHANS: 2; WIDOWS: 2">700DC4E2-36C4-0A07-76F8-8C137D7141AA</span><span style="FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; FONT-WEIGHT: normal; ORPHANS: 2; WIDOWS: 2">9C08FD7C-9B05-FA9F-F58F-FC3BFE63142D</span></h2></blockquote>
+<h2 style="FONT-SIZE: 15px; MARGIN-RIGHT: 0px" dir="ltr"><font face="Verdana"><font size="+0"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; ORPHANS: 2; WIDOWS: 2; font-variant-ligatures: normal"><span style="font-variant-ligatures: normal"><font size="+0"><span style="FONT-SIZE: 15px; font-variant-ligatures: normal"><span style="FONT-WEIGHT: normal">8B031505-4CF9-D73A-A351-101368117D2F</span>A20ACBAF-AEBA-63D1-1686-6AB4A1DB1543</span></font></span></span></font></font></h2></blockquote></blockquote></blockquote>
 <blockquote style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 0px 40px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">
 <blockquote style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 0px 40px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<h2 style="ORPHANS: 2; WIDOWS: 2; MARGIN-RIGHT: 0px" dir="ltr"><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px; FONT-WEIGHT: normal">Для включения опции нужно установить флаг "Эмулировать движения мышки".</span></font></h2>
-<h2 style="ORPHANS: 2; WIDOWS: 2; MARGIN-RIGHT: 0px" dir="ltr"><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px; FONT-WEIGHT: normal">Если флаг установлен, то при выполнении шагов будет выполняться попытка найти элемент формы или элемент управления на экране и переместить курсор мышки к нему.</span></font></h2>
-<div><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px">Для поиска картинки и передвижения мышки используется SikuliX. Картинка для поиска будет сгенерирована по тексту, полученному из элемента формы.</span></font></div>
-<div><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px">Чтобы отключить движение мышки у конкретного шага надо использовать директиву #[DoNotMoveMouse].</span></font></div></blockquote></blockquote></blockquote></blockquote>
+<h2 style="ORPHANS: 2; WIDOWS: 2; MARGIN-RIGHT: 0px" dir="ltr"><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px; FONT-WEIGHT: normal">9077BC74-5C44-5A4C-C529-92F2C8D00820</span></font></h2>
+<h2 style="ORPHANS: 2; WIDOWS: 2; MARGIN-RIGHT: 0px" dir="ltr"><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px; FONT-WEIGHT: normal">574A4B76-754A-0574-4B59-90B6194AAEFC</span></font></h2>
+<div><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px">CB94A4A4-DD9D-8BD1-1273-3300B5CF9079</span></font></div>
+<div><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px">69A5DD16-A4A3-06CA-A5DD-D8C89721748C</span></font></div></blockquote></blockquote></blockquote></blockquote>
 <blockquote style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 0px 40px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<h2 style="FONT-SIZE: 15px; MARGIN-RIGHT: 0px" dir="ltr"><font face="Verdana"><font size="+0"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; FONT-WEIGHT: normal; ORPHANS: 2; WIDOWS: 2; font-variant-ligatures: normal"><span style="font-variant-ligatures: normal"><font size="+0"><span style="FONT-SIZE: 15px; font-variant-ligatures: normal"></span></font></span></span></font></font> </h2></blockquote></blockquote></blockquote></blockquote>
+<h2 style="FONT-SIZE: 15px; MARGIN-RIGHT: 0px" dir="ltr"><font face="Verdana"><font size="+0"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; FONT-WEIGHT: normal; ORPHANS: 2; WIDOWS: 2; font-variant-ligatures: normal"><span style="font-variant-ligatures: normal"><font size="+0"><span style="FONT-SIZE: 15px; font-variant-ligatures: normal"></span></font></span></span></font></font>D9F6C118-D8E5-2571-1294-4697A273F5F6</h2></blockquote></blockquote></blockquote></blockquote>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font face="Verdana"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong></strong></span></font></font></font> </h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font face="Verdana"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong></strong></span></font></font></font>7E052EF2-71B9-D110-0004-4F5D14DC1D3F</h2>
 <h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font face="Verdana"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">
-<h2 dir="ltr"><font style="BACKGROUND-COLOR: #ffffff"><a name="15. Как узнать детали ошибки.">15. Как узнать детали ошибки.</a></font></h2>
+<h2 dir="ltr"><font style="BACKGROUND-COLOR: #ffffff"><a name="15. Как узнать детали ошибки.">92BBFA80-9D23-DF06-6B5C-C4015851CA75</a></font></h2>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<p dir="ltr">Допустим у вас возникла ошибка сравнения двух таблиц. В дереве сценария это выглядит примерно так.</p>
+<p dir="ltr">0B8710D0-7E9F-F27C-C418-834BCB82C1A4</p>
 <p dir="ltr"><img src="_files/01.png"></img></p>
-<p dir="ltr"> </p>
-<p dir="ltr">Делаем двойной клик по строке упавшего шага (показан стрелкой). Тогда появится такое окно</p>
+<p dir="ltr">582163BB-B1B3-16C8-8288-83BC2B744499</p>
+<p dir="ltr">EE0B2C6E-F88C-430E-E359-9AEECF1FF726</p>
 <p dir="ltr"><img src="_files/05.png"></img></p>
-<p dir="ltr">В этом окне можно увидеть более детальную информацию об ошибке.</p>
-<p dir="ltr">Также, в том случае, если шаг проверял равенство таблиц или макетов, можно использовать кнопку "Сравнить таблицы", нажатие на которую покажет стандартное окно сравнения табличных документов.</p>
-<p dir="ltr">Если флаг "Только текст ячек выставлен" - то сравниваться будут только тексты ячеек макетов, без учёта их оформления.</p>
+<p dir="ltr">77159972-4634-8CD8-8352-29FA1024936B</p>
+<p dir="ltr">47706DF4-1228-7F1C-C842-2FCF2F4DAD81</p>
+<p dir="ltr">97E5D073-46B6-A01C-C0FF-FAE8BB5F525D</p>
 <p dir="ltr"><img src="_files/04.png"></img></p></blockquote>
-<p dir="ltr"> </p>
-<h2 dir="ltr"><font style="BACKGROUND-COLOR: #ffffff"><a name="16. Работа со сценариями на других языках.">16. Работа со сценариями на других языках.</a></font></h2>
+<p dir="ltr">F8E889D0-3640-F60E-E4D5-5BFA76F37A58</p>
+<h2 dir="ltr"><font style="BACKGROUND-COLOR: #ffffff"><a name="16. Работа со сценариями на других языках.">6ADAC673-BB8C-4935-5563-3EFD46A49FF1</a></font></h2>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<p dir="ltr">Vanessa-Automation позволяет работать со сценариями на разных яхыках.</p>
-<p dir="ltr">1. Чтобы выбрать язык, на котором вы хотите накликать фичу - надо использовать соответствующую настройку.</p>
+<p dir="ltr">95DEA6DB-F4B8-FD5E-E6B8-8EAA499C55DA</p>
+<p dir="ltr">FF5722DF-BE63-9ABD-DB03-3DCB1B6A748C</p>
 <p dir="ltr"><img src="_files/06.png"></img></p>
-<p dir="ltr">2. Далее, при накликиванни фичи ваш сценарий будет автоматически переводится на выбранный язык. Чтобы работал перевод - должен быть заполнен файл перевода шагов, расположенный тут</p>
-<p dir="ltr">{КаталогVB}\locales\Gherkin\  например en.mxl.</p>
-<p dir="ltr">3. Также вам станет досупна кнопка перевода сценария с русского языка на выбранный вами язык.</p>
+<p dir="ltr">E3B2E41B-69B8-2D16-6F1E-E20636B15E72</p>
+<p dir="ltr">278472A1-2EC0-775F-F734-4F921DAF73D1</p>
+<p dir="ltr">D3BE6F54-CBB9-9419-9D98-83AEF8C65E02</p>
 <p dir="ltr"><img src="_files/07.png"></img></p>
-<p dir="ltr">4. Также при просмотре дерева известных шагов - вы можете выбрать опцию "Показать шаги на Русском"</p>
+<p dir="ltr">E34DFCAB-D9A4-7DF7-767E-EC8DB4B2A235</p>
 <p dir="ltr"><img src="_files/09.png"></img></p>
-<p dir="ltr">Это может помочь русскоговорящим пользователям при поиске шагов на другом языке.</p>
-<p dir="ltr">5. Также Исследователь форм будет предлагать вам шаги на том яызке, который указан в настройках.</p>
+<p dir="ltr">607D9198-BE9E-08BF-F36E-E0A9E7B01D7E</p>
+<p dir="ltr">4D4A9B46-9F0E-C9FD-DA00-0EC1F2F6FAC9</p>
 <p dir="ltr"><img src="_files/10.png"></img></p>
-<p dir="ltr"> </p></blockquote>
-<h2><a name="20 SikuliX">20 SikuliX</a></h2>
+<p dir="ltr">C0D453A1-83AE-4316-67A2-253334570CB0</p></blockquote>
+<h2><a name="20 SikuliX">D77D02EB-8ACB-A429-99D9-94CE5B894556</a></h2>
 <div><a name="20 SikuliX"><br></a></div>
-<h2 dir="ltr"><a name="20.1 Установка SikuliX">20.1 Установка SikuliX</a></h2></span></font></font></font></h2></blockquote></blockquote>
+<h2 dir="ltr"><a name="20.1 Установка SikuliX">8D782FFD-00B8-4468-8636-65963866C39C</a></h2></span></font></font></font></h2></blockquote></blockquote>
 <blockquote style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 0px 40px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<p style="ORPHANS: 2; WIDOWS: 2"><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px">Последний дистрибутив можно скачать по <a href="https://raiman.github.io/SikuliX1/downloads.html">ссылке</a> (на момент написание статьи текущий релиз 1.1.3)</span></font></p>
-<p style="ORPHANS: 2; WIDOWS: 2"><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px">1. Скопировать скаченный файл в директорию D:\SikuliX\</span></font></p>
-<p style="ORPHANS: 2; WIDOWS: 2"><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px">2. Запустить файл и согласиться с установкой<br><img src="_files/2019-09-01_183720.png"></img><br><br></span></font></p>
-<p style="ORPHANS: 2; WIDOWS: 2"><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px">3. В настройка установки выбрать Pack1. Оставить по умолчанию язык - Python<br><img src="_files/2019-09-01_184021.png"></img> </span></font></p>
-<p style="ORPHANS: 2; WIDOWS: 2"><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px">3. Согласиться с установкой<br><img src="_files/2019-09-01_184333.png"></img><br><img src="_files/2019-09-01_184447.png"></img></span></font></p>
-<p style="ORPHANS: 2; WIDOWS: 2"><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px">4. В результате успешной установки будет выведено соответствующее окно.<br><img src="_files/2019-09-01_184832.png"></img></span></font></p>
-<p style="ORPHANS: 2; WIDOWS: 2"><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px">5. Прописать в системную переменную среды <b>Path</b> путь к каталогу SikuliX (D:\SikuliX). </span></font></p>
-<p style="ORPHANS: 2; WIDOWS: 2"><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px">Проверить правильность указания путь можно запустив консоль и выполнив команду: </span></font></p>
-<p style="ORPHANS: 2; WIDOWS: 2"><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px"><i>where runsikulix</i></span></font></p>
-<p style="ORPHANS: 2; WIDOWS: 2"><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px">в результате будет выведен путь нахождения команды<br><br><img src="_files/2019-09-01_191126.png"></img></span></font></p></blockquote></blockquote></blockquote>
+<p style="ORPHANS: 2; WIDOWS: 2"><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px">17C30D7F-EDC3-6AD1-1237-7D1873704BC4<a href="https://raiman.github.io/SikuliX1/downloads.html">10015ABF-233C-D889-9BD9-9B8976F95AEB</a>3D098B88-9B27-4D77-7FB8-8AF60879CA68</span></font></p>
+<p style="ORPHANS: 2; WIDOWS: 2"><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px">46F4304C-0DE5-2852-2EE1-165DF9655935</span></font></p>
+<p style="ORPHANS: 2; WIDOWS: 2"><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px">84D5E57A-6C18-A945-5E5D-D32A1DE78E52<br><img src="_files/2019-09-01_183720.png"></img><br><br></span></font></p>
+<p style="ORPHANS: 2; WIDOWS: 2"><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px">B0A119E2-561E-6599-960C-C60C821B3E76<br><img src="_files/2019-09-01_184021.png"></img>4FCE937A-F21D-0D3C-CFCE-E55B1987948A</span></font></p>
+<p style="ORPHANS: 2; WIDOWS: 2"><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px">56CF125A-D0EA-2D31-171C-CAAC3A994D49<br><img src="_files/2019-09-01_184333.png"></img><br><img src="_files/2019-09-01_184447.png"></img></span></font></p>
+<p style="ORPHANS: 2; WIDOWS: 2"><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px">8E4A86B6-279B-47AB-B17F-FB65D6791BBB<br><img src="_files/2019-09-01_184832.png"></img></span></font></p>
+<p style="ORPHANS: 2; WIDOWS: 2"><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px">861928D9-1127-E06D-DD81-1E8F8BCDD522<b>620F78B5-F607-0F30-0F47-70665D8A1EC9</b>906E986F-4C86-2759-9A75-558C3B670056</span></font></p>
+<p style="ORPHANS: 2; WIDOWS: 2"><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px">2D5978B1-FA12-7FDF-F913-3E734986D77A</span></font></p>
+<p style="ORPHANS: 2; WIDOWS: 2"><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px"><i>6FBDF46C-2CB7-709F-FEAA-A736539443A3</i></span></font></p>
+<p style="ORPHANS: 2; WIDOWS: 2"><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px">021739D1-16F6-E843-3315-58BE6F055E41<br><br><img src="_files/2019-09-01_191126.png"></img></span></font></p></blockquote></blockquote></blockquote>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
 <h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font face="Verdana"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">
-<h2 dir="ltr"><font style="BACKGROUND-COLOR: #ffffff"><a name="20.2 SikuliX сервер">20.2 SikuliX сервер</a></font></h2>
+<h2 dir="ltr"><font style="BACKGROUND-COLOR: #ffffff"><a name="20.2 SikuliX сервер">CA63691B-FDA0-CA45-5BA5-51225F518691</a></font></h2>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<p dir="ltr"><br>1. SikuliX сервер нужен, чтобы ускорить работу сценариев, которые многократно вызывают скрипты SikuliX. Таким образом с помощью Vanessa Automation можно писать быстрые сценарии, которые могут интерактивно работать с экраном пользователя.</p>
-<p dir="ltr">2. Большая часть скриптов SikuliX не требует специальной адаптации для работы на SikuliX сервере.</p>
-<p dir="ltr">3. Чтобы использовать SikuliX сервер нужно установить флаг "Использовать SikuliX сервер" и указать каталоги (через точку с запятой) скриптов SikuliX.</p>
+<p dir="ltr"><br>DAD7EA03-C573-9051-14C6-63E466D2DBDB</p>
+<p dir="ltr">AF509367-5CF3-BAE3-3237-7DC4E157D6D7</p>
+<p dir="ltr">F7EEEB32-EAD2-7080-0368-8BE14DBDDE20</p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
 <p dir="ltr"><img src="_files/SikuliXСервер01.png"></img></p></blockquote>
-<p dir="ltr"><br>4. При такой настройке вызов <strong>Ванесса.ВыполнитьSikuliСкрипт()</strong> будет перенаправлен в метод <strong>Ванесса.ВыполнитьSikuliСкриптЧерезSikuliXСервер()</strong> (поэтому большую часть сценариев, которые уже используют SikuliX скрипты переделывать не надо).</p>
-<p dir="ltr">5. При этом будет запущен специальный сеанс SikuliX, если его ещё нет.</p>
-<p dir="ltr">6. Будет собран специальный SikuliX скрипт, который представляет собой компиляцию всех скриптов, которые были в каталоге (каталогах) в параметра "Каталоги скриптов SikuliX". Скрипт будет размещён в первом каталоге с именем <strong>SikuliXServer.sikuli</strong>.</p>
-<p dir="ltr">7. Скрипты, принимающие аргрументы вида "<strong>sys.argv[1]</strong>" также будут корректно обработаны.</p>
-<p dir="ltr">8. Запуск SikuliX сервера доступен через управляющий json файл. Параметры: "<strong>КаталогиСкриптовSikuliX</strong>" и "<strong>ИспользоватьSikuliXСервер</strong>".</p></blockquote>
-<p dir="ltr"> </p>
-<h2 dir="ltr"><font style="BACKGROUND-COLOR: #ffffff"><a name="Работа с глобальными переменными.">21. Работа с глобальными переменными.</a></font></h2>
+<p dir="ltr"><br>BB8C7D8F-ACFF-169B-B8A8-85B0ECFA0655<strong>F2C4A0F4-1280-2AD2-2D41-1735D245A596</strong>7AC17048-1E7F-2FF2-2E03-30C769A3C263<strong>F5B53ABE-B7F6-2F0B-BC9F-FD93ACA52047</strong>298267B3-1F5F-11D8-8EB6-691BADB3AF13</p>
+<p dir="ltr">F2095CCB-A3DD-CC69-99BA-A5F6AF376F5A</p>
+<p dir="ltr">AFA401EB-933B-D0C6-65E1-1AA59C285B19<strong>F748E22B-2035-44CA-A60D-D08EE7E263B9</strong>3E91D190-91F3-C3B3-3E84-48DFB2CFBF3E</p>
+<p dir="ltr">CCAB9D44-6E33-9E2E-E079-946E0C0E6B0D<strong>564EAF0D-D4AC-4905-5008-898AAF9A850C</strong>932A9544-C478-9DA3-3439-98B2C48B3B61</p>
+<p dir="ltr">A8AB6C48-D79A-75CB-BEBD-DA65D73ECCF6<strong>CE1161FD-D418-CEB0-03C7-7DA53CF940BB</strong>483BE10F-8C9C-B3A2-2663-3582E318031C<strong>2030C960-CA56-1FA2-26A7-718341D40DB8</strong>688813F0-7270-A088-8374-4CF7C0B5E34F</p></blockquote>
+<p dir="ltr">2D28AB48-DF05-638A-A5A1-12B4FDCDC309</p>
+<h2 dir="ltr"><font style="BACKGROUND-COLOR: #ffffff"><a name="Работа с глобальными переменными.">18C09794-5274-1A9E-E59F-FDF9EC66F5FE</a></font></h2>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<p dir="ltr"><br>1. В Vanessa Automation есть возможность работать с глобальными переменными. Они бывают двух типов.</p>
+<p dir="ltr"><br>FE4322D4-B961-B6E1-1B30-061E76AF227E</p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<p dir="ltr">1) Переменные, которые хранятся в служебной структуре <strong>Контекст</strong>. Они существуют на время жизни одного сценария.</p>
-<p dir="ltr">2) Переменные, которые хранятся в служебной структуре <strong>КонтекстСохраняемый</strong>. Они существуют, пока открыта форма Vanessa Automation. </p></blockquote>
-<p dir="ltr">2. В стандартной библиоетке шагов Vanessa Automation есть готовые шаги, которые позволяют сохранить нужное значение в переменную, а затем его использовать. Например:</p>
+<p dir="ltr">7AFF762C-1D21-FF6C-C4CD-D7149D91F294<strong>4BD3ABFD-DF28-8705-5930-0815712D3BD7</strong>1887D7F5-6BE3-DFEA-AE05-5D32D1313E61</p>
+<p dir="ltr">7DD186F7-5AAA-ADC2-2F32-280222EDC3BE<strong>325953FC-D125-8AD2-2486-6037400C2353</strong>6C30A844-6B9E-A4CE-E40D-DFB2E13F0BE1</p></blockquote>
+<p dir="ltr">8E658E66-1B38-F8D3-3409-922A1B43521F</p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<p dir="ltr"><em>И я запоминаю значение текущего поля как "ИмяПеременной"</em></p>
-<p dir="ltr"><em>И в поле с именем "ИмяПоля" ввожу значение переменной "ИмяПеременной"</em></p></blockquote>
-<p dir="ltr">3. Возможные варианты синтаксиса для сохранения значения переменной:</p>
+<p dir="ltr"><em>2C42C9AF-8420-A5E2-211C-C428D635B9FA</em></p>
+<p dir="ltr"><em>6CDD28A8-6364-AF39-9461-157BFDE1E516</em></p></blockquote>
+<p dir="ltr">F810CE92-25D6-EABB-BBA7-7F007212A214</p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<p dir="ltr"><em>И я запоминаю значение текущего поля как "ИмяПеременной" - </em>Переменная будет сохранена в Контекст</p>
-<p dir="ltr"><em>И я запоминаю значение текущего поля как "$ИмяПеременной$" - </em>Переменная будет сохранена в Контекст</p>
-<p dir="ltr"><em>И я запоминаю значение текущего поля как "$$ИмяПеременной$$" - </em>Переменная будет сохранена в КонтекстСохраняемый</p></blockquote>
-<p dir="ltr">4. Возможные варианты синтаксиса для чтения значения переменной:</p>
+<p dir="ltr"><em>4184B4D2-9932-EF34-49A5-57A6256C7161</em>E7A06F1F-484C-47DA-AF7D-DA5487C713A5</p>
+<p dir="ltr"><em>872FA162-739B-1EF1-1151-16704DFDD7F5</em>1E94C3DE-CDF1-0C40-0C83-349DAA60C09E</p>
+<p dir="ltr"><em>00121D53-5570-A687-7116-64F7E4389204</em>2FFF5281-FBF5-34E8-8F5A-A883CB32ECFE</p></blockquote>
+<p dir="ltr">8FB22A88-F31F-DA09-9C3F-F6087F724249</p>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<p dir="ltr"><em>И в поле с именем "ИмяПоля" ввожу значение переменной "ИмяПеременной" - </em>значение переменной будет взято из Контекста</p>
-<p dir="ltr"><em>И в поле с именем "ИмяПоля" ввожу значение переменной "$ИмяПеременной$" - </em>значение переменной будет взято из Контекста</p>
-<p dir="ltr"><em>И в поле с именем "ИмяПоля" ввожу значение переменной "$$ИмяПеременной$$" - </em>значение переменной будет взято из КонтекстаСохраняемого</p></blockquote>
-<p dir="ltr">5. Имена переменных должны соответствовать правилам помещения значений в Структуру (нельзя использовать пробелы, спецсимволы и т.д.)</p>
-<p dir="ltr"> </p></blockquote></span></font></font></font></h2></blockquote></blockquote></body></html>
+<p dir="ltr"><em>330E984A-C376-C15B-BE07-737E89B6241A</em>793A5DFB-C41D-1291-1A6C-C57FDDEC8C7E</p>
+<p dir="ltr"><em>175A35DF-712D-CB4D-DC98-8DABF51674AF</em>5004F507-4222-8B98-80F6-67CDDE1010E0</p>
+<p dir="ltr"><em>87129C75-A90B-8D38-88BE-E485CB1B7214</em>598A801A-9D66-77D6-6238-8E4BC55A9182</p></blockquote>
+<p dir="ltr">8541DDAC-3898-9BC3-3FF0-0978091B2A69</p>
+<p dir="ltr">D6024A9A-C21A-54A6-640C-CA458F54D7B7</p></blockquote></span></font></font></font></h2></blockquote></blockquote></body></html>
