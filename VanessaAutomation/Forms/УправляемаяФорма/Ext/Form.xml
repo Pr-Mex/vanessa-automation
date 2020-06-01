@@ -13786,6 +13786,19 @@ Log events:
 																</Title>
 															</ExtendedTooltip>
 														</CheckBoxField>
+														<InputField name="КоэффициентМасштабированияЭкрана" id="2383">
+															<DataPath>Объект.КоэффициентМасштабированияЭкрана</DataPath>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<ContextMenu name="КоэффициентМасштабированияЭкранаКонтекстноеМеню" id="2384"/>
+															<ExtendedTooltip name="КоэффициентМасштабированияЭкранаРасширеннаяПодсказка" id="2385">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Значение по умолчанию равно единице. Если используется масштабирование экрана в ОС, тогда нужно изменять устанавливать соответствующее значение. Например, при масштабировании в 150% в ОС надо установить значение коэффициента 1.5.</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+														</InputField>
 													</ChildItems>
 												</UsualGroup>
 												<UsualGroup name="ГруппаSikuliXServer" id="2130">
@@ -20290,6 +20303,12 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 															<ContextMenu name="ТаблицаИзвестныхStepDefinitionСтрокаОбрабатываласьКонтекстноеМеню" id="1530"/>
 															<ExtendedTooltip name="ТаблицаИзвестныхStepDefinitionСтрокаОбрабатываласьРасширеннаяПодсказка" id="1531"/>
 														</CheckBoxField>
+														<InputField name="ТаблицаИзвестныхStepDefinitionТипШагаВДереве" id="2380">
+															<DataPath>ТаблицаИзвестныхStepDefinition.ТипШагаВДереве</DataPath>
+															<EditMode>EnterOnInput</EditMode>
+															<ContextMenu name="ТаблицаИзвестныхStepDefinitionТипШагаВДеревеКонтекстноеМеню" id="2381"/>
+															<ExtendedTooltip name="ТаблицаИзвестныхStepDefinitionТипШагаВДеревеРасширеннаяПодсказка" id="2382"/>
+														</InputField>
 													</ChildItems>
 												</Table>
 											</ChildItems>
@@ -21748,6 +21767,15 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 							<v8:AllowedLength>Variable</v8:AllowedLength>
 						</v8:StringQualifiers>
 					</Type>
+				</Column>
+				<Column name="ДопПараметры" id="13">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Доп параметры</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
 				</Column>
 			</Columns>
 		</Attribute>
