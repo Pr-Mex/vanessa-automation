@@ -11953,6 +11953,111 @@ For example:
 														</CheckBoxField>
 													</ChildItems>
 												</UsualGroup>
+												<UsualGroup name="ГруппаВидеозаписьПрохожденияТестов" id="2386">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Видеозапись прохождения тестов</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Test video record</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа видеозапись прохождения тестов</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Vertical</Group>
+													<Behavior>Collapsible</Behavior>
+													<Collapsed>true</Collapsed>
+													<ControlRepresentation>Picture</ControlRepresentation>
+													<Representation>NormalSeparation</Representation>
+													<ExtendedTooltip name="ГруппаВидеозаписьПрохожденияТестовРасширеннаяПодсказка" id="2387"/>
+													<ChildItems>
+														<CheckBoxField name="ЗаписыватьВидеоВыполненияТестов" id="2388">
+															<DataPath>Объект.ЗаписыватьВидеоВыполненияТестов</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ЗаписыватьВидеоВыполненияТестовКонтекстноеМеню" id="2389"/>
+															<ExtendedTooltip name="ЗаписыватьВидеоВыполненияТестовРасширеннаяПодсказка" id="2390">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Включает запись видео во время прохождения тестов. Необходимо включить использование внешней компоненты VanessaExt.
+Для каждого сценария будет создаваться свой видео файл.</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Enables video recording during the test. You must enable the use of an external VanessaExt add-in.
+A video file will be created for each scenario.</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+															<Events>
+																<Event name="OnChange">ЗаписыватьВидеоВыполненияТестовПриИзменении</Event>
+															</Events>
+														</CheckBoxField>
+														<InputField name="КоличествоКадровВидеоВыполненияТестов" id="2391">
+															<DataPath>Объект.КоличествоКадровВидеоВыполненияТестов</DataPath>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<ContextMenu name="КоличествоКадровВидеоВыполненияТестовКонтекстноеМеню" id="2392"/>
+															<ExtendedTooltip name="КоличествоКадровВидеоВыполненияТестовРасширеннаяПодсказка" id="2393">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>The number of frames for recording video.</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Количество кадров для записи видео.</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+														</InputField>
+														<InputField name="КомандаЗаписиВидеоВыполненияТестов" id="2394">
+															<DataPath>Объект.КомандаЗаписиВидеоВыполненияТестов</DataPath>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<ContextMenu name="КомандаЗаписиВидеоВыполненияТестовКонтекстноеМеню" id="2395"/>
+															<ExtendedTooltip name="КомандаЗаписиВидеоВыполненияТестовРасширеннаяПодсказка" id="2396">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>The command to start the "ffmpeg" application. It is recommended to write the path to ffmpeg in path.</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Команда для запуска приложения "ffmpeg". Рекомендуется прописать путь к ffmpeg в path.</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+														</InputField>
+														<InputField name="КаталогДляЗаписиВидеоВыполненияТестов" id="2397">
+															<DataPath>Объект.КаталогДляЗаписиВидеоВыполненияТестов</DataPath>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<ChoiceButton>true</ChoiceButton>
+															<ContextMenu name="КаталогДляЗаписиВидеоВыполненияТестовКонтекстноеМеню" id="2398"/>
+															<ExtendedTooltip name="КаталогДляЗаписиВидеоВыполненияТестовРасширеннаяПодсказка" id="2399">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Directory for video files.</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Каталог для видео файлов.</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+															<Events>
+																<Event name="StartChoice">КаталогДляЗаписиВидеоВыполненияТестовНачалоВыбора</Event>
+															</Events>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
 												<InputField name="ИмяТекущейСборки" id="1998">
 													<DataPath>Объект.ИмяТекущейСборки</DataPath>
 													<Title>
