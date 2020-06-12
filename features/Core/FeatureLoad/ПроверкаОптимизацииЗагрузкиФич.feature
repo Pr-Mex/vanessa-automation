@@ -92,7 +92,7 @@
 	И я перехожу к закладке "Служебная"
 	И в поле 'Каталог фич (служебный)' я ввожу текст 'C:\Temp\Optimization\Test.feature'
 	
-	И     Я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
+	И я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
 	
 	Тогда в логе сообщений TestClient есть строка "ВозможнаОптимизацияЗагрузкиФичи=Нет"
 	
@@ -110,7 +110,7 @@
 	И я заменяю строку в файле "C:\Temp\Optimization\Test.feature"
 		|'Тест3_2'|'Тест3_1'|
 
-	И     Я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
+	И я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
 
 	Тогда в логе сообщений TestClient есть строка "ВозможнаОптимизацияЗагрузкиФичи=Да"
 
@@ -138,8 +138,8 @@
 	И я перехожу к закладке "Служебная"
 	И в поле 'Каталог фич (служебный)' я ввожу текст 'C:\Temp\Optimization\Test.feature'
 	
-	И     Я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
-	И     Я нажимаю на кнопку выполнить сценарии в Vanessa-Automation TestClient
+	И я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
+	И я нажимаю на кнопку выполнить сценарии в Vanessa-Automation TestClient
 	
 	Тогда в логе сообщений TestClient есть строка "Hellow world1"
 	Тогда в логе сообщений TestClient есть строка "Текст исключения1"
@@ -167,8 +167,8 @@
 	И я заменяю строку в файле "C:\Temp\Optimization\Test.feature"
 		|'Тест1_2'|'Тест1_1'|
 
-	И     Я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
-	И     Я нажимаю на кнопку выполнить сценарии в Vanessa-Automation TestClient
+	И я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
+	И я нажимаю на кнопку выполнить сценарии в Vanessa-Automation TestClient
 
 	Тогда в логе сообщений TestClient есть строка "Hellow world2"
 	Тогда в логе сообщений TestClient есть строка "Текст исключения2"
@@ -201,8 +201,8 @@
 	И я перехожу к закладке "Служебная"
 	И в поле 'Каталог фич (служебный)' я ввожу текст 'C:\Temp\Optimization\Test.feature'
 	
-	И     Я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
-	И     Я нажимаю на кнопку выполнить сценарии в Vanessa-Automation TestClient
+	И я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
+	И я нажимаю на кнопку выполнить сценарии в Vanessa-Automation TestClient
 	
 	Тогда в логе сообщений TestClient есть строка "Hellow world1"
 	Тогда в логе сообщений TestClient есть строка "Текст исключения1"
@@ -232,8 +232,8 @@
 	
 	И я обновляю время изменения у файла "C:\Temp\Optimization\Test.feature"
 
-	И     Я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
-	И     Я нажимаю на кнопку выполнить сценарии в Vanessa-Automation TestClient
+	И я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
+	И я нажимаю на кнопку выполнить сценарии в Vanessa-Automation TestClient
 
 	Тогда в логе сообщений TestClient есть строка "Hellow world2"
 	Тогда в логе сообщений TestClient есть строка "Текст исключения2"
