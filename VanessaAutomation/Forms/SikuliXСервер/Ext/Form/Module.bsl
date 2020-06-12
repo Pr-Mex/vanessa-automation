@@ -137,9 +137,13 @@
 	|NeetToExit = False
 	|
 	|while True:
-	|    if not os.path.exists(comand_filename):
-	|        sleep(0.3)
-	|        continue
+	|    try:
+	|        if not os.path.exists(comand_filename):
+	|            sleep(0.3)
+	|            continue
+	|    except:
+	|            continue
+	|    
 	|    
 	|    with open(comand_filename) as data_file_comand:    
 	|            dataofcomand = json.load(data_file_comand)
