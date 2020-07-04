@@ -19,24 +19,24 @@
 1. [Пакет ImageMagick](https://imagemagick.org/script/download.php) 
     * При установке ImageMagick необходимо обязательно установить флаг `Install legacy utilities (e.g. convert)` , иначе convert.exe не будет установлен.
     * Необходимо прописать путь в Path. 
-2. [Oscript](http://oscript.io/downloads) Необходимо прописать путь в Path.
-3. Java (Не обязательно)
-    * Необходима для работы SikuliX.
-    * Прописать путь в Path
-4. Установить [SikuliX](https://launchpad.net/sikuli/+milestone/1.1.3) версии 1.1.  (Не обязательно)
-    * Необходимо скачать файл jar.
-    * Запустить командой java -jar sikulixsetup-1.1.3.jar.
-    * Установить флаг Pack 1 (SikuliX IDE + Python(Jython))
-    * Прописать путь в Path
-5. Озвучка от Yandex. (Не обязательно) 
+2. Озвучка от Yandex. (Не обязательно) 
     * Нужно зарегистрироваться в [Yandex SpeechKit](https://cloud.yandex.ru/services/speechkit). 
     * Также нужно привязать карту. Далее у вас будет 2 месяца триального периода.
     * Необходимо получить идентификатор каталога из Яндекс.Облако.
     * Сгенерировать токен доступа и сохранить его в текстовый файл.
-6. Озвучка от Amazon Polly. (Не обязательно) 
+3. Озвучка от Amazon Polly. (Не обязательно) 
     * Нужно зарегистрироваться в [Amazon Polly](https://aws.amazon.com/ru/polly/). 
     * Необходим ключ доступа и секретный ключ для облака Amazon.
-7. Озвучка от Microsoft. (Устаревшее) 
+4. [Oscript](http://oscript.io/downloads) Необходимо прописать путь в Path.
+5. Java (Не обязательно)
+    * Необходима для работы SikuliX.
+    * Прописать путь в Path
+6. Установить [SikuliX](https://launchpad.net/sikuli/+milestone/1.1.3) версии 1.1. (Не обязательно)
+    * Необходимо скачать файл jar.
+    * Запустить командой java -jar sikulixsetup-1.1.3.jar.
+    * Установить флаг Pack 1 (SikuliX IDE + Python(Jython))
+    * Прописать путь в Path
+ 7. Озвучка от Microsoft. (Устаревшее) 
     * Для озвучки голосом необходимо установить [Microsoft Speech Platform х32](https://www.microsoft.com/en-us/download/details.aspx?id=27225) и [Server Runtime Languages](https://www.microsoft.com/en-us/download/details.aspx?id=27224) `MSSpeech_TTS_ru-RU_Elena` или другую голосовую библиотеку. Если не хотите озучивать текст - надо **снять** флаг **Делать озвучку TTS**.
     * Также понадобится голосовой движок [Балаболка консольный вариант](http://www.cross-plus-a.ru/bconsole.html) Необходимо прописать путь в Path.
     * Если на компьютере нет аудиокарты (настоящей или виртуальной) - озвучка работать не будет из-за особенностей движка TTS.
