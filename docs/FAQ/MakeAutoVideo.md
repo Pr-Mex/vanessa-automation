@@ -16,7 +16,7 @@
 
  Для формирования видеоинструкций нужно обязательно поставить пакет ImageMagick  и один из голосовых движков по выбору (если не хотите озучивать текст - надо **снять** флаг **Делать озвучку TTS**).
 
-1. [Пакет ImageMagick](https://imagemagick.org/script/download.php#windows) используется при формировании видеоинструкций как источник местонахождения утилит ffmpeg и convert.
+1. [Пакет ImageMagick](https://imagemagick.org/script/download.php#windows) используется как источник местонахождения утилит ffmpeg и convert.
     * Необходимо выбирать пакет, в котором есть "dll", например "ImageMagick-7.0.7-22-Q16-x64-dll.exe".
     * При установке ImageMagick необходимо обязательно установить флаг `Install legacy utilities (e.g. convert)` , иначе convert.exe не будет установлен.
     * Необходимо прописать путь в Path. 
