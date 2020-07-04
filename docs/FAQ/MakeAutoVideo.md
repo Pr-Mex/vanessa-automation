@@ -16,33 +16,33 @@
 <a id="markdown-установка" name="установка"></a>
 ## **Установка ПО**
 
-1. [ VLC 2.1.5](https://www.videolan.org/vlc/releases/2.1.5.html) 
-    * Также работают версии VLC, начиная с 3.0.2. Версии 2.2, 3.0.0 и 3.0.1. - не работают.
-2. [Пакет ImageMagick](https://legacy.imagemagick.org/script/download.php) 
+1. [Пакет ImageMagick](https://legacy.imagemagick.org/script/download.php) 
     * При установке ImageMagick необходимо обязательно установить флаг `Install legacy utilities (e.g. convert)` , иначе convert.exe не будет установлен.
     * Необходимо прописать путь в Path. 
-3. [Oscript](http://oscript.io/downloads) Необходимо прописать путь в Path.
-4. Java (Не обязательно)
+2. [Oscript](http://oscript.io/downloads) Необходимо прописать путь в Path.
+3. Java (Не обязательно)
     * Необходима для работы SikuliX.
     * Прописать путь в Path
-5. Установить [SikuliX](https://launchpad.net/sikuli/+milestone/1.1.3) версии 1.1.  (Не обязательно)
+4. Установить [SikuliX](https://launchpad.net/sikuli/+milestone/1.1.3) версии 1.1.  (Не обязательно)
     * Необходимо скачать файл jar.
     * Запустить командой java -jar sikulixsetup-1.1.3.jar.
     * Установить флаг Pack 1 (SikuliX IDE + Python(Jython))
     * Прописать путь в Path
-6. Озвучка от Microsoft. (Не обязательно) 
+5. Озвучка от Microsoft. (Не обязательно) 
     * Для озвучки голосом необходимо установить [Microsoft Speech Platform х32](https://www.microsoft.com/en-us/download/details.aspx?id=27225) и [Server Runtime Languages](https://www.microsoft.com/en-us/download/details.aspx?id=27224) `MSSpeech_TTS_ru-RU_Elena` или другую голосовую библиотеку. Если не хотите озучивать текст - надо **снять** флаг **Делать озвучку TTS**.
     * Также понадобится голосовой движок [Балаболка консольный вариант](http://www.cross-plus-a.ru/bconsole.html) Необходимо прописать путь в Path.
     * Если на компьютере нет аудиокарты (настоящей или виртуальной) - озвучка работать не будет из-за особенностей движка TTS.
-5. Озвучка от Yandex. (Не обязательно) 
+6. Озвучка от Yandex. (Не обязательно) 
     * Нужно зарегистрироваться в [Yandex SpeechKit](https://cloud.yandex.ru/services/speechkit). 
     * Также нужно привязать карту. Далее у вас будет 2 месяца триального периода.
     * Необходимо получить идентификатор каталога из Яндекс.Облако.
     * Сгенерировать токен доступа и сохранить его в текстовый файл.
-6. Озвучка от Amazon Polly. (Не обязательно) 
+7. Озвучка от Amazon Polly. (Не обязательно) 
     * Нужно зарегистрироваться в [Amazon Polly](https://aws.amazon.com/ru/polly/). 
     * Необходим ключ доступа и секретный ключ для облака Amazon.
-7. После установки ПО необходимо перезагрузить компьютер. 
+8. [ VLC 2.1.5](https://www.videolan.org/vlc/releases/2.1.5.html) 
+    * Также работают версии VLC, начиная с 3.0.2. Версии 2.2, 3.0.0 и 3.0.1. - не работают.
+9. После установки ПО необходимо перезагрузить компьютер. 
 
 <a id="markdown-общие-настройки" name="общие-настройки"></a>
 ## **Общие настройки**
@@ -57,7 +57,7 @@
     * **Экран высота** - задаёт высоту экрана для записи видео. Значение не может быть больше чем высота в текущем разрешении экрана. Если указать значение меньше, то в видео будет записываться часть экрана, начиная с верхнего левого угла.
     * **Отступ слева** - задает отступ слева.
     * **Отступ сверху** - задает отступ сверху.
-    * **Инструмент для записи видео** - по умолчанию для записи видео используется VLC. Если выбрать вариант FFmpeg, то для записи видео будет использована внешняя компонента VanessaExt, которая вызывает ffmpeg.
+    * **Инструмент для записи видео** - по умолчанию выбран вариант FFmpeg, для записи видео будет использована внешняя компонента VanessaExt, которая вызывает ffmpeg. При переключении на VLC для записи видео будет использоваться VLC.
     * **Команда начать запись видео** - вызов VLC для старта записи видео. VLC используется, потому что умеет записывать видео и управляется по tcp с (помощью OneScript). Пример команды: 
     ```
     "C:\Program Files (x86)\VideoLAN\VLC\vlc.exe" screen://  -I rc --rc-quiet --rc-host=127.0.0.1:8082 --nommx :screen-mouse-image="<screenmouseimage>" :screen-fps=<fps>       :screen-width=<screenwidth> :screen-height=<screenheight> :screen-top=0 :screen-left=0 :screen-caching=100 :sout=#transcode{vcodec=mp4v,vb=400,fps=<fps>,scale=1,width=<screenwidth>,height=<screenheight>,acodec=none}:duplicate{dst=std{access=file,mux=mp4,dst=<dst>}}
