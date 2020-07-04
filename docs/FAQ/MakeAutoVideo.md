@@ -17,7 +17,8 @@
 1. [Пакет ImageMagick](https://imagemagick.org/script/download.php)
     * Необходимо выбирать пакет, в котором есть "dll", например "ImageMagick-7.0.7-22-Q16-x64-dll.exe".
     * При установке ImageMagick необходимо обязательно установить флаг `Install legacy utilities (e.g. convert)` , иначе convert.exe не будет установлен.
-    * Необходимо прописать путь в Path. 
+    * Необходимо прописать путь в Path.
+    * Пакет ImageMagick используется при формировании видеоинструкций как источник местонахождения утилит ffmpeg и convert.
 2. Озвучка от Yandex. (Не обязательно) 
     * Нужно зарегистрироваться в [Yandex SpeechKit](https://cloud.yandex.ru/services/speechkit). 
     * Также нужно привязать карту. Далее у вас будет 2 месяца триального периода.
