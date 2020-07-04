@@ -17,13 +17,9 @@
 ## **Установка ПО**
 
 1. [ VLC 2.1.5](https://www.videolan.org/vlc/releases/2.1.5.html) 
-
-    !!! warning
-    Версию 2.2 или выше СТАВИТЬ НЕЛЬЗЯ!!!
-
-2. [Пакет ImageMagick](https://imagemagick.org/download/windows/releases/) 
-    * Выбирать пакет 6 версии, в котором есть "dll", например `ImageMagick-6.9.3-7-Q16-x64-dll.exe`. 
-    * Также при установке ImageMagick необходимо обязательно установить флаг `Install legacy utilities (e.g. convert)` , иначе convert.exe не будет установлен.
+    * Также работают версии VLC, начиная с 3.0.2. Версии 2.2, 3.0.0 и 3.0.1. - не работают.
+2. [Пакет ImageMagick](https://legacy.imagemagick.org/script/download.php) 
+    * При установке ImageMagick необходимо обязательно установить флаг `Install legacy utilities (e.g. convert)` , иначе convert.exe не будет установлен.
     * Необходимо прописать путь в Path. 
 3. [Oscript](http://oscript.io/downloads) Необходимо прописать путь в Path.
 4. Java (Не обязательно)
