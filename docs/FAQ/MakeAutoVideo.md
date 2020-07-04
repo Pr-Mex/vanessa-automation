@@ -6,8 +6,6 @@
    * [SikuliX](#sikulix)
    * [Теги и комментарий для видеоинструкций](#теги)
    
-Также по автовидеоинструкциям есть вот это замечательное [видео](https://www.youtube.com/watch?v=BfXowJH5uP0).
-
 Статьи по видеоинструкциям:
   * https://infostart.ru/public/1133932/ Vanessa, хочу все и сразу
   * https://infostart.ru/public/1147009/ Vanessa, улучшаем инструкции
