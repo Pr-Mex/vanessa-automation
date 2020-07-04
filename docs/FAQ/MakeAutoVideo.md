@@ -16,7 +16,7 @@
 <a id="markdown-установка" name="установка"></a>
 ## **Установка ПО**
 
-1. [Пакет ImageMagick](https://legacy.imagemagick.org/script/download.php) 
+1. [Пакет ImageMagick](https://imagemagick.org/script/download.php) 
     * При установке ImageMagick необходимо обязательно установить флаг `Install legacy utilities (e.g. convert)` , иначе convert.exe не будет установлен.
     * Необходимо прописать путь в Path. 
 2. [Oscript](http://oscript.io/downloads) Необходимо прописать путь в Path.
