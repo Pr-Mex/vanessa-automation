@@ -31,7 +31,7 @@
 4. Java (Не обязательно)
     * Необходима для работы SikuliX.
     * Прописать путь в Path
-5. Установить [SikuliX](https://launchpad.net/sikuli/+milestone/1.1.3) версии 1.1. (Не обязательно)
+5. Установить [SikuliX](https://launchpad.net/sikuli/+milestone/1.1.3) версии 1.1. (Не обязательно) используется при записи видеоинструкций не в web клиенте (в том числе и для обычных форм).
     * Необходимо скачать файл jar.
     * Запустить командой java -jar sikulixsetup-1.1.3.jar.
     * Установить флаг Pack 1 (SikuliX IDE + Python(Jython))
