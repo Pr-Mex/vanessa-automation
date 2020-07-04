@@ -10,6 +10,8 @@
   * https://infostart.ru/public/1133932/ Vanessa, хочу все и сразу
   * https://infostart.ru/public/1147009/ Vanessa, улучшаем инструкции
   * https://infostart.ru/public/1243801/ Vanessa, видеоинструкции для web-клиента
+  
+[Примеры сценариев](../VSL) для видеоинструкций
 
 <a id="markdown-установка" name="установка"></a>
 ## **Установка ПО**
