@@ -1272,7 +1272,7 @@
 			+ СобранноеВидео4 
 			+ " -filter_complex ""[0:a]aformat=sample_fmts=fltp:sample_rates=44100:channel_layouts=stereo,volume=%MusicVolume[a1]; "
 			+ "[1:a]aformat=sample_fmts=fltp:sample_rates=44100:channel_layouts=stereo,volume=1[a2]; "
-			+ "[a1][a2]amerge,pan=stereo:c0<c0+c2:c1<c1+c3[out]"" -map 1:v -map ""[out]"" -c:v copy  -acodec libmp3lame -b:a 320k -shortest " 
+			+ "[a1][a2]amerge,pan=stereo|c0<c0+c2|c1<c1+c3[out]"" -map 1:v -map ""[out]"" -c:v copy  -acodec libmp3lame -b:a 320k -shortest " 
 			+ СобранноеВидео5;
 		ГромкостьМузыки = "0.1";
 		Если ЗначениеЗаполнено(ПараметрыВидео.ЗаписьВидеоГромкостьМузыки) Тогда
