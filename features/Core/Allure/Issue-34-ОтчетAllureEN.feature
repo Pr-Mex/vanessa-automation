@@ -5,6 +5,7 @@
 @UA18_формировать_отчёт_Allure
 
 @IgnoreOn82Builds
+@IgnoreOnUFSovm82Builds
 @IgnoreOnOFBuilds
 @IgnoreOnWeb
 
