@@ -10876,21 +10876,22 @@
 		Ид = Значение;
 	КонецЕсли;	 
 	
-	ТекстJavaScript = "
-	|{
+	ПараметрыСкрипта = Новый Структура("id", Ид);
+	
+	ТекстJavaScript = "{
+	|let p = " + ЗаписатьОбъектJSON(ПараметрыСкрипта) + ";
 	|function pos(){
-	|    let r = document.querySelector('#editDropDown').querySelectorAll('li')[%1].getBoundingClientRect();
+	|    let r = document.querySelector('#editDropDown').querySelectorAll('li')[p.id].getBoundingClientRect();
 	|    return {
-	|       x: Math.round(r.left + r.width / 2) + window.screenLeft,
-	|       y: Math.round(r.top + r.height / 2) + window.screenTop + window.outerHeight - window.innerHeight,    
-	|       sw: screen.width, 
-	|       sh:screen.height,    
+	|       x: Math.round(r.left + r.width / 2),
+	|       y: Math.round(r.top + r.height / 2),
+	|		screenLeft: window.screenLeft,
+	|		screenTop: window.screenTop + window.outerHeight - window.innerHeight,
+	|		screenZoom: window.devicePixelRatio,
 	|    }
 	|}; JSON.stringify(pos())
 	|}
 	|";
-	
-	ТекстJavaScript = СтрЗаменить(ТекстJavaScript,"%1", Ид);
 	
 	КоординатыЭлемента = ВыполнитьJavaScriptБраузерСлужебный(ТекстJavaScript);
 	
@@ -10909,9 +10910,7 @@
 	КонецЕсли;	 
 	
 	Попытка
-		ЧтениеJSON = Новый ЧтениеJSON();
-		ЧтениеJSON.УстановитьСтроку(СтрокаКоординаты);
-		ДанныеКоординат = ПрочитатьJSON(ЧтениеJSON);
+		ДанныеКоординат = ПрочитатьОбъектJSON(СтрокаКоординаты);
 	Исключение
 		ДанныеКоординат = Неопределено;
 	КонецПопытки;
@@ -10961,22 +10960,22 @@
 	X = 0;
 	Y = 0;
 	
-	ТекстJavaScript = "
-	|	{
+	ПараметрыСкрипта = Новый Структура("name,number", Элемент, НомерЗначения);
+	
+	ТекстJavaScript = "{
+	|	let p = " + ЗаписатьОбъектJSON(ПараметрыСкрипта) + ";
 	|	function pos(){
-	|	    let r = elem('ИмяЭлемента', НомерЗначения).getBoundingClientRect();
+	|	    let r = elem(p.name, p.number).getBoundingClientRect();
 	|	    return {
-	|	        x: Math.round(r.left + r.width / 2) + window.screenLeft,
-	|	        y: Math.round(r.top + r.height / 2) + window.screenTop + window.outerHeight - window.innerHeight,		
-	|	        sw: screen.width, 
-	|	        sh:screen.height,		
+	|	        x: Math.round(r.left + r.width / 2),
+	|	        y: Math.round(r.top + r.height / 2),
+	|			screenLeft: window.screenLeft,
+	|			screenTop: window.screenTop + window.outerHeight - window.innerHeight,
+	|			screenZoom: window.devicePixelRatio,
 	|	    }
 	|	}; JSON.stringify(pos())
 	|	}
 	|";
-	
-	ТекстJavaScript = СтрЗаменить(ТекстJavaScript,"ИмяЭлемента", Элемент.Имя);
-	ТекстJavaScript = СтрЗаменить(ТекстJavaScript,"НомерЗначения", НомерЗначения);
 	
 	КоординатыЭлементаJavaScript(Элемент, ТекстJavaScript, X, Y);
 КонецПроцедуры 
@@ -11231,10 +11230,11 @@
 	|function pos(){
 	|    let r = %2(%1)%3.getBoundingClientRect();
 	|    return {
-    |        x: Math.round(r.left + r.width / 2) + window.screenLeft,
-    |        y: Math.round(r.top + r.height / 2) + window.screenTop + window.outerHeight - window.innerHeight,		
-    |        sw: screen.width, 
-    |        sh:screen.height,		
+    |        x: Math.round(r.left + r.width / 2),
+    |        y: Math.round(r.top + r.height / 2),
+	|		 screenLeft: window.screenLeft,
+	|		 screenTop: window.screenTop + window.outerHeight - window.innerHeight,
+	|		 screenZoom: window.devicePixelRatio,
 	|    }
 	|}; JSON.stringify(pos())
 	|}
@@ -11258,10 +11258,11 @@
 	|	});res;
 	|    let r = res.getBoundingClientRect();
 	|    return {
-    |        x: Math.round(r.left + r.width / 2) + window.screenLeft,
-    |        y: Math.round(r.top + r.height / 2) + window.screenTop + window.outerHeight - window.innerHeight,		
-    |        sw: screen.width, 
-    |        sh:screen.height,		
+    |        x: Math.round(r.left + r.width / 2),
+    |        y: Math.round(r.top + r.height / 2),
+	|		 screenLeft: window.screenLeft,
+	|		 screenTop: window.screenTop + window.outerHeight - window.innerHeight,
+	|		 screenZoom: window.devicePixelRatio,
 	|    }
 	|}; JSON.stringify(pos())
 	|}
@@ -11394,10 +11395,11 @@
 		|    let e = $(s).filter((i, e) => isElementVisible(e)).last()[0];
 		|    let r = e.getBoundingClientRect();
 		|    JSON.stringify({
-		|        x: Math.round(r.left + r.width / 2) + window.screenLeft,
-		|        y: Math.round(r.top + r.height / 2) + window.screenTop + window.outerHeight - window.innerHeight,    
-		|        sw: screen.width, 
-		|        sh:screen.height,    
+		|       x: Math.round(r.left + r.width / 2),
+		|       y: Math.round(r.top + r.height / 2),
+		|		screenLeft: window.screenLeft,
+		|		screenTop: window.screenTop + window.outerHeight - window.innerHeight,
+		|		screenZoom: window.devicePixelRatio,
 		|    });
 		|}		
 		|";
@@ -11429,10 +11431,11 @@
 		|    let e = $(s).filter((i, e) => isElementVisible(e)).last()[0];
 		|    let r = e.getBoundingClientRect();
 		|    JSON.stringify({
-		|        x: Math.round(r.left + r.width / 2) + window.screenLeft,
-		|        y: Math.round(r.top + r.height / 2) + window.screenTop + window.outerHeight - window.innerHeight,    
-		|        sw: screen.width, 
-		|        sh:screen.height,    
+		|       x: Math.round(r.left + r.width / 2),
+		|       y: Math.round(r.top + r.height / 2),
+		|		screenLeft: window.screenLeft,
+		|		screenTop: window.screenTop + window.outerHeight - window.innerHeight,
+		|		screenZoom: window.devicePixelRatio,
 		|    });
 		|}		
 		|";
