@@ -4033,7 +4033,18 @@
 																</Button>
 																<Button name="VanessaEditorViewZoomReset" id="2468">
 																	<Type>CommandBarButton</Type>
+																	<Representation>Picture</Representation>
 																	<CommandName>Form.Command.VanessaEditorViewZoomReset</CommandName>
+																	<Picture>
+																		<xr:Abs>Picture.png</xr:Abs>
+																		<xr:LoadTransparent>false</xr:LoadTransparent>
+																	</Picture>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Сбросить</v8:content>
+																		</v8:item>
+																	</Title>
 																	<ExtendedTooltip name="VanessaEditorViewZoomResetРасширеннаяПодсказка" id="2469"/>
 																</Button>
 																<Popup name="ГруппаVanessaEditorВыборТемы" id="2514">
@@ -4291,7 +4302,7 @@
 																		<Title>
 																			<v8:item>
 																				<v8:lang>ru</v8:lang>
-																				<v8:content>ПодборШага</v8:content>
+																				<v8:content>Подбор шага</v8:content>
 																			</v8:item>
 																			<v8:item>
 																				<v8:lang>en</v8:lang>
@@ -14176,7 +14187,7 @@ Log events:
 																<Title formatted="false">
 																	<v8:item>
 																		<v8:lang>ru</v8:lang>
-																		<v8:content>Каталог, для формирования файлов с данными об ошибках и состоянии элементов форм. Кататлог очищается при начале выполнения сценариев.</v8:content>
+																		<v8:content>Каталог, для формирования файлов с данными об ошибках и состоянии элементов форм. Каталог очищается при начале выполнения сценариев.</v8:content>
 																	</v8:item>
 																	<v8:item>
 																		<v8:lang>en</v8:lang>
@@ -15655,7 +15666,7 @@ Log events:
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Компонента VanessaExt</v8:content>
+															<v8:content>Компонента VanessaExt + Chrome</v8:content>
 														</v8:item>
 														<v8:item>
 															<v8:lang>en</v8:lang>
@@ -15663,10 +15674,6 @@ Log events:
 														</v8:item>
 													</Title>
 													<ToolTip>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Группа автоинструкции VanessaExt</v8:content>
-														</v8:item>
 														<v8:item>
 															<v8:lang>en</v8:lang>
 															<v8:content>VanessaExt auto instruction group</v8:content>
@@ -15677,95 +15684,178 @@ Log events:
 													<ControlRepresentation>Picture</ControlRepresentation>
 													<ExtendedTooltip name="ГруппаАвтоинструкцииVanessaExtРасширеннаяПодсказка" id="2338"/>
 													<ChildItems>
-														<CheckBoxField name="ИспользоватьБраузерПлюсWebSocket" id="2334">
-															<DataPath>Объект.ИспользоватьБраузерПлюсWebSocket</DataPath>
+														<CheckBoxField name="ИспользоватьКомпонентуVanessaExt2" id="2612">
+															<DataPath>Объект.ИспользоватьКомпонентуVanessaExt</DataPath>
 															<TitleLocation>Right</TitleLocation>
-															<ToolTipRepresentation>Button</ToolTipRepresentation>
 															<CheckBoxType>Auto</CheckBoxType>
-															<ContextMenu name="ИспользоватьБраузерПлюсWebSocketКонтекстноеМеню" id="2335"/>
-															<ExtendedTooltip name="ИспользоватьБраузерПлюсWebSocketРасширеннаяПодсказка" id="2336">
-																<Title formatted="false">
-																	<v8:item>
-																		<v8:lang>ru</v8:lang>
-																		<v8:content>Позволяет выполнять внешние команды для барузера через WebSocket.</v8:content>
-																	</v8:item>
-																	<v8:item>
-																		<v8:lang>en</v8:lang>
-																		<v8:content>Allows to execute external commands in the browser using WebSocket.</v8:content>
-																	</v8:item>
-																</Title>
-															</ExtendedTooltip>
+															<ContextMenu name="ИспользоватьКомпонентуVanessaExt2КонтекстноеМеню" id="2613"/>
+															<ExtendedTooltip name="ИспользоватьКомпонентуVanessaExt2РасширеннаяПодсказка" id="2614"/>
+															<Events>
+																<Event name="OnChange">ИспользоватьКомпонентуVanessaExtПриИзменении</Event>
+															</Events>
 														</CheckBoxField>
-														<CheckBoxField name="ЭмулироватьДвиженияМышкиVanessaExt" id="2339">
-															<DataPath>Объект.ЭмулироватьДвиженияМышкиVanessaExt</DataPath>
-															<TitleLocation>Right</TitleLocation>
-															<ToolTipRepresentation>Button</ToolTipRepresentation>
-															<CheckBoxType>Auto</CheckBoxType>
-															<ContextMenu name="ЭмулироватьДвиженияМышкиVanessaExtКонтекстноеМеню" id="2340"/>
-															<ExtendedTooltip name="ЭмулироватьДвиженияМышкиVanessaExtРасширеннаяПодсказка" id="2341">
-																<Title formatted="false">
-																	<v8:item>
-																		<v8:lang>ru</v8:lang>
-																		<v8:content>Включает эмуляцию движения мышки с помощью компоненты VanessaExt</v8:content>
-																	</v8:item>
-																	<v8:item>
-																		<v8:lang>en</v8:lang>
-																		<v8:content>Enables mouse movement emulation using VanessaExt add-in</v8:content>
-																	</v8:item>
-																</Title>
-															</ExtendedTooltip>
-														</CheckBoxField>
-														<CheckBoxField name="ЭмулироватьВводКлавиатурыVanessaExt" id="2342">
-															<DataPath>Объект.ЭмулироватьВводКлавиатурыVanessaExt</DataPath>
-															<TitleLocation>Right</TitleLocation>
-															<ToolTipRepresentation>Button</ToolTipRepresentation>
-															<CheckBoxType>Auto</CheckBoxType>
-															<ContextMenu name="ЭмулироватьВводКлавиатурыVanessaExtКонтекстноеМеню" id="2343"/>
-															<ExtendedTooltip name="ЭмулироватьВводКлавиатурыVanessaExtРасширеннаяПодсказка" id="2344">
-																<Title formatted="false">
-																	<v8:item>
-																		<v8:lang>ru</v8:lang>
-																		<v8:content>Включает эмуляцию ввода клавиатуры с помощью компоненты VanessaExt</v8:content>
-																	</v8:item>
-																	<v8:item>
-																		<v8:lang>en</v8:lang>
-																		<v8:content>Enables emulation of keyboard input using VanessaExt add-in</v8:content>
-																	</v8:item>
-																</Title>
-															</ExtendedTooltip>
-														</CheckBoxField>
-														<CheckBoxField name="ИгнорироватьОшибкиПоискаЭлементовВБраузере" id="2345">
-															<DataPath>Объект.ИгнорироватьОшибкиПоискаЭлементовВБраузере</DataPath>
-															<TitleLocation>Right</TitleLocation>
-															<ToolTipRepresentation>Button</ToolTipRepresentation>
-															<CheckBoxType>Auto</CheckBoxType>
-															<ContextMenu name="ИгнорироватьОшибкиПоискаЭлементовВБраузереКонтекстноеМеню" id="2346"/>
-															<ExtendedTooltip name="ИгнорироватьОшибкиПоискаЭлементовВБраузереРасширеннаяПодсказка" id="2347">
-																<Title formatted="false">
-																	<v8:item>
-																		<v8:lang>ru</v8:lang>
-																		<v8:content>Поволяет не останавливать выполнение сценария если элемент формы не был найден в браузере.</v8:content>
-																	</v8:item>
-																	<v8:item>
-																		<v8:lang>en</v8:lang>
-																		<v8:content>Allows to continue running the scenario if the form item is not found in the browser.</v8:content>
-																	</v8:item>
-																</Title>
-															</ExtendedTooltip>
-														</CheckBoxField>
-														<InputField name="КоэффициентМасштабированияЭкрана" id="2383">
-															<DataPath>Объект.КоэффициентМасштабированияЭкрана</DataPath>
-															<ToolTipRepresentation>Button</ToolTipRepresentation>
-															<ContextMenu name="КоэффициентМасштабированияЭкранаКонтекстноеМеню" id="2384"/>
-															<ExtendedTooltip name="КоэффициентМасштабированияЭкранаРасширеннаяПодсказка" id="2385">
-																<Title formatted="false">
-																	<v8:item>
-																		<v8:lang>ru</v8:lang>
-																		<v8:content>Значение по умолчанию равно единице. Если используется масштабирование экрана в ОС, тогда нужно изменять устанавливать соответствующее значение. Например, при масштабировании в 150% в ОС надо установить значение коэффициента 1.5.</v8:content>
-																	</v8:item>
-																</Title>
-															</ExtendedTooltip>
-														</InputField>
+														<UsualGroup name="ГруппаНастройкиАвтоинструкцийПриРаботеСБраузером" id="2615">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Настройки автоинструкций при работе с браузером</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа настройки автоинструкций при работе с браузером</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Group>Vertical</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаНастройкиАвтоинструкцийПриРаботеСБраузеромРасширеннаяПодсказка" id="2616"/>
+															<ChildItems>
+																<CheckBoxField name="ИспользоватьБраузерПлюсWebSocket" id="2334">
+																	<DataPath>Объект.ИспользоватьБраузерПлюсWebSocket</DataPath>
+																	<TitleLocation>Right</TitleLocation>
+																	<ToolTipRepresentation>Button</ToolTipRepresentation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="ИспользоватьБраузерПлюсWebSocketКонтекстноеМеню" id="2335"/>
+																	<ExtendedTooltip name="ИспользоватьБраузерПлюсWebSocketРасширеннаяПодсказка" id="2336">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Позволяет выполнять внешние команды для барузера через WebSocket.</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>Allows to execute external commands in the browser using WebSocket.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																</CheckBoxField>
+																<CheckBoxField name="ЭмулироватьДвиженияМышкиVanessaExt" id="2339">
+																	<DataPath>Объект.ЭмулироватьДвиженияМышкиVanessaExt</DataPath>
+																	<TitleLocation>Right</TitleLocation>
+																	<ToolTipRepresentation>Button</ToolTipRepresentation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="ЭмулироватьДвиженияМышкиVanessaExtКонтекстноеМеню" id="2340"/>
+																	<ExtendedTooltip name="ЭмулироватьДвиженияМышкиVanessaExtРасширеннаяПодсказка" id="2341">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Включает эмуляцию движения мышки с помощью компоненты VanessaExt</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>Enables mouse movement emulation using VanessaExt add-in</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																	<Events>
+																		<Event name="OnChange">ЭмулироватьДвиженияМышкиVanessaExtПриИзменении</Event>
+																	</Events>
+																</CheckBoxField>
+																<UsualGroup name="ГруппаНастройкиЭмуляцииДействийМышки" id="2617">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Настройки эмуляции действий мышки</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Group>Vertical</Group>
+																	<Behavior>Collapsible</Behavior>
+																	<ControlRepresentation>Picture</ControlRepresentation>
+																	<ExtendedTooltip name="ГруппаНастройкиЭмуляцииДействийМышкиРасширеннаяПодсказка" id="2618"/>
+																	<ChildItems>
+																		<UsualGroup name="ГруппаНастройкиСмещенийКоордиантМышки" id="2628">
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Настройки смещений коордиант мышки</v8:content>
+																				</v8:item>
+																			</Title>
+																			<Group>Horizontal</Group>
+																			<ShowTitle>false</ShowTitle>
+																			<ExtendedTooltip name="ГруппаНастройкиСмещенийКоордиантМышкиРасширеннаяПодсказка" id="2629"/>
+																			<ChildItems>
+																				<InputField name="СмещениеПоГоризонталиДвиженияМышкиVanessaExt" id="2619">
+																					<DataPath>Объект.СмещениеПоГоризонталиДвиженияМышкиVanessaExt</DataPath>
+																					<ContextMenu name="СмещениеПоГоризонталиДвиженияМышкиVanessaExtКонтекстноеМеню" id="2620"/>
+																					<ExtendedTooltip name="СмещениеПоГоризонталиДвиженияМышкиVanessaExtРасширеннаяПодсказка" id="2621"/>
+																				</InputField>
+																				<InputField name="СмещениеПоВертикалиДвиженияМышкиVanessaExt" id="2622">
+																					<DataPath>Объект.СмещениеПоВертикалиДвиженияМышкиVanessaExt</DataPath>
+																					<ContextMenu name="СмещениеПоВертикалиДвиженияМышкиVanessaExtКонтекстноеМеню" id="2623"/>
+																					<ExtendedTooltip name="СмещениеПоВертикалиДвиженияМышкиVanessaExtРасширеннаяПодсказка" id="2624"/>
+																				</InputField>
+																			</ChildItems>
+																		</UsualGroup>
+																		<CheckBoxField name="ПодсвечиватьКликМышкиВБраузереVanessaExt" id="2625">
+																			<DataPath>Объект.ПодсвечиватьКликМышкиВБраузереVanessaExt</DataPath>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Подсвечивать клик мышки</v8:content>
+																				</v8:item>
+																			</Title>
+																			<TitleLocation>Right</TitleLocation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="ПодсвечиватьКликМышкиВБраузереVanessaExtКонтекстноеМеню" id="2626"/>
+																			<ExtendedTooltip name="ПодсвечиватьКликМышкиВБраузереVanessaExtРасширеннаяПодсказка" id="2627"/>
+																		</CheckBoxField>
+																	</ChildItems>
+																</UsualGroup>
+																<CheckBoxField name="ЭмулироватьВводКлавиатурыVanessaExt" id="2342">
+																	<DataPath>Объект.ЭмулироватьВводКлавиатурыVanessaExt</DataPath>
+																	<TitleLocation>Right</TitleLocation>
+																	<ToolTipRepresentation>Button</ToolTipRepresentation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="ЭмулироватьВводКлавиатурыVanessaExtКонтекстноеМеню" id="2343"/>
+																	<ExtendedTooltip name="ЭмулироватьВводКлавиатурыVanessaExtРасширеннаяПодсказка" id="2344">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Включает эмуляцию ввода клавиатуры с помощью компоненты VanessaExt</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>Enables emulation of keyboard input using VanessaExt add-in</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																</CheckBoxField>
+																<CheckBoxField name="ИгнорироватьОшибкиПоискаЭлементовВБраузере" id="2345">
+																	<DataPath>Объект.ИгнорироватьОшибкиПоискаЭлементовВБраузере</DataPath>
+																	<TitleLocation>Right</TitleLocation>
+																	<ToolTipRepresentation>Button</ToolTipRepresentation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="ИгнорироватьОшибкиПоискаЭлементовВБраузереКонтекстноеМеню" id="2346"/>
+																	<ExtendedTooltip name="ИгнорироватьОшибкиПоискаЭлементовВБраузереРасширеннаяПодсказка" id="2347">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Поволяет не останавливать выполнение сценария если элемент формы не был найден в браузере.</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>Allows to continue running the scenario if the form item is not found in the browser.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																</CheckBoxField>
+																<InputField name="КоэффициентМасштабированияЭкрана" id="2383">
+																	<DataPath>Объект.КоэффициентМасштабированияЭкрана</DataPath>
+																	<ToolTipRepresentation>Button</ToolTipRepresentation>
+																	<ContextMenu name="КоэффициентМасштабированияЭкранаКонтекстноеМеню" id="2384"/>
+																	<ExtendedTooltip name="КоэффициентМасштабированияЭкранаРасширеннаяПодсказка" id="2385">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Значение по умолчанию равно единице. Если используется масштабирование экрана в ОС, тогда нужно изменять устанавливать соответствующее значение. Например, при масштабировании в 150% в ОС надо установить значение коэффициента 1.5.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																</InputField>
+															</ChildItems>
+														</UsualGroup>
 													</ChildItems>
 												</UsualGroup>
 												<UsualGroup name="ГруппаSikuliXServer" id="2130">
@@ -21602,6 +21692,12 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 												</CheckBoxField>
 												<InputField name="ТемаРедактораVanessaEditor" id="2413">
 													<DataPath>Объект.ТемаРедактораVanessaEditor</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Тема редактора</v8:content>
+														</v8:item>
+													</Title>
 													<ListChoiceMode>true</ListChoiceMode>
 													<ChoiceList>
 														<xr:Item>
@@ -21611,6 +21707,10 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 																<Presentation>
 																	<v8:item>
 																		<v8:lang>ru</v8:lang>
+																		<v8:content>1С:Предприятие</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
 																		<v8:content>1C:Enterprise</v8:content>
 																	</v8:item>
 																</Presentation>
@@ -21624,6 +21724,10 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 																<Presentation>
 																	<v8:item>
 																		<v8:lang>ru</v8:lang>
+																		<v8:content>Основная</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
 																		<v8:content>Visual Studio</v8:content>
 																	</v8:item>
 																</Presentation>
@@ -21637,6 +21741,10 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 																<Presentation>
 																	<v8:item>
 																		<v8:lang>ru</v8:lang>
+																		<v8:content>Темная тема</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
 																		<v8:content>Visual Studio Dark</v8:content>
 																	</v8:item>
 																</Presentation>
@@ -21650,6 +21758,10 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 																<Presentation>
 																	<v8:item>
 																		<v8:lang>ru</v8:lang>
+																		<v8:content>Высокий контраст</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
 																		<v8:content>High Contrast Dark</v8:content>
 																	</v8:item>
 																</Presentation>
@@ -31890,7 +32002,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Find previous</v8:content>
+					<v8:content>Найти предыдущий</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
