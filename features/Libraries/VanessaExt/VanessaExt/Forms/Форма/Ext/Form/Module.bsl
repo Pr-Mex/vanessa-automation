@@ -102,6 +102,7 @@
 	Map.Insert("TAB", 9);
 	Map.Insert("CLEAR", 12);
 	Map.Insert("RETURN", 13);
+	Map.Insert("ENTER", 13);
 	Map.Insert("SHIFT", 16);
 	Map.Insert("CONTROL", 17);
 	Map.Insert("CTRL", 17);
