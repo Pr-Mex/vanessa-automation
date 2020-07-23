@@ -1,4 +1,4 @@
-# language: ru
+﻿# language: ru
 # encoding: utf-8
 #parent ua:
 @UA9_загружать_features
@@ -163,6 +163,7 @@
 	И Я запоминаю значение выражения 'ПолучитьСостояниеVanessaAutomation().ТекущаяФича.Каталог + "files\Test1_2.feature"' в переменную "TestFeature"	
 	Тогда я копирую файл "$TestFeature$" "C:\Temp\Optimization\Test.feature"
 	
+	И Пауза 1
 	И я обновляю время изменения у файла "C:\Temp\Optimization\Test.feature"
 	И я заменяю строку в файле "C:\Temp\Optimization\Test.feature"
 		|'Тест1_2'|'Тест1_1'|
@@ -173,6 +174,9 @@
 	Тогда в логе сообщений TestClient есть строка "Hellow world2"
 	Тогда в логе сообщений TestClient есть строка "Текст исключения2"
 	Тогда в логе сообщений TestClient есть строка "ВозможнаОптимизацияЗагрузкиФичи=Да"
+	Тогда в логе сообщений TestClient нет строки 'Пустой адрес снипета у шага'
+
+	
 
 
 	Тогда таблица "ДеревоТестов" стала равной:
