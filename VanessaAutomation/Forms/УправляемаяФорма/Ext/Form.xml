@@ -3646,6 +3646,16 @@
 																	<CommandName>Form.Command.VanessaEditorEditReplace</CommandName>
 																	<ExtendedTooltip name="VanessaEditorEditReplaceРасширеннаяПодсказка" id="2449"/>
 																</Button>
+																<Button name="VanessaEditorОчиститьРаскраскуСтрок" id="2638">
+																	<Type>CommandBarButton</Type>
+																	<Representation>Picture</Representation>
+																	<CommandName>Form.Command.VanessaEditorОчиститьРаскраскуСтрок</CommandName>
+																	<Picture>
+																		<xr:Abs>Picture.png</xr:Abs>
+																		<xr:LoadTransparent>false</xr:LoadTransparent>
+																	</Picture>
+																	<ExtendedTooltip name="VanessaEditorОчиститьРаскраскуСтрокРасширеннаяПодсказка" id="2639"/>
+																</Button>
 															</ChildItems>
 														</ButtonGroup>
 														<ButtonGroup name="ГруппаVanessaEditorТочкиОстанова" id="2470">
@@ -13331,7 +13341,7 @@ SikuliX or VanessaExt is used for this option.</v8:content>
 - Управление размерами и положением окна
 - Получение снимка окна и снимка экрана
 
-https://github.com/lintest/VanessaExt</v8:content>
+&lt;link https://github.com/lintest/VanessaExt&gt;https://github.com/lintest/VanessaExt&lt;/&gt;</v8:content>
 															</v8:item>
 															<v8:item>
 																<v8:lang>en</v8:lang>
@@ -15687,9 +15697,23 @@ Log events:
 														<CheckBoxField name="ИспользоватьКомпонентуVanessaExt2" id="2612">
 															<DataPath>Объект.ИспользоватьКомпонентуVanessaExt</DataPath>
 															<TitleLocation>Right</TitleLocation>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
 															<CheckBoxType>Auto</CheckBoxType>
 															<ContextMenu name="ИспользоватьКомпонентуVanessaExt2КонтекстноеМеню" id="2613"/>
-															<ExtendedTooltip name="ИспользоватьКомпонентуVanessaExt2РасширеннаяПодсказка" id="2614"/>
+															<ExtendedTooltip name="ИспользоватьКомпонентуVanessaExt2РасширеннаяПодсказка" id="2614">
+																<Title formatted="true">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Предназначена для управления окнами Windows и Linux. 
+Возможности:
+- Получение списка окон и списка процессов
+- Управление размерами и положением окна
+- Получение снимка окна и снимка экрана
+
+&lt;link https://github.com/lintest/VanessaExt&gt;https://github.com/lintest/VanessaExt&lt;/&gt;</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
 															<Events>
 																<Event name="OnChange">ИспользоватьКомпонентуVanessaExtПриИзменении</Event>
 															</Events>
@@ -15778,13 +15802,81 @@ Log events:
 																			<ChildItems>
 																				<InputField name="СмещениеПоГоризонталиДвиженияМышкиVanessaExt" id="2619">
 																					<DataPath>Объект.СмещениеПоГоризонталиДвиженияМышкиVanessaExt</DataPath>
+																					<ToolTipRepresentation>Button</ToolTipRepresentation>
 																					<ContextMenu name="СмещениеПоГоризонталиДвиженияМышкиVanessaExtКонтекстноеМеню" id="2620"/>
-																					<ExtendedTooltip name="СмещениеПоГоризонталиДвиженияМышкиVanessaExtРасширеннаяПодсказка" id="2621"/>
+																					<ExtendedTooltip name="СмещениеПоГоризонталиДвиженияМышкиVanessaExtРасширеннаяПодсказка" id="2621">
+																						<Title formatted="false">
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Используется, когда надо сместить положение мышки по горизонтали на заданное число пикселей. Может принимать как положительные, так и отрицательные значения.</v8:content>
+																							</v8:item>
+																						</Title>
+																					</ExtendedTooltip>
 																				</InputField>
 																				<InputField name="СмещениеПоВертикалиДвиженияМышкиVanessaExt" id="2622">
 																					<DataPath>Объект.СмещениеПоВертикалиДвиженияМышкиVanessaExt</DataPath>
+																					<ToolTipRepresentation>Button</ToolTipRepresentation>
 																					<ContextMenu name="СмещениеПоВертикалиДвиженияМышкиVanessaExtКонтекстноеМеню" id="2623"/>
-																					<ExtendedTooltip name="СмещениеПоВертикалиДвиженияМышкиVanessaExtРасширеннаяПодсказка" id="2624"/>
+																					<ExtendedTooltip name="СмещениеПоВертикалиДвиженияМышкиVanessaExtРасширеннаяПодсказка" id="2624">
+																						<Title formatted="false">
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Используется, когда надо сместить положение мышки по вертикали на заданное число пикселей. Может принимать как положительные, так и отрицательные значения.</v8:content>
+																							</v8:item>
+																						</Title>
+																					</ExtendedTooltip>
+																				</InputField>
+																			</ChildItems>
+																		</UsualGroup>
+																		<UsualGroup name="ГруппаСкоростьПеремещенияМышки" id="2630">
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Скорость перемещения мышки</v8:content>
+																				</v8:item>
+																			</Title>
+																			<Group>Horizontal</Group>
+																			<Behavior>Collapsible</Behavior>
+																			<ControlRepresentation>Picture</ControlRepresentation>
+																			<ExtendedTooltip name="ГруппаСкоростьПеремещенияМышкиРасширеннаяПодсказка" id="2631"/>
+																			<ChildItems>
+																				<InputField name="КоличествоШаговПриДвиженииМышкиVanessaExt" id="2632">
+																					<DataPath>Объект.КоличествоШаговПриДвиженииМышкиVanessaExt</DataPath>
+																					<Title>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Количество шагов</v8:content>
+																						</v8:item>
+																					</Title>
+																					<ToolTipRepresentation>Button</ToolTipRepresentation>
+																					<ContextMenu name="КоличествоШаговПриДвиженииМышкиVanessaExtКонтекстноеМеню" id="2633"/>
+																					<ExtendedTooltip name="КоличествоШаговПриДвиженииМышкиVanessaExtРасширеннаяПодсказка" id="2634">
+																						<Title formatted="false">
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Задаёт количество микро движений (шагов), которая совершает мышка на своём пути. Значение по умолчанию 150.</v8:content>
+																							</v8:item>
+																						</Title>
+																					</ExtendedTooltip>
+																				</InputField>
+																				<InputField name="ТаймаутМеждуШагамиПриДвиженииМышкиVanessaExt" id="2635">
+																					<DataPath>Объект.ПаузаМеждуШагамиПриДвиженииМышкиVanessaExt</DataPath>
+																					<Title>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Пауза между шагами</v8:content>
+																						</v8:item>
+																					</Title>
+																					<ToolTipRepresentation>Button</ToolTipRepresentation>
+																					<ContextMenu name="ТаймаутМеждуШагамиПриДвиженииМышкиVanessaExtКонтекстноеМеню" id="2636"/>
+																					<ExtendedTooltip name="ТаймаутМеждуШагамиПриДвиженииМышкиVanessaExtРасширеннаяПодсказка" id="2637">
+																						<Title formatted="false">
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Задаёт паузу в милисекундах между микро движениями мышки. Значение по умолчанию 3.</v8:content>
+																							</v8:item>
+																						</Title>
+																					</ExtendedTooltip>
 																				</InputField>
 																			</ChildItems>
 																		</UsualGroup>
@@ -15797,9 +15889,17 @@ Log events:
 																				</v8:item>
 																			</Title>
 																			<TitleLocation>Right</TitleLocation>
+																			<ToolTipRepresentation>Button</ToolTipRepresentation>
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="ПодсвечиватьКликМышкиВБраузереVanessaExtКонтекстноеМеню" id="2626"/>
-																			<ExtendedTooltip name="ПодсвечиватьКликМышкиВБраузереVanessaExtРасширеннаяПодсказка" id="2627"/>
+																			<ExtendedTooltip name="ПодсвечиватьКликМышкиВБраузереVanessaExtРасширеннаяПодсказка" id="2627">
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Если опция включена, то в браузере будет происходить отрисовка анимации клика мышки.</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
 																		</CheckBoxField>
 																	</ChildItems>
 																</UsualGroup>
@@ -32263,7 +32363,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Vanessa editor сохранить файл</v8:content>
+					<v8:content>Сохранить файл (ctrl+S)</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>
@@ -32421,6 +32521,21 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorПоказатьСкрытьДеревоКаталогов</Action>
+		</Command>
+		<Command name="VanessaEditorОчиститьРаскраскуСтрок" id="120">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить раскраску строк</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очистить раскраску строк</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>VanessaEditorОчиститьРаскраскуСтрок</Action>
 		</Command>
 	</Commands>
 </Form>
