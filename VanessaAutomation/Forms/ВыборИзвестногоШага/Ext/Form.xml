@@ -371,6 +371,9 @@
 						</InputField>
 						<InputField name="ДеревоШаговИмяEPF" id="29">
 							<DataPath>ДеревоШагов.ИмяФайла</DataPath>
+							<UserVisible>
+								<xr:Common>false</xr:Common>
+							</UserVisible>
 							<EditMode>EnterOnInput</EditMode>
 							<Width>10</Width>
 							<HorizontalStretch>false</HorizontalStretch>
@@ -381,6 +384,22 @@
 				</ColumnGroup>
 			</ChildItems>
 		</Table>
+		<InputField name="ДеревоШаговИмяФайла" id="101">
+			<DataPath>Items.ДеревоШагов.CurrentData.ИмяФайла</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<TextEdit>false</TextEdit>
+			<ContextMenu name="ДеревоШаговИмяФайлаКонтекстноеМеню" id="102"/>
+			<ExtendedTooltip name="ДеревоШаговИмяФайлаРасширеннаяПодсказка" id="103"/>
+		</InputField>
+		<InputField name="ДеревоШаговОписаниеШагаПоле" id="98">
+			<DataPath>Items.ДеревоШагов.CurrentData.ОписаниеШага</DataPath>
+			<TitleLocation>None</TitleLocation>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<MultiLine>true</MultiLine>
+			<TextEdit>false</TextEdit>
+			<ContextMenu name="ДеревоШаговОписаниеШагаПолеКонтекстноеМеню" id="99"/>
+			<ExtendedTooltip name="ДеревоШаговОписаниеШагаПолеРасширеннаяПодсказка" id="100"/>
+		</InputField>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
