@@ -156,6 +156,7 @@
 		"ЯПоказываюПодсказкуDriverJsУЭлементаВБраузере",
 		"И я показываю подсказку ""ТекстПодсказки"" DriverJs у элемента ""ИмяЭлемента"" в браузере
 		|		|'description'|'Подробное описание'|
+		|		|'animate'|'true'|
 		|		|'opacity'|'0.5'|
 		|		|'padding'|'10'|
 		|		|'position'|'bottom'|
@@ -626,6 +627,7 @@
 //@ЯПоказываюПодсказкуEnjoyHintУЭлемента(Парам01,ТабПарам)
 Функция ЯПоказываюПодсказкуDriverJsУЭлементаВБраузере(Текст, ИмяЭлемента, ТабПарам = Неопределено) Экспорт
 
+	animate = "true";
 	description = "";
 	opacity = "0.5";
 	padding = "10";
@@ -633,6 +635,7 @@
 	timeout = "5000";
 
 	ДанныеПараметров = Новый Соответствие;
+	ДанныеПараметров.Вставить("animate", animate);
 	ДанныеПараметров.Вставить("description", description);
 	ДанныеПараметров.Вставить("opacity", opacity);
 	ДанныеПараметров.Вставить("padding", padding);
@@ -646,9 +649,9 @@
 	Скрипт = "{
 		|let p = " + Ванесса.ЗаписатьОбъектJSON(ДанныеПараметров) + ";
 		|p.timeout = fixNumericOptions(p.timeout, p);
-		|if (!window.VanessaDriverId) window.VanessaDriverId = 0;
+		|if (window.VanessaDriverTimer) clearTimeout(window.VanessaDriverTimer);
 		|if (!window.VanessaDriverJs) window.VanessaDriverJs = new Driver({
-		|	animate: false,
+		|	animate: p.animate,
 		|	showButtons: false,
 		|	opacity: p.opacity,
 		|	padding: p.padding,
@@ -664,9 +667,17 @@
 		|		position: p.position,
 		|	}
 		|});
-		|setTimeout(() => {
-		|	if (id === window.VanessaDriverId) driver.reset();
-		|}, p.timeout);
+		|
+		|let patch_id = 'vanessa-driver-css-patch';
+		|let patch = document.getElementById(patch_id);
+		|if (!patch) {
+		|    patch = document.createElement('style');
+		|    patch.id = id;
+		|    window.top.document.body.appendChild(patch);
+		|}
+		|patch.innerText = '#driver-page-overlay{opacity:' +  p.opacity + ' !important}';
+		|
+		|window.VanessaDriverTimer = setTimeout(() => driver.reset(), p.timeout);
 		|}";
 
 	Ванесса.ВыполнитьJavaScriptБраузер(Скрипт);
