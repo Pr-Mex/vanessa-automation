@@ -85,9 +85,7 @@
 
 	Скрипт = "{
 		|let p = " + Ванесса.ЗаписатьОбъектJSON(ДанныеПараметров) + ";
-		|setTimeout(function() { 
-		|	VanessaMouse.showClick(p);
-		|}, 10);
+		|VanessaMouse.showClick(p);
 		|}";
 	
 	Ванесса.ВыполнитьJavaScriptБраузер(Скрипт);
