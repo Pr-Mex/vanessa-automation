@@ -543,44 +543,17 @@
 	
 	Скрипт = "{
 		|let p = " + Ванесса.ЗаписатьОбъектJSON(ДанныеПараметров) + ";
-		|let elements = [];
-		|let table = elem(p.tableName);
+		|p.margin = 4;
+		|p.size = parseInt(p.size);
+		|let coordinates = getTableRegionCoordinates(p.tableName, p);
+		|coordinates.left -= p.margin + p.size;
+		|coordinates.top -= p.margin + p.size;
+		|coordinates.right += p.margin - p.size;
+		|coordinates.bottom += p.margin - p.size;
+		|coordinates.width = coordinates.right - coordinates.left;
+		|coordinates.height = coordinates.bottom - coordinates.top;
 		|
-		|if(p.rowNumber === null) {
-		|	p.rowNumber = 0;
-		|	p.rowNumberEnd = table.querySelectorAll('.gridBody .gridLine').length;
-		|}
-		|if(p.rowNumberEnd === null) {
-		|	p.rowNumberEnd = p.rowNumber;
-		|}
-		|
-		|p['columnIndex'] = null;
-		|p['columnIndexEnd'] = null;
-		|if(p.columnTitle !== null) {
-		|	p.columnIndex = tableColumnIndex(table, p.columnTitle);
-		|}
-		|if(p.columnTitleEnd !== null) {
-		|	p.columnIndexEnd = tableColumnIndex(table, p.columnTitleEnd);
-		|}
-		|if(p.columnNumber !== null) {
-		|	p.columnIndex = parseInt(p.columnNumber) - 1;
-		|}
-		|if(p.columnNumberEnd !== null) {
-		|	p.columnIndexEnd = parseInt(p.columnNumberEnd) - 1;
-		|}
-		|if(p.columnIndex === null) {
-		|	p.columnIndex = 0;
-		|	p.columnIndexEnd = table.querySelectorAll('.gridHead .gridLine .gridBox').length - 1;
-		|}
-		|if(p.columnIndexEnd === null) {
-		|	p.columnIndexEnd = p.columnIndex;
-		|}
-		|
-		|elements.push(tableCellByColumnIndex(table, p.rowNumber, p.columnIndex));
-		|if(p.rowNumberEnd !== p.rowNumber || p.columnIndexEnd !== p.columnIndex)
-		|	elements.push(tableCellByColumnIndex(table, p.rowNumberEnd, p.columnIndexEnd));
-		|
-		|border(elements, p.timeout, p);
+		|border(coordinates, p.timeout, p);
 		|}";
 	
 	Ванесса.ВыполнитьJavaScriptБраузер(Скрипт);
