@@ -456,7 +456,7 @@
 	
 	Скрипт = "
 		|var VATableRegionParams = " + Ванесса.ЗаписатьОбъектJSON(ДанныеПараметров) + ";
-		|JSON.stringify(getTableRegionCoordinates(VATableRegionParams.tableName, VATableRegionParams));";
+		|JSON.stringify(tableRegionBoundingRect(VATableRegionParams.tableName, VATableRegionParams));";
 	
 	РезультатВыполнения = Ванесса.ВыполнитьJavaScriptБраузер(Скрипт).result;
 	Если РезультатВыполнения.Свойство("exceptionDetails") Тогда
@@ -651,7 +651,7 @@
 		|let p = " + Ванесса.ЗаписатьОбъектJSON(ДанныеПараметров) + ";
 		|p.margin = 4;
 		|p.size = parseInt(p.size);
-		|let coordinates = getTableRegionCoordinates(p.tableName, p);
+		|let coordinates = tableRegionBoundingRect(p.tableName, p);
 		|coordinates.left -= p.margin + p.size;
 		|coordinates.top -= p.margin + p.size;
 		|coordinates.right += p.margin - p.size;
