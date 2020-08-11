@@ -1380,6 +1380,9 @@
 					</Title>
 					<PagesRepresentation>TabsOnRightHorizontal</PagesRepresentation>
 					<ExtendedTooltip name="ФункциональностьЗакладкиРасширеннаяПодсказка" id="1261"/>
+					<Events>
+						<Event name="OnCurrentPageChange">ФункциональностьЗакладкиПриСменеСтраницы</Event>
+					</Events>
 					<ChildItems>
 						<Page name="ГруппаЗапускТестов" id="44">
 							<Title>
@@ -3558,6 +3561,12 @@
 															<ExtendedTooltip name="ГруппаVanessaEditorПоискРасширеннаяПодсказка" id="2441"/>
 															<ChildItems>
 																<Popup name="ГруппаVanessaEditorСвернутьШаги" id="2450">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Свернуть шаги</v8:content>
+																		</v8:item>
+																	</Title>
 																	<ToolTip>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
@@ -4058,6 +4067,12 @@
 																	<ExtendedTooltip name="VanessaEditorViewZoomResetРасширеннаяПодсказка" id="2469"/>
 																</Button>
 																<Popup name="ГруппаVanessaEditorВыборТемы" id="2514">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Выбор темы</v8:content>
+																		</v8:item>
+																	</Title>
 																	<ToolTip>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
@@ -4144,6 +4159,12 @@
 															</ChildItems>
 														</ButtonGroup>
 														<Popup name="ГруппаVanessaEditorНастройкиРедактора" id="2552">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Настройки редактора</v8:content>
+																</v8:item>
+															</Title>
 															<ToolTip>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
@@ -4151,8 +4172,8 @@
 																</v8:item>
 															</ToolTip>
 															<Picture>
-																<xr:Ref>0:caf2e58b-ca3d-4b63-82c9-f21f1c9bc9eb</xr:Ref>
-																<xr:LoadTransparent>true</xr:LoadTransparent>
+																<xr:Abs>Picture.png</xr:Abs>
+																<xr:LoadTransparent>false</xr:LoadTransparent>
 															</Picture>
 															<Representation>Picture</Representation>
 															<ExtendedTooltip name="ГруппаVanessaEditorНастройкиРедактораРасширеннаяПодсказка" id="2553"/>
@@ -16880,12 +16901,14 @@ Also use special instructions in the script, see Help info.</v8:content>
 																	<v8:item>
 																		<v8:lang>ru</v8:lang>
 																		<v8:content>Позволяет создавать видео инструкции.
-Видео по описанию настроек находится в этом &lt;link https://www.youtube.com/watch?v=QSDvDQDLyLk&amp;list=PLalsS95_a3a_m9ieRJgD3XPWCP9goa9GC&gt;плей листе&lt;/&gt;.</v8:content>
+Видео по описанию настроек находится в этом &lt;link https://www.youtube.com/watch?v=QSDvDQDLyLk&amp;list=PLalsS95_a3a_m9ieRJgD3XPWCP9goa9GC&gt;плей листе&lt;/&gt;.
+Также рекомендуется прочитать этот &lt;link https://github.com/Pr-Mex/vanessa-automation/blob/develop/docs/FAQ/MakeAutoVideo.md&gt;FAQ.&lt;/&gt; </v8:content>
 																	</v8:item>
 																	<v8:item>
 																		<v8:lang>en</v8:lang>
 																		<v8:content>Allows you to create video tutorials.
-See the settings tutorial &lt;link https://www.youtube.com/watch?v=QSDvDQDLyLk&amp;list=PLalsS95_a3a_m9ieRJgD3XPWCP9goa9GC&gt;playlist &lt;/&gt;.</v8:content>
+See the settings tutorial &lt;link https://www.youtube.com/watch?v=QSDvDQDLyLk&amp;list=PLalsS95_a3a_m9ieRJgD3XPWCP9goa9GC&gt;playlist &lt;/&gt;.
+Also read this &lt;link https://github.com/Pr-Mex/vanessa-automation/blob/develop/docs/FAQ/MakeAutoVideo.md&gt;FAQ&lt;/&gt;, please.</v8:content>
 																	</v8:item>
 																</Title>
 															</ExtendedTooltip>
@@ -19190,14 +19213,16 @@ Used software &lt;link http://www.cross-plus-a.ru/bconsole.html&gt;balabolka_con
 																															<ToolTipRepresentation>Button</ToolTipRepresentation>
 																															<ContextMenu name="ЗаписьВидеоИмяTTSКонтекстноеМеню" id="693"/>
 																															<ExtendedTooltip name="ЗаписьВидеоИмяTTSРасширеннаяПодсказка" id="1432">
-																																<Title formatted="false">
+																																<Title formatted="true">
 																																	<v8:item>
 																																		<v8:lang>ru</v8:lang>
-																																		<v8:content>Указвает какой голос будет использован для озвучки. Допускается указывать не полное название голоса в системе, а только часть, например "Elena".</v8:content>
+																																		<v8:content>Указывает какой голос будет использован для озвучки. Допускается указывать не полное название голоса в системе, а только часть, например "Elena".
+Понадобится установить &lt;link https://www.microsoft.com/en-us/download/details.aspx?id=27225&gt;Microsoft Speech Platform х32&lt;/&gt; и &lt;link https://www.microsoft.com/en-us/download/details.aspx?id=27224&gt;Server Runtime Languages&lt;/&gt;.</v8:content>
 																																	</v8:item>
 																																	<v8:item>
 																																		<v8:lang>en</v8:lang>
-																																		<v8:content>Specifies the narrator's voice. You can specify a part of the voice name, for example, "Elena".</v8:content>
+																																		<v8:content>Specifies the narrator's voice. You can specify a part of the voice name, for example, "Elena".
+Also you need to install &lt;link https://www.microsoft.com/en-us/download/details.aspx?id=27225&gt;Microsoft Speech Platform х32&lt;/&gt; and &lt;link https://www.microsoft.com/en-us/download/details.aspx?id=27224&gt;Server Runtime Languages&lt;/&gt;.</v8:content>
 																																	</v8:item>
 																																</Title>
 																															</ExtendedTooltip>
@@ -21801,6 +21826,10 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Vanessa Editor</v8:content>
 												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Vanessa Editor</v8:content>
+												</v8:item>
 											</Title>
 											<ToolTip>
 												<v8:item>
@@ -22121,6 +22150,32 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 													<ContextMenu name="PIDЭтогоСеансаКонтекстноеМеню" id="1665"/>
 													<ExtendedTooltip name="PIDЭтогоСеансаРасширеннаяПодсказка" id="1666"/>
 												</InputField>
+											</ChildItems>
+										</Page>
+										<Page name="ГруппаCI" id="2640">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>CI</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>CI</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа CI</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="ГруппаCIРасширеннаяПодсказка" id="2641"/>
+											<ChildItems>
+												<Button name="ПолучитьСтрокуЗапуска" id="2642">
+													<Type>Hyperlink</Type>
+													<CommandName>Form.Command.ПолучитьСтрокуЗапуска</CommandName>
+													<ExtendedTooltip name="ПолучитьСтрокуЗапускаРасширеннаяПодсказка" id="2643"/>
+												</Button>
 											</ChildItems>
 										</Page>
 									</ChildItems>
@@ -32091,7 +32146,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				<xr:Ref>StdPicture.MoveLeft</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
-			<Action>VanessaEditorСтандартныеКоманды</Action>
+			<Action>VanessaEditorEditUndo</Action>
 			<Representation>Picture</Representation>
 		</Command>
 		<Command name="VanessaEditorEditRedo" id="92">
@@ -32112,7 +32167,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				<xr:Ref>StdPicture.MoveRight</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
-			<Action>VanessaEditorСтандартныеКоманды</Action>
+			<Action>VanessaEditorEditRedo</Action>
 			<Representation>Picture</Representation>
 		</Command>
 		<Command name="VanessaEditorEditFind" id="93">
@@ -32573,6 +32628,25 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorОчиститьРаскраскуСтрок</Action>
+		</Command>
+		<Command name="ПолучитьСтрокуЗапуска" id="121">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить строку запуска</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Get startup string</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить строку запуска</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьСтрокуЗапуска</Action>
 		</Command>
 	</Commands>
 </Form>

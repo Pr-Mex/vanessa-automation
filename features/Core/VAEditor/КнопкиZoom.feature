@@ -16,8 +16,9 @@
 @IgnoreOn8313
 @IgnoreOn8314
 @IgnoreOn8315
+@IgnoreOn8316
 
-
+@ServerCodeCoverage
 
 
 Функциональность: Работа с кнопками zoom
