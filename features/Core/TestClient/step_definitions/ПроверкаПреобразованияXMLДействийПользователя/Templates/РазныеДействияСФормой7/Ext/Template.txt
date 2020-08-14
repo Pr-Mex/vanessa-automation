@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<uilog xmlns:d1p1="http://v8.1c.ru/8.3/uilog">
+	<ClientApplicationWindow isMain="true">
+		<CommandInterface>
+			<CommandInterfaceGroup title="Панель разделов">
+				<CommandInterfaceButton title="Основная">
+					<click/>
+				</CommandInterfaceButton>
+			</CommandInterfaceGroup>
+			<CommandInterfaceGroup title="Меню функций">
+				<CommandInterfaceButton title="Справочник1">
+					<click/>
+				</CommandInterfaceButton>
+			</CommandInterfaceGroup>
+		</CommandInterface>
+	</ClientApplicationWindow>
+	<ClientApplicationWindow caption="Справочник1">
+		<Form title="Справочник1">
+			<FormGroup name="ФормаКоманднаяПанель" title="Командная панель">
+				<FormButton name="ФормаСоздать" title="Создать">
+					<click/>
+				</FormButton>
+			</FormGroup>
+		</Form>
+	</ClientApplicationWindow>
+	<ClientApplicationWindow caption="Справочник1 (создание)">
+		<Form title="Справочник1 (создание)">
+			<FormGroup name="Группа3" title="Группа3">
+				<FormGroup name="СтраницаТЧ" title="ТЧ">
+					<activate/>
+					<FormTable name="ТабличнаяЧасть1" title="ТабличнаяЧасть1">
+						<activate/>
+						<FormGroup name="ТабличнаяЧасть1КоманднаяПанель" title="Командная панель">
+							<FormButton name="ТабличнаяЧасть1Добавить" title="Добавить">
+								<click/>
+							</FormButton>
+						</FormGroup>
+					</FormTable>
+				</FormGroup>
+			</FormGroup>
+		</Form>
+	</ClientApplicationWindow>
+	<ClientApplicationWindow caption="Справочник1 (создание) *">
+		<Form title="Справочник1 (создание) *">
+			<FormGroup name="Группа3" title="Группа3">
+				<FormGroup name="СтраницаТЧ" title="ТЧ">
+					<FormTable name="ТабличнаяЧасть1" title="ТабличнаяЧасть1">
+						<FormField name="ТабличнаяЧасть1РеквизитЧисло" title="Реквизит число">
+							<inputText text="1,00"/>
+							<cancel/>
+						</FormField>
+						<endEditRow cancel="true"/>
+					</FormTable>
+				</FormGroup>
+			</FormGroup>
+		</Form>
+	</ClientApplicationWindow>
+</uilog>

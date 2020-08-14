@@ -8,7 +8,16 @@
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 @IgnoreOnWeb
-
+@IgnoreOn836
+@IgnoreOn837
+@IgnoreOn838
+@IgnoreOn839
+@IgnoreOn8310
+@IgnoreOn8311
+@IgnoreOn8312
+@IgnoreOn8313
+@IgnoreOn8314
+@IgnoreOn8315
 
 @tree
 
@@ -16,7 +25,7 @@
 Функциональность: Проверка формирования файла состояния активной формы
 
 
-	
+
 Сценарий: Проверка формирования файла состояния активной формы
 	Дано Я закрыл все окна клиентского приложения
 	И я закрываю сеанс TESTCLIENT

@@ -40,6 +40,12 @@ elif lowerHotKey == 'down':
     HotKey = Key.DOWN
 elif lowerHotKey == 'esc':
     HotKey = Key.ESC
+elif lowerHotKey == 'end':
+    HotKey = Key.END
+elif lowerHotKey == 'home':
+    HotKey = Key.HOME
+elif lowerHotKey == 'tab':
+    HotKey = Key.TAB
 
 if Modif == 'win':
     type(HotKey, KeyModifier.WIN)

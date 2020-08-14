@@ -1090,6 +1090,14 @@
 							<ShowTitle>false</ShowTitle>
 							<ExtendedTooltip name="ГруппаСЭлементамиСОдинаковымЗаголовком1РасширеннаяПодсказка" id="298"/>
 							<ChildItems>
+								<Button name="КнопкаКомандаКартинка" id="347">
+									<Type>Hyperlink</Type>
+									<Representation>Picture</Representation>
+									<Width>2</Width>
+									<CommandName>Form.Command.КомандаКартинка</CommandName>
+									<Parameter xsi:nil="true"/>
+									<ExtendedTooltip name="КнопкаКомандаКартинкаРасширеннаяПодсказка" id="348"/>
+								</Button>
 								<PictureDecoration name="ГиперссылкаТолькоПросмотр1" id="284">
 									<Width>24</Width>
 									<Height>2</Height>
@@ -1199,6 +1207,12 @@
 								</InputField>
 							</ChildItems>
 						</UsualGroup>
+						<Button name="КнопкаГиперссылка" id="349">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.КнопкаГиперссылка</CommandName>
+							<Parameter xsi:nil="true"/>
+							<ExtendedTooltip name="КнопкаГиперссылкаРасширеннаяПодсказка" id="350"/>
+						</Button>
 						<InputField name="РекСтрока1" id="129">
 							<DataPath>Объект.РекСтрока1</DataPath>
 							<ContextMenu name="РекСтрока1КонтекстноеМеню" id="130"/>
@@ -1209,6 +1223,53 @@
 							<ContextMenu name="РекСтрока2КонтекстноеМеню" id="133"/>
 							<ExtendedTooltip name="РекСтрока2РасширеннаяПодсказка" id="134"/>
 						</InputField>
+						<RadioButtonField name="Переключатель" id="351">
+							<DataPath>ПереключательКнопками</DataPath>
+							<RadioButtonType>Tumbler</RadioButtonType>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Первое значение</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">Значение1</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Второе значение</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">Значение2</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Третье значение</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:string">Значение3</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="ПереключательКонтекстноеМеню" id="352"/>
+							<ExtendedTooltip name="ПереключательРасширеннаяПодсказка" id="353"/>
+						</RadioButtonField>
 						<Button name="ЗаполнитьРекСтрока1" id="135">
 							<Type>UsualButton</Type>
 							<CommandName>Form.Command.ЗаполнитьРекСтрока1</CommandName>
@@ -1945,6 +2006,21 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="ПереключательКнопками" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Переключатель кнопками</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ЗаполнитьРекСтрока1" id="1">
@@ -2435,6 +2511,40 @@
 				</v8:item>
 			</ToolTip>
 			<Action>КомандаВГруппеКомаднойПанели3</Action>
+		</Command>
+		<Command name="КомандаКартинка" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда картинка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда картинка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.BusinessProcess</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КомандаКартинка</Action>
+		</Command>
+		<Command name="КнопкаГиперссылка" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кнопка гиперссылка</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Кнопка гиперссылка</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КнопкаГиперссылка</Action>
 		</Command>
 	</Commands>
 	<CommandInterface>

@@ -7,6 +7,8 @@ on:
     - develop
     paths:
     - 'docs/**'
+    - 'mkdocs.yml'
+    - '.github/workflows/gh-pages.yml'
 
 jobs:
   build-deploy:
@@ -23,7 +25,7 @@ jobs:
     - name: Install dependencies
       run: |
         pip install --upgrade pip
-        pip install mkdocs mkdocs-material pygments-bsl
+        pip install mkdocs mkdocs-material==5.0.0 pygments-bsl
     
     - name: Dowload latest GitHub Pages
       run: |
