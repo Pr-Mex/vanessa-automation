@@ -1,5 +1,5 @@
 ﻿
-# Как запустиь сценарий: 
+# Как запустить сценарий: 
 # 1) Сформировать тестовые базы ("..\vanessa-automation\tools\1 PrepareCheck.cmd")
 # 2) Прописать, и запустить ..vanessa-automation\tools\ServiceBases\v83ServiceBase83xx
 # 3) Открыть Ванессу, загрузить фичу, выполнить.
