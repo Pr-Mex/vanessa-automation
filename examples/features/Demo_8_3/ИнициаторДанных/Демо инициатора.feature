@@ -3,7 +3,7 @@
 # 1) Сформировать тестовые базы ("..\vanessa-automation\tools\1 PrepareCheck.cmd")
 # 2) Прописать, и запустить ..vanessa-automation\tools\ServiceBases\v83ServiceBase83xx
 # 3) Открыть Ванессу, загрузить фичу, выполнить.
-
+# Более подробно функционал здесь https://infostart.ru/public/1283198/
 
 Функционал: Проверка и демонстрация методов плагина ИнициаторДанных
 
