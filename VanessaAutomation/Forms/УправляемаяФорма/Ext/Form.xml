@@ -4190,6 +4190,12 @@
 																	<CommandName>Form.Command.VanessaEditorПоказыватьСтрокиПодсценариев</CommandName>
 																	<ExtendedTooltip name="VanessaEditorПоказыватьСтрокиПодсценариевРасширеннаяПодсказка" id="2557"/>
 																</Button>
+																<Button name="VanessaEditorПоказыватьМиниатюруКода" id="2650">
+																	<Type>CommandBarButton</Type>
+																	<Check>true</Check>
+																	<CommandName>Form.Command.VanessaEditorПоказыватьМиниатюруКода</CommandName>
+																	<ExtendedTooltip name="VanessaEditorПоказыватьМиниатюруКодаРасширеннаяПодсказка" id="2651"/>
+																</Button>
 															</ChildItems>
 														</Popup>
 													</ChildItems>
@@ -20487,6 +20493,23 @@ To get the OAuth-token:
 																																</Title>
 																															</ExtendedTooltip>
 																														</InputField>
+																														<InputField name="ЗаписьВидеоAmazonРегион" id="2652">
+																															<DataPath>Объект.ЗаписьВидеоAmazonРегион</DataPath>
+																															<ToolTipRepresentation>Button</ToolTipRepresentation>
+																															<ContextMenu name="ЗаписьВидеоAmazonРегионКонтекстноеМеню" id="2653"/>
+																															<ExtendedTooltip name="ЗаписьВидеоAmazonРегионРасширеннаяПодсказка" id="2654">
+																																<Title formatted="false">
+																																	<v8:item>
+																																		<v8:lang>en</v8:lang>
+																																		<v8:content>The field specifies the region parameter. The default is us-east-1.</v8:content>
+																																	</v8:item>
+																																	<v8:item>
+																																		<v8:lang>ru</v8:lang>
+																																		<v8:content>В поле указывается параметр регион. Значение по умолчанию: us-east-1.</v8:content>
+																																	</v8:item>
+																																</Title>
+																															</ExtendedTooltip>
+																														</InputField>
 																														<InputField name="ЗаписьВидеоAmazonКлючДоступа" id="2115">
 																															<DataPath>Объект.ЗаписьВидеоAmazonКлючДоступа</DataPath>
 																															<ToolTipRepresentation>Button</ToolTipRepresentation>
@@ -21842,9 +21865,21 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 												<CheckBoxField name="ИспользоватьДанныеТекущейФормыПриПодбореШагов" id="2524">
 													<DataPath>Объект.ИспользоватьДанныеТекущейФормыПриПодбореШагов</DataPath>
 													<TitleLocation>Right</TitleLocation>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
 													<CheckBoxType>Auto</CheckBoxType>
 													<ContextMenu name="ИспользоватьДанныеТекущейФормыПриПодбореШаговКонтекстноеМеню" id="2525"/>
-													<ExtendedTooltip name="ИспользоватьДанныеТекущейФормыПриПодбореШаговРасширеннаяПодсказка" id="2526"/>
+													<ExtendedTooltip name="ИспользоватьДанныеТекущейФормыПриПодбореШаговРасширеннаяПодсказка" id="2526">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Enables the ability to use data from the current test client form, such as field names, window titles, and so on, when adding steps.</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Включает возможность использовать данные текущей формы клиента тестирования, таких как имена полей, заголовоков окон и так далее при подборе шагов.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
 													<Events>
 														<Event name="OnChange">ИспользоватьДанныеТекущейФормыПриПодбореШаговПриИзменении</Event>
 													</Events>
@@ -21852,9 +21887,46 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 												<CheckBoxField name="ПоказыватьСтрокиПодсценариевVanessaEdittor" id="2543">
 													<DataPath>Объект.ПоказыватьСтрокиПодсценариевVanessaEdittor</DataPath>
 													<TitleLocation>Right</TitleLocation>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
 													<CheckBoxType>Auto</CheckBoxType>
 													<ContextMenu name="ПоказыватьСтрокиПодсценариевVanessaEdittorКонтекстноеМеню" id="2544"/>
-													<ExtendedTooltip name="ПоказыватьСтрокиПодсценариевVanessaEdittorРасширеннаяПодсказка" id="2545"/>
+													<ExtendedTooltip name="ПоказыватьСтрокиПодсценариевVanessaEdittorРасширеннаяПодсказка" id="2545">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Enables the display of subscript lines in the editor.</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Включает отображение строк подсценариев в редакторе.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+													<Events>
+														<Event name="OnChange">ПоказыватьСтрокиПодсценариевVanessaEdittorПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<CheckBoxField name="ПоказыватьМиниатюруКода" id="2647">
+													<DataPath>Объект.ПоказыватьМиниатюруКода</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ПоказыватьМиниатюруКодаКонтекстноеМеню" id="2648"/>
+													<ExtendedTooltip name="ПоказыватьМиниатюруКодаРасширеннаяПодсказка" id="2649">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Controls the display of the code miniature.</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Управляет отображением миниатюры кода.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+													<Events>
+														<Event name="OnChange">ПоказыватьМиниатюруКодаПриИзменении</Event>
+													</Events>
 												</CheckBoxField>
 												<InputField name="ТемаРедактораVanessaEditor" id="2413">
 													<DataPath>Объект.ТемаРедактораVanessaEditor</DataPath>
@@ -21864,6 +21936,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 															<v8:content>Тема редактора</v8:content>
 														</v8:item>
 													</Title>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
 													<ListChoiceMode>true</ListChoiceMode>
 													<ChoiceList>
 														<xr:Item>
@@ -21936,7 +22009,18 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 														</xr:Item>
 													</ChoiceList>
 													<ContextMenu name="ТемаРедактораVanessaEditorКонтекстноеМеню" id="2414"/>
-													<ExtendedTooltip name="ТемаРедактораVanessaEditorРасширеннаяПодсказка" id="2415"/>
+													<ExtendedTooltip name="ТемаРедактораVanessaEditorРасширеннаяПодсказка" id="2415">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Allows you to change the editor theme.</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Позволяет сменить тему редактора.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
 													<Events>
 														<Event name="OnChange">ТемаРедактораVanessaEditorПриИзменении</Event>
 													</Events>
@@ -32545,6 +32629,10 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Использовать данные текущей формы при подборе шагов</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Use the data of the current form when adding steps</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
@@ -32559,6 +32647,10 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Показывать строки подсценариев</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Show subscript lines</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -32647,6 +32739,25 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПолучитьСтрокуЗапуска</Action>
+		</Command>
+		<Command name="VanessaEditorПоказыватьМиниатюруКода" id="122">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать миниатюру кода</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Show code miniature</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Vanessa editor использовать данные текущей формы при подборе шагов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>VanessaEditorПоказыватьМиниатюруКода</Action>
 		</Command>
 	</Commands>
 </Form>
