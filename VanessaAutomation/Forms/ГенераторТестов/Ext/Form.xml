@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.10">
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
@@ -88,14 +88,14 @@
 				<ChildItems>
 					<Button name="ФормаВыгрузитьНастройки" id="112">
 						<Type>CommandBarButton</Type>
-						<OnlyInAllActions>false</OnlyInAllActions>
 						<CommandName>Form.Command.ВыгрузитьНастройки</CommandName>
+						<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 						<ExtendedTooltip name="ФормаВыгрузитьНастройкиРасширеннаяПодсказка" id="113"/>
 					</Button>
 					<Button name="ФормаЗагрузитьНастройки" id="114">
 						<Type>CommandBarButton</Type>
-						<OnlyInAllActions>false</OnlyInAllActions>
 						<CommandName>Form.Command.ЗагрузитьНастройки</CommandName>
+						<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 						<ExtendedTooltip name="ФормаЗагрузитьНастройкиРасширеннаяПодсказка" id="115"/>
 					</Button>
 				</ChildItems>
@@ -214,6 +214,7 @@
 							<ChangeRowSet>false</ChangeRowSet>
 							<ChangeRowOrder>false</ChangeRowOrder>
 							<InitialTreeView>ExpandTopLevel</InitialTreeView>
+							<FileDragMode>AsFile</FileDragMode>
 							<DataPath>ДеревоОбъектовМетаданных</DataPath>
 							<Title>
 								<v8:item>
@@ -329,6 +330,7 @@
 											<Width>2</Width>
 											<HorizontalStretch>false</HorizontalStretch>
 											<VerticalStretch>false</VerticalStretch>
+											<FileDragMode>AsFile</FileDragMode>
 											<ContextMenu name="ДеревоОбъектовМетаданныхКартинкаКонтекстноеМеню" id="24"/>
 											<ExtendedTooltip name="ДеревоОбъектовМетаданныхКартинкаРасширеннаяПодсказка" id="25"/>
 										</PictureField>
@@ -779,6 +781,7 @@
 				</v8:item>
 			</Title>
 			<Action>СформироватьСценарии</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="УстановитьОткрытиеФормы" id="2">
 			<Title>
@@ -792,6 +795,7 @@
 				</v8:item>
 			</Title>
 			<Action>УстановитьОткрытиеФормы</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="УстановитьЗаписьНового" id="3">
 			<Title>
@@ -805,6 +809,7 @@
 				</v8:item>
 			</Title>
 			<Action>УстановитьЗаписьНового</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="УстановитьЗаписьСуществующего" id="4">
 			<Title>
@@ -818,6 +823,7 @@
 				</v8:item>
 			</Title>
 			<Action>УстановитьЗаписьСуществующего</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="УстановитьВводНаОсновании" id="5">
 			<Title>
@@ -831,6 +837,7 @@
 				</v8:item>
 			</Title>
 			<Action>УстановитьВводНаОсновании</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="УстановитьПоУмолчанию" id="6">
 			<Title>
@@ -848,6 +855,7 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>УстановитьПоУмолчанию</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПодготовитьСценарииКВыполнению" id="7">
 			<Title>
@@ -861,6 +869,7 @@
 				</v8:item>
 			</Title>
 			<Action>ПодготовитьСценарииКВыполнению</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ВыгрузитьНастройки" id="8">
 			<Title>
@@ -878,6 +887,7 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>ВыгрузитьНастройки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ЗагрузитьНастройки" id="9">
 			<Title>
@@ -891,6 +901,7 @@
 				</v8:item>
 			</Title>
 			<Action>ЗагрузитьНастройки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 </Form>
