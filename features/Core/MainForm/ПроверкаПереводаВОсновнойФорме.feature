@@ -196,10 +196,8 @@
 	|'Designed to manage windows in Windows and Linux.'|
 	|'1c win ctrl group'|
 	|'1c win ctrl group'|
-	|'Update tree'|
 	|'Tools directory'|
 	|'The catalog of Vanessa Automation data processor. This field must be filled on the standard installation.'|
-	|'Extended Vanessa Satck Commons tools'|
 	|'Project directory'|
 	|'The catalog with the tested project files, which are necessary for test execution.'|
 	|'Load features upon opening VA'|

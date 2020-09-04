@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.10">
 	<AutoTitle>false</AutoTitle>
 	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
@@ -214,6 +214,7 @@ If value is &gt; 1, then paged sub-elements of this level or lower according to<
 											<InitialTreeView>ExpandAllLevels</InitialTreeView>
 											<EnableStartDrag>true</EnableStartDrag>
 											<EnableDrag>true</EnableDrag>
+											<FileDragMode>AsFile</FileDragMode>
 											<DataPath>Объект.ДеревоМетаданных</DataPath>
 											<RowPictureDataPath>Объект.ДеревоМетаданных.ИндексКартинки</RowPictureDataPath>
 											<RowsPicture>
@@ -336,6 +337,7 @@ If value is &gt; 1, then paged sub-elements of this level or lower according to<
 											<InitialTreeView>ExpandAllLevels</InitialTreeView>
 											<EnableStartDrag>true</EnableStartDrag>
 											<EnableDrag>true</EnableDrag>
+											<FileDragMode>AsFile</FileDragMode>
 											<DataPath>Объект.КомпоновщикНастроекКомпоновкиДанных.Settings.Filter</DataPath>
 											<SearchStringLocation>None</SearchStringLocation>
 											<ViewStatusLocation>None</ViewStatusLocation>
@@ -424,6 +426,7 @@ If value is &gt; 1, then paged sub-elements of this level or lower according to<
 									<AutoInsertNewRow>true</AutoInsertNewRow>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
 									<DataPath>Объект.ТаблицаДанных</DataPath>
 									<SearchStringLocation>None</SearchStringLocation>
 									<ViewStatusLocation>None</ViewStatusLocation>
@@ -542,6 +545,7 @@ If value is &gt; 1, then paged sub-elements of this level or lower according to<
 									<AutoInsertNewRow>true</AutoInsertNewRow>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
 									<DataPath>Объект.ПользователиИБ</DataPath>
 									<SearchStringLocation>None</SearchStringLocation>
 									<ViewStatusLocation>None</ViewStatusLocation>
@@ -629,6 +633,7 @@ If value is &gt; 1, then paged sub-elements of this level or lower according to<
 					<AutoInsertNewRow>true</AutoInsertNewRow>
 					<EnableStartDrag>true</EnableStartDrag>
 					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
 					<DataPath>Объект.ДополнительныеСвойства</DataPath>
 					<Title>
 						<v8:item>
@@ -940,6 +945,7 @@ If value is &gt; 1, then paged sub-elements of this level or lower according to<
 			<Action>СоздатьМакетДанных</Action>
 			<Representation>TextPicture</Representation>
 			<ModifiesSavedData>true</ModifiesSavedData>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СохранитьМакетДанныхВФайл" id="2">
 			<Title>
@@ -968,6 +974,7 @@ If value is &gt; 1, then paged sub-elements of this level or lower according to<
 			</Picture>
 			<Action>СохранитьМакетДанныхВФайл</Action>
 			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПротестироватьЗагрузкуМакета" id="3">
 			<Title>
@@ -996,6 +1003,7 @@ If value is &gt; 1, then paged sub-elements of this level or lower according to<
 			</Picture>
 			<Action>ПротестироватьЗагрузкуМакета</Action>
 			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОчиститьТаблицуДанных" id="4">
 			<Title>
@@ -1100,6 +1108,7 @@ If value is &gt; 1, then paged sub-elements of this level or lower according to<
 			</Picture>
 			<Action>ОчиститьТаблицуДанных</Action>
 			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПересчитатьВыгружаемыеПоСсылке" id="5">
 			<Title>
@@ -1128,6 +1137,7 @@ If value is &gt; 1, then paged sub-elements of this level or lower according to<
 			</Picture>
 			<Action>ПересчитатьВыгружаемыеПоСсылке</Action>
 			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ПоказатьРезультатОтбора" id="6">
 			<Title>
@@ -1151,6 +1161,7 @@ If value is &gt; 1, then paged sub-elements of this level or lower according to<
 				</v8:item>
 			</ToolTip>
 			<Action>ПоказатьРезультатОтбора</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ДополнительныеСвойства" id="7">
 			<Title>
@@ -1174,6 +1185,7 @@ If value is &gt; 1, then paged sub-elements of this level or lower according to<
 				</v8:item>
 			</ToolTip>
 			<Action>ДополнительныеСвойства</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 </Form>

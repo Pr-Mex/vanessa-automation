@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.10">
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
@@ -91,8 +91,8 @@
 		<ChildItems>
 			<Button name="ФормаВыгрузитьШагиВJSON" id="70">
 				<Type>CommandBarButton</Type>
-				<OnlyInAllActions>false</OnlyInAllActions>
 				<CommandName>Form.Command.ВыгрузитьШагиВJSON</CommandName>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 				<ExtendedTooltip name="ФормаВыгрузитьШагиВJSONРасширеннаяПодсказка" id="71"/>
 			</Button>
 		</ChildItems>
@@ -296,16 +296,6 @@
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="ГруппаДеревоШаговРасширеннаяПодсказка" id="105"/>
 			<ChildItems>
-				<InputField name="ДеревоШаговИмяФайлаПоле" id="101">
-					<DataPath>Items.ДеревоШагов.CurrentData.ИмяФайла</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<OpenButton>true</OpenButton>
-					<ContextMenu name="ДеревоШаговИмяФайлаПолеКонтекстноеМеню" id="102"/>
-					<ExtendedTooltip name="ДеревоШаговИмяФайлаПолеРасширеннаяПодсказка" id="103"/>
-					<Events>
-						<Event name="Opening">ДеревоШаговИмяФайлаПолеОткрытие</Event>
-					</Events>
-				</InputField>
 				<UsualGroup name="ГруппаДеревоСОписанием" id="108">
 					<Title>
 						<v8:item>
@@ -331,6 +321,7 @@
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
 							<DataPath>ДеревоШагов</DataPath>
 							<SearchStringLocation>None</SearchStringLocation>
 							<ViewStatusLocation>None</ViewStatusLocation>
@@ -440,7 +431,11 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
-									<v8:content>Описание</v8:content>
+									<v8:content>Дополнительно</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Additionally</v8:content>
 								</v8:item>
 							</Title>
 							<ToolTip>
@@ -449,12 +444,35 @@
 									<v8:content>Группа описания</v8:content>
 								</v8:item>
 							</ToolTip>
+							<Group>Vertical</Group>
 							<ExtendedTooltip name="ГруппаОписанияРасширеннаяПодсказка" id="117"/>
 							<ChildItems>
+								<InputField name="ДеревоШаговИмяФайлаПоле" id="101">
+									<DataPath>Items.ДеревоШагов.CurrentData.ИмяФайла</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Файл</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>File</v8:content>
+										</v8:item>
+									</Title>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<OpenButton>true</OpenButton>
+									<ContextMenu name="ДеревоШаговИмяФайлаПолеКонтекстноеМеню" id="102"/>
+									<ExtendedTooltip name="ДеревоШаговИмяФайлаПолеРасширеннаяПодсказка" id="103"/>
+									<Events>
+										<Event name="Opening">ДеревоШаговИмяФайлаПолеОткрытие</Event>
+									</Events>
+								</InputField>
 								<InputField name="ДеревоШаговОписаниеШагаОригинал" id="118">
 									<DataPath>Items.ДеревоШагов.CurrentData.ОписаниеШагаОригинал</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<TitleLocation>None</TitleLocation>
+									<AutoMaxWidth>false</AutoMaxWidth>
 									<MultiLine>true</MultiLine>
 									<ContextMenu name="ДеревоШаговОписаниеШагаОригиналКонтекстноеМеню" id="119"/>
 									<ExtendedTooltip name="ДеревоШаговОписаниеШагаОригиналРасширеннаяПодсказка" id="120"/>
@@ -463,6 +481,7 @@
 									<DataPath>Items.ДеревоШагов.CurrentData.ОписаниеШага</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<TitleLocation>None</TitleLocation>
+									<AutoMaxWidth>false</AutoMaxWidth>
 									<MultiLine>true</MultiLine>
 									<ContextMenu name="ДеревоШаговОписаниеШагаКонтекстноеМеню" id="99"/>
 									<ExtendedTooltip name="ДеревоШаговОписаниеШагаРасширеннаяПодсказка" id="100"/>
@@ -2501,6 +2520,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПоказатьПеревод</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ВыгрузитьШагиВJSON" id="2">
 			<Title>
@@ -2600,6 +2620,7 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ВыгрузитьШагиВJSON</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="НайтиШаги" id="6">
 			<Title>
@@ -2617,6 +2638,7 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>НайтиШаги</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 </Form>
