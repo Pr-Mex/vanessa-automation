@@ -160,6 +160,7 @@
 	VanessaEditor = Ванесса.VanessaEditor;
 	VanessaEditor.decorateProblems(Ванесса.ЗаписатьОбъектJSON(Новый Массив));
 	VanessaEditor.clearRuntimeProgress();// также сбрасывает виджеты
+	VanessaEditor.clearCodicons();
 	
 	Если Ванесса.ФайлСуществуетКомандаСистемы(Ванесса.Объект.КаталогФич) Тогда
 		Если НЕ Ванесса.ЭтоКаталогКомандаСистемы(Ванесса.Объект.КаталогФич) Тогда
