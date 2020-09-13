@@ -6,6 +6,8 @@
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
+@IgnoreOnUFSovm82Builds
+@IgnoreOn8312
 @IgnoreOnWeb
 
 Функционал: Остановка и продолжение выполнения сценария перед началом сценария
