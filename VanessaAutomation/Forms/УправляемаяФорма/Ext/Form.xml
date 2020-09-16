@@ -311,11 +311,6 @@
 					</ButtonGroup>
 				</ChildItems>
 			</Popup>
-			<Button name="VanessaEditorСохранитьФайл" id="2512">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.VanessaEditorСохранитьФайл</CommandName>
-				<ExtendedTooltip name="VanessaEditorСохранитьФайлРасширеннаяПодсказка" id="2513"/>
-			</Button>
 			<Button name="Перезагрузить" id="60">
 				<Type>CommandBarButton</Type>
 				<Representation>PictureAndText</Representation>
@@ -16613,6 +16608,11 @@ Log events:
 																								<Event name="OnChange">ВыборЦветаПодсветкиКликовМышкиПриИзменении</Event>
 																							</Events>
 																						</InputField>
+																						<Button name="ТестПодсветкиКликаМышки" id="2734">
+																							<Type>UsualButton</Type>
+																							<CommandName>Form.Command.ТестПодсветкиКликаМышки</CommandName>
+																							<ExtendedTooltip name="ТестПодсветкиКликаМышкиРасширеннаяПодсказка" id="2735"/>
+																						</Button>
 																					</ChildItems>
 																				</UsualGroup>
 																				<UsualGroup name="ГруппаНастройкаКликовМышкиПрочиеНастройки" id="2693">
@@ -18622,11 +18622,11 @@ Also use special instructions in the script, see Help info.</v8:content>
 																								<Presentation>
 																									<v8:item>
 																										<v8:lang>ru</v8:lang>
-																										<v8:content>FFmpeg</v8:content>
+																										<v8:content>FFmpeg (рекомендуется)</v8:content>
 																									</v8:item>
 																									<v8:item>
 																										<v8:lang>en</v8:lang>
-																										<v8:content>FFmpeg</v8:content>
+																										<v8:content>FFmpeg (Recommended)</v8:content>
 																									</v8:item>
 																								</Presentation>
 																								<Value xsi:type="xs:string">ffmpeg</Value>
@@ -22084,27 +22084,6 @@ Then in the example above the video will speed up (10 * (1-0.3)) from 10 to 7 se
 																										</Title>
 																									</ExtendedTooltip>
 																								</CheckBoxField>
-																								<CheckBoxField name="ЗаписьВидеоПодсвечиватьНажатияМышки" id="1845">
-																									<DataPath>Объект.ЗаписьВидеоПодсвечиватьНажатияМышки</DataPath>
-																									<TitleLocation>Right</TitleLocation>
-																									<ToolTipRepresentation>Button</ToolTipRepresentation>
-																									<CheckBoxType>Auto</CheckBoxType>
-																									<ContextMenu name="ЗаписьВидеоПодсвечиватьНажатияМышкиКонтекстноеМеню" id="1846"/>
-																									<ExtendedTooltip name="ЗаписьВидеоПодсвечиватьНажатияМышкиРасширеннаяПодсказка" id="1847">
-																										<Title formatted="false">
-																											<v8:item>
-																												<v8:lang>ru</v8:lang>
-																												<v8:content>Включает подсветку кликов мышки. Используется утилита из проекта UIToolsFor1C.
-Эмуляция кликов мышки осуществляется с помощью SikuliX.</v8:content>
-																											</v8:item>
-																											<v8:item>
-																												<v8:lang>en</v8:lang>
-																												<v8:content>Switches on mouse clicks highlighting. Project utility UIToolsFor1C is used.
-SikuliX emulates mouse clicks.</v8:content>
-																											</v8:item>
-																										</Title>
-																									</ExtendedTooltip>
-																								</CheckBoxField>
 																								<CheckBoxField name="ЗаписьВидеоЭмулироватьВводСКлавиатуры" id="1854">
 																									<DataPath>Объект.ЗаписьВидеоЭмулироватьВводСКлавиатуры</DataPath>
 																									<TitleLocation>Right</TitleLocation>
@@ -22251,83 +22230,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 																										</v8:item>
 																										<v8:item>
 																											<v8:lang>en</v8:lang>
-																											<v8:content>Move mouse to active control</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>am</v8:lang>
-																											<v8:content>አዳዲስ ቅድሚያ ነጥብ ጋር ንቁ ቅጽ እንዳሏቸውም</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>az</v8:lang>
-																											<v8:content>Hərəkət kursor siçan fəal element formaları</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>bg</v8:lang>
-																											<v8:content>Преместване на курсора на мишката до активен елемент на формуляра</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>de</v8:lang>
-																											<v8:content>Bewegen Sie den Mauszeiger auf das aktive Element der Form</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>es</v8:lang>
-																											<v8:content>Mover el cursor del ratón a la ventana activa un elemento de formulario</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>et</v8:lang>
-																											<v8:content>Liiguta hiirega sellele üksusele vormi</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>fr</v8:lang>
-																											<v8:content>Déplacer le curseur de la souris à l'élément actif de la forme</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>hu</v8:lang>
-																											<v8:content>Vigye az egérmutatót a aktív formában elem</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>it</v8:lang>
-																											<v8:content>Spostare il cursore del mouse verso un elemento attivo di forma</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>ka</v8:lang>
-																											<v8:content>გადატანა მაუსის მაჩვენებელი აქტიური ფორმის ელემენტი</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>lt</v8:lang>
-																											<v8:content>Perkelti pelės žymeklį į aktyvų elementą formos</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>lv</v8:lang>
-																											<v8:content>Pārvietot kursoru uz aktīvo elementu formas</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>mn</v8:lang>
-																											<v8:content>Хулганы заагчийг шилжүүлэх идэвхтэй хэлбэр элемент</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>pl</v8:lang>
-																											<v8:content>Przesunąć kursor myszy do aktywnego elementu formularza</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>ro</v8:lang>
-																											<v8:content>Muta cursorul mouse-ului la activ element de formular</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>sl</v8:lang>
-																											<v8:content>Premaknite kazalec miške na aktivno obliko element</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>sv</v8:lang>
-																											<v8:content>Flytta muspekaren till den aktiva formen element</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>tr</v8:lang>
-																											<v8:content>Taşımak için fare imleci etkin öğeye formu</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>vi</v8:lang>
-																											<v8:content>Di chuyển con trỏ chuột đến phần tử biểu mẫu hiện hoạt</v8:content>
+																											<v8:content>Deprecated. Move mouse to active control</v8:content>
 																										</v8:item>
 																									</Title>
 																									<TitleTextColor>style:BorderColor</TitleTextColor>
@@ -22345,83 +22248,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 																										</v8:item>
 																										<v8:item>
 																											<v8:lang>en</v8:lang>
-																											<v8:content>Show active form controls</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>am</v8:lang>
-																											<v8:content>መገለጫዎ ንቁ ቅጽ ይታያል</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>az</v8:lang>
-																											<v8:content>Подсвечивать aktiv maddələr formaları</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>bg</v8:lang>
-																											<v8:content>Осветяване на активни елементи форми</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>de</v8:lang>
-																											<v8:content>Aktive Elemente hervorheben Formen</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>es</v8:lang>
-																											<v8:content>Resaltar los elementos activos de las formas de</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>et</v8:lang>
-																											<v8:content>Rõhutada aktiivsete üksuste vormid</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>fr</v8:lang>
-																											<v8:content>Mettre en évidence les éléments actifs des formes</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>hu</v8:lang>
-																											<v8:content>Jelölje ki a aktív formában elemek</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>it</v8:lang>
-																											<v8:content>Evidenziare gli elementi attivi di forme</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>ka</v8:lang>
-																											<v8:content>მონიშნეთ აქტიური ფორმის ელემენტები</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>lt</v8:lang>
-																											<v8:content>Paryškinti aktyvūs elementai formų</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>lv</v8:lang>
-																											<v8:content>Izcelt aktīvie elementi formu</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>mn</v8:lang>
-																											<v8:content>Тодруулах идэвхтэй хэлбэр элемент</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>pl</v8:lang>
-																											<v8:content>Podświetl elementy aktywne formy</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>ro</v8:lang>
-																											<v8:content>Pentru a evidenția elementele active forme de</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>sl</v8:lang>
-																											<v8:content>Označite aktivno obliko elementov</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>sv</v8:lang>
-																											<v8:content>Markera aktiv form element</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>tr</v8:lang>
-																											<v8:content>Parlat aktif öğeleri şekil</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>vi</v8:lang>
-																											<v8:content>Hiển thị phần tử biểu mẫu hiện hoạt</v8:content>
+																											<v8:content>Deprecated. Show active form controls</v8:content>
 																										</v8:item>
 																									</Title>
 																									<TitleTextColor>style:BorderColor</TitleTextColor>
@@ -22429,6 +22256,38 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 																									<CheckBoxType>Auto</CheckBoxType>
 																									<ContextMenu name="ЗаписьВидеоПодсвечиватьАктивныеЭлементыФормКонтекстноеМеню" id="710"/>
 																									<ExtendedTooltip name="ЗаписьВидеоПодсвечиватьАктивныеЭлементыФормРасширеннаяПодсказка" id="1437"/>
+																								</CheckBoxField>
+																								<CheckBoxField name="ЗаписьВидеоПодсвечиватьНажатияМышки" id="1845">
+																									<DataPath>Объект.ЗаписьВидеоПодсвечиватьНажатияМышки</DataPath>
+																									<Title>
+																										<v8:item>
+																											<v8:lang>ru</v8:lang>
+																											<v8:content>Устарело. Подсвечиать клики мышкой</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>en</v8:lang>
+																											<v8:content>Deprecated. Highlight mouse click</v8:content>
+																										</v8:item>
+																									</Title>
+																									<TitleTextColor>style:BorderColor</TitleTextColor>
+																									<TitleLocation>Right</TitleLocation>
+																									<ToolTipRepresentation>Button</ToolTipRepresentation>
+																									<CheckBoxType>Auto</CheckBoxType>
+																									<ContextMenu name="ЗаписьВидеоПодсвечиватьНажатияМышкиКонтекстноеМеню" id="1846"/>
+																									<ExtendedTooltip name="ЗаписьВидеоПодсвечиватьНажатияМышкиРасширеннаяПодсказка" id="1847">
+																										<Title formatted="false">
+																											<v8:item>
+																												<v8:lang>ru</v8:lang>
+																												<v8:content>Включает подсветку кликов мышки. Используется утилита из проекта UIToolsFor1C.
+Эмуляция кликов мышки осуществляется с помощью SikuliX.</v8:content>
+																											</v8:item>
+																											<v8:item>
+																												<v8:lang>en</v8:lang>
+																												<v8:content>Switches on mouse clicks highlighting. Project utility UIToolsFor1C is used.
+SikuliX emulates mouse clicks.</v8:content>
+																											</v8:item>
+																										</Title>
+																									</ExtendedTooltip>
 																								</CheckBoxField>
 																							</ChildItems>
 																						</UsualGroup>
@@ -33152,7 +33011,6 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 					<v8:content>Поиск</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Shortcut>Ctrl+F</Shortcut>
 			<Picture>
 				<xr:Ref>StdPicture.Find</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
@@ -33692,6 +33550,25 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>НастройкаВидимостиКнопокПанелиРедактора</Action>
+		</Command>
+		<Command name="ТестПодсветкиКликаМышки" id="124">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тест</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Test</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тест подсветки клика мышки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ТестПодсветкиКликаМышки</Action>
 		</Command>
 	</Commands>
 </Form>
