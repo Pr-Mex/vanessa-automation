@@ -191,15 +191,13 @@
 	|'If the checkbox is on, scenario and steps beginning events will be written to the event log.'|
 	|'Add meta information when clicking'|
 	|'If the checkbox is on, data for translation into another language will be added when clicking the scenario step by step.'|
-	|'If the checkbox is on, scenario steps will define form elements &lt;b&gt;by internal name&lt;/&gt; when generating scenario text.'|
+	//|'If the checkbox is on, scenario steps will define form elements &lt;b&gt;by internal name&lt;/&gt; when generating scenario text.'|
 	|'If the checkbox is on, feature file is considered as if it has @tree tag, even if it is absent. In other words, any uploaded feature file is considered as hierarchical.'|
-	|'Designed to manage windows in Windows and Linux.'|
+	//|'Designed to manage windows in Windows and Linux.'|
 	|'1c win ctrl group'|
 	|'1c win ctrl group'|
-	|'Update tree'|
 	|'Tools directory'|
 	|'The catalog of Vanessa Automation data processor. This field must be filled on the standard installation.'|
-	|'Extended Vanessa Satck Commons tools'|
 	|'Project directory'|
 	|'The catalog with the tested project files, which are necessary for test execution.'|
 	|'Load features upon opening VA'|
@@ -250,27 +248,27 @@
 	|'If the checkbox is on, scenario will be executed until the first error occurs.'|
 	|'If flag is set, when an error occurs in tree steps will be shown column with the row number in the tree, if this column was hidden.'|
 	|'If the checkbox is on, pending steps will set assembly status to failed on the execution on CI server.'|
-	|'Specifies maximum timeout for async step.'|
-	|'Maximum timeout for window search in the step'|
+	//|'Specifies maximum timeout for async step.'|
+	//|'Maximum timeout for window search in the step'|
 	|'Sets maximum tries number for multiple steps.'|
 	|'Adds delay for multiple actions, which may cause unstable scenario execution, e.g.: move to line, field value check etc.'|
-	|'The value of the additional delay to be applied in the step'|
+	//|'The value of the additional delay to be applied in the step'|
 	|'Screenshots'|
 	|'Screenshots page'|
 	|'Create screnshoot in case of error'|
 	|'Enables taking screenshots in case of an error.'|
 	|'Take every window screenshot'|
 	|'Enables taking screenshots for each 1C window when an error occurs.'|
-	|'Designed to manage windows in Windows and Linux.'|
+	//|'Designed to manage windows in Windows and Linux.'|
 	|'VanessaExt add-in screenshots'|
 	|'To take screenshots, use the VanessaExt add-in instead of the screenshot creation command.'|
 	|'Method for taking screenshots by an external module.'|
 	|'Full Screen'|
 	|'Current test client window'|
 	|'All test client windows'|
-	|'&lt;b&gt;Full Screen&lt;/&gt; - Gets a screenshot of the entire screen, including the Windows taskbar.'|
+	//|'&lt;b&gt;Full Screen&lt;/&gt; - Gets a screenshot of the entire screen, including the Windows taskbar.'|
 	|'Screenshot creation command'|
-	|'Specify the command line used to create the screenshots.'|
+	//|'Specify the command line used to create the screenshots.'|
 	|'Temporary directory for screenshoots'|
 	|'Screenshots directory.'|
 	|'Scenario report'|
@@ -353,7 +351,7 @@
 	|'SikuliX server'|
 	|'Tooltip'|
 	|'Use SikuliX Server'|
-	|'SikuliX is a Java application for mouse pointer moving and clicking management, and emulation of pressing keys.'|
+	//|'SikuliX is a Java application for mouse pointer moving and clicking management, and emulation of pressing keys.'|
 	|'If the checkbox is on, then the search of form element or control will be performed on steps execution. Mouse pointer will be moved to the detected element.'|
 	|'Sikuli x server details'|
 	|'Group sikuli x server details'|
@@ -374,7 +372,7 @@
 	|'Markdown documentation directory'|
 	|'Video tutorial'|
 	|'Create video tutorial'|
-	|'Allows you to create video tutorials.'|
+	//|'Allows you to create video tutorials.'|
 	|'Video settings'|
 	|'Video tutorials directory'|
 	|'Directory where will be placed result of assembly videos or animated screencast.'|
@@ -416,8 +414,8 @@
 	|'The directory for temporary files created on video recording and composing. The directory is cleared before each recording!'|
 	|'ffmpeg command'|
 	|'Convert command'|
-	|'Path to executed file convert.exe in ImageMagick directory.'|
-	|'If the checkbox is on, then during the execution of step'|
+	//|'Path to executed file convert.exe in ImageMagick directory.'|
+	//|'If the checkbox is on, then during the execution of step'|
 	|'Video snippets directory.'|
 	|'Audio settings'|
 	|'Audio page'|
@@ -437,15 +435,15 @@
 	|'Voice settings pages'|
 	|'Microsoft TTS'|
 	|'TTS command'|
-	|'Console command for converting text to voice.'|
+	//|'Console command for converting text to voice.'|
 	|'TTS voice'|
-	|'Specifies the narrator\'s voice. You can specify a part of the voice name, for example, "Elena".'|
+	//|'Specifies the narrator\'s voice. You can specify a part of the voice name, for example, "Elena".'|
 	|'Narrator\'s speech speed.'|
 	|'Yandex TTS'|
 	|'Russian (ru-RU)'|
 	|'English (en-US)'|
 	|'Turkish (tr-TR)'|
-	|'Specifies narrator\'s language. See details &lt;link https://cloud.yandex.ru/docs/speechkit/tts/request&gt;here&lt;/&gt;.'|
+	//|'Specifies narrator\'s language. See details &lt;link https://cloud.yandex.ru/docs/speechkit/tts/request&gt;here&lt;/&gt;.'|
 	|'Alice'|
 	|'Jane (jane)'|
 	|'Oksana'|
@@ -454,17 +452,17 @@
 	|'Ermil (ermil)'|
 	|'Alena'|
 	|'Filipp'|
-	|'Specifies narrator\'s voice. See details &lt;link https://cloud.yandex.ru/docs/speechkit/tts/request&gt;here&lt;/&gt;.'|
+	//|'Specifies narrator\'s voice. See details &lt;link https://cloud.yandex.ru/docs/speechkit/tts/request&gt;here&lt;/&gt;.'|
 	|'Joyful'|
 	|'Annoyed'|
 	|'Neutral (neutral)'|
-	|'Specifies narrator\'s emotion. See details &lt;link https://cloud.yandex.ru/docs/speechkit/tts/request&gt;here&lt;/&gt;.'|
-	|'OAuth-token is used in Yandex.Cloud authentication.'|
+	//|'Specifies narrator\'s emotion. See details &lt;link https://cloud.yandex.ru/docs/speechkit/tts/request&gt;here&lt;/&gt;.'|
+	//|'OAuth-token is used in Yandex.Cloud authentication.'|
 	|'Group amazon TTS'|
 	|'Group amazon TTS'|
-	|'See voice and language mapping &lt;link https://docs.aws.amazon.com/en_us/polly/latest/dg/voicelist.html&gt;here&lt;/&gt;.'|
-	|'See correspondence of voice and language &lt;link https://docs.aws.amazon.com/en_us/polly/latest/dg/voicelist.html&gt;here&lt;/&gt;.'|
-	|'See possible "Driver" field values in &lt;link https://docs.aws.amazon.com/en_us/polly/latest/dg/voicelist.html&gt;here&lt;/&gt;.'|
+	//|'See voice and language mapping &lt;link https://docs.aws.amazon.com/en_us/polly/latest/dg/voicelist.html&gt;here&lt;/&gt;.'|
+	//|'See correspondence of voice and language &lt;link https://docs.aws.amazon.com/en_us/polly/latest/dg/voicelist.html&gt;here&lt;/&gt;.'|
+	//|'See possible "Driver" field values in &lt;link https://docs.aws.amazon.com/en_us/polly/latest/dg/voicelist.html&gt;here&lt;/&gt;.'|
 	|'Amazon cloud access key.'|
 	|'The file where Amazon cloud private key is stored.'|
 	|'Voice test'|

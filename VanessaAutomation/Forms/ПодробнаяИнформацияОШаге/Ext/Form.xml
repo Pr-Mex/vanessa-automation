@@ -1,11 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.10">
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
 			<v8:content>Подробная информация о шаге</v8:content>
 		</v8:item>
 	</Title>
+	<Width>64</Width>
+	<Height>30</Height>
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<AutoTitle>false</AutoTitle>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
@@ -20,11 +22,21 @@
 			<DataPath>ПримерИспользования</DataPath>
 			<ReadOnly>true</ReadOnly>
 			<AutoMaxWidth>false</AutoMaxWidth>
-			<Height>5</Height>
+			<Height>4</Height>
 			<AutoMaxHeight>false</AutoMaxHeight>
 			<MultiLine>true</MultiLine>
 			<ContextMenu name="ПримерИспользованияКонтекстноеМеню" id="2"/>
 			<ExtendedTooltip name="ПримерИспользованияРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="ОписаниеШага" id="4">
+			<DataPath>ОписаниеШага</DataPath>
+			<ReadOnly>true</ReadOnly>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<Height>5</Height>
+			<AutoMaxHeight>false</AutoMaxHeight>
+			<MultiLine>true</MultiLine>
+			<ContextMenu name="ОписаниеШагаКонтекстноеМеню" id="5"/>
+			<ExtendedTooltip name="ОписаниеШагаРасширеннаяПодсказка" id="6"/>
 		</InputField>
 		<InputField name="ТипШага" id="7">
 			<DataPath>ТипШага</DataPath>
@@ -46,16 +58,6 @@
 			<AutoMaxWidth>false</AutoMaxWidth>
 			<ContextMenu name="ИмяПроцедурыКонтекстноеМеню" id="14"/>
 			<ExtendedTooltip name="ИмяПроцедурыРасширеннаяПодсказка" id="15"/>
-		</InputField>
-		<InputField name="ОписаниеШага" id="4">
-			<DataPath>ОписаниеШага</DataPath>
-			<ReadOnly>true</ReadOnly>
-			<AutoMaxWidth>false</AutoMaxWidth>
-			<Height>8</Height>
-			<AutoMaxHeight>false</AutoMaxHeight>
-			<MultiLine>true</MultiLine>
-			<ContextMenu name="ОписаниеШагаКонтекстноеМеню" id="5"/>
-			<ExtendedTooltip name="ОписаниеШагаРасширеннаяПодсказка" id="6"/>
 		</InputField>
 	</ChildItems>
 	<Attributes>
