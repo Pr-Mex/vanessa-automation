@@ -1,9 +1,9 @@
 # language: ru
 # encoding: utf-8
 #parent uf:
-@UF11_Прочее
+@UF6_текстовые_и_видео_инструкции
 #parent ua:
-@UA45_Прочая_активность_вообще
+@UA31_описание_настроек_и_инструкции
 
 @IgnoreOnCIMainBuild
 
