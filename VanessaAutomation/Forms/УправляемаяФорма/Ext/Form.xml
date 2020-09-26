@@ -2098,11 +2098,19 @@
 										<v8:lang>ru</v8:lang>
 										<v8:content>Свернуть шаги</v8:content>
 									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Collapse steps</v8:content>
+									</v8:item>
 								</Title>
 								<ToolTip>
 									<v8:item>
 										<v8:lang>ru</v8:lang>
 										<v8:content>Свернуть шаги</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Collapse steps</v8:content>
 									</v8:item>
 								</ToolTip>
 								<Picture>
@@ -2119,6 +2127,10 @@
 											<v8:item>
 												<v8:lang>ru</v8:lang>
 												<v8:content>Свернуть все</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Collapse all</v8:content>
 											</v8:item>
 										</Title>
 										<ExtendedTooltip name="VanessaEditorViewFoldAllРасширеннаяПодсказка" id="2453"/>
@@ -2155,6 +2167,10 @@
 											<v8:item>
 												<v8:lang>ru</v8:lang>
 												<v8:content>Развернуть все</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Expand all</v8:content>
 											</v8:item>
 										</Title>
 										<ExtendedTooltip name="VanessaEditorViewUnfoldAllРасширеннаяПодсказка" id="2461"/>
@@ -2604,11 +2620,19 @@
 										<v8:lang>ru</v8:lang>
 										<v8:content>Выбор темы</v8:content>
 									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Theme selection</v8:content>
+									</v8:item>
 								</Title>
 								<ToolTip>
 									<v8:item>
 										<v8:lang>ru</v8:lang>
 										<v8:content>Выбор темы</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Theme selection</v8:content>
 									</v8:item>
 								</ToolTip>
 								<Picture>
@@ -2696,11 +2720,19 @@
 								<v8:lang>ru</v8:lang>
 								<v8:content>Настройки редактора</v8:content>
 							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Editor settings</v8:content>
+							</v8:item>
 						</Title>
 						<ToolTip>
 							<v8:item>
 								<v8:lang>ru</v8:lang>
 								<v8:content>Настройки редактора</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Editor settings</v8:content>
 							</v8:item>
 						</ToolTip>
 						<Picture>
@@ -7100,6 +7132,10 @@
 														<Type>CommandBarButton</Type>
 														<Representation>PictureAndText</Representation>
 														<CommandName>Form.Command.СохранитьНастройки</CommandName>
+														<Picture>
+															<xr:Ref>StdPicture.Write</xr:Ref>
+															<xr:LoadTransparent>true</xr:LoadTransparent>
+														</Picture>
 														<Title>
 															<v8:item>
 																<v8:lang>ru</v8:lang>
@@ -10010,7 +10046,12 @@
 											</Button>
 											<Button name="ТестКлиентСохранить" id="989">
 												<Type>CommandBarButton</Type>
+												<Representation>PictureAndText</Representation>
 												<CommandName>Form.Command.СохранитьКлиентовТестирования</CommandName>
+												<Picture>
+													<xr:Ref>StdPicture.Write</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</Picture>
 												<ExtendedTooltip name="ТестКлиентСохранитьРасширеннаяПодсказка" id="1335"/>
 											</Button>
 											<ButtonGroup name="ТестКлиентГруппа1" id="991">
@@ -10204,12 +10245,32 @@
 											<ChildItems>
 												<InputField name="ДанныеКлиентовТестированияИмя" id="975">
 													<DataPath>ДанныеКлиентовТестирования.Имя</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Имя</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Name</v8:content>
+														</v8:item>
+													</Title>
 													<EditMode>EnterOnInput</EditMode>
 													<ContextMenu name="ДанныеКлиентовТестированияИмяКонтекстноеМеню" id="976"/>
 													<ExtendedTooltip name="ДанныеКлиентовТестированияИмяРасширеннаяПодсказка" id="1351"/>
 												</InputField>
 												<InputField name="ДанныеКлиентовТестированияСиноним" id="1722">
 													<DataPath>ДанныеКлиентовТестирования.Синоним</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Синоним</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Synonym</v8:content>
+														</v8:item>
+													</Title>
 													<EditMode>EnterOnInput</EditMode>
 													<ContextMenu name="ДанныеКлиентовТестированияСинонимКонтекстноеМеню" id="1723"/>
 													<ExtendedTooltip name="ДанныеКлиентовТестированияСинонимРасширеннаяПодсказка" id="1724"/>
@@ -10218,6 +10279,16 @@
 										</ColumnGroup>
 										<InputField name="ДанныеКлиентовТестированияТипКлиента" id="1566">
 											<DataPath>ДанныеКлиентовТестирования.ТипКлиента</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Тип клиента</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Client type</v8:content>
+												</v8:item>
+											</Title>
 											<EditMode>EnterOnInput</EditMode>
 											<AutoMaxWidth>false</AutoMaxWidth>
 											<MaxWidth>14</MaxWidth>
@@ -10526,12 +10597,32 @@
 											<ChildItems>
 												<InputField name="ДанныеКлиентовТестированияПутьКИнфобазе" id="981">
 													<DataPath>ДанныеКлиентовТестирования.ПутьКИнфобазе</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Путь к инфобазе</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Infobase path</v8:content>
+														</v8:item>
+													</Title>
 													<EditMode>EnterOnInput</EditMode>
 													<ContextMenu name="ДанныеКлиентовТестированияПутьКИнфобазеКонтекстноеМеню" id="982"/>
 													<ExtendedTooltip name="ДанныеКлиентовТестированияПутьКИнфобазеРасширеннаяПодсказка" id="1355"/>
 												</InputField>
 												<InputField name="ДанныеКлиентовТестированияДопПараметры" id="1011">
 													<DataPath>ДанныеКлиентовТестирования.ДопПараметры</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Доп.параметры</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Addl. parameters</v8:content>
+														</v8:item>
+													</Title>
 													<EditMode>EnterOnInput</EditMode>
 													<FooterText>
 														<v8:item>
@@ -10563,6 +10654,16 @@
 											<ChildItems>
 												<InputField name="ДанныеКлиентовТестированияИмяКомпьютера" id="1677">
 													<DataPath>ДанныеКлиентовТестирования.ИмяКомпьютера</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Имя компьютера</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Computer name</v8:content>
+														</v8:item>
+													</Title>
 													<EditMode>EnterOnInput</EditMode>
 													<ContextMenu name="ДанныеКлиентовТестированияИмяКомпьютераКонтекстноеМеню" id="1678"/>
 													<ExtendedTooltip name="ДанныеКлиентовТестированияИмяКомпьютераРасширеннаяПодсказка" id="1679"/>
@@ -10572,6 +10673,16 @@
 												</InputField>
 												<InputField name="ДанныеКлиентовТестированияПорт" id="984">
 													<DataPath>ДанныеКлиентовТестирования.ПортЗапускаТестКлиента</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Порт запуска</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Port</v8:content>
+														</v8:item>
+													</Title>
 													<EditMode>EnterOnInput</EditMode>
 													<ContextMenu name="ДанныеКлиентовТестированияПортКонтекстноеМеню" id="985"/>
 													<ExtendedTooltip name="ДанныеКлиентовТестированияПортРасширеннаяПодсказка" id="1357"/>
@@ -10580,6 +10691,16 @@
 										</ColumnGroup>
 										<InputField name="ДанныеКлиентовТестированияPIDКлиента" id="2264">
 											<DataPath>ДанныеКлиентовТестирования.PIDКлиентаТестирования</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>PID</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>PID</v8:content>
+												</v8:item>
+											</Title>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="ДанныеКлиентовТестированияPIDКлиентаКонтекстноеМеню" id="2265"/>
 											<ExtendedTooltip name="ДанныеКлиентовТестированияPIDКлиентаРасширеннаяПодсказка" id="2266"/>
@@ -11838,7 +11959,7 @@
 - Управление размерами и положением окна
 - Получение снимка окна и снимка экрана
 
-https://github.com/lintest/VanessaExt</v8:content>
+&lt;link https://github.com/lintest/VanessaExt&gt;https://github.com/lintest/VanessaExt&lt;/&gt;</v8:content>
 																	</v8:item>
 																</Title>
 															</ExtendedTooltip>
@@ -16406,6 +16527,10 @@ Log events:
 																			<v8:lang>ru</v8:lang>
 																			<v8:content>Настройки эмуляции действий мышки</v8:content>
 																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Mouse actions emulation settings</v8:content>
+																		</v8:item>
 																	</Title>
 																	<Group>Vertical</Group>
 																	<Behavior>Collapsible</Behavior>
@@ -16456,6 +16581,10 @@ Log events:
 																				<v8:item>
 																					<v8:lang>ru</v8:lang>
 																					<v8:content>Скорость перемещения мышки</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>Mouse speed</v8:content>
 																				</v8:item>
 																			</Title>
 																			<Group>Horizontal</Group>
@@ -16873,13 +17002,13 @@ SikuliX Server - это специальная программная оптим
 																<Event name="OnChange">ИспользоватьSikuliXСерверПриИзменении</Event>
 															</Events>
 														</CheckBoxField>
-														<CheckBoxField name="ЗаписьВидеоЭмулироватьДвиженияМышки" id="2193">
-															<DataPath>Объект.ЗаписьВидеоЭмулироватьДвиженияМышки</DataPath>
+														<CheckBoxField name="ЗаписьВидеоЭмулироватьДвиженияМышкиSikuliX" id="2193">
+															<DataPath>Объект.ЗаписьВидеоЭмулироватьДвиженияМышкиSikuliX</DataPath>
 															<TitleLocation>Right</TitleLocation>
 															<ToolTipRepresentation>Button</ToolTipRepresentation>
 															<CheckBoxType>Auto</CheckBoxType>
-															<ContextMenu name="ЗаписьВидеоЭмулироватьДвиженияМышкиКонтекстноеМеню" id="2194"/>
-															<ExtendedTooltip name="ЗаписьВидеоЭмулироватьДвиженияМышкиРасширеннаяПодсказка" id="2195">
+															<ContextMenu name="ЗаписьВидеоЭмулироватьДвиженияМышкиSikuliXКонтекстноеМеню" id="2194"/>
+															<ExtendedTooltip name="ЗаписьВидеоЭмулироватьДвиженияМышкиSikuliXРасширеннаяПодсказка" id="2195">
 																<Title formatted="false">
 																	<v8:item>
 																		<v8:lang>ru</v8:lang>
@@ -16896,7 +17025,7 @@ To disable mouse movement at a specific step, you should use the #[DoNotMoveMous
 																</Title>
 															</ExtendedTooltip>
 															<Events>
-																<Event name="OnChange">ЗаписьВидеоЭмулироватьДвиженияМышкиПриИзменении</Event>
+																<Event name="OnChange">ЗаписьВидеоЭмулироватьДвиженияМышкиSikuliXПриИзменении</Event>
 															</Events>
 														</CheckBoxField>
 														<UsualGroup name="ГруппаSikuliXServerПодробно" id="2135">
@@ -20374,6 +20503,10 @@ Value range is from -10 to 10.</v8:content>
 																																				<v8:lang>ru</v8:lang>
 																																				<v8:content>API</v8:content>
 																																			</v8:item>
+																																			<v8:item>
+																																				<v8:lang>en</v8:lang>
+																																				<v8:content>API</v8:content>
+																																			</v8:item>
 																																		</Presentation>
 																																		<Value xsi:type="xs:decimal">0</Value>
 																																	</xr:Value>
@@ -20386,6 +20519,10 @@ Value range is from -10 to 10.</v8:content>
 																																			<v8:item>
 																																				<v8:lang>ru</v8:lang>
 																																				<v8:content>Веб-интерфейс</v8:content>
+																																			</v8:item>
+																																			<v8:item>
+																																				<v8:lang>en</v8:lang>
+																																				<v8:content>Web interface</v8:content>
 																																			</v8:item>
 																																		</Presentation>
 																																		<Value xsi:type="xs:decimal">1</Value>
@@ -21344,14 +21481,11 @@ Value range is from -10 to 10.</v8:content>
 																											</InputHint>
 																											<ContextMenu name="ТекстДляТестаГолосаКонтекстноеМеню" id="2124"/>
 																											<ExtendedTooltip name="ТекстДляТестаГолосаРасширеннаяПодсказка" id="2125">
-																												<Title formatted="false">
+																												<Title formatted="true">
 																													<v8:item>
 																														<v8:lang>ru</v8:lang>
-																														<v8:content>Текст, который необходимо произнести.</v8:content>
-																													</v8:item>
-																													<v8:item>
-																														<v8:lang>en</v8:lang>
-																														<v8:content>What to say</v8:content>
+																														<v8:content>Текст, который необходимо произнести.
+Управление ударением и произношением см &lt;link https://yandex.ru/dev/dialogs/alice/doc/speech-tuning-docpage/&gt;тут.&lt;/&gt;</v8:content>
 																													</v8:item>
 																												</Title>
 																											</ExtendedTooltip>
@@ -21764,16 +21898,6 @@ Reduces voice generation costs.</v8:content>
 																					<v8:content>Hơn nữa</v8:content>
 																				</v8:item>
 																			</Title>
-																			<ToolTip>
-																				<v8:item>
-																					<v8:lang>ru</v8:lang>
-																					<v8:content>Страница видео дополнительные</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>en</v8:lang>
-																					<v8:content>Video page additional</v8:content>
-																				</v8:item>
-																			</ToolTip>
 																			<ExtendedTooltip name="СтраницаВидеоДополнительныеРасширеннаяПодсказка" id="1434"/>
 																			<ChildItems>
 																				<InputField name="ЗаписьВидеоФайлКурсораМышки" id="665">
@@ -22262,11 +22386,11 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 																									<Title>
 																										<v8:item>
 																											<v8:lang>ru</v8:lang>
-																											<v8:content>Устарело. Подсвечиать клики мышкой</v8:content>
+																											<v8:content>Устарело. Подсвечивать клики мышкой</v8:content>
 																										</v8:item>
 																										<v8:item>
 																											<v8:lang>en</v8:lang>
-																											<v8:content>Deprecated. Highlight mouse click</v8:content>
+																											<v8:content>Deprecated. Highlight mouse clicks</v8:content>
 																										</v8:item>
 																									</Title>
 																									<TitleTextColor>style:BorderColor</TitleTextColor>
@@ -22889,7 +23013,19 @@ SikuliX emulates mouse clicks.</v8:content>
 												<Button name="ПолучитьСтрокуЗапуска" id="2642">
 													<Type>Hyperlink</Type>
 													<CommandName>Form.Command.ПолучитьСтрокуЗапуска</CommandName>
-													<ExtendedTooltip name="ПолучитьСтрокуЗапускаРасширеннаяПодсказка" id="2643"/>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<ExtendedTooltip name="ПолучитьСтрокуЗапускаРасширеннаяПодсказка" id="2643">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Allows you to get the test run string from the command line for the given database.</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Позволяет получить строку запуска тестов из командной строки для данной базы.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
 												</Button>
 											</ChildItems>
 										</Page>
@@ -25339,82 +25475,6 @@ SikuliX emulates mouse clicks.</v8:content>
 							<v8:lang>en</v8:lang>
 							<v8:content>Client type</v8:content>
 						</v8:item>
-						<v8:item>
-							<v8:lang>am</v8:lang>
-							<v8:content>ደንበኛ አይነት</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>az</v8:lang>
-							<v8:content>Növü müştəri</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>bg</v8:lang>
-							<v8:content>Вид клиент</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>de</v8:lang>
-							<v8:content>Client-Typ</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>es</v8:lang>
-							<v8:content>Tipo de cliente</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>et</v8:lang>
-							<v8:content>Kliendi liik</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>fr</v8:lang>
-							<v8:content>Le type de client</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>hu</v8:lang>
-							<v8:content>Vevő típusa</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>it</v8:lang>
-							<v8:content>Tipo di cliente</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>ka</v8:lang>
-							<v8:content>მომხმარებელს ტიპი</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>lt</v8:lang>
-							<v8:content>Kliento tipą</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>lv</v8:lang>
-							<v8:content>Klienta tips</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>mn</v8:lang>
-							<v8:content>Харилцагчийн төрөл</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>pl</v8:lang>
-							<v8:content>Typ klienta</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>ro</v8:lang>
-							<v8:content>Tipul de client</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>sl</v8:lang>
-							<v8:content>Vrsto stranke</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>sv</v8:lang>
-							<v8:content>Kunden typ</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>tr</v8:lang>
-							<v8:content>İstemci türü</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>vi</v8:lang>
-							<v8:content>Kiểu máy trạm</v8:content>
-						</v8:item>
 					</Title>
 					<Type>
 						<v8:Type>xs:string</v8:Type>
@@ -25657,82 +25717,6 @@ SikuliX emulates mouse clicks.</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>en</v8:lang>
-							<v8:content>PID</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>am</v8:lang>
-							<v8:content>ነፃ</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>az</v8:lang>
-							<v8:content>PID</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>bg</v8:lang>
-							<v8:content>Тазова възпалителна болест</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>de</v8:lang>
-							<v8:content>PID</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>es</v8:lang>
-							<v8:content>PID</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>et</v8:lang>
-							<v8:content>PID</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>fr</v8:lang>
-							<v8:content>PID</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>hu</v8:lang>
-							<v8:content>PID</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>it</v8:lang>
-							<v8:content>PID</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>ka</v8:lang>
-							<v8:content>PID</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>lt</v8:lang>
-							<v8:content>PID</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>lv</v8:lang>
-							<v8:content>PID</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>mn</v8:lang>
-							<v8:content>PID</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>pl</v8:lang>
-							<v8:content>PID</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>ro</v8:lang>
-							<v8:content>PID</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>sl</v8:lang>
-							<v8:content>PID</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>sv</v8:lang>
-							<v8:content>PID</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>tr</v8:lang>
-							<v8:content>PID</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>vi</v8:lang>
 							<v8:content>PID</v8:content>
 						</v8:item>
 					</Title>
@@ -32483,11 +32467,11 @@ SikuliX emulates mouse clicks.</v8:content>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Перейти к строке с ошибкой</v8:content>
+					<v8:content>Перейти к следующей строке с ошибкой</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
-					<v8:content>Go to line with error</v8:content>
+					<v8:content>Move to next line with error</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -32497,7 +32481,7 @@ SikuliX emulates mouse clicks.</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
-					<v8:content>Go to line with step error</v8:content>
+					<v8:content>Move to next line with error</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Shortcut>F8</Shortcut>
@@ -32515,6 +32499,16 @@ SikuliX emulates mouse clicks.</v8:content>
 					<v8:content>Save settings to file</v8:content>
 				</v8:item>
 			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить настройки в файл...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Save settings to file</v8:content>
+				</v8:item>
+			</ToolTip>
 			<Action>ВыгрузитьНастройкиВФайл</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
@@ -32529,6 +32523,16 @@ SikuliX emulates mouse clicks.</v8:content>
 					<v8:content>Load settings from file</v8:content>
 				</v8:item>
 			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить настройки из файла...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Load settings from file</v8:content>
+				</v8:item>
+			</ToolTip>
 			<Action>ЗагрузитьНастройкиИзФайла</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
@@ -32860,11 +32864,19 @@ SikuliX emulates mouse clicks.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Перейти в Vanessa Editor</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Go to Vanessa Editor</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Перейти в vanessa editor</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Go to Vanessa Editor</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>
@@ -32880,11 +32892,19 @@ SikuliX emulates mouse clicks.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Перейти в дерево шагов</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Go to step tree</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Перейти в дерево шагов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Go to step tree</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПерейтиВДеревоШагов</Action>
@@ -32912,11 +32932,19 @@ SikuliX emulates mouse clicks.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Вырезать</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Cut</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Вырезать</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Cut</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorСтандартныеКоманды</Action>
@@ -32928,11 +32956,19 @@ SikuliX emulates mouse clicks.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Скопировать</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Copy</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Скопировать</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Copy</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorСтандартныеКоманды</Action>
@@ -32944,11 +32980,19 @@ SikuliX emulates mouse clicks.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Вставить</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Paste</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Вставить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Paste</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorСтандартныеКоманды</Action>
@@ -32960,11 +33004,19 @@ SikuliX emulates mouse clicks.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Отменить</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Undo</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Отменить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Undo</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Shortcut>Ctrl+Z</Shortcut>
@@ -32982,11 +33034,19 @@ SikuliX emulates mouse clicks.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Вернуть</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Redo</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Вернуть</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Redo</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Shortcut>Ctrl+Y</Shortcut>
@@ -33004,11 +33064,19 @@ SikuliX emulates mouse clicks.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Найти</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Find</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Поиск</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Search</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>
@@ -33024,11 +33092,19 @@ SikuliX emulates mouse clicks.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Найти предыдущий</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Find previous</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Найти предыдущий</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Find previous</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>
@@ -33044,11 +33120,19 @@ SikuliX emulates mouse clicks.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Найти следующий</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Find next</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Найти следующий</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Find next</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>
@@ -33064,11 +33148,19 @@ SikuliX emulates mouse clicks.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Заменить</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Replace</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Заменить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Replace</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Shortcut>Ctrl+H</Shortcut>
@@ -33085,11 +33177,19 @@ SikuliX emulates mouse clicks.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Свернуть все</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Collapse all</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Свернуть все</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Collapse all</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>
@@ -33105,11 +33205,19 @@ SikuliX emulates mouse clicks.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>1</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>1</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Свернуть до первого уровня</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Collapse to the first level</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorСтандартныеКоманды</Action>
@@ -33121,11 +33229,19 @@ SikuliX emulates mouse clicks.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>2</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>2</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Свернуть до второго уровня</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Collapse to the second level</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorСтандартныеКоманды</Action>
@@ -33137,11 +33253,19 @@ SikuliX emulates mouse clicks.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>3</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>3</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Свернуть до третьего уровня</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Collapse to third level</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorСтандартныеКоманды</Action>
@@ -33153,11 +33277,19 @@ SikuliX emulates mouse clicks.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Развернуть все</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Expand all</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Развернуть всё</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Expand all</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>
@@ -33173,11 +33305,19 @@ SikuliX emulates mouse clicks.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Увеличить</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Zoom in</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Увеличить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Zoom in</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>
@@ -33193,11 +33333,19 @@ SikuliX emulates mouse clicks.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Уменьшить</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Zoom out</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Уменьшить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Zoom out</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>
@@ -33213,11 +33361,19 @@ SikuliX emulates mouse clicks.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Сбросить масштабирование</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Reset zoom</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Сбросить масштабирование</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Reset zoom</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorСтандартныеКоманды</Action>
@@ -33227,13 +33383,21 @@ SikuliX emulates mouse clicks.</v8:content>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Установить точку останова</v8:content>
+					<v8:content>Установить/снять точку останова</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Set/remove a breakpoint</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Установить/снять точку останова</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Set/remove a breakpoint</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Shortcut>F9</Shortcut>
@@ -33246,11 +33410,19 @@ SikuliX emulates mouse clicks.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Удалить все точки останова</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Remove all breakpoints</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Убрать все точки останова</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Remove all breakpoints</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorRemoveBreakPoints</Action>
@@ -33262,11 +33434,19 @@ SikuliX emulates mouse clicks.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>4</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>4</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Свернуть до третьего уровня</v8:content>
+					<v8:content>Свернуть до четвертого уровня</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Collapse to the fourth level</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorСтандартныеКоманды</Action>
@@ -33278,11 +33458,19 @@ SikuliX emulates mouse clicks.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>5</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>5</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Свернуть до третьего уровня</v8:content>
+					<v8:content>Свернуть до пятого уровня</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Collapse to the fifth level</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorСтандартныеКоманды</Action>
@@ -33294,11 +33482,19 @@ SikuliX emulates mouse clicks.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Сохранить файл</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Save file</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Сохранить файл (ctrl+S)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Save file (ctrl+S)</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>
@@ -33314,11 +33510,19 @@ SikuliX emulates mouse clicks.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>1С:Предприятие</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>1C:Enterprise</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Vanessa editor тема 1c</v8:content>
+					<v8:content>1С:Предприятие</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>1C:Enterprise</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorТема1c</Action>
@@ -33330,11 +33534,19 @@ SikuliX emulates mouse clicks.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Основная тема</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Main theme</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Vanessa editor тема vs</v8:content>
+					<v8:content>Основная тема</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Main theme</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorТема_vs</Action>
@@ -33346,11 +33558,19 @@ SikuliX emulates mouse clicks.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Темная тема</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Dark theme</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Vanessa editor тема vsdark</v8:content>
+					<v8:content>Темная тема</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Dark theme</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorТема_vsdark</Action>
@@ -33362,11 +33582,19 @@ SikuliX emulates mouse clicks.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Высокий контраст</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>High contrast</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Vanessa editor тема hcblack</v8:content>
+					<v8:content>Высокий контраст</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>High contrast</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorТема_hcblack</Action>
@@ -33402,7 +33630,11 @@ SikuliX emulates mouse clicks.</v8:content>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Vanessa editor использовать данные текущей формы при подборе шагов</v8:content>
+					<v8:content>Использовать данные текущей формы при подборе шагов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Use the data of the current form when adding steps</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorИспользоватьДанныеТекущейФормыПриПодбореШагов</Action>
@@ -33422,7 +33654,11 @@ SikuliX emulates mouse clicks.</v8:content>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Vanessa editor показывать строки подсценариев</v8:content>
+					<v8:content>Показывать строки подсценариев</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Show subscript lines</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorПоказыватьСтрокиПодсценариев</Action>
@@ -33450,11 +33686,19 @@ SikuliX emulates mouse clicks.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Показать список точек останова</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Show list of breakpoints</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Показать список точек останова</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Show list of breakpoints</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorПоказатьСписокТочекОстанова</Action>
@@ -33466,11 +33710,19 @@ SikuliX emulates mouse clicks.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Показать/скрыть дерево каталогов</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Show/hide directory tree</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Показать/скрыть дерево каталогов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Show/hide directory tree</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorПоказатьСкрытьДеревоКаталогов</Action>
@@ -33482,11 +33734,19 @@ SikuliX emulates mouse clicks.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Очистить раскраску строк</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Clear line coloring</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Очистить раскраску строк</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Clear line coloring</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorОчиститьРаскраскуСтрок</Action>
@@ -33526,7 +33786,11 @@ SikuliX emulates mouse clicks.</v8:content>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Vanessa editor использовать данные текущей формы при подборе шагов</v8:content>
+					<v8:content>Показывать миниатюру кода</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Show code miniature</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorПоказыватьМиниатюруКода</Action>
@@ -33547,6 +33811,10 @@ SikuliX emulates mouse clicks.</v8:content>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Настройка видимости кнопок панели редактора</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Setting the visibility of the editor panel buttons</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>НастройкаВидимостиКнопокПанелиРедактора</Action>

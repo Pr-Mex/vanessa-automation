@@ -476,7 +476,6 @@
 	|'Replacements dictionaries'|
 	|'Substitution dictionaries'|
 	|'More'|
-	|'Video page additional'|
 	|'Mouse pointer'|
 	|'The path to the image used for mouse cursor appearance.'|
 	|'Watermark'|
@@ -737,8 +736,6 @@
 	|'Refresh variables board'|
 	|'Refresh variables board'|
 	|'Stop'|
-	|'Go to line with error'|
-	|'Go to line with step error'|
 	|'Save settings to file'|
 	|'Load settings from file'|
 	|'Close'|
