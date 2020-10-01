@@ -311,11 +311,6 @@
 					</ButtonGroup>
 				</ChildItems>
 			</Popup>
-			<Button name="VanessaEditorСохранитьФайл" id="2512">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.VanessaEditorСохранитьФайл</CommandName>
-				<ExtendedTooltip name="VanessaEditorСохранитьФайлРасширеннаяПодсказка" id="2513"/>
-			</Button>
 			<Button name="Перезагрузить" id="60">
 				<Type>CommandBarButton</Type>
 				<Representation>PictureAndText</Representation>
@@ -504,11 +499,26 @@
 				<Type>CommandBarButton</Type>
 				<Representation>PictureAndText</Representation>
 				<CommandName>Form.Command.ОстановитьСценарии</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Остановить</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Stop</v8:content>
+					</v8:item>
+				</Title>
 				<ExtendedTooltip name="ОстановитьСценарииРасширеннаяПодсказка" id="2032"/>
 			</Button>
 			<Button name="ФормаПерезагрузитьИВыполнить" id="151">
 				<Type>CommandBarButton</Type>
+				<Representation>PictureAndText</Representation>
 				<CommandName>Form.Command.ПерезагрузитьИВыполнить</CommandName>
+				<Picture>
+					<xr:Abs>Picture.png</xr:Abs>
+					<xr:LoadTransparent>false</xr:LoadTransparent>
+				</Picture>
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
@@ -1298,7 +1308,7 @@
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Группа настройки</v8:content>
+						<v8:content>Настройки</v8:content>
 					</v8:item>
 					<v8:item>
 						<v8:lang>en</v8:lang>
@@ -1306,8 +1316,8 @@
 					</v8:item>
 				</Title>
 				<Picture>
-					<xr:Ref>StdPicture.LoadReportSettings</xr:Ref>
-					<xr:LoadTransparent>true</xr:LoadTransparent>
+					<xr:Abs>Picture.png</xr:Abs>
+					<xr:LoadTransparent>false</xr:LoadTransparent>
 				</Picture>
 				<Representation>Picture</Representation>
 				<ExtendedTooltip name="ФормаГруппаНастройкиРасширеннаяПодсказка" id="2036"/>
@@ -1346,6 +1356,1449 @@
 				<CommandName>Form.StandardCommand.Help</CommandName>
 				<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="1553"/>
 			</Button>
+			<ButtonGroup name="ГруппаКоманднаяПанельVanessaEditor" id="2424">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа командная панель vanessa editor</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Группа командная панель vanessa editor</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="ГруппаКоманднаяПанельVanessaEditorРасширеннаяПодсказка" id="2425"/>
+				<ChildItems>
+					<ButtonGroup name="ГруппаVanessaEditorДеревоКаталогов" id="2608">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Дерево каталогов</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Буфер обмена</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Representation>Compact</Representation>
+						<ExtendedTooltip name="ГруппаVanessaEditorДеревоКаталоговРасширеннаяПодсказка" id="2609"/>
+						<ChildItems>
+							<Button name="VanessaEditorПоказатьСкрытьДеревоКаталогов" id="2610">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<CommandName>Form.Command.VanessaEditorПоказатьСкрытьДеревоКаталогов</CommandName>
+								<Picture>
+									<xr:Abs>Picture.jpg</xr:Abs>
+									<xr:LoadTransparent>false</xr:LoadTransparent>
+								</Picture>
+								<ExtendedTooltip name="VanessaEditorПоказатьСкрытьДеревоКаталоговРасширеннаяПодсказка" id="2611"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<ButtonGroup name="ГруппаVanessaEditorВыполнениеСценариев" id="2698">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Выполнение сценариев</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Run scenarios</v8:content>
+							</v8:item>
+						</Title>
+						<Representation>Compact</Representation>
+						<ExtendedTooltip name="ГруппаVanessaEditorВыполнениеСценариевРасширеннаяПодсказка" id="2699"/>
+						<ChildItems>
+							<Popup name="ПодменюVanessaEditorЗагрузитьФичи" id="2700">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Загрузить</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Load</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>am</v8:lang>
+										<v8:content>ተጨማሪ ገፅታዎች</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>az</v8:lang>
+										<v8:content>Yüklə фичи</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>bg</v8:lang>
+										<v8:content>Изтегли фичи</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>de</v8:lang>
+										<v8:content>Herunterladen Fichi</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>es</v8:lang>
+										<v8:content>Descargar slave</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>et</v8:lang>
+										<v8:content>Alla laadida фичи</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>fr</v8:lang>
+										<v8:content>Télécharger fonctionnalités</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>hu</v8:lang>
+										<v8:content>Letöltés funkciók</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>it</v8:lang>
+										<v8:content>Caricare caratteristiche</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ka</v8:lang>
+										<v8:content>ჩამოწერე თვისებები</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>lt</v8:lang>
+										<v8:content>Atsisiųsti фичи</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>lv</v8:lang>
+										<v8:content>Lejupielādēt фичи</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>mn</v8:lang>
+										<v8:content>Татаж онцлог</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>pl</v8:lang>
+										<v8:content>Pobierz cechy</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ro</v8:lang>
+										<v8:content>Descărcați фичи</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>sl</v8:lang>
+										<v8:content>Prenos funkcije</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>sv</v8:lang>
+										<v8:content>Ladda ner funktioner</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>tr</v8:lang>
+										<v8:content>İndir özellikler</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>vi</v8:lang>
+										<v8:content>Tải tính năng</v8:content>
+									</v8:item>
+								</Title>
+								<Picture>
+									<xr:Ref>StdPicture.OpenFile</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</Picture>
+								<Representation>Picture</Representation>
+								<ExtendedTooltip name="ПодменюVanessaEditorЗагрузитьФичиРасширеннаяПодсказка" id="2701"/>
+								<ChildItems>
+									<ButtonGroup name="ГруппаКнопокVanessaEditorЗагрузитьФичи" id="2702">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Загрузить фичи</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Upload buttons features</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ГруппаКнопокVanessaEditorЗагрузитьФичиРасширеннаяПодсказка" id="2703"/>
+										<ChildItems>
+											<Button name="VanessaEditorФормаЗагрузитьФичиИзКаталога" id="2704">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ЗагрузитьФичиИзКаталога</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Загрузить файлы из каталога</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>Load files from directory</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>am</v8:lang>
+														<v8:content>ጋር ፋይሎች ከአንድ የማውጫ</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>az</v8:lang>
+														<v8:content>Faylları yüklə kataloq</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>bg</v8:lang>
+														<v8:content>Качване на файлове от директория</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>de</v8:lang>
+														<v8:content>Laden Sie die Dateien aus dem Verzeichnis</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>es</v8:lang>
+														<v8:content>Descargar los archivos desde el directorio</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>et</v8:lang>
+														<v8:content>Lae failid kataloogist</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>fr</v8:lang>
+														<v8:content>Télécharger des fichiers à partir du répertoire</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>hu</v8:lang>
+														<v8:content>A fájlok letöltése a könyvtár</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>it</v8:lang>
+														<v8:content>Scaricare i file dalla directory</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>ka</v8:lang>
+														<v8:content>რომ გადმოწეროთ ფაილები დირექტორია</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>lt</v8:lang>
+														<v8:content>Parsisiųsti failus iš katalogo</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>lv</v8:lang>
+														<v8:content>Lejupielādēt failus no kataloga</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>mn</v8:lang>
+														<v8:content>Татаж авах файл сан</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>pl</v8:lang>
+														<v8:content>Pobierz pliki z katalogu</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>ro</v8:lang>
+														<v8:content>Descărca fișierele din directorul</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>sl</v8:lang>
+														<v8:content>Če želite prenesti datoteke iz imenika</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>sv</v8:lang>
+														<v8:content>För att ladda ner filer från en katalog</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>tr</v8:lang>
+														<v8:content>Upload dizinindeki dosyaları</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>vi</v8:lang>
+														<v8:content>Tải tệp từ thư mục</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="VanessaEditorФормаЗагрузитьФичиИзКаталогаРасширеннаяПодсказка" id="2705"/>
+											</Button>
+											<Button name="VanessaEditorФормаЗагрузитьОднуФичу" id="2706">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ЗагрузитьОднуФичу</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Загрузить один файл</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>Load one feature file</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>am</v8:lang>
+														<v8:content>ላይ አንድ ፋይል</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>az</v8:lang>
+														<v8:content>Yüklemek üçün bir fayl</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>bg</v8:lang>
+														<v8:content>Качване на един файл</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>de</v8:lang>
+														<v8:content>Herunterladen einer Datei</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>es</v8:lang>
+														<v8:content>Subir un archivo</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>et</v8:lang>
+														<v8:content>Alla laadida ühe faili</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>fr</v8:lang>
+														<v8:content>Télécharger un seul fichier</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>hu</v8:lang>
+														<v8:content>Letöltés egyetlen fájl</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>it</v8:lang>
+														<v8:content>Caricare un file</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>ka</v8:lang>
+														<v8:content>ჩამოტვირთვა ერთი ფაილი</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>lt</v8:lang>
+														<v8:content>Įkelti vieną failą</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>lv</v8:lang>
+														<v8:content>Lejupielādēt failu</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>mn</v8:lang>
+														<v8:content>Нэг файл татаж авах</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>pl</v8:lang>
+														<v8:content>Pobierz jeden plik</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>ro</v8:lang>
+														<v8:content>Încărcați un fișier</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>sl</v8:lang>
+														<v8:content>Prenos eno datoteko</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>sv</v8:lang>
+														<v8:content>Ladda ner enstaka fil</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>tr</v8:lang>
+														<v8:content>Bir dosya yükleyin</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>vi</v8:lang>
+														<v8:content>Tải một tệp</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="VanessaEditorФормаЗагрузитьОднуФичуРасширеннаяПодсказка" id="2707"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="ГруппаКнопокVanessaEditorНедавноЗагруженныеФичи" id="2708">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Кнопок недавно загруженные фичи</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Buttons newly loaded features</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ГруппаКнопокVanessaEditorНедавноЗагруженныеФичиРасширеннаяПодсказка" id="2709"/>
+									</ButtonGroup>
+								</ChildItems>
+							</Popup>
+							<Button name="ПанельVanessaEditorСохранитьФайл" id="2710">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.VanessaEditorСохранитьФайл</CommandName>
+								<ExtendedTooltip name="ПанельVanessaEditorСохранитьФайлРасширеннаяПодсказка" id="2711"/>
+							</Button>
+							<Button name="ПанельVanessaEditorПерезагрузить" id="2712">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<CommandName>Form.Command.Перезагрузить</CommandName>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Перезагрузить</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Reload scenario</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>am</v8:lang>
+										<v8:content>መገለጫዎ ይታያል</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>az</v8:lang>
+										<v8:content>Yeniden ssenarilər</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>bg</v8:lang>
+										<v8:content>Презареждане на сценарии</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>de</v8:lang>
+										<v8:content>Neustart des Skripts</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>es</v8:lang>
+										<v8:content>Reiniciar el escenario</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>et</v8:lang>
+										<v8:content>Uuesti skriptide</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>fr</v8:lang>
+										<v8:content>Redémarrer le scénario</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>hu</v8:lang>
+										<v8:content>Indítsa újra forgatókönyvek</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>it</v8:lang>
+										<v8:content>Riavviare scenari</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ka</v8:lang>
+										<v8:content>გადატვირთვა სცენარი</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>lt</v8:lang>
+										<v8:content>Iš naujo paleisti scenarijų</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>lv</v8:lang>
+										<v8:content>Restartēt scenāriji</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>mn</v8:lang>
+										<v8:content>Рестарт хувилбарууд</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>pl</v8:lang>
+										<v8:content>Ponownie uruchomić skrypty</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ro</v8:lang>
+										<v8:content>Reporniți scenarii</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>sl</v8:lang>
+										<v8:content>Znova zaženite scenarijev</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>sv</v8:lang>
+										<v8:content>Starta scenarier</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>tr</v8:lang>
+										<v8:content>Yeniden senaryolar</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>vi</v8:lang>
+										<v8:content>Khởi động lại kịch bản</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ПанельVanessaEditorПерезагрузитьРасширеннаяПодсказка" id="2713"/>
+							</Button>
+							<Button name="ПанельVanessaEditorВыполнитьСценарии" id="2714">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<CommandName>Form.Command.ВыполнитьСценарии</CommandName>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Выполнить</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Run scenarios</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>am</v8:lang>
+										<v8:content>ቅድሚያ የሚሰጡዋቸውን</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>az</v8:lang>
+										<v8:content>İcra ssenarilər</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>bg</v8:lang>
+										<v8:content>Изпълнение на скриптове</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>de</v8:lang>
+										<v8:content>Ausführen von Skripts</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>es</v8:lang>
+										<v8:content>Ejecutar secuencias de comandos</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>et</v8:lang>
+										<v8:content>Käivita stsenaarium</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>fr</v8:lang>
+										<v8:content>Exécuter les scripts</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>hu</v8:lang>
+										<v8:content>A scriptek futtatását</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>it</v8:lang>
+										<v8:content>Eseguire gli script</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ka</v8:lang>
+										<v8:content>აწარმოებს სკრიპტები</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>lt</v8:lang>
+										<v8:content>Vykdyti scenarijus</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>lv</v8:lang>
+										<v8:content>Izpildīt skriptus</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>mn</v8:lang>
+										<v8:content>Ажиллуулах скриптүүд</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>pl</v8:lang>
+										<v8:content>Uruchom skrypty</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ro</v8:lang>
+										<v8:content>Executa script-uri</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>sl</v8:lang>
+										<v8:content>Dovolite zaganjanje skriptov</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>sv</v8:lang>
+										<v8:content>Att köra skript</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>tr</v8:lang>
+										<v8:content>Çalıştır komut</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>vi</v8:lang>
+										<v8:content>Thực hiện kịch bản</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ПанельVanessaEditorВыполнитьСценарииРасширеннаяПодсказка" id="2715"/>
+							</Button>
+							<Button name="ПанельVanessaEditorОстановитьСценарии" id="2716">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<CommandName>Form.Command.ОстановитьСценарии</CommandName>
+								<ExtendedTooltip name="ПанельVanessaEditorОстановитьСценарииРасширеннаяПодсказка" id="2717"/>
+							</Button>
+							<Button name="ПанельVanessaEditorФормаПерезагрузитьИВыполнить" id="2718">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<CommandName>Form.Command.ПерезагрузитьИВыполнить</CommandName>
+								<Picture>
+									<xr:Abs>Picture.png</xr:Abs>
+									<xr:LoadTransparent>false</xr:LoadTransparent>
+								</Picture>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Перезагрузить и выполнить</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Reload and run</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>am</v8:lang>
+										<v8:content>ጋር ይገናኛሉ እና ሆኗል</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>az</v8:lang>
+										<v8:content>Yenidən başladın və yerinə yetirmək</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>bg</v8:lang>
+										<v8:content>Рестартирате и изпълнение на</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>de</v8:lang>
+										<v8:content>Neu starten und ausführen</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>es</v8:lang>
+										<v8:content>Reiniciar y ejecutar</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>et</v8:lang>
+										<v8:content>Restart ja käivita</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>fr</v8:lang>
+										<v8:content>Redémarrer et exécuter</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>hu</v8:lang>
+										<v8:content>Újraindul végre</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>it</v8:lang>
+										<v8:content>Riavviare ed eseguire</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ka</v8:lang>
+										<v8:content>გადატვირთეთ და შეასრულოს</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>lt</v8:lang>
+										<v8:content>Paleisti ir vykdyti</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>lv</v8:lang>
+										<v8:content>Pārlādēt un izpildīt</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>mn</v8:lang>
+										<v8:content>Дахин ачаалах болон гүйцэтгэх</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>pl</v8:lang>
+										<v8:content>Ponownie uruchomić i wykonać</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ro</v8:lang>
+										<v8:content>Pentru a reîncărca și de a efectua</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>sl</v8:lang>
+										<v8:content>Za ponovni zagon in izvajanje</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>sv</v8:lang>
+										<v8:content>Att starta och köra</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>tr</v8:lang>
+										<v8:content>Yeniden yükle ve çalıştır</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>vi</v8:lang>
+										<v8:content>Khởi động lại và thực hiện</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ПанельVanessaEditorФормаПерезагрузитьИВыполнитьРасширеннаяПодсказка" id="2719"/>
+							</Button>
+							<Button name="ПанельVanessaEditorФормаПерейтиВДеревоШагов" id="2720">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ПерейтиВДеревоШагов</CommandName>
+								<Picture>
+									<xr:Abs>Picture.png</xr:Abs>
+									<xr:LoadTransparent>false</xr:LoadTransparent>
+								</Picture>
+								<ExtendedTooltip name="ПанельVanessaEditorФормаПерейтиВДеревоШаговРасширеннаяПодсказка" id="2721"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<ButtonGroup name="ГруппаVanessaEditorБуферОбмена" id="2428">
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Буфер обмена</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Representation>Compact</Representation>
+						<ExtendedTooltip name="ГруппаVanessaEditorБуферОбменаРасширеннаяПодсказка" id="2429"/>
+						<ChildItems>
+							<Button name="VanessaEditorClipboardCut" id="2426">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.VanessaEditorClipboardCut</CommandName>
+								<Picture>
+									<xr:Abs>Picture.png</xr:Abs>
+									<xr:LoadTransparent>false</xr:LoadTransparent>
+								</Picture>
+								<ExtendedTooltip name="VanessaEditorClipboardCutРасширеннаяПодсказка" id="2427"/>
+							</Button>
+							<Button name="VanessaEditorClipboardCopy" id="2430">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.VanessaEditorClipboardCopy</CommandName>
+								<Picture>
+									<xr:Abs>Picture.png</xr:Abs>
+									<xr:LoadTransparent>false</xr:LoadTransparent>
+								</Picture>
+								<ExtendedTooltip name="VanessaEditorClipboardCopyРасширеннаяПодсказка" id="2431"/>
+							</Button>
+							<Button name="VanessaEditorClipboardPaste" id="2432">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.VanessaEditorClipboardPaste</CommandName>
+								<Picture>
+									<xr:Abs>Picture.png</xr:Abs>
+									<xr:LoadTransparent>false</xr:LoadTransparent>
+								</Picture>
+								<ExtendedTooltip name="VanessaEditorClipboardPasteРасширеннаяПодсказка" id="2433"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<ButtonGroup name="ГруппаVanessaEditorИзмененияТекста" id="2434">
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Изменения текста</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Representation>Compact</Representation>
+						<ExtendedTooltip name="ГруппаVanessaEditorИзмененияТекстаРасширеннаяПодсказка" id="2435"/>
+						<ChildItems>
+							<Button name="VanessaEditorEditUndo" id="2436">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.VanessaEditorEditUndo</CommandName>
+								<ExtendedTooltip name="VanessaEditorEditUndoРасширеннаяПодсказка" id="2437"/>
+							</Button>
+							<Button name="VanessaEditorEditRedo" id="2438">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.VanessaEditorEditRedo</CommandName>
+								<ExtendedTooltip name="VanessaEditorEditRedoРасширеннаяПодсказка" id="2439"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<ButtonGroup name="ГруппаVanessaEditorПоиск" id="2440">
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Поиск</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Representation>Compact</Representation>
+						<ExtendedTooltip name="ГруппаVanessaEditorПоискРасширеннаяПодсказка" id="2441"/>
+						<ChildItems>
+							<Popup name="ГруппаVanessaEditorСвернутьШаги" id="2450">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Свернуть шаги</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Collapse steps</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Свернуть шаги</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Collapse steps</v8:content>
+									</v8:item>
+								</ToolTip>
+								<Picture>
+									<xr:Ref>StdPicture.CollapseAll</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</Picture>
+								<Representation>Picture</Representation>
+								<ExtendedTooltip name="ГруппаVanessaEditorСвернутьШагиРасширеннаяПодсказка" id="2451"/>
+								<ChildItems>
+									<Button name="VanessaEditorViewFoldAll" id="2452">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.VanessaEditorViewFoldAll</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Свернуть все</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Collapse all</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="VanessaEditorViewFoldAllРасширеннаяПодсказка" id="2453"/>
+									</Button>
+									<Button name="VanessaEditorViewUnfold2" id="2454">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.VanessaEditorViewUnfold2</CommandName>
+										<ExtendedTooltip name="VanessaEditorViewUnfold2РасширеннаяПодсказка" id="2455"/>
+									</Button>
+									<Button name="VanessaEditorViewUnfold3" id="2456">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.VanessaEditorViewUnfold3</CommandName>
+										<ExtendedTooltip name="VanessaEditorViewUnfold3РасширеннаяПодсказка" id="2457"/>
+									</Button>
+									<Button name="VanessaEditorViewUnfold4" id="2458">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.VanessaEditorViewUnfold4</CommandName>
+										<ExtendedTooltip name="VanessaEditorViewUnfold4РасширеннаяПодсказка" id="2459"/>
+									</Button>
+									<Button name="VanessaEditorViewUnfold5" id="2490">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.VanessaEditorViewUnfold5</CommandName>
+										<ExtendedTooltip name="VanessaEditorViewUnfold5РасширеннаяПодсказка" id="2491"/>
+									</Button>
+									<Button name="VanessaEditorViewUnfold6" id="2492">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.VanessaEditorViewUnfold6</CommandName>
+										<ExtendedTooltip name="VanessaEditorViewUnfold6РасширеннаяПодсказка" id="2493"/>
+									</Button>
+									<Button name="VanessaEditorViewUnfoldAll" id="2460">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.VanessaEditorViewUnfoldAll</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Развернуть все</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Expand all</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="VanessaEditorViewUnfoldAllРасширеннаяПодсказка" id="2461"/>
+									</Button>
+								</ChildItems>
+							</Popup>
+							<Button name="VanessaEditorEditFind" id="2442">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.VanessaEditorEditFind</CommandName>
+								<ExtendedTooltip name="VanessaEditorEditFindРасширеннаяПодсказка" id="2443"/>
+							</Button>
+							<Button name="VanessaEditorEditFindPrevious" id="2444">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.VanessaEditorEditFindPrevious</CommandName>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Найти предыдущий</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="VanessaEditorEditFindPreviousРасширеннаяПодсказка" id="2445"/>
+							</Button>
+							<Button name="VanessaEditorEditFindNext" id="2446">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.VanessaEditorEditFindNext</CommandName>
+								<ExtendedTooltip name="VanessaEditorEditFindNextРасширеннаяПодсказка" id="2447"/>
+							</Button>
+							<Button name="VanessaEditorEditReplace" id="2448">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.VanessaEditorEditReplace</CommandName>
+								<ExtendedTooltip name="VanessaEditorEditReplaceРасширеннаяПодсказка" id="2449"/>
+							</Button>
+							<Button name="VanessaEditorОчиститьРаскраскуСтрок" id="2638">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<CommandName>Form.Command.VanessaEditorОчиститьРаскраскуСтрок</CommandName>
+								<Picture>
+									<xr:Abs>Picture.png</xr:Abs>
+									<xr:LoadTransparent>false</xr:LoadTransparent>
+								</Picture>
+								<ExtendedTooltip name="VanessaEditorОчиститьРаскраскуСтрокРасширеннаяПодсказка" id="2639"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<ButtonGroup name="ГруппаVanessaEditorТочкиОстанова" id="2470">
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Точки останова</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Representation>Compact</Representation>
+						<ExtendedTooltip name="ГруппаVanessaEditorТочкиОстановаРасширеннаяПодсказка" id="2471"/>
+						<ChildItems>
+							<Button name="VanessaEditorSetBreakPoint" id="2472">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.VanessaEditorSetBreakPoint</CommandName>
+								<Picture>
+									<xr:Ref>StdPicture.AppearanceDownTriangleRed</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</Picture>
+								<ExtendedTooltip name="VanessaEditorSetBreakPointРасширеннаяПодсказка" id="2473"/>
+							</Button>
+							<Button name="VanessaEditorПоказатьСписокТочекОстанова" id="2606">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.VanessaEditorПоказатьСписокТочекОстанова</CommandName>
+								<Picture>
+									<xr:Ref>StdPicture.NestedTable</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</Picture>
+								<ExtendedTooltip name="VanessaEditorПоказатьСписокТочекОстановаРасширеннаяПодсказка" id="2607"/>
+							</Button>
+							<Button name="VanessaEditorRemoveBreakPoints" id="2474">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.VanessaEditorRemoveBreakPoints</CommandName>
+								<Picture>
+									<xr:Ref>StdPicture.DeleteDirectly</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</Picture>
+								<ExtendedTooltip name="VanessaEditorRemoveBreakPointsРасширеннаяПодсказка" id="2475"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<ButtonGroup name="ГруппаVanessaEditorДействияВРедакторе" id="2594">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа vanessa editor действия в редакторе</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Точки останова</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Representation>Compact</Representation>
+						<ExtendedTooltip name="ГруппаVanessaEditorДействияВРедактореРасширеннаяПодсказка" id="2595"/>
+						<ChildItems>
+							<Button name="VanessaEditorПерейтиКСледующейОшибке" id="2596">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ПерейтиКСтрокеСОшибкой</CommandName>
+								<Picture>
+									<xr:Ref>StdPicture.AppearanceDownArrowRed</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</Picture>
+								<ExtendedTooltip name="VanessaEditorПерейтиКСледующейОшибкеРасширеннаяПодсказка" id="2597"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<ButtonGroup name="ГруппаVanessaEditorЗаписьДействийПользователя" id="2500">
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Точки останова</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Representation>Compact</Representation>
+						<ExtendedTooltip name="ГруппаVanessaEditorЗаписьДействийПользователяРасширеннаяПодсказка" id="2501"/>
+						<ChildItems>
+							<Button name="VanessaEditorОткрытьПодключитьTestClient" id="2541">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ОткрытьПодключитьTestClient</CommandName>
+								<Picture>
+									<xr:Abs>Picture.png</xr:Abs>
+									<xr:LoadTransparent>false</xr:LoadTransparent>
+								</Picture>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Подключить клиент тестирования</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Connect TestClient</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>am</v8:lang>
+										<v8:content>ጋር TestClient</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>az</v8:lang>
+										<v8:content>Əlaqə TestClient</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>bg</v8:lang>
+										<v8:content>Свържете TestClient</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>de</v8:lang>
+										<v8:content>Verbinden Von Testclient</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>es</v8:lang>
+										<v8:content>Conectar TestClient</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>et</v8:lang>
+										<v8:content>Ühendada TestClient</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>fr</v8:lang>
+										<v8:content>Connecter TestClient</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>hu</v8:lang>
+										<v8:content>Csatlakoztassa TestClient</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>it</v8:lang>
+										<v8:content>Collegare TestClient</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ka</v8:lang>
+										<v8:content>დაკავშირება TestClient</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>lt</v8:lang>
+										<v8:content>Prijungti TestClient</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>lv</v8:lang>
+										<v8:content>Pievienot TestClient</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>mn</v8:lang>
+										<v8:content>To Connect TestClient</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>pl</v8:lang>
+										<v8:content>Podłączyć TestClient</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ro</v8:lang>
+										<v8:content>Conectați TestClient</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>sl</v8:lang>
+										<v8:content>Za Povezavo TestClient</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>sv</v8:lang>
+										<v8:content>För Att Ansluta TestClient</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>tr</v8:lang>
+										<v8:content>Bağlamak TestClient</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>vi</v8:lang>
+										<v8:content>Kết Nối TestClient</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="VanessaEditorОткрытьПодключитьTestClientРасширеннаяПодсказка" id="2542"/>
+							</Button>
+							<Button name="VanessaEditorНачатьЗаписьДействийПользователя" id="2502">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.НачатьЗаписьДействийПользователя</CommandName>
+								<Picture>
+									<xr:Abs>Picture.png</xr:Abs>
+									<xr:LoadTransparent>false</xr:LoadTransparent>
+								</Picture>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Начать запись поведения</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Record user behavior</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>am</v8:lang>
+										<v8:content>አዳዲስ ግምገማዎች ቀረጻ ባህሪ</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>az</v8:lang>
+										<v8:content>Yazmağa başlamaq davranış</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>bg</v8:lang>
+										<v8:content>Започнете запис на поведение</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>de</v8:lang>
+										<v8:content>Starten Sie die Aufnahme des Verhaltens</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>es</v8:lang>
+										<v8:content>Iniciar la grabación de la conducta</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>et</v8:lang>
+										<v8:content>Alustada käitumine rekord</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>fr</v8:lang>
+										<v8:content>Commencer l'enregistrement de conduite</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>hu</v8:lang>
+										<v8:content>Indítsa el a felvételt viselkedés</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>it</v8:lang>
+										<v8:content>Avviare la registrazione del comportamento</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ka</v8:lang>
+										<v8:content>ჩაწერის დაწყება ქცევა</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>lt</v8:lang>
+										<v8:content>Pradėti įrašymą, elgesio</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>lv</v8:lang>
+										<v8:content>Sākt rīcību ierakstu</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>mn</v8:lang>
+										<v8:content>Бичиж эхлэх зан</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>pl</v8:lang>
+										<v8:content>Rozpocząć nagrywanie zachowania</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ro</v8:lang>
+										<v8:content>Începe înregistrarea comportamentului</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>sl</v8:lang>
+										<v8:content>Začetek snemanja vedenje</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>sv</v8:lang>
+										<v8:content>Starta inspelningen beteende</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>tr</v8:lang>
+										<v8:content>Kaydı başlatmak davranış</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>vi</v8:lang>
+										<v8:content>Bắt đầu ghi hành vi</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="VanessaEditorНачатьЗаписьДействийПользователяРасширеннаяПодсказка" id="2503"/>
+							</Button>
+							<Button name="VanessaEditorЗавершитьЗаписьДействийПользователя" id="2504">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ЗавершитьЗаписьДействийПользователя</CommandName>
+								<Picture>
+									<xr:Abs>Picture.png</xr:Abs>
+									<xr:LoadTransparent>false</xr:LoadTransparent>
+								</Picture>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Закончить запись поведения</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Stop recording user behavior</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>am</v8:lang>
+										<v8:content>ለመጨረስ ቀረጻ ነው ባህሪ</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>az</v8:lang>
+										<v8:content>Son giriş davranış</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>bg</v8:lang>
+										<v8:content>Пълен запис на поведение</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>de</v8:lang>
+										<v8:content>Beenden Sie die Aufzeichnung des Verhaltens</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>es</v8:lang>
+										<v8:content>Terminar la grabación de la conducta</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>et</v8:lang>
+										<v8:content>Lõpetada käitumine rekord</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>fr</v8:lang>
+										<v8:content>Terminer l'enregistrement de conduite</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>hu</v8:lang>
+										<v8:content>Befejezni a felvétel a viselkedés</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>it</v8:lang>
+										<v8:content>Terminare la registrazione del comportamento</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ka</v8:lang>
+										<v8:content>დასრულება ჩაწერა ქცევა</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>lt</v8:lang>
+										<v8:content>Baigti filmuoti elgesio</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>lv</v8:lang>
+										<v8:content>Pabeigt rīcību ierakstu</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>mn</v8:lang>
+										<v8:content>Дуусгах бичлэг зан</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>pl</v8:lang>
+										<v8:content>Zakończyć nagrywanie zachowania</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>ro</v8:lang>
+										<v8:content>Pentru a termina înregistrarea comportamentului</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>sl</v8:lang>
+										<v8:content>Če želite končati snemanje vedenja</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>sv</v8:lang>
+										<v8:content>För att avsluta inspelningen av beteende</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>tr</v8:lang>
+										<v8:content>Kaydı bitirmek davranış</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>vi</v8:lang>
+										<v8:content>Dừng ghi hành vi người sử dụng</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="VanessaEditorЗавершитьЗаписьДействийПользователяРасширеннаяПодсказка" id="2505"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<ButtonGroup name="ГруппаVanessaEditorМасштаб" id="2462">
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Масштаб</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Representation>Compact</Representation>
+						<ExtendedTooltip name="ГруппаVanessaEditorМасштабРасширеннаяПодсказка" id="2463"/>
+						<ChildItems>
+							<Button name="VanessaEditorViewZoomIn" id="2464">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.VanessaEditorViewZoomIn</CommandName>
+								<ExtendedTooltip name="VanessaEditorViewZoomInРасширеннаяПодсказка" id="2465"/>
+							</Button>
+							<Button name="VanessaEditorViewZoomOut" id="2466">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.VanessaEditorViewZoomOut</CommandName>
+								<ExtendedTooltip name="VanessaEditorViewZoomOutРасширеннаяПодсказка" id="2467"/>
+							</Button>
+							<Button name="VanessaEditorViewZoomReset" id="2468">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<CommandName>Form.Command.VanessaEditorViewZoomReset</CommandName>
+								<Picture>
+									<xr:Abs>Picture.png</xr:Abs>
+									<xr:LoadTransparent>false</xr:LoadTransparent>
+								</Picture>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Сбросить</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="VanessaEditorViewZoomResetРасширеннаяПодсказка" id="2469"/>
+							</Button>
+							<Popup name="ГруппаVanessaEditorВыборТемы" id="2514">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Выбор темы</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Theme selection</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Выбор темы</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Theme selection</v8:content>
+									</v8:item>
+								</ToolTip>
+								<Picture>
+									<xr:Ref>StdPicture.ChartOfAccounts</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</Picture>
+								<Representation>Picture</Representation>
+								<ExtendedTooltip name="ГруппаVanessaEditorВыборТемыРасширеннаяПодсказка" id="2515"/>
+								<ChildItems>
+									<Button name="VanessaEditorТема_1c" id="2516">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.VanessaEditorТема_1c</CommandName>
+										<ExtendedTooltip name="VanessaEditorТема_1cРасширеннаяПодсказка" id="2517"/>
+									</Button>
+									<Button name="VanessaEditorТема_vs" id="2518">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.VanessaEditorТема_vs</CommandName>
+										<ExtendedTooltip name="VanessaEditorТема_vsРасширеннаяПодсказка" id="2519"/>
+									</Button>
+									<Button name="VanessaEditorТема_vsdark" id="2520">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.VanessaEditorТема_vsdark</CommandName>
+										<ExtendedTooltip name="VanessaEditorТема_vsdarkРасширеннаяПодсказка" id="2521"/>
+									</Button>
+									<Button name="VanessaEditorТема_hcblack" id="2522">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.VanessaEditorТема_hcblack</CommandName>
+										<ExtendedTooltip name="VanessaEditorТема_hcblackРасширеннаяПодсказка" id="2523"/>
+									</Button>
+								</ChildItems>
+							</Popup>
+						</ChildItems>
+					</ButtonGroup>
+					<ButtonGroup name="ГруппаVanessaEditorРедактироватьСтроки" id="2535">
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Точки останова</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Representation>Compact</Representation>
+						<ExtendedTooltip name="ГруппаVanessaEditorРедактироватьСтрокиРасширеннаяПодсказка" id="2536"/>
+						<ChildItems>
+							<Button name="VanessaEditorКомментироватьСтрокиСценария" id="2537">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<CommandName>Form.Command.КомментироватьСтрокиСценария</CommandName>
+								<Picture>
+									<xr:Abs>Picture.png</xr:Abs>
+									<xr:LoadTransparent>false</xr:LoadTransparent>
+								</Picture>
+								<ExtendedTooltip name="VanessaEditorКомментироватьСтрокиСценарияРасширеннаяПодсказка" id="2538"/>
+							</Button>
+							<Button name="VanessaEditorВыделитьСтрокиСценария" id="2539">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<CommandName>Form.Command.ВыделитьСтрокиСценария</CommandName>
+								<Picture>
+									<xr:Abs>Picture.png</xr:Abs>
+									<xr:LoadTransparent>false</xr:LoadTransparent>
+								</Picture>
+								<ExtendedTooltip name="VanessaEditorВыделитьСтрокиСценарияРасширеннаяПодсказка" id="2540"/>
+							</Button>
+							<Button name="VanessaEditorПеревестиТекстНаДругойЯзык" id="2564">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<CommandName>Form.Command.ПеревестиТекстНаДругойЯзык</CommandName>
+								<Picture>
+									<xr:Abs>Picture.png</xr:Abs>
+									<xr:LoadTransparent>false</xr:LoadTransparent>
+								</Picture>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Перевести</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="VanessaEditorПеревестиТекстНаДругойЯзыкРасширеннаяПодсказка" id="2565"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<Popup name="ГруппаVanessaEditorНастройкиРедактора" id="2552">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Настройки редактора</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Editor settings</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Настройки редактора</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Editor settings</v8:content>
+							</v8:item>
+						</ToolTip>
+						<Picture>
+							<xr:Abs>Picture.png</xr:Abs>
+							<xr:LoadTransparent>false</xr:LoadTransparent>
+						</Picture>
+						<Representation>Picture</Representation>
+						<ExtendedTooltip name="ГруппаVanessaEditorНастройкиРедактораРасширеннаяПодсказка" id="2553"/>
+						<ChildItems>
+							<ButtonGroup name="ПанельVanessaEditorФормаГруппаНастройки" id="2722">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Группа настройки</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Group settings</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ПанельVanessaEditorФормаГруппаНастройкиРасширеннаяПодсказка" id="2723"/>
+								<ChildItems>
+									<Button name="VanessaEditorСохранитьНастройки" id="2724">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.СохранитьНастройки</CommandName>
+										<ExtendedTooltip name="VanessaEditorСохранитьНастройкиРасширеннаяПодсказка" id="2725"/>
+									</Button>
+									<Button name="VanessaEditorВыгрузитьНастройкиВФайл" id="2726">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ВыгрузитьНастройкиВФайл</CommandName>
+										<ExtendedTooltip name="VanessaEditorВыгрузитьНастройкиВФайлРасширеннаяПодсказка" id="2727"/>
+									</Button>
+									<Button name="VanessaEditorЗагрузитьНастройкиИзФайла" id="2728">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ЗагрузитьНастройкиИзФайла</CommandName>
+										<ExtendedTooltip name="VanessaEditorЗагрузитьНастройкиИзФайлаРасширеннаяПодсказка" id="2729"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+							<Button name="VanessaEditorИспользоватьДанныеТекущейФормыПриПодбореШагов" id="2554">
+								<Type>CommandBarButton</Type>
+								<Check>true</Check>
+								<CommandName>Form.Command.VanessaEditorИспользоватьДанныеТекущейФормыПриПодбореШагов</CommandName>
+								<ExtendedTooltip name="VanessaEditorИспользоватьДанныеТекущейФормыПриПодбореШаговРасширеннаяПодсказка" id="2555"/>
+							</Button>
+							<Button name="VanessaEditorПоказыватьСтрокиПодсценариев" id="2556">
+								<Type>CommandBarButton</Type>
+								<Check>true</Check>
+								<CommandName>Form.Command.VanessaEditorПоказыватьСтрокиПодсценариев</CommandName>
+								<ExtendedTooltip name="VanessaEditorПоказыватьСтрокиПодсценариевРасширеннаяПодсказка" id="2557"/>
+							</Button>
+							<Button name="VanessaEditorПоказыватьМиниатюруКода" id="2650">
+								<Type>CommandBarButton</Type>
+								<Check>true</Check>
+								<CommandName>Form.Command.VanessaEditorПоказыватьМиниатюруКода</CommandName>
+								<ExtendedTooltip name="VanessaEditorПоказыватьМиниатюруКодаРасширеннаяПодсказка" id="2651"/>
+							</Button>
+							<Button name="VanessaEditorНастройкаВидимостиКнопокПанелиРедактора" id="2732">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.НастройкаВидимостиКнопокПанелиРедактора</CommandName>
+								<ExtendedTooltip name="VanessaEditorНастройкаВидимостиКнопокПанелиРедактораРасширеннаяПодсказка" id="2733"/>
+							</Button>
+						</ChildItems>
+					</Popup>
+				</ChildItems>
+			</ButtonGroup>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -3452,760 +4905,6 @@
 											</ToolTip>
 											<ExtendedTooltip name="СтраницаVanessaEditorРасширеннаяПодсказка" id="2421"/>
 											<ChildItems>
-												<CommandBar name="ГруппаКоманднаяПанельVanessaEditor" id="2424">
-													<Title>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Группа командная панель vanessa editor</v8:content>
-														</v8:item>
-													</Title>
-													<ToolTip>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Группа командная панель vanessa editor</v8:content>
-														</v8:item>
-													</ToolTip>
-													<ExtendedTooltip name="ГруппаКоманднаяПанельVanessaEditorРасширеннаяПодсказка" id="2425"/>
-													<ChildItems>
-														<ButtonGroup name="ГруппаVanessaEditorДеревоКаталогов" id="2608">
-															<Title>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Дерево каталогов</v8:content>
-																</v8:item>
-															</Title>
-															<ToolTip>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Буфер обмена</v8:content>
-																</v8:item>
-															</ToolTip>
-															<Representation>Compact</Representation>
-															<ExtendedTooltip name="ГруппаVanessaEditorДеревоКаталоговРасширеннаяПодсказка" id="2609"/>
-															<ChildItems>
-																<Button name="VanessaEditorПоказатьСкрытьДеревоКаталогов" id="2610">
-																	<Type>CommandBarButton</Type>
-																	<Representation>Picture</Representation>
-																	<CommandName>Form.Command.VanessaEditorПоказатьСкрытьДеревоКаталогов</CommandName>
-																	<Picture>
-																		<xr:Abs>Picture.jpg</xr:Abs>
-																		<xr:LoadTransparent>false</xr:LoadTransparent>
-																	</Picture>
-																	<ExtendedTooltip name="VanessaEditorПоказатьСкрытьДеревоКаталоговРасширеннаяПодсказка" id="2611"/>
-																</Button>
-															</ChildItems>
-														</ButtonGroup>
-														<ButtonGroup name="ГруппаVanessaEditorБуферОбмена" id="2428">
-															<ToolTip>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Буфер обмена</v8:content>
-																</v8:item>
-															</ToolTip>
-															<Representation>Compact</Representation>
-															<ExtendedTooltip name="ГруппаVanessaEditorБуферОбменаРасширеннаяПодсказка" id="2429"/>
-															<ChildItems>
-																<Button name="VanessaEditorClipboardCut" id="2426">
-																	<Type>CommandBarButton</Type>
-																	<CommandName>Form.Command.VanessaEditorClipboardCut</CommandName>
-																	<Picture>
-																		<xr:Abs>Picture.png</xr:Abs>
-																		<xr:LoadTransparent>false</xr:LoadTransparent>
-																	</Picture>
-																	<ExtendedTooltip name="VanessaEditorClipboardCutРасширеннаяПодсказка" id="2427"/>
-																</Button>
-																<Button name="VanessaEditorClipboardCopy" id="2430">
-																	<Type>CommandBarButton</Type>
-																	<CommandName>Form.Command.VanessaEditorClipboardCopy</CommandName>
-																	<Picture>
-																		<xr:Abs>Picture.png</xr:Abs>
-																		<xr:LoadTransparent>false</xr:LoadTransparent>
-																	</Picture>
-																	<ExtendedTooltip name="VanessaEditorClipboardCopyРасширеннаяПодсказка" id="2431"/>
-																</Button>
-																<Button name="VanessaEditorClipboardPaste" id="2432">
-																	<Type>CommandBarButton</Type>
-																	<CommandName>Form.Command.VanessaEditorClipboardPaste</CommandName>
-																	<Picture>
-																		<xr:Abs>Picture.png</xr:Abs>
-																		<xr:LoadTransparent>false</xr:LoadTransparent>
-																	</Picture>
-																	<ExtendedTooltip name="VanessaEditorClipboardPasteРасширеннаяПодсказка" id="2433"/>
-																</Button>
-															</ChildItems>
-														</ButtonGroup>
-														<ButtonGroup name="ГруппаVanessaEditorИзмененияТекста" id="2434">
-															<ToolTip>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Изменения текста</v8:content>
-																</v8:item>
-															</ToolTip>
-															<Representation>Compact</Representation>
-															<ExtendedTooltip name="ГруппаVanessaEditorИзмененияТекстаРасширеннаяПодсказка" id="2435"/>
-															<ChildItems>
-																<Button name="VanessaEditorEditUndo" id="2436">
-																	<Type>CommandBarButton</Type>
-																	<CommandName>Form.Command.VanessaEditorEditUndo</CommandName>
-																	<ExtendedTooltip name="VanessaEditorEditUndoРасширеннаяПодсказка" id="2437"/>
-																</Button>
-																<Button name="VanessaEditorEditRedo" id="2438">
-																	<Type>CommandBarButton</Type>
-																	<CommandName>Form.Command.VanessaEditorEditRedo</CommandName>
-																	<ExtendedTooltip name="VanessaEditorEditRedoРасширеннаяПодсказка" id="2439"/>
-																</Button>
-															</ChildItems>
-														</ButtonGroup>
-														<ButtonGroup name="ГруппаVanessaEditorПоиск" id="2440">
-															<ToolTip>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Поиск</v8:content>
-																</v8:item>
-															</ToolTip>
-															<Representation>Compact</Representation>
-															<ExtendedTooltip name="ГруппаVanessaEditorПоискРасширеннаяПодсказка" id="2441"/>
-															<ChildItems>
-																<Popup name="ГруппаVanessaEditorСвернутьШаги" id="2450">
-																	<Title>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Свернуть шаги</v8:content>
-																		</v8:item>
-																	</Title>
-																	<ToolTip>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Свернуть шаги</v8:content>
-																		</v8:item>
-																	</ToolTip>
-																	<Picture>
-																		<xr:Ref>StdPicture.CollapseAll</xr:Ref>
-																		<xr:LoadTransparent>true</xr:LoadTransparent>
-																	</Picture>
-																	<Representation>Picture</Representation>
-																	<ExtendedTooltip name="ГруппаVanessaEditorСвернутьШагиРасширеннаяПодсказка" id="2451"/>
-																	<ChildItems>
-																		<Button name="VanessaEditorViewFoldAll" id="2452">
-																			<Type>CommandBarButton</Type>
-																			<CommandName>Form.Command.VanessaEditorViewFoldAll</CommandName>
-																			<Title>
-																				<v8:item>
-																					<v8:lang>ru</v8:lang>
-																					<v8:content>Свернуть все</v8:content>
-																				</v8:item>
-																			</Title>
-																			<ExtendedTooltip name="VanessaEditorViewFoldAllРасширеннаяПодсказка" id="2453"/>
-																		</Button>
-																		<Button name="VanessaEditorViewUnfold2" id="2454">
-																			<Type>CommandBarButton</Type>
-																			<CommandName>Form.Command.VanessaEditorViewUnfold2</CommandName>
-																			<ExtendedTooltip name="VanessaEditorViewUnfold2РасширеннаяПодсказка" id="2455"/>
-																		</Button>
-																		<Button name="VanessaEditorViewUnfold3" id="2456">
-																			<Type>CommandBarButton</Type>
-																			<CommandName>Form.Command.VanessaEditorViewUnfold3</CommandName>
-																			<ExtendedTooltip name="VanessaEditorViewUnfold3РасширеннаяПодсказка" id="2457"/>
-																		</Button>
-																		<Button name="VanessaEditorViewUnfold4" id="2458">
-																			<Type>CommandBarButton</Type>
-																			<CommandName>Form.Command.VanessaEditorViewUnfold4</CommandName>
-																			<ExtendedTooltip name="VanessaEditorViewUnfold4РасширеннаяПодсказка" id="2459"/>
-																		</Button>
-																		<Button name="VanessaEditorViewUnfold5" id="2490">
-																			<Type>CommandBarButton</Type>
-																			<CommandName>Form.Command.VanessaEditorViewUnfold5</CommandName>
-																			<ExtendedTooltip name="VanessaEditorViewUnfold5РасширеннаяПодсказка" id="2491"/>
-																		</Button>
-																		<Button name="VanessaEditorViewUnfold6" id="2492">
-																			<Type>CommandBarButton</Type>
-																			<CommandName>Form.Command.VanessaEditorViewUnfold6</CommandName>
-																			<ExtendedTooltip name="VanessaEditorViewUnfold6РасширеннаяПодсказка" id="2493"/>
-																		</Button>
-																		<Button name="VanessaEditorViewUnfoldAll" id="2460">
-																			<Type>CommandBarButton</Type>
-																			<CommandName>Form.Command.VanessaEditorViewUnfoldAll</CommandName>
-																			<Title>
-																				<v8:item>
-																					<v8:lang>ru</v8:lang>
-																					<v8:content>Развернуть все</v8:content>
-																				</v8:item>
-																			</Title>
-																			<ExtendedTooltip name="VanessaEditorViewUnfoldAllРасширеннаяПодсказка" id="2461"/>
-																		</Button>
-																	</ChildItems>
-																</Popup>
-																<Button name="VanessaEditorEditFind" id="2442">
-																	<Type>CommandBarButton</Type>
-																	<CommandName>Form.Command.VanessaEditorEditFind</CommandName>
-																	<ExtendedTooltip name="VanessaEditorEditFindРасширеннаяПодсказка" id="2443"/>
-																</Button>
-																<Button name="VanessaEditorEditFindPrevious" id="2444">
-																	<Type>CommandBarButton</Type>
-																	<CommandName>Form.Command.VanessaEditorEditFindPrevious</CommandName>
-																	<Title>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Найти предыдущий</v8:content>
-																		</v8:item>
-																	</Title>
-																	<ExtendedTooltip name="VanessaEditorEditFindPreviousРасширеннаяПодсказка" id="2445"/>
-																</Button>
-																<Button name="VanessaEditorEditFindNext" id="2446">
-																	<Type>CommandBarButton</Type>
-																	<CommandName>Form.Command.VanessaEditorEditFindNext</CommandName>
-																	<ExtendedTooltip name="VanessaEditorEditFindNextРасширеннаяПодсказка" id="2447"/>
-																</Button>
-																<Button name="VanessaEditorEditReplace" id="2448">
-																	<Type>CommandBarButton</Type>
-																	<CommandName>Form.Command.VanessaEditorEditReplace</CommandName>
-																	<ExtendedTooltip name="VanessaEditorEditReplaceРасширеннаяПодсказка" id="2449"/>
-																</Button>
-																<Button name="VanessaEditorОчиститьРаскраскуСтрок" id="2638">
-																	<Type>CommandBarButton</Type>
-																	<Representation>Picture</Representation>
-																	<CommandName>Form.Command.VanessaEditorОчиститьРаскраскуСтрок</CommandName>
-																	<Picture>
-																		<xr:Abs>Picture.png</xr:Abs>
-																		<xr:LoadTransparent>false</xr:LoadTransparent>
-																	</Picture>
-																	<ExtendedTooltip name="VanessaEditorОчиститьРаскраскуСтрокРасширеннаяПодсказка" id="2639"/>
-																</Button>
-															</ChildItems>
-														</ButtonGroup>
-														<ButtonGroup name="ГруппаVanessaEditorТочкиОстанова" id="2470">
-															<ToolTip>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Точки останова</v8:content>
-																</v8:item>
-															</ToolTip>
-															<Representation>Compact</Representation>
-															<ExtendedTooltip name="ГруппаVanessaEditorТочкиОстановаРасширеннаяПодсказка" id="2471"/>
-															<ChildItems>
-																<Button name="VanessaEditorSetBreakPoint" id="2472">
-																	<Type>CommandBarButton</Type>
-																	<CommandName>Form.Command.VanessaEditorSetBreakPoint</CommandName>
-																	<Picture>
-																		<xr:Ref>StdPicture.AppearanceDownTriangleRed</xr:Ref>
-																		<xr:LoadTransparent>true</xr:LoadTransparent>
-																	</Picture>
-																	<ExtendedTooltip name="VanessaEditorSetBreakPointРасширеннаяПодсказка" id="2473"/>
-																</Button>
-																<Button name="VanessaEditorПоказатьСписокТочекОстанова" id="2606">
-																	<Type>CommandBarButton</Type>
-																	<CommandName>Form.Command.VanessaEditorПоказатьСписокТочекОстанова</CommandName>
-																	<Picture>
-																		<xr:Ref>StdPicture.NestedTable</xr:Ref>
-																		<xr:LoadTransparent>true</xr:LoadTransparent>
-																	</Picture>
-																	<ExtendedTooltip name="VanessaEditorПоказатьСписокТочекОстановаРасширеннаяПодсказка" id="2607"/>
-																</Button>
-																<Button name="VanessaEditorRemoveBreakPoints" id="2474">
-																	<Type>CommandBarButton</Type>
-																	<CommandName>Form.Command.VanessaEditorRemoveBreakPoints</CommandName>
-																	<Picture>
-																		<xr:Ref>StdPicture.DeleteDirectly</xr:Ref>
-																		<xr:LoadTransparent>true</xr:LoadTransparent>
-																	</Picture>
-																	<ExtendedTooltip name="VanessaEditorRemoveBreakPointsРасширеннаяПодсказка" id="2475"/>
-																</Button>
-															</ChildItems>
-														</ButtonGroup>
-														<ButtonGroup name="ГруппаVanessaEditorДействияВРедакторе" id="2594">
-															<Title>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Группа vanessa editor действия в редакторе</v8:content>
-																</v8:item>
-															</Title>
-															<ToolTip>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Точки останова</v8:content>
-																</v8:item>
-															</ToolTip>
-															<Representation>Compact</Representation>
-															<ExtendedTooltip name="ГруппаVanessaEditorДействияВРедактореРасширеннаяПодсказка" id="2595"/>
-															<ChildItems>
-																<Button name="VanessaEditorПерейтиКСледующейОшибке" id="2596">
-																	<Type>CommandBarButton</Type>
-																	<CommandName>Form.Command.ПерейтиКСтрокеСОшибкой</CommandName>
-																	<Picture>
-																		<xr:Ref>StdPicture.AppearanceDownArrowRed</xr:Ref>
-																		<xr:LoadTransparent>true</xr:LoadTransparent>
-																	</Picture>
-																	<ExtendedTooltip name="VanessaEditorПерейтиКСледующейОшибкеРасширеннаяПодсказка" id="2597"/>
-																</Button>
-															</ChildItems>
-														</ButtonGroup>
-														<ButtonGroup name="ГруппаVanessaEditorЗаписьДействийПользователя" id="2500">
-															<ToolTip>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Точки останова</v8:content>
-																</v8:item>
-															</ToolTip>
-															<Representation>Compact</Representation>
-															<ExtendedTooltip name="ГруппаVanessaEditorЗаписьДействийПользователяРасширеннаяПодсказка" id="2501"/>
-															<ChildItems>
-																<Button name="VanessaEditorОткрытьПодключитьTestClient" id="2541">
-																	<Type>CommandBarButton</Type>
-																	<CommandName>Form.Command.ОткрытьПодключитьTestClient</CommandName>
-																	<Picture>
-																		<xr:Abs>Picture.png</xr:Abs>
-																		<xr:LoadTransparent>false</xr:LoadTransparent>
-																	</Picture>
-																	<Title>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Подключить клиент тестирования</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>en</v8:lang>
-																			<v8:content>Connect TestClient</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>am</v8:lang>
-																			<v8:content>ጋር TestClient</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>az</v8:lang>
-																			<v8:content>Əlaqə TestClient</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>bg</v8:lang>
-																			<v8:content>Свържете TestClient</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>de</v8:lang>
-																			<v8:content>Verbinden Von Testclient</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>es</v8:lang>
-																			<v8:content>Conectar TestClient</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>et</v8:lang>
-																			<v8:content>Ühendada TestClient</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>fr</v8:lang>
-																			<v8:content>Connecter TestClient</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>hu</v8:lang>
-																			<v8:content>Csatlakoztassa TestClient</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>it</v8:lang>
-																			<v8:content>Collegare TestClient</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>ka</v8:lang>
-																			<v8:content>დაკავშირება TestClient</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>lt</v8:lang>
-																			<v8:content>Prijungti TestClient</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>lv</v8:lang>
-																			<v8:content>Pievienot TestClient</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>mn</v8:lang>
-																			<v8:content>To Connect TestClient</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>pl</v8:lang>
-																			<v8:content>Podłączyć TestClient</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>ro</v8:lang>
-																			<v8:content>Conectați TestClient</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>sl</v8:lang>
-																			<v8:content>Za Povezavo TestClient</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>sv</v8:lang>
-																			<v8:content>För Att Ansluta TestClient</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>tr</v8:lang>
-																			<v8:content>Bağlamak TestClient</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>vi</v8:lang>
-																			<v8:content>Kết Nối TestClient</v8:content>
-																		</v8:item>
-																	</Title>
-																	<ExtendedTooltip name="VanessaEditorОткрытьПодключитьTestClientРасширеннаяПодсказка" id="2542"/>
-																</Button>
-																<Button name="VanessaEditorНачатьЗаписьДействийПользователя" id="2502">
-																	<Type>CommandBarButton</Type>
-																	<CommandName>Form.Command.НачатьЗаписьДействийПользователя</CommandName>
-																	<Picture>
-																		<xr:Abs>Picture.png</xr:Abs>
-																		<xr:LoadTransparent>false</xr:LoadTransparent>
-																	</Picture>
-																	<Title>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Начать запись поведения</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>en</v8:lang>
-																			<v8:content>Record user behavior</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>am</v8:lang>
-																			<v8:content>አዳዲስ ግምገማዎች ቀረጻ ባህሪ</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>az</v8:lang>
-																			<v8:content>Yazmağa başlamaq davranış</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>bg</v8:lang>
-																			<v8:content>Започнете запис на поведение</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>de</v8:lang>
-																			<v8:content>Starten Sie die Aufnahme des Verhaltens</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>es</v8:lang>
-																			<v8:content>Iniciar la grabación de la conducta</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>et</v8:lang>
-																			<v8:content>Alustada käitumine rekord</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>fr</v8:lang>
-																			<v8:content>Commencer l'enregistrement de conduite</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>hu</v8:lang>
-																			<v8:content>Indítsa el a felvételt viselkedés</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>it</v8:lang>
-																			<v8:content>Avviare la registrazione del comportamento</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>ka</v8:lang>
-																			<v8:content>ჩაწერის დაწყება ქცევა</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>lt</v8:lang>
-																			<v8:content>Pradėti įrašymą, elgesio</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>lv</v8:lang>
-																			<v8:content>Sākt rīcību ierakstu</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>mn</v8:lang>
-																			<v8:content>Бичиж эхлэх зан</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>pl</v8:lang>
-																			<v8:content>Rozpocząć nagrywanie zachowania</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>ro</v8:lang>
-																			<v8:content>Începe înregistrarea comportamentului</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>sl</v8:lang>
-																			<v8:content>Začetek snemanja vedenje</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>sv</v8:lang>
-																			<v8:content>Starta inspelningen beteende</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>tr</v8:lang>
-																			<v8:content>Kaydı başlatmak davranış</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>vi</v8:lang>
-																			<v8:content>Bắt đầu ghi hành vi</v8:content>
-																		</v8:item>
-																	</Title>
-																	<ExtendedTooltip name="VanessaEditorНачатьЗаписьДействийПользователяРасширеннаяПодсказка" id="2503"/>
-																</Button>
-																<Button name="VanessaEditorЗавершитьЗаписьДействийПользователя" id="2504">
-																	<Type>CommandBarButton</Type>
-																	<CommandName>Form.Command.ЗавершитьЗаписьДействийПользователя</CommandName>
-																	<Picture>
-																		<xr:Abs>Picture.png</xr:Abs>
-																		<xr:LoadTransparent>false</xr:LoadTransparent>
-																	</Picture>
-																	<Title>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Закончить запись поведения</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>en</v8:lang>
-																			<v8:content>Stop recording user behavior</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>am</v8:lang>
-																			<v8:content>ለመጨረስ ቀረጻ ነው ባህሪ</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>az</v8:lang>
-																			<v8:content>Son giriş davranış</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>bg</v8:lang>
-																			<v8:content>Пълен запис на поведение</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>de</v8:lang>
-																			<v8:content>Beenden Sie die Aufzeichnung des Verhaltens</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>es</v8:lang>
-																			<v8:content>Terminar la grabación de la conducta</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>et</v8:lang>
-																			<v8:content>Lõpetada käitumine rekord</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>fr</v8:lang>
-																			<v8:content>Terminer l'enregistrement de conduite</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>hu</v8:lang>
-																			<v8:content>Befejezni a felvétel a viselkedés</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>it</v8:lang>
-																			<v8:content>Terminare la registrazione del comportamento</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>ka</v8:lang>
-																			<v8:content>დასრულება ჩაწერა ქცევა</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>lt</v8:lang>
-																			<v8:content>Baigti filmuoti elgesio</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>lv</v8:lang>
-																			<v8:content>Pabeigt rīcību ierakstu</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>mn</v8:lang>
-																			<v8:content>Дуусгах бичлэг зан</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>pl</v8:lang>
-																			<v8:content>Zakończyć nagrywanie zachowania</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>ro</v8:lang>
-																			<v8:content>Pentru a termina înregistrarea comportamentului</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>sl</v8:lang>
-																			<v8:content>Če želite končati snemanje vedenja</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>sv</v8:lang>
-																			<v8:content>För att avsluta inspelningen av beteende</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>tr</v8:lang>
-																			<v8:content>Kaydı bitirmek davranış</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>vi</v8:lang>
-																			<v8:content>Dừng ghi hành vi người sử dụng</v8:content>
-																		</v8:item>
-																	</Title>
-																	<ExtendedTooltip name="VanessaEditorЗавершитьЗаписьДействийПользователяРасширеннаяПодсказка" id="2505"/>
-																</Button>
-															</ChildItems>
-														</ButtonGroup>
-														<ButtonGroup name="ГруппаVanessaEditorМасштаб" id="2462">
-															<ToolTip>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Масштаб</v8:content>
-																</v8:item>
-															</ToolTip>
-															<Representation>Compact</Representation>
-															<ExtendedTooltip name="ГруппаVanessaEditorМасштабРасширеннаяПодсказка" id="2463"/>
-															<ChildItems>
-																<Button name="VanessaEditorViewZoomIn" id="2464">
-																	<Type>CommandBarButton</Type>
-																	<CommandName>Form.Command.VanessaEditorViewZoomIn</CommandName>
-																	<ExtendedTooltip name="VanessaEditorViewZoomInРасширеннаяПодсказка" id="2465"/>
-																</Button>
-																<Button name="VanessaEditorViewZoomOut" id="2466">
-																	<Type>CommandBarButton</Type>
-																	<CommandName>Form.Command.VanessaEditorViewZoomOut</CommandName>
-																	<ExtendedTooltip name="VanessaEditorViewZoomOutРасширеннаяПодсказка" id="2467"/>
-																</Button>
-																<Button name="VanessaEditorViewZoomReset" id="2468">
-																	<Type>CommandBarButton</Type>
-																	<Representation>Picture</Representation>
-																	<CommandName>Form.Command.VanessaEditorViewZoomReset</CommandName>
-																	<Picture>
-																		<xr:Abs>Picture.png</xr:Abs>
-																		<xr:LoadTransparent>false</xr:LoadTransparent>
-																	</Picture>
-																	<Title>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Сбросить</v8:content>
-																		</v8:item>
-																	</Title>
-																	<ExtendedTooltip name="VanessaEditorViewZoomResetРасширеннаяПодсказка" id="2469"/>
-																</Button>
-																<Popup name="ГруппаVanessaEditorВыборТемы" id="2514">
-																	<Title>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Выбор темы</v8:content>
-																		</v8:item>
-																	</Title>
-																	<ToolTip>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Выбор темы</v8:content>
-																		</v8:item>
-																	</ToolTip>
-																	<Picture>
-																		<xr:Ref>StdPicture.ChartOfAccounts</xr:Ref>
-																		<xr:LoadTransparent>true</xr:LoadTransparent>
-																	</Picture>
-																	<Representation>Picture</Representation>
-																	<ExtendedTooltip name="ГруппаVanessaEditorВыборТемыРасширеннаяПодсказка" id="2515"/>
-																	<ChildItems>
-																		<Button name="VanessaEditorТема_1c" id="2516">
-																			<Type>CommandBarButton</Type>
-																			<CommandName>Form.Command.VanessaEditorТема_1c</CommandName>
-																			<ExtendedTooltip name="VanessaEditorТема_1cРасширеннаяПодсказка" id="2517"/>
-																		</Button>
-																		<Button name="VanessaEditorТема_vs" id="2518">
-																			<Type>CommandBarButton</Type>
-																			<CommandName>Form.Command.VanessaEditorТема_vs</CommandName>
-																			<ExtendedTooltip name="VanessaEditorТема_vsРасширеннаяПодсказка" id="2519"/>
-																		</Button>
-																		<Button name="VanessaEditorТема_vsdark" id="2520">
-																			<Type>CommandBarButton</Type>
-																			<CommandName>Form.Command.VanessaEditorТема_vsdark</CommandName>
-																			<ExtendedTooltip name="VanessaEditorТема_vsdarkРасширеннаяПодсказка" id="2521"/>
-																		</Button>
-																		<Button name="VanessaEditorТема_hcblack" id="2522">
-																			<Type>CommandBarButton</Type>
-																			<CommandName>Form.Command.VanessaEditorТема_hcblack</CommandName>
-																			<ExtendedTooltip name="VanessaEditorТема_hcblackРасширеннаяПодсказка" id="2523"/>
-																		</Button>
-																	</ChildItems>
-																</Popup>
-															</ChildItems>
-														</ButtonGroup>
-														<ButtonGroup name="ГруппаVanessaEditorРедактироватьСтроки" id="2535">
-															<ToolTip>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Точки останова</v8:content>
-																</v8:item>
-															</ToolTip>
-															<Representation>Compact</Representation>
-															<ExtendedTooltip name="ГруппаVanessaEditorРедактироватьСтрокиРасширеннаяПодсказка" id="2536"/>
-															<ChildItems>
-																<Button name="VanessaEditorКомментироватьСтрокиСценария" id="2537">
-																	<Type>CommandBarButton</Type>
-																	<Representation>Picture</Representation>
-																	<CommandName>Form.Command.КомментироватьСтрокиСценария</CommandName>
-																	<Picture>
-																		<xr:Abs>Picture.png</xr:Abs>
-																		<xr:LoadTransparent>false</xr:LoadTransparent>
-																	</Picture>
-																	<ExtendedTooltip name="VanessaEditorКомментироватьСтрокиСценарияРасширеннаяПодсказка" id="2538"/>
-																</Button>
-																<Button name="VanessaEditorВыделитьСтрокиСценария" id="2539">
-																	<Type>CommandBarButton</Type>
-																	<Representation>Picture</Representation>
-																	<CommandName>Form.Command.ВыделитьСтрокиСценария</CommandName>
-																	<Picture>
-																		<xr:Abs>Picture.png</xr:Abs>
-																		<xr:LoadTransparent>false</xr:LoadTransparent>
-																	</Picture>
-																	<ExtendedTooltip name="VanessaEditorВыделитьСтрокиСценарияРасширеннаяПодсказка" id="2540"/>
-																</Button>
-																<Button name="VanessaEditorПеревестиТекстНаДругойЯзык" id="2564">
-																	<Type>CommandBarButton</Type>
-																	<Representation>Picture</Representation>
-																	<CommandName>Form.Command.ПеревестиТекстНаДругойЯзык</CommandName>
-																	<Picture>
-																		<xr:Abs>Picture.png</xr:Abs>
-																		<xr:LoadTransparent>false</xr:LoadTransparent>
-																	</Picture>
-																	<Title>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Перевести</v8:content>
-																		</v8:item>
-																	</Title>
-																	<ExtendedTooltip name="VanessaEditorПеревестиТекстНаДругойЯзыкРасширеннаяПодсказка" id="2565"/>
-																</Button>
-															</ChildItems>
-														</ButtonGroup>
-														<Popup name="ГруппаVanessaEditorНастройкиРедактора" id="2552">
-															<Title>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Настройки редактора</v8:content>
-																</v8:item>
-															</Title>
-															<ToolTip>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Настройки редактора</v8:content>
-																</v8:item>
-															</ToolTip>
-															<Picture>
-																<xr:Abs>Picture.png</xr:Abs>
-																<xr:LoadTransparent>false</xr:LoadTransparent>
-															</Picture>
-															<Representation>Picture</Representation>
-															<ExtendedTooltip name="ГруппаVanessaEditorНастройкиРедактораРасширеннаяПодсказка" id="2553"/>
-															<ChildItems>
-																<Button name="VanessaEditorИспользоватьДанныеТекущейФормыПриПодбореШагов" id="2554">
-																	<Type>CommandBarButton</Type>
-																	<Check>true</Check>
-																	<CommandName>Form.Command.VanessaEditorИспользоватьДанныеТекущейФормыПриПодбореШагов</CommandName>
-																	<ExtendedTooltip name="VanessaEditorИспользоватьДанныеТекущейФормыПриПодбореШаговРасширеннаяПодсказка" id="2555"/>
-																</Button>
-																<Button name="VanessaEditorПоказыватьСтрокиПодсценариев" id="2556">
-																	<Type>CommandBarButton</Type>
-																	<Check>true</Check>
-																	<CommandName>Form.Command.VanessaEditorПоказыватьСтрокиПодсценариев</CommandName>
-																	<ExtendedTooltip name="VanessaEditorПоказыватьСтрокиПодсценариевРасширеннаяПодсказка" id="2557"/>
-																</Button>
-																<Button name="VanessaEditorПоказыватьМиниатюруКода" id="2650">
-																	<Type>CommandBarButton</Type>
-																	<Check>true</Check>
-																	<CommandName>Form.Command.VanessaEditorПоказыватьМиниатюруКода</CommandName>
-																	<ExtendedTooltip name="VanessaEditorПоказыватьМиниатюруКодаРасширеннаяПодсказка" id="2651"/>
-																</Button>
-															</ChildItems>
-														</Popup>
-													</ChildItems>
-												</CommandBar>
 												<UsualGroup name="ГруппаРедактораИДреваФайлов" id="2566">
 													<Title>
 														<v8:item>
@@ -4258,6 +4957,27 @@
 																	<Events>
 																		<Event name="OnChange">ПутьКПапкеСФичамиПриИзменении</Event>
 																		<Event name="StartChoice">ПутьКПапкеСФичамиНачалоВыбора</Event>
+																	</Events>
+																</InputField>
+																<InputField name="СтрокаДляПоискаВнутриФичи" id="2695">
+																	<DataPath>СтрокаДляПоискаВнутриФичи</DataPath>
+																	<TitleLocation>None</TitleLocation>
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<ClearButton>true</ClearButton>
+																	<InputHint>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Введите искомый текст или часть фразы</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Enter a search text or a phrase part</v8:content>
+																		</v8:item>
+																	</InputHint>
+																	<ContextMenu name="СтрокаДляПоискаВнутриФичиКонтекстноеМеню" id="2696"/>
+																	<ExtendedTooltip name="СтрокаДляПоискаВнутриФичиРасширеннаяПодсказка" id="2697"/>
+																	<Events>
+																		<Event name="OnChange">СтрокаДляПоискаВнутриФичиПриИзменении</Event>
 																	</Events>
 																</InputField>
 																<Table name="ДревоФайлаФич" id="2573">
@@ -6412,6 +7132,10 @@
 														<Type>CommandBarButton</Type>
 														<Representation>PictureAndText</Representation>
 														<CommandName>Form.Command.СохранитьНастройки</CommandName>
+														<Picture>
+															<xr:Ref>StdPicture.Write</xr:Ref>
+															<xr:LoadTransparent>true</xr:LoadTransparent>
+														</Picture>
 														<Title>
 															<v8:item>
 																<v8:lang>ru</v8:lang>
@@ -9322,7 +10046,12 @@
 											</Button>
 											<Button name="ТестКлиентСохранить" id="989">
 												<Type>CommandBarButton</Type>
+												<Representation>PictureAndText</Representation>
 												<CommandName>Form.Command.СохранитьКлиентовТестирования</CommandName>
+												<Picture>
+													<xr:Ref>StdPicture.Write</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</Picture>
 												<ExtendedTooltip name="ТестКлиентСохранитьРасширеннаяПодсказка" id="1335"/>
 											</Button>
 											<ButtonGroup name="ТестКлиентГруппа1" id="991">
@@ -9516,12 +10245,32 @@
 											<ChildItems>
 												<InputField name="ДанныеКлиентовТестированияИмя" id="975">
 													<DataPath>ДанныеКлиентовТестирования.Имя</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Имя</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Name</v8:content>
+														</v8:item>
+													</Title>
 													<EditMode>EnterOnInput</EditMode>
 													<ContextMenu name="ДанныеКлиентовТестированияИмяКонтекстноеМеню" id="976"/>
 													<ExtendedTooltip name="ДанныеКлиентовТестированияИмяРасширеннаяПодсказка" id="1351"/>
 												</InputField>
 												<InputField name="ДанныеКлиентовТестированияСиноним" id="1722">
 													<DataPath>ДанныеКлиентовТестирования.Синоним</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Синоним</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Synonym</v8:content>
+														</v8:item>
+													</Title>
 													<EditMode>EnterOnInput</EditMode>
 													<ContextMenu name="ДанныеКлиентовТестированияСинонимКонтекстноеМеню" id="1723"/>
 													<ExtendedTooltip name="ДанныеКлиентовТестированияСинонимРасширеннаяПодсказка" id="1724"/>
@@ -9530,6 +10279,16 @@
 										</ColumnGroup>
 										<InputField name="ДанныеКлиентовТестированияТипКлиента" id="1566">
 											<DataPath>ДанныеКлиентовТестирования.ТипКлиента</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Тип клиента</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Client type</v8:content>
+												</v8:item>
+											</Title>
 											<EditMode>EnterOnInput</EditMode>
 											<AutoMaxWidth>false</AutoMaxWidth>
 											<MaxWidth>14</MaxWidth>
@@ -9838,12 +10597,32 @@
 											<ChildItems>
 												<InputField name="ДанныеКлиентовТестированияПутьКИнфобазе" id="981">
 													<DataPath>ДанныеКлиентовТестирования.ПутьКИнфобазе</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Путь к инфобазе</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Infobase path</v8:content>
+														</v8:item>
+													</Title>
 													<EditMode>EnterOnInput</EditMode>
 													<ContextMenu name="ДанныеКлиентовТестированияПутьКИнфобазеКонтекстноеМеню" id="982"/>
 													<ExtendedTooltip name="ДанныеКлиентовТестированияПутьКИнфобазеРасширеннаяПодсказка" id="1355"/>
 												</InputField>
 												<InputField name="ДанныеКлиентовТестированияДопПараметры" id="1011">
 													<DataPath>ДанныеКлиентовТестирования.ДопПараметры</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Доп.параметры</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Addl. parameters</v8:content>
+														</v8:item>
+													</Title>
 													<EditMode>EnterOnInput</EditMode>
 													<FooterText>
 														<v8:item>
@@ -9875,6 +10654,16 @@
 											<ChildItems>
 												<InputField name="ДанныеКлиентовТестированияИмяКомпьютера" id="1677">
 													<DataPath>ДанныеКлиентовТестирования.ИмяКомпьютера</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Имя компьютера</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Computer name</v8:content>
+														</v8:item>
+													</Title>
 													<EditMode>EnterOnInput</EditMode>
 													<ContextMenu name="ДанныеКлиентовТестированияИмяКомпьютераКонтекстноеМеню" id="1678"/>
 													<ExtendedTooltip name="ДанныеКлиентовТестированияИмяКомпьютераРасширеннаяПодсказка" id="1679"/>
@@ -9884,6 +10673,16 @@
 												</InputField>
 												<InputField name="ДанныеКлиентовТестированияПорт" id="984">
 													<DataPath>ДанныеКлиентовТестирования.ПортЗапускаТестКлиента</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Порт запуска</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Port</v8:content>
+														</v8:item>
+													</Title>
 													<EditMode>EnterOnInput</EditMode>
 													<ContextMenu name="ДанныеКлиентовТестированияПортКонтекстноеМеню" id="985"/>
 													<ExtendedTooltip name="ДанныеКлиентовТестированияПортРасширеннаяПодсказка" id="1357"/>
@@ -9892,6 +10691,16 @@
 										</ColumnGroup>
 										<InputField name="ДанныеКлиентовТестированияPIDКлиента" id="2264">
 											<DataPath>ДанныеКлиентовТестирования.PIDКлиентаТестирования</DataPath>
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>PID</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>PID</v8:content>
+												</v8:item>
+											</Title>
 											<EditMode>EnterOnInput</EditMode>
 											<ContextMenu name="ДанныеКлиентовТестированияPIDКлиентаКонтекстноеМеню" id="2265"/>
 											<ExtendedTooltip name="ДанныеКлиентовТестированияPIDКлиентаРасширеннаяПодсказка" id="2266"/>
@@ -11150,7 +11959,7 @@
 - Управление размерами и положением окна
 - Получение снимка окна и снимка экрана
 
-https://github.com/lintest/VanessaExt</v8:content>
+&lt;link https://github.com/lintest/VanessaExt&gt;https://github.com/lintest/VanessaExt&lt;/&gt;</v8:content>
 																	</v8:item>
 																</Title>
 															</ExtendedTooltip>
@@ -15718,6 +16527,10 @@ Log events:
 																			<v8:lang>ru</v8:lang>
 																			<v8:content>Настройки эмуляции действий мышки</v8:content>
 																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Mouse actions emulation settings</v8:content>
+																		</v8:item>
 																	</Title>
 																	<Group>Vertical</Group>
 																	<Behavior>Collapsible</Behavior>
@@ -15768,6 +16581,10 @@ Log events:
 																				<v8:item>
 																					<v8:lang>ru</v8:lang>
 																					<v8:content>Скорость перемещения мышки</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>Mouse speed</v8:content>
 																				</v8:item>
 																			</Title>
 																			<Group>Horizontal</Group>
@@ -15831,11 +16648,235 @@ Log events:
 																				<Title formatted="false">
 																					<v8:item>
 																						<v8:lang>ru</v8:lang>
-																						<v8:content>Если опция включена, то в браузере будет происходить отрисовка анимации клика мышки.</v8:content>
+																						<v8:content>Если опция включена, то будет включена подсветка кликов с помощью внешней компоненты VanessaExt.</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>If this option is enabled, click highlighting will be enabled using the external VanessaExt component.</v8:content>
 																					</v8:item>
 																				</Title>
 																			</ExtendedTooltip>
+																			<Events>
+																				<Event name="OnChange">ПодсвечиватьКликМышкиВБраузереVanessaExtПриИзменении</Event>
+																			</Events>
 																		</CheckBoxField>
+																		<UsualGroup name="ГруппаПодсвечиватьКликиМышкой" id="2667">
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Подсвечивать клики мышкой</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>Highlight mouse clicks</v8:content>
+																				</v8:item>
+																			</Title>
+																			<Group>Vertical</Group>
+																			<Behavior>Collapsible</Behavior>
+																			<ControlRepresentation>Picture</ControlRepresentation>
+																			<ExtendedTooltip name="ГруппаПодсвечиватьКликиМышкойРасширеннаяПодсказка" id="2668"/>
+																			<ChildItems>
+																				<UsualGroup name="ГруппаВыборЦветаПодсветкиКликовМышки" id="2672">
+																					<Title>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Выбор цвета подсветки кликов мышки</v8:content>
+																						</v8:item>
+																					</Title>
+																					<Group>AlwaysHorizontal</Group>
+																					<ShowTitle>false</ShowTitle>
+																					<ExtendedTooltip name="ГруппаВыборЦветаПодсветкиКликовМышкиРасширеннаяПодсказка" id="2673"/>
+																					<ChildItems>
+																						<InputField name="ЦветПодсветкиКликаМышкиVanessaExt" id="2669">
+																							<DataPath>Объект.ЦветПодсветкиКликаМышкиVanessaExt</DataPath>
+																							<Title>
+																								<v8:item>
+																									<v8:lang>ru</v8:lang>
+																									<v8:content>Цвет</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>en</v8:lang>
+																									<v8:content>Colour</v8:content>
+																								</v8:item>
+																							</Title>
+																							<ToolTipRepresentation>Button</ToolTipRepresentation>
+																							<ContextMenu name="ЦветПодсветкиКликаМышкиVanessaExtКонтекстноеМеню" id="2670"/>
+																							<ExtendedTooltip name="ЦветПодсветкиКликаМышкиVanessaExtРасширеннаяПодсказка" id="2671">
+																								<Title formatted="false">
+																									<v8:item>
+																										<v8:lang>ru</v8:lang>
+																										<v8:content>Число. Задаёт цвет, которым будут подсвечиваться клики мышки.</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>en</v8:lang>
+																										<v8:content>Number. Sets the color for highlighting mouse clicks.</v8:content>
+																									</v8:item>
+																								</Title>
+																							</ExtendedTooltip>
+																						</InputField>
+																						<InputField name="ВыборЦветаПодсветкиКликовМышки" id="2674">
+																							<DataPath>ВыборЦветаПодсветкиКликовМышки</DataPath>
+																							<TitleLocation>None</TitleLocation>
+																							<ToolTipRepresentation>Button</ToolTipRepresentation>
+																							<Width>16</Width>
+																							<HorizontalStretch>false</HorizontalStretch>
+																							<ContextMenu name="ВыборЦветаПодсветкиКликовМышкиКонтекстноеМеню" id="2675"/>
+																							<ExtendedTooltip name="ВыборЦветаПодсветкиКликовМышкиРасширеннаяПодсказка" id="2676">
+																								<Title formatted="false">
+																									<v8:item>
+																										<v8:lang>ru</v8:lang>
+																										<v8:content>Позволяет выбрать цвет с помощью стандартного диалога выбора цветов.</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>en</v8:lang>
+																										<v8:content>Allows you to select a color using the standard color selection dialog.</v8:content>
+																									</v8:item>
+																								</Title>
+																							</ExtendedTooltip>
+																							<Events>
+																								<Event name="OnChange">ВыборЦветаПодсветкиКликовМышкиПриИзменении</Event>
+																							</Events>
+																						</InputField>
+																						<Button name="ТестПодсветкиКликаМышки" id="2734">
+																							<Type>UsualButton</Type>
+																							<CommandName>Form.Command.ТестПодсветкиКликаМышки</CommandName>
+																							<ExtendedTooltip name="ТестПодсветкиКликаМышкиРасширеннаяПодсказка" id="2735"/>
+																						</Button>
+																					</ChildItems>
+																				</UsualGroup>
+																				<UsualGroup name="ГруппаНастройкаКликовМышкиПрочиеНастройки" id="2693">
+																					<Group>AlwaysHorizontal</Group>
+																					<Representation>None</Representation>
+																					<ShowTitle>false</ShowTitle>
+																					<ExtendedTooltip name="ГруппаНастройкаКликовМышкиПрочиеНастройкиРасширеннаяПодсказка" id="2694"/>
+																					<ChildItems>
+																						<UsualGroup name="ГруппаПодсветкаКликовМышкиЛевыйСтолбец" id="2677">
+																							<Group>Vertical</Group>
+																							<Representation>None</Representation>
+																							<ShowTitle>false</ShowTitle>
+																							<ExtendedTooltip name="ГруппаПодсветкаКликовМышкиЛевыйСтолбецРасширеннаяПодсказка" id="2678"/>
+																							<ChildItems>
+																								<InputField name="РадиусПодсветкиКликаМышкиVanessaExt" id="2681">
+																									<DataPath>Объект.РадиусПодсветкиКликаМышкиVanessaExt</DataPath>
+																									<Title>
+																										<v8:item>
+																											<v8:lang>ru</v8:lang>
+																											<v8:content>Радиус</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>en</v8:lang>
+																											<v8:content>Radius</v8:content>
+																										</v8:item>
+																									</Title>
+																									<ToolTipRepresentation>Button</ToolTipRepresentation>
+																									<ContextMenu name="РадиусПодсветкиКликаМышкиVanessaExtКонтекстноеМеню" id="2682"/>
+																									<ExtendedTooltip name="РадиусПодсветкиКликаМышкиVanessaExtРасширеннаяПодсказка" id="2683">
+																										<Title formatted="false">
+																											<v8:item>
+																												<v8:lang>ru</v8:lang>
+																												<v8:content>Задаёт радиус анимации клика.</v8:content>
+																											</v8:item>
+																											<v8:item>
+																												<v8:lang>en</v8:lang>
+																												<v8:content>Sets the radius of the click animation.</v8:content>
+																											</v8:item>
+																										</Title>
+																									</ExtendedTooltip>
+																								</InputField>
+																								<InputField name="ТолщинаПодсветкиКликаМышкиVanessaExt" id="2684">
+																									<DataPath>Объект.ТолщинаПодсветкиКликаМышкиVanessaExt</DataPath>
+																									<Title>
+																										<v8:item>
+																											<v8:lang>ru</v8:lang>
+																											<v8:content>Толщина</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>en</v8:lang>
+																											<v8:content>Width</v8:content>
+																										</v8:item>
+																									</Title>
+																									<ToolTipRepresentation>Button</ToolTipRepresentation>
+																									<ContextMenu name="ТолщинаПодсветкиКликаМышкиVanessaExtКонтекстноеМеню" id="2685"/>
+																									<ExtendedTooltip name="ТолщинаПодсветкиКликаМышкиVanessaExtРасширеннаяПодсказка" id="2686">
+																										<Title formatted="false">
+																											<v8:item>
+																												<v8:lang>ru</v8:lang>
+																												<v8:content>Задаёт толщину анимации клика.</v8:content>
+																											</v8:item>
+																											<v8:item>
+																												<v8:lang>en</v8:lang>
+																												<v8:content>Sets the width of the click animation.</v8:content>
+																											</v8:item>
+																										</Title>
+																									</ExtendedTooltip>
+																								</InputField>
+																							</ChildItems>
+																						</UsualGroup>
+																						<UsualGroup name="ГруппаПодсветкаКликовМышкиПравыйСтолбец" id="2679">
+																							<Group>Vertical</Group>
+																							<ShowTitle>false</ShowTitle>
+																							<ExtendedTooltip name="ГруппаПодсветкаКликовМышкиПравыйСтолбецРасширеннаяПодсказка" id="2680"/>
+																							<ChildItems>
+																								<InputField name="ДлительностьПодсветкиКликаМышкиVanessaExt" id="2687">
+																									<DataPath>Объект.ДлительностьПодсветкиКликаМышкиVanessaExt</DataPath>
+																									<Title>
+																										<v8:item>
+																											<v8:lang>ru</v8:lang>
+																											<v8:content>Длительность</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>en</v8:lang>
+																											<v8:content>Duration</v8:content>
+																										</v8:item>
+																									</Title>
+																									<ToolTipRepresentation>Button</ToolTipRepresentation>
+																									<ContextMenu name="ДлительностьПодсветкиКликаМышкиVanessaExtКонтекстноеМеню" id="2688"/>
+																									<ExtendedTooltip name="ДлительностьПодсветкиКликаМышкиVanessaExtРасширеннаяПодсказка" id="2689">
+																										<Title formatted="false">
+																											<v8:item>
+																												<v8:lang>en</v8:lang>
+																												<v8:content>Sets the duration of the click animation.</v8:content>
+																											</v8:item>
+																											<v8:item>
+																												<v8:lang>ru</v8:lang>
+																												<v8:content>Задаёт длительность анимации клика.</v8:content>
+																											</v8:item>
+																										</Title>
+																									</ExtendedTooltip>
+																								</InputField>
+																								<InputField name="ПрозрачностьПодсветкиКликаМышкиVanessaExt" id="2690">
+																									<DataPath>Объект.ПрозрачностьПодсветкиКликаМышкиVanessaExt</DataPath>
+																									<Title>
+																										<v8:item>
+																											<v8:lang>ru</v8:lang>
+																											<v8:content>Прозрачность</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>en</v8:lang>
+																											<v8:content>Transparency</v8:content>
+																										</v8:item>
+																									</Title>
+																									<ToolTipRepresentation>Button</ToolTipRepresentation>
+																									<ContextMenu name="ПрозрачностьПодсветкиКликаМышкиVanessaExtКонтекстноеМеню" id="2691"/>
+																									<ExtendedTooltip name="ПрозрачностьПодсветкиКликаМышкиVanessaExtРасширеннаяПодсказка" id="2692">
+																										<Title formatted="false">
+																											<v8:item>
+																												<v8:lang>ru</v8:lang>
+																												<v8:content>Задаёт прозрачность анимации клика.</v8:content>
+																											</v8:item>
+																											<v8:item>
+																												<v8:lang>en</v8:lang>
+																												<v8:content>Sets the transparency of the click animation.</v8:content>
+																											</v8:item>
+																										</Title>
+																									</ExtendedTooltip>
+																								</InputField>
+																							</ChildItems>
+																						</UsualGroup>
+																					</ChildItems>
+																				</UsualGroup>
+																			</ChildItems>
+																		</UsualGroup>
 																	</ChildItems>
 																</UsualGroup>
 																<CheckBoxField name="ЭмулироватьВводКлавиатурыVanessaExt" id="2342">
@@ -15961,13 +17002,13 @@ SikuliX Server - это специальная программная оптим
 																<Event name="OnChange">ИспользоватьSikuliXСерверПриИзменении</Event>
 															</Events>
 														</CheckBoxField>
-														<CheckBoxField name="ЗаписьВидеоЭмулироватьДвиженияМышки" id="2193">
-															<DataPath>Объект.ЗаписьВидеоЭмулироватьДвиженияМышки</DataPath>
+														<CheckBoxField name="ЗаписьВидеоЭмулироватьДвиженияМышкиSikuliX" id="2193">
+															<DataPath>Объект.ЗаписьВидеоЭмулироватьДвиженияМышкиSikuliX</DataPath>
 															<TitleLocation>Right</TitleLocation>
 															<ToolTipRepresentation>Button</ToolTipRepresentation>
 															<CheckBoxType>Auto</CheckBoxType>
-															<ContextMenu name="ЗаписьВидеоЭмулироватьДвиженияМышкиКонтекстноеМеню" id="2194"/>
-															<ExtendedTooltip name="ЗаписьВидеоЭмулироватьДвиженияМышкиРасширеннаяПодсказка" id="2195">
+															<ContextMenu name="ЗаписьВидеоЭмулироватьДвиженияМышкиSikuliXКонтекстноеМеню" id="2194"/>
+															<ExtendedTooltip name="ЗаписьВидеоЭмулироватьДвиженияМышкиSikuliXРасширеннаяПодсказка" id="2195">
 																<Title formatted="false">
 																	<v8:item>
 																		<v8:lang>ru</v8:lang>
@@ -15984,7 +17025,7 @@ To disable mouse movement at a specific step, you should use the #[DoNotMoveMous
 																</Title>
 															</ExtendedTooltip>
 															<Events>
-																<Event name="OnChange">ЗаписьВидеоЭмулироватьДвиженияМышкиПриИзменении</Event>
+																<Event name="OnChange">ЗаписьВидеоЭмулироватьДвиженияМышкиSikuliXПриИзменении</Event>
 															</Events>
 														</CheckBoxField>
 														<UsualGroup name="ГруппаSikuliXServerПодробно" id="2135">
@@ -17710,11 +18751,11 @@ Also use special instructions in the script, see Help info.</v8:content>
 																								<Presentation>
 																									<v8:item>
 																										<v8:lang>ru</v8:lang>
-																										<v8:content>FFmpeg</v8:content>
+																										<v8:content>FFmpeg (рекомендуется)</v8:content>
 																									</v8:item>
 																									<v8:item>
 																										<v8:lang>en</v8:lang>
-																										<v8:content>FFmpeg</v8:content>
+																										<v8:content>FFmpeg (Recommended)</v8:content>
 																									</v8:item>
 																								</Presentation>
 																								<Value xsi:type="xs:string">ffmpeg</Value>
@@ -19204,7 +20245,8 @@ Value range is from -10 to 10.</v8:content>
 																																<Title formatted="true">
 																																	<v8:item>
 																																		<v8:lang>ru</v8:lang>
-																																		<v8:content>Задаёт язык, на котором будет говорить диктор. Подробности &lt;link https://cloud.yandex.ru/docs/speechkit/tts/request&gt;здесь&lt;/&gt;.</v8:content>
+																																		<v8:content>Задаёт язык, на котором будет говорить диктор. Подробности &lt;link https://cloud.yandex.ru/docs/speechkit/tts/request&gt;здесь&lt;/&gt;.
+Управление ударением и произношением см &lt;link https://yandex.ru/dev/dialogs/alice/doc/speech-tuning-docpage/&gt;тут.&lt;/&gt;</v8:content>
 																																	</v8:item>
 																																</Title>
 																															</ExtendedTooltip>
@@ -19358,7 +20400,8 @@ Value range is from -10 to 10.</v8:content>
 																																<Title formatted="true">
 																																	<v8:item>
 																																		<v8:lang>ru</v8:lang>
-																																		<v8:content>Задаёт голос, которым будет говорить диктор. Подробности &lt;link https://cloud.yandex.ru/docs/speechkit/tts/request&gt;здесь&lt;/&gt;.</v8:content>
+																																		<v8:content>Задаёт голос, которым будет говорить диктор. Подробности &lt;link https://cloud.yandex.ru/docs/speechkit/tts/request&gt;здесь&lt;/&gt;.
+Управление ударением и произношением см &lt;link https://yandex.ru/dev/dialogs/alice/doc/speech-tuning-docpage/&gt;тут.&lt;/&gt;</v8:content>
 																																	</v8:item>
 																																</Title>
 																															</ExtendedTooltip>
@@ -19427,7 +20470,8 @@ Value range is from -10 to 10.</v8:content>
 																																<Title formatted="true">
 																																	<v8:item>
 																																		<v8:lang>ru</v8:lang>
-																																		<v8:content>Задаёт эмоцию, с которой будет говорить диктор. Подробности &lt;link https://cloud.yandex.ru/docs/speechkit/tts/request&gt;здесь&lt;/&gt;.</v8:content>
+																																		<v8:content>Задаёт эмоцию, с которой будет говорить диктор. Подробности &lt;link https://cloud.yandex.ru/docs/speechkit/tts/request&gt;здесь&lt;/&gt;.
+Управление ударением и произношением см &lt;link https://yandex.ru/dev/dialogs/alice/doc/speech-tuning-docpage/&gt;тут.&lt;/&gt;</v8:content>
 																																	</v8:item>
 																																</Title>
 																															</ExtendedTooltip>
@@ -19459,6 +20503,10 @@ Value range is from -10 to 10.</v8:content>
 																																				<v8:lang>ru</v8:lang>
 																																				<v8:content>API</v8:content>
 																																			</v8:item>
+																																			<v8:item>
+																																				<v8:lang>en</v8:lang>
+																																				<v8:content>API</v8:content>
+																																			</v8:item>
 																																		</Presentation>
 																																		<Value xsi:type="xs:decimal">0</Value>
 																																	</xr:Value>
@@ -19471,6 +20519,10 @@ Value range is from -10 to 10.</v8:content>
 																																			<v8:item>
 																																				<v8:lang>ru</v8:lang>
 																																				<v8:content>Веб-интерфейс</v8:content>
+																																			</v8:item>
+																																			<v8:item>
+																																				<v8:lang>en</v8:lang>
+																																				<v8:content>Web interface</v8:content>
 																																			</v8:item>
 																																		</Presentation>
 																																		<Value xsi:type="xs:decimal">1</Value>
@@ -20429,14 +21481,11 @@ Value range is from -10 to 10.</v8:content>
 																											</InputHint>
 																											<ContextMenu name="ТекстДляТестаГолосаКонтекстноеМеню" id="2124"/>
 																											<ExtendedTooltip name="ТекстДляТестаГолосаРасширеннаяПодсказка" id="2125">
-																												<Title formatted="false">
+																												<Title formatted="true">
 																													<v8:item>
 																														<v8:lang>ru</v8:lang>
-																														<v8:content>Текст, который необходимо произнести.</v8:content>
-																													</v8:item>
-																													<v8:item>
-																														<v8:lang>en</v8:lang>
-																														<v8:content>What to say</v8:content>
+																														<v8:content>Текст, который необходимо произнести.
+Управление ударением и произношением см &lt;link https://yandex.ru/dev/dialogs/alice/doc/speech-tuning-docpage/&gt;тут.&lt;/&gt;</v8:content>
 																													</v8:item>
 																												</Title>
 																											</ExtendedTooltip>
@@ -20849,16 +21898,6 @@ Reduces voice generation costs.</v8:content>
 																					<v8:content>Hơn nữa</v8:content>
 																				</v8:item>
 																			</Title>
-																			<ToolTip>
-																				<v8:item>
-																					<v8:lang>ru</v8:lang>
-																					<v8:content>Страница видео дополнительные</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>en</v8:lang>
-																					<v8:content>Video page additional</v8:content>
-																				</v8:item>
-																			</ToolTip>
 																			<ExtendedTooltip name="СтраницаВидеоДополнительныеРасширеннаяПодсказка" id="1434"/>
 																			<ChildItems>
 																				<InputField name="ЗаписьВидеоФайлКурсораМышки" id="665">
@@ -21169,27 +22208,6 @@ Then in the example above the video will speed up (10 * (1-0.3)) from 10 to 7 se
 																										</Title>
 																									</ExtendedTooltip>
 																								</CheckBoxField>
-																								<CheckBoxField name="ЗаписьВидеоПодсвечиватьНажатияМышки" id="1845">
-																									<DataPath>Объект.ЗаписьВидеоПодсвечиватьНажатияМышки</DataPath>
-																									<TitleLocation>Right</TitleLocation>
-																									<ToolTipRepresentation>Button</ToolTipRepresentation>
-																									<CheckBoxType>Auto</CheckBoxType>
-																									<ContextMenu name="ЗаписьВидеоПодсвечиватьНажатияМышкиКонтекстноеМеню" id="1846"/>
-																									<ExtendedTooltip name="ЗаписьВидеоПодсвечиватьНажатияМышкиРасширеннаяПодсказка" id="1847">
-																										<Title formatted="false">
-																											<v8:item>
-																												<v8:lang>ru</v8:lang>
-																												<v8:content>Включает подсветку кликов мышки. Используется утилита из проекта UIToolsFor1C.
-Эмуляция кликов мышки осуществляется с помощью SikuliX.</v8:content>
-																											</v8:item>
-																											<v8:item>
-																												<v8:lang>en</v8:lang>
-																												<v8:content>Switches on mouse clicks highlighting. Project utility UIToolsFor1C is used.
-SikuliX emulates mouse clicks.</v8:content>
-																											</v8:item>
-																										</Title>
-																									</ExtendedTooltip>
-																								</CheckBoxField>
 																								<CheckBoxField name="ЗаписьВидеоЭмулироватьВводСКлавиатуры" id="1854">
 																									<DataPath>Объект.ЗаписьВидеоЭмулироватьВводСКлавиатуры</DataPath>
 																									<TitleLocation>Right</TitleLocation>
@@ -21336,83 +22354,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 																										</v8:item>
 																										<v8:item>
 																											<v8:lang>en</v8:lang>
-																											<v8:content>Move mouse to active control</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>am</v8:lang>
-																											<v8:content>አዳዲስ ቅድሚያ ነጥብ ጋር ንቁ ቅጽ እንዳሏቸውም</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>az</v8:lang>
-																											<v8:content>Hərəkət kursor siçan fəal element formaları</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>bg</v8:lang>
-																											<v8:content>Преместване на курсора на мишката до активен елемент на формуляра</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>de</v8:lang>
-																											<v8:content>Bewegen Sie den Mauszeiger auf das aktive Element der Form</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>es</v8:lang>
-																											<v8:content>Mover el cursor del ratón a la ventana activa un elemento de formulario</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>et</v8:lang>
-																											<v8:content>Liiguta hiirega sellele üksusele vormi</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>fr</v8:lang>
-																											<v8:content>Déplacer le curseur de la souris à l'élément actif de la forme</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>hu</v8:lang>
-																											<v8:content>Vigye az egérmutatót a aktív formában elem</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>it</v8:lang>
-																											<v8:content>Spostare il cursore del mouse verso un elemento attivo di forma</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>ka</v8:lang>
-																											<v8:content>გადატანა მაუსის მაჩვენებელი აქტიური ფორმის ელემენტი</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>lt</v8:lang>
-																											<v8:content>Perkelti pelės žymeklį į aktyvų elementą formos</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>lv</v8:lang>
-																											<v8:content>Pārvietot kursoru uz aktīvo elementu formas</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>mn</v8:lang>
-																											<v8:content>Хулганы заагчийг шилжүүлэх идэвхтэй хэлбэр элемент</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>pl</v8:lang>
-																											<v8:content>Przesunąć kursor myszy do aktywnego elementu formularza</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>ro</v8:lang>
-																											<v8:content>Muta cursorul mouse-ului la activ element de formular</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>sl</v8:lang>
-																											<v8:content>Premaknite kazalec miške na aktivno obliko element</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>sv</v8:lang>
-																											<v8:content>Flytta muspekaren till den aktiva formen element</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>tr</v8:lang>
-																											<v8:content>Taşımak için fare imleci etkin öğeye formu</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>vi</v8:lang>
-																											<v8:content>Di chuyển con trỏ chuột đến phần tử biểu mẫu hiện hoạt</v8:content>
+																											<v8:content>Deprecated. Move mouse to active control</v8:content>
 																										</v8:item>
 																									</Title>
 																									<TitleTextColor>style:BorderColor</TitleTextColor>
@@ -21430,83 +22372,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 																										</v8:item>
 																										<v8:item>
 																											<v8:lang>en</v8:lang>
-																											<v8:content>Show active form controls</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>am</v8:lang>
-																											<v8:content>መገለጫዎ ንቁ ቅጽ ይታያል</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>az</v8:lang>
-																											<v8:content>Подсвечивать aktiv maddələr formaları</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>bg</v8:lang>
-																											<v8:content>Осветяване на активни елементи форми</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>de</v8:lang>
-																											<v8:content>Aktive Elemente hervorheben Formen</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>es</v8:lang>
-																											<v8:content>Resaltar los elementos activos de las formas de</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>et</v8:lang>
-																											<v8:content>Rõhutada aktiivsete üksuste vormid</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>fr</v8:lang>
-																											<v8:content>Mettre en évidence les éléments actifs des formes</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>hu</v8:lang>
-																											<v8:content>Jelölje ki a aktív formában elemek</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>it</v8:lang>
-																											<v8:content>Evidenziare gli elementi attivi di forme</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>ka</v8:lang>
-																											<v8:content>მონიშნეთ აქტიური ფორმის ელემენტები</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>lt</v8:lang>
-																											<v8:content>Paryškinti aktyvūs elementai formų</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>lv</v8:lang>
-																											<v8:content>Izcelt aktīvie elementi formu</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>mn</v8:lang>
-																											<v8:content>Тодруулах идэвхтэй хэлбэр элемент</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>pl</v8:lang>
-																											<v8:content>Podświetl elementy aktywne formy</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>ro</v8:lang>
-																											<v8:content>Pentru a evidenția elementele active forme de</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>sl</v8:lang>
-																											<v8:content>Označite aktivno obliko elementov</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>sv</v8:lang>
-																											<v8:content>Markera aktiv form element</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>tr</v8:lang>
-																											<v8:content>Parlat aktif öğeleri şekil</v8:content>
-																										</v8:item>
-																										<v8:item>
-																											<v8:lang>vi</v8:lang>
-																											<v8:content>Hiển thị phần tử biểu mẫu hiện hoạt</v8:content>
+																											<v8:content>Deprecated. Show active form controls</v8:content>
 																										</v8:item>
 																									</Title>
 																									<TitleTextColor>style:BorderColor</TitleTextColor>
@@ -21514,6 +22380,38 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 																									<CheckBoxType>Auto</CheckBoxType>
 																									<ContextMenu name="ЗаписьВидеоПодсвечиватьАктивныеЭлементыФормКонтекстноеМеню" id="710"/>
 																									<ExtendedTooltip name="ЗаписьВидеоПодсвечиватьАктивныеЭлементыФормРасширеннаяПодсказка" id="1437"/>
+																								</CheckBoxField>
+																								<CheckBoxField name="ЗаписьВидеоПодсвечиватьНажатияМышки" id="1845">
+																									<DataPath>Объект.ЗаписьВидеоПодсвечиватьНажатияМышки</DataPath>
+																									<Title>
+																										<v8:item>
+																											<v8:lang>ru</v8:lang>
+																											<v8:content>Устарело. Подсвечивать клики мышкой</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>en</v8:lang>
+																											<v8:content>Deprecated. Highlight mouse clicks</v8:content>
+																										</v8:item>
+																									</Title>
+																									<TitleTextColor>style:BorderColor</TitleTextColor>
+																									<TitleLocation>Right</TitleLocation>
+																									<ToolTipRepresentation>Button</ToolTipRepresentation>
+																									<CheckBoxType>Auto</CheckBoxType>
+																									<ContextMenu name="ЗаписьВидеоПодсвечиватьНажатияМышкиКонтекстноеМеню" id="1846"/>
+																									<ExtendedTooltip name="ЗаписьВидеоПодсвечиватьНажатияМышкиРасширеннаяПодсказка" id="1847">
+																										<Title formatted="false">
+																											<v8:item>
+																												<v8:lang>ru</v8:lang>
+																												<v8:content>Включает подсветку кликов мышки. Используется утилита из проекта UIToolsFor1C.
+Эмуляция кликов мышки осуществляется с помощью SikuliX.</v8:content>
+																											</v8:item>
+																											<v8:item>
+																												<v8:lang>en</v8:lang>
+																												<v8:content>Switches on mouse clicks highlighting. Project utility UIToolsFor1C is used.
+SikuliX emulates mouse clicks.</v8:content>
+																											</v8:item>
+																										</Title>
+																									</ExtendedTooltip>
 																								</CheckBoxField>
 																							</ChildItems>
 																						</UsualGroup>
@@ -21877,6 +22775,11 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 														<Event name="OnChange">ТемаРедактораVanessaEditorПриИзменении</Event>
 													</Events>
 												</InputField>
+												<Button name="НастройкаВидимостиКнопокПанелиРедактора" id="2730">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.НастройкаВидимостиКнопокПанелиРедактора</CommandName>
+													<ExtendedTooltip name="НастройкаВидимостиКнопокПанелиРедактораРасширеннаяПодсказка" id="2731"/>
+												</Button>
 											</ChildItems>
 										</Page>
 										<Page name="СтраницаPID" id="1658">
@@ -22110,7 +23013,19 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 												<Button name="ПолучитьСтрокуЗапуска" id="2642">
 													<Type>Hyperlink</Type>
 													<CommandName>Form.Command.ПолучитьСтрокуЗапуска</CommandName>
-													<ExtendedTooltip name="ПолучитьСтрокуЗапускаРасширеннаяПодсказка" id="2643"/>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<ExtendedTooltip name="ПолучитьСтрокуЗапускаРасширеннаяПодсказка" id="2643">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Allows you to get the test run string from the command line for the given database.</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Позволяет получить строку запуска тестов из командной строки для данной базы.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
 												</Button>
 											</ChildItems>
 										</Page>
@@ -24560,82 +25475,6 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 							<v8:lang>en</v8:lang>
 							<v8:content>Client type</v8:content>
 						</v8:item>
-						<v8:item>
-							<v8:lang>am</v8:lang>
-							<v8:content>ደንበኛ አይነት</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>az</v8:lang>
-							<v8:content>Növü müştəri</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>bg</v8:lang>
-							<v8:content>Вид клиент</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>de</v8:lang>
-							<v8:content>Client-Typ</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>es</v8:lang>
-							<v8:content>Tipo de cliente</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>et</v8:lang>
-							<v8:content>Kliendi liik</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>fr</v8:lang>
-							<v8:content>Le type de client</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>hu</v8:lang>
-							<v8:content>Vevő típusa</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>it</v8:lang>
-							<v8:content>Tipo di cliente</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>ka</v8:lang>
-							<v8:content>მომხმარებელს ტიპი</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>lt</v8:lang>
-							<v8:content>Kliento tipą</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>lv</v8:lang>
-							<v8:content>Klienta tips</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>mn</v8:lang>
-							<v8:content>Харилцагчийн төрөл</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>pl</v8:lang>
-							<v8:content>Typ klienta</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>ro</v8:lang>
-							<v8:content>Tipul de client</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>sl</v8:lang>
-							<v8:content>Vrsto stranke</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>sv</v8:lang>
-							<v8:content>Kunden typ</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>tr</v8:lang>
-							<v8:content>İstemci türü</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>vi</v8:lang>
-							<v8:content>Kiểu máy trạm</v8:content>
-						</v8:item>
 					</Title>
 					<Type>
 						<v8:Type>xs:string</v8:Type>
@@ -24878,82 +25717,6 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>en</v8:lang>
-							<v8:content>PID</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>am</v8:lang>
-							<v8:content>ነፃ</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>az</v8:lang>
-							<v8:content>PID</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>bg</v8:lang>
-							<v8:content>Тазова възпалителна болест</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>de</v8:lang>
-							<v8:content>PID</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>es</v8:lang>
-							<v8:content>PID</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>et</v8:lang>
-							<v8:content>PID</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>fr</v8:lang>
-							<v8:content>PID</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>hu</v8:lang>
-							<v8:content>PID</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>it</v8:lang>
-							<v8:content>PID</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>ka</v8:lang>
-							<v8:content>PID</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>lt</v8:lang>
-							<v8:content>PID</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>lv</v8:lang>
-							<v8:content>PID</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>mn</v8:lang>
-							<v8:content>PID</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>pl</v8:lang>
-							<v8:content>PID</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>ro</v8:lang>
-							<v8:content>PID</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>sl</v8:lang>
-							<v8:content>PID</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>sv</v8:lang>
-							<v8:content>PID</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>tr</v8:lang>
-							<v8:content>PID</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>vi</v8:lang>
 							<v8:content>PID</v8:content>
 						</v8:item>
 					</Title>
@@ -26261,7 +27024,25 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Путь к папке с фичами</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Feature folder</v8:content>
+				</v8:item>
 			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыборЦветаПодсветкиКликовМышки" id="26">
+			<Type>
+				<v8:Type>v8ui:Color</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="СтрокаДляПоискаВнутриФичи" id="35">
 			<Type>
 				<v8:Type>xs:string</v8:Type>
 				<v8:StringQualifiers>
@@ -31665,7 +32446,16 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 					<v8:content>Stop</v8:content>
 				</v8:item>
 			</Title>
-			<Shortcut>Ctrl+F5</Shortcut>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остановить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Stop</v8:content>
+				</v8:item>
+			</ToolTip>
 			<Picture>
 				<xr:Ref>StdPicture.Stop</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
@@ -31677,11 +32467,11 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Перейти к строке с ошибкой</v8:content>
+					<v8:content>Перейти к следующей строке с ошибкой</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
-					<v8:content>Go to line with error</v8:content>
+					<v8:content>Move to next line with error</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -31691,7 +32481,7 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
-					<v8:content>Go to line with step error</v8:content>
+					<v8:content>Move to next line with error</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Shortcut>F8</Shortcut>
@@ -31709,6 +32499,16 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 					<v8:content>Save settings to file</v8:content>
 				</v8:item>
 			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгрузить настройки в файл...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Save settings to file</v8:content>
+				</v8:item>
+			</ToolTip>
 			<Action>ВыгрузитьНастройкиВФайл</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
@@ -31723,6 +32523,16 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 					<v8:content>Load settings from file</v8:content>
 				</v8:item>
 			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить настройки из файла...</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Load settings from file</v8:content>
+				</v8:item>
+			</ToolTip>
 			<Action>ЗагрузитьНастройкиИзФайла</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
@@ -32054,11 +32864,19 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Перейти в Vanessa Editor</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Go to Vanessa Editor</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Перейти в vanessa editor</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Go to Vanessa Editor</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>
@@ -32074,11 +32892,19 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Перейти в дерево шагов</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Go to step tree</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Перейти в дерево шагов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Go to step tree</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПерейтиВДеревоШагов</Action>
@@ -32106,11 +32932,19 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Вырезать</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Cut</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Вырезать</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Cut</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorСтандартныеКоманды</Action>
@@ -32122,11 +32956,19 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Скопировать</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Copy</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Скопировать</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Copy</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorСтандартныеКоманды</Action>
@@ -32138,11 +32980,19 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Вставить</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Paste</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Вставить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Paste</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorСтандартныеКоманды</Action>
@@ -32154,11 +33004,19 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Отменить</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Undo</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Отменить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Undo</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Shortcut>Ctrl+Z</Shortcut>
@@ -32176,11 +33034,19 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Вернуть</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Redo</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Вернуть</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Redo</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Shortcut>Ctrl+Y</Shortcut>
@@ -32198,14 +33064,21 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Найти</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Find</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Поиск</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Search</v8:content>
+				</v8:item>
 			</ToolTip>
-			<Shortcut>Ctrl+F</Shortcut>
 			<Picture>
 				<xr:Ref>StdPicture.Find</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
@@ -32219,11 +33092,19 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Найти предыдущий</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Find previous</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Найти предыдущий</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Find previous</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>
@@ -32239,11 +33120,19 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Найти следующий</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Find next</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Найти следующий</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Find next</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>
@@ -32259,11 +33148,19 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Заменить</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Replace</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Заменить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Replace</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Shortcut>Ctrl+H</Shortcut>
@@ -32280,11 +33177,19 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Свернуть все</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Collapse all</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Свернуть все</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Collapse all</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>
@@ -32300,11 +33205,19 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>1</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>1</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Свернуть до первого уровня</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Collapse to the first level</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorСтандартныеКоманды</Action>
@@ -32316,11 +33229,19 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>2</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>2</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Свернуть до второго уровня</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Collapse to the second level</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorСтандартныеКоманды</Action>
@@ -32332,11 +33253,19 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>3</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>3</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Свернуть до третьего уровня</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Collapse to third level</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorСтандартныеКоманды</Action>
@@ -32348,11 +33277,19 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Развернуть все</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Expand all</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Развернуть всё</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Expand all</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>
@@ -32368,11 +33305,19 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Увеличить</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Zoom in</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Увеличить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Zoom in</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>
@@ -32388,11 +33333,19 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Уменьшить</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Zoom out</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Уменьшить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Zoom out</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>
@@ -32408,11 +33361,19 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Сбросить масштабирование</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Reset zoom</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Сбросить масштабирование</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Reset zoom</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorСтандартныеКоманды</Action>
@@ -32422,13 +33383,21 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Установить точку останова</v8:content>
+					<v8:content>Установить/снять точку останова</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Set/remove a breakpoint</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Установить/снять точку останова</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Set/remove a breakpoint</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Shortcut>F9</Shortcut>
@@ -32441,11 +33410,19 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Удалить все точки останова</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Remove all breakpoints</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Убрать все точки останова</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Remove all breakpoints</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorRemoveBreakPoints</Action>
@@ -32457,11 +33434,19 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>4</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>4</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Свернуть до третьего уровня</v8:content>
+					<v8:content>Свернуть до четвертого уровня</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Collapse to the fourth level</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorСтандартныеКоманды</Action>
@@ -32473,11 +33458,19 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>5</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>5</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Свернуть до третьего уровня</v8:content>
+					<v8:content>Свернуть до пятого уровня</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Collapse to the fifth level</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorСтандартныеКоманды</Action>
@@ -32489,11 +33482,19 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Сохранить файл</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Save file</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Сохранить файл (ctrl+S)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Save file (ctrl+S)</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>
@@ -32509,11 +33510,19 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>1С:Предприятие</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>1C:Enterprise</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Vanessa editor тема 1c</v8:content>
+					<v8:content>1С:Предприятие</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>1C:Enterprise</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorТема1c</Action>
@@ -32525,11 +33534,19 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Основная тема</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Main theme</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Vanessa editor тема vs</v8:content>
+					<v8:content>Основная тема</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Main theme</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorТема_vs</Action>
@@ -32541,11 +33558,19 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Темная тема</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Dark theme</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Vanessa editor тема vsdark</v8:content>
+					<v8:content>Темная тема</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Dark theme</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorТема_vsdark</Action>
@@ -32557,11 +33582,19 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Высокий контраст</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>High contrast</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Vanessa editor тема hcblack</v8:content>
+					<v8:content>Высокий контраст</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>High contrast</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorТема_hcblack</Action>
@@ -32597,7 +33630,11 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Vanessa editor использовать данные текущей формы при подборе шагов</v8:content>
+					<v8:content>Использовать данные текущей формы при подборе шагов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Use the data of the current form when adding steps</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorИспользоватьДанныеТекущейФормыПриПодбореШагов</Action>
@@ -32617,7 +33654,11 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Vanessa editor показывать строки подсценариев</v8:content>
+					<v8:content>Показывать строки подсценариев</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Show subscript lines</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorПоказыватьСтрокиПодсценариев</Action>
@@ -32645,11 +33686,19 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Показать список точек останова</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Show list of breakpoints</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Показать список точек останова</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Show list of breakpoints</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorПоказатьСписокТочекОстанова</Action>
@@ -32661,11 +33710,19 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Показать/скрыть дерево каталогов</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Show/hide directory tree</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Показать/скрыть дерево каталогов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Show/hide directory tree</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorПоказатьСкрытьДеревоКаталогов</Action>
@@ -32677,11 +33734,19 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Очистить раскраску строк</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Clear line coloring</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Очистить раскраску строк</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Clear line coloring</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorОчиститьРаскраскуСтрок</Action>
@@ -32721,11 +33786,57 @@ Speeds up video assembly. This mode is recommended.</v8:content>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Vanessa editor использовать данные текущей формы при подборе шагов</v8:content>
+					<v8:content>Показывать миниатюру кода</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Show code miniature</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorПоказыватьМиниатюруКода</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="НастройкаВидимостиКнопокПанелиРедактора" id="123">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать/скрыть кнопки панели</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Show/hide panel buttons</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройка видимости кнопок панели редактора</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Setting the visibility of the editor panel buttons</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастройкаВидимостиКнопокПанелиРедактора</Action>
+		</Command>
+		<Command name="ТестПодсветкиКликаМышки" id="124">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тест</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Test</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тест подсветки клика мышки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ТестПодсветкиКликаМышки</Action>
 		</Command>
 	</Commands>
 </Form>
