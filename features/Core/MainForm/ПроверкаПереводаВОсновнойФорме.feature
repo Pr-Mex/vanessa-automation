@@ -104,7 +104,6 @@
 	|'Obsolete. No need to use this checkbox.'|
 	|'Put text module. instead regenerate and update step defintion'|
 	|'If the checkbox is on, generated code will be displayed instead of re-creating the epf (if it existed).'|
-	|'Group1'|
 	|'Platform version for EPF generation (8.3.10 or higher)'|
 	|'Platform version for epf generation.'|
 	|'As batch start of Designer is used to create the epf, then'|
@@ -746,7 +745,7 @@
 	|'What to say'|
 	|'Voice test'|
 	|'Install service programs'|
-	|'Utilities allow you to highlight the mouse pointer, draw arrows to form elements. Required  for most SikuliX steps.'|
+	|'Utilities allow you to highlight the mouse pointer, draw arrows to form elements. Required  for some SikuliX steps.'|
 	|'Open step definition'|
 	|'Open step definition'|
 	|'Create main scheme'|
