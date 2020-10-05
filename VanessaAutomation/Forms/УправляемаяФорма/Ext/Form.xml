@@ -1360,15 +1360,13 @@
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Группа командная панель vanessa editor</v8:content>
+						<v8:content>Командная панель vanessa editor</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Command panel vanessa editor</v8:content>
 					</v8:item>
 				</Title>
-				<ToolTip>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Группа командная панель vanessa editor</v8:content>
-					</v8:item>
-				</ToolTip>
 				<ExtendedTooltip name="ГруппаКоманднаяПанельVanessaEditorРасширеннаяПодсказка" id="2425"/>
 				<ChildItems>
 					<ButtonGroup name="ГруппаVanessaEditorДеревоКаталогов" id="2608">
@@ -1377,11 +1375,19 @@
 								<v8:lang>ru</v8:lang>
 								<v8:content>Дерево каталогов</v8:content>
 							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Directory tree</v8:content>
+							</v8:item>
 						</Title>
 						<ToolTip>
 							<v8:item>
 								<v8:lang>ru</v8:lang>
-								<v8:content>Буфер обмена</v8:content>
+								<v8:content>Дерево каталогов</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Directory tree</v8:content>
 							</v8:item>
 						</ToolTip>
 						<Representation>Compact</Representation>
@@ -1413,6 +1419,11 @@
 						<Representation>Compact</Representation>
 						<ExtendedTooltip name="ГруппаVanessaEditorВыполнениеСценариевРасширеннаяПодсказка" id="2699"/>
 						<ChildItems>
+							<Button name="ФормаVanessaEditorСоздатьНовыйСценарий" id="2740">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.VanessaEditorСоздатьНовыйСценарий</CommandName>
+								<ExtendedTooltip name="ФормаVanessaEditorСоздатьНовыйСценарийРасширеннаяПодсказка" id="2741"/>
+							</Button>
 							<Popup name="ПодменюVanessaEditorЗагрузитьФичи" id="2700">
 								<Title>
 									<v8:item>
@@ -2022,10 +2033,24 @@
 						</ChildItems>
 					</ButtonGroup>
 					<ButtonGroup name="ГруппаVanessaEditorБуферОбмена" id="2428">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Буфер обмена</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Clipboard</v8:content>
+							</v8:item>
+						</Title>
 						<ToolTip>
 							<v8:item>
 								<v8:lang>ru</v8:lang>
 								<v8:content>Буфер обмена</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Clipboard</v8:content>
 							</v8:item>
 						</ToolTip>
 						<Representation>Compact</Representation>
@@ -2061,10 +2086,24 @@
 						</ChildItems>
 					</ButtonGroup>
 					<ButtonGroup name="ГруппаVanessaEditorИзмененияТекста" id="2434">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Изменения текста</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Text changes</v8:content>
+							</v8:item>
+						</Title>
 						<ToolTip>
 							<v8:item>
 								<v8:lang>ru</v8:lang>
 								<v8:content>Изменения текста</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Text changes</v8:content>
 							</v8:item>
 						</ToolTip>
 						<Representation>Compact</Representation>
@@ -2083,10 +2122,24 @@
 						</ChildItems>
 					</ButtonGroup>
 					<ButtonGroup name="ГруппаVanessaEditorПоиск" id="2440">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Поиск</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Search</v8:content>
+							</v8:item>
+						</Title>
 						<ToolTip>
 							<v8:item>
 								<v8:lang>ru</v8:lang>
 								<v8:content>Поиск</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Search</v8:content>
 							</v8:item>
 						</ToolTip>
 						<Representation>Compact</Representation>
@@ -2177,32 +2230,62 @@
 									</Button>
 								</ChildItems>
 							</Popup>
-							<Button name="VanessaEditorEditFind" id="2442">
-								<Type>CommandBarButton</Type>
-								<CommandName>Form.Command.VanessaEditorEditFind</CommandName>
-								<ExtendedTooltip name="VanessaEditorEditFindРасширеннаяПодсказка" id="2443"/>
-							</Button>
-							<Button name="VanessaEditorEditFindPrevious" id="2444">
-								<Type>CommandBarButton</Type>
-								<CommandName>Form.Command.VanessaEditorEditFindPrevious</CommandName>
+							<Popup name="ГруппаVanessaEditorПоискВТексте" id="2738">
 								<Title>
 									<v8:item>
 										<v8:lang>ru</v8:lang>
-										<v8:content>Найти предыдущий</v8:content>
+										<v8:content>Поиск</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Search</v8:content>
 									</v8:item>
 								</Title>
-								<ExtendedTooltip name="VanessaEditorEditFindPreviousРасширеннаяПодсказка" id="2445"/>
-							</Button>
-							<Button name="VanessaEditorEditFindNext" id="2446">
-								<Type>CommandBarButton</Type>
-								<CommandName>Form.Command.VanessaEditorEditFindNext</CommandName>
-								<ExtendedTooltip name="VanessaEditorEditFindNextРасширеннаяПодсказка" id="2447"/>
-							</Button>
-							<Button name="VanessaEditorEditReplace" id="2448">
-								<Type>CommandBarButton</Type>
-								<CommandName>Form.Command.VanessaEditorEditReplace</CommandName>
-								<ExtendedTooltip name="VanessaEditorEditReplaceРасширеннаяПодсказка" id="2449"/>
-							</Button>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Поиск</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Search</v8:content>
+									</v8:item>
+								</ToolTip>
+								<Picture>
+									<xr:Ref>StdPicture.Find</xr:Ref>
+									<xr:LoadTransparent>true</xr:LoadTransparent>
+								</Picture>
+								<Representation>Picture</Representation>
+								<ExtendedTooltip name="ГруппаVanessaEditorПоискВТекстеРасширеннаяПодсказка" id="2739"/>
+								<ChildItems>
+									<Button name="VanessaEditorEditFind" id="2442">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.VanessaEditorEditFind</CommandName>
+										<ExtendedTooltip name="VanessaEditorEditFindРасширеннаяПодсказка" id="2443"/>
+									</Button>
+									<Button name="VanessaEditorEditFindPrevious" id="2444">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.VanessaEditorEditFindPrevious</CommandName>
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Найти предыдущий</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="VanessaEditorEditFindPreviousРасширеннаяПодсказка" id="2445"/>
+									</Button>
+									<Button name="VanessaEditorEditFindNext" id="2446">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.VanessaEditorEditFindNext</CommandName>
+										<ExtendedTooltip name="VanessaEditorEditFindNextРасширеннаяПодсказка" id="2447"/>
+									</Button>
+									<Button name="VanessaEditorEditReplace" id="2448">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.VanessaEditorEditReplace</CommandName>
+										<ExtendedTooltip name="VanessaEditorEditReplaceРасширеннаяПодсказка" id="2449"/>
+									</Button>
+								</ChildItems>
+							</Popup>
 							<Button name="VanessaEditorОчиститьРаскраскуСтрок" id="2638">
 								<Type>CommandBarButton</Type>
 								<Representation>Picture</Representation>
@@ -2216,10 +2299,24 @@
 						</ChildItems>
 					</ButtonGroup>
 					<ButtonGroup name="ГруппаVanessaEditorТочкиОстанова" id="2470">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Точки останова</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Breakpoints</v8:content>
+							</v8:item>
+						</Title>
 						<ToolTip>
 							<v8:item>
 								<v8:lang>ru</v8:lang>
 								<v8:content>Точки останова</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Breakpoints</v8:content>
 							</v8:item>
 						</ToolTip>
 						<Representation>Compact</Representation>
@@ -2258,13 +2355,21 @@
 						<Title>
 							<v8:item>
 								<v8:lang>ru</v8:lang>
-								<v8:content>Группа vanessa editor действия в редакторе</v8:content>
+								<v8:content>Действия в редакторе</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Actions in the editor</v8:content>
 							</v8:item>
 						</Title>
 						<ToolTip>
 							<v8:item>
 								<v8:lang>ru</v8:lang>
-								<v8:content>Точки останова</v8:content>
+								<v8:content>Действия в редакторе</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Actions in the editor</v8:content>
 							</v8:item>
 						</ToolTip>
 						<Representation>Compact</Representation>
@@ -2282,10 +2387,24 @@
 						</ChildItems>
 					</ButtonGroup>
 					<ButtonGroup name="ГруппаVanessaEditorЗаписьДействийПользователя" id="2500">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Запись действий пользователя</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>User actions recording</v8:content>
+							</v8:item>
+						</Title>
 						<ToolTip>
 							<v8:item>
 								<v8:lang>ru</v8:lang>
-								<v8:content>Точки останова</v8:content>
+								<v8:content>Запись действий пользователя</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>User actions recording</v8:content>
 							</v8:item>
 						</ToolTip>
 						<Representation>Compact</Representation>
@@ -2579,10 +2698,24 @@
 						</ChildItems>
 					</ButtonGroup>
 					<ButtonGroup name="ГруппаVanessaEditorМасштаб" id="2462">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Масштаб</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Scale</v8:content>
+							</v8:item>
+						</Title>
 						<ToolTip>
 							<v8:item>
 								<v8:lang>ru</v8:lang>
 								<v8:content>Масштаб</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Scale</v8:content>
 							</v8:item>
 						</ToolTip>
 						<Representation>Compact</Representation>
@@ -2667,10 +2800,24 @@
 						</ChildItems>
 					</ButtonGroup>
 					<ButtonGroup name="ГруппаVanessaEditorРедактироватьСтроки" id="2535">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Обработка строк сценария</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Processing script lines</v8:content>
+							</v8:item>
+						</Title>
 						<ToolTip>
 							<v8:item>
 								<v8:lang>ru</v8:lang>
-								<v8:content>Точки останова</v8:content>
+								<v8:content>Обработка строк сценария</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Processing script lines</v8:content>
 							</v8:item>
 						</ToolTip>
 						<Representation>Compact</Representation>
@@ -2936,13 +3083,11 @@
 											<v8:lang>ru</v8:lang>
 											<v8:content>Страницы для отображения дерева и редактора</v8:content>
 										</v8:item>
-									</Title>
-									<ToolTip>
 										<v8:item>
-											<v8:lang>ru</v8:lang>
-											<v8:content>Страницы для отображения дерева и редактора</v8:content>
+											<v8:lang>en</v8:lang>
+											<v8:content>Pages for displaying the tree and editor</v8:content>
 										</v8:item>
-									</ToolTip>
+									</Title>
 									<PagesRepresentation>None</PagesRepresentation>
 									<ExtendedTooltip name="СтраницыДляОтображенияДереваИРедактораРасширеннаяПодсказка" id="2417"/>
 									<ChildItems>
@@ -2952,13 +3097,11 @@
 													<v8:lang>ru</v8:lang>
 													<v8:content>Дерево шагов</v8:content>
 												</v8:item>
-											</Title>
-											<ToolTip>
 												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Страница дерево шагов</v8:content>
+													<v8:lang>en</v8:lang>
+													<v8:content>Step tree</v8:content>
 												</v8:item>
-											</ToolTip>
+											</Title>
 											<ExtendedTooltip name="СтраницаДеревоШаговРасширеннаяПодсказка" id="2419"/>
 											<ChildItems>
 												<Table name="ДеревоТестов" id="66">
@@ -2990,18 +3133,18 @@
 													<ContextMenu name="ДеревоТестовКонтекстноеМеню" id="67">
 														<Autofill>false</Autofill>
 														<ChildItems>
-															<ButtonGroup name="Основная" id="1014">
+															<ButtonGroup name="ГруппаОсновная" id="1014">
 																<Title>
 																	<v8:item>
 																		<v8:lang>ru</v8:lang>
-																		<v8:content>Основная</v8:content>
+																		<v8:content>Основные команды</v8:content>
 																	</v8:item>
 																	<v8:item>
 																		<v8:lang>en</v8:lang>
-																		<v8:content>Main</v8:content>
+																		<v8:content>Basic commands</v8:content>
 																	</v8:item>
 																</Title>
-																<ExtendedTooltip name="ОсновнаяРасширеннаяПодсказка" id="1263"/>
+																<ExtendedTooltip name="ГруппаОсновнаяРасширеннаяПодсказка" id="1263"/>
 																<ChildItems>
 																	<Button name="ДеревоТестовКонтекстноеМенюВыполнитьДанныйСценарийСТекущегоШага" id="1471">
 																		<Type>CommandBarButton</Type>
@@ -3748,7 +3891,7 @@
 																	</Button>
 																</ChildItems>
 															</ButtonGroup>
-															<ButtonGroup name="Свернуть" id="1026">
+															<ButtonGroup name="ГруппаСвернуть" id="1026">
 																<Title>
 																	<v8:item>
 																		<v8:lang>ru</v8:lang>
@@ -3759,7 +3902,7 @@
 																		<v8:content>Collapse</v8:content>
 																	</v8:item>
 																</Title>
-																<ExtendedTooltip name="СвернутьРасширеннаяПодсказка" id="1270"/>
+																<ExtendedTooltip name="ГруппаСвернутьРасширеннаяПодсказка" id="1270"/>
 																<ChildItems>
 																	<Button name="ДеревоТестовКонтекстноеМенюСвернутьДоФич" id="1028">
 																		<Type>CommandBarButton</Type>
@@ -3980,7 +4123,7 @@
 																	</Button>
 																</ChildItems>
 															</ButtonGroup>
-															<ButtonGroup name="Брейпоинты" id="1478">
+															<ButtonGroup name="ГруппаБрейпоинты" id="1478">
 																<Title>
 																	<v8:item>
 																		<v8:lang>ru</v8:lang>
@@ -3991,7 +4134,7 @@
 																		<v8:content>Breakpoints</v8:content>
 																	</v8:item>
 																</Title>
-																<ExtendedTooltip name="БрейпоинтыРасширеннаяПодсказка" id="1479"/>
+																<ExtendedTooltip name="ГруппаБрейпоинтыРасширеннаяПодсказка" id="1479"/>
 																<ChildItems>
 																	<Button name="ДеревоТестовКонтекстноеМенюБрейкпоинт" id="1480">
 																		<Type>CommandBarButton</Type>
@@ -4896,6 +5039,10 @@
 													<v8:lang>ru</v8:lang>
 													<v8:content>Vanessa Editor</v8:content>
 												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Vanessa Editor</v8:content>
+												</v8:item>
 											</Title>
 											<ToolTip>
 												<v8:item>
@@ -4905,44 +5052,50 @@
 											</ToolTip>
 											<ExtendedTooltip name="СтраницаVanessaEditorРасширеннаяПодсказка" id="2421"/>
 											<ChildItems>
-												<UsualGroup name="ГруппаРедактораИДреваФайлов" id="2566">
+												<UsualGroup name="ГруппаРедактораИДереваФайлов" id="2566">
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Группа редактора и древа файлов</v8:content>
+															<v8:content>Редактор и дерево файлов</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Editor and file tree</v8:content>
 														</v8:item>
 													</Title>
-													<ToolTip>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Группа редактора и древа файлов</v8:content>
-														</v8:item>
-													</ToolTip>
 													<Group>Horizontal</Group>
 													<Representation>None</Representation>
 													<ShowTitle>false</ShowTitle>
-													<ExtendedTooltip name="ГруппаРедактораИДреваФайловРасширеннаяПодсказка" id="2567"/>
+													<ExtendedTooltip name="ГруппаРедактораИДереваФайловРасширеннаяПодсказка" id="2567"/>
 													<ChildItems>
-														<UsualGroup name="ГруппаДреваФайлов" id="2568">
+														<UsualGroup name="ГруппаДереваФайлов" id="2568">
 															<Title>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
-																	<v8:content>Группа древа файлов</v8:content>
+																	<v8:content>Дерево файлов</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>File tree</v8:content>
 																</v8:item>
 															</Title>
-															<ToolTip>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Группа древа файлов</v8:content>
-																</v8:item>
-															</ToolTip>
 															<Group>Vertical</Group>
 															<Representation>None</Representation>
 															<ShowTitle>false</ShowTitle>
-															<ExtendedTooltip name="ГруппаДреваФайловРасширеннаяПодсказка" id="2569"/>
+															<ExtendedTooltip name="ГруппаДереваФайловРасширеннаяПодсказка" id="2569"/>
 															<ChildItems>
 																<InputField name="ПутьКПапкеСФичами" id="2570">
 																	<DataPath>ПутьКПапкеСФичами</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Каталог фич</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Feature catalog</v8:content>
+																		</v8:item>
+																	</Title>
 																	<TitleLocation>None</TitleLocation>
 																	<AutoMaxWidth>false</AutoMaxWidth>
 																	<ChoiceButton>true</ChoiceButton>
@@ -4961,6 +5114,16 @@
 																</InputField>
 																<InputField name="СтрокаДляПоискаВнутриФичи" id="2695">
 																	<DataPath>СтрокаДляПоискаВнутриФичи</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Строка поиска</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Search string</v8:content>
+																		</v8:item>
+																	</Title>
 																	<TitleLocation>None</TitleLocation>
 																	<AutoMaxWidth>false</AutoMaxWidth>
 																	<ClearButton>true</ClearButton>
@@ -4988,6 +5151,16 @@
 																	<EnableDrag>true</EnableDrag>
 																	<FileDragMode>AsFile</FileDragMode>
 																	<DataPath>ДревоФайлаФич</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Дерево каталогов</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Directory tree</v8:content>
+																		</v8:item>
+																	</Title>
 																	<ContextMenu name="ДревоФайлаФичКонтекстноеМеню" id="2574"/>
 																	<AutoCommandBar name="ДревоФайлаФичКоманднаяПанель" id="2575">
 																		<Autofill>false</Autofill>
@@ -5026,20 +5199,28 @@
 																			<Title>
 																				<v8:item>
 																					<v8:lang>ru</v8:lang>
-																					<v8:content>Древо файла фич строки</v8:content>
+																					<v8:content>Строки дерева</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>Tree lines</v8:content>
 																				</v8:item>
 																			</Title>
-																			<ToolTip>
-																				<v8:item>
-																					<v8:lang>ru</v8:lang>
-																					<v8:content>Древо файла фич строки</v8:content>
-																				</v8:item>
-																			</ToolTip>
 																			<Group>InCell</Group>
 																			<ExtendedTooltip name="ДревоФайлаФичСтрокиРасширеннаяПодсказка" id="2593"/>
 																			<ChildItems>
 																				<PictureField name="ДревоФайлаФичКартинка" id="2589">
 																					<DataPath>ДревоФайлаФич.Картинка</DataPath>
+																					<Title>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Картинка</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>en</v8:lang>
+																							<v8:content>Picture</v8:content>
+																						</v8:item>
+																					</Title>
 																					<EditMode>EnterOnInput</EditMode>
 																					<FileDragMode>AsFile</FileDragMode>
 																					<ContextMenu name="ДревоФайлаФичКартинкаКонтекстноеМеню" id="2590"/>
@@ -5047,6 +5228,16 @@
 																				</PictureField>
 																				<InputField name="СписокФайловИмя" id="2586">
 																					<DataPath>ДревоФайлаФич.Имя</DataPath>
+																					<Title>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Имя</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>en</v8:lang>
+																							<v8:content>Name</v8:content>
+																						</v8:item>
+																					</Title>
 																					<EditMode>EnterOnInput</EditMode>
 																					<ContextMenu name="СписокФайловИмяКонтекстноеМеню" id="2587"/>
 																					<ExtendedTooltip name="СписокФайловИмяРасширеннаяПодсказка" id="2588"/>
@@ -5059,6 +5250,16 @@
 														</UsualGroup>
 														<HTMLDocumentField name="VanessaEditor" id="2404">
 															<DataPath>VanessaEditorURL</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Редактор</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Editor</v8:content>
+																</v8:item>
+															</Title>
 															<TitleLocation>None</TitleLocation>
 															<ContextMenu name="VanessaEditorContextMenu" id="2405">
 																<Autofill>false</Autofill>
@@ -5201,6 +5402,12 @@
 																			<Button name="VanessaEditorКонтекстноеМенюВыполнитьВыделенныеСтроки" id="2422">
 																				<Type>CommandBarButton</Type>
 																				<CommandName>Form.Command.ВыполнитьВыделенныеСтроки</CommandName>
+																				<Title>
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>Selected lines</v8:content>
+																					</v8:item>
+																				</Title>
 																				<ExtendedTooltip name="VanessaEditorКонтекстноеМенюВыполнитьВыделенныеСтрокиРасширеннаяПодсказка" id="2423"/>
 																			</Button>
 																			<Button name="VanessaEditorКонтекстноеМенюПунктВыполнитьСценарий" id="2478">
@@ -5400,6 +5607,21 @@
 																		</Title>
 																		<ExtendedTooltip name="ГруппаКонтекстногоМенюVanessaEditorРаботаСФичейРасширеннаяПодсказка" id="2485"/>
 																		<ChildItems>
+																			<Button name="VanessaEditorКонтекстноеМенюОткрытьПодсценарийВНовойВкладке" id="2736">
+																				<Type>CommandBarButton</Type>
+																				<CommandName>Form.Command.ОткрытьПодсценарийВНовойВкладке</CommandName>
+																				<Title>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Открыть в новой вкладке</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>Open in a new tab</v8:content>
+																					</v8:item>
+																				</Title>
+																				<ExtendedTooltip name="VanessaEditorКонтекстноеМенюОткрытьПодсценарийВНовойВкладкеРасширеннаяПодсказка" id="2737"/>
+																			</Button>
 																			<Button name="VanessaEditorКонтекстноеМенюПунктОткрытьФичаФайл" id="2486">
 																				<Type>CommandBarButton</Type>
 																				<CommandName>Form.Command.ОткрытьФичаФайл</CommandName>
@@ -6079,11 +6301,21 @@
 							</ToolTip>
 							<ExtendedTooltip name="ГруппаГенерацияEPFРасширеннаяПодсказка" id="1289"/>
 							<ChildItems>
-								<UsualGroup name="Группа7" id="1620">
+								<UsualGroup name="ГруппаКнопкиСозданиеОбработок" id="1620">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Кнопки создания обработок</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Creation buttons</v8:content>
+										</v8:item>
+									</Title>
 									<Group>Horizontal</Group>
 									<Representation>NormalSeparation</Representation>
 									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="1621"/>
+									<ExtendedTooltip name="ГруппаКнопкиСозданиеОбработокРасширеннаяПодсказка" id="1621"/>
 									<ChildItems>
 										<Button name="кнСоздатьШаблоныОбработок" id="47">
 											<Type>UsualButton</Type>
@@ -6691,21 +6923,21 @@
 										</Title>
 									</ExtendedTooltip>
 								</CheckBoxField>
-								<UsualGroup name="Группа1" id="1557">
+								<UsualGroup name="ГруппаВерсияПлатформы" id="1557">
 									<Title>
 										<v8:item>
 											<v8:lang>ru</v8:lang>
-											<v8:content>Группа1</v8:content>
+											<v8:content>Версия платформы</v8:content>
 										</v8:item>
 										<v8:item>
 											<v8:lang>en</v8:lang>
-											<v8:content>Group1</v8:content>
+											<v8:content>Platform version</v8:content>
 										</v8:item>
 									</Title>
 									<Width>28</Width>
 									<Group>Vertical</Group>
 									<ShowTitle>false</ShowTitle>
-									<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="1558"/>
+									<ExtendedTooltip name="ГруппаВерсияПлатформыРасширеннаяПодсказка" id="1558"/>
 									<ChildItems>
 										<InputField name="ВерсияПлатформыДляГенерацииEPF" id="1559">
 											<DataPath>Объект.ВерсияПлатформыДляГенерацииEPF</DataPath>
@@ -7252,11 +7484,22 @@
 												<ExtendedTooltip name="КаталогиБиблиотекУправлениеПоискомРасширеннаяПодсказка" id="1306"/>
 											</SearchControlAddition>
 											<Events>
+												<Event name="BeforeEditEnd">КаталогиБиблиотекПередОкончаниемРедактирования</Event>
 												<Event name="AfterDeleteRow">КаталогиБиблиотекПослеУдаления</Event>
 											</Events>
 											<ChildItems>
 												<InputField name="КаталогиБиблиотекЗначение" id="87">
 													<DataPath>Объект.КаталогиБиблиотек.Value</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Значение</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Value</v8:content>
+														</v8:item>
+													</Title>
 													<ToolTip>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
@@ -7270,6 +7513,7 @@
 													<EditMode>EnterOnInput</EditMode>
 													<ChoiceButton>true</ChoiceButton>
 													<ClearButton>true</ClearButton>
+													<AutoMarkIncomplete>true</AutoMarkIncomplete>
 													<ChooseType>false</ChooseType>
 													<ContextMenu name="КаталогиБиблиотекЗначениеКонтекстноеМеню" id="88"/>
 													<ExtendedTooltip name="КаталогиБиблиотекЗначениеРасширеннаяПодсказка" id="1307"/>
@@ -8385,12 +8629,22 @@
 													</Title>
 													<ExtendedTooltip name="СценарийПоведенияРасширеннаяПодсказка" id="1322"/>
 													<ChildItems>
-														<UsualGroup name="Группа4" id="1245">
+														<UsualGroup name="ГруппаКнопкиСценарийПоведения" id="1245">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Команды</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Commands</v8:content>
+																</v8:item>
+															</Title>
 															<HorizontalStretch>false</HorizontalStretch>
 															<Group>Horizontal</Group>
 															<Representation>None</Representation>
 															<ShowTitle>false</ShowTitle>
-															<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="1323"/>
+															<ExtendedTooltip name="ГруппаКнопкиСценарийПоведенияРасширеннаяПодсказка" id="1323"/>
 															<ChildItems>
 																<Button name="ПодготовитьСценарийКВыполнению" id="1241">
 																	<Type>UsualButton</Type>
@@ -8604,6 +8858,16 @@
 																				<xr:Abs>Picture.png</xr:Abs>
 																				<xr:LoadTransparent>false</xr:LoadTransparent>
 																			</Picture>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Комментарий строки сценария</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>Comment lines of the script</v8:content>
+																				</v8:item>
+																			</Title>
 																			<ExtendedTooltip name="КомментироватьСтрокиСценарияРасширеннаяПодсказка" id="2225"/>
 																		</Button>
 																		<Button name="ВыделитьСтрокиСценария" id="2226">
@@ -8614,6 +8878,16 @@
 																				<xr:Abs>Picture.png</xr:Abs>
 																				<xr:LoadTransparent>false</xr:LoadTransparent>
 																			</Picture>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Выделить как код встроенного языка</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>Highlight code like embedded language</v8:content>
+																				</v8:item>
+																			</Title>
 																			<ExtendedTooltip name="ВыделитьСтрокиСценарияРасширеннаяПодсказка" id="2227"/>
 																		</Button>
 																	</ChildItems>
@@ -8622,6 +8896,16 @@
 														</UsualGroup>
 														<TextDocumentField name="СгенерированныйСценарий" id="314">
 															<DataPath>Объект.СгенерированныйСценарий</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Сгенерированный сценарий</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Generated script</v8:content>
+																</v8:item>
+															</Title>
 															<TitleLocation>None</TitleLocation>
 															<ContextMenu name="СгенерированныйСценарийКонтекстноеМеню" id="315">
 																<ChildItems>
@@ -8790,6 +9074,16 @@
 													<ChildItems>
 														<TextDocumentField name="СгенерированныйСценарийКод" id="854">
 															<DataPath>Объект.СгенерированныйСценарийКод</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Код</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Code</v8:content>
+																</v8:item>
+															</Title>
 															<TitleLocation>None</TitleLocation>
 															<ContextMenu name="СгенерированныйСценарийКодКонтекстноеМеню" id="855"/>
 															<ExtendedTooltip name="СгенерированныйСценарийКодРасширеннаяПодсказка" id="1327"/>
@@ -8973,6 +9267,16 @@
 													<ChildItems>
 														<TextDocumentField name="СгенерированныйКод" id="327">
 															<DataPath>Объект.СгенерированныйКод</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Код</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Code</v8:content>
+																</v8:item>
+															</Title>
 															<TitleLocation>None</TitleLocation>
 															<ContextMenu name="СгенерированныйКодКонтекстноеМеню" id="328"/>
 															<ExtendedTooltip name="СгенерированныйКодРасширеннаяПодсказка" id="1329"/>
@@ -9161,6 +9465,16 @@
 														</Button>
 														<InputField name="СгенерированныйXML" id="330">
 															<DataPath>Объект.СгенерированныйXML</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>XML</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>XML</v8:content>
+																</v8:item>
+															</Title>
 															<TitleLocation>None</TitleLocation>
 															<AutoMaxWidth>false</AutoMaxWidth>
 															<MultiLine>true</MultiLine>
@@ -11637,82 +11951,6 @@
 																					<v8:lang>en</v8:lang>
 																					<v8:content>Output verbose log and debug log</v8:content>
 																				</v8:item>
-																				<v8:item>
-																					<v8:lang>am</v8:lang>
-																					<v8:content>አሁን..</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>az</v8:lang>
-																					<v8:content>Daxil debug mesajları</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>bg</v8:lang>
-																					<v8:content>Включва изтриване на съобщения</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>de</v8:lang>
-																					<v8:content>Debug-Meldungen aktivieren</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>es</v8:lang>
-																					<v8:content>Incluir mensajes de depuración</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>et</v8:lang>
-																					<v8:content>Luba silumine sõnumeid</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>fr</v8:lang>
-																					<v8:content>Activer les messages de débogage</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>hu</v8:lang>
-																					<v8:content>Hogy enable debug üzenetek</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>it</v8:lang>
-																					<v8:content>Includere i messaggi di debug</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>ka</v8:lang>
-																					<v8:content>ჩართვა გამართვის შეტყობინებები</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>lt</v8:lang>
-																					<v8:content>Įtraukti derinimo pranešimai</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>lv</v8:lang>
-																					<v8:content>Ieslēgt atkļūdošanas ziņojumus</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>mn</v8:lang>
-																					<v8:content>Идэвхжүүлэхийн тулд debug messages</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>pl</v8:lang>
-																					<v8:content>Włączyć komunikaty diagnostyczne</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>ro</v8:lang>
-																					<v8:content>Activați mesajele de depanare</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>sl</v8:lang>
-																					<v8:content>Če želite omogočiti sporočila debug</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>sv</v8:lang>
-																					<v8:content>För att aktivera debug-meddelanden</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>tr</v8:lang>
-																					<v8:content>Etkinleştirmek için hata ayıklama iletileri</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>vi</v8:lang>
-																					<v8:content>Bật thông báo gỡ rối</v8:content>
-																				</v8:item>
 																			</Title>
 																			<TitleLocation>Right</TitleLocation>
 																			<ToolTipRepresentation>Button</ToolTipRepresentation>
@@ -11993,6 +12231,16 @@
 															<ExtendedTooltip name="ГруппаVanessaExtРасширеннаяПодсказка" id="2268"/>
 															<ChildItems>
 																<LabelDecoration name="ДекорацияВерсияVanessaExt" id="2269">
+																	<Title formatted="false">
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Версия</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Version</v8:content>
+																		</v8:item>
+																	</Title>
 																	<ContextMenu name="ДекорацияВерсияVanessaExtКонтекстноеМеню" id="2270"/>
 																	<ExtendedTooltip name="ДекорацияВерсияVanessaExtРасширеннаяПодсказка" id="2271"/>
 																</LabelDecoration>
@@ -14830,7 +15078,6 @@ Log events:
 														</v8:item>
 													</Title>
 													<Behavior>Collapsible</Behavior>
-													<Collapsed>true</Collapsed>
 													<ControlRepresentation>Picture</ControlRepresentation>
 													<ExtendedTooltip name="ГруппаОтчетыРасширеннаяПодсказка" id="2091"/>
 													<ChildItems>
@@ -15253,6 +15500,21 @@ Log events:
 																						</Title>
 																					</ExtendedTooltip>
 																				</InputField>
+																				<CheckBoxField name="ТегиПропускающиеСценарийAllure" id="2742">
+																					<DataPath>Объект.ТегиПропускающиеСценарийAllure</DataPath>
+																					<ToolTipRepresentation>Button</ToolTipRepresentation>
+																					<CheckBoxType>Auto</CheckBoxType>
+																					<ContextMenu name="ТегиПропускающиеСценарийAllureКонтекстноеМеню" id="2743"/>
+																					<ExtendedTooltip name="ТегиПропускающиеСценарийAllureРасширеннаяПодсказка" id="2744">
+																						<Title formatted="true">
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Список тегов, разделённых с помощью ";".
+Если в сценарии есть такой тег, тогда сценарий не будет выполняться и отчете Allure у него будет статус &lt;b&gt;skipped&lt;/&gt;.</v8:content>
+																							</v8:item>
+																						</Title>
+																					</ExtendedTooltip>
+																				</CheckBoxField>
 																				<UsualGroup name="ГруппаПриложенияКОтчетуAllure" id="2348">
 																					<Title>
 																						<v8:item>
@@ -15396,6 +15658,7 @@ Log events:
 																				</UsualGroup>
 																				<Table name="ДанныеАллюрМеток" id="1985">
 																					<Representation>List</Representation>
+																					<TitleLocation>Top</TitleLocation>
 																					<Height>4</Height>
 																					<AutoInsertNewRow>true</AutoInsertNewRow>
 																					<VerticalStretch>false</VerticalStretch>
@@ -15413,6 +15676,7 @@ Log events:
 																							<v8:content>Allure labels data</v8:content>
 																						</v8:item>
 																					</Title>
+																					<TitleTextColor>#009646</TitleTextColor>
 																					<ToolTipRepresentation>Button</ToolTipRepresentation>
 																					<RowFilter xsi:nil="true"/>
 																					<ContextMenu name="ДанныеАллюрМетокКонтекстноеМеню" id="1986"/>
@@ -16212,11 +16476,21 @@ Log events:
 														</InputField>
 													</ChildItems>
 												</UsualGroup>
-												<UsualGroup name="Группа3" id="918">
+												<UsualGroup name="ГруппаОтчетВоВнутреннемФормате" id="918">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Отчет во внутреннем формате</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Internal report</v8:content>
+														</v8:item>
+													</Title>
 													<Group>Horizontal</Group>
 													<Representation>None</Representation>
 													<ShowTitle>false</ShowTitle>
-													<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="1398"/>
+													<ExtendedTooltip name="ГруппаОтчетВоВнутреннемФорматеРасширеннаяПодсказка" id="1398"/>
 													<ChildItems>
 														<CheckBoxField name="ДелатьОтчетВоВнутреннемФормате" id="375">
 															<DataPath>Объект.ДелатьОтчетВоВнутреннемФормате</DataPath>
@@ -16468,13 +16742,11 @@ Log events:
 																	<v8:lang>ru</v8:lang>
 																	<v8:content>Настройки автоинструкций при работе с браузером</v8:content>
 																</v8:item>
-															</Title>
-															<ToolTip>
 																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Группа настройки автоинструкций при работе с браузером</v8:content>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Autoinstructions settings when working with a browser</v8:content>
 																</v8:item>
-															</ToolTip>
+															</Title>
 															<Group>Vertical</Group>
 															<Representation>None</Representation>
 															<ShowTitle>false</ShowTitle>
@@ -16542,6 +16814,10 @@ Log events:
 																				<v8:item>
 																					<v8:lang>ru</v8:lang>
 																					<v8:content>Настройки смещений коордиант мышки</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>Mouse coordinate offset settings</v8:content>
 																				</v8:item>
 																			</Title>
 																			<Group>Horizontal</Group>
@@ -16682,6 +16958,10 @@ Log events:
 																							<v8:lang>ru</v8:lang>
 																							<v8:content>Выбор цвета подсветки кликов мышки</v8:content>
 																						</v8:item>
+																						<v8:item>
+																							<v8:lang>en</v8:lang>
+																							<v8:content>Selecting a color for highlighting mouse clicks</v8:content>
+																						</v8:item>
 																					</Title>
 																					<Group>AlwaysHorizontal</Group>
 																					<ShowTitle>false</ShowTitle>
@@ -16716,6 +16996,16 @@ Log events:
 																						</InputField>
 																						<InputField name="ВыборЦветаПодсветкиКликовМышки" id="2674">
 																							<DataPath>ВыборЦветаПодсветкиКликовМышки</DataPath>
+																							<Title>
+																								<v8:item>
+																									<v8:lang>ru</v8:lang>
+																									<v8:content>Выбор цвета</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>en</v8:lang>
+																									<v8:content>Color selection</v8:content>
+																								</v8:item>
+																							</Title>
 																							<TitleLocation>None</TitleLocation>
 																							<ToolTipRepresentation>Button</ToolTipRepresentation>
 																							<Width>16</Width>
@@ -16745,12 +17035,32 @@ Log events:
 																					</ChildItems>
 																				</UsualGroup>
 																				<UsualGroup name="ГруппаНастройкаКликовМышкиПрочиеНастройки" id="2693">
+																					<Title>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Прочие настройки</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>en</v8:lang>
+																							<v8:content>Other settings</v8:content>
+																						</v8:item>
+																					</Title>
 																					<Group>AlwaysHorizontal</Group>
 																					<Representation>None</Representation>
 																					<ShowTitle>false</ShowTitle>
 																					<ExtendedTooltip name="ГруппаНастройкаКликовМышкиПрочиеНастройкиРасширеннаяПодсказка" id="2694"/>
 																					<ChildItems>
 																						<UsualGroup name="ГруппаПодсветкаКликовМышкиЛевыйСтолбец" id="2677">
+																							<Title>
+																								<v8:item>
+																									<v8:lang>ru</v8:lang>
+																									<v8:content>Подсветка кликов мышки</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>en</v8:lang>
+																									<v8:content>Highlighting mouse clicks</v8:content>
+																								</v8:item>
+																							</Title>
 																							<Group>Vertical</Group>
 																							<Representation>None</Representation>
 																							<ShowTitle>false</ShowTitle>
@@ -16813,6 +17123,16 @@ Log events:
 																							</ChildItems>
 																						</UsualGroup>
 																						<UsualGroup name="ГруппаПодсветкаКликовМышкиПравыйСтолбец" id="2679">
+																							<Title>
+																								<v8:item>
+																									<v8:lang>ru</v8:lang>
+																									<v8:content>Подсветка кликов мышки</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>en</v8:lang>
+																									<v8:content>Highlighting mouse clicks</v8:content>
+																								</v8:item>
+																							</Title>
 																							<Group>Vertical</Group>
 																							<ShowTitle>false</ShowTitle>
 																							<ExtendedTooltip name="ГруппаПодсветкаКликовМышкиПравыйСтолбецРасширеннаяПодсказка" id="2680"/>
@@ -17109,9 +17429,21 @@ To disable mouse movement at a specific step, you should use the #[DoNotMoveMous
 																					<v8:content>SikuliX scripts directory</v8:content>
 																				</v8:item>
 																			</ToolTip>
+																			<ToolTipRepresentation>Button</ToolTipRepresentation>
 																			<ChoiceButton>true</ChoiceButton>
 																			<ContextMenu name="КаталогиСкриптовSikuliXКонтекстноеМеню" id="2140"/>
-																			<ExtendedTooltip name="КаталогиСкриптовSikuliXРасширеннаяПодсказка" id="2141"/>
+																			<ExtendedTooltip name="КаталогиСкриптовSikuliXРасширеннаяПодсказка" id="2141">
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>Script directory. Multiple directories can be used, separated by ";".</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Каталог скриптов. Можно указывать несколько каталогов, разделенных через ";".</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
 																			<Events>
 																				<Event name="StartChoice">КаталогиСкриптовSikuliXНачалоВыбора</Event>
 																			</Events>
@@ -17121,6 +17453,16 @@ To disable mouse movement at a specific step, you should use the #[DoNotMoveMous
 																			<Representation>Picture</Representation>
 																			<Width>4</Width>
 																			<CommandName>Form.Command.КаталогиСкриптовSikuliXПоУмолчанию</CommandName>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Каталог по умолчанию</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>Default directory</v8:content>
+																				</v8:item>
+																			</Title>
 																			<ExtendedTooltip name="КаталогиСкриптовSikuliXПоУмолчаниюРасширеннаяПодсказка" id="2143"/>
 																		</Button>
 																		<Button name="СброситьПодключениеSikuliXСервера" id="2144">
@@ -17178,6 +17520,16 @@ To disable mouse movement at a specific step, you should use the #[DoNotMoveMous
 																	<EnableDrag>true</EnableDrag>
 																	<FileDragMode>AsFile</FileDragMode>
 																	<DataPath>ПрофилиПоискаКартинокСТекстом</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Профили</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Profiles</v8:content>
+																		</v8:item>
+																	</Title>
 																	<RowFilter xsi:nil="true"/>
 																	<ContextMenu name="ПрофилиПоискаКартинокСТекстомКонтекстноеМеню" id="2161"/>
 																	<AutoCommandBar name="ПрофилиПоискаКартинокСТекстомКоманднаяПанель" id="2162">
@@ -19873,11 +20225,21 @@ Recommended value is 0.1 or less.</v8:content>
 																								<Event name="OnChange">ЗаписьВидеоДелатьНаложениеTTSПриИзменении</Event>
 																							</Events>
 																						</CheckBoxField>
-																						<UsualGroup name="Группа5" id="2156">
+																						<UsualGroup name="ГруппаНастройкаОзвучки" id="2156">
+																							<Title>
+																								<v8:item>
+																									<v8:lang>ru</v8:lang>
+																									<v8:content>Настройка озвучки</v8:content>
+																								</v8:item>
+																								<v8:item>
+																									<v8:lang>en</v8:lang>
+																									<v8:content>Setting up voice acting</v8:content>
+																								</v8:item>
+																							</Title>
 																							<Group>Horizontal</Group>
 																							<Representation>None</Representation>
 																							<ShowTitle>false</ShowTitle>
-																							<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="2157"/>
+																							<ExtendedTooltip name="ГруппаНастройкаОзвучкиРасширеннаяПодсказка" id="2157"/>
 																							<ChildItems>
 																								<UsualGroup name="ГруппаОзвучкаГолосомВнутренняя" id="2077">
 																									<Title>
@@ -21462,6 +21824,16 @@ Value range is from -10 to 10.</v8:content>
 																									<ChildItems>
 																										<InputField name="ТекстДляТестаГолоса" id="2123">
 																											<DataPath>ТекстДляТестаГолоса</DataPath>
+																											<Title>
+																												<v8:item>
+																													<v8:lang>ru</v8:lang>
+																													<v8:content>Текст</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>en</v8:lang>
+																													<v8:content>Text</v8:content>
+																												</v8:item>
+																											</Title>
 																											<TitleLocation>None</TitleLocation>
 																											<ToolTipRepresentation>Button</ToolTipRepresentation>
 																											<AutoMaxWidth>false</AutoMaxWidth>
@@ -21797,6 +22169,16 @@ Reduces voice generation costs.</v8:content>
 																							<ChildItems>
 																								<InputField name="ЗаписьВидеоСловарьЗаменЗначение" id="1740">
 																									<DataPath>Объект.ЗаписьВидеоСловарьЗамен.Value</DataPath>
+																									<Title>
+																										<v8:item>
+																											<v8:lang>ru</v8:lang>
+																											<v8:content>Значение</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>en</v8:lang>
+																											<v8:content>Value</v8:content>
+																										</v8:item>
+																									</Title>
 																									<TitleLocation>Top</TitleLocation>
 																									<EditMode>EnterOnInput</EditMode>
 																									<ContextMenu name="ЗаписьВидеоСловарьЗаменЗначениеКонтекстноеМеню" id="1741"/>
@@ -22148,12 +22530,22 @@ Then in the example above the video will speed up (10 * (1-0.3)) from 10 to 7 se
 																						</Title>
 																					</ExtendedTooltip>
 																				</InputField>
-																				<UsualGroup name="Группа2" id="2075">
+																				<UsualGroup name="ГруппаРазличныеНастройкиВидео" id="2075">
+																					<Title>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Настройки</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>en</v8:lang>
+																							<v8:content>Settings</v8:content>
+																						</v8:item>
+																					</Title>
 																					<VerticalStretch>false</VerticalStretch>
 																					<Group>Horizontal</Group>
 																					<Representation>None</Representation>
 																					<ShowTitle>false</ShowTitle>
-																					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="2076"/>
+																					<ExtendedTooltip name="ГруппаРазличныеНастройкиВидеоРасширеннаяПодсказка" id="2076"/>
 																					<ChildItems>
 																						<UsualGroup name="НастройкиВидеоДополнительныеЛевая" id="2071">
 																							<Title>
@@ -22489,6 +22881,16 @@ SikuliX emulates mouse clicks.</v8:content>
 																								</CheckBoxField>
 																								<InputField name="ЗаписьВидеоПутьКСлайдуЗаголовок" id="2206">
 																									<DataPath>Объект.ЗаписьВидеоПутьКСлайдуЗаголовок</DataPath>
+																									<Title>
+																										<v8:item>
+																											<v8:lang>ru</v8:lang>
+																											<v8:content>Путь в файлу</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>en</v8:lang>
+																											<v8:content>Path to the file</v8:content>
+																										</v8:item>
+																									</Title>
 																									<TitleLocation>Top</TitleLocation>
 																									<ToolTipRepresentation>Button</ToolTipRepresentation>
 																									<ChoiceButton>true</ChoiceButton>
@@ -23391,6 +23793,16 @@ SikuliX emulates mouse clicks.</v8:content>
 												</InputField>
 												<CheckBoxField name="РежимСамотестирования" id="1667">
 													<DataPath>Объект.РежимСамотестирования</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Режим самотестирования</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Self-test mode</v8:content>
+														</v8:item>
+													</Title>
 													<CheckBoxType>Auto</CheckBoxType>
 													<ContextMenu name="РежимСамотестированияКонтекстноеМеню" id="1668"/>
 													<ExtendedTooltip name="РежимСамотестированияРасширеннаяПодсказка" id="1669"/>
@@ -23583,6 +23995,16 @@ SikuliX emulates mouse clicks.</v8:content>
 					<DataPath>СтрокаСтатуса</DataPath>
 					<Visible>false</Visible>
 					<ReadOnly>true</ReadOnly>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Status</v8:content>
+						</v8:item>
+					</Title>
 					<TitleLocation>None</TitleLocation>
 					<ContextMenu name="СтрокаСтатусаКонтекстноеМеню" id="1718"/>
 					<ExtendedTooltip name="СтрокаСтатусаРасширеннаяПодсказка" id="1719"/>
@@ -25022,6 +25444,16 @@ SikuliX emulates mouse clicks.</v8:content>
 					</Type>
 				</Column>
 				<Column name="ТипШагаВДереве" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип шага</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Step type</v8:content>
+						</v8:item>
+					</Title>
 					<Type>
 						<v8:Type>xs:string</v8:Type>
 						<v8:StringQualifiers>
@@ -28038,7 +28470,7 @@ SikuliX emulates mouse clicks.</v8:content>
 					<v8:content>Open feature file</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Shortcut>F7</Shortcut>
+			<Shortcut>Shift+F7</Shortcut>
 			<Action>ОткрытьФичаФайл</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
@@ -32588,11 +33020,11 @@ SikuliX emulates mouse clicks.</v8:content>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Значение по умолчанию</v8:content>
+					<v8:content>Установить значение по умолчанию</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
-					<v8:content>Default value</v8:content>
+					<v8:content>Set default value</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>
@@ -32640,11 +33072,11 @@ SikuliX emulates mouse clicks.</v8:content>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Утилиты позволяют подсвечитьвать указатель мыши, рисовать стрелки к элементам форм. Необходимы для большинства шагов SikuliX.</v8:content>
+					<v8:content>Утилиты позволяют подсвечитьвать указатель мыши, рисовать стрелки к элементам форм. Необходимы для некоторых шагов SikuliX.</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
-					<v8:content>Utilities allow you to highlight the mouse pointer, draw arrows to form elements. Required  for most SikuliX steps.</v8:content>
+					<v8:content>Utilities allow you to highlight the mouse pointer, draw arrows to form elements. Required  for some SikuliX steps.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>УстановитьСервисныеУтилиты</Action>
@@ -32915,6 +33347,10 @@ SikuliX emulates mouse clicks.</v8:content>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Выполнить выделенные строки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Execute selected lines</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -33606,6 +34042,10 @@ SikuliX emulates mouse clicks.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Показать/скрыть служебные переменные</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Show / hide service variables</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
@@ -33669,6 +34109,10 @@ SikuliX emulates mouse clicks.</v8:content>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Добавить проверку сообщений пользователя</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Add check for user messages</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -33837,6 +34281,59 @@ SikuliX emulates mouse clicks.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ТестПодсветкиКликаМышки</Action>
+		</Command>
+		<Command name="ОткрытьПодсценарийВНовойВкладке" id="125">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть подсценарий в новой вкладке</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Open subscript in a new tab</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть фича файл</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Open feature file</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>F7</Shortcut>
+			<Action>ОткрытьПодсценарийВНовойВкладке</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="VanessaEditorСоздатьНовыйСценарий" id="126">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Новый сценарий</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>New scenario</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Новый сценарий</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>New scenario</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+N</Shortcut>
+			<Picture>
+				<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>VanessaEditorСоздатьНовыйСценарий</Action>
 		</Command>
 	</Commands>
 </Form>
