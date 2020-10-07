@@ -22,7 +22,7 @@
 @IgnoreOnWeb
 @IgnoreOnUFSovm82Builds
 @Video
-@IgnoreOnFastCheck
+
 
 
 Функционал: Возможность делать подсветку до платформы 8.3.12. Видео.
