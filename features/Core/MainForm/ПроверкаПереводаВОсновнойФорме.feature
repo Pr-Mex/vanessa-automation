@@ -256,7 +256,7 @@
 	|'Screenshots page'|
 	|'Create screnshoot in case of error'|
 	|'Enables taking screenshots in case of an error.'|
-	|'Take every window screenshot'|
+	|'Take a screenshot of each 1C session (process)'|
 	|'Enables taking screenshots for each 1C window when an error occurs.'|
 	//|'Designed to manage windows in Windows and Linux.'|
 	|'VanessaExt add-in screenshots'|
