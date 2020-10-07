@@ -13459,6 +13459,60 @@ When working with Vanessa Automation Single it is allowed to leave the field bla
 														</InputField>
 													</ChildItems>
 												</UsualGroup>
+												<UsualGroup name="ГруппаЗакрытиеКлиентаТестирования" id="2751">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Закрытие клиента тестирования</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Closing test client</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Vertical</Group>
+													<Behavior>Collapsible</Behavior>
+													<ControlRepresentation>Picture</ControlRepresentation>
+													<ExtendedTooltip name="ГруппаЗакрытиеКлиентаТестированияРасширеннаяПодсказка" id="2752"/>
+													<ChildItems>
+														<CheckBoxField name="ЗакрыватьКлиентТестированияПринудительно" id="2745">
+															<DataPath>Объект.ЗакрыватьКлиентТестированияПринудительно</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ЗакрыватьКлиентТестированияПринудительноКонтекстноеМеню" id="2746"/>
+															<ExtendedTooltip name="ЗакрыватьКлиентТестированияПринудительноРасширеннаяПодсказка" id="2747">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>If the flag is set, then when closing the testing client, it will be checked whether the testing client has closed by its PID. If the testing client has not closed normally, an attempt will be made to close it using the OS command.</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Если флаг установлен, то при закрытии клиента тестирования будет проверяться, закрылся ли клиент тестирования по его PID. Если клиент тестирования не закрылся штатно, то будет выполнена попытка закрыть его с помощью команды ОС.</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+														</CheckBoxField>
+														<InputField name="ТаймаутОжиданияПередПринудительнымЗакрытиемКлиентаТестирования" id="2748">
+															<DataPath>Объект.ТаймаутПередПринудительнымЗакрытиемКлиентаТестирования</DataPath>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<ContextMenu name="ТаймаутОжиданияПередПринудительнымЗакрытиемКлиентаТестированияКонтекстноеМеню" id="2749"/>
+															<ExtendedTooltip name="ТаймаутОжиданияПередПринудительнымЗакрытиемКлиентаТестированияРасширеннаяПодсказка" id="2750">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>The number of seconds to check that the testing client process completed on its own.</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Количество секунд, в течение которого будет проверяться, что процесс клиента тестирования звершился самостоятельно.</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
 											</ChildItems>
 										</Page>
 										<Page name="СтраницаВыполнениеСценариев" id="1840">
@@ -14241,83 +14295,7 @@ To enable the option, make sure the "Screenshot creation command" field is fille
 														</v8:item>
 														<v8:item>
 															<v8:lang>en</v8:lang>
-															<v8:content>Take every window screenshot</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>am</v8:lang>
-															<v8:content>ማስጠንቀቂያ ቅድሚያ የሚሰጡዋቸውን መስኮት 1C</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>az</v8:lang>
-															<v8:content>Şəkil çəkmək üçün ekran və hər bir windows, 1C</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>bg</v8:lang>
-															<v8:content>Снима екрана на всеки прозорец 1C</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>de</v8:lang>
-															<v8:content>Schießen Screenshot jedes Fenster 1S</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>es</v8:lang>
-															<v8:content>Retirar la captura de pantalla de cada una de las ventanas 1S</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>et</v8:lang>
-															<v8:content>Tulistada screenshot iga akna 1S</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>fr</v8:lang>
-															<v8:content>Retirer la capture d'écran de chaque fenêtre 1S</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>hu</v8:lang>
-															<v8:content>Egy screenshot minden ablak 1C</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>it</v8:lang>
-															<v8:content>Scattare uno screenshot di ogni finestra 1S</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>ka</v8:lang>
-															<v8:content>მიიღოს სკრინშოტი თითოეული ფანჯარა 1C</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>lt</v8:lang>
-															<v8:content>Šaudyti screenshot kiekvieno lango 1</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>lv</v8:lang>
-															<v8:content>Uzņemt screenshot no katra loga 1C</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>mn</v8:lang>
-															<v8:content>Онцлог нь дэлгэцийн авах, тус бүрийн цонх 1C</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>pl</v8:lang>
-															<v8:content>Zrob zrzut ekranu z każdego okna 1C</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>ro</v8:lang>
-															<v8:content>Pentru a trage un screenshot de la fiecare fereastră 1C</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>sl</v8:lang>
-															<v8:content>Posnetek zaslona vsako okno 1C</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>sv</v8:lang>
-															<v8:content>Ta en skärmdump av varje fönster 1C</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>tr</v8:lang>
-															<v8:content>Ateş ekran görüntüsü her pencere 1C</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>vi</v8:lang>
-															<v8:content>Lấy ra ảnh chụp màn hình mỗi cửa sổ 1C</v8:content>
+															<v8:content>Take a screenshot of each 1C session (process)</v8:content>
 														</v8:item>
 													</Title>
 													<TitleLocation>Right</TitleLocation>
