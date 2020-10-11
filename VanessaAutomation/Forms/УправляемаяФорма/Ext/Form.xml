@@ -2946,6 +2946,12 @@
 					</Popup>
 				</ChildItems>
 			</ButtonGroup>
+			<Button name="ФормаVanessaEditorЗакрытьВкладку" id="2755">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.VanessaEditorЗакрытьВкладку</CommandName>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаVanessaEditorЗакрытьВкладкуРасширеннаяПодсказка" id="2756"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -15545,11 +15551,11 @@ Log events:
 																								<Title formatted="false">
 																									<v8:item>
 																										<v8:lang>ru</v8:lang>
-																										<v8:content>Прикладывает к сценарию данные журнала регистрации. Данные берутся с момента начала выполнения сценария.</v8:content>
+																										<v8:content>При возникновении ошибки к сценарию будет приложен журнала регистрации. Данные берутся с момента начала выполнения сценария.</v8:content>
 																									</v8:item>
 																									<v8:item>
 																										<v8:lang>en</v8:lang>
-																										<v8:content>Applies the event log to the scenario. Data is taken from the moment the scenario starts.</v8:content>
+																										<v8:content>If an error occurs, a log will be attached to the script. Data is taken from the moment the scenario starts.</v8:content>
 																									</v8:item>
 																								</Title>
 																							</ExtendedTooltip>
@@ -34329,6 +34335,30 @@ SikuliX emulates mouse clicks.</v8:content>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>VanessaEditorСоздатьНовыйСценарий</Action>
+		</Command>
+		<Command name="VanessaEditorЗакрытьВкладку" id="127">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть вкладку</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Close tab</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть вкладку</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Close tab</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+W</Shortcut>
+			<Action>VanessaEditorЗакрытьВкладку</Action>
 		</Command>
 	</Commands>
 </Form>
