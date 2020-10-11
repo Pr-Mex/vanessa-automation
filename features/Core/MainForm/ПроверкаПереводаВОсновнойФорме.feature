@@ -315,7 +315,7 @@
 	|'Sets grouping value for Allure report on the Suites tab. See Help info for details.'|
 	|'Customize the title slide features'|
 	|'Allure report applications'|
-	|'Applies the event log to the scenario. Data is taken from the moment the scenario starts.'|
+	|'If an error occurs, a log will be attached to the script. Data is taken from the moment the scenario starts.'|
 	|'If the option is enabled, states of items of the active form will be collected in xlsx format in case of an error.'|
 	|'If the option is enabled, states of items of all forms opened in TestClient will be collected in xlsx format.'|
 	|'If the option is enabled, then when an error occurs, data will be collected on the network connections of the PC on which the tests were run.'|
