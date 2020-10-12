@@ -181,7 +181,7 @@
 					VanessaEditor = Ванесса.VanessaTabs.current.editor;
 					VanessaEditor.setContent(ТекстФичи);
 					Ванесса.VanessaTabs.current.resetModified();
-					Ванесса.VanessaTabs.current.editor.useDebugger(Истина);
+					ДействияПриСозданииВкладки();
 				КонецЕсли;
 				
 				НайденныеПроблемы = Ванесса.НайденныеПроблемы();
@@ -1096,6 +1096,13 @@
 	
 	Возврат Истина;
 КонецФункции	 
+
+// Выполняет стандартные действия при открытии вкладки
+&НаКлиенте
+Процедура ДействияПриСозданииВкладки() Экспорт
+	Ванесса.VanessaTabs.current.editor.useDebugger(Истина);
+	Ванесса.VanessaTabs.current.editor.setHoverDelay(800);
+КонецПроцедуры 
 
 #КонецОбласти
 
