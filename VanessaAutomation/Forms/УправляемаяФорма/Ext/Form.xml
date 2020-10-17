@@ -15042,14 +15042,21 @@ Log events:
 																		</Title>
 																	</ExtendedTooltip>
 																</CheckBoxField>
-																<CheckBoxField name="ПодробныйЛогВыполненияСценариев" id="2755">
+																<CheckBoxField name="ПодробныйЛогВыполненияСценариев" id="2757">
 																	<DataPath>Объект.ПодробныйЛогВыполненияСценариев</DataPath>
 																	<TitleLocation>Right</TitleLocation>
 																	<ToolTipRepresentation>Button</ToolTipRepresentation>
 																	<CheckBoxType>Auto</CheckBoxType>
-																	<ContextMenu name="ПодробныйЛогВыполненияСценариевКонтекстноеМеню" id="2756"/>
-																	<ExtendedTooltip name="ПодробныйЛогВыполненияСценариевРасширеннаяПодсказка" id="2757">
+																	<ContextMenu name="ПодробныйЛогВыполненияСценариевКонтекстноеМеню" id="2758"/>
+																	<ExtendedTooltip name="ПодробныйЛогВыполненияСценариевРасширеннаяПодсказка" id="2759">
 																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>More details in the log
+1. Number of tests in total
+2. How many fell / successfully / missed
+3. Time passed / left</v8:content>
+																			</v8:item>
 																			<v8:item>
 																				<v8:lang>ru</v8:lang>
 																				<v8:content>Больше деталей в логе
@@ -21881,22 +21888,56 @@ Value range is from -10 to 10.</v8:content>
 																												</Title>
 																											</ExtendedTooltip>
 																										</InputField>
-																										<Button name="ТестГолоса" id="2126">
-																											<Type>UsualButton</Type>
-																											<CommandName>Form.Command.ТестГолоса</CommandName>
-																											<ExtendedTooltip name="ТестГолосаРасширеннаяПодсказка" id="2127">
-																												<Title formatted="false">
-																													<v8:item>
-																														<v8:lang>ru</v8:lang>
-																														<v8:content>Генерирует mp3 файл с данным текстом и отправлет его на воспроизведение плееру по умолчанию.</v8:content>
-																													</v8:item>
-																													<v8:item>
-																														<v8:lang>en</v8:lang>
-																														<v8:content>Generates mp3 file with the specified text and runs it in the default player.</v8:content>
-																													</v8:item>
-																												</Title>
-																											</ExtendedTooltip>
-																										</Button>
+																										<UsualGroup name="ГруппаКнопкиПроизнестиТекст" id="2760">
+																											<Title>
+																												<v8:item>
+																													<v8:lang>ru</v8:lang>
+																													<v8:content>Произнести текст</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>en</v8:lang>
+																													<v8:content>Speak text</v8:content>
+																												</v8:item>
+																											</Title>
+																											<Group>AlwaysHorizontal</Group>
+																											<Representation>None</Representation>
+																											<ShowTitle>false</ShowTitle>
+																											<ExtendedTooltip name="ГруппаКнопкиПроизнестиТекстРасширеннаяПодсказка" id="2761"/>
+																											<ChildItems>
+																												<Button name="ТестГолосаПроизнести" id="2126">
+																													<Type>UsualButton</Type>
+																													<CommandName>Form.Command.ТестГолосаПроизнести</CommandName>
+																													<ExtendedTooltip name="ТестГолосаПроизнестиРасширеннаяПодсказка" id="2127">
+																														<Title formatted="false">
+																															<v8:item>
+																																<v8:lang>ru</v8:lang>
+																																<v8:content>Генерирует mp3 файл с данным текстом и отправлет его на воспроизведение с помощью внешней компоненты VanessaExt.</v8:content>
+																															</v8:item>
+																															<v8:item>
+																																<v8:lang>en</v8:lang>
+																																<v8:content>Generates mp3 file with the specified text and runs it for playback by the external component VanessaExt.</v8:content>
+																															</v8:item>
+																														</Title>
+																													</ExtendedTooltip>
+																												</Button>
+																												<Button name="ТестГолосаОткрытьФалйTTS_В_ОС" id="2762">
+																													<Type>UsualButton</Type>
+																													<CommandName>Form.Command.ТестГолосаОткрытьФалйTTS_В_ОС</CommandName>
+																													<ExtendedTooltip name="ТестГолосаОткрытьФалйTTS_В_ОСРасширеннаяПодсказка" id="2763">
+																														<Title formatted="false">
+																															<v8:item>
+																																<v8:lang>ru</v8:lang>
+																																<v8:content>Генерирует mp3 файл с данным текстом и отправлет его на воспроизведение плееру по умолчанию.</v8:content>
+																															</v8:item>
+																															<v8:item>
+																																<v8:lang>en</v8:lang>
+																																<v8:content>Generates mp3 file with the specified text and runs it in the default player.</v8:content>
+																															</v8:item>
+																														</Title>
+																													</ExtendedTooltip>
+																												</Button>
+																											</ChildItems>
+																										</UsualGroup>
 																									</ChildItems>
 																								</UsualGroup>
 																							</ChildItems>
@@ -33053,7 +33094,7 @@ SikuliX emulates mouse clicks.</v8:content>
 			<Action>КаталогиСкриптовSikuliXПоУмолчанию</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
-		<Command name="ТестГолоса" id="28">
+		<Command name="ТестГолосаПроизнести" id="28">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -33061,20 +33102,16 @@ SikuliX emulates mouse clicks.</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
-					<v8:content>What to say</v8:content>
+					<v8:content>Speak</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Тест голоса</v8:content>
-				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Voice test</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action>ТестГолоса</Action>
+			<Action>ТестГолосаПроизнести</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="УстановитьСервисныеУтилиты" id="29">
@@ -34377,6 +34414,26 @@ SikuliX emulates mouse clicks.</v8:content>
 			</ToolTip>
 			<Shortcut>Ctrl+W</Shortcut>
 			<Action>VanessaEditorЗакрытьВкладку</Action>
+		</Command>
+		<Command name="ТестГолосаОткрытьФалйTTS_В_ОС" id="128">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть в плеере</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Open in player</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Voice test</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ТестГолосаОткрытьВПлеере</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 </Form>
