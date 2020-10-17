@@ -15,6 +15,8 @@
 @IgnoreOn839
 @tree
 
+@IgnoreOnCIMainBuild
+
 Функционал: Проверка перевода в основной форме.
  
 
