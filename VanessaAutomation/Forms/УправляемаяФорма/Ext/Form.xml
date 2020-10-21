@@ -2946,6 +2946,12 @@
 					</Popup>
 				</ChildItems>
 			</ButtonGroup>
+			<Button name="ФормаVanessaEditorЗакрытьВкладку" id="2755">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.VanessaEditorЗакрытьВкладку</CommandName>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаVanessaEditorЗакрытьВкладкуРасширеннаяПодсказка" id="2756"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -13995,6 +14001,37 @@ All the following scenarios will be skipped.</v8:content>
 														</Title>
 													</ExtendedTooltip>
 												</CheckBoxField>
+												<CheckBoxField name="ЗвуковоеОповещениеПриОкончанииВыполненияСценария" id="2764">
+													<DataPath>Объект.ЗвуковоеОповещениеПриОкончанииВыполненияСценария</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ЗвуковоеОповещениеПриОкончанииВыполненияСценарияКонтекстноеМеню" id="2765"/>
+													<ExtendedTooltip name="ЗвуковоеОповещениеПриОкончанииВыполненияСценарияРасширеннаяПодсказка" id="2766">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>If this option is enabled, the following sound notification will be issued at the end of the script execution:
+1. Scripts completed successfully.
+2. An error occurred while executing the script.
+3. The breakpoint was triggered.
+
+You must enable the use of the VanessaExt addin.
+This option only works under Windows.</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Если опция включена, то при окончании выполнения сценария будет выдаваться звуковое оповещение:
+1. Сценарии выполнены успешно.
+2. Ошибка при выполнении сценария.
+3. Сработала точка останова.
+
+Необходимо включить использование компоненты VanessaExt.
+Опция работает только под Windows.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+												</CheckBoxField>
 												<CheckBoxField name="ПоказыватьНомерСтрокиДереваПриВозникновенииОшибки" id="1750">
 													<DataPath>Объект.ПоказыватьНомерСтрокиДереваПриВозникновенииОшибки</DataPath>
 													<TitleLocation>Right</TitleLocation>
@@ -15036,6 +15073,31 @@ Log events:
 																		</Title>
 																	</ExtendedTooltip>
 																</CheckBoxField>
+																<CheckBoxField name="ПодробныйЛогВыполненияСценариев" id="2757">
+																	<DataPath>Объект.ПодробныйЛогВыполненияСценариев</DataPath>
+																	<TitleLocation>Right</TitleLocation>
+																	<ToolTipRepresentation>Button</ToolTipRepresentation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="ПодробныйЛогВыполненияСценариевКонтекстноеМеню" id="2758"/>
+																	<ExtendedTooltip name="ПодробныйЛогВыполненияСценариевРасширеннаяПодсказка" id="2759">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>More details in the log
+1. Number of tests in total
+2. How many fell / successfully / missed
+3. Time passed / left</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Больше деталей в логе
+1. Количество тестов всего
+2. Сколько упало/успешно/пропущено
+3. Прошло/осталось времени</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																</CheckBoxField>
 																<InputField name="ИмяФайлаЛогВыполненияСценариев" id="1547">
 																	<DataPath>Объект.ИмяФайлаЛогВыполненияСценариев</DataPath>
 																	<ToolTipRepresentation>Button</ToolTipRepresentation>
@@ -15545,11 +15607,11 @@ Log events:
 																								<Title formatted="false">
 																									<v8:item>
 																										<v8:lang>ru</v8:lang>
-																										<v8:content>Прикладывает к сценарию данные журнала регистрации. Данные берутся с момента начала выполнения сценария.</v8:content>
+																										<v8:content>При возникновении ошибки к сценарию будет приложен журнала регистрации. Данные берутся с момента начала выполнения сценария.</v8:content>
 																									</v8:item>
 																									<v8:item>
 																										<v8:lang>en</v8:lang>
-																										<v8:content>Applies the event log to the scenario. Data is taken from the moment the scenario starts.</v8:content>
+																										<v8:content>If an error occurs, a log will be attached to the script. Data is taken from the moment the scenario starts.</v8:content>
 																									</v8:item>
 																								</Title>
 																							</ExtendedTooltip>
@@ -21857,22 +21919,56 @@ Value range is from -10 to 10.</v8:content>
 																												</Title>
 																											</ExtendedTooltip>
 																										</InputField>
-																										<Button name="ТестГолоса" id="2126">
-																											<Type>UsualButton</Type>
-																											<CommandName>Form.Command.ТестГолоса</CommandName>
-																											<ExtendedTooltip name="ТестГолосаРасширеннаяПодсказка" id="2127">
-																												<Title formatted="false">
-																													<v8:item>
-																														<v8:lang>ru</v8:lang>
-																														<v8:content>Генерирует mp3 файл с данным текстом и отправлет его на воспроизведение плееру по умолчанию.</v8:content>
-																													</v8:item>
-																													<v8:item>
-																														<v8:lang>en</v8:lang>
-																														<v8:content>Generates mp3 file with the specified text and runs it in the default player.</v8:content>
-																													</v8:item>
-																												</Title>
-																											</ExtendedTooltip>
-																										</Button>
+																										<UsualGroup name="ГруппаКнопкиПроизнестиТекст" id="2760">
+																											<Title>
+																												<v8:item>
+																													<v8:lang>ru</v8:lang>
+																													<v8:content>Произнести текст</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>en</v8:lang>
+																													<v8:content>Speak text</v8:content>
+																												</v8:item>
+																											</Title>
+																											<Group>AlwaysHorizontal</Group>
+																											<Representation>None</Representation>
+																											<ShowTitle>false</ShowTitle>
+																											<ExtendedTooltip name="ГруппаКнопкиПроизнестиТекстРасширеннаяПодсказка" id="2761"/>
+																											<ChildItems>
+																												<Button name="ТестГолосаПроизнести" id="2126">
+																													<Type>UsualButton</Type>
+																													<CommandName>Form.Command.ТестГолосаПроизнести</CommandName>
+																													<ExtendedTooltip name="ТестГолосаПроизнестиРасширеннаяПодсказка" id="2127">
+																														<Title formatted="false">
+																															<v8:item>
+																																<v8:lang>ru</v8:lang>
+																																<v8:content>Генерирует mp3 файл с данным текстом и отправлет его на воспроизведение с помощью внешней компоненты VanessaExt.</v8:content>
+																															</v8:item>
+																															<v8:item>
+																																<v8:lang>en</v8:lang>
+																																<v8:content>Generates mp3 file with the specified text and runs it for playback by the external component VanessaExt.</v8:content>
+																															</v8:item>
+																														</Title>
+																													</ExtendedTooltip>
+																												</Button>
+																												<Button name="ТестГолосаОткрытьФалйTTS_В_ОС" id="2762">
+																													<Type>UsualButton</Type>
+																													<CommandName>Form.Command.ТестГолосаОткрытьФалйTTS_В_ОС</CommandName>
+																													<ExtendedTooltip name="ТестГолосаОткрытьФалйTTS_В_ОСРасширеннаяПодсказка" id="2763">
+																														<Title formatted="false">
+																															<v8:item>
+																																<v8:lang>ru</v8:lang>
+																																<v8:content>Генерирует mp3 файл с данным текстом и отправлет его на воспроизведение плееру по умолчанию.</v8:content>
+																															</v8:item>
+																															<v8:item>
+																																<v8:lang>en</v8:lang>
+																																<v8:content>Generates mp3 file with the specified text and runs it in the default player.</v8:content>
+																															</v8:item>
+																														</Title>
+																													</ExtendedTooltip>
+																												</Button>
+																											</ChildItems>
+																										</UsualGroup>
 																									</ChildItems>
 																								</UsualGroup>
 																							</ChildItems>
@@ -33029,7 +33125,7 @@ SikuliX emulates mouse clicks.</v8:content>
 			<Action>КаталогиСкриптовSikuliXПоУмолчанию</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
-		<Command name="ТестГолоса" id="28">
+		<Command name="ТестГолосаПроизнести" id="28">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -33037,20 +33133,16 @@ SikuliX emulates mouse clicks.</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
-					<v8:content>What to say</v8:content>
+					<v8:content>Speak</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Тест голоса</v8:content>
-				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Voice test</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action>ТестГолоса</Action>
+			<Action>ТестГолосаПроизнести</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="УстановитьСервисныеУтилиты" id="29">
@@ -34329,6 +34421,50 @@ SikuliX emulates mouse clicks.</v8:content>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>VanessaEditorСоздатьНовыйСценарий</Action>
+		</Command>
+		<Command name="VanessaEditorЗакрытьВкладку" id="127">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть вкладку</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Close tab</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть вкладку</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Close tab</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+W</Shortcut>
+			<Action>VanessaEditorЗакрытьВкладку</Action>
+		</Command>
+		<Command name="ТестГолосаОткрытьФалйTTS_В_ОС" id="128">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть в плеере</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Open in player</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Voice test</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ТестГолосаОткрытьВПлеере</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 </Form>
