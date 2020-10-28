@@ -5274,6 +5274,7 @@
 																	<v8:content>Git</v8:content>
 																</v8:item>
 															</Title>
+															<Width>25</Width>
 															<Group>Vertical</Group>
 															<Representation>None</Representation>
 															<ShowTitle>false</ShowTitle>
@@ -5301,14 +5302,52 @@
 																		<Event name="StartChoice">ПутьКПапкеGitНачалоВыбора</Event>
 																	</Events>
 																</InputField>
-																<Table name="ДревоGit" id="2775">
+																<UsualGroup name="ГруппаКнопокДеревоGit" id="2819">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа кнопок дерево git</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Git tree button group</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Group>AlwaysHorizontal</Group>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаКнопокДеревоGitРасширеннаяПодсказка" id="2820"/>
+																	<ChildItems>
+																		<Button name="ДеревоGitОбновить" id="2821">
+																			<Type>UsualButton</Type>
+																			<CommandName>Form.Command.ДеревоGitОбновить</CommandName>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Обновить</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>Refresh</v8:content>
+																				</v8:item>
+																			</Title>
+																			<ExtendedTooltip name="ДеревоGitОбновитьРасширеннаяПодсказка" id="2822"/>
+																		</Button>
+																	</ChildItems>
+																</UsualGroup>
+																<Table name="ДеревоGit" id="2803">
 																	<Representation>Tree</Representation>
-																	<Header>false</Header>
+																	<ReadOnly>true</ReadOnly>
+																	<AutoMaxWidth>false</AutoMaxWidth>
 																	<AutoInsertNewRow>true</AutoInsertNewRow>
 																	<EnableStartDrag>true</EnableStartDrag>
 																	<EnableDrag>true</EnableDrag>
-																	<FileDragMode>AsFile</FileDragMode>
-																	<DataPath>ДревоФайлаФич</DataPath>
+																	<DataPath>ДеревоGit</DataPath>
+																	<RowPictureDataPath>ДеревоGit.ТипКартинки</RowPictureDataPath>
+																	<RowsPicture>
+																		<xr:Abs>RowsPicture.png</xr:Abs>
+																		<xr:LoadTransparent>false</xr:LoadTransparent>
+																	</RowsPicture>
 																	<Title>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
@@ -5319,89 +5358,45 @@
 																			<v8:content>Git tree</v8:content>
 																		</v8:item>
 																	</Title>
-																	<ContextMenu name="ДревоGitКонтекстноеМеню" id="2776"/>
-																	<AutoCommandBar name="ДревоGitКоманднаяПанель" id="2777">
+																	<ContextMenu name="ДеревоGitКонтекстноеМеню" id="2804"/>
+																	<AutoCommandBar name="ДеревоGitКоманднаяПанель" id="2805">
 																		<Autofill>false</Autofill>
 																	</AutoCommandBar>
-																	<ExtendedTooltip name="ДревоGitРасширеннаяПодсказка" id="2778"/>
-																	<SearchStringAddition name="ДревоGitСтрокаПоиска" id="2779">
+																	<ExtendedTooltip name="ДеревоGitРасширеннаяПодсказка" id="2806"/>
+																	<SearchStringAddition name="ДеревоGitСтрокаПоиска" id="2807">
 																		<AdditionSource>
-																			<Item>ДревоGit</Item>
+																			<Item>ДеревоGit</Item>
 																			<Type>SearchStringRepresentation</Type>
 																		</AdditionSource>
-																		<ContextMenu name="ДревоGitСтрокаПоискаКонтекстноеМеню" id="2780"/>
-																		<ExtendedTooltip name="ДревоGitСтрокаПоискаРасширеннаяПодсказка" id="2781"/>
+																		<ContextMenu name="ДеревоGitСтрокаПоискаКонтекстноеМеню" id="2808"/>
+																		<ExtendedTooltip name="ДеревоGitСтрокаПоискаРасширеннаяПодсказка" id="2809"/>
 																	</SearchStringAddition>
-																	<ViewStatusAddition name="ДревоGitСостояниеПросмотра" id="2782">
+																	<ViewStatusAddition name="ДеревоGitСостояниеПросмотра" id="2810">
 																		<AdditionSource>
-																			<Item>ДревоGit</Item>
+																			<Item>ДеревоGit</Item>
 																			<Type>ViewStatusRepresentation</Type>
 																		</AdditionSource>
-																		<ContextMenu name="ДревоGitСостояниеПросмотраКонтекстноеМеню" id="2783"/>
-																		<ExtendedTooltip name="ДревоGitСостояниеПросмотраРасширеннаяПодсказка" id="2784"/>
+																		<ContextMenu name="ДеревоGitСостояниеПросмотраКонтекстноеМеню" id="2811"/>
+																		<ExtendedTooltip name="ДеревоGitСостояниеПросмотраРасширеннаяПодсказка" id="2812"/>
 																	</ViewStatusAddition>
-																	<SearchControlAddition name="ДревоGitУправлениеПоиском" id="2785">
+																	<SearchControlAddition name="ДеревоGitУправлениеПоиском" id="2813">
 																		<AdditionSource>
-																			<Item>ДревоGit</Item>
+																			<Item>ДеревоGit</Item>
 																			<Type>SearchControl</Type>
 																		</AdditionSource>
-																		<ContextMenu name="ДревоGitУправлениеПоискомКонтекстноеМеню" id="2786"/>
-																		<ExtendedTooltip name="ДревоGitУправлениеПоискомРасширеннаяПодсказка" id="2787"/>
+																		<ContextMenu name="ДеревоGitУправлениеПоискомКонтекстноеМеню" id="2814"/>
+																		<ExtendedTooltip name="ДеревоGitУправлениеПоискомРасширеннаяПодсказка" id="2815"/>
 																	</SearchControlAddition>
 																	<Events>
-																		<Event name="ValueChoice">ДревоФайлаФичВыборЗначения</Event>
-																		<Event name="Selection">ДревоФайлаФичВыбор</Event>
+																		<Event name="OnActivateRow">ДеревоGitПриАктивизацииСтроки</Event>
 																	</Events>
 																	<ChildItems>
-																		<ColumnGroup name="ДревоФайлаФичСтроки1" id="2788">
-																			<Title>
-																				<v8:item>
-																					<v8:lang>ru</v8:lang>
-																					<v8:content>Строки дерева</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>en</v8:lang>
-																					<v8:content>Tree lines</v8:content>
-																				</v8:item>
-																			</Title>
-																			<Group>InCell</Group>
-																			<ExtendedTooltip name="ДревоФайлаФичСтроки1РасширеннаяПодсказка" id="2789"/>
-																			<ChildItems>
-																				<PictureField name="ДревоФайлаФичКартинка1" id="2790">
-																					<DataPath>ДревоФайлаФич.Картинка</DataPath>
-																					<Title>
-																						<v8:item>
-																							<v8:lang>ru</v8:lang>
-																							<v8:content>Картинка</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>en</v8:lang>
-																							<v8:content>Picture</v8:content>
-																						</v8:item>
-																					</Title>
-																					<EditMode>EnterOnInput</EditMode>
-																					<FileDragMode>AsFile</FileDragMode>
-																					<ContextMenu name="ДревоФайлаФичКартинка1КонтекстноеМеню" id="2791"/>
-																					<ExtendedTooltip name="ДревоФайлаФичКартинка1РасширеннаяПодсказка" id="2792"/>
-																				</PictureField>
-																				<InputField name="СписокФайловИмя1" id="2793">
-																					<DataPath>ДревоФайлаФич.Имя</DataPath>
-																					<Title>
-																						<v8:item>
-																							<v8:lang>ru</v8:lang>
-																							<v8:content>Имя</v8:content>
-																						</v8:item>
-																						<v8:item>
-																							<v8:lang>en</v8:lang>
-																							<v8:content>Name</v8:content>
-																						</v8:item>
-																					</Title>
-																					<EditMode>EnterOnInput</EditMode>
-																					<ContextMenu name="СписокФайловИмя1КонтекстноеМеню" id="2794"/>
-																					<ExtendedTooltip name="СписокФайловИмя1РасширеннаяПодсказка" id="2795"/>
-																				</InputField>
-																			</ChildItems>
-																		</ColumnGroup>
+																		<InputField name="ДеревоGitФайл" id="2816">
+																			<DataPath>ДеревоGit.Файл</DataPath>
+																			<EditMode>EnterOnInput</EditMode>
+																			<ContextMenu name="ДеревоGitФайлКонтекстноеМеню" id="2817"/>
+																			<ExtendedTooltip name="ДеревоGitФайлРасширеннаяПодсказка" id="2818"/>
+																		</InputField>
 																	</ChildItems>
 																</Table>
 															</ChildItems>
@@ -27773,6 +27768,113 @@ SikuliX emulates mouse clicks.</v8:content>
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="ДеревоGit" id="46">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево git</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Git tree</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Файл" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Файл</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>File</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТипКартинки" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип картинки</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Picture type</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Тип" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Type</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Статус" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Статус</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Status</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ДанныеФайла" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Данные файла</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>File data</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+			</Columns>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -34689,6 +34791,34 @@ SikuliX emulates mouse clicks.</v8:content>
 			</ToolTip>
 			<Shortcut>Alt+G</Shortcut>
 			<Action>VanessaEditorПоказатьСкрытьДеревоGit</Action>
+		</Command>
+		<Command name="ДеревоGitОбновить" id="130">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Refresh</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Refresh</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДеревоGitОбновить</Action>
+			<Representation>Picture</Representation>
 		</Command>
 	</Commands>
 </Form>
