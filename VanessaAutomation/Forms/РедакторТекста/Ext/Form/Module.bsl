@@ -841,7 +841,9 @@
 Процедура ПоказатьМиниатюруКода() Экспорт
 	//VanessaEditor = Ванесса.VanessaTabs.current.editor;
 	Если Ванесса.VanessaTabs.current <> Неопределено Тогда
-		Ванесса.VanessaTabs.current.editor.showMinimap(Ванесса.Объект.ПоказыватьМиниатюруКода);
+		Если НЕ Ванесса.ЭтоВкладкаDiff(Ванесса.VanessaTabs.current) Тогда
+			Ванесса.VanessaTabs.current.editor.showMinimap(Ванесса.Объект.ПоказыватьМиниатюруКода);
+		КонецЕсли;	 
 	КонецЕсли;	 
 КонецПроцедуры 
 
@@ -897,10 +899,12 @@
 Процедура УстановитьЗаменуТабуляцииНаПробелы() Экспорт
 	//VanessaEditor = Ванесса.VanessaTabs.current.editor;
 	Если Ванесса.VanessaTabs.current <> Неопределено Тогда
-		Если Ванесса.Объект.ЗаменятьТабыНаПробелы Тогда
-			Ванесса.VanessaTabs.current.editor.setInsertSpaces(4);
-		Иначе	
-			Ванесса.VanessaTabs.current.editor.setInsertSpaces(0);
+		Если НЕ Ванесса.ЭтоВкладкаDiff(Ванесса.VanessaTabs.current) Тогда
+			Если Ванесса.Объект.ЗаменятьТабыНаПробелы Тогда
+				Ванесса.VanessaTabs.current.editor.setInsertSpaces(4);
+			Иначе	
+				Ванесса.VanessaTabs.current.editor.setInsertSpaces(0);
+			КонецЕсли;	 
 		КонецЕсли;	 
 	КонецЕсли;	 
 КонецПроцедуры 
