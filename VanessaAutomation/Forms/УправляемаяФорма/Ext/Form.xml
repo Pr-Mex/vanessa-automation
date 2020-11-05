@@ -5302,39 +5302,118 @@
 																		<Event name="StartChoice">ПутьКПапкеGitНачалоВыбора</Event>
 																	</Events>
 																</InputField>
-																<UsualGroup name="ГруппаКнопокДеревоGit" id="2819">
+																<CommandBar name="ГруппаКнопокДеревоGitКоманднаяПанель" id="2834">
 																	<Title>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>Группа кнопок дерево git</v8:content>
+																			<v8:content>Группа кнопок дерево git командная панель</v8:content>
 																		</v8:item>
 																		<v8:item>
 																			<v8:lang>en</v8:lang>
-																			<v8:content>Git tree button group</v8:content>
+																			<v8:content>Button group tree git command bar</v8:content>
 																		</v8:item>
 																	</Title>
-																	<Group>AlwaysHorizontal</Group>
-																	<Representation>None</Representation>
-																	<ShowTitle>false</ShowTitle>
-																	<ExtendedTooltip name="ГруппаКнопокДеревоGitРасширеннаяПодсказка" id="2820"/>
+																	<ExtendedTooltip name="ГруппаКнопокДеревоGitКоманднаяПанельРасширеннаяПодсказка" id="2835"/>
 																	<ChildItems>
-																		<Button name="ДеревоGitОбновить" id="2821">
-																			<Type>UsualButton</Type>
-																			<CommandName>Form.Command.ДеревоGitОбновить</CommandName>
+																		<ButtonGroup name="ГруппаКнопокДеревоGit" id="2825">
 																			<Title>
 																				<v8:item>
 																					<v8:lang>ru</v8:lang>
-																					<v8:content>Обновить</v8:content>
+																					<v8:content>Группа кнопок дерево git</v8:content>
 																				</v8:item>
 																				<v8:item>
 																					<v8:lang>en</v8:lang>
-																					<v8:content>Refresh</v8:content>
+																					<v8:content>Git tree button group</v8:content>
 																				</v8:item>
 																			</Title>
-																			<ExtendedTooltip name="ДеревоGitОбновитьРасширеннаяПодсказка" id="2822"/>
-																		</Button>
+																			<Representation>Compact</Representation>
+																			<ExtendedTooltip name="ГруппаКнопокДеревоGitРасширеннаяПодсказка" id="2826"/>
+																			<ChildItems>
+																				<Button name="ДеревоGitОбновить" id="2821">
+																					<Type>CommandBarButton</Type>
+																					<Representation>Picture</Representation>
+																					<Width>3</Width>
+																					<AutoMaxWidth>false</AutoMaxWidth>
+																					<CommandName>Form.Command.ДеревоGitОбновить</CommandName>
+																					<Picture>
+																						<xr:Abs>Picture.png</xr:Abs>
+																						<xr:LoadTransparent>false</xr:LoadTransparent>
+																					</Picture>
+																					<Title>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Обновить</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>en</v8:lang>
+																							<v8:content>Refresh</v8:content>
+																						</v8:item>
+																					</Title>
+																					<ExtendedTooltip name="ДеревоGitОбновитьРасширеннаяПодсказка" id="2822"/>
+																				</Button>
+																				<Button name="ДеревоGitДобавитьВИндекс" id="2823">
+																					<Type>CommandBarButton</Type>
+																					<Representation>Picture</Representation>
+																					<CommandName>Form.Command.ДеревоGitДобавитьВИндекс</CommandName>
+																					<Picture>
+																						<xr:Abs>Picture.png</xr:Abs>
+																						<xr:LoadTransparent>false</xr:LoadTransparent>
+																					</Picture>
+																					<Title>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Stage Selected</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>en</v8:lang>
+																							<v8:content>Stage Selected</v8:content>
+																						</v8:item>
+																					</Title>
+																					<ExtendedTooltip name="ДеревоGitДобавитьВИндексРасширеннаяПодсказка" id="2824"/>
+																				</Button>
+																				<Button name="ДеревоGitДеревоGitУбратьИзИндекса" id="2827">
+																					<Type>CommandBarButton</Type>
+																					<Representation>Picture</Representation>
+																					<CommandName>Form.Command.ДеревоGitУбратьИзИндекса</CommandName>
+																					<Picture>
+																						<xr:Abs>Picture.png</xr:Abs>
+																						<xr:LoadTransparent>false</xr:LoadTransparent>
+																					</Picture>
+																					<ExtendedTooltip name="ДеревоGitДеревоGitУбратьИзИндексаРасширеннаяПодсказка" id="2828"/>
+																				</Button>
+																				<Button name="ДеревоGitДеревоGitЗафиксировать" id="2829">
+																					<Type>CommandBarButton</Type>
+																					<Representation>PictureAndText</Representation>
+																					<CommandName>Form.Command.ДеревоGitЗафиксировать</CommandName>
+																					<Picture>
+																						<xr:Abs>Picture.png</xr:Abs>
+																						<xr:LoadTransparent>false</xr:LoadTransparent>
+																					</Picture>
+																					<Title>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Commit</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>en</v8:lang>
+																							<v8:content>Commit</v8:content>
+																						</v8:item>
+																					</Title>
+																					<ExtendedTooltip name="ДеревоGitДеревоGitЗафиксироватьРасширеннаяПодсказка" id="2830"/>
+																				</Button>
+																			</ChildItems>
+																		</ButtonGroup>
 																	</ChildItems>
-																</UsualGroup>
+																</CommandBar>
+																<InputField name="ДеревоGitДеревоТекстСообщения" id="2831">
+																	<DataPath>ДеревоGitДеревоТекстСообщения</DataPath>
+																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<Height>3</Height>
+																	<VerticalStretch>false</VerticalStretch>
+																	<MultiLine>true</MultiLine>
+																	<ContextMenu name="ДеревоGitДеревоТекстСообщенияКонтекстноеМеню" id="2832"/>
+																	<ExtendedTooltip name="ДеревоGitДеревоТекстСообщенияРасширеннаяПодсказка" id="2833"/>
+																</InputField>
 																<Table name="ДеревоGit" id="2803">
 																	<Representation>Tree</Representation>
 																	<ReadOnly>true</ReadOnly>
@@ -13095,6 +13174,19 @@ When working with Vanessa Automation Single it is allowed to leave the field bla
 																			</v8:item>
 																		</Presentation>
 																		<Value xsi:type="xs:string">FILE</Value>
+																	</xr:Value>
+																</xr:Item>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>NotUse</v8:content>
+																			</v8:item>
+																		</Presentation>
+																		<Value xsi:type="xs:string">NotUse</Value>
 																	</xr:Value>
 																</xr:Item>
 															</ChoiceList>
@@ -27875,6 +27967,36 @@ SikuliX emulates mouse clicks.</v8:content>
 				</Column>
 			</Columns>
 		</Attribute>
+		<Attribute name="ДеревоGitДеревоТекстСообщения" id="47">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст сообщения</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Message text</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РежимСовместимостиКорректноАктивизируетПолеHTMLДокумента" id="48">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим совместимости корректно активизирует поле HTMLДокумента</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -34819,6 +34941,75 @@ SikuliX emulates mouse clicks.</v8:content>
 			</Picture>
 			<Action>ДеревоGitОбновить</Action>
 			<Representation>Picture</Representation>
+		</Command>
+		<Command name="ДеревоGitДобавитьВИндекс" id="131">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить в индекс</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Add to index</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Stage Selected</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Stage Selected</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДеревоGitДобавитьВИндекс</Action>
+		</Command>
+		<Command name="ДеревоGitУбратьИзИндекса" id="132">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Убрать из индекса</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Remove from index</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Unstage Selected</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Unstage Selected</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДеревоGitУбратьИзИндекса</Action>
+		</Command>
+		<Command name="ДеревоGitЗафиксировать" id="133">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Зафиксировать</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Commit</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Commit</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Commit</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДеревоGitЗафиксировать</Action>
 		</Command>
 	</Commands>
 </Form>
