@@ -5401,6 +5401,16 @@
 																					</Title>
 																					<ExtendedTooltip name="ДеревоGitДеревоGitЗафиксироватьРасширеннаяПодсказка" id="2830"/>
 																				</Button>
+																				<Button name="ДеревоGitНастройки" id="2836">
+																					<Type>CommandBarButton</Type>
+																					<Representation>Picture</Representation>
+																					<CommandName>Form.Command.ДеревоGitНастройки</CommandName>
+																					<Picture>
+																						<xr:Abs>Picture.png</xr:Abs>
+																						<xr:LoadTransparent>false</xr:LoadTransparent>
+																					</Picture>
+																					<ExtendedTooltip name="ДеревоGitНастройкиРасширеннаяПодсказка" id="2837"/>
+																				</Button>
 																			</ChildItems>
 																		</ButtonGroup>
 																	</ChildItems>
@@ -5478,6 +5488,16 @@
 																		</InputField>
 																	</ChildItems>
 																</Table>
+																<Button name="ДеревоGitВыборВетки" id="2838">
+																	<Type>UsualButton</Type>
+																	<Representation>PictureAndText</Representation>
+																	<CommandName>Form.Command.ДеревоGitВыборВетки</CommandName>
+																	<Picture>
+																		<xr:Abs>Picture.png</xr:Abs>
+																		<xr:LoadTransparent>false</xr:LoadTransparent>
+																	</Picture>
+																	<ExtendedTooltip name="ДеревоGitВыборВеткиРасширеннаяПодсказка" id="2839"/>
+																</Button>
 															</ChildItems>
 														</UsualGroup>
 														<HTMLDocumentField name="VanessaEditor" id="2404">
@@ -35010,6 +35030,52 @@ SikuliX emulates mouse clicks.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ДеревоGitЗафиксировать</Action>
+		</Command>
+		<Command name="ДеревоGitНастройки" id="134">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Settings</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Settings</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДеревоGitНастройки</Action>
+		</Command>
+		<Command name="ДеревоGitВыборВетки" id="135">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбор ветки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Branch selection</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбор ветки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Branch selection</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДеревоGitВыборВетки</Action>
 		</Command>
 	</Commands>
 </Form>
