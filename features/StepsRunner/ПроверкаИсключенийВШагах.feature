@@ -1,4 +1,4 @@
-# language: ru
+﻿# language: ru
 # encoding: utf-8
 #parent uf:
 @UF11_Прочее
@@ -17,6 +17,7 @@
 @IgnoreOn8312
 @IgnoreOn8313
 @IgnoreOn8314
+@IgnoreOnUFSovm82Builds
 
 
 @tree
