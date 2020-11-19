@@ -1488,6 +1488,12 @@
 										<CommandName>Form.Command.VanessaEditorПоказыватьМиниатюруКода</CommandName>
 										<ExtendedTooltip name="VanessaEditorПоказыватьМиниатюруКодаРасширеннаяПодсказка" id="2651"/>
 									</Button>
+									<Button name="VanessaEditorПоказыватьРазличияВРедактореОтдельно" id="2848">
+										<Type>CommandBarButton</Type>
+										<Check>true</Check>
+										<CommandName>Form.Command.VanessaEditorПоказыватьРазличияВРедактореОтдельно</CommandName>
+										<ExtendedTooltip name="VanessaEditorПоказыватьРазличияВРедактореОтдельноРасширеннаяПодсказка" id="2849"/>
+									</Button>
 									<ButtonGroup name="ГруппаVanessaEditorВидимостьКнопокПанелиРедактора" id="2846">
 										<Title>
 											<v8:item>
@@ -1840,7 +1846,30 @@
 							<Button name="ПанельVanessaEditorСохранитьФайл" id="2710">
 								<Type>CommandBarButton</Type>
 								<CommandName>Form.Command.VanessaEditorСохранитьФайл</CommandName>
+								<Picture>
+									<xr:Abs>Picture.png</xr:Abs>
+									<xr:LoadTransparent>false</xr:LoadTransparent>
+								</Picture>
 								<ExtendedTooltip name="ПанельVanessaEditorСохранитьФайлРасширеннаяПодсказка" id="2711"/>
+							</Button>
+							<Button name="ПанельVanessaEditorСохранитьФайлКак" id="2852">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.VanessaEditorСохранитьФайлКак</CommandName>
+								<Picture>
+									<xr:Abs>Picture.png</xr:Abs>
+									<xr:LoadTransparent>false</xr:LoadTransparent>
+								</Picture>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Сохранить файл как</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Save file as</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ПанельVanessaEditorСохранитьФайлКакРасширеннаяПодсказка" id="2853"/>
 							</Button>
 							<Button name="ПанельVanessaEditorПерезагрузить" id="2712">
 								<Type>CommandBarButton</Type>
@@ -5317,62 +5346,6 @@
 																		<Event name="StartChoice">ПутьКПапкеGitНачалоВыбора</Event>
 																	</Events>
 																</InputField>
-																<InputField name="ВидОтображенияОтличийВРедакторе" id="2843">
-																	<DataPath>ВидОтображенияОтличийВРедакторе</DataPath>
-																	<Title>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Показывать отличия</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>en</v8:lang>
-																			<v8:content>Show differences</v8:content>
-																		</v8:item>
-																	</Title>
-																	<AutoMaxWidth>false</AutoMaxWidth>
-																	<DropListButton>true</DropListButton>
-																	<ChoiceList>
-																		<xr:Item>
-																			<xr:Presentation/>
-																			<xr:CheckState>0</xr:CheckState>
-																			<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																				<Presentation>
-																					<v8:item>
-																						<v8:lang>ru</v8:lang>
-																						<v8:content>Раздельно</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>en</v8:lang>
-																						<v8:content>Split</v8:content>
-																					</v8:item>
-																				</Presentation>
-																				<Value xsi:type="xs:string">Раздельно</Value>
-																			</xr:Value>
-																		</xr:Item>
-																		<xr:Item>
-																			<xr:Presentation/>
-																			<xr:CheckState>0</xr:CheckState>
-																			<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																				<Presentation>
-																					<v8:item>
-																						<v8:lang>ru</v8:lang>
-																						<v8:content>Вместе</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>en</v8:lang>
-																						<v8:content>Unified</v8:content>
-																					</v8:item>
-																				</Presentation>
-																				<Value xsi:type="xs:string">Вместе</Value>
-																			</xr:Value>
-																		</xr:Item>
-																	</ChoiceList>
-																	<ContextMenu name="ВидОтображенияОтличийВРедактореКонтекстноеМеню" id="2844"/>
-																	<ExtendedTooltip name="ВидОтображенияОтличийВРедактореРасширеннаяПодсказка" id="2845"/>
-																	<Events>
-																		<Event name="OnChange">ВидОтображенияОтличийВРедактореПриИзменении</Event>
-																	</Events>
-																</InputField>
 																<CommandBar name="ГруппаКнопокДеревоGitКоманднаяПанель" id="2834">
 																	<Title>
 																		<v8:item>
@@ -5559,16 +5532,76 @@
 																		</InputField>
 																	</ChildItems>
 																</Table>
-																<Button name="ДеревоGitВыборВетки" id="2838">
-																	<Type>UsualButton</Type>
-																	<Representation>PictureAndText</Representation>
-																	<CommandName>Form.Command.ДеревоGitВыборВетки</CommandName>
-																	<Picture>
-																		<xr:Abs>Picture.png</xr:Abs>
-																		<xr:LoadTransparent>false</xr:LoadTransparent>
-																	</Picture>
-																	<ExtendedTooltip name="ДеревоGitВыборВеткиРасширеннаяПодсказка" id="2839"/>
-																</Button>
+																<UsualGroup name="ГруппаПодвалКнопкиGit" id="2854">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Подвал кнопки git</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Git button footer</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Group>AlwaysHorizontal</Group>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаПодвалКнопкиGitРасширеннаяПодсказка" id="2855"/>
+																	<ChildItems>
+																		<Button name="ДеревоGitВыборВетки" id="2838">
+																			<Type>UsualButton</Type>
+																			<Representation>PictureAndText</Representation>
+																			<CommandName>Form.Command.ДеревоGitВыборВетки</CommandName>
+																			<Picture>
+																				<xr:Abs>Picture.png</xr:Abs>
+																				<xr:LoadTransparent>false</xr:LoadTransparent>
+																			</Picture>
+																			<ExtendedTooltip name="ДеревоGitВыборВеткиРасширеннаяПодсказка" id="2839"/>
+																		</Button>
+																		<UsualGroup name="ГруппаPullPush" id="2860">
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Группа pull push</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>Pull push group</v8:content>
+																				</v8:item>
+																			</Title>
+																			<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+																			<Group>AlwaysHorizontal</Group>
+																			<HorizontalSpacing>None</HorizontalSpacing>
+																			<Representation>None</Representation>
+																			<ShowTitle>false</ShowTitle>
+																			<ExtendedTooltip name="ГруппаPullPushРасширеннаяПодсказка" id="2861"/>
+																			<ChildItems>
+																				<Button name="ДеревоGitPull" id="2856">
+																					<Type>UsualButton</Type>
+																					<Representation>PictureAndText</Representation>
+																					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+																					<CommandName>Form.Command.ДеревоGitPull</CommandName>
+																					<Picture>
+																						<xr:Abs>Picture.png</xr:Abs>
+																						<xr:LoadTransparent>false</xr:LoadTransparent>
+																					</Picture>
+																					<ExtendedTooltip name="ДеревоGitPullРасширеннаяПодсказка" id="2857"/>
+																				</Button>
+																				<Button name="ДеревоGitPush" id="2858">
+																					<Type>UsualButton</Type>
+																					<Representation>PictureAndText</Representation>
+																					<GroupHorizontalAlign>Right</GroupHorizontalAlign>
+																					<CommandName>Form.Command.ДеревоGitPush</CommandName>
+																					<Picture>
+																						<xr:Abs>Picture.png</xr:Abs>
+																						<xr:LoadTransparent>false</xr:LoadTransparent>
+																					</Picture>
+																					<ExtendedTooltip name="ДеревоGitPushРасширеннаяПодсказка" id="2859"/>
+																				</Button>
+																			</ChildItems>
+																		</UsualGroup>
+																	</ChildItems>
+																</UsualGroup>
 															</ChildItems>
 														</UsualGroup>
 														<HTMLDocumentField name="VanessaEditor" id="2404">
@@ -12444,55 +12477,45 @@
 																</Title>
 															</ExtendedTooltip>
 														</CheckBoxField>
-														<CheckBoxField name="ИспользоватьКомпонентуVanessaExt" id="2320">
-															<DataPath>Объект.ИспользоватьКомпонентуVanessaExt</DataPath>
-															<TitleLocation>Right</TitleLocation>
-															<ToolTipRepresentation>Button</ToolTipRepresentation>
-															<CheckBoxType>Auto</CheckBoxType>
-															<ContextMenu name="ИспользоватьКомпонентуVanessaExtКонтекстноеМеню" id="2321"/>
-															<ExtendedTooltip name="ИспользоватьКомпонентуVanessaExtРасширеннаяПодсказка" id="2322">
-																<Title formatted="true">
-																	<v8:item>
-																		<v8:lang>ru</v8:lang>
-																		<v8:content>Предназначена для управления окнами Windows и Linux. 
+														<UsualGroup name="ГруппаВключениеVanessaExt" id="2850">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Включение vanessa ext</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Enabling vanessa ext</v8:content>
+																</v8:item>
+															</Title>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаВключениеVanessaExtРасширеннаяПодсказка" id="2851"/>
+															<ChildItems>
+																<CheckBoxField name="ИспользоватьКомпонентуVanessaExt" id="2320">
+																	<DataPath>Объект.ИспользоватьКомпонентуVanessaExt</DataPath>
+																	<TitleLocation>Right</TitleLocation>
+																	<ToolTipRepresentation>Button</ToolTipRepresentation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="ИспользоватьКомпонентуVanessaExtКонтекстноеМеню" id="2321"/>
+																	<ExtendedTooltip name="ИспользоватьКомпонентуVanessaExtРасширеннаяПодсказка" id="2322">
+																		<Title formatted="true">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Предназначена для управления окнами Windows и Linux. 
 Возможности:
 - Получение списка окон и списка процессов
 - Управление размерами и положением окна
 - Получение снимка окна и снимка экрана
 
 &lt;link https://github.com/lintest/VanessaExt&gt;https://github.com/lintest/VanessaExt&lt;/&gt;</v8:content>
-																	</v8:item>
-																</Title>
-															</ExtendedTooltip>
-															<Events>
-																<Event name="OnChange">ИспользоватьКомпонентуVanessaExtПриИзменении</Event>
-															</Events>
-														</CheckBoxField>
-														<UsualGroup name="ГруппаVanessaExt" id="2267">
-															<Title>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Группа1c win ctrl</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>en</v8:lang>
-																	<v8:content>1c win ctrl group</v8:content>
-																</v8:item>
-															</Title>
-															<ToolTip>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Группа1c win ctrl</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>en</v8:lang>
-																	<v8:content>1c win ctrl group</v8:content>
-																</v8:item>
-															</ToolTip>
-															<Representation>None</Representation>
-															<ShowTitle>false</ShowTitle>
-															<ExtendedTooltip name="ГруппаVanessaExtРасширеннаяПодсказка" id="2268"/>
-															<ChildItems>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																	<Events>
+																		<Event name="OnChange">ИспользоватьКомпонентуVanessaExtПриИзменении</Event>
+																	</Events>
+																</CheckBoxField>
 																<LabelDecoration name="ДекорацияВерсияVanessaExt" id="2269">
 																	<Title formatted="false">
 																		<v8:item>
@@ -20031,87 +20054,11 @@ Also use special instructions in the script, see Help info.</v8:content>
 																			<Title>
 																				<v8:item>
 																					<v8:lang>ru</v8:lang>
-																					<v8:content>Страница аудио</v8:content>
+																					<v8:content>Настройки аудио</v8:content>
 																				</v8:item>
 																				<v8:item>
 																					<v8:lang>en</v8:lang>
 																					<v8:content>Audio settings</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>am</v8:lang>
-																					<v8:content>ለማስለቀቅ</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>az</v8:lang>
-																					<v8:content>Parametrlər audio</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>bg</v8:lang>
-																					<v8:content>Настройка на звука</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>de</v8:lang>
-																					<v8:content>Audio-Einstellungen</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>es</v8:lang>
-																					<v8:content>La configuración de audio</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>et</v8:lang>
-																					<v8:content>Audio seaded</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>fr</v8:lang>
-																					<v8:content>Paramètres audio</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>hu</v8:lang>
-																					<v8:content>Audio beállítások</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>it</v8:lang>
-																					<v8:content>Impostazioni audio</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>ka</v8:lang>
-																					<v8:content>აუდიო პარამეტრები</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>lt</v8:lang>
-																					<v8:content>Garso parametrai</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>lv</v8:lang>
-																					<v8:content>Audio uzstādījumi</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>mn</v8:lang>
-																					<v8:content>Аудио тохиргоо</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>pl</v8:lang>
-																					<v8:content>Ustawienia audio</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>ro</v8:lang>
-																					<v8:content>Setări audio</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>sl</v8:lang>
-																					<v8:content>Zvočne nastavitve</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>sv</v8:lang>
-																					<v8:content>Ljud-inställningar</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>tr</v8:lang>
-																					<v8:content>Ses ayarları</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>vi</v8:lang>
-																					<v8:content>Cài đặt âm thanh</v8:content>
 																				</v8:item>
 																			</Title>
 																			<ToolTip>
@@ -34582,10 +34529,6 @@ SikuliX emulates mouse clicks.</v8:content>
 					<v8:content>Save file (ctrl+S)</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Picture>
-				<xr:Ref>StdPicture.Write</xr:Ref>
-				<xr:LoadTransparent>true</xr:LoadTransparent>
-			</Picture>
 			<Action>VanessaEditorСохранитьФайл</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
@@ -35195,6 +35138,98 @@ SikuliX emulates mouse clicks.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ДеревоGitВыборВетки</Action>
+		</Command>
+		<Command name="VanessaEditorПоказыватьРазличияВРедактореОтдельно" id="136">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать различия в редакторе отдельно</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Show differences in editor separately</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать различия в редакторе отдельно</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Show differences in editor separately</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>VanessaEditorПоказыватьРазличияВРедактореОтдельно</Action>
+		</Command>
+		<Command name="VanessaEditorСохранитьФайлКак" id="137">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить файл как</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Save file as</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить файл как</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Save file as</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>VanessaEditorСохранитьФайлКак</Action>
+		</Command>
+		<Command name="ДеревоGitPull" id="138">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Pull</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Pull</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Pull</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Pull</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДеревоGitPull</Action>
+		</Command>
+		<Command name="ДеревоGitPush" id="139">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Push</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Push</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Push</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Push</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДеревоGitPush</Action>
 		</Command>
 	</Commands>
 </Form>
