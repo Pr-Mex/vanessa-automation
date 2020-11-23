@@ -5138,6 +5138,7 @@
 																	<v8:content>File tree</v8:content>
 																</v8:item>
 															</Title>
+															<Width>20</Width>
 															<Group>Vertical</Group>
 															<Representation>None</Representation>
 															<ShowTitle>false</ShowTitle>
@@ -5318,7 +5319,7 @@
 																	<v8:content>Git</v8:content>
 																</v8:item>
 															</Title>
-															<Width>25</Width>
+															<Width>27</Width>
 															<Group>Vertical</Group>
 															<Representation>None</Representation>
 															<ShowTitle>false</ShowTitle>
@@ -5543,6 +5544,7 @@
 																			<v8:content>Git button footer</v8:content>
 																		</v8:item>
 																	</Title>
+																	<HorizontalStretch>true</HorizontalStretch>
 																	<Group>AlwaysHorizontal</Group>
 																	<HorizontalSpacing>None</HorizontalSpacing>
 																	<Representation>None</Representation>
@@ -5552,6 +5554,7 @@
 																		<Button name="ДеревоGitВыборВетки" id="2838">
 																			<Type>UsualButton</Type>
 																			<Representation>PictureAndText</Representation>
+																			<Width>12</Width>
 																			<CommandName>Form.Command.ДеревоGitВыборВетки</CommandName>
 																			<Picture>
 																				<xr:Abs>Picture.png</xr:Abs>
@@ -5562,6 +5565,8 @@
 																		<Button name="ДеревоGitPull" id="2856">
 																			<Type>UsualButton</Type>
 																			<Representation>PictureAndText</Representation>
+																			<Width>7</Width>
+																			<AutoMaxWidth>false</AutoMaxWidth>
 																			<GroupHorizontalAlign>Right</GroupHorizontalAlign>
 																			<CommandName>Form.Command.ДеревоGitPull</CommandName>
 																			<Picture>
@@ -5573,6 +5578,8 @@
 																		<Button name="ДеревоGitPush" id="2858">
 																			<Type>UsualButton</Type>
 																			<Representation>PictureAndText</Representation>
+																			<Width>8</Width>
+																			<AutoMaxWidth>false</AutoMaxWidth>
 																			<GroupHorizontalAlign>Right</GroupHorizontalAlign>
 																			<CommandName>Form.Command.ДеревоGitPush</CommandName>
 																			<Picture>
@@ -5598,6 +5605,7 @@
 																</v8:item>
 															</Title>
 															<TitleLocation>None</TitleLocation>
+															<Width>80</Width>
 															<ContextMenu name="VanessaEditorContextMenu" id="2405">
 																<Autofill>false</Autofill>
 																<ChildItems>
@@ -28296,10 +28304,18 @@ SikuliX emulates mouse clicks.</v8:content>
 					</dcsset:item>
 				</dcsset:selection>
 				<dcsset:filter>
-					<dcsset:item xsi:type="dcsset:FilterItemComparison">
-						<dcsset:left xsi:type="dcscor:Field">ДревоФайлаФич.ПолныйПуть</dcsset:left>
-						<dcsset:comparisonType>Contains</dcsset:comparisonType>
-						<dcsset:right xsi:type="dcscor:Field">Объект.КаталогФич</dcsset:right>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>AndGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ДревоФайлаФич.ПолныйПуть</dcsset:left>
+							<dcsset:comparisonType>Contains</dcsset:comparisonType>
+							<dcsset:right xsi:type="dcscor:Field">Объект.КаталогФич</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">Объект.КаталогФич</dcsset:left>
+							<dcsset:comparisonType>NotEqual</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string"/>
+						</dcsset:item>
 					</dcsset:item>
 				</dcsset:filter>
 				<dcsset:appearance>
