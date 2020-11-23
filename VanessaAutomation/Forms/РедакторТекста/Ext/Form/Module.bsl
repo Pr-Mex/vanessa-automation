@@ -1204,6 +1204,10 @@
 
 &НаКлиенте
 Процедура ОбновитьВставкиКодаVanessaEditor(ДопПараметры)
+	Если Ванесса.VanessaTabs.current = Неопределено Тогда
+		Возврат;
+	КонецЕсли;	 
+	
 	VanessaEditor = Ванесса.VanessaTabs.current.editor;
 	VanessaEditor.clearRuntimeCodes();
 	Ванесса.ОчиститьДанныеВиджетов();
