@@ -1,12 +1,14 @@
 # Vanessa Automation
 
-[![GitHub release](https://img.shields.io/github/release/Pr-Mex/vanessa-automation.svg)](Changelog.md)
+[![GitHub release](https://img.shields.io/github/release/Pr-Mex/vanessa-automation.svg)](docs/Changelog.md)
 [![Build Status](http://84.237.195.35:32005/buildStatus/icon?job=VAFullCheck)](http://84.237.195.35:32005/job/VAFullCheck/)
-
+[![GitHub Releases](https://img.shields.io/github/downloads/Pr-Mex/vanessa-automation/latest/total?style=flat-square)](https://github.com/Pr-Mex/vanessa-automation/releases)
+[![GitHub All Releases](https://img.shields.io/github/downloads/Pr-Mex/vanessa-automation/total?style=flat-square)](https://github.com/Pr-Mex/vanessa-automation/releases)
+[![telegram](https://img.shields.io/badge/telegram-chat-green.svg)](https://t.me/testspro1c)
 
 ## BDD for 1С:Enterprise
 
-* Текущий релиз в ветке [Master: 1.2.034](https://github.com/Pr-Mex/vanessa-automation/tree/master)
+* Текущий релиз в ветке [Master: 1.2.035](https://github.com/Pr-Mex/vanessa-automation/tree/master)
 * Разработка ведется в ветке [Develop](https://github.com/Pr-Mex/vanessa-automation/tree/develop).
 * [Обсудить Ванессу](https://t.me/testspro1c) в телеграмм группе, и обсудить всё, что связано с тестированием в 1С.
 * [Подписаться на новости о проекте](https://t.me/VanessaAutomation) в телеграмм каналле.

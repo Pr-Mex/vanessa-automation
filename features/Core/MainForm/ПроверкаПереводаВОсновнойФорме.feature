@@ -15,6 +15,8 @@
 @IgnoreOn839
 @tree
 
+@IgnoreOnCIMainBuild
+
 Функционал: Проверка перевода в основной форме.
  
 
@@ -104,7 +106,6 @@
 	|'Obsolete. No need to use this checkbox.'|
 	|'Put text module. instead regenerate and update step defintion'|
 	|'If the checkbox is on, generated code will be displayed instead of re-creating the epf (if it existed).'|
-	|'Group1'|
 	|'Platform version for EPF generation (8.3.10 or higher)'|
 	|'Platform version for epf generation.'|
 	|'As batch start of Designer is used to create the epf, then'|
@@ -257,7 +258,7 @@
 	|'Screenshots page'|
 	|'Create screnshoot in case of error'|
 	|'Enables taking screenshots in case of an error.'|
-	|'Take every window screenshot'|
+	|'Take a screenshot of each 1C session (process)'|
 	|'Enables taking screenshots for each 1C window when an error occurs.'|
 	//|'Designed to manage windows in Windows and Linux.'|
 	|'VanessaExt add-in screenshots'|
@@ -316,7 +317,7 @@
 	|'Sets grouping value for Allure report on the Suites tab. See Help info for details.'|
 	|'Customize the title slide features'|
 	|'Allure report applications'|
-	|'Applies the event log to the scenario. Data is taken from the moment the scenario starts.'|
+	|'If an error occurs, a log will be attached to the script. Data is taken from the moment the scenario starts.'|
 	|'If the option is enabled, states of items of the active form will be collected in xlsx format in case of an error.'|
 	|'If the option is enabled, states of items of all forms opened in TestClient will be collected in xlsx format.'|
 	|'If the option is enabled, then when an error occurs, data will be collected on the network connections of the PC on which the tests were run.'|
@@ -476,7 +477,6 @@
 	|'Replacements dictionaries'|
 	|'Substitution dictionaries'|
 	|'More'|
-	|'Video page additional'|
 	|'Mouse pointer'|
 	|'The path to the image used for mouse cursor appearance.'|
 	|'Watermark'|
@@ -737,8 +737,6 @@
 	|'Refresh variables board'|
 	|'Refresh variables board'|
 	|'Stop'|
-	|'Go to line with error'|
-	|'Go to line with step error'|
 	|'Save settings to file'|
 	|'Load settings from file'|
 	|'Close'|
@@ -749,7 +747,7 @@
 	|'What to say'|
 	|'Voice test'|
 	|'Install service programs'|
-	|'Utilities allow you to highlight the mouse pointer, draw arrows to form elements. Required  for most SikuliX steps.'|
+	|'Utilities allow you to highlight the mouse pointer, draw arrows to form elements. Required  for some SikuliX steps.'|
 	|'Open step definition'|
 	|'Open step definition'|
 	|'Create main scheme'|

@@ -1,4 +1,4 @@
-# language: ru
+﻿# language: ru
 # encoding: utf-8
 #parent uf:
 @UF11_Прочее
@@ -25,7 +25,7 @@
 		| 'VanessaUserEN'   | '1'    | 'VanessaUserEN' | '1'      |   '/Len /Vlen'                              |	
 	И Я подключаю клиент тестирования "VanessaUserEN" из таблицы клиентов тестирования
 	И В командном интерфейсе я выбираю 'Main' 'Open vanessa automation'
-	Когда открылось окно '*autotest: Vanessa Automation'
+	Когда открылось окно '*autotest: Vanessa Automation*'
 	И я перехожу к закладке "Service"
 	И я устанавливаю флаг 'Check Vanessa Automation in test client mode'
 	И я перехожу к закладке "Extended"
