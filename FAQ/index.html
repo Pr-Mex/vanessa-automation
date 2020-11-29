@@ -447,17 +447,14 @@
     <span class="s2">&quot;КомандаСделатьСкриншот&quot;</span><span class="err">:</span> <span class="s2">&quot;nircmd savescreenshot &quot;</span>
 </code></pre></div>
 
-
 <div class="codehilite"><pre><span></span><code><span class="n">или</span> <span class="n">для</span> <span class="n">`IrfanView`</span><span class="o">:</span>
 </code></pre></div>
-
 
 <div class="codehilite"><pre><span></span><code>    <span class="s2">&quot;ДелатьСкриншотПриВозникновенииОшибки&quot;</span><span class="err">:</span> <span class="kc">true</span><span class="err">,</span>
     <span class="s2">&quot;СниматьСкриншотКаждогоОкна1С&quot;</span><span class="err">:</span> <span class="kc">true</span><span class="err">,</span>
     <span class="s2">&quot;КаталогOutputСкриншоты&quot;</span><span class="err">:</span> <span class="s2">&quot;$workspaceRoot/build/out/ScreenShots&quot;</span><span class="err">,</span>
     <span class="s2">&quot;КомандаСделатьСкриншот&quot;</span><span class="err">:</span> <span class="err">&#39;&quot;C:\Program</span> <span class="err">Files</span> <span class="err">(x</span><span class="mi">86</span><span class="err">)\IrfanView\i_view</span><span class="mi">32</span><span class="err">.exe&quot;</span> <span class="err">/capture=</span><span class="mi">1</span> <span class="err">/convert=&#39;</span>
 </code></pre></div>
-
 
 <ol>
 <li>На CI сервере скриншот формируется, но вместо изображения чёрный экран. Как настроит сервер CI?<ul>
@@ -538,6 +535,22 @@
 <li>В строке соединения указать правильную ссылку, которая начинается на http или ws.</li>
 <li>Для файловой базы надо указать порт web сервера (обычно это 1538). Для серверной базы надо указать имя сервера и порт кластера (обычно 1541).</li>
 <li>Т.е. TestManager общается с браузером либо через веб сервер для файловых баз, либо через сервер кластера для серверных баз.</li>
+</ul>
+</li>
+<li>Как запомнить навигационную ссылку<ul>
+<li>Для окон, находящихся в панели открытых окон:
+    <code>Gherkin
+    И я сохраняю навигационную ссылку текущего окна в переменную "ИмяПеременной"</code></li>
+<li>Также можно использоват внешнюю компоненту, например, так:
+    <code>Gherkin
+    И я закрыл все окна клиентского приложения
+    И В командном интерфейсе я выбираю 'Основная' 'Справочник1'
+    Тогда открылось окно 'Справочник1'
+    И в таблице "Список" я выбираю текущую строку
+    И я нажимаю сочетание клавиш "Ctrl+F11"
+    И я нажимаю на кнопку с именем "BtnCopy"
+    И я жду закрытия окна "Получение ссылки" в течение 20 секунд
+    И Я запоминаю значение выражения 'Ванесса.БуферОбмена.Текст' в переменную "НавСсылка"</code></li>
 </ul>
 </li>
 </ol>
