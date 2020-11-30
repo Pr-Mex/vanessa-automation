@@ -284,6 +284,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#onescript" class="md-nav__link">
+    Установка через OneScript
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     Описание простого использования
   </a>
@@ -522,6 +529,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#onescript" class="md-nav__link">
+    Установка через OneScript
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
     Описание простого использования
   </a>
@@ -654,14 +668,18 @@
 Вы можете собрать необходимые файлы сами, либо <a href="https://github.com/Pr-Mex/vanessa-automation/releases">скачать готовую сборку</a>.
 При первом скачивании репозитория необходимо собрать файлы обработок.</p>
 <ol>
-<li>Чтобы работала сборка epf надо установить <a href="http://oscript.io">OneScript</a> версии 1.0.20 или выше.</li>
+<li>Чтобы работала сборка epf надо установить <a href="http://oscript.io">OneScript</a> версии 1.4.0.177 или выше.</li>
 <li>Также, чтобы работала сборка и разборка epf надо установить платформу <a href="https://releases.1c.ru">1С:Предприятие 8.3.17</a>.</li>
-<li>Для запуска сборки epf из исходников надо запустить Compile.bat.</li>
+<li>Для запуска сборки epf из исходников надо запустить <strong>Compile.bat</strong>.</li>
 <li><a href="https://github.com/Pr-Mex/ExternalModulesConverterFor1C">Скрипты по сборке/разборке файлов</a>.</li>
-<li>Также скачать Vanessa-Automation можно с помощью команды: opm install vanessa-automation</li>
-<li>Сборку Vanessa-Automation-Single можно скачать с помощью команды: opm install vanessa-automation-single</li>
 </ol>
-<p>Чтобы зафиксировать изменения epf файлов, нужно запустить Decompile.bat.</p>
+<p>Чтобы зафиксировать изменения epf файлов, нужно запустить <strong>Decompile.bat</strong>.</p>
+<h2 id="onescript">Установка через OneScript<a class="headerlink" href="#onescript" title="Permanent link">&para;</a></h2>
+<p>Для обычной сборки
+* opm install vanessa-automation</p>
+<p>Для сборки VASingle.
+* opm install vanessa-automation-single
+VASingle отличается от обычной сборки тем, что поставляется в виде одного epf файла, который по функциональности полностью совпадает с основной сборкой.</p>
 <h2 id="_3">Описание простого использования<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
 <ul>
 <li>пишем feature файлы в формате Gherkin - рекомендуется использовать встренный редактор (VAEditor), созданный на базе VSCode.</li>
