@@ -39,14 +39,21 @@
 Вы можете собрать необходимые файлы сами, либо [скачать готовую сборку](https://github.com/Pr-Mex/vanessa-automation/releases).
 При первом скачивании репозитория необходимо собрать файлы обработок.
 
-1. Чтобы работала сборка epf надо установить [OneScript](http://oscript.io) версии 1.0.20 или выше.
+1. Чтобы работала сборка epf надо установить [OneScript](http://oscript.io) версии 1.4.0.177 или выше.
 2. Также, чтобы работала сборка и разборка epf надо установить платформу [1С:Предприятие 8.3.17](https://releases.1c.ru).
-3. Для запуска сборки epf из исходников надо запустить Compile.bat.
+3. Для запуска сборки epf из исходников надо запустить **Compile.bat**.
 4. [Скрипты по сборке/разборке файлов](https://github.com/Pr-Mex/ExternalModulesConverterFor1C).
-5. Также скачать Vanessa-Automation можно с помощью команды: opm install vanessa-automation
-6. Сборку Vanessa-Automation-Single можно скачать с помощью команды: opm install vanessa-automation-single
 
-Чтобы зафиксировать изменения epf файлов, нужно запустить Decompile.bat.
+Чтобы зафиксировать изменения epf файлов, нужно запустить **Decompile.bat**.
+
+## Установка через OneScript
+Для обычной сборки
+* opm install vanessa-automation
+
+Для сборки VASingle.
+* opm install vanessa-automation-single
+VASingle отличается от обычной сборки тем, что поставляется в виде одного epf файла, который по функциональности полностью совпадает с основной сборкой.
+
 
 
 ## Описание простого использования
