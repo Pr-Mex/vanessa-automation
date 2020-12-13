@@ -32,6 +32,7 @@
 * [Vanessa, видеоинструкции для web-клиента](https://infostart.ru/public/1243801/)
 * [Генерация сценариев тестирования внешних печатных форм средствами Vanessa Automation](https://infostart.ru/public/1250707/)
 * [Тестирование серверного поведения с Vanessa Automation](https://infostart.ru/1c/articles/1283198/)
+* [Практика применения DevOps. Тестирование](https://infostart.ru/1c/articles/1342422/)
 
 ## Сборка из исходников
 
