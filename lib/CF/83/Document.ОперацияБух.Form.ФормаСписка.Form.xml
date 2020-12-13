@@ -3,9 +3,6 @@
 	<Height>20</Height>
 	<VerticalScroll>useIfNecessary</VerticalScroll>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
-	<Events>
-		<Event name="OnCreateAtServer"/>
-	</Events>
 	<ChildItems>
 		<UsualGroup name="ГруппаБыстрыеОтборы" id="221">
 			<Title>
@@ -88,9 +85,6 @@
 				<ContextMenu name="СписокУправлениеПоискомКонтекстноеМеню" id="243"/>
 				<ExtendedTooltip name="СписокУправлениеПоискомРасширеннаяПодсказка" id="244"/>
 			</SearchControlAddition>
-			<Events>
-				<Event name="97365900-eadf-4dfd-a9aa-fbb9ecabd079"/>
-			</Events>
 			<ChildItems>
 				<LabelField name="Дата" id="4">
 					<DataPath>Список.Date</DataPath>
@@ -109,7 +103,7 @@
 					<ExtendedTooltip name="ПортфельРасширеннаяПодсказка" id="247"/>
 				</LabelField>
 				<InputField name="Учредитель" id="295">
-					<DataPath>1/28</DataPath>
+					<DataPath>Список.ТаблицаРегистровНакопления</DataPath>
 					<ContextMenu name="УчредительКонтекстноеМеню" id="296"/>
 					<ExtendedTooltip name="УчредительРасширеннаяПодсказка" id="297"/>
 				</InputField>
