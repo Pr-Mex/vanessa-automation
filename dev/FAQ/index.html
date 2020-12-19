@@ -553,6 +553,60 @@
     И Я запоминаю значение выражения 'Ванесса.БуферОбмена.Текст' в переменную "НавСсылка"</code></li>
 </ul>
 </li>
+<li>
+<p>Как отключить появление окна, при падении в дамп процесса 1С на windows?</p>
+<ul>
+<li>
+<p>Нужно в рестре установить значения параметров</p>
+<ol>
+<li>
+<p>DontShowUI
+    Ключ: HKLM:\Software\Microsoft\Windows\Windows Error Reporting
+    Имя: DontShowUI
+    Значение: 1
+    Тип: dword</p>
+</li>
+<li>
+<p>ShutdownReasonOn
+    Ключ: HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Reliability
+    Имя: ShutdownReasonOn
+    Значение: 0
+    Тип: dword</p>
+</li>
+<li>
+<p>ShutdownReasonUI
+    Ключ: HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Reliability
+    Имя: ShutdownReasonUI
+    Значение: 0
+    Тип: dword</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p>Как настроить сбор дампов на раннере?</p>
+<ul>
+<li>
+<p>Надо в каталоге C:\Program Files (x86)\1cv8\conf создать файл logcfg.xml с таким содержимым (если его нет) или дополнить файл, если он есть.
+    <code>xml
+    &lt;config xmlns="http://v8.1c.ru/v8/tech-log"&gt;
+        &lt;dump location="КаталогДляДампов" create="1" type="2"/&gt;
+    &lt;/config&gt;</code></p>
+<p>Для проверки формирования дампов достаточно создать обработку с бесконечным рекурсивным вызовом. Пример кода:
+``` 1C
+&amp;НаКлиенте
+Процедура ВызватьПроцедуру()
+    ВызватьПроцедуру();
+КонецПроцедуры </p>
+<p>&amp;НаКлиенте
+Процедура ПриОткрытии(Отказ)
+    ВызватьПроцедуру();
+КонецПроцедуры
+```</p>
+</li>
+</ul>
+</li>
 </ol>
                 
               
