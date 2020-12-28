@@ -726,15 +726,42 @@
 				</InputField>
 			</ChildItems>
 		</UsualGroup>
-		<CheckBoxField name="ПолучитьАктивныйЭлементИзTestClient" id="46">
-			<DataPath>ПолучатьАктивныйЭлементИзTestClient</DataPath>
-			<CheckBoxType>Auto</CheckBoxType>
-			<ContextMenu name="ПолучитьАктивныйЭлементИзTestClientКонтекстноеМеню" id="47"/>
-			<ExtendedTooltip name="ПолучитьАктивныйЭлементИзTestClientРасширеннаяПодсказка" id="48"/>
-			<Events>
-				<Event name="OnChange">ПолучитьАктивныйЭлементИзTestClientПриИзменении</Event>
-			</Events>
-		</CheckBoxField>
+		<UsualGroup name="ГруппаФлаги" id="78">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа флаги</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа флаги</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаФлагиРасширеннаяПодсказка" id="79"/>
+			<ChildItems>
+				<CheckBoxField name="ПолучитьАктивныйЭлементИзTestClient" id="46">
+					<DataPath>ПолучатьАктивныйЭлементИзTestClient</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ПолучитьАктивныйЭлементИзTestClientКонтекстноеМеню" id="47"/>
+					<ExtendedTooltip name="ПолучитьАктивныйЭлементИзTestClientРасширеннаяПодсказка" id="48"/>
+					<Events>
+						<Event name="OnChange">ПолучитьАктивныйЭлементИзTestClientПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<CheckBoxField name="СтроитьДерево" id="80">
+					<DataPath>СтроитьДерево</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="СтроитьДеревоКонтекстноеМеню" id="81"/>
+					<ExtendedTooltip name="СтроитьДеревоРасширеннаяПодсказка" id="82"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
 		<Table name="ДеревоФормы" id="1">
 			<Representation>Tree</Representation>
 			<ReadOnly>true</ReadOnly>
@@ -1996,6 +2023,32 @@
 					<v8:Length>0</v8:Length>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СтроитьДерево" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строить дерево</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Build tree</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекущийTestclientЭтоWebКлиент" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текущий testclient это web клиент</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
 	</Attributes>

@@ -1,12 +1,14 @@
 # Vanessa Automation
 
-[![GitHub release](https://img.shields.io/github/release/Pr-Mex/vanessa-automation.svg)](Changelog.md)
+[![GitHub release](https://img.shields.io/github/release/Pr-Mex/vanessa-automation.svg)](docs/Changelog.md)
 [![Build Status](http://84.237.195.35:32005/buildStatus/icon?job=VAFullCheck)](http://84.237.195.35:32005/job/VAFullCheck/)
-
+[![GitHub Releases](https://img.shields.io/github/downloads/Pr-Mex/vanessa-automation/latest/total?style=flat-square)](https://github.com/Pr-Mex/vanessa-automation/releases)
+[![GitHub All Releases](https://img.shields.io/github/downloads/Pr-Mex/vanessa-automation/total?style=flat-square)](https://github.com/Pr-Mex/vanessa-automation/releases)
+[![telegram](https://img.shields.io/badge/telegram-chat-green.svg)](https://t.me/testspro1c)
 
 ## BDD for 1С:Enterprise
 
-* Текущий релиз в ветке [Master: 1.2.034](https://github.com/Pr-Mex/vanessa-automation/tree/master)
+* Текущий релиз в ветке [Master: 1.2.035](https://github.com/Pr-Mex/vanessa-automation/tree/master)
 * Разработка ведется в ветке [Develop](https://github.com/Pr-Mex/vanessa-automation/tree/develop).
 * [Обсудить Ванессу](https://t.me/testspro1c) в телеграмм группе, и обсудить всё, что связано с тестированием в 1С.
 * [Подписаться на новости о проекте](https://t.me/VanessaAutomation) в телеграмм каналле.
@@ -30,6 +32,7 @@
 * [Vanessa, видеоинструкции для web-клиента](https://infostart.ru/public/1243801/)
 * [Генерация сценариев тестирования внешних печатных форм средствами Vanessa Automation](https://infostart.ru/public/1250707/)
 * [Тестирование серверного поведения с Vanessa Automation](https://infostart.ru/1c/articles/1283198/)
+* [Практика применения DevOps. Тестирование](https://infostart.ru/1c/articles/1342422/)
 
 ## Сборка из исходников
 
@@ -37,14 +40,21 @@
 Вы можете собрать необходимые файлы сами, либо [скачать готовую сборку](https://github.com/Pr-Mex/vanessa-automation/releases).
 При первом скачивании репозитория необходимо собрать файлы обработок.
 
-1. Чтобы работала сборка epf надо установить [OneScript](http://oscript.io) версии 1.0.20 или выше.
+1. Чтобы работала сборка epf надо установить [OneScript](http://oscript.io) версии 1.4.0.177 или выше.
 2. Также, чтобы работала сборка и разборка epf надо установить платформу [1С:Предприятие 8.3.17](https://releases.1c.ru).
-3. Для запуска сборки epf из исходников надо запустить Compile.bat.
+3. Для запуска сборки epf из исходников надо запустить **Compile.bat**.
 4. [Скрипты по сборке/разборке файлов](https://github.com/Pr-Mex/ExternalModulesConverterFor1C).
-5. Также скачать Vanessa-Automation можно с помощью команды: opm install vanessa-automation
-6. Сборку Vanessa-Automation-Single можно скачать с помощью команды: opm install vanessa-automation-single
 
-Чтобы зафиксировать изменения epf файлов, нужно запустить Decompile.bat.
+Чтобы зафиксировать изменения epf файлов, нужно запустить **Decompile.bat**.
+
+## Установка через OneScript
+Для обычной сборки
+* opm install vanessa-automation
+
+Для сборки VASingle.
+* opm install vanessa-automation-single
+VASingle отличается от обычной сборки тем, что поставляется в виде одного epf файла, который по функциональности полностью совпадает с основной сборкой.
+
 
 
 ## Описание простого использования

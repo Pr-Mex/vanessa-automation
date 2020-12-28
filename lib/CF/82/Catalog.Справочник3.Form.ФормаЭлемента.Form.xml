@@ -2,7 +2,81 @@
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<UseForFoldersAndItems>Items</UseForFoldersAndItems>
-	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Popup name="Группа4" id="42">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Команды</v8:content>
+					</v8:item>
+				</Title>
+				<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="43"/>
+				<ChildItems>
+					<Button name="СформироватьОтчет" id="7">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.СформироватьОтчет</CommandName>
+						<Parameter xsi:nil="true"/>
+						<ExtendedTooltip name="СформироватьОтчетРасширеннаяПодсказка" id="8"/>
+					</Button>
+					<Button name="СформироватьОтчетСВертикальнойЧертой" id="14">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.СформироватьОтчетСВертикальнойЧертой</CommandName>
+						<Parameter xsi:nil="true"/>
+						<ExtendedTooltip name="СформироватьОтчетСВертикальнойЧертойРасширеннаяПодсказка" id="15"/>
+					</Button>
+					<Button name="СформироватьОтчетОбъединенныеЯчейки" id="26">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.СформироватьОтчетОбъединенныеЯчейки</CommandName>
+						<Parameter xsi:nil="true"/>
+						<ExtendedTooltip name="СформироватьОтчетОбъединенныеЯчейкиРасширеннаяПодсказка" id="27"/>
+					</Button>
+					<Button name="ОткрытьФайл" id="12">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОткрытьФайл</CommandName>
+						<Parameter xsi:nil="true"/>
+						<ExtendedTooltip name="ОткрытьФайлРасширеннаяПодсказка" id="13"/>
+					</Button>
+					<Button name="СделатьСлужебноеСообщение" id="16">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.СделатьСлужебноеСообщение</CommandName>
+						<Parameter xsi:nil="true"/>
+						<ExtendedTooltip name="СделатьСлужебноеСообщениеРасширеннаяПодсказка" id="17"/>
+					</Button>
+					<Button name="КомандаПоказатьВопросСНестандартнымДиалогом" id="18">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.КомандаПоказатьВопросСНестандартнымДиалогом</CommandName>
+						<Parameter xsi:nil="true"/>
+						<ExtendedTooltip name="КомандаПоказатьВопросСНестандартнымДиалогомРасширеннаяПодсказка" id="19"/>
+					</Button>
+					<Button name="РазрешитьРедактированиеТабличногоДокумента" id="34">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.РазрешитьРедактированиеТабличногоДокумента</CommandName>
+						<Parameter xsi:nil="true"/>
+						<ExtendedTooltip name="РазрешитьРедактированиеТабличногоДокументаРасширеннаяПодсказка" id="35"/>
+					</Button>
+					<Button name="СформироватьОтчетСЗадержкой" id="36">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.СформироватьОтчетСЗадержкой</CommandName>
+						<Parameter xsi:nil="true"/>
+						<ExtendedTooltip name="СформироватьОтчетСЗадержкойРасширеннаяПодсказка" id="37"/>
+					</Button>
+					<Button name="СформироватьОтчетСВертикальнойПереносомСтроки" id="38">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОтчетСПереносомСтроки</CommandName>
+						<Parameter xsi:nil="true"/>
+						<ExtendedTooltip name="СформироватьОтчетСВертикальнойПереносомСтрокиРасширеннаяПодсказка" id="39"/>
+					</Button>
+					<Button name="ФормаПоказатьОтчетВНовомОкнеИСохранитьВФайл" id="44">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПоказатьОтчетВНовомОкнеИСохранитьВФайл</CommandName>
+						<Parameter xsi:nil="true"/>
+						<ExtendedTooltip name="ФормаПоказатьОтчетВНовомОкнеИСохранитьВФайлРасширеннаяПодсказка" id="45"/>
+					</Button>
+				</ChildItems>
+			</Popup>
+		</ChildItems>
+	</AutoCommandBar>
 	<ChildItems>
 		<UsualGroup name="ГруппаНаименованиеКод" id="40">
 			<Title>
@@ -37,6 +111,7 @@
 		</UsualGroup>
 		<CheckBoxField name="СделатьМакетНедоступным" id="20">
 			<DataPath>СделатьМакетНедоступным</DataPath>
+			<TitleLocation>Right</TitleLocation>
 			<CheckBoxType>Auto</CheckBoxType>
 			<ContextMenu name="СделатьМакетНедоступнымКонтекстноеМеню" id="21"/>
 			<ExtendedTooltip name="СделатьМакетНедоступнымРасширеннаяПодсказка" id="22"/>
@@ -45,76 +120,16 @@
 			<Group>Horizontal</Group>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="29"/>
-			<ChildItems>
-				<Button name="СформироватьОтчет" id="7">
-					<Type>UsualButton</Type>
-					<CommandName>Form.Command.СформироватьОтчет</CommandName>
-					<Parameter xsi:nil="true"/>
-					<ExtendedTooltip name="СформироватьОтчетРасширеннаяПодсказка" id="8"/>
-				</Button>
-				<Button name="СформироватьОтчетСВертикальнойЧертой" id="14">
-					<Type>UsualButton</Type>
-					<CommandName>Form.Command.СформироватьОтчетСВертикальнойЧертой</CommandName>
-					<Parameter xsi:nil="true"/>
-					<ExtendedTooltip name="СформироватьОтчетСВертикальнойЧертойРасширеннаяПодсказка" id="15"/>
-				</Button>
-				<Button name="СформироватьОтчетОбъединенныеЯчейки" id="26">
-					<Type>UsualButton</Type>
-					<CommandName>Form.Command.СформироватьОтчетОбъединенныеЯчейки</CommandName>
-					<Parameter xsi:nil="true"/>
-					<ExtendedTooltip name="СформироватьОтчетОбъединенныеЯчейкиРасширеннаяПодсказка" id="27"/>
-				</Button>
-			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="Группа2" id="30">
 			<Group>Horizontal</Group>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="31"/>
-			<ChildItems>
-				<Button name="ОткрытьФайл" id="12">
-					<Type>UsualButton</Type>
-					<CommandName>Form.Command.ОткрытьФайл</CommandName>
-					<Parameter xsi:nil="true"/>
-					<ExtendedTooltip name="ОткрытьФайлРасширеннаяПодсказка" id="13"/>
-				</Button>
-				<Button name="СделатьСлужебноеСообщение" id="16">
-					<Type>UsualButton</Type>
-					<CommandName>Form.Command.СделатьСлужебноеСообщение</CommandName>
-					<Parameter xsi:nil="true"/>
-					<ExtendedTooltip name="СделатьСлужебноеСообщениеРасширеннаяПодсказка" id="17"/>
-				</Button>
-				<Button name="КомандаПоказатьВопросСНестандартнымДиалогом" id="18">
-					<Type>UsualButton</Type>
-					<CommandName>Form.Command.КомандаПоказатьВопросСНестандартнымДиалогом</CommandName>
-					<Parameter xsi:nil="true"/>
-					<ExtendedTooltip name="КомандаПоказатьВопросСНестандартнымДиалогомРасширеннаяПодсказка" id="19"/>
-				</Button>
-			</ChildItems>
 		</UsualGroup>
 		<UsualGroup name="Группа3" id="32">
 			<Group>Horizontal</Group>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="33"/>
-			<ChildItems>
-				<Button name="РазрешитьРедактированиеТабличногоДокумента" id="34">
-					<Type>UsualButton</Type>
-					<CommandName>Form.Command.РазрешитьРедактированиеТабличногоДокумента</CommandName>
-					<Parameter xsi:nil="true"/>
-					<ExtendedTooltip name="РазрешитьРедактированиеТабличногоДокументаРасширеннаяПодсказка" id="35"/>
-				</Button>
-				<Button name="СформироватьОтчетСЗадержкой" id="36">
-					<Type>UsualButton</Type>
-					<CommandName>Form.Command.СформироватьОтчетСЗадержкой</CommandName>
-					<Parameter xsi:nil="true"/>
-					<ExtendedTooltip name="СформироватьОтчетСЗадержкойРасширеннаяПодсказка" id="37"/>
-				</Button>
-				<Button name="СформироватьОтчетСВертикальнойПереносомСтроки" id="38">
-					<Type>UsualButton</Type>
-					<CommandName>Form.Command.ОтчетСПереносомСтроки</CommandName>
-					<Parameter xsi:nil="true"/>
-					<ExtendedTooltip name="СформироватьОтчетСВертикальнойПереносомСтрокиРасширеннаяПодсказка" id="39"/>
-				</Button>
-			</ChildItems>
 		</UsualGroup>
 		<CalendarField name="Календарь" id="23">
 			<DataPath>Календарь</DataPath>
@@ -183,6 +198,17 @@
 				<v8:DateQualifiers>
 					<v8:DateFractions>Date</v8:DateFractions>
 				</v8:DateQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗапретитьСохранениеВФайл" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запретить сохранение в файл</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
 	</Attributes>
@@ -377,6 +403,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОтчетСПереносомСтроки</Action>
+		</Command>
+		<Command name="ПоказатьОтчетВНовомОкнеИСохранитьВФайл" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать отчет в новом окне и сохранить в файл</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать отчет в новом окне и сохранить в файл</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказатьОтчетВНовомОкнеИСохранитьВФайл</Action>
 		</Command>
 	</Commands>
 </Form>
