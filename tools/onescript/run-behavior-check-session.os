@@ -237,7 +237,7 @@
 	Стр = Стр + " " + ПолучитьСтрокуДляПодключенияИзПереданныхДанных(ПараметрыСборки["СтрокаПодключенияКБазе"]);
 
 	ФайлПараметров = Новый Файл(ПараметрыСборки["ИмяФайлаСборки"]);
-	Стр = Стр + " /Execute " + ПараметрыСборки["ПутьКVanessaAutomation"] + " /C""StartFeaturePlayer;workspaceRoot=%workspaceRoot%;DisableUserSettingsLoader;ClearCacheSteps;NoLoadTestClientsTable;VBParams=" + ФайлПараметров.ПолноеИмя +  """ /TESTMANAGER ";
+	Стр = Стр + " /Execute " + ПараметрыСборки["ПутьКVanessaAutomation"] + " /C""StartFeaturePlayer;workspaceRoot=%workspaceRoot%;DisableUserSettingsLoader;ClearCacheSteps;DisableLoadTestClientsTable;VBParams=" + ФайлПараметров.ПолноеИмя +  """ /TESTMANAGER ";
 	
 	ПутьКVanessaAutomation = ПреобразоватьПутьСТочкамиКНормальномуПути(ПараметрыСборки["ПутьКVanessaAutomation"]);
 	ФайлПутьКVanessaAutomation = Новый Файл(ПутьКVanessaAutomation); 

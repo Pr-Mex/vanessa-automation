@@ -371,7 +371,7 @@
 	
 	КаталогBin = ПолучитьКаталогBinПлатформы(ВерсияПлатформы);
 
-	ДопПараметрЗапуска = "/TESTMANAGER /DebuggerURL %1 /Debug /Execute ""%2"" /C""StartFeaturePlayer;NoLoadTestClientsTable;ClearCacheSteps;VBParams=%3"" " + ДопПараметр;
+	ДопПараметрЗапуска = "/TESTMANAGER /DebuggerURL %1 /Debug /Execute ""%2"" /C""StartFeaturePlayer;DisableLoadTestClientsTable;ClearCacheSteps;VBParams=%3"" " + ДопПараметр;
 	Если ЭтоSingle Тогда
 		ДопПараметрЗапуска = СтрШаблон(ДопПараметрЗапуска,АдресОтладчика,ПутьКПроекту + "\vanessa-automation-single.epf",ИмяJson);
 	Иначе	
