@@ -15478,14 +15478,18 @@ A video file will be created for each scenario.</v8:content>
 																		<v8:content>Включает вывод лога выполнения сценариев.
 В лог записываются события:
 1. Начало выполнения сценария
-2. Событие возникновения ошибки</v8:content>
+2. Событие возникновения ошибки
+
+Вывод лога возможен либо в  файл, либо в консоль, либо в файл и консоль одновременно.</v8:content>
 																	</v8:item>
 																	<v8:item>
 																		<v8:lang>en</v8:lang>
 																		<v8:content>Switches on scenario execution log.
 Log events:
 1. Scenario execution begin
-2. Error event</v8:content>
+2. Error event
+
+Log output is possible either to a file, or to the console, or to a file and a console at the same time.</v8:content>
 																	</v8:item>
 																</Title>
 															</ExtendedTooltip>
@@ -15510,6 +15514,30 @@ Log events:
 															<ThroughAlign>Use</ThroughAlign>
 															<ExtendedTooltip name="ГруппаЛогТекстНастройкиРасширеннаяПодсказка" id="2052"/>
 															<ChildItems>
+																<CheckBoxField name="ВыводитьЛогВКонсоль" id="2874">
+																	<DataPath>Объект.ВыводитьЛогВКонсоль</DataPath>
+																	<TitleLocation>Right</TitleLocation>
+																	<ToolTipRepresentation>Button</ToolTipRepresentation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="ВыводитьЛогВКонсольКонтекстноеМеню" id="2875"/>
+																	<ExtendedTooltip name="ВыводитьЛогВКонсольРасширеннаяПодсказка" id="2876">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>Enables logging to the console.
+For this option to work, you must enable the use of the VanessaExt addin.</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Включает вывод лога в консоль.
+Для работы опции необходимо включить использование компоненты VanessaExt.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																	<Events>
+																		<Event name="OnChange">ВыводитьЛогВКонсольПриИзменении</Event>
+																	</Events>
+																</CheckBoxField>
 																<CheckBoxField name="ВыводитьВЛогВыполнениеШагов" id="1770">
 																	<DataPath>Объект.ВыводитьВЛогВыполнениеШагов</DataPath>
 																	<TitleLocation>Right</TitleLocation>
@@ -15563,11 +15591,13 @@ Log events:
 																		<Title formatted="false">
 																			<v8:item>
 																				<v8:lang>ru</v8:lang>
-																				<v8:content>Имя файла, куда будет выводиться лог Vanessa Automation.</v8:content>
+																				<v8:content>Имя файла, куда будет выводиться лог Vanessa Automation.
+Если поле пустое - но лог в текстовый файл выводиться не будет.</v8:content>
 																			</v8:item>
 																			<v8:item>
 																				<v8:lang>en</v8:lang>
-																				<v8:content>Vanessa Automation log file name.</v8:content>
+																				<v8:content>Vanessa Automation log file name.
+If the field is empty, the log will not be output to a text file.</v8:content>
 																			</v8:item>
 																		</Title>
 																	</ExtendedTooltip>
