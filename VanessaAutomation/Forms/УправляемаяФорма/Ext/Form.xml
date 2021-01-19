@@ -1488,6 +1488,12 @@
 										<CommandName>Form.Command.VanessaEditorПоказыватьМиниатюруКода</CommandName>
 										<ExtendedTooltip name="VanessaEditorПоказыватьМиниатюруКодаРасширеннаяПодсказка" id="2651"/>
 									</Button>
+									<Button name="VanessaEditorПроверкаСинтаксисаВРедакторе" id="2880">
+										<Type>CommandBarButton</Type>
+										<Check>true</Check>
+										<CommandName>Form.Command.VanessaEditorПроверкаСинтаксисаВРедакторе</CommandName>
+										<ExtendedTooltip name="VanessaEditorПроверкаСинтаксисаВРедактореРасширеннаяПодсказка" id="2881"/>
+									</Button>
 									<Button name="VanessaEditorПоказыватьРазличияВРедактореОтдельно" id="2848">
 										<Type>CommandBarButton</Type>
 										<Check>true</Check>
@@ -23622,6 +23628,27 @@ SikuliX emulates mouse clicks.</v8:content>
 														<Event name="OnChange">ОтображатьЗакладкиСверхуПриИзменении</Event>
 													</Events>
 												</CheckBoxField>
+												<CheckBoxField name="ПроверкаСинтаксисаВРедакторе" id="2877">
+													<DataPath>Объект.ПроверкаСинтаксисаВРедакторе</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ПроверкаСинтаксисаВРедактореКонтекстноеМеню" id="2878"/>
+													<ExtendedTooltip name="ПроверкаСинтаксисаВРедактореРасширеннаяПодсказка" id="2879">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>If the option is set, the script syntax is checked in the editor</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Опция для отключения проверки синтаксиса в редакторе сценариев</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+													<Events>
+														<Event name="OnChange">ПроверкаСинтаксисаВРедактореПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
 												<InputField name="ТемаРедактораVanessaEditor" id="2413">
 													<DataPath>Объект.ТемаРедактораVanessaEditor</DataPath>
 													<Title>
@@ -35433,6 +35460,21 @@ SikuliX emulates mouse clicks.</v8:content>
 			</Picture>
 			<Action>VanessaEditorNextDiff</Action>
 			<Representation>Picture</Representation>
+		</Command>
+		<Command name="VanessaEditorПроверкаСинтаксисаВРедакторе" id="142">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверка синтаксиса в редакторе</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверка синтаксиса в редакторе</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>VanessaEditorПроверкаСинтаксисаВРедакторе</Action>
 		</Command>
 	</Commands>
 </Form>
