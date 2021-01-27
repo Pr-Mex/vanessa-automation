@@ -1412,6 +1412,106 @@
 								</Picture>
 								<ExtendedTooltip name="VanessaEditorПоказатьСкрытьДеревоGitРасширеннаяПодсказка" id="2797"/>
 							</Button>
+							<Popup name="ГруппаVanessaEditorИнструменты" id="2885">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Инструменты</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Tools</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Инструменты</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Tools</v8:content>
+									</v8:item>
+								</ToolTip>
+								<Picture>
+									<xr:Abs>Picture.png</xr:Abs>
+									<xr:LoadTransparent>false</xr:LoadTransparent>
+								</Picture>
+								<Representation>Picture</Representation>
+								<ExtendedTooltip name="ГруппаVanessaEditorИнструментыРасширеннаяПодсказка" id="2886"/>
+								<ChildItems>
+									<Button name="VanessaEditorИсследовательФормы" id="2887">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ИсследовательФормы</CommandName>
+										<ExtendedTooltip name="VanessaEditorИсследовательФормыРасширеннаяПодсказка" id="2888"/>
+									</Button>
+									<ButtonGroup name="ГруппаVanessaEditorСостояниеФормы" id="2893">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Состояние формы</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Form state</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ГруппаVanessaEditorСостояниеФормыРасширеннаяПодсказка" id="2894"/>
+										<ChildItems>
+											<Button name="VanessaEditorЗапомнитьСостояниеФормыTestClient" id="2889">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ЗапомнитьСостояниеФормыTestClient</CommandName>
+												<ExtendedTooltip name="VanessaEditorЗапомнитьСостояниеФормыTestClientРасширеннаяПодсказка" id="2890"/>
+											</Button>
+											<Button name="VanessaEditorЗабытьСостояниеФормыTestClient" id="2891">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ЗабытьСостояниеФормыTestClient</CommandName>
+												<ExtendedTooltip name="VanessaEditorЗабытьСостояниеФормыTestClientРасширеннаяПодсказка" id="2892"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="ГруппаVanessaEditorПолучитьИзмененияФормы" id="2895">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Изменения формы</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Form changes</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ГруппаVanessaEditorПолучитьИзмененияФормыРасширеннаяПодсказка" id="2896"/>
+										<ChildItems>
+											<Button name="VanessaEditorПолучитьИзмененияФормыGherkin" id="2897">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ПолучитьИзмененияФормыGherkin</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Получить состояние всей формы в виде шагов</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>Get the whole form state</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="VanessaEditorПолучитьИзмененияФормыGherkinРасширеннаяПодсказка" id="2898"/>
+											</Button>
+											<Button name="VanessaEditorПолучитьСостояниеТекущегоЭлементаФормы" id="2899">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ПолучитьСостояниеТекущегоЭлементаФормы</CommandName>
+												<ExtendedTooltip name="VanessaEditorПолучитьСостояниеТекущегоЭлементаФормыРасширеннаяПодсказка" id="2900"/>
+											</Button>
+											<Button name="ФормаДобавитьПроверкуСообщенийПользователя" id="2901">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ДобавитьПроверкуСообщенийПользователя</CommandName>
+												<ExtendedTooltip name="ФормаДобавитьПроверкуСообщенийПользователяРасширеннаяПодсказка" id="2902"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+								</ChildItems>
+							</Popup>
 							<Popup name="ГруппаVanessaEditorНастройкиРедактора" id="2552">
 								<Title>
 									<v8:item>
@@ -6479,7 +6579,7 @@
 																						<Title>
 																							<v8:item>
 																								<v8:lang>ru</v8:lang>
-																								<v8:content>Получить состояние всей формы</v8:content>
+																								<v8:content>Получить состояние всей формы в виде шагов</v8:content>
 																							</v8:item>
 																							<v8:item>
 																								<v8:lang>en</v8:lang>
@@ -8857,87 +8957,11 @@
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Получить состояние всей формы</v8:content>
+															<v8:content>Получить состояние всей формы в виде шагов</v8:content>
 														</v8:item>
 														<v8:item>
 															<v8:lang>en</v8:lang>
-															<v8:content>Get the whole form state</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>am</v8:lang>
-															<v8:content>በቀዳሚ ግምገማዎች ላይ ያለው ስምዎ ስለጀመሩ ቅጽ</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>az</v8:lang>
-															<v8:content>Almaq üçün dövlət bütün formaları</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>bg</v8:lang>
-															<v8:content>Получаване на състоянието на цялата форма</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>de</v8:lang>
-															<v8:content>Erhalten Sie den Zustand der gesamten Form</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>es</v8:lang>
-															<v8:content>Obtener el estado de todo el formulario</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>et</v8:lang>
-															<v8:content>Saada seisund kogu vormi</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>fr</v8:lang>
-															<v8:content>Obtenir l'état de l'ensemble de la forme</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>hu</v8:lang>
-															<v8:content>A teljes űrlap</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>it</v8:lang>
-															<v8:content>Ottenere lo stato di forma intera</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>ka</v8:lang>
-															<v8:content>უნდა მიიღოთ მთელი ფორმა</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>lt</v8:lang>
-															<v8:content>Gauti būsena visos formos</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>lv</v8:lang>
-															<v8:content>Saņemt stāvokli visā veidlapas</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>mn</v8:lang>
-															<v8:content>Авах бүх хэлбэр</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>pl</v8:lang>
-															<v8:content>Zobacz stan całej formy</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>ro</v8:lang>
-															<v8:content>Pentru a obține starea de întregul formular</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>sl</v8:lang>
-															<v8:content>Da bi dobili celoten obrazec</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>sv</v8:lang>
-															<v8:content>För att få hela formen</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>tr</v8:lang>
-															<v8:content>Bir devlet olsun tüm formu</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>vi</v8:lang>
-															<v8:content>Nhận trạng thái tất cả biểu mẫu</v8:content>
+															<v8:content>Get the whole form state in steps</v8:content>
 														</v8:item>
 													</Title>
 													<ExtendedTooltip name="ПолучитьИзмененияФормыGherkinРасширеннаяПодсказка" id="1318"/>
@@ -29497,7 +29521,7 @@ SikuliX emulates mouse clicks.</v8:content>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Запомнить состояние формы test client</v8:content>
+					<v8:content>Запомнить состояние формы клиента тестирования</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
@@ -29521,7 +29545,7 @@ SikuliX emulates mouse clicks.</v8:content>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Забыть состояние формы test client</v8:content>
+					<v8:content>Забыть состояние формы клиента тестирования</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
@@ -33343,87 +33367,11 @@ SikuliX emulates mouse clicks.</v8:content>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Получить состояние текущего элемента формы</v8:content>
+					<v8:content>Получить состояние текущего элемента формы в виде шагов</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
-					<v8:content>Get current form item state</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>am</v8:lang>
-					<v8:content>አሁን ቅድሚያ አሁን ቅጽ እንዳሏቸውም</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>az</v8:lang>
-					<v8:content>Əldə vəziyyətinə cari vurun formaları</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>bg</v8:lang>
-					<v8:content>Получаване на състоянието на текущия елемент на формуляра</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>de</v8:lang>
-					<v8:content>Erhalten Sie den Status des aktuellen Elements aus der Form</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>es</v8:lang>
-					<v8:content>Obtener el estado actual de un elemento de formulario</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>et</v8:lang>
-					<v8:content>Saada riigi praegust vormi elemendi</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>fr</v8:lang>
-					<v8:content>Obtenir l'état actuel de l'élément de formulaire</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>hu</v8:lang>
-					<v8:content>Megszerezni az állapot a jelenlegi formájában elem</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>it</v8:lang>
-					<v8:content>Ottenere lo stato corrente di un elemento del modulo</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ka</v8:lang>
-					<v8:content>მიიღოს სტატუსი მიმდინარე ფორმის ელემენტი</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>lt</v8:lang>
-					<v8:content>Gauti būklė dabartinio elemento formos</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>lv</v8:lang>
-					<v8:content>Saņemt stāvokli pašreizējā vienuma formas</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>mn</v8:lang>
-					<v8:content>Олж авах байдал нь одоогийн хэлбэр элемент</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>pl</v8:lang>
-					<v8:content>Zobacz stan bieżącego elementu formularza</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ro</v8:lang>
-					<v8:content>Pentru a obține starea curentă a unui element de formular</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>sl</v8:lang>
-					<v8:content>Pridobiti status trenutnega elementa obrazca</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>sv</v8:lang>
-					<v8:content>För att få status av det aktuella formuläret element</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>tr</v8:lang>
-					<v8:content>Geçerli durumunu almak için bir form elemanı</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>vi</v8:lang>
-					<v8:content>Nhận trạng thái phần tử hiện tại của biểu mẫu</v8:content>
+					<v8:content>Get current form item state in steps</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -34893,11 +34841,11 @@ SikuliX emulates mouse clicks.</v8:content>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Добавить проверку сообщений пользователя</v8:content>
+					<v8:content>Получить проверку сообщений пользователя в виде шагов</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
-					<v8:content>Add check for user messages</v8:content>
+					<v8:content>Get check for user messages in steps</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
