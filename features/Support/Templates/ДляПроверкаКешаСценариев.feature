@@ -4,7 +4,7 @@
 @UF9_Вспомогательные_фичи
 #parent ua:
 @UA30_Прочие_макеты
-#language: ru
+
 
 @IgnoreOnCIMainBuild
 @tree

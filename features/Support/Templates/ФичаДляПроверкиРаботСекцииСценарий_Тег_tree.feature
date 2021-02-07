@@ -4,8 +4,6 @@
 @UF11_Прочее
 #parent ua:
 @UA45_Прочая_активность_вообще
-#encoding: utf-8
-#language: ru 
 @IgnoreOnCIMainBuild
 
 @Tree

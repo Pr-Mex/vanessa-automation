@@ -4,7 +4,6 @@
 @UA27_Макеты_для_проверки_парсинга
 #parent uf:
 @UF9_Вспомогательные_фичи
-#language: ru
 @IgnoreOnCIMainBuild
 @tree
 Функционал: ФичаДляПроверкиТег_tree3
