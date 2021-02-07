@@ -4,7 +4,7 @@
 @UF7_системные_настройки_VA
 #parent ua:
 @UA34_указывать_настройки_выполнения_сценариев
-#language: ru
+
 
 @IgnoreOn82Builds
 @IgnoreOnUFSovm82Builds
