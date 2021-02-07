@@ -4,7 +4,7 @@
 @UF4_Библиотека_шагов
 #parent ua:
 @UA1_Работать_с_макетами_данных
-#language: ru
+
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
