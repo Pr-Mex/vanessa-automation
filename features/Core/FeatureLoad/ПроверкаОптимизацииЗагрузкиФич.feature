@@ -23,6 +23,70 @@
 	Когда Я открываю VanessaAutomation в режиме TestClient со стандартной библиотекой
 
 
+Сценарий: Закрытие клиента тестирования
+	И я закрываю сеанс TESTCLIENT
+	И в таблице клиентов тестирования я активизирую строку 'Этот клиент'
+
+
+Сценарий: Проверка оптимизации загрузки фич ru 05. Изменение в строке таблицы Gherkin.
+	Если Файл "C:\Temp\Optimization\Test.feature" существует тогда
+		Тогда я удаляю файл "C:\Temp\Optimization\Test.feature"
+		
+	И Я запоминаю значение выражения 'ПолучитьСостояниеVanessaAutomation().ТекущаяФича.Каталог + "files\Test6_1.feature"' в переменную "TestFeature"	
+	Тогда я копирую файл "$TestFeature$" "C:\Temp\Optimization\Test.feature"
+
+	И я перехожу к закладке "Служебная"
+	И в поле 'Каталог фич (служебный)' я ввожу текст 'C:\Temp\Optimization\Test.feature'
+	
+	И Я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
+	
+	Тогда в логе сообщений TestClient есть строка "ВозможнаОптимизацияЗагрузкиФичи=Нет"
+	
+	И я очищаю окно сообщений пользователю
+
+
+
+	Если Файл "C:\Temp\Optimization\Test.feature" существует тогда
+		Тогда я удаляю файл "C:\Temp\Optimization\Test.feature"
+		
+	И Я запоминаю значение выражения 'ПолучитьСостояниеVanessaAutomation().ТекущаяФича.Каталог + "files\Test6_2.feature"' в переменную "TestFeature"	
+	Тогда я копирую файл "$TestFeature$" "C:\Temp\Optimization\Test.feature"
+
+	И я перехожу к закладке "Служебная"
+	И в поле 'Каталог фич (служебный)' я ввожу текст 'C:\Temp\Optimization\Test.feature'
+	
+	И Я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
+	
+	И я очищаю окно сообщений пользователю
+
+
+	Если Файл "C:\Temp\Optimization\Test.feature" существует тогда
+		Тогда я удаляю файл "C:\Temp\Optimization\Test.feature"
+	И Я запоминаю значение выражения 'ПолучитьСостояниеVanessaAutomation().ТекущаяФича.Каталог + "files\Test6_3.feature"' в переменную "TestFeature"	
+	Тогда я копирую файл "$TestFeature$" "C:\Temp\Optimization\Test.feature"
+	
+	И Пауза 1
+	И я обновляю время изменения у файла "C:\Temp\Optimization\Test.feature"
+	И Пауза 1
+
+	И Я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
+
+	И я перехожу к закладке с именем "ГруппаСлужебная"
+	И я нажимаю на кнопку с именем 'РазвернутьВсеСтрокиДереваСлужебный'
+	И я перехожу к закладке с именем "ГруппаЗапускТестов"
+		
+
+	Тогда в логе сообщений TestClient есть строка "ВозможнаОптимизацияЗагрузкиФичи=Да"
+
+	И Я нажимаю на кнопку выполнить сценарии в Vanessa-Automation TestClient
+
+
+	Тогда в логе сообщений TestClient есть строки:
+		|'Колонка1 = Значение111'|
+		
+
+
+
 
 Сценарий: Проверка оптимизации загрузки фич ru 04. Структура сценария.
 	Если Файл "C:\Temp\Optimization\Test.feature" существует тогда
@@ -48,7 +112,9 @@
 	И Я запоминаю значение выражения 'ПолучитьСостояниеVanessaAutomation().ТекущаяФича.Каталог + "files\Test5_2.feature"' в переменную "TestFeature"	
 	Тогда я копирую файл "$TestFeature$" "C:\Temp\Optimization\Test.feature"
 	
+	И Пауза 1
 	И я обновляю время изменения у файла "C:\Temp\Optimization\Test.feature"
+	И Пауза 1
 
 	И Я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
 
@@ -110,7 +176,9 @@
 	И Я запоминаю значение выражения 'ПолучитьСостояниеVanessaAutomation().ТекущаяФича.Каталог + "files\Test4_2.feature"' в переменную "TestFeature"	
 	Тогда я копирую файл "$TestFeature$" "C:\Temp\Optimization\Test.feature"
 	
+	И Пауза 1
 	И я обновляю время изменения у файла "C:\Temp\Optimization\Test.feature"
+	И Пауза 1
 
 	И Я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
 
@@ -170,7 +238,9 @@
 	И Я запоминаю значение выражения 'ПолучитьСостояниеVanessaAutomation().ТекущаяФича.Каталог + "files\Test3_2.feature"' в переменную "TestFeature"	
 	Тогда я копирую файл "$TestFeature$" "C:\Temp\Optimization\Test.feature"
 	
+	И Пауза 1
 	И я обновляю время изменения у файла "C:\Temp\Optimization\Test.feature"
+	И Пауза 1
 	И я заменяю строку в файле "C:\Temp\Optimization\Test.feature"
 		|'Тест3_2'|'Тест3_1'|
 
@@ -233,6 +303,7 @@
 	
 	И Пауза 1
 	И я обновляю время изменения у файла "C:\Temp\Optimization\Test.feature"
+	И Пауза 1
 	И я заменяю строку в файле "C:\Temp\Optimization\Test.feature"
 		|'Тест1_2'|'Тест1_1'|
 
@@ -309,7 +380,9 @@
 	И Я запоминаю значение выражения 'ПолучитьСостояниеVanessaAutomation().ТекущаяФича.Каталог + "files\Test2_2.feature"' в переменную "TestFeature"	
 	Тогда я копирую файл "$TestFeature$" "C:\Temp\Optimization\Test.feature"
 	
+	И Пауза 1
 	И я обновляю время изменения у файла "C:\Temp\Optimization\Test.feature"
+	И Пауза 1
 
 	И я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
 	И я нажимаю на кнопку выполнить сценарии в Vanessa-Automation TestClient
