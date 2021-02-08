@@ -1,6 +1,13 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.4">
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.10">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Редактор таблиц Gherkin</v8:content>
+		</v8:item>
+	</Title>
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
 			<Button name="ФормаОК" id="42">
@@ -25,11 +32,16 @@
 					<AutoInsertNewRow>true</AutoInsertNewRow>
 					<EnableStartDrag>true</EnableStartDrag>
 					<EnableDrag>true</EnableDrag>
+					<FileDragMode>AsFile</FileDragMode>
 					<DataPath>ТаблицаНаФорме</DataPath>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Таблица на форме</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Table on the form</v8:content>
 						</v8:item>
 					</Title>
 					<RowFilter xsi:nil="true"/>
@@ -60,9 +72,6 @@
 						<ContextMenu name="ТаблицаНаФормеУправлениеПоискомКонтекстноеМеню" id="12"/>
 						<ExtendedTooltip name="ТаблицаНаФормеУправлениеПоискомРасширеннаяПодсказка" id="13"/>
 					</SearchControlAddition>
-					<Events>
-						<Event name="BeforeRowChange">ТаблицаНаФормеПередНачаломИзменения</Event>
-					</Events>
 				</Table>
 				<Table name="СписокКолонок" id="19">
 					<Representation>List</Representation>
@@ -70,12 +79,17 @@
 					<HorizontalLines>false</HorizontalLines>
 					<VerticalLines>false</VerticalLines>
 					<AutoInsertNewRow>true</AutoInsertNewRow>
+					<FileDragMode>AsFile</FileDragMode>
 					<DataPath>СписокКолонок</DataPath>
 					<RowPictureDataPath>СписокКолонок.Picture</RowPictureDataPath>
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Список колонок</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Column list</v8:content>
 						</v8:item>
 					</Title>
 					<ContextMenu name="СписокКолонокКонтекстноеМеню" id="20"/>
@@ -129,6 +143,9 @@
 						<ContextMenu name="СписокКолонокУправлениеПоискомКонтекстноеМеню" id="30"/>
 						<ExtendedTooltip name="СписокКолонокУправлениеПоискомРасширеннаяПодсказка" id="31"/>
 					</SearchControlAddition>
+					<Events>
+						<Event name="Selection">СписокКолонокВыбор</Event>
+					</Events>
 					<ChildItems>
 						<CheckBoxField name="СписокКолонокПометка" id="35">
 							<DataPath>СписокКолонок.Check</DataPath>
@@ -164,6 +181,10 @@
 					<v8:lang>ru</v8:lang>
 					<v8:content>Таблица на форме</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Table on the form</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>v8:ValueTable</v8:Type>
@@ -174,6 +195,10 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Список колонок</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Column list</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -195,8 +220,13 @@
 					<v8:lang>ru</v8:lang>
 					<v8:content>Пометить все</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Mark all</v8:content>
+				</v8:item>
 			</ToolTip>
 			<Action>ПометитьВсе</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="СнятьВсе" id="2">
 			<Title>
@@ -204,14 +234,23 @@
 					<v8:lang>ru</v8:lang>
 					<v8:content>Снять все</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Clear all</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Снять все</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Clear all</v8:content>
+				</v8:item>
 			</ToolTip>
 			<Action>СнятьВсе</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="ОК" id="3">
 			<Title>
@@ -219,14 +258,23 @@
 					<v8:lang>ru</v8:lang>
 					<v8:content>ОК</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>OK</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>ОК</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>OK</v8:content>
+				</v8:item>
 			</ToolTip>
 			<Action>ОК</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 </Form>

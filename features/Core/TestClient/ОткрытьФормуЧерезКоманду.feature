@@ -1,4 +1,9 @@
-﻿# language: ru
+# language: ru
+# encoding: utf-8
+#parent uf:
+@UF4_Библиотека_шагов
+#parent ua:
+@UA52_Работать_с_UI_прочее
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds

@@ -1,4 +1,9 @@
-# language: ru
+﻿# language: ru
+# encoding: utf-8
+#parent uf:
+@UF11_Прочее
+#parent ua:
+@UA44_Прочая_активность_по_проверке
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
@@ -19,10 +24,10 @@
 		| 'Имя подключения' | 'Порт' | 'Логин'         | 'Пароль' |  'Дополнительные параметры строки запуска'  |
 		| 'VanessaUserEN'   | '1'    | 'VanessaUserEN' | '1'      |   '/Len /Vlen'                              |	
 	И Я подключаю клиент тестирования "VanessaUserEN" из таблицы клиентов тестирования
-	И В командном интерфейсе я выбираю 'Основная' 'ОткрытьVanessaAutomation'
-	Когда открылось окно '*autotest: Vanessa Automation'
-	И я перехожу к закладке "Service and Settings"
-	И я изменяю флаг 'Check Vanessa-Automation on 1C test client session'
+	И В командном интерфейсе я выбираю 'Main' 'Open vanessa automation'
+	Когда открылось окно '*autotest: Vanessa Automation*'
+	И я перехожу к закладке "Service"
+	И я устанавливаю флаг 'Check Vanessa Automation in test client mode'
 	И я перехожу к закладке "Extended"
 	И я активизирую поле с именем "КаталогИнструментовСлужебный"
 	И В поле с именем "КаталогИнструментовСлужебный" я указываю значение реквизита объекта обработки "КаталогИнструментов"

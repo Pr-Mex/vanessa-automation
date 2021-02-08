@@ -1,4 +1,9 @@
-﻿# language: ru
+# language: ru
+# encoding: utf-8
+#parent uf:
+@UF6_текстовые_и_видео_инструкции
+#parent ua:
+@UA41_формировать_текстовые_инструкции
 
 @IgnoreOnCIMainBuild
 @ExportScenarios
@@ -32,5 +37,4 @@
 		И я помещаю в буфер обмена строку 'НужнаяСтрока'
 		Дано я нажимаю хоткей "v" "ctrl"
 	
-
 

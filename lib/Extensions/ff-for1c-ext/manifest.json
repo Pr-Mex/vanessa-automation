@@ -1,0 +1,36 @@
+{
+  "description": "Get active coordinate for VA",
+  "manifest_version": 2,
+  "name": "ActiveCoordinateVA",
+  "version": "1.4.6",
+
+  "applications": {
+    "gecko": {
+      "id": "{A4220892-14BA-0ACF-FA67-7FF79D57E7D6}"
+    }
+  },
+
+  "browser_action": {
+    "default_icon": "icons/icon.png",
+    "default_title": "Active coordinate for VA"
+  },
+
+  "icons": {
+    "32": "icons/icon.png"
+  },
+
+  "permissions": [
+    "webRequest",
+    "storage",
+    "tabs",
+    "<all_urls>"
+  ],
+
+  "content_scripts": [{
+    "js": ["send_coordinates.js"],
+    "css": ["style.css"],
+    "matches": ["http://*/*", "https://*/*", "file://*/*"],
+    "all_frames": true
+}]
+
+}

@@ -1,4 +1,10 @@
-﻿#language: ru
+# language: ru
+# encoding: utf-8
+#parent uf:
+@UF4_Библиотека_шагов
+#parent ua:
+@UA1_Работать_с_макетами_данных
+
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds

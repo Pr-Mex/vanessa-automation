@@ -1,4 +1,9 @@
 # language: ru
+# encoding: utf-8
+#parent uf:
+@UF4_Библиотека_шагов
+#parent ua:
+@UA5_Работать_с_контекстом_фич
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
@@ -37,6 +42,4 @@
 		| ''                             | ''        |
 
 	И в логе сообщений TestClient есть строка "Hellow world."
-
-
 

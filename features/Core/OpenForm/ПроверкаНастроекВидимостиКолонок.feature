@@ -1,4 +1,9 @@
-﻿# language: ru
+# language: ru
+# encoding: utf-8
+#parent uf:
+@UF11_Прочее
+#parent ua:
+@UA44_Прочая_активность_по_проверке
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
@@ -87,5 +92,5 @@
 Сценарий: Закрытие сеанса Vanessa Automation
 	И я перехожу к закладке с именем "ГруппаНастройки"
 	И из выпадающего списка "Запрашивать подтверждение при закрытии" я выбираю точное значение 'Нет'
-	И Я закрываю окно '*Vanessa Automation'
+	И Я закрываю окно '*Vanessa Automation*'
 	

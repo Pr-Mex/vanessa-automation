@@ -1,4 +1,9 @@
-﻿# language: ru
+# language: ru
+# encoding: utf-8
+#parent uf:
+@UF9_Вспомогательные_фичи
+#parent ua:
+@UA47_Макеты_запуска_VA
 
 @IgnoreOnCIMainBuild
 
