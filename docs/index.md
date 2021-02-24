@@ -20,6 +20,9 @@
 * [Видео инструкции](https://www.youtube.com/channel/UC114RqHhG__1gET8pzs3AHA/playlists).
 * [Вебинар](http://infostart.ru/webinars/537546/). 
 
+## Как стать контрибьютором (предложить свои доработки) проекта?
+* Об этом рассказано [тут](https://infostart.ru/public/1092009/)
+
 ## Статьи по Vanessa Automation
 
 * [Vanessa-Automation — инструмент тестирования прикладных решений на платформе «1С: Предприятие» @Хабрахабр](https://habr.com/post/418303/)
