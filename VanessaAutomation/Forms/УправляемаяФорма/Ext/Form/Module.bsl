@@ -12784,11 +12784,27 @@
 		
 	ЗакрываемоеОкноАктивно = ЗакрываемоеОкно = ПолучитьАктивноеОкноИзТестовоеПриложение();	
 	
-	Селектор = ?(ЗакрываемоеОкноАктивно, ".openedItem.select .openedClose", ".openedItem[title=""" + ЗакрываемоеОкно.Заголовок + """] .openedClose");
 	ТекстJavaScript = "
 	|{
 	|function pos(){
-	|    let r = document.querySelector('" + Селектор + "').getBoundingClientRect();
+	|	const windowCaption = '" + ЗакрываемоеОкно.Заголовок + "';
+	|	const windowIsActive = " + ?(ЗакрываемоеОкноАктивно, "true", "false") + ";
+	|	let closeButton = null;
+	|	let selectedOpenedItem = document.querySelector('.openedItem.select');
+	|	if(windowIsActive && selectedOpenedItem != null && selectedOpenedItem.getAttribute('title') === windowCaption) {
+	|			closeButton = selectedOpenedItem.querySelector('.openedClose'); 			
+	|	}
+	|	
+	|	if(closeButton === null) {
+	|		closeButton = document.querySelector('.openedItem[title=""' + windowCaption + '""] .openedClose');
+	|	}	
+	|
+	|	if(closeButton === null) {
+	|   	closeButton = document.querySelector('.toplineBox[data-title=""' + windowCaption + '""]')
+	|			.closest('.topline').querySelector('span[id$=""TopLine_cmd_CloseButton""]');
+	|	}
+	|
+	|	let r = closeButton.getBoundingClientRect();
 	|    return {
 	|       x: Math.round(r.left + r.width / 2) + window.screenLeft,
 	|       y: Math.round(r.top + r.height / 2) + window.screenTop + window.outerHeight - window.innerHeight,    
