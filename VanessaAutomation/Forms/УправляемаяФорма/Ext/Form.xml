@@ -6,6 +6,13 @@
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
 		<ChildItems>
+			<Button name="ФормаВывестиДеревоКакМакет" id="2926">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ВывестиДеревоНаПечать</CommandName>
+				<RepresentationInContextMenu>None</RepresentationInContextMenu>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаВывестиДеревоКакМакетРасширеннаяПодсказка" id="2927"/>
+			</Button>
 			<Popup name="ПодменюЗагрузитьФичи" id="63">
 				<Title>
 					<v8:item>
@@ -1507,6 +1514,46 @@
 												<Type>CommandBarButton</Type>
 												<CommandName>Form.Command.ДобавитьПроверкуСообщенийПользователя</CommandName>
 												<ExtendedTooltip name="ФормаДобавитьПроверкуСообщенийПользователяРасширеннаяПодсказка" id="2902"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="ГруппаVanessaEditorТаблоПеременных" id="2928">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа vanessa editor табло переменных</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Variables board</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ГруппаVanessaEditorТаблоПеременныхРасширеннаяПодсказка" id="2929"/>
+										<ChildItems>
+											<Button name="ФормаПоказатьСкрытьТаблоПеременных" id="2930">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ПоказатьСкрытьТаблоПеременных</CommandName>
+												<ExtendedTooltip name="ФормаПоказатьСкрытьТаблоПеременныхРасширеннаяПодсказка" id="2931"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="ГруппаVanessaEditorПодготовкаИЗагрузкаДанных" id="2934">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа vanessa editor подготовка и загрузка данных</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Test data generator</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ГруппаVanessaEditorПодготовкаИЗагрузкаДанныхРасширеннаяПодсказка" id="2935"/>
+										<ChildItems>
+											<Button name="ФормаОткрытьИнструментПодготовкаИЗагрузкаДанных" id="2932">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ОткрытьИнструментПодготовкаИЗагрузкаДанных</CommandName>
+												<ExtendedTooltip name="ФормаОткрытьИнструментПодготовкаИЗагрузкаДанныхРасширеннаяПодсказка" id="2933"/>
 											</Button>
 										</ChildItems>
 									</ButtonGroup>
@@ -35508,6 +35555,44 @@ SikuliX emulates mouse clicks.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorПроверкаСинтаксисаВРедакторе</Action>
+		</Command>
+		<Command name="ВывестиДеревоНаПечать" id="143">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вывести дерево шагов на печать</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Print steps tree</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вывести дерево на печать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВывестиДеревоНаПечать</Action>
+		</Command>
+		<Command name="ОткрытьИнструментПодготовкаИЗагрузкаДанных" id="144">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подготовка и загрузка данных</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Test data generator</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть инструмент подготовка и загрузка данных</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьИнструментПодготовкаИЗагрузкаДанных</Action>
 		</Command>
 	</Commands>
 </Form>
