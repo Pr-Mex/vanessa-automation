@@ -1,5 +1,17 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.10">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Подготовка и загрузка данных</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>en</v8:lang>
+			<v8:content>Test data generator</v8:content>
+		</v8:item>
+	</Title>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<SaveDataInSettings>UseList</SaveDataInSettings>
 	<AutoCommandBar name="FormCommandBar" id="-1">
 		<ChildItems>
 			<Button name="FormGenerateFeature" id="70">
@@ -16,9 +28,43 @@
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
-		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+		<Event name="OnOpen">OnOpen</Event>
 	</Events>
 	<ChildItems>
+		<RadioButtonField name="StepsLanguage" id="86">
+			<DataPath>StepsLanguage</DataPath>
+			<RadioButtonType>Tumbler</RadioButtonType>
+			<ChoiceList>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>English</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">en</Value>
+					</xr:Value>
+				</xr:Item>
+				<xr:Item>
+					<xr:Presentation/>
+					<xr:CheckState>0</xr:CheckState>
+					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+						<Presentation>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Russian</v8:content>
+							</v8:item>
+						</Presentation>
+						<Value xsi:type="xs:string">ru</Value>
+					</xr:Value>
+				</xr:Item>
+			</ChoiceList>
+			<ContextMenu name="StepsLanguageContextMenu" id="87"/>
+			<ExtendedTooltip name="StepsLanguageExtendedTooltip" id="88"/>
+		</RadioButtonField>
 		<Pages name="GroupPages" id="72">
 			<Title>
 				<v8:item>
@@ -180,16 +226,12 @@
 					</Title>
 					<ExtendedTooltip name="GroupPageFeatureExtendedTooltip" id="77"/>
 					<ChildItems>
-						<InputField name="Feature" id="78">
+						<TextDocumentField name="Feature" id="78">
 							<DataPath>Feature</DataPath>
 							<TitleLocation>None</TitleLocation>
-							<Width>300</Width>
-							<HorizontalStretch>true</HorizontalStretch>
-							<MultiLine>true</MultiLine>
-							<Font faceName="Consolas" height="8" bold="false" italic="false" underline="false" strikeout="false" kind="Absolute" scale="100"/>
 							<ContextMenu name="FeatureContextMenu" id="79"/>
 							<ExtendedTooltip name="FeatureExtendedTooltip" id="80"/>
-						</InputField>
+						</TextDocumentField>
 					</ChildItems>
 				</Page>
 			</ChildItems>
@@ -198,7 +240,7 @@
 	<Attributes>
 		<Attribute name="Object" id="1">
 			<Type>
-				<v8:Type>cfg:ExternalDataProcessorObject.TestDataGenerator</v8:Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.VanessaAutomation</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
 		</Attribute>
@@ -318,11 +360,36 @@
 				</v8:item>
 			</Title>
 			<Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/txtedt">d5p1:TextDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="StepsLanguage" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Steps language</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
 				<v8:Type>xs:string</v8:Type>
 				<v8:StringQualifiers>
-					<v8:Length>0</v8:Length>
+					<v8:Length>16</v8:Length>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>StepsLanguage</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Initialized" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Initialized</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
 	</Attributes>

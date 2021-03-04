@@ -1,71 +1,42 @@
 ﻿
 // IRP Team v.1.2
 
+#Region Variables
+
+//
+&AtClient
+Var LocalizedStringFromServer;
+
+#EndRegion
+
 #Region Vanessa
+
 
 #Region ServiceFunctionsAndProcedures
 
+//
 &AtClient
 Var Vanessa;
- 
+
+// 
 &AtClient
 Var Контекст Export;
- 
+
+//
 &AtClient
 Var КонтекстСохраняемый Export;
 
 &AtClient
 Function ПолучитьСписокТестов(КонтекстФреймворкаBDD) Export
+	LocalizedStringFromServer = LocalizedStringsServer();
 	Vanessa = КонтекстФреймворкаBDD;	
 	AllTests = New Array;
-	Vanessa.ДобавитьШагВМассивТестов(AllTests
-										, "IRunDatabaseClean()"
-										, "IRunDatabaseClean"
-										, "And I run database clean"
-										, ""
-										, "");
-	Vanessa.ДобавитьШагВМассивТестов(AllTests
-										, "ICheckOrCreateCatalogObjects(ObjectName, Values)"
-										, "ICheckOrCreateCatalogObjects"
-										, StrTemplate(ScenarioCatalogActionString(), """ObjectName""", "", "")
-										, ""
-										, "");
-	Vanessa.ДобавитьШагВМассивТестов(AllTests
-										, "ICheckOrCreateDocumentObjects(ObjectName, Values)"
-										, "ICheckOrCreateDocumentObjects"
-										, StrTemplate(ScenarioDocumentActionString(), """ObjectName""", "", "")
-										, ""
-										, "");
-	Vanessa.ДобавитьШагВМассивТестов(AllTests
-										, "ICheckOrCreateChartOfCharacteristicTypesObjects(ObjectName, Values)"
-										, "ICheckOrCreateChartOfCharacteristicTypesObjects"
-										, StrTemplate(ScenarioChartOfCharacteristicTypesActionString(), """ObjectName""", "", "")
-										, ""
-										, "");
-	Vanessa.ДобавитьШагВМассивТестов(AllTests
-										, "ICheckOrCreateInformationRegisterRecords(RegisterName, Values)"
-										, "ICheckOrCreateInformationRegisterRecords"
-										, StrTemplate(ScenarioInformationRegisterActionString(), """RegisterName""", "", "")
-										, ""
-										, "");
-	Vanessa.ДобавитьШагВМассивТестов(AllTests
-										, "ICheckOrCreateAccumulationRegisterRecords(RegisterName, Values)"
-										, "ICheckOrCreateAccumulationRegisterRecords"
-										, StrTemplate(ScenarioAccumulationRegisterActionString(), """RegisterName""", "", "")
-										, ""
-										, "");
-	Vanessa.ДобавитьШагВМассивТестов(AllTests
-										, "IRefillObjectTabularSection(TabularSectionName, Values)"
-										, "IRefillObjectTabularSection"
-										, StrTemplate(ScenarioTabularSectionActionString(), """TabularSectionName""", "", "")
-										, ""
-										, "");
-	Vanessa.ДобавитьШагВМассивТестов(AllTests
-										, "IExecuteCodeAndPutToVarible(Code, VaribleName)"
-										, "IExecuteCodeAndPutToVarible"
-										, "I execute code and put to varible ""Code"" ""VaribleName"""
-										, ""
-										, "");							
+	AddStepsByLanguage(Vanessa, AllTests, "ru");
+	
+	For Each Item In AllTests Do
+		Item.ТипШага = "Подготовка и загрузка данных";
+	EndDo;						
+	
 	Return AllTests;
 EndFunction
 	
@@ -108,8 +79,18 @@ EndProcedure
 #EndRegion
 
 &AtClient
+Procedure InitForm(VanessaContext) Export
+	Vanessa = VanessaContext;
+EndProcedure
+
+&AtClient
 Procedure IRunDatabaseClean() Export
 	IRunDatabaseCleanAtServer();
+EndProcedure
+
+&AtClient
+Procedure ЯЗапускаюОчисткуБазыДанных() Export
+	IRunDatabaseClean();
 EndProcedure
 
 &AtServer
@@ -123,6 +104,11 @@ Procedure ICheckOrCreateCatalogObjects(Val ObjectName, Val Values) Export
 		Return;
 	EndIf;
 	ICheckOrCreateCatalogObjectsAtServer(ObjectName, Values);
+EndProcedure
+
+&AtClient
+Procedure ЯПроверяюИлиСоздаюДляСправочникаОбъекты(Val ИмяОбъекта, Val Значения) Export
+	ICheckOrCreateCatalogObjects(ИмяОбъекта, Значения);
 EndProcedure
 
 &AtServerNoContext
@@ -198,6 +184,11 @@ Procedure ICheckOrCreateDocumentObjects(Val ObjectName, Val Values) Export
 	ICheckOrCreateDocumentObjectsAtServer(ObjectName, Values);
 EndProcedure
 
+&AtClient
+Procedure ЯПроверяюИлиСоздаюДляДокументаОбъекты(Val ИмяОбъекта, Val Значения) Export
+	ICheckOrCreateDocumentObjects(ИмяОбъекта, Значения);
+EndProcedure
+
 &AtServerNoContext
 Procedure ICheckOrCreateDocumentObjectsAtServer(ObjectName, Values)
 	ObjectValues = GetValueTableFromVanessaTableArray(Values);	
@@ -266,6 +257,11 @@ Procedure ICheckOrCreateChartOfCharacteristicTypesObjects(Val ObjectName, Val Va
 	ICheckOrCreateChartOfCharacteristicTypesObjectsAtServer(ObjectName, Values);
 EndProcedure
 
+&AtClient
+Procedure ЯПроверяюИлиСоздаюДляПланаВидовХарактеристикОбъекты(Val ИмяОбъекта, Val Значения) Export
+	ICheckOrCreateChartOfCharacteristicTypesObjects(ИмяОбъекта, Значения);
+EndProcedure
+
 &AtServerNoContext
 Procedure ICheckOrCreateChartOfCharacteristicTypesObjectsAtServer(ObjectName, Values)	
 	ObjectValues = GetValueTableFromVanessaTableArray(Values);
@@ -322,6 +318,11 @@ Procedure IRefillObjectTabularSection(Val TabularSectionName, Val Values) Export
 	IRefillObjectTabularSectionAtServer(TabularSectionName, Values);
 EndProcedure
 
+&AtClient
+Procedure ЯПерезаполняюДляОбъектаТабличнуюЧасть(Val ИмяТабличнойЧасти, Val Значения) Export
+	IRefillObjectTabularSection(ИмяТабличнойЧасти, Значения);
+EndProcedure
+
 &AtServerNoContext
 Procedure IRefillObjectTabularSectionAtServer(TabularSectionName, Values)	
 	ObjectValues = GetValueTableFromVanessaTableArray(Values);
@@ -375,6 +376,11 @@ Procedure ICheckOrCreateInformationRegisterRecords(Val RegisterName, Val Values)
 		Return;
 	EndIf;
 	ICheckOrCreateInformationRegisterRecordsAtServer(RegisterName, Values);
+EndProcedure
+
+&AtClient
+Procedure ЯПроверяюИлиСоздаюДляРегистраСведенийЗаписи(Val ИмяРегистра, Val Значения) Export
+	ICheckOrCreateInformationRegisterRecords(ИмяРегистра, Значения);
 EndProcedure
 
 &AtServerNoContext
@@ -446,6 +452,11 @@ Procedure ICheckOrCreateAccumulationRegisterRecords(Val RegisterName, Val Values
 	ICheckOrCreateAccumulationRegisterRecordsAtServer(RegisterName, Values);
 EndProcedure
 
+&AtClient
+Procedure ЯПроверяюИлиСоздаюДляРегистраНакопленийЗаписи(Val ИмяРегистра, Val Значения) Export
+	ICheckOrCreateAccumulationRegisterRecords(ИмяРегистра, Значения);
+EndProcedure
+
 &AtServerNoContext
 Procedure ICheckOrCreateAccumulationRegisterRecordsAtServer(RegisterName, Values)	
 	ObjectValues = GetValueTableFromVanessaTableArray(Values);	
@@ -511,15 +522,47 @@ Procedure ICheckOrCreateAccumulationRegisterRecordsAtServer(RegisterName, Values
 	EndIf;
 EndProcedure
 
+&AtClient
+Procedure IRefillConstant(Val ConstantName, Val ConstantValue) Export
+	IRefillConstantAtServer(ConstantName, ConstantValue);
+EndProcedure
+
+&AtClient
+Procedure ЯПерезаполняюКонстанту(Val ИмяКонстанты, Val ЗначениеКонстанты) Export
+	IRefillConstant(ИмяКонстанты, ЗначениеКонстанты);
+EndProcedure
+
+&AtServerNoContext
+Procedure IRefillConstantAtServer(ConstantName, ConstantValue)
+	ConstantData = New Structure;
+	ConstantData.Insert("Name", ConstantName);
+	ConstantData.Insert("ValueType", Metadata.Constants[ConstantName].Type);
+	ConstantData.Insert(ConstantName, ConstantValue);
+	FilledValue = New Structure;
+	FilledValue.Insert(ConstantName, Constants[ConstantName].Get());
+	FillTipicalObjectAttributesByValues(FilledValue, ConstantData, ConstantData);
+	Constants[ConstantName].Set(FilledValue[ConstantName]);
+EndProcedure
+
 #EndRegion
 
 #Region Events
 
 &AtServer
-Procedure OnCreateAtServer(Cancel, StandardProcessing)
+Procedure ServerCallOnOpen()
 	DrawDataListHack();
 	FillMetadataType();
 	FillMetadata();
+EndProcedure
+
+&AtClient
+Procedure OnOpen(Cancel)
+	If not Initialized Then
+		ServerCallOnOpen();
+		Initialized = True;
+	EndIf;
+	FillStepsLanguage();
+	LocalizedStringFromServer = LocalizedStringsServer();
 EndProcedure
 
 &AtClient
@@ -546,7 +589,8 @@ EndProcedure
 
 &AtClient
 Procedure GenerateFeature(Command)
-	ThisObject.Feature = GeneratedFeatureFile();
+	Feature.Очистить();
+	Feature.ДобавитьСтроку(GeneratedFeatureFile());
 	Items.GroupPages.CurrentPage = Items.GroupPageFeature;
 EndProcedure
 
@@ -810,6 +854,8 @@ Function MetadataTypeValueSingle(Val MetadataTypeValue)
 		ReturnValue = "InformationRegister";
 	ElsIf MetadataTypeValue = "AccumulationRegisters" Then
 		ReturnValue = "AccumulationRegister";
+	ElsIf MetadataTypeValue = "Constants" Then
+		ReturnValue = "Constant";
 	Else
 		ReturnValue = "";
 	EndIf;
@@ -973,12 +1019,78 @@ Procedure FillTipicalObjectAttributesByValues(Obj, Row, Column)
 	Obj[Column.Name] = Row[Column.Name];
 EndProcedure
 
+&AtClient
+Procedure AddStepsByLanguage(Vanessa, AllTests, LangCode)
+	Vanessa.ДобавитьШагВМассивТестов(AllTests
+										, LocalizedStringsClient()["s1a_" + LangCode]
+										, LocalizedStringsClient()["s1b_" + LangCode]
+										, LocalizedStringsClient()["s1c_" + LangCode]
+										, LocalizedStringsClient()["s1d_" + LangCode]
+										, "");
+	Vanessa.ДобавитьШагВМассивТестов(AllTests
+										, LocalizedStringsClient()["s2a_" + LangCode]
+										, LocalizedStringsClient()["s2b_" + LangCode]
+										, StrTemplate(ScenarioCatalogActionString(LangCode), LocalizedStringsClient()["s2d_" + LangCode], "", "")
+										, LocalizedStringsClient()["s2f_" + LangCode]
+										, "");
+	Vanessa.ДобавитьШагВМассивТестов(AllTests
+										, LocalizedStringsClient()["s3a_" + LangCode]
+										, LocalizedStringsClient()["s3b_" + LangCode]
+										, StrTemplate(ScenarioDocumentActionString(LangCode), LocalizedStringsClient()["s3d_" + LangCode], "", "")
+										, LocalizedStringsClient()["s3f_" + LangCode]
+										, "");
+	Vanessa.ДобавитьШагВМассивТестов(AllTests
+										, LocalizedStringsClient()["s4a_" + LangCode]
+										, LocalizedStringsClient()["s4b_" + LangCode]
+										, StrTemplate(ScenarioChartOfCharacteristicTypesActionString(LangCode), LocalizedStringsClient()["s4d_" + LangCode], "", "")
+										, LocalizedStringsClient()["s4f_" + LangCode]
+										, "");
+	Vanessa.ДобавитьШагВМассивТестов(AllTests
+										, LocalizedStringsClient()["s5a_" + LangCode]
+										, LocalizedStringsClient()["s5b_" + LangCode]
+										, StrTemplate(ScenarioInformationRegisterActionString(LangCode), LocalizedStringsClient()["s5d_" + LangCode], "", "")
+										, LocalizedStringsClient()["s5f_" + LangCode]
+										, "");
+	Vanessa.ДобавитьШагВМассивТестов(AllTests
+										, LocalizedStringsClient()["s6a_" + LangCode]
+										, LocalizedStringsClient()["s6b_" + LangCode]
+										, StrTemplate(ScenarioAccumulationRegisterActionString(LangCode), LocalizedStringsClient()["s6d_" + LangCode], "", "")
+										, LocalizedStringsClient()["s6f_" + LangCode]
+										, "");
+	Vanessa.ДобавитьШагВМассивТестов(AllTests
+										, LocalizedStringsClient()["s7a_" + LangCode]
+										, LocalizedStringsClient()["s7b_" + LangCode]
+										, StrTemplate(ScenarioTabularSectionActionString(LangCode), LocalizedStringsClient()["s7c_" + LangCode], "", "")
+										, LocalizedStringsClient()["s7d_" + LangCode]
+										, "");
+	Vanessa.ДобавитьШагВМассивТестов(AllTests
+										, LocalizedStringsClient()["s8a_" + LangCode]
+										, LocalizedStringsClient()["s8b_" + LangCode]
+										, LocalizedStringsClient()["s8c_" + LangCode]
+										, LocalizedStringsClient()["s8d_" + LangCode]
+										, "");
+	Vanessa.ДобавитьШагВМассивТестов(AllTests
+										, LocalizedStringsClient()["s10a_" + LangCode]
+										, LocalizedStringsClient()["s10b_" + LangCode]
+										, StrTemplate(ScenarioCatalogActionString(LangCode), LocalizedStringsClient()["s10d_" + LangCode], "", "")
+										, LocalizedStringsClient()["s10d_" + LangCode]
+										, "");
+EndProcedure
+
+&AtClient
+Procedure FillStepsLanguage()
+	If Not ValueIsFilled(ThisObject.StepsLanguage) Then
+		ThisObject.StepsLanguage = "en";
+	EndIf;
+EndProcedure
+
 #Region GenerateFeature
 
 #Region FeatureFile
 
 &AtServer
 Function GeneratedFeatureFile()
+	LangCode = ThisObject.StepsLanguage;
 	ReturnValue = New Array;	
 	Scenarious = New Array;		
 	MetadataListValue = FormAttributeToValue("MetadataList");
@@ -989,40 +1101,48 @@ Function GeneratedFeatureFile()
 				Continue;
 			EndIf;
 			
-			MarkdownTables = GetMarkdownTables(MetadataTypeValueSingle(MetadataListParentRow.Name), MetadataListRow.Name);
-			ContinueFlag = True;
-			If ValueIsFilled(MarkdownTables.ObjectDataMarkdownTable) Then
-				ContinueFlag = False;
-			EndIf;
-			If ContinueFlag
-				And MarkdownTables.TabularSectionsDataMarkdownTables.Count() Then
-				For Each MarkdownTable In MarkdownTables.TabularSectionsDataMarkdownTables Do
-					If ValueIsFilled(MarkdownTable.Value) Then
-						ContinueFlag = False;
-						Break;
-					EndIf;
-				EndDo;
-			EndIf;
-			If ContinueFlag Then
-				Continue;
-			EndIf;
-			If MetadataListParentRow.Name = "Catalogs" Then
-				Scenarious.Add(ScenarioCatalog(MetadataListRow.Name, MarkdownTables));
-			ElsIf MetadataListParentRow.Name = "Documents" Then
-				Scenarious.Add(ScenarioDocument(MetadataListRow.Name, MarkdownTables));
-			ElsIf MetadataListParentRow.Name = "ChartsOfCharacteristicTypes" Then
-				Scenarious.Add(ScenarioChartOfCharacteristicTypes(MetadataListRow.Name, MarkdownTables));
-			ElsIf MetadataListParentRow.Name = "InformationRegisters" Then
-				Scenarious.Add(ScenarioInformationRegister(MetadataListRow.Name, MarkdownTables));
-			ElsIf MetadataListParentRow.Name = "AccumulationRegisters" Then
-				Scenarious.Add(ScenarioAccumulationRegister(MetadataListRow.Name, MarkdownTables));
+			If MetadataListParentRow.Name = "Constants" Then
+				MarkdownConstantValue = GetMarkdownConstantValue(MetadataListRow.Name);
+				If Not ValueIsFilled(MarkdownConstantValue) Then
+					Continue;
+				EndIf;
+				Scenarious.Add(ScenarioConstant(MetadataListRow.Name, MarkdownConstantValue, LangCode));
 			Else
-				Scenarious.Add("");
+				MarkdownTables = GetMarkdownTables(MetadataTypeValueSingle(MetadataListParentRow.Name),
+					MetadataListRow.Name);
+				ContinueFlag = True;
+				If ValueIsFilled(MarkdownTables.ObjectDataMarkdownTable) Then
+					ContinueFlag = False;
+				EndIf;
+				If ContinueFlag And MarkdownTables.TabularSectionsDataMarkdownTables.Count() Then
+					For Each MarkdownTable In MarkdownTables.TabularSectionsDataMarkdownTables Do
+						If ValueIsFilled(MarkdownTable.Value) Then
+							ContinueFlag = False;
+							Break;
+						EndIf;
+					EndDo;
+				EndIf;
+				If ContinueFlag Then
+					Continue;
+				EndIf;
+				If MetadataListParentRow.Name = "Catalogs" Then
+					Scenarious.Add(ScenarioCatalog(MetadataListRow.Name, MarkdownTables, LangCode));
+				ElsIf MetadataListParentRow.Name = "Documents" Then
+					Scenarious.Add(ScenarioDocument(MetadataListRow.Name, MarkdownTables, LangCode));
+				ElsIf MetadataListParentRow.Name = "ChartsOfCharacteristicTypes" Then
+					Scenarious.Add(ScenarioChartOfCharacteristicTypes(MetadataListRow.Name, MarkdownTables, LangCode));
+				ElsIf MetadataListParentRow.Name = "InformationRegisters" Then
+					Scenarious.Add(ScenarioInformationRegister(MetadataListRow.Name, MarkdownTables, LangCode));
+				ElsIf MetadataListParentRow.Name = "AccumulationRegisters" Then
+					Scenarious.Add(ScenarioAccumulationRegister(MetadataListRow.Name, MarkdownTables, LangCode));
+				Else
+					Scenarious.Add("");
+				EndIf;
 			EndIf;
 		EndDo;
 	EndDo;
 	
-	ReturnValue.Add(FeatureTitle());
+	ReturnValue.Add(FeatureTitle(LangCode));
 	For Each Scenario In Scenarious Do
 		ReturnValue.Add(Scenario);
 	EndDo;
@@ -1031,15 +1151,15 @@ Function GeneratedFeatureFile()
 EndFunction
 
 &AtServerNoContext
-Function FeatureTitle()
+Function FeatureTitle(LangCode)
 	TitleString = New Array;
-	TitleString.Add("#language: en");
-	TitleString.Add("@tree");
+	TitleString.Add(LocalizedStringsServer()["s9a_" + LangCode]);
+	TitleString.Add(LocalizedStringsServer()["s9b_" + LangCode]);
 	TitleString.Add("");
-	TitleString.Add("Feature: export scenarios");
+	TitleString.Add(LocalizedStringsServer()["s9c_" + LangCode]);
 	TitleString.Add("");
-	TitleString.Add("Background:");
-	TitleString.Add(Chars.Tab + "Given I launch TestClient opening script or connect the existing one");
+	TitleString.Add(LocalizedStringsServer()["s9d_" + LangCode]);
+	TitleString.Add(Chars.Tab + LocalizedStringsServer()["s9e_" + LangCode]);
 	TitleString.Add("");
 	Return StrConcat(TitleString, Chars.LF);
 EndFunction
@@ -1049,22 +1169,23 @@ EndFunction
 #Region Scenario_Catalog
 
 &AtServerNoContext
-Function ScenarioCatalog(MetadataName, MarkdownTables)
+Function ScenarioCatalog(MetadataName, MarkdownTables, LangCode)
 	Scenario = New Array;	
-	Scenario.Add(StrTemplate("Scenario: Create catalog %1 objects", MetadataName));
+	Scenario.Add(StrTemplate(LocalizedStringsServer()["s2e_" + LangCode], MetadataName));
 	Scenario.Add("");
-	Scenario.Add(Chars.Tab + StrTemplate(ScenarioCatalogActionString(), """" + MetadataName + """", Chars.LF, MarkdownTables.ObjectDataMarkdownTable));
+	Scenario.Add(Chars.Tab + StrTemplate(ScenarioCatalogActionString(LangCode), """" + MetadataName + """", Chars.LF, MarkdownTables.ObjectDataMarkdownTable));
 	For Each DataValue In MarkdownTables.TabularSectionsDataMarkdownTables Do
 		Scenario.Add("");
-		Scenario.Add(Chars.Tab + StrTemplate(ScenarioTabularSectionActionString(), """" + DataValue.Key + """", Chars.LF, DataValue.Value));
+		Scenario.Add(Chars.Tab + StrTemplate(ScenarioTabularSectionActionString(LangCode), """" + DataValue.Key + """", Chars.LF, DataValue.Value));
 	EndDo;
 	Scenario.Add("");
 	Return StrConcat(Scenario, Chars.LF);
 EndFunction
 
 &AtServerNoContext
-Function ScenarioCatalogActionString()
-	Return "And I check or create catalog %1 objects:%2%3";
+Function ScenarioCatalogActionString(LangCode)
+	ReturnValue = LocalizedStringsServer()["s2c_" + LangCode];
+	Return ReturnValue;
 EndFunction
 
 #EndRegion
@@ -1072,22 +1193,23 @@ EndFunction
 #Region Scenario_Document
 
 &AtServerNoContext
-Function ScenarioDocument(MetadataName, MarkdownTables)
+Function ScenarioDocument(MetadataName, MarkdownTables, LangCode)
 	Scenario = New Array;	
-	Scenario.Add(StrTemplate("Scenario: Create document %1 objects", MetadataName));
+	Scenario.Add(StrTemplate(LocalizedStringsServer()["s3e_" + LangCode], MetadataName));
 	Scenario.Add("");
-	Scenario.Add(Chars.Tab + StrTemplate(ScenarioDocumentActionString(), """" + MetadataName + """", Chars.LF, MarkdownTables.ObjectDataMarkdownTable));
+	Scenario.Add(Chars.Tab + StrTemplate(ScenarioDocumentActionString(LangCode), """" + MetadataName + """", Chars.LF, MarkdownTables.ObjectDataMarkdownTable));
 	For Each DataValue In MarkdownTables.TabularSectionsDataMarkdownTables Do
 		Scenario.Add("");
-		Scenario.Add(Chars.Tab + StrTemplate(ScenarioTabularSectionActionString(), """" + DataValue.Key + """", Chars.LF, DataValue.Value));
+		Scenario.Add(Chars.Tab + StrTemplate(ScenarioTabularSectionActionString(LangCode), """" + DataValue.Key + """", Chars.LF, DataValue.Value));
 	EndDo;
 	Scenario.Add("");
 	Return StrConcat(Scenario, Chars.LF);
 EndFunction
 
 &AtServerNoContext
-Function ScenarioDocumentActionString()
-	Return "And I check or create document %1 objects:%2%3";
+Function ScenarioDocumentActionString(LangCode)
+	ReturnValue = LocalizedStringsServer()["s3c_" + LangCode];
+	Return ReturnValue;
 EndFunction
 
 #EndRegion
@@ -1095,22 +1217,23 @@ EndFunction
 #Region Scenario_ChartOfCharacteristicTypes
 
 &AtServerNoContext
-Function ScenarioChartOfCharacteristicTypes(MetadataName, MarkdownTables)
+Function ScenarioChartOfCharacteristicTypes(MetadataName, MarkdownTables, LangCode)
 	Scenario = New Array;	
-	Scenario.Add(StrTemplate("Scenario: Create chart of characteristic types %1 objects", MetadataName));
+	Scenario.Add(StrTemplate(LocalizedStringsServer()["s4e_" + LangCode], MetadataName));
 	Scenario.Add("");
-	Scenario.Add(Chars.Tab + StrTemplate(ScenarioChartOfCharacteristicTypesActionString(), """" + MetadataName + """", Chars.LF, MarkdownTables.ObjectDataMarkdownTable));
+	Scenario.Add(Chars.Tab + StrTemplate(ScenarioChartOfCharacteristicTypesActionString(LangCode), """" + MetadataName + """", Chars.LF, MarkdownTables.ObjectDataMarkdownTable));
 	For Each DataValue In MarkdownTables.TabularSectionsDataMarkdownTables Do
 		Scenario.Add("");
-		Scenario.Add(Chars.Tab + StrTemplate(ScenarioTabularSectionActionString(), """" + DataValue.Key + """", Chars.LF, DataValue.Value));
+		Scenario.Add(Chars.Tab + StrTemplate(ScenarioTabularSectionActionString(LangCode), """" + DataValue.Key + """", Chars.LF, DataValue.Value));
 	EndDo;
 	Scenario.Add("");
 	Return StrConcat(Scenario, Chars.LF);
 EndFunction
 
 &AtServerNoContext
-Function ScenarioChartOfCharacteristicTypesActionString()
-	Return "And I check or create chart of characteristic types %1 objects:%2%3";
+Function ScenarioChartOfCharacteristicTypesActionString(LangCode)
+	ReturnValue = LocalizedStringsServer()["s4c_" + LangCode];
+	Return ReturnValue;
 EndFunction
 
 #EndRegion
@@ -1118,8 +1241,9 @@ EndFunction
 #Region Scenario_TabularSection
 
 &AtServerNoContext
-Function ScenarioTabularSectionActionString()
-	Return "And I refill object tabular section %1:%2%3";
+Function ScenarioTabularSectionActionString(LangCode)
+	ReturnValue = LocalizedStringsServer()["s7c_" + LangCode];
+	Return ReturnValue;
 EndFunction
 
 #EndRegion
@@ -1127,18 +1251,19 @@ EndFunction
 #Region Scenario_InformationRegister
 
 &AtServerNoContext
-Function ScenarioInformationRegister(MetadataName, MarkdownTables)
-	Scenario = New Array;	
-	Scenario.Add(StrTemplate("Scenario: Create information register %1 records", MetadataName));
+Function ScenarioInformationRegister(MetadataName, MarkdownTables, LangCode)
+	Scenario = New Array;
+	Scenario.Add(StrTemplate(LocalizedStringsServer()["s5e_" + LangCode], MetadataName));
 	Scenario.Add("");
-	Scenario.Add(Chars.Tab + StrTemplate(ScenarioInformationRegisterActionString(), """" + MetadataName + """", Chars.LF, MarkdownTables.ObjectDataMarkdownTable));
+	Scenario.Add(Chars.Tab + StrTemplate(ScenarioInformationRegisterActionString(LangCode), """" + MetadataName + """", Chars.LF, MarkdownTables.ObjectDataMarkdownTable));
 	Scenario.Add("");
 	Return StrConcat(Scenario, Chars.LF);
 EndFunction
 
 &AtServerNoContext
-Function ScenarioInformationRegisterActionString()
-	Return "And I check or create information register %1 records:%2%3";
+Function ScenarioInformationRegisterActionString(LangCode)
+	ReturnValue = LocalizedStringsServer()["s5c_" + LangCode];
+	Return ReturnValue;
 EndFunction
 
 #EndRegion
@@ -1146,18 +1271,39 @@ EndFunction
 #Region Scenario_AccumulationRegister
 
 &AtServerNoContext
-Function ScenarioAccumulationRegister(MetadataName, MarkdownTables)
-	Scenario = New Array;	
-	Scenario.Add(StrTemplate("Scenario: Create accumulation register %1 records", MetadataName));
+Function ScenarioAccumulationRegister(MetadataName, MarkdownTables, LangCode)
+	Scenario = New Array;
+	Scenario.Add(StrTemplate(LocalizedStringsServer()["s6e_" + LangCode], MetadataName));
 	Scenario.Add("");
-	Scenario.Add(Chars.Tab + StrTemplate(ScenarioAccumulationRegisterActionString(), """" + MetadataName + """", Chars.LF, MarkdownTables.ObjectDataMarkdownTable));
+	Scenario.Add(Chars.Tab + StrTemplate(ScenarioAccumulationRegisterActionString(LangCode), """" + MetadataName + """", Chars.LF, MarkdownTables.ObjectDataMarkdownTable));
 	Scenario.Add("");
 	Return StrConcat(Scenario, Chars.LF);
 EndFunction
 
 &AtServerNoContext
-Function ScenarioAccumulationRegisterActionString()
-	Return "And I check or create accumulation register %1 records:%2%3";
+Function ScenarioAccumulationRegisterActionString(LangCode)
+	ReturnValue = LocalizedStringsServer()["s6c_" + LangCode];
+	Return ReturnValue;
+EndFunction
+
+#EndRegion
+
+#Region Scenario_Constant
+
+&AtServerNoContext
+Function ScenarioConstant(MetadataName, MarkdownConstantValue, LangCode)
+	Scenario = New Array;	
+	Scenario.Add(StrTemplate(LocalizedStringsServer()["s10e_" + LangCode], MetadataName));
+	Scenario.Add("");
+	Scenario.Add(Chars.Tab + StrTemplate(ScenarioConstantActionString(LangCode), """" + MetadataName + """", MarkdownConstantValue));
+	Scenario.Add("");
+	Return StrConcat(Scenario, Chars.LF);
+EndFunction
+
+&AtServerNoContext
+Function ScenarioConstantActionString(LangCode)
+	ReturnValue = LocalizedStringsServer()["s10c_" + LangCode];
+	Return ReturnValue;
 EndFunction
 
 #EndRegion
@@ -1358,27 +1504,69 @@ EndProcedure
 
 &AtServerNoContext
 Procedure TransformStandardRussianAttributeName(AttributeName)
-	NamesMap = New Map;
-	NamesMap.Insert("Ссылка",						"Ref");
-	NamesMap.Insert("Код",							"Code");
-	NamesMap.Insert("Наименование",					"Description");
-	NamesMap.Insert("Владелец",						"Owner");
-	NamesMap.Insert("Родитель",						"Parent");
-	NamesMap.Insert("ЭтоГруппа",					"IsFolder");
-	NamesMap.Insert("ПометкаУдаления",				"DeletionMark");
-	NamesMap.Insert("Предопределенный",				"Predefined");
-	NamesMap.Insert("ИмяПредопределенныхДанных",	"PredefinedDataName");
-	NamesMap.Insert("Номер",						"Number");
-	NamesMap.Insert("Дата",							"Date");
-	NamesMap.Insert("Проведен",						"Posted");
-	NamesMap.Insert("Регистратор",					"Recorder");
-	NamesMap.Insert("ВидДвижения",					"RecordType");
-	NamesMap.Insert("НомерСтроки",					"LineNumber");
-	FoundName = NamesMap.Get(AttributeName);
+	Str = New Map;
+	Str.Insert("ИмяПредопределенныхДанных", "PredefinedDataName");
+	Str.Insert("Код", "Code");
+	Str.Insert("Наименование", "Description");
+	Str.Insert("ПометкаУдаления", "DeletionMark");
+	Str.Insert("Предопределенный", "Predefined");
+	Str.Insert("Ссылка", "Ref");
+	Str.Insert("ВидДвижения", "RecordType");
+	Str.Insert("Активность", "Active");
+	Str.Insert("НомерСтроки", "LineNumber");
+	Str.Insert("Регистратор", "Recorder");
+	Str.Insert("Период", "Period");
+	Str.Insert("ТипЗначения", "ValueType");
+	Str.Insert("ЭтоГруппа", "IsFolder");
+	Str.Insert("Родитель", "Parent");
+	Str.Insert("Порядок", "Order");
+	Str.Insert("ВидыСубконто", "ExtDimensionTypes");
+	Str.Insert("ТолькоОбороты", "TurnoversOnly");
+	Str.Insert("ВидСубконто", "ExtDimensionType");
+	Str.Insert("Забалансовый", "OffBalance");
+	Str.Insert("Вид", "Type");
+	Str.Insert("Владелец", "Owner");
+	Str.Insert("ВедущиеВидыРасчета", "LeadingCalculationTypes");
+	Str.Insert("ВидРасчета", "CalculationType");
+	Str.Insert("ВытесняющиеВидыРасчета", "DisplacingCalculationTypes");
+	Str.Insert("БазовыеВидыРасчета", "BaseCalculationTypes");
+	Str.Insert("ПериодДействияБазовый", "ActionPeriodIsBasic");
+	Str.Insert("Проведен", "Posted");
+	Str.Insert("Дата", "Date");
+	Str.Insert("Номер", "Number");
+	Str.Insert("ПериодРегистрации", "RegistrationPeriod");
+	Str.Insert("Сторно", "ReversingEntry");
+	Str.Insert("БазовыйПериодКонец", "EndOfBasePeriod");
+	Str.Insert("БазовыйПериодНачало", "BegOfBasePeriod");
+	Str.Insert("ПериодДействияКонец", "EndOfActionPeriod");
+	Str.Insert("ПериодДействияНачало", "BegOfActionPeriod");
+	Str.Insert("ПериодДействия", "ActionPeriod");
+	Str.Insert("ЭтотУзел", "ThisNode");
+	Str.Insert("НомерПринятого", "ReceivedNo");
+	Str.Insert("НомерОтправленного", "SentNo");
+	Str.Insert("Стартован", "Started");
+	Str.Insert("ВедущаяЗадача", "HeadTask");
+	Str.Insert("Завершен", "Completed");
+	Str.Insert("Выполнена", "Executed");
+	Str.Insert("ТочкаМаршрута", "RoutePoint");
+	Str.Insert("БизнесПроцесс", "BusinessProcess");
+	Str.Insert("Счет", "Account");
+	Str.Insert("ПериодДействияБазовый", "ActionPeriodIsBasic");
+	FoundName = Str.Get(AttributeName);
 	If Not FoundName = Undefined Then
 		AttributeName = FoundName;
 	EndIf;
 EndProcedure
+
+#EndRegion
+
+#Region ConstantValue
+
+&AtServerNoContext
+Function GetMarkdownConstantValue(Val MetadataObjectName)
+	DataValue = Constants[MetadataObjectName].Get();
+	Return GeValuetStringRepresentation(DataValue);
+EndFunction
 
 #EndRegion
 
@@ -1398,6 +1586,133 @@ Function RL()
 	ReturnData.Insert("s5", "Information registers");
 	ReturnData.Insert("s6", "Accumulation registers");
 	Return ReturnData;	
+EndFunction
+
+&AtClient
+Function LocalizedStringsClient()
+	Return LocalizedStringFromServer;
+EndFunction
+
+&AtServerNoContext
+Function LocalizedStringsServer()
+	ReturnData = New Structure();
+	ReturnData.Insert("s1a_en", "IRunDatabaseClean()");
+	ReturnData.Insert("s1a_ru", "ЯЗапускаюОчисткуБазыДанных()");
+	ReturnData.Insert("s1b_en", "IRunDatabaseClean");
+	ReturnData.Insert("s1b_ru", "ЯЗапускаюОчисткуБазыДанных");
+	ReturnData.Insert("s1c_en", "And I run database clean");
+	ReturnData.Insert("s1c_ru", "Я запускаю очистку базы данных");
+	ReturnData.Insert("s1d_en", "Cleans the database");
+	ReturnData.Insert("s1d_ru", "Очищает базу данных");
+	
+	ReturnData.Insert("s2a_en", "ICheckOrCreateCatalogObjects(ObjectName, Values)");
+	ReturnData.Insert("s2a_ru", "ЯПроверяюИлиСоздаюДляСправочникаОбъекты(ИмяОбъекта, Значения)");
+	ReturnData.Insert("s2b_en", "ICheckOrCreateCatalogObjects");
+	ReturnData.Insert("s2b_ru", "ЯПроверяюИлиСоздаюДляСправочникаОбъекты");
+	ReturnData.Insert("s2c_en", "And I check or create catalog %1 objects:%2%3");
+	ReturnData.Insert("s2c_ru", "И я проверяю или создаю для справочника %1 объекты:%2%3");
+	ReturnData.Insert("s2d_en", """ObjectName""");
+	ReturnData.Insert("s2d_ru", """ИмяОбъекта""");
+	ReturnData.Insert("s2e_en", "Scenario: Create catalog %1 objects");
+	ReturnData.Insert("s2e_ru", "Сценарий: Создание объектов для справочника %1");
+	ReturnData.Insert("s2f_en", "Creates catalog items and groups");
+	ReturnData.Insert("s2f_ru", "Создаёт элементы и группы справочника");
+	
+	ReturnData.Insert("s3a_en", "ICheckOrCreateDocumentObjects(ObjectName, Values)");
+	ReturnData.Insert("s3a_ru", "ЯПроверяюИлиСоздаюДляДокументаОбъекты(ИмяОбъекта, Значения)");
+	ReturnData.Insert("s3b_en", "ICheckOrCreateDocumentObjects");
+	ReturnData.Insert("s3b_ru", "ЯПроверяюИлиСоздаюДляДокументаОбъекты");
+	ReturnData.Insert("s3c_en", "And I check or create document %1 objects:%2%3");
+	ReturnData.Insert("s3c_ru", "И я проверяю или создаю для документа %1 объекты:%2%3");
+	ReturnData.Insert("s3d_en", """ObjectName""");
+	ReturnData.Insert("s3d_ru", """ИмяОбъекта""");
+	ReturnData.Insert("s3e_en", "Scenario: Create document %1 objects");
+	ReturnData.Insert("s3e_ru", "Сценарий: Создание объектов для документа %1");
+	ReturnData.Insert("s3f_en", "Creates documents");
+	ReturnData.Insert("s3f_ru", "Создаёт документы");
+	
+	ReturnData.Insert("s4a_en", "ICheckOrCreateChartOfCharacteristicTypesObjects(ObjectName, Values)");
+	ReturnData.Insert("s4a_ru", "ЯПроверяюИлиСоздаюДляПланаВидовХарактеристикОбъекты(ИмяОбъекта, Значения)");
+	ReturnData.Insert("s4b_en", "ICheckOrCreateChartOfCharacteristicTypesObjects");
+	ReturnData.Insert("s4b_ru", "ЯПроверяюИлиСоздаюДляПланаВидовХарактеристикОбъекты");
+	ReturnData.Insert("s4c_en", "And I check or create chart of characteristic types %1 objects:%2%3");
+	ReturnData.Insert("s4c_ru", "И я проверяю или создаю для плана видов характеристик %1 объекты:%2%3");
+	ReturnData.Insert("s4d_en", """ObjectName""");
+	ReturnData.Insert("s4d_ru", """ИмяОбъекта""");
+	ReturnData.Insert("s4e_en", "Scenario: Create chart of characteristic types %1 objects");
+	ReturnData.Insert("s4e_ru", "Сценарий: Создание объектов для плана видов характеристик %1");
+	ReturnData.Insert("s4f_en", "Creates chart of characteristic items");
+	ReturnData.Insert("s4f_ru", "Создаёт элементы плана видов характеристик");
+	
+	ReturnData.Insert("s5a_en", "ICheckOrCreateInformationRegisterRecords(RegisterName, Values)");
+	ReturnData.Insert("s5a_ru", "ЯПроверяюИлиСоздаюДляРегистраСведенийЗаписи(ИмяРегистра, Значения)");
+	ReturnData.Insert("s5b_en", "ICheckOrCreateInformationRegisterRecords");
+	ReturnData.Insert("s5b_ru", "ЯПроверяюИлиСоздаюДляРегистраСведенийЗаписи");
+	ReturnData.Insert("s5c_en", "And I check or create information register %1 records:%2%3");
+	ReturnData.Insert("s5c_ru", "И я проверяю или создаю для регистра сведений %1 записи:%2%3");
+	ReturnData.Insert("s5d_en", """RegisterName""");
+	ReturnData.Insert("s5d_ru", """ИмяРегистра""");
+	ReturnData.Insert("s5e_en", "Scenario: Create information register %1 records");
+	ReturnData.Insert("s5e_ru", "Сценарий: Создание записей для регистра сведений %1");
+	ReturnData.Insert("s5f_en", "Creates information register records");
+	ReturnData.Insert("s5f_ru", "Создаёт записи регистра сведений");
+	
+	ReturnData.Insert("s6a_en", "ICheckOrCreateAccumulationRegisterRecords(RegisterName, Values)");
+	ReturnData.Insert("s6a_ru", "ЯПроверяюИлиСоздаюДляРегистраНакопленийЗаписи(ИмяРегистра, Значения)");
+	ReturnData.Insert("s6b_en", "ICheckOrCreateAccumulationRegisterRecords");
+	ReturnData.Insert("s6b_ru", "ЯПроверяюИлиСоздаюДляРегистраНакопленийЗаписи");
+	ReturnData.Insert("s6c_en", "And I check or create accumulation register %1 records:%2%3");
+	ReturnData.Insert("s6c_ru", "И я проверяю или создаю для регистра накоплений %1 записи:%2%3");
+	ReturnData.Insert("s6d_en", """RegisterName""");
+	ReturnData.Insert("s6d_ru", """ИмяРегистра""");
+	ReturnData.Insert("s6e_en", "Scenario: Create accumulation register %1 records");
+	ReturnData.Insert("s6e_ru", "Сценарий: Создание записей для регистра накоплений %1");
+	ReturnData.Insert("s6f_en", "Creates accumulation register records");
+	ReturnData.Insert("s6f_ru", "Создаёт записи регистра накопления");
+	
+	ReturnData.Insert("s7a_en", "IRefillObjectTabularSection(TabularSectionName, Values)");
+	ReturnData.Insert("s7a_ru", "ЯПерезаполняюДляОбъектаТабличнуюЧасть(ИмяТабличнойЧасти, Значения)");
+	ReturnData.Insert("s7b_en", "IRefillObjectTabularSection");
+	ReturnData.Insert("s7b_ru", "ЯПерезаполняюДляОбъектаТабличнуюЧасть");
+	ReturnData.Insert("s7c_en", "And I refill object tabular section %1:%2%3");
+	ReturnData.Insert("s7c_ru", "И я перезаполняю для объекта табличную часть %1:%2%3");
+	ReturnData.Insert("s7d_en", "Refills object tabular section");
+	ReturnData.Insert("s7d_ru", "Перезаполняет табличную часть объекта");
+	
+	ReturnData.Insert("s8a_en", "IExecuteCodeAndPutToVarible(Code, VaribleName)");
+	ReturnData.Insert("s8a_ru", "ЯВыполняюКодИВставляюВПеременную(Код, ИмяПеременной)");
+	ReturnData.Insert("s8b_en", "IExecuteCodeAndPutToVarible");
+	ReturnData.Insert("s8b_ru", "ЯВыполняюКодИВставляюВПеременную");
+	ReturnData.Insert("s8c_en", "And I execute code and put to varible ""Code"" ""VaribleName""");
+	ReturnData.Insert("s8c_ru", "И я выполняю код и вставляю в переменную ""Код"" ""ИмяПеременной""");
+	ReturnData.Insert("s8d_en", "Executes code and puts to varible");
+	ReturnData.Insert("s8d_ru", "Выполняет код и вставляет в переменную");
+	
+	ReturnData.Insert("s9a_en", "#language: en");
+	ReturnData.Insert("s9a_ru", "#language: ru");
+	ReturnData.Insert("s9b_en", "@tree");
+	ReturnData.Insert("s9b_ru", "@дерево");
+	ReturnData.Insert("s9c_en", "Feature: export scenarios");
+	ReturnData.Insert("s9c_ru", "Функционал: экспорт сценариев");
+	ReturnData.Insert("s9d_en", "Background:");
+	ReturnData.Insert("s9d_ru", "Контекст:");
+	ReturnData.Insert("s9e_en", "Given I launch TestClient opening script or connect the existing one");
+	ReturnData.Insert("s9e_ru", "Дано Я запускаю сценарий открытия TestClient или подключаю уже существующий");
+	
+	ReturnData.Insert("s10a_en", "IRefillConstant(ConstantName, ConstantValue)");
+	ReturnData.Insert("s10a_ru", "ЯПерезаполняюКонстанту(ИмяКонстанты, ЗначениеКонстанты)");
+	ReturnData.Insert("s10b_en", "IRefillConstant");
+	ReturnData.Insert("s10b_ru", "ЯПерезаполняюКонстанту");
+	ReturnData.Insert("s10c_en", "And I refill constant %1 by ""%2""");
+	ReturnData.Insert("s10c_ru", "И я перезаполняю константу %1 значением ""%2""");
+	ReturnData.Insert("s10d_en", """ConstantName""");
+	ReturnData.Insert("s10d_ru", """ИмяКонстанты""");
+	ReturnData.Insert("s10e_en", "Scenario: Refill constant %1 value");
+	ReturnData.Insert("s10e_ru", "Сценарий: Перезаполнение константы %1 значением");
+	ReturnData.Insert("s10f_en", "Refill constant");
+	ReturnData.Insert("s10f_ru", "Перезаполняет константу");
+	
+	Return ReturnData;
 EndFunction
 
 #EndRegion
