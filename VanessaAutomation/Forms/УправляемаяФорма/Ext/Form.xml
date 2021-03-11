@@ -16364,14 +16364,14 @@ If the field is empty, the log will not be output to a text file.</v8:content>
 																					<ContextMenu name="ДанныеАллюрМетокКонтекстноеМеню" id="1986"/>
 																					<AutoCommandBar name="ДанныеАллюрМетокКоманднаяПанель" id="1987"/>
 																					<ExtendedTooltip name="ДанныеАллюрМетокРасширеннаяПодсказка" id="1988">
-																						<Title formatted="false">
+																						<Title formatted="true">
 																							<v8:item>
 																								<v8:lang>ru</v8:lang>
-																								<v8:content>В таблице указываются метки Allure.</v8:content>
-																							</v8:item>
-																							<v8:item>
-																								<v8:lang>en</v8:lang>
-																								<v8:content>The table contains Allure markdowns.</v8:content>
+																								<v8:content>Таблица используется для установки соответствия тегов сценариев меткам аллюра.
+Если в  строке таблицы указано регулярное выражение, то к каждому тегу сценария применяется регулярное выражение из данной таблицы и если тег ему соответствует, то к отчету будет добавлена метка в формате ИмяМетки:Значение.
+Если в строке таблицы регулярное выражение не указано, то метка добавляется безусловно.
+
+Подробнее зачем это может быть нужно можно прочитать &lt;link https://habr.com/ru/company/sberbank/blog/359302/&gt;тут&lt;/&gt;.</v8:content>
 																							</v8:item>
 																						</Title>
 																					</ExtendedTooltip>
@@ -28650,7 +28650,7 @@ SikuliX emulates mouse clicks.</v8:content>
 					</dcscor:item>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>Шрифт</dcscor:parameter>
-						<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+						<dcscor:value xsi:type="v8ui:Font" ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 					</dcscor:item>
 				</dcsset:appearance>
 			</dcsset:item>
