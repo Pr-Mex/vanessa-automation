@@ -1615,6 +1615,11 @@
 												<CommandName>Form.Command.ЗагрузитьНастройкиИзФайла</CommandName>
 												<ExtendedTooltip name="VanessaEditorЗагрузитьНастройкиИзФайлаРасширеннаяПодсказка" id="2729"/>
 											</Button>
+											<Button name="VanessaEditorСравнитьТекущиеНастройкиСФайлом" id="2936">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.СравнитьТекущиеНастройкиСФайлом</CommandName>
+												<ExtendedTooltip name="VanessaEditorСравнитьТекущиеНастройкиСФайломРасширеннаяПодсказка" id="2937"/>
+											</Button>
 										</ChildItems>
 									</ButtonGroup>
 									<Button name="VanessaEditorИспользоватьДанныеТекущейФормыПриПодбореШагов" id="2554">
@@ -23782,6 +23787,87 @@ SikuliX emulates mouse clicks.</v8:content>
 														<Event name="OnChange">ПроверкаСинтаксисаВРедактореПриИзменении</Event>
 													</Events>
 												</CheckBoxField>
+												<InputField name="ОтображениеТабуляцииИПробелов" id="2938">
+													<DataPath>Объект.ОтображениеТабуляцииИПробелов</DataPath>
+													<DropListButton>true</DropListButton>
+													<ListChoiceMode>true</ListChoiceMode>
+													<ChooseType>false</ChooseType>
+													<ChoiceList>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Выделение</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Selection</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">0</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Нет</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>None</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">1</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Граница</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Boundary</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">2</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Все</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>All</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">3</Value>
+															</xr:Value>
+														</xr:Item>
+													</ChoiceList>
+													<ContextMenu name="ОтображениеТабуляцииИПробеловКонтекстноеМеню" id="2939"/>
+													<ExtendedTooltip name="ОтображениеТабуляцииИПробеловРасширеннаяПодсказка" id="2940"/>
+													<Events>
+														<Event name="OnChange">ОтображениеТабуляцииИПробеловПриИзменении</Event>
+													</Events>
+												</InputField>
 												<InputField name="ТемаРедактораVanessaEditor" id="2413">
 													<DataPath>Объект.ТемаРедактораVanessaEditor</DataPath>
 													<Title>
@@ -35593,6 +35679,25 @@ SikuliX emulates mouse clicks.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ОткрытьИнструментПодготовкаИЗагрузкаДанных</Action>
+		</Command>
+		<Command name="СравнитьТекущиеНастройкиСФайлом" id="145">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сравнить текущие настройки с файлом</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Compare current settings with file</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сравнить текущие настройки с файлом</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СравнитьТекущиеНастройкиСФайлом</Action>
 		</Command>
 	</Commands>
 </Form>
