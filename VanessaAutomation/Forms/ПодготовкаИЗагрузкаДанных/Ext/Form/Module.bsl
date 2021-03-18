@@ -523,17 +523,17 @@ Procedure ICheckOrCreateAccumulationRegisterRecordsAtServer(RegisterName, Values
 EndProcedure
 
 &AtClient
-Procedure IRefillConstant(Val ConstantName, Val ConstantValue) Export
-	IRefillConstantAtServer(ConstantName, ConstantValue);
+Procedure IRefillConstantByValue(Val ConstantName, Val ConstantValue) Export
+	IRefillConstantByValueAtServer(ConstantName, ConstantValue);
 EndProcedure
 
 &AtClient
-Procedure ЯПерезаполняюКонстанту(Val ИмяКонстанты, Val ЗначениеКонстанты) Export
-	IRefillConstant(ИмяКонстанты, ЗначениеКонстанты);
+Procedure ЯПерезаполняюКонстантуЗначением(Val ИмяКонстанты, Val ЗначениеКонстанты) Export
+	IRefillConstantByValue(ИмяКонстанты, ЗначениеКонстанты);
 EndProcedure
 
 &AtServerNoContext
-Procedure IRefillConstantAtServer(ConstantName, ConstantValue)
+Procedure IRefillConstantByValueAtServer(ConstantName, ConstantValue)
 	ConstantData = New Structure;
 	ConstantData.Insert("Name", ConstantName);
 	ConstantData.Insert("ValueType", Metadata.Constants[ConstantName].Type);
@@ -1060,8 +1060,8 @@ Procedure AddStepsByLanguage(Vanessa, AllTests, LangCode)
 	Vanessa.ДобавитьШагВМассивТестов(AllTests
 										, LocalizedStringsClient()["s7a_" + LangCode]
 										, LocalizedStringsClient()["s7b_" + LangCode]
-										, StrTemplate(ScenarioTabularSectionActionString(LangCode), LocalizedStringsClient()["s7c_" + LangCode], "", "")
-										, LocalizedStringsClient()["s7d_" + LangCode]
+										, StrTemplate(ScenarioTabularSectionActionString(LangCode), LocalizedStringsClient()["s7d_" + LangCode], "", "")
+										, LocalizedStringsClient()["s7e_" + LangCode]
 										, "");
 	Vanessa.ДобавитьШагВМассивТестов(AllTests
 										, LocalizedStringsClient()["s8a_" + LangCode]
@@ -1676,8 +1676,10 @@ Function LocalizedStringsServer()
 	ReturnData.Insert("s7b_ru", "ЯПерезаполняюДляОбъектаТабличнуюЧасть");
 	ReturnData.Insert("s7c_en", "And I refill object tabular section %1:%2%3");
 	ReturnData.Insert("s7c_ru", "И я перезаполняю для объекта табличную часть %1:%2%3");
-	ReturnData.Insert("s7d_en", "Refills object tabular section");
-	ReturnData.Insert("s7d_ru", "Перезаполняет табличную часть объекта");
+	ReturnData.Insert("s7d_en", """TabularSectionName""");
+	ReturnData.Insert("s7d_ru", """ИмяТабличнойЧасти""");
+	ReturnData.Insert("s7e_en", "Refills object tabular section");
+	ReturnData.Insert("s7e_ru", "Перезаполняет табличную часть объекта");
 	
 	ReturnData.Insert("s8a_en", "IExecuteCodeAndPutToVarible(Code, VaribleName)");
 	ReturnData.Insert("s8a_ru", "ЯВыполняюКодИВставляюВПеременную(Код, ИмяПеременной)");
@@ -1699,15 +1701,15 @@ Function LocalizedStringsServer()
 	ReturnData.Insert("s9e_en", "Given I launch TestClient opening script or connect the existing one");
 	ReturnData.Insert("s9e_ru", "Дано Я запускаю сценарий открытия TestClient или подключаю уже существующий");
 	
-	ReturnData.Insert("s10a_en", "IRefillConstant(ConstantName, ConstantValue)");
-	ReturnData.Insert("s10a_ru", "ЯПерезаполняюКонстанту(ИмяКонстанты, ЗначениеКонстанты)");
-	ReturnData.Insert("s10b_en", "IRefillConstant");
-	ReturnData.Insert("s10b_ru", "ЯПерезаполняюКонстанту");
-	ReturnData.Insert("s10c_en", "And I refill constant %1 by ""%2""");
+	ReturnData.Insert("s10a_en", "IRefillConstantByValue(ConstantName, ConstantValue)");
+	ReturnData.Insert("s10a_ru", "ЯПерезаполняюКонстантуЗначением(ИмяКонстанты, ЗначениеКонстанты)");
+	ReturnData.Insert("s10b_en", "IRefillConstantByValue");
+	ReturnData.Insert("s10b_ru", "ЯПерезаполняюКонстантуЗначением");
+	ReturnData.Insert("s10c_en", "And I refill constant %1 by value ""%2""");
 	ReturnData.Insert("s10c_ru", "И я перезаполняю константу %1 значением ""%2""");
 	ReturnData.Insert("s10d_en", """ConstantName""");
 	ReturnData.Insert("s10d_ru", """ИмяКонстанты""");
-	ReturnData.Insert("s10e_en", "Scenario: Refill constant %1 value");
+	ReturnData.Insert("s10e_en", "Scenario: Refill constant %1 by value");
 	ReturnData.Insert("s10e_ru", "Сценарий: Перезаполнение константы %1 значением");
 	ReturnData.Insert("s10f_en", "Refill constant");
 	ReturnData.Insert("s10f_ru", "Перезаполняет константу");
