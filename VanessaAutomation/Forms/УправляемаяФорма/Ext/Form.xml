@@ -18677,13 +18677,13 @@ Also use special instructions in the script, see Help info.</v8:content>
 																			<v8:item>
 																				<v8:lang>ru</v8:lang>
 																				<v8:content>Если флаг установлен, то во время выполнения сценария будет создаваться скринкаст в формате MarkDown.
-В поле "Команда создания скриншотов" должна быть указана консольная команда для снятия скриншотов.
+В поле "Команда создания скриншотов" должна быть указана консольная команда для снятия скриншотов или установлен флаг скриншоты компонентой "VanessaExt".
 Также в тексте сценария возможно использовать специальные директивы, которые описаны в справке.</v8:content>
 																			</v8:item>
 																			<v8:item>
 																				<v8:lang>en</v8:lang>
 																				<v8:content>If the checkbox is on, MarkDown screencast will be created during scenario execution.
-Specify console command for snapshots generation in  "Snapshot creating command" field.
+Specify console command for snapshots generation in  "Snapshot creating command" field or the screenshots flag is set by the "VanessaExt" component".
 Also use special instructions in the script, see Help info.</v8:content>
 																			</v8:item>
 																		</Title>
@@ -18788,6 +18788,47 @@ Also use special instructions in the script, see Help info.</v8:content>
 																		<Event name="StartChoice">КаталогOutputИнструкцияMarkdownНачалоВыбора</Event>
 																	</Events>
 																</InputField>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="ГруппаОбщее" id="2941">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа общее</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа общее</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаОбщееРасширеннаяПодсказка" id="2942"/>
+															<ChildItems>
+																<CheckBoxField name="АвтонумерацияШагов" id="2943">
+																	<DataPath>Объект.АвтонумерацияШагов</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Автонумерация шагов инструкций</v8:content>
+																		</v8:item>
+																	</Title>
+																	<TitleLocation>Right</TitleLocation>
+																	<ToolTipRepresentation>Button</ToolTipRepresentation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="АвтонумерацияШаговКонтекстноеМеню" id="2944"/>
+																	<ExtendedTooltip name="АвтонумерацияШаговРасширеннаяПодсказка" id="2945">
+																		<Title formatted="true">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Добавляет авто нумерацию в начало текста описания шага. 
+Для того, что бы лидирующие нули не терялись при экспорте из MD формата, текст записывается в блок кода.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																</CheckBoxField>
 															</ChildItems>
 														</UsualGroup>
 													</ChildItems>
