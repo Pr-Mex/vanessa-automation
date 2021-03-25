@@ -1199,7 +1199,6 @@
 						ЗначенияПараметров                = ПараметрыДляПолученияStepDefenition.ЗначенияПараметров;
 						
 						IDИзStepDefinition     = НРег(Лев(НовыйStepDefinition,Найти(НовыйStepDefinition,"(")-1));
-						//СтрТаблицаИзвестныхStepDefinition = ТаблицаИзвестныхStepDefinition.Найти(IDИзStepDefinition,"СтрокаДляПоиска");
 						
 						ЭтоОбычныйШагОбернутыйВУсловие = Ложь;
 						СтрТаблицаИзвестныхStepDefinition = StepDefinitionИзТаблицы(IDИзStepDefinition,ТаблицаИзвестныхStepDefinition,СтруктураПараметров,ЗначенияПараметров,СтрОбласть);

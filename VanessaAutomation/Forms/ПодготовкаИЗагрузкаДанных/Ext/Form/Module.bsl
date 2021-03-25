@@ -323,6 +323,11 @@ Procedure ЯПерезаполняюДляОбъектаТабличнуюЧас
 	IRefillObjectTabularSection(ИмяТабличнойЧасти, Значения);
 EndProcedure
 
+&AtClient
+Procedure ЯВыполняюКодИВставляюВПеременную(Val Код, Val ИмяПеременной) Export
+	IExecuteCodeAndPutToVarible(Код, ИмяПеременной);
+EndProcedure
+
 &AtServerNoContext
 Procedure IRefillObjectTabularSectionAtServer(TabularSectionName, Values)	
 	ObjectValues = GetValueTableFromVanessaTableArray(Values);
@@ -599,6 +604,18 @@ Procedure SelectDependentItems(Command)
 	SelectDependentItemsAtServer();
 EndProcedure
 
+&НаКлиенте
+Procedure StepsLanguageПриИзменении(Элемент)
+	FillMetadataType();
+	Для Каждого СтрокаДерева Из MetadataList.ПолучитьЭлементы() Цикл
+		Для Каждого Элем Из MetadataType Цикл
+			Если Элем.Значение = СтрокаДерева.Name Тогда
+				СтрокаДерева.Presentation = Элем.Представление;
+			КонецЕсли;	 
+		КонецЦикла;	 
+	КонецЦикла;	 
+EndProcedure
+
 #EndRegion
 
 #Region Private
@@ -645,6 +662,9 @@ Procedure FillMetadata()
 			MetadataListRow.Use = False;
 			MetadataListRow.Name = Data.Name;
 			MetadataListRow.Presentation = Data.Synonym;
+			If IsBlankString(MetadataListRow.Presentation) Then
+				MetadataListRow.Presentation = Data.Name;
+			EndIf;	
 			MetadataListRow.FullName = MetadataTypeValueSingle(MetadataListParentRow.Name)
 										+ "."
 										+ MetadataListRow.Name;
@@ -1072,8 +1092,8 @@ Procedure AddStepsByLanguage(Vanessa, AllTests, LangCode)
 	Vanessa.ДобавитьШагВМассивТестов(AllTests
 										, LocalizedStringsClient()["s10a_" + LangCode]
 										, LocalizedStringsClient()["s10b_" + LangCode]
-										, StrTemplate(ScenarioCatalogActionString(LangCode), LocalizedStringsClient()["s10d_" + LangCode], "", "")
-										, LocalizedStringsClient()["s10d_" + LangCode]
+										, StrTemplate(ScenarioConstantActionString(LangCode), LocalizedStringsClient()["s10d_" + LangCode], LocalizedStringsClient()["s10g_" + LangCode])
+										, LocalizedStringsClient()["s10f_" + LangCode]
 										, "");
 EndProcedure
 
@@ -1579,12 +1599,21 @@ EndFunction
 &AtServer
 Function RL()
 	ReturnData = New Structure();
-	ReturnData.Insert("s1", "Constants");
-	ReturnData.Insert("s2", "Catalogs");
-	ReturnData.Insert("s3", "Documents");
-	ReturnData.Insert("s4", "Charts of characteristic types");
-	ReturnData.Insert("s5", "Information registers");
-	ReturnData.Insert("s6", "Accumulation registers");
+	If StepsLanguage = "en" Then
+		ReturnData.Insert("s1", "Constants");
+		ReturnData.Insert("s2", "Catalogs");
+		ReturnData.Insert("s3", "Documents");
+		ReturnData.Insert("s4", "Charts of characteristic types");
+		ReturnData.Insert("s5", "Information registers");
+		ReturnData.Insert("s6", "Accumulation registers");
+	Else	
+		ReturnData.Insert("s1", "Константы");
+		ReturnData.Insert("s2", "Справочники");
+		ReturnData.Insert("s3", "Документы");
+		ReturnData.Insert("s4", "Планы видов характеристик");
+		ReturnData.Insert("s5", "Регистры сведений");
+		ReturnData.Insert("s6", "Регистры накопления");
+	EndIf;	 
 	Return ReturnData;	
 EndFunction
 
@@ -1601,7 +1630,7 @@ Function LocalizedStringsServer()
 	ReturnData.Insert("s1b_en", "IRunDatabaseClean");
 	ReturnData.Insert("s1b_ru", "ЯЗапускаюОчисткуБазыДанных");
 	ReturnData.Insert("s1c_en", "And I run database clean");
-	ReturnData.Insert("s1c_ru", "Я запускаю очистку базы данных");
+	ReturnData.Insert("s1c_ru", "И Я запускаю очистку базы данных");
 	ReturnData.Insert("s1d_en", "Cleans the database");
 	ReturnData.Insert("s1d_ru", "Очищает базу данных");
 	
@@ -1713,6 +1742,8 @@ Function LocalizedStringsServer()
 	ReturnData.Insert("s10e_ru", "Сценарий: Перезаполнение константы %1 значением");
 	ReturnData.Insert("s10f_en", "Refill constant");
 	ReturnData.Insert("s10f_ru", "Перезаполняет константу");
+	ReturnData.Insert("s10g_en", "Value");
+	ReturnData.Insert("s10g_ru", "Значение");
 	
 	Return ReturnData;
 EndFunction
