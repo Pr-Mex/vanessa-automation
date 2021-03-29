@@ -1358,6 +1358,22 @@
 				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 				<ExtendedTooltip name="ФормаПроверитьДублированиеСценариевРасширеннаяПодсказка" id="2268"/>
 			</Button>
+			<Button name="ФормаРазвернутьВсеСтрокиДереваСлужебный" id="2946">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.РазвернутьВсеСтрокиДереваСлужебный</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Развернуть все строки дерева</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Expand all lines of the tree</v8:content>
+					</v8:item>
+				</Title>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаРазвернутьВсеСтрокиДереваСлужебныйРасширеннаяПодсказка" id="2947"/>
+			</Button>
 			<Button name="ФормаСправка" id="1552">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.StandardCommand.Help</CommandName>
@@ -7073,7 +7089,7 @@
 										</Button>
 									</ChildItems>
 								</UsualGroup>
-								<CheckBoxField name="ГенерироватьУФ1" id="50">
+								<CheckBoxField name="ГенерироватьУФ" id="50">
 									<DataPath>Объект.ГенерироватьУФ</DataPath>
 									<Title>
 										<v8:item>
@@ -7164,8 +7180,8 @@
 									<TitleLocation>Right</TitleLocation>
 									<ToolTipRepresentation>Button</ToolTipRepresentation>
 									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="ГенерироватьУФ1КонтекстноеМеню" id="51"/>
-									<ExtendedTooltip name="ГенерироватьУФ1РасширеннаяПодсказка" id="1291">
+									<ContextMenu name="ГенерироватьУФКонтекстноеМеню" id="51"/>
+									<ExtendedTooltip name="ГенерироватьУФРасширеннаяПодсказка" id="1291">
 										<Title formatted="false">
 											<v8:item>
 												<v8:lang>ru</v8:lang>
@@ -8029,7 +8045,18 @@
 													</Button>
 												</ChildItems>
 											</AutoCommandBar>
-											<ExtendedTooltip name="КаталогиБиблиотекРасширеннаяПодсказка" id="1297"/>
+											<ExtendedTooltip name="КаталогиБиблиотекРасширеннаяПодсказка" id="1297">
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Список каталогов, в которых находятся epf файлы, содержащие шаги для сценариев и feature файлы, содержащие экспортные сценарии.</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>List of directories that contain epf files containing script steps and feature files containing export scripts.</v8:content>
+													</v8:item>
+												</Title>
+											</ExtendedTooltip>
 											<SearchStringAddition name="КаталогиБиблиотекСтрокаПоиска" id="1298">
 												<AdditionSource>
 													<Item>КаталогиБиблиотек</Item>
@@ -8073,14 +8100,11 @@
 													</Title>
 													<ToolTip>
 														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Каталоги библиотек</v8:content>
-														</v8:item>
-														<v8:item>
 															<v8:lang>en</v8:lang>
 															<v8:content>Library catalogs</v8:content>
 														</v8:item>
 													</ToolTip>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
 													<EditMode>EnterOnInput</EditMode>
 													<ChoiceButton>true</ChoiceButton>
 													<ClearButton>true</ClearButton>
@@ -10672,6 +10696,7 @@
 											<v8:content>TestClients data</v8:content>
 										</v8:item>
 									</Title>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
 									<SearchStringLocation>None</SearchStringLocation>
 									<ViewStatusLocation>None</ViewStatusLocation>
 									<SearchControlLocation>None</SearchControlLocation>
@@ -11029,7 +11054,32 @@
 											</ButtonGroup>
 										</ChildItems>
 									</AutoCommandBar>
-									<ExtendedTooltip name="ДанныеКлиентовТестированияРасширеннаяПодсказка" id="1341"/>
+									<ExtendedTooltip name="ДанныеКлиентовТестированияРасширеннаяПодсказка" id="1341">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>A list of testing clients, which indicates:
+1. Profile name
+2. Synonym
+3. Testing client type
+4. String of connection to the base
+5. Additional launch options
+6. Computer name to establish connection
+7. Port</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Список клиентов тестирования, в котором указаны:
+1. Имя профиля
+2. Синоним
+3. Тип клиента тестирования
+4. Строка подключения к базе
+5. Дополнительные параметры запуска
+6. Имя компьютера для установления подключения
+7. Порт</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
 									<SearchStringAddition name="ДанныеКлиентовТестированияСтрокаПоиска" id="1342">
 										<AdditionSource>
 											<Item>ДанныеКлиентовТестирования</Item>
@@ -11769,7 +11819,7 @@
 													<ThroughAlign>Use</ThroughAlign>
 													<ExtendedTooltip name="РаботаСТэгамиРасширеннаяПодсказка" id="1362"/>
 													<ChildItems>
-														<InputField name="СписокТеговИсключение1" id="221">
+														<InputField name="СписокТеговИсключение" id="221">
 															<DataPath>Объект.СписокТеговИсключение</DataPath>
 															<Title>
 																<v8:item>
@@ -11858,8 +11908,8 @@
 																</v8:item>
 															</Title>
 															<ToolTipRepresentation>Button</ToolTipRepresentation>
-															<ContextMenu name="СписокТеговИсключение1КонтекстноеМеню" id="222"/>
-															<ExtendedTooltip name="СписокТеговИсключение1РасширеннаяПодсказка" id="1363">
+															<ContextMenu name="СписокТеговИсключениеКонтекстноеМеню" id="222"/>
+															<ExtendedTooltip name="СписокТеговИсключениеРасширеннаяПодсказка" id="1363">
 																<Title formatted="false">
 																	<v8:item>
 																		<v8:lang>ru</v8:lang>
@@ -11872,7 +11922,7 @@
 																</Title>
 															</ExtendedTooltip>
 														</InputField>
-														<InputField name="СписокТеговОтбор1" id="224">
+														<InputField name="СписокТеговОтбор" id="224">
 															<DataPath>Объект.СписокТеговОтбор</DataPath>
 															<Title>
 																<v8:item>
@@ -11961,8 +12011,8 @@
 																</v8:item>
 															</Title>
 															<ToolTipRepresentation>Button</ToolTipRepresentation>
-															<ContextMenu name="СписокТеговОтбор1КонтекстноеМеню" id="225"/>
-															<ExtendedTooltip name="СписокТеговОтбор1РасширеннаяПодсказка" id="1364">
+															<ContextMenu name="СписокТеговОтборКонтекстноеМеню" id="225"/>
+															<ExtendedTooltip name="СписокТеговОтборРасширеннаяПодсказка" id="1364">
 																<Title formatted="false">
 																	<v8:item>
 																		<v8:lang>ru</v8:lang>
@@ -12545,7 +12595,7 @@
 																	<ShowTitle>false</ShowTitle>
 																	<ExtendedTooltip name="ПраваяЧастьФлажковНастроекРасширеннаяПодсказка" id="1376"/>
 																	<ChildItems>
-																		<CheckBoxField name="DebugLog2" id="289">
+																		<CheckBoxField name="DebugLog" id="289">
 																			<DataPath>Объект.DebugLog</DataPath>
 																			<Title>
 																				<v8:item>
@@ -12560,8 +12610,8 @@
 																			<TitleLocation>Right</TitleLocation>
 																			<ToolTipRepresentation>Button</ToolTipRepresentation>
 																			<CheckBoxType>Auto</CheckBoxType>
-																			<ContextMenu name="DebugLog2КонтекстноеМеню" id="290"/>
-																			<ExtendedTooltip name="DebugLog2РасширеннаяПодсказка" id="1377">
+																			<ContextMenu name="DebugLogКонтекстноеМеню" id="290"/>
+																			<ExtendedTooltip name="DebugLogРасширеннаяПодсказка" id="1377">
 																				<Title formatted="false">
 																					<v8:item>
 																						<v8:lang>ru</v8:lang>
@@ -13489,11 +13539,11 @@ When working with Vanessa Automation Single it is allowed to leave the field bla
 																<Title formatted="false">
 																	<v8:item>
 																		<v8:lang>ru</v8:lang>
-																		<v8:content>Добавить описание</v8:content>
+																		<v8:content>Поставщик пользовательских настроек</v8:content>
 																	</v8:item>
 																	<v8:item>
 																		<v8:lang>en</v8:lang>
-																		<v8:content>Add description</v8:content>
+																		<v8:content>Custom settings provider</v8:content>
 																	</v8:item>
 																</Title>
 															</ExtendedTooltip>
@@ -13516,7 +13566,7 @@ When working with Vanessa Automation Single it is allowed to leave the field bla
 																<Title formatted="false">
 																	<v8:item>
 																		<v8:lang>ru</v8:lang>
-																		<v8:content>файловый путь или url по которому находятся настройки. По умолчанию каталог проекта (имя файлы по умолчанию user_settings.json)  или localhost</v8:content>
+																		<v8:content>файловый путь или url по которому находятся настройки. По умолчанию каталог проекта (имя файла по умолчанию user_settings.json)  или localhost</v8:content>
 																	</v8:item>
 																	<v8:item>
 																		<v8:lang>en</v8:lang>
@@ -13973,11 +14023,11 @@ When working with Vanessa Automation Single it is allowed to leave the field bla
 																</Title>
 															</ExtendedTooltip>
 														</CheckBoxField>
-														<InputField name="ТаймаутОжиданияПередПринудительнымЗакрытиемКлиентаТестирования" id="2748">
+														<InputField name="ТаймаутПередПринудительнымЗакрытиемКлиентаТестирования" id="2748">
 															<DataPath>Объект.ТаймаутПередПринудительнымЗакрытиемКлиентаТестирования</DataPath>
 															<ToolTipRepresentation>Button</ToolTipRepresentation>
-															<ContextMenu name="ТаймаутОжиданияПередПринудительнымЗакрытиемКлиентаТестированияКонтекстноеМеню" id="2749"/>
-															<ExtendedTooltip name="ТаймаутОжиданияПередПринудительнымЗакрытиемКлиентаТестированияРасширеннаяПодсказка" id="2750">
+															<ContextMenu name="ТаймаутПередПринудительнымЗакрытиемКлиентаТестированияКонтекстноеМеню" id="2749"/>
+															<ExtendedTooltip name="ТаймаутПередПринудительнымЗакрытиемКлиентаТестированияРасширеннаяПодсказка" id="2750">
 																<Title formatted="false">
 																	<v8:item>
 																		<v8:lang>en</v8:lang>
@@ -14698,13 +14748,24 @@ It is recommended to set this checkbox on.</v8:content>
 															<AutoMaxWidth>false</AutoMaxWidth>
 															<ContextMenu name="ТаймаутДляАсинхронныхШаговКонтекстноеМеню" id="1774"/>
 															<ExtendedTooltip name="ТаймаутДляАсинхронныхШаговРасширеннаяПодсказка" id="1775">
-																<Title formatted="true">
+																<Title formatted="false">
 																	<v8:item>
 																		<v8:lang>ru</v8:lang>
 																		<v8:content>Указывает максимальное время ожидания для асинхронного шага.
 Например, если задано значение параметра равное 20 секунд и используется шаг
-&lt;i&gt;И я жду, что поле с именем "ИмяПоля" перестанет быть пустым в течение 10 секунд&lt;/&gt;
+```Gherkin
+И я жду, что поле с именем "ИмяПоля" перестанет быть пустым в течение 10 секунд
+```
 тогда в рельности максимальное время работы шага будет 20 секунд, а не 10.</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Specifies the maximum time to wait for an asynchronous step.
+For example, if the parameter value is set to 20 seconds and the step is used
+```Gherkin
+And I wait the field named "FieldName" will be filled in 10 seconds
+```
+then in reality the maximum step time will be 20 seconds, not 10.</v8:content>
 																	</v8:item>
 																</Title>
 															</ExtendedTooltip>
@@ -14715,11 +14776,20 @@ It is recommended to set this checkbox on.</v8:content>
 															<AutoMaxWidth>false</AutoMaxWidth>
 															<ContextMenu name="КоличествоСекундПоискаОкнаКонтекстноеМеню" id="1748"/>
 															<ExtendedTooltip name="КоличествоСекундПоискаОкнаРасширеннаяПодсказка" id="1749">
-																<Title formatted="true">
+																<Title formatted="false">
 																	<v8:item>
 																		<v8:lang>ru</v8:lang>
 																		<v8:content>Максимальное время для поиска окна в шаге
-&lt;i&gt;И тогда открылось окно "ИмяОкна"&lt;/&gt;</v8:content>
+```Gherkin
+Тогда открылось окно "ИмяОкна"
+```</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Maximum time to search for a window in a step
+```Gherkin
+Then "WindowTitle" window is opened
+```</v8:content>
 																	</v8:item>
 																</Title>
 															</ExtendedTooltip>
@@ -14775,11 +14845,20 @@ This option slow the execution down .</v8:content>
 															<Width>5</Width>
 															<ContextMenu name="ПаузаПриОткрытииОкнаКонтекстноеМеню" id="1884"/>
 															<ExtendedTooltip name="ПаузаПриОткрытииОкнаРасширеннаяПодсказка" id="1885">
-																<Title formatted="true">
+																<Title formatted="false">
 																	<v8:item>
 																		<v8:lang>ru</v8:lang>
 																		<v8:content>Значение дополнительной паузы, которая будет всегда применяться в шаге
-&lt;i&gt;И тогда открылось окно "ИмяОкна"&lt;/&gt;</v8:content>
+```Gherkin
+Тогда открылось окно "ИмяОкна"
+```</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Additional pause value that will always be applied in a step
+```Gherkin
+Then "WindowTitle" window is opened
+```</v8:content>
 																	</v8:item>
 																</Title>
 															</ExtendedTooltip>
@@ -16369,14 +16448,24 @@ If the field is empty, the log will not be output to a text file.</v8:content>
 																					<ContextMenu name="ДанныеАллюрМетокКонтекстноеМеню" id="1986"/>
 																					<AutoCommandBar name="ДанныеАллюрМетокКоманднаяПанель" id="1987"/>
 																					<ExtendedTooltip name="ДанныеАллюрМетокРасширеннаяПодсказка" id="1988">
-																						<Title formatted="true">
+																						<Title formatted="false">
 																							<v8:item>
 																								<v8:lang>ru</v8:lang>
 																								<v8:content>Таблица используется для установки соответствия тегов сценариев меткам аллюра.
 Если в  строке таблицы указано регулярное выражение, то к каждому тегу сценария применяется регулярное выражение из данной таблицы и если тег ему соответствует, то к отчету будет добавлена метка в формате ИмяМетки:Значение.
 Если в строке таблицы регулярное выражение не указано, то метка добавляется безусловно.
 
-Подробнее зачем это может быть нужно можно прочитать &lt;link https://habr.com/ru/company/sberbank/blog/359302/&gt;тут&lt;/&gt;.</v8:content>
+Подробнее зачем это может быть нужно можно прочитать тут
+https://habr.com/ru/company/sberbank/blog/359302/</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>The table is used to map script tags to pace marks.
+If a regular expression is specified in a table row, then a regular expression from this table is applied to each script tag, and if the tag matches it, then a tag in the TagName: Value format will be added to the report.
+If no regular expression is specified in a table row, then the label is added unconditionally.
+
+You can read more about why this may be needed here
+https://habr.com/ru/company/sberbank/blog/359302/</v8:content>
 																							</v8:item>
 																						</Title>
 																					</ExtendedTooltip>
@@ -17574,7 +17663,7 @@ If the field is empty, the log will not be output to a text file.</v8:content>
 																						</Title>
 																					</ExtendedTooltip>
 																				</InputField>
-																				<InputField name="ТаймаутМеждуШагамиПриДвиженииМышкиVanessaExt" id="2635">
+																				<InputField name="ПаузаМеждуШагамиПриДвиженииМышкиVanessaExt" id="2635">
 																					<DataPath>Объект.ПаузаМеждуШагамиПриДвиженииМышкиVanessaExt</DataPath>
 																					<Title>
 																						<v8:item>
@@ -17583,8 +17672,8 @@ If the field is empty, the log will not be output to a text file.</v8:content>
 																						</v8:item>
 																					</Title>
 																					<ToolTipRepresentation>Button</ToolTipRepresentation>
-																					<ContextMenu name="ТаймаутМеждуШагамиПриДвиженииМышкиVanessaExtКонтекстноеМеню" id="2636"/>
-																					<ExtendedTooltip name="ТаймаутМеждуШагамиПриДвиженииМышкиVanessaExtРасширеннаяПодсказка" id="2637">
+																					<ContextMenu name="ПаузаМеждуШагамиПриДвиженииМышкиVanessaExtКонтекстноеМеню" id="2636"/>
+																					<ExtendedTooltip name="ПаузаМеждуШагамиПриДвиженииМышкиVanessaExtРасширеннаяПодсказка" id="2637">
 																						<Title formatted="false">
 																							<v8:item>
 																								<v8:lang>ru</v8:lang>
@@ -20298,7 +20387,7 @@ Also use special instructions in the script, see Help info.</v8:content>
 																					<ChoiceButton>true</ChoiceButton>
 																					<ContextMenu name="ЗаписьВидеоКомандаConvertКонтекстноеМеню" id="681"/>
 																					<ExtendedTooltip name="ЗаписьВидеоКомандаConvertРасширеннаяПодсказка" id="1426">
-																						<Title formatted="true">
+																						<Title formatted="false">
 																							<v8:item>
 																								<v8:lang>ru</v8:lang>
 																								<v8:content>Путь к исполняемому файлу convert.exe в каталоге с программой ImageMagick.
@@ -20306,8 +20395,18 @@ Also use special instructions in the script, see Help info.</v8:content>
 Пример:
 "C:\Program Files\ImageMagick-Х.Х.Х-Q16\convert.exe"
 
-Скачать: &lt;link https://imagemagick.org/script/download.php&gt;ссылка&lt;/&gt;
-В процессе установки обязательным к установке является пункт: I&lt;b&gt;nstall legacy utilities (e. g. convert)&lt;/&gt;</v8:content>
+Скачать: https://imagemagick.org/script/download.php
+В процессе установки обязательным к установке является пункт: Install legacy utilities (e. g. convert)</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>The path to the convert.exe executable file in the ImageMagick directory.
+
+Example:
+"C:\Program Files\ImageMagick-X.X.X-Q16\convert.exe"
+
+Download: https://imagemagick.org/script/download.php
+During the installation, the following item is required for installation: Install legacy utilities (e. G. Convert)</v8:content>
 																							</v8:item>
 																						</Title>
 																					</ExtendedTooltip>
@@ -20589,12 +20688,12 @@ If mp3 file duration is less than the video's, it will be repeated.</v8:content>
 																								<Event name="StartChoice">ЗаписьВидеоКаталогМузыкиНачалоВыбора</Event>
 																							</Events>
 																						</InputField>
-																						<InputField name="ЗаписьВидеоГромкостьАудиоТрека" id="1833">
+																						<InputField name="ЗаписьВидеоГромкостьМузыки" id="1833">
 																							<DataPath>Объект.ЗаписьВидеоГромкостьМузыки</DataPath>
 																							<ToolTipRepresentation>Button</ToolTipRepresentation>
 																							<AutoMaxWidth>false</AutoMaxWidth>
-																							<ContextMenu name="ЗаписьВидеоГромкостьАудиоТрекаКонтекстноеМеню" id="1834"/>
-																							<ExtendedTooltip name="ЗаписьВидеоГромкостьАудиоТрекаРасширеннаяПодсказка" id="1835">
+																							<ContextMenu name="ЗаписьВидеоГромкостьМузыкиКонтекстноеМеню" id="1834"/>
+																							<ExtendedTooltip name="ЗаписьВидеоГромкостьМузыкиРасширеннаяПодсказка" id="1835">
 																								<Title formatted="false">
 																									<v8:item>
 																										<v8:lang>ru</v8:lang>
@@ -23198,12 +23297,14 @@ Reduces voice generation costs.</v8:content>
 																							<v8:item>
 																								<v8:lang>ru</v8:lang>
 																								<v8:content>Картинка в формате png, которая будет использована для наложения водяного знака.
-Водяной знак будет расположен в правом нижнем углу видео.</v8:content>
+Водяной знак будет расположен в правом нижнем углу видео.
+Разрешение картинки должно быть меньше, чем разрешение, в котором идёт запись видео.</v8:content>
 																							</v8:item>
 																							<v8:item>
 																								<v8:lang>en</v8:lang>
 																								<v8:content>Png image used as a watermark.
-Watermark will be placed in the lower right corner of the video.</v8:content>
+Watermark will be placed in the lower right corner of the video.
+The image resolution must be less than the resolution in which the video is recorded.</v8:content>
 																							</v8:item>
 																						</Title>
 																					</ExtendedTooltip>
@@ -24269,7 +24370,6 @@ SikuliX emulates mouse clicks.</v8:content>
 							</ChildItems>
 						</Page>
 						<Page name="ГруппаСлужебная" id="484">
-							<Visible>false</Visible>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
@@ -24388,6 +24488,11 @@ SikuliX emulates mouse clicks.</v8:content>
 													<Type>UsualButton</Type>
 													<CommandName>Form.Command.РазвернутьВсеСтрокиДереваСлужебный</CommandName>
 													<ExtendedTooltip name="РазвернутьВсеСтрокиДереваСлужебныйРасширеннаяПодсказка" id="1810"/>
+												</Button>
+												<Button name="СоздатьИнструкциюПоОписаниюЭлементов" id="2948">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.СоздатьИнструкциюПоОписаниюЭлементов</CommandName>
+													<ExtendedTooltip name="СоздатьИнструкциюПоОписаниюЭлементовРасширеннаяПодсказка" id="2949"/>
 												</Button>
 												<InputField name="КаталогИнструментовСлужебный" id="494">
 													<DataPath>Объект.КаталогИнструментов</DataPath>
@@ -35743,6 +35848,25 @@ SikuliX emulates mouse clicks.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>СравнитьТекущиеНастройкиСФайлом</Action>
+		</Command>
+		<Command name="СоздатьИнструкциюПоОписаниюЭлементов" id="146">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать инструкцию по описанию элементов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Create instructions for describing elements</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать инструкцию по описанию элементов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьИнструкциюПоОписаниюЭлементов</Action>
 		</Command>
 	</Commands>
 </Form>
