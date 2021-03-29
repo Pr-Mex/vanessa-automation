@@ -180,6 +180,19 @@
   
 
       
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../Settings/SettingsEN/" class="md-tabs__link">
+          Settings
+        </a>
+      
+    </li>
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -1340,6 +1353,60 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      Settings
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Settings" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Settings
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Settings/SettingsEN/" title="Описание параметров файла запуска Vanessa Automation из командной строки." class="md-nav__link">
+      Описание параметров файла запуска Vanessa Automation из командной строки.
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../Settings/SettingsRU/" title="Описание параметров файла запуска Vanessa Automation из командной строки." class="md-nav__link">
+      Описание параметров файла запуска Vanessa Automation из командной строки.
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -2380,6 +2447,7 @@
 <li>Возможность любой шаг выполнить как условие. Если в шаге было вызвано исключение, тогда это означает что условие ложно. Иначе - истинно. #1172</li>
 <li>Приложение к Аллюру файлов скриншотов, снятых тегом @screenshot #1173</li>
 <li>Приложение к Аллюру файлов записи сессии тестирования, снятых тегом @recordvideo или через настройки VA #1174</li>
+<li>Описание параметров JSON файла VA в формате MD. #1179</li>
 </ul>
 <h3 id="_3">Новые шаги<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2405,7 +2473,58 @@
 
 <ul>
 <li>Шаг И я завершаю выполнение процессов клиентов тестирования #1176</li>
+<li>Шаги открытия/закрытия подсказки поля в браузере #1154 Спасибо @CryptKat</li>
 </ul>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я открываю подсказку поля с именем &quot;</span><span class="s">ИмяПоля</span><span class="nf">&quot; в браузере</span>
+<span class="nf">    </span><span class="k">И </span><span class="nf">я закрываю подсказку поля с именем &quot;</span><span class="s">ИмяПоля</span><span class="nf">&quot; в браузере</span>
+</code></pre></div>
+
+<ul>
+<li>Шаг нажатия на любой элемент в бразуере #1154 Спасибо @CryptKat</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я нажимаю на HTML элемент &quot;</span><span class="s">elem(\&#39;НужноеПолеФормы\\\#extTooltipBtn\&#39;)</span><span class="nf">&quot; в браузере</span>
+</code></pre></div>
+
+<ul>
+<li>Шаг, рисующий анимацию загрузки в браузере #1148 Спасибо @ViktorErmakov</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я показываю анимацию загрузки в браузере</span>
+</code></pre></div>
+
+<ul>
+<li>Шаг для накладывания эффекта размытия в браузере #1143 Спасибо @CryptKat</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я накладываю эффект размытия в браузере</span>
+</code></pre></div>
+
+<ul>
+<li>Шаг, показывающий серию подсказок EnjoyHint в браузере #1138 Спасибо @CryptKat</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я показываю серию подсказок EnjoyHint в браузере</span>
+</code></pre></div>
+
+<ul>
+<li>Шаги нажатия на подменю командной панели формы в браузере #1132 Спасибо @CryptKat</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я нажимаю на подменю с именем &quot;</span><span class="s">ФормаСоздатьНаОсновании</span><span class="nf">&quot; командной панели формы в браузере</span>
+<span class="nf">    </span><span class="k">И </span><span class="nf">я нажимаю на подменю &quot;</span><span class="s">Создать на основании</span><span class="nf">&quot; командной панели формы в браузере</span>
+</code></pre></div>
+
+<ul>
+<li>Шаги открытия форм объектов метаданных #1130 Спасибо @DoublesunRUS </li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="nf">    Дано Я открываю общую форму &quot;</span><span class="s">ИмяОбщейФормы</span><span class="nf">&quot;</span>
+<span class="nf">    Дано Я открываю основную форму журнала документов &quot;</span><span class="s">ИмяЖурналаДокументов</span><span class="nf">&quot;</span>
+<span class="nf">    Дано Я открываю основную форму плана видов расчета &quot;</span><span class="s">ИмяПВР</span><span class="nf">&quot;</span>
+<span class="nf">    Дано Я открываю основную форму списка плана видов расчета &quot;</span><span class="s">ИмяПВР</span><span class="nf">&quot;</span>
+</code></pre></div>
+
+<ul>
+<li>Шаг для рисования рамки вокруг картинки ВК #1077 Спасибо @lintest</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я рисую рамку вокруг картинки &quot;</span><span class="s">ИмяКартинки</span><span class="nf">&quot;</span>
+</code></pre></div>
+
 <h3 id="_4">Разные доработки<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Описание подсценария в фиче можно указывать на английском. #1051
@@ -2433,6 +2552,14 @@
 <li>При возникновении ошибки показывать проблемную строку в центре редактора, если это возможно. #1133</li>
 <li>Описать возможные статусы возврата при запуске сессии тестирования из командной строки. #1145</li>
 <li>Команда, выводящая дерево шагов в печатную форму. #1153</li>
+<li>Сделать опциональным добавление в инструкции авто нумерации. #1168 Спасибо @ViktorErmakov</li>
+<li>Опция запрета перезаписи переменных. #882 Спасибо @Wadus16</li>
+<li>Инициатор данных: Заполнение ссылочных реквизитов объекта по строке #1131 Спасибо @BProg-Gladkov</li>
+<li>Инициатор данных: Добавить шаг создания объекта с начальным заполнением #1123 Спасибо @BProg-Gladkov</li>
+<li>Статус репозитория Git получаем внешней компонентой #1083 Спасибо @lintest </li>
+<li>В подсказках нет информации о единицах измерениях #1061 Спасибо @shalimski </li>
+<li>Активация клиента по идентификатору процесса #1057 Спасибо @lintest </li>
+<li>Улучшение автоинструкций. Перемещение курсора мышки в шагах и кеш TTS веб-интерфейс. #1152 Спасибо @CryptKat</li>
 </ul>
 <h3 id="_5">Исправление ошибок<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <ul>
