@@ -1,6 +1,6 @@
-﻿# Описание параметров файла запуска Vanessa Automation из командной строки.
-#### Данный файл создан автоматически на основании данных формы Vanessa Automation. Пулреквесты нужно отправлять в подсказки к элементам формы.
-#### Заготовку для этого файла можно получить выгрузив настройки Vanessa Automation в файл VAParams.json.
+﻿# Description Vanessa Automation startup file parameters from the command line.
+#### This file was created automatically based on Vanessa Automation form data. Send pull requests to the form fields tooltips.
+#### The template for this file can be obtained by uploading the Vanessa Automation settings to VAParams.json file.
 
 ## Main
 
@@ -185,6 +185,14 @@ This option is used when one report (e.g. Allure) is generated for several simil
    * **buildname**:
 Unique assembly name used along with the parameter "Add uploading conditions to scenario name".
 
+   * **createlogs**:
+If the flag is set, Vanessa Automation will upload the script execution status to a file.
+Details here:
+https://pr-mex.github.io/vanessa-automation/dev/ReturnStatus
+
+   * **logpath**:
+The path to the file into which the script execution status will be uploaded.
+
 *  Test video record
 
       * **recordtestrunvideo**:
@@ -286,15 +294,24 @@ https://habr.com/ru/company/sberbank/blog/359302/
 
    *  Cucumber
 
+         * **cucumbercreatereport**:
+Generate a report in Cucumber format based on the script execution results.
+
          * **cucumberreportpath**:
 Report directory.
 
    *  JUnit
 
+         * **junitcreatereport**:
+Generate a report in JUnit format based on the results of script execution.
+
          * **junitpath**:
 Report generation directory.
 
    *  ASDS
+
+         * **ModelingCreateReport**:
+Generate a report in the SPPR format based on the results of the scenarios.
 
          * **modelingreportpath**:
 Report directory.
@@ -391,12 +408,27 @@ If the checkbox is on, HTML screencast will be created during scenario execution
 Specify console command for snapshots generation in  "Snapshot creating command" field.
 Also use special instructions in the script, see Help info.
 
+      * **htmlpath**:
+HTML instruction catalog
+
       * **markdowncreate**:
 If the checkbox is on, MarkDown screencast will be created during scenario execution.
 Specify console command for snapshots generation in  "Snapshot creating command" field or the screenshots flag is set by the "VanessaExt" component".
 Also use special instructions in the script, see Help info.
 
+      * **markdownpath**:
+Markdown Instruction Directory
+
+      * **autonumberingofsteps**:
+Adds auto numbering to the beginning of the step description text.
+To ensure that leading zeros are not lost when exporting from MD format, the text is written to the code block.
+
 *  Video tutorial
+
+      * **videocreate**:
+Allows you to create video instructions.
+A video describing the settings is in this playlist.
+It is also recommended to read this FAQ.
 
       * **videopath**:
 Directory where will be placed result of assembly videos or animated screencast.
@@ -474,6 +506,13 @@ Value range is from -10 to 10.
 
          *  Yandex TTS
 
+               * **yandexttsspeed**:
+The speed (tempo) of synthesized speech.
+Speech rate is specified as a fractional number in the range from 0.1 to 3.0.
+
+               * **yandexttsquerytype**:
+Determines how the audio files will be received: through the official API or through the free interface. The recommended value is via the official API.
+
          *  Group amazon TTS
 
                * **amazonttsregion**:
@@ -499,6 +538,9 @@ Reduces voice generation costs.
 Voice cache files directory.
 
       *  Replacements dictionaries
+
+            * **changewordslib**:
+List of files that will be used for autocorrect spoken text.
 
    *  More
 
