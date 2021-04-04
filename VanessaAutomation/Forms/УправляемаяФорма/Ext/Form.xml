@@ -1463,6 +1463,42 @@
 								<Representation>Picture</Representation>
 								<ExtendedTooltip name="ГруппаVanessaEditorИнструментыРасширеннаяПодсказка" id="2886"/>
 								<ChildItems>
+									<ButtonGroup name="ГруппаVanessaEditorБиблиотекаШагов" id="2952">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Библиотека шагов</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Steps library</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа vanessa editor библиотека шагов</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="ГруппаVanessaEditorБиблиотекаШаговРасширеннаяПодсказка" id="2953"/>
+										<ChildItems>
+											<Button name="ФормаДобавитьИзвестныйШаг" id="2950">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ДобавитьИзвестныйШаг</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Библиотека шагов</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>Steps library</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ФормаДобавитьИзвестныйШагРасширеннаяПодсказка" id="2951"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
 									<Button name="VanessaEditorИсследовательФормы" id="2887">
 										<Type>CommandBarButton</Type>
 										<CommandName>Form.Command.ИсследовательФормы</CommandName>
@@ -15546,6 +15582,44 @@ SikuliX or VanessaExt is used for this option.</v8:content>
 														</InputField>
 													</ChildItems>
 												</UsualGroup>
+												<CheckBoxField name="ВыгружатьСтатусВыполненияСценариевВФайл" id="2954">
+													<DataPath>Объект.ВыгружатьСтатусВыполненияСценариевВФайл</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ВыгружатьСтатусВыполненияСценариевВФайлКонтекстноеМеню" id="2955"/>
+													<ExtendedTooltip name="ВыгружатьСтатусВыполненияСценариевВФайлРасширеннаяПодсказка" id="2956">
+														<Title formatted="true">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Если флаг установлен, то Vanessa Automation будет выгружать статус выполнения сценариев в файл.
+Подробности тут:
+
+&lt;link https://pr-mex.github.io/vanessa-automation/dev/ReturnStatus&gt;https://pr-mex.github.io/vanessa-automation/dev/ReturnStatus&lt;/&gt;</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+													<Events>
+														<Event name="OnChange">ВыгружатьСтатусВыполненияСценариевВФайлПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<InputField name="ПутьКФайлуДляВыгрузкиСтатусаВыполненияСценариев" id="2957">
+													<DataPath>Объект.ПутьКФайлуДляВыгрузкиСтатусаВыполненияСценариев</DataPath>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<ContextMenu name="ПутьКФайлуДляВыгрузкиСтатусаВыполненияСценариевКонтекстноеМеню" id="2958"/>
+													<ExtendedTooltip name="ПутьКФайлуДляВыгрузкиСтатусаВыполненияСценариевРасширеннаяПодсказка" id="2959">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>The path to the file into which the script execution status will be uploaded.</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Путь к файлу, в который будет выгружен статус выполнения сценариев.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+												</InputField>
 												<UsualGroup name="ГруппаВидеозаписьПрохожденияТестов" id="2386">
 													<Title>
 														<v8:item>
@@ -15952,7 +16026,7 @@ If the field is empty, the log will not be output to a text file.</v8:content>
 																				</v8:item>
 																			</Title>
 																			<TitleLocation>Right</TitleLocation>
-																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<ToolTipRepresentation>Button</ToolTipRepresentation>
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="ДелатьОтчетВФорматеАллюрКонтекстноеМеню" id="139"/>
 																			<ExtendedTooltip name="ДелатьОтчетВФорматеАллюрРасширеннаяПодсказка" id="1392">
@@ -16624,10 +16698,21 @@ https://habr.com/ru/company/sberbank/blog/359302/</v8:content>
 																				</v8:item>
 																			</Title>
 																			<TitleLocation>Right</TitleLocation>
-																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<ToolTipRepresentation>Button</ToolTipRepresentation>
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="ДелатьОтчетВФорматеCucumberJsonКонтекстноеМеню" id="1462"/>
-																			<ExtendedTooltip name="ДелатьОтчетВФорматеCucumberJsonРасширеннаяПодсказка" id="1463"/>
+																			<ExtendedTooltip name="ДелатьОтчетВФорматеCucumberJsonРасширеннаяПодсказка" id="1463">
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>Generate a report in Cucumber format based on the script execution results.</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Формировать отчет в формате Cucumber по результатам выполнения сценариев.</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
 																			<Events>
 																				<Event name="OnChange">ДелатьОтчетВФорматеCucumberJsonПриИзменении</Event>
 																			</Events>
@@ -16877,10 +16962,21 @@ https://habr.com/ru/company/sberbank/blog/359302/</v8:content>
 																				</v8:item>
 																			</Title>
 																			<TitleLocation>Right</TitleLocation>
-																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<ToolTipRepresentation>Button</ToolTipRepresentation>
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="ДелатьОтчетВФорматеjUnitКонтекстноеМеню" id="368"/>
-																			<ExtendedTooltip name="ДелатьОтчетВФорматеjUnitРасширеннаяПодсказка" id="1393"/>
+																			<ExtendedTooltip name="ДелатьОтчетВФорматеjUnitРасширеннаяПодсказка" id="1393">
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>Generate a report in JUnit format based on the results of script execution.</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Формировать отчет в формате JUnit по результатам выполнения сценариев.</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
 																			<Events>
 																				<Event name="OnChange">ДелатьОтчетВФорматеxUnitПриИзменении</Event>
 																			</Events>
@@ -17053,10 +17149,21 @@ https://habr.com/ru/company/sberbank/blog/359302/</v8:content>
 																		<CheckBoxField name="ДелатьОтчетВФорматеСППР" id="2096">
 																			<DataPath>Объект.ДелатьОтчетВФорматеСППР</DataPath>
 																			<TitleLocation>Right</TitleLocation>
-																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<ToolTipRepresentation>Button</ToolTipRepresentation>
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="ДелатьОтчетВФорматеСППРКонтекстноеМеню" id="2097"/>
-																			<ExtendedTooltip name="ДелатьОтчетВФорматеСППРРасширеннаяПодсказка" id="2098"/>
+																			<ExtendedTooltip name="ДелатьОтчетВФорматеСППРРасширеннаяПодсказка" id="2098">
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>Generate a report in the SPPR format based on the results of the scenarios.</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Формировать отчет в формате СППР по результатам выполнения сценариев.</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
 																			<Events>
 																				<Event name="OnChange">ДелатьОтчетВФорматеСППРПриИзменении</Event>
 																			</Events>
@@ -18439,7 +18546,7 @@ To disable mouse movement at a specific step, you should use the #[DoNotMoveMous
 															<ThroughAlign>Use</ThroughAlign>
 															<ExtendedTooltip name="ГруппаHTMLРасширеннаяПодсказка" id="1404"/>
 															<ChildItems>
-																<CheckBoxField name="СоздаватьИнструкциюHTML" id="135">
+																<CheckBoxField name="СоздаватьИнструкциюHTML" id="2960">
 																	<DataPath>Объект.СоздаватьИнструкциюHTML</DataPath>
 																	<Title>
 																		<v8:item>
@@ -18448,90 +18555,14 @@ To disable mouse movement at a specific step, you should use the #[DoNotMoveMous
 																		</v8:item>
 																		<v8:item>
 																			<v8:lang>en</v8:lang>
-																			<v8:content>Create HTML documentaion</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>am</v8:lang>
-																			<v8:content>መፍጠር ቅድሚያ ማኑዋል</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>az</v8:lang>
-																			<v8:content>Yaratmaq HTML təlimat</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>bg</v8:lang>
-																			<v8:content>Да създавате HTML инструкции</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>de</v8:lang>
-																			<v8:content>Erstellen der HTML-Anweisung</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>es</v8:lang>
-																			<v8:content>Crear HTML instrucción</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>et</v8:lang>
-																			<v8:content>Luua HTML õpetus</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>fr</v8:lang>
-																			<v8:content>Créer une instruction</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>hu</v8:lang>
-																			<v8:content>Létrehozása HTML-manuális</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>it</v8:lang>
-																			<v8:content>Creare HTML istruzione</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>ka</v8:lang>
-																			<v8:content>შექმნათ HTML მექანიკური</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>lt</v8:lang>
-																			<v8:content>Kurti HTML sakinį</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>lv</v8:lang>
-																			<v8:content>Izveidot HTML instrukciju</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>mn</v8:lang>
-																			<v8:content>Бий болгох HTML гарын авлага</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>pl</v8:lang>
-																			<v8:content>Tworzenie HTML instrukcję</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>ro</v8:lang>
-																			<v8:content>Pentru a crea HTML instrucțiunea</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>sl</v8:lang>
-																			<v8:content>Ustvari HTML priročnik</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>sv</v8:lang>
-																			<v8:content>Skapa HTML-manuell</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>tr</v8:lang>
-																			<v8:content>Oluşturmak için HTML deyim</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>vi</v8:lang>
-																			<v8:content>Tạo bản hướng dẫn HTML</v8:content>
+																			<v8:content>Make HTML instruction</v8:content>
 																		</v8:item>
 																	</Title>
 																	<TitleLocation>Right</TitleLocation>
 																	<ToolTipRepresentation>Button</ToolTipRepresentation>
 																	<CheckBoxType>Auto</CheckBoxType>
-																	<ContextMenu name="СоздаватьИнструкциюHTMLКонтекстноеМеню" id="136"/>
-																	<ExtendedTooltip name="СоздаватьИнструкциюHTMLРасширеннаяПодсказка" id="1405">
+																	<ContextMenu name="СоздаватьИнструкциюHTMLКонтекстноеМеню" id="2961"/>
+																	<ExtendedTooltip name="СоздаватьИнструкциюHTMLРасширеннаяПодсказка" id="2962">
 																		<Title formatted="false">
 																			<v8:item>
 																				<v8:lang>ru</v8:lang>
@@ -18639,10 +18670,22 @@ Also use special instructions in the script, see Help info.</v8:content>
 																			<v8:content>Thư mục để tạo bản hướng dẫn HTML</v8:content>
 																		</v8:item>
 																	</Title>
+																	<ToolTipRepresentation>Button</ToolTipRepresentation>
 																	<ChoiceButton>true</ChoiceButton>
 																	<ClearButton>true</ClearButton>
 																	<ContextMenu name="КаталогВыгрузкиИнструкцийHTMLКонтекстноеМеню" id="149"/>
-																	<ExtendedTooltip name="КаталогВыгрузкиИнструкцийHTMLРасширеннаяПодсказка" id="1406"/>
+																	<ExtendedTooltip name="КаталогВыгрузкиИнструкцийHTMLРасширеннаяПодсказка" id="1406">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>HTML instruction catalog</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Каталог HTML инструкций</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
 																	<Events>
 																		<Event name="StartChoice">КаталогOutputИнструкцияHTMLНачалоВыбора</Event>
 																	</Events>
@@ -18669,7 +18712,7 @@ Also use special instructions in the script, see Help info.</v8:content>
 															<ShowTitle>false</ShowTitle>
 															<ExtendedTooltip name="ГруппаMarkdownРасширеннаяПодсказка" id="1407"/>
 															<ChildItems>
-																<CheckBoxField name="СоздаватьИнструкциюMarkdown" id="644">
+																<CheckBoxField name="СоздаватьИнструкциюMarkdown" id="2972">
 																	<DataPath>Объект.СоздаватьИнструкциюMarkdown</DataPath>
 																	<Title>
 																		<v8:item>
@@ -18680,88 +18723,12 @@ Also use special instructions in the script, see Help info.</v8:content>
 																			<v8:lang>en</v8:lang>
 																			<v8:content>Make Markdown instruction</v8:content>
 																		</v8:item>
-																		<v8:item>
-																			<v8:lang>am</v8:lang>
-																			<v8:content>ለመፍጠር Markdown.</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>az</v8:lang>
-																			<v8:content>Yaratmaq Markdown təlimat</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>bg</v8:lang>
-																			<v8:content>Създаване на Markdown инструкции</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>de</v8:lang>
-																			<v8:content>Erstellen Markdown-Anweisung</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>es</v8:lang>
-																			<v8:content>Crear Markdown la instrucción</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>et</v8:lang>
-																			<v8:content>Luua Markdown õpetus</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>fr</v8:lang>
-																			<v8:content>Créer Markdown l'instruction</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>hu</v8:lang>
-																			<v8:content>Hozzon létre egy Árleszállítás kézi</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>it</v8:lang>
-																			<v8:content>Creare Markdown istruzione</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>ka</v8:lang>
-																			<v8:content>შექმნათ Markdown მექანიკური</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>lt</v8:lang>
-																			<v8:content>Kurti Markdown sakinį</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>lv</v8:lang>
-																			<v8:content>Izveidot Markdown instrukciju</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>mn</v8:lang>
-																			<v8:content>Бий болгох Markdown гарын авлага</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>pl</v8:lang>
-																			<v8:content>Tworzenie Markdown instrukcję</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>ro</v8:lang>
-																			<v8:content>Pentru a crea Continua instrucțiunea</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>sl</v8:lang>
-																			<v8:content>Če želite ustvariti Markdown priročnik</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>sv</v8:lang>
-																			<v8:content>För att skapa en Wiki manuell</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>tr</v8:lang>
-																			<v8:content>Oluşturmak için Markdown deyim</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>vi</v8:lang>
-																			<v8:content>Tạo bản hướng dẫn Markdown</v8:content>
-																		</v8:item>
 																	</Title>
 																	<TitleLocation>Right</TitleLocation>
 																	<ToolTipRepresentation>Button</ToolTipRepresentation>
 																	<CheckBoxType>Auto</CheckBoxType>
-																	<ContextMenu name="СоздаватьИнструкциюMarkdownКонтекстноеМеню" id="645"/>
-																	<ExtendedTooltip name="СоздаватьИнструкциюMarkdownРасширеннаяПодсказка" id="1408">
+																	<ContextMenu name="СоздаватьИнструкциюMarkdownКонтекстноеМеню" id="2973"/>
+																	<ExtendedTooltip name="СоздаватьИнструкциюMarkdownРасширеннаяПодсказка" id="2974">
 																		<Title formatted="false">
 																			<v8:item>
 																				<v8:lang>ru</v8:lang>
@@ -18869,10 +18836,22 @@ Also use special instructions in the script, see Help info.</v8:content>
 																			<v8:content>Thư mục để tạo bản hướng dẫn Markdown</v8:content>
 																		</v8:item>
 																	</Title>
+																	<ToolTipRepresentation>Button</ToolTipRepresentation>
 																	<ChoiceButton>true</ChoiceButton>
 																	<ClearButton>true</ClearButton>
 																	<ContextMenu name="КаталогВыгрузкиИнструкцийMarkdownКонтекстноеМеню" id="648"/>
-																	<ExtendedTooltip name="КаталогВыгрузкиИнструкцийMarkdownРасширеннаяПодсказка" id="1409"/>
+																	<ExtendedTooltip name="КаталогВыгрузкиИнструкцийMarkdownРасширеннаяПодсказка" id="1409">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>Markdown Instruction Directory</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Каталог Markdown инструкций</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
 																	<Events>
 																		<Event name="StartChoice">КаталогOutputИнструкцияMarkdownНачалоВыбора</Event>
 																	</Events>
@@ -18900,20 +18879,29 @@ Also use special instructions in the script, see Help info.</v8:content>
 															<ShowTitle>false</ShowTitle>
 															<ExtendedTooltip name="ГруппаОбщееРасширеннаяПодсказка" id="2942"/>
 															<ChildItems>
-																<CheckBoxField name="АвтонумерацияШагов" id="2943">
+																<CheckBoxField name="АвтонумерацияШагов" id="2966">
 																	<DataPath>Объект.АвтонумерацияШагов</DataPath>
 																	<Title>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
 																			<v8:content>Автонумерация шагов инструкций</v8:content>
 																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Auto numbering of steps of instructions</v8:content>
+																		</v8:item>
 																	</Title>
 																	<TitleLocation>Right</TitleLocation>
 																	<ToolTipRepresentation>Button</ToolTipRepresentation>
 																	<CheckBoxType>Auto</CheckBoxType>
-																	<ContextMenu name="АвтонумерацияШаговКонтекстноеМеню" id="2944"/>
-																	<ExtendedTooltip name="АвтонумерацияШаговРасширеннаяПодсказка" id="2945">
-																		<Title formatted="true">
+																	<ContextMenu name="АвтонумерацияШаговКонтекстноеМеню" id="2967"/>
+																	<ExtendedTooltip name="АвтонумерацияШаговРасширеннаяПодсказка" id="2968">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>Adds auto numbering to the beginning of the step description text.
+To ensure that leading zeros are not lost when exporting from MD format, the text is written to the code block.</v8:content>
+																			</v8:item>
 																			<v8:item>
 																				<v8:lang>ru</v8:lang>
 																				<v8:content>Добавляет авто нумерацию в начало текста описания шага. 
@@ -18942,7 +18930,7 @@ Also use special instructions in the script, see Help info.</v8:content>
 													<ControlRepresentation>Picture</ControlRepresentation>
 													<ExtendedTooltip name="ГруппаРаботаСВидеоРасширеннаяПодсказка" id="1410"/>
 													<ChildItems>
-														<CheckBoxField name="СоздаватьИнструкциюВидео" id="517">
+														<CheckBoxField name="СоздаватьИнструкциюВидео" id="2969">
 															<DataPath>Объект.СоздаватьИнструкциюВидео</DataPath>
 															<Title>
 																<v8:item>
@@ -18953,88 +18941,12 @@ Also use special instructions in the script, see Help info.</v8:content>
 																	<v8:lang>en</v8:lang>
 																	<v8:content>Create video tutorial</v8:content>
 																</v8:item>
-																<v8:item>
-																	<v8:lang>am</v8:lang>
-																	<v8:content>ለመፍጠር በጣም</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>az</v8:lang>
-																	<v8:content>Yaratmaq видеоинструкцию</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>bg</v8:lang>
-																	<v8:content>Създаване на видеоинструкцию</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>de</v8:lang>
-																	<v8:content>Erstellen Video</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>es</v8:lang>
-																	<v8:content>Crear видеоинструкцию</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>et</v8:lang>
-																	<v8:content>Luua видеоинструкцию</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>fr</v8:lang>
-																	<v8:content>Créer pour visualiser un didacticiel vidéo</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>hu</v8:lang>
-																	<v8:content>Létre a videót</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>it</v8:lang>
-																	<v8:content>Creare video di istruzioni</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>ka</v8:lang>
-																	<v8:content>შექმნათ ვიდეო</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>lt</v8:lang>
-																	<v8:content>Kurti видеоинструкцию</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>lv</v8:lang>
-																	<v8:content>Izveidot видеоинструкцию</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>mn</v8:lang>
-																	<v8:content>Бий болгох видео</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>pl</v8:lang>
-																	<v8:content>Tworzenie samouczek wideo</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>ro</v8:lang>
-																	<v8:content>Pentru a crea видеоинструкцию</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>sl</v8:lang>
-																	<v8:content>Če želite ustvariti video</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>sv</v8:lang>
-																	<v8:content>För att skapa video</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>tr</v8:lang>
-																	<v8:content>Oluşturmak видеоинструкцию</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>vi</v8:lang>
-																	<v8:content>Tạo bản hướng dẫn video</v8:content>
-																</v8:item>
 															</Title>
 															<TitleLocation>Right</TitleLocation>
 															<ToolTipRepresentation>Button</ToolTipRepresentation>
 															<CheckBoxType>Auto</CheckBoxType>
-															<ContextMenu name="СоздаватьИнструкциюВидеоКонтекстноеМеню" id="518"/>
-															<ExtendedTooltip name="СоздаватьИнструкциюВидеоРасширеннаяПодсказка" id="1412">
+															<ContextMenu name="СоздаватьИнструкциюВидеоКонтекстноеМеню" id="2970"/>
+															<ExtendedTooltip name="СоздаватьИнструкциюВидеоРасширеннаяПодсказка" id="2971">
 																<Title formatted="true">
 																	<v8:item>
 																		<v8:lang>ru</v8:lang>
@@ -19065,7 +18977,7 @@ Also use special instructions in the script, see Help info.</v8:content>
 															<ThroughAlign>Use</ThroughAlign>
 															<ExtendedTooltip name="ГруппаВидеоНастройкиРасширеннаяПодсказка" id="2054"/>
 															<ChildItems>
-																<InputField name="КаталогВыгрузкиИнструкцийВидео" id="520">
+																<InputField name="КаталогВыгрузкиИнструкцийВидео" id="2975">
 																	<DataPath>Объект.КаталогВыгрузкиИнструкцийВидео</DataPath>
 																	<Title>
 																		<v8:item>
@@ -19076,88 +18988,12 @@ Also use special instructions in the script, see Help info.</v8:content>
 																			<v8:lang>en</v8:lang>
 																			<v8:content>Video tutorials directory</v8:content>
 																		</v8:item>
-																		<v8:item>
-																			<v8:lang>am</v8:lang>
-																			<v8:content>ወደ ማውጫ ለማመንጨት ይከተሉ ቪድዮ</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>az</v8:lang>
-																			<v8:content>Kataloq yaratmaq üçün təlimat Video</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>bg</v8:lang>
-																			<v8:content>Каталог за формиране на инструкции Видеоклипове</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>de</v8:lang>
-																			<v8:content>Katalog für die Bildung von Anweisungen Video</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>es</v8:lang>
-																			<v8:content>El directorio para la formación de instrucciones Vídeos</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>et</v8:lang>
-																			<v8:content>Kataloogi moodustamine juhiseid Video</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>fr</v8:lang>
-																			<v8:content>Catalogue pour la formation des instructions de la Vidéo</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>hu</v8:lang>
-																			<v8:content>A könyvtár létrehozásához utasításokat Videó</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>it</v8:lang>
-																			<v8:content>Catalogo per la formazione di istruzioni Video</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>ka</v8:lang>
-																			<v8:content>დირექტორია გენერირება ინსტრუქციები ვიდეო</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>lt</v8:lang>
-																			<v8:content>Katalogas forma instrukcijų Vaizdo įrašus</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>lv</v8:lang>
-																			<v8:content>Katalogs, lai veidotu instrukcijas Video</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>mn</v8:lang>
-																			<v8:content>Сан үүсгэх заавар Видео</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>pl</v8:lang>
-																			<v8:content>Katalog do tworzenia instrukcji Wideo</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>ro</v8:lang>
-																			<v8:content>Directorul pentru formarea de instrucțiuni Video de</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>sl</v8:lang>
-																			<v8:content>Imenik za ustvarjanje Video navodila</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>sv</v8:lang>
-																			<v8:content>Katalog för att skapa Video-instruktioner</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>tr</v8:lang>
-																			<v8:content>Katalog oluşturmak için talimatlar Video</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>vi</v8:lang>
-																			<v8:content>Thư mục để tạo bản hướng dẫn Video</v8:content>
-																		</v8:item>
 																	</Title>
 																	<ToolTipRepresentation>Button</ToolTipRepresentation>
 																	<ChoiceButton>true</ChoiceButton>
 																	<ClearButton>true</ClearButton>
-																	<ContextMenu name="КаталогВыгрузкиИнструкцийВидеоКонтекстноеМеню" id="521"/>
-																	<ExtendedTooltip name="КаталогВыгрузкиИнструкцийВидеоРасширеннаяПодсказка" id="1413">
+																	<ContextMenu name="КаталогВыгрузкиИнструкцийВидеоКонтекстноеМеню" id="2976"/>
+																	<ExtendedTooltip name="КаталогВыгрузкиИнструкцийВидеоРасширеннаяПодсказка" id="2977">
 																		<Title formatted="false">
 																			<v8:item>
 																				<v8:lang>ru</v8:lang>
@@ -21621,13 +21457,27 @@ Value range is from -10 to 10.</v8:content>
 																															<MinValue xsi:type="xs:decimal">0.1</MinValue>
 																															<MaxValue xsi:type="xs:decimal">3</MaxValue>
 																															<ContextMenu name="ЗаписьВидеоYandexTTSСкоростьКонтекстноеМеню" id="1977"/>
-																															<ExtendedTooltip name="ЗаписьВидеоYandexTTSСкоростьРасширеннаяПодсказка" id="1978"/>
+																															<ExtendedTooltip name="ЗаписьВидеоYandexTTSСкоростьРасширеннаяПодсказка" id="1978">
+																																<Title formatted="false">
+																																	<v8:item>
+																																		<v8:lang>en</v8:lang>
+																																		<v8:content>The speed (tempo) of synthesized speech.
+Speech rate is specified as a fractional number in the range from 0.1 to 3.0.</v8:content>
+																																	</v8:item>
+																																	<v8:item>
+																																		<v8:lang>ru</v8:lang>
+																																		<v8:content>Скорость (темп) синтезированной речи.
+Скорость речи задается дробным числом в диапазоне от 0.1 до 3.0.</v8:content>
+																																	</v8:item>
+																																</Title>
+																															</ExtendedTooltip>
 																															<Events>
 																																<Event name="Tuning">ЗаписьВидеоYandexTTSСкоростьРегулирование</Event>
 																															</Events>
 																														</InputField>
 																														<RadioButtonField name="ЗаписьВидеоYandexTTSВариантЗапроса" id="2644">
 																															<DataPath>Объект.ЗаписьВидеоYandexTTSВариантЗапроса</DataPath>
+																															<ToolTipRepresentation>Button</ToolTipRepresentation>
 																															<RadioButtonType>Auto</RadioButtonType>
 																															<ChoiceList>
 																																<xr:Item>
@@ -21666,7 +21516,18 @@ Value range is from -10 to 10.</v8:content>
 																																</xr:Item>
 																															</ChoiceList>
 																															<ContextMenu name="ЗаписьВидеоYandexTTSВариантЗапросаКонтекстноеМеню" id="2645"/>
-																															<ExtendedTooltip name="ЗаписьВидеоYandexTTSВариантЗапросаРасширеннаяПодсказка" id="2646"/>
+																															<ExtendedTooltip name="ЗаписьВидеоYandexTTSВариантЗапросаРасширеннаяПодсказка" id="2646">
+																																<Title formatted="false">
+																																	<v8:item>
+																																		<v8:lang>en</v8:lang>
+																																		<v8:content>Determines how the audio files will be received: through the official API or through the free interface. The recommended value is via the official API.</v8:content>
+																																	</v8:item>
+																																	<v8:item>
+																																		<v8:lang>ru</v8:lang>
+																																		<v8:content>Определяет как будут получены файлы озвучки: через официальное API или через бесплатный интерфейс. Рекомендуемое значение - через официальное API.</v8:content>
+																																	</v8:item>
+																																</Title>
+																															</ExtendedTooltip>
 																															<Events>
 																																<Event name="OnChange">ЗаписьВидеоYandexTTSВариантЗапросаПриИзменении</Event>
 																															</Events>
@@ -22949,7 +22810,18 @@ Reduces voice generation costs.</v8:content>
 																							</CommandSet>
 																							<ContextMenu name="ЗаписьВидеоСловарьЗаменКонтекстноеМеню" id="1728"/>
 																							<AutoCommandBar name="ЗаписьВидеоСловарьЗаменКоманднаяПанель" id="1729"/>
-																							<ExtendedTooltip name="ЗаписьВидеоСловарьЗаменРасширеннаяПодсказка" id="1730"/>
+																							<ExtendedTooltip name="ЗаписьВидеоСловарьЗаменРасширеннаяПодсказка" id="1730">
+																								<Title formatted="false">
+																									<v8:item>
+																										<v8:lang>en</v8:lang>
+																										<v8:content>List of files that will be used for autocorrect spoken text.</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>ru</v8:lang>
+																										<v8:content>Список файлов, которые будут использоваться для автозамены произносимого текста.</v8:content>
+																									</v8:item>
+																								</Title>
+																							</ExtendedTooltip>
 																							<SearchStringAddition name="ЗаписьВидеоСловарьЗаменСтрокаПоиска" id="1731">
 																								<AdditionSource>
 																									<Item>ЗаписьВидеоСловарьЗамен</Item>
@@ -24370,6 +24242,7 @@ SikuliX emulates mouse clicks.</v8:content>
 							</ChildItems>
 						</Page>
 						<Page name="ГруппаСлужебная" id="484">
+							<Visible>false</Visible>
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
