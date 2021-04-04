@@ -391,8 +391,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../SettingsEN/" title="Описание параметров файла запуска Vanessa Automation из командной строки." class="md-nav__link">
-      Описание параметров файла запуска Vanessa Automation из командной строки.
+    <a href="../SettingsEN/" title="Description Vanessa Automation startup file parameters from the command line." class="md-nav__link">
+      Description Vanessa Automation startup file parameters from the command line.
     </a>
   </li>
 
@@ -936,6 +936,16 @@ https://github.com/lintest/VanessaExt</p>
 Уникальное имя сборки, которое используется совместно с параметром "Добавлять у имени сценария условия выгрузки".</p>
 </li>
 <li>
+<p><strong>ВыгружатьСтатусВыполненияСценариевВФайл {createlogs}</strong>:
+Если флаг установлен, то Vanessa Automation будет выгружать статус выполнения сценариев в файл.
+Подробности тут:
+https://pr-mex.github.io/vanessa-automation/dev/ReturnStatus</p>
+</li>
+<li>
+<p><strong>ПутьКФайлуДляВыгрузкиСтатусаВыполненияСценариев {logpath}</strong>:
+Путь к файлу, в который будет выгружен статус выполнения сценариев.</p>
+</li>
+<li>
 <p>Видеозапись прохождения тестов</p>
 <ul>
 <li>
@@ -1081,6 +1091,10 @@ https://habr.com/ru/company/sberbank/blog/359302/</li>
 </li>
 <li>
 <p>Cucumber</p>
+<div class="codehilite"><pre><span></span><code> * **ДелатьОтчетВФорматеCucumberJson {cucumbercreatereport}**:
+</code></pre></div>
+
+<p>Формировать отчет в формате Cucumber по результатам выполнения сценариев.</p>
 <div class="codehilite"><pre><span></span><code> * **КаталогВыгрузкиCucumberJson {cucumberreportpath}**:
 </code></pre></div>
 
@@ -1088,6 +1102,10 @@ https://habr.com/ru/company/sberbank/blog/359302/</li>
 </li>
 <li>
 <p>JUnit</p>
+<div class="codehilite"><pre><span></span><code> * **ДелатьОтчетВФорматеjUnit {junitcreatereport}**:
+</code></pre></div>
+
+<p>Формировать отчет в формате JUnit по результатам выполнения сценариев.</p>
 <div class="codehilite"><pre><span></span><code> * **КаталогВыгрузкиjUnit {junitpath}**:
 </code></pre></div>
 
@@ -1095,6 +1113,10 @@ https://habr.com/ru/company/sberbank/blog/359302/</li>
 </li>
 <li>
 <p>СППР</p>
+<div class="codehilite"><pre><span></span><code> * **ДелатьОтчетВФорматеСППР {ModelingCreateReport}**:
+</code></pre></div>
+
+<p>Формировать отчет в формате СППР по результатам выполнения сценариев.</p>
 <div class="codehilite"><pre><span></span><code> * **КаталогВыгрузкиСППР {modelingreportpath}**:
 </code></pre></div>
 
@@ -1267,10 +1289,18 @@ SikuliX Server - это специальная программная оптим
 Также в тексте сценария возможно использовать специальные директивы, которые описаны в справке.</p>
 </li>
 <li>
+<p><strong>КаталогВыгрузкиИнструкцийHTML {htmlpath}</strong>:
+Каталог HTML инструкций</p>
+</li>
+<li>
 <p><strong>СоздаватьИнструкциюMarkdown {markdowncreate}</strong>:
 Если флаг установлен, то во время выполнения сценария будет создаваться скринкаст в формате MarkDown.
 В поле "Команда создания скриншотов" должна быть указана консольная команда для снятия скриншотов или установлен флаг скриншоты компонентой "VanessaExt".
 Также в тексте сценария возможно использовать специальные директивы, которые описаны в справке.</p>
+</li>
+<li>
+<p><strong>КаталогВыгрузкиИнструкцийMarkdown {markdownpath}</strong>:
+Каталог Markdown инструкций</p>
 </li>
 <li>
 <p><strong>АвтонумерацияШагов {autonumberingofsteps}</strong>:
@@ -1428,6 +1458,15 @@ SikuliX Server - это специальная программная оптим
 Управление ударением и произношением см тут.</p>
 </li>
 <li>
+<p><strong>ЗаписьВидеоYandexTTSСкорость {yandexttsspeed}</strong>:
+Скорость (темп) синтезированной речи.
+Скорость речи задается дробным числом в диапазоне от 0.1 до 3.0.</p>
+</li>
+<li>
+<p><strong>ЗаписьВидеоYandexTTSВариантЗапроса {yandexttsquerytype}</strong>:
+Определяет как будут получены файлы озвучки: через официальное API или через бесплатный интерфейс. Рекомендуемое значение - через официальное API.</p>
+</li>
+<li>
 <p><strong>ЗаписьВидеоYandexTTSИдентификаторКаталога {yandexttsfolderId}</strong>:
 Последняя часть пути строки адреса в интернет браузере. https://console.cloud.yandex.ru/folders/ИдентификаторКаталога
 Требуется:</p>
@@ -1503,6 +1542,10 @@ OAuth-токен используется в процедуре аутентиф
 </li>
 <li>
 <p>Словари замен</p>
+<div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоСловарьЗамен {changewordslib}**:
+</code></pre></div>
+
+<p>Список файлов, которые будут использоваться для автозамены произносимого текста.</p>
 </li>
 </ul>
 </li>
@@ -1655,7 +1698,7 @@ OAuth-токен используется в процедуре аутентиф
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="">
         
-          <a href="../SettingsEN/" title="Описание параметров файла запуска Vanessa Automation из командной строки." class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../SettingsEN/" title="Description Vanessa Automation startup file parameters from the command line." class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
             </div>
@@ -1664,7 +1707,7 @@ OAuth-токен используется в процедуре аутентиф
                 <span class="md-footer-nav__direction">
                   Назад
                 </span>
-                Описание параметров файла запуска Vanessa Automation из командной строки.
+                Description Vanessa Automation startup file parameters from the command line.
               </div>
             </div>
           </a>
