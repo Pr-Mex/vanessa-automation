@@ -1,4 +1,5 @@
 ﻿# Как создать автовидеоинструкцию
+
  Видеоинструкции  
    * [Установка ПО](#установка)
    * [Общие настройки](#общие-настройки)
@@ -7,16 +8,16 @@
    * [Теги и комментарий для видеоинструкций](#теги)
    
 Статьи по видеоинструкциям:
-  * https://infostart.ru/public/1133932/ Vanessa, хочу все и сразу
-  * https://infostart.ru/public/1147009/ Vanessa, улучшаем инструкции
-  * https://infostart.ru/public/1243801/ Vanessa, видеоинструкции для web-клиента
+   * [Vanessa, хочу все и сразу](https://infostart.ru/public/1133932/)
+   * [Vanessa, улучшаем инструкции](https://infostart.ru/public/1147009/)
+   * [Vanessa, видеоинструкции для web-клиента](https://infostart.ru/public/1243801/)
   
 Каналы на Youtube, которые используют автовидеоинструкции
-  * [1С ЭДО](https://www.youtube.com/playlist?list=PLY7ViBfWFBOkPONsBgH4fEvj7ESz5uhum)
-  * [SOFT LIDER SRL](https://www.youtube.com/playlist?list=PLP_VY1kBmzcjV1Ngbi9HOguA7Sh9zaTwd)
-  * [1С Минск](https://www.youtube.com/channel/UCPgkPOrgg6i1mQS3TGWdxPQ)
+   * [1С ЭДО](https://www.youtube.com/playlist?list=PLY7ViBfWFBOkPONsBgH4fEvj7ESz5uhum)
+   * [SOFT LIDER SRL](https://www.youtube.com/playlist?list=PLP_VY1kBmzcjV1Ngbi9HOguA7Sh9zaTwd)
+   * [1С Минск](https://www.youtube.com/channel/UCPgkPOrgg6i1mQS3TGWdxPQ)
   
-[Примеры сценариев](../VSL) для видеоинструкций
+[Примеры сценариев](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/VSL) для видеоинструкций
 
 <a id="markdown-установка" name="установка"></a>
 ## **Установка ПО**
