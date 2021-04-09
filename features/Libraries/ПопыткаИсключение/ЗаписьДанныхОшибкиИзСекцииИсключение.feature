@@ -8,6 +8,7 @@
 @IgnoreOnOFBuilds
 @IgnoreOn82Builds
 @IgnoreOnWeb
+@IgnoreOnUFSovm82Builds
 
 
 @tree
