@@ -1,0 +1,1649 @@
+
+
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <link rel="canonical" href="https://pr-mex.github.io/vanessa-automation/Settings/SettingsEN/">
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/logo.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.0.0">
+    
+    
+      
+        <title>Description Vanessa Automation startup file parameters from the command line. - Vanessa Automation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.c3000690.min.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.4444686e.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    <body dir="" data-md-color-primary="white" data-md-color-accent="red">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#description-vanessa-automation-startup-file-parameters-from-the-command-line" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="">
+    <a href="https://pr-mex.github.io/vanessa-automation" title="Vanessa Automation" class="md-header-nav__button md-logo" aria-label="Vanessa Automation">
+      
+  <img src="../../assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Vanessa Automation
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Description Vanessa Automation startup file parameters from the command line.
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Начните печатать для поиска
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/pr-mex/vanessa-automation/" title="Перейти к репозиторию" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pr-mex/vanessa-automation
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+          
+
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." class="md-tabs__link">
+        Vanessa Automation
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../FAQ/" class="md-tabs__link">
+          FAQ
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="./" class="md-tabs__link md-tabs__link--active">
+          Settings
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://pr-mex.github.io/vanessa-automation" title="Vanessa Automation" class="md-nav__button md-logo" aria-label="Vanessa Automation">
+      
+  <img src="../../assets/images/logo.png" alt="logo">
+
+    </a>
+    Vanessa Automation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/pr-mex/vanessa-automation/" title="Перейти к репозиторию" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pr-mex/vanessa-automation
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Vanessa Automation" class="md-nav__link">
+      Vanessa Automation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Changelog/" title="История версий" class="md-nav__link">
+      История версий
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../CommandSetting/" title="Параметры запуска из командной строки" class="md-nav__link">
+      Параметры запуска из командной строки
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../ReturnStatus/" title="Статус возврата" class="md-nav__link">
+      Статус возврата
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      FAQ
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="FAQ" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        FAQ
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../FAQ/" title="Вопросы и ответы" class="md-nav__link">
+      Вопросы и ответы
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../FAQ/KnownProblems/" title="Известные проблемы" class="md-nav__link">
+      Известные проблемы
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../FAQ/MakeAutoVideo/" title="Как создать автовидеоинструкцию" class="md-nav__link">
+      Как создать автовидеоинструкцию
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../FAQ/NotAdd/" title="Отличия Vanessa-Automation от ADD" class="md-nav__link">
+      Отличия Vanessa-Automation от ADD
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    
+    <label class="md-nav__link" for="nav-6">
+      Settings
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Settings" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Settings
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Description Vanessa Automation startup file parameters from the command line.
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Description Vanessa Automation startup file parameters from the command line." class="md-nav__link md-nav__link--active">
+      Description Vanessa Automation startup file parameters from the command line.
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#this-file-was-created-automatically-based-on-vanessa-automation-form-data-send-pull-requests-to-the-form-fields-tooltips" class="md-nav__link">
+    This file was created automatically based on Vanessa Automation form data. Send pull requests to the form fields tooltips.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-template-for-this-file-can-be-obtained-by-uploading-the-vanessa-automation-settings-to-vaparamsjson-file" class="md-nav__link">
+    The template for this file can be obtained by uploading the Vanessa Automation settings to VAParams.json file.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#main" class="md-nav__link">
+    Main
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-client-settings" class="md-nav__link">
+    Test client settings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-scenarios" class="md-nav__link">
+    Running scenarios
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screenshots" class="md-nav__link">
+    Screenshots
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scenario-report" class="md-nav__link">
+    Scenario report
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-instructions" class="md-nav__link">
+    Auto instructions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vanessa-editor" class="md-nav__link">
+    Vanessa Editor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#libraries" class="md-nav__link">
+    Libraries
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-clients" class="md-nav__link">
+    Test clients
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../SettingsRU/" title="Описание параметров файла запуска Vanessa Automation из командной строки." class="md-nav__link">
+      Описание параметров файла запуска Vanessa Automation из командной строки.
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#this-file-was-created-automatically-based-on-vanessa-automation-form-data-send-pull-requests-to-the-form-fields-tooltips" class="md-nav__link">
+    This file was created automatically based on Vanessa Automation form data. Send pull requests to the form fields tooltips.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-template-for-this-file-can-be-obtained-by-uploading-the-vanessa-automation-settings-to-vaparamsjson-file" class="md-nav__link">
+    The template for this file can be obtained by uploading the Vanessa Automation settings to VAParams.json file.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#main" class="md-nav__link">
+    Main
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-client-settings" class="md-nav__link">
+    Test client settings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-scenarios" class="md-nav__link">
+    Running scenarios
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screenshots" class="md-nav__link">
+    Screenshots
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scenario-report" class="md-nav__link">
+    Scenario report
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-instructions" class="md-nav__link">
+    Auto instructions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vanessa-editor" class="md-nav__link">
+    Vanessa Editor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#libraries" class="md-nav__link">
+    Libraries
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-clients" class="md-nav__link">
+    Test clients
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/pr-mex/vanessa-automation/edit/develop/docs/Settings/SettingsEN.md" title="Редактировать страницу" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <h1 id="description-vanessa-automation-startup-file-parameters-from-the-command-line">Description Vanessa Automation startup file parameters from the command line.<a class="headerlink" href="#description-vanessa-automation-startup-file-parameters-from-the-command-line" title="Permanent link">&para;</a></h1>
+<h4 id="this-file-was-created-automatically-based-on-vanessa-automation-form-data-send-pull-requests-to-the-form-fields-tooltips">This file was created automatically based on Vanessa Automation form data. Send pull requests to the form fields tooltips.<a class="headerlink" href="#this-file-was-created-automatically-based-on-vanessa-automation-form-data-send-pull-requests-to-the-form-fields-tooltips" title="Permanent link">&para;</a></h4>
+<h4 id="the-template-for-this-file-can-be-obtained-by-uploading-the-vanessa-automation-settings-to-vaparamsjson-file">The template for this file can be obtained by uploading the Vanessa Automation settings to VAParams.json file.<a class="headerlink" href="#the-template-for-this-file-can-be-obtained-by-uploading-the-vanessa-automation-settings-to-vaparamsjson-file" title="Permanent link">&para;</a></h4>
+<h2 id="main">Main<a class="headerlink" href="#main" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Tags</p>
+<ul>
+<li>
+<p><strong>ignoretags</strong>:
+Enter tags in the field. If the tag is detected in the feature, the whole feature will not be uploaded. If the tag is found in the scenario, only this scenario will not be uploaded.</p>
+</li>
+<li>
+<p><strong>filtertags</strong>:
+Enter tags in the field. If the tag is NOT detected in the feature, the whole feature will not be uploaded. You can also upload only the feature scenarios, which contain the tags from the list.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Language</p>
+<ul>
+<li><strong>gherkinlanguage</strong>:
+The field defines scenatio generating language. If any but not Russain is selected, Known steps will contain additional columns with the step along with its description in selected language.</li>
+</ul>
+</li>
+<li>
+<p>User actions recording</p>
+<ul>
+<li><strong>addmetainformationclicking</strong>:
+If the checkbox is on, data for translation into another language will be added when clicking the scenario step by step.</li>
+</ul>
+</li>
+<li>
+<p>System settings</p>
+<ul>
+<li>
+<p><strong>thetreetagisenabledbydefault</strong>:
+If the checkbox is on, feature file is considered as if it has @tree tag, even if it is absent. In other words, any uploaded feature file is considered as hierarchical.</p>
+</li>
+<li>
+<p><strong>usethegherkinparserfromthevanessaextaddin</strong>:
+Sets the flag. that you need to use the Gherkin parser from the VanessaExt component. This parser is much faster than the built-in parser.</p>
+</li>
+<li>
+<p><strong>instrpath</strong>:
+The catalog of Vanessa Automation data processor. This field must be filled on the standard installation.
+When working with Vanessa Automation Single it is allowed to leave the field blank.</p>
+</li>
+<li>
+<p><strong>projectpath</strong>:
+The catalog with the tested project files, which are necessary for test execution.</p>
+</li>
+<li>
+<p><strong>DownloadFeaturesOpen</strong>:
+Allows you to control the behavior of Vanessa Automation when opening: do you need to upload a feature file with which the work was carried out in the previous session or not.</p>
+</li>
+<li>
+<p><strong>commandtoopenfeatureintexteditor</strong>:
+This field contains a text editor to open a feature file and position on the current line when clicking "Open .feature file in editor".</p>
+</li>
+<li>
+<p><strong>usersettingsprovider</strong>:
+Custom settings provider</p>
+</li>
+<li>
+<p><strong>addressofcustomsettings</strong>:
+file path or url for settings. By default, project directory (name of default file user_settings.json) or localhost</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="test-client-settings">Test client settings<a class="headerlink" href="#test-client-settings" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Test client launch</p>
+<ul>
+<li>
+<p><strong>runtestclientwithmaximizedwindow</strong>:
+If the option is on, TestClient will launch in full-screen mode.</p>
+</li>
+<li>
+<p><strong>testclienttimeout</strong>:
+Specifies timeout in seconds of Vanessa Automation awaiting for TestClient launch. After timeout the exception will be risen.</p>
+</li>
+<li>
+<p><strong>testclientports</strong>:
+Specifies ports range to search for free port to run TestClient.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>TestClient debug</p>
+<ul>
+<li>
+<p><strong>testclientdebug</strong>:
+If the check box is selected, TestClient will be launched with /debug and /debuggerURL startup keys.</p>
+</li>
+<li>
+<p><strong>testclientdebugaddress</strong>:
+Address of debugger to be passed to TestClient.</p>
+</li>
+<li>
+<p><strong>testclientdebugkeys</strong>:
+Launch parameters to be passed to TestClient.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Browser launch settings</p>
+</li>
+<li>
+<p>Browser launch string installation command group</p>
+<ul>
+<li><strong>browserlaunchcommand</strong>:
+This field indicates the command to launch the browser. If the field is empty, then the default browser will be used to start the web client.</li>
+</ul>
+</li>
+<li>
+<p>Closing test client</p>
+<ul>
+<li>
+<p><strong>forceclosetestclient</strong>:
+If the flag is set, then when closing the testing client, it will be checked whether the testing client has closed by its PID. If the testing client has not closed normally, an attempt will be made to close it using the OS command.</p>
+</li>
+<li>
+<p><strong>timeoutbeforeforciblyclosingtestclient</strong>:
+The number of seconds to check that the testing client process completed on its own.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="running-scenarios">Running scenarios<a class="headerlink" href="#running-scenarios" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>logtogr</strong>:
+If the checkbox is on, scenario and steps beginning events will be written to the event log.</p>
+</li>
+<li>
+<p><strong>makestepsasync</strong>:
+If the checkbox is on, each step will be executed asynchronously with the specified delay.
+If the checkbox is off, the steps will be executed synchronously. Steps tree will be updated on each 100th step.
+Scenario runs several times faster when the flag is off.</p>
+</li>
+<li>
+<p><strong>SpacingStepSpecifiedUser</strong>:
+Specifies delay between steps in asynchronous mode.</p>
+</li>
+<li>
+<p><strong>updatestatistics</strong>:
+If the checkbox is on, scenario statistic will be collected: number of steps passed, number of scenarios failes etc.</p>
+</li>
+<li>
+<p><strong>updatetreewhenscenariostarts</strong>:
+If the checkbox is on, current row of the tree will be active on step execution. It is allowed to turn the checkbox off on CI server to fasten up.</p>
+</li>
+<li>
+<p><strong>stoponerror</strong>:
+If the checkbox is on, scenario will be executed until the first error occurs.
+All the following scenarios will be skipped.</p>
+</li>
+<li>
+<p><strong>soundnotificationwhenscriptends</strong>:
+If this option is enabled, the following sound notification will be issued at the end of the script execution:</p>
+<ol>
+<li>Scripts completed successfully.</li>
+<li>An error occurred while executing the script.</li>
+<li>The breakpoint was triggered.
+You must enable the use of the VanessaExt addin.
+This option only works under Windows.</li>
+</ol>
+</li>
+<li>
+<p><strong>showrownumberonerror</strong>:
+If flag is set, when an error occurs in tree steps will be shown column with the row number in the tree, if this column was hidden.</p>
+</li>
+<li>
+<p><strong>pendingequalfailed</strong>:
+If the checkbox is on, pending steps will set assembly status to failed on the execution on CI server.
+It is recommended to set this checkbox on.</p>
+</li>
+<li>
+<p><strong>dosleepusingping</strong>:
+If this option is enabled, then the Sleep() method will be called through a call to the Ping command. This is necessary if the testing client window is currently not responding to requests.</p>
+</li>
+<li>
+<p><strong>banoverwritingvariables</strong>:
+If the checkbox is on, pending steps will set assembly status to failed on the execution on CI server.
+It is recommended to set this checkbox on.</p>
+</li>
+<li>
+<p><strong>updateformtableswhengettingvalue</strong>:
+If this option is enabled, then when receiving a table, the test will try to find and click on the "Refresh" table button and press it.
+An update attempt will occur if there are several attempts to get the table value and the first attempt was unsuccessful.</p>
+</li>
+<li>
+<p><strong>timeoutforasynchronoussteps</strong>:
+Specifies the maximum time to wait for an asynchronous step.
+For example, if the parameter value is set to 20 seconds and the step is used</p>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="k">And </span><span class="nf">I wait the field named &quot;</span><span class="s">FieldName</span><span class="nf">&quot; will be filled in </span><span class="s">10</span><span class="nf"> seconds</span>
+</code></pre></div>
+
+<p>then in reality the maximum step time will be 20 seconds, not 10.</p>
+<ul>
+<li><strong>timetofindwindow</strong>:
+Maximum time to search for a window in a step</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="k">Then </span><span class="nf">&quot;</span><span class="s">WindowTitle</span><span class="nf">&quot; window is opened</span>
+</code></pre></div>
+
+<ul>
+<li>
+<p><strong>numberofattemptstoperformanaction</strong>:
+Sets maximum tries number for multiple steps.
+Increasing this parameter may make scenarios execution more stable on the weak hardware.</p>
+</li>
+<li>
+<p><strong>safeexecutionofsteps</strong>:
+Adds delay for multiple actions, which may cause unstable scenario execution, e.g.: move to line, field value check etc.
+This option slow the execution down .</p>
+</li>
+<li>
+<p><strong>pauseonwindowopening</strong>:
+Additional pause value that will always be applied in a step</p>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="k">Then </span><span class="nf">&quot;</span><span class="s">WindowTitle</span><span class="nf">&quot; window is opened</span>
+</code></pre></div>
+
+<h2 id="screenshots">Screenshots<a class="headerlink" href="#screenshots" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>onerrorscreenshot</strong>:
+Enables taking screenshots in case of an error.
+To enable the option, make sure the "Screenshot creation command" field is filled in or VanessaExt is enabled depending on the settings.</p>
+</li>
+<li>
+<p><strong>onerrorscreenshoteverywindow</strong>:
+Enables taking screenshots for each 1C window when an error occurs.
+SikuliX or VanessaExt is used for this option.</p>
+</li>
+<li>
+<p><strong>useaddinforscreencapture</strong>:
+To take screenshots, use the VanessaExt add-in instead of the screenshot creation command.</p>
+</li>
+<li>
+<p><strong>outputscreenshot</strong>:
+Screenshots directory.</p>
+</li>
+</ul>
+<h2 id="scenario-report">Scenario report<a class="headerlink" href="#scenario-report" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>addtofeaturefilter</strong>:
+This option is used when one report (e.g. Allure) is generated for several similar assemblies (e.g., the same tests). In this case "Current assembly name" field value will be added to the scenario name to avoid non-unique names. </p>
+</li>
+<li>
+<p><strong>buildname</strong>:
+Unique assembly name used along with the parameter "Add uploading conditions to scenario name".</p>
+</li>
+<li>
+<p><strong>createlogs</strong>:
+If the flag is set, Vanessa Automation will upload the script execution status to a file.
+Details here:
+https://pr-mex.github.io/vanessa-automation/dev/ReturnStatus</p>
+</li>
+<li>
+<p><strong>logpath</strong>:
+The path to the file into which the script execution status will be uploaded.</p>
+</li>
+<li>
+<p>Test video record</p>
+<ul>
+<li>
+<p><strong>recordtestrunvideo</strong>:
+Enables video recording during the test. You must enable the use of an external VanessaExt add-in.
+A video file will be created for each scenario.</p>
+</li>
+<li>
+<p><strong>thenumberofframesofvideotestsession</strong>:
+The number of frames for recording video.</p>
+</li>
+<li>
+<p><strong>testrecordingvideocommand</strong>:
+The command to start the "ffmpeg" application. It is recommended to write the path to ffmpeg in path.</p>
+</li>
+<li>
+<p><strong>directoryforrecordingvideotestexecution</strong>:
+Directory for video files.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Logs</p>
+<ul>
+<li>
+<p><strong>logtotext</strong>:
+Switches on scenario execution log.
+Log events:</p>
+<ol>
+<li>Scenario execution begin</li>
+<li>Error event
+Log output is possible either to a file, or to the console, or to a file and a console at the same time.</li>
+</ol>
+</li>
+<li>
+<p><strong>outputloginconsole</strong>:
+Enables logging to the console.
+For this option to work, you must enable the use of the VanessaExt addin.</p>
+</li>
+<li>
+<p><strong>logstepstotext</strong>:
+Writes step beginning event to the log.</p>
+</li>
+<li>
+<p><strong>fulllog</strong>:
+More details in the log</p>
+<ol>
+<li>Number of tests in total</li>
+<li>How many fell / successfully / missed</li>
+<li>Time passed / left</li>
+</ol>
+</li>
+<li>
+<p><strong>textlogname</strong>:
+Vanessa Automation log file name.
+If the field is empty, the log will not be output to a text file.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Reports</p>
+</li>
+<li>
+<p>Allure</p>
+<div class="codehilite"><pre><span></span><code> * **allurecreatereport**:
+</code></pre></div>
+
+<p>Create a scenario execution report in Allure format.</p>
+<div class="codehilite"><pre><span></span><code> <span class="o">*</span> <span class="o">**</span><span class="n">setvariablevaluesinstepsallurereport</span><span class="o">**</span><span class="p">:</span>
+</code></pre></div>
+
+<p>If this option is enabled, then in the parameters of the steps in which the variables were used, the variable names will be replaced with their values.</p>
+<div class="codehilite"><pre><span></span><code> * **allurepath**:
+</code></pre></div>
+
+<p>Allure reports directory.</p>
+<div class="codehilite"><pre><span></span><code> * **allurepathbase**:
+</code></pre></div>
+
+<p>The directory in which report data is generated in Allure format, and subdirectories will be created for each assembly. This parameter takes precedence and the value of the "Allure Report Catalog" parameter will be ignored.</p>
+<div class="codehilite"><pre><span></span><code> * **reportlevel1**:
+</code></pre></div>
+
+<p>Sets first level of grouping in Allure report on the Behaviors tab. See Help info for details.</p>
+<div class="codehilite"><pre><span></span><code> * **reportlevel2**:
+</code></pre></div>
+
+<p>Sets second level of grouping in Allure report on the Behaviors tab. See Help info for details.</p>
+<div class="codehilite"><pre><span></span><code> * **reportlevel3**:
+</code></pre></div>
+
+<p>Sets third level of grouping in Allure report on the Behaviors tab. See Help info for details.</p>
+<div class="codehilite"><pre><span></span><code> * **directorytobuildhierarchy**:
+</code></pre></div>
+
+<p>The directory for features hierarchy calculation. See Help info for details.</p>
+<div class="codehilite"><pre><span></span><code> * **testsuites**:
+</code></pre></div>
+
+<p>Sets grouping value for Allure report on the Suites tab. See Help info for details.</p>
+<ul>
+<li>
+<p>Customize the title slide features</p>
+<div class="codehilite"><pre><span></span><code>* **attacheventlogtotheallurereport**:
+</code></pre></div>
+
+<p>If an error occurs, a log will be attached to the script. Data is taken from the moment the scenario starts.</p>
+<div class="codehilite"><pre><span></span><code>* **attachactiveformdatatotheallurereport**:
+</code></pre></div>
+
+<p>If the option is enabled, states of items of the active form will be collected in xlsx format in case of an error.</p>
+<div class="codehilite"><pre><span></span><code>* **attachallformsdatatotheallurereport**:
+</code></pre></div>
+
+<p>If the option is enabled, states of items of all forms opened in TestClient will be collected in xlsx format.</p>
+<div class="codehilite"><pre><span></span><code>* **attachnetworkconnectiondatatotheallurereport**:
+</code></pre></div>
+
+<p>If the option is enabled, then when an error occurs, data will be collected on the network connections of the PC on which the tests were run.</p>
+<div class="codehilite"><pre><span></span><code>* **attachdataoftheoperatingsystemprocessestotheallurereport**:
+</code></pre></div>
+
+<p>If the option is enabled, then when an error occurs, data on running OS processes will be collected.</p>
+<div class="codehilite"><pre><span></span><code><span class="o">*</span> <span class="o">**</span><span class="n">attachvariablestotheallurereport</span><span class="o">**</span><span class="p">:</span>
+</code></pre></div>
+
+<p>If the option is enabled, data with Context and Global Context variable values will be collected when an error occurs.</p>
+<ul>
+<li><strong>DataAllureMarks</strong>:
+The table is used to map script tags to pace marks.
+If a regular expression is specified in a table row, then a regular expression from this table is applied to each script tag, and if the tag matches it, then a tag in the TagName: Value format will be added to the report.
+If no regular expression is specified in a table row, then the label is added unconditionally.
+You can read more about why this may be needed here
+https://habr.com/ru/company/sberbank/blog/359302/</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Cucumber</p>
+<div class="codehilite"><pre><span></span><code> * **cucumbercreatereport**:
+</code></pre></div>
+
+<p>Generate a report in Cucumber format based on the script execution results.</p>
+<div class="codehilite"><pre><span></span><code> * **cucumberreportpath**:
+</code></pre></div>
+
+<p>Report directory.</p>
+</li>
+<li>
+<p>JUnit</p>
+<div class="codehilite"><pre><span></span><code> * **junitcreatereport**:
+</code></pre></div>
+
+<p>Generate a report in JUnit format based on the results of script execution.</p>
+<div class="codehilite"><pre><span></span><code> * **junitpath**:
+</code></pre></div>
+
+<p>Report generation directory.</p>
+</li>
+<li>
+<p>ASDS</p>
+<div class="codehilite"><pre><span></span><code> * **ModelingCreateReport**:
+</code></pre></div>
+
+<p>Generate a report in the SPPR format based on the results of the scenarios.</p>
+<div class="codehilite"><pre><span></span><code> * **modelingreportpath**:
+</code></pre></div>
+
+<p>Report directory.</p>
+</li>
+<li>
+<p>Error log text</p>
+<ul>
+<li>
+<p><strong>logerrorstotext</strong>:
+Create json file with the detailed information for each error.</p>
+</li>
+<li>
+<p><strong>getactiveformdataonerror</strong>:
+If the option is on, the status of the elements of the active form will be collected in mxl format.</p>
+</li>
+<li>
+<p><strong>getallformsdataonerror</strong>:
+If the option is on, the status of the elements of all forms opened in TestClient will be collected in mxl format.</p>
+</li>
+<li>
+<p><strong>collectnetworkconnectiondata</strong>:
+If the option is enabled, then when an error occurs, data will be collected on the network connections of the PC on which the tests were run.</p>
+</li>
+<li>
+<p><strong>collectdataoftheoperatingsystemprocesses</strong>:
+If the option is enabled, then when an error occurs, data on running OS processes will be collected.</p>
+</li>
+<li>
+<p><strong>texterrorslogname</strong>:
+The directory for errors data and form elements status information.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>simplereport</strong>:
+Enables a scenario execution report in the internal format.</p>
+</li>
+</ul>
+<h2 id="auto-instructions">Auto instructions<a class="headerlink" href="#auto-instructions" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>VanessaExt add-in</p>
+<ul>
+<li>
+<p><strong>usebrowserwebsocket</strong>:
+Allows to execute external commands in the browser using WebSocket.</p>
+</li>
+<li>
+<p><strong>emulatemousemovementswithVanessaExt</strong>:
+Enables mouse movement emulation using VanessaExt add-in</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Mouse actions emulation settings</p>
+<ul>
+<li>
+<p>Mouse coordinate offset settings</p>
+</li>
+<li>
+<p>Mouse speed</p>
+<ul>
+<li><strong>hlightmouseclicksinbrowser</strong>:
+If this option is enabled, click highlighting will be enabled using the external VanessaExt component.</li>
+</ul>
+</li>
+<li>
+<p>Highlight mouse clicks</p>
+<ul>
+<li>
+<p>Selecting a color for highlighting mouse clicks</p>
+<ul>
+<li>
+<p><strong>mouseclickhighlightcolor</strong>:
+Number. Sets the color for highlighting mouse clicks.</p>
+</li>
+<li>
+<p><strong>mouseclickhighlightradius</strong>:
+Sets the radius of the click animation.</p>
+</li>
+<li>
+<p><strong>mouseclickhighlightwidth</strong>:
+Sets the width of the click animation.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Highlighting mouse clicks</p>
+<ul>
+<li>
+<p><strong>mouseclickhighlightduration</strong>:
+Sets the duration of the click animation.</p>
+</li>
+<li>
+<p><strong>mouseclickhighlighttransparency</strong>:
+Sets the transparency of the click animation.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>emulatekeyboardinputwithVanessaExt</strong>:
+Enables emulation of keyboard input using VanessaExt add-in</p>
+</li>
+<li>
+<p><strong>findingpicturesusingaddinvanessaext</strong>:
+If this option is enabled, then the steps performing image search on the screen will use the external addin VanessaExt instead of using SikuliX.</p>
+</li>
+<li>
+<p><strong>ignorebrowsersearcherrors</strong>:
+Allows to continue running the scenario if the form item is not found in the browser.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>SikuliX server</p>
+<ul>
+<li>
+<p><strong>emulatemousemovement</strong>:
+If the checkbox is on, then the search of form element or control will be performed on steps execution. Mouse pointer will be moved to the detected element. 
+SikuliX is used for picture search and mouse movement. Picture will be generated by the text from the form element.
+To disable mouse movement at a specific step, you should use the #[DoNotMoveMouse] directive.</p>
+</li>
+<li>
+<p><strong>sikulixscriptpath</strong>:
+Script directory. Multiple directories can be used, separated by ";".</p>
+</li>
+<li>
+<p><strong>pathforpicturegeneration</strong>:
+The directory in which pictures will be programmatically created to search for them on the screen.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>HTML and Markdown</p>
+<ul>
+<li>
+<p><strong>htmlcreate</strong>:
+If the checkbox is on, HTML screencast will be created during scenario execution.
+Specify console command for snapshots generation in  "Snapshot creating command" field.
+Also use special instructions in the script, see Help info.</p>
+</li>
+<li>
+<p><strong>htmlpath</strong>:
+HTML instruction catalog</p>
+</li>
+<li>
+<p><strong>markdowncreate</strong>:
+If the checkbox is on, MarkDown screencast will be created during scenario execution.
+Specify console command for snapshots generation in  "Snapshot creating command" field or the screenshots flag is set by the "VanessaExt" component".
+Also use special instructions in the script, see Help info.</p>
+</li>
+<li>
+<p><strong>markdownpath</strong>:
+Markdown Instruction Directory</p>
+</li>
+<li>
+<p><strong>autonumberingofsteps</strong>:
+Adds auto numbering to the beginning of the step description text.
+To ensure that leading zeros are not lost when exporting from MD format, the text is written to the code block.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Video tutorial</p>
+<ul>
+<li>
+<p><strong>videocreate</strong>:
+Allows you to create video instructions.
+A video describing the settings is in this playlist.
+It is also recommended to read this FAQ.</p>
+</li>
+<li>
+<p><strong>videopath</strong>:
+Directory where will be placed result of assembly videos or animated screencast.</p>
+</li>
+<li>
+<p><strong>instructiontypevideo</strong>:
+Create a video tutorial.</p>
+</li>
+<li>
+<p><strong>instructiontypehtml</strong>:
+Create animated HTML screencast.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Video settings</p>
+<div class="codehilite"><pre><span></span><code> * **fps**:
+</code></pre></div>
+
+<p>Sets shots per second number for the recording.</p>
+<div class="codehilite"><pre><span></span><code> * **screenwidth**:
+</code></pre></div>
+
+<p>Sets screen width for the recording. Maximum value is screen width for the current resolution. If the specified value is less than screen width, screen area beginning from upper left corner will be recorded.</p>
+<div class="codehilite"><pre><span></span><code> * **screenleft**:
+</code></pre></div>
+
+<p>Sets left indent</p>
+<div class="codehilite"><pre><span></span><code> * **screenheight**:
+</code></pre></div>
+
+<p>Sets screen height for the recording. Maximum value is screen height for the current resolution. If the specified value is less than screen height, screen area beginning from upper left corner will be recorded.</p>
+<div class="codehilite"><pre><span></span><code> * **screentop**:
+</code></pre></div>
+
+<p>Sets top indent</p>
+<div class="codehilite"><pre><span></span><code> <span class="o">*</span> <span class="o">**</span><span class="n">videocapturetool</span><span class="o">**</span><span class="p">:</span>
+</code></pre></div>
+
+<p>If VLC is selected, VLC will be used for video recording. Otherwise, VanessaExt add-in that will call ffmpeg will be used.</p>
+<div class="codehilite"><pre><span></span><code> * **comandrecvideo**:
+</code></pre></div>
+
+<p>Command to start VLC for screen recording. You can specify bitrate and other parameters.</p>
+<div class="codehilite"><pre><span></span><code> * **tempfolderforvideo**:
+</code></pre></div>
+
+<p>The directory for temporary files created on video recording and composing. The directory is cleared before each recording!</p>
+<div class="codehilite"><pre><span></span><code> * **convertcomand**:
+</code></pre></div>
+
+<p>The path to the convert.exe executable file in the ImageMagick directory.
+Example:
+"C:\Program Files\ImageMagick-X.X.X-Q16\convert.exe"
+Download: https://imagemagick.org/script/download.php
+During the installation, the following item is required for installation: Install legacy utilities (e. G. Convert)</p>
+<div class="codehilite"><pre><span></span><code> * **videocachepath**:
+</code></pre></div>
+
+<p>Video snippets directory.</p>
+</li>
+<li>
+<p>Audio settings</p>
+<ul>
+<li>
+<p>Music</p>
+<div class="codehilite"><pre><span></span><code>* **musicpath**:
+</code></pre></div>
+
+<p>mp3 files directory.
+If this field is filled, random mp3 file will be retrieved from this catalog as a soundtrack.
+If mp3 file duration is less than the video's, it will be repeated.</p>
+<div class="codehilite"><pre><span></span><code>* **musicvolume**:
+</code></pre></div>
+
+<p>Value range is from 0 to 1.
+If the specified value is 0, it will not affect music volume.
+If value is greater than zero (e.g., 0.06), it will affect the volume of the soundtrack.
+Recommended value is 0.1 or less.</p>
+</li>
+<li>
+<p>Make voice</p>
+<div class="codehilite"><pre><span></span><code>* **dotts**:
+</code></pre></div>
+
+<p>Switches on the voicing of the video.</p>
+<div class="codehilite"><pre><span></span><code>* **ttstype**:
+</code></pre></div>
+
+<p>Specifies the narrator's voice.</p>
+<ul>
+<li>
+<p>Microsoft TTS</p>
+<ul>
+<li><strong>speedofspeech</strong>:
+Narrator's speech speed.
+Value range is from -10 to 10.</li>
+</ul>
+</li>
+<li>
+<p>Yandex TTS</p>
+<ul>
+<li>
+<p><strong>yandexttsspeed</strong>:
+The speed (tempo) of synthesized speech.
+Speech rate is specified as a fractional number in the range from 0.1 to 3.0.</p>
+</li>
+<li>
+<p><strong>yandexttsquerytype</strong>:
+Determines how the audio files will be received: through the official API or through the free interface. The recommended value is via the official API.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Group amazon TTS</p>
+<ul>
+<li>
+<p><strong>amazonttsregion</strong>:
+The field specifies the region parameter. The default is us-east-1.</p>
+</li>
+<li>
+<p><strong>amazonttskey</strong>:
+Amazon cloud access key.</p>
+</li>
+<li>
+<p><strong>amazonttssecretkey</strong>:
+The file where Amazon cloud private key is stored.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Voice test</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Audio cache</p>
+<div class="codehilite"><pre><span></span><code>* **cachettsfiles**:
+</code></pre></div>
+
+<p>Switchs on voice file cashing.
+Makes video assembly process faster.
+Reduces external voice generation servises usage.
+Reduces voice generation costs.</p>
+<div class="codehilite"><pre><span></span><code>* **ttsfilescache**:
+</code></pre></div>
+
+<p>Voice cache files directory.</p>
+</li>
+<li>
+<p>Replacements dictionaries</p>
+<div class="codehilite"><pre><span></span><code>* **changewordslib**:
+</code></pre></div>
+
+<p>List of files that will be used for autocorrect spoken text.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>More</p>
+<div class="codehilite"><pre><span></span><code> * **mousecurfile**:
+</code></pre></div>
+
+<p>The path to the image used for mouse cursor appearance.</p>
+<div class="codehilite"><pre><span></span><code> * **watermarkfile**:
+</code></pre></div>
+
+<p>Png image used as a watermark.
+Watermark will be placed in the lower right corner of the video.
+The image resolution must be less than the resolution in which the video is recorded.</p>
+<div class="codehilite"><pre><span></span><code> * **accelerationpercentage**:
+</code></pre></div>
+
+<p>Maximum speeding percentage available for video snippet (for a single step).
+Video assembly mechanism can speed up video snippet, for example, if soundtrack for video is 5 seconds long, and video snippet is 10 seconds long.
+Is the specified value is 0, than there is no limit on the speeding up.
+Recommended value is 30%.
+Then in the example above the video will speed up (10 * (1-0.3)) from 10 to 7 seconds.</p>
+<div class="codehilite"><pre><span></span><code> * **addsubtitles**:
+</code></pre></div>
+
+<p>Switches on adding video subtitles.</p>
+<div class="codehilite"><pre><span></span><code> * **groupofstepsasastep**:
+</code></pre></div>
+
+<p>Switches on the mode, when each first level group of scenario steps will be converter to one step in automanual.</p>
+<div class="codehilite"><pre><span></span><code> * **emulatekeyboardinput**:
+</code></pre></div>
+
+<p>Switches on text input emulation. Project utility UIToolsFor1C is used.
+Only Russian and English are available.
+Keyboard layout shwitches by pressing Ctrl+Shift emulation.</p>
+<div class="codehilite"><pre><span></span><code> * **hideservicewindows**:
+</code></pre></div>
+
+<p>Hides service console windows used for video assembly.
+Speeds up video assembly. This mode is recommended.</p>
+<div class="codehilite"><pre><span></span><code> * **disablescalingofsteps**:
+</code></pre></div>
+
+<p>Switches of video snippets scaling by time.</p>
+<div class="codehilite"><pre><span></span><code> * **turnofffeaturetitleslide**:
+</code></pre></div>
+
+<p>Switches off creating of video initial slide with feature file header.</p>
+<div class="codehilite"><pre><span></span><code> * **turnoffscenarioslide**:
+</code></pre></div>
+
+<p>Switches off creating of video initial slide with scenario header.</p>
+<div class="codehilite"><pre><span></span><code> * **turnofffinalslide**:
+</code></pre></div>
+
+<p>Switches off creating of video final slide with video total information.</p>
+<div class="codehilite"><pre><span></span><code> * **highlightmouseclicks**:
+</code></pre></div>
+
+<p>Switches on mouse clicks highlighting. Project utility UIToolsFor1C is used.
+SikuliX emulates mouse clicks.</p>
+<ul>
+<li>
+<p>Customize the title slide features</p>
+</li>
+<li>
+<p>Final slide settings </p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="vanessa-editor">Vanessa Editor<a class="headerlink" href="#vanessa-editor" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>usecurrentformdatawhenselectingsteps</strong>:
+Enables the ability to use data from the current test client form, such as field names, window titles, and so on, when adding steps.</p>
+</li>
+<li>
+<p><strong>showsubscenariolines</strong>:
+Enables the display of subscript lines in the editor.</p>
+</li>
+<li>
+<p><strong>showcodeminiature</strong>:
+Controls the display of the code miniature.</p>
+</li>
+<li>
+<p><strong>replacetabswithspaces</strong>:
+The option determines whether tabs should be replaced with spaces in the editor.</p>
+</li>
+<li>
+<p><strong>showbookmarkstop</strong>:
+If the option is set, then bookmarks will be displayed at the top. This is to give the script editor more room to display the script.</p>
+</li>
+<li>
+<p><strong>syntaxcheckingineditor</strong>:
+If the option is set, the script syntax is checked in the editor</p>
+</li>
+<li>
+<p><strong>vanessaeditortheme</strong>:
+Allows you to change the editor theme.</p>
+</li>
+</ul>
+<h2 id="libraries">Libraries<a class="headerlink" href="#libraries" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Re-code library</p>
+<ul>
+<li>
+<p><strong>librarycatalogs</strong>:
+List of directories that contain epf files containing script steps and feature files containing export scripts.</p>
+</li>
+<li>
+<p><strong>stepsfrommetadata</strong>:
+The list contains paths to forms within the configuration containing step descriptions.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="test-clients">Test clients<a class="headerlink" href="#test-clients" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>datatestclients</strong>:
+A list of testing clients, which indicates:<ol>
+<li>Profile name</li>
+<li>Synonym</li>
+<li>Testing client type</li>
+<li>String of connection to the base</li>
+<li>Additional launch options</li>
+<li>Computer name to establish connection</li>
+<li>Port</li>
+</ol>
+</li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="">
+        
+          <a href="../../FAQ/NotAdd/" title="Отличия Vanessa-Automation от ADD" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Назад
+                </span>
+                Отличия Vanessa-Automation от ADD
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../SettingsRU/" title="Описание параметров файла запуска Vanessa Automation из командной строки." class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Вперед
+                </span>
+                Описание параметров файла запуска Vanessa Automation из командной строки.
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+      <a href="https://github.com/Pr-Mex/vanessa-automation" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://t.me/VanessaAutomation" target="_blank" rel="noopener" title="t.me" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.f45d2d8d.min.js"></script>
+      <script src="../../assets/javascripts/bundle.74d0b805.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "search.config.lang": "ru", "search.config.pipeline": "", "search.config.separator": "", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e # \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ["tabs", "instant"],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.7f7c8775.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>

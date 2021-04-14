@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <link rel="canonical" href="https://pr-mex.github.io/vanessa-automation/CommandSetting/">
+        <link rel="canonical" href="https://pr-mex.github.io/vanessa-automation/ReturnStatus/">
       
       
       <link rel="shortcut icon" href="../assets/images/logo.png">
@@ -17,7 +17,7 @@
     
     
       
-        <title>Параметры запуска из командной строки - Vanessa Automation</title>
+        <title>Статус возврата - Vanessa Automation</title>
       
     
     
@@ -85,7 +85,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Параметры запуска из командной строки
+              Статус возврата
             
           </span>
         </div>
@@ -258,6 +258,18 @@
       
       
 
+
+  <li class="md-nav__item">
+    <a href="../CommandSetting/" title="Параметры запуска из командной строки" class="md-nav__link">
+      Параметры запуска из командной строки
+    </a>
+  </li>
+
+    
+      
+      
+      
+
   
 
 
@@ -268,22 +280,10 @@
       
     
     
-    <a href="./" title="Параметры запуска из командной строки" class="md-nav__link md-nav__link--active">
-      Параметры запуска из командной строки
-    </a>
-    
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../ReturnStatus/" title="Статус возврата" class="md-nav__link">
+    <a href="./" title="Статус возврата" class="md-nav__link md-nav__link--active">
       Статус возврата
     </a>
+    
   </li>
 
     
@@ -446,7 +446,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/pr-mex/vanessa-automation/edit/develop/docs/CommandSetting.md" title="Редактировать страницу" class="md-content__button md-icon">
+                  <a href="https://github.com/pr-mex/vanessa-automation/edit/develop/docs/ReturnStatus.md" title="Редактировать страницу" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg>
                   </a>
                 
@@ -454,88 +454,38 @@
                   
                 
                 
-                <h1 id="_1">Параметры запуска из командной строки<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+                <h1 id="_1">Статус возврата<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<p>При запуске выполнения сценариев из командной строки Vanessa Automation возвращает статус возврата в виде числа.
+При этом в Json файле с параметрами запуска должны быть заданы параметры:
+"ВыгружатьСтатусВыполненияСценариевВФайл": "Истина",
+"ПутьКФайлуДляВыгрузкиСтатусаВыполненияСценариев": "&lt;ПутьКФайлу&gt;",</p>
+<p>Возможные статусы описаны в таблице.</p>
 <table>
 <thead>
 <tr>
-<th>Параметр</th>
-<th>Тип</th>
+<th>Значение</th>
 <th>Описание</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>StartFeaturePlayer</td>
-<td>Булево</td>
-<td>Параметр означает, что нужно запустить тесты на выполнение, согласно параметрам переданным в VAParams.</td>
+<td>0</td>
+<td>Ошибок при выполнении сценариев не было.</td>
 </tr>
 <tr>
-<td>VAParams</td>
-<td>Строка</td>
-<td>Путь к файлу json с основными настройками Vanessa-Automation. Устаревшее значение параметра: "VBParams".</td>
+<td>1</td>
+<td>Были ошибки выполнения сценариев.</td>
 </tr>
 <tr>
-<td>QuietInstallVanessaExt</td>
-<td>Булево</td>
-<td>Выполняет тихую установку компоненты VanessaExt, без показа модального диалога пользователю. Также этот параметр может быть передан в файле VAParams (возможно указать QuietInstallVanessaExt или ТихаяУстановкаVanessaExt). Для работы опуции необходима установка толстого клиента платформы и возможность запускать файловые базы.</td>
+<td>2</td>
+<td>Возникла ошибка в шаге контекста, либо возникла ошибка подключения клиента тестирования, либо возникла ошибка сетевого взаимодействия. Обычно это означает, что были проблемы с подключением клиента тестирования и запускающая сторона может принять решение о перезапуске теста.</td>
 </tr>
 <tr>
-<td>QuietInstallVanessaExtAndClose</td>
-<td>Булево</td>
-<td>Выполняет тоже самое, что и предыдущая опция, но после установки компоненты сеанс 1С буде закрыт. Тесты при этом выполняться не будут. Используется для гарантированной установки внешней компоненты до запуска основного сеанса тестирования. Опцию нельзя передавать в файле VAParams.</td>
-</tr>
-<tr>
-<td>WorkspaceRoot</td>
-<td>Строка</td>
-<td>Определяет путь к каталогу проекта. По умолчанию каталогом проекта являет каталог, в котором находится основная обработка vanessa-automation.epf</td>
-</tr>
-<tr>
-<td>ClearStepsCache</td>
-<td>Булево</td>
-<td>Очищает кеш шагов при запуске Vanessa-Automation. Параметр может быть полезен, чтобы блокировать загрузку кеша шагов, который мог остаться у данного пользователя в данной базе.</td>
-</tr>
-<tr>
-<td>DisableUserSettingsLoader</td>
-<td>Булево</td>
-<td>Отключает работу плагина "Загрузчик пользовательских настроек". Использование параметра уменьшает количество серверных вызовов, если не планируется использовать даный плагин.</td>
-</tr>
-<tr>
-<td>DisableLoadTestClientsTable</td>
-<td>Булево</td>
-<td>Отключает загрузку списка клиентов тестирования. Параметр может быть полезен, чтобы блокировать загрузку списка клиентов тестирования, который мог остаться у данного пользователя в данной базе.</td>
-</tr>
-<tr>
-<td>DisableLoadConfig</td>
-<td>Булево</td>
-<td>Отключает загрузку настроек Vanessa-Automation. Параметр может быть полезен, чтобы блокировать загрузку настроек пользователя, которые могли остаться у данного пользователя в данной базе.</td>
-</tr>
-<tr>
-<td>DisableFeatureLoadOnOpenForm</td>
-<td>Булево</td>
-<td>Отключает загрузку фича файла при старте Vanessa-Automation. Аналогично установке {Объект.ЗагрузкаФичПриОткрытии = "Не загружать"}</td>
-</tr>
-<tr>
-<td>DisableCheckPossibilityOfSynchronousCalls</td>
-<td>Булево</td>
-<td>Отключает проверку возможности использования синхронных вызовов, несмотря на то, что в свойствах конфигурации они явно запрещены. Это нужно, т.к. в тонком клиенте часто возможно использовать синхронные вызовы несмотря на настройки конфигурации.</td>
-</tr>
-<tr>
-<td>GetStepsCache</td>
-<td>Булево</td>
-<td>Служебный. Нужен при сборке Vanessa Automation Single. Т.к. Single уже внутри содержит всю библиотеку шагов. И сразу же содержит в себе рассчитанный кеш шагов.</td>
-</tr>
-<tr>
-<td>DisableFileOptimization</td>
-<td>Булево</td>
-<td>Служебный. Отключает механизм оптимизации работы с файлами для серверных баз, когда сервер запущен на том же ПК, что и клиент. Параметр используется для режима самотестирования Vanessa-Automation и использовать его в реальных запусках тестов не рекомендуется.</td>
+<td>3</td>
+<td>Не было найдено ни одного сценария для выполнения.</td>
 </tr>
 </tbody>
 </table>
-<p>Порядок параметров не важен. Значения параметров указываются через равно, например:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">StartFeaturePlayer</span><span class="o">;</span><span class="nt">VAParams</span><span class="o">=</span><span class="nt">C</span><span class="o">:</span><span class="err">\</span><span class="nt">Temp</span><span class="err">\</span><span class="nt">features</span><span class="err">\</span><span class="nt">VAParams</span><span class="p">.</span><span class="nc">json</span><span class="o">;</span>
-</code></pre></div>
-
-<p>У параметра с типом булево можно записывать не указывая значение. По умолчанию считается Истина.</p>
                 
               
               
@@ -554,7 +504,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="">
         
-          <a href="../Changelog/" title="История версий" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../CommandSetting/" title="Параметры запуска из командной строки" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
             </div>
@@ -563,19 +513,19 @@
                 <span class="md-footer-nav__direction">
                   Назад
                 </span>
-                История версий
+                Параметры запуска из командной строки
               </div>
             </div>
           </a>
         
         
-          <a href="../ReturnStatus/" title="Статус возврата" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../FAQ/" title="Вопросы и ответы" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Вперед
                 </span>
-                Статус возврата
+                Вопросы и ответы
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">

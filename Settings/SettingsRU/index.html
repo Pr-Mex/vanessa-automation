@@ -1,0 +1,1771 @@
+
+
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <link rel="canonical" href="https://pr-mex.github.io/vanessa-automation/Settings/SettingsRU/">
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/logo.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.0.0">
+    
+    
+      
+        <title>Описание параметров файла запуска Vanessa Automation из командной строки. - Vanessa Automation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.c3000690.min.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.4444686e.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    <body dir="" data-md-color-primary="white" data-md-color-accent="red">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#vanessa-automation" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="">
+    <a href="https://pr-mex.github.io/vanessa-automation" title="Vanessa Automation" class="md-header-nav__button md-logo" aria-label="Vanessa Automation">
+      
+  <img src="../../assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Vanessa Automation
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Описание параметров файла запуска Vanessa Automation из командной строки.
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Начните печатать для поиска
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/pr-mex/vanessa-automation/" title="Перейти к репозиторию" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pr-mex/vanessa-automation
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+          
+
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." class="md-tabs__link">
+        Vanessa Automation
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../FAQ/" class="md-tabs__link">
+          FAQ
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../SettingsEN/" class="md-tabs__link md-tabs__link--active">
+          Settings
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://pr-mex.github.io/vanessa-automation" title="Vanessa Automation" class="md-nav__button md-logo" aria-label="Vanessa Automation">
+      
+  <img src="../../assets/images/logo.png" alt="logo">
+
+    </a>
+    Vanessa Automation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/pr-mex/vanessa-automation/" title="Перейти к репозиторию" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pr-mex/vanessa-automation
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Vanessa Automation" class="md-nav__link">
+      Vanessa Automation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Changelog/" title="История версий" class="md-nav__link">
+      История версий
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../CommandSetting/" title="Параметры запуска из командной строки" class="md-nav__link">
+      Параметры запуска из командной строки
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../ReturnStatus/" title="Статус возврата" class="md-nav__link">
+      Статус возврата
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      FAQ
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="FAQ" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        FAQ
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../FAQ/" title="Вопросы и ответы" class="md-nav__link">
+      Вопросы и ответы
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../FAQ/KnownProblems/" title="Известные проблемы" class="md-nav__link">
+      Известные проблемы
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../FAQ/MakeAutoVideo/" title="Как создать автовидеоинструкцию" class="md-nav__link">
+      Как создать автовидеоинструкцию
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../FAQ/NotAdd/" title="Отличия Vanessa-Automation от ADD" class="md-nav__link">
+      Отличия Vanessa-Automation от ADD
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+    
+    <label class="md-nav__link" for="nav-6">
+      Settings
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Settings" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Settings
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../SettingsEN/" title="Description Vanessa Automation startup file parameters from the command line." class="md-nav__link">
+      Description Vanessa Automation startup file parameters from the command line.
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Описание параметров файла запуска Vanessa Automation из командной строки.
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Описание параметров файла запуска Vanessa Automation из командной строки." class="md-nav__link md-nav__link--active">
+      Описание параметров файла запуска Vanessa Automation из командной строки.
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vanessa-automation_1" class="md-nav__link">
+    Данный файл создан автоматически на основании данных формы Vanessa Automation. Пулреквесты нужно отправлять в подсказки к элементам формы.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vanessa-automation-vaparamsjson" class="md-nav__link">
+    Заготовку для этого файла можно получить выгрузив настройки Vanessa Automation в файл VAParams.json.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    Основные
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Настройки клиентов тестирования
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    Выполнение сценариев
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    Скриншоты
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    Отчет о запуске сценариев
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    Автоинструкции
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vanessa-editor" class="md-nav__link">
+    Vanessa Editor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    Библиотеки
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    Клиенты тестирования
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#vanessa-automation_1" class="md-nav__link">
+    Данный файл создан автоматически на основании данных формы Vanessa Automation. Пулреквесты нужно отправлять в подсказки к элементам формы.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vanessa-automation-vaparamsjson" class="md-nav__link">
+    Заготовку для этого файла можно получить выгрузив настройки Vanessa Automation в файл VAParams.json.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    Основные
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    Настройки клиентов тестирования
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    Выполнение сценариев
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    Скриншоты
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    Отчет о запуске сценариев
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    Автоинструкции
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vanessa-editor" class="md-nav__link">
+    Vanessa Editor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    Библиотеки
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    Клиенты тестирования
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/pr-mex/vanessa-automation/edit/develop/docs/Settings/SettingsRU.md" title="Редактировать страницу" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <h1 id="vanessa-automation">Описание параметров файла запуска Vanessa Automation из командной строки.<a class="headerlink" href="#vanessa-automation" title="Permanent link">&para;</a></h1>
+<h4 id="vanessa-automation_1">Данный файл создан автоматически на основании данных формы Vanessa Automation. Пулреквесты нужно отправлять в подсказки к элементам формы.<a class="headerlink" href="#vanessa-automation_1" title="Permanent link">&para;</a></h4>
+<h4 id="vanessa-automation-vaparamsjson">Заготовку для этого файла можно получить выгрузив настройки Vanessa Automation в файл VAParams.json.<a class="headerlink" href="#vanessa-automation-vaparamsjson" title="Permanent link">&para;</a></h4>
+<h2 id="_1">Основные<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Теги</p>
+<ul>
+<li>
+<p><strong>СписокТеговИсключение {ignoretags}</strong>:
+В поле указываются теги. Если тег будет найден в фиче, то вся фича не будет загружена. Если тег будет найден у сценария, то не будет загружен только этот сценарий.</p>
+</li>
+<li>
+<p><strong>СписокТеговОтбор {filtertags}</strong>:
+В поле указываются теги. Если тег НЕ будет найден в фиче, то вся фича не будет загружена. Также возможно загрузить из фичи только те сценарии, у которых указаны нужные теги из списка.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Язык</p>
+<ul>
+<li><strong>ЯзыкГенератораGherkin {gherkinlanguage}</strong>:
+Поле задаёт язык, на котором будет генерироваться текст сценария при накликивании. Также, если выбран язык отличный от русского, то при выборе шага из базы "известных шагов" также появятся дополнительные колонки, которые отображают текст и описание шага на выбранном языке.</li>
+</ul>
+</li>
+<li>
+<p>Запись действий пользователя</p>
+<ul>
+<li>
+<p><strong>ДобавлятьПриНакликиванииМетаИнформацию {addmetainformationclicking}</strong>:
+Если флаг установлен, то при генерации текста сценария после накликивания будет добавляться информация, необходимая для перевода сценария на другой язык в будущем.</p>
+</li>
+<li>
+<p><strong>ИскатьЭлементыФормыПоИмени {searchformelementsbyname}</strong>:
+Если флаг установлен, то при генерации текста сценария после накликивания, шаги в сценарии будут искать элементы формы по внутреннему имени.
+Если флаг снят, то при генерации текста сценария после накликивания, шаги в сценарии будут искать элементы формы по заголовку, если это возможно.
+Это возможно в том случае, если в данной форме есть только один элемент с данным заголовком.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Системные настройки</p>
+<ul>
+<li>
+<p><strong>ТегTreeВключенПоУмолчанию {thetreetagisenabledbydefault}</strong>:
+Если флаг установлен, то считается, что в фича файл написан так, как будто в нём указан тег @tree, даже если его там нет. Т.е. считается, что любой загружаемый фича файл использует иерархию шагов.</p>
+</li>
+<li>
+<p><strong>ИспользоватьКомпонентуVanessaExt {useaddine}</strong>:
+Предназначена для управления окнами Windows и Linux. 
+Возможности:
+Получение списка окон и списка процессов
+Управление размерами и положением окна
+Получение снимка окна и снимка экрана
+https://github.com/lintest/VanessaExt</p>
+</li>
+<li>
+<p><strong>ИспользоватьПарсерGherkinИзКомпонентыVanessaExt {usethegherkinparserfromthevanessaextaddin}</strong>:
+Устанавливает признак того. что нужно использовать парсер Gherkin из компоненты VanessaExt. Этот парсер работает гораздо быстрее, чем встроенный парсер.</p>
+</li>
+<li>
+<p><strong>КаталогИнструментов {instrpath}</strong>:
+Каталог, где находится обработка Vanessa Automation. При работе со стандартной поставкой поле должно быть заполнено.
+При работе с Vanessa Automation Single допускается оставлять поле пустым.</p>
+</li>
+<li>
+<p><strong>КаталогПроекта {projectpath}</strong>:
+Каталог, где находятся файлы тестируемого проекта, необходимые для выполнения тестов.</p>
+</li>
+<li>
+<p><strong>ЗагрузкаФичПриОткрытии {DownloadFeaturesOpen}</strong>:
+Позволяет управлять поведением Vanessa Automation при открытии: нужно ли загружать фича файл, с которым велась работа в предыдущей, сесии или нет.</p>
+</li>
+<li>
+<p><strong>КомандаОткрытияФичиВТекстовомРедакторе {commandtoopenfeatureintexteditor}</strong>:
+В поле указывается текстовый редактор, в котором будет открыт фича файл и спозиционирован на текущей строке, при выполнении команды "Открыть .feature файл в редакторе".</p>
+</li>
+<li>
+<p><strong>ПоставщикПользовательскихНастроек {usersettingsprovider}</strong>:
+Поставщик пользовательских настроек</p>
+</li>
+<li>
+<p><strong>АдресПользовательскихНастроек {addressofcustomsettings}</strong>:
+файловый путь или url по которому находятся настройки. По умолчанию каталог проекта (имя файла по умолчанию user_settings.json)  или localhost</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="_2">Настройки клиентов тестирования<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Запуск клиента тестирования</p>
+<ul>
+<li>
+<p><strong>ЗапускатьКлиентТестированияСМаксимизированнымОкном {runtestclientwithmaximizedwindow}</strong>:
+Если опция включена клиент тестирования будет запущен развёрнутым на весь экран.</p>
+</li>
+<li>
+<p><strong>ТаймаутЗапуска1С {testclienttimeout}</strong>:
+Устанавливает макcимальное время в секундах, в течение которого Vanessa Automation будет ждать запуска клиента тестирования. По истечении времени будет вызвано исключение.</p>
+</li>
+<li>
+<p><strong>ДиапазонПортовTestclient {testclientports}</strong>:
+Устанавливает диапазон портов, в котором будет производиться поиск свободного порта в системе для запуска клиента тестирования.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Отладка клиента тестирования</p>
+<ul>
+<li>
+<p><strong>ЗапускатьТестКлиентВРежимеОтладки {testclientdebug}</strong>:
+Если флаг установлен, то при запуске клиента тестирования ему будут переданы дополнительные ключи запуска /debug и /debuggerURL</p>
+</li>
+<li>
+<p><strong>АдресОтладчика {testclientdebugaddress}</strong>:
+Адрес отладчика, который будет передан клиенту тестирования.</p>
+</li>
+<li>
+<p><strong>КлючиОтладки {testclientdebugkeys}</strong>:
+Ключи отладки, которые будут переданы клиенту тестирования при запуске.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Настройки запуска браузера</p>
+</li>
+<li>
+<p>Группа команды установки строки запуска браузера</p>
+<ul>
+<li><strong>КомандаЗапускаБраузера {browserlaunchcommand}</strong>:
+В данном поле указывается команда запуска браузера. Если поле пустое, тогда для запуска web клиента будет использован браузер по умолчанию.</li>
+</ul>
+</li>
+<li>
+<p>Закрытие клиента тестирования</p>
+<ul>
+<li>
+<p><strong>ЗакрыватьКлиентТестированияПринудительно {forceclosetestclient}</strong>:
+Если флаг установлен, то при закрытии клиента тестирования будет проверяться, закрылся ли клиент тестирования по его PID. Если клиент тестирования не закрылся штатно, то будет выполнена попытка закрыть его с помощью команды ОС.</p>
+</li>
+<li>
+<p><strong>ТаймаутПередПринудительнымЗакрытиемКлиентаТестирования {timeoutbeforeforciblyclosingtestclient}</strong>:
+Количество секунд, в течение которого будет проверяться, что процесс клиента тестирования звершился самостоятельно.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="_3">Выполнение сценариев<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>ДелатьЛогВыполненияСценариевВЖР {logtogr}</strong>:
+Если флаг установлен, то в журнал регистрации будут записываться события о начале выполнения сценария и о начале выполнения шагов.</p>
+</li>
+<li>
+<p><strong>ВыполнятьШагиАссинхронно {makestepsasync}</strong>:
+Если флаг установлен, то каждый шаг сценария будет выполняться асинхронно с указанным интервалом.
+Если флаг снят, то шаги будут выполняться синхронно. Дерево шагов при этом будет обновлять своё состояние каждый сотый шаг.
+При снятом флаге сценарий будет выполняються в несколько раз быстрее.</p>
+</li>
+<li>
+<p><strong>ИнтервалВыполненияШагаЗаданныйПользователем {SpacingStepSpecifiedUser}</strong>:
+Задаёт интервал выполнение между шагами сценария при асинхронном режиме выполнения шагов.</p>
+</li>
+<li>
+<p><strong>ОбновлятьСтатистикуВДереве {updatestatistics}</strong>:
+Если флаг установлен, то во время выполнения сценария происходит обновление статистики: сколько шагов сценария прошло, сколько сценариев упало и подобное.</p>
+</li>
+<li>
+<p><strong>ОбновлятьДеревоПриНачалеВыполненияСценария {updatetreewhenscenariostarts}</strong>:
+Если флаг установлен, то при обновлении дерева шагов будет активизироваться текущая строка дерева. Допускатеся снимать флаг при выполнении сценариев на CI сервере для ускорения.</p>
+</li>
+<li>
+<p><strong>ОстановкаПриВозникновенииОшибки {stoponerror}</strong>:
+Если флаг установлен, то сценарии будут выполняться до первой ошибки.
+Все последующие сценарии выполняться не будут.</p>
+</li>
+<li>
+<p><strong>ЗвуковоеОповещениеПриОкончанииВыполненияСценария {soundnotificationwhenscriptends}</strong>:
+Если опция включена, то при окончании выполнения сценария будет выдаваться звуковое оповещение:</p>
+<ol>
+<li>Сценарии выполнены успешно.</li>
+<li>Ошибка при выполнении сценария.</li>
+<li>Сработала точка останова.
+Необходимо включить использование компоненты VanessaExt.
+Опция работает только под Windows.</li>
+</ol>
+</li>
+<li>
+<p><strong>ПоказыватьНомерСтрокиДереваПриВозникновенииОшибки {showrownumberonerror}</strong>:
+Если флаг установлен, то при возникновении ошибки в дереве шагов будет показана колонка с номером строки в дереве, если эта колонка была скрыта.</p>
+</li>
+<li>
+<p><strong>ПриравниватьPendingКFailed {pendingequalfailed}</strong>:
+Если флаг установлен, то при выполнении сценариев на CI сервере, если будут найдены нереализованные шаги ("pending") статус сборки всё равно будет "failed".
+Флаг рекомендуется устанавливать.</p>
+</li>
+<li>
+<p><strong>ВыполнятьSleepЧерезPing {dosleepusingping}</strong>:
+Если опция включена, тогда вызов метода Sleep() будет происходить через вызов команды Ping. Это нужно в том случае, если в окне клиента тестирования в данный момент не отвечает на запросы.</p>
+</li>
+<li>
+<p><strong>ЗапрещатьПерезаписыватьПеременные {banoverwritingvariables}</strong>:
+Если флаг установлен, то при создании переменных во время выполнения шагов будет запрещено перезаписывать уже ранее объявленные переменные.</p>
+</li>
+<li>
+<p><strong>ОбновлятьТаблицыФормыПриПолученииЗначения {updateformtableswhengettingvalue}</strong>:
+Если опция включена, то при  получении таблицы тест будет пытаться найти и нажать на кнопку таблицы "Обновить" и нажать её.
+Попытка обновления будет происходить в том случае, если происходит несколько попыток получения значения таблицы и первая попытка была неуспешной.</p>
+</li>
+<li>
+<p><strong>ТаймаутДляАсинхронныхШагов {timeoutforasynchronoussteps}</strong>:
+Указывает максимальное время ожидания для асинхронного шага.
+Например, если задано значение параметра равное 20 секунд и используется шаг</p>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="k">И </span><span class="nf">я жду, что поле с именем &quot;</span><span class="s">ИмяПоля</span><span class="nf">&quot; перестанет быть пустым в течение </span><span class="s">10</span><span class="nf"> секунд</span>
+</code></pre></div>
+
+<p>тогда в рельности максимальное время работы шага будет 20 секунд, а не 10.</p>
+<ul>
+<li><strong>КоличествоСекундПоискаОкна {timetofindwindow}</strong>:
+Максимальное время для поиска окна в шаге</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="nf">Тогда открылось окно &quot;</span><span class="s">ИмяОкна</span><span class="nf">&quot;</span>
+</code></pre></div>
+
+<ul>
+<li>
+<p><strong>КоличествоПопытокВыполненияДействия {numberofattemptstoperformanaction}</strong>:
+Устанавливает количество попыток выполнения действий для многих шагов.
+Увеличение значения параметра может повысить стабильность выполннения сценариев на медленном железе.</p>
+</li>
+<li>
+<p><strong>БезопасноеВыполнениеШагов {safeexecutionofsteps}</strong>:
+Добавляет паузу при выполнении многих действий, которые потенциально могут приводить к не стабильному выполнению сценариев, например: переход к строке, проверка значения поля и т.д.
+Данная опция существенно замедляет выполнение сценариев.</p>
+</li>
+<li>
+<p><strong>ПаузаПриОткрытииОкна {pauseonwindowopening}</strong>:
+Значение дополнительной паузы, которая будет всегда применяться в шаге</p>
+</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="nf">Тогда открылось окно &quot;</span><span class="s">ИмяОкна</span><span class="nf">&quot;</span>
+</code></pre></div>
+
+<h2 id="_4">Скриншоты<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>ДелатьСкриншотПриВозникновенииОшибки {onerrorscreenshot}</strong>:
+Включает снятие скриншотов при возникновении ошибки.
+Для работы опции необходимо, чтобы было заполнено поле "Команда создания скриншотов" либо подключена внешняя компонента VanessaExt в зависимости от настроек.</p>
+</li>
+<li>
+<p><strong>СниматьСкриншотКаждогоОкна1С {onerrorscreenshoteverywindow}</strong>:
+Включает снятие скриншотов с каждого окна 1С при возникновении ошибки.
+Для работы опции используется SikuliX либо внешняя компонента VanessaExt в зависимости от настроек.</p>
+</li>
+<li>
+<p><strong>ИспользоватьВнешнююКомпонентуДляСкриншотов {useaddinforscreencapture}</strong>:
+Для снятия скриншотов используется компонента VanessaExt вместо команды создания скриншотов.</p>
+</li>
+<li>
+<p><strong>СпособСнятияСкриншотовВнешнейКомпонентой {screencaptureaddinmethod}</strong>:
+Весь экран - получает скриншот всего экрана, включая панель задач Windows.
+Текущее окно клиента тестирования - получает скриншот только активного окна клиента тестирования.
+Все окна клиента тестирования - получает скриншот всех окон клиента тестирования</p>
+</li>
+<li>
+<p><strong>КомандаСделатьСкриншот {commandscreenshot}</strong>:
+В поле указывается консольная команда, которая будет использоваться при снятии скриншотов.
+Например:</p>
+<ol>
+<li>"C:\Program Files (x86)\IrfanView\i_view32.exe" /capture=1 /convert=</li>
+<li>nircmd savescreenshot</li>
+</ol>
+</li>
+<li>
+<p><strong>КаталогВыгрузкиСкриншотов {outputscreenshot}</strong>:
+Каталог, в который будут складываться скриншоты.</p>
+</li>
+</ul>
+<h2 id="_5">Отчет о запуске сценариев<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>ДобавлятьКИмениСценарияУсловияВыгрузки {addtofeaturefilter}</strong>:
+Данная опция используется, когда для нескольких похожих сборок (например запуск одних и техже тестов) формируется один отчет (например Allure). Тогда, чтобы избежать неуникальности имен сценариев к имени сценария будет добавляться значение поля "Имя текущей сборки".</p>
+</li>
+<li>
+<p><strong>ИмяТекущейСборки {buildname}</strong>:
+Уникальное имя сборки, которое используется совместно с параметром "Добавлять у имени сценария условия выгрузки".</p>
+</li>
+<li>
+<p><strong>ВыгружатьСтатусВыполненияСценариевВФайл {createlogs}</strong>:
+Если флаг установлен, то Vanessa Automation будет выгружать статус выполнения сценариев в файл.
+Подробности тут:
+https://pr-mex.github.io/vanessa-automation/dev/ReturnStatus</p>
+</li>
+<li>
+<p><strong>ПутьКФайлуДляВыгрузкиСтатусаВыполненияСценариев {logpath}</strong>:
+Путь к файлу, в который будет выгружен статус выполнения сценариев.</p>
+</li>
+<li>
+<p>Видеозапись прохождения тестов</p>
+<ul>
+<li>
+<p><strong>ЗаписыватьВидеоВыполненияТестов {recordtestrunvideo}</strong>:
+Включает запись видео во время прохождения тестов. Необходимо включить использование внешней компоненты VanessaExt.
+Для каждого сценария будет создаваться свой видео файл.</p>
+</li>
+<li>
+<p><strong>КоличествоКадровВидеоВыполненияТестов {thenumberofframesofvideotestsession}</strong>:
+Количество кадров для записи видео.</p>
+</li>
+<li>
+<p><strong>КомандаЗаписиВидеоВыполненияТестов {testrecordingvideocommand}</strong>:
+Команда для запуска приложения "ffmpeg". Рекомендуется прописать путь к ffmpeg в path.</p>
+</li>
+<li>
+<p><strong>КаталогДляЗаписиВидеоВыполненияТестов {directoryforrecordingvideotestexecution}</strong>:
+Каталог для видео файлов.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Логирование</p>
+<ul>
+<li>
+<p><strong>ДелатьЛогВыполненияСценариевВТекстовыйФайл {logtotext}</strong>:
+Включает вывод лога выполнения сценариев.
+В лог записываются события:</p>
+<ol>
+<li>Начало выполнения сценария</li>
+<li>Событие возникновения ошибки
+Вывод лога возможен либо в  файл, либо в консоль, либо в файл и консоль одновременно.</li>
+</ol>
+</li>
+<li>
+<p><strong>ВыводитьЛогВКонсоль {outputloginconsole}</strong>:
+Включает вывод лога в консоль.
+Для работы опции необходимо включить использование компоненты VanessaExt.</p>
+</li>
+<li>
+<p><strong>ВыводитьВЛогВыполнениеШагов {logstepstotext}</strong>:
+Выводит в лог событие: начало выполнения шага.</p>
+</li>
+<li>
+<p><strong>ПодробныйЛогВыполненияСценариев {fulllog}</strong>:
+Больше деталей в логе</p>
+<ol>
+<li>Количество тестов всего</li>
+<li>Сколько упало/успешно/пропущено</li>
+<li>Прошло/осталось времени</li>
+</ol>
+</li>
+<li>
+<p><strong>ИмяФайлаЛогВыполненияСценариев {textlogname}</strong>:
+Имя файла, куда будет выводиться лог Vanessa Automation.
+Если поле пустое - но лог в текстовый файл выводиться не будет.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Отчеты</p>
+</li>
+<li>
+<p>Allure</p>
+<div class="codehilite"><pre><span></span><code> * **ДелатьОтчетВФорматеАллюр {allurecreatereport}**:
+</code></pre></div>
+
+<p>Формировать отчет в формате Allure по результатам выполнения сценариев.</p>
+<div class="codehilite"><pre><span></span><code> <span class="o">*</span> <span class="o">**</span><span class="err">ПодставлятьВОтчете</span><span class="n">AllureЗначенияПеременных</span> <span class="p">{</span><span class="n">setvariablevaluesinstepsallurereport</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
+</code></pre></div>
+
+<p>Если опция включена, то в параметрах шагов, в которых использовались переменные, имена переменных будут заменены на их значения.</p>
+<div class="codehilite"><pre><span></span><code> * **КаталогВыгрузкиAllure {allurepath}**:
+</code></pre></div>
+
+<p>Каталог, в котором формируются данные отчета в формате Allure.</p>
+<div class="codehilite"><pre><span></span><code> * **КаталогВыгрузкиAllureБазовый {allurepathbase}**:
+</code></pre></div>
+
+<p>Каталог, в котором формируются данные отчета в формате Allure, при этом для каждой сборки будет создаваться подкаталоги. Данный параметр имеет приоритет и значение параметра "Каталог отчета Allure" будет проигнорировано.</p>
+<div class="codehilite"><pre><span></span><code> * **УровеньОтчета1 {reportlevel1}**:
+</code></pre></div>
+
+<p>Задаёт первый уровень группировки в отчете Allure на закладке Behaviors. Подробности описаны в справке.</p>
+<div class="codehilite"><pre><span></span><code> * **УровеньОтчета2 {reportlevel2}**:
+</code></pre></div>
+
+<p>Задаёт второй уровень группировки в отчете Allure на закладке Behaviors. Подробности описаны в справке.</p>
+<div class="codehilite"><pre><span></span><code> * **УровеньОтчета3 {reportlevel3}**:
+</code></pre></div>
+
+<p>Задаёт третий уровень группировки в отчете Allure на закладке Behaviors. Подробности описаны в справке.</p>
+<div class="codehilite"><pre><span></span><code> * **КаталогОтносительноКоторогоНадоСтроитьИерархию {directorytobuildhierarchy}**:
+</code></pre></div>
+
+<p>Каталог, относительно которого рассчитывается иерархия фич. Подробности описаны в справке.</p>
+<div class="codehilite"><pre><span></span><code> * **ГруппировкаTestSuites {testsuites}**:
+</code></pre></div>
+
+<p>Задаёт значение группировки в отчете Allure на закладке Suites. Подробности описаны в справке.</p>
+<div class="codehilite"><pre><span></span><code> * **ТегиПропускающиеСценарийAllure {tagsskippingscript}**:
+</code></pre></div>
+
+<p>Список тегов, разделённых с помощью ";".
+Если в сценарии есть такой тег, тогда сценарий не будет выполняться и отчете Allure у него будет статус skipped.</p>
+<ul>
+<li>
+<p>Приложения к отчету Allure</p>
+<div class="codehilite"><pre><span></span><code>* **ПрикладыватьКОтчетуAllureЖурналРегистрацииВыполненияСценария {attacheventlogtotheallurereport}**:
+</code></pre></div>
+
+<p>При возникновении ошибки к сценарию будет приложен журнала регистрации. Данные берутся с момента начала выполнения сценария.</p>
+<div class="codehilite"><pre><span></span><code>* **ПрикладыватьКОтчетуAllureДанныеОСостоянииАктивнойФормы {attachactiveformdatatotheallurereport}**:
+</code></pre></div>
+
+<p>Если опция включена, то при возникновении ошибки будут собраны данные о состоянии элементов активной формы в формате xlsx.</p>
+<div class="codehilite"><pre><span></span><code>* **ПрикладыватьКОтчетуAllureДанныеОСостоянииВсехФорм {attachallformsdatatotheallurereport}**:
+</code></pre></div>
+
+<p>Если опция включена, то при возникновении ошибки будут собраны данные о состоянии элементов всех форм открытых в клиенте тестирования в формате xlsx.</p>
+<div class="codehilite"><pre><span></span><code>* **ПрикладыватьКОтчетуAllureДанныеОСетевыхСоединениях {attachnetworkconnectiondatatotheallurereport}**:
+</code></pre></div>
+
+<p>Если опция включена, то при возникновении ошибки будут собраны данные о сетевых соединениях ПК, на котором запускались тесты.</p>
+<div class="codehilite"><pre><span></span><code>* **ПрикладыватьКОтчетуAllureДанныеОПроцессахОС {attachdataoftheoperatingsystemprocessestotheallurereport}**:
+</code></pre></div>
+
+<p>Если опция включена, то при возникновении ошибки будут собраны данные о запущенных процессах ОС.</p>
+<div class="codehilite"><pre><span></span><code><span class="o">*</span> <span class="o">**</span><span class="err">ПрикладыватьКОтчету</span><span class="n">AllureДанныеОЗначенияхПеременных</span> <span class="p">{</span><span class="n">attachvariablestotheallurereport</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
+</code></pre></div>
+
+<p>Если опция включена, то при возникновении ошибки будут собраны данные со значениями переменных Контекста и Контекста глобального.</p>
+<ul>
+<li><strong>ДанныеАллюрМеток {DataAllureMarks}</strong>:
+Таблица используется для установки соответствия тегов сценариев меткам аллюра.
+Если в  строке таблицы указано регулярное выражение, то к каждому тегу сценария применяется регулярное выражение из данной таблицы и если тег ему соответствует, то к отчету будет добавлена метка в формате ИмяМетки:Значение.
+Если в строке таблицы регулярное выражение не указано, то метка добавляется безусловно.
+Подробнее зачем это может быть нужно можно прочитать тут
+https://habr.com/ru/company/sberbank/blog/359302/</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Cucumber</p>
+<div class="codehilite"><pre><span></span><code> * **ДелатьОтчетВФорматеCucumberJson {cucumbercreatereport}**:
+</code></pre></div>
+
+<p>Формировать отчет в формате Cucumber по результатам выполнения сценариев.</p>
+<div class="codehilite"><pre><span></span><code> * **КаталогВыгрузкиCucumberJson {cucumberreportpath}**:
+</code></pre></div>
+
+<p>Каталог для формирования отчета.</p>
+</li>
+<li>
+<p>JUnit</p>
+<div class="codehilite"><pre><span></span><code> * **ДелатьОтчетВФорматеjUnit {junitcreatereport}**:
+</code></pre></div>
+
+<p>Формировать отчет в формате JUnit по результатам выполнения сценариев.</p>
+<div class="codehilite"><pre><span></span><code> * **КаталогВыгрузкиjUnit {junitpath}**:
+</code></pre></div>
+
+<p>Каталог для формирования отчета.</p>
+</li>
+<li>
+<p>СППР</p>
+<div class="codehilite"><pre><span></span><code> * **ДелатьОтчетВФорматеСППР {ModelingCreateReport}**:
+</code></pre></div>
+
+<p>Формировать отчет в формате СППР по результатам выполнения сценариев.</p>
+<div class="codehilite"><pre><span></span><code> * **КаталогВыгрузкиСППР {modelingreportpath}**:
+</code></pre></div>
+
+<p>Каталог для формирования отчета.</p>
+</li>
+<li>
+<p>Лог ошибок текст</p>
+<ul>
+<li>
+<p><strong>ДелатьЛогОшибокВТекстовыйФайл {logerrorstotext}</strong>:
+Формировать json файл для каждой ошибки, в котором будет подробная информация об ошибке.</p>
+</li>
+<li>
+<p><strong>СобиратьДанныеОСостоянииАктивнойФормыПриОшибке {getactiveformdataonerror}</strong>:
+Если опция включена, то при возникновении ошибки будут собраны данные о состоянии элементов активной формы в формате mxl.</p>
+</li>
+<li>
+<p><strong>СобиратьДанныеОСостоянииВсехФормПриОшибке {getallformsdataonerror}</strong>:
+Если опция включена, то при возникновении ошибки будут собраны данные о состоянии элементов всех форм открытых в клиенте тестирования в формате mxl.</p>
+</li>
+<li>
+<p><strong>СобиратьДанныеОСетевыхСоединениях {collectnetworkconnectiondata}</strong>:
+Если опция включена, то при возникновении ошибки будут собраны данные о сетевых соединениях ПК, на котором запускались тесты.</p>
+</li>
+<li>
+<p><strong>СобиратьДанныеОПроцессахОС {collectdataoftheoperatingsystemprocesses}</strong>:
+Если опция включена, то при возникновении ошибки будут собраны данные о запущенных процессах ОС.</p>
+</li>
+<li>
+<p><strong>ИмяКаталогаЛогОшибок {texterrorslogname}</strong>:
+Каталог, для формирования файлов с данными об ошибках и состоянии элементов форм. Каталог очищается при начале выполнения сценариев.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>ДелатьОтчетВоВнутреннемФормате {simplereport}</strong>:
+Включает вывод отчет о запуске сценариев во внутреннем формате.</p>
+</li>
+</ul>
+<h2 id="_6">Автоинструкции<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Компонента VanessaExt + Chrome</p>
+<ul>
+<li>
+<p><strong>ИспользоватьБраузерПлюсWebSocket {usebrowserwebsocket}</strong>:
+Позволяет выполнять внешние команды для барузера через WebSocket.</p>
+</li>
+<li>
+<p><strong>ЭмулироватьДвиженияМышкиVanessaExt {emulatemousemovementswithVanessaExt}</strong>:
+Включает эмуляцию движения мышки с помощью компоненты VanessaExt</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Настройки эмуляции действий мышки</p>
+<ul>
+<li>
+<p>Настройки смещений коордиант мышки</p>
+<div class="codehilite"><pre><span></span><code>* **СмещениеПоГоризонталиДвиженияМышкиVanessaExt {hrizontaloffset}**:
+</code></pre></div>
+
+<p>Используется, когда надо сместить положение мышки по горизонтали на заданное число пикселей. Может принимать как положительные, так и отрицательные значения.</p>
+<div class="codehilite"><pre><span></span><code>* **СмещениеПоВертикалиДвиженияМышкиVanessaExt {verticaloffset}**:
+</code></pre></div>
+
+<p>Используется, когда надо сместить положение мышки по вертикали на заданное число пикселей. Может принимать как положительные, так и отрицательные значения.</p>
+</li>
+<li>
+<p>Скорость перемещения мышки</p>
+<div class="codehilite"><pre><span></span><code><span class="o">*</span> <span class="o">**</span><span class="err">КоличествоШаговПриДвиженииМышки</span><span class="n">VanessaExt</span> <span class="p">{</span><span class="n">thenumberofstepswhenmovingthemouse</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
+</code></pre></div>
+
+<p>Задаёт количество микро движений (шагов), которая совершает мышка на своём пути. Значение по умолчанию 150.</p>
+<div class="codehilite"><pre><span></span><code>* **ПаузаМеждуШагамиПриДвиженииМышкиVanessaExt {timeoutbetweenstepswhenmovingthemouse}**:
+</code></pre></div>
+
+<p>Задаёт паузу в милисекундах между микро движениями мышки. Значение по умолчанию 3.</p>
+<ul>
+<li><strong>ПодсвечиватьКликМышкиВБраузереVanessaExt {hlightmouseclicksinbrowser}</strong>:
+Если опция включена, то будет включена подсветка кликов с помощью внешней компоненты VanessaExt.</li>
+</ul>
+</li>
+<li>
+<p>Подсвечивать клики мышкой</p>
+<ul>
+<li>
+<p>Выбор цвета подсветки кликов мышки</p>
+<ul>
+<li>
+<p><strong>ЦветПодсветкиКликаМышкиVanessaExt {mouseclickhighlightcolor}</strong>:
+Число. Задаёт цвет, которым будут подсвечиваться клики мышки.</p>
+</li>
+<li>
+<p><strong>РадиусПодсветкиКликаМышкиVanessaExt {mouseclickhighlightradius}</strong>:
+Задаёт радиус анимации клика.</p>
+</li>
+<li>
+<p><strong>ТолщинаПодсветкиКликаМышкиVanessaExt {mouseclickhighlightwidth}</strong>:
+Задаёт толщину анимации клика.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Подсветка кликов мышки</p>
+<ul>
+<li>
+<p><strong>ДлительностьПодсветкиКликаМышкиVanessaExt {mouseclickhighlightduration}</strong>:
+Задаёт длительность анимации клика.</p>
+</li>
+<li>
+<p><strong>ПрозрачностьПодсветкиКликаМышкиVanessaExt {mouseclickhighlighttransparency}</strong>:
+Задаёт прозрачность анимации клика.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p><strong>ЭмулироватьВводКлавиатурыVanessaExt {emulatekeyboardinputwithVanessaExt}</strong>:
+Включает эмуляцию ввода клавиатуры с помощью компоненты VanessaExt</p>
+</li>
+<li>
+<p><strong>ПоискКартинокСПомощьюКомпонентыVanessaExt {findingpicturesusingaddinvanessaext}</strong>:
+Если опция включена, то шаги, выполняющие поиск картинок на экране, будут использовать внешнюю компоненту VanessaExt вместо использования SikuliX.</p>
+</li>
+<li>
+<p><strong>ИгнорироватьОшибкиПоискаЭлементовВБраузере {ignorebrowsersearcherrors}</strong>:
+Поволяет не останавливать выполнение сценария если элемент формы не был найден в браузере.</p>
+</li>
+<li>
+<p><strong>КоэффициентМасштабированияЭкрана {scalefactor}</strong>:
+Значение по умолчанию равно единице. Если используется масштабирование экрана в ОС, тогда нужно изменять устанавливать соответствующее значение. Например, при масштабировании в 150% в ОС надо установить значение коэффициента 1.5.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>SikuliX server</p>
+<ul>
+<li>
+<p><strong>ИспользоватьSikuliXСервер {usesikulixserver}</strong>:
+SikuliX это Java приложение, которое позволяет управлять перемещением и нажатиями мыши на экране, а также эмулировать нажатие кнопок клавиатуры.
+SikuliX Server - это специальная программная оптимизация работы с SikuliX. Если опция включена VA собирает один большой скрипт из множества скриптов SikuliX, который можно запустить один раз и быстро выполнять необходимые команды, которые раньше приходилось запускать по одной.  Это позволяет существенно сэкономить время на выполнение одного скрипта SikuliX, т.к. не тратится время на запуск SikuliX и его выгрузку из памяти.
+Описание установки и настройки SikuliX и SikuliX Server приведено в разделе справки 20.1
+Открыть справку</p>
+</li>
+<li>
+<p><strong>ЗаписьВидеоЭмулироватьДвиженияМышкиSikuliX {emulatemousemovement}</strong>:
+Если флаг установлен, то при выполнении шагов будет выполняться попытка найти элмент формы или элемент управления на экране и переместить курсор мышки к нему.
+Для поиска картинки и передвижения мышки используется SikuliX. Картинка для поиска будет сгенерирована по тексту, полученному из элемента формы.
+Чтобы отключить движение мышки у конкретного шага надо использовать директиву #[DoNotMoveMouse].</p>
+</li>
+<li>
+<p><strong>КаталогиСкриптовSikuliX {sikulixscriptpath}</strong>:
+Каталог скриптов. Можно указывать несколько каталогов, разделенных через ";".</p>
+</li>
+<li>
+<p><strong>КаталогДляГенерацииКартинок {pathforpicturegeneration}</strong>:
+Каталог, в котором будут программно создаваться картинки для поиска их на экране.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>HTML и Markdown</p>
+<ul>
+<li>
+<p><strong>СоздаватьИнструкциюHTML {htmlcreate}</strong>:
+Если флаг установлен, то во время выполнения сценария будет создаваться скринкаст в формате HTML.
+В поле "Команда создания скриншотов" должна быть указана консольная команда для снятия скриншотов.
+Также в тексте сценария возможно использовать специальные директивы, которые описаны в справке.</p>
+</li>
+<li>
+<p><strong>КаталогВыгрузкиИнструкцийHTML {htmlpath}</strong>:
+Каталог HTML инструкций</p>
+</li>
+<li>
+<p><strong>СоздаватьИнструкциюMarkdown {markdowncreate}</strong>:
+Если флаг установлен, то во время выполнения сценария будет создаваться скринкаст в формате MarkDown.
+В поле "Команда создания скриншотов" должна быть указана консольная команда для снятия скриншотов или установлен флаг скриншоты компонентой "VanessaExt".
+Также в тексте сценария возможно использовать специальные директивы, которые описаны в справке.</p>
+</li>
+<li>
+<p><strong>КаталогВыгрузкиИнструкцийMarkdown {markdownpath}</strong>:
+Каталог Markdown инструкций</p>
+</li>
+<li>
+<p><strong>АвтонумерацияШагов {autonumberingofsteps}</strong>:
+Добавляет авто нумерацию в начало текста описания шага. 
+Для того, что бы лидирующие нули не терялись при экспорте из MD формата, текст записывается в блок кода.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Видеоинструкция</p>
+<ul>
+<li>
+<p><strong>СоздаватьИнструкциюВидео {videocreate}</strong>:
+Позволяет создавать видео инструкции.
+Видео по описанию настроек находится в этом плей листе.
+Также рекомендуется прочитать этот FAQ. </p>
+</li>
+<li>
+<p><strong>КаталогВыгрузкиИнструкцийВидео {videopath}</strong>:
+Каталог, в которой будут помещен результат сборки видео или анимированного скринкаста.</p>
+</li>
+<li>
+<p><strong>ЗаписьВидеоФормироватьИнструкциюТипВидео {instructiontypevideo}</strong>:
+Создавать видео инструкцию.</p>
+</li>
+<li>
+<p><strong>ЗаписьВидеоФормироватьИнструкциюТипHTML {instructiontypehtml}</strong>:
+Создавать анимированный скринкаст в формате HTML.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Настройки видео</p>
+<div class="codehilite"><pre><span></span><code> * **ЗаписьВидеоКоличествоКадров {fps}**:
+</code></pre></div>
+
+<p>Задаёт количество кадров в секунду, снимаемых с экрана во время записи видео.</p>
+<div class="codehilite"><pre><span></span><code> * **ЗаписьВидеоЭкранШирина {screenwidth}**:
+</code></pre></div>
+
+<p>Задаёт ширину экрана для записи видео. Значение не может быть больше чем ширина в текущем разрешении экрана. Если указать значение меньше, то в видео будет записываться часть экрана, начиная с верхнего левого угла.</p>
+<div class="codehilite"><pre><span></span><code> * **ЗаписьВидеоЭкранСлева {screenleft}**:
+</code></pre></div>
+
+<p>Задает отступ слева</p>
+<div class="codehilite"><pre><span></span><code> * **ЗаписьВидеоЭкранВысота {screenheight}**:
+</code></pre></div>
+
+<p>Задаёт высоту экрана для записи видео. Значение не может быть больше чем высота в текущем разрешении экрана. Если указать значение меньше, то в видео будет записываться часть экрана, начиная с верхнего левого угла.</p>
+<div class="codehilite"><pre><span></span><code> * **ЗаписьВидеоЭкранСверху {screentop}**:
+</code></pre></div>
+
+<p>Задает отступ сверху</p>
+<div class="codehilite"><pre><span></span><code> <span class="o">*</span> <span class="o">**</span><span class="err">ЗаписьВидеоИнструмент</span> <span class="p">{</span><span class="n">videocapturetool</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
+</code></pre></div>
+
+<p>Если выбран вариант VLC, тогда для записи видео будет вызываться иснтрумент VLC. Иначе будет использована внешняя компонента VanessaExt, которая будет вызывать ffmpeg.</p>
+<div class="codehilite"><pre><span></span><code> * **ЗаписьВидеоКомандаНачатьЗаписьВидео {comandrecvideo}**:
+</code></pre></div>
+
+<p>Команда, которая будет запускать VLC для начала записи экрана. В команде возможно редактирование битрейта и других настроек.</p>
+<div class="codehilite"><pre><span></span><code> * **ЗаписьВидеоКаталогДляВременныхФайлов {tempfolderforvideo}**:
+</code></pre></div>
+
+<p>Рабочий каталог, в котором создаются промежуточные файлы во время записи и сборки видео. Каталог очищается перед каждой сборкой видео!</p>
+<div class="codehilite"><pre><span></span><code> * **ЗаписьВидеоКомандаConvert {convertcomand}**:
+</code></pre></div>
+
+<p>Путь к исполняемому файлу convert.exe в каталоге с программой ImageMagick.
+Пример:
+"C:\Program Files\ImageMagick-Х.Х.Х-Q16\convert.exe"
+Скачать: https://imagemagick.org/script/download.php
+В процессе установки обязательным к установке является пункт: Install legacy utilities (e. g. convert)</p>
+<div class="codehilite"><pre><span></span><code> * **ЗаписьВидеоКэшироватьВидеоВставки {cachevideo}**:
+</code></pre></div>
+
+<p>Если флаг установлен то при работе шага
+И видеовставка "ТекстВставки"
+будет происходить проверка, есть ли в кеш уже такой видеофрагмент.
+Если в кеш фрагмента нет - он будет туда добавлен.
+Если фрагмент есть - то он будет взят из кеш.
+Установка флага ускоряет сборку видео.</p>
+<div class="codehilite"><pre><span></span><code> * **ЗаписьВидеоКэшВидеоВставок {videocachepath}**:
+</code></pre></div>
+
+<p>Каталог, в котором хранятся фрагменты видеовстаок.</p>
+</li>
+<li>
+<p>Настройки аудио</p>
+<ul>
+<li>
+<p>Музыка</p>
+<div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоКаталогМузыки {musicpath}**:
+</code></pre></div>
+
+<p>Каталог, в котором находятся файлы в формате mp3.
+Если поле заполнено, то из каталога будет случайным образом взят mp3 файл, который будет использован для музыкальной подложки.
+Если длина mp3 файла меньше, чем длина результируещего видео, то аудио трек будет зациклен нужное количество раз, чтобы соответствовать длине видео файла.</p>
+<div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоГромкостьМузыки {musicvolume}**:
+</code></pre></div>
+
+<p>Возможно указывать значение от 0 до 1.
+Если значение поля 0, тогда громкость музыки изменяться не будет.
+Если указано значение отличное от нуля (например 0.06), тогда данное значение будет влиять на громкость музыкальной подложки.
+Чем больше значение - тем громче будет звучать музыкальная подложка.
+Рекомендуется указывать значение 0.1 или меньше.</p>
+</li>
+<li>
+<p>Озвучивание голосом</p>
+<div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоДелатьНаложениеTTS {dotts}**:
+</code></pre></div>
+
+<p>Включает озвучку видео диктором.</p>
+<div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоТипОзвучкиTTS {ttstype}**:
+</code></pre></div>
+
+<p>Указывает какой голос нужно использовать для озвучки видео диктором.</p>
+<ul>
+<li>
+<p>Microsoft TTS</p>
+<ul>
+<li>
+<p><strong>ЗаписьВидеоПутьКДвижкуTTS {audioenginetts}</strong>:
+Консольная команда, которая будет использована при конвертации текста в речь.
+Используется программа balabolka_console.</p>
+</li>
+<li>
+<p><strong>ЗаписьВидеоИмяTTS {ttsvoice}</strong>:
+Указывает какой голос будет использован для озвучки. Допускается указывать не полное название голоса в системе, а только часть, например "Elena".
+Понадобится установить Microsoft Speech Platform х32 и Server Runtime Languages.</p>
+</li>
+<li>
+<p><strong>ЗаписьВидеоСкоростьПроизношения {speedofspeech}</strong>:
+Скорость произношения текста диктором.
+Значения могут быть от -10 до 10.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Yandex TTS</p>
+<ul>
+<li>
+<p><strong>ЗаписьВидеоYandexTTSЯзык {yandexttslanguage}</strong>:
+Задаёт язык, на котором будет говорить диктор. Подробности здесь.
+Управление ударением и произношением см тут.</p>
+</li>
+<li>
+<p><strong>ЗаписьВидеоYandexTTSГолос {yandexttsvoice}</strong>:
+Задаёт голос, которым будет говорить диктор. Подробности здесь.
+Управление ударением и произношением см тут.</p>
+</li>
+<li>
+<p><strong>ЗаписьВидеоYandexTTSЭмоция {yandexttsemotion}</strong>:
+Задаёт эмоцию, с которой будет говорить диктор. Подробности здесь.
+Управление ударением и произношением см тут.</p>
+</li>
+<li>
+<p><strong>ЗаписьВидеоYandexTTSСкорость {yandexttsspeed}</strong>:
+Скорость (темп) синтезированной речи.
+Скорость речи задается дробным числом в диапазоне от 0.1 до 3.0.</p>
+</li>
+<li>
+<p><strong>ЗаписьВидеоYandexTTSВариантЗапроса {yandexttsquerytype}</strong>:
+Определяет как будут получены файлы озвучки: через официальное API или через бесплатный интерфейс. Рекомендуемое значение - через официальное API.</p>
+</li>
+<li>
+<p><strong>ЗаписьВидеоYandexTTSИдентификаторКаталога {yandexttsfolderId}</strong>:
+Последняя часть пути строки адреса в интернет браузере. https://console.cloud.yandex.ru/folders/ИдентификаторКаталога
+Требуется:</p>
+<ol>
+<li>В главном окне Яндекс.Облако нажать на ссылку "Перейти в текущий каталог".</li>
+<li>Скопировать последнюю часть путь из строки адреса
+Пример: 
+https://console.cloud.yandex.ru/folders/b1gheo81t4a6eаafe5vd
+(Идентификатор каталога - b1gheo81t4a6eаafe5vd)
+Получение идентификатора каталога </li>
+</ol>
+</li>
+<li>
+<p><strong>ЗаписьВидеоYandexTTSOauthToken {yandexttsoauthtoken}</strong>:
+OAuth-токен используется в процедуре аутентификации в Яндекс.Облаке
+Для получения OAuth-токена требуется:</p>
+<ol>
+<li>Перейсти по ссылке https://cloud.yandex.ru/docs/iam/concepts/authorization/oauth-token;</li>
+<li>Сгенерировать токен;</li>
+<li>Сохранить его в текстовый файл;</li>
+<li>Указать путь к текстоговому файлу с токеном.</li>
+</ol>
+</li>
+</ul>
+</li>
+<li>
+<p>Группа amazon TTS</p>
+<ul>
+<li>
+<p><strong>ЗаписьВидеоAmazonЯзык {amazonttslanguage}</strong>:
+Соответствие языка и голоса смотрите здесь.</p>
+</li>
+<li>
+<p><strong>ЗаписьВидеоAmazonГолос {amazonttsvoice}</strong>:
+Соответствие языка и голоса смотрите здесь.</p>
+</li>
+<li>
+<p><strong>ЗаписьВидеоAmazonДвижок {amazonttsengine}</strong>:
+Варианты значения для поля "Движок" смотрите здесь.</p>
+</li>
+<li>
+<p><strong>ЗаписьВидеоAmazonРегион {amazonttsregion}</strong>:
+В поле указывается параметр регион. Значение по умолчанию: us-east-1.</p>
+</li>
+<li>
+<p><strong>ЗаписьВидеоAmazonКлючДоступа {amazonttskey}</strong>:
+Ключ доступа к облаку Amazon.</p>
+</li>
+<li>
+<p><strong>ЗаписьВидеоAmazonСекретныйКлюч {amazonttssecretkey}</strong>:
+Файл, в котором хранится секретный ключ для доступа к облаку Amazon.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Тест голоса</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Кеш аудио</p>
+<div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоКэшироватьФайлыTTS {cachettsfiles}**:
+</code></pre></div>
+
+<p>Включает кеширование файлов озвучки.
+Ускоряет сборку видео.
+Позволяет сократить обращение к внешним сервисам для генерации речи.
+Позволяет сократить затраты на генерацию речи при использовании платных тарифов у сервисов генерации речи.</p>
+<div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоКэшФайловTTS {ttsfilescache}**:
+</code></pre></div>
+
+<p>Каталог, в котором хранится кеш файлов озвучки.</p>
+</li>
+<li>
+<p>Словари замен</p>
+<div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоСловарьЗамен {changewordslib}**:
+</code></pre></div>
+
+<p>Список файлов, которые будут использоваться для автозамены произносимого текста.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Дополнительно</p>
+<div class="codehilite"><pre><span></span><code> * **ЗаписьВидеоФайлКурсораМышки {mousecurfile}**:
+</code></pre></div>
+
+<p>Путь к картинке, которая используется для отрисовки курсора мышки.</p>
+<div class="codehilite"><pre><span></span><code> * **ЗаписьВидеоФайлВодянойЗнак {watermarkfile}**:
+</code></pre></div>
+
+<p>Картинка в формате png, которая будет использована для наложения водяного знака.
+Водяной знак будет расположен в правом нижнем углу видео.
+Разрешение картинки должно быть меньше, чем разрешение, в котором идёт запись видео.</p>
+<div class="codehilite"><pre><span></span><code> * **ЗаписьВидеоПроцентУскорения {accelerationpercentage}**:
+</code></pre></div>
+
+<p>Максимальный процент ускорения, который возможен для фрагмента видео (одного шага видео).
+Механизм сборки видео может ускорить фрагмент видео, например, если длительность аудио трека для фрагамента была 5 секунд, а сам видео фрагмент получился 10 секунд.
+Если указано значение 0 - то ограничения на ускорение нет.
+Рекомендуется значение - 30%.
+Тогда в приведенном примере видео ускорится (5 * 1.3) с 5 секунд до 6.5 секунд.</p>
+<div class="codehilite"><pre><span></span><code> * **ЗаписьВидеоДобавлятьСубтитры {addsubtitles}**:
+</code></pre></div>
+
+<p>Включает дообавление субтитров встроенных в видео.</p>
+<div class="codehilite"><pre><span></span><code> * **ЗаписьВидеоГруппаШаговКакШаг {groupofstepsasastep}**:
+</code></pre></div>
+
+<p>Включает режим, когда по умолчанию каждая группа шагов первого уровня в сценарии будет конвертироваться в один шаг в автоинструкции.</p>
+<div class="codehilite"><pre><span></span><code> * **ЗаписьВидеоЭмулироватьВводСКлавиатуры {emulatekeyboardinput}**:
+</code></pre></div>
+
+<p>Включает ввод эмуляцию ввода текста с клавиаутуры с помощью утилиты из проекта UIToolsFor1C.
+Допускается ввод текста только на русском и английском языках.
+Переключение раскладки клавиатуры осуществляется с помощью эмуляции нажатия Ctrl+Shift.</p>
+<div class="codehilite"><pre><span></span><code> * **ЗаписьВидеоСкрытьСлужебныеОкна {hideservicewindows}**:
+</code></pre></div>
+
+<p>Скрывает служебные консольные окна, которые используются для сборки видео.
+Ускоряет сборку видео. Рекомендуется.</p>
+<div class="codehilite"><pre><span></span><code> * **ЗаписьВидеоОтключитьМасштабированиеШаговПоВремени {disablescalingofsteps}**:
+</code></pre></div>
+
+<p>Отключает масштабирование видео фрагментов по времени.</p>
+<div class="codehilite"><pre><span></span><code> * **ЗаписьВидеоОтключитьСлайдСЗаголовкомФичи {turnofffeaturetitleslide}**:
+</code></pre></div>
+
+<p>Отключает создание в видео начального слайда, в котором указывается название фича файла.</p>
+<div class="codehilite"><pre><span></span><code> * **ЗаписьВидеоОтключитьСлайдСценария {turnoffscenarioslide}**:
+</code></pre></div>
+
+<p>Отключает создание в видео слайда, в котором выводится название сценария.</p>
+<div class="codehilite"><pre><span></span><code> * **ЗаписьВидеоОтключитьСлайдФинал {turnofffinalslide}**:
+</code></pre></div>
+
+<p>Отключает создание в видео финальнго слайда, в котором выводится итоговая информация по видео.</p>
+<div class="codehilite"><pre><span></span><code> * **ЗаписьВидеоПодсвечиватьНажатияМышки {highlightmouseclicks}**:
+</code></pre></div>
+
+<p>Включает подсветку кликов мышки. Используется утилита из проекта UIToolsFor1C.
+Эмуляция кликов мышки осуществляется с помощью SikuliX.</p>
+<ul>
+<li>
+<p>Настройки  слайда с заголовком фичи</p>
+</li>
+<li>
+<p>Настройки финального слайда</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="vanessa-editor">Vanessa Editor<a class="headerlink" href="#vanessa-editor" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>ИспользоватьДанныеТекущейФормыПриПодбореШагов {usecurrentformdatawhenselectingsteps}</strong>:
+Включает возможность использовать данные текущей формы клиента тестирования, таких как имена полей, заголовоков окон и так далее при подборе шагов.</p>
+</li>
+<li>
+<p><strong>ПоказыватьСтрокиПодсценариевVanessaEdittor {showsubscenariolines}</strong>:
+Включает отображение строк подсценариев в редакторе.</p>
+</li>
+<li>
+<p><strong>ПоказыватьМиниатюруКода {showcodeminiature}</strong>:
+Управляет отображением миниатюры кода.</p>
+</li>
+<li>
+<p><strong>ЗаменятьТабыНаПробелы {replacetabswithspaces}</strong>:
+Опция определяет надо ли заменять в редакторе символы табуляции на пробелы.</p>
+</li>
+<li>
+<p><strong>ОтображатьЗакладкиСверху {showbookmarkstop}</strong>:
+Если опция установлена, то закладки будут отображаться сверху. Это нужно, чтобы предоставить редактору сценария больше места для отображения сценария.</p>
+</li>
+<li>
+<p><strong>ПроверкаСинтаксисаВРедакторе {syntaxcheckingineditor}</strong>:
+Опция для отключения проверки синтаксиса в редакторе сценариев</p>
+</li>
+<li>
+<p><strong>ТемаРедактораVanessaEditor {vanessaeditortheme}</strong>:
+Позволяет сменить тему редактора.</p>
+</li>
+</ul>
+<h2 id="_7">Библиотеки<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Библиотеки повторного кода</p>
+<ul>
+<li>
+<p><strong>КаталогиБиблиотек {librarycatalogs}</strong>:
+Список каталогов, в которых находятся epf файлы, содержащие шаги для сценариев и feature файлы, содержащие экспортные сценарии.</p>
+</li>
+<li>
+<p><strong>МетаданныеБиблиотек {stepsfrommetadata}</strong>:
+В списке указываются пути к формам внутри конфигурации, содержащим описания шагов.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="_8">Клиенты тестирования<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>ДанныеКлиентовТестирования {datatestclients}</strong>:
+Список клиентов тестирования, в котором указаны:<ol>
+<li>Имя профиля</li>
+<li>Синоним</li>
+<li>Тип клиента тестирования</li>
+<li>Строка подключения к базе</li>
+<li>Дополнительные параметры запуска</li>
+<li>Имя компьютера для установления подключения</li>
+<li>Порт</li>
+</ol>
+</li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="">
+        
+          <a href="../SettingsEN/" title="Description Vanessa Automation startup file parameters from the command line." class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Назад
+                </span>
+                Description Vanessa Automation startup file parameters from the command line.
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+      <a href="https://github.com/Pr-Mex/vanessa-automation" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://t.me/VanessaAutomation" target="_blank" rel="noopener" title="t.me" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.f45d2d8d.min.js"></script>
+      <script src="../../assets/javascripts/bundle.74d0b805.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "search.config.lang": "ru", "search.config.pipeline": "", "search.config.separator": "", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e # \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ["tabs", "instant"],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.7f7c8775.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
