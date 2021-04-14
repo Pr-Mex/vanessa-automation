@@ -4,7 +4,6 @@
 @UF9_Вспомогательные_фичи
 #parent ua:
 @UA49_макеты_для_запуска_сценариев
-#language: ru
 
 @IgnoreOnCIMainBuild
 @tree

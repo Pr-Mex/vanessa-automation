@@ -6,6 +6,13 @@
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
 		<ChildItems>
+			<Button name="ФормаВывестиДеревоКакМакет" id="2926">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ВывестиДеревоНаПечать</CommandName>
+				<RepresentationInContextMenu>None</RepresentationInContextMenu>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаВывестиДеревоКакМакетРасширеннаяПодсказка" id="2927"/>
+			</Button>
 			<Popup name="ПодменюЗагрузитьФичи" id="63">
 				<Title>
 					<v8:item>
@@ -1351,6 +1358,22 @@
 				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 				<ExtendedTooltip name="ФормаПроверитьДублированиеСценариевРасширеннаяПодсказка" id="2268"/>
 			</Button>
+			<Button name="ФормаРазвернутьВсеСтрокиДереваСлужебный" id="2946">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.РазвернутьВсеСтрокиДереваСлужебный</CommandName>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Развернуть все строки дерева</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Expand all lines of the tree</v8:content>
+					</v8:item>
+				</Title>
+				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
+				<ExtendedTooltip name="ФормаРазвернутьВсеСтрокиДереваСлужебныйРасширеннаяПодсказка" id="2947"/>
+			</Button>
 			<Button name="ФормаСправка" id="1552">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.StandardCommand.Help</CommandName>
@@ -1412,6 +1435,182 @@
 								</Picture>
 								<ExtendedTooltip name="VanessaEditorПоказатьСкрытьДеревоGitРасширеннаяПодсказка" id="2797"/>
 							</Button>
+							<Popup name="ГруппаVanessaEditorИнструменты" id="2885">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Инструменты</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Tools</v8:content>
+									</v8:item>
+								</Title>
+								<ToolTip>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Инструменты</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Tools</v8:content>
+									</v8:item>
+								</ToolTip>
+								<Picture>
+									<xr:Abs>Picture.png</xr:Abs>
+									<xr:LoadTransparent>false</xr:LoadTransparent>
+								</Picture>
+								<Representation>Picture</Representation>
+								<ExtendedTooltip name="ГруппаVanessaEditorИнструментыРасширеннаяПодсказка" id="2886"/>
+								<ChildItems>
+									<ButtonGroup name="ГруппаVanessaEditorБиблиотекаШагов" id="2952">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Библиотека шагов</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Steps library</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа vanessa editor библиотека шагов</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="ГруппаVanessaEditorБиблиотекаШаговРасширеннаяПодсказка" id="2953"/>
+										<ChildItems>
+											<Button name="ФормаДобавитьИзвестныйШаг" id="2950">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ДобавитьИзвестныйШаг</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Библиотека шагов</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>Steps library</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="ФормаДобавитьИзвестныйШагРасширеннаяПодсказка" id="2951"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<Button name="VanessaEditorИсследовательФормы" id="2887">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ИсследовательФормы</CommandName>
+										<ExtendedTooltip name="VanessaEditorИсследовательФормыРасширеннаяПодсказка" id="2888"/>
+									</Button>
+									<ButtonGroup name="ГруппаVanessaEditorСостояниеФормы" id="2893">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Состояние формы</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Form state</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ГруппаVanessaEditorСостояниеФормыРасширеннаяПодсказка" id="2894"/>
+										<ChildItems>
+											<Button name="VanessaEditorЗапомнитьСостояниеФормыTestClient" id="2889">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ЗапомнитьСостояниеФормыTestClient</CommandName>
+												<ExtendedTooltip name="VanessaEditorЗапомнитьСостояниеФормыTestClientРасширеннаяПодсказка" id="2890"/>
+											</Button>
+											<Button name="VanessaEditorЗабытьСостояниеФормыTestClient" id="2891">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ЗабытьСостояниеФормыTestClient</CommandName>
+												<ExtendedTooltip name="VanessaEditorЗабытьСостояниеФормыTestClientРасширеннаяПодсказка" id="2892"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="ГруппаVanessaEditorПолучитьИзмененияФормы" id="2895">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Изменения формы</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Form changes</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ГруппаVanessaEditorПолучитьИзмененияФормыРасширеннаяПодсказка" id="2896"/>
+										<ChildItems>
+											<Button name="VanessaEditorПолучитьИзмененияФормыGherkin" id="2897">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ПолучитьИзмененияФормыGherkin</CommandName>
+												<Title>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Получить состояние всей формы в виде шагов</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>Get the whole form state</v8:content>
+													</v8:item>
+												</Title>
+												<ExtendedTooltip name="VanessaEditorПолучитьИзмененияФормыGherkinРасширеннаяПодсказка" id="2898"/>
+											</Button>
+											<Button name="VanessaEditorПолучитьСостояниеТекущегоЭлементаФормы" id="2899">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ПолучитьСостояниеТекущегоЭлементаФормы</CommandName>
+												<ExtendedTooltip name="VanessaEditorПолучитьСостояниеТекущегоЭлементаФормыРасширеннаяПодсказка" id="2900"/>
+											</Button>
+											<Button name="ФормаДобавитьПроверкуСообщенийПользователя" id="2901">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ДобавитьПроверкуСообщенийПользователя</CommandName>
+												<ExtendedTooltip name="ФормаДобавитьПроверкуСообщенийПользователяРасширеннаяПодсказка" id="2902"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="ГруппаVanessaEditorТаблоПеременных" id="2928">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа vanessa editor табло переменных</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Variables board</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ГруппаVanessaEditorТаблоПеременныхРасширеннаяПодсказка" id="2929"/>
+										<ChildItems>
+											<Button name="ФормаПоказатьСкрытьТаблоПеременных" id="2930">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ПоказатьСкрытьТаблоПеременных</CommandName>
+												<ExtendedTooltip name="ФормаПоказатьСкрытьТаблоПеременныхРасширеннаяПодсказка" id="2931"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="ГруппаVanessaEditorПодготовкаИЗагрузкаДанных" id="2934">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа vanessa editor подготовка и загрузка данных</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Test data generator</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ГруппаVanessaEditorПодготовкаИЗагрузкаДанныхРасширеннаяПодсказка" id="2935"/>
+										<ChildItems>
+											<Button name="ФормаОткрытьИнструментПодготовкаИЗагрузкаДанных" id="2932">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.ОткрытьИнструментПодготовкаИЗагрузкаДанных</CommandName>
+												<ExtendedTooltip name="ФормаОткрытьИнструментПодготовкаИЗагрузкаДанныхРасширеннаяПодсказка" id="2933"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+								</ChildItems>
+							</Popup>
 							<Popup name="ГруппаVanessaEditorНастройкиРедактора" id="2552">
 								<Title>
 									<v8:item>
@@ -1468,6 +1667,11 @@
 												<CommandName>Form.Command.ЗагрузитьНастройкиИзФайла</CommandName>
 												<ExtendedTooltip name="VanessaEditorЗагрузитьНастройкиИзФайлаРасширеннаяПодсказка" id="2729"/>
 											</Button>
+											<Button name="VanessaEditorСравнитьТекущиеНастройкиСФайлом" id="2936">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.СравнитьТекущиеНастройкиСФайлом</CommandName>
+												<ExtendedTooltip name="VanessaEditorСравнитьТекущиеНастройкиСФайломРасширеннаяПодсказка" id="2937"/>
+											</Button>
 										</ChildItems>
 									</ButtonGroup>
 									<Button name="VanessaEditorИспользоватьДанныеТекущейФормыПриПодбореШагов" id="2554">
@@ -1487,6 +1691,12 @@
 										<Check>true</Check>
 										<CommandName>Form.Command.VanessaEditorПоказыватьМиниатюруКода</CommandName>
 										<ExtendedTooltip name="VanessaEditorПоказыватьМиниатюруКодаРасширеннаяПодсказка" id="2651"/>
+									</Button>
+									<Button name="VanessaEditorПроверкаСинтаксисаВРедакторе" id="2880">
+										<Type>CommandBarButton</Type>
+										<Check>true</Check>
+										<CommandName>Form.Command.VanessaEditorПроверкаСинтаксисаВРедакторе</CommandName>
+										<ExtendedTooltip name="VanessaEditorПроверкаСинтаксисаВРедактореРасширеннаяПодсказка" id="2881"/>
 									</Button>
 									<Button name="VanessaEditorПоказыватьРазличияВРедактореОтдельно" id="2848">
 										<Type>CommandBarButton</Type>
@@ -3011,6 +3221,7 @@
 		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="BeforeClose">ПередЗакрытием</Event>
+		<Event name="ExternalEvent">ВнешнееСобытие</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 		<Event name="OnClose">ПриЗакрытии</Event>
 	</Events>
@@ -5592,953 +5803,1020 @@
 																</UsualGroup>
 															</ChildItems>
 														</UsualGroup>
-														<HTMLDocumentField name="VanessaEditor" id="2404">
-															<DataPath>VanessaEditorURL</DataPath>
+														<UsualGroup name="ГруппаVanessaEditor" id="2866">
 															<Title>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
-																	<v8:content>Редактор</v8:content>
+																	<v8:content>Группа vanessa editor</v8:content>
 																</v8:item>
 																<v8:item>
 																	<v8:lang>en</v8:lang>
-																	<v8:content>Editor</v8:content>
+																	<v8:content>Vanessa editor group</v8:content>
 																</v8:item>
 															</Title>
-															<TitleLocation>None</TitleLocation>
-															<Width>80</Width>
-															<ContextMenu name="VanessaEditorContextMenu" id="2405">
-																<Autofill>false</Autofill>
-																<ChildItems>
-																	<ButtonGroup name="ГруппаКонтекстногоМенюVanessaEditorПодборШага" id="2529">
-																		<Title>
-																			<v8:item>
-																				<v8:lang>ru</v8:lang>
-																				<v8:content>Подбор шага</v8:content>
-																			</v8:item>
-																			<v8:item>
-																				<v8:lang>en</v8:lang>
-																				<v8:content>Breakpoints</v8:content>
-																			</v8:item>
-																		</Title>
-																		<ExtendedTooltip name="ГруппаКонтекстногоМенюVanessaEditorПодборШагаРасширеннаяПодсказка" id="2530"/>
+															<Group>Vertical</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаVanessaEditorРасширеннаяПодсказка" id="2867"/>
+															<ChildItems>
+																<UsualGroup name="ГруппаКнопкиVanessaEditor" id="2868">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа кrнопки Vanessa Editor</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Vanessa Editor buttons group</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Group>AlwaysHorizontal</Group>
+																	<HorizontalSpacing>None</HorizontalSpacing>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаКнопкиVanessaEditorРасширеннаяПодсказка" id="2869"/>
+																	<ChildItems>
+																		<Button name="VanessaEditorPreviousDiff" id="2872">
+																			<Type>UsualButton</Type>
+																			<CommandName>Form.Command.VanessaEditorPreviousDiff</CommandName>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Предыдущее изменение</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>Previous diff</v8:content>
+																				</v8:item>
+																			</Title>
+																			<ExtendedTooltip name="VanessaEditorPreviousDiffРасширеннаяПодсказка" id="2873"/>
+																		</Button>
+																		<Button name="VanessaEditorNextDiff" id="2870">
+																			<Type>UsualButton</Type>
+																			<CommandName>Form.Command.VanessaEditorNextDiff</CommandName>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Следующее изменение</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>Next diff</v8:content>
+																				</v8:item>
+																			</Title>
+																			<ExtendedTooltip name="VanessaEditorNextDiffРасширеннаяПодсказка" id="2871"/>
+																		</Button>
+																	</ChildItems>
+																</UsualGroup>
+																<HTMLDocumentField name="VanessaEditor" id="2404">
+																	<DataPath>VanessaEditorURL</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Редактор</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Editor</v8:content>
+																		</v8:item>
+																	</Title>
+																	<TitleLocation>None</TitleLocation>
+																	<Width>80</Width>
+																	<ContextMenu name="VanessaEditorContextMenu" id="2405">
+																		<Autofill>false</Autofill>
 																		<ChildItems>
-																			<Button name="VanessaEditorКонтекстноеМенюОткрытьОпределениеШага" id="2533">
-																				<Type>CommandBarButton</Type>
-																				<CommandName>Form.Command.ОткрытьОпределениеШага</CommandName>
-																				<ExtendedTooltip name="VanessaEditorКонтекстноеМенюОткрытьОпределениеШагаРасширеннаяПодсказка" id="2534"/>
-																			</Button>
+																			<ButtonGroup name="ГруппаКонтекстногоМенюVanessaEditorПодборШага" id="2529">
+																				<Title>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Подбор шага</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>Breakpoints</v8:content>
+																					</v8:item>
+																				</Title>
+																				<ExtendedTooltip name="ГруппаКонтекстногоМенюVanessaEditorПодборШагаРасширеннаяПодсказка" id="2530"/>
+																				<ChildItems>
+																					<Button name="VanessaEditorКонтекстноеМенюОткрытьОпределениеШага" id="2533">
+																						<Type>CommandBarButton</Type>
+																						<CommandName>Form.Command.ОткрытьОпределениеШага</CommandName>
+																						<ExtendedTooltip name="VanessaEditorКонтекстноеМенюОткрытьОпределениеШагаРасширеннаяПодсказка" id="2534"/>
+																					</Button>
+																				</ChildItems>
+																			</ButtonGroup>
+																			<ButtonGroup name="ГруппаКонтекстногоМенюVanessaEditorОсновная" id="2482">
+																				<Title>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Основная</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>Main</v8:content>
+																					</v8:item>
+																				</Title>
+																				<ExtendedTooltip name="ГруппаКонтекстногоМенюVanessaEditorОсновнаяРасширеннаяПодсказка" id="2483"/>
+																				<ChildItems>
+																					<Button name="VanessaEditorКонтекстноеМенюВыполнитьДанныйСценарийСТекущегоШага" id="2476">
+																						<Type>CommandBarButton</Type>
+																						<CommandName>Form.Command.ВыполнитьДанныйСценарийСТекущегоШага</CommandName>
+																						<Title>
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Выполнить с текущего шага</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>Run from this step</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>am</v8:lang>
+																								<v8:content>አንድ የአሁኑ እርምጃ</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>az</v8:lang>
+																								<v8:content>İcra ilə cari addım</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>bg</v8:lang>
+																								<v8:content>Изпълни с текущата стъпка</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>de</v8:lang>
+																								<v8:content>Ausführen des aktuellen Schritts</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>es</v8:lang>
+																								<v8:content>Cumplir con el actual paso</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>et</v8:lang>
+																								<v8:content>Teha valitud sammu</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>fr</v8:lang>
+																								<v8:content>Effectuer l'étape en cours</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>hu</v8:lang>
+																								<v8:content>Végre az aktuális lépés</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>it</v8:lang>
+																								<v8:content>Eseguire con il passaggio dell'</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>ka</v8:lang>
+																								<v8:content>შეასრულოს მიმდინარე ნაბიჯი</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>lt</v8:lang>
+																								<v8:content>Vykdyti aktyvų žingsnio</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>lv</v8:lang>
+																								<v8:content>Veikt ar pašreizējo soļi</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>mn</v8:lang>
+																								<v8:content>Гүйцэтгэх одоогийн алхам</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>pl</v8:lang>
+																								<v8:content>Uruchom z bieżącego kroku</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>ro</v8:lang>
+																								<v8:content>Executa curent cu pas</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>sl</v8:lang>
+																								<v8:content>Za opravljanje tekočih korak</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>sv</v8:lang>
+																								<v8:content>För att utföra den aktuella steg</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>tr</v8:lang>
+																								<v8:content>Gerçekleştirmek, cari adım</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>vi</v8:lang>
+																								<v8:content>Thực hiện từ bước hiện tại</v8:content>
+																							</v8:item>
+																						</Title>
+																						<ExtendedTooltip name="VanessaEditorКонтекстноеМенюВыполнитьДанныйСценарийСТекущегоШагаРасширеннаяПодсказка" id="2477"/>
+																					</Button>
+																					<Button name="VanessaEditorКонтекстноеМенюВыполнитьДанныйСценарийСТекущегоШагаСПродолжением" id="2562">
+																						<Type>CommandBarButton</Type>
+																						<CommandName>Form.Command.ВыполнитьДанныйСценарийСТекущегоШагаСПродолжением</CommandName>
+																						<Title>
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Выполнить с текущего шага с продолжением</v8:content>
+																							</v8:item>
+																						</Title>
+																						<ExtendedTooltip name="VanessaEditorКонтекстноеМенюВыполнитьДанныйСценарийСТекущегоШагаСПродолжениемРасширеннаяПодсказка" id="2563"/>
+																					</Button>
+																					<Button name="VanessaEditorКонтекстноеМенюВыполнитьВыделенныеСтроки" id="2422">
+																						<Type>CommandBarButton</Type>
+																						<CommandName>Form.Command.ВыполнитьВыделенныеСтроки</CommandName>
+																						<Title>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>Selected lines</v8:content>
+																							</v8:item>
+																						</Title>
+																						<ExtendedTooltip name="VanessaEditorКонтекстноеМенюВыполнитьВыделенныеСтрокиРасширеннаяПодсказка" id="2423"/>
+																					</Button>
+																					<Button name="VanessaEditorКонтекстноеМенюПунктВыполнитьСценарий" id="2478">
+																						<Type>CommandBarButton</Type>
+																						<CommandName>Form.Command.ВыполнитьВыделенныйСценарий</CommandName>
+																						<Title>
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Выполнить с начала</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>Run from beginning</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>am</v8:lang>
+																								<v8:content>..</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>az</v8:lang>
+																								<v8:content>İcra ilə başladı</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>bg</v8:lang>
+																								<v8:content>Изпълни от началото на</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>de</v8:lang>
+																								<v8:content>Seit Anfang ausführen</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>es</v8:lang>
+																								<v8:content>Realizar desde el inicio de la</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>et</v8:lang>
+																								<v8:content>Run algusest</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>fr</v8:lang>
+																								<v8:content>Exécuter depuis le début</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>hu</v8:lang>
+																								<v8:content>Kezdjük az elején</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>it</v8:lang>
+																								<v8:content>Eseguire con inizio</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>ka</v8:lang>
+																								<v8:content>დავიწყოთ ისევ თავიდან</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>lt</v8:lang>
+																								<v8:content>Atlikti nuo pradžios</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>lv</v8:lang>
+																								<v8:content>Veikt no sākuma</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>mn</v8:lang>
+																								<v8:content>Эхлэх дахин эхнээс нь</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>pl</v8:lang>
+																								<v8:content>Wykonać od początku</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>ro</v8:lang>
+																								<v8:content>Executare de la începutul</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>sl</v8:lang>
+																								<v8:content>Začeti znova od začetka</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>sv</v8:lang>
+																								<v8:content>Börja om från början igen</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>tr</v8:lang>
+																								<v8:content>Gerçekleştirmek başından</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>vi</v8:lang>
+																								<v8:content>Bắt đầu lại từ đầu</v8:content>
+																							</v8:item>
+																						</Title>
+																						<ExtendedTooltip name="VanessaEditorКонтекстноеМенюПунктВыполнитьСценарийРасширеннаяПодсказка" id="2479"/>
+																					</Button>
+																					<Button name="VanessaEditorКонтекстноеМенюВыполнитьОдинШаг" id="2480">
+																						<Type>CommandBarButton</Type>
+																						<CommandName>Form.Command.ВыполнитьОдинШаг</CommandName>
+																						<Title>
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Выполнить шаг</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>Run one step</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>am</v8:lang>
+																								<v8:content>አንድ እርምጃ</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>az</v8:lang>
+																								<v8:content>İcra addım</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>bg</v8:lang>
+																								<v8:content>Изпълнява стъпка</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>de</v8:lang>
+																								<v8:content>Schritt</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>es</v8:lang>
+																								<v8:content>Realizar el paso</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>et</v8:lang>
+																								<v8:content>Täita samm</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>fr</v8:lang>
+																								<v8:content>Effectuer l'étape</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>hu</v8:lang>
+																								<v8:content>Végre lépés</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>it</v8:lang>
+																								<v8:content>Eseguire il passaggio</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>ka</v8:lang>
+																								<v8:content>შეასრულოს ნაბიჯი</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>lt</v8:lang>
+																								<v8:content>Atlikti žingsnis</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>lv</v8:lang>
+																								<v8:content>Veikt soli</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>mn</v8:lang>
+																								<v8:content>Гүйцэтгэх алхам</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>pl</v8:lang>
+																								<v8:content>Wykonać krok</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>ro</v8:lang>
+																								<v8:content>Executa pasul</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>sl</v8:lang>
+																								<v8:content>Za opravljanje korak</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>sv</v8:lang>
+																								<v8:content>För att utföra steg</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>tr</v8:lang>
+																								<v8:content>Gerçekleştirmek için adım</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>vi</v8:lang>
+																								<v8:content>Thực hiện bước</v8:content>
+																							</v8:item>
+																						</Title>
+																						<ExtendedTooltip name="VanessaEditorКонтекстноеМенюВыполнитьОдинШагРасширеннаяПодсказка" id="2481"/>
+																					</Button>
+																				</ChildItems>
+																			</ButtonGroup>
+																			<ButtonGroup name="ГруппаКонтекстногоМенюVanessaEditorРаботаСФичей" id="2484">
+																				<Title>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Открыть фича файл в редакторе</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>Open feature file in editor</v8:content>
+																					</v8:item>
+																				</Title>
+																				<ExtendedTooltip name="ГруппаКонтекстногоМенюVanessaEditorРаботаСФичейРасширеннаяПодсказка" id="2485"/>
+																				<ChildItems>
+																					<Button name="VanessaEditorКонтекстноеМенюОткрытьПодсценарийВНовойВкладке" id="2736">
+																						<Type>CommandBarButton</Type>
+																						<CommandName>Form.Command.ОткрытьПодсценарийВНовойВкладке</CommandName>
+																						<Title>
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Открыть в новой вкладке</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>Open in a new tab</v8:content>
+																							</v8:item>
+																						</Title>
+																						<ExtendedTooltip name="VanessaEditorКонтекстноеМенюОткрытьПодсценарийВНовойВкладкеРасширеннаяПодсказка" id="2737"/>
+																					</Button>
+																					<Button name="VanessaEditorКонтекстноеМенюПунктОткрытьФичаФайл" id="2486">
+																						<Type>CommandBarButton</Type>
+																						<CommandName>Form.Command.ОткрытьФичаФайл</CommandName>
+																						<Title>
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Открыть .feature файл во внешнем редакторе</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>Open .feature file in editor</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>am</v8:lang>
+																								<v8:content>ክፍት አዳዲስ ግምገማዎች ፋይል ውስጥ አራሚ</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>az</v8:lang>
+																								<v8:content>Açıq feature faylı redaktoru</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>bg</v8:lang>
+																								<v8:content>Отвори feature файл в редактора</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>de</v8:lang>
+																								<v8:content>Feature Datei öffnen im Editor</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>es</v8:lang>
+																								<v8:content>Abrir feature archivo en el editor de</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>et</v8:lang>
+																								<v8:content>Avada feature faili editor</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>fr</v8:lang>
+																								<v8:content>Ouvrir feature fichier dans l'éditeur</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>hu</v8:lang>
+																								<v8:content>Nyissa meg a funkció a fájlt a szerkesztő</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>it</v8:lang>
+																								<v8:content>Aprire feature file nell'editor</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>ka</v8:lang>
+																								<v8:content>ღია ფუნქცია, ფაილის რედაქტორი</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>lt</v8:lang>
+																								<v8:content>Atidaryti feature failą redaktorius</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>lv</v8:lang>
+																								<v8:content>Atvērt feature failu redaktors</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>mn</v8:lang>
+																								<v8:content>Нээх боломж файлыг засварлагч</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>pl</v8:lang>
+																								<v8:content>Otworzyć feature plik w edytorze</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>ro</v8:lang>
+																								<v8:content>Deschide feature fișierul într-un editor</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>sl</v8:lang>
+																								<v8:content>Odprite funkcijo datoteko v urejevalniku</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>sv</v8:lang>
+																								<v8:content>Öppna funktionen fil i editorn</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>tr</v8:lang>
+																								<v8:content>Aç feature dosyası düzenleyicisi'nde,</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>vi</v8:lang>
+																								<v8:content>Mở tệp tính năng trong bộ soạn</v8:content>
+																							</v8:item>
+																						</Title>
+																						<ExtendedTooltip name="VanessaEditorКонтекстноеМенюПунктОткрытьФичаФайлРасширеннаяПодсказка" id="2487"/>
+																					</Button>
+																					<Button name="VanessaEditorКонтекстноеМенюОткрытьКаталогФичи" id="2488">
+																						<Type>CommandBarButton</Type>
+																						<CommandName>Form.Command.ОткрытьКаталогФичи</CommandName>
+																						<Title>
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Открыть каталог .feature файлов</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>Open .feature files directory</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>am</v8:lang>
+																								<v8:content>ክፍት ይገናኛሉ የሚሰጡዋቸውን</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>az</v8:lang>
+																								<v8:content>Open directory feature</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>bg</v8:lang>
+																								<v8:content>Отваряне на каталог feature</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>de</v8:lang>
+																								<v8:content>Feature-Katalog öffnen</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>es</v8:lang>
+																								<v8:content>Abrir el directorio de feature</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>et</v8:lang>
+																								<v8:content>Ava kataloog feature</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>fr</v8:lang>
+																								<v8:content>Ouvrir le répertoire feature</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>hu</v8:lang>
+																								<v8:content>Nyitva katalógus funkció</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>it</v8:lang>
+																								<v8:content>Aprire il catalogo feature</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>ka</v8:lang>
+																								<v8:content>ღია კატალოგი ფუნქცია</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>lt</v8:lang>
+																								<v8:content>Atidaryti katalogą feature</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>lv</v8:lang>
+																								<v8:content>Open directory feature</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>mn</v8:lang>
+																								<v8:content>Нээлттэй каталог онцлог</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>pl</v8:lang>
+																								<v8:content>Otworzyć katalog feature</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>ro</v8:lang>
+																								<v8:content>Deschideți directorul feature</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>sl</v8:lang>
+																								<v8:content>Odprite katalog funkcija</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>sv</v8:lang>
+																								<v8:content>Öppna katalog-funktion</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>tr</v8:lang>
+																								<v8:content>Açık dizin özelliği</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>vi</v8:lang>
+																								<v8:content>Mở thư mục tính năng</v8:content>
+																							</v8:item>
+																						</Title>
+																						<ExtendedTooltip name="VanessaEditorКонтекстноеМенюОткрытьКаталогФичиРасширеннаяПодсказка" id="2489"/>
+																					</Button>
+																				</ChildItems>
+																			</ButtonGroup>
+																			<ButtonGroup name="ГруппаКонтекстногоМенюVanessaEditorБрейпоинты" id="2494">
+																				<Title>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Брейпоинты</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>Breakpoints</v8:content>
+																					</v8:item>
+																				</Title>
+																				<ExtendedTooltip name="ГруппаКонтекстногоМенюVanessaEditorБрейпоинтыРасширеннаяПодсказка" id="2495"/>
+																				<ChildItems>
+																					<Button name="VanessaEditorКонтекстноеМенюБрейкпоинт" id="2496">
+																						<Type>CommandBarButton</Type>
+																						<CommandName>Form.Command.VanessaEditorSetBreakPoint</CommandName>
+																						<Title>
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Брейкпоинт</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>Breakpoint</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>am</v8:lang>
+																								<v8:content>ወደ breakpoint</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>az</v8:lang>
+																								<v8:content>Брейкпоинт</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>bg</v8:lang>
+																								<v8:content>Брейкпоинт</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>de</v8:lang>
+																								<v8:content>Haltepunkt</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>es</v8:lang>
+																								<v8:content>Брейкпоинт</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>et</v8:lang>
+																								<v8:content>Брейкпоинт</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>fr</v8:lang>
+																								<v8:content>Брейкпоинт</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>hu</v8:lang>
+																								<v8:content>A töréspont</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>it</v8:lang>
+																								<v8:content>Брейкпоинт</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>ka</v8:lang>
+																								<v8:content>"Breakpoint</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>lt</v8:lang>
+																								<v8:content>Брейкпоинт</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>lv</v8:lang>
+																								<v8:content>Брейкпоинт</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>mn</v8:lang>
+																								<v8:content>Энэ breakpoint</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>pl</v8:lang>
+																								<v8:content>Брейкпоинт</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>ro</v8:lang>
+																								<v8:content>Брейкпоинт</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>sl</v8:lang>
+																								<v8:content>Prekinitvena točka</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>sv</v8:lang>
+																								<v8:content>Brytpunkten</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>tr</v8:lang>
+																								<v8:content>Брейкпоинт</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>vi</v8:lang>
+																								<v8:content>Các điểm dừng</v8:content>
+																							</v8:item>
+																						</Title>
+																						<ExtendedTooltip name="VanessaEditorКонтекстноеМенюБрейкпоинтРасширеннаяПодсказка" id="2497"/>
+																					</Button>
+																					<Button name="VanessaEditorКонтекстноеМенюБрейпоинтУбратьВсе" id="2498">
+																						<Type>CommandBarButton</Type>
+																						<CommandName>Form.Command.VanessaEditorRemoveBreakPoints</CommandName>
+																						<Title>
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Убрать все брейкпоинты</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>Remove all breakpoints</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>am</v8:lang>
+																								<v8:content>በይፋ breakpoints</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>az</v8:lang>
+																								<v8:content>Clear bütün брейкпоинты</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>bg</v8:lang>
+																								<v8:content>Изтрий всички брейкпоинты</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>de</v8:lang>
+																								<v8:content>Entfernen Sie alle брейкпоинты</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>es</v8:lang>
+																								<v8:content>Eliminar todos los брейкпоинты</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>et</v8:lang>
+																								<v8:content>Kustuta kõik брейкпоинты</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>fr</v8:lang>
+																								<v8:content>Supprimer tous les брейкпоинты</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>hu</v8:lang>
+																								<v8:content>Távolítsa el az összes töréspontok</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>it</v8:lang>
+																								<v8:content>Rimuovere tutti брейкпоинты</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>ka</v8:lang>
+																								<v8:content>ამოიღონ ყველა breakpoints</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>lt</v8:lang>
+																								<v8:content>Ištrinti visas брейкпоинты</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>lv</v8:lang>
+																								<v8:content>Notīrīt visu брейкпоинты</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>mn</v8:lang>
+																								<v8:content>Бүх устгах нь breakpoints</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>pl</v8:lang>
+																								<v8:content>Usunąć wszystkie брейкпоинты</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>ro</v8:lang>
+																								<v8:content>Pentru a elimina toate брейкпоинты</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>sl</v8:lang>
+																								<v8:content>Odstranite vse mejne vrednosti</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>sv</v8:lang>
+																								<v8:content>Ta bort alla brytpunkter</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>tr</v8:lang>
+																								<v8:content>Kaldırmak için брейкпоинты</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>vi</v8:lang>
+																								<v8:content>Loại bỏ tất cả các điểm ngắt</v8:content>
+																							</v8:item>
+																						</Title>
+																						<ExtendedTooltip name="VanessaEditorКонтекстноеМенюБрейпоинтУбратьВсеРасширеннаяПодсказка" id="2499"/>
+																					</Button>
+																				</ChildItems>
+																			</ButtonGroup>
+																			<ButtonGroup name="ГруппаКонтекстногоМенюVanessaEditorРаботаСТаблицами" id="2506">
+																				<Title>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Работа с таблицами</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>Breakpoints</v8:content>
+																					</v8:item>
+																				</Title>
+																				<ExtendedTooltip name="ГруппаКонтекстногоМенюVanessaEditorРаботаСТаблицамиРасширеннаяПодсказка" id="2507"/>
+																				<ChildItems>
+																					<Button name="VanessaEditorКонтекстноеМенюРедактироватьТаблицуТекст" id="2508">
+																						<Type>CommandBarButton</Type>
+																						<CommandName>Form.Command.РедактироватьТаблицуТекст</CommandName>
+																						<Title>
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Редактировать таблицу</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>Edit table</v8:content>
+																							</v8:item>
+																						</Title>
+																						<ExtendedTooltip name="VanessaEditorКонтекстноеМенюРедактироватьТаблицуТекстРасширеннаяПодсказка" id="2509"/>
+																					</Button>
+																					<Button name="VanessaEditorКонтекстноеМенюПолучитьМакетПоТаблице" id="2510">
+																						<Type>CommandBarButton</Type>
+																						<CommandName>Form.Command.ПолучитьМакетПоТаблице</CommandName>
+																						<ExtendedTooltip name="VanessaEditorКонтекстноеМенюПолучитьМакетПоТаблицеРасширеннаяПодсказка" id="2511"/>
+																					</Button>
+																				</ChildItems>
+																			</ButtonGroup>
+																			<ButtonGroup name="ГруппаКонтекстногоМенюVanessaEditorПолучитьСостояниеФормы" id="2546">
+																				<Title>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Работа с таблицами</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>Breakpoints</v8:content>
+																					</v8:item>
+																				</Title>
+																				<ToolTip>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Группа контекстного меню vanessa editor получить состояние формы</v8:content>
+																					</v8:item>
+																				</ToolTip>
+																				<ExtendedTooltip name="ГруппаКонтекстногоМенюVanessaEditorПолучитьСостояниеФормыРасширеннаяПодсказка" id="2547"/>
+																				<ChildItems>
+																					<Button name="VanessaEditorКонтекстноеМенюПолучитьИзмененияФормыGherkin" id="2548">
+																						<Type>CommandBarButton</Type>
+																						<CommandName>Form.Command.ПолучитьИзмененияФормыGherkin</CommandName>
+																						<Title>
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Получить состояние всей формы в виде шагов</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>Get the whole form state</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>am</v8:lang>
+																								<v8:content>በቀዳሚ ግምገማዎች ላይ ያለው ስምዎ ስለጀመሩ ቅጽ</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>az</v8:lang>
+																								<v8:content>Almaq üçün dövlət bütün formaları</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>bg</v8:lang>
+																								<v8:content>Получаване на състоянието на цялата форма</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>de</v8:lang>
+																								<v8:content>Erhalten Sie den Zustand der gesamten Form</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>es</v8:lang>
+																								<v8:content>Obtener el estado de todo el formulario</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>et</v8:lang>
+																								<v8:content>Saada seisund kogu vormi</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>fr</v8:lang>
+																								<v8:content>Obtenir l'état de l'ensemble de la forme</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>hu</v8:lang>
+																								<v8:content>A teljes űrlap</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>it</v8:lang>
+																								<v8:content>Ottenere lo stato di forma intera</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>ka</v8:lang>
+																								<v8:content>უნდა მიიღოთ მთელი ფორმა</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>lt</v8:lang>
+																								<v8:content>Gauti būsena visos formos</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>lv</v8:lang>
+																								<v8:content>Saņemt stāvokli visā veidlapas</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>mn</v8:lang>
+																								<v8:content>Авах бүх хэлбэр</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>pl</v8:lang>
+																								<v8:content>Zobacz stan całej formy</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>ro</v8:lang>
+																								<v8:content>Pentru a obține starea de întregul formular</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>sl</v8:lang>
+																								<v8:content>Da bi dobili celoten obrazec</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>sv</v8:lang>
+																								<v8:content>För att få hela formen</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>tr</v8:lang>
+																								<v8:content>Bir devlet olsun tüm formu</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>vi</v8:lang>
+																								<v8:content>Nhận trạng thái tất cả biểu mẫu</v8:content>
+																							</v8:item>
+																						</Title>
+																						<ExtendedTooltip name="VanessaEditorКонтекстноеМенюПолучитьИзмененияФормыGherkinРасширеннаяПодсказка" id="2549"/>
+																					</Button>
+																					<Button name="VanessaEditorКонтекстноеМенюПолучитьСостояниеТекущегоЭлементаФормы" id="2550">
+																						<Type>CommandBarButton</Type>
+																						<CommandName>Form.Command.ПолучитьСостояниеТекущегоЭлементаФормы</CommandName>
+																						<ExtendedTooltip name="VanessaEditorКонтекстноеМенюПолучитьСостояниеТекущегоЭлементаФормыРасширеннаяПодсказка" id="2551"/>
+																					</Button>
+																					<Button name="VanessaEditorКонтекстноеМенюДобавитьПроверкуСообщенийПользователя" id="2558">
+																						<Type>CommandBarButton</Type>
+																						<CommandName>Form.Command.ДобавитьПроверкуСообщенийПользователя</CommandName>
+																						<ExtendedTooltip name="VanessaEditorКонтекстноеМенюДобавитьПроверкуСообщенийПользователяРасширеннаяПодсказка" id="2559"/>
+																					</Button>
+																				</ChildItems>
+																			</ButtonGroup>
+																			<ButtonGroup name="ГруппаКонтекстногоМенюVanessaEditorНавигация" id="2598">
+																				<Title>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Открыть фича файл в редакторе</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>Open feature file in editor</v8:content>
+																					</v8:item>
+																				</Title>
+																				<ToolTip>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Группа контекстного меню vanessa editor навигация</v8:content>
+																					</v8:item>
+																				</ToolTip>
+																				<ExtendedTooltip name="ГруппаКонтекстногоМенюVanessaEditorНавигацияРасширеннаяПодсказка" id="2599"/>
+																				<ChildItems>
+																					<Button name="VanessaEditorКонтекстноеМенюПерейтиКСтрокеСОшибкой" id="2604">
+																						<Type>CommandBarButton</Type>
+																						<CommandName>Form.Command.ПерейтиКСтрокеСОшибкой</CommandName>
+																						<ExtendedTooltip name="VanessaEditorКонтекстноеМенюПерейтиКСтрокеСОшибкойРасширеннаяПодсказка" id="2605"/>
+																					</Button>
+																				</ChildItems>
+																			</ButtonGroup>
 																		</ChildItems>
-																	</ButtonGroup>
-																	<ButtonGroup name="ГруппаКонтекстногоМенюVanessaEditorОсновная" id="2482">
-																		<Title>
-																			<v8:item>
-																				<v8:lang>ru</v8:lang>
-																				<v8:content>Основная</v8:content>
-																			</v8:item>
-																			<v8:item>
-																				<v8:lang>en</v8:lang>
-																				<v8:content>Main</v8:content>
-																			</v8:item>
-																		</Title>
-																		<ExtendedTooltip name="ГруппаКонтекстногоМенюVanessaEditorОсновнаяРасширеннаяПодсказка" id="2483"/>
-																		<ChildItems>
-																			<Button name="VanessaEditorКонтекстноеМенюВыполнитьДанныйСценарийСТекущегоШага" id="2476">
-																				<Type>CommandBarButton</Type>
-																				<CommandName>Form.Command.ВыполнитьДанныйСценарийСТекущегоШага</CommandName>
-																				<Title>
-																					<v8:item>
-																						<v8:lang>ru</v8:lang>
-																						<v8:content>Выполнить с текущего шага</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>en</v8:lang>
-																						<v8:content>Run from this step</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>am</v8:lang>
-																						<v8:content>አንድ የአሁኑ እርምጃ</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>az</v8:lang>
-																						<v8:content>İcra ilə cari addım</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>bg</v8:lang>
-																						<v8:content>Изпълни с текущата стъпка</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>de</v8:lang>
-																						<v8:content>Ausführen des aktuellen Schritts</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>es</v8:lang>
-																						<v8:content>Cumplir con el actual paso</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>et</v8:lang>
-																						<v8:content>Teha valitud sammu</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>fr</v8:lang>
-																						<v8:content>Effectuer l'étape en cours</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>hu</v8:lang>
-																						<v8:content>Végre az aktuális lépés</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>it</v8:lang>
-																						<v8:content>Eseguire con il passaggio dell'</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>ka</v8:lang>
-																						<v8:content>შეასრულოს მიმდინარე ნაბიჯი</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>lt</v8:lang>
-																						<v8:content>Vykdyti aktyvų žingsnio</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>lv</v8:lang>
-																						<v8:content>Veikt ar pašreizējo soļi</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>mn</v8:lang>
-																						<v8:content>Гүйцэтгэх одоогийн алхам</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>pl</v8:lang>
-																						<v8:content>Uruchom z bieżącego kroku</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>ro</v8:lang>
-																						<v8:content>Executa curent cu pas</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>sl</v8:lang>
-																						<v8:content>Za opravljanje tekočih korak</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>sv</v8:lang>
-																						<v8:content>För att utföra den aktuella steg</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>tr</v8:lang>
-																						<v8:content>Gerçekleştirmek, cari adım</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>vi</v8:lang>
-																						<v8:content>Thực hiện từ bước hiện tại</v8:content>
-																					</v8:item>
-																				</Title>
-																				<ExtendedTooltip name="VanessaEditorКонтекстноеМенюВыполнитьДанныйСценарийСТекущегоШагаРасширеннаяПодсказка" id="2477"/>
-																			</Button>
-																			<Button name="VanessaEditorКонтекстноеМенюВыполнитьДанныйСценарийСТекущегоШагаСПродолжением" id="2562">
-																				<Type>CommandBarButton</Type>
-																				<CommandName>Form.Command.ВыполнитьДанныйСценарийСТекущегоШагаСПродолжением</CommandName>
-																				<Title>
-																					<v8:item>
-																						<v8:lang>ru</v8:lang>
-																						<v8:content>Выполнить с текущего шага с продолжением</v8:content>
-																					</v8:item>
-																				</Title>
-																				<ExtendedTooltip name="VanessaEditorКонтекстноеМенюВыполнитьДанныйСценарийСТекущегоШагаСПродолжениемРасширеннаяПодсказка" id="2563"/>
-																			</Button>
-																			<Button name="VanessaEditorКонтекстноеМенюВыполнитьВыделенныеСтроки" id="2422">
-																				<Type>CommandBarButton</Type>
-																				<CommandName>Form.Command.ВыполнитьВыделенныеСтроки</CommandName>
-																				<Title>
-																					<v8:item>
-																						<v8:lang>en</v8:lang>
-																						<v8:content>Selected lines</v8:content>
-																					</v8:item>
-																				</Title>
-																				<ExtendedTooltip name="VanessaEditorКонтекстноеМенюВыполнитьВыделенныеСтрокиРасширеннаяПодсказка" id="2423"/>
-																			</Button>
-																			<Button name="VanessaEditorКонтекстноеМенюПунктВыполнитьСценарий" id="2478">
-																				<Type>CommandBarButton</Type>
-																				<CommandName>Form.Command.ВыполнитьВыделенныйСценарий</CommandName>
-																				<Title>
-																					<v8:item>
-																						<v8:lang>ru</v8:lang>
-																						<v8:content>Выполнить с начала</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>en</v8:lang>
-																						<v8:content>Run from beginning</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>am</v8:lang>
-																						<v8:content>..</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>az</v8:lang>
-																						<v8:content>İcra ilə başladı</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>bg</v8:lang>
-																						<v8:content>Изпълни от началото на</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>de</v8:lang>
-																						<v8:content>Seit Anfang ausführen</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>es</v8:lang>
-																						<v8:content>Realizar desde el inicio de la</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>et</v8:lang>
-																						<v8:content>Run algusest</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>fr</v8:lang>
-																						<v8:content>Exécuter depuis le début</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>hu</v8:lang>
-																						<v8:content>Kezdjük az elején</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>it</v8:lang>
-																						<v8:content>Eseguire con inizio</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>ka</v8:lang>
-																						<v8:content>დავიწყოთ ისევ თავიდან</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>lt</v8:lang>
-																						<v8:content>Atlikti nuo pradžios</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>lv</v8:lang>
-																						<v8:content>Veikt no sākuma</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>mn</v8:lang>
-																						<v8:content>Эхлэх дахин эхнээс нь</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>pl</v8:lang>
-																						<v8:content>Wykonać od początku</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>ro</v8:lang>
-																						<v8:content>Executare de la începutul</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>sl</v8:lang>
-																						<v8:content>Začeti znova od začetka</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>sv</v8:lang>
-																						<v8:content>Börja om från början igen</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>tr</v8:lang>
-																						<v8:content>Gerçekleştirmek başından</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>vi</v8:lang>
-																						<v8:content>Bắt đầu lại từ đầu</v8:content>
-																					</v8:item>
-																				</Title>
-																				<ExtendedTooltip name="VanessaEditorКонтекстноеМенюПунктВыполнитьСценарийРасширеннаяПодсказка" id="2479"/>
-																			</Button>
-																			<Button name="VanessaEditorКонтекстноеМенюВыполнитьОдинШаг" id="2480">
-																				<Type>CommandBarButton</Type>
-																				<CommandName>Form.Command.ВыполнитьОдинШаг</CommandName>
-																				<Title>
-																					<v8:item>
-																						<v8:lang>ru</v8:lang>
-																						<v8:content>Выполнить шаг</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>en</v8:lang>
-																						<v8:content>Run one step</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>am</v8:lang>
-																						<v8:content>አንድ እርምጃ</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>az</v8:lang>
-																						<v8:content>İcra addım</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>bg</v8:lang>
-																						<v8:content>Изпълнява стъпка</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>de</v8:lang>
-																						<v8:content>Schritt</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>es</v8:lang>
-																						<v8:content>Realizar el paso</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>et</v8:lang>
-																						<v8:content>Täita samm</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>fr</v8:lang>
-																						<v8:content>Effectuer l'étape</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>hu</v8:lang>
-																						<v8:content>Végre lépés</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>it</v8:lang>
-																						<v8:content>Eseguire il passaggio</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>ka</v8:lang>
-																						<v8:content>შეასრულოს ნაბიჯი</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>lt</v8:lang>
-																						<v8:content>Atlikti žingsnis</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>lv</v8:lang>
-																						<v8:content>Veikt soli</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>mn</v8:lang>
-																						<v8:content>Гүйцэтгэх алхам</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>pl</v8:lang>
-																						<v8:content>Wykonać krok</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>ro</v8:lang>
-																						<v8:content>Executa pasul</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>sl</v8:lang>
-																						<v8:content>Za opravljanje korak</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>sv</v8:lang>
-																						<v8:content>För att utföra steg</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>tr</v8:lang>
-																						<v8:content>Gerçekleştirmek için adım</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>vi</v8:lang>
-																						<v8:content>Thực hiện bước</v8:content>
-																					</v8:item>
-																				</Title>
-																				<ExtendedTooltip name="VanessaEditorКонтекстноеМенюВыполнитьОдинШагРасширеннаяПодсказка" id="2481"/>
-																			</Button>
-																		</ChildItems>
-																	</ButtonGroup>
-																	<ButtonGroup name="ГруппаКонтекстногоМенюVanessaEditorРаботаСФичей" id="2484">
-																		<Title>
-																			<v8:item>
-																				<v8:lang>ru</v8:lang>
-																				<v8:content>Открыть фича файл в редакторе</v8:content>
-																			</v8:item>
-																			<v8:item>
-																				<v8:lang>en</v8:lang>
-																				<v8:content>Open feature file in editor</v8:content>
-																			</v8:item>
-																		</Title>
-																		<ExtendedTooltip name="ГруппаКонтекстногоМенюVanessaEditorРаботаСФичейРасширеннаяПодсказка" id="2485"/>
-																		<ChildItems>
-																			<Button name="VanessaEditorКонтекстноеМенюОткрытьПодсценарийВНовойВкладке" id="2736">
-																				<Type>CommandBarButton</Type>
-																				<CommandName>Form.Command.ОткрытьПодсценарийВНовойВкладке</CommandName>
-																				<Title>
-																					<v8:item>
-																						<v8:lang>ru</v8:lang>
-																						<v8:content>Открыть в новой вкладке</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>en</v8:lang>
-																						<v8:content>Open in a new tab</v8:content>
-																					</v8:item>
-																				</Title>
-																				<ExtendedTooltip name="VanessaEditorКонтекстноеМенюОткрытьПодсценарийВНовойВкладкеРасширеннаяПодсказка" id="2737"/>
-																			</Button>
-																			<Button name="VanessaEditorКонтекстноеМенюПунктОткрытьФичаФайл" id="2486">
-																				<Type>CommandBarButton</Type>
-																				<CommandName>Form.Command.ОткрытьФичаФайл</CommandName>
-																				<Title>
-																					<v8:item>
-																						<v8:lang>ru</v8:lang>
-																						<v8:content>Открыть .feature файл во внешнем редакторе</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>en</v8:lang>
-																						<v8:content>Open .feature file in editor</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>am</v8:lang>
-																						<v8:content>ክፍት አዳዲስ ግምገማዎች ፋይል ውስጥ አራሚ</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>az</v8:lang>
-																						<v8:content>Açıq feature faylı redaktoru</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>bg</v8:lang>
-																						<v8:content>Отвори feature файл в редактора</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>de</v8:lang>
-																						<v8:content>Feature Datei öffnen im Editor</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>es</v8:lang>
-																						<v8:content>Abrir feature archivo en el editor de</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>et</v8:lang>
-																						<v8:content>Avada feature faili editor</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>fr</v8:lang>
-																						<v8:content>Ouvrir feature fichier dans l'éditeur</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>hu</v8:lang>
-																						<v8:content>Nyissa meg a funkció a fájlt a szerkesztő</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>it</v8:lang>
-																						<v8:content>Aprire feature file nell'editor</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>ka</v8:lang>
-																						<v8:content>ღია ფუნქცია, ფაილის რედაქტორი</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>lt</v8:lang>
-																						<v8:content>Atidaryti feature failą redaktorius</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>lv</v8:lang>
-																						<v8:content>Atvērt feature failu redaktors</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>mn</v8:lang>
-																						<v8:content>Нээх боломж файлыг засварлагч</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>pl</v8:lang>
-																						<v8:content>Otworzyć feature plik w edytorze</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>ro</v8:lang>
-																						<v8:content>Deschide feature fișierul într-un editor</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>sl</v8:lang>
-																						<v8:content>Odprite funkcijo datoteko v urejevalniku</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>sv</v8:lang>
-																						<v8:content>Öppna funktionen fil i editorn</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>tr</v8:lang>
-																						<v8:content>Aç feature dosyası düzenleyicisi'nde,</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>vi</v8:lang>
-																						<v8:content>Mở tệp tính năng trong bộ soạn</v8:content>
-																					</v8:item>
-																				</Title>
-																				<ExtendedTooltip name="VanessaEditorКонтекстноеМенюПунктОткрытьФичаФайлРасширеннаяПодсказка" id="2487"/>
-																			</Button>
-																			<Button name="VanessaEditorКонтекстноеМенюОткрытьКаталогФичи" id="2488">
-																				<Type>CommandBarButton</Type>
-																				<CommandName>Form.Command.ОткрытьКаталогФичи</CommandName>
-																				<Title>
-																					<v8:item>
-																						<v8:lang>ru</v8:lang>
-																						<v8:content>Открыть каталог .feature файлов</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>en</v8:lang>
-																						<v8:content>Open .feature files directory</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>am</v8:lang>
-																						<v8:content>ክፍት ይገናኛሉ የሚሰጡዋቸውን</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>az</v8:lang>
-																						<v8:content>Open directory feature</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>bg</v8:lang>
-																						<v8:content>Отваряне на каталог feature</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>de</v8:lang>
-																						<v8:content>Feature-Katalog öffnen</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>es</v8:lang>
-																						<v8:content>Abrir el directorio de feature</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>et</v8:lang>
-																						<v8:content>Ava kataloog feature</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>fr</v8:lang>
-																						<v8:content>Ouvrir le répertoire feature</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>hu</v8:lang>
-																						<v8:content>Nyitva katalógus funkció</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>it</v8:lang>
-																						<v8:content>Aprire il catalogo feature</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>ka</v8:lang>
-																						<v8:content>ღია კატალოგი ფუნქცია</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>lt</v8:lang>
-																						<v8:content>Atidaryti katalogą feature</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>lv</v8:lang>
-																						<v8:content>Open directory feature</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>mn</v8:lang>
-																						<v8:content>Нээлттэй каталог онцлог</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>pl</v8:lang>
-																						<v8:content>Otworzyć katalog feature</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>ro</v8:lang>
-																						<v8:content>Deschideți directorul feature</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>sl</v8:lang>
-																						<v8:content>Odprite katalog funkcija</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>sv</v8:lang>
-																						<v8:content>Öppna katalog-funktion</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>tr</v8:lang>
-																						<v8:content>Açık dizin özelliği</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>vi</v8:lang>
-																						<v8:content>Mở thư mục tính năng</v8:content>
-																					</v8:item>
-																				</Title>
-																				<ExtendedTooltip name="VanessaEditorКонтекстноеМенюОткрытьКаталогФичиРасширеннаяПодсказка" id="2489"/>
-																			</Button>
-																		</ChildItems>
-																	</ButtonGroup>
-																	<ButtonGroup name="ГруппаКонтекстногоМенюVanessaEditorБрейпоинты" id="2494">
-																		<Title>
-																			<v8:item>
-																				<v8:lang>ru</v8:lang>
-																				<v8:content>Брейпоинты</v8:content>
-																			</v8:item>
-																			<v8:item>
-																				<v8:lang>en</v8:lang>
-																				<v8:content>Breakpoints</v8:content>
-																			</v8:item>
-																		</Title>
-																		<ExtendedTooltip name="ГруппаКонтекстногоМенюVanessaEditorБрейпоинтыРасширеннаяПодсказка" id="2495"/>
-																		<ChildItems>
-																			<Button name="VanessaEditorКонтекстноеМенюБрейкпоинт" id="2496">
-																				<Type>CommandBarButton</Type>
-																				<CommandName>Form.Command.VanessaEditorSetBreakPoint</CommandName>
-																				<Title>
-																					<v8:item>
-																						<v8:lang>ru</v8:lang>
-																						<v8:content>Брейкпоинт</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>en</v8:lang>
-																						<v8:content>Breakpoint</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>am</v8:lang>
-																						<v8:content>ወደ breakpoint</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>az</v8:lang>
-																						<v8:content>Брейкпоинт</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>bg</v8:lang>
-																						<v8:content>Брейкпоинт</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>de</v8:lang>
-																						<v8:content>Haltepunkt</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>es</v8:lang>
-																						<v8:content>Брейкпоинт</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>et</v8:lang>
-																						<v8:content>Брейкпоинт</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>fr</v8:lang>
-																						<v8:content>Брейкпоинт</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>hu</v8:lang>
-																						<v8:content>A töréspont</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>it</v8:lang>
-																						<v8:content>Брейкпоинт</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>ka</v8:lang>
-																						<v8:content>"Breakpoint</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>lt</v8:lang>
-																						<v8:content>Брейкпоинт</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>lv</v8:lang>
-																						<v8:content>Брейкпоинт</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>mn</v8:lang>
-																						<v8:content>Энэ breakpoint</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>pl</v8:lang>
-																						<v8:content>Брейкпоинт</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>ro</v8:lang>
-																						<v8:content>Брейкпоинт</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>sl</v8:lang>
-																						<v8:content>Prekinitvena točka</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>sv</v8:lang>
-																						<v8:content>Brytpunkten</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>tr</v8:lang>
-																						<v8:content>Брейкпоинт</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>vi</v8:lang>
-																						<v8:content>Các điểm dừng</v8:content>
-																					</v8:item>
-																				</Title>
-																				<ExtendedTooltip name="VanessaEditorКонтекстноеМенюБрейкпоинтРасширеннаяПодсказка" id="2497"/>
-																			</Button>
-																			<Button name="VanessaEditorКонтекстноеМенюБрейпоинтУбратьВсе" id="2498">
-																				<Type>CommandBarButton</Type>
-																				<CommandName>Form.Command.VanessaEditorRemoveBreakPoints</CommandName>
-																				<Title>
-																					<v8:item>
-																						<v8:lang>ru</v8:lang>
-																						<v8:content>Убрать все брейкпоинты</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>en</v8:lang>
-																						<v8:content>Remove all breakpoints</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>am</v8:lang>
-																						<v8:content>በይፋ breakpoints</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>az</v8:lang>
-																						<v8:content>Clear bütün брейкпоинты</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>bg</v8:lang>
-																						<v8:content>Изтрий всички брейкпоинты</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>de</v8:lang>
-																						<v8:content>Entfernen Sie alle брейкпоинты</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>es</v8:lang>
-																						<v8:content>Eliminar todos los брейкпоинты</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>et</v8:lang>
-																						<v8:content>Kustuta kõik брейкпоинты</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>fr</v8:lang>
-																						<v8:content>Supprimer tous les брейкпоинты</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>hu</v8:lang>
-																						<v8:content>Távolítsa el az összes töréspontok</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>it</v8:lang>
-																						<v8:content>Rimuovere tutti брейкпоинты</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>ka</v8:lang>
-																						<v8:content>ამოიღონ ყველა breakpoints</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>lt</v8:lang>
-																						<v8:content>Ištrinti visas брейкпоинты</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>lv</v8:lang>
-																						<v8:content>Notīrīt visu брейкпоинты</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>mn</v8:lang>
-																						<v8:content>Бүх устгах нь breakpoints</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>pl</v8:lang>
-																						<v8:content>Usunąć wszystkie брейкпоинты</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>ro</v8:lang>
-																						<v8:content>Pentru a elimina toate брейкпоинты</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>sl</v8:lang>
-																						<v8:content>Odstranite vse mejne vrednosti</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>sv</v8:lang>
-																						<v8:content>Ta bort alla brytpunkter</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>tr</v8:lang>
-																						<v8:content>Kaldırmak için брейкпоинты</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>vi</v8:lang>
-																						<v8:content>Loại bỏ tất cả các điểm ngắt</v8:content>
-																					</v8:item>
-																				</Title>
-																				<ExtendedTooltip name="VanessaEditorКонтекстноеМенюБрейпоинтУбратьВсеРасширеннаяПодсказка" id="2499"/>
-																			</Button>
-																		</ChildItems>
-																	</ButtonGroup>
-																	<ButtonGroup name="ГруппаКонтекстногоМенюVanessaEditorРаботаСТаблицами" id="2506">
-																		<Title>
-																			<v8:item>
-																				<v8:lang>ru</v8:lang>
-																				<v8:content>Работа с таблицами</v8:content>
-																			</v8:item>
-																			<v8:item>
-																				<v8:lang>en</v8:lang>
-																				<v8:content>Breakpoints</v8:content>
-																			</v8:item>
-																		</Title>
-																		<ExtendedTooltip name="ГруппаКонтекстногоМенюVanessaEditorРаботаСТаблицамиРасширеннаяПодсказка" id="2507"/>
-																		<ChildItems>
-																			<Button name="VanessaEditorКонтекстноеМенюРедактироватьТаблицуТекст" id="2508">
-																				<Type>CommandBarButton</Type>
-																				<CommandName>Form.Command.РедактироватьТаблицуТекст</CommandName>
-																				<Title>
-																					<v8:item>
-																						<v8:lang>ru</v8:lang>
-																						<v8:content>Редактировать таблицу</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>en</v8:lang>
-																						<v8:content>Edit table</v8:content>
-																					</v8:item>
-																				</Title>
-																				<ExtendedTooltip name="VanessaEditorКонтекстноеМенюРедактироватьТаблицуТекстРасширеннаяПодсказка" id="2509"/>
-																			</Button>
-																			<Button name="VanessaEditorКонтекстноеМенюПолучитьМакетПоТаблице" id="2510">
-																				<Type>CommandBarButton</Type>
-																				<CommandName>Form.Command.ПолучитьМакетПоТаблице</CommandName>
-																				<ExtendedTooltip name="VanessaEditorКонтекстноеМенюПолучитьМакетПоТаблицеРасширеннаяПодсказка" id="2511"/>
-																			</Button>
-																		</ChildItems>
-																	</ButtonGroup>
-																	<ButtonGroup name="ГруппаКонтекстногоМенюVanessaEditorПолучитьСостояниеФормы" id="2546">
-																		<Title>
-																			<v8:item>
-																				<v8:lang>ru</v8:lang>
-																				<v8:content>Работа с таблицами</v8:content>
-																			</v8:item>
-																			<v8:item>
-																				<v8:lang>en</v8:lang>
-																				<v8:content>Breakpoints</v8:content>
-																			</v8:item>
-																		</Title>
-																		<ToolTip>
-																			<v8:item>
-																				<v8:lang>ru</v8:lang>
-																				<v8:content>Группа контекстного меню vanessa editor получить состояние формы</v8:content>
-																			</v8:item>
-																		</ToolTip>
-																		<ExtendedTooltip name="ГруппаКонтекстногоМенюVanessaEditorПолучитьСостояниеФормыРасширеннаяПодсказка" id="2547"/>
-																		<ChildItems>
-																			<Button name="VanessaEditorКонтекстноеМенюПолучитьИзмененияФормыGherkin" id="2548">
-																				<Type>CommandBarButton</Type>
-																				<CommandName>Form.Command.ПолучитьИзмененияФормыGherkin</CommandName>
-																				<Title>
-																					<v8:item>
-																						<v8:lang>ru</v8:lang>
-																						<v8:content>Получить состояние всей формы</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>en</v8:lang>
-																						<v8:content>Get the whole form state</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>am</v8:lang>
-																						<v8:content>በቀዳሚ ግምገማዎች ላይ ያለው ስምዎ ስለጀመሩ ቅጽ</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>az</v8:lang>
-																						<v8:content>Almaq üçün dövlət bütün formaları</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>bg</v8:lang>
-																						<v8:content>Получаване на състоянието на цялата форма</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>de</v8:lang>
-																						<v8:content>Erhalten Sie den Zustand der gesamten Form</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>es</v8:lang>
-																						<v8:content>Obtener el estado de todo el formulario</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>et</v8:lang>
-																						<v8:content>Saada seisund kogu vormi</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>fr</v8:lang>
-																						<v8:content>Obtenir l'état de l'ensemble de la forme</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>hu</v8:lang>
-																						<v8:content>A teljes űrlap</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>it</v8:lang>
-																						<v8:content>Ottenere lo stato di forma intera</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>ka</v8:lang>
-																						<v8:content>უნდა მიიღოთ მთელი ფორმა</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>lt</v8:lang>
-																						<v8:content>Gauti būsena visos formos</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>lv</v8:lang>
-																						<v8:content>Saņemt stāvokli visā veidlapas</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>mn</v8:lang>
-																						<v8:content>Авах бүх хэлбэр</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>pl</v8:lang>
-																						<v8:content>Zobacz stan całej formy</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>ro</v8:lang>
-																						<v8:content>Pentru a obține starea de întregul formular</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>sl</v8:lang>
-																						<v8:content>Da bi dobili celoten obrazec</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>sv</v8:lang>
-																						<v8:content>För att få hela formen</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>tr</v8:lang>
-																						<v8:content>Bir devlet olsun tüm formu</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>vi</v8:lang>
-																						<v8:content>Nhận trạng thái tất cả biểu mẫu</v8:content>
-																					</v8:item>
-																				</Title>
-																				<ExtendedTooltip name="VanessaEditorКонтекстноеМенюПолучитьИзмененияФормыGherkinРасширеннаяПодсказка" id="2549"/>
-																			</Button>
-																			<Button name="VanessaEditorКонтекстноеМенюПолучитьСостояниеТекущегоЭлементаФормы" id="2550">
-																				<Type>CommandBarButton</Type>
-																				<CommandName>Form.Command.ПолучитьСостояниеТекущегоЭлементаФормы</CommandName>
-																				<ExtendedTooltip name="VanessaEditorКонтекстноеМенюПолучитьСостояниеТекущегоЭлементаФормыРасширеннаяПодсказка" id="2551"/>
-																			</Button>
-																			<Button name="VanessaEditorКонтекстноеМенюДобавитьПроверкуСообщенийПользователя" id="2558">
-																				<Type>CommandBarButton</Type>
-																				<CommandName>Form.Command.ДобавитьПроверкуСообщенийПользователя</CommandName>
-																				<ExtendedTooltip name="VanessaEditorКонтекстноеМенюДобавитьПроверкуСообщенийПользователяРасширеннаяПодсказка" id="2559"/>
-																			</Button>
-																		</ChildItems>
-																	</ButtonGroup>
-																	<ButtonGroup name="ГруппаКонтекстногоМенюVanessaEditorНавигация" id="2598">
-																		<Title>
-																			<v8:item>
-																				<v8:lang>ru</v8:lang>
-																				<v8:content>Открыть фича файл в редакторе</v8:content>
-																			</v8:item>
-																			<v8:item>
-																				<v8:lang>en</v8:lang>
-																				<v8:content>Open feature file in editor</v8:content>
-																			</v8:item>
-																		</Title>
-																		<ToolTip>
-																			<v8:item>
-																				<v8:lang>ru</v8:lang>
-																				<v8:content>Группа контекстного меню vanessa editor навигация</v8:content>
-																			</v8:item>
-																		</ToolTip>
-																		<ExtendedTooltip name="ГруппаКонтекстногоМенюVanessaEditorНавигацияРасширеннаяПодсказка" id="2599"/>
-																		<ChildItems>
-																			<Button name="VanessaEditorКонтекстноеМенюПерейтиКСтрокеСОшибкой" id="2604">
-																				<Type>CommandBarButton</Type>
-																				<CommandName>Form.Command.ПерейтиКСтрокеСОшибкой</CommandName>
-																				<ExtendedTooltip name="VanessaEditorКонтекстноеМенюПерейтиКСтрокеСОшибкойРасширеннаяПодсказка" id="2605"/>
-																			</Button>
-																		</ChildItems>
-																	</ButtonGroup>
-																</ChildItems>
-															</ContextMenu>
-															<ExtendedTooltip name="VanessaEditorExtendedTooltip" id="2406"/>
-															<Events>
-																<Event name="DocumentComplete">VanessaEditorДокументСформирован</Event>
-																<Event name="OnClick">VanessaEditorПриНажатии</Event>
-															</Events>
-														</HTMLDocumentField>
+																	</ContextMenu>
+																	<ExtendedTooltip name="VanessaEditorExtendedTooltip" id="2406"/>
+																	<Events>
+																		<Event name="DocumentComplete">VanessaEditorДокументСформирован</Event>
+																		<Event name="OnClick">VanessaEditorПриНажатии</Event>
+																	</Events>
+																</HTMLDocumentField>
+															</ChildItems>
+														</UsualGroup>
 													</ChildItems>
 												</UsualGroup>
 											</ChildItems>
@@ -6847,7 +7125,7 @@
 										</Button>
 									</ChildItems>
 								</UsualGroup>
-								<CheckBoxField name="ГенерироватьУФ1" id="50">
+								<CheckBoxField name="ГенерироватьУФ" id="50">
 									<DataPath>Объект.ГенерироватьУФ</DataPath>
 									<Title>
 										<v8:item>
@@ -6938,8 +7216,8 @@
 									<TitleLocation>Right</TitleLocation>
 									<ToolTipRepresentation>Button</ToolTipRepresentation>
 									<CheckBoxType>Auto</CheckBoxType>
-									<ContextMenu name="ГенерироватьУФ1КонтекстноеМеню" id="51"/>
-									<ExtendedTooltip name="ГенерироватьУФ1РасширеннаяПодсказка" id="1291">
+									<ContextMenu name="ГенерироватьУФКонтекстноеМеню" id="51"/>
+									<ExtendedTooltip name="ГенерироватьУФРасширеннаяПодсказка" id="1291">
 										<Title formatted="false">
 											<v8:item>
 												<v8:lang>ru</v8:lang>
@@ -7803,7 +8081,18 @@
 													</Button>
 												</ChildItems>
 											</AutoCommandBar>
-											<ExtendedTooltip name="КаталогиБиблиотекРасширеннаяПодсказка" id="1297"/>
+											<ExtendedTooltip name="КаталогиБиблиотекРасширеннаяПодсказка" id="1297">
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Список каталогов, в которых находятся epf файлы, содержащие шаги для сценариев и feature файлы, содержащие экспортные сценарии.</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>List of directories that contain epf files containing script steps and feature files containing export scripts.</v8:content>
+													</v8:item>
+												</Title>
+											</ExtendedTooltip>
 											<SearchStringAddition name="КаталогиБиблиотекСтрокаПоиска" id="1298">
 												<AdditionSource>
 													<Item>КаталогиБиблиотек</Item>
@@ -7847,14 +8136,11 @@
 													</Title>
 													<ToolTip>
 														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Каталоги библиотек</v8:content>
-														</v8:item>
-														<v8:item>
 															<v8:lang>en</v8:lang>
 															<v8:content>Library catalogs</v8:content>
 														</v8:item>
 													</ToolTip>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
 													<EditMode>EnterOnInput</EditMode>
 													<ChoiceButton>true</ChoiceButton>
 													<ClearButton>true</ClearButton>
@@ -7868,6 +8154,25 @@
 												</InputField>
 											</ChildItems>
 										</Table>
+										<InputField name="МетаданныеБиблиотек" id="2863">
+											<DataPath>Объект.МетаданныеБиблиотек</DataPath>
+											<ToolTipRepresentation>Button</ToolTipRepresentation>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<ChooseType>false</ChooseType>
+											<ContextMenu name="МетаданныеБиблиотекКонтекстноеМеню" id="2864"/>
+											<ExtendedTooltip name="МетаданныеБиблиотекРасширеннаяПодсказка" id="2865">
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>The list contains paths to forms within the configuration containing step descriptions.</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>В списке указываются пути к формам внутри конфигурации, содержащим описания шагов.</v8:content>
+													</v8:item>
+												</Title>
+											</ExtendedTooltip>
+										</InputField>
 									</ChildItems>
 								</UsualGroup>
 							</ChildItems>
@@ -8765,87 +9070,11 @@
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Получить состояние всей формы</v8:content>
+															<v8:content>Получить состояние всей формы в виде шагов</v8:content>
 														</v8:item>
 														<v8:item>
 															<v8:lang>en</v8:lang>
-															<v8:content>Get the whole form state</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>am</v8:lang>
-															<v8:content>በቀዳሚ ግምገማዎች ላይ ያለው ስምዎ ስለጀመሩ ቅጽ</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>az</v8:lang>
-															<v8:content>Almaq üçün dövlət bütün formaları</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>bg</v8:lang>
-															<v8:content>Получаване на състоянието на цялата форма</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>de</v8:lang>
-															<v8:content>Erhalten Sie den Zustand der gesamten Form</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>es</v8:lang>
-															<v8:content>Obtener el estado de todo el formulario</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>et</v8:lang>
-															<v8:content>Saada seisund kogu vormi</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>fr</v8:lang>
-															<v8:content>Obtenir l'état de l'ensemble de la forme</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>hu</v8:lang>
-															<v8:content>A teljes űrlap</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>it</v8:lang>
-															<v8:content>Ottenere lo stato di forma intera</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>ka</v8:lang>
-															<v8:content>უნდა მიიღოთ მთელი ფორმა</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>lt</v8:lang>
-															<v8:content>Gauti būsena visos formos</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>lv</v8:lang>
-															<v8:content>Saņemt stāvokli visā veidlapas</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>mn</v8:lang>
-															<v8:content>Авах бүх хэлбэр</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>pl</v8:lang>
-															<v8:content>Zobacz stan całej formy</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>ro</v8:lang>
-															<v8:content>Pentru a obține starea de întregul formular</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>sl</v8:lang>
-															<v8:content>Da bi dobili celoten obrazec</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>sv</v8:lang>
-															<v8:content>För att få hela formen</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>tr</v8:lang>
-															<v8:content>Bir devlet olsun tüm formu</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>vi</v8:lang>
-															<v8:content>Nhận trạng thái tất cả biểu mẫu</v8:content>
+															<v8:content>Get the whole form state in steps</v8:content>
 														</v8:item>
 													</Title>
 													<ExtendedTooltip name="ПолучитьИзмененияФормыGherkinРасширеннаяПодсказка" id="1318"/>
@@ -10503,6 +10732,7 @@
 											<v8:content>TestClients data</v8:content>
 										</v8:item>
 									</Title>
+									<ToolTipRepresentation>Button</ToolTipRepresentation>
 									<SearchStringLocation>None</SearchStringLocation>
 									<ViewStatusLocation>None</ViewStatusLocation>
 									<SearchControlLocation>None</SearchControlLocation>
@@ -10860,7 +11090,32 @@
 											</ButtonGroup>
 										</ChildItems>
 									</AutoCommandBar>
-									<ExtendedTooltip name="ДанныеКлиентовТестированияРасширеннаяПодсказка" id="1341"/>
+									<ExtendedTooltip name="ДанныеКлиентовТестированияРасширеннаяПодсказка" id="1341">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>A list of testing clients, which indicates:
+1. Profile name
+2. Synonym
+3. Testing client type
+4. String of connection to the base
+5. Additional launch options
+6. Computer name to establish connection
+7. Port</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Список клиентов тестирования, в котором указаны:
+1. Имя профиля
+2. Синоним
+3. Тип клиента тестирования
+4. Строка подключения к базе
+5. Дополнительные параметры запуска
+6. Имя компьютера для установления подключения
+7. Порт</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
 									<SearchStringAddition name="ДанныеКлиентовТестированияСтрокаПоиска" id="1342">
 										<AdditionSource>
 											<Item>ДанныеКлиентовТестирования</Item>
@@ -11600,7 +11855,7 @@
 													<ThroughAlign>Use</ThroughAlign>
 													<ExtendedTooltip name="РаботаСТэгамиРасширеннаяПодсказка" id="1362"/>
 													<ChildItems>
-														<InputField name="СписокТеговИсключение1" id="221">
+														<InputField name="СписокТеговИсключение" id="221">
 															<DataPath>Объект.СписокТеговИсключение</DataPath>
 															<Title>
 																<v8:item>
@@ -11689,8 +11944,8 @@
 																</v8:item>
 															</Title>
 															<ToolTipRepresentation>Button</ToolTipRepresentation>
-															<ContextMenu name="СписокТеговИсключение1КонтекстноеМеню" id="222"/>
-															<ExtendedTooltip name="СписокТеговИсключение1РасширеннаяПодсказка" id="1363">
+															<ContextMenu name="СписокТеговИсключениеКонтекстноеМеню" id="222"/>
+															<ExtendedTooltip name="СписокТеговИсключениеРасширеннаяПодсказка" id="1363">
 																<Title formatted="false">
 																	<v8:item>
 																		<v8:lang>ru</v8:lang>
@@ -11703,7 +11958,7 @@
 																</Title>
 															</ExtendedTooltip>
 														</InputField>
-														<InputField name="СписокТеговОтбор1" id="224">
+														<InputField name="СписокТеговОтбор" id="224">
 															<DataPath>Объект.СписокТеговОтбор</DataPath>
 															<Title>
 																<v8:item>
@@ -11792,8 +12047,8 @@
 																</v8:item>
 															</Title>
 															<ToolTipRepresentation>Button</ToolTipRepresentation>
-															<ContextMenu name="СписокТеговОтбор1КонтекстноеМеню" id="225"/>
-															<ExtendedTooltip name="СписокТеговОтбор1РасширеннаяПодсказка" id="1364">
+															<ContextMenu name="СписокТеговОтборКонтекстноеМеню" id="225"/>
+															<ExtendedTooltip name="СписокТеговОтборРасширеннаяПодсказка" id="1364">
 																<Title formatted="false">
 																	<v8:item>
 																		<v8:lang>ru</v8:lang>
@@ -12376,7 +12631,7 @@
 																	<ShowTitle>false</ShowTitle>
 																	<ExtendedTooltip name="ПраваяЧастьФлажковНастроекРасширеннаяПодсказка" id="1376"/>
 																	<ChildItems>
-																		<CheckBoxField name="DebugLog2" id="289">
+																		<CheckBoxField name="DebugLog" id="289">
 																			<DataPath>Объект.DebugLog</DataPath>
 																			<Title>
 																				<v8:item>
@@ -12391,8 +12646,8 @@
 																			<TitleLocation>Right</TitleLocation>
 																			<ToolTipRepresentation>Button</ToolTipRepresentation>
 																			<CheckBoxType>Auto</CheckBoxType>
-																			<ContextMenu name="DebugLog2КонтекстноеМеню" id="290"/>
-																			<ExtendedTooltip name="DebugLog2РасширеннаяПодсказка" id="1377">
+																			<ContextMenu name="DebugLogКонтекстноеМеню" id="290"/>
+																			<ExtendedTooltip name="DebugLogРасширеннаяПодсказка" id="1377">
 																				<Title formatted="false">
 																					<v8:item>
 																						<v8:lang>ru</v8:lang>
@@ -12521,6 +12776,28 @@
 																</LabelDecoration>
 															</ChildItems>
 														</UsualGroup>
+														<CheckBoxField name="ИспользоватьПарсерGherkinИзКомпонентыVanessaExt" id="2923">
+															<DataPath>Объект.ИспользоватьПарсерGherkinИзКомпонентыVanessaExt</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ИспользоватьПарсерGherkinИзКомпонентыVanessaExtКонтекстноеМеню" id="2924"/>
+															<ExtendedTooltip name="ИспользоватьПарсерGherkinИзКомпонентыVanessaExtРасширеннаяПодсказка" id="2925">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Sets the flag. that you need to use the Gherkin parser from the VanessaExt component. This parser is much faster than the built-in parser.</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Устанавливает признак того. что нужно использовать парсер Gherkin из компоненты VanessaExt. Этот парсер работает гораздо быстрее, чем встроенный парсер.</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+															<Events>
+																<Event name="OnChange">ИспользоватьПарсерGherkinИзКомпонентыVanessaExtПриИзменении</Event>
+															</Events>
+														</CheckBoxField>
 														<InputField name="КаталогИнструментов" id="380">
 															<DataPath>Объект.КаталогИнструментов</DataPath>
 															<Title>
@@ -13298,11 +13575,11 @@ When working with Vanessa Automation Single it is allowed to leave the field bla
 																<Title formatted="false">
 																	<v8:item>
 																		<v8:lang>ru</v8:lang>
-																		<v8:content>Добавить описание</v8:content>
+																		<v8:content>Поставщик пользовательских настроек</v8:content>
 																	</v8:item>
 																	<v8:item>
 																		<v8:lang>en</v8:lang>
-																		<v8:content>Add description</v8:content>
+																		<v8:content>Custom settings provider</v8:content>
 																	</v8:item>
 																</Title>
 															</ExtendedTooltip>
@@ -13325,7 +13602,7 @@ When working with Vanessa Automation Single it is allowed to leave the field bla
 																<Title formatted="false">
 																	<v8:item>
 																		<v8:lang>ru</v8:lang>
-																		<v8:content>файловый путь или url по которому находятся настройки. По умолчанию каталог проекта (имя файлы по умолчанию user_settings.json)  или localhost</v8:content>
+																		<v8:content>файловый путь или url по которому находятся настройки. По умолчанию каталог проекта (имя файла по умолчанию user_settings.json)  или localhost</v8:content>
 																	</v8:item>
 																	<v8:item>
 																		<v8:lang>en</v8:lang>
@@ -13412,11 +13689,11 @@ When working with Vanessa Automation Single it is allowed to leave the field bla
 																<Title formatted="false">
 																	<v8:item>
 																		<v8:lang>ru</v8:lang>
-																		<v8:content>Устанавливает макимальное время, в течение которого Vanessa Automation будет ждать запуска клиента тестирования. По истечении времени будет вызвано исключение.</v8:content>
+																		<v8:content>Устанавливает макcимальное время в секундах, в течение которого Vanessa Automation будет ждать запуска клиента тестирования. По истечении времени будет вызвано исключение.</v8:content>
 																	</v8:item>
 																	<v8:item>
 																		<v8:lang>en</v8:lang>
-																		<v8:content>Specifies timeout of Vanessa Automation awaiting for TestClient launch. After timeout the exception will be risen.</v8:content>
+																		<v8:content>Specifies timeout in seconds of Vanessa Automation awaiting for TestClient launch. After timeout the exception will be risen.</v8:content>
 																	</v8:item>
 																</Title>
 															</ExtendedTooltip>
@@ -13782,11 +14059,11 @@ When working with Vanessa Automation Single it is allowed to leave the field bla
 																</Title>
 															</ExtendedTooltip>
 														</CheckBoxField>
-														<InputField name="ТаймаутОжиданияПередПринудительнымЗакрытиемКлиентаТестирования" id="2748">
+														<InputField name="ТаймаутПередПринудительнымЗакрытиемКлиентаТестирования" id="2748">
 															<DataPath>Объект.ТаймаутПередПринудительнымЗакрытиемКлиентаТестирования</DataPath>
 															<ToolTipRepresentation>Button</ToolTipRepresentation>
-															<ContextMenu name="ТаймаутОжиданияПередПринудительнымЗакрытиемКлиентаТестированияКонтекстноеМеню" id="2749"/>
-															<ExtendedTooltip name="ТаймаутОжиданияПередПринудительнымЗакрытиемКлиентаТестированияРасширеннаяПодсказка" id="2750">
+															<ContextMenu name="ТаймаутПередПринудительнымЗакрытиемКлиентаТестированияКонтекстноеМеню" id="2749"/>
+															<ExtendedTooltip name="ТаймаутПередПринудительнымЗакрытиемКлиентаТестированияРасширеннаяПодсказка" id="2750">
 																<Title formatted="false">
 																	<v8:item>
 																		<v8:lang>en</v8:lang>
@@ -14461,6 +14738,48 @@ It is recommended to set this checkbox on.</v8:content>
 														</Title>
 													</ExtendedTooltip>
 												</CheckBoxField>
+												<CheckBoxField name="ЗапрещатьПерезаписыватьПеременные" id="2903">
+													<DataPath>Объект.ЗапрещатьПерезаписыватьПеременные</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ЗапрещатьПерезаписыватьПеременныеКонтекстноеМеню" id="2904"/>
+													<ExtendedTooltip name="ЗапрещатьПерезаписыватьПеременныеРасширеннаяПодсказка" id="2905">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Если флаг установлен, то при создании переменных во время выполнения шагов будет запрещено перезаписывать уже ранее объявленные переменные.</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>If the checkbox is on, pending steps will set assembly status to failed on the execution on CI server.
+It is recommended to set this checkbox on.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+												</CheckBoxField>
+												<CheckBoxField name="ОбновлятьТаблицыФормыПриПолученииЗначения" id="2978">
+													<DataPath>Объект.ОбновлятьТаблицыФормыПриПолученииЗначения</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ОбновлятьТаблицыФормыПриПолученииЗначенияКонтекстноеМеню" id="2979"/>
+													<ExtendedTooltip name="ОбновлятьТаблицыФормыПриПолученииЗначенияРасширеннаяПодсказка" id="2980">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>If this option is enabled, then when receiving a table, the test will try to find and click on the "Refresh" table button and press it.
+An update attempt will occur if there are several attempts to get the table value and the first attempt was unsuccessful.</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Если опция включена, то при  получении таблицы тест будет пытаться найти и нажать на кнопку таблицы "Обновить" и нажать её.
+Попытка обновления будет происходить в том случае, если происходит несколько попыток получения значения таблицы и первая попытка была неуспешной.
+</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+												</CheckBoxField>
 												<UsualGroup name="ГруппаПодсистемаСтабилизацияВыполненияТестов" id="2560">
 													<Title>
 														<v8:item>
@@ -14487,13 +14806,24 @@ It is recommended to set this checkbox on.</v8:content>
 															<AutoMaxWidth>false</AutoMaxWidth>
 															<ContextMenu name="ТаймаутДляАсинхронныхШаговКонтекстноеМеню" id="1774"/>
 															<ExtendedTooltip name="ТаймаутДляАсинхронныхШаговРасширеннаяПодсказка" id="1775">
-																<Title formatted="true">
+																<Title formatted="false">
 																	<v8:item>
 																		<v8:lang>ru</v8:lang>
 																		<v8:content>Указывает максимальное время ожидания для асинхронного шага.
 Например, если задано значение параметра равное 20 секунд и используется шаг
-&lt;i&gt;И я жду, что поле с именем "ИмяПоля" перестанет быть пустым в течение 10 секунд&lt;/&gt;
+```Gherkin
+И я жду, что поле с именем "ИмяПоля" перестанет быть пустым в течение 10 секунд
+```
 тогда в рельности максимальное время работы шага будет 20 секунд, а не 10.</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Specifies the maximum time to wait for an asynchronous step.
+For example, if the parameter value is set to 20 seconds and the step is used
+```Gherkin
+And I wait the field named "FieldName" will be filled in 10 seconds
+```
+then in reality the maximum step time will be 20 seconds, not 10.</v8:content>
 																	</v8:item>
 																</Title>
 															</ExtendedTooltip>
@@ -14504,11 +14834,20 @@ It is recommended to set this checkbox on.</v8:content>
 															<AutoMaxWidth>false</AutoMaxWidth>
 															<ContextMenu name="КоличествоСекундПоискаОкнаКонтекстноеМеню" id="1748"/>
 															<ExtendedTooltip name="КоличествоСекундПоискаОкнаРасширеннаяПодсказка" id="1749">
-																<Title formatted="true">
+																<Title formatted="false">
 																	<v8:item>
 																		<v8:lang>ru</v8:lang>
 																		<v8:content>Максимальное время для поиска окна в шаге
-&lt;i&gt;И тогда открылось окно "ИмяОкна"&lt;/&gt;</v8:content>
+```Gherkin
+Тогда открылось окно "ИмяОкна"
+```</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Maximum time to search for a window in a step
+```Gherkin
+Then "WindowTitle" window is opened
+```</v8:content>
 																	</v8:item>
 																</Title>
 															</ExtendedTooltip>
@@ -14564,11 +14903,20 @@ This option slow the execution down .</v8:content>
 															<Width>5</Width>
 															<ContextMenu name="ПаузаПриОткрытииОкнаКонтекстноеМеню" id="1884"/>
 															<ExtendedTooltip name="ПаузаПриОткрытииОкнаРасширеннаяПодсказка" id="1885">
-																<Title formatted="true">
+																<Title formatted="false">
 																	<v8:item>
 																		<v8:lang>ru</v8:lang>
 																		<v8:content>Значение дополнительной паузы, которая будет всегда применяться в шаге
-&lt;i&gt;И тогда открылось окно "ИмяОкна"&lt;/&gt;</v8:content>
+```Gherkin
+Тогда открылось окно "ИмяОкна"
+```</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Additional pause value that will always be applied in a step
+```Gherkin
+Then "WindowTitle" window is opened
+```</v8:content>
 																	</v8:item>
 																</Title>
 															</ExtendedTooltip>
@@ -15256,6 +15604,44 @@ SikuliX or VanessaExt is used for this option.</v8:content>
 														</InputField>
 													</ChildItems>
 												</UsualGroup>
+												<CheckBoxField name="ВыгружатьСтатусВыполненияСценариевВФайл" id="2954">
+													<DataPath>Объект.ВыгружатьСтатусВыполненияСценариевВФайл</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ВыгружатьСтатусВыполненияСценариевВФайлКонтекстноеМеню" id="2955"/>
+													<ExtendedTooltip name="ВыгружатьСтатусВыполненияСценариевВФайлРасширеннаяПодсказка" id="2956">
+														<Title formatted="true">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Если флаг установлен, то Vanessa Automation будет выгружать статус выполнения сценариев в файл.
+Подробности тут:
+
+&lt;link https://pr-mex.github.io/vanessa-automation/dev/ReturnStatus&gt;https://pr-mex.github.io/vanessa-automation/dev/ReturnStatus&lt;/&gt;</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+													<Events>
+														<Event name="OnChange">ВыгружатьСтатусВыполненияСценариевВФайлПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<InputField name="ПутьКФайлуДляВыгрузкиСтатусаВыполненияСценариев" id="2957">
+													<DataPath>Объект.ПутьКФайлуДляВыгрузкиСтатусаВыполненияСценариев</DataPath>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<ContextMenu name="ПутьКФайлуДляВыгрузкиСтатусаВыполненияСценариевКонтекстноеМеню" id="2958"/>
+													<ExtendedTooltip name="ПутьКФайлуДляВыгрузкиСтатусаВыполненияСценариевРасширеннаяПодсказка" id="2959">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>The path to the file into which the script execution status will be uploaded.</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Путь к файлу, в который будет выгружен статус выполнения сценариев.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+												</InputField>
 												<UsualGroup name="ГруппаВидеозаписьПрохожденияТестов" id="2386">
 													<Title>
 														<v8:item>
@@ -15392,14 +15778,18 @@ A video file will be created for each scenario.</v8:content>
 																		<v8:content>Включает вывод лога выполнения сценариев.
 В лог записываются события:
 1. Начало выполнения сценария
-2. Событие возникновения ошибки</v8:content>
+2. Событие возникновения ошибки
+
+Вывод лога возможен либо в  файл, либо в консоль, либо в файл и консоль одновременно.</v8:content>
 																	</v8:item>
 																	<v8:item>
 																		<v8:lang>en</v8:lang>
 																		<v8:content>Switches on scenario execution log.
 Log events:
 1. Scenario execution begin
-2. Error event</v8:content>
+2. Error event
+
+Log output is possible either to a file, or to the console, or to a file and a console at the same time.</v8:content>
 																	</v8:item>
 																</Title>
 															</ExtendedTooltip>
@@ -15424,6 +15814,30 @@ Log events:
 															<ThroughAlign>Use</ThroughAlign>
 															<ExtendedTooltip name="ГруппаЛогТекстНастройкиРасширеннаяПодсказка" id="2052"/>
 															<ChildItems>
+																<CheckBoxField name="ВыводитьЛогВКонсоль" id="2874">
+																	<DataPath>Объект.ВыводитьЛогВКонсоль</DataPath>
+																	<TitleLocation>Right</TitleLocation>
+																	<ToolTipRepresentation>Button</ToolTipRepresentation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="ВыводитьЛогВКонсольКонтекстноеМеню" id="2875"/>
+																	<ExtendedTooltip name="ВыводитьЛогВКонсольРасширеннаяПодсказка" id="2876">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>Enables logging to the console.
+For this option to work, you must enable the use of the VanessaExt addin.</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Включает вывод лога в консоль.
+Для работы опции необходимо включить использование компоненты VanessaExt.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																	<Events>
+																		<Event name="OnChange">ВыводитьЛогВКонсольПриИзменении</Event>
+																	</Events>
+																</CheckBoxField>
 																<CheckBoxField name="ВыводитьВЛогВыполнениеШагов" id="1770">
 																	<DataPath>Объект.ВыводитьВЛогВыполнениеШагов</DataPath>
 																	<TitleLocation>Right</TitleLocation>
@@ -15477,11 +15891,13 @@ Log events:
 																		<Title formatted="false">
 																			<v8:item>
 																				<v8:lang>ru</v8:lang>
-																				<v8:content>Имя файла, куда будет выводиться лог Vanessa Automation.</v8:content>
+																				<v8:content>Имя файла, куда будет выводиться лог Vanessa Automation.
+Если поле пустое - но лог в текстовый файл выводиться не будет.</v8:content>
 																			</v8:item>
 																			<v8:item>
 																				<v8:lang>en</v8:lang>
-																				<v8:content>Vanessa Automation log file name.</v8:content>
+																				<v8:content>Vanessa Automation log file name.
+If the field is empty, the log will not be output to a text file.</v8:content>
 																			</v8:item>
 																		</Title>
 																	</ExtendedTooltip>
@@ -15632,7 +16048,7 @@ Log events:
 																				</v8:item>
 																			</Title>
 																			<TitleLocation>Right</TitleLocation>
-																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<ToolTipRepresentation>Button</ToolTipRepresentation>
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="ДелатьОтчетВФорматеАллюрКонтекстноеМеню" id="139"/>
 																			<ExtendedTooltip name="ДелатьОтчетВФорматеАллюрРасширеннаяПодсказка" id="1392">
@@ -15667,6 +16083,25 @@ Log events:
 																			<ShowTitle>false</ShowTitle>
 																			<ExtendedTooltip name="ГруппаAllureНастройкиРасширеннаяПодсказка" id="2044"/>
 																			<ChildItems>
+																				<CheckBoxField name="ПодставлятьВОтчетеAllureЗначенияПеременных" id="2884">
+																					<DataPath>Объект.ПодставлятьВОтчетеAllureЗначенияПеременных</DataPath>
+																					<TitleLocation>Right</TitleLocation>
+																					<ToolTipRepresentation>Button</ToolTipRepresentation>
+																					<CheckBoxType>Auto</CheckBoxType>
+																					<ContextMenu name="ПодставлятьВОтчетеAllureЗначенияПеременныхКонтекстноеМеню" id="2883"/>
+																					<ExtendedTooltip name="ПодставлятьВОтчетеAllureЗначенияПеременныхРасширеннаяПодсказка" id="2882">
+																						<Title formatted="false">
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>If this option is enabled, then in the parameters of the steps in which the variables were used, the variable names will be replaced with their values.</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Если опция включена, то в параметрах шагов, в которых использовались переменные, имена переменных будут заменены на их значения.</v8:content>
+																							</v8:item>
+																						</Title>
+																					</ExtendedTooltip>
+																				</CheckBoxField>
 																				<InputField name="КаталогВыгрузкиAllure" id="141">
 																					<DataPath>Объект.КаталогВыгрузкиAllure</DataPath>
 																					<Title>
@@ -16112,11 +16547,21 @@ Log events:
 																						<Title formatted="false">
 																							<v8:item>
 																								<v8:lang>ru</v8:lang>
-																								<v8:content>В таблице указываются метки Allure.</v8:content>
+																								<v8:content>Таблица используется для установки соответствия тегов сценариев меткам аллюра.
+Если в  строке таблицы указано регулярное выражение, то к каждому тегу сценария применяется регулярное выражение из данной таблицы и если тег ему соответствует, то к отчету будет добавлена метка в формате ИмяМетки:Значение.
+Если в строке таблицы регулярное выражение не указано, то метка добавляется безусловно.
+
+Подробнее зачем это может быть нужно можно прочитать тут
+https://habr.com/ru/company/sberbank/blog/359302/</v8:content>
 																							</v8:item>
 																							<v8:item>
 																								<v8:lang>en</v8:lang>
-																								<v8:content>The table contains Allure markdowns.</v8:content>
+																								<v8:content>The table is used to map script tags to pace marks.
+If a regular expression is specified in a table row, then a regular expression from this table is applied to each script tag, and if the tag matches it, then a tag in the TagName: Value format will be added to the report.
+If no regular expression is specified in a table row, then the label is added unconditionally.
+
+You can read more about why this may be needed here
+https://habr.com/ru/company/sberbank/blog/359302/</v8:content>
 																							</v8:item>
 																						</Title>
 																					</ExtendedTooltip>
@@ -16275,10 +16720,21 @@ Log events:
 																				</v8:item>
 																			</Title>
 																			<TitleLocation>Right</TitleLocation>
-																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<ToolTipRepresentation>Button</ToolTipRepresentation>
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="ДелатьОтчетВФорматеCucumberJsonКонтекстноеМеню" id="1462"/>
-																			<ExtendedTooltip name="ДелатьОтчетВФорматеCucumberJsonРасширеннаяПодсказка" id="1463"/>
+																			<ExtendedTooltip name="ДелатьОтчетВФорматеCucumberJsonРасширеннаяПодсказка" id="1463">
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>Generate a report in Cucumber format based on the script execution results.</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Формировать отчет в формате Cucumber по результатам выполнения сценариев.</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
 																			<Events>
 																				<Event name="OnChange">ДелатьОтчетВФорматеCucumberJsonПриИзменении</Event>
 																			</Events>
@@ -16528,10 +16984,21 @@ Log events:
 																				</v8:item>
 																			</Title>
 																			<TitleLocation>Right</TitleLocation>
-																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<ToolTipRepresentation>Button</ToolTipRepresentation>
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="ДелатьОтчетВФорматеjUnitКонтекстноеМеню" id="368"/>
-																			<ExtendedTooltip name="ДелатьОтчетВФорматеjUnitРасширеннаяПодсказка" id="1393"/>
+																			<ExtendedTooltip name="ДелатьОтчетВФорматеjUnitРасширеннаяПодсказка" id="1393">
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>Generate a report in JUnit format based on the results of script execution.</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Формировать отчет в формате JUnit по результатам выполнения сценариев.</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
 																			<Events>
 																				<Event name="OnChange">ДелатьОтчетВФорматеxUnitПриИзменении</Event>
 																			</Events>
@@ -16704,10 +17171,21 @@ Log events:
 																		<CheckBoxField name="ДелатьОтчетВФорматеСППР" id="2096">
 																			<DataPath>Объект.ДелатьОтчетВФорматеСППР</DataPath>
 																			<TitleLocation>Right</TitleLocation>
-																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<ToolTipRepresentation>Button</ToolTipRepresentation>
 																			<CheckBoxType>Auto</CheckBoxType>
 																			<ContextMenu name="ДелатьОтчетВФорматеСППРКонтекстноеМеню" id="2097"/>
-																			<ExtendedTooltip name="ДелатьОтчетВФорматеСППРРасширеннаяПодсказка" id="2098"/>
+																			<ExtendedTooltip name="ДелатьОтчетВФорматеСППРРасширеннаяПодсказка" id="2098">
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>Generate a report in the SPPR format based on the results of the scenarios.</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Формировать отчет в формате СППР по результатам выполнения сценариев.</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
 																			<Events>
 																				<Event name="OnChange">ДелатьОтчетВФорматеСППРПриИзменении</Event>
 																			</Events>
@@ -17314,7 +17792,7 @@ Log events:
 																						</Title>
 																					</ExtendedTooltip>
 																				</InputField>
-																				<InputField name="ТаймаутМеждуШагамиПриДвиженииМышкиVanessaExt" id="2635">
+																				<InputField name="ПаузаМеждуШагамиПриДвиженииМышкиVanessaExt" id="2635">
 																					<DataPath>Объект.ПаузаМеждуШагамиПриДвиженииМышкиVanessaExt</DataPath>
 																					<Title>
 																						<v8:item>
@@ -17323,8 +17801,8 @@ Log events:
 																						</v8:item>
 																					</Title>
 																					<ToolTipRepresentation>Button</ToolTipRepresentation>
-																					<ContextMenu name="ТаймаутМеждуШагамиПриДвиженииМышкиVanessaExtКонтекстноеМеню" id="2636"/>
-																					<ExtendedTooltip name="ТаймаутМеждуШагамиПриДвиженииМышкиVanessaExtРасширеннаяПодсказка" id="2637">
+																					<ContextMenu name="ПаузаМеждуШагамиПриДвиженииМышкиVanessaExtКонтекстноеМеню" id="2636"/>
+																					<ExtendedTooltip name="ПаузаМеждуШагамиПриДвиженииМышкиVanessaExtРасширеннаяПодсказка" id="2637">
 																						<Title formatted="false">
 																							<v8:item>
 																								<v8:lang>ru</v8:lang>
@@ -17641,6 +18119,25 @@ Log events:
 																			<v8:item>
 																				<v8:lang>en</v8:lang>
 																				<v8:content>Enables emulation of keyboard input using VanessaExt add-in</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																</CheckBoxField>
+																<CheckBoxField name="ПоискКартинокСПомощьюКомпонентыVanessaExt" id="2860">
+																	<DataPath>Объект.ПоискКартинокСПомощьюКомпонентыVanessaExt</DataPath>
+																	<TitleLocation>Right</TitleLocation>
+																	<ToolTipRepresentation>Button</ToolTipRepresentation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="ПоискКартинокСПомощьюКомпонентыVanessaExtКонтекстноеМеню" id="2861"/>
+																	<ExtendedTooltip name="ПоискКартинокСПомощьюКомпонентыVanessaExtРасширеннаяПодсказка" id="2862">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>If this option is enabled, then the steps performing image search on the screen will use the external addin VanessaExt instead of using SikuliX.</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Если опция включена, то шаги, выполняющие поиск картинок на экране, будут использовать внешнюю компоненту VanessaExt вместо использования SikuliX.</v8:content>
 																			</v8:item>
 																		</Title>
 																	</ExtendedTooltip>
@@ -18071,7 +18568,7 @@ To disable mouse movement at a specific step, you should use the #[DoNotMoveMous
 															<ThroughAlign>Use</ThroughAlign>
 															<ExtendedTooltip name="ГруппаHTMLРасширеннаяПодсказка" id="1404"/>
 															<ChildItems>
-																<CheckBoxField name="СоздаватьИнструкциюHTML" id="135">
+																<CheckBoxField name="СоздаватьИнструкциюHTML" id="2960">
 																	<DataPath>Объект.СоздаватьИнструкциюHTML</DataPath>
 																	<Title>
 																		<v8:item>
@@ -18080,90 +18577,14 @@ To disable mouse movement at a specific step, you should use the #[DoNotMoveMous
 																		</v8:item>
 																		<v8:item>
 																			<v8:lang>en</v8:lang>
-																			<v8:content>Create HTML documentaion</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>am</v8:lang>
-																			<v8:content>መፍጠር ቅድሚያ ማኑዋል</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>az</v8:lang>
-																			<v8:content>Yaratmaq HTML təlimat</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>bg</v8:lang>
-																			<v8:content>Да създавате HTML инструкции</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>de</v8:lang>
-																			<v8:content>Erstellen der HTML-Anweisung</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>es</v8:lang>
-																			<v8:content>Crear HTML instrucción</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>et</v8:lang>
-																			<v8:content>Luua HTML õpetus</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>fr</v8:lang>
-																			<v8:content>Créer une instruction</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>hu</v8:lang>
-																			<v8:content>Létrehozása HTML-manuális</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>it</v8:lang>
-																			<v8:content>Creare HTML istruzione</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>ka</v8:lang>
-																			<v8:content>შექმნათ HTML მექანიკური</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>lt</v8:lang>
-																			<v8:content>Kurti HTML sakinį</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>lv</v8:lang>
-																			<v8:content>Izveidot HTML instrukciju</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>mn</v8:lang>
-																			<v8:content>Бий болгох HTML гарын авлага</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>pl</v8:lang>
-																			<v8:content>Tworzenie HTML instrukcję</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>ro</v8:lang>
-																			<v8:content>Pentru a crea HTML instrucțiunea</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>sl</v8:lang>
-																			<v8:content>Ustvari HTML priročnik</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>sv</v8:lang>
-																			<v8:content>Skapa HTML-manuell</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>tr</v8:lang>
-																			<v8:content>Oluşturmak için HTML deyim</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>vi</v8:lang>
-																			<v8:content>Tạo bản hướng dẫn HTML</v8:content>
+																			<v8:content>Make HTML instruction</v8:content>
 																		</v8:item>
 																	</Title>
 																	<TitleLocation>Right</TitleLocation>
 																	<ToolTipRepresentation>Button</ToolTipRepresentation>
 																	<CheckBoxType>Auto</CheckBoxType>
-																	<ContextMenu name="СоздаватьИнструкциюHTMLКонтекстноеМеню" id="136"/>
-																	<ExtendedTooltip name="СоздаватьИнструкциюHTMLРасширеннаяПодсказка" id="1405">
+																	<ContextMenu name="СоздаватьИнструкциюHTMLКонтекстноеМеню" id="2961"/>
+																	<ExtendedTooltip name="СоздаватьИнструкциюHTMLРасширеннаяПодсказка" id="2962">
 																		<Title formatted="false">
 																			<v8:item>
 																				<v8:lang>ru</v8:lang>
@@ -18271,10 +18692,22 @@ Also use special instructions in the script, see Help info.</v8:content>
 																			<v8:content>Thư mục để tạo bản hướng dẫn HTML</v8:content>
 																		</v8:item>
 																	</Title>
+																	<ToolTipRepresentation>Button</ToolTipRepresentation>
 																	<ChoiceButton>true</ChoiceButton>
 																	<ClearButton>true</ClearButton>
 																	<ContextMenu name="КаталогВыгрузкиИнструкцийHTMLКонтекстноеМеню" id="149"/>
-																	<ExtendedTooltip name="КаталогВыгрузкиИнструкцийHTMLРасширеннаяПодсказка" id="1406"/>
+																	<ExtendedTooltip name="КаталогВыгрузкиИнструкцийHTMLРасширеннаяПодсказка" id="1406">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>HTML instruction catalog</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Каталог HTML инструкций</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
 																	<Events>
 																		<Event name="StartChoice">КаталогOutputИнструкцияHTMLНачалоВыбора</Event>
 																	</Events>
@@ -18301,7 +18734,7 @@ Also use special instructions in the script, see Help info.</v8:content>
 															<ShowTitle>false</ShowTitle>
 															<ExtendedTooltip name="ГруппаMarkdownРасширеннаяПодсказка" id="1407"/>
 															<ChildItems>
-																<CheckBoxField name="СоздаватьИнструкциюMarkdown" id="644">
+																<CheckBoxField name="СоздаватьИнструкциюMarkdown" id="2972">
 																	<DataPath>Объект.СоздаватьИнструкциюMarkdown</DataPath>
 																	<Title>
 																		<v8:item>
@@ -18312,99 +18745,23 @@ Also use special instructions in the script, see Help info.</v8:content>
 																			<v8:lang>en</v8:lang>
 																			<v8:content>Make Markdown instruction</v8:content>
 																		</v8:item>
-																		<v8:item>
-																			<v8:lang>am</v8:lang>
-																			<v8:content>ለመፍጠር Markdown.</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>az</v8:lang>
-																			<v8:content>Yaratmaq Markdown təlimat</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>bg</v8:lang>
-																			<v8:content>Създаване на Markdown инструкции</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>de</v8:lang>
-																			<v8:content>Erstellen Markdown-Anweisung</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>es</v8:lang>
-																			<v8:content>Crear Markdown la instrucción</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>et</v8:lang>
-																			<v8:content>Luua Markdown õpetus</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>fr</v8:lang>
-																			<v8:content>Créer Markdown l'instruction</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>hu</v8:lang>
-																			<v8:content>Hozzon létre egy Árleszállítás kézi</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>it</v8:lang>
-																			<v8:content>Creare Markdown istruzione</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>ka</v8:lang>
-																			<v8:content>შექმნათ Markdown მექანიკური</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>lt</v8:lang>
-																			<v8:content>Kurti Markdown sakinį</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>lv</v8:lang>
-																			<v8:content>Izveidot Markdown instrukciju</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>mn</v8:lang>
-																			<v8:content>Бий болгох Markdown гарын авлага</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>pl</v8:lang>
-																			<v8:content>Tworzenie Markdown instrukcję</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>ro</v8:lang>
-																			<v8:content>Pentru a crea Continua instrucțiunea</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>sl</v8:lang>
-																			<v8:content>Če želite ustvariti Markdown priročnik</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>sv</v8:lang>
-																			<v8:content>För att skapa en Wiki manuell</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>tr</v8:lang>
-																			<v8:content>Oluşturmak için Markdown deyim</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>vi</v8:lang>
-																			<v8:content>Tạo bản hướng dẫn Markdown</v8:content>
-																		</v8:item>
 																	</Title>
 																	<TitleLocation>Right</TitleLocation>
 																	<ToolTipRepresentation>Button</ToolTipRepresentation>
 																	<CheckBoxType>Auto</CheckBoxType>
-																	<ContextMenu name="СоздаватьИнструкциюMarkdownКонтекстноеМеню" id="645"/>
-																	<ExtendedTooltip name="СоздаватьИнструкциюMarkdownРасширеннаяПодсказка" id="1408">
+																	<ContextMenu name="СоздаватьИнструкциюMarkdownКонтекстноеМеню" id="2973"/>
+																	<ExtendedTooltip name="СоздаватьИнструкциюMarkdownРасширеннаяПодсказка" id="2974">
 																		<Title formatted="false">
 																			<v8:item>
 																				<v8:lang>ru</v8:lang>
 																				<v8:content>Если флаг установлен, то во время выполнения сценария будет создаваться скринкаст в формате MarkDown.
-В поле "Команда создания скриншотов" должна быть указана консольная команда для снятия скриншотов.
+В поле "Команда создания скриншотов" должна быть указана консольная команда для снятия скриншотов или установлен флаг скриншоты компонентой "VanessaExt".
 Также в тексте сценария возможно использовать специальные директивы, которые описаны в справке.</v8:content>
 																			</v8:item>
 																			<v8:item>
 																				<v8:lang>en</v8:lang>
 																				<v8:content>If the checkbox is on, MarkDown screencast will be created during scenario execution.
-Specify console command for snapshots generation in  "Snapshot creating command" field.
+Specify console command for snapshots generation in  "Snapshot creating command" field or the screenshots flag is set by the "VanessaExt" component".
 Also use special instructions in the script, see Help info.</v8:content>
 																			</v8:item>
 																		</Title>
@@ -18501,14 +18858,80 @@ Also use special instructions in the script, see Help info.</v8:content>
 																			<v8:content>Thư mục để tạo bản hướng dẫn Markdown</v8:content>
 																		</v8:item>
 																	</Title>
+																	<ToolTipRepresentation>Button</ToolTipRepresentation>
 																	<ChoiceButton>true</ChoiceButton>
 																	<ClearButton>true</ClearButton>
 																	<ContextMenu name="КаталогВыгрузкиИнструкцийMarkdownКонтекстноеМеню" id="648"/>
-																	<ExtendedTooltip name="КаталогВыгрузкиИнструкцийMarkdownРасширеннаяПодсказка" id="1409"/>
+																	<ExtendedTooltip name="КаталогВыгрузкиИнструкцийMarkdownРасширеннаяПодсказка" id="1409">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>Markdown Instruction Directory</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Каталог Markdown инструкций</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
 																	<Events>
 																		<Event name="StartChoice">КаталогOutputИнструкцияMarkdownНачалоВыбора</Event>
 																	</Events>
 																</InputField>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="ГруппаОбщее" id="2941">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа общее</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Group General</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа общее</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаОбщееРасширеннаяПодсказка" id="2942"/>
+															<ChildItems>
+																<CheckBoxField name="АвтонумерацияШагов" id="2966">
+																	<DataPath>Объект.АвтонумерацияШагов</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Автонумерация шагов инструкций</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Auto numbering of steps of instructions</v8:content>
+																		</v8:item>
+																	</Title>
+																	<TitleLocation>Right</TitleLocation>
+																	<ToolTipRepresentation>Button</ToolTipRepresentation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="АвтонумерацияШаговКонтекстноеМеню" id="2967"/>
+																	<ExtendedTooltip name="АвтонумерацияШаговРасширеннаяПодсказка" id="2968">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>Adds auto numbering to the beginning of the step description text.
+To ensure that leading zeros are not lost when exporting from MD format, the text is written to the code block.</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Добавляет авто нумерацию в начало текста описания шага. 
+Для того, что бы лидирующие нули не терялись при экспорте из MD формата, текст записывается в блок кода.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																</CheckBoxField>
 															</ChildItems>
 														</UsualGroup>
 													</ChildItems>
@@ -18529,7 +18952,7 @@ Also use special instructions in the script, see Help info.</v8:content>
 													<ControlRepresentation>Picture</ControlRepresentation>
 													<ExtendedTooltip name="ГруппаРаботаСВидеоРасширеннаяПодсказка" id="1410"/>
 													<ChildItems>
-														<CheckBoxField name="СоздаватьИнструкциюВидео" id="517">
+														<CheckBoxField name="СоздаватьИнструкциюВидео" id="2969">
 															<DataPath>Объект.СоздаватьИнструкциюВидео</DataPath>
 															<Title>
 																<v8:item>
@@ -18540,88 +18963,12 @@ Also use special instructions in the script, see Help info.</v8:content>
 																	<v8:lang>en</v8:lang>
 																	<v8:content>Create video tutorial</v8:content>
 																</v8:item>
-																<v8:item>
-																	<v8:lang>am</v8:lang>
-																	<v8:content>ለመፍጠር በጣም</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>az</v8:lang>
-																	<v8:content>Yaratmaq видеоинструкцию</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>bg</v8:lang>
-																	<v8:content>Създаване на видеоинструкцию</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>de</v8:lang>
-																	<v8:content>Erstellen Video</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>es</v8:lang>
-																	<v8:content>Crear видеоинструкцию</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>et</v8:lang>
-																	<v8:content>Luua видеоинструкцию</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>fr</v8:lang>
-																	<v8:content>Créer pour visualiser un didacticiel vidéo</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>hu</v8:lang>
-																	<v8:content>Létre a videót</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>it</v8:lang>
-																	<v8:content>Creare video di istruzioni</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>ka</v8:lang>
-																	<v8:content>შექმნათ ვიდეო</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>lt</v8:lang>
-																	<v8:content>Kurti видеоинструкцию</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>lv</v8:lang>
-																	<v8:content>Izveidot видеоинструкцию</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>mn</v8:lang>
-																	<v8:content>Бий болгох видео</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>pl</v8:lang>
-																	<v8:content>Tworzenie samouczek wideo</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>ro</v8:lang>
-																	<v8:content>Pentru a crea видеоинструкцию</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>sl</v8:lang>
-																	<v8:content>Če želite ustvariti video</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>sv</v8:lang>
-																	<v8:content>För att skapa video</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>tr</v8:lang>
-																	<v8:content>Oluşturmak видеоинструкцию</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>vi</v8:lang>
-																	<v8:content>Tạo bản hướng dẫn video</v8:content>
-																</v8:item>
 															</Title>
 															<TitleLocation>Right</TitleLocation>
 															<ToolTipRepresentation>Button</ToolTipRepresentation>
 															<CheckBoxType>Auto</CheckBoxType>
-															<ContextMenu name="СоздаватьИнструкциюВидеоКонтекстноеМеню" id="518"/>
-															<ExtendedTooltip name="СоздаватьИнструкциюВидеоРасширеннаяПодсказка" id="1412">
+															<ContextMenu name="СоздаватьИнструкциюВидеоКонтекстноеМеню" id="2970"/>
+															<ExtendedTooltip name="СоздаватьИнструкциюВидеоРасширеннаяПодсказка" id="2971">
 																<Title formatted="true">
 																	<v8:item>
 																		<v8:lang>ru</v8:lang>
@@ -18652,7 +18999,7 @@ Also use special instructions in the script, see Help info.</v8:content>
 															<ThroughAlign>Use</ThroughAlign>
 															<ExtendedTooltip name="ГруппаВидеоНастройкиРасширеннаяПодсказка" id="2054"/>
 															<ChildItems>
-																<InputField name="КаталогВыгрузкиИнструкцийВидео" id="520">
+																<InputField name="КаталогВыгрузкиИнструкцийВидео" id="2975">
 																	<DataPath>Объект.КаталогВыгрузкиИнструкцийВидео</DataPath>
 																	<Title>
 																		<v8:item>
@@ -18663,88 +19010,12 @@ Also use special instructions in the script, see Help info.</v8:content>
 																			<v8:lang>en</v8:lang>
 																			<v8:content>Video tutorials directory</v8:content>
 																		</v8:item>
-																		<v8:item>
-																			<v8:lang>am</v8:lang>
-																			<v8:content>ወደ ማውጫ ለማመንጨት ይከተሉ ቪድዮ</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>az</v8:lang>
-																			<v8:content>Kataloq yaratmaq üçün təlimat Video</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>bg</v8:lang>
-																			<v8:content>Каталог за формиране на инструкции Видеоклипове</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>de</v8:lang>
-																			<v8:content>Katalog für die Bildung von Anweisungen Video</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>es</v8:lang>
-																			<v8:content>El directorio para la formación de instrucciones Vídeos</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>et</v8:lang>
-																			<v8:content>Kataloogi moodustamine juhiseid Video</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>fr</v8:lang>
-																			<v8:content>Catalogue pour la formation des instructions de la Vidéo</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>hu</v8:lang>
-																			<v8:content>A könyvtár létrehozásához utasításokat Videó</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>it</v8:lang>
-																			<v8:content>Catalogo per la formazione di istruzioni Video</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>ka</v8:lang>
-																			<v8:content>დირექტორია გენერირება ინსტრუქციები ვიდეო</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>lt</v8:lang>
-																			<v8:content>Katalogas forma instrukcijų Vaizdo įrašus</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>lv</v8:lang>
-																			<v8:content>Katalogs, lai veidotu instrukcijas Video</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>mn</v8:lang>
-																			<v8:content>Сан үүсгэх заавар Видео</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>pl</v8:lang>
-																			<v8:content>Katalog do tworzenia instrukcji Wideo</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>ro</v8:lang>
-																			<v8:content>Directorul pentru formarea de instrucțiuni Video de</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>sl</v8:lang>
-																			<v8:content>Imenik za ustvarjanje Video navodila</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>sv</v8:lang>
-																			<v8:content>Katalog för att skapa Video-instruktioner</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>tr</v8:lang>
-																			<v8:content>Katalog oluşturmak için talimatlar Video</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>vi</v8:lang>
-																			<v8:content>Thư mục để tạo bản hướng dẫn Video</v8:content>
-																		</v8:item>
 																	</Title>
 																	<ToolTipRepresentation>Button</ToolTipRepresentation>
 																	<ChoiceButton>true</ChoiceButton>
 																	<ClearButton>true</ClearButton>
-																	<ContextMenu name="КаталогВыгрузкиИнструкцийВидеоКонтекстноеМеню" id="521"/>
-																	<ExtendedTooltip name="КаталогВыгрузкиИнструкцийВидеоРасширеннаяПодсказка" id="1413">
+																	<ContextMenu name="КаталогВыгрузкиИнструкцийВидеоКонтекстноеМеню" id="2976"/>
+																	<ExtendedTooltip name="КаталогВыгрузкиИнструкцийВидеоРасширеннаяПодсказка" id="2977">
 																		<Title formatted="false">
 																			<v8:item>
 																				<v8:lang>ru</v8:lang>
@@ -19974,7 +20245,7 @@ Also use special instructions in the script, see Help info.</v8:content>
 																					<ChoiceButton>true</ChoiceButton>
 																					<ContextMenu name="ЗаписьВидеоКомандаConvertКонтекстноеМеню" id="681"/>
 																					<ExtendedTooltip name="ЗаписьВидеоКомандаConvertРасширеннаяПодсказка" id="1426">
-																						<Title formatted="true">
+																						<Title formatted="false">
 																							<v8:item>
 																								<v8:lang>ru</v8:lang>
 																								<v8:content>Путь к исполняемому файлу convert.exe в каталоге с программой ImageMagick.
@@ -19982,8 +20253,18 @@ Also use special instructions in the script, see Help info.</v8:content>
 Пример:
 "C:\Program Files\ImageMagick-Х.Х.Х-Q16\convert.exe"
 
-Скачать: &lt;link https://imagemagick.org/script/download.php&gt;ссылка&lt;/&gt;
-В процессе установки обязательным к установке является пункт: I&lt;b&gt;nstall legacy utilities (e. g. convert)&lt;/&gt;</v8:content>
+Скачать: https://imagemagick.org/script/download.php
+В процессе установки обязательным к установке является пункт: Install legacy utilities (e. g. convert)</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>The path to the convert.exe executable file in the ImageMagick directory.
+
+Example:
+"C:\Program Files\ImageMagick-X.X.X-Q16\convert.exe"
+
+Download: https://imagemagick.org/script/download.php
+During the installation, the following item is required for installation: Install legacy utilities (e. G. Convert)</v8:content>
 																							</v8:item>
 																						</Title>
 																					</ExtendedTooltip>
@@ -20265,12 +20546,12 @@ If mp3 file duration is less than the video's, it will be repeated.</v8:content>
 																								<Event name="StartChoice">ЗаписьВидеоКаталогМузыкиНачалоВыбора</Event>
 																							</Events>
 																						</InputField>
-																						<InputField name="ЗаписьВидеоГромкостьАудиоТрека" id="1833">
+																						<InputField name="ЗаписьВидеоГромкостьМузыки" id="1833">
 																							<DataPath>Объект.ЗаписьВидеоГромкостьМузыки</DataPath>
 																							<ToolTipRepresentation>Button</ToolTipRepresentation>
 																							<AutoMaxWidth>false</AutoMaxWidth>
-																							<ContextMenu name="ЗаписьВидеоГромкостьАудиоТрекаКонтекстноеМеню" id="1834"/>
-																							<ExtendedTooltip name="ЗаписьВидеоГромкостьАудиоТрекаРасширеннаяПодсказка" id="1835">
+																							<ContextMenu name="ЗаписьВидеоГромкостьМузыкиКонтекстноеМеню" id="1834"/>
+																							<ExtendedTooltip name="ЗаписьВидеоГромкостьМузыкиРасширеннаяПодсказка" id="1835">
 																								<Title formatted="false">
 																									<v8:item>
 																										<v8:lang>ru</v8:lang>
@@ -21198,13 +21479,27 @@ Value range is from -10 to 10.</v8:content>
 																															<MinValue xsi:type="xs:decimal">0.1</MinValue>
 																															<MaxValue xsi:type="xs:decimal">3</MaxValue>
 																															<ContextMenu name="ЗаписьВидеоYandexTTSСкоростьКонтекстноеМеню" id="1977"/>
-																															<ExtendedTooltip name="ЗаписьВидеоYandexTTSСкоростьРасширеннаяПодсказка" id="1978"/>
+																															<ExtendedTooltip name="ЗаписьВидеоYandexTTSСкоростьРасширеннаяПодсказка" id="1978">
+																																<Title formatted="false">
+																																	<v8:item>
+																																		<v8:lang>en</v8:lang>
+																																		<v8:content>The speed (tempo) of synthesized speech.
+Speech rate is specified as a fractional number in the range from 0.1 to 3.0.</v8:content>
+																																	</v8:item>
+																																	<v8:item>
+																																		<v8:lang>ru</v8:lang>
+																																		<v8:content>Скорость (темп) синтезированной речи.
+Скорость речи задается дробным числом в диапазоне от 0.1 до 3.0.</v8:content>
+																																	</v8:item>
+																																</Title>
+																															</ExtendedTooltip>
 																															<Events>
 																																<Event name="Tuning">ЗаписьВидеоYandexTTSСкоростьРегулирование</Event>
 																															</Events>
 																														</InputField>
 																														<RadioButtonField name="ЗаписьВидеоYandexTTSВариантЗапроса" id="2644">
 																															<DataPath>Объект.ЗаписьВидеоYandexTTSВариантЗапроса</DataPath>
+																															<ToolTipRepresentation>Button</ToolTipRepresentation>
 																															<RadioButtonType>Auto</RadioButtonType>
 																															<ChoiceList>
 																																<xr:Item>
@@ -21243,7 +21538,18 @@ Value range is from -10 to 10.</v8:content>
 																																</xr:Item>
 																															</ChoiceList>
 																															<ContextMenu name="ЗаписьВидеоYandexTTSВариантЗапросаКонтекстноеМеню" id="2645"/>
-																															<ExtendedTooltip name="ЗаписьВидеоYandexTTSВариантЗапросаРасширеннаяПодсказка" id="2646"/>
+																															<ExtendedTooltip name="ЗаписьВидеоYandexTTSВариантЗапросаРасширеннаяПодсказка" id="2646">
+																																<Title formatted="false">
+																																	<v8:item>
+																																		<v8:lang>en</v8:lang>
+																																		<v8:content>Determines how the audio files will be received: through the official API or through the free interface. The recommended value is via the official API.</v8:content>
+																																	</v8:item>
+																																	<v8:item>
+																																		<v8:lang>ru</v8:lang>
+																																		<v8:content>Определяет как будут получены файлы озвучки: через официальное API или через бесплатный интерфейс. Рекомендуемое значение - через официальное API.</v8:content>
+																																	</v8:item>
+																																</Title>
+																															</ExtendedTooltip>
 																															<Events>
 																																<Event name="OnChange">ЗаписьВидеоYandexTTSВариантЗапросаПриИзменении</Event>
 																															</Events>
@@ -22526,7 +22832,18 @@ Reduces voice generation costs.</v8:content>
 																							</CommandSet>
 																							<ContextMenu name="ЗаписьВидеоСловарьЗаменКонтекстноеМеню" id="1728"/>
 																							<AutoCommandBar name="ЗаписьВидеоСловарьЗаменКоманднаяПанель" id="1729"/>
-																							<ExtendedTooltip name="ЗаписьВидеоСловарьЗаменРасширеннаяПодсказка" id="1730"/>
+																							<ExtendedTooltip name="ЗаписьВидеоСловарьЗаменРасширеннаяПодсказка" id="1730">
+																								<Title formatted="false">
+																									<v8:item>
+																										<v8:lang>en</v8:lang>
+																										<v8:content>List of files that will be used for autocorrect spoken text.</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>ru</v8:lang>
+																										<v8:content>Список файлов, которые будут использоваться для автозамены произносимого текста.</v8:content>
+																									</v8:item>
+																								</Title>
+																							</ExtendedTooltip>
 																							<SearchStringAddition name="ЗаписьВидеоСловарьЗаменСтрокаПоиска" id="1731">
 																								<AdditionSource>
 																									<Item>ЗаписьВидеоСловарьЗамен</Item>
@@ -22874,12 +23191,14 @@ Reduces voice generation costs.</v8:content>
 																							<v8:item>
 																								<v8:lang>ru</v8:lang>
 																								<v8:content>Картинка в формате png, которая будет использована для наложения водяного знака.
-Водяной знак будет расположен в правом нижнем углу видео.</v8:content>
+Водяной знак будет расположен в правом нижнем углу видео.
+Разрешение картинки должно быть меньше, чем разрешение, в котором идёт запись видео.</v8:content>
 																							</v8:item>
 																							<v8:item>
 																								<v8:lang>en</v8:lang>
 																								<v8:content>Png image used as a watermark.
-Watermark will be placed in the lower right corner of the video.</v8:content>
+Watermark will be placed in the lower right corner of the video.
+The image resolution must be less than the resolution in which the video is recorded.</v8:content>
 																							</v8:item>
 																						</Title>
 																					</ExtendedTooltip>
@@ -23269,7 +23588,7 @@ SikuliX emulates mouse clicks.</v8:content>
 																									<Title>
 																										<v8:item>
 																											<v8:lang>ru</v8:lang>
-																											<v8:content>Путь в файлу</v8:content>
+																											<v8:content>Путь к видео файлу</v8:content>
 																										</v8:item>
 																										<v8:item>
 																											<v8:lang>en</v8:lang>
@@ -23487,6 +23806,108 @@ SikuliX emulates mouse clicks.</v8:content>
 														<Event name="OnChange">ОтображатьЗакладкиСверхуПриИзменении</Event>
 													</Events>
 												</CheckBoxField>
+												<CheckBoxField name="ПроверкаСинтаксисаВРедакторе" id="2877">
+													<DataPath>Объект.ПроверкаСинтаксисаВРедакторе</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ПроверкаСинтаксисаВРедактореКонтекстноеМеню" id="2878"/>
+													<ExtendedTooltip name="ПроверкаСинтаксисаВРедактореРасширеннаяПодсказка" id="2879">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>If the option is set, the script syntax is checked in the editor</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Опция для отключения проверки синтаксиса в редакторе сценариев</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+													<Events>
+														<Event name="OnChange">ПроверкаСинтаксисаВРедактореПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<InputField name="ОтображениеТабуляцииИПробелов" id="2938">
+													<DataPath>Объект.ОтображениеТабуляцииИПробелов</DataPath>
+													<DropListButton>true</DropListButton>
+													<ListChoiceMode>true</ListChoiceMode>
+													<ChooseType>false</ChooseType>
+													<ChoiceList>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Выделение</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Selection</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">0</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Нет</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>None</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">1</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Граница</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Boundary</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">2</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Все</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>All</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:decimal">3</Value>
+															</xr:Value>
+														</xr:Item>
+													</ChoiceList>
+													<ContextMenu name="ОтображениеТабуляцииИПробеловКонтекстноеМеню" id="2939"/>
+													<ExtendedTooltip name="ОтображениеТабуляцииИПробеловРасширеннаяПодсказка" id="2940"/>
+													<Events>
+														<Event name="OnChange">ОтображениеТабуляцииИПробеловПриИзменении</Event>
+													</Events>
+												</InputField>
 												<InputField name="ТемаРедактораVanessaEditor" id="2413">
 													<DataPath>Объект.ТемаРедактораVanessaEditor</DataPath>
 													<Title>
@@ -23962,6 +24383,11 @@ SikuliX emulates mouse clicks.</v8:content>
 													<Type>UsualButton</Type>
 													<CommandName>Form.Command.РазвернутьВсеСтрокиДереваСлужебный</CommandName>
 													<ExtendedTooltip name="РазвернутьВсеСтрокиДереваСлужебныйРасширеннаяПодсказка" id="1810"/>
+												</Button>
+												<Button name="СоздатьИнструкциюПоОписаниюЭлементов" id="2948">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.СоздатьИнструкциюПоОписаниюЭлементов</CommandName>
+													<ExtendedTooltip name="СоздатьИнструкциюПоОписаниюЭлементовРасширеннаяПодсказка" id="2949"/>
 												</Button>
 												<InputField name="КаталогИнструментовСлужебный" id="494">
 													<DataPath>Объект.КаталогИнструментов</DataPath>
@@ -28072,6 +28498,36 @@ SikuliX emulates mouse clicks.</v8:content>
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="МестоположениеВнешнейКомпонентыДляCentOS" id="51">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Местоположение внешней компоненты для CentOS</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РеквизитТекстStopVideoRec" id="52">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Реквизит текст stop video rec</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -28325,7 +28781,7 @@ SikuliX emulates mouse clicks.</v8:content>
 					</dcscor:item>
 					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
 						<dcscor:parameter>Шрифт</dcscor:parameter>
-						<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+						<dcscor:value xsi:type="v8ui:Font" ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
 					</dcscor:item>
 				</dcsset:appearance>
 			</dcsset:item>
@@ -29301,7 +29757,7 @@ SikuliX emulates mouse clicks.</v8:content>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Запомнить состояние формы test client</v8:content>
+					<v8:content>Запомнить состояние формы клиента тестирования</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
@@ -29325,7 +29781,7 @@ SikuliX emulates mouse clicks.</v8:content>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Забыть состояние формы test client</v8:content>
+					<v8:content>Забыть состояние формы клиента тестирования</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
@@ -33147,87 +33603,11 @@ SikuliX emulates mouse clicks.</v8:content>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Получить состояние текущего элемента формы</v8:content>
+					<v8:content>Получить состояние текущего элемента формы в виде шагов</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
-					<v8:content>Get current form item state</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>am</v8:lang>
-					<v8:content>አሁን ቅድሚያ አሁን ቅጽ እንዳሏቸውም</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>az</v8:lang>
-					<v8:content>Əldə vəziyyətinə cari vurun formaları</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>bg</v8:lang>
-					<v8:content>Получаване на състоянието на текущия елемент на формуляра</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>de</v8:lang>
-					<v8:content>Erhalten Sie den Status des aktuellen Elements aus der Form</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>es</v8:lang>
-					<v8:content>Obtener el estado actual de un elemento de formulario</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>et</v8:lang>
-					<v8:content>Saada riigi praegust vormi elemendi</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>fr</v8:lang>
-					<v8:content>Obtenir l'état actuel de l'élément de formulaire</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>hu</v8:lang>
-					<v8:content>Megszerezni az állapot a jelenlegi formájában elem</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>it</v8:lang>
-					<v8:content>Ottenere lo stato corrente di un elemento del modulo</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ka</v8:lang>
-					<v8:content>მიიღოს სტატუსი მიმდინარე ფორმის ელემენტი</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>lt</v8:lang>
-					<v8:content>Gauti būklė dabartinio elemento formos</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>lv</v8:lang>
-					<v8:content>Saņemt stāvokli pašreizējā vienuma formas</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>mn</v8:lang>
-					<v8:content>Олж авах байдал нь одоогийн хэлбэр элемент</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>pl</v8:lang>
-					<v8:content>Zobacz stan bieżącego elementu formularza</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ro</v8:lang>
-					<v8:content>Pentru a obține starea curentă a unui element de formular</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>sl</v8:lang>
-					<v8:content>Pridobiti status trenutnega elementa obrazca</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>sv</v8:lang>
-					<v8:content>För att få status av det aktuella formuläret element</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>tr</v8:lang>
-					<v8:content>Geçerli durumunu almak için bir form elemanı</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>vi</v8:lang>
-					<v8:content>Nhận trạng thái phần tử hiện tại của biểu mẫu</v8:content>
+					<v8:content>Get current form item state in steps</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -34697,11 +35077,11 @@ SikuliX emulates mouse clicks.</v8:content>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Добавить проверку сообщений пользователя</v8:content>
+					<v8:content>Получить проверку сообщений пользователя в виде шагов</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
-					<v8:content>Add check for user messages</v8:content>
+					<v8:content>Get check for user messages in steps</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -35227,6 +35607,161 @@ SikuliX emulates mouse clicks.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ДеревоGitPush</Action>
+		</Command>
+		<Command name="VanessaEditorPreviousDiff" id="140">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущее изменение</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Previous diff</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предыдущее изменение</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Previous diff</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveUp</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>VanessaEditorPreviousDiff</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="VanessaEditorNextDiff" id="141">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Следующее изменение</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Next diff</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Следующее изменение</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Next diff</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveDown</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>VanessaEditorNextDiff</Action>
+			<Representation>Picture</Representation>
+		</Command>
+		<Command name="VanessaEditorПроверкаСинтаксисаВРедакторе" id="142">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверка синтаксиса в редакторе</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Syntax checking in the editor</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверка синтаксиса в редакторе</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Syntax checking in the editor</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>VanessaEditorПроверкаСинтаксисаВРедакторе</Action>
+		</Command>
+		<Command name="ВывестиДеревоНаПечать" id="143">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вывести дерево шагов на печать</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Print steps tree</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вывести дерево на печать</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВывестиДеревоНаПечать</Action>
+		</Command>
+		<Command name="ОткрытьИнструментПодготовкаИЗагрузкаДанных" id="144">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подготовка и загрузка данных</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Test data generator</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть инструмент подготовка и загрузка данных</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьИнструментПодготовкаИЗагрузкаДанных</Action>
+		</Command>
+		<Command name="СравнитьТекущиеНастройкиСФайлом" id="145">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сравнить текущие настройки с файлом</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Compare current settings with file</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сравнить текущие настройки с файлом</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СравнитьТекущиеНастройкиСФайлом</Action>
+		</Command>
+		<Command name="СоздатьИнструкциюПоОписаниюЭлементов" id="146">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать инструкцию по описанию элементов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Create instructions for describing elements</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать инструкцию по описанию элементов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьИнструкциюПоОписаниюЭлементов</Action>
 		</Command>
 	</Commands>
 </Form>

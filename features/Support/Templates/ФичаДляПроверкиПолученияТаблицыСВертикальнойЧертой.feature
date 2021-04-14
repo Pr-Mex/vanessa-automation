@@ -4,7 +4,6 @@
 @UF11_Прочее
 #parent ua:
 @UA44_Прочая_активность_по_проверке
-#language: ru
 
 @IgnoreOnCIMainBuild
 @tree

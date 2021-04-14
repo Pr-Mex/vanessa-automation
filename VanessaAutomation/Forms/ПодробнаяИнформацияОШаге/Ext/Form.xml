@@ -5,6 +5,10 @@
 			<v8:lang>ru</v8:lang>
 			<v8:content>Подробная информация о шаге</v8:content>
 		</v8:item>
+		<v8:item>
+			<v8:lang>en</v8:lang>
+			<v8:content>Step details</v8:content>
+		</v8:item>
 	</Title>
 	<Width>64</Width>
 	<Height>30</Height>
@@ -12,6 +16,13 @@
 	<AutoTitle>false</AutoTitle>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<Autofill>false</Autofill>
+		<ChildItems>
+			<Button name="ФормаНайтиВДеревеШагов" id="16">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.НайтиВДеревеШагов</CommandName>
+				<ExtendedTooltip name="ФормаНайтиВДеревеШаговРасширеннаяПодсказка" id="17"/>
+			</Button>
+		</ChildItems>
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
@@ -162,5 +173,45 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="Снипет" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снипет</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Snippet</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 	</Attributes>
+	<Commands>
+		<Command name="НайтиВДеревеШагов" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найти в дереве шагов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Find in the tree of steps</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найти в дереве шагов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НайтиВДеревеШагов</Action>
+		</Command>
+	</Commands>
 </Form>
