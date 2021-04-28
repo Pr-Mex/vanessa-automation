@@ -1,22 +1,24 @@
 ﻿# Как создать автовидеоинструкцию
+
  Видеоинструкции  
    * [Установка ПО](#установка)
    * [Общие настройки](#общие-настройки)
    * [Видеоинструкции в web клиенте](#веб-клиент)
    * [SikuliX](#sikulix)
    * [Теги и комментарий для видеоинструкций](#теги)
+   * [F.A.Q.](#faq)
    
 Статьи по видеоинструкциям:
-  * https://infostart.ru/public/1133932/ Vanessa, хочу все и сразу
-  * https://infostart.ru/public/1147009/ Vanessa, улучшаем инструкции
-  * https://infostart.ru/public/1243801/ Vanessa, видеоинструкции для web-клиента
+   * [Vanessa, хочу все и сразу](https://infostart.ru/public/1133932/)
+   * [Vanessa, улучшаем инструкции](https://infostart.ru/public/1147009/)
+   * [Vanessa, видеоинструкции для web-клиента](https://infostart.ru/public/1243801/)
   
 Каналы на Youtube, которые используют автовидеоинструкции
-  * [1С ЭДО](https://www.youtube.com/playlist?list=PLY7ViBfWFBOkPONsBgH4fEvj7ESz5uhum)
-  * [SOFT LIDER SRL](https://www.youtube.com/playlist?list=PLP_VY1kBmzcjV1Ngbi9HOguA7Sh9zaTwd)
-  * [1С Минск](https://www.youtube.com/channel/UCPgkPOrgg6i1mQS3TGWdxPQ)
+   * [1С ЭДО](https://www.youtube.com/playlist?list=PLY7ViBfWFBOkPONsBgH4fEvj7ESz5uhum)
+   * [SOFT LIDER SRL](https://www.youtube.com/playlist?list=PLP_VY1kBmzcjV1Ngbi9HOguA7Sh9zaTwd)
+   * [1С Минск](https://www.youtube.com/channel/UCPgkPOrgg6i1mQS3TGWdxPQ)
   
-[Примеры сценариев](../VSL) для видеоинструкций
+[Примеры сценариев](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/VSL) для видеоинструкций
 
 <a id="markdown-установка" name="установка"></a>
 ## **Установка ПО**
@@ -183,6 +185,7 @@
    * Т.е. %2 и %1 были заменены на параметры шага. Выражение ["" + ТекущаяДата()] было вычислено через метод Вычислить().
    * А текст \[я\] содержал в себе экранирование квадратных скобок.
 * **#[autodoc.ignorestep]** - не включать шаг в инструкцию. Если перед шагом или группой шагов написать #[autodoc.ignorestep], тогда он/они будет выполнен, но не попадёт в финальный видео файл.
+* **#[autodoc.mute]** - отключение озвучивания шага. Если перед шагом или группой шагов написать #[autodoc.mute], тогда шаг в инструкции будет выполнен, но не будет озвучен.
 * **#[autodoc.donotscale]** - отключить автомасштабирование шага или группы. autodoc.donotscale Если перед шагом или группой написать #[autodoc.donotscale], тогда он не будет сжиматься по времени для синхронизации голоса и видео.
 * **#[autodoc.groupsteps]** - сделать из группы шагов один шаг:
    * Пусть в сценарии есть группа шагов с текстом: Просто группа шагов
@@ -201,3 +204,16 @@
    * @AmazonTTS: voice = Kimberly; lang = en-US
    * При краткой записи для Yandex первый параметр - голос, второй эмоция, при развернутой записи порядок не важен, параметры разделяются.
 
+<a id="markdown-теги" name="faq"></a>
+## **Часто задаваемые вопросы**
+
+1. Вопрос: Как открыть кнопку "Eщё"?
+   Ответ:
+   С указанием имени командной панели:
+    ``` Gherkin
+    И я нажимаю на HTML элемент "elem(\'allActionsГруппаКоманднаяПанель\')" в браузере
+    ```
+    или (второй вариант):
+    ``` Gherkin
+    И я нажимаю на HTML элемент "querySelectElemByTitle(\'.pressBox\', \'Еще\')" в браузере
+    ```
