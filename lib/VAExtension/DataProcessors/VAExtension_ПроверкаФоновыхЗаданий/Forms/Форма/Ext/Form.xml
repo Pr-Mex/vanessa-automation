@@ -1,0 +1,434 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.10">
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ОбновитьТаблицу" id="26">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ОбновитьТаблицу</CommandName>
+				<ExtendedTooltip name="ОбновитьТаблицуРасширеннаяПодсказка" id="27"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ПоСостоянию" id="62">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Состояние</v8:content>
+				</v8:item>
+			</Title>
+			<Group>Horizontal</Group>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ПоСостояниюExtendedTooltip" id="63"/>
+			<ChildItems>
+				<LabelDecoration name="ДекорацияСостояние" id="79">
+					<AutoMaxWidth>false</AutoMaxWidth>
+					<Title formatted="false">
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состояние:</v8:content>
+						</v8:item>
+					</Title>
+					<ContextMenu name="ДекорацияСостояниеКонтекстноеМеню" id="80"/>
+					<ExtendedTooltip name="ДекорацияСостояниеРасширеннаяПодсказка" id="81"/>
+				</LabelDecoration>
+				<CheckBoxField name="ОтборПоСостояниюЗавершено" id="67">
+					<DataPath>ОтборПоСостояниюЗавершено</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Показывать выполненные фоновые задания</v8:content>
+						</v8:item>
+					</ToolTip>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОтборПоСостояниюЗавершеноКонтекстноеМеню" id="68"/>
+					<ExtendedTooltip name="ОтборПоСостояниюЗавершеноExtendedTooltip" id="69"/>
+				</CheckBoxField>
+				<CheckBoxField name="ОтборПоСостояниюЗавершеноАварийно" id="70">
+					<DataPath>ОтборПоСостояниюЗавершеноАварийно</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Показывать фоновые задания завершенные с ошибкой</v8:content>
+						</v8:item>
+					</ToolTip>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОтборПоСостояниюЗавершеноАварийноКонтекстноеМеню" id="71"/>
+					<ExtendedTooltip name="ОтборПоСостояниюЗавершеноАварийноExtendedTooltip" id="72"/>
+				</CheckBoxField>
+				<CheckBoxField name="ОтборПоСостояниюОтменено" id="73">
+					<DataPath>ОтборПоСостояниюОтменено</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Показывать фоновые задания отмененные пользователем</v8:content>
+						</v8:item>
+					</ToolTip>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОтборПоСостояниюОтмененоКонтекстноеМеню" id="74"/>
+					<ExtendedTooltip name="ОтборПоСостояниюОтмененоExtendedTooltip" id="75"/>
+				</CheckBoxField>
+				<CheckBoxField name="ОтборПоСостояниюАктивно" id="76">
+					<DataPath>ОтборПоСостояниюАктивно</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Показывать фоновые задания, которые сейчас выполняются</v8:content>
+						</v8:item>
+					</ToolTip>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОтборПоСостояниюАктивноКонтекстноеМеню" id="77"/>
+					<ExtendedTooltip name="ОтборПоСостояниюАктивноExtendedTooltip" id="78"/>
+				</CheckBoxField>
+				<CheckBoxField name="ОтборИсключитьРегламентныеЗадания" id="85">
+					<DataPath>ОтборИсключитьРегламентныеЗадания</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ОтборИсключитьРегламентныеЗаданияКонтекстноеМеню" id="86"/>
+					<ExtendedTooltip name="ОтборИсключитьРегламентныеЗаданияРасширеннаяПодсказка" id="87"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<Table name="ТаблицаФоновых" id="28">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>ТаблицаФоновых</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ТаблицаФоновыхКонтекстноеМеню" id="29"/>
+			<AutoCommandBar name="ТаблицаФоновыхКоманднаяПанель" id="30">
+				<Autofill>false</Autofill>
+			</AutoCommandBar>
+			<ExtendedTooltip name="ТаблицаФоновыхРасширеннаяПодсказка" id="31"/>
+			<SearchStringAddition name="ТаблицаФоновыхСтрокаПоиска" id="32">
+				<AdditionSource>
+					<Item>ТаблицаФоновых</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаФоновыхСтрокаПоискаКонтекстноеМеню" id="33"/>
+				<ExtendedTooltip name="ТаблицаФоновыхСтрокаПоискаРасширеннаяПодсказка" id="34"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ТаблицаФоновыхСостояниеПросмотра" id="35">
+				<AdditionSource>
+					<Item>ТаблицаФоновых</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаФоновыхСостояниеПросмотраКонтекстноеМеню" id="36"/>
+				<ExtendedTooltip name="ТаблицаФоновыхСостояниеПросмотраРасширеннаяПодсказка" id="37"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ТаблицаФоновыхУправлениеПоиском" id="38">
+				<AdditionSource>
+					<Item>ТаблицаФоновых</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ТаблицаФоновыхУправлениеПоискомКонтекстноеМеню" id="39"/>
+				<ExtendedTooltip name="ТаблицаФоновыхУправлениеПоискомРасширеннаяПодсказка" id="40"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="ТаблицаФоновыхНаименование" id="47">
+					<DataPath>ТаблицаФоновых.Наименование</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаФоновыхНаименованиеКонтекстноеМеню" id="48"/>
+					<ExtendedTooltip name="ТаблицаФоновыхНаименованиеРасширеннаяПодсказка" id="49"/>
+				</InputField>
+				<InputField name="ТаблицаФоновыхНачало" id="59">
+					<DataPath>ТаблицаФоновых.Начало</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаФоновыхНачалоКонтекстноеМеню" id="60"/>
+					<ExtendedTooltip name="ТаблицаФоновыхНачалоРасширеннаяПодсказка" id="61"/>
+				</InputField>
+				<InputField name="ТаблицаФоновыхКонец" id="82">
+					<DataPath>ТаблицаФоновых.Конец</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаФоновыхКонецКонтекстноеМеню" id="83"/>
+					<ExtendedTooltip name="ТаблицаФоновыхКонецРасширеннаяПодсказка" id="84"/>
+				</InputField>
+				<InputField name="ТаблицаФоновыхСостояние" id="50">
+					<DataPath>ТаблицаФоновых.Состояние</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаФоновыхСостояниеКонтекстноеМеню" id="51"/>
+					<ExtendedTooltip name="ТаблицаФоновыхСостояниеРасширеннаяПодсказка" id="52"/>
+				</InputField>
+				<InputField name="ТаблицаФоновыхИмяМетода" id="41">
+					<DataPath>ТаблицаФоновых.ИмяМетода</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаФоновыхИмяМетодаКонтекстноеМеню" id="42"/>
+					<ExtendedTooltip name="ТаблицаФоновыхИмяМетодаРасширеннаяПодсказка" id="43"/>
+				</InputField>
+				<InputField name="ТаблицаФоновыхКлюч" id="44">
+					<DataPath>ТаблицаФоновых.Ключ</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаФоновыхКлючКонтекстноеМеню" id="45"/>
+					<ExtendedTooltip name="ТаблицаФоновыхКлючРасширеннаяПодсказка" id="46"/>
+				</InputField>
+				<InputField name="ТаблицаФоновыхИнформацияОбОшибке" id="53">
+					<DataPath>ТаблицаФоновых.ИнформацияОбОшибке</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаФоновыхИнформацияОбОшибкеКонтекстноеМеню" id="54"/>
+					<ExtendedTooltip name="ТаблицаФоновыхИнформацияОбОшибкеРасширеннаяПодсказка" id="55"/>
+				</InputField>
+				<InputField name="ТаблицаФоновыхУникальныйИдентификатор" id="56">
+					<DataPath>ТаблицаФоновых.УникальныйИдентификатор</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ТаблицаФоновыхУникальныйИдентификаторКонтекстноеМеню" id="57"/>
+					<ExtendedTooltip name="ТаблицаФоновыхУникальныйИдентификаторРасширеннаяПодсказка" id="58"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+		<CheckBoxField name="ОбновлениеТаблицыЗавершено" id="88">
+			<DataPath>ОбновлениеТаблицыЗавершено</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ОбновлениеТаблицыЗавершеноКонтекстноеМеню" id="89"/>
+			<ExtendedTooltip name="ОбновлениеТаблицыЗавершеноРасширеннаяПодсказка" id="90"/>
+		</CheckBoxField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.VAExtension_ПроверкаФоновыхЗаданий</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ТаблицаФоновых" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица фоновых</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ИмяМетода" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя метода</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Ключ" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ключ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Наименование" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Наименование</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Состояние" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Состояние</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИнформацияОбОшибке" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Информация об ошибке</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="УникальныйИдентификатор" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Уникальный идентификатор</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Начало" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Начало</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+				<Column name="Конец" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Конец</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:dateTime</v8:Type>
+						<v8:DateQualifiers>
+							<v8:DateFractions>DateTime</v8:DateFractions>
+						</v8:DateQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ОтборПоСостояниюЗавершено" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнено</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ОтборПоСостояниюЗавершено</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ОтборПоСостояниюАктивно" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполняется</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ОтборПоСостояниюАктивно</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ОтборПоСостояниюЗавершеноАварийно" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Завершено с ошибками</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ОтборПоСостояниюЗавершеноАварийно</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ОтборПоСостояниюОтменено" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отменено</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ОтборПоСостояниюОтменено</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ОтборИсключитьРегламентныеЗадания" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исключить регламентные задания</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ОтборИсключитьРегламентныеЗадания</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ОбновлениеТаблицыЗавершено" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновление таблицы завершено</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ОбновитьТаблицу" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить таблицу</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить таблицу</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОбновитьТаблицу</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+	</Commands>
+</Form>

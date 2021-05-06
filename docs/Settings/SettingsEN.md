@@ -137,6 +137,10 @@ It is recommended to set this checkbox on.
 If this option is enabled, then when receiving a table, the test will try to find and click on the "Refresh" table button and press it.
 An update attempt will occur if there are several attempts to get the table value and the first attempt was unsuccessful.
 
+   * **getlayoutsusingextensionvaextension**:
+Enables retrieval of layout values (printable forms and reports) using the VAExtension.
+Allows you to receive the entire layout with the design in the web client.
+
    * **timeoutforasynchronoussteps**:
 Specifies the maximum time to wait for an asynchronous step.
 For example, if the parameter value is set to 20 seconds and the step is used
