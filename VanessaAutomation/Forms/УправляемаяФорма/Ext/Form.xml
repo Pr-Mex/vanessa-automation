@@ -16556,6 +16556,45 @@ If the field is empty, the log will not be output to a text file.</v8:content>
 																								</Title>
 																							</ExtendedTooltip>
 																						</CheckBoxField>
+																						<CheckBoxField name="ПрикладыватьДополнительныеДанныеПриСравненииЗначенияСЭталономAllure" id="2987">
+																							<DataPath>Объект.ПрикладыватьДополнительныеДанныеПриСравненииЗначенияСЭталономAllure</DataPath>
+																							<TitleLocation>Right</TitleLocation>
+																							<ToolTipRepresentation>Button</ToolTipRepresentation>
+																							<CheckBoxType>Auto</CheckBoxType>
+																							<ContextMenu name="ПрикладыватьДополнительныеДанныеПриСравненииЗначенияСЭталономAllureКонтекстноеМеню" id="2988"/>
+																							<ExtendedTooltip name="ПрикладыватьДополнительныеДанныеПриСравненииЗначенияСЭталономAllureРасширеннаяПодсказка" id="2989">
+																								<Title formatted="false">
+																									<v8:item>
+																										<v8:lang>en</v8:lang>
+																										<v8:content>If this option is enabled, then when comparing a layout with a reference or when comparing a table with a reference, additional files will be generated:
+- a picture containing the difference between the reference and the current value of the table or layout
+- a picture of the current value
+- picture of the reference value
+- a gif file showing the difference between the current and reference value.
+
+An additional section will also appear in the Allure report, where you can conveniently view a comparison of the reference and the current value.
+
+For this option to work, it is necessary that the ImageMagick 7 version or higher and the ghostscript package https://www.ghostscript.com/download.html, which converts pdf files into pictures, must be installed on the PC where Vanessa Automation is running.
+It is also necessary that commands of the form are executed on the PC:
+magick convert file.pdf file.png</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>ru</v8:lang>
+																										<v8:content>Если опция включена, то при сравнении макета с эталоном или при сравнении таблицы с эталоном будут формироваться дополнительные файлы:
+- картинка, содержаящая разницу между эталоном и текущим значением таблицы или макета
+- картинка текущего значения
+- картинка эталонного значения
+- файл в формате gif, показывающий разницу между текущим и эталонным значением.
+
+Также в отчете Allure появится дополнительная секция, где можно будет удобно просмотреть сравнение эталона и текущего значения.
+
+Для работы опции необходимо, чтобы на ПК, где запускается Vanessa Automation был установлен пакет ImageMagick7 версии или выше и пакет ghostscript https://www.ghostscript.com/download.htmlt, который выполняет конвертацию pdf файлов в картинки.
+Также необходимо, чтобы на ПК выполнялись команды вида:
+magick convert file.pdf file.png</v8:content>
+																									</v8:item>
+																								</Title>
+																							</ExtendedTooltip>
+																						</CheckBoxField>
 																					</ChildItems>
 																				</UsualGroup>
 																				<Table name="ДанныеАллюрМеток" id="1985">
