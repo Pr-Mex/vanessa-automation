@@ -2774,11 +2774,13 @@
 <li>Изменять произвольные данные формы, доступные для записи.</li>
 <li>Выполнить метод текущей формы.</li>
 <li>Получать макеты из формы клиента тестирования без использования временных файлов. Также работает в web клиенте.</li>
+<li>Открытие окна "Настройка начальной страницы"</li>
 </ol>
 </li>
 <li>
 <p>Allure. Возможность сохранять данные mxl файлов (отчетов, печатных форма) в формате HTML, чтобы их можно было удобно просматривать в браузере. #1195</p>
 </li>
+<li>Allure. Отображение файла эталона и текущего значения печатной форме в виде изображений (анимации) и их разницы. #1209</li>
 </ul>
 <h3 id="_3">Новые шаги<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2801,11 +2803,23 @@
 <li>И Я устанавливаю в данную базу расширение "ИмяРасширения" из каталога "КаталогРасширения" #1203</li>
 <li>И у расширения "ИмяРасширения" я снимаю флаги #1204</li>
 <li>И я открываю окно функции для технического специалиста (расширение) #1205</li>
+<li>Установка настроек Vanessa-Automation с помощью шагов #1210</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я устанавливаю флаг настройки Vanessa-Automation &quot;</span><span class="s">ИмяФлага</span><span class="nf">&quot;</span>
+<span class="nf">    </span><span class="k">И </span><span class="nf">я снимаю флаг настройки Vanessa-Automation &quot;</span><span class="s">ИмяФлага</span><span class="nf">&quot;</span>
+<span class="nf">    </span><span class="k">И </span><span class="nf">я устанавливаю опцию Vanessa-Automation &quot;</span><span class="s">ИмяНастройки</span><span class="nf">&quot; &quot;</span><span class="s">ЗначениеНастройки</span><span class="nf">&quot;</span>
+</code></pre></div>
+
+<ul>
+<li>Проверка равенства файлов. И файл "ИмяФайла1" равен файлу "ИмяФайла2" #1211</li>
+<li>И я открываю окно настройка начальной страницы (расширение) #1212</li>
 </ul>
 <h3 id="_4">Разные доработки<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Запись в ЖР текущих настроек VA при возникновении ошибки. #1206</li>
 <li>Выбор произвольного окна в исследователе формы. #1207</li>
+<li>Переход на использование ImageMagick 7 версии. #1213</li>
+<li>Использовать метод Sleep из компоненты, если это возможно. #1214</li>
 </ul>
 <h2 id="12036">1.2.036<a class="headerlink" href="#12036" title="Permanent link">&para;</a></h2>
 <h3 id="_5">Новые возможности<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
