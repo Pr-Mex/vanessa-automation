@@ -3174,7 +3174,17 @@
 		
 		
 		ВызватьИсключение Стр;
-	КонецЕсли;	
+	КонецЕсли;
+	
+	Если Ванесса.ЭмуляцияДвиженияМышкиКомпонентаВБраузере() Тогда
+		Ванесса.ВыполнитьJavaScriptБраузер("{
+			|	if(!document.activeElement.className.includes('gridBody')) {
+			|		let element = querySelectElem('.gridBox.select.focus');
+			|		triggerMouseEvent(element, 'mousedown');
+			|		triggerMouseEvent(element, 'mouseup');
+			|	}
+			|}");
+	КонецЕсли;
 	
 	СделатьДействияПриЗаписиHTML("толькофрейм");
 КонецПроцедуры
