@@ -1392,6 +1392,32 @@
 				</Title>
 				<ExtendedTooltip name="ГруппаКоманднаяПанельVanessaEditorРасширеннаяПодсказка" id="2425"/>
 				<ChildItems>
+					<ButtonGroup name="ГруппаVanessaEditorПереходКРазличиямВФайлах" id="3019">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Переход к различиям в файлах</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Go to file differences</v8:content>
+							</v8:item>
+						</Title>
+						<Representation>Compact</Representation>
+						<ExtendedTooltip name="ГруппаVanessaEditorПереходКРазличиямВФайлахРасширеннаяПодсказка" id="3020"/>
+						<ChildItems>
+							<Button name="VanessaEditorPreviousDiff" id="3021">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.VanessaEditorPreviousDiff</CommandName>
+								<ExtendedTooltip name="VanessaEditorPreviousDiffРасширеннаяПодсказка" id="3022"/>
+							</Button>
+							<Button name="VanessaEditorNextDiff" id="3023">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.VanessaEditorNextDiff</CommandName>
+								<ExtendedTooltip name="VanessaEditorNextDiffРасширеннаяПодсказка" id="3024"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
 					<ButtonGroup name="ГруппаVanessaEditorДеревоКаталогов" id="2608">
 						<Title>
 							<v8:item>
@@ -1606,6 +1632,26 @@
 												<Type>CommandBarButton</Type>
 												<CommandName>Form.Command.ОткрытьИнструментПодготовкаИЗагрузкаДанных</CommandName>
 												<ExtendedTooltip name="ФормаОткрытьИнструментПодготовкаИЗагрузкаДанныхРасширеннаяПодсказка" id="2933"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="ГруппаVanessaEditorСравнитьСДругимФичаФайлом" id="3025">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа vanessa editor сравнить с другим фича файлом</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Compare with another feature file</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ГруппаVanessaEditorСравнитьСДругимФичаФайломРасширеннаяПодсказка" id="3026"/>
+										<ChildItems>
+											<Button name="ФормаСравнитьСДругимФичаФайлом" id="3027">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.СравнитьСДругимФичаФайлом</CommandName>
+												<ExtendedTooltip name="ФормаСравнитьСДругимФичаФайломРасширеннаяПодсказка" id="3028"/>
 											</Button>
 										</ChildItems>
 									</ButtonGroup>
@@ -2375,6 +2421,16 @@
 									<xr:LoadTransparent>false</xr:LoadTransparent>
 								</Picture>
 								<ExtendedTooltip name="ПанельVanessaEditorФормаПерейтиВДеревоШаговРасширеннаяПодсказка" id="2721"/>
+							</Button>
+							<Button name="ПанельVanessaEditorФормаВключитьВыключитьЗаписьВидео" id="3017">
+								<Type>CommandBarButton</Type>
+								<Check>true</Check>
+								<CommandName>Form.Command.ВключитьВыключитьЗаписьВидео</CommandName>
+								<Picture>
+									<xr:Abs>Picture.png</xr:Abs>
+									<xr:LoadTransparent>false</xr:LoadTransparent>
+								</Picture>
+								<ExtendedTooltip name="ПанельVanessaEditorФормаВключитьВыключитьЗаписьВидеоРасширеннаяПодсказка" id="3018"/>
 							</Button>
 						</ChildItems>
 					</ButtonGroup>
@@ -5819,55 +5875,6 @@
 															<ShowTitle>false</ShowTitle>
 															<ExtendedTooltip name="ГруппаVanessaEditorРасширеннаяПодсказка" id="2867"/>
 															<ChildItems>
-																<UsualGroup name="ГруппаКнопкиVanessaEditor" id="2868">
-																	<Title>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Группа кrнопки Vanessa Editor</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>en</v8:lang>
-																			<v8:content>Vanessa Editor buttons group</v8:content>
-																		</v8:item>
-																	</Title>
-																	<Group>AlwaysHorizontal</Group>
-																	<HorizontalSpacing>None</HorizontalSpacing>
-																	<Representation>None</Representation>
-																	<ShowTitle>false</ShowTitle>
-																	<ExtendedTooltip name="ГруппаКнопкиVanessaEditorРасширеннаяПодсказка" id="2869"/>
-																	<ChildItems>
-																		<Button name="VanessaEditorPreviousDiff" id="2872">
-																			<Type>UsualButton</Type>
-																			<CommandName>Form.Command.VanessaEditorPreviousDiff</CommandName>
-																			<Title>
-																				<v8:item>
-																					<v8:lang>ru</v8:lang>
-																					<v8:content>Предыдущее изменение</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>en</v8:lang>
-																					<v8:content>Previous diff</v8:content>
-																				</v8:item>
-																			</Title>
-																			<ExtendedTooltip name="VanessaEditorPreviousDiffРасширеннаяПодсказка" id="2873"/>
-																		</Button>
-																		<Button name="VanessaEditorNextDiff" id="2870">
-																			<Type>UsualButton</Type>
-																			<CommandName>Form.Command.VanessaEditorNextDiff</CommandName>
-																			<Title>
-																				<v8:item>
-																					<v8:lang>ru</v8:lang>
-																					<v8:content>Следующее изменение</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>en</v8:lang>
-																					<v8:content>Next diff</v8:content>
-																				</v8:item>
-																			</Title>
-																			<ExtendedTooltip name="VanessaEditorNextDiffРасширеннаяПодсказка" id="2871"/>
-																		</Button>
-																	</ChildItems>
-																</UsualGroup>
 																<HTMLDocumentField name="VanessaEditor" id="2404">
 																	<DataPath>VanessaEditorURL</DataPath>
 																	<Title>
@@ -21056,6 +21063,23 @@ Recommended value is 0.1 or less.</v8:content>
 																														<Value xsi:type="xs:decimal">2</Value>
 																													</xr:Value>
 																												</xr:Item>
+																												<xr:Item>
+																													<xr:Presentation/>
+																													<xr:CheckState>0</xr:CheckState>
+																													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																														<Presentation>
+																															<v8:item>
+																																<v8:lang>ru</v8:lang>
+																																<v8:content>Другой движок TTS</v8:content>
+																															</v8:item>
+																															<v8:item>
+																																<v8:lang>en</v8:lang>
+																																<v8:content>Another TTS engine</v8:content>
+																															</v8:item>
+																														</Presentation>
+																														<Value xsi:type="xs:decimal">3</Value>
+																													</xr:Value>
+																												</xr:Item>
 																											</ChoiceList>
 																											<ContextMenu name="ЗаписьВидеоТипОзвучкиTTSКонтекстноеМеню" id="1961"/>
 																											<ExtendedTooltip name="ЗаписьВидеоТипОзвучкиTTSРасширеннаяПодсказка" id="1962">
@@ -22547,6 +22571,158 @@ Speech rate is specified as a fractional number in the range from 0.1 to 3.0.</v
 																																<Event name="StartChoice">ЗаписьВидеоAmazonСекретныйКлючНачалоВыбора</Event>
 																															</Events>
 																														</InputField>
+																													</ChildItems>
+																												</Page>
+																												<Page name="ГруппаДругойДвижокTTS" id="2993">
+																													<Title>
+																														<v8:item>
+																															<v8:lang>ru</v8:lang>
+																															<v8:content>Группа другой движок TTS</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>en</v8:lang>
+																															<v8:content>Group other TTS engine</v8:content>
+																														</v8:item>
+																													</Title>
+																													<ToolTip>
+																														<v8:item>
+																															<v8:lang>ru</v8:lang>
+																															<v8:content>Группа другой движок TTS</v8:content>
+																														</v8:item>
+																													</ToolTip>
+																													<ExtendedTooltip name="ГруппаДругойДвижокTTSРасширеннаяПодсказка" id="2994"/>
+																													<ChildItems>
+																														<InputField name="ЗаписьВидеоПутьКОбработкеДвижкаTTS" id="2995">
+																															<DataPath>Объект.ЗаписьВидеоПутьКОбработкеДвижкаTTS</DataPath>
+																															<ToolTipRepresentation>Button</ToolTipRepresentation>
+																															<ChoiceButton>true</ChoiceButton>
+																															<ClearButton>true</ClearButton>
+																															<ContextMenu name="ЗаписьВидеоПутьКОбработкеДвижкаTTSКонтекстноеМеню" id="2996"/>
+																															<ExtendedTooltip name="ЗаписьВидеоПутьКОбработкеДвижкаTTSРасширеннаяПодсказка" id="2997">
+																																<Title formatted="false">
+																																	<v8:item>
+																																		<v8:lang>ru</v8:lang>
+																																		<v8:content>Позволяет генерировать озвучку шага с помощью внешней обработки. Обработка должна в основной форме содержать экспортный метод:
+GetMp3File(Vanessa, VideoParams, Text, FileName, VoiceParams)
+где:
+Vanessa - Контекст фреймпорка Vanessa Automation
+VideoParams - Структура, содержащая параметры записи видео
+Text - текст, который требуется озвучить
+FileName - имя текущего видеофрагмента
+VoiceParams - дополнительные параметры озвучки, указанные в фича файле с помощью дополнительных директив
+
+Метод должен возвращать путь к mp3 файлу.</v8:content>
+																																	</v8:item>
+																																	<v8:item>
+																																		<v8:lang>en</v8:lang>
+																																		<v8:content>Allows you to generate voiceovers for a step using external processing. Processing should contain an export method in the main form:
+GetMp3File (Vanessa, VideoParams, Text, FileName, VoiceParams)
+Where:
+Vanessa - Vanessa Automation context framework
+VideoParams - Structure containing video recording parameters
+Text - the text to be read
+FileName - the name of the current video clip
+VoiceParams - additional voice parameters specified in the feature file using additional directives
+
+The method should return the path to the mp3 file.</v8:content>
+																																	</v8:item>
+																																</Title>
+																															</ExtendedTooltip>
+																															<Events>
+																																<Event name="StartChoice">ЗаписьВидеоПутьКОбработкеДвижкаTTSНачалоВыбора</Event>
+																															</Events>
+																														</InputField>
+																														<Table name="НастройкиДругогоДвижкаTTS" id="2998">
+																															<Representation>List</Representation>
+																															<AutoInsertNewRow>true</AutoInsertNewRow>
+																															<EnableStartDrag>true</EnableStartDrag>
+																															<EnableDrag>true</EnableDrag>
+																															<DataPath>НастройкиДругогоДвижкаTTS</DataPath>
+																															<Title>
+																																<v8:item>
+																																	<v8:lang>ru</v8:lang>
+																																	<v8:content>Настройки</v8:content>
+																																</v8:item>
+																																<v8:item>
+																																	<v8:lang>en</v8:lang>
+																																	<v8:content>Settings</v8:content>
+																																</v8:item>
+																															</Title>
+																															<ToolTipRepresentation>Button</ToolTipRepresentation>
+																															<RowFilter xsi:nil="true"/>
+																															<ContextMenu name="НастройкиДругогоДвижкаTTSКонтекстноеМеню" id="2999"/>
+																															<AutoCommandBar name="НастройкиДругогоДвижкаTTSКоманднаяПанель" id="3000"/>
+																															<ExtendedTooltip name="НастройкиДругогоДвижкаTTSРасширеннаяПодсказка" id="3001">
+																																<Title formatted="false">
+																																	<v8:item>
+																																		<v8:lang>en</v8:lang>
+																																		<v8:content>Allows you to set an arbitrary set of settings for generating voiceovers.</v8:content>
+																																	</v8:item>
+																																	<v8:item>
+																																		<v8:lang>ru</v8:lang>
+																																		<v8:content>Позволяет задать произвольный набор настроек для генерации файлов озвучки.</v8:content>
+																																	</v8:item>
+																																</Title>
+																															</ExtendedTooltip>
+																															<SearchStringAddition name="НастройкиДругогоДвижкаTTSСтрокаПоиска" id="3002">
+																																<AdditionSource>
+																																	<Item>НастройкиДругогоДвижкаTTS</Item>
+																																	<Type>SearchStringRepresentation</Type>
+																																</AdditionSource>
+																																<ContextMenu name="НастройкиДругогоДвижкаTTSСтрокаПоискаКонтекстноеМеню" id="3003"/>
+																																<ExtendedTooltip name="НастройкиДругогоДвижкаTTSСтрокаПоискаРасширеннаяПодсказка" id="3004"/>
+																															</SearchStringAddition>
+																															<ViewStatusAddition name="НастройкиДругогоДвижкаTTSСостояниеПросмотра" id="3005">
+																																<AdditionSource>
+																																	<Item>НастройкиДругогоДвижкаTTS</Item>
+																																	<Type>ViewStatusRepresentation</Type>
+																																</AdditionSource>
+																																<ContextMenu name="НастройкиДругогоДвижкаTTSСостояниеПросмотраКонтекстноеМеню" id="3006"/>
+																																<ExtendedTooltip name="НастройкиДругогоДвижкаTTSСостояниеПросмотраРасширеннаяПодсказка" id="3007"/>
+																															</ViewStatusAddition>
+																															<SearchControlAddition name="НастройкиДругогоДвижкаTTSУправлениеПоиском" id="3008">
+																																<AdditionSource>
+																																	<Item>НастройкиДругогоДвижкаTTS</Item>
+																																	<Type>SearchControl</Type>
+																																</AdditionSource>
+																																<ContextMenu name="НастройкиДругогоДвижкаTTSУправлениеПоискомКонтекстноеМеню" id="3009"/>
+																																<ExtendedTooltip name="НастройкиДругогоДвижкаTTSУправлениеПоискомРасширеннаяПодсказка" id="3010"/>
+																															</SearchControlAddition>
+																															<ChildItems>
+																																<InputField name="НастройкиДругогоДвижкаTTSИмя" id="3011">
+																																	<DataPath>НастройкиДругогоДвижкаTTS.Имя</DataPath>
+																																	<Title>
+																																		<v8:item>
+																																			<v8:lang>ru</v8:lang>
+																																			<v8:content>Имя</v8:content>
+																																		</v8:item>
+																																		<v8:item>
+																																			<v8:lang>en</v8:lang>
+																																			<v8:content>Name</v8:content>
+																																		</v8:item>
+																																	</Title>
+																																	<EditMode>EnterOnInput</EditMode>
+																																	<ContextMenu name="НастройкиДругогоДвижкаTTSИмяКонтекстноеМеню" id="3012"/>
+																																	<ExtendedTooltip name="НастройкиДругогоДвижкаTTSИмяРасширеннаяПодсказка" id="3013"/>
+																																</InputField>
+																																<InputField name="НастройкиДругогоДвижкаTTSЗначение" id="3014">
+																																	<DataPath>НастройкиДругогоДвижкаTTS.Значение</DataPath>
+																																	<Title>
+																																		<v8:item>
+																																			<v8:lang>ru</v8:lang>
+																																			<v8:content>Значение</v8:content>
+																																		</v8:item>
+																																		<v8:item>
+																																			<v8:lang>en</v8:lang>
+																																			<v8:content>Value</v8:content>
+																																		</v8:item>
+																																	</Title>
+																																	<EditMode>EnterOnInput</EditMode>
+																																	<ContextMenu name="НастройкиДругогоДвижкаTTSЗначениеКонтекстноеМеню" id="3015"/>
+																																	<ExtendedTooltip name="НастройкиДругогоДвижкаTTSЗначениеРасширеннаяПодсказка" id="3016"/>
+																																</InputField>
+																															</ChildItems>
+																														</Table>
 																													</ChildItems>
 																												</Page>
 																											</ChildItems>
@@ -28625,6 +28801,53 @@ SikuliX emulates mouse clicks.</v8:content>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
+		</Attribute>
+		<Attribute name="НастройкиДругогоДвижкаTTS" id="53">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Settings</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Имя" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Значение" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
 		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
@@ -35860,6 +36083,48 @@ SikuliX emulates mouse clicks.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>СоздатьИнструкциюПоОписаниюЭлементов</Action>
+		</Command>
+		<Command name="ВключитьВыключитьЗаписьВидео" id="147">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить/выключить запись видео</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Enable/disable video recording</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить/выключить запись видео</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Enable/disable video recording</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВключитьВыключитьЗаписьВидео</Action>
+		</Command>
+		<Command name="СравнитьСДругимФичаФайлом" id="148">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сравнить с другим фича файлом</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Compare with another feature file</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сравнить с другим фича файлом</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СравнитьСДругимФичаФайлом</Action>
 		</Command>
 	</Commands>
 </Form>
