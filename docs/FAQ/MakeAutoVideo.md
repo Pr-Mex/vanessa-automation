@@ -17,6 +17,7 @@
    * [Vanessa, хочу все и сразу](https://infostart.ru/public/1133932/)
    * [Vanessa, улучшаем инструкции](https://infostart.ru/public/1147009/)
    * [Vanessa, видеоинструкции для web-клиента](https://infostart.ru/public/1243801/)
+   * [Vanessa Automation. Как начать создавать видеоинструкции](https://infostart.ru/1c/articles/1448125/)
   
 Каналы на Youtube, которые используют автовидеоинструкции:
    * [1С ЭДО](https://www.youtube.com/playlist?list=PLY7ViBfWFBOkPONsBgH4fEvj7ESz5uhum)
