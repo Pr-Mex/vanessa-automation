@@ -1198,7 +1198,11 @@ https://pr-mex.github.io/vanessa-automation/dev/ReturnStatus</p>
 </code></pre></div>
 
 <p>Если опция включена, то при возникновении ошибки будут собраны данные со значениями переменных Контекста и Контекста глобального.</p>
-<div class="codehilite"><pre><span></span><code>* **СохранятьMxlКакHTMLВAllure {savemxlashtmlinallure}**:
+<div class="codehilite"><pre><span></span><code>* **ПрикладыватьФайлыMxlКОтчетуAllure {attachmxlfilestoallurereport}**:
+</code></pre></div>
+
+<p>Файлы отчетов и их эталонов будут прикладываться к отчету Allure в формате mxl.</p>
+<div class="codehilite"><pre><span></span><code>* **ПрикладыватьФайлыMxlСохраненныеВФорматеHTMLКОтчетуAllure {attachmxlfilessavedinhtmlformattoallurereport}**:
 </code></pre></div>
 
 <p>Все mxl файлы, которые будут приложены к отчету Allure будут сохраняться в формате HTML. Это упрощает открытие и просмотр результата.</p>
@@ -1654,6 +1658,27 @@ OAuth-токен используется в процедуре аутентиф
 <li>
 <p><strong>ЗаписьВидеоAmazonСекретныйКлюч {amazonttssecretkey}</strong>:
 Файл, в котором хранится секретный ключ для доступа к облаку Amazon.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Группа другой движок TTS</p>
+<ul>
+<li>
+<p><strong>ЗаписьВидеоПутьКОбработкеДвижкаTTS {pathprocessingenginetts}</strong>:
+Позволяет генерировать озвучку шага с помощью внешней обработки. Обработка должна в основной форме содержать экспортный метод:
+GetMp3File(Vanessa, VideoParams, Text, FileName, VoiceParams)
+где:
+Vanessa - Контекст фреймпорка Vanessa Automation
+VideoParams - Структура, содержащая параметры записи видео
+Text - текст, который требуется озвучить
+FileName - имя текущего видеофрагмента
+VoiceParams - дополнительные параметры озвучки, указанные в фича файле с помощью дополнительных директив
+Метод должен возвращать путь к mp3 файлу.</p>
+</li>
+<li>
+<p><strong>НастройкиДругогоДвижкаTTS {SettingsOtherEngineTTS}</strong>:
+Позволяет задать произвольный набор настроек для генерации файлов озвучки.</p>
 </li>
 </ul>
 </li>
