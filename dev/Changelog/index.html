@@ -2802,6 +2802,8 @@
 <li>Возможность сохранить состояние всех форм клиента тестирования в файл mxl. #1229</li>
 <li>Поддержка использования в параметрах шагов быстрого доступа к каталогу фичи: $КаталогФичи$ #1232</li>
 <li>Возможность показать отчет Allure по результату локального выполнения тестов. #1233</li>
+<li>Возможность запустить сеанс клиента тестирования повторно, если процесс не клиента тестирования не запустился. #1245</li>
+<li>Поддержка работы механизма UI Automation. #1246 Спасибо @lintest</li>
 </ul>
 <h3 id="_3">Новые шаги<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2828,7 +2830,7 @@
 </ul>
 <div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я устанавливаю флаг настройки Vanessa-Automation &quot;</span><span class="s">ИмяФлага</span><span class="nf">&quot;</span>
 <span class="nf">    </span><span class="k">И </span><span class="nf">я снимаю флаг настройки Vanessa-Automation &quot;</span><span class="s">ИмяФлага</span><span class="nf">&quot;</span>
-<span class="nf">    </span><span class="k">И </span><span class="nf">я устанавливаю опцию Vanessa-Automation &quot;</span><span class="s">ИмяНастройки</span><span class="nf">&quot; &quot;</span><span class="s">ЗначениеНастройки</span><span class="nf">&quot;</span>
+<span class="nf">    </span><span class="k">И </span><span class="nf">я устанавливаю настройку Vanessa-Automation &quot;</span><span class="s">ИмяНастройки</span><span class="nf">&quot; &quot;</span><span class="s">ЗначениеНастройки</span><span class="nf">&quot;</span>
 </code></pre></div>
 
 <ul>
@@ -2850,6 +2852,7 @@
 <li>Отображение кнопок перехода к различиям при сравнении текущих настроек VA с файлом. #1226</li>
 <li>Параметр InstallVanessaExtOnFailOfQuietInstall. Возможность подключить внешнюю копоненту, если тихая установка не сработала (например, потому что не была получена лицензия), но подключить компоненту можно, т.к. на этом ПК она уэе раньше устанавливалась. #1230</li>
 <li>Автоматическое очищение каталога Allure при каждом запуске сценариев локально. #1234</li>
+<li>При поиске файлов по части строки в результат поиска также включается поиск по имени файла. #1247</li>
 </ul>
 <h3 id="_5">Исправление ошибок<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <ul>
