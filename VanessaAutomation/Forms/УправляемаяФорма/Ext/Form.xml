@@ -11543,6 +11543,23 @@
 														<Value xsi:type="xs:string">Web</Value>
 													</xr:Value>
 												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Мобильное приложение</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Mobile app</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">МобильноеПриложение</Value>
+													</xr:Value>
+												</xr:Item>
 											</ChoiceList>
 											<ContextMenu name="ДанныеКлиентовТестированияТипКлиентаКонтекстноеМеню" id="1567"/>
 											<ExtendedTooltip name="ДанныеКлиентовТестированияТипКлиентаРасширеннаяПодсказка" id="1568"/>
@@ -13752,8 +13769,47 @@ When working with Vanessa Automation Single it is allowed to leave the field bla
 																</Title>
 															</ExtendedTooltip>
 														</InputField>
+														<CheckBoxField name="ПовторноЗапускатьСеансКлиентаТестированияПриПодключенииЕслиНеНайденЕгоПроцесс" id="3037">
+															<DataPath>Объект.ПовторноЗапускатьСеансКлиентаТестированияПриПодключенииЕслиНеНайденЕгоПроцесс</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ПовторноЗапускатьСеансКлиентаТестированияПриПодключенииЕслиНеНайденЕгоПроцессКонтекстноеМеню" id="3038"/>
+															<ExtendedTooltip name="ПовторноЗапускатьСеансКлиентаТестированияПриПодключенииЕслиНеНайденЕгоПроцессРасширеннаяПодсказка" id="3039">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Enables restarting the test client process if the previous run did not work (for example, if no license was obtained). For thick and thin clien only.</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Включает повторный запуск процесса клиента тестирования, если предыдущий запуск не сработал (например, если не была получена лицензия). Только для толстого и тонкого клиена.</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+															<Events>
+																<Event name="OnChange">ПовторноЗапускатьСеансКлиентаТестированияПриПодключенииЕслиНеНайденЕгоПроцессПриИзменении</Event>
+															</Events>
+														</CheckBoxField>
 													</ChildItems>
 												</UsualGroup>
+												<InputField name="ИнтервалЗапускаПроцессаКлиентаТестирования" id="3040">
+													<DataPath>Объект.ИнтервалЗапускаПроцессаКлиентаТестирования</DataPath>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<ContextMenu name="ИнтервалЗапускаПроцессаКлиентаТестированияКонтекстноеМеню" id="3041"/>
+													<ExtendedTooltip name="ИнтервалЗапускаПроцессаКлиентаТестированияРасширеннаяПодсказка" id="3042">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Specifies the interval at which an attempt will be made to start a testing client session.</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Задаёт интервал, с которым будет производиться попытка запустить сеанс клиента тестирования.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+												</InputField>
 												<UsualGroup name="ГруппаОтладкаКлиентаТестирования" id="859">
 													<Title>
 														<v8:item>
@@ -17730,7 +17786,7 @@ https://habr.com/ru/company/sberbank/blog/359302/</v8:content>
 											</Title>
 											<ExtendedTooltip name="СтраницаАвтоИнструкцииРасширеннаяПодсказка" id="1400"/>
 											<ChildItems>
-												<UsualGroup name="ГруппаАвтоинструкцииVanessaExt" id="2337">
+												<UsualGroup name="ГруппаАвтоинструкцииVanessaExtChrome" id="2337">
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
@@ -17738,7 +17794,7 @@ https://habr.com/ru/company/sberbank/blog/359302/</v8:content>
 														</v8:item>
 														<v8:item>
 															<v8:lang>en</v8:lang>
-															<v8:content>VanessaExt add-in</v8:content>
+															<v8:content>VanessaExt add-in + Chrome</v8:content>
 														</v8:item>
 													</Title>
 													<ToolTip>
@@ -17750,7 +17806,7 @@ https://habr.com/ru/company/sberbank/blog/359302/</v8:content>
 													<Group>Vertical</Group>
 													<Behavior>Collapsible</Behavior>
 													<ControlRepresentation>Picture</ControlRepresentation>
-													<ExtendedTooltip name="ГруппаАвтоинструкцииVanessaExtРасширеннаяПодсказка" id="2338"/>
+													<ExtendedTooltip name="ГруппаАвтоинструкцииVanessaExtChromeРасширеннаяПодсказка" id="2338"/>
 													<ChildItems>
 														<CheckBoxField name="ИспользоватьКомпонентуVanessaExt2" id="2612">
 															<DataPath>Объект.ИспользоватьКомпонентуVanessaExt</DataPath>
@@ -18313,353 +18369,41 @@ https://habr.com/ru/company/sberbank/blog/359302/</v8:content>
 														</UsualGroup>
 													</ChildItems>
 												</UsualGroup>
-												<UsualGroup name="ГруппаSikuliXServer" id="2130">
+												<UsualGroup name="ГруппаАвтоинструкцииVanessaExtUIAutomation" id="3043">
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>SikuliX server</v8:content>
+															<v8:content>Компонента VanessaExt + UI Automation</v8:content>
 														</v8:item>
 														<v8:item>
 															<v8:lang>en</v8:lang>
-															<v8:content>SikuliX server</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>ro</v8:lang>
-															<v8:content>SikuliX server</v8:content>
+															<v8:content>VanessaExt add-in + UI Automation</v8:content>
 														</v8:item>
 													</Title>
-													<ToolTip>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Подсказка</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>en</v8:lang>
-															<v8:content>Tooltip</v8:content>
-														</v8:item>
-													</ToolTip>
 													<Group>Vertical</Group>
 													<Behavior>Collapsible</Behavior>
-													<Collapsed>true</Collapsed>
 													<ControlRepresentation>Picture</ControlRepresentation>
-													<ExtendedTooltip name="ГруппаSikuliXServerРасширеннаяПодсказка" id="2131"/>
+													<ExtendedTooltip name="ГруппаАвтоинструкцииVanessaExtUIAutomationРасширеннаяПодсказка" id="3044"/>
 													<ChildItems>
-														<CheckBoxField name="ИспользоватьSikuliXСервер" id="2132">
-															<DataPath>Объект.ИспользоватьSikuliXСервер</DataPath>
-															<TitleLocation>Right</TitleLocation>
-															<ToolTip>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Использовать SikuliX Сервер</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>en</v8:lang>
-																	<v8:content>Use SikuliX Server</v8:content>
-																</v8:item>
-															</ToolTip>
-															<ToolTipRepresentation>Button</ToolTipRepresentation>
-															<CheckBoxType>Auto</CheckBoxType>
-															<ContextMenu name="ИспользоватьSikuliXСерверКонтекстноеМеню" id="2133"/>
-															<ExtendedTooltip name="ИспользоватьSikuliXСерверРасширеннаяПодсказка" id="2134">
-																<Title formatted="true">
-																	<v8:item>
-																		<v8:lang>ru</v8:lang>
-																		<v8:content>SikuliX это Java приложение, которое позволяет управлять перемещением и нажатиями мыши на экране, а также эмулировать нажатие кнопок клавиатуры.
-
-SikuliX Server - это специальная программная оптимизация работы с SikuliX. Если опция включена VA собирает один большой скрипт из множества скриптов SikuliX, который можно запустить один раз и быстро выполнять необходимые команды, которые раньше приходилось запускать по одной.  Это позволяет существенно сэкономить время на выполнение одного скрипта SikuliX, т.к. не тратится время на запуск SikuliX и его выгрузку из памяти.
-
-Описание установки и настройки SikuliX и SikuliX Server приведено в разделе справки 20.1
-
-&lt;link #&gt;Открыть справку&lt;/&gt;</v8:content>
-																	</v8:item>
-																</Title>
-																<Events>
-																	<Event name="URLProcessing">ИспользоватьSikuliXСерверРасширеннаяПодсказкаОбработкаНавигационнойСсылки</Event>
-																</Events>
-															</ExtendedTooltip>
-															<Events>
-																<Event name="OnChange">ИспользоватьSikuliXСерверПриИзменении</Event>
-															</Events>
-														</CheckBoxField>
-														<CheckBoxField name="ЗаписьВидеоЭмулироватьДвиженияМышкиSikuliX" id="2193">
-															<DataPath>Объект.ЗаписьВидеоЭмулироватьДвиженияМышкиSikuliX</DataPath>
+														<CheckBoxField name="ИспользоватьUIAutomation" id="3045">
+															<DataPath>Объект.ИспользоватьUIAutomation</DataPath>
 															<TitleLocation>Right</TitleLocation>
 															<ToolTipRepresentation>Button</ToolTipRepresentation>
 															<CheckBoxType>Auto</CheckBoxType>
-															<ContextMenu name="ЗаписьВидеоЭмулироватьДвиженияМышкиSikuliXКонтекстноеМеню" id="2194"/>
-															<ExtendedTooltip name="ЗаписьВидеоЭмулироватьДвиженияМышкиSikuliXРасширеннаяПодсказка" id="2195">
+															<ContextMenu name="ИспользоватьUIAutomationКонтекстноеМеню" id="3046"/>
+															<ExtendedTooltip name="ИспользоватьUIAutomationРасширеннаяПодсказка" id="3047">
 																<Title formatted="false">
 																	<v8:item>
-																		<v8:lang>ru</v8:lang>
-																		<v8:content>Если флаг установлен, то при выполнении шагов будет выполняться попытка найти элмент формы или элемент управления на экране и переместить курсор мышки к нему.
-Для поиска картинки и передвижения мышки используется SikuliX. Картинка для поиска будет сгенерирована по тексту, полученному из элемента формы.
-Чтобы отключить движение мышки у конкретного шага надо использовать директиву #[DoNotMoveMouse].</v8:content>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Enables the use of the UI Automation mechanism on Windows.</v8:content>
 																	</v8:item>
 																	<v8:item>
-																		<v8:lang>en</v8:lang>
-																		<v8:content>If the checkbox is on, then the search of form element or control will be performed on steps execution. Mouse pointer will be moved to the detected element. 
-SikuliX is used for picture search and mouse movement. Picture will be generated by the text from the form element.
-To disable mouse movement at a specific step, you should use the #[DoNotMoveMouse] directive.</v8:content>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Включает использование механизма UI Automation в Windows.</v8:content>
 																	</v8:item>
 																</Title>
 															</ExtendedTooltip>
-															<Events>
-																<Event name="OnChange">ЗаписьВидеоЭмулироватьДвиженияМышкиSikuliXПриИзменении</Event>
-															</Events>
 														</CheckBoxField>
-														<UsualGroup name="ГруппаSikuliXServerПодробно" id="2135">
-															<Title>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Sikuli x server подробно</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>en</v8:lang>
-																	<v8:content>Sikuli x server details</v8:content>
-																</v8:item>
-															</Title>
-															<ToolTip>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Группа sikuli x server подробно</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>en</v8:lang>
-																	<v8:content>Group sikuli x server details</v8:content>
-																</v8:item>
-															</ToolTip>
-															<Group>Vertical</Group>
-															<Representation>None</Representation>
-															<ShowTitle>false</ShowTitle>
-															<ThroughAlign>Use</ThroughAlign>
-															<ExtendedTooltip name="ГруппаSikuliXServerПодробноРасширеннаяПодсказка" id="2136"/>
-															<ChildItems>
-																<Button name="УстановитьСервисныеУтилиты" id="2146">
-																	<Type>UsualButton</Type>
-																	<CommandName>Form.Command.УстановитьСервисныеУтилиты</CommandName>
-																	<Title>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Установить сервисные утилиты</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>en</v8:lang>
-																			<v8:content>Install service programs</v8:content>
-																		</v8:item>
-																	</Title>
-																	<ToolTipRepresentation>Button</ToolTipRepresentation>
-																	<ExtendedTooltip name="УстановитьСервисныеУтилитыРасширеннаяПодсказка" id="2147"/>
-																</Button>
-																<UsualGroup name="ПутьККаталогуСкриптовSikuliX" id="2137">
-																	<Title>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Путь к каталогу скриптов sikuli x</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>en</v8:lang>
-																			<v8:content>SikuliX scripts directory path</v8:content>
-																		</v8:item>
-																	</Title>
-																	<ToolTip>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Путь к каталогу скриптов sikuli X</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>en</v8:lang>
-																			<v8:content>SikuliX scripts directory path</v8:content>
-																		</v8:item>
-																	</ToolTip>
-																	<Group>Horizontal</Group>
-																	<Representation>None</Representation>
-																	<ShowTitle>false</ShowTitle>
-																	<ExtendedTooltip name="ПутьККаталогуСкриптовSikuliXРасширеннаяПодсказка" id="2138"/>
-																	<ChildItems>
-																		<InputField name="КаталогиСкриптовSikuliX" id="2139">
-																			<DataPath>Объект.КаталогиСкриптовSikuliX</DataPath>
-																			<ToolTip>
-																				<v8:item>
-																					<v8:lang>ru</v8:lang>
-																					<v8:content>Каталог в котором расположены скрипты SikuliX</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>en</v8:lang>
-																					<v8:content>SikuliX scripts directory</v8:content>
-																				</v8:item>
-																			</ToolTip>
-																			<ToolTipRepresentation>Button</ToolTipRepresentation>
-																			<ChoiceButton>true</ChoiceButton>
-																			<ContextMenu name="КаталогиСкриптовSikuliXКонтекстноеМеню" id="2140"/>
-																			<ExtendedTooltip name="КаталогиСкриптовSikuliXРасширеннаяПодсказка" id="2141">
-																				<Title formatted="false">
-																					<v8:item>
-																						<v8:lang>en</v8:lang>
-																						<v8:content>Script directory. Multiple directories can be used, separated by ";".</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>ru</v8:lang>
-																						<v8:content>Каталог скриптов. Можно указывать несколько каталогов, разделенных через ";".</v8:content>
-																					</v8:item>
-																				</Title>
-																			</ExtendedTooltip>
-																			<Events>
-																				<Event name="StartChoice">КаталогиСкриптовSikuliXНачалоВыбора</Event>
-																			</Events>
-																		</InputField>
-																		<Button name="КаталогиСкриптовSikuliXПоУмолчанию" id="2142">
-																			<Type>UsualButton</Type>
-																			<Representation>Picture</Representation>
-																			<Width>4</Width>
-																			<CommandName>Form.Command.КаталогиСкриптовSikuliXПоУмолчанию</CommandName>
-																			<Title>
-																				<v8:item>
-																					<v8:lang>ru</v8:lang>
-																					<v8:content>Каталог по умолчанию</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>en</v8:lang>
-																					<v8:content>Default directory</v8:content>
-																				</v8:item>
-																			</Title>
-																			<ExtendedTooltip name="КаталогиСкриптовSikuliXПоУмолчаниюРасширеннаяПодсказка" id="2143"/>
-																		</Button>
-																		<Button name="СброситьПодключениеSikuliXСервера" id="2144">
-																			<Type>UsualButton</Type>
-																			<CommandName>Form.Command.СброситьПодключениеSikuliXСервера</CommandName>
-																			<ExtendedTooltip name="СброситьПодключениеSikuliXСервераРасширеннаяПодсказка" id="2145"/>
-																		</Button>
-																	</ChildItems>
-																</UsualGroup>
-															</ChildItems>
-														</UsualGroup>
-														<InputField name="КаталогДляГенерацииКартинок" id="2190">
-															<DataPath>Объект.КаталогДляГенерацииКартинок</DataPath>
-															<ToolTipRepresentation>Button</ToolTipRepresentation>
-															<ChoiceButton>true</ChoiceButton>
-															<ContextMenu name="КаталогДляГенерацииКартинокКонтекстноеМеню" id="2191"/>
-															<ExtendedTooltip name="КаталогДляГенерацииКартинокРасширеннаяПодсказка" id="2192">
-																<Title formatted="false">
-																	<v8:item>
-																		<v8:lang>ru</v8:lang>
-																		<v8:content>Каталог, в котором будут программно создаваться картинки для поиска их на экране.</v8:content>
-																	</v8:item>
-																	<v8:item>
-																		<v8:lang>en</v8:lang>
-																		<v8:content>The directory in which pictures will be programmatically created to search for them on the screen.</v8:content>
-																	</v8:item>
-																</Title>
-															</ExtendedTooltip>
-															<Events>
-																<Event name="StartChoice">КаталогДляГенерацииКартинокНачалоВыбора</Event>
-															</Events>
-														</InputField>
-														<UsualGroup name="ГруппаПрофилиЦветов" id="2158">
-															<Title>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Группа профили цветов</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>en</v8:lang>
-																	<v8:content>Group color profiles</v8:content>
-																</v8:item>
-															</Title>
-															<Group>Vertical</Group>
-															<Representation>None</Representation>
-															<ShowTitle>false</ShowTitle>
-															<ExtendedTooltip name="ГруппаПрофилиЦветовРасширеннаяПодсказка" id="2159"/>
-															<ChildItems>
-																<Table name="ПрофилиПоискаКартинокСТекстом" id="2160">
-																	<Representation>List</Representation>
-																	<Height>4</Height>
-																	<AutoInsertNewRow>true</AutoInsertNewRow>
-																	<VerticalStretch>false</VerticalStretch>
-																	<EnableStartDrag>true</EnableStartDrag>
-																	<EnableDrag>true</EnableDrag>
-																	<FileDragMode>AsFile</FileDragMode>
-																	<DataPath>ПрофилиПоискаКартинокСТекстом</DataPath>
-																	<Title>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Профили</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>en</v8:lang>
-																			<v8:content>Profiles</v8:content>
-																		</v8:item>
-																	</Title>
-																	<RowFilter xsi:nil="true"/>
-																	<ContextMenu name="ПрофилиПоискаКартинокСТекстомКонтекстноеМеню" id="2161"/>
-																	<AutoCommandBar name="ПрофилиПоискаКартинокСТекстомКоманднаяПанель" id="2162">
-																		<ChildItems>
-																			<Button name="ПрофилиЦветовЗаполнитьТиповыеПрофилиЦветов" id="2185">
-																				<Type>CommandBarButton</Type>
-																				<CommandName>Form.Command.ЗаполнитьТиповыеПрофилиПоиска</CommandName>
-																				<ExtendedTooltip name="ПрофилиЦветовЗаполнитьТиповыеПрофилиЦветовРасширеннаяПодсказка" id="2186"/>
-																			</Button>
-																		</ChildItems>
-																	</AutoCommandBar>
-																	<ExtendedTooltip name="ПрофилиПоискаКартинокСТекстомРасширеннаяПодсказка" id="2163"/>
-																	<SearchStringAddition name="ПрофилиПоискаКартинокСТекстомСтрокаПоиска" id="2164">
-																		<AdditionSource>
-																			<Item>ПрофилиПоискаКартинокСТекстом</Item>
-																			<Type>SearchStringRepresentation</Type>
-																		</AdditionSource>
-																		<ContextMenu name="ПрофилиПоискаКартинокСТекстомСтрокаПоискаКонтекстноеМеню" id="2165"/>
-																		<ExtendedTooltip name="ПрофилиПоискаКартинокСТекстомСтрокаПоискаРасширеннаяПодсказка" id="2166"/>
-																	</SearchStringAddition>
-																	<ViewStatusAddition name="ПрофилиПоискаКартинокСТекстомСостояниеПросмотра" id="2167">
-																		<AdditionSource>
-																			<Item>ПрофилиПоискаКартинокСТекстом</Item>
-																			<Type>ViewStatusRepresentation</Type>
-																		</AdditionSource>
-																		<ContextMenu name="ПрофилиПоискаКартинокСТекстомСостояниеПросмотраКонтекстноеМеню" id="2168"/>
-																		<ExtendedTooltip name="ПрофилиПоискаКартинокСТекстомСостояниеПросмотраРасширеннаяПодсказка" id="2169"/>
-																	</ViewStatusAddition>
-																	<SearchControlAddition name="ПрофилиПоискаКартинокСТекстомУправлениеПоиском" id="2170">
-																		<AdditionSource>
-																			<Item>ПрофилиПоискаКартинокСТекстом</Item>
-																			<Type>SearchControl</Type>
-																		</AdditionSource>
-																		<ContextMenu name="ПрофилиПоискаКартинокСТекстомУправлениеПоискомКонтекстноеМеню" id="2171"/>
-																		<ExtendedTooltip name="ПрофилиПоискаКартинокСТекстомУправлениеПоискомРасширеннаяПодсказка" id="2172"/>
-																	</SearchControlAddition>
-																	<ChildItems>
-																		<InputField name="ПрофилиЦветовИмя" id="2187">
-																			<DataPath>ПрофилиПоискаКартинокСТекстом.Имя</DataPath>
-																			<EditMode>EnterOnInput</EditMode>
-																			<ContextMenu name="ПрофилиЦветовИмяКонтекстноеМеню" id="2188"/>
-																			<ExtendedTooltip name="ПрофилиЦветовИмяРасширеннаяПодсказка" id="2189"/>
-																		</InputField>
-																		<InputField name="ПрофилиЦветовШрифт" id="2173">
-																			<DataPath>ПрофилиПоискаКартинокСТекстом.Шрифт</DataPath>
-																			<EditMode>EnterOnInput</EditMode>
-																			<ContextMenu name="ПрофилиЦветовШрифтКонтекстноеМеню" id="2174"/>
-																			<ExtendedTooltip name="ПрофилиЦветовШрифтРасширеннаяПодсказка" id="2175"/>
-																		</InputField>
-																		<InputField name="ПрофилиЦветовЦветФона" id="2176">
-																			<DataPath>ПрофилиПоискаКартинокСТекстом.ЦветФона</DataPath>
-																			<EditMode>EnterOnInput</EditMode>
-																			<ContextMenu name="ПрофилиЦветовЦветФонаКонтекстноеМеню" id="2177"/>
-																			<ExtendedTooltip name="ПрофилиЦветовЦветФонаРасширеннаяПодсказка" id="2178"/>
-																		</InputField>
-																		<InputField name="ПрофилиЦветовЦветШрифта" id="2179">
-																			<DataPath>ПрофилиПоискаКартинокСТекстом.ЦветШрифта</DataPath>
-																			<EditMode>EnterOnInput</EditMode>
-																			<ContextMenu name="ПрофилиЦветовЦветШрифтаКонтекстноеМеню" id="2180"/>
-																			<ExtendedTooltip name="ПрофилиЦветовЦветШрифтаРасширеннаяПодсказка" id="2181"/>
-																		</InputField>
-																		<InputField name="ПрофилиЦветовРазмер" id="2182">
-																			<DataPath>ПрофилиПоискаКартинокСТекстом.Размер</DataPath>
-																			<EditMode>EnterOnInput</EditMode>
-																			<ContextMenu name="ПрофилиЦветовРазмерКонтекстноеМеню" id="2183"/>
-																			<ExtendedTooltip name="ПрофилиЦветовРазмерРасширеннаяПодсказка" id="2184"/>
-																		</InputField>
-																	</ChildItems>
-																</Table>
-															</ChildItems>
-														</UsualGroup>
 													</ChildItems>
 												</UsualGroup>
 												<UsualGroup name="HTMLИMarkdown" id="658">
@@ -23975,6 +23719,351 @@ SikuliX emulates mouse clicks.</v8:content>
 																		</Page>
 																	</ChildItems>
 																</Pages>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаSikuliXServer" id="2130">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>SikuliX server (устаревшее)</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>SikuliX server (deprecated)</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Подсказка</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Tooltip</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Vertical</Group>
+													<Behavior>Collapsible</Behavior>
+													<Collapsed>true</Collapsed>
+													<ControlRepresentation>Picture</ControlRepresentation>
+													<ExtendedTooltip name="ГруппаSikuliXServerРасширеннаяПодсказка" id="2131"/>
+													<ChildItems>
+														<CheckBoxField name="ИспользоватьSikuliXСервер" id="2132">
+															<DataPath>Объект.ИспользоватьSikuliXСервер</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Использовать SikuliX Сервер</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Use SikuliX Server</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ИспользоватьSikuliXСерверКонтекстноеМеню" id="2133"/>
+															<ExtendedTooltip name="ИспользоватьSikuliXСерверРасширеннаяПодсказка" id="2134">
+																<Title formatted="true">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>SikuliX это Java приложение, которое позволяет управлять перемещением и нажатиями мыши на экране, а также эмулировать нажатие кнопок клавиатуры.
+
+SikuliX Server - это специальная программная оптимизация работы с SikuliX. Если опция включена VA собирает один большой скрипт из множества скриптов SikuliX, который можно запустить один раз и быстро выполнять необходимые команды, которые раньше приходилось запускать по одной.  Это позволяет существенно сэкономить время на выполнение одного скрипта SikuliX, т.к. не тратится время на запуск SikuliX и его выгрузку из памяти.
+
+Описание установки и настройки SikuliX и SikuliX Server приведено в разделе справки 20.1
+
+&lt;link #&gt;Открыть справку&lt;/&gt;</v8:content>
+																	</v8:item>
+																</Title>
+																<Events>
+																	<Event name="URLProcessing">ИспользоватьSikuliXСерверРасширеннаяПодсказкаОбработкаНавигационнойСсылки</Event>
+																</Events>
+															</ExtendedTooltip>
+															<Events>
+																<Event name="OnChange">ИспользоватьSikuliXСерверПриИзменении</Event>
+															</Events>
+														</CheckBoxField>
+														<CheckBoxField name="ЗаписьВидеоЭмулироватьДвиженияМышкиSikuliX" id="2193">
+															<DataPath>Объект.ЗаписьВидеоЭмулироватьДвиженияМышкиSikuliX</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ЗаписьВидеоЭмулироватьДвиженияМышкиSikuliXКонтекстноеМеню" id="2194"/>
+															<ExtendedTooltip name="ЗаписьВидеоЭмулироватьДвиженияМышкиSikuliXРасширеннаяПодсказка" id="2195">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Если флаг установлен, то при выполнении шагов будет выполняться попытка найти элмент формы или элемент управления на экране и переместить курсор мышки к нему.
+Для поиска картинки и передвижения мышки используется SikuliX. Картинка для поиска будет сгенерирована по тексту, полученному из элемента формы.
+Чтобы отключить движение мышки у конкретного шага надо использовать директиву #[DoNotMoveMouse].</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>If the checkbox is on, then the search of form element or control will be performed on steps execution. Mouse pointer will be moved to the detected element. 
+SikuliX is used for picture search and mouse movement. Picture will be generated by the text from the form element.
+To disable mouse movement at a specific step, you should use the #[DoNotMoveMouse] directive.</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+															<Events>
+																<Event name="OnChange">ЗаписьВидеоЭмулироватьДвиженияМышкиSikuliXПриИзменении</Event>
+															</Events>
+														</CheckBoxField>
+														<UsualGroup name="ГруппаSikuliXServerПодробно" id="2135">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Sikuli x server подробно</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Sikuli x server details</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа sikuli x server подробно</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Group sikuli x server details</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Group>Vertical</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ThroughAlign>Use</ThroughAlign>
+															<ExtendedTooltip name="ГруппаSikuliXServerПодробноРасширеннаяПодсказка" id="2136"/>
+															<ChildItems>
+																<Button name="УстановитьСервисныеУтилиты" id="2146">
+																	<Type>UsualButton</Type>
+																	<CommandName>Form.Command.УстановитьСервисныеУтилиты</CommandName>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Установить сервисные утилиты</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Install service programs</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ToolTipRepresentation>Button</ToolTipRepresentation>
+																	<ExtendedTooltip name="УстановитьСервисныеУтилитыРасширеннаяПодсказка" id="2147"/>
+																</Button>
+																<UsualGroup name="ПутьККаталогуСкриптовSikuliX" id="2137">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Путь к каталогу скриптов sikuli x</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>SikuliX scripts directory path</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ToolTip>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Путь к каталогу скриптов sikuli X</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>SikuliX scripts directory path</v8:content>
+																		</v8:item>
+																	</ToolTip>
+																	<Group>Horizontal</Group>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ПутьККаталогуСкриптовSikuliXРасширеннаяПодсказка" id="2138"/>
+																	<ChildItems>
+																		<InputField name="КаталогиСкриптовSikuliX" id="2139">
+																			<DataPath>Объект.КаталогиСкриптовSikuliX</DataPath>
+																			<ToolTip>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Каталог в котором расположены скрипты SikuliX</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>SikuliX scripts directory</v8:content>
+																				</v8:item>
+																			</ToolTip>
+																			<ToolTipRepresentation>Button</ToolTipRepresentation>
+																			<ChoiceButton>true</ChoiceButton>
+																			<ContextMenu name="КаталогиСкриптовSikuliXКонтекстноеМеню" id="2140"/>
+																			<ExtendedTooltip name="КаталогиСкриптовSikuliXРасширеннаяПодсказка" id="2141">
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>Script directory. Multiple directories can be used, separated by ";".</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Каталог скриптов. Можно указывать несколько каталогов, разделенных через ";".</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
+																			<Events>
+																				<Event name="StartChoice">КаталогиСкриптовSikuliXНачалоВыбора</Event>
+																			</Events>
+																		</InputField>
+																		<Button name="КаталогиСкриптовSikuliXПоУмолчанию" id="2142">
+																			<Type>UsualButton</Type>
+																			<Representation>Picture</Representation>
+																			<Width>4</Width>
+																			<CommandName>Form.Command.КаталогиСкриптовSikuliXПоУмолчанию</CommandName>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Каталог по умолчанию</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>Default directory</v8:content>
+																				</v8:item>
+																			</Title>
+																			<ExtendedTooltip name="КаталогиСкриптовSikuliXПоУмолчаниюРасширеннаяПодсказка" id="2143"/>
+																		</Button>
+																		<Button name="СброситьПодключениеSikuliXСервера" id="2144">
+																			<Type>UsualButton</Type>
+																			<CommandName>Form.Command.СброситьПодключениеSikuliXСервера</CommandName>
+																			<ExtendedTooltip name="СброситьПодключениеSikuliXСервераРасширеннаяПодсказка" id="2145"/>
+																		</Button>
+																	</ChildItems>
+																</UsualGroup>
+															</ChildItems>
+														</UsualGroup>
+														<InputField name="КаталогДляГенерацииКартинок" id="2190">
+															<DataPath>Объект.КаталогДляГенерацииКартинок</DataPath>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<ChoiceButton>true</ChoiceButton>
+															<ContextMenu name="КаталогДляГенерацииКартинокКонтекстноеМеню" id="2191"/>
+															<ExtendedTooltip name="КаталогДляГенерацииКартинокРасширеннаяПодсказка" id="2192">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Каталог, в котором будут программно создаваться картинки для поиска их на экране.</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>The directory in which pictures will be programmatically created to search for them on the screen.</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+															<Events>
+																<Event name="StartChoice">КаталогДляГенерацииКартинокНачалоВыбора</Event>
+															</Events>
+														</InputField>
+														<UsualGroup name="ГруппаПрофилиЦветов" id="2158">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа профили цветов</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Group color profiles</v8:content>
+																</v8:item>
+															</Title>
+															<Group>Vertical</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаПрофилиЦветовРасширеннаяПодсказка" id="2159"/>
+															<ChildItems>
+																<Table name="ПрофилиПоискаКартинокСТекстом" id="2160">
+																	<Representation>List</Representation>
+																	<Height>4</Height>
+																	<AutoInsertNewRow>true</AutoInsertNewRow>
+																	<VerticalStretch>false</VerticalStretch>
+																	<EnableStartDrag>true</EnableStartDrag>
+																	<EnableDrag>true</EnableDrag>
+																	<FileDragMode>AsFile</FileDragMode>
+																	<DataPath>ПрофилиПоискаКартинокСТекстом</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Профили</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Profiles</v8:content>
+																		</v8:item>
+																	</Title>
+																	<RowFilter xsi:nil="true"/>
+																	<ContextMenu name="ПрофилиПоискаКартинокСТекстомКонтекстноеМеню" id="2161"/>
+																	<AutoCommandBar name="ПрофилиПоискаКартинокСТекстомКоманднаяПанель" id="2162">
+																		<ChildItems>
+																			<Button name="ПрофилиЦветовЗаполнитьТиповыеПрофилиЦветов" id="2185">
+																				<Type>CommandBarButton</Type>
+																				<CommandName>Form.Command.ЗаполнитьТиповыеПрофилиПоиска</CommandName>
+																				<ExtendedTooltip name="ПрофилиЦветовЗаполнитьТиповыеПрофилиЦветовРасширеннаяПодсказка" id="2186"/>
+																			</Button>
+																		</ChildItems>
+																	</AutoCommandBar>
+																	<ExtendedTooltip name="ПрофилиПоискаКартинокСТекстомРасширеннаяПодсказка" id="2163"/>
+																	<SearchStringAddition name="ПрофилиПоискаКартинокСТекстомСтрокаПоиска" id="2164">
+																		<AdditionSource>
+																			<Item>ПрофилиПоискаКартинокСТекстом</Item>
+																			<Type>SearchStringRepresentation</Type>
+																		</AdditionSource>
+																		<ContextMenu name="ПрофилиПоискаКартинокСТекстомСтрокаПоискаКонтекстноеМеню" id="2165"/>
+																		<ExtendedTooltip name="ПрофилиПоискаКартинокСТекстомСтрокаПоискаРасширеннаяПодсказка" id="2166"/>
+																	</SearchStringAddition>
+																	<ViewStatusAddition name="ПрофилиПоискаКартинокСТекстомСостояниеПросмотра" id="2167">
+																		<AdditionSource>
+																			<Item>ПрофилиПоискаКартинокСТекстом</Item>
+																			<Type>ViewStatusRepresentation</Type>
+																		</AdditionSource>
+																		<ContextMenu name="ПрофилиПоискаКартинокСТекстомСостояниеПросмотраКонтекстноеМеню" id="2168"/>
+																		<ExtendedTooltip name="ПрофилиПоискаКартинокСТекстомСостояниеПросмотраРасширеннаяПодсказка" id="2169"/>
+																	</ViewStatusAddition>
+																	<SearchControlAddition name="ПрофилиПоискаКартинокСТекстомУправлениеПоиском" id="2170">
+																		<AdditionSource>
+																			<Item>ПрофилиПоискаКартинокСТекстом</Item>
+																			<Type>SearchControl</Type>
+																		</AdditionSource>
+																		<ContextMenu name="ПрофилиПоискаКартинокСТекстомУправлениеПоискомКонтекстноеМеню" id="2171"/>
+																		<ExtendedTooltip name="ПрофилиПоискаКартинокСТекстомУправлениеПоискомРасширеннаяПодсказка" id="2172"/>
+																	</SearchControlAddition>
+																	<ChildItems>
+																		<InputField name="ПрофилиЦветовИмя" id="2187">
+																			<DataPath>ПрофилиПоискаКартинокСТекстом.Имя</DataPath>
+																			<EditMode>EnterOnInput</EditMode>
+																			<ContextMenu name="ПрофилиЦветовИмяКонтекстноеМеню" id="2188"/>
+																			<ExtendedTooltip name="ПрофилиЦветовИмяРасширеннаяПодсказка" id="2189"/>
+																		</InputField>
+																		<InputField name="ПрофилиЦветовШрифт" id="2173">
+																			<DataPath>ПрофилиПоискаКартинокСТекстом.Шрифт</DataPath>
+																			<EditMode>EnterOnInput</EditMode>
+																			<ContextMenu name="ПрофилиЦветовШрифтКонтекстноеМеню" id="2174"/>
+																			<ExtendedTooltip name="ПрофилиЦветовШрифтРасширеннаяПодсказка" id="2175"/>
+																		</InputField>
+																		<InputField name="ПрофилиЦветовЦветФона" id="2176">
+																			<DataPath>ПрофилиПоискаКартинокСТекстом.ЦветФона</DataPath>
+																			<EditMode>EnterOnInput</EditMode>
+																			<ContextMenu name="ПрофилиЦветовЦветФонаКонтекстноеМеню" id="2177"/>
+																			<ExtendedTooltip name="ПрофилиЦветовЦветФонаРасширеннаяПодсказка" id="2178"/>
+																		</InputField>
+																		<InputField name="ПрофилиЦветовЦветШрифта" id="2179">
+																			<DataPath>ПрофилиПоискаКартинокСТекстом.ЦветШрифта</DataPath>
+																			<EditMode>EnterOnInput</EditMode>
+																			<ContextMenu name="ПрофилиЦветовЦветШрифтаКонтекстноеМеню" id="2180"/>
+																			<ExtendedTooltip name="ПрофилиЦветовЦветШрифтаРасширеннаяПодсказка" id="2181"/>
+																		</InputField>
+																		<InputField name="ПрофилиЦветовРазмер" id="2182">
+																			<DataPath>ПрофилиПоискаКартинокСТекстом.Размер</DataPath>
+																			<EditMode>EnterOnInput</EditMode>
+																			<ContextMenu name="ПрофилиЦветовРазмерКонтекстноеМеню" id="2183"/>
+																			<ExtendedTooltip name="ПрофилиЦветовРазмерРасширеннаяПодсказка" id="2184"/>
+																		</InputField>
+																	</ChildItems>
+																</Table>
 															</ChildItems>
 														</UsualGroup>
 													</ChildItems>
