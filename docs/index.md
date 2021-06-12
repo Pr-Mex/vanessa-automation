@@ -21,7 +21,7 @@
 * [Вебинар](http://infostart.ru/webinars/537546/). 
 
 ## Как стать контрибьютором (предложить свои доработки) проекта?
-* Об этом рассказано [тут](https://infostart.ru/public/1092009/)
+* Об этом рассказано [в этой статье](https://infostart.ru/public/1092009/)
 
 ## Статьи по Vanessa Automation
 
@@ -52,10 +52,13 @@
 
 ## Установка через OneScript
 Для обычной сборки
+
 * opm install vanessa-automation
 
 Для сборки VASingle.
+
 * opm install vanessa-automation-single
+
 VASingle отличается от обычной сборки тем, что поставляется в виде одного epf файла, который по функциональности полностью совпадает с основной сборкой.
 
 
