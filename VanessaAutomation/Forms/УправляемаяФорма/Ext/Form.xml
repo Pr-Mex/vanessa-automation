@@ -20844,6 +20844,19 @@ Recommended value is 0.1 or less.</v8:content>
 																														<Presentation>
 																															<v8:item>
 																																<v8:lang>ru</v8:lang>
+																																<v8:content>Сбер TTS</v8:content>
+																															</v8:item>
+																														</Presentation>
+																														<Value xsi:type="xs:decimal">3</Value>
+																													</xr:Value>
+																												</xr:Item>
+																												<xr:Item>
+																													<xr:Presentation/>
+																													<xr:CheckState>0</xr:CheckState>
+																													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																														<Presentation>
+																															<v8:item>
+																																<v8:lang>ru</v8:lang>
 																																<v8:content>Другой движок TTS</v8:content>
 																															</v8:item>
 																															<v8:item>
@@ -20851,7 +20864,7 @@ Recommended value is 0.1 or less.</v8:content>
 																																<v8:content>Another TTS engine</v8:content>
 																															</v8:item>
 																														</Presentation>
-																														<Value xsi:type="xs:decimal">3</Value>
+																														<Value xsi:type="xs:decimal">-1</Value>
 																													</xr:Value>
 																												</xr:Item>
 																											</ChoiceList>
@@ -22497,6 +22510,264 @@ The method should return the path to the mp3 file.</v8:content>
 																																</InputField>
 																															</ChildItems>
 																														</Table>
+																													</ChildItems>
+																												</Page>
+																												<Page name="ГруппаСберTTS" id="3048">
+																													<Title>
+																														<v8:item>
+																															<v8:lang>ru</v8:lang>
+																															<v8:content>Параметры Сбер</v8:content>
+																														</v8:item>
+																														<v8:item>
+																															<v8:lang>en</v8:lang>
+																															<v8:content>SBER parameters</v8:content>
+																														</v8:item>
+																													</Title>
+																													<ToolTip>
+																														<v8:item>
+																															<v8:lang>ru</v8:lang>
+																															<v8:content>Группа сбер TTS</v8:content>
+																														</v8:item>
+																													</ToolTip>
+																													<ExtendedTooltip name="ГруппаСберTTSРасширеннаяПодсказка" id="3049"/>
+																													<ChildItems>
+																														<InputField name="ЗаписьВидеоСберTTSClientID" id="3050">
+																															<DataPath>Объект.ЗаписьВидеоСберTTSClientID</DataPath>
+																															<ToolTipRepresentation>Button</ToolTipRepresentation>
+																															<ContextMenu name="ЗаписьВидеоСберTTSClientIDКонтекстноеМеню" id="3051"/>
+																															<ExtendedTooltip name="ЗаписьВидеоСберTTSClientIDРасширеннаяПодсказка" id="3052">
+																																<Title formatted="false">
+																																	<v8:item>
+																																		<v8:lang>ru</v8:lang>
+																																		<v8:content>Идентификатор клиента, полученный в Smartmarket studio</v8:content>
+																																	</v8:item>
+																																</Title>
+																															</ExtendedTooltip>
+																														</InputField>
+																														<InputField name="ЗаписьВидеоСберTTSClientSecret" id="3053">
+																															<DataPath>Объект.ЗаписьВидеоСберTTSClientSecret</DataPath>
+																															<ToolTipRepresentation>Button</ToolTipRepresentation>
+																															<PasswordMode>true</PasswordMode>
+																															<ContextMenu name="ЗаписьВидеоСберTTSClientSecretКонтекстноеМеню" id="3054"/>
+																															<ExtendedTooltip name="ЗаписьВидеоСберTTSClientSecretРасширеннаяПодсказка" id="3055">
+																																<Title formatted="false">
+																																	<v8:item>
+																																		<v8:lang>ru</v8:lang>
+																																		<v8:content>Вторая часть идентификации клиента в Smartmarket studio</v8:content>
+																																	</v8:item>
+																																</Title>
+																															</ExtendedTooltip>
+																														</InputField>
+																														<InputField name="ЗаписьВидеоСберTTSГолос" id="3059">
+																															<DataPath>Объект.ЗаписьВидеоСберTTSГолос</DataPath>
+																															<ToolTipRepresentation>Button</ToolTipRepresentation>
+																															<ListChoiceMode>true</ListChoiceMode>
+																															<ChoiceList>
+																																<xr:Item>
+																																	<xr:Presentation/>
+																																	<xr:CheckState>0</xr:CheckState>
+																																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																		<Presentation>
+																																			<v8:item>
+																																				<v8:lang>ru</v8:lang>
+																																				<v8:content>Наталья (24 кГц)</v8:content>
+																																			</v8:item>
+																																			<v8:item>
+																																				<v8:lang>en</v8:lang>
+																																				<v8:content>Natali (24 kHz)</v8:content>
+																																			</v8:item>
+																																		</Presentation>
+																																		<Value xsi:type="xs:string">Nec_24000</Value>
+																																	</xr:Value>
+																																</xr:Item>
+																																<xr:Item>
+																																	<xr:Presentation/>
+																																	<xr:CheckState>0</xr:CheckState>
+																																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																		<Presentation>
+																																			<v8:item>
+																																				<v8:lang>ru</v8:lang>
+																																				<v8:content>Наталья (8 кГц)</v8:content>
+																																			</v8:item>
+																																			<v8:item>
+																																				<v8:lang>en</v8:lang>
+																																				<v8:content>Natali (8 кГц)</v8:content>
+																																			</v8:item>
+																																		</Presentation>
+																																		<Value xsi:type="xs:string">Nec_8000</Value>
+																																	</xr:Value>
+																																</xr:Item>
+																																<xr:Item>
+																																	<xr:Presentation/>
+																																	<xr:CheckState>0</xr:CheckState>
+																																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																		<Presentation>
+																																			<v8:item>
+																																				<v8:lang>ru</v8:lang>
+																																				<v8:content>Борис (24 кГц)</v8:content>
+																																			</v8:item>
+																																			<v8:item>
+																																				<v8:lang>en</v8:lang>
+																																				<v8:content>Boris (24 kHz)</v8:content>
+																																			</v8:item>
+																																		</Presentation>
+																																		<Value xsi:type="xs:string">Bys_24000</Value>
+																																	</xr:Value>
+																																</xr:Item>
+																																<xr:Item>
+																																	<xr:Presentation/>
+																																	<xr:CheckState>0</xr:CheckState>
+																																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																		<Presentation>
+																																			<v8:item>
+																																				<v8:lang>ru</v8:lang>
+																																				<v8:content>Борис (8 кГц)</v8:content>
+																																			</v8:item>
+																																			<v8:item>
+																																				<v8:lang>en</v8:lang>
+																																				<v8:content>Boris (8 kHz)</v8:content>
+																																			</v8:item>
+																																		</Presentation>
+																																		<Value xsi:type="xs:string">Bys_8000</Value>
+																																	</xr:Value>
+																																</xr:Item>
+																																<xr:Item>
+																																	<xr:Presentation/>
+																																	<xr:CheckState>0</xr:CheckState>
+																																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																		<Presentation>
+																																			<v8:item>
+																																				<v8:lang>ru</v8:lang>
+																																				<v8:content>Марфа (24 кГц)</v8:content>
+																																			</v8:item>
+																																			<v8:item>
+																																				<v8:lang>en</v8:lang>
+																																				<v8:content>Marfa (24 kHz)</v8:content>
+																																			</v8:item>
+																																		</Presentation>
+																																		<Value xsi:type="xs:string">May_24000</Value>
+																																	</xr:Value>
+																																</xr:Item>
+																																<xr:Item>
+																																	<xr:Presentation/>
+																																	<xr:CheckState>0</xr:CheckState>
+																																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																		<Presentation>
+																																			<v8:item>
+																																				<v8:lang>ru</v8:lang>
+																																				<v8:content>Марфа (8 кГц)</v8:content>
+																																			</v8:item>
+																																			<v8:item>
+																																				<v8:lang>en</v8:lang>
+																																				<v8:content>Marfa (8 kHz)</v8:content>
+																																			</v8:item>
+																																		</Presentation>
+																																		<Value xsi:type="xs:string">May_8000</Value>
+																																	</xr:Value>
+																																</xr:Item>
+																																<xr:Item>
+																																	<xr:Presentation/>
+																																	<xr:CheckState>0</xr:CheckState>
+																																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																		<Presentation>
+																																			<v8:item>
+																																				<v8:lang>ru</v8:lang>
+																																				<v8:content>Тарас (24 кГц)</v8:content>
+																																			</v8:item>
+																																			<v8:item>
+																																				<v8:lang>en</v8:lang>
+																																				<v8:content>Taras (24 kHz)</v8:content>
+																																			</v8:item>
+																																		</Presentation>
+																																		<Value xsi:type="xs:string">Tur_24000</Value>
+																																	</xr:Value>
+																																</xr:Item>
+																																<xr:Item>
+																																	<xr:Presentation/>
+																																	<xr:CheckState>0</xr:CheckState>
+																																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																																		<Presentation>
+																																			<v8:item>
+																																				<v8:lang>ru</v8:lang>
+																																				<v8:content>Тарас (8 кГц)</v8:content>
+																																			</v8:item>
+																																			<v8:item>
+																																				<v8:lang>en</v8:lang>
+																																				<v8:content>Taras (8 kHz)</v8:content>
+																																			</v8:item>
+																																		</Presentation>
+																																		<Value xsi:type="xs:string">Tur_8000</Value>
+																																	</xr:Value>
+																																</xr:Item>
+																															</ChoiceList>
+																															<ContextMenu name="ЗаписьВидеоСберTTSГолосКонтекстноеМеню" id="3060"/>
+																															<ExtendedTooltip name="ЗаписьВидеоСберTTSГолосРасширеннаяПодсказка" id="3061">
+																																<Title formatted="true">
+																																	<v8:item>
+																																		<v8:lang>ru</v8:lang>
+																																		<v8:content>Задает голос для генерации.
+Примеры голосов можно посмотреть &lt;link https://developer.sberdevices.ru/docs/ru/smartservices/synthesize_smartspeech#%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D1%8B-%D0%B3%D0%BE%D0%BB%D0%BE%D1%81%D0%BE%D0%B2-%D0%B4%D0%BB%D1%8F-%D1%81%D0%B8%D0%BD%D1%82%D0%B5%D0%B7%D0%B0&gt;здесь&lt;/&gt;</v8:content>
+																																	</v8:item>
+																																</Title>
+																															</ExtendedTooltip>
+																														</InputField>
+																														<LabelDecoration name="ПодсказкаКакПолучитьЭтиПараметры" id="3056">
+																															<Title formatted="false">
+																																<v8:item>
+																																	<v8:lang>ru</v8:lang>
+																																	<v8:content>Как получить ключи доступа</v8:content>
+																																</v8:item>
+																																<v8:item>
+																																	<v8:lang>en</v8:lang>
+																																	<v8:content>How to get access keys</v8:content>
+																																</v8:item>
+																															</Title>
+																															<ToolTipRepresentation>Button</ToolTipRepresentation>
+																															<ContextMenu name="ПодсказкаКакПолучитьЭтиПараметрыКонтекстноеМеню" id="3057"/>
+																															<ExtendedTooltip name="ПодсказкаКакПолучитьЭтиПараметрыРасширеннаяПодсказка" id="3058">
+																																<Title formatted="true">
+																																	<v8:item>
+																																		<v8:lang>ru</v8:lang>
+																																		<v8:content>Инструкция по получению доступа к SmartSpeech API (это займет пару минут):
+1. Войти в SmartMarket Studio &lt;link https://developers.sber.ru/studio&gt;https://developers.sber.ru/studio&lt;/&gt;
+2. В панели слева выбрать ЛП – личное пространство
+3. Выбрать проект SmartService.
+4. Указать название проекта (любое понятное вам).
+5. Выбрать чекбокс рядом со SmartSpeech и заполнить запрос в соответствии с инструкцией.
+6. Нажать «Сохранить» и затем «Отправить на модерацию».
+7. После одобрения модерации вы получите доступ к вкладке «Доступы», где сможете взять client_id и client_secret, необходимые для работы API.</v8:content>
+																																	</v8:item>
+																																</Title>
+																															</ExtendedTooltip>
+																														</LabelDecoration>
+																														<LabelDecoration name="ПодсказкаРазметкаТекстаСбер" id="3065">
+																															<Title formatted="false">
+																																<v8:item>
+																																	<v8:lang>ru</v8:lang>
+																																	<v8:content>Особенности разметки текста</v8:content>
+																																</v8:item>
+																																<v8:item>
+																																	<v8:lang>en</v8:lang>
+																																	<v8:content>Features of text markup</v8:content>
+																																</v8:item>
+																															</Title>
+																															<ToolTipRepresentation>Button</ToolTipRepresentation>
+																															<ContextMenu name="ПодсказкаРазметкаТекстаСберКонтекстноеМеню" id="3066"/>
+																															<ExtendedTooltip name="ПодсказкаРазметкаТекстаСберРасширеннаяПодсказка" id="3067">
+																																<Title formatted="true">
+																																	<v8:item>
+																																		<v8:lang>ru</v8:lang>
+																																		<v8:content>При разметке текста можно: 
+- указывать паузы, 
+- замены текста при произношении, 
+- добавлять звуковые эффекты
+- указывать произношение аббревиатур и т.д.
+
+Подробнее можно почитать &lt;link https://developer.sberdevices.ru/docs/ru/developer_tools/ssml/overview&gt;здесь&lt;/&gt;</v8:content>
+																																	</v8:item>
+																																</Title>
+																															</ExtendedTooltip>
+																														</LabelDecoration>
 																													</ChildItems>
 																												</Page>
 																											</ChildItems>
