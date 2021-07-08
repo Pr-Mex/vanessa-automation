@@ -449,9 +449,9 @@
 <p style="ORPHANS: 2; WIDOWS: 2"><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px">в результате будет выведен путь нахождения команды<br><br><img src="_files/2019-09-01_191126.png"></img></span></font></p></blockquote></blockquote></blockquote>
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
 <blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font face="Verdana"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">
-<h2 dir="ltr"><font style="BACKGROUND-COLOR: #ffffff"><a name="20.2 SikuliX сервер">20.2 SikuliX сервер</a></font></h2>
-<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font face="Verdana"><font size="+0"><font style="face: Verdana"><span style="font-size: 15px; font-family: Arial, Tahoma, Verdana, sans-serif; white-space: normal; word-spacing: 0px; text-transform: none; float: none; color: rgb(0, 0, 0); orphans: 2; widows: 2; letter-spacing: normal; background-color: rgb(255, 255, 255); text-indent: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; display: inline !important;">
+<h2 dir="ltr" style="font-style: normal; font-weight: normal;"><font style="BACKGROUND-COLOR: #ffffff"><a name="20.2 SikuliX сервер">20.2 SikuliX сервер</a></font></h2>
+<blockquote style="font-style: normal; font-weight: normal; margin-right: 0px;" dir="ltr">
 <p dir="ltr"><br>1. SikuliX сервер нужен, чтобы ускорить работу сценариев, которые многократно вызывают скрипты SikuliX. Таким образом с помощью Vanessa Automation можно писать быстрые сценарии, которые могут интерактивно работать с экраном пользователя.</p>
 <p dir="ltr">2. Большая часть скриптов SikuliX не требует специальной адаптации для работы на SikuliX сервере.</p>
 <p dir="ltr">3. Чтобы использовать SikuliX сервер нужно установить флаг "Использовать SikuliX сервер" и указать каталоги (через точку с запятой) скриптов SikuliX.</p>
@@ -462,26 +462,33 @@
 <p dir="ltr">6. Будет собран специальный SikuliX скрипт, который представляет собой компиляцию всех скриптов, которые были в каталоге (каталогах) в параметра "Каталоги скриптов SikuliX". Скрипт будет размещён в первом каталоге с именем <strong>SikuliXServer.sikuli</strong>.</p>
 <p dir="ltr">7. Скрипты, принимающие аргрументы вида "<strong>sys.argv[1]</strong>" также будут корректно обработаны.</p>
 <p dir="ltr">8. Запуск SikuliX сервера доступен через управляющий json файл. Параметры: "<strong>КаталогиСкриптовSikuliX</strong>" и "<strong>ИспользоватьSikuliXСервер</strong>".</p></blockquote>
-<p dir="ltr"> </p>
-<h2 dir="ltr"><font style="BACKGROUND-COLOR: #ffffff"><a name="Работа с глобальными переменными.">21. Работа с глобальными переменными.</a></font></h2>
-<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<p dir="ltr"><br>1. В Vanessa Automation есть возможность работать с глобальными переменными. Они бывают двух типов.</p>
-<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p dir="ltr" style="font-style: normal; font-weight: normal;"> </p>
+<h2 dir="ltr" style="font-style: normal; font-weight: normal;"><font style="BACKGROUND-COLOR: #ffffff"><a name="Работа с глобальными переменными.">21. Работа с глобальными переменными.</a></font></h2>
+<blockquote style="margin-right: 0px;" dir="ltr">
+<p dir="ltr" style="font-style: normal; font-weight: normal;"><br>1. В Vanessa Automation есть возможность работать с глобальными переменными. Они бывают двух типов.</p>
+<blockquote style="font-style: normal; font-weight: normal; margin-right: 0px;" dir="ltr">
 <p dir="ltr">1) Переменные, которые хранятся в служебной структуре <strong>Контекст</strong>. Они существуют на время жизни одного сценария.</p>
 <p dir="ltr">2) Переменные, которые хранятся в служебной структуре <strong>КонтекстСохраняемый</strong>. Они существуют, пока открыта форма Vanessa Automation. </p></blockquote>
-<p dir="ltr">2. В стандартной библиоетке шагов Vanessa Automation есть готовые шаги, которые позволяют сохранить нужное значение в переменную, а затем его использовать. Например:</p>
-<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p dir="ltr" style="font-style: normal; font-weight: normal;">2. В стандартной библиоетке шагов Vanessa Automation есть готовые шаги, которые позволяют сохранить нужное значение в переменную, а затем его использовать. Например:</p>
+<blockquote style="font-style: normal; font-weight: normal; margin-right: 0px;" dir="ltr">
 <p dir="ltr"><em>И я запоминаю значение текущего поля как "ИмяПеременной"</em></p>
 <p dir="ltr"><em>И в поле с именем "ИмяПоля" ввожу значение переменной "ИмяПеременной"</em></p></blockquote>
-<p dir="ltr">3. Возможные варианты синтаксиса для сохранения значения переменной:</p>
-<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
-<p dir="ltr"><em>И я запоминаю значение текущего поля как "ИмяПеременной" - </em>Переменная будет сохранена в Контекст</p>
-<p dir="ltr"><em>И я запоминаю значение текущего поля как "$ИмяПеременной$" - </em>Переменная будет сохранена в Контекст</p>
-<p dir="ltr"><em>И я запоминаю значение текущего поля как "$$ИмяПеременной$$" - </em>Переменная будет сохранена в КонтекстСохраняемый</p></blockquote>
-<p dir="ltr">4. Возможные варианты синтаксиса для чтения значения переменной:</p>
-<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p dir="ltr" style="font-style: normal; font-weight: normal;">3. Возможные варианты синтаксиса для сохранения значения переменной:</p>
+<blockquote style="font-style: normal; margin-right: 0px;" dir="ltr">
+<p dir="ltr" style="font-weight: normal;"><em>И я запоминаю значение текущего поля как "ИмяПеременной" - </em>Переменная будет сохранена в Контекст</p>
+<p dir="ltr" style="font-weight: normal;"><em>И я запоминаю значение текущего поля как "$ИмяПеременной$" - </em>Переменная будет сохранена в Контекст</p>
+<p dir="ltr" style="font-weight: normal;"><em>И я запоминаю значение текущего поля как "$$ИмяПеременной$$" - </em>Переменная будет сохранена в КонтекстСохраняемый</p>
+<p dir="ltr" style="font-weight: bold;"><br></p>
+<p dir="ltr">ВАЖНО! Глобальные переменные являются неизменяемыми. </p>
+<p dir="ltr"><span style="font-weight: normal;">При вызове шага, который присваивает значение ранее созданной глобальной переменной, значение в ней не изменяется. </span></p>
+<p dir="ltr"><span style="font-weight: normal;">Изменить значение в уже созданной глобальной переменной можно одним из двух способов:</span></p>
+<p dir="ltr" style="font-weight: normal;">1) Вызвать шаг <i>И я удаляю переменную "$$ИмяПеременной$$"</i>, а затем вызвать шаг, который присвоит новое значение </p>
+<p dir="ltr" style="font-weight: normal;">2) Вызвать шаг <em>И я запоминаю значение текущего поля как</em><i> "$$$$ИмяПеременной$$$$"</i></p>
+<p dir="ltr" style="font-weight: normal;"><i><br></i></p></blockquote>
+<p dir="ltr" style="font-style: normal; font-weight: normal;">4. Возможные варианты синтаксиса для чтения значения переменной:</p>
+<blockquote style="font-style: normal; font-weight: normal; margin-right: 0px;" dir="ltr">
 <p dir="ltr"><em>И в поле с именем "ИмяПоля" ввожу значение переменной "ИмяПеременной" - </em>значение переменной будет взято из Контекста</p>
 <p dir="ltr"><em>И в поле с именем "ИмяПоля" ввожу значение переменной "$ИмяПеременной$" - </em>значение переменной будет взято из Контекста</p>
 <p dir="ltr"><em>И в поле с именем "ИмяПоля" ввожу значение переменной "$$ИмяПеременной$$" - </em>значение переменной будет взято из КонтекстаСохраняемого</p></blockquote>
-<p dir="ltr">5. Имена переменных должны соответствовать правилам помещения значений в Структуру (нельзя использовать пробелы, спецсимволы и т.д.)</p>
-<p dir="ltr"> </p></blockquote></span></font></font></font></h2></blockquote></blockquote></body></html>
+<p dir="ltr" style="font-style: normal; font-weight: normal;">5. Имена переменных должны соответствовать правилам помещения значений в Структуру (нельзя использовать пробелы, спецсимволы и т.д.)</p>
+<p dir="ltr" style="font-style: normal;"><br></p></blockquote></span></font></font></font></h2></blockquote></blockquote></body></html>
