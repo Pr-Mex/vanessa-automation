@@ -716,12 +716,16 @@
 
 // Активизирует строку дерева шагов, которая соответствует текущей строке редактора.
 &НаКлиенте
-Функция АктивизироватьСтрокуДереваСоответствующуюVanessaEditor() Экспорт
+Функция АктивизироватьСтрокуДереваСоответствующуюVanessaEditor(ТекущаяСтрокаVanessaEditor = Неопределено) Экспорт
 	VanessaEditor = Ванесса.VanessaTabs.current.editor;
 	
 	ПозицияVanessaEditor = VanessaEditor.getPosition();
-	ТекущаяСтрокаVanessaEditor = ПозицияVanessaEditor.LineNumber;
-	ТекстСтроки = VanessaEditor.getLineContent(ТекущаяСтрокаVanessaEditor, ПозицияVanessaEditor.codeWidget);
+	Если ТекущаяСтрокаVanessaEditor = Неопределено Тогда
+		ТекущаяСтрокаVanessaEditor = ПозицияVanessaEditor.LineNumber;
+		ТекстСтроки = VanessaEditor.getLineContent(ТекущаяСтрокаVanessaEditor, ПозицияVanessaEditor.codeWidget);
+	Иначе	
+		ТекстСтроки = VanessaEditor.getLineContent(ТекущаяСтрокаVanessaEditor, "");
+	КонецЕсли;	 
 	НашлиСтроку = Ложь;
 	Если НЕ ЭтоЗначимаяСтрокаVanessaEditor(ТекстСтроки) Тогда
 		Пока Истина Цикл
