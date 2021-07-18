@@ -1518,7 +1518,8 @@
 		|    ""background"": [
 		|      ""Background""
 		|    ],
-		|	 ""hyperlinks"": [
+		|	 ""variables"": [
+		|	   ""Variables"",
 		|	   ""Hyperlinks"",
 		|	   ""Links""
 		|    ],
@@ -3291,7 +3292,7 @@
 		|      ""Предыстория"",
 		|      ""Контекст""
 		|    ],
-		|	 ""hyperlinks"": [
+		|	 ""variables"": [
 		|	   ""Переменные""
 		| 	 ],
 		|    ""but"": [
