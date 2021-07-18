@@ -1685,6 +1685,26 @@
 											</Button>
 										</ChildItems>
 									</ButtonGroup>
+									<ButtonGroup name="ГруппаVanessaEditorОзвучитьСтроку" id="3106">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа vanessa editor озвучить строку</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Vanessa editor group to voice line</v8:content>
+											</v8:item>
+										</Title>
+										<ExtendedTooltip name="ГруппаVanessaEditorОзвучитьСтрокуРасширеннаяПодсказка" id="3107"/>
+										<ChildItems>
+											<Button name="VanessaEditorОзвучитьТекущуюСтрокуРедактора" id="3108">
+												<Type>CommandBarButton</Type>
+												<CommandName>Form.Command.VanessaEditorОзвучитьТекущуюСтрокуРедактора</CommandName>
+												<ExtendedTooltip name="VanessaEditorОзвучитьТекущуюСтрокуРедактораРасширеннаяПодсказка" id="3109"/>
+											</Button>
+										</ChildItems>
+									</ButtonGroup>
 								</ChildItems>
 							</Popup>
 							<Popup name="ГруппаVanessaEditorНастройкиРедактора" id="2552">
@@ -36640,6 +36660,30 @@ To disable mouse movement at a specific step, you should use the #[DoNotMoveMous
 				</v8:item>
 			</ToolTip>
 			<Action>ВключитьВыключитьОзвучиваниеВыполненияСценария</Action>
+		</Command>
+		<Command name="VanessaEditorОзвучитьТекущуюСтрокуРедактора" id="154">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Озвучить текущую строку</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Speak the current line</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Vanessa editor озвучить текущую строку</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Speak the current line</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Alt+S</Shortcut>
+			<Action>VanessaEditorОзвучитьТекущуюСтрокуРедактора</Action>
 		</Command>
 	</Commands>
 </Form>
