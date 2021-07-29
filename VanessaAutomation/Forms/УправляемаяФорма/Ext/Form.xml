@@ -12913,6 +12913,29 @@
 																<Event name="OnChange">ИспользоватьПарсерGherkinИзКомпонентыVanessaExtПриИзменении</Event>
 															</Events>
 														</CheckBoxField>
+														<CheckBoxField name="ВычислятьВыраженияВФигурныхСкобках" id="3110">
+															<DataPath>Объект.ВычислятьВыраженияВФигурныхСкобках</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ВычислятьВыраженияВФигурныхСкобкахКонтекстноеМеню" id="3111"/>
+															<ExtendedTooltip name="ВычислятьВыраженияВФигурныхСкобкахРасширеннаяПодсказка" id="3112">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Turns on the mode when any expression inside the parameters of the steps {} will be evaluated. If the section "Variables" is declared, but first an attempt will be made to find a variable from this section by the specified expression. Otherwise, an attempt will be made to evaluate the expression in {}.
+If {expression} is used, then the expression will be evaluated on the client.
+If {!expression} Is used, the expression will be evaluated on the server.</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Включает режим, когда любое выражение внутри параметров шагов {} будет вычисляться. Если объявлена секция "Переменные", но сначала будет произведена попытка найти переменную из этой секции по указанному выражению. Иначе будет попытка вычислить выражение в {}.
+Если используются {выражение}, то выражение будет вычисляться на клиенте.
+Если используются {!выражение}, то выражение будет вычисляться на сервере.</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+														</CheckBoxField>
 														<InputField name="КаталогИнструментов" id="380">
 															<DataPath>Объект.КаталогИнструментов</DataPath>
 															<Title>
