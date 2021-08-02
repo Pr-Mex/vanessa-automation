@@ -624,6 +624,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    11. Взаимодействие с активным окном.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    12. Сортировка таблиц динамических списков
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -738,6 +752,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#11" class="md-nav__link">
+    11. Взаимодействие с активным окном.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12" class="md-nav__link">
+    12. Сортировка таблиц динамических списков
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -840,6 +868,33 @@
 </code></pre></div>
 
 <p><img alt="alt text" src="../pic/StartPage.png" title="Функции технического специалиста" />​</p>
+<h2 id="11">11. Взаимодействие с активным окном.<a class="headerlink" href="#11" title="Permanent link">&para;</a></h2>
+<p>Нужно использовать шаги</p>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я запоминаю текущее окно как &quot;</span><span class="s">ЗаголовокОкна</span><span class="nf">&quot;</span>
+<span class="nf">    </span><span class="k">И </span><span class="nf">я выполняю код встроенного языка ( Расширение )</span>
+<span class="nf">    </span><span class="k">&quot;&quot;&quot;</span><span class="s"></span>
+<span class="s">        ТекОкно = VAExtensionКлиент.ПолучитьОкноПоЗаголовку(&quot;$ЗаголовокОкна$&quot;);</span>
+<span class="s">        Список = ТекОкно.Список;</span>
+
+<span class="s">        Сортировка = Список.КомпоновщикНастроек.Настройки.Порядок.Элементы;</span>
+<span class="s">        Сортировка.Очистить();</span>
+
+<span class="s">        УсловиеСортировки = Сортировка.Добавить(Тип(&quot;ЭлементПорядкаКомпоновкиДанных&quot;));</span>
+<span class="s">        УсловиеСортировки.Поле = Новый ПолеКомпоновкиДанных(&quot;Код&quot;);</span>
+<span class="s">        УсловиеСортировки.ТипУпорядочивания = НаправлениеСортировкиКомпоновкиДанных.Возр;</span>
+<span class="s">        Список.КомпоновщикНастроек.ЗагрузитьНастройки(Список.КомпоновщикНастроек.Настройки);</span>
+<span class="s">    </span><span class="k">&quot;&quot;&quot;</span><span class="nf"></span>
+</code></pre></div>
+
+<p>Такой код будет выполнен в контексте клиента тестирования.
+Метод VAExtensionКлиент.ПолучитьОкноПоЗаголовку() вернёт данные окна по его заголовку.
+Далее можно взаимодействовать с элементами окна.
+В данном примере происходит установка сортировки динамического списка с именем Список по колонке Код по возрастанию.</p>
+<h2 id="12">12. Сортировка таблиц динамических списков<a class="headerlink" href="#12" title="Permanent link">&para;</a></h2>
+<p>Нужно использовать шаги</p>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; текущего окна я устанавливаю сортировку по колонке &quot;</span><span class="s">ИмяКолонки</span><span class="nf">&quot; по возрастанию (расширение)</span>
+<span class="nf">    </span><span class="k">И </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; текущего окна я устанавливаю сортировку по колонке &quot;</span><span class="s">ИмяКолонки</span><span class="nf">&quot; по убыванию (расширение)</span>
+</code></pre></div>
                 
               
               
