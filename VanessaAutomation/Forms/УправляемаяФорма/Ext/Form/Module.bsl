@@ -42480,6 +42480,7 @@
 			VanessaEditor = view.createVanessaEditor("", "turbo-gherkin");
 			МодульРедакторТекста().УстановитьСписокКомандVanessaEditor();
 			VanessaEditor.setSuggestWidgetWidth("90%");
+			view.blockContextMenu1C();
 			view.createVanessaTabs();
 			VanessaTabs = Элементы.VanessaEditor.Document.defaultView.VanessaTabs;
 		КонецЕсли;	 
