@@ -6905,6 +6905,32 @@
 																					</Button>
 																				</ChildItems>
 																			</ButtonGroup>
+																			<ButtonGroup name="ГруппаКонтекстногоМенюVanessaEditorМеню" id="3116">
+																				<Title>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Группа контекстного меню vanessa editor меню</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>Vanessa Editor context menu group</v8:content>
+																					</v8:item>
+																				</Title>
+																				<ToolTip>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Группа контекстного меню vanessa editor меню</v8:content>
+																					</v8:item>
+																				</ToolTip>
+																				<ExtendedTooltip name="ГруппаКонтекстногоМенюVanessaEditorМенюExtendedTooltip" id="3117"/>
+																				<ChildItems>
+																					<Button name="VanessaEditorКонтекстноеМенюКонтекстноеМеню" id="3118">
+																						<Type>CommandBarButton</Type>
+																						<CommandName>Form.Command.VanessaEditorContextMenu</CommandName>
+																						<ExtendedTooltip name="VanessaEditorКонтекстноеМенюКонтекстноеМенюExtendedTooltip" id="3119"/>
+																					</Button>
+																				</ChildItems>
+																			</ButtonGroup>
 																		</ChildItems>
 																	</ContextMenu>
 																	<ExtendedTooltip name="VanessaEditorExtendedTooltip" id="2406"/>
@@ -36726,6 +36752,25 @@ To disable mouse movement at a specific step, you should use the #[DoNotMoveMous
 			</ToolTip>
 			<Shortcut>Alt+S</Shortcut>
 			<Action>VanessaEditorОзвучитьТекущуюСтрокуРедактора</Action>
+		</Command>
+		<Command name="VanessaEditorContextMenu" id="155">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контекстное меню редактора</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Show editor context menu</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контекстное меню редактора</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>VanessaEditorContextMenu</Action>
 		</Command>
 	</Commands>
 </Form>
