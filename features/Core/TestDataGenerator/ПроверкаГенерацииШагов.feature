@@ -74,9 +74,9 @@
 	
 
 
-	И я нажимаю на кнопку с именем 'FormGenerateFeature'
+	И я нажимаю на кнопку с именем '*GenerateFeature*'
 	И я меняю значение переключателя с именем 'StepsLanguage' на 'en'
-	И я нажимаю на кнопку с именем 'FormGenerateFeature'
+	И я нажимаю на кнопку с именем '*GenerateFeature*'
 	И я меняю значение переключателя с именем 'StepsLanguage' на 'ru'
-	И я нажимаю на кнопку с именем 'FormGenerateFeature'
+	И я нажимаю на кнопку с именем '*GenerateFeature*'
 	
