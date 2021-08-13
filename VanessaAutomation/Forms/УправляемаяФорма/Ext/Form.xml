@@ -6905,6 +6905,32 @@
 																					</Button>
 																				</ChildItems>
 																			</ButtonGroup>
+																			<ButtonGroup name="ГруппаКонтекстногоМенюVanessaEditorМеню" id="3119">
+																				<Title>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Группа контекстного меню vanessa editor меню</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>Vanessa Editor context menu group</v8:content>
+																					</v8:item>
+																				</Title>
+																				<ToolTip>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Группа контекстного меню vanessa editor меню</v8:content>
+																					</v8:item>
+																				</ToolTip>
+																				<ExtendedTooltip name="ГруппаКонтекстногоМенюVanessaEditorМенюExtendedTooltip" id="3120"/>
+																				<ChildItems>
+																					<Button name="VanessaEditorКонтекстноеМенюКонтекстноеМеню" id="3121">
+																						<Type>CommandBarButton</Type>
+																						<CommandName>Form.Command.VanessaEditorContextMenu</CommandName>
+																						<ExtendedTooltip name="VanessaEditorКонтекстноеМенюКонтекстноеМенюExtendedTooltip" id="3122"/>
+																					</Button>
+																				</ChildItems>
+																			</ButtonGroup>
 																		</ChildItems>
 																	</ContextMenu>
 																	<ExtendedTooltip name="VanessaEditorExtendedTooltip" id="2406"/>
@@ -12913,6 +12939,29 @@
 																<Event name="OnChange">ИспользоватьПарсерGherkinИзКомпонентыVanessaExtПриИзменении</Event>
 															</Events>
 														</CheckBoxField>
+														<CheckBoxField name="ВычислятьВыраженияВФигурныхСкобках" id="3110">
+															<DataPath>Объект.ВычислятьВыраженияВФигурныхСкобках</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ВычислятьВыраженияВФигурныхСкобкахКонтекстноеМеню" id="3111"/>
+															<ExtendedTooltip name="ВычислятьВыраженияВФигурныхСкобкахРасширеннаяПодсказка" id="3112">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Turns on the mode when any expression inside the parameters of the steps {} will be evaluated. If the section "Variables" is declared, but first an attempt will be made to find a variable from this section by the specified expression. Otherwise, an attempt will be made to evaluate the expression in {}.
+If {expression} is used, then the expression will be evaluated on the client.
+If {!expression} Is used, the expression will be evaluated on the server.</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Включает режим, когда любое выражение внутри параметров шагов {} будет вычисляться. Если объявлена секция "Переменные", но сначала будет произведена попытка найти переменную из этой секции по указанному выражению. Иначе будет попытка вычислить выражение в {}.
+Если используются {выражение}, то выражение будет вычисляться на клиенте.
+Если используются {!выражение}, то выражение будет вычисляться на сервере.</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+														</CheckBoxField>
 														<InputField name="КаталогИнструментов" id="380">
 															<DataPath>Объект.КаталогИнструментов</DataPath>
 															<Title>
@@ -17658,6 +17707,25 @@ https://habr.com/ru/company/sberbank/blog/359302/</v8:content>
 																</Title>
 															</ExtendedTooltip>
 														</CheckBoxField>
+														<CheckBoxField name="СобиратьДанныеОЗначенияхПеременных" id="3113">
+															<DataPath>Объект.СобиратьДанныеОЗначенияхПеременных</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="СобиратьДанныеОЗначенияхПеременныхКонтекстноеМеню" id="3114"/>
+															<ExtendedTooltip name="СобиратьДанныеОЗначенияхПеременныхРасширеннаяПодсказка" id="3115">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Enables the collection of data about the values of variables.</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Включает сбор данных о значениях переменных.</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+														</CheckBoxField>
 														<InputField name="ИмяКаталогаЛогОшибок" id="1758">
 															<DataPath>Объект.ИмяКаталогаЛогОшибок</DataPath>
 															<ToolTipRepresentation>Button</ToolTipRepresentation>
@@ -18974,6 +19042,25 @@ To ensure that leading zeros are not lost when exporting from MD format, the tex
 															<Events>
 																<Event name="OnChange">ОзвучиватьВыполнениеСценарияПриИзменении</Event>
 															</Events>
+														</CheckBoxField>
+														<CheckBoxField name="ЗаписьВидеоГруппаШаговКакШаг1" id="3116">
+															<DataPath>Объект.ЗаписьВидеоГруппаШаговКакШаг</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ЗаписьВидеоГруппаШаговКакШаг1КонтекстноеМеню" id="3117"/>
+															<ExtendedTooltip name="ЗаписьВидеоГруппаШаговКакШаг1РасширеннаяПодсказка" id="3118">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Switches on the mode, when each first level group of scenario steps will be converter to one step in automanual.</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Включает режим, когда по умолчанию каждая группа шагов первого уровня в сценарии будет конвертироваться в один шаг в автоинструкции.</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
 														</CheckBoxField>
 														<UsualGroup name="ОзвучкаГолосом" id="698">
 															<Title>
@@ -36684,6 +36771,25 @@ To disable mouse movement at a specific step, you should use the #[DoNotMoveMous
 			</ToolTip>
 			<Shortcut>Alt+S</Shortcut>
 			<Action>VanessaEditorОзвучитьТекущуюСтрокуРедактора</Action>
+		</Command>
+		<Command name="VanessaEditorContextMenu" id="155">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контекстное меню редактора</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Show editor context menu</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Контекстное меню редактора</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>VanessaEditorContextMenu</Action>
 		</Command>
 	</Commands>
 </Form>
