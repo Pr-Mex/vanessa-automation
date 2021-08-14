@@ -1554,7 +1554,7 @@ Procedure AddStepsByLanguage(Vanessa, AllTests, LangCode)
 	Vanessa.ДобавитьШагВМассивТестов(AllTests
 										, LocalizedStringsClient()["s14a_" + LangCode]
 										, LocalizedStringsClient()["s14b_" + LangCode]
-										, StrTemplate(ScenarioDocumentActionString(LangCode, ThisObject.UseDataExhangeLoadTrue), ThisObject.UseDataExhangeLoadTrue, LocalizedStringsClient()["s14d_" + LangCode], "", "")
+										, StrTemplate(ScenarioDocumentActionString(LangCode, ThisObject.UseDataExhangeLoadTrue), LocalizedStringsClient()["s14d_" + LangCode], "", "")
 										, LocalizedStringsClient()["s14f_" + LangCode]
 										, "");
 	Vanessa.ДобавитьШагВМассивТестов(AllTests
