@@ -111,8 +111,21 @@ Procedure ЯПроверяюИлиСоздаюДляСправочникаОбъ
 	ICheckOrCreateCatalogObjects(ИмяОбъекта, Значения);
 EndProcedure
 
+&AtClient
+Procedure ICheckOrCreateCatalogObjectsWithDataExchangeLoadTrue(Val ObjectName, Val Values) Export
+	If Not Values.Count() Then
+		Return;
+	EndIf;
+	ICheckOrCreateCatalogObjectsAtServer(ObjectName, Values, True);
+EndProcedure
+
+&AtClient
+Procedure ЯПроверяюИлиСоздаюДляСправочникаОбъектыСОбменДаннымиЗагрузкаИстина(Val ИмяОбъекта, Val Значения) Export
+	ICheckOrCreateCatalogObjectsWithDataExchangeLoadTrue(ИмяОбъекта, Значения);
+EndProcedure
+
 &AtServerNoContext
-Procedure ICheckOrCreateCatalogObjectsAtServer(ObjectName, Values)
+Procedure ICheckOrCreateCatalogObjectsAtServer(ObjectName, Values, DataExchange = False)
 	ObjectValues = GetValueTableFromVanessaTableArray(Values);
 	ObjectAttributes = New ValueTable;
 	FillColumnsByStandardAttributes(ObjectAttributes, "Catalogs", ObjectName);
@@ -170,7 +183,7 @@ Procedure ICheckOrCreateCatalogObjectsAtServer(ObjectName, Values)
 		If Not ValueIsFilled(Obj.Code) Then
 			Obj.SetNewCode();
 		EndIf;
-		Obj.DataExchange.Load = True;
+		Obj.DataExchange.Load = DataExchange;
 		Obj.Write();
 	EndDo;
 EndProcedure
@@ -188,8 +201,21 @@ Procedure ЯПроверяюИлиСоздаюДляДокументаОбъек
 	ICheckOrCreateDocumentObjects(ИмяОбъекта, Значения);
 EndProcedure
 
+&AtClient
+Procedure ICheckOrCreateDocumentObjectsWithDataExchangeLoadTrue(Val ObjectName, Val Values) Export
+	If Not Values.Count() Then
+		Return;
+	EndIf;
+	ICheckOrCreateDocumentObjectsAtServer(ObjectName, Values, True);
+EndProcedure
+
+&AtClient
+Procedure ЯПроверяюИлиСоздаюДляДокументаОбъектыСОбменДаннымиЗагрузкаИстина(Val ИмяОбъекта, Val Значения) Export
+	ICheckOrCreateDocumentObjectsWithDataExchangeLoadTrue(ИмяОбъекта, Значения);
+EndProcedure
+
 &AtServerNoContext
-Procedure ICheckOrCreateDocumentObjectsAtServer(ObjectName, Values)
+Procedure ICheckOrCreateDocumentObjectsAtServer(ObjectName, Values, DataExchange = False)
 	ObjectValues = GetValueTableFromVanessaTableArray(Values);	
 	ObjectAttributes = New ValueTable;
 	FillColumnsByStandardAttributes(ObjectAttributes, "Documents", ObjectName);
@@ -244,10 +270,9 @@ Procedure ICheckOrCreateDocumentObjectsAtServer(ObjectName, Values)
 		If Not ValueIsFilled(Obj.Number) Then
 			Obj.SetNewNumber();
 		EndIf;
-		Obj.DataExchange.Load = True;
+		Obj.DataExchange.Load = DataExchange;
 		If DocumentWriteModeValue = DocumentWriteMode.Posting Then
 			Obj.Write(DocumentWriteMode.Write);
-			Obj.DataExchange.Load = False;
 			Obj.Write(DocumentWriteMode.Posting);
 		Else
 			Obj.Write(DocumentWriteModeValue);
@@ -268,8 +293,21 @@ Procedure ЯПроверяюИлиСоздаюДляПланаВидовХара
 	ICheckOrCreateChartOfCharacteristicTypesObjects(ИмяОбъекта, Значения);
 EndProcedure
 
+&AtClient
+Procedure ICheckOrCreateChartOfCharacteristicTypesObjectsWithDataExchangeLoadTrue(Val ObjectName, Val Values) Export
+	If Not Values.Count() Then
+		Return;
+	EndIf;
+	ICheckOrCreateChartOfCharacteristicTypesObjectsAtServer(ObjectName, Values, True);
+EndProcedure
+
+&AtClient
+Procedure ЯПроверяюИлиСоздаюДляПланаВидовХарактеристикОбъектыСОбменДаннымиЗагрузкаИстина(Val ИмяОбъекта, Val Значения) Export
+	ICheckOrCreateChartOfCharacteristicTypesObjectsWithDataExchangeLoadTrue(ИмяОбъекта, Значения);
+EndProcedure
+
 &AtServerNoContext
-Procedure ICheckOrCreateChartOfCharacteristicTypesObjectsAtServer(ObjectName, Values)	
+Procedure ICheckOrCreateChartOfCharacteristicTypesObjectsAtServer(ObjectName, Values, DataExchange = False)	
 	ObjectValues = GetValueTableFromVanessaTableArray(Values);
 	ObjectAttributes = New ValueTable;
 	FillColumnsByStandardAttributes(ObjectAttributes, "ChartsOfCharacteristicTypes", ObjectName);
@@ -312,7 +350,7 @@ Procedure ICheckOrCreateChartOfCharacteristicTypesObjectsAtServer(ObjectName, Va
 			EndIf;
 			FillTipicalObjectAttributesByValues(Obj, Row, Column);
 		EndDo;
-		Obj.DataExchange.Load = True;
+		Obj.DataExchange.Load = DataExchange;
 		Obj.Write();
 	EndDo;
 EndProcedure
@@ -409,8 +447,21 @@ Procedure ЯПроверяюИлиСоздаюДляРегистраСведен
 	ICheckOrCreateInformationRegisterRecordsUsingRecordSets(ИмяРегистра, Значения);
 EndProcedure
 
+&AtClient
+Procedure ICheckOrCreateInformationRegisterRecordsUsingRecordSetsWithDataExchangeLoadTrue(Val RegisterName, Val Values) Export
+	If Not Values.Count() Then
+		Return;
+	EndIf;
+	ICheckOrCreateInformationRegisterRecordsAtServer(RegisterName, Values, True, True);
+EndProcedure
+
+&AtClient
+Procedure ЯПроверяюИлиСоздаюДляРегистраСведенийЗаписиИспользуяНаборыЗаписейСОбменДаннымиЗагрузкаИстина(Val ИмяРегистра, Val Значения) Export
+	ICheckOrCreateInformationRegisterRecordsUsingRecordSetsWithDataExchangeLoadTrue(ИмяРегистра, Значения);
+EndProcedure
+
 &AtServerNoContext
-Procedure ICheckOrCreateInformationRegisterRecordsAtServer(RegisterName, Values, UseRecordSets = False)	
+Procedure ICheckOrCreateInformationRegisterRecordsAtServer(RegisterName, Values, UseRecordSets = False, DataExchange = False)	
 	ObjectValues = GetValueTableFromVanessaTableArray(Values);	
 	ObjectAttributes = New ValueTable;
 	FillColumnsByStandardAttributes(ObjectAttributes, "InformationRegisters", RegisterName);
@@ -483,6 +534,7 @@ Procedure ICheckOrCreateInformationRegisterRecordsAtServer(RegisterName, Values,
 				EndDo;
 			EndDo;
 			If RegisterSet.Count() Then
+				RegisterSet.DataExchange = DataExchange;
 				RegisterSet.Write(True);
 			EndIf;
 		EndDo;
@@ -1442,19 +1494,19 @@ Procedure AddStepsByLanguage(Vanessa, AllTests, LangCode)
 	Vanessa.ДобавитьШагВМассивТестов(AllTests
 										, LocalizedStringsClient()["s2a_" + LangCode]
 										, LocalizedStringsClient()["s2b_" + LangCode]
-										, StrTemplate(ScenarioCatalogActionString(LangCode), LocalizedStringsClient()["s2d_" + LangCode], "", "")
+										, StrTemplate(ScenarioCatalogActionString(LangCode, ThisObject.UseDataExhangeLoadTrue), LocalizedStringsClient()["s2d_" + LangCode], "", "")
 										, LocalizedStringsClient()["s2f_" + LangCode]
 										, "");
 	Vanessa.ДобавитьШагВМассивТестов(AllTests
 										, LocalizedStringsClient()["s3a_" + LangCode]
 										, LocalizedStringsClient()["s3b_" + LangCode]
-										, StrTemplate(ScenarioDocumentActionString(LangCode), LocalizedStringsClient()["s3d_" + LangCode], "", "")
+										, StrTemplate(ScenarioDocumentActionString(LangCode, ThisObject.UseDataExhangeLoadTrue), LocalizedStringsClient()["s3d_" + LangCode], "", "")
 										, LocalizedStringsClient()["s3f_" + LangCode]
 										, "");
 	Vanessa.ДобавитьШагВМассивТестов(AllTests
 										, LocalizedStringsClient()["s4a_" + LangCode]
 										, LocalizedStringsClient()["s4b_" + LangCode]
-										, StrTemplate(ScenarioChartOfCharacteristicTypesActionString(LangCode), LocalizedStringsClient()["s4d_" + LangCode], "", "")
+										, StrTemplate(ScenarioChartOfCharacteristicTypesActionString(LangCode, ThisObject.UseDataExhangeLoadTrue), LocalizedStringsClient()["s4d_" + LangCode], "", "")
 										, LocalizedStringsClient()["s4f_" + LangCode]
 										, "");
 	Vanessa.ДобавитьШагВМассивТестов(AllTests
@@ -1462,12 +1514,6 @@ Procedure AddStepsByLanguage(Vanessa, AllTests, LangCode)
 										, LocalizedStringsClient()["s5b_" + LangCode]
 										, StrTemplate(ScenarioInformationRegisterActionString(LangCode), LocalizedStringsClient()["s5d_" + LangCode], "", "")
 										, LocalizedStringsClient()["s5f_" + LangCode]
-										, "");
-	Vanessa.ДобавитьШагВМассивТестов(AllTests
-										, LocalizedStringsClient()["s12a_" + LangCode]
-										, LocalizedStringsClient()["s12b_" + LangCode]
-										, StrTemplate(LocalizedStringsClient()["s12c_" + LangCode], LocalizedStringsClient()["s12d_" + LangCode], "", "")
-										, LocalizedStringsClient()["s12f_" + LangCode]
 										, "");
 	Vanessa.ДобавитьШагВМассивТестов(AllTests
 										, LocalizedStringsClient()["s6a_" + LangCode]
@@ -1492,6 +1538,36 @@ Procedure AddStepsByLanguage(Vanessa, AllTests, LangCode)
 										, LocalizedStringsClient()["s10b_" + LangCode]
 										, StrTemplate(ScenarioConstantActionString(LangCode), LocalizedStringsClient()["s10d_" + LangCode], LocalizedStringsClient()["s10g_" + LangCode])
 										, LocalizedStringsClient()["s10f_" + LangCode]
+										, "");
+	Vanessa.ДобавитьШагВМассивТестов(AllTests
+										, LocalizedStringsClient()["s12a_" + LangCode]
+										, LocalizedStringsClient()["s12b_" + LangCode]
+										, StrTemplate(LocalizedStringsClient()["s12c_" + LangCode], LocalizedStringsClient()["s12d_" + LangCode], "", "")
+										, LocalizedStringsClient()["s12f_" + LangCode]
+										, "");
+	Vanessa.ДобавитьШагВМассивТестов(AllTests
+										, LocalizedStringsClient()["s13a_" + LangCode]
+										, LocalizedStringsClient()["s13b_" + LangCode]
+										, StrTemplate(ScenarioCatalogActionString(LangCode, ThisObject.UseDataExhangeLoadTrue), LocalizedStringsClient()["s13d_" + LangCode], "", "")
+										, LocalizedStringsClient()["s13f_" + LangCode]
+										, "");
+	Vanessa.ДобавитьШагВМассивТестов(AllTests
+										, LocalizedStringsClient()["s14a_" + LangCode]
+										, LocalizedStringsClient()["s14b_" + LangCode]
+										, StrTemplate(ScenarioDocumentActionString(LangCode, ThisObject.UseDataExhangeLoadTrue), LocalizedStringsClient()["s14d_" + LangCode], "", "")
+										, LocalizedStringsClient()["s14f_" + LangCode]
+										, "");
+	Vanessa.ДобавитьШагВМассивТестов(AllTests
+										, LocalizedStringsClient()["s15a_" + LangCode]
+										, LocalizedStringsClient()["s15b_" + LangCode]
+										, StrTemplate(ScenarioChartOfCharacteristicTypesActionString(LangCode, ThisObject.UseDataExhangeLoadTrue), LocalizedStringsClient()["s15d_" + LangCode], "", "")
+										, LocalizedStringsClient()["s15f_" + LangCode]
+										, "");
+	Vanessa.ДобавитьШагВМассивТестов(AllTests
+										, LocalizedStringsClient()["s16a_" + LangCode]
+										, LocalizedStringsClient()["s16b_" + LangCode]
+										, StrTemplate(LocalizedStringsClient()["s16c_" + LangCode], LocalizedStringsClient()["s16d_" + LangCode], "", "")
+										, LocalizedStringsClient()["s16f_" + LangCode]
 										, "");
 EndProcedure
 
@@ -1570,11 +1646,11 @@ Function GeneratedFeatureFile()
 					Continue;
 				EndIf;
 				If MetadataListParentRow.Name = "Catalogs" Then
-					Scenarious.Add(ScenarioCatalog(MetadataListRow.Name, MarkdownTables, LangCode));
+					Scenarious.Add(ScenarioCatalog(MetadataListRow.Name, MarkdownTables, LangCode, ThisObject.UseDataExhangeLoadTrue));
 				ElsIf MetadataListParentRow.Name = "Documents" Then
-					Scenarious.Add(ScenarioDocument(MetadataListRow.Name, MarkdownTables, LangCode));
+					Scenarious.Add(ScenarioDocument(MetadataListRow.Name, MarkdownTables, LangCode, ThisObject.UseDataExhangeLoadTrue));
 				ElsIf MetadataListParentRow.Name = "ChartsOfCharacteristicTypes" Then
-					Scenarious.Add(ScenarioChartOfCharacteristicTypes(MetadataListRow.Name, MarkdownTables, LangCode));
+					Scenarious.Add(ScenarioChartOfCharacteristicTypes(MetadataListRow.Name, MarkdownTables, LangCode, ThisObject.UseDataExhangeLoadTrue));
 				ElsIf MetadataListParentRow.Name = "InformationRegisters" Then
 					Scenarious.Add(ScenarioInformationRegister(MetadataListRow.Name, MarkdownTables, LangCode));
 				ElsIf MetadataListParentRow.Name = "AccumulationRegisters" Then
@@ -1654,11 +1730,11 @@ Function GenerateFeatureFileForRefsAtServer()
 		EndIf;
 
 		If MetadataClass = "Catalog" Then
-			ScenarioActionString = ScenarioCatalogActionString(LangCode);
+			ScenarioActionString = ScenarioCatalogActionString(LangCode, ThisObject.UseDataExhangeLoadTrue);
 		ElsIf MetadataClass = "Document" Then
-			ScenarioActionString = ScenarioDocumentActionString(LangCode);
+			ScenarioActionString = ScenarioDocumentActionString(LangCode, ThisObject.UseDataExhangeLoadTrue);
 		ElsIf MetadataClass = "ChartOfCharacteristicTypes" Then
-			ScenarioActionString = ScenarioChartOfCharacteristicTypesActionString(LangCode);
+			ScenarioActionString = ScenarioChartOfCharacteristicTypesActionString(LangCode, ThisObject.UseDataExhangeLoadTrue);
 		ElsIf MetadataClass = "InformationRegister" Then
 			ScenarioActionString = ScenarioInformationRegisterActionString(LangCode);
 		ElsIf MetadataClass = "AccumulationRegister" Then
@@ -1705,11 +1781,11 @@ EndFunction
 #Region Scenario_Catalog
 
 &AtServerNoContext
-Function ScenarioCatalog(MetadataName, MarkdownTables, LangCode)
+Function ScenarioCatalog(MetadataName, MarkdownTables, LangCode, DataExchangeLoad)
 	Scenario = New Array;	
-	Scenario.Add(StrTemplate(LocalizedStringsServer()["s2e_" + LangCode], MetadataName));
+	Scenario.Add(StrTemplate(LocalizedStringsServer()[?(DataExchangeLoad, "s13e_", "s2e_") + LangCode], MetadataName));
 	Scenario.Add("");
-	Scenario.Add(Chars.Tab + StrTemplate(ScenarioCatalogActionString(LangCode), """" + MetadataName + """", Chars.LF, MarkdownTables.ObjectDataMarkdownTable));
+	Scenario.Add(Chars.Tab + StrTemplate(ScenarioCatalogActionString(LangCode, DataExchangeLoad), """" + MetadataName + """", Chars.LF, MarkdownTables.ObjectDataMarkdownTable));
 	For Each DataValue In MarkdownTables.TabularSectionsDataMarkdownTables Do
 		Scenario.Add("");
 		Scenario.Add(Chars.Tab + StrTemplate(ScenarioTabularSectionActionString(LangCode), """" + DataValue.Key + """", Chars.LF, DataValue.Value));
@@ -1719,8 +1795,8 @@ Function ScenarioCatalog(MetadataName, MarkdownTables, LangCode)
 EndFunction
 
 &AtServerNoContext
-Function ScenarioCatalogActionString(LangCode)
-	ReturnValue = LocalizedStringsServer()["s2c_" + LangCode];
+Function ScenarioCatalogActionString(LangCode, DataExchangeLoad)
+	ReturnValue = LocalizedStringsServer()[?(DataExchangeLoad, "s13c_", "s2c_") + LangCode];
 	Return ReturnValue;
 EndFunction
 
@@ -1729,11 +1805,11 @@ EndFunction
 #Region Scenario_Document
 
 &AtServerNoContext
-Function ScenarioDocument(MetadataName, MarkdownTables, LangCode)
+Function ScenarioDocument(MetadataName, MarkdownTables, LangCode, DataExchangeLoad)
 	Scenario = New Array;	
-	Scenario.Add(StrTemplate(LocalizedStringsServer()["s3e_" + LangCode], MetadataName));
+	Scenario.Add(StrTemplate(LocalizedStringsServer()[?(DataExchangeLoad, "s14e_", "s3e_") + LangCode], MetadataName));
 	Scenario.Add("");
-	Scenario.Add(Chars.Tab + StrTemplate(ScenarioDocumentActionString(LangCode), """" + MetadataName + """", Chars.LF, MarkdownTables.ObjectDataMarkdownTable));
+	Scenario.Add(Chars.Tab + StrTemplate(ScenarioDocumentActionString(LangCode, DataExchangeLoad), """" + MetadataName + """", Chars.LF, MarkdownTables.ObjectDataMarkdownTable));
 	For Each DataValue In MarkdownTables.TabularSectionsDataMarkdownTables Do
 		Scenario.Add("");
 		Scenario.Add(Chars.Tab + StrTemplate(ScenarioTabularSectionActionString(LangCode), """" + DataValue.Key + """", Chars.LF, DataValue.Value));
@@ -1743,8 +1819,8 @@ Function ScenarioDocument(MetadataName, MarkdownTables, LangCode)
 EndFunction
 
 &AtServerNoContext
-Function ScenarioDocumentActionString(LangCode)
-	ReturnValue = LocalizedStringsServer()["s3c_" + LangCode];
+Function ScenarioDocumentActionString(LangCode, DataExchangeLoad)
+	ReturnValue = LocalizedStringsServer()[?(DataExchangeLoad, "s14c_", "s3c_") + LangCode];
 	Return ReturnValue;
 EndFunction
 
@@ -1753,11 +1829,11 @@ EndFunction
 #Region Scenario_ChartOfCharacteristicTypes
 
 &AtServerNoContext
-Function ScenarioChartOfCharacteristicTypes(MetadataName, MarkdownTables, LangCode)
+Function ScenarioChartOfCharacteristicTypes(MetadataName, MarkdownTables, LangCode, DataExchangeLoad)
 	Scenario = New Array;	
-	Scenario.Add(StrTemplate(LocalizedStringsServer()["s4e_" + LangCode], MetadataName));
+	Scenario.Add(StrTemplate(LocalizedStringsServer()[?(DataExchangeLoad, "s15e_", "s4e_") + LangCode], MetadataName));
 	Scenario.Add("");
-	Scenario.Add(Chars.Tab + StrTemplate(ScenarioChartOfCharacteristicTypesActionString(LangCode), """" + MetadataName + """", Chars.LF, MarkdownTables.ObjectDataMarkdownTable));
+	Scenario.Add(Chars.Tab + StrTemplate(ScenarioChartOfCharacteristicTypesActionString(LangCode, DataExchangeLoad), """" + MetadataName + """", Chars.LF, MarkdownTables.ObjectDataMarkdownTable));
 	For Each DataValue In MarkdownTables.TabularSectionsDataMarkdownTables Do
 		Scenario.Add("");
 		Scenario.Add(Chars.Tab + StrTemplate(ScenarioTabularSectionActionString(LangCode), """" + DataValue.Key + """", Chars.LF, DataValue.Value));
@@ -1767,8 +1843,8 @@ Function ScenarioChartOfCharacteristicTypes(MetadataName, MarkdownTables, LangCo
 EndFunction
 
 &AtServerNoContext
-Function ScenarioChartOfCharacteristicTypesActionString(LangCode)
-	ReturnValue = LocalizedStringsServer()["s4c_" + LangCode];
+Function ScenarioChartOfCharacteristicTypesActionString(LangCode, DataExchangeLoad)
+	ReturnValue = LocalizedStringsServer()[?(DataExchangeLoad, "s15c_", "s4c_") + LangCode];
 	Return ReturnValue;
 EndFunction
 
@@ -1930,6 +2006,7 @@ Function GeValuetStringRepresentation(DataValue)
 			ReturnValue = String(DataValue);
 			ReturnValue = StrReplace(ReturnValue, "\", "\\");
 			ReturnValue = StrReplace(ReturnValue, Chars.LF, "\n");
+			ReturnValue = StrReplace(ReturnValue, Chars.CR, "");
 			ReturnValue = StrReplace(ReturnValue, "'", "\'");
 		EndIf;
 	ElsIf isMetadataObjectAndDataValueNotEmpty(MetadataObject, DataValue) Then
@@ -2157,19 +2234,6 @@ Function LocalizedStringsServer()
 	ReturnData.Insert("s5f_en", "Creates information register records, using record managers");
 	ReturnData.Insert("s5f_ru", "Создаёт записи регистра сведений, используя менеджеры записей.");
 	
-	ReturnData.Insert("s12a_en", "ICheckOrCreateInformationRegisterRecordsUsingRecordSets(RegisterName, Values)");
-	ReturnData.Insert("s12a_ru", "ЯПроверяюИлиСоздаюДляРегистраСведенийЗаписиИспользуяНаборыЗаписей(ИмяРегистра, Значения)");
-	ReturnData.Insert("s12b_en", "ICheckOrCreateInformationRegisterRecordsUsingRecordSets");
-	ReturnData.Insert("s12b_ru", "ЯПроверяюИлиСоздаюДляРегистраСведенийЗаписиИспользуяНаборыЗаписей");
-	ReturnData.Insert("s12c_en", "And I check or create information register %1 records using record sets:%2%3");
-	ReturnData.Insert("s12c_ru", "И я проверяю или создаю для регистра сведений %1 записи используя наборы записей:%2%3");
-	ReturnData.Insert("s12d_en", """RegisterName""");
-	ReturnData.Insert("s12d_ru", """ИмяРегистра""");
-	ReturnData.Insert("s12e_en", "Scenario: Create information register %1 records");
-	ReturnData.Insert("s12e_ru", "Сценарий: Создание записей для регистра сведений %1");
-	ReturnData.Insert("s12f_en", "Creates information register records, using record sets");
-	ReturnData.Insert("s12f_ru", "Создаёт записи регистра сведений, используя наборы записей");
-	
 	ReturnData.Insert("s6a_en", "ICheckOrCreateAccumulationRegisterRecords(RegisterName, Values)");
 	ReturnData.Insert("s6a_ru", "ЯПроверяюИлиСоздаюДляРегистраНакопленийЗаписи(ИмяРегистра, Значения)");
 	ReturnData.Insert("s6b_en", "ICheckOrCreateAccumulationRegisterRecords");
@@ -2234,6 +2298,70 @@ Function LocalizedStringsServer()
 	ReturnData.Insert("s11a_en", "Scenario: Data preparation");
 	ReturnData.Insert("s11a_ru", "Сценарий: Подготовка данных");
 	
+	ReturnData.Insert("s12a_en", "ICheckOrCreateInformationRegisterRecordsUsingRecordSets(RegisterName, Values)");
+	ReturnData.Insert("s12a_ru", "ЯПроверяюИлиСоздаюДляРегистраСведенийЗаписиИспользуяНаборыЗаписей(ИмяРегистра, Значения)");
+	ReturnData.Insert("s12b_en", "ICheckOrCreateInformationRegisterRecordsUsingRecordSets");
+	ReturnData.Insert("s12b_ru", "ЯПроверяюИлиСоздаюДляРегистраСведенийЗаписиИспользуяНаборыЗаписей");
+	ReturnData.Insert("s12c_en", "And I check or create information register %1 records using record sets:%2%3");
+	ReturnData.Insert("s12c_ru", "И я проверяю или создаю для регистра сведений %1 записи используя наборы записей:%2%3");
+	ReturnData.Insert("s12d_en", """RegisterName""");
+	ReturnData.Insert("s12d_ru", """ИмяРегистра""");
+	ReturnData.Insert("s12e_en", "Scenario: Create information register %1 records");
+	ReturnData.Insert("s12e_ru", "Сценарий: Создание записей для регистра сведений %1");
+	ReturnData.Insert("s12f_en", "Creates information register records, using record sets");
+	ReturnData.Insert("s12f_ru", "Создаёт записи регистра сведений, используя наборы записей");
+	
+	ReturnData.Insert("s13a_en", "ICheckOrCreateCatalogObjectsDataWithDataExchangeLoadTrue(ObjectName, Values)");
+	ReturnData.Insert("s13a_ru", "ЯПроверяюИлиСоздаюДляСправочникаОбъектыCОбменДаннымиЗагрузкаИстина(ИмяОбъекта, Значения)");
+	ReturnData.Insert("s13b_en", "ICheckOrCreateCatalogObjectsDataWithDataExchangeLoadTrue");
+	ReturnData.Insert("s13b_ru", "ЯПроверяюИлиСоздаюДляСправочникаОбъектыCОбменДаннымиЗагрузкаИстина");
+	ReturnData.Insert("s13c_en", "And I check or create catalog %1 objects with data exchange load true:%2%3");
+	ReturnData.Insert("s13c_ru", "И я проверяю или создаю для справочника %1 объекты с обмен данными загрузка истина:%2%3");
+	ReturnData.Insert("s13d_en", """ObjectName""");
+	ReturnData.Insert("s13d_ru", """ИмяОбъекта""");
+	ReturnData.Insert("s13e_en", "Scenario: Create catalog %1 objects with DataExchange.Load = True");
+	ReturnData.Insert("s13e_ru", "Сценарий: Создание объектов для справочника %1 с ОбменДанными.Загрузка = Истина");
+	ReturnData.Insert("s13f_en", "Creates catalog items and groups with DataExchange.Load = True");
+	ReturnData.Insert("s13f_ru", "Создаёт элементы и группы справочника с ОбменДанными.Загрузка = Истина");
+	
+	ReturnData.Insert("s14a_en", "ICheckOrCreateDocumentObjectsWithDataExchangeLoadTrue(ObjectName, Values)");
+	ReturnData.Insert("s14a_ru", "ЯПроверяюИлиСоздаюДляДокументаОбъектыCОбменДаннымиЗагрузкаИстина(ИмяОбъекта, Значения)");
+	ReturnData.Insert("s14b_en", "ICheckOrCreateDocumentObjectsDataWithDataExchangeLoadTrue");
+	ReturnData.Insert("s14b_ru", "ЯПроверяюИлиСоздаюДляДокументаОбъектыCОбменДаннымиЗагрузкаИстина");
+	ReturnData.Insert("s14c_en", "And I check or create document %1 objects with data exchange load true:%2%3");
+	ReturnData.Insert("s14c_ru", "И я проверяю или создаю для документа %1 объекты с обмен данными загрузка истина:%2%3");
+	ReturnData.Insert("s14d_en", """ObjectName""");
+	ReturnData.Insert("s14d_ru", """ИмяОбъекта""");
+	ReturnData.Insert("s14e_en", "Scenario: Create document %1 objects with DataExchange.Load = True");
+	ReturnData.Insert("s14e_ru", "Сценарий: Создание объектов для документа %1 с ОбменДанными.Загрузка = Истина");
+	ReturnData.Insert("s14f_en", "Creates documents with DataExchange.Load = True");
+	ReturnData.Insert("s14f_ru", "Создаёт документы с ОбменДанными.Загрузка = Истина");
+	
+	ReturnData.Insert("s15a_en", "ICheckOrCreateChartOfCharacteristicTypesObjectsWithDataExchangeLoadTrue(ObjectName, Values)");
+	ReturnData.Insert("s15a_ru", "ЯПроверяюИлиСоздаюДляПланаВидовХарактеристикОбъектыCОбменДаннымиЗагрузкаИстина(ИмяОбъекта, Значения)");
+	ReturnData.Insert("s15b_en", "ICheckOrCreateChartOfCharacteristicTypesObjectsWithDataExchangeLoadTrue");
+	ReturnData.Insert("s15b_ru", "ЯПроверяюИлиСоздаюДляПланаВидовХарактеристикОбъектыCОбменДаннымиЗагрузкаИстина");
+	ReturnData.Insert("s15c_en", "And I check or create chart of characteristic types %1 objects with data exchange load true:%2%3");
+	ReturnData.Insert("s15c_ru", "И я проверяю или создаю для плана видов характеристик %1 объекты с обмен данными загрузка истина:%2%3");
+	ReturnData.Insert("s15d_en", """ObjectName""");
+	ReturnData.Insert("s15d_ru", """ИмяОбъекта""");
+	ReturnData.Insert("s15e_en", "Scenario: Create chart of characteristic types %1 objects with DataExchange.Load = True");
+	ReturnData.Insert("s15e_ru", "Сценарий: Создание объектов для плана видов характеристик %1 с ОбменДанными.Загрузка = Истина");
+	ReturnData.Insert("s15f_en", "Creates chart of characteristic items with DataExchange.Load = True");
+	ReturnData.Insert("s15f_ru", "Создаёт элементы плана видов характеристик с ОбменДанными.Загрузка = Истина");
+	
+	ReturnData.Insert("s16a_en", "ICheckOrCreateInformationRegisterRecordsWithDataExchangeLoadTrue(RegisterName, Values)");
+	ReturnData.Insert("s16a_ru", "ЯПроверяюИлиСоздаюДляРегистраСведенийЗаписиCОбменДаннымиЗагрузкаИстина(ИмяРегистра, Значения)");
+	ReturnData.Insert("s16b_en", "ICheckOrCreateInformationRegisterRecordsWithDataExchangeLoadTrue");
+	ReturnData.Insert("s16b_ru", "ЯПроверяюИлиСоздаюДляРегистраСведенийЗаписиCОбменДаннымиЗагрузкаИстина");
+	ReturnData.Insert("s16c_en", "And I check or create information register %1 records with DataExchange.Load = True:%2%3");
+	ReturnData.Insert("s16c_ru", "И я проверяю или создаю для регистра сведений %1 записи с обмен данными загрузка истина:%2%3");
+	ReturnData.Insert("s16d_en", """RegisterName""");
+	ReturnData.Insert("s16d_ru", """ИмяРегистра""");
+	ReturnData.Insert("s16e_en", "Scenario: Create information register %1 records with DataExchange.Load = True");
+	ReturnData.Insert("s16e_ru", "Сценарий: Создание записей для регистра сведений %1 с ОбменДанными.Загрузка = Истина");
+	ReturnData.Insert("s16f_en", "Creates information register records with DataExchange.Load = True");
+	ReturnData.Insert("s16f_ru", "Создаёт записи регистра сведений с ОбменДанными.Загрузка = Истина");
 	Return ReturnData;
 EndFunction
 
