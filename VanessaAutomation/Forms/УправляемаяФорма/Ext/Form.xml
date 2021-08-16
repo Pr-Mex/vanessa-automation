@@ -11636,15 +11636,15 @@
 													<xr:Value xsi:type="FormChoiceListDesTimeValue">
 														<Presentation>
 															<v8:item>
-																<v8:lang>ru</v8:lang>
-																<v8:content>Мобильное приложение</v8:content>
+																<v8:lang>en</v8:lang>
+																<v8:content>Mobile client</v8:content>
 															</v8:item>
 															<v8:item>
-																<v8:lang>en</v8:lang>
-																<v8:content>Mobile app</v8:content>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Мобильный клиент</v8:content>
 															</v8:item>
 														</Presentation>
-														<Value xsi:type="xs:string">МобильноеПриложение</Value>
+														<Value xsi:type="xs:string">МобильныйКлиент</Value>
 													</xr:Value>
 												</xr:Item>
 											</ChoiceList>
@@ -14300,6 +14300,66 @@ When working with Vanessa Automation Single it is allowed to leave the field bla
 														</InputField>
 													</ChildItems>
 												</UsualGroup>
+												<UsualGroup name="ГруппаНастройкиМобильногоКлиента" id="3123">
+													<Title>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Mobile client settings</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Настройки мобильного клиента</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа настройки мобильного клиента</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Vertical</Group>
+													<Behavior>Collapsible</Behavior>
+													<ControlRepresentation>Picture</ControlRepresentation>
+													<ExtendedTooltip name="ГруппаНастройкиМобильногоКлиентаРасширеннаяПодсказка" id="3124"/>
+													<ChildItems>
+														<InputField name="ПутьКadb" id="3125">
+															<DataPath>ПутьКadb</DataPath>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Set path to adb tool</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Путь к adb</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<InputHint>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>C:\adb\</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>C:\adb\</v8:content>
+																</v8:item>
+															</InputHint>
+															<ContextMenu name="ПутьКadbКонтекстноеМеню" id="3126"/>
+															<ExtendedTooltip name="ПутьКadbРасширеннаяПодсказка" id="3127"/>
+														</InputField>
+														<Button name="ПроверкаПодключенияКМобильномуУстройству" id="3128">
+															<Type>UsualButton</Type>
+															<CommandName>Form.Command.ПроверкаПодключенияКМобильномуУстройству</CommandName>
+															<ExtendedTooltip name="ПроверкаПодключенияКМобильномуУстройствуРасширеннаяПодсказка" id="3129"/>
+														</Button>
+														<Button name="ЗапуститьМобильныйКлиент" id="3130">
+															<Type>UsualButton</Type>
+															<CommandName>Form.Command.ЗапуститьМобильныйКлиент</CommandName>
+															<ExtendedTooltip name="ЗапуститьМобильныйКлиентРасширеннаяПодсказка" id="3131"/>
+														</Button>
+													</ChildItems>
+												</UsualGroup>
 											</ChildItems>
 										</Page>
 										<Page name="СтраницаВыполнениеСценариев" id="1840">
@@ -16611,7 +16671,7 @@ If the field is empty, the log will not be output to a text file.</v8:content>
 																					<CheckBoxType>Auto</CheckBoxType>
 																					<ContextMenu name="ТегиПропускающиеСценарийAllureКонтекстноеМеню" id="2743"/>
 																					<ExtendedTooltip name="ТегиПропускающиеСценарийAllureРасширеннаяПодсказка" id="2744">
-																						<Title formatted="true">
+																							<Title formatted="true">
 																							<v8:item>
 																								<v8:lang>ru</v8:lang>
 																								<v8:content>Список тегов, разделённых с помощью ";".
@@ -21182,7 +21242,7 @@ The method should return the path to the mp3 file.</v8:content>
 																									<ToolTipRepresentation>Button</ToolTipRepresentation>
 																									<ContextMenu name="ПодсказкаРазметкаТекстаСберКонтекстноеМеню" id="3066"/>
 																									<ExtendedTooltip name="ПодсказкаРазметкаТекстаСберРасширеннаяПодсказка" id="3067">
-																										<Title formatted="true">
+																											<Title formatted="true">
 																											<v8:item>
 																												<v8:lang>ru</v8:lang>
 																												<v8:content>При разметке текста можно: 
@@ -29356,6 +29416,25 @@ To disable mouse movement at a specific step, you should use the #[DoNotMoveMous
 				</Column>
 			</Columns>
 		</Attribute>
+		<Attribute name="ПутьКadb" id="54">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Path to adb</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь к adb</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -36790,6 +36869,44 @@ To disable mouse movement at a specific step, you should use the #[DoNotMoveMous
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorContextMenu</Action>
+		</Command>
+		<Command name="ПроверкаПодключенияКМобильномуУстройству" id="156">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Test connection to mobile device</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверка подключения к мобильному устройству</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверка подключения к мобильному устройству</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверкаПодключенияКМобильномуУстройству</Action>
+		</Command>
+		<Command name="ЗапуститьМобильныйКлиент" id="157">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Launch mobile client</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить мобильный клиент</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Запустить мобильный клиент</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗапуститьМобильныйКлиент</Action>
 		</Command>
 	</Commands>
 </Form>
