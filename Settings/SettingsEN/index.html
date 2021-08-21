@@ -13,7 +13,7 @@
       
       
       <link rel="shortcut icon" href="../../assets/images/logo.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.0.0">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-5.0.0">
     
     
       
@@ -69,7 +69,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="">
-    <a href="https://pr-mex.github.io/vanessa-automation" title="Vanessa Automation" class="md-header-nav__button md-logo" aria-label="Vanessa Automation">
+    <a href="https://pr-mex.github.io/vanessa-automation/" title="Vanessa Automation" class="md-header-nav__button md-logo" aria-label="Vanessa Automation">
       
   <img src="../../assets/images/logo.png" alt="logo">
 
@@ -195,6 +195,32 @@
   
 
       
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../TestDataGenerator/TestDataGenerator/" class="md-tabs__link">
+          TestDataGenerator
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../VAExtension/VAExtension/" class="md-tabs__link">
+          VAExtension
+        </a>
+      
+    </li>
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -209,7 +235,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" aria-label="" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://pr-mex.github.io/vanessa-automation" title="Vanessa Automation" class="md-nav__button md-logo" aria-label="Vanessa Automation">
+    <a href="https://pr-mex.github.io/vanessa-automation/" title="Vanessa Automation" class="md-nav__button md-logo" aria-label="Vanessa Automation">
       
   <img src="../../assets/images/logo.png" alt="logo">
 
@@ -526,6 +552,90 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      TestDataGenerator
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="TestDataGenerator" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        TestDataGenerator
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../TestDataGenerator/TestDataGenerator/" title="Подготовка и загрузка данных" class="md-nav__link">
+      Подготовка и загрузка данных
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      VAExtension
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="VAExtension" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        VAExtension
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../VAExtension/VAExtension/" title="Расширение VAExtension" class="md-nav__link">
+      Расширение VAExtension
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -692,6 +802,12 @@ If the checkbox is on, feature file is considered as if it has @tree tag, even i
 Sets the flag. that you need to use the Gherkin parser from the VanessaExt component. This parser is much faster than the built-in parser.</p>
 </li>
 <li>
+<p><strong>EvaluateExpressionsInCurlyBraces</strong>:
+Turns on the mode when any expression inside the parameters of the steps {} will be evaluated. If the section "Variables" is declared, but first an attempt will be made to find a variable from this section by the specified expression. Otherwise, an attempt will be made to evaluate the expression in {}.
+If {expression} is used, then the expression will be evaluated on the client.
+If {!expression} Is used, the expression will be evaluated on the server.</p>
+</li>
+<li>
 <p><strong>instrpath</strong>:
 The catalog of Vanessa Automation data processor. This field must be filled on the standard installation.
 When working with Vanessa Automation Single it is allowed to leave the field blank.</p>
@@ -729,6 +845,10 @@ file path or url for settings. By default, project directory (name of default fi
 If the option is on, TestClient will launch in full-screen mode.</p>
 </li>
 <li>
+<p><strong>modalwindowwhenstartingtestclientiserror</strong>:
+If this option is enabled, then the modal window when starting the test client means a test client connection error.</p>
+</li>
+<li>
 <p><strong>testclienttimeout</strong>:
 Specifies timeout in seconds of Vanessa Automation awaiting for TestClient launch. After timeout the exception will be risen.</p>
 </li>
@@ -736,7 +856,15 @@ Specifies timeout in seconds of Vanessa Automation awaiting for TestClient launc
 <p><strong>testclientports</strong>:
 Specifies ports range to search for free port to run TestClient.</p>
 </li>
+<li>
+<p><strong>starttestclientsessionagainonconnectionifitsprocessisnotfound</strong>:
+Enables restarting the test client process if the previous run did not work (for example, if no license was obtained). For thick and thin clien only.</p>
+</li>
 </ul>
+</li>
+<li>
+<p><strong>testclientprocessstartinterval</strong>:
+Specifies the interval at which an attempt will be made to start a testing client session.</p>
 </li>
 <li>
 <p>TestClient debug</p>
@@ -841,6 +969,11 @@ It is recommended to set this checkbox on.</p>
 <p><strong>updateformtableswhengettingvalue</strong>:
 If this option is enabled, then when receiving a table, the test will try to find and click on the "Refresh" table button and press it.
 An update attempt will occur if there are several attempts to get the table value and the first attempt was unsuccessful.</p>
+</li>
+<li>
+<p><strong>getlayoutsusingextensionvaextension</strong>:
+Enables retrieval of layout values (printable forms and reports) using the VAExtension.
+Allows you to receive the entire layout with the design in the web client.</p>
 </li>
 <li>
 <p><strong>timeoutforasynchronoussteps</strong>:
@@ -995,7 +1128,7 @@ If the field is empty, the log will not be output to a text file.</p>
 <div class="codehilite"><pre><span></span><code> * **allurepath**:
 </code></pre></div>
 
-<p>Allure reports directory.</p>
+<p>Allure reports directory. When run locally, the directory will be cleaned up each time the scripts are run.</p>
 <div class="codehilite"><pre><span></span><code> * **allurepathbase**:
 </code></pre></div>
 
@@ -1047,6 +1180,26 @@ If the field is empty, the log will not be output to a text file.</p>
 </code></pre></div>
 
 <p>If the option is enabled, data with Context and Global Context variable values will be collected when an error occurs.</p>
+<div class="codehilite"><pre><span></span><code>* **attachmxlfilestoallurereport**:
+</code></pre></div>
+
+<p>Files of reports and their templates will be attached to the Allure report in mxl format.</p>
+<div class="codehilite"><pre><span></span><code>* **attachmxlfilessavedinhtmlformattoallurereport**:
+</code></pre></div>
+
+<p>All mxl files that will be attached to the Allure report will be saved in HTML format. This makes it easier to open and view the result.</p>
+<div class="codehilite"><pre><span></span><code>* **attachadditionaldatawhencomparingvaluewithreferenceallure**:
+</code></pre></div>
+
+<p>If this option is enabled, then when comparing a layout with a reference or when comparing a table with a reference, additional files will be generated:
+a picture containing the difference between the reference and the current value of the table or layout
+a picture of the current value
+picture of the reference value
+a gif file showing the difference between the current and reference value.
+An additional section will also appear in the Allure report, where you can conveniently view a comparison of the reference and the current value.
+For this option to work, it is necessary that the ImageMagick 7 version or higher and the ghostscript package https://www.ghostscript.com/download.html, which converts pdf files into pictures, must be installed on the PC where Vanessa Automation is running.
+It is also necessary that commands of the form are executed on the PC:
+magick convert file.pdf file.png</p>
 <ul>
 <li><strong>DataAllureMarks</strong>:
 The table is used to map script tags to pace marks.
@@ -1115,6 +1268,10 @@ If the option is enabled, then when an error occurs, data will be collected on t
 If the option is enabled, then when an error occurs, data on running OS processes will be collected.</p>
 </li>
 <li>
+<p><strong>CollectDataOnVariableValues</strong>:
+Enables the collection of data about the values of variables.</p>
+</li>
+<li>
 <p><strong>texterrorslogname</strong>:
 The directory for errors data and form elements status information.</p>
 </li>
@@ -1128,8 +1285,12 @@ Enables a scenario execution report in the internal format.</p>
 <h2 id="auto-instructions">Auto instructions<a class="headerlink" href="#auto-instructions" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p>VanessaExt add-in</p>
+<p>VanessaExt add-in + Chrome + UI Automation</p>
 <ul>
+<li>
+<p><strong>UseUIAutomation</strong>:
+Enables the use of the UI Automation mechanism on Windows.</p>
+</li>
 <li>
 <p><strong>usebrowserwebsocket</strong>:
 Allows to execute external commands in the browser using WebSocket.</p>
@@ -1203,23 +1364,7 @@ Allows to continue running the scenario if the form item is not found in the bro
 </ul>
 </li>
 <li>
-<p>SikuliX server</p>
-<ul>
-<li>
-<p><strong>emulatemousemovement</strong>:
-If the checkbox is on, then the search of form element or control will be performed on steps execution. Mouse pointer will be moved to the detected element. 
-SikuliX is used for picture search and mouse movement. Picture will be generated by the text from the form element.
-To disable mouse movement at a specific step, you should use the #[DoNotMoveMouse] directive.</p>
-</li>
-<li>
-<p><strong>sikulixscriptpath</strong>:
-Script directory. Multiple directories can be used, separated by ";".</p>
-</li>
-<li>
-<p><strong>pathforpicturegeneration</strong>:
-The directory in which pictures will be programmatically created to search for them on the screen.</p>
-</li>
-</ul>
+<p>VanessaExt add-in + UI Automation</p>
 </li>
 <li>
 <p>HTML and Markdown</p>
@@ -1252,14 +1397,105 @@ To ensure that leading zeros are not lost when exporting from MD format, the tex
 </ul>
 </li>
 <li>
-<p>Video tutorial</p>
+<p>Audio</p>
+<ul>
+<li><strong>soundscenarioexecution</strong>:
+Includes voice acting of the script execution according to the specified settings of the announcer's voice.</li>
+</ul>
+</li>
+<li>
+<p>Voiceover by announcer</p>
+<div class="codehilite"><pre><span></span><code> * **ttstype**:
+</code></pre></div>
+
+<p>Specifies the narrator's voice.</p>
 <ul>
 <li>
-<p><strong>videocreate</strong>:
-Allows you to create video instructions.
-A video describing the settings is in this playlist.
-It is also recommended to read this FAQ.</p>
+<p>Microsoft TTS</p>
+<div class="codehilite"><pre><span></span><code>* **speedofspeech**:
+</code></pre></div>
+
+<p>Narrator's speech speed.
+Value range is from -10 to 10.</p>
 </li>
+<li>
+<p>Yandex TTS</p>
+<div class="codehilite"><pre><span></span><code>* **yandexttsspeed**:
+</code></pre></div>
+
+<p>The speed (tempo) of synthesized speech.
+Speech rate is specified as a fractional number in the range from 0.1 to 3.0.</p>
+<div class="codehilite"><pre><span></span><code>* **yandexttsquerytype**:
+</code></pre></div>
+
+<p>Determines how the audio files will be received: through the official API or through the free interface. The recommended value is via the official API.</p>
+</li>
+<li>
+<p>Group amazon TTS</p>
+<div class="codehilite"><pre><span></span><code><span class="o">*</span> <span class="o">**</span><span class="n">amazonttsregion</span><span class="o">**:</span>
+</code></pre></div>
+
+<p>The field specifies the region parameter. The default is us-east-1.</p>
+<div class="codehilite"><pre><span></span><code>* **amazonttskey**:
+</code></pre></div>
+
+<p>Amazon cloud access key.</p>
+<div class="codehilite"><pre><span></span><code>* **amazonttssecretkey**:
+</code></pre></div>
+
+<p>The file where Amazon cloud private key is stored.</p>
+</li>
+<li>
+<p>Group other TTS engine</p>
+<div class="codehilite"><pre><span></span><code>* **pathprocessingenginetts**:
+</code></pre></div>
+
+<p>Allows you to generate voiceovers for a step using external processing. Processing should contain an export method in the main form:
+GetMp3File (Vanessa, VideoParams, Text, FileName, VoiceParams)
+Where:
+Vanessa - Vanessa Automation context framework
+VideoParams - Structure containing video recording parameters
+Text - the text to be read
+FileName - the name of the current video clip
+VoiceParams - additional voice parameters specified in the feature file using additional directives
+The method should return the path to the mp3 file.</p>
+<div class="codehilite"><pre><span></span><code>* **SettingsOtherEngineTTS**:
+</code></pre></div>
+
+<p>Allows you to set an arbitrary set of settings for generating voiceovers.</p>
+</li>
+<li>
+<p>SBER parameters</p>
+</li>
+<li>
+<p>Voice test</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Audio cache</p>
+<div class="codehilite"><pre><span></span><code> * **cachettsfiles**:
+</code></pre></div>
+
+<p>Switchs on voice file cashing.
+Makes video assembly process faster.
+Reduces external voice generation servises usage.
+Reduces voice generation costs.</p>
+<div class="codehilite"><pre><span></span><code> * **ttsfilescache**:
+</code></pre></div>
+
+<p>Voice cache files directory.</p>
+</li>
+<li>
+<p>Replacements dictionaries</p>
+<div class="codehilite"><pre><span></span><code> * **changewordslib**:
+</code></pre></div>
+
+<p>List of files that will be used for autocorrect spoken text.</p>
+</li>
+<li>
+<p>Video tutorial</p>
+<ul>
 <li>
 <p><strong>videopath</strong>:
 Directory where will be placed result of assembly videos or animated screencast.</p>
@@ -1323,10 +1559,12 @@ During the installation, the following item is required for installation: Instal
 </li>
 <li>
 <p>Audio settings</p>
+<div class="codehilite"><pre><span></span><code> * **dotts**:
+</code></pre></div>
+
+<p>Switches on the voicing of the video.</p>
 <ul>
-<li>
-<p>Music</p>
-<div class="codehilite"><pre><span></span><code>* **musicpath**:
+<li>Music<div class="codehilite"><pre><span></span><code>* **musicpath**:
 </code></pre></div>
 
 <p>mp3 files directory.
@@ -1339,82 +1577,6 @@ If mp3 file duration is less than the video's, it will be repeated.</p>
 If the specified value is 0, it will not affect music volume.
 If value is greater than zero (e.g., 0.06), it will affect the volume of the soundtrack.
 Recommended value is 0.1 or less.</p>
-</li>
-<li>
-<p>Make voice</p>
-<div class="codehilite"><pre><span></span><code>* **dotts**:
-</code></pre></div>
-
-<p>Switches on the voicing of the video.</p>
-<div class="codehilite"><pre><span></span><code>* **ttstype**:
-</code></pre></div>
-
-<p>Specifies the narrator's voice.</p>
-<ul>
-<li>
-<p>Microsoft TTS</p>
-<ul>
-<li><strong>speedofspeech</strong>:
-Narrator's speech speed.
-Value range is from -10 to 10.</li>
-</ul>
-</li>
-<li>
-<p>Yandex TTS</p>
-<ul>
-<li>
-<p><strong>yandexttsspeed</strong>:
-The speed (tempo) of synthesized speech.
-Speech rate is specified as a fractional number in the range from 0.1 to 3.0.</p>
-</li>
-<li>
-<p><strong>yandexttsquerytype</strong>:
-Determines how the audio files will be received: through the official API or through the free interface. The recommended value is via the official API.</p>
-</li>
-</ul>
-</li>
-<li>
-<p>Group amazon TTS</p>
-<ul>
-<li>
-<p><strong>amazonttsregion</strong>:
-The field specifies the region parameter. The default is us-east-1.</p>
-</li>
-<li>
-<p><strong>amazonttskey</strong>:
-Amazon cloud access key.</p>
-</li>
-<li>
-<p><strong>amazonttssecretkey</strong>:
-The file where Amazon cloud private key is stored.</p>
-</li>
-</ul>
-</li>
-<li>
-<p>Voice test</p>
-</li>
-</ul>
-</li>
-<li>
-<p>Audio cache</p>
-<div class="codehilite"><pre><span></span><code>* **cachettsfiles**:
-</code></pre></div>
-
-<p>Switchs on voice file cashing.
-Makes video assembly process faster.
-Reduces external voice generation servises usage.
-Reduces voice generation costs.</p>
-<div class="codehilite"><pre><span></span><code>* **ttsfilescache**:
-</code></pre></div>
-
-<p>Voice cache files directory.</p>
-</li>
-<li>
-<p>Replacements dictionaries</p>
-<div class="codehilite"><pre><span></span><code>* **changewordslib**:
-</code></pre></div>
-
-<p>List of files that will be used for autocorrect spoken text.</p>
 </li>
 </ul>
 </li>
@@ -1446,12 +1608,6 @@ Then in the example above the video will speed up (10 * (1-0.3)) from 10 to 7 se
 </code></pre></div>
 
 <p>Switches on the mode, when each first level group of scenario steps will be converter to one step in automanual.</p>
-<div class="codehilite"><pre><span></span><code> * **emulatekeyboardinput**:
-</code></pre></div>
-
-<p>Switches on text input emulation. Project utility UIToolsFor1C is used.
-Only Russian and English are available.
-Keyboard layout shwitches by pressing Ctrl+Shift emulation.</p>
 <div class="codehilite"><pre><span></span><code> * **hideservicewindows**:
 </code></pre></div>
 
@@ -1478,12 +1634,37 @@ Speeds up video assembly. This mode is recommended.</p>
 
 <p>Switches on mouse clicks highlighting. Project utility UIToolsFor1C is used.
 SikuliX emulates mouse clicks.</p>
+<div class="codehilite"><pre><span></span><code> * **emulatekeyboardinput**:
+</code></pre></div>
+
+<p>Switches on text input emulation. Project utility UIToolsFor1C is used.
+Only Russian and English are available.
+Keyboard layout shwitches by pressing Ctrl+Shift emulation.</p>
 <ul>
 <li>
 <p>Customize the title slide features</p>
 </li>
 <li>
 <p>Final slide settings </p>
+</li>
+</ul>
+</li>
+<li>
+<p>SikuliX server (deprecated)</p>
+<ul>
+<li>
+<p><strong>emulatemousemovement</strong>:
+If the checkbox is on, then the search of form element or control will be performed on steps execution. Mouse pointer will be moved to the detected element. 
+SikuliX is used for picture search and mouse movement. Picture will be generated by the text from the form element.
+To disable mouse movement at a specific step, you should use the #[DoNotMoveMouse] directive.</p>
+</li>
+<li>
+<p><strong>sikulixscriptpath</strong>:
+Script directory. Multiple directories can be used, separated by ";".</p>
+</li>
+<li>
+<p><strong>pathforpicturegeneration</strong>:
+The directory in which pictures will be programmatically created to search for them on the screen.</p>
 </li>
 </ul>
 </li>

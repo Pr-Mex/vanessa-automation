@@ -13,7 +13,7 @@
       
       
       <link rel="shortcut icon" href="../../assets/images/logo.png">
-      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-5.0.0">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-5.0.0">
     
     
       
@@ -69,7 +69,7 @@
     
       <header class="md-header" data-md-component="header">
   <nav class="md-header-nav md-grid" aria-label="">
-    <a href="https://pr-mex.github.io/vanessa-automation" title="Vanessa Automation" class="md-header-nav__button md-logo" aria-label="Vanessa Automation">
+    <a href="https://pr-mex.github.io/vanessa-automation/" title="Vanessa Automation" class="md-header-nav__button md-logo" aria-label="Vanessa Automation">
       
   <img src="../../assets/images/logo.png" alt="logo">
 
@@ -195,6 +195,32 @@
   
 
       
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../TestDataGenerator/TestDataGenerator/" class="md-tabs__link">
+          TestDataGenerator
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../VAExtension/VAExtension/" class="md-tabs__link">
+          VAExtension
+        </a>
+      
+    </li>
+  
+
+      
     </ul>
   </div>
 </nav>
@@ -209,7 +235,7 @@
                   <div class="md-sidebar__inner">
                     <nav class="md-nav md-nav--primary" aria-label="" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://pr-mex.github.io/vanessa-automation" title="Vanessa Automation" class="md-nav__button md-logo" aria-label="Vanessa Automation">
+    <a href="https://pr-mex.github.io/vanessa-automation/" title="Vanessa Automation" class="md-nav__button md-logo" aria-label="Vanessa Automation">
       
   <img src="../../assets/images/logo.png" alt="logo">
 
@@ -526,6 +552,90 @@
   </li>
 
     
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
+    
+    <label class="md-nav__link" for="nav-7">
+      TestDataGenerator
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="TestDataGenerator" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        TestDataGenerator
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../TestDataGenerator/TestDataGenerator/" title="Подготовка и загрузка данных" class="md-nav__link">
+      Подготовка и загрузка данных
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      VAExtension
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="VAExtension" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        VAExtension
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../VAExtension/VAExtension/" title="Расширение VAExtension" class="md-nav__link">
+      Расширение VAExtension
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
   </ul>
 </nav>
                   </div>
@@ -709,6 +819,12 @@ https://github.com/lintest/VanessaExt</p>
 Устанавливает признак того. что нужно использовать парсер Gherkin из компоненты VanessaExt. Этот парсер работает гораздо быстрее, чем встроенный парсер.</p>
 </li>
 <li>
+<p><strong>ВычислятьВыраженияВФигурныхСкобках {EvaluateExpressionsInCurlyBraces}</strong>:
+Включает режим, когда любое выражение внутри параметров шагов {} будет вычисляться. Если объявлена секция "Переменные", но сначала будет произведена попытка найти переменную из этой секции по указанному выражению. Иначе будет попытка вычислить выражение в {}.
+Если используются {выражение}, то выражение будет вычисляться на клиенте.
+Если используются {!выражение}, то выражение будет вычисляться на сервере.</p>
+</li>
+<li>
 <p><strong>КаталогИнструментов {instrpath}</strong>:
 Каталог, где находится обработка Vanessa Automation. При работе со стандартной поставкой поле должно быть заполнено.
 При работе с Vanessa Automation Single допускается оставлять поле пустым.</p>
@@ -746,6 +862,10 @@ https://github.com/lintest/VanessaExt</p>
 Если опция включена клиент тестирования будет запущен развёрнутым на весь экран.</p>
 </li>
 <li>
+<p><strong>МодальноеОкноПриЗапускеКлиентаТестированияЭтоОшибка {modalwindowwhenstartingtestclientiserror}</strong>:
+Если опция включена, то модальное окно при запуске клиента тестирования означает ошибку подключения клиента тестирования.</p>
+</li>
+<li>
 <p><strong>ТаймаутЗапуска1С {testclienttimeout}</strong>:
 Устанавливает макcимальное время в секундах, в течение которого Vanessa Automation будет ждать запуска клиента тестирования. По истечении времени будет вызвано исключение.</p>
 </li>
@@ -753,7 +873,15 @@ https://github.com/lintest/VanessaExt</p>
 <p><strong>ДиапазонПортовTestclient {testclientports}</strong>:
 Устанавливает диапазон портов, в котором будет производиться поиск свободного порта в системе для запуска клиента тестирования.</p>
 </li>
+<li>
+<p><strong>ПовторноЗапускатьСеансКлиентаТестированияПриПодключенииЕслиНеНайденЕгоПроцесс {starttestclientsessionagainonconnectionifitsprocessisnotfound}</strong>:
+Включает повторный запуск процесса клиента тестирования, если предыдущий запуск не сработал (например, если не была получена лицензия). Только для толстого и тонкого клиена.</p>
+</li>
 </ul>
+</li>
+<li>
+<p><strong>ИнтервалЗапускаПроцессаКлиентаТестирования {testclientprocessstartinterval}</strong>:
+Задаёт интервал, с которым будет производиться попытка запустить сеанс клиента тестирования.</p>
 </li>
 <li>
 <p>Отладка клиента тестирования</p>
@@ -857,6 +985,11 @@ https://github.com/lintest/VanessaExt</p>
 <p><strong>ОбновлятьТаблицыФормыПриПолученииЗначения {updateformtableswhengettingvalue}</strong>:
 Если опция включена, то при  получении таблицы тест будет пытаться найти и нажать на кнопку таблицы "Обновить" и нажать её.
 Попытка обновления будет происходить в том случае, если происходит несколько попыток получения значения таблицы и первая попытка была неуспешной.</p>
+</li>
+<li>
+<p><strong>ПолучатьМакетыСПомощьюРасширенияVAExtension {getlayoutsusingextensionvaextension}</strong>:
+Включает получение значений макетов (печатных форм и отчетов)  с помощью расширения VAExtension.
+Позволяет получать макет целиком с оформлением в web клиенте.</p>
 </li>
 <li>
 <p><strong>ТаймаутДляАсинхронныхШагов {timeoutforasynchronoussteps}</strong>:
@@ -1026,7 +1159,7 @@ https://pr-mex.github.io/vanessa-automation/dev/ReturnStatus</p>
 <div class="codehilite"><pre><span></span><code> * **КаталогВыгрузкиAllure {allurepath}**:
 </code></pre></div>
 
-<p>Каталог, в котором формируются данные отчета в формате Allure.</p>
+<p>Каталог, в котором формируются данные отчета в формате Allure. При локальном запуске каталог будет очищаться при каждом запуске сценариев.</p>
 <div class="codehilite"><pre><span></span><code> * **КаталогВыгрузкиAllureБазовый {allurepathbase}**:
 </code></pre></div>
 
@@ -1083,6 +1216,26 @@ https://pr-mex.github.io/vanessa-automation/dev/ReturnStatus</p>
 </code></pre></div>
 
 <p>Если опция включена, то при возникновении ошибки будут собраны данные со значениями переменных Контекста и Контекста глобального.</p>
+<div class="codehilite"><pre><span></span><code>* **ПрикладыватьФайлыMxlКОтчетуAllure {attachmxlfilestoallurereport}**:
+</code></pre></div>
+
+<p>Файлы отчетов и их эталонов будут прикладываться к отчету Allure в формате mxl.</p>
+<div class="codehilite"><pre><span></span><code>* **ПрикладыватьФайлыMxlСохраненныеВФорматеHTMLКОтчетуAllure {attachmxlfilessavedinhtmlformattoallurereport}**:
+</code></pre></div>
+
+<p>Все mxl файлы, которые будут приложены к отчету Allure будут сохраняться в формате HTML. Это упрощает открытие и просмотр результата.</p>
+<div class="codehilite"><pre><span></span><code>* **ПрикладыватьДополнительныеДанныеПриСравненииЗначенияСЭталономAllure {attachadditionaldatawhencomparingvaluewithreferenceallure}**:
+</code></pre></div>
+
+<p>Если опция включена, то при сравнении макета с эталоном или при сравнении таблицы с эталоном будут формироваться дополнительные файлы:
+картинка, содержаящая разницу между эталоном и текущим значением таблицы или макета
+картинка текущего значения
+картинка эталонного значения
+файл в формате gif, показывающий разницу между текущим и эталонным значением.
+Также в отчете Allure появится дополнительная секция, где можно будет удобно просмотреть сравнение эталона и текущего значения.
+Для работы опции необходимо, чтобы на ПК, где запускается Vanessa Automation был установлен пакет ImageMagick7 версии или выше и пакет ghostscript https://www.ghostscript.com/download.htmlt, который выполняет конвертацию pdf файлов в картинки.
+Также необходимо, чтобы на ПК выполнялись команды вида:
+magick convert file.pdf file.png</p>
 <ul>
 <li><strong>ДанныеАллюрМеток {DataAllureMarks}</strong>:
 Таблица используется для установки соответствия тегов сценариев меткам аллюра.
@@ -1115,6 +1268,12 @@ https://habr.com/ru/company/sberbank/blog/359302/</li>
 </code></pre></div>
 
 <p>Каталог для формирования отчета.</p>
+<div class="codehilite"><pre><span></span><code> * **СкриншотыjUnit {junitscreenshots}**:
+</code></pre></div>
+
+<p>С версии 13.12 в jUnit можно добавлять скриншоты.
+Чтобы все корректно работало - КаталогСкриншотов должен быть расположен внутри КаталогаПроекта.
+Папку скриншотов сохранять как артефакты.</p>
 </li>
 <li>
 <p>СППР</p>
@@ -1151,6 +1310,10 @@ https://habr.com/ru/company/sberbank/blog/359302/</li>
 Если опция включена, то при возникновении ошибки будут собраны данные о запущенных процессах ОС.</p>
 </li>
 <li>
+<p><strong>СобиратьДанныеОЗначенияхПеременных {CollectDataOnVariableValues}</strong>:
+Включает сбор данных о значениях переменных.</p>
+</li>
+<li>
 <p><strong>ИмяКаталогаЛогОшибок {texterrorslogname}</strong>:
 Каталог, для формирования файлов с данными об ошибках и состоянии элементов форм. Каталог очищается при начале выполнения сценариев.</p>
 </li>
@@ -1164,8 +1327,12 @@ https://habr.com/ru/company/sberbank/blog/359302/</li>
 <h2 id="_6">Автоинструкции<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p>Компонента VanessaExt + Chrome</p>
+<p>Компонента VanessaExt + Chrome + UI Automation</p>
 <ul>
+<li>
+<p><strong>ИспользоватьUIAutomation {UseUIAutomation}</strong>:
+Включает использование механизма UI Automation в Windows.</p>
+</li>
 <li>
 <p><strong>ИспользоватьБраузерПлюсWebSocket {usebrowserwebsocket}</strong>:
 Позволяет выполнять внешние команды для барузера через WebSocket.</p>
@@ -1259,30 +1426,7 @@ https://habr.com/ru/company/sberbank/blog/359302/</li>
 </ul>
 </li>
 <li>
-<p>SikuliX server</p>
-<ul>
-<li>
-<p><strong>ИспользоватьSikuliXСервер {usesikulixserver}</strong>:
-SikuliX это Java приложение, которое позволяет управлять перемещением и нажатиями мыши на экране, а также эмулировать нажатие кнопок клавиатуры.
-SikuliX Server - это специальная программная оптимизация работы с SikuliX. Если опция включена VA собирает один большой скрипт из множества скриптов SikuliX, который можно запустить один раз и быстро выполнять необходимые команды, которые раньше приходилось запускать по одной.  Это позволяет существенно сэкономить время на выполнение одного скрипта SikuliX, т.к. не тратится время на запуск SikuliX и его выгрузку из памяти.
-Описание установки и настройки SikuliX и SikuliX Server приведено в разделе справки 20.1
-Открыть справку</p>
-</li>
-<li>
-<p><strong>ЗаписьВидеоЭмулироватьДвиженияМышкиSikuliX {emulatemousemovement}</strong>:
-Если флаг установлен, то при выполнении шагов будет выполняться попытка найти элмент формы или элемент управления на экране и переместить курсор мышки к нему.
-Для поиска картинки и передвижения мышки используется SikuliX. Картинка для поиска будет сгенерирована по тексту, полученному из элемента формы.
-Чтобы отключить движение мышки у конкретного шага надо использовать директиву #[DoNotMoveMouse].</p>
-</li>
-<li>
-<p><strong>КаталогиСкриптовSikuliX {sikulixscriptpath}</strong>:
-Каталог скриптов. Можно указывать несколько каталогов, разделенных через ";".</p>
-</li>
-<li>
-<p><strong>КаталогДляГенерацииКартинок {pathforpicturegeneration}</strong>:
-Каталог, в котором будут программно создаваться картинки для поиска их на экране.</p>
-</li>
-</ul>
+<p>Компонента VanessaExt + UI Automation</p>
 </li>
 <li>
 <p>HTML и Markdown</p>
@@ -1313,6 +1457,173 @@ SikuliX Server - это специальная программная оптим
 Для того, что бы лидирующие нули не терялись при экспорте из MD формата, текст записывается в блок кода.</p>
 </li>
 </ul>
+</li>
+<li>
+<p>Аудио</p>
+<ul>
+<li><strong>ОзвучиватьВыполнениеСценария {soundscenarioexecution}</strong>:
+Включает озвучку выполнения сценария согласно заданным настройкам голоса диктора.</li>
+</ul>
+</li>
+<li>
+<p>Озвучивание диктором</p>
+<div class="codehilite"><pre><span></span><code> * **ЗаписьВидеоТипОзвучкиTTS {ttstype}**:
+</code></pre></div>
+
+<p>Указывает какой голос нужно использовать для озвучки видео диктором.</p>
+<ul>
+<li>
+<p>Microsoft TTS</p>
+<div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоПутьКДвижкуTTS {audioenginetts}**:
+</code></pre></div>
+
+<p>Консольная команда, которая будет использована при конвертации текста в речь.
+Используется программа balabolka_console.</p>
+<div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоИмяTTS {ttsvoice}**:
+</code></pre></div>
+
+<p>Указывает какой голос будет использован для озвучки. Допускается указывать не полное название голоса в системе, а только часть, например "Elena".
+Понадобится установить Microsoft Speech Platform х32 и Server Runtime Languages.</p>
+<div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоСкоростьПроизношения {speedofspeech}**:
+</code></pre></div>
+
+<p>Скорость произношения текста диктором.
+Значения могут быть от -10 до 10.</p>
+</li>
+<li>
+<p>Yandex TTS</p>
+<div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоYandexTTSЯзык {yandexttslanguage}**:
+</code></pre></div>
+
+<p>Задаёт язык, на котором будет говорить диктор. Подробности здесь.
+Управление ударением и произношением см тут.</p>
+<div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоYandexTTSГолос {yandexttsvoice}**:
+</code></pre></div>
+
+<p>Задаёт голос, которым будет говорить диктор. Подробности здесь.
+Управление ударением и произношением см тут.</p>
+<div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоYandexTTSЭмоция {yandexttsemotion}**:
+</code></pre></div>
+
+<p>Задаёт эмоцию, с которой будет говорить диктор. Подробности здесь.
+Управление ударением и произношением см тут.</p>
+<div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоYandexTTSСкорость {yandexttsspeed}**:
+</code></pre></div>
+
+<p>Скорость (темп) синтезированной речи.
+Скорость речи задается дробным числом в диапазоне от 0.1 до 3.0.</p>
+<div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоYandexTTSВариантЗапроса {yandexttsquerytype}**:
+</code></pre></div>
+
+<p>Определяет как будут получены файлы озвучки: через официальное API или через бесплатный интерфейс. Рекомендуемое значение - через официальное API.</p>
+<div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоYandexTTSИдентификаторКаталога {yandexttsfolderId}**:
+</code></pre></div>
+
+<p>Последняя часть пути строки адреса в интернет браузере. https://console.cloud.yandex.ru/folders/ИдентификаторКаталога
+Требуется:
+      1. В главном окне Яндекс.Облако нажать на ссылку "Перейти в текущий каталог".
+      2. Скопировать последнюю часть путь из строки адреса
+Пример: 
+https://console.cloud.yandex.ru/folders/b1gheo81t4a6eаafe5vd
+(Идентификатор каталога - b1gheo81t4a6eаafe5vd)
+Получение идентификатора каталога </p>
+<div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоYandexTTSOauthToken {yandexttsoauthtoken}**:
+</code></pre></div>
+
+<p>OAuth-токен используется в процедуре аутентификации в Яндекс.Облаке
+Для получения OAuth-токена требуется:
+      1. Перейсти по ссылке https://cloud.yandex.ru/docs/iam/concepts/authorization/oauth-token;
+      2. Сгенерировать токен;
+      3. Сохранить его в текстовый файл;
+      4. Указать путь к текстоговому файлу с токеном.</p>
+</li>
+<li>
+<p>Группа amazon TTS</p>
+<div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоAmazonЯзык {amazonttslanguage}**:
+</code></pre></div>
+
+<p>Соответствие языка и голоса смотрите здесь.</p>
+<div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоAmazonГолос {amazonttsvoice}**:
+</code></pre></div>
+
+<p>Соответствие языка и голоса смотрите здесь.</p>
+<div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоAmazonДвижок {amazonttsengine}**:
+</code></pre></div>
+
+<p>Варианты значения для поля "Движок" смотрите здесь.</p>
+<div class="codehilite"><pre><span></span><code><span class="o">*</span> <span class="o">**</span><span class="err">ЗаписьВидео</span><span class="n">AmazonРегион</span> <span class="p">{</span><span class="n">amazonttsregion</span><span class="p">}</span><span class="o">**:</span>
+</code></pre></div>
+
+<p>В поле указывается параметр регион. Значение по умолчанию: us-east-1.</p>
+<div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоAmazonКлючДоступа {amazonttskey}**:
+</code></pre></div>
+
+<p>Ключ доступа к облаку Amazon.</p>
+<div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоAmazonСекретныйКлюч {amazonttssecretkey}**:
+</code></pre></div>
+
+<p>Файл, в котором хранится секретный ключ для доступа к облаку Amazon.</p>
+</li>
+<li>
+<p>Группа другой движок TTS</p>
+<div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоПутьКОбработкеДвижкаTTS {pathprocessingenginetts}**:
+</code></pre></div>
+
+<p>Позволяет генерировать озвучку шага с помощью внешней обработки. Обработка должна в основной форме содержать экспортный метод:
+GetMp3File(Vanessa, VideoParams, Text, FileName, VoiceParams)
+где:
+Vanessa - Контекст фреймпорка Vanessa Automation
+VideoParams - Структура, содержащая параметры записи видео
+Text - текст, который требуется озвучить
+FileName - имя текущего видеофрагмента
+VoiceParams - дополнительные параметры озвучки, указанные в фича файле с помощью дополнительных директив
+Метод должен возвращать путь к mp3 файлу.</p>
+<div class="codehilite"><pre><span></span><code>* **НастройкиДругогоДвижкаTTS {SettingsOtherEngineTTS}**:
+</code></pre></div>
+
+<p>Позволяет задать произвольный набор настроек для генерации файлов озвучки.</p>
+</li>
+<li>
+<p>Параметры Сбер</p>
+<div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоСберTTSClientID {sberttsclientid}**:
+</code></pre></div>
+
+<p>Идентификатор клиента, полученный в Smartmarket studio</p>
+<div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоСберTTSClientSecret {sberttsclientsecret}**:
+</code></pre></div>
+
+<p>Вторая часть идентификации клиента в Smartmarket studio</p>
+<div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоСберTTSГолос {sberttsvoice}**:
+</code></pre></div>
+
+<p>Задает голос для генерации.
+Примеры голосов можно посмотреть здесь</p>
+</li>
+<li>
+<p>Тест голоса</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Кеш аудио</p>
+<div class="codehilite"><pre><span></span><code> * **ЗаписьВидеоКэшироватьФайлыTTS {cachettsfiles}**:
+</code></pre></div>
+
+<p>Включает кеширование файлов озвучки.
+Ускоряет сборку видео.
+Позволяет сократить обращение к внешним сервисам для генерации речи.
+Позволяет сократить затраты на генерацию речи при использовании платных тарифов у сервисов генерации речи.</p>
+<div class="codehilite"><pre><span></span><code> * **ЗаписьВидеоКэшФайловTTS {ttsfilescache}**:
+</code></pre></div>
+
+<p>Каталог, в котором хранится кеш файлов озвучки.</p>
+</li>
+<li>
+<p>Словари замен</p>
+<div class="codehilite"><pre><span></span><code> * **ЗаписьВидеоСловарьЗамен {changewordslib}**:
+</code></pre></div>
+
+<p>Список файлов, которые будут использоваться для автозамены произносимого текста.</p>
 </li>
 <li>
 <p>Видеоинструкция</p>
@@ -1395,10 +1706,12 @@ SikuliX Server - это специальная программная оптим
 </li>
 <li>
 <p>Настройки аудио</p>
+<div class="codehilite"><pre><span></span><code> * **ЗаписьВидеоДелатьНаложениеTTS {dotts}**:
+</code></pre></div>
+
+<p>Включает озвучку видео диктором.</p>
 <ul>
-<li>
-<p>Музыка</p>
-<div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоКаталогМузыки {musicpath}**:
+<li>Музыка<div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоКаталогМузыки {musicpath}**:
 </code></pre></div>
 
 <p>Каталог, в котором находятся файлы в формате mp3.
@@ -1412,145 +1725,6 @@ SikuliX Server - это специальная программная оптим
 Если указано значение отличное от нуля (например 0.06), тогда данное значение будет влиять на громкость музыкальной подложки.
 Чем больше значение - тем громче будет звучать музыкальная подложка.
 Рекомендуется указывать значение 0.1 или меньше.</p>
-</li>
-<li>
-<p>Озвучивание голосом</p>
-<div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоДелатьНаложениеTTS {dotts}**:
-</code></pre></div>
-
-<p>Включает озвучку видео диктором.</p>
-<div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоТипОзвучкиTTS {ttstype}**:
-</code></pre></div>
-
-<p>Указывает какой голос нужно использовать для озвучки видео диктором.</p>
-<ul>
-<li>
-<p>Microsoft TTS</p>
-<ul>
-<li>
-<p><strong>ЗаписьВидеоПутьКДвижкуTTS {audioenginetts}</strong>:
-Консольная команда, которая будет использована при конвертации текста в речь.
-Используется программа balabolka_console.</p>
-</li>
-<li>
-<p><strong>ЗаписьВидеоИмяTTS {ttsvoice}</strong>:
-Указывает какой голос будет использован для озвучки. Допускается указывать не полное название голоса в системе, а только часть, например "Elena".
-Понадобится установить Microsoft Speech Platform х32 и Server Runtime Languages.</p>
-</li>
-<li>
-<p><strong>ЗаписьВидеоСкоростьПроизношения {speedofspeech}</strong>:
-Скорость произношения текста диктором.
-Значения могут быть от -10 до 10.</p>
-</li>
-</ul>
-</li>
-<li>
-<p>Yandex TTS</p>
-<ul>
-<li>
-<p><strong>ЗаписьВидеоYandexTTSЯзык {yandexttslanguage}</strong>:
-Задаёт язык, на котором будет говорить диктор. Подробности здесь.
-Управление ударением и произношением см тут.</p>
-</li>
-<li>
-<p><strong>ЗаписьВидеоYandexTTSГолос {yandexttsvoice}</strong>:
-Задаёт голос, которым будет говорить диктор. Подробности здесь.
-Управление ударением и произношением см тут.</p>
-</li>
-<li>
-<p><strong>ЗаписьВидеоYandexTTSЭмоция {yandexttsemotion}</strong>:
-Задаёт эмоцию, с которой будет говорить диктор. Подробности здесь.
-Управление ударением и произношением см тут.</p>
-</li>
-<li>
-<p><strong>ЗаписьВидеоYandexTTSСкорость {yandexttsspeed}</strong>:
-Скорость (темп) синтезированной речи.
-Скорость речи задается дробным числом в диапазоне от 0.1 до 3.0.</p>
-</li>
-<li>
-<p><strong>ЗаписьВидеоYandexTTSВариантЗапроса {yandexttsquerytype}</strong>:
-Определяет как будут получены файлы озвучки: через официальное API или через бесплатный интерфейс. Рекомендуемое значение - через официальное API.</p>
-</li>
-<li>
-<p><strong>ЗаписьВидеоYandexTTSИдентификаторКаталога {yandexttsfolderId}</strong>:
-Последняя часть пути строки адреса в интернет браузере. https://console.cloud.yandex.ru/folders/ИдентификаторКаталога
-Требуется:</p>
-<ol>
-<li>В главном окне Яндекс.Облако нажать на ссылку "Перейти в текущий каталог".</li>
-<li>Скопировать последнюю часть путь из строки адреса
-Пример: 
-https://console.cloud.yandex.ru/folders/b1gheo81t4a6eаafe5vd
-(Идентификатор каталога - b1gheo81t4a6eаafe5vd)
-Получение идентификатора каталога </li>
-</ol>
-</li>
-<li>
-<p><strong>ЗаписьВидеоYandexTTSOauthToken {yandexttsoauthtoken}</strong>:
-OAuth-токен используется в процедуре аутентификации в Яндекс.Облаке
-Для получения OAuth-токена требуется:</p>
-<ol>
-<li>Перейсти по ссылке https://cloud.yandex.ru/docs/iam/concepts/authorization/oauth-token;</li>
-<li>Сгенерировать токен;</li>
-<li>Сохранить его в текстовый файл;</li>
-<li>Указать путь к текстоговому файлу с токеном.</li>
-</ol>
-</li>
-</ul>
-</li>
-<li>
-<p>Группа amazon TTS</p>
-<ul>
-<li>
-<p><strong>ЗаписьВидеоAmazonЯзык {amazonttslanguage}</strong>:
-Соответствие языка и голоса смотрите здесь.</p>
-</li>
-<li>
-<p><strong>ЗаписьВидеоAmazonГолос {amazonttsvoice}</strong>:
-Соответствие языка и голоса смотрите здесь.</p>
-</li>
-<li>
-<p><strong>ЗаписьВидеоAmazonДвижок {amazonttsengine}</strong>:
-Варианты значения для поля "Движок" смотрите здесь.</p>
-</li>
-<li>
-<p><strong>ЗаписьВидеоAmazonРегион {amazonttsregion}</strong>:
-В поле указывается параметр регион. Значение по умолчанию: us-east-1.</p>
-</li>
-<li>
-<p><strong>ЗаписьВидеоAmazonКлючДоступа {amazonttskey}</strong>:
-Ключ доступа к облаку Amazon.</p>
-</li>
-<li>
-<p><strong>ЗаписьВидеоAmazonСекретныйКлюч {amazonttssecretkey}</strong>:
-Файл, в котором хранится секретный ключ для доступа к облаку Amazon.</p>
-</li>
-</ul>
-</li>
-<li>
-<p>Тест голоса</p>
-</li>
-</ul>
-</li>
-<li>
-<p>Кеш аудио</p>
-<div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоКэшироватьФайлыTTS {cachettsfiles}**:
-</code></pre></div>
-
-<p>Включает кеширование файлов озвучки.
-Ускоряет сборку видео.
-Позволяет сократить обращение к внешним сервисам для генерации речи.
-Позволяет сократить затраты на генерацию речи при использовании платных тарифов у сервисов генерации речи.</p>
-<div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоКэшФайловTTS {ttsfilescache}**:
-</code></pre></div>
-
-<p>Каталог, в котором хранится кеш файлов озвучки.</p>
-</li>
-<li>
-<p>Словари замен</p>
-<div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоСловарьЗамен {changewordslib}**:
-</code></pre></div>
-
-<p>Список файлов, которые будут использоваться для автозамены произносимого текста.</p>
 </li>
 </ul>
 </li>
@@ -1582,12 +1756,6 @@ OAuth-токен используется в процедуре аутентиф
 </code></pre></div>
 
 <p>Включает режим, когда по умолчанию каждая группа шагов первого уровня в сценарии будет конвертироваться в один шаг в автоинструкции.</p>
-<div class="codehilite"><pre><span></span><code> * **ЗаписьВидеоЭмулироватьВводСКлавиатуры {emulatekeyboardinput}**:
-</code></pre></div>
-
-<p>Включает ввод эмуляцию ввода текста с клавиаутуры с помощью утилиты из проекта UIToolsFor1C.
-Допускается ввод текста только на русском и английском языках.
-Переключение раскладки клавиатуры осуществляется с помощью эмуляции нажатия Ctrl+Shift.</p>
 <div class="codehilite"><pre><span></span><code> * **ЗаписьВидеоСкрытьСлужебныеОкна {hideservicewindows}**:
 </code></pre></div>
 
@@ -1614,12 +1782,44 @@ OAuth-токен используется в процедуре аутентиф
 
 <p>Включает подсветку кликов мышки. Используется утилита из проекта UIToolsFor1C.
 Эмуляция кликов мышки осуществляется с помощью SikuliX.</p>
+<div class="codehilite"><pre><span></span><code> * **ЗаписьВидеоЭмулироватьВводСКлавиатуры {emulatekeyboardinput}**:
+</code></pre></div>
+
+<p>Включает ввод эмуляцию ввода текста с клавиаутуры с помощью утилиты из проекта UIToolsFor1C.
+Допускается ввод текста только на русском и английском языках.
+Переключение раскладки клавиатуры осуществляется с помощью эмуляции нажатия Ctrl+Shift.</p>
 <ul>
 <li>
 <p>Настройки  слайда с заголовком фичи</p>
 </li>
 <li>
 <p>Настройки финального слайда</p>
+</li>
+</ul>
+</li>
+<li>
+<p>SikuliX server (устаревшее)</p>
+<ul>
+<li>
+<p><strong>ИспользоватьSikuliXСервер {usesikulixserver}</strong>:
+SikuliX это Java приложение, которое позволяет управлять перемещением и нажатиями мыши на экране, а также эмулировать нажатие кнопок клавиатуры.
+SikuliX Server - это специальная программная оптимизация работы с SikuliX. Если опция включена VA собирает один большой скрипт из множества скриптов SikuliX, который можно запустить один раз и быстро выполнять необходимые команды, которые раньше приходилось запускать по одной.  Это позволяет существенно сэкономить время на выполнение одного скрипта SikuliX, т.к. не тратится время на запуск SikuliX и его выгрузку из памяти.
+Описание установки и настройки SikuliX и SikuliX Server приведено в разделе справки 20.1
+Открыть справку</p>
+</li>
+<li>
+<p><strong>ЗаписьВидеоЭмулироватьДвиженияМышкиSikuliX {emulatemousemovement}</strong>:
+Если флаг установлен, то при выполнении шагов будет выполняться попытка найти элмент формы или элемент управления на экране и переместить курсор мышки к нему.
+Для поиска картинки и передвижения мышки используется SikuliX. Картинка для поиска будет сгенерирована по тексту, полученному из элемента формы.
+Чтобы отключить движение мышки у конкретного шага надо использовать директиву #[DoNotMoveMouse].</p>
+</li>
+<li>
+<p><strong>КаталогиСкриптовSikuliX {sikulixscriptpath}</strong>:
+Каталог скриптов. Можно указывать несколько каталогов, разделенных через ";".</p>
+</li>
+<li>
+<p><strong>КаталогДляГенерацииКартинок {pathforpicturegeneration}</strong>:
+Каталог, в котором будут программно создаваться картинки для поиска их на экране.</p>
 </li>
 </ul>
 </li>
@@ -1717,6 +1917,20 @@ OAuth-токен используется в процедуре аутентиф
             </div>
           </a>
         
+        
+          <a href="../../TestDataGenerator/TestDataGenerator/" title="Подготовка и загрузка данных" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Вперед
+                </span>
+                Подготовка и загрузка данных
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg>
+            </div>
+          </a>
         
       </nav>
     </div>
