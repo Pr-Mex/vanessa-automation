@@ -343,6 +343,11 @@
 					</Button>
 				</ChildItems>
 			</Popup>
+			<Button name="ФормаВыбратьОкно" id="83">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ВыбратьОкно</CommandName>
+				<ExtendedTooltip name="ФормаВыбратьОкноРасширеннаяПодсказка" id="84"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -2753,6 +2758,25 @@
 			</ToolTip>
 			<Action>ПоказатьСкрытьТолькоПросмотр</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВыбратьОкно" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать окно</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Select window</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать окно</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыбратьОкно</Action>
 		</Command>
 	</Commands>
 </Form>

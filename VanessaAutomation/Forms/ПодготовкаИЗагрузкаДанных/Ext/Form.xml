@@ -13,26 +13,21 @@
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<SaveDataInSettings>UseList</SaveDataInSettings>
 	<AutoCommandBar name="FormCommandBar" id="-1">
-		<ChildItems>
-			<Button name="FormGenerateFeature" id="70">
-				<Type>CommandBarButton</Type>
-				<DefaultButton>true</DefaultButton>
-				<CommandName>Form.Command.GenerateFeature</CommandName>
-				<ExtendedTooltip name="FormGenerateFeatureExtendedTooltip" id="71"/>
-			</Button>
-			<Button name="FormSelectDependentItems" id="81">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.SelectDependentItems</CommandName>
-				<ExtendedTooltip name="FormSelectDependentItemsExtendedTooltip" id="82"/>
-			</Button>
-		</ChildItems>
+		<Autofill>false</Autofill>
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen">OnOpen</Event>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
 	</Events>
 	<ChildItems>
 		<RadioButtonField name="StepsLanguage" id="86">
 			<DataPath>StepsLanguage</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Язык шагов</v8:content>
+				</v8:item>
+			</Title>
 			<RadioButtonType>Tumbler</RadioButtonType>
 			<ChoiceList>
 				<xr:Item>
@@ -85,7 +80,7 @@
 						</v8:item>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Основное</v8:content>
+							<v8:content>Отбор по метаданным</v8:content>
 						</v8:item>
 					</Title>
 					<ExtendedTooltip name="GroupPageMainExtendedTooltip" id="75"/>
@@ -107,6 +102,20 @@
 											<ContextMenu name="MetadataListContextMenu" id="50"/>
 											<AutoCommandBar name="MetadataListCommandBar" id="49">
 												<Autofill>false</Autofill>
+												<ChildItems>
+													<Button name="MetadataListGenerateFeature" id="113">
+														<Type>CommandBarButton</Type>
+														<DefaultButton>true</DefaultButton>
+														<DefaultItem>true</DefaultItem>
+														<CommandName>Form.Command.GenerateFeature</CommandName>
+														<ExtendedTooltip name="MetadataListGenerateFeatureРасширеннаяПодсказка" id="114"/>
+													</Button>
+													<Button name="MetadataListSelectDependentItems" id="111">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.SelectDependentItems</CommandName>
+														<ExtendedTooltip name="MetadataListSelectDependentItemsРасширеннаяПодсказка" id="112"/>
+													</Button>
+												</ChildItems>
 											</AutoCommandBar>
 											<ExtendedTooltip name="MetadataListExtendedTooltip" id="51"/>
 											<SearchStringAddition name="MetadataListSearchString" id="52">
@@ -214,6 +223,149 @@
 								</UsualGroup>
 							</ChildItems>
 						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="GroupPageFilterByRefs" id="93">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отбор по ссылкам</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="GroupPageFilterByRefsРасширеннаяПодсказка" id="94"/>
+					<ChildItems>
+						<CheckBoxField name="IncludeUpstreamDependenciesDefault" id="117">
+							<DataPath>IncludeUpstreamDependenciesDefault</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="IncludeUpstreamDependenciesDefaultКонтекстноеМеню" id="118"/>
+							<ExtendedTooltip name="IncludeUpstreamDependenciesDefaultРасширеннаяПодсказка" id="119"/>
+							<Events>
+								<Event name="OnChange">IncludeUpstreamDependenciesDefaultOnChange</Event>
+							</Events>
+						</CheckBoxField>
+						<UsualGroup name="GroupIncludeDependencies" id="123">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Group include dependencies</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Group include dependencies</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="GroupIncludeDependenciesРасширеннаяПодсказка" id="124"/>
+							<ChildItems>
+								<CheckBoxField name="IncludeDownstreamDependenciesDefault" id="120">
+									<DataPath>IncludeDownstreamDependenciesDefault</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="IncludeDownstreamDependenciesDefaultКонтекстноеМеню" id="121"/>
+									<ExtendedTooltip name="IncludeDownstreamDependenciesDefaultРасширеннаяПодсказка" id="122"/>
+									<Events>
+										<Event name="OnChange">IncludeDownstreamDependenciesDefaultOnChange</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="MaxDownstreamDependenciesHierarchyLevel" id="128">
+									<DataPath>MaxDownstreamDependenciesHierarchyLevel</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Рекомендуется значение не больше 1</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="MaxDownstreamDependenciesHierarchyLevelКонтекстноеМеню" id="129"/>
+									<ExtendedTooltip name="MaxDownstreamDependenciesHierarchyLevelРасширеннаяПодсказка" id="130"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<CheckBoxField name="DontAddCommentsWithMetadataName" id="125">
+							<DataPath>DontAddCommentsWithMetadataName</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="DontAddCommentsWithMetadataNameКонтекстноеМеню" id="126"/>
+							<ExtendedTooltip name="DontAddCommentsWithMetadataNameРасширеннаяПодсказка" id="127"/>
+						</CheckBoxField>
+						<Table name="DataRefs" id="133">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>DataRefs</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="DataRefsКонтекстноеМеню" id="134"/>
+							<AutoCommandBar name="DataRefsКоманднаяПанель" id="135">
+								<ChildItems>
+									<Button name="DataRefsAddObjectByURL" id="131">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.AddObjectByURL</CommandName>
+										<ExtendedTooltip name="DataRefsAddObjectByURLРасширеннаяПодсказка" id="132"/>
+									</Button>
+									<Button name="DataRefsGenerateFeatureForRefs" id="115">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.GenerateFeatureForRefs</CommandName>
+										<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+										<ExtendedTooltip name="DataRefsGenerateFeatureForRefsРасширеннаяПодсказка" id="116"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="DataRefsРасширеннаяПодсказка" id="136"/>
+							<SearchStringAddition name="DataRefsСтрокаПоиска" id="137">
+								<AdditionSource>
+									<Item>DataRefs</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="DataRefsСтрокаПоискаКонтекстноеМеню" id="138"/>
+								<ExtendedTooltip name="DataRefsСтрокаПоискаРасширеннаяПодсказка" id="139"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="DataRefsСостояниеПросмотра" id="140">
+								<AdditionSource>
+									<Item>DataRefs</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="DataRefsСостояниеПросмотраКонтекстноеМеню" id="141"/>
+								<ExtendedTooltip name="DataRefsСостояниеПросмотраРасширеннаяПодсказка" id="142"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="DataRefsУправлениеПоиском" id="143">
+								<AdditionSource>
+									<Item>DataRefs</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="DataRefsУправлениеПоискомКонтекстноеМеню" id="144"/>
+								<ExtendedTooltip name="DataRefsУправлениеПоискомРасширеннаяПодсказка" id="145"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnStartEdit">DataRefsOnStartEdit</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="DataRefsRef" id="146">
+									<DataPath>DataRefs.Item</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="DataRefsRefКонтекстноеМеню" id="147"/>
+									<ExtendedTooltip name="DataRefsRefРасширеннаяПодсказка" id="148"/>
+								</InputField>
+								<CheckBoxField name="DataRefsIncludeUpstreamDependencies" id="152">
+									<DataPath>DataRefs.IncludeUpstreamDependencies</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="DataRefsIncludeUpstreamDependenciesКонтекстноеМеню" id="153"/>
+									<ExtendedTooltip name="DataRefsIncludeUpstreamDependenciesРасширеннаяПодсказка" id="154"/>
+								</CheckBoxField>
+								<CheckBoxField name="DataRefsIncludeDownstreamDependencies" id="149">
+									<DataPath>DataRefs.IncludeDownstreamDependencies</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="DataRefsIncludeDownstreamDependenciesКонтекстноеМеню" id="150"/>
+									<ExtendedTooltip name="DataRefsIncludeDownstreamDependenciesРасширеннаяПодсказка" id="151"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
 					</ChildItems>
 				</Page>
 				<Page name="GroupPageFeature" id="76">
@@ -395,6 +547,129 @@
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
+		<Attribute name="IncludeUpstreamDependenciesDefault" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включать восходящие зависимости (ссылки в объекте)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>IncludeUpstreamDependenciesDefault</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="IncludeDownstreamDependenciesDefault" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включать нисходящие зависимости (ссылки на объект)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>IncludeDownstreamDependenciesDefault</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="DontAddCommentsWithMetadataName" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не добавлять комментарии с именами объектов метаданных</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>DontAddCommentsWithMetadataName</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="MaxDownstreamDependenciesHierarchyLevel" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Макс. уровень иерархии</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<Save>
+				<Field>MaxDownstreamDependenciesHierarchyLevel</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="DataRefs" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Data refs</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Save>
+				<Field>DataRefs</Field>
+			</Save>
+			<Columns>
+				<Column name="Item" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:TypeSet>cfg:DocumentRef</v8:TypeSet>
+						<v8:TypeSet>cfg:ChartOfCharacteristicTypesRef</v8:TypeSet>
+						<v8:TypeSet>cfg:CatalogRef</v8:TypeSet>
+					</Type>
+				</Column>
+				<Column name="IncludeDownstreamDependencies" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Включать нисходящие зависимости</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="IncludeUpstreamDependencies" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Включать восходящие зависимости</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="UseDataExhangeLoadTrue" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Use data exhange load true</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="GenerateFeature" id="1">
@@ -422,6 +697,24 @@
 				</v8:item>
 			</Title>
 			<Action>SelectDependentItems</Action>
+		</Command>
+		<Command name="GenerateFeatureForRefs" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сгенерировать фичу</v8:content>
+				</v8:item>
+			</Title>
+			<Action>GenerateFeatureForRefs</Action>
+		</Command>
+		<Command name="AddObjectByURL" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить по ссылке</v8:content>
+				</v8:item>
+			</Title>
+			<Action>AddObjectByURL</Action>
 		</Command>
 	</Commands>
 </Form>

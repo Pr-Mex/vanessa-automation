@@ -30,6 +30,11 @@ If the checkbox is on, feature file is considered as if it has @tree tag, even i
       * **usethegherkinparserfromthevanessaextaddin**:
 Sets the flag. that you need to use the Gherkin parser from the VanessaExt component. This parser is much faster than the built-in parser.
 
+      * **EvaluateExpressionsInCurlyBraces**:
+Turns on the mode when any expression inside the parameters of the steps {} will be evaluated. If the section "Variables" is declared, but first an attempt will be made to find a variable from this section by the specified expression. Otherwise, an attempt will be made to evaluate the expression in {}.
+If {expression} is used, then the expression will be evaluated on the client.
+If {!expression} Is used, the expression will be evaluated on the server.
+
       * **instrpath**:
 The catalog of Vanessa Automation data processor. This field must be filled on the standard installation.
 When working with Vanessa Automation Single it is allowed to leave the field blank.
@@ -56,11 +61,20 @@ file path or url for settings. By default, project directory (name of default fi
       * **runtestclientwithmaximizedwindow**:
 If the option is on, TestClient will launch in full-screen mode.
 
+      * **modalwindowwhenstartingtestclientiserror**:
+If this option is enabled, then the modal window when starting the test client means a test client connection error.
+
       * **testclienttimeout**:
 Specifies timeout in seconds of Vanessa Automation awaiting for TestClient launch. After timeout the exception will be risen.
 
       * **testclientports**:
 Specifies ports range to search for free port to run TestClient.
+
+      * **starttestclientsessionagainonconnectionifitsprocessisnotfound**:
+Enables restarting the test client process if the previous run did not work (for example, if no license was obtained). For thick and thin clien only.
+
+   * **testclientprocessstartinterval**:
+Specifies the interval at which an attempt will be made to start a testing client session.
 
 *  TestClient debug
 
@@ -136,6 +150,10 @@ It is recommended to set this checkbox on.
    * **updateformtableswhengettingvalue**:
 If this option is enabled, then when receiving a table, the test will try to find and click on the "Refresh" table button and press it.
 An update attempt will occur if there are several attempts to get the table value and the first attempt was unsuccessful.
+
+   * **getlayoutsusingextensionvaextension**:
+Enables retrieval of layout values (printable forms and reports) using the VAExtension.
+Allows you to receive the entire layout with the design in the web client.
 
    * **timeoutforasynchronoussteps**:
 Specifies the maximum time to wait for an asynchronous step.
@@ -249,7 +267,7 @@ Create a scenario execution report in Allure format.
 If this option is enabled, then in the parameters of the steps in which the variables were used, the variable names will be replaced with their values.
 
          * **allurepath**:
-Allure reports directory.
+Allure reports directory. When run locally, the directory will be cleaned up each time the scripts are run.
 
          * **allurepathbase**:
 The directory in which report data is generated in Allure format, and subdirectories will be created for each assembly. This parameter takes precedence and the value of the "Allure Report Catalog" parameter will be ignored.
@@ -288,6 +306,23 @@ If the option is enabled, then when an error occurs, data on running OS processe
 
             * **attachvariablestotheallurereport**:
 If the option is enabled, data with Context and Global Context variable values will be collected when an error occurs.
+
+            * **attachmxlfilestoallurereport**:
+Files of reports and their templates will be attached to the Allure report in mxl format.
+
+            * **attachmxlfilessavedinhtmlformattoallurereport**:
+All mxl files that will be attached to the Allure report will be saved in HTML format. This makes it easier to open and view the result.
+
+            * **attachadditionaldatawhencomparingvaluewithreferenceallure**:
+If this option is enabled, then when comparing a layout with a reference or when comparing a table with a reference, additional files will be generated:
+a picture containing the difference between the reference and the current value of the table or layout
+a picture of the current value
+picture of the reference value
+a gif file showing the difference between the current and reference value.
+An additional section will also appear in the Allure report, where you can conveniently view a comparison of the reference and the current value.
+For this option to work, it is necessary that the ImageMagick 7 version or higher and the ghostscript package https://www.ghostscript.com/download.html, which converts pdf files into pictures, must be installed on the PC where Vanessa Automation is running.
+It is also necessary that commands of the form are executed on the PC:
+magick convert file.pdf file.png
 
          * **DataAllureMarks**:
 The table is used to map script tags to pace marks.
@@ -337,6 +372,9 @@ If the option is enabled, then when an error occurs, data will be collected on t
       * **collectdataoftheoperatingsystemprocesses**:
 If the option is enabled, then when an error occurs, data on running OS processes will be collected.
 
+      * **CollectDataOnVariableValues**:
+Enables the collection of data about the values of variables.
+
       * **texterrorslogname**:
 The directory for errors data and form elements status information.
 
@@ -345,7 +383,10 @@ Enables a scenario execution report in the internal format.
 
 ## Auto instructions
 
-*  VanessaExt add-in
+*  VanessaExt add-in + Chrome + UI Automation
+
+      * **UseUIAutomation**:
+Enables the use of the UI Automation mechanism on Windows.
 
       * **usebrowserwebsocket**:
 Allows to execute external commands in the browser using WebSocket.
@@ -392,18 +433,7 @@ If this option is enabled, then the steps performing image search on the screen 
       * **ignorebrowsersearcherrors**:
 Allows to continue running the scenario if the form item is not found in the browser.
 
-*  SikuliX server
-
-      * **emulatemousemovement**:
-If the checkbox is on, then the search of form element or control will be performed on steps execution. Mouse pointer will be moved to the detected element. 
-SikuliX is used for picture search and mouse movement. Picture will be generated by the text from the form element.
-To disable mouse movement at a specific step, you should use the #[DoNotMoveMouse] directive.
-
-      * **sikulixscriptpath**:
-Script directory. Multiple directories can be used, separated by ";".
-
-      * **pathforpicturegeneration**:
-The directory in which pictures will be programmatically created to search for them on the screen.
+*  VanessaExt add-in + UI Automation
 
 *  HTML and Markdown
 
@@ -427,12 +457,79 @@ Markdown Instruction Directory
 Adds auto numbering to the beginning of the step description text.
 To ensure that leading zeros are not lost when exporting from MD format, the text is written to the code block.
 
-*  Video tutorial
+*  Audio
 
-      * **videocreate**:
-Allows you to create video instructions.
-A video describing the settings is in this playlist.
-It is also recommended to read this FAQ.
+      * **soundscenarioexecution**:
+Includes voice acting of the script execution according to the specified settings of the announcer's voice.
+
+   *  Voiceover by announcer
+
+         * **ttstype**:
+Specifies the narrator's voice.
+
+      *  Microsoft TTS
+
+            * **speedofspeech**:
+Narrator's speech speed.
+Value range is from -10 to 10.
+
+      *  Yandex TTS
+
+            * **yandexttsspeed**:
+The speed (tempo) of synthesized speech.
+Speech rate is specified as a fractional number in the range from 0.1 to 3.0.
+
+            * **yandexttsquerytype**:
+Determines how the audio files will be received: through the official API or through the free interface. The recommended value is via the official API.
+
+      *  Group amazon TTS
+
+            * **amazonttsregion**:
+The field specifies the region parameter. The default is us-east-1.
+
+            * **amazonttskey**:
+Amazon cloud access key.
+
+            * **amazonttssecretkey**:
+The file where Amazon cloud private key is stored.
+
+      *  Group other TTS engine
+
+            * **pathprocessingenginetts**:
+Allows you to generate voiceovers for a step using external processing. Processing should contain an export method in the main form:
+GetMp3File (Vanessa, VideoParams, Text, FileName, VoiceParams)
+Where:
+Vanessa - Vanessa Automation context framework
+VideoParams - Structure containing video recording parameters
+Text - the text to be read
+FileName - the name of the current video clip
+VoiceParams - additional voice parameters specified in the feature file using additional directives
+The method should return the path to the mp3 file.
+
+            * **SettingsOtherEngineTTS**:
+Allows you to set an arbitrary set of settings for generating voiceovers.
+
+      *  SBER parameters
+
+      *  Voice test
+
+   *  Audio cache
+
+         * **cachettsfiles**:
+Switchs on voice file cashing.
+Makes video assembly process faster.
+Reduces external voice generation servises usage.
+Reduces voice generation costs.
+
+         * **ttsfilescache**:
+Voice cache files directory.
+
+   *  Replacements dictionaries
+
+         * **changewordslib**:
+List of files that will be used for autocorrect spoken text.
+
+*  Video tutorial
 
       * **videopath**:
 Directory where will be placed result of assembly videos or animated screencast.
@@ -481,6 +578,9 @@ Video snippets directory.
 
    *  Audio settings
 
+         * **dotts**:
+Switches on the voicing of the video.
+
       *  Music
 
             * **musicpath**:
@@ -493,58 +593,6 @@ Value range is from 0 to 1.
 If the specified value is 0, it will not affect music volume.
 If value is greater than zero (e.g., 0.06), it will affect the volume of the soundtrack.
 Recommended value is 0.1 or less.
-
-      *  Make voice
-
-            * **dotts**:
-Switches on the voicing of the video.
-
-            * **ttstype**:
-Specifies the narrator's voice.
-
-         *  Microsoft TTS
-
-               * **speedofspeech**:
-Narrator's speech speed.
-Value range is from -10 to 10.
-
-         *  Yandex TTS
-
-               * **yandexttsspeed**:
-The speed (tempo) of synthesized speech.
-Speech rate is specified as a fractional number in the range from 0.1 to 3.0.
-
-               * **yandexttsquerytype**:
-Determines how the audio files will be received: through the official API or through the free interface. The recommended value is via the official API.
-
-         *  Group amazon TTS
-
-               * **amazonttsregion**:
-The field specifies the region parameter. The default is us-east-1.
-
-               * **amazonttskey**:
-Amazon cloud access key.
-
-               * **amazonttssecretkey**:
-The file where Amazon cloud private key is stored.
-
-         *  Voice test
-
-      *  Audio cache
-
-            * **cachettsfiles**:
-Switchs on voice file cashing.
-Makes video assembly process faster.
-Reduces external voice generation servises usage.
-Reduces voice generation costs.
-
-            * **ttsfilescache**:
-Voice cache files directory.
-
-      *  Replacements dictionaries
-
-            * **changewordslib**:
-List of files that will be used for autocorrect spoken text.
 
    *  More
 
@@ -569,11 +617,6 @@ Switches on adding video subtitles.
          * **groupofstepsasastep**:
 Switches on the mode, when each first level group of scenario steps will be converter to one step in automanual.
 
-         * **emulatekeyboardinput**:
-Switches on text input emulation. Project utility UIToolsFor1C is used.
-Only Russian and English are available.
-Keyboard layout shwitches by pressing Ctrl+Shift emulation.
-
          * **hideservicewindows**:
 Hides service console windows used for video assembly.
 Speeds up video assembly. This mode is recommended.
@@ -594,9 +637,27 @@ Switches off creating of video final slide with video total information.
 Switches on mouse clicks highlighting. Project utility UIToolsFor1C is used.
 SikuliX emulates mouse clicks.
 
+         * **emulatekeyboardinput**:
+Switches on text input emulation. Project utility UIToolsFor1C is used.
+Only Russian and English are available.
+Keyboard layout shwitches by pressing Ctrl+Shift emulation.
+
       *  Customize the title slide features
 
       *  Final slide settings 
+
+*  SikuliX server (deprecated)
+
+      * **emulatemousemovement**:
+If the checkbox is on, then the search of form element or control will be performed on steps execution. Mouse pointer will be moved to the detected element. 
+SikuliX is used for picture search and mouse movement. Picture will be generated by the text from the form element.
+To disable mouse movement at a specific step, you should use the #[DoNotMoveMouse] directive.
+
+      * **sikulixscriptpath**:
+Script directory. Multiple directories can be used, separated by ";".
+
+      * **pathforpicturegeneration**:
+The directory in which pictures will be programmatically created to search for them on the screen.
 
 ## Vanessa Editor
 
