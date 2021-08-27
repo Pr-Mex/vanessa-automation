@@ -2525,6 +2525,40 @@
 							</Button>
 						</ChildItems>
 					</ButtonGroup>
+					<ButtonGroup name="ГруппаVanessaEditorОбучение" id="3135">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Обучение</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Training</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Обучение</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Training</v8:content>
+							</v8:item>
+						</ToolTip>
+						<ExtendedTooltip name="ГруппаVanessaEditorОбучениеРасширеннаяПодсказка" id="3136"/>
+						<ChildItems>
+							<Button name="VanessaEditorОткрытьСписокУроков" id="3137">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.VanessaEditorОткрытьСписокУроков</CommandName>
+								<Picture>
+									<xr:Abs>Picture.png</xr:Abs>
+									<xr:LoadTransparent>false</xr:LoadTransparent>
+								</Picture>
+								<ExtendedTooltip name="VanessaEditorОткрытьСписокУроковРасширеннаяПодсказка" id="3138"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
 					<ButtonGroup name="ГруппаVanessaEditorБуферОбмена" id="2428">
 						<Title>
 							<v8:item>
@@ -11636,15 +11670,15 @@
 													<xr:Value xsi:type="FormChoiceListDesTimeValue">
 														<Presentation>
 															<v8:item>
-																<v8:lang>ru</v8:lang>
-																<v8:content>Мобильное приложение</v8:content>
+																<v8:lang>en</v8:lang>
+																<v8:content>Mobile client</v8:content>
 															</v8:item>
 															<v8:item>
-																<v8:lang>en</v8:lang>
-																<v8:content>Mobile app</v8:content>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Мобильный клиент</v8:content>
 															</v8:item>
 														</Presentation>
-														<Value xsi:type="xs:string">МобильноеПриложение</Value>
+														<Value xsi:type="xs:string">МобильныйКлиент</Value>
 													</xr:Value>
 												</xr:Item>
 											</ChoiceList>
@@ -14298,6 +14332,57 @@ When working with Vanessa Automation Single it is allowed to leave the field bla
 																</Title>
 															</ExtendedTooltip>
 														</InputField>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаНастройкиМобильногоКлиента" id="3123">
+													<Title>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Mobile client settings</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Настройки мобильного клиента</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа настройки мобильного клиента</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Vertical</Group>
+													<Behavior>Collapsible</Behavior>
+													<ControlRepresentation>Picture</ControlRepresentation>
+													<ExtendedTooltip name="ГруппаНастройкиМобильногоКлиентаРасширеннаяПодсказка" id="3124"/>
+													<ChildItems>
+														<InputField name="ПутьКadb" id="3132">
+															<DataPath>Объект.ПутьКadb</DataPath>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<ContextMenu name="ПутьКadbКонтекстноеМеню" id="3133"/>
+															<ExtendedTooltip name="ПутьКadbРасширеннаяПодсказка" id="3134">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Путь к файлу программы adb</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>The path to the adb program file</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+														</InputField>
+														<Button name="ПроверкаПодключенияКМобильномуУстройству" id="3128">
+															<Type>UsualButton</Type>
+															<CommandName>Form.Command.ПроверкаПодключенияКМобильномуУстройству</CommandName>
+															<ExtendedTooltip name="ПроверкаПодключенияКМобильномуУстройствуРасширеннаяПодсказка" id="3129"/>
+														</Button>
+														<Button name="ЗапуститьМобильныйКлиент" id="3130">
+															<Type>UsualButton</Type>
+															<CommandName>Form.Command.ЗапуститьМобильныйКлиент</CommandName>
+															<ExtendedTooltip name="ЗапуститьМобильныйКлиентРасширеннаяПодсказка" id="3131"/>
+														</Button>
 													</ChildItems>
 												</UsualGroup>
 											</ChildItems>
@@ -18075,11 +18160,11 @@ https://habr.com/ru/company/sberbank/blog/359302/</v8:content>
 																		<Title formatted="false">
 																			<v8:item>
 																				<v8:lang>ru</v8:lang>
-																				<v8:content>Включает эмуляцию движения мышки с помощью компоненты VanessaExt</v8:content>
+																				<v8:content>Включает эмуляцию движения мышки с помощью компоненты VanessaExt. По умолчнию опция включает перемещение мышки, когда клиентом тестирования является браузер. Для тонкого и толстого клиента нужно включать режим UI Automation.</v8:content>
 																			</v8:item>
 																			<v8:item>
 																				<v8:lang>en</v8:lang>
-																				<v8:content>Enables mouse movement emulation using VanessaExt add-in</v8:content>
+																				<v8:content>Enables mouse movement emulation using VanessaExt add-in. By default, this option enables mouse movement when the testing client is a browser. For thin and thick clients, you need to enable UI Automation option.</v8:content>
 																			</v8:item>
 																		</Title>
 																	</ExtendedTooltip>
@@ -21158,7 +21243,7 @@ The method should return the path to the mp3 file.</v8:content>
 																												<v8:lang>ru</v8:lang>
 																												<v8:content>Инструкция по получению доступа к SmartSpeech API (это займет пару минут):
 1. Войти в SmartMarket Studio &lt;link https://developers.sber.ru/studio&gt;https://developers.sber.ru/studio&lt;/&gt;
-2. В панели слева выбрать ЛП – личное пространство
+2. В панели слева выбрать или создать корпоративное пространство. Пройдите верификацию компании.
 3. Выбрать проект SmartService.
 4. Указать название проекта (любое понятное вам).
 5. Выбрать чекбокс рядом со SmartSpeech и заполнить запрос в соответствии с инструкцией.
@@ -22961,23 +23046,29 @@ Reduces voice generation costs.</v8:content>
 																						<Title formatted="false">
 																							<v8:item>
 																								<v8:lang>ru</v8:lang>
-																								<v8:content>Путь к исполняемому файлу convert.exe в каталоге с программой ImageMagick.
+																								<v8:content>В поле описывается как будет вызыаться команда Convert.
+Для версии ImageMagick 7 достаточно указать "magick convert."
+
+Для более старых версий нужно указать путь к исполняемому файлу convert.exe в каталоге с программой ImageMagick.
 
 Пример:
 "C:\Program Files\ImageMagick-Х.Х.Х-Q16\convert.exe"
 
 Скачать: https://imagemagick.org/script/download.php
-В процессе установки обязательным к установке является пункт: Install legacy utilities (e. g. convert)</v8:content>
+Для версий младше 7 в процессе установки обязательным к установке является пункт: Install legacy utilities (e. g. convert)</v8:content>
 																							</v8:item>
 																							<v8:item>
 																								<v8:lang>en</v8:lang>
-																								<v8:content>The path to the convert.exe executable file in the ImageMagick directory.
+																								<v8:content>The field describes how the Convert command will be invoked.
+For ImageMagick 7, just specify "magick convert."
+
+For older versions, you need to specify the path to the executable convert.exe file in the directory with the ImageMagick program.
 
 Example:
 "C:\Program Files\ImageMagick-X.X.X-Q16\convert.exe"
 
 Download: https://imagemagick.org/script/download.php
-During the installation, the following item is required for installation: Install legacy utilities (e. G. Convert)</v8:content>
+For versions earlier than 7 during the installation, the following item is required for installation: Install legacy utilities (e. G. Convert)</v8:content>
 																							</v8:item>
 																						</Title>
 																					</ExtendedTooltip>
@@ -24006,7 +24097,18 @@ Keyboard layout shwitches by pressing Ctrl+Shift emulation.</v8:content>
 																									<ToolTipRepresentation>Button</ToolTipRepresentation>
 																									<CheckBoxType>Auto</CheckBoxType>
 																									<ContextMenu name="ЗаписьВидеоЗаменитьСлайдЗаголовокКонтекстноеМеню" id="2201"/>
-																									<ExtendedTooltip name="ЗаписьВидеоЗаменитьСлайдЗаголовокРасширеннаяПодсказка" id="2202"/>
+																									<ExtendedTooltip name="ЗаписьВидеоЗаменитьСлайдЗаголовокРасширеннаяПодсказка" id="2202">
+																										<Title formatted="false">
+																											<v8:item>
+																												<v8:lang>ru</v8:lang>
+																												<v8:content>Если флаг установлен, то стандартный файл с заголовком фичи будет заменен на указанный видео файл. Видео файл должен быть того разрешения, что и записываемое видео. Также у него должна быть аудио дорожка.</v8:content>
+																											</v8:item>
+																											<v8:item>
+																												<v8:lang>en</v8:lang>
+																												<v8:content>If the flag is set, then the standard file with the feature header will be replaced with the specified video file. The video file must be of the same resolution as the video being recorded. It must also have an audio track.</v8:content>
+																											</v8:item>
+																										</Title>
+																									</ExtendedTooltip>
 																									<Events>
 																										<Event name="OnChange">ЗаписьВидеоЗаменитьIntroФайлПриИзменении</Event>
 																									</Events>
@@ -24017,7 +24119,18 @@ Keyboard layout shwitches by pressing Ctrl+Shift emulation.</v8:content>
 																									<ToolTipRepresentation>Button</ToolTipRepresentation>
 																									<CheckBoxType>Auto</CheckBoxType>
 																									<ContextMenu name="ЗаписьВидеоДобавитьМузыкуКСлайдуЗаголовокКонтекстноеМеню" id="2204"/>
-																									<ExtendedTooltip name="ЗаписьВидеоДобавитьМузыкуКСлайдуЗаголовокРасширеннаяПодсказка" id="2205"/>
+																									<ExtendedTooltip name="ЗаписьВидеоДобавитьМузыкуКСлайдуЗаголовокРасширеннаяПодсказка" id="2205">
+																										<Title formatted="false">
+																											<v8:item>
+																												<v8:lang>ru</v8:lang>
+																												<v8:content>Если флаг установлен, то к видео файлу с заголовком фичи будет добавлена музыка.</v8:content>
+																											</v8:item>
+																											<v8:item>
+																												<v8:lang>en</v8:lang>
+																												<v8:content>If the check box is selected, music will be added to the video file with the feature title</v8:content>
+																											</v8:item>
+																										</Title>
+																									</ExtendedTooltip>
 																								</CheckBoxField>
 																								<InputField name="ЗаписьВидеоПутьКСлайдуЗаголовок" id="2206">
 																									<DataPath>Объект.ЗаписьВидеоПутьКСлайдуЗаголовок</DataPath>
@@ -24036,7 +24149,18 @@ Keyboard layout shwitches by pressing Ctrl+Shift emulation.</v8:content>
 																									<ChoiceButton>true</ChoiceButton>
 																									<ClearButton>true</ClearButton>
 																									<ContextMenu name="ЗаписьВидеоПутьКСлайдуЗаголовокКонтекстноеМеню" id="2207"/>
-																									<ExtendedTooltip name="ЗаписьВидеоПутьКСлайдуЗаголовокРасширеннаяПодсказка" id="2208"/>
+																									<ExtendedTooltip name="ЗаписьВидеоПутьКСлайдуЗаголовокРасширеннаяПодсказка" id="2208">
+																										<Title formatted="false">
+																											<v8:item>
+																												<v8:lang>ru</v8:lang>
+																												<v8:content>Путь к видео файлу с заголовком фичи,  который будет добавлен вместо стандартного.</v8:content>
+																											</v8:item>
+																											<v8:item>
+																												<v8:lang>en</v8:lang>
+																												<v8:content>The path to the video file with the feature title, which will be added instead of the standard one.</v8:content>
+																											</v8:item>
+																										</Title>
+																									</ExtendedTooltip>
 																									<Events>
 																										<Event name="StartChoice">ЗаписьВидеоПутьКСлайдуЗаголовокНачалоВыбора</Event>
 																									</Events>
@@ -24074,7 +24198,18 @@ Keyboard layout shwitches by pressing Ctrl+Shift emulation.</v8:content>
 																									<ToolTipRepresentation>Button</ToolTipRepresentation>
 																									<CheckBoxType>Auto</CheckBoxType>
 																									<ContextMenu name="ЗаписьВидеоЗаменитьСлайдФиналКонтекстноеМеню" id="2212"/>
-																									<ExtendedTooltip name="ЗаписьВидеоЗаменитьСлайдФиналРасширеннаяПодсказка" id="2213"/>
+																									<ExtendedTooltip name="ЗаписьВидеоЗаменитьСлайдФиналРасширеннаяПодсказка" id="2213">
+																										<Title formatted="false">
+																											<v8:item>
+																												<v8:lang>ru</v8:lang>
+																												<v8:content>Если флаг установлен, то стандартный финальный файл будет заменен на указанный видео файл. Видео файл должен быть того разрешения, что и записываемое видео. Также у него должна быть аудио дорожка.</v8:content>
+																											</v8:item>
+																											<v8:item>
+																												<v8:lang>en</v8:lang>
+																												<v8:content>If the flag is set, then the standard final file will be replaced with the specified video file. The video file must be of the same resolution as the video being recorded. It must also have an audio track.</v8:content>
+																											</v8:item>
+																										</Title>
+																									</ExtendedTooltip>
 																									<Events>
 																										<Event name="OnChange">ЗаписьВидеоЗаменитьOutroФайлПриИзменении</Event>
 																									</Events>
@@ -24085,7 +24220,18 @@ Keyboard layout shwitches by pressing Ctrl+Shift emulation.</v8:content>
 																									<ToolTipRepresentation>Button</ToolTipRepresentation>
 																									<CheckBoxType>Auto</CheckBoxType>
 																									<ContextMenu name="ЗаписьВидеоДобавитьМузыкуКСлайдуФиналКонтекстноеМеню" id="2215"/>
-																									<ExtendedTooltip name="ЗаписьВидеоДобавитьМузыкуКСлайдуФиналРасширеннаяПодсказка" id="2216"/>
+																									<ExtendedTooltip name="ЗаписьВидеоДобавитьМузыкуКСлайдуФиналРасширеннаяПодсказка" id="2216">
+																										<Title formatted="false">
+																											<v8:item>
+																												<v8:lang>ru</v8:lang>
+																												<v8:content>Если флаг установлен, то к финальному видео файлу  будет добавлена музыка.</v8:content>
+																											</v8:item>
+																											<v8:item>
+																												<v8:lang>en</v8:lang>
+																												<v8:content>If the check box is selected, music will be added to the final video file.</v8:content>
+																											</v8:item>
+																										</Title>
+																									</ExtendedTooltip>
 																								</CheckBoxField>
 																								<InputField name="ЗаписьВидеоПутьКСлайдуФинал" id="2217">
 																									<DataPath>Объект.ЗаписьВидеоПутьКСлайдуФинал</DataPath>
@@ -24094,7 +24240,18 @@ Keyboard layout shwitches by pressing Ctrl+Shift emulation.</v8:content>
 																									<ChoiceButton>true</ChoiceButton>
 																									<ClearButton>true</ClearButton>
 																									<ContextMenu name="ЗаписьВидеоПутьКСлайдуФиналКонтекстноеМеню" id="2218"/>
-																									<ExtendedTooltip name="ЗаписьВидеоПутьКСлайдуФиналРасширеннаяПодсказка" id="2219"/>
+																									<ExtendedTooltip name="ЗаписьВидеоПутьКСлайдуФиналРасширеннаяПодсказка" id="2219">
+																										<Title formatted="false">
+																											<v8:item>
+																												<v8:lang>ru</v8:lang>
+																												<v8:content>Путь к финальному видео файлу, который будет добавлен вместо стандартного финального видео файла.</v8:content>
+																											</v8:item>
+																											<v8:item>
+																												<v8:lang>en</v8:lang>
+																												<v8:content>The path to the final video file that will be added instead of the standard final video file.</v8:content>
+																											</v8:item>
+																										</Title>
+																									</ExtendedTooltip>
 																									<Events>
 																										<Event name="StartChoice">ЗаписьВидеоЗаписьВидеоПутьКСлайдуФиналНачалоВыбора</Event>
 																									</Events>
@@ -36790,6 +36947,75 @@ To disable mouse movement at a specific step, you should use the #[DoNotMoveMous
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorContextMenu</Action>
+		</Command>
+		<Command name="ПроверкаПодключенияКМобильномуУстройству" id="156">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Test connection to mobile device</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверка подключения к мобильному устройству</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверка подключения к мобильному устройству</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Test connection to mobile device</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПроверкаПодключенияКМобильномуУстройству</Action>
+		</Command>
+		<Command name="ЗапуститьМобильныйКлиент" id="157">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Launch mobile client</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить мобильный клиент</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запустить мобильный клиент</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Launch mobile client</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗапуститьМобильныйКлиент</Action>
+		</Command>
+		<Command name="VanessaEditorОткрытьСписокУроков" id="158">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть список уроков</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Open the list of lessons</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть список уроков</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Open the list of lessons</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>VanessaEditorОткрытьСписокУроков</Action>
 		</Command>
 	</Commands>
 </Form>
