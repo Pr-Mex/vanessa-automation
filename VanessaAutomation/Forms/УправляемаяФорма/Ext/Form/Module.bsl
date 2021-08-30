@@ -16028,7 +16028,7 @@
 		VanessaTabs.current.editor.revealLineInCenter(НомерСтроки, ИдВиджета);
 		VanessaTabs.current.editor.setPosition(НомерСтроки, 1, ИдВиджета);
 	Иначе	
-		VanessaTabs.current.editor.editor.revealLineInCenter(НомерСтрокиВФиче);
+		VanessaTabs.current.editor.revealLineInCenter(НомерСтрокиВФиче);
 		VanessaTabs.current.editor.setPosition(НомерСтрокиВФиче, 1, "");
 	КонецЕсли;	 
 КонецПроцедуры 
