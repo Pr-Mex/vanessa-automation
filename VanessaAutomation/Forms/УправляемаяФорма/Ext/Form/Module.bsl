@@ -2375,7 +2375,7 @@
 		Возврат;
 	КонецЕсли;	 
 	
-	VanessaEditorСтандартныеКоманды(Команда);
+	VanessaTabs.undo();
 КонецПроцедуры
 
 &НаКлиенте
@@ -2384,7 +2384,7 @@
 		Возврат;
 	КонецЕсли;	 
 	
-	VanessaEditorСтандартныеКоманды(Команда);
+	VanessaTabs.redo();
 КонецПроцедуры
 
 &НаКлиенте
@@ -2393,12 +2393,7 @@
 		Возврат;
 	КонецЕсли;	
 	
-	Если VanessaTabs.current = Неопределено Тогда
-		Возврат;
-	КонецЕсли;	 
-	
 	VanessaTabs.close();
-	
 КонецПроцедуры
 
 &НаКлиенте
@@ -2448,10 +2443,10 @@
 	ИмяКоманды = СтрЗаменить(Команда.Имя, "VanessaEditor", "");
 	
 	Если Найти(Соответствие[ИмяКоманды], "editor.foldLevel") > 0 Тогда
-		VanessaTabs.current.editor.editor.trigger("", "editor.unfoldAll");
+		VanessaTabs.current.editor.trigger("", "editor.unfoldAll");
 	КонецЕсли;	 
 	
-	VanessaTabs.current.editor.editor.trigger("", Соответствие[ИмяКоманды]);
+	VanessaTabs.current.editor.trigger("", Соответствие[ИмяКоманды]);
 КонецПроцедуры
 
 &НаКлиенте
