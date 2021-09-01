@@ -2370,24 +2370,6 @@
 КонецПроцедуры
 
 &НаКлиенте
-Процедура VanessaEditorEditUndo(Команда)
-	Если ТекущийЭлемент <> Элементы.VanessaEditor Тогда
-		Возврат;
-	КонецЕсли;	 
-	VanessaTabs.current.editor.focus();
-	VanessaTabs.undo();
-КонецПроцедуры
-
-&НаКлиенте
-Процедура VanessaEditorEditRedo(Команда)
-	Если ТекущийЭлемент <> Элементы.VanessaEditor Тогда
-		Возврат;
-	КонецЕсли;	 
-	VanessaTabs.current.editor.focus();
-	VanessaTabs.redo();
-КонецПроцедуры
-
-&НаКлиенте
 Процедура VanessaEditorЗакрытьВкладку(Команда)
 	Если НЕ Объект.ИспользоватьРедакторVanessaEditor Тогда
 		Возврат;
