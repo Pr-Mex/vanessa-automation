@@ -2374,7 +2374,7 @@
 	Если ТекущийЭлемент <> Элементы.VanessaEditor Тогда
 		Возврат;
 	КонецЕсли;	 
-	
+	VanessaTabs.current.editor.focus();
 	VanessaTabs.undo();
 КонецПроцедуры
 
@@ -2383,7 +2383,7 @@
 	Если ТекущийЭлемент <> Элементы.VanessaEditor Тогда
 		Возврат;
 	КонецЕсли;	 
-	
+	VanessaTabs.current.editor.focus();
 	VanessaTabs.redo();
 КонецПроцедуры
 
@@ -2441,6 +2441,8 @@
 	Соответствие.Вставить("ViewZoomOut", "editor.action.fontZoomOut");
 	Соответствие.Вставить("ViewZoomReset", "editor.action.fontZoomReset");
 	ИмяКоманды = СтрЗаменить(Команда.Имя, "VanessaEditor", "");
+	
+	VanessaTabs.current.editor.focus();
 	
 	Если Найти(Соответствие[ИмяКоманды], "editor.foldLevel") > 0 Тогда
 		VanessaTabs.current.editor.trigger("", "editor.unfoldAll");
