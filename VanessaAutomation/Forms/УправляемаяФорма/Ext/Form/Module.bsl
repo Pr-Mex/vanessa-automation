@@ -2370,35 +2370,12 @@
 КонецПроцедуры
 
 &НаКлиенте
-Процедура VanessaEditorEditUndo(Команда)
-	Если ТекущийЭлемент <> Элементы.VanessaEditor Тогда
-		Возврат;
-	КонецЕсли;	 
-	
-	VanessaEditorСтандартныеКоманды(Команда);
-КонецПроцедуры
-
-&НаКлиенте
-Процедура VanessaEditorEditRedo(Команда)
-	Если ТекущийЭлемент <> Элементы.VanessaEditor Тогда
-		Возврат;
-	КонецЕсли;	 
-	
-	VanessaEditorСтандартныеКоманды(Команда);
-КонецПроцедуры
-
-&НаКлиенте
 Процедура VanessaEditorЗакрытьВкладку(Команда)
 	Если НЕ Объект.ИспользоватьРедакторVanessaEditor Тогда
 		Возврат;
 	КонецЕсли;	
 	
-	Если VanessaTabs.current = Неопределено Тогда
-		Возврат;
-	КонецЕсли;	 
-	
 	VanessaTabs.close();
-	
 КонецПроцедуры
 
 &НаКлиенте
@@ -2447,11 +2424,13 @@
 	Соответствие.Вставить("ViewZoomReset", "editor.action.fontZoomReset");
 	ИмяКоманды = СтрЗаменить(Команда.Имя, "VanessaEditor", "");
 	
+	VanessaTabs.current.editor.focus();
+	
 	Если Найти(Соответствие[ИмяКоманды], "editor.foldLevel") > 0 Тогда
-		VanessaTabs.current.editor.editor.trigger("", "editor.unfoldAll");
+		VanessaTabs.current.editor.trigger("", "editor.unfoldAll");
 	КонецЕсли;	 
 	
-	VanessaTabs.current.editor.editor.trigger("", Соответствие[ИмяКоманды]);
+	VanessaTabs.current.editor.trigger("", Соответствие[ИмяКоманды]);
 КонецПроцедуры
 
 &НаКлиенте
@@ -16028,7 +16007,7 @@
 		VanessaTabs.current.editor.revealLineInCenter(НомерСтроки, ИдВиджета);
 		VanessaTabs.current.editor.setPosition(НомерСтроки, 1, ИдВиджета);
 	Иначе	
-		VanessaTabs.current.editor.editor.revealLineInCenter(НомерСтрокиВФиче);
+		VanessaTabs.current.editor.revealLineInCenter(НомерСтрокиВФиче);
 		VanessaTabs.current.editor.setPosition(НомерСтрокиВФиче, 1, "");
 	КонецЕсли;	 
 КонецПроцедуры 
@@ -21463,7 +21442,7 @@
 		Если VanessaTabs = Неопределено ИЛИ VanessaTabs.current = Неопределено ИЛИ ВРедакторЗагруженMDФайл() Тогда
 			ДанныеРедактораПослеЗагрузкиФичи.Вставить("VersionId", Неопределено);
 		Иначе	
-			ДанныеРедактораПослеЗагрузкиФичи.Вставить("VersionId", VanessaTabs.current.editor.editor.getModel().getVersionId());
+			ДанныеРедактораПослеЗагрузкиФичи.Вставить("VersionId", VanessaTabs.current.getVersionId());
 		КонецЕсли;	 
 		ДанныеРедактораПослеЗагрузкиФичи.Вставить("ИмяФайла", Объект.КаталогФич);
 	КонецЕсли;	 
@@ -42705,14 +42684,14 @@
 		ЗаписатьBOM = Ложь;
 	КонецЕсли;
 	
-	Состояние(Локализовать("Сохранение файла."), , Data.Title, БиблиотекаКартинок.ДиалогИнформация);
+	Состояние(Локализовать("Сохранение файла."), , Data.title, БиблиотекаКартинок.ДиалогИнформация);
 	
 	Если ПустаяСтрока(filename) Тогда
 		filename = Data.filename;
 	КонецЕсли;	 
 	
 	ЗаписьТекста = Новый ЗаписьТекста(filename, "UTF-8", , Ложь, Символы.ПС); 
-	ЗаписьТекста.Записать(Data.model.getValue());
+	ЗаписьТекста.Записать(Data.value);
 	ЗаписьТекста.Закрыть();
 	
 	Data.accept();
@@ -42844,7 +42823,6 @@
 		Если VanessaEditor = Неопределено Тогда
 			view = Элементы.VanessaEditor.Document.defaultView;
 			VanessaGherkinProvider = view.VanessaGherkinProvider;
-			МодульРедакторТекста().УстановитьИмяОбластиПеременных();
 			МодульРедакторТекста().УстановитьКлючевыеСловаVanessaEditor();
 			МодульРедакторТекста().УстановитьСоответствиеСловУсловныхОператоров();
 			МодульРедакторТекста().УстановитьКлючевыеСловаИсключений();
