@@ -42797,6 +42797,7 @@
 			КонецЕсли;	 
 		КонецЕсли;	 
 	ИначеЕсли Event = "ON_TAB_SELECT" Тогда
+		VanessaEditor = VanessaTabs.current.editor;
 		МодульРедакторТекста().ПриСменеЗакладкиРедактора(Arg);
 	КонецЕсли;
 
@@ -42841,17 +42842,15 @@
 &НаКлиенте
 Процедура VanessaEditorДокументСформирован(Элемент)
 	Попытка
-		Если VanessaEditor = Неопределено Тогда
+		Если VanessaTabs = Неопределено Тогда
 			view = Элементы.VanessaEditor.Document.defaultView;
 			VanessaGherkinProvider = view.VanessaGherkinProvider;
+			VanessaGherkinProvider.setSuggestWidgetWidth("90%");
 			МодульРедакторТекста().УстановитьКлючевыеСловаVanessaEditor();
 			МодульРедакторТекста().УстановитьСоответствиеСловУсловныхОператоров();
 			МодульРедакторТекста().УстановитьКлючевыеСловаИсключений();
-			VanessaEditor = view.createVanessaEditor("", "turbo-gherkin");
 			МодульРедакторТекста().УстановитьСписокКомандVanessaEditor();
-			VanessaEditor.setSuggestWidgetWidth("90%");
-			view.createVanessaTabs();
-			VanessaTabs = Элементы.VanessaEditor.Document.defaultView.VanessaTabs;
+			VanessaTabs = view.createVanessaTabs();
 			Массив = Новый Массив;
 			Массив.Добавить(Локализовать("Версия") + ": ");
 			Массив.Добавить(Новый ФорматированнаяСтрока(VanessaTabs.version,, WebЦвета.Синий,, "https://github.com/Pr-Mex/VAEditor/releases"));
@@ -42872,7 +42871,7 @@
 	Element = ДанныеСобытия.Element;
 	Если Element.id = "VanessaEditorEventForwarder" Тогда
 		Пока Истина Цикл
-			msg = VanessaEditor.popMessage();
+			msg = Элементы.VanessaEditor.Document.popVanessaMessage();
 			Если (msg = Неопределено) Тогда Прервать; КонецЕсли;
 			VanessaEditorOnReceiveEventHandler(msg.type, msg.data);
 		КонецЦикла;
