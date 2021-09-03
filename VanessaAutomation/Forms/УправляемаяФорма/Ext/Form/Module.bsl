@@ -42831,6 +42831,10 @@
 			VanessaEditor.setSuggestWidgetWidth("90%");
 			view.createVanessaTabs();
 			VanessaTabs = Элементы.VanessaEditor.Document.defaultView.VanessaTabs;
+			Массив = Новый Массив;
+			Массив.Добавить(Локализовать("Версия") + ": ");
+			Массив.Добавить(Новый ФорматированнаяСтрока(VanessaTabs.version,, WebЦвета.Синий,, "https://github.com/Pr-Mex/VAEditor/releases"));
+			Элементы.ДекорацияВерсияVAEditor.Заголовок = Новый ФорматированнаяСтрока(Массив);
 		КонецЕсли;	 
 	Исключение
 		ВыключитьИспользованиеVanessaEditor();
