@@ -66,9 +66,6 @@
 Перем БуферОбменаVA Экспорт;
 
 &НаКлиенте
-Перем VanessaEditor Экспорт;
-
-&НаКлиенте
 Перем VanessaTabs Экспорт;
 
 &НаКлиенте
@@ -752,7 +749,7 @@
 		КонецЕсли;	 
 		
 		Если Объект.ИспользоватьРедакторVanessaEditor  Тогда
-			Если VanessaEditor <> Неопределено Тогда
+			Если НЕ ОтсутствуетVanessaEditor() Тогда
 				МодульРедакторТекста().ВставитьТекстСУчетомФорматирования(Параметр);
 			КонецЕсли;	 
 		Иначе	
@@ -832,7 +829,7 @@
 			Возврат;
 		КонецЕсли;	 
 		
-		Если VanessaEditor <> Неопределено Тогда
+		Если НЕ ОтсутствуетVanessaEditor() Тогда
 			ОбновитьТекущуюСтрокуРедактораСРасчетомВиджета(Параметр);
 		КонецЕсли;	
 	КонецЕсли;
@@ -1801,13 +1798,14 @@
 			Возврат;
 		КонецЕсли;	 
 		
-		ПозицияVanessaEditor = VanessaTabs.current.editor.getPosition();
+		ЭкземплярVanessaEditor = ПолучитьVanessaEditor();
+		ПозицияVanessaEditor = ЭкземплярVanessaEditor.getPosition();
 		Если НЕ ПустаяСтрока(ПозицияVanessaEditor.codeWidget) Тогда
 			//Опция доступна только для основного текста фичи
 			Возврат;
 		КонецЕсли;	 
 		ТекущаяСтрокаVanessaEditor = ПозицияVanessaEditor.LineNumber;
-		ТекстСтроки = СокрЛ(VanessaTabs.current.editor.getLineContent(ТекущаяСтрокаVanessaEditor));
+		ТекстСтроки = СокрЛ(ЭкземплярVanessaEditor.getLineContent(ТекущаяСтрокаVanessaEditor));
 		Если Лев(ТекстСтроки, 1) <> "|" Тогда
 			Возврат;
 		КонецЕсли;	 
@@ -1918,7 +1916,7 @@
 		Если НЕ ВозможенЗапускСценариевИзТекущейВкладки() Тогда
 			Возврат;
 		КонецЕсли;	 
-		Объект.СгенерированныйСценарий = VanessaTabs.current.editor.getContent();
+		Объект.СгенерированныйСценарий = ПолучитьVanessaEditor().getContent();
 	КонецЕсли;	 
 	
 	Перевод = ПеревестиТекст(Объект.СгенерированныйСценарий);
@@ -1930,7 +1928,7 @@
 		Соответствие.Вставить("startColumn", 1);
 		Соответствие.Вставить("endLineNumber", 1000000);
 		Соответствие.Вставить("endColumn", 1);
-		VanessaTabs.current.editor.insertText(Объект.СгенерированныйСценарий, ЗаписатьОбъектJSON(Соответствие));
+		ПолучитьVanessaEditor().insertText(Объект.СгенерированныйСценарий, ЗаписатьОбъектJSON(Соответствие));
 	КонецЕсли;	 
 КонецПроцедуры
 
@@ -1940,27 +1938,29 @@
 		Если НЕ ВозможенЗапускСценариевИзТекущейВкладки() Тогда
 			Возврат;
 		КонецЕсли;	 
-		ВыделеннаяОбласть = VanessaTabs.current.editor.getSelection();
+
+		ЭкземплярVanessaEditor = ПолучитьVanessaEditor();
+		ВыделеннаяОбласть = ЭкземплярVanessaEditor.getSelection();
 		НачалоДиапазона = ВыделеннаяОбласть.startLineNumber;
 		ОкончаниеДиапазона = ВыделеннаяОбласть.endLineNumber;
 		
-		Если ПустаяСтрока(VanessaTabs.current.editor.getLineContent(ОкончаниеДиапазона)) Тогда
+		Если ПустаяСтрока(ЭкземплярVanessaEditor.getLineContent(ОкончаниеДиапазона)) Тогда
 			ОкончаниеДиапазона = ОкончаниеДиапазона - 1;
 		КонецЕсли;	 
 		
-		ПолныйТекстСтроки = VanessaTabs.current.editor.getLineContent(НачалоДиапазона);
+		ПолныйТекстСтроки = ЭкземплярVanessaEditor.getLineContent(НачалоДиапазона);
 		Если Лев(СокрЛ(ПолныйТекстСтроки), 2) = "//" Тогда
 			ДобавлятьКомментарий = Ложь;
 		Иначе	
 			ДобавлятьКомментарий = Истина;
 		КонецЕсли;	 
 		
-		ПолныйТекстСтроки = VanessaTabs.current.editor.getLineContent(ОкончаниеДиапазона);
+		ПолныйТекстСтроки = ЭкземплярVanessaEditor.getLineContent(ОкончаниеДиапазона);
 		ДлинаМаксСтр = СтрДлина(ПолныйТекстСтроки);
 		
 		СтрокаЗамены = "";
 		Для Сч = НачалоДиапазона По ОкончаниеДиапазона Цикл
-			ПолныйТекстСтроки = VanessaTabs.current.editor.getLineContent(Сч);
+			ПолныйТекстСтроки = ЭкземплярVanessaEditor.getLineContent(Сч);
 			Если ДобавлятьКомментарий Тогда
 				ПолныйТекстСтроки = "//" + ПолныйТекстСтроки;
 			Иначе	
@@ -1979,7 +1979,7 @@
 		Соответствие.Вставить("startColumn", 1);
 		Соответствие.Вставить("endLineNumber", ОкончаниеДиапазона);
 		Соответствие.Вставить("endColumn", ДлинаМаксСтр+1);
-		VanessaTabs.current.editor.insertText(СтрокаЗамены, ЗаписатьОбъектJSON(Соответствие));
+		ЭкземплярVanessaEditor.insertText(СтрокаЗамены, ЗаписатьОбъектJSON(Соответствие));
 	Иначе	
 		
 		Если ПустаяСтрока(Объект.СгенерированныйСценарий) Тогда
@@ -2007,20 +2007,21 @@
 		Если НЕ ВозможенЗапускСценариевИзТекущейВкладки() Тогда
 			Возврат;
 		КонецЕсли;	 
-		ВыделеннаяОбласть = VanessaTabs.current.editor.getSelection();
+		ЭкземплярVanessaEditor = ПолучитьVanessaEditor();
+		ВыделеннаяОбласть = ЭкземплярVanessaEditor.getSelection();
 		НачалоДиапазона = ВыделеннаяОбласть.startLineNumber;
 		ОкончаниеДиапазона = ВыделеннаяОбласть.endLineNumber;
 		
-		Если ПустаяСтрока(VanessaTabs.current.editor.getLineContent(ОкончаниеДиапазона)) Тогда
+		Если ПустаяСтрока(ЭкземплярVanessaEditor.getLineContent(ОкончаниеДиапазона)) Тогда
 			ОкончаниеДиапазона = ОкончаниеДиапазона - 1;
 		КонецЕсли;	 
 		
-		ПолныйТекстСтроки = VanessaTabs.current.editor.getLineContent(ОкончаниеДиапазона);
+		ПолныйТекстСтроки = ЭкземплярVanessaEditor.getLineContent(ОкончаниеДиапазона);
 		ДлинаМаксСтр = СтрДлина(ПолныйТекстСтроки);
 		
 		СтрокаЗамены = "";
 		Для Сч = НачалоДиапазона По ОкончаниеДиапазона Цикл
-			ПолныйТекстСтроки = VanessaTabs.current.editor.getLineContent(Сч);
+			ПолныйТекстСтроки = ЭкземплярVanessaEditor.getLineContent(Сч);
 			ПолныйТекстСтрокиСокрЛ = СокрЛ(ПолныйТекстСтроки);
 			ПолныйТекстСтрокиСокрП = СокрП(ПолныйТекстСтроки);
 			Если НЕ (Лев(ПолныйТекстСтрокиСокрЛ, 1) = "|" ИЛИ Прав(ПолныйТекстСтрокиСокрП, 1) = "|") Тогда
@@ -2044,7 +2045,7 @@
 		Соответствие.Вставить("startColumn", 1);
 		Соответствие.Вставить("endLineNumber", ОкончаниеДиапазона);
 		Соответствие.Вставить("endColumn", ДлинаМаксСтр+1);
-		VanessaTabs.current.editor.insertText(СтрокаЗамены, ЗаписатьОбъектJSON(Соответствие));
+		ЭкземплярVanessaEditor.insertText(СтрокаЗамены, ЗаписатьОбъектJSON(Соответствие));
 	Иначе	
 		
 		Если ПустаяСтрока(Объект.СгенерированныйСценарий) Тогда
@@ -2426,13 +2427,14 @@
 	Соответствие.Вставить("ViewZoomReset", "editor.action.fontZoomReset");
 	ИмяКоманды = СтрЗаменить(Команда.Имя, "VanessaEditor", "");
 	
-	VanessaTabs.current.editor.focus();
+	ЭкземплярVanessaEditor = ПолучитьVanessaEditor(); 
+	ЭкземплярVanessaEditor.focus();
 	
 	Если Найти(Соответствие[ИмяКоманды], "editor.foldLevel") > 0 Тогда
-		VanessaTabs.current.editor.trigger("", "editor.unfoldAll");
+		ЭкземплярVanessaEditor.trigger("", "editor.unfoldAll");
 	КонецЕсли;	 
 	
-	VanessaTabs.current.editor.trigger("", Соответствие[ИмяКоманды]);
+	ЭкземплярVanessaEditor.trigger("", Соответствие[ИмяКоманды]);
 КонецПроцедуры
 
 &НаКлиенте
@@ -2458,7 +2460,7 @@
 	Соответствие.Вставить("startColumn", 1);
 	Соответствие.Вставить("endLineNumber", 1);
 	Соответствие.Вставить("endColumn", 1);
-	VanessaTabs.current.editor.insertText(МодульРедакторТекста().ТекстНовогоСценария(), ЗаписатьОбъектJSON(Соответствие));
+	ПолучитьVanessaEditor().insertText(МодульРедакторТекста().ТекстНовогоСценария(), ЗаписатьОбъектJSON(Соответствие));
 	
 	АктивизироватьСтраницуЗапускТестов();
 КонецПроцедуры
@@ -2522,10 +2524,11 @@
 	ПараметрыФормы = Новый Структура;
 	ПараметрыФормы.Вставить("БрейкпоинтыVanessaEditor", ДанныеВкладкиРедактора.БрейкпоинтыVanessaEditor);
 	
+	ЭкземплярVanessaEditor = ПолучитьVanessaEditor();
 	Для Каждого Элем Из ДанныеВкладкиРедактора.БрейкпоинтыVanessaEditor Цикл
-		Элем.Вставить("ТекстСтроки", VanessaTabs.current.editor.getLineContent(Элем.НомерСтроки, Элем.ИдВиджета));
+		Элем.Вставить("ТекстСтроки", ЭкземплярVanessaEditor.getLineContent(Элем.НомерСтроки, Элем.ИдВиджета));
 		Если НЕ ПустаяСтрока(Элем.ИдВиджета) Тогда
-			Элем.Вставить("РеальныйНомерСтроки", VanessaTabs.current.editor.getWidgetLine(Элем.ИдВиджета));
+			Элем.Вставить("РеальныйНомерСтроки", ЭкземплярVanessaEditor.getWidgetLine(Элем.ИдВиджета));
 		Иначе	
 			Элем.Вставить("РеальныйНомерСтроки", Элем.НомерСтроки);
 		КонецЕсли;	 
@@ -3950,7 +3953,7 @@
 &НаКлиенте
 Процедура ТемаРедактораVanessaEditorПриИзменении(Элемент)
 	Попытка
-		VanessaTabs.current.editor.setTheme(Объект.ТемаРедактораVanessaEditor);
+		ПолучитьVanessaEditor().setTheme(Объект.ТемаРедактораVanessaEditor);
 	Исключение
 	КонецПопытки;
 КонецПроцедуры
@@ -4372,7 +4375,7 @@
 	
 	Если Объект.ИспользоватьРедакторVanessaEditor Тогда
 		Если ОстановкаНаПроблемномШаге = Истина Тогда
-			VanessaTabs.current.editor.toggleBreakpoint(НомерСтрокиПроблемногоШага);
+			ПолучитьVanessaEditor().toggleBreakpoint(НомерСтрокиПроблемногоШага);
 		КонецЕсли;	 
 		МодульРедакторТекста().ЗагрузитьБрейкпоинтыИзVanessaEditor();
 		ТекущаяПозицияVanessaEditor = ПолучитьТекущаяПозицияVanessaEditor();
@@ -5241,7 +5244,7 @@
 		Если ИдШагаДляРаскраскиТекущим <> Неопределено И ИдШагаДляРаскраскиТекущим <= Шаги.Количество()-1 Тогда
 			МодульРедакторТекста().УстановитьТекущийШагVanessaEditor(Шаги[ИдШагаДляРаскраскиТекущим]);
 		ИначеЕсли ИдШагаДляРаскраскиТекущим = Неопределено Тогда
-			VanessaTabs.current.editor.setCurrentProgress(0);
+			ПолучитьVanessaEditor().setCurrentProgress(0);
 		КонецЕсли;	 
 		МодульРедакторТекста().УстановитьВыполненныйШагVanessaEditor(ТекШаг);
 		
@@ -8275,7 +8278,7 @@
 	ДанныеДляОбновленияСтрокиРедактора.Вставить("codeWidget", Данные.codeWidget);
 	
 	Если НЕ ПустаяСтрока(Данные.codeWidget) Тогда
-		ВиджетыСтроки = ПрочитатьОбъектJSON(VanessaTabs.current.editor.getLineWidgets(Данные.РеальныйНомерСтроки));
+		ВиджетыСтроки = ПрочитатьОбъектJSON(ПолучитьVanessaEditor().getLineWidgets(Данные.РеальныйНомерСтроки));
 		Если ВиджетыСтроки.Количество() > 0 Тогда
 			ДанныеДляОбновленияСтрокиРедактора.Вставить("codeWidget", ВиджетыСтроки[0]);
 		КонецЕсли;	 
@@ -13228,7 +13231,7 @@
 		Если НЕ ВозможенЗапускСценариевИзТекущейВкладки() Тогда
 			Возврат;
 		КонецЕсли;	 
-		VanessaTabs.current.editor.toggleBreakpoint();
+		ПолучитьVanessaEditor().toggleBreakpoint();
 	Иначе	
 		
 		ТекущаяСтрокаДереваИдСтроки = Неопределено;
@@ -15779,7 +15782,7 @@
 	
 	Элементы.VanessaEditorПоказыватьСтрокиПодсценариев.Пометка = Объект.ПоказыватьСтрокиПодсценариевVanessaEdittor;
 	Если НЕ Объект.ПоказыватьСтрокиПодсценариевVanessaEdittor Тогда
-		VanessaTabs.current.editor.clearRuntimeCodes();
+		ПолучитьVanessaEditor().clearRuntimeCodes();
 		ОчиститьДанныеВиджетов();
 	Иначе
 		Если ДеревоБудетПерезагружено("ОтобразитьДанныеВиджетов") Тогда
@@ -15838,9 +15841,10 @@
 		Возврат;
 	КонецЕсли;	 
 	
-	VanessaTabs.current.editor.clearRuntimeStatus();
-	VanessaTabs.current.editor.clearRuntimeErrors();
-	VanessaTabs.current.editor.clearLinesStyle();
+	ЭкземплярVanessaEditor = ПолучитьVanessaEditor();
+	ЭкземплярVanessaEditor.clearRuntimeStatus();
+	ЭкземплярVanessaEditor.clearRuntimeErrors();
+	ЭкземплярVanessaEditor.clearLinesStyle();
 	РаскраситьСтрокиПодсценариевVanessaEditor();
 КонецПроцедуры 
 
@@ -15957,17 +15961,19 @@
 	КонецЕсли;	 
 	
 	Если Объект.ИспользоватьРедакторVanessaEditor Тогда
-		НомераСтрокСОшибкой = ПрочитатьОбъектJSON(VanessaTabs.current.editor.getRuntimeProgress("error"));
-		ТекНомерСтроки = VanessaTabs.current.editor.getPosition().lineNumber;
+		ЭкземплярVanessaEditor = ПолучитьVanessaEditor();
+		НомераСтрокСОшибкой = ПрочитатьОбъектJSON(ЭкземплярVanessaEditor.getRuntimeProgress("error"));
+		ТекНомерСтроки = ЭкземплярVanessaEditor.getPosition().lineNumber;
 		Если НомераСтрокСОшибкой.Найти(ТекНомерСтроки) <> Неопределено Тогда
-			VanessaTabs.current.editor.setPosition(ТекНомерСтроки + 1, 1, "");
+			ЭкземплярVanessaEditor.setPosition(ТекНомерСтроки + 1, 1, "");
 		КонецЕсли;	 
 	КонецЕсли;	 
 	
 	ПолучатьСтрокиСценариев = Истина;
 	Если Объект.ИспользоватьРедакторVanessaEditor Тогда
-		Если НЕ СделатьСтрокуДереваТекущейПоНомеруСтрокиФичи(VanessaTabs.current.editor.getPosition().lineNumber) Тогда
-			СделатьБлижайшуюСтрокуДереваТекущейПоНомеруСтрокиФичи(VanessaTabs.current.editor.getPosition().lineNumber) 
+		ЭкземплярVanessaEditor = ПолучитьVanessaEditor();
+		Если НЕ СделатьСтрокуДереваТекущейПоНомеруСтрокиФичи(ЭкземплярVanessaEditor.getPosition().lineNumber) Тогда
+			СделатьБлижайшуюСтрокуДереваТекущейПоНомеруСтрокиФичи(ЭкземплярVanessaEditor.getPosition().lineNumber) 
 		КонецЕсли;	 
 		ПолучатьСтрокиСценариев = Ложь;
 		
@@ -16016,12 +16022,12 @@
 	
 	ИдВиджета = ИдВиджетаПоИдСтроки(ИДСтроки);
 	Если ИдВиджета <> Неопределено Тогда
-		НомерСтроки = VanessaTabs.current.editor.getWidgetLine(ИдВиджета);
-		VanessaTabs.current.editor.revealLineInCenter(НомерСтроки, ИдВиджета);
-		VanessaTabs.current.editor.setPosition(НомерСтроки, 1, ИдВиджета);
+		НомерСтроки = ПолучитьVanessaEditor().getWidgetLine(ИдВиджета);
+		ПолучитьVanessaEditor().revealLineInCenter(НомерСтроки, ИдВиджета);
+		ПолучитьVanessaEditor().setPosition(НомерСтроки, 1, ИдВиджета);
 	Иначе	
-		VanessaTabs.current.editor.revealLineInCenter(НомерСтрокиВФиче);
-		VanessaTabs.current.editor.setPosition(НомерСтрокиВФиче, 1, "");
+		ПолучитьVanessaEditor().revealLineInCenter(НомерСтрокиВФиче);
+		ПолучитьVanessaEditor().setPosition(НомерСтрокиВФиче, 1, "");
 	КонецЕсли;	 
 КонецПроцедуры 
 
@@ -16030,7 +16036,7 @@
 	Если VanessaTabs = Неопределено ИЛИ VanessaTabs.current = Неопределено ИЛИ ВРедакторЗагруженMDФайл() Тогда
 		ТекДанные = Неопределено;
 	Иначе	
-		ТекДанные = VanessaTabs.current.editor.getPosition();
+		ТекДанные = ПолучитьVanessaEditor().getPosition();
 	КонецЕсли;	 
 	Если ТекДанные = Неопределено Тогда
 		Результат = Новый Структура;
@@ -16049,7 +16055,7 @@
 	Результат.Вставить("РеальныйНомерСтроки", ТекДанные.lineNumber);
 	
 	Если НЕ ПустаяСтрока(Результат.codeWidget) Тогда
-		Результат.Вставить("РеальныйНомерСтроки", VanessaTabs.current.editor.getWidgetLine(Результат.codeWidget));
+		Результат.Вставить("РеальныйНомерСтроки", ПолучитьVanessaEditor().getWidgetLine(Результат.codeWidget));
 	КонецЕсли;	 
 	
 	Возврат Результат; 
@@ -16081,12 +16087,13 @@
 	КонецЕсли;	 
 	
 	Попытка
+		ЭкземплярVanessaEditor = ПолучитьVanessaEditor();
 		Если ПустаяСтрока(ДанныеДляОбновленияСтрокиРедактора.codeWidget) Тогда
-			VanessaTabs.current.editor.revealLineInCenter(ДанныеДляОбновленияСтрокиРедактора.LineNumber);
+			ЭкземплярVanessaEditor.revealLineInCenter(ДанныеДляОбновленияСтрокиРедактора.LineNumber);
 		Иначе	
-			VanessaTabs.current.editor.revealLineInCenter(ДанныеДляОбновленияСтрокиРедактора.LineNumber, ДанныеДляОбновленияСтрокиРедактора.codeWidget);
+			ЭкземплярVanessaEditor.revealLineInCenter(ДанныеДляОбновленияСтрокиРедактора.LineNumber, ДанныеДляОбновленияСтрокиРедактора.codeWidget);
 		КонецЕсли;	 
-		VanessaTabs.current.editor.setPosition(ДанныеДляОбновленияСтрокиРедактора.LineNumber,
+		ЭкземплярVanessaEditor.setPosition(ДанныеДляОбновленияСтрокиРедактора.LineNumber,
 			ДанныеДляОбновленияСтрокиРедактора.Column, ДанныеДляОбновленияСтрокиРедактора.codeWidget);
 	Исключение
 	КонецПопытки;
@@ -16107,7 +16114,7 @@
 	
 	Если ИмяФайлаФичи = Неопределено Тогда
 		Если Объект.ИспользоватьРедакторVanessaEditor Тогда
-			ПозицияVanessaEditor = VanessaTabs.current.editor.getPosition();
+			ПозицияVanessaEditor = ПолучитьVanessaEditor().getPosition();
 			Если ПустаяСтрока(ПозицияVanessaEditor.codeWidget) Тогда
 				НомерСтрокиВФиче = ПозицияVanessaEditor.LineNumber;
 				ПолныйПуть = Объект.КаталогФич;
@@ -25152,7 +25159,7 @@
 			Если Объект.ИспользоватьРедакторVanessaEditor Тогда
 				ВыполненныеШагиVanessaEditor = Новый Массив;
 				ВыполненныеШагиVanessaEditor.Добавить(ТекШаг.НомерСтрокиВФиче);
-				VanessaEditor.setRuntimeProgress("pending", ЗаписатьОбъектJSON(ВыполненныеШагиVanessaEditor));
+				ПолучитьVanessaEditor().setRuntimeProgress("pending", ЗаписатьОбъектJSON(ВыполненныеШагиVanessaEditor));
 			КонецЕсли;	 
 			
 		Иначе
@@ -25392,7 +25399,7 @@
 			Если ИдШагаДляРаскраскиТекущим <> Неопределено И ИдШагаДляРаскраскиТекущим <= Шаги.Количество()-1 Тогда
 				МодульРедакторТекста().УстановитьТекущийШагVanessaEditor(Шаги[ИдШагаДляРаскраскиТекущим]);
 			ИначеЕсли ИдШагаДляРаскраскиТекущим = Неопределено Тогда
-				VanessaTabs.current.editor.setCurrentProgress(0);
+				ПолучитьVanessaEditor().setCurrentProgress(0);
 			КонецЕсли;	 
 			
 			МодульРедакторТекста().УстановитьВыполненныйШагVanessaEditor(ТекШаг);
@@ -25641,7 +25648,7 @@
 					КонецЕсли;	 
 					
 					Если НЕ Объект.ПоказыватьСтрокиПодсценариевVanessaEdittor Тогда
-						VanessaEditor.setStackStatus(Истина, ТекШаг.СтрокаШагаПодсценарияФичи);
+						ПолучитьVanessaEditor().setStackStatus(Истина, ТекШаг.СтрокаШагаПодсценарияФичи);
 					КонецЕсли;	 
 				КонецЕсли;	 
 				ДаннныеСценария.ТекущийНомерСтрокиПодсценария = ТекШаг.СтрокаШагаПодсценарияФичи;
@@ -25650,7 +25657,7 @@
 			Если НЕ ДаннныеСценария.ЭтоСтруктураСценария Тогда
 				Если ДаннныеСценария.ТекущийНомерСтрокиПодсценария <> Неопределено Тогда
 					Если НЕ Объект.ПоказыватьСтрокиПодсценариевVanessaEdittor Тогда
-						VanessaEditor.setStackStatus(Ложь, ДаннныеСценария.ТекущийНомерСтрокиПодсценария);
+						ПолучитьVanessaEditor().setStackStatus(Ложь, ДаннныеСценария.ТекущийНомерСтрокиПодсценария);
 					КонецЕсли;	 
 					МодульРедакторТекста().ОбновитьСтатусВыполненногоПодсценарияФичи(ДаннныеСценария.ТекущийНомерСтрокиПодсценария);
 					ДаннныеСценария.ТекущийНомерСтрокиПодсценария = Неопределено;
@@ -25722,7 +25729,7 @@
 		Если Объект.ИспользоватьРедакторVanessaEditor Тогда
 			ВыполненныеШагиVanessaEditor = Новый Массив;
 			ВыполненныеШагиVanessaEditor.Добавить(ТекШаг.НомерСтрокиВФиче);
-			VanessaEditor.setRuntimeProgress("pending", ЗаписатьОбъектJSON(ВыполненныеШагиVanessaEditor));
+			ПолучитьVanessaEditor().setRuntimeProgress("pending", ЗаписатьОбъектJSON(ВыполненныеШагиVanessaEditor));
 		КонецЕсли;	 
 		
 		СообщитьПользователю(ОписаниеОшибки);
@@ -26601,7 +26608,7 @@
 		КонецЕсли;	 
 		
 		Если Объект.ИспользоватьРедакторVanessaEditor Тогда
-			VanessaTabs.current.editor.setCurrentProgress(0);
+			ПолучитьVanessaEditor().setCurrentProgress(0);
 			ДаннныеСценария = МассивСценариевДляВыполнения[ТекИД_СценарияВМассиве];
 			Если НЕ ДаннныеСценария.ЭтоСтруктураСценария Тогда
 				Если ДаннныеСценария.ТекущийНомерСтрокиПодсценария <> Неопределено Тогда
@@ -26615,7 +26622,7 @@
 					Если НадоПоставитьСтатусУспешно Тогда
 						МодульРедакторТекста().ОбновитьСтатусВыполненногоПодсценарияФичи(ДаннныеСценария.ТекущийНомерСтрокиПодсценария);
 					КонецЕсли;	 
-					VanessaTabs.current.editor.setStackStatus(Ложь, ДаннныеСценария.ТекущийНомерСтрокиПодсценария);
+					ПолучитьVanessaEditor().setStackStatus(Ложь, ДаннныеСценария.ТекущийНомерСтрокиПодсценария);
 					ДаннныеСценария.ТекущийНомерСтрокиПодсценария = Неопределено;
 				КонецЕсли;	
 			КонецЕсли;	 
@@ -27002,7 +27009,7 @@
 		// значит все шаги выполнены, запускаем следующий сценарий
 		
 		Если Объект.ИспользоватьРедакторVanessaEditor Тогда
-			VanessaTabs.current.editor.setCurrentProgress(0);
+			ПолучитьVanessaEditor().setCurrentProgress(0);
 		КонецЕсли;	 
 		
 		ИДСтрокиСценария = МассивСценариевДляВыполнения[ТекИД_СценарияВМассиве].СтрокаДерева;
@@ -36206,13 +36213,14 @@
 			Возврат;
 		КонецЕсли;	 
 		
-		ПозицияVanessaEditor = VanessaTabs.current.editor.getPosition();
+		ЭкземплярVanessaEditor = ПолучитьVanessaEditor();
+		ПозицияVanessaEditor = ЭкземплярVanessaEditor.getPosition();
 		Если НЕ ПустаяСтрока(ПозицияVanessaEditor.codeWidget) Тогда
 			//Опция доступна только для основного текста фичи
 			Возврат;
 		КонецЕсли;	 
 		ТекущаяСтрокаVanessaEditor = ПозицияVanessaEditor.LineNumber;
-		ТекстСтроки = СокрЛ(VanessaTabs.current.editor.getLineContent(ТекущаяСтрокаVanessaEditor));
+		ТекстСтроки = СокрЛ(ЭкземплярVanessaEditor.getLineContent(ТекущаяСтрокаVanessaEditor));
 		Если Лев(ТекстСтроки, 1) <> "|" Тогда
 			Возврат;
 		КонецЕсли;	 
@@ -36283,17 +36291,18 @@
 &НаКлиенте
 Процедура ЗаменитьТаблицуGherkinПослеРедактирования(МассивСтрокТаблицы)
 	Если Объект.ИспользоватьРедакторVanessaEditor И Элементы.ФункциональностьЗакладки.ТекущаяСтраница = Элементы.ГруппаЗапускТестов Тогда
-		Если VanessaEditor = Неопределено Тогда
+		Если ОтсутствуетVanessaEditor() Тогда
 			Возврат;
 		КонецЕсли;	 
 		
-		ПозицияVanessaEditor = VanessaTabs.current.editor.getPosition();
+		ЭкземплярVanessaEditor = ПолучитьVanessaEditor();
+		ПозицияVanessaEditor = ЭкземплярVanessaEditor.getPosition();
 		Если НЕ ПустаяСтрока(ПозицияVanessaEditor.codeWidget) Тогда
 			//Опция доступна только для основного текста фичи
 			Возврат;
 		КонецЕсли;	 
 		ТекущаяСтрокаVanessaEditor = ПозицияVanessaEditor.LineNumber;
-		ПолныйТекстСтроки = VanessaTabs.current.editor.getLineContent(ТекущаяСтрокаVanessaEditor);
+		ПолныйТекстСтроки = ЭкземплярVanessaEditor.getLineContent(ТекущаяСтрокаVanessaEditor);
 		ТекстСтроки = СокрЛ(ПолныйТекстСтроки);
 		Префикс = Лев(ПолныйТекстСтроки, СтрДлина(ПолныйТекстСтроки) - СтрДлина(ТекстСтроки));
 		
@@ -36315,7 +36324,7 @@
 		Соответствие.Вставить("startColumn", 1);
 		Соответствие.Вставить("endLineNumber", МаксСтр);
 		Соответствие.Вставить("endColumn", ДлинаМаксСтр+1);
-		VanessaTabs.current.editor.insertText(СтрокаЗамены, ЗаписатьОбъектJSON(Соответствие));
+		ЭкземплярVanessaEditor.insertText(СтрокаЗамены, ЗаписатьОбъектJSON(Соответствие));
 	Иначе	
 		НачалоСтроки = 0;
 		НачалоКолонки = 0;
@@ -39692,22 +39701,12 @@
 &НаКлиенте
 Процедура VanessaEditorОзвучитьТекущуюСтрокуРедактораПродолжение(Результат, ДополнительныеПараметры) Экспорт
 	
-	Если НЕ Объект.ИспользоватьРедакторVanessaEditor Тогда
+	Если ОтсутствуетVanessaEditor() Тогда
 		Возврат;
 	КонецЕсли;	
 	
-	Если VanessaTabs = Неопределено Тогда
-		Возврат;
-	КонецЕсли;	 
 	
-	Если VanessaTabs.current = Неопределено Тогда
-		Возврат;
-	КонецЕсли;	 
-	
-	VanessaEditor = VanessaTabs.current.editor;
-	
-	ПозицияVanessaEditor = VanessaEditor.getPosition();
-	
+	ПозицияVanessaEditor = ПолучитьVanessaEditor().getPosition();
 	ОзвучитьСтрокуСценарияПоНомеру(ПозицияVanessaEditor.LineNumber);
 	
 КонецПроцедуры 
@@ -40674,7 +40673,7 @@
 	
 	ИмяВременногоФайла = ПолучитьИмяВременногоФайла("txt");
 	ЗТ = Новый ЗаписьТекста(ИмяВременногоФайла, "UTF-8",, Ложь); 
-	ТекущийТекст = VanessaTabs.current.editor.getContent();
+	ТекущийТекст = ПолучитьVanessaEditor().getContent();
 	ЗТ.Записать(ТекущийТекст); 
 	ЗТ.Закрыть();
 	
@@ -42538,6 +42537,36 @@
 #Область VanessaEditor
 
 &НаКлиенте
+Функция ОтсутствуетVanessaEditor() Экспорт
+
+	Если НЕ Объект.ИспользоватьРедакторVanessaEditor Тогда
+		Возврат Истина;
+	КонецЕсли;
+	
+	Если VanessaTabs = Неопределено Тогда
+		Возврат Истина;
+	КонецЕсли;
+	
+	Если VanessaTabs.current = Неопределено Тогда
+		Возврат Истина;
+	КонецЕсли;
+
+	Возврат Ложь;
+	
+КонецФункции
+
+&НаКлиенте
+Функция ПолучитьVanessaEditor() Экспорт
+
+	Если ОтсутствуетVanessaEditor() Тогда
+		ВызватьИсключение Локализовать("Отсутствует редактор Vanessa Automation Editor")
+	КонецЕсли;
+
+	Возврат VanessaTabs.current.editor;
+	
+КонецФункции
+
+&НаКлиенте
 Процедура ОткрытьПодсценарийВНовойВкладкеОбработчик()
 	Если НЕ ВозможенЗапускСценариевИзТекущейВкладки() Тогда
 		Возврат;
@@ -42547,7 +42576,7 @@
 		Возврат;
 	КонецЕсли;	 
 	
-	ПозицияVanessaEditor = VanessaTabs.current.editor.getPosition();
+	ПозицияVanessaEditor = ПолучитьVanessaEditor().getPosition();
 	Если ПустаяСтрока(ПозицияVanessaEditor.codeWidget) Тогда
 		СтрокаДерева = СтрокаДереваПоНомеруСтрокиФичи(ПозицияVanessaEditor.LineNumber);
 		Если СтрокаДерева = Неопределено Тогда
@@ -42789,7 +42818,6 @@
 			КонецЕсли;	 
 		КонецЕсли;	 
 	ИначеЕсли Event = "ON_TAB_SELECT" Тогда
-		VanessaEditor = VanessaTabs.current.editor;
 		МодульРедакторТекста().ПриСменеЗакладкиРедактора(Arg);
 	КонецЕсли;
 
