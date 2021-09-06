@@ -5541,20 +5541,35 @@
 																	<Title>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>Каталог фич</v8:content>
+																			<v8:content>Путь к каталогу с фичами</v8:content>
 																		</v8:item>
 																		<v8:item>
 																			<v8:lang>en</v8:lang>
-																			<v8:content>Feature catalog</v8:content>
+																			<v8:content>Features directory path</v8:content>
 																		</v8:item>
 																	</Title>
 																	<TitleLocation>None</TitleLocation>
+																	<ToolTip>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Путь к каталогу с фичами</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Features directory path</v8:content>
+																		</v8:item>
+																	</ToolTip>
+																	<ToolTipRepresentation>None</ToolTipRepresentation>
 																	<AutoMaxWidth>false</AutoMaxWidth>
 																	<ChoiceButton>true</ChoiceButton>
 																	<InputHint>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>Путь к папке с фичами</v8:content>
+																			<v8:content>Путь к каталогу с фичами</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Features directory path</v8:content>
 																		</v8:item>
 																	</InputHint>
 																	<ContextMenu name="ПутьКПапкеСФичамиКонтекстноеМеню" id="2571"/>
@@ -5577,6 +5592,16 @@
 																		</v8:item>
 																	</Title>
 																	<TitleLocation>None</TitleLocation>
+																	<ToolTip>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Фильтр</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Filter</v8:content>
+																		</v8:item>
+																	</ToolTip>
 																	<AutoMaxWidth>false</AutoMaxWidth>
 																	<ClearButton>true</ClearButton>
 																	<InputHint>
@@ -5613,6 +5638,16 @@
 																			<v8:content>Directory tree</v8:content>
 																		</v8:item>
 																	</Title>
+																	<ToolTip>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Дерево файлов</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>File tree</v8:content>
+																		</v8:item>
+																	</ToolTip>
 																	<ContextMenu name="ДревоФайлаФичКонтекстноеМеню" id="2574"/>
 																	<AutoCommandBar name="ДревоФайлаФичКоманднаяПанель" id="2575">
 																		<Autofill>false</Autofill>
@@ -5673,6 +5708,16 @@
 																							<v8:content>Picture</v8:content>
 																						</v8:item>
 																					</Title>
+																					<ToolTip>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Дерево файлов</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>en</v8:lang>
+																							<v8:content>File tree</v8:content>
+																						</v8:item>
+																					</ToolTip>
 																					<EditMode>EnterOnInput</EditMode>
 																					<FileDragMode>AsFile</FileDragMode>
 																					<ContextMenu name="ДревоФайлаФичКартинкаКонтекстноеМеню" id="2590"/>
@@ -24634,6 +24679,20 @@ To disable mouse movement at a specific step, you should use the #[DoNotMoveMous
 											</ToolTip>
 											<ExtendedTooltip name="СтраницаНастройкиVanessaEditorРасширеннаяПодсказка" id="2412"/>
 											<ChildItems>
+												<LabelDecoration name="ДекорацияВерсияVAEditor" id="3139">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Версия</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Version</v8:content>
+														</v8:item>
+													</Title>
+													<ContextMenu name="ДекорацияВерсияVAEditorContextMenu" id="3140"/>
+													<ExtendedTooltip name="ДекорацияВерсияVAEditorExtendedTooltip" id="3141"/>
+												</LabelDecoration>
 												<CheckBoxField name="ИспользоватьДанныеТекущейФормыПриПодбореШагов" id="2524">
 													<DataPath>Объект.ИспользоватьДанныеТекущейФормыПриПодбореШагов</DataPath>
 													<TitleLocation>Right</TitleLocation>
@@ -35418,7 +35477,7 @@ To disable mouse movement at a specific step, you should use the #[DoNotMoveMous
 				<xr:Ref>StdPicture.MoveLeft</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
-			<Action>VanessaEditorEditUndo</Action>
+			<Action>VanessaEditorСтандартныеКоманды</Action>
 			<Representation>Picture</Representation>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
@@ -35448,7 +35507,7 @@ To disable mouse movement at a specific step, you should use the #[DoNotMoveMous
 				<xr:Ref>StdPicture.MoveRight</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
-			<Action>VanessaEditorEditRedo</Action>
+			<Action>VanessaEditorСтандартныеКоманды</Action>
 			<Representation>Picture</Representation>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
