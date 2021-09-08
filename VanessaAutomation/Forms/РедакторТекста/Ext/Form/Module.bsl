@@ -50,14 +50,11 @@
 // Выполняет шаги, которые выделены в редакторе
 &НаКлиенте
 Процедура ВыполнитьВыделенныйТекстVanessaEditor() Экспорт
-	VanessaEditor = Ванесса.VanessaTabs.current.editor;
-	ВыделеннаяОбласть = VanessaEditor.getSelection();
-	
+	ВыделеннаяОбласть = Ванесса.ПолучитьVanessaEditor().getSelection();
 	ДанныеДиапазонаСтрокДляВыполненияСценария = Новый Структура;
 	ДанныеДиапазонаСтрокДляВыполненияСценария.Вставить("ВыполнениеДиапазонаШаговVanessaEditor", Истина);
 	ДанныеДиапазонаСтрокДляВыполненияСценария.Вставить("НачалоДиапазона", ВыделеннаяОбласть.startLineNumber);
 	ДанныеДиапазонаСтрокДляВыполненияСценария.Вставить("ОкончаниеДиапазона", ВыделеннаяОбласть.endLineNumber);
-	
 	Ванесса.ВыполнитьСценарии(, ДанныеДиапазонаСтрокДляВыполненияСценария);
 КонецПроцедуры 
 
@@ -79,14 +76,13 @@
 		Данные.Добавить(БрейкПоинт);
 	КонецЦикла;	 
 
-	VanessaEditor = Ванесса.VanessaTabs.current.editor;
-	VanessaEditor.decorateBreakpoints(Ванесса.ЗаписатьОбъектJSON(Данные));
+	Ванесса.ПолучитьVanessaEditor().decorateBreakpoints(Ванесса.ЗаписатьОбъектJSON(Данные));
 КонецПроцедуры 
 
 // Загружает данные по точкам останова из редактора
 &НаКлиенте
 Процедура ЗагрузитьБрейкпоинтыИзVanessaEditor() Экспорт
-	Если Ванесса.VanessaTabs = Неопределено ИЛИ Ванесса.VanessaTabs.current = Неопределено Тогда
+	Если Ванесса.ОтсутствуетVanessaEditor() Тогда
 		Возврат;
 	КонецЕсли;	 
 	
@@ -189,10 +185,8 @@
 				
 				Если НадоУстановитьТекст Тогда
 					ФайлФичи = Новый Файл(Ванесса.Объект.КаталогФич);
-					VanessaTabs = Ванесса.VanessaTabs;
-					VanessaTabs.edit(ТекстФичи, ФайлФичи.ПолноеИмя, ФайлФичи.ПолноеИмя, ФайлФичи.ИмяБезРасширения, 0, Ложь, Истина);
-					VanessaEditor = Ванесса.VanessaTabs.current.editor;
-					VanessaEditor.setContent(ТекстФичи);
+					ЭкземплярVanessaEditor = Ванесса.VanessaTabs.edit(ТекстФичи, ФайлФичи.ПолноеИмя, ФайлФичи.ПолноеИмя, ФайлФичи.ИмяБезРасширения, 0, Ложь, Истина);
+					ЭкземплярVanessaEditor.setContent(ТекстФичи);
 					Ванесса.VanessaTabs.current.resetModified();
 					ДействияПриСозданииВкладки();
 				КонецЕсли;
@@ -201,10 +195,10 @@
 				НайденныеПроблемы.Очистить();
 				Если Ванесса.VanessaTabs.current <> Неопределено И НадоУстановитьТекст
 					ИЛИ (ДополнительныеПараметры.Свойство("ЗагрузкаФичиИзVanessaEditor") И ДополнительныеПараметры.ЗагрузкаФичиИзVanessaEditor) Тогда
-					VanessaEditor = Ванесса.VanessaTabs.current.editor;
-					VanessaEditor.decorateProblems(Ванесса.ЗаписатьОбъектJSON(Новый Массив));
-					VanessaEditor.clearRuntimeProgress();// также сбрасывает виджеты
-					VanessaEditor.clearCodicons();
+					ЭкземплярVanessaEditor = Ванесса.ПолучитьVanessaEditor();
+					ЭкземплярVanessaEditor.decorateProblems(Ванесса.ЗаписатьОбъектJSON(Новый Массив));
+					ЭкземплярVanessaEditor.clearRuntimeProgress();// также сбрасывает виджеты
+					ЭкземплярVanessaEditor.clearCodicons();
 				КонецЕсли;	 
 				
 				Если ДополнительныеПараметры.НадоОбновитьВставкиVanessaEditor ИЛИ НадоУстановитьТекст ИЛИ Ванесса.Объект.ПоказыватьСтрокиПодсценариевVanessaEdittor Тогда
@@ -251,8 +245,7 @@
 		Для Каждого ДанныеОшибки Из ДополнительныеПараметры.ДанныеОшибокДляРедактора Цикл
 			ШагиДляVanessaEditor = Новый Массив;
 			ШагиДляVanessaEditor.Добавить(ДанныеОшибки.НомерСтроки);
-			VanessaEditor = Ванесса.VanessaTabs.current.editor;
-			VanessaEditor.setRuntimeProgress("error", Ванесса.ЗаписатьОбъектJSON(ШагиДляVanessaEditor));
+			Ванесса.ПолучитьVanessaEditor().setRuntimeProgress("error", Ванесса.ЗаписатьОбъектJSON(ШагиДляVanessaEditor));
 			
 			ДанныеПоОшибке = Новый Структура;
 			ДанныеПоОшибке.Вставить("id", Строка(Новый УникальныйИдентификатор));
@@ -334,7 +327,7 @@
 	ПоказатьОшибкуВРедактореVanessaEditor(НомерСтрокиВФиче, ИдВиджета, ДанныеПоОшибке,
 		ОписаниеОшибкиКраткоVanessaEditor, ТекШаг, СтрокаШага);
 		
-	Ванесса.VanessaTabs.current.editor.revealLineInCenter(НомерСтрокиВФиче, ИдВиджета);	
+	Ванесса.ПолучитьVanessaEditor().revealLineInCenter(НомерСтрокиВФиче, ИдВиджета);	
 	
 КонецПроцедуры 
 
@@ -379,8 +372,8 @@
 // Выгружает данные и очищает память редактора
 &НаКлиенте
 Процедура ВыгрузитьДанныеVanessaEditor() Экспорт
-	VanessaEditor = Неопределено;
-	Ванесса.VanessaGherkinProvider = Неопределено;
+	Ванесса.VanessaTabs = Неопределено;
+ 	Ванесса.VanessaGherkinProvider = Неопределено;
 	Если Ванесса.Объект.ИспользоватьРедакторVanessaEditor Тогда
 		Ванесса.Элементы.VanessaEditor.Document.defaultView.location = "about:blank";
 	КонецЕсли;	 
@@ -393,8 +386,7 @@
 		Возврат;
 	КонецЕсли;	
 	
-	//VanessaEditor = Ванесса.VanessaTabs.current.editor;
-	Ванесса.VanessaEditor.setTheme(Ванесса.Объект.ТемаРедактораVanessaEditor);
+	Ванесса.VanessaTabs.theme = Ванесса.Объект.ТемаРедактораVanessaEditor;
 КонецПроцедуры 
 
 // Возвращает краткий текст ошибки для отображения в редакторе
@@ -411,9 +403,9 @@
 // Получает значение таблицы Gherkin по текущей строке редактора
 &НаКлиенте
 Функция ТаблицаGherkinИзVanessaEditor(ТекущаяСтрокаVanessaEditor, МинСтр, МаксСтр, ДлинаМаксСтр) Экспорт
-	VanessaEditor = Ванесса.VanessaTabs.current.editor;
-	ТекущаяСтрокаVanessaEditor = VanessaEditor.getPosition().LineNumber;
-	ПолныйТекстСтроки = VanessaEditor.getLineContent(ТекущаяСтрокаVanessaEditor);
+	ЭкземплярVanessaEditor = Ванесса.ПолучитьVanessaEditor();
+	ТекущаяСтрокаVanessaEditor = ЭкземплярVanessaEditor.getPosition().LineNumber;
+	ПолныйТекстСтроки = ЭкземплярVanessaEditor.getLineContent(ТекущаяСтрокаVanessaEditor);
 	ТекстСтроки = СокрЛ(ПолныйТекстСтроки);
 	
 	МинСтр = ТекущаяСтрокаVanessaEditor;
@@ -426,7 +418,7 @@
 	ТекНомСтр = ТекущаяСтрокаVanessaEditor;
 	Пока Истина Цикл
 		ТекНомСтр = ТекНомСтр - 1;
-		ТекстСтроки = СокрЛ(VanessaEditor.getLineContent(ТекНомСтр));
+		ТекстСтроки = СокрЛ(ЭкземплярVanessaEditor.getLineContent(ТекНомСтр));
 		Если Лев(ТекстСтроки, 1) <> "|" Тогда
 			Прервать;
 		КонецЕсли;	
@@ -439,7 +431,7 @@
 	ТекНомСтр = ТекущаяСтрокаVanessaEditor;
 	Пока Истина Цикл
 		ТекНомСтр = ТекНомСтр + 1;
-		Стр = VanessaEditor.getLineContent(ТекНомСтр);
+		Стр = ЭкземплярVanessaEditor.getLineContent(ТекНомСтр);
 		ТекстСтроки = СокрЛ(Стр);
 		Если Лев(ТекстСтроки, 1) <> "|" Тогда
 			Прервать;
@@ -571,8 +563,7 @@
 // Сохраняет текст из редактора в файл.
 &НаКлиенте
 Процедура СохранитьТекстИзVanessaEditorВФайл() Экспорт
-	VanessaEditor = Ванесса.VanessaTabs.current.editor;
-	ТекстИзVanessaEditor = VanessaEditor.getContent();
+	ТекстИзVanessaEditor = Ванесса.ПолучитьVanessaEditor().getContent();
 	СброситьФлагМодифицированностиVanessaEditor();
 	
 	ЗТ = Новый ЗаписьТекста(Ванесса.VanessaTabs.current.filename, "UTF-8", , Ложь, Символы.ПС); 
@@ -717,21 +708,20 @@
 // Активизирует строку дерева шагов, которая соответствует текущей строке редактора.
 &НаКлиенте
 Функция АктивизироватьСтрокуДереваСоответствующуюVanessaEditor(ТекущаяСтрокаVanessaEditor = Неопределено) Экспорт
-	VanessaEditor = Ванесса.VanessaTabs.current.editor;
-	
-	ПозицияVanessaEditor = VanessaEditor.getPosition();
+	ЭкземплярVanessaEditor = Ванесса.ПолучитьVanessaEditor();
+	ПозицияVanessaEditor = ЭкземплярVanessaEditor.getPosition();
 	Если ТекущаяСтрокаVanessaEditor = Неопределено Тогда
 		ТекущаяСтрокаVanessaEditor = ПозицияVanessaEditor.LineNumber;
-		ТекстСтроки = VanessaEditor.getLineContent(ТекущаяСтрокаVanessaEditor, ПозицияVanessaEditor.codeWidget);
+		ТекстСтроки = ЭкземплярVanessaEditor.getLineContent(ТекущаяСтрокаVanessaEditor, ПозицияVanessaEditor.codeWidget);
 	Иначе	
-		ТекстСтроки = VanessaEditor.getLineContent(ТекущаяСтрокаVanessaEditor, "");
+		ТекстСтроки = ЭкземплярVanessaEditor.getLineContent(ТекущаяСтрокаVanessaEditor, "");
 	КонецЕсли;	 
 	НашлиСтроку = Ложь;
 	Если НЕ ЭтоЗначимаяСтрокаVanessaEditor(ТекстСтроки) Тогда
 		Пока Истина Цикл
 			ТекущаяСтрокаVanessaEditor = ТекущаяСтрокаVanessaEditor + 1;
 			Попытка
-				ТекстСтроки = VanessaEditor.getLineContent(ТекущаяСтрокаVanessaEditor);
+				ТекстСтроки = ЭкземплярVanessaEditor.getLineContent(ТекущаяСтрокаVanessaEditor);
 			Исключение
 				Прервать;
 			КонецПопытки;
@@ -900,8 +890,7 @@
 Функция ОбновитьСтатусВыполненногоПодсценарияФичи(НомерСтроки) Экспорт
 	ШагиДляVanessaEditor = Новый Массив;
 	ШагиДляVanessaEditor.Добавить(НомерСтроки);
-	VanessaEditor = Ванесса.VanessaTabs.current.editor;
-	VanessaEditor.setRuntimeProgress("complete", Ванесса.ЗаписатьОбъектJSON(ШагиДляVanessaEditor), "");
+	Ванесса.ПолучитьVanessaEditor().setRuntimeProgress("complete", Ванесса.ЗаписатьОбъектJSON(ШагиДляVanessaEditor), "");
 КонецФункции	 
 
 // Открывает гиперссылку в редакторе по умолчанию
@@ -927,20 +916,21 @@
 	
 	ДанныеСсылки = Ванесса.ПрочитатьОбъектJSON(Стр);
 	УниверсальноеИмяФайла = УниверсальноеИмяФайла(Ванесса.Объект.КаталогФич);
+	ЭкземплярVanessaEditor = Ванесса.ПолучитьVanessaEditor();
 	
 	Если ДанныеСсылки.Свойство("file") Тогда
 		ИмяФайла = ДанныеСсылки.file;
 		Файл = Новый Файл(ИмяФайла);
 		ИмяФайлаФичи = НРег(Файл.Имя);
 		
-		ТекстФичи = Ванесса.VanessaTabs.current.editor.getContent();
+		ТекстФичи = ЭкземплярVanessaEditor.getContent();
 		МассивСтрок = Ванесса.РазложитьСтрокуВМассивПодстрокКлиент(ТекстФичи, Символы.ПС);
 		Для Сч = 0 По МассивСтрок.Количество() - 1 Цикл
 			ТекСтр = НРег(МассивСтрок[Сч]);
 			Если Найти(ТекСтр, "'" + ИмяФайлаФичи + "'") > 0 ИЛИ Найти(ТекСтр, """" + ИмяФайлаФичи + """") > 0 Тогда
 				НомерСтроки = Сч + 1;
-				Ванесса.VanessaTabs.current.editor.revealLineInCenter(НомерСтроки, "");
-				Ванесса.VanessaTabs.current.editor.setPosition(НомерСтроки, 1, "");
+				ЭкземплярVanessaEditor.revealLineInCenter(НомерСтроки, "");
+				ЭкземплярVanessaEditor.setPosition(НомерСтроки, 1, "");
 				Прервать;
 			КонецЕсли;	 
 		КонецЦикла;	
@@ -954,8 +944,8 @@
 		Если ДанныеПростыхПеременных <> Неопределено Тогда
 			ДанныеПеременной = ДанныеПростыхПеременных[НРег(ИмяПеременнойКлик)];
 			Если ДанныеПеременной <> Неопределено Тогда
-				Ванесса.VanessaTabs.current.editor.revealLineInCenter(ДанныеПеременной.НомерСтроки, "");
-				Ванесса.VanessaTabs.current.editor.setPosition(ДанныеПеременной.НомерСтроки, 1, "");
+				ЭкземплярVanessaEditor.revealLineInCenter(ДанныеПеременной.НомерСтроки, "");
+				ЭкземплярVanessaEditor.setPosition(ДанныеПеременной.НомерСтроки, 1, "");
 			КонецЕсли;	 
 		КонецЕсли;	 
 	КонецЕсли;	 
@@ -983,8 +973,8 @@
 				Если ТаблицаПеременных.Значения.Свойство(ИмяПеременной) Тогда
 					ДанныеСтрокиПеременной = ТаблицаПеременных.Значения[ИмяПеременной];
 					Если ДанныеСтрокиПеременной <> Неопределено Тогда
-						Ванесса.VanessaTabs.current.editor.revealLineInCenter(ДанныеСтрокиПеременной._НомерСтроки_, "");
-						Ванесса.VanessaTabs.current.editor.setPosition(ДанныеСтрокиПеременной._НомерСтроки_, 1, "");
+						ЭкземплярVanessaEditor.revealLineInCenter(ДанныеСтрокиПеременной._НомерСтроки_, "");
+						ЭкземплярVanessaEditor.setPosition(ДанныеСтрокиПеременной._НомерСтроки_, 1, "");
 					КонецЕсли;	 
 				КонецЕсли;	 
 			КонецЕсли;	 
@@ -997,11 +987,7 @@
 // Показывает/скрывает миниатюру кода
 &НаКлиенте
 Процедура ПоказатьМиниатюруКода() Экспорт
-	Если Ванесса.VanessaTabs.current <> Неопределено Тогда
-		Если Ванесса.ЭтоВкладкаEdit(Ванесса.VanessaTabs.current) Тогда
-			Ванесса.VanessaTabs.current.editor.showMinimap(Ванесса.Объект.ПоказыватьМиниатюруКода);
-		КонецЕсли;	 
-	КонецЕсли;	 
+	Ванесса.VanessaTabs.showMinimap = Ванесса.Объект.ПоказыватьМиниатюруКода;
 КонецПроцедуры 
 
 // Включает и отключает проверку синтаксиса в редакторе
@@ -1030,15 +1016,13 @@
 // Делает раскраску подстроки сценария
 &НаКлиенте
 Процедура РаскраситьПодстрокуСценария(НомерСтроки, ИдВиджета) Экспорт
-	VanessaEditor = Ванесса.VanessaTabs.current.editor;
-	VanessaEditor.setLineStyle(НомерСтроки, ИдВиджета, Ложь, Ложь, Истина);
+	Ванесса.ПолучитьVanessaEditor().setLineStyle(НомерСтроки, ИдВиджета, Ложь, Ложь, Истина);
 КонецПроцедуры 
 
 // Делает раскраску неявной области, которая образовалась из-за отступов
 &НаКлиенте
 Процедура РаскраситьНеявнуюОбласть(НомерСтроки, ИдВиджета) Экспорт
-	VanessaEditor = Ванесса.VanessaTabs.current.editor;
-	VanessaEditor.setLineStyle(НомерСтроки, ИдВиджета, Истина, Ложь, Ложь);
+	Ванесса.ПолучитьVanessaEditor().setLineStyle(НомерСтроки, ИдВиджета, Истина, Ложь, Ложь);
 КонецПроцедуры 
 
 // Делает раскраску строки цикла
@@ -1047,9 +1031,8 @@
 	Если НЕ ПустаяСтрока(ИдВиджета) Тогда
 		Возврат;
 	КонецЕсли;	 
-	
-	VanessaEditor = Ванесса.VanessaTabs.current.editor;
-	VanessaEditor.setLineCodicon(НомерСтроки, "codicon-git-compare");
+
+	Ванесса.ПолучитьVanessaEditor().setLineCodicon(НомерСтроки, "codicon-git-compare");
 КонецПроцедуры 
 
 // Делает раскраску строки условия
@@ -1059,8 +1042,7 @@
 		Возврат;
 	КонецЕсли;	 
 	
-	VanessaEditor = Ванесса.VanessaTabs.current.editor;
-	VanessaEditor.setLineCodicon(НомерСтроки, "codicon-symbol-class");
+	Ванесса.ПолучитьVanessaEditor().setLineCodicon(НомерСтроки, "codicon-symbol-class");
 КонецПроцедуры 
 
 // Делает раскраску строки условия
@@ -1070,8 +1052,7 @@
 		Возврат;
 	КонецЕсли;	 
 	
-	VanessaEditor = Ванесса.VanessaTabs.current.editor;
-	VanessaEditor.setLineCodicon(НомерСтроки, "codicon-triangle-right");
+	Ванесса.ПолучитьVanessaEditor().setLineCodicon(НомерСтроки, "codicon-triangle-right");
 КонецПроцедуры 
 
 // Устанавливает надо ли заменять символы табуляции на пробелы при работе в редакторе
@@ -1079,11 +1060,11 @@
 Процедура УстановитьЗаменуТабуляцииНаПробелы() Экспорт
 	Попытка
 		Если Ванесса.VanessaTabs.current <> Неопределено Тогда
-			Если НЕ Ванесса.ЭтоВкладкаDiff(Ванесса.VanessaTabs.current) Тогда
+			Если Ванесса.ЭтоВкладкаEdit(Ванесса.VanessaTabs.current) Тогда
 				Если Ванесса.Объект.ЗаменятьТабыНаПробелы Тогда
-					Ванесса.VanessaTabs.current.editor.setInsertSpaces(4);
+					Ванесса.ПолучитьVanessaEditor().setInsertSpaces(4);
 				Иначе	
-					Ванесса.VanessaTabs.current.editor.setInsertSpaces(0);
+					Ванесса.ПолучитьVanessaEditor().setInsertSpaces(0);
 				КонецЕсли;	 
 			КонецЕсли;	 
 		КонецЕсли;	 
@@ -1094,8 +1075,7 @@
 // Проверяет является ли текущая строка редактора подсценарием
 &НаКлиенте
 Функция ТекущаяСтрокаРедактораЭтоПодсценарий(СтрокаДерева = Неопределено) Экспорт
-	VanessaEditor = Ванесса.VanessaTabs.current.editor;
-	ТекущаяСтрокаVanessaEditor = VanessaEditor.getPosition().LineNumber;
+	ТекущаяСтрокаVanessaEditor = Ванесса.ПолучитьVanessaEditor().getPosition().LineNumber;
 	СтрокаДерева = Ванесса.СтрокаДереваПоНомеруСтрокиФичи(ТекущаяСтрокаVanessaEditor);
 	
 	Если СтрокаДерева = Неопределено Тогда
@@ -1118,17 +1098,17 @@
 		МассивСтрок[Сч] = СокрЛ(МассивСтрок[Сч]);
 	КонецЦикла;	
 	
-	VanessaEditor = Ванесса.VanessaTabs.current.editor;
-	ПозицияVanessaEditor = VanessaEditor.getPosition();
+	ЭкземплярVanessaEditor = Ванесса.ПолучитьVanessaEditor();
+	ПозицияVanessaEditor = ЭкземплярVanessaEditor.getPosition();
 	ТекущаяСтрокаVanessaEditor = ПозицияVanessaEditor.LineNumber;
 	
-	ТекстСтроки = VanessaEditor.getLineContent(ТекущаяСтрокаVanessaEditor);
+	ТекстСтроки = ЭкземплярVanessaEditor.getLineContent(ТекущаяСтрокаVanessaEditor);
 	НашлиСтроку = Ложь;
 	Если НЕ ЭтоЗначимаяСтрокаVanessaEditor(ТекстСтроки) Тогда
 		Пока Истина Цикл
 			ТекущаяСтрокаVanessaEditor = ТекущаяСтрокаVanessaEditor - 1;
 			Попытка
-				ТекстСтроки = VanessaEditor.getLineContent(ТекущаяСтрокаVanessaEditor);
+				ТекстСтроки = ЭкземплярVanessaEditor.getLineContent(ТекущаяСтрокаVanessaEditor);
 			Исключение
 				Прервать;
 			КонецПопытки;
@@ -1162,7 +1142,7 @@
 	
 	СтрокаДерева = Ванесса.СтрокаДереваПоНомеруСтрокиФичи(ТекущаяСтрокаVanessaEditor);
 	
-	ТекстСтроки = VanessaEditor.getLineContent(ТекущаяСтрокаVanessaEditor);
+	ТекстСтроки = ЭкземплярVanessaEditor.getLineContent(ТекущаяСтрокаVanessaEditor);
 	ТекстСтрокиСокрЛ = СокрЛ(ТекстСтроки);
 	ОтступСтрокиСверху = Лев(ТекстСтроки, СтрДлина(ТекстСтроки) - СтрДлина(ТекстСтрокиСокрЛ));
 	
@@ -1187,41 +1167,35 @@
 // Осуществляет вставку текста в редактор с учётом отступов строк
 &НаКлиенте
 Функция ВставитьТекстСУчетомФорматирования(Знач Стр) Экспорт
-	VanessaEditor = Ванесса.VanessaTabs.current.editor;
-	ПозицияVanessaEditor = VanessaEditor.getPosition();
+	ЭкземплярVanessaEditor = Ванесса.ПолучитьVanessaEditor();
+	ПозицияVanessaEditor = ЭкземплярVanessaEditor.getPosition();
 	ТекущаяСтрокаVanessaEditor = ПозицияVanessaEditor.LineNumber;
 	Если НЕ ПустаяСтрока(ПозицияVanessaEditor.codeWidget) Тогда
 		Возврат Стр;
 	КонецЕсли;	 
 	
-	VanessaEditor.setPosition(ТекущаяСтрокаVanessaEditor, 1, "");
+	ЭкземплярVanessaEditor.setPosition(ТекущаяСтрокаVanessaEditor, 1, "");
 	Стр = ОтформатироватьТекстДляВставкиВРедактор(СокрЛ(Стр));
-	VanessaEditor.insertText(Стр);
+	ЭкземплярVanessaEditor.insertText(Стр);
 КонецФункции	 
 
 // Обработка смены закладки редактора
 &НаКлиенте
 Процедура ПриСменеЗакладкиРедактора(Вкладка) Экспорт
 	//проверка активной вкладки
-	
-	Если Ванесса.VanessaTabs.tabStack.length > 0 Тогда
-		Ванесса.Элементы.ГруппаVanessaEditorПереходКРазличиямВФайлах.Видимость = Ванесса.ЭтоВкладкаDiff(Ванесса.VanessaTabs.current);
-	Иначе	 
-		Ванесса.Элементы.ГруппаVanessaEditorПереходКРазличиямВФайлах.Видимость = Ложь;
+
+	Ванесса.Элементы.ГруппаVanessaEditorПереходКРазличиямВФайлах.Видимость = Ванесса.ЭтоВкладкаDiff(Вкладка);
+
+	Если Ванесса.ЭтоВкладкаEdit(Вкладка) Тогда
+		Ванесса.Объект.КаталогФич = Вкладка.filename;
 	КонецЕсли;	 
-	
-	Если Ванесса.VanessaTabs.current <> Неопределено Тогда
-		Если НЕ Ванесса.ЭтоВкладкаDiff(Ванесса.VanessaTabs.current) Тогда
-			Ванесса.Объект.КаталогФич = Вкладка.filename;
-		КонецЕсли;	 
-	КонецЕсли;	 
+
 	Если ИмяФайлаСоответствуетПустойНовойРедактора(Ванесса.Объект.КаталогФич) Тогда
 		//для новых файлов
 		Ванесса.Объект.КаталогФич = "";
 	КонецЕсли;	 
 	ПоказатьМиниатюруКода();
 	УстановитьЗаменуТабуляцииНаПробелы();
-	
 	
 КонецПроцедуры 
 
@@ -1303,8 +1277,9 @@
 // Выполняет стандартные действия при открытии вкладки
 &НаКлиенте
 Процедура ДействияПриСозданииВкладки() Экспорт
-	Ванесса.VanessaTabs.current.editor.useDebugger(Истина);
-	Ванесса.VanessaTabs.current.editor.setHoverDelay(800);
+	ЭкземплярVanessaEditor = Ванесса.ПолучитьVanessaEditor();
+	ЭкземплярVanessaEditor.useDebugger(Истина);
+	ЭкземплярVanessaEditor.setHoverDelay(800);
 КонецПроцедуры 
 
 #КонецОбласти
@@ -1333,29 +1308,29 @@
 	ИдВСтрокеВиджета = Неопределено;
 	ИдВиджета = Неопределено;
 	ОпределитьДанныеВиджета(ИдВСтрокеВиджета, ИдВиджета, ТекШаг.ИдСтроки);
-	VanessaEditor = Ванесса.VanessaTabs.current.editor;
+	ЭкземплярVanessaEditor = Ванесса.ПолучитьVanessaEditor();
 
 	Если ИдВиджета = Неопределено Тогда
 		Если НЕ ТекШаг.ЭтоШагПодсценария Тогда
 			Если ЭтоТекущийШаг Тогда
-				VanessaEditor.setCurrentProgress(ТекШаг.НомерСтрокиВФиче);
+				ЭкземплярVanessaEditor.setCurrentProgress(ТекШаг.НомерСтрокиВФиче);
 			Иначе	
 				ШагиДляVanessaEditor = Новый Массив;
 				ШагиДляVanessaEditor.Добавить(ТекШаг.НомерСтрокиВФиче);
-				VanessaEditor.setRuntimeProgress(СтатусШага, Ванесса.ЗаписатьОбъектJSON(ШагиДляVanessaEditor));
+				ЭкземплярVanessaEditor.setRuntimeProgress(СтатусШага, Ванесса.ЗаписатьОбъектJSON(ШагиДляVanessaEditor));
 			КонецЕсли;	 
 		Иначе
 			ШагиДляVanessaEditor = Новый Массив;
 			ШагиДляVanessaEditor.Добавить(ТекШаг.СтрокаШагаПодсценарияФичи);
-			VanessaEditor.setRuntimeProgress(СтатусШага, Ванесса.ЗаписатьОбъектJSON(ШагиДляVanessaEditor));
+			ЭкземплярVanessaEditor.setRuntimeProgress(СтатусШага, Ванесса.ЗаписатьОбъектJSON(ШагиДляVanessaEditor));
 		КонецЕсли;	 
 	Иначе	
 		Если ЭтоТекущийШаг Тогда
-			VanessaEditor.setCurrentProgress(ИдВСтрокеВиджета, ИдВиджета);
+			ЭкземплярVanessaEditor.setCurrentProgress(ИдВСтрокеВиджета, ИдВиджета);
 		Иначе	
 			ШагиДляVanessaEditor = Новый Массив;
 			ШагиДляVanessaEditor.Добавить(ИдВСтрокеВиджета);
-			VanessaEditor.setRuntimeProgress(СтатусШага, Ванесса.ЗаписатьОбъектJSON(ШагиДляVanessaEditor), ИдВиджета);
+			ЭкземплярVanessaEditor.setRuntimeProgress(СтатусШага, Ванесса.ЗаписатьОбъектJSON(ШагиДляVanessaEditor), ИдВиджета);
 		КонецЕсли;	 
 	КонецЕсли;	 
 	
@@ -1397,8 +1372,7 @@
 		Возврат;
 	КонецЕсли;	 
 	
-	VanessaEditor = Ванесса.VanessaTabs.current.editor;
-	VanessaEditor.clearRuntimeCodes();
+	Ванесса.ПолучитьVanessaEditor().clearRuntimeCodes();
 	Ванесса.ОчиститьДанныеВиджетов();
 	
 	Если НЕ Ванесса.Объект.ПоказыватьСтрокиПодсценариевVanessaEdittor Тогда
@@ -1451,13 +1425,13 @@
 
 &НаКлиенте
 Процедура СделатьВставкуВиджетаСПодчиненнымиСтрокамиVanessaEditor(СтрокаДерева, ТекУровень, СтрокиПодсценариевВиджетов)
-	VanessaEditor = Ванесса.VanessaTabs.current.editor;
-	ТекстСтроки = VanessaEditor.getLineContent(СтрокаДерева.НомерСтрокиВФиче);
+	ЭкземплярVanessaEditor = Ванесса.ПолучитьVanessaEditor(); 
+	ТекстСтроки = ЭкземплярVanessaEditor.getLineContent(СтрокаДерева.НомерСтрокиВФиче);
 	ТекстСтрокиСокрЛ = СокрЛ(ТекстСтроки);
 	СтрокаОтступ = Лев(ТекстСтроки, СтрДлина(ТекстСтроки) - СтрДлина(ТекстСтрокиСокрЛ));
 	ДанныеВиджета = Новый Соответствие;
 	СтрокиПодсценариев = Новый Массив;
-	ИДВиджета = VanessaEditor.showRuntimeCode(СтрокаДерева.НомерСтрокиВФиче,
+	ИДВиджета = ЭкземплярVanessaEditor.showRuntimeCode(СтрокаДерева.НомерСтрокиВФиче,
 		ТекстВставкиПоСтрокеДерева(СтрокаДерева, СтрокаОтступ, ДанныеВиджета, СтрокиПодсценариев));
 		
 	Для Каждого НомеСтрокиВиджета Из СтрокиПодсценариев Цикл
@@ -1789,8 +1763,7 @@
 	Если ТекШаг <> Неопределено Тогда
 		Ванесса.СохранитьДанныеОбОшибкеVanessaEditor(ТекШаг, ДанныеПоОшибке, ТекстОшибки, СтрокаШага);
 	КонецЕсли;	 
-	VanessaEditor = Ванесса.VanessaTabs.current.editor;
-	VanessaEditor.showRuntimeError(НомерСтрокиВФиче, ИдВиджета, Ванесса.ЗаписатьОбъектJSON(ДанныеПоОшибке),
+	Ванесса.ПолучитьVanessaEditor().showRuntimeError(НомерСтрокиВФиче, ИдВиджета, Ванесса.ЗаписатьОбъектJSON(ДанныеПоОшибке),
 		ПолучитьПервуюСтроку(ТекстОшибки));
 КонецПроцедуры 
 
@@ -1862,7 +1835,5 @@
 Функция УниверсальноеИмяФайла(Стр)
 	Возврат НРег(СтрЗаменить(Стр, "\", "/")); 
 КонецФункции	 
-
-
 
 #КонецОбласти
