@@ -20,49 +20,78 @@
 		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
 	</Events>
 	<ChildItems>
-		<RadioButtonField name="StepsLanguage" id="86">
-			<DataPath>StepsLanguage</DataPath>
+		<UsualGroup name="GroupSettings" id="158">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Язык шагов</v8:content>
+					<v8:content>Группа настроек</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group settings</v8:content>
 				</v8:item>
 			</Title>
-			<RadioButtonType>Tumbler</RadioButtonType>
-			<ChoiceList>
-				<xr:Item>
-					<xr:Presentation/>
-					<xr:CheckState>0</xr:CheckState>
-					<xr:Value xsi:type="FormChoiceListDesTimeValue">
-						<Presentation>
-							<v8:item>
-								<v8:lang>en</v8:lang>
-								<v8:content>English</v8:content>
-							</v8:item>
-						</Presentation>
-						<Value xsi:type="xs:string">en</Value>
-					</xr:Value>
-				</xr:Item>
-				<xr:Item>
-					<xr:Presentation/>
-					<xr:CheckState>0</xr:CheckState>
-					<xr:Value xsi:type="FormChoiceListDesTimeValue">
-						<Presentation>
-							<v8:item>
-								<v8:lang>en</v8:lang>
-								<v8:content>Russian</v8:content>
-							</v8:item>
-						</Presentation>
-						<Value xsi:type="xs:string">ru</Value>
-					</xr:Value>
-				</xr:Item>
-			</ChoiceList>
-			<ContextMenu name="StepsLanguageContextMenu" id="87"/>
-			<ExtendedTooltip name="StepsLanguageExtendedTooltip" id="88"/>
-			<Events>
-				<Event name="OnChange">StepsLanguageПриИзменении</Event>
-			</Events>
-		</RadioButtonField>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Group settings</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Representation>None</Representation>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="GroupSettingsРасширеннаяПодсказка" id="159"/>
+			<ChildItems>
+				<RadioButtonField name="StepsLanguage" id="86">
+					<DataPath>StepsLanguage</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Язык шагов</v8:content>
+						</v8:item>
+					</Title>
+					<RadioButtonType>Tumbler</RadioButtonType>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>English</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">en</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Russian</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">ru</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="StepsLanguageContextMenu" id="87"/>
+					<ExtendedTooltip name="StepsLanguageExtendedTooltip" id="88"/>
+					<Events>
+						<Event name="OnChange">StepsLanguageПриИзменении</Event>
+					</Events>
+				</RadioButtonField>
+				<CheckBoxField name="UseDataExhangeLoadTrue" id="155">
+					<DataPath>UseDataExhangeLoadTrue</DataPath>
+					<CheckBoxType>Tumbler</CheckBoxType>
+					<ContextMenu name="UseDataExhangeLoadTrueКонтекстноеМеню" id="156"/>
+					<ExtendedTooltip name="UseDataExhangeLoadTrueРасширеннаяПодсказка" id="157"/>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
 		<Pages name="GroupPages" id="72">
 			<Title>
 				<v8:item>
@@ -663,7 +692,11 @@
 			<Title>
 				<v8:item>
 					<v8:lang>en</v8:lang>
-					<v8:content>Use data exhange load true</v8:content>
+					<v8:content>DataExhange.Load</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОбменДанными.Загрузка</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
