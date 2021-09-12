@@ -1813,6 +1813,11 @@
 										<CommandName>Form.Command.VanessaEditorПоказыватьМиниатюруКода</CommandName>
 										<ExtendedTooltip name="VanessaEditorПоказыватьМиниатюруКодаРасширеннаяПодсказка" id="2651"/>
 									</Button>
+									<Button name="VanessaEditorПоказыватьЗначенияПеременныхВСтрокахРедактора" id="3150">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.VanessaEditorПоказыватьЗначенияПеременныхВСтрокахРедактора</CommandName>
+										<ExtendedTooltip name="VanessaEditorПоказыватьЗначенияПеременныхВСтрокахРедактораРасширеннаяПодсказка" id="3151"/>
+									</Button>
 									<Button name="VanessaEditorПроверкаСинтаксисаВРедакторе" id="2880">
 										<Type>CommandBarButton</Type>
 										<Check>true</Check>
@@ -15112,6 +15117,25 @@ This option only works under Windows.</v8:content>
 														</Title>
 													</ExtendedTooltip>
 												</CheckBoxField>
+												<CheckBoxField name="ПоказыватьОкноОстановкиВыполненияСценария" id="3144">
+													<DataPath>Объект.ПоказыватьОкноОстановкиВыполненияСценария</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ПоказыватьОкноОстановкиВыполненияСценарияКонтекстноеМеню" id="3145"/>
+													<ExtendedTooltip name="ПоказыватьОкноОстановкиВыполненияСценарияРасширеннаяПодсказка" id="3146">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Enables the display of an additional window that allows you to stop the execution of the script. You need to enable the use of the VanessaExt component.</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Включет показ дополнительного окна, которое позволяет остановить выполнение сценария. Необходимо включить использование компоненты VanessaExt.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+												</CheckBoxField>
 												<CheckBoxField name="ПоказыватьНомерСтрокиДереваПриВозникновенииОшибки" id="1750">
 													<DataPath>Объект.ПоказыватьНомерСтрокиДереваПриВозникновенииОшибки</DataPath>
 													<TitleLocation>Right</TitleLocation>
@@ -24887,6 +24911,7 @@ To disable mouse movement at a specific step, you should use the #[DoNotMoveMous
 												<CheckBoxField name="ПроверкаСинтаксисаВРедакторе" id="2877">
 													<DataPath>Объект.ПроверкаСинтаксисаВРедакторе</DataPath>
 													<TitleLocation>Right</TitleLocation>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
 													<CheckBoxType>Auto</CheckBoxType>
 													<ContextMenu name="ПроверкаСинтаксисаВРедактореКонтекстноеМеню" id="2878"/>
 													<ExtendedTooltip name="ПроверкаСинтаксисаВРедактореРасширеннаяПодсказка" id="2879">
@@ -24903,6 +24928,28 @@ To disable mouse movement at a specific step, you should use the #[DoNotMoveMous
 													</ExtendedTooltip>
 													<Events>
 														<Event name="OnChange">ПроверкаСинтаксисаВРедактореПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<CheckBoxField name="ПоказыватьЗначенияПеременныхВСтрокахРедактора" id="3147">
+													<DataPath>Объект.ПоказыватьЗначенияПеременныхВСтрокахРедактора</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ПоказыватьЗначенияПеременныхВСтрокахРедактораКонтекстноеМеню" id="3148"/>
+													<ExtendedTooltip name="ПоказыватьЗначенияПеременныхВСтрокахРедактораРасширеннаяПодсказка" id="3149">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Enables displaying data by variable values in the editor (inline debug). Variable values are updated after the step line is executed.</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Включает отображение в редакторе данных по значениям переменных (inline debug). Значения переменных обновляются после того как строка шага выполнена.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+													<Events>
+														<Event name="OnChange">ПоказыватьЗначенияПеременныхВСтрокахРедактораПриИзменении</Event>
 													</Events>
 												</CheckBoxField>
 												<InputField name="ОтображениеТабуляцииИПробелов" id="2938">
@@ -37175,6 +37222,29 @@ To disable mouse movement at a specific step, you should use the #[DoNotMoveMous
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorОткрытьСписокУроков</Action>
+		</Command>
+		<Command name="VanessaEditorПоказыватьЗначенияПеременныхВСтрокахРедактора" id="159">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать значения переменных в строках редактора</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Show variable values in editor lines</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать значения переменных в строках редактора</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Show variable values in editor lines</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>VanessaEditorПоказыватьЗначенияПеременныхВСтрокахРедактора</Action>
 		</Command>
 	</Commands>
 </Form>
