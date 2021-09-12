@@ -13,7 +13,6 @@
 @IgnoreOn839
 @IgnoreOnWeb
 @IgnoreOnNoSyncBuilds
-@InstallComponent
 
 Функционал: Окно прерывания процесса
 
