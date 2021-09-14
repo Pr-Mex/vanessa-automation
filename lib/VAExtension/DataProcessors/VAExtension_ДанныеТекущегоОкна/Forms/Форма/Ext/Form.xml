@@ -1,0 +1,179 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.8">
+	<WindowOpeningMode>LockWholeInterface</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ВывестиДанные" id="4">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ВывестиДанные</CommandName>
+				<ExtendedTooltip name="ВывестиДанныеРасширеннаяПодсказка" id="5"/>
+			</Button>
+			<Button name="ЗакрытьФорму" id="12">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ЗакрытьФорму</CommandName>
+				<ExtendedTooltip name="ЗакрытьФормуРасширеннаяПодсказка" id="13"/>
+			</Button>
+			<Button name="ВычислитьВыражение" id="17">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ВычислитьВыражение</CommandName>
+				<ExtendedTooltip name="ВычислитьВыражениеРасширеннаяПодсказка" id="18"/>
+			</Button>
+			<Button name="ВыполнитьВыражение" id="19">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ВыполнитьВыражение</CommandName>
+				<ExtendedTooltip name="ВыполнитьВыражениеРасширеннаяПодсказка" id="20"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<InputField name="ЗначениеЗаголовокОкна" id="1">
+			<DataPath>ЗначениеЗаголовокОкна</DataPath>
+			<ContextMenu name="ЗначениеЗаголовокОкнаКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ЗначениеЗаголовокОкнаРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="ЗначениеВыражение" id="14">
+			<DataPath>ЗначениеВыражение</DataPath>
+			<ContextMenu name="ЗначениеВыражениеКонтекстноеМеню" id="15"/>
+			<ExtendedTooltip name="ЗначениеВыражениеРасширеннаяПодсказка" id="16"/>
+		</InputField>
+		<InputField name="ЗначениеРезультат" id="9">
+			<DataPath>ЗначениеРезультат</DataPath>
+			<MultiLine>true</MultiLine>
+			<ContextMenu name="ЗначениеРезультатКонтекстноеМеню" id="10"/>
+			<ExtendedTooltip name="ЗначениеРезультатРасширеннаяПодсказка" id="11"/>
+		</InputField>
+		<CheckBoxField name="ВыражениеВычислено" id="6">
+			<DataPath>ВыражениеВычислено</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ВыражениеВычисленоКонтекстноеМеню" id="7"/>
+			<ExtendedTooltip name="ВыражениеВычисленоРасширеннаяПодсказка" id="8"/>
+		</CheckBoxField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.VAExtension_ДанныеТекущегоОкна</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ЗначениеЗаголовокОкна" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заголовок окна</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВыражениеВычислено" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выражение вычислено</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗначениеРезультат" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значение результат</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗначениеВыражение" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Значение выражение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВывестиДанные" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вывести данные</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вывести данные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВывестиДанные</Action>
+		</Command>
+		<Command name="ЗакрытьФорму" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть форму</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗакрытьФорму</Action>
+		</Command>
+		<Command name="ВычислитьВыражение" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вычислить выражение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вычислить выражение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВычислитьВыражение</Action>
+		</Command>
+		<Command name="ВыполнитьВыражение" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить выражение</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить выражение</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполнитьВыражение</Action>
+		</Command>
+	</Commands>
+</Form>

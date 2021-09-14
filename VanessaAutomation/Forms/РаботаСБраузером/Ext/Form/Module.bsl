@@ -22,22 +22,24 @@
 &НаКлиенте
 Процедура НайтиБраузерChrome(ИспользоватьОтладку) Экспорт
 	
-	ПапкиПоиска = Новый Массив;
-	ПапкиПоиска.Добавить("%ProgramFiles%");
-	ПапкиПоиска.Добавить("%ProgramFiles(x86)%");
-	ПапкиПоиска.Добавить("%LocalAppData%");
+	// путь к браузеру можно взять из ветки реестра "HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\chrome.exe"
+	// значение параметра "Path" - "C:\Program Files\Google\Chrome\Application" или "C:\Program Files (x86)\Google\Chrome\Application"
+	// в результате получаем "C:\Program Files\Google\Chrome\Application\crhome.exe" или "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe"
 	
 	СисИнфо = Новый СистемнаяИнформация;
 	Если СисИнфо.ТипПлатформы = ТипПлатформы.Windows_x86 ИЛИ СисИнфо.ТипПлатформы = ТипПлатформы.Windows_x86_64 Тогда
-		ИмяФайла = "\Google\Chrome\Application\chrome.exe";
-		Для каждого ПапкаПоиска Из ПапкиПоиска Цикл
-			ProgramFiles = Ванесса.ПолучитьWshShell().ExpandEnvironmentStrings(ПапкаПоиска);
-			Файл = Новый Файл(ProgramFiles + ИмяФайла);
+		RegProv = ПолучитьCOMОбъект("winmgmts:{impersonationLevel=impersonate}!\\.\root\default:StdRegProv");
+		ПутьGoogleChromeИзРеестра = Неопределено;
+		RegProv.GetStringValue(2147483650,"SOFTWARE\Microsoft\Windows\CurrentVersion\App Paths\chrome.exe","Path",ПутьGoogleChromeИзРеестра);
+		Если НЕ ПутьGoogleChromeИзРеестра = NULL Тогда
+			Файл = Новый файл (ПутьGoogleChromeИзРеестра + "\chrome.exe");
 			Если Ванесса.ФайлСуществуетКомандаСистемы(Файл.ПолноеИмя) Тогда
 				Ванесса.Объект.КомандаЗапускаБраузера = """" + Файл.ПолноеИмя + """"
 					+ ?(ИспользоватьОтладку, " --remote-debugging-port=" + Формат(ПортБраузера, "ЧГ="), "");
 			КонецЕсли;
-		КонецЦикла;
+		Иначе
+			ВызватьИсключение Ванесса.Локализовать("В реестре windows не обнаружен путь к браузеру Google Chrome. Укажите путь вручную.");
+		КонецЕсли;
 	КонецЕсли;
 	
 КонецПроцедуры
@@ -59,7 +61,7 @@
 
 // Показывает анимацию клика в браузере
 &НаКлиенте
-Процедура АнимацияКликаВБраузере(ЭлементФормы = Неопределено) Экспорт
+Процедура АнимацияКлика(ЭлементФормы = Неопределено) Экспорт
 	Если НЕ Ванесса.Объект.ЭмулироватьДвиженияМышкиVanessaExt Тогда
 		Возврат;
 	КонецЕсли;
