@@ -3426,6 +3426,11 @@
 				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 				<ExtendedTooltip name="ФормаVanessaEditorЗакрытьВкладкуРасширеннаяПодсказка" id="2756"/>
 			</Button>
+			<Button name="ФормаVanessaEditorWelcome" id="3152">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.VanessaEditorWelcome</CommandName>
+				<ExtendedTooltip name="ФормаVanessaEditorWelcomeРасширеннаяПодсказка" id="3153"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -37245,6 +37250,29 @@ To disable mouse movement at a specific step, you should use the #[DoNotMoveMous
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorПоказыватьЗначенияПеременныхВСтрокахРедактора</Action>
+		</Command>
+		<Command name="VanessaEditorWelcome" id="160">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Приветствие</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Welcome</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страница "Добро пожаловать!"</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Show welcome page</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>VanessaEditorWelcome</Action>
 		</Command>
 	</Commands>
 </Form>
