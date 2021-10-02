@@ -7,18 +7,18 @@
 
 ### Глава 1. Знакомство с Vanessa Automation
 
-   1. Что такое Vanessa Automation? ![](pict/mortarboard.png) [Запустить урок](ЧтоТакоеVanessaAutomation)
-   1. Знакомство с Vanessa Automation. Основные элементы формы. [Запустить урок](ЗнакомствоСVanessaAutomationОсновныеЭлементыФормы)
+   1. Что такое Vanessa Automation? ![](https://github.com/Pr-Mex/vanessa-automation/blob/develop/training/pict/mortarboard.png?raw=true)[Запустить урок](ЧтоТакоеVanessaAutomation)
+   1. Знакомство с Vanessa Automation. Основные элементы формы. ![](https://github.com/Pr-Mex/vanessa-automation/blob/develop/training/pict/mortarboard.png?raw=true)[Запустить урок](ЗнакомствоСVanessaAutomationОсновныеЭлементыФормы)
 
 ### Глава 2. Подробное описание элементов формы Vanessa Automation
    1. ***Закладка "Запуск сценариев"***
 
-       - Основные элементы закладки "Запуск сценариев" [Запустить урок](ОсновныеЭлементыЗакладкиЗапускСценариев)
+       - Основные элементы закладки "Запуск сценариев" ![](https://github.com/Pr-Mex/vanessa-automation/blob/develop/training/pict/mortarboard.png?raw=true)[Запустить урок](ОсновныеЭлементыЗакладкиЗапускСценариев)
        - Панель инструментов редактора
-           - Панель "Дерево каталогов" [Запустить урок](ОписаниеПанелиДеревоКаталогов)
-           - Панель "Работа с git" [Запустить урок](ОписаниеПанелиРаботаСGit)
+           - Панель "Дерево каталогов" ![](https://github.com/Pr-Mex/vanessa-automation/blob/develop/training/pict/mortarboard.png?raw=true)[Запустить урок](ОписаниеПанелиДеревоКаталогов)
+           - Панель "Работа с git" ![](https://github.com/Pr-Mex/vanessa-automation/blob/develop/training/pict/mortarboard.png?raw=true)[Запустить урок](ОписаниеПанелиРаботаСGit)
            - Инструменты
-              - Краткий обзор доступных инструментов при работе с редактором [Запустить урок](КраткийОбзорДоступныхИнструментовПриРаботеСРедактором)
+              - Краткий обзор доступных инструментов при работе с редактором ![](https://github.com/Pr-Mex/vanessa-automation/blob/develop/training/pict/mortarboard.png?raw=true)[Запустить урок](КраткийОбзорДоступныхИнструментовПриРаботеСРедактором)
 
 ### Глава 3. Синтаксис языка Gherkin
 
