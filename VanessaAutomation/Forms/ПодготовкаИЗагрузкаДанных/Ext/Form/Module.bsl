@@ -781,6 +781,11 @@ Procedure DataRefsOnStartEdit(Item, NewRow, Clone)
 	EndIf;	
 EndProcedure
 
+&НаКлиенте
+Процедура CloseForm(Команда)
+	Close();
+КонецПроцедуры
+
 #EndRegion
 
 #Region Private

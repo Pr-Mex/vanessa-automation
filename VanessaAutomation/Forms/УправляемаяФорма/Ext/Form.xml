@@ -1508,7 +1508,7 @@
 										</ToolTip>
 										<ExtendedTooltip name="ГруппаVanessaEditorБиблиотекаШаговРасширеннаяПодсказка" id="2953"/>
 										<ChildItems>
-											<Button name="ФормаДобавитьИзвестныйШаг" id="2950">
+											<Button name="VanessaEditorДобавитьИзвестныйШаг" id="2950">
 												<Type>CommandBarButton</Type>
 												<CommandName>Form.Command.ДобавитьИзвестныйШаг</CommandName>
 												<Title>
@@ -1521,7 +1521,7 @@
 														<v8:content>Steps library</v8:content>
 													</v8:item>
 												</Title>
-												<ExtendedTooltip name="ФормаДобавитьИзвестныйШагРасширеннаяПодсказка" id="2951"/>
+												<ExtendedTooltip name="VanessaEditorДобавитьИзвестныйШагРасширеннаяПодсказка" id="2951"/>
 											</Button>
 										</ChildItems>
 									</ButtonGroup>
@@ -1553,6 +1553,31 @@
 												<CommandName>Form.Command.ЗабытьСостояниеФормыTestClient</CommandName>
 												<ExtendedTooltip name="VanessaEditorЗабытьСостояниеФормыTestClientРасширеннаяПодсказка" id="2892"/>
 											</Button>
+										</ChildItems>
+									</ButtonGroup>
+									<ButtonGroup name="ГруппаVanessaEditorСохранитьСостояниеФормы" id="3142">
+										<Title>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа сохранить состояние формы</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Group save form state</v8:content>
+											</v8:item>
+										</Title>
+										<ToolTip>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Группа сохранить состояние формы</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Group save form state</v8:content>
+											</v8:item>
+										</ToolTip>
+										<ExtendedTooltip name="ГруппаVanessaEditorСохранитьСостояниеФормыРасширеннаяПодсказка" id="3143"/>
+										<ChildItems>
 											<Button name="VanessaEditorСохранитьСостояниеТекущейФормыКлиентаТестированияВФайл" id="3029">
 												<Type>CommandBarButton</Type>
 												<CommandName>Form.Command.СохранитьСостояниеТекущейФормыКлиентаТестированияВФайл</CommandName>
@@ -1788,6 +1813,11 @@
 										<CommandName>Form.Command.VanessaEditorПоказыватьМиниатюруКода</CommandName>
 										<ExtendedTooltip name="VanessaEditorПоказыватьМиниатюруКодаРасширеннаяПодсказка" id="2651"/>
 									</Button>
+									<Button name="VanessaEditorПоказыватьЗначенияПеременныхВСтрокахРедактора" id="3150">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.VanessaEditorПоказыватьЗначенияПеременныхВСтрокахРедактора</CommandName>
+										<ExtendedTooltip name="VanessaEditorПоказыватьЗначенияПеременныхВСтрокахРедактораРасширеннаяПодсказка" id="3151"/>
+									</Button>
 									<Button name="VanessaEditorПроверкаСинтаксисаВРедакторе" id="2880">
 										<Type>CommandBarButton</Type>
 										<Check>true</Check>
@@ -1950,193 +1980,248 @@
 										</Title>
 										<ExtendedTooltip name="ГруппаКнопокVanessaEditorЗагрузитьФичиРасширеннаяПодсказка" id="2703"/>
 										<ChildItems>
-											<Button name="VanessaEditorФормаЗагрузитьФичиИзКаталога" id="2704">
-												<Type>CommandBarButton</Type>
-												<CommandName>Form.Command.ЗагрузитьФичиИзКаталога</CommandName>
+											<ButtonGroup name="ГруппаКнопокVanessaEditorКнопкиЗагрузитьФичи" id="3159">
 												<Title>
 													<v8:item>
 														<v8:lang>ru</v8:lang>
-														<v8:content>Загрузить файлы из каталога</v8:content>
+														<v8:content>Кнопки загрузить фичи</v8:content>
 													</v8:item>
 													<v8:item>
 														<v8:lang>en</v8:lang>
-														<v8:content>Load files from directory</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>am</v8:lang>
-														<v8:content>ጋር ፋይሎች ከአንድ የማውጫ</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>az</v8:lang>
-														<v8:content>Faylları yüklə kataloq</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>bg</v8:lang>
-														<v8:content>Качване на файлове от директория</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>de</v8:lang>
-														<v8:content>Laden Sie die Dateien aus dem Verzeichnis</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>es</v8:lang>
-														<v8:content>Descargar los archivos desde el directorio</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>et</v8:lang>
-														<v8:content>Lae failid kataloogist</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>fr</v8:lang>
-														<v8:content>Télécharger des fichiers à partir du répertoire</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>hu</v8:lang>
-														<v8:content>A fájlok letöltése a könyvtár</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>it</v8:lang>
-														<v8:content>Scaricare i file dalla directory</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>ka</v8:lang>
-														<v8:content>რომ გადმოწეროთ ფაილები დირექტორია</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>lt</v8:lang>
-														<v8:content>Parsisiųsti failus iš katalogo</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>lv</v8:lang>
-														<v8:content>Lejupielādēt failus no kataloga</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>mn</v8:lang>
-														<v8:content>Татаж авах файл сан</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>pl</v8:lang>
-														<v8:content>Pobierz pliki z katalogu</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>ro</v8:lang>
-														<v8:content>Descărca fișierele din directorul</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>sl</v8:lang>
-														<v8:content>Če želite prenesti datoteke iz imenika</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>sv</v8:lang>
-														<v8:content>För att ladda ner filer från en katalog</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>tr</v8:lang>
-														<v8:content>Upload dizinindeki dosyaları</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>vi</v8:lang>
-														<v8:content>Tải tệp từ thư mục</v8:content>
+														<v8:content>Download features buttons</v8:content>
 													</v8:item>
 												</Title>
-												<ExtendedTooltip name="VanessaEditorФормаЗагрузитьФичиИзКаталогаРасширеннаяПодсказка" id="2705"/>
-											</Button>
-											<Button name="VanessaEditorФормаЗагрузитьОднуФичу" id="2706">
-												<Type>CommandBarButton</Type>
-												<CommandName>Form.Command.ЗагрузитьОднуФичу</CommandName>
+												<ToolTip>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Кнопки загрузить фичи</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>Download features buttons</v8:content>
+													</v8:item>
+												</ToolTip>
+												<ExtendedTooltip name="ГруппаКнопокVanessaEditorКнопкиЗагрузитьФичиРасширеннаяПодсказка" id="3160"/>
+												<ChildItems>
+													<Button name="VanessaEditorФормаЗагрузитьФичиИзКаталога" id="2704">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.ЗагрузитьФичиИзКаталога</CommandName>
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Загрузить файлы из каталога</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Load files from directory</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>am</v8:lang>
+																<v8:content>ጋር ፋይሎች ከአንድ የማውጫ</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>az</v8:lang>
+																<v8:content>Faylları yüklə kataloq</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>bg</v8:lang>
+																<v8:content>Качване на файлове от директория</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>de</v8:lang>
+																<v8:content>Laden Sie die Dateien aus dem Verzeichnis</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>es</v8:lang>
+																<v8:content>Descargar los archivos desde el directorio</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>et</v8:lang>
+																<v8:content>Lae failid kataloogist</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>fr</v8:lang>
+																<v8:content>Télécharger des fichiers à partir du répertoire</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>hu</v8:lang>
+																<v8:content>A fájlok letöltése a könyvtár</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>it</v8:lang>
+																<v8:content>Scaricare i file dalla directory</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ka</v8:lang>
+																<v8:content>რომ გადმოწეროთ ფაილები დირექტორია</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>lt</v8:lang>
+																<v8:content>Parsisiųsti failus iš katalogo</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>lv</v8:lang>
+																<v8:content>Lejupielādēt failus no kataloga</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>mn</v8:lang>
+																<v8:content>Татаж авах файл сан</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>pl</v8:lang>
+																<v8:content>Pobierz pliki z katalogu</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ro</v8:lang>
+																<v8:content>Descărca fișierele din directorul</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>sl</v8:lang>
+																<v8:content>Če želite prenesti datoteke iz imenika</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>sv</v8:lang>
+																<v8:content>För att ladda ner filer från en katalog</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>tr</v8:lang>
+																<v8:content>Upload dizinindeki dosyaları</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>vi</v8:lang>
+																<v8:content>Tải tệp từ thư mục</v8:content>
+															</v8:item>
+														</Title>
+														<ExtendedTooltip name="VanessaEditorФормаЗагрузитьФичиИзКаталогаРасширеннаяПодсказка" id="2705"/>
+													</Button>
+													<Button name="VanessaEditorФормаЗагрузитьОднуФичу" id="2706">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.ЗагрузитьОднуФичу</CommandName>
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Загрузить один файл</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Load one feature file</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>am</v8:lang>
+																<v8:content>ላይ አንድ ፋይል</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>az</v8:lang>
+																<v8:content>Yüklemek üçün bir fayl</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>bg</v8:lang>
+																<v8:content>Качване на един файл</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>de</v8:lang>
+																<v8:content>Herunterladen einer Datei</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>es</v8:lang>
+																<v8:content>Subir un archivo</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>et</v8:lang>
+																<v8:content>Alla laadida ühe faili</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>fr</v8:lang>
+																<v8:content>Télécharger un seul fichier</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>hu</v8:lang>
+																<v8:content>Letöltés egyetlen fájl</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>it</v8:lang>
+																<v8:content>Caricare un file</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ka</v8:lang>
+																<v8:content>ჩამოტვირთვა ერთი ფაილი</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>lt</v8:lang>
+																<v8:content>Įkelti vieną failą</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>lv</v8:lang>
+																<v8:content>Lejupielādēt failu</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>mn</v8:lang>
+																<v8:content>Нэг файл татаж авах</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>pl</v8:lang>
+																<v8:content>Pobierz jeden plik</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ro</v8:lang>
+																<v8:content>Încărcați un fișier</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>sl</v8:lang>
+																<v8:content>Prenos eno datoteko</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>sv</v8:lang>
+																<v8:content>Ladda ner enstaka fil</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>tr</v8:lang>
+																<v8:content>Bir dosya yükleyin</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>vi</v8:lang>
+																<v8:content>Tải một tệp</v8:content>
+															</v8:item>
+														</Title>
+														<ExtendedTooltip name="VanessaEditorФормаЗагрузитьОднуФичуРасширеннаяПодсказка" id="2707"/>
+													</Button>
+												</ChildItems>
+											</ButtonGroup>
+											<ButtonGroup name="ГруппаКнопокVanessaEditorКнопкиЗагрузитьПрочее" id="3161">
 												<Title>
 													<v8:item>
 														<v8:lang>ru</v8:lang>
-														<v8:content>Загрузить один файл</v8:content>
+														<v8:content>Кнопки загрузить прочее</v8:content>
 													</v8:item>
 													<v8:item>
 														<v8:lang>en</v8:lang>
-														<v8:content>Load one feature file</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>am</v8:lang>
-														<v8:content>ላይ አንድ ፋይል</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>az</v8:lang>
-														<v8:content>Yüklemek üçün bir fayl</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>bg</v8:lang>
-														<v8:content>Качване на един файл</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>de</v8:lang>
-														<v8:content>Herunterladen einer Datei</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>es</v8:lang>
-														<v8:content>Subir un archivo</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>et</v8:lang>
-														<v8:content>Alla laadida ühe faili</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>fr</v8:lang>
-														<v8:content>Télécharger un seul fichier</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>hu</v8:lang>
-														<v8:content>Letöltés egyetlen fájl</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>it</v8:lang>
-														<v8:content>Caricare un file</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>ka</v8:lang>
-														<v8:content>ჩამოტვირთვა ერთი ფაილი</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>lt</v8:lang>
-														<v8:content>Įkelti vieną failą</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>lv</v8:lang>
-														<v8:content>Lejupielādēt failu</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>mn</v8:lang>
-														<v8:content>Нэг файл татаж авах</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>pl</v8:lang>
-														<v8:content>Pobierz jeden plik</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>ro</v8:lang>
-														<v8:content>Încărcați un fișier</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>sl</v8:lang>
-														<v8:content>Prenos eno datoteko</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>sv</v8:lang>
-														<v8:content>Ladda ner enstaka fil</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>tr</v8:lang>
-														<v8:content>Bir dosya yükleyin</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>vi</v8:lang>
-														<v8:content>Tải một tệp</v8:content>
+														<v8:content>Load other buttons</v8:content>
 													</v8:item>
 												</Title>
-												<ExtendedTooltip name="VanessaEditorФормаЗагрузитьОднуФичуРасширеннаяПодсказка" id="2707"/>
-											</Button>
-											<Button name="ФормаЗагрузитьФайлДокументации" id="3088">
-												<Type>CommandBarButton</Type>
-												<CommandName>Form.Command.ОткрытьФайлДокументации</CommandName>
-												<ExtendedTooltip name="ФормаЗагрузитьФайлДокументацииРасширеннаяПодсказка" id="3089"/>
-											</Button>
+												<ToolTip>
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Кнопки загрузить прочее</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>Load other buttons</v8:content>
+													</v8:item>
+												</ToolTip>
+												<ExtendedTooltip name="ГруппаКнопокVanessaEditorКнопкиЗагрузитьПрочееРасширеннаяПодсказка" id="3162"/>
+												<ChildItems>
+													<Button name="VanessaEditorЗагрузитьФайлДокументации" id="3088">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.ОткрытьФайлДокументации</CommandName>
+														<ExtendedTooltip name="VanessaEditorЗагрузитьФайлДокументацииРасширеннаяПодсказка" id="3089"/>
+													</Button>
+													<Button name="VanessaEditorWelcome" id="3152">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.VanessaEditorWelcome</CommandName>
+														<ExtendedTooltip name="VanessaEditorWelcomeРасширеннаяПодсказка" id="3153"/>
+													</Button>
+												</ChildItems>
+											</ButtonGroup>
 										</ChildItems>
 									</ButtonGroup>
 									<ButtonGroup name="ГруппаКнопокVanessaEditorНедавноЗагруженныеФичи" id="2708">
@@ -3390,11 +3475,11 @@
 					</ButtonGroup>
 				</ChildItems>
 			</ButtonGroup>
-			<Button name="ФормаVanessaEditorЗакрытьВкладку" id="2755">
+			<Button name="VanessaEditorЗакрытьВкладку" id="2755">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.Command.VanessaEditorЗакрытьВкладку</CommandName>
 				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
-				<ExtendedTooltip name="ФормаVanessaEditorЗакрытьВкладкуРасширеннаяПодсказка" id="2756"/>
+				<ExtendedTooltip name="VanessaEditorЗакрытьВкладкуРасширеннаяПодсказка" id="2756"/>
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
@@ -5775,6 +5860,16 @@
 																		</v8:item>
 																	</Title>
 																	<TitleLocation>None</TitleLocation>
+																	<ToolTip>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Путь к папке git</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Git folder</v8:content>
+																		</v8:item>
+																	</ToolTip>
 																	<AutoMaxWidth>false</AutoMaxWidth>
 																	<ChoiceButton>true</ChoiceButton>
 																	<ContextMenu name="ПутьКПапкеGitКонтекстноеМеню" id="2799"/>
@@ -5861,6 +5956,16 @@
 																						<xr:Abs>Picture.png</xr:Abs>
 																						<xr:LoadTransparent>false</xr:LoadTransparent>
 																					</Picture>
+																					<Title>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Unstage Selected</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>en</v8:lang>
+																							<v8:content>Unstage Selected</v8:content>
+																						</v8:item>
+																					</Title>
 																					<ExtendedTooltip name="ДеревоGitДеревоGitУбратьИзИндексаРасширеннаяПодсказка" id="2828"/>
 																				</Button>
 																				<Button name="ДеревоGitДеревоGitЗафиксировать" id="2829">
@@ -5891,6 +5996,12 @@
 																						<xr:Abs>Picture.png</xr:Abs>
 																						<xr:LoadTransparent>false</xr:LoadTransparent>
 																					</Picture>
+																					<Title>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Настройки Git</v8:content>
+																						</v8:item>
+																					</Title>
 																					<ExtendedTooltip name="ДеревоGitНастройкиРасширеннаяПодсказка" id="2837"/>
 																				</Button>
 																			</ChildItems>
@@ -5899,6 +6010,16 @@
 																</CommandBar>
 																<InputField name="ДеревоGitДеревоТекстСообщения" id="2831">
 																	<DataPath>ДеревоGitДеревоТекстСообщения</DataPath>
+																	<ToolTip>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Текст сообщения</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Message text</v8:content>
+																		</v8:item>
+																	</ToolTip>
 																	<AutoMaxWidth>false</AutoMaxWidth>
 																	<Height>3</Height>
 																	<VerticalStretch>false</VerticalStretch>
@@ -6010,6 +6131,16 @@
 																				<xr:Abs>Picture.png</xr:Abs>
 																				<xr:LoadTransparent>false</xr:LoadTransparent>
 																			</Picture>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Pull</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>Pull</v8:content>
+																				</v8:item>
+																			</Title>
 																			<ExtendedTooltip name="ДеревоGitPullРасширеннаяПодсказка" id="2857"/>
 																		</Button>
 																		<Button name="ДеревоGitPush" id="2858">
@@ -6023,6 +6154,16 @@
 																				<xr:Abs>Picture.png</xr:Abs>
 																				<xr:LoadTransparent>false</xr:LoadTransparent>
 																			</Picture>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Push</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>Push</v8:content>
+																				</v8:item>
+																			</Title>
 																			<ExtendedTooltip name="ДеревоGitPushРасширеннаяПодсказка" id="2859"/>
 																		</Button>
 																	</ChildItems>
@@ -15027,6 +15168,25 @@ This option only works under Windows.</v8:content>
 
 Необходимо включить использование компоненты VanessaExt.
 Опция работает только под Windows.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+												</CheckBoxField>
+												<CheckBoxField name="ПоказыватьОкноОстановкиВыполненияСценария" id="3144">
+													<DataPath>Объект.ПоказыватьОкноОстановкиВыполненияСценария</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ПоказыватьОкноОстановкиВыполненияСценарияКонтекстноеМеню" id="3145"/>
+													<ExtendedTooltip name="ПоказыватьОкноОстановкиВыполненияСценарияРасширеннаяПодсказка" id="3146">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Enables the display of an additional window that allows you to stop the execution of the script. You need to enable the use of the VanessaExt component.</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Включет показ дополнительного окна, которое позволяет остановить выполнение сценария. Необходимо включить использование компоненты VanessaExt.</v8:content>
 															</v8:item>
 														</Title>
 													</ExtendedTooltip>
@@ -24806,6 +24966,7 @@ To disable mouse movement at a specific step, you should use the #[DoNotMoveMous
 												<CheckBoxField name="ПроверкаСинтаксисаВРедакторе" id="2877">
 													<DataPath>Объект.ПроверкаСинтаксисаВРедакторе</DataPath>
 													<TitleLocation>Right</TitleLocation>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
 													<CheckBoxType>Auto</CheckBoxType>
 													<ContextMenu name="ПроверкаСинтаксисаВРедактореКонтекстноеМеню" id="2878"/>
 													<ExtendedTooltip name="ПроверкаСинтаксисаВРедактореРасширеннаяПодсказка" id="2879">
@@ -24823,6 +24984,47 @@ To disable mouse movement at a specific step, you should use the #[DoNotMoveMous
 													<Events>
 														<Event name="OnChange">ПроверкаСинтаксисаВРедактореПриИзменении</Event>
 													</Events>
+												</CheckBoxField>
+												<CheckBoxField name="ПоказыватьЗначенияПеременныхВСтрокахРедактора" id="3147">
+													<DataPath>Объект.ПоказыватьЗначенияПеременныхВСтрокахРедактора</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ПоказыватьЗначенияПеременныхВСтрокахРедактораКонтекстноеМеню" id="3148"/>
+													<ExtendedTooltip name="ПоказыватьЗначенияПеременныхВСтрокахРедактораРасширеннаяПодсказка" id="3149">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Enables displaying data by variable values in the editor (inline debug). Variable values are updated after the step line is executed.</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Включает отображение в редакторе данных по значениям переменных (inline debug). Значения переменных обновляются после того как строка шага выполнена.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+													<Events>
+														<Event name="OnChange">ПоказыватьЗначенияПеременныхВСтрокахРедактораПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<CheckBoxField name="ОткрыватьНачальнуюСтраницуПриЗапуске" id="3172">
+													<DataPath>Объект.ОткрыватьНачальнуюСтраницуПриЗапуске</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ОткрыватьНачальнуюСтраницуПриЗапускеКонтекстноеМеню" id="3173"/>
+													<ExtendedTooltip name="ОткрыватьНачальнуюСтраницуПриЗапускеРасширеннаяПодсказка" id="3174">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Enables display of the start page in the editor when Vanessa Automation starts.</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Включает отображение начальной страницы в редакторе при запуске Vanessa Automation.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
 												</CheckBoxField>
 												<InputField name="ОтображениеТабуляцииИПробелов" id="2938">
 													<DataPath>Объект.ОтображениеТабуляцииИПробелов</DataPath>
@@ -25007,6 +25209,68 @@ To disable mouse movement at a specific step, you should use the #[DoNotMoveMous
 													<CommandName>Form.Command.НастройкаВидимостиКнопокПанелиРедактора</CommandName>
 													<ExtendedTooltip name="НастройкаВидимостиКнопокПанелиРедактораРасширеннаяПодсказка" id="2731"/>
 												</Button>
+												<Button name="VanessaEditorНастройкиРедактора" id="3154">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.VanessaEditorНастройкиРедактора</CommandName>
+													<ExtendedTooltip name="VanessaEditorНастройкиРедактораРасширеннаяПодсказка" id="3155"/>
+												</Button>
+											</ChildItems>
+										</Page>
+										<Page name="СтраницаОбучение" id="3157">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Обучение</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Training</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="СтраницаОбучениеРасширеннаяПодсказка" id="3158"/>
+											<ChildItems>
+												<InputField name="КаталогКешОзвучкиДляИнтерактивнойСправки" id="3170">
+													<DataPath>Объект.КаталогКешОзвучкиДляИнтерактивнойСправки</DataPath>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<ChoiceButton>true</ChoiceButton>
+													<ContextMenu name="КаталогКешОзвучкиДляИнтерактивнойСправкиКонтекстноеМеню" id="3171"/>
+													<ExtendedTooltip name="КаталогКешОзвучкиДляИнтерактивнойСправкиРасширеннаяПодсказка" id="3156">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>The directory in which the online help voice files will be searched first.
+If the voice acting file is not found in the directory, the process of generating voice acting by the announcer will be launched.</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Каталог,  в котором будет производится поиск файлов озвучки интерактивной спрвки в первую очередь.
+Если файл озвучки в каталоге будет не найден, то будет запущен процесс генерации озвучки диктором.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+													<Events>
+														<Event name="StartChoice">КаталогКешОзвучкиДляИнтерактивнойСправкиНачалоВыбора</Event>
+													</Events>
+												</InputField>
+												<CheckBoxField name="СоздаватьФайлыОзвучкиДляСправки" id="3163">
+													<DataPath>Объект.СоздаватьФайлыОзвучкиДляСправки</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="СоздаватьФайлыОзвучкиДляСправкиКонтекстноеМеню" id="3164"/>
+													<ExtendedTooltip name="СоздаватьФайлыОзвучкиДляСправкиРасширеннаяПодсказка" id="3165">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Determines whether to create mp3 audio files for online help if they were not found in the cache.</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Определяет, нужно ли создавать mp3 файлы озвучки для интерактивной справки если они не были найдены в кеш.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+												</CheckBoxField>
 											</ChildItems>
 										</Page>
 										<Page name="СтраницаPID" id="1658">
@@ -29572,6 +29836,25 @@ To disable mouse movement at a specific step, you should use the #[DoNotMoveMous
 				</Column>
 			</Columns>
 		</Attribute>
+		<Attribute name="МестоположениеКлючевыеСловаGherkin" id="54">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес макета ключевых слов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Keywords template URL</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -30240,7 +30523,7 @@ To disable mouse movement at a specific step, you should use the #[DoNotMoveMous
 					<v8:content>Download one feature</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Shortcut>Ctrl+F2</Shortcut>
+			<Shortcut>Ctrl+Shift+F2</Shortcut>
 			<Action>ЗагрузитьОднуФичу</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
@@ -37075,6 +37358,75 @@ To disable mouse movement at a specific step, you should use the #[DoNotMoveMous
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorОткрытьСписокУроков</Action>
+		</Command>
+		<Command name="VanessaEditorПоказыватьЗначенияПеременныхВСтрокахРедактора" id="159">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать значения переменных в строках редактора</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Show variable values in editor lines</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать значения переменных в строках редактора</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Show variable values in editor lines</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>VanessaEditorПоказыватьЗначенияПеременныхВСтрокахРедактора</Action>
+		</Command>
+		<Command name="VanessaEditorWelcome" id="160">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть начальную страницу</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Open welcome page</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страница "Добро пожаловать!"</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Show welcome page</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>VanessaEditorWelcome</Action>
+		</Command>
+		<Command name="VanessaEditorНастройкиРедактора" id="161">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все настройки редактора</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>All editor settings</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Все настройки редактора</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>All editor settings</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>VanessaEditorНастройкиРедактора</Action>
 		</Command>
 	</Commands>
 </Form>
