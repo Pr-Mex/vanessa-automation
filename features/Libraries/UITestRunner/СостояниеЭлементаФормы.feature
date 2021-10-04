@@ -1,4 +1,4 @@
-# language: ru
+﻿# language: ru
 # encoding: utf-8
 #parent uf:
 @UF4_Библиотека_шагов
@@ -15,6 +15,7 @@
 @IgnoreOn8316
 @IgnoreOn8317
 @IgnoreOn8318
+@IgnoreOn8319
 
 
 Функционал: Проверка текущего состояния элемента формы
