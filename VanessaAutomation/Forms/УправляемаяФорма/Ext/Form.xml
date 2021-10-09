@@ -11303,6 +11303,16 @@
 												</Picture>
 												<ExtendedTooltip name="ТестКлиентСохранитьРасширеннаяПодсказка" id="1335"/>
 											</Button>
+											<Button name="ДанныеКлиентовТестированияЗагрузитьСписокКлиентовТестированияИзФайла" id="3177">
+												<Type>CommandBarButton</Type>
+												<Representation>PictureAndText</Representation>
+												<CommandName>Form.Command.ЗагрузитьСписокКлиентовТестированияИзФайла</CommandName>
+												<Picture>
+													<xr:Ref>StdPicture.RestoreValues</xr:Ref>
+													<xr:LoadTransparent>true</xr:LoadTransparent>
+												</Picture>
+												<ExtendedTooltip name="ДанныеКлиентовТестированияЗагрузитьСписокКлиентовТестированияИзФайлаРасширеннаяПодсказка" id="3178"/>
+											</Button>
 											<ButtonGroup name="ТестКлиентГруппа1" id="991">
 												<Title>
 													<v8:item>
@@ -14008,6 +14018,23 @@ When working with Vanessa Automation Single it is allowed to leave the field bla
 																	<v8:item>
 																		<v8:lang>en</v8:lang>
 																		<v8:content>Clears known steps cash. After command execution close Vanessa Automation and reopen it. </v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+														</Button>
+														<Button name="СброситьНастройкиVanessaAutomation" id="3175">
+															<Type>UsualButton</Type>
+															<CommandName>Form.Command.СброситьНастройкиVanessaAutomation</CommandName>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<ExtendedTooltip name="СброситьНастройкиVanessaAutomationРасширеннаяПодсказка" id="3176">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Resets the settings to their default values.</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Выполняет сброс настроек на значения настроек по умолчанию.</v8:content>
 																	</v8:item>
 																</Title>
 															</ExtendedTooltip>
@@ -37427,6 +37454,52 @@ If the voice acting file is not found in the directory, the process of generatin
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorНастройкиРедактора</Action>
+		</Command>
+		<Command name="СброситьНастройкиVanessaAutomation" id="162">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сбросить настройки Vanessa Automation</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Reset settings of Vanessa Automation</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сбросить настройки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Reset settings</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СброситьНастройкиVanessaAutomation</Action>
+		</Command>
+		<Command name="ЗагрузитьСписокКлиентовТестированияИзФайла" id="163">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из файла</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Load from file</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить из файла</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Load from file</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьСписокКлиентовТестированияИзФайла</Action>
 		</Command>
 	</Commands>
 </Form>
