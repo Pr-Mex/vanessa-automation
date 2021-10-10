@@ -15258,6 +15258,25 @@ It is recommended to set this checkbox on.</v8:content>
 														</Title>
 													</ExtendedTooltip>
 												</CheckBoxField>
+												<CheckBoxField name="РазличатьBrokenИFailedПоКлючевомуСловуТогда" id="3178">
+													<DataPath>Объект.РазличатьBrokenИFailedПоКлючевомуСловуТогда</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="РазличатьBrokenИFailedПоКлючевомуСловуТогдаКонтекстноеМеню" id="3179"/>
+													<ExtendedTooltip name="РазличатьBrokenИFailedПоКлючевомуСловуТогдаРасширеннаяПодсказка" id="3180">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Если опция включена, то при возникновении ошибки статус сценария будет зависеть от того, с какого ключевого слова начинается шаг, на котором возникла ошибка. Если это слово Тогда, то статус сценария будет Failed. Во всех остальных случаях - Broken. Это помогает различать сломанные тесты от неожиданного поведения тестируемой системы.</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>If the checkbox is on, assembly status will be set to Failed only if failing step starts with Then keyword. This helps to distinguish broken tests from unexpected behaviour.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+												</CheckBoxField>
 												<CheckBoxField name="ВыполнятьSleepЧерезPing" id="2655">
 													<DataPath>Объект.ВыполнятьSleepЧерезPing</DataPath>
 													<TitleLocation>Right</TitleLocation>
@@ -29880,6 +29899,17 @@ If the voice acting file is not found in the directory, the process of generatin
 					<v8:Length>0</v8:Length>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РазличатьBrokenИFailedПоКлючевомуСловуТогда" id="55">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Различать broken и failed по ключевому слову Тогда</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
 		<ConditionalAppearance>
