@@ -1379,6 +1379,277 @@
 				<CommandName>Form.StandardCommand.Help</CommandName>
 				<ExtendedTooltip name="ФормаСправкаРасширеннаяПодсказка" id="1553"/>
 			</Button>
+			<Popup name="ГруппаVanessaEditorИнструменты" id="2885">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Инструменты</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Tools</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Инструменты</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Tools</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Picture>
+					<xr:Abs>Picture.png</xr:Abs>
+					<xr:LoadTransparent>false</xr:LoadTransparent>
+				</Picture>
+				<Representation>Picture</Representation>
+				<ExtendedTooltip name="ГруппаVanessaEditorИнструментыРасширеннаяПодсказка" id="2886"/>
+				<ChildItems>
+					<ButtonGroup name="ГруппаVanessaEditorБиблиотекаШагов" id="2952">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Библиотека шагов</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Steps library</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа vanessa editor библиотека шагов</v8:content>
+							</v8:item>
+						</ToolTip>
+						<ExtendedTooltip name="ГруппаVanessaEditorБиблиотекаШаговРасширеннаяПодсказка" id="2953"/>
+						<ChildItems>
+							<Button name="VanessaEditorДобавитьИзвестныйШаг" id="2950">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ДобавитьИзвестныйШаг</CommandName>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Библиотека шагов</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Steps library</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="VanessaEditorДобавитьИзвестныйШагРасширеннаяПодсказка" id="2951"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<Button name="VanessaEditorИсследовательФормы" id="2887">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ИсследовательФормы</CommandName>
+						<ExtendedTooltip name="VanessaEditorИсследовательФормыРасширеннаяПодсказка" id="2888"/>
+					</Button>
+					<ButtonGroup name="ГруппаVanessaEditorСостояниеФормы" id="2893">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Состояние формы</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Form state</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ГруппаVanessaEditorСостояниеФормыРасширеннаяПодсказка" id="2894"/>
+						<ChildItems>
+							<Button name="VanessaEditorЗапомнитьСостояниеФормыTestClient" id="2889">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ЗапомнитьСостояниеФормыTestClient</CommandName>
+								<ExtendedTooltip name="VanessaEditorЗапомнитьСостояниеФормыTestClientРасширеннаяПодсказка" id="2890"/>
+							</Button>
+							<Button name="VanessaEditorЗабытьСостояниеФормыTestClient" id="2891">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ЗабытьСостояниеФормыTestClient</CommandName>
+								<ExtendedTooltip name="VanessaEditorЗабытьСостояниеФормыTestClientРасширеннаяПодсказка" id="2892"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<ButtonGroup name="ГруппаVanessaEditorСохранитьСостояниеФормы" id="3142">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа сохранить состояние формы</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Group save form state</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа сохранить состояние формы</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Group save form state</v8:content>
+							</v8:item>
+						</ToolTip>
+						<ExtendedTooltip name="ГруппаVanessaEditorСохранитьСостояниеФормыРасширеннаяПодсказка" id="3143"/>
+						<ChildItems>
+							<Button name="VanessaEditorСохранитьСостояниеТекущейФормыКлиентаТестированияВФайл" id="3029">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.СохранитьСостояниеТекущейФормыКлиентаТестированияВФайл</CommandName>
+								<ExtendedTooltip name="VanessaEditorСохранитьСостояниеТекущейФормыКлиентаТестированияВФайлРасширеннаяПодсказка" id="3030"/>
+							</Button>
+							<Button name="VanessaEditorСохранитьСостояниеВсехФормКлиентаТестированияВФайл" id="3031">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.СохранитьСостояниеВсехФормКлиентаТестированияВФайл</CommandName>
+								<ExtendedTooltip name="VanessaEditorСохранитьСостояниеВсехФормКлиентаТестированияВФайлРасширеннаяПодсказка" id="3032"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<ButtonGroup name="ГруппаVanessaEditorПолучитьИзмененияФормы" id="2895">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Изменения формы</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Form changes</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ГруппаVanessaEditorПолучитьИзмененияФормыРасширеннаяПодсказка" id="2896"/>
+						<ChildItems>
+							<Button name="VanessaEditorПолучитьИзмененияФормыGherkin" id="2897">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ПолучитьИзмененияФормыGherkin</CommandName>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Получить состояние всей формы в виде шагов</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Get the whole form state</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="VanessaEditorПолучитьИзмененияФормыGherkinРасширеннаяПодсказка" id="2898"/>
+							</Button>
+							<Button name="VanessaEditorПолучитьСостояниеТекущегоЭлементаФормы" id="2899">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ПолучитьСостояниеТекущегоЭлементаФормы</CommandName>
+								<ExtendedTooltip name="VanessaEditorПолучитьСостояниеТекущегоЭлементаФормыРасширеннаяПодсказка" id="2900"/>
+							</Button>
+							<Button name="VanessaEditorДобавитьПроверкуСообщенийПользователя" id="2901">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ДобавитьПроверкуСообщенийПользователя</CommandName>
+								<ExtendedTooltip name="VanessaEditorДобавитьПроверкуСообщенийПользователяРасширеннаяПодсказка" id="2902"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<ButtonGroup name="ГруппаVanessaEditorТаблоПеременных" id="2928">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа vanessa editor табло переменных</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Variables board</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ГруппаVanessaEditorТаблоПеременныхРасширеннаяПодсказка" id="2929"/>
+						<ChildItems>
+							<Button name="VanessaEditorПоказатьСкрытьТаблоПеременных" id="2930">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ПоказатьСкрытьТаблоПеременных</CommandName>
+								<ExtendedTooltip name="VanessaEditorПоказатьСкрытьТаблоПеременныхРасширеннаяПодсказка" id="2931"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<ButtonGroup name="ГруппаVanessaEditorПодготовкаИЗагрузкаДанных" id="2934">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа vanessa editor подготовка и загрузка данных</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Test data generator</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ГруппаVanessaEditorПодготовкаИЗагрузкаДанныхРасширеннаяПодсказка" id="2935"/>
+						<ChildItems>
+							<Button name="VanessaEditorОткрытьИнструментПодготовкаИЗагрузкаДанных" id="2932">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ОткрытьИнструментПодготовкаИЗагрузкаДанных</CommandName>
+								<ExtendedTooltip name="VanessaEditorОткрытьИнструментПодготовкаИЗагрузкаДанныхРасширеннаяПодсказка" id="2933"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<ButtonGroup name="ГруппаVanessaEditorСравнитьСДругимФичаФайлом" id="3025">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа vanessa editor сравнить с другим фича файлом</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Compare with another feature file</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ГруппаVanessaEditorСравнитьСДругимФичаФайломРасширеннаяПодсказка" id="3026"/>
+						<ChildItems>
+							<Button name="VanessaEditorСравнитьСДругимФичаФайлом" id="3027">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.СравнитьСДругимФичаФайлом</CommandName>
+								<ExtendedTooltip name="VanessaEditorСравнитьСДругимФичаФайломРасширеннаяПодсказка" id="3028"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<ButtonGroup name="ГруппаVanessaEditorПоказатьОтчетAllure" id="3033">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа vanessa editor показать отчет allure</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Vanessa editor group show allure report</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ГруппаVanessaEditorПоказатьОтчетAllureРасширеннаяПодсказка" id="3034"/>
+						<ChildItems>
+							<Button name="VanessaEditorПоказатьОтчетAllure" id="3035">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ПоказатьОтчетAllure</CommandName>
+								<ExtendedTooltip name="VanessaEditorПоказатьОтчетAllureРасширеннаяПодсказка" id="3036"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+					<ButtonGroup name="ГруппаVanessaEditorОзвучитьСтроку" id="3106">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа vanessa editor озвучить строку</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Vanessa editor group to voice line</v8:content>
+							</v8:item>
+						</Title>
+						<ExtendedTooltip name="ГруппаVanessaEditorОзвучитьСтрокуРасширеннаяПодсказка" id="3107"/>
+						<ChildItems>
+							<Button name="VanessaEditorОзвучитьТекущуюСтрокуРедактора" id="3108">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.VanessaEditorОзвучитьТекущуюСтрокуРедактора</CommandName>
+								<ExtendedTooltip name="VanessaEditorОзвучитьТекущуюСтрокуРедактораРасширеннаяПодсказка" id="3109"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
+				</ChildItems>
+			</Popup>
 			<ButtonGroup name="ГруппаКоманднаяПанельVanessaEditor" id="2424">
 				<Title>
 					<v8:item>
@@ -1461,277 +1732,6 @@
 								</Picture>
 								<ExtendedTooltip name="VanessaEditorПоказатьСкрытьДеревоGitРасширеннаяПодсказка" id="2797"/>
 							</Button>
-							<Popup name="ГруппаVanessaEditorИнструменты" id="2885">
-								<Title>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>Инструменты</v8:content>
-									</v8:item>
-									<v8:item>
-										<v8:lang>en</v8:lang>
-										<v8:content>Tools</v8:content>
-									</v8:item>
-								</Title>
-								<ToolTip>
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>Инструменты</v8:content>
-									</v8:item>
-									<v8:item>
-										<v8:lang>en</v8:lang>
-										<v8:content>Tools</v8:content>
-									</v8:item>
-								</ToolTip>
-								<Picture>
-									<xr:Abs>Picture.png</xr:Abs>
-									<xr:LoadTransparent>false</xr:LoadTransparent>
-								</Picture>
-								<Representation>Picture</Representation>
-								<ExtendedTooltip name="ГруппаVanessaEditorИнструментыРасширеннаяПодсказка" id="2886"/>
-								<ChildItems>
-									<ButtonGroup name="ГруппаVanessaEditorБиблиотекаШагов" id="2952">
-										<Title>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Библиотека шагов</v8:content>
-											</v8:item>
-											<v8:item>
-												<v8:lang>en</v8:lang>
-												<v8:content>Steps library</v8:content>
-											</v8:item>
-										</Title>
-										<ToolTip>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Группа vanessa editor библиотека шагов</v8:content>
-											</v8:item>
-										</ToolTip>
-										<ExtendedTooltip name="ГруппаVanessaEditorБиблиотекаШаговРасширеннаяПодсказка" id="2953"/>
-										<ChildItems>
-											<Button name="VanessaEditorДобавитьИзвестныйШаг" id="2950">
-												<Type>CommandBarButton</Type>
-												<CommandName>Form.Command.ДобавитьИзвестныйШаг</CommandName>
-												<Title>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>Библиотека шагов</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>en</v8:lang>
-														<v8:content>Steps library</v8:content>
-													</v8:item>
-												</Title>
-												<ExtendedTooltip name="VanessaEditorДобавитьИзвестныйШагРасширеннаяПодсказка" id="2951"/>
-											</Button>
-										</ChildItems>
-									</ButtonGroup>
-									<Button name="VanessaEditorИсследовательФормы" id="2887">
-										<Type>CommandBarButton</Type>
-										<CommandName>Form.Command.ИсследовательФормы</CommandName>
-										<ExtendedTooltip name="VanessaEditorИсследовательФормыРасширеннаяПодсказка" id="2888"/>
-									</Button>
-									<ButtonGroup name="ГруппаVanessaEditorСостояниеФормы" id="2893">
-										<Title>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Состояние формы</v8:content>
-											</v8:item>
-											<v8:item>
-												<v8:lang>en</v8:lang>
-												<v8:content>Form state</v8:content>
-											</v8:item>
-										</Title>
-										<ExtendedTooltip name="ГруппаVanessaEditorСостояниеФормыРасширеннаяПодсказка" id="2894"/>
-										<ChildItems>
-											<Button name="VanessaEditorЗапомнитьСостояниеФормыTestClient" id="2889">
-												<Type>CommandBarButton</Type>
-												<CommandName>Form.Command.ЗапомнитьСостояниеФормыTestClient</CommandName>
-												<ExtendedTooltip name="VanessaEditorЗапомнитьСостояниеФормыTestClientРасширеннаяПодсказка" id="2890"/>
-											</Button>
-											<Button name="VanessaEditorЗабытьСостояниеФормыTestClient" id="2891">
-												<Type>CommandBarButton</Type>
-												<CommandName>Form.Command.ЗабытьСостояниеФормыTestClient</CommandName>
-												<ExtendedTooltip name="VanessaEditorЗабытьСостояниеФормыTestClientРасширеннаяПодсказка" id="2892"/>
-											</Button>
-										</ChildItems>
-									</ButtonGroup>
-									<ButtonGroup name="ГруппаVanessaEditorСохранитьСостояниеФормы" id="3142">
-										<Title>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Группа сохранить состояние формы</v8:content>
-											</v8:item>
-											<v8:item>
-												<v8:lang>en</v8:lang>
-												<v8:content>Group save form state</v8:content>
-											</v8:item>
-										</Title>
-										<ToolTip>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Группа сохранить состояние формы</v8:content>
-											</v8:item>
-											<v8:item>
-												<v8:lang>en</v8:lang>
-												<v8:content>Group save form state</v8:content>
-											</v8:item>
-										</ToolTip>
-										<ExtendedTooltip name="ГруппаVanessaEditorСохранитьСостояниеФормыРасширеннаяПодсказка" id="3143"/>
-										<ChildItems>
-											<Button name="VanessaEditorСохранитьСостояниеТекущейФормыКлиентаТестированияВФайл" id="3029">
-												<Type>CommandBarButton</Type>
-												<CommandName>Form.Command.СохранитьСостояниеТекущейФормыКлиентаТестированияВФайл</CommandName>
-												<ExtendedTooltip name="VanessaEditorСохранитьСостояниеТекущейФормыКлиентаТестированияВФайлРасширеннаяПодсказка" id="3030"/>
-											</Button>
-											<Button name="VanessaEditorСохранитьСостояниеВсехФормКлиентаТестированияВФайл" id="3031">
-												<Type>CommandBarButton</Type>
-												<CommandName>Form.Command.СохранитьСостояниеВсехФормКлиентаТестированияВФайл</CommandName>
-												<ExtendedTooltip name="VanessaEditorСохранитьСостояниеВсехФормКлиентаТестированияВФайлРасширеннаяПодсказка" id="3032"/>
-											</Button>
-										</ChildItems>
-									</ButtonGroup>
-									<ButtonGroup name="ГруппаVanessaEditorПолучитьИзмененияФормы" id="2895">
-										<Title>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Изменения формы</v8:content>
-											</v8:item>
-											<v8:item>
-												<v8:lang>en</v8:lang>
-												<v8:content>Form changes</v8:content>
-											</v8:item>
-										</Title>
-										<ExtendedTooltip name="ГруппаVanessaEditorПолучитьИзмененияФормыРасширеннаяПодсказка" id="2896"/>
-										<ChildItems>
-											<Button name="VanessaEditorПолучитьИзмененияФормыGherkin" id="2897">
-												<Type>CommandBarButton</Type>
-												<CommandName>Form.Command.ПолучитьИзмененияФормыGherkin</CommandName>
-												<Title>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>Получить состояние всей формы в виде шагов</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>en</v8:lang>
-														<v8:content>Get the whole form state</v8:content>
-													</v8:item>
-												</Title>
-												<ExtendedTooltip name="VanessaEditorПолучитьИзмененияФормыGherkinРасширеннаяПодсказка" id="2898"/>
-											</Button>
-											<Button name="VanessaEditorПолучитьСостояниеТекущегоЭлементаФормы" id="2899">
-												<Type>CommandBarButton</Type>
-												<CommandName>Form.Command.ПолучитьСостояниеТекущегоЭлементаФормы</CommandName>
-												<ExtendedTooltip name="VanessaEditorПолучитьСостояниеТекущегоЭлементаФормыРасширеннаяПодсказка" id="2900"/>
-											</Button>
-											<Button name="VanessaEditorДобавитьПроверкуСообщенийПользователя" id="2901">
-												<Type>CommandBarButton</Type>
-												<CommandName>Form.Command.ДобавитьПроверкуСообщенийПользователя</CommandName>
-												<ExtendedTooltip name="VanessaEditorДобавитьПроверкуСообщенийПользователяРасширеннаяПодсказка" id="2902"/>
-											</Button>
-										</ChildItems>
-									</ButtonGroup>
-									<ButtonGroup name="ГруппаVanessaEditorТаблоПеременных" id="2928">
-										<Title>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Группа vanessa editor табло переменных</v8:content>
-											</v8:item>
-											<v8:item>
-												<v8:lang>en</v8:lang>
-												<v8:content>Variables board</v8:content>
-											</v8:item>
-										</Title>
-										<ExtendedTooltip name="ГруппаVanessaEditorТаблоПеременныхРасширеннаяПодсказка" id="2929"/>
-										<ChildItems>
-											<Button name="VanessaEditorПоказатьСкрытьТаблоПеременных" id="2930">
-												<Type>CommandBarButton</Type>
-												<CommandName>Form.Command.ПоказатьСкрытьТаблоПеременных</CommandName>
-												<ExtendedTooltip name="VanessaEditorПоказатьСкрытьТаблоПеременныхРасширеннаяПодсказка" id="2931"/>
-											</Button>
-										</ChildItems>
-									</ButtonGroup>
-									<ButtonGroup name="ГруппаVanessaEditorПодготовкаИЗагрузкаДанных" id="2934">
-										<Title>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Группа vanessa editor подготовка и загрузка данных</v8:content>
-											</v8:item>
-											<v8:item>
-												<v8:lang>en</v8:lang>
-												<v8:content>Test data generator</v8:content>
-											</v8:item>
-										</Title>
-										<ExtendedTooltip name="ГруппаVanessaEditorПодготовкаИЗагрузкаДанныхРасширеннаяПодсказка" id="2935"/>
-										<ChildItems>
-											<Button name="VanessaEditorОткрытьИнструментПодготовкаИЗагрузкаДанных" id="2932">
-												<Type>CommandBarButton</Type>
-												<CommandName>Form.Command.ОткрытьИнструментПодготовкаИЗагрузкаДанных</CommandName>
-												<ExtendedTooltip name="VanessaEditorОткрытьИнструментПодготовкаИЗагрузкаДанныхРасширеннаяПодсказка" id="2933"/>
-											</Button>
-										</ChildItems>
-									</ButtonGroup>
-									<ButtonGroup name="ГруппаVanessaEditorСравнитьСДругимФичаФайлом" id="3025">
-										<Title>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Группа vanessa editor сравнить с другим фича файлом</v8:content>
-											</v8:item>
-											<v8:item>
-												<v8:lang>en</v8:lang>
-												<v8:content>Compare with another feature file</v8:content>
-											</v8:item>
-										</Title>
-										<ExtendedTooltip name="ГруппаVanessaEditorСравнитьСДругимФичаФайломРасширеннаяПодсказка" id="3026"/>
-										<ChildItems>
-											<Button name="VanessaEditorСравнитьСДругимФичаФайлом" id="3027">
-												<Type>CommandBarButton</Type>
-												<CommandName>Form.Command.СравнитьСДругимФичаФайлом</CommandName>
-												<ExtendedTooltip name="VanessaEditorСравнитьСДругимФичаФайломРасширеннаяПодсказка" id="3028"/>
-											</Button>
-										</ChildItems>
-									</ButtonGroup>
-									<ButtonGroup name="ГруппаVanessaEditorПоказатьОтчетAllure" id="3033">
-										<Title>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Группа vanessa editor показать отчет allure</v8:content>
-											</v8:item>
-											<v8:item>
-												<v8:lang>en</v8:lang>
-												<v8:content>Vanessa editor group show allure report</v8:content>
-											</v8:item>
-										</Title>
-										<ExtendedTooltip name="ГруппаVanessaEditorПоказатьОтчетAllureРасширеннаяПодсказка" id="3034"/>
-										<ChildItems>
-											<Button name="VanessaEditorПоказатьОтчетAllure" id="3035">
-												<Type>CommandBarButton</Type>
-												<CommandName>Form.Command.ПоказатьОтчетAllure</CommandName>
-												<ExtendedTooltip name="VanessaEditorПоказатьОтчетAllureРасширеннаяПодсказка" id="3036"/>
-											</Button>
-										</ChildItems>
-									</ButtonGroup>
-									<ButtonGroup name="ГруппаVanessaEditorОзвучитьСтроку" id="3106">
-										<Title>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Группа vanessa editor озвучить строку</v8:content>
-											</v8:item>
-											<v8:item>
-												<v8:lang>en</v8:lang>
-												<v8:content>Vanessa editor group to voice line</v8:content>
-											</v8:item>
-										</Title>
-										<ExtendedTooltip name="ГруппаVanessaEditorОзвучитьСтрокуРасширеннаяПодсказка" id="3107"/>
-										<ChildItems>
-											<Button name="VanessaEditorОзвучитьТекущуюСтрокуРедактора" id="3108">
-												<Type>CommandBarButton</Type>
-												<CommandName>Form.Command.VanessaEditorОзвучитьТекущуюСтрокуРедактора</CommandName>
-												<ExtendedTooltip name="VanessaEditorОзвучитьТекущуюСтрокуРедактораРасширеннаяПодсказка" id="3109"/>
-											</Button>
-										</ChildItems>
-									</ButtonGroup>
-								</ChildItems>
-							</Popup>
 							<Popup name="ГруппаVanessaEditorНастройкиРедактора" id="2552">
 								<Title>
 									<v8:item>

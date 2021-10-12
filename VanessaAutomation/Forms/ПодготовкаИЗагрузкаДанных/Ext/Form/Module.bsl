@@ -95,7 +95,17 @@ EndProcedure
 
 &AtServer
 Procedure IRunDatabaseCleanAtServer()
-	AdministrationInfoBaseDeletionMode.ClearDatabase();
+	
+	Try
+	
+		Execute("AdministrationInfoBaseDeletionMode.ClearDatabase()");
+		
+	Except
+		
+		Raise "Объект Администрирование Информационной базы недоступен"
+		
+	EndTry;
+	
 EndProcedure
 
 &AtClient
