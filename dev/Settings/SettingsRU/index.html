@@ -13,7 +13,7 @@
       
       
       <link rel="shortcut icon" href="../../assets/images/logo.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-5.0.0">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-5.0.0">
     
     
       
@@ -1101,6 +1101,10 @@ https://github.com/lintest/VanessaExt</p>
 <p><strong>ПриравниватьPendingКFailed {pendingequalfailed}</strong>:
 Если флаг установлен, то при выполнении сценариев на CI сервере, если будут найдены нереализованные шаги ("pending") статус сборки всё равно будет "failed".
 Флаг рекомендуется устанавливать.</p>
+</li>
+<li>
+<p><strong>РазличатьBrokenИFailedПоКлючевомуСловуТогда {distinguishbrokenorfailedbythenkeyword}</strong>:
+Если опция включена, то при возникновении ошибки статус сценария будет зависеть от того, с какого ключевого слова начинается шаг, на котором возникла ошибка. Если это слово Тогда, то статус сценария будет Failed. Во всех остальных случаях - Broken. Это помогает различать сломанные тесты от неожиданного поведения тестируемой системы.</p>
 </li>
 <li>
 <p><strong>ВыполнятьSleepЧерезPing {dosleepusingping}</strong>:

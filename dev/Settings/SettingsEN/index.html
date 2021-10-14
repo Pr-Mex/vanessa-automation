@@ -13,7 +13,7 @@
       
       
       <link rel="shortcut icon" href="../../assets/images/logo.png">
-      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-5.0.0">
+      <meta name="generator" content="mkdocs-1.2.3, mkdocs-material-5.0.0">
     
     
       
@@ -1077,6 +1077,10 @@ If flag is set, when an error occurs in tree steps will be shown column with the
 <p><strong>pendingequalfailed</strong>:
 If the checkbox is on, pending steps will set assembly status to failed on the execution on CI server.
 It is recommended to set this checkbox on.</p>
+</li>
+<li>
+<p><strong>distinguishbrokenorfailedbythenkeyword</strong>:
+If the checkbox is on, assembly status will be set to Failed only if failing step starts with Then keyword. This helps to distinguish broken tests from unexpected behaviour.</p>
 </li>
 <li>
 <p><strong>dosleepusingping</strong>:
