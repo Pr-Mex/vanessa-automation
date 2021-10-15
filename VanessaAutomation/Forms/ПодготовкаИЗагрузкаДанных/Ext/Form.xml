@@ -90,6 +90,26 @@
 					<ContextMenu name="UseDataExhangeLoadTrueКонтекстноеМеню" id="156"/>
 					<ExtendedTooltip name="UseDataExhangeLoadTrueРасширеннаяПодсказка" id="157"/>
 				</CheckBoxField>
+				<CheckBoxField name="ReplaceRefByAttribute" id="168">
+					<DataPath>ReplaceRefByAttribute</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Если в дереве метаданных у объекта указан признак поиска по реквизиту и указано имя реквизита, то при генерации данных, ссылка будет заменена на значение этого реквизита (со служебными префиксами). При загрузке данных, поиск объекта будет производиться по реквизиту и его значению.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Если в дереве метаданных у объекта указан признак поиска по реквизиту и указано имя реквизита, то при генерации данных, ссылка будет заменена на значение этого реквизита (со служебными префиксами). При загрузке данных, поиск объекта будет производиться по реквизиту и его значению.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<CheckBoxType>Tumbler</CheckBoxType>
+					<ContextMenu name="ReplaceRefByAttributeContextMenu" id="169"/>
+					<ExtendedTooltip name="ReplaceRefByAttributeExtendedTooltip" id="170"/>
+					<Events>
+						<Event name="OnChange">ReplaceRefByAttributeOnChange</Event>
+					</Events>
+				</CheckBoxField>
 			</ChildItems>
 		</UsualGroup>
 		<Pages name="GroupPages" id="72">
@@ -206,6 +226,19 @@
 													<ContextMenu name="MetadataListPresentationContextMenu" id="68"/>
 													<ExtendedTooltip name="MetadataListPresentationExtendedTooltip" id="69"/>
 												</InputField>
+												<CheckBoxField name="MetadataListUseSearchByAttribute" id="162">
+													<DataPath>MetadataList.UseSearchByAttribute</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="MetadataListUseSearchByAttributeContextMenu" id="163"/>
+													<ExtendedTooltip name="MetadataListUseSearchByAttributeExtendedTooltip" id="164"/>
+												</CheckBoxField>
+												<InputField name="MetadataListSearchAttribute" id="165">
+													<DataPath>MetadataList.SearchAttribute</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="MetadataListSearchAttributeContextMenu" id="166"/>
+													<ExtendedTooltip name="MetadataListSearchAttributeExtendedTooltip" id="167"/>
+												</InputField>
 												<InputField name="MetadataListName" id="61">
 													<DataPath>MetadataList.Name</DataPath>
 													<Visible>false</Visible>
@@ -271,6 +304,10 @@
 				</Page>
 				<Page name="GroupPageFilterByRefs" id="93">
 					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Filter by refs</v8:content>
+						</v8:item>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Отбор по ссылкам</v8:content>
@@ -425,6 +462,30 @@
 					</Title>
 					<ExtendedTooltip name="GroupPageFeatureExtendedTooltip" id="77"/>
 					<ChildItems>
+						<UsualGroup name="GroupFeatureCommand" id="171">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Group feature command</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Group feature command</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="GroupFeatureCommandExtendedTooltip" id="172"/>
+							<ChildItems>
+								<Button name="ProcessReplaceRefByAttribute" id="173">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ProcessReplaceRefByAttribute</CommandName>
+									<ExtendedTooltip name="ProcessReplaceRefByAttributeExtendedTooltip" id="174"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
 						<TextDocumentField name="Feature" id="78">
 							<DataPath>Feature</DataPath>
 							<TitleLocation>None</TitleLocation>
@@ -534,6 +595,32 @@
 						<v8:Type>xs:string</v8:Type>
 						<v8:StringQualifiers>
 							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="UseSearchByAttribute" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Use search by attribute</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="SearchAttribute" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Search attribute</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>128</v8:Length>
 							<v8:AllowedLength>Variable</v8:AllowedLength>
 						</v8:StringQualifiers>
 					</Type>
@@ -718,6 +805,24 @@
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
+		<Attribute name="ReplaceRefByAttribute" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Replace ref by attribute</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заменять ссылку на реквизит</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ReplaceRefByAttribute</Field>
+			</Save>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="GenerateFeature" id="1">
@@ -782,6 +887,25 @@
 				</v8:item>
 			</ToolTip>
 			<Action>CloseForm</Action>
+		</Command>
+		<Command name="ProcessReplaceRefByAttribute" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Replace ref by attribute</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заменить ссылки реквизитами</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Process replace ref by attribute</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ProcessReplaceRefByAttribute</Action>
 		</Command>
 	</Commands>
 </Form>
