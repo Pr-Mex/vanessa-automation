@@ -692,6 +692,7 @@ Procedure OnOpen(Cancel)
 	EndIf;
 	FillStepsLanguage();
 	LocalizedStringFromServer = LocalizedStringsServer();
+	ChangeReplaceRefByAttribute();
 EndProcedure
 
 &AtClient
@@ -706,12 +707,14 @@ EndProcedure
 
 &AtClient
 Procedure MetadataListSelection(Item, RowSelected, Field, StandardProcessing)
-	CurrentRow = Items.MetadataList.CurrentRow;
-	MetadataListRow = MetadataList.FindByID(CurrentRow);
-	If MetadataListRow <> Undefined Then
-		MetadataListRowParent = MetadataListRow.GetParent();
-		If MetadataListRowParent <> Undefined Then
-			FillDataList(MetadataListRowParent.Name, MetadataListRow.Name);
+	If Field.Name = "MetadataListPresentation" Then
+		CurrentRow = Items.MetadataList.CurrentRow;
+		MetadataListRow = MetadataList.FindByID(CurrentRow);
+		If MetadataListRow <> Undefined Then
+			MetadataListRowParent = MetadataListRow.GetParent();
+			If MetadataListRowParent <> Undefined Then
+				FillDataList(MetadataListRowParent.Name, MetadataListRow.Name);
+			EndIf;
 		EndIf;
 	EndIf;
 EndProcedure
@@ -795,6 +798,11 @@ EndProcedure
 Процедура CloseForm(Команда)
 	Close();
 КонецПроцедуры
+
+&AtClient
+Procedure ReplaceRefByAttributeOnChange(Item)
+	ChangeReplaceRefByAttribute();
+EndProcedure
 
 #EndRegion
 
@@ -1152,6 +1160,26 @@ Function MetadataTypeValueSingle(Val MetadataTypeValue)
 EndFunction
 
 &AtServerNoContext
+Function MetadataTypeValueMultiple(Val MetadataTypeValue)
+	If MetadataTypeValue = "Catalog" Then
+		ReturnValue = "Catalogs";
+	ElsIf MetadataTypeValue = "Document" Then
+		ReturnValue = "Documents";
+	ElsIf MetadataTypeValue = "ChartOfCharacteristicTypes" Then
+		ReturnValue = "ChartsOfCharacteristicTypes";
+	ElsIf MetadataTypeValue = "InformationRegister" Then
+		ReturnValue = "InformationRegisters";
+	ElsIf MetadataTypeValue = "AccumulationRegister" Then
+		ReturnValue = "AccumulationRegisters";
+	ElsIf MetadataTypeValue = "Constant" Then
+		ReturnValue = "Constants";
+	Else
+		ReturnValue = "";
+	EndIf;
+	Return ReturnValue;
+EndFunction
+
+&AtServerNoContext
 Function MetadataTypeValueEnFromRu(Val MetadataTypeValue)
 	If MetadataTypeValue = "Справочник" Then
 		ReturnValue = "Catalog";
@@ -1484,6 +1512,9 @@ Function ParseStringValue(Val ParsingValue, Val ValueType)
 		Result = ReadXML(Reader);
 		Return Result;
 	EndIf;
+	If Left(ParsingValue, 16) = "FindByAttribute:" Then
+		Return GetObjectLinkByAttributeString(ParsingValue);
+	EndIf;
 	If Left(ParsingValue, 12) = "ValueStorage" Then	//For features without support of ValueStorage load
 		Return Undefined;
 	EndIf;
@@ -1636,6 +1667,51 @@ Function IsWritableObjectField(Obj, FieldName)
 	Return ReturnValue;
 EndFunction
 
+&AtServerNoContext
+Function GetRefReplaceMetadataObjects(Val MetadataListValue, Val UseDataExhangeLoadTrue)
+	ReturnValue = New ValueList;
+	If UseDataExhangeLoadTrue Then
+		RefReplaceFilter = New Structure("UseSearchByAttribute", True);
+		FoundRows = MetadataListValue.Rows.FindRows(RefReplaceFilter, True);
+		For Each FoundRow In FoundRows Do
+			If Not IsBlankString(FoundRow.SearchAttribute) Then
+				ReturnValue.Add(FoundRow.FullName, FoundRow.SearchAttribute);
+			EndIf;
+		EndDo;
+	EndIf;
+	Return ReturnValue;
+EndFunction	
+
+&AtClient
+Procedure ChangeReplaceRefByAttribute()
+	Items.MetadataListSearchAttribute.Visible = ThisObject.ReplaceRefByAttribute;
+	Items.MetadataListUseSearchByAttribute.Visible = ThisObject.ReplaceRefByAttribute;
+EndProcedure
+
+&AtServerNoContext
+Function GetObjectLinkByAttributeString(Val ParsingString)
+	ColonPosition = StrFind(ParsingString, ":");
+	FirstSemicolonPosition = StrFind(ParsingString, ";");
+	SecondSemicolonPosition = StrFind(ParsingString, ";", , FirstSemicolonPosition + 1);
+	MetadataName = Mid(ParsingString, ColonPosition + 1, FirstSemicolonPosition - ColonPosition - 1);
+	AttributeName = Mid(ParsingString, FirstSemicolonPosition + 1, SecondSemicolonPosition - FirstSemicolonPosition - 1);
+	AttibuteValue = Mid(ParsingString, SecondSemicolonPosition + 1, StrLen(ParsingString) - SecondSemicolonPosition);
+	Query = New Query;
+	Query.Text = "SELECT
+	             |	QueryObject.Ref AS Ref
+	             |FROM
+	             |	" + MetadataName + " AS QueryObject
+				 |WHERE
+				 |	QueryObject." + AttributeName + " = &AttributeValue";
+	Query.SetParameter("AttributeValue", AttibuteValue);
+	QuerySelection = Query.Execute().Select();
+	If QuerySelection.Next() Then
+		Return QuerySelection.Ref;
+	Else
+		Return PredefinedValue(MetadataName + ".EmptyRef");
+	EndIf;
+EndFunction
+
 #Region GenerateFeature
 
 #Region FeatureFile
@@ -1646,6 +1722,7 @@ Function GeneratedFeatureFile()
 	ReturnValue = New Array;	
 	Scenarious = New Array;		
 	MetadataListValue = FormAttributeToValue("MetadataList");
+	RefReplaceMetadataObjects = GetRefReplaceMetadataObjects(MetadataListValue, ThisObject.ReplaceRefByAttribute);
 	
 	For Each MetadataListParentRow In MetadataListValue.Rows Do
 		For Each MetadataListRow In MetadataListParentRow.Rows Do
@@ -1654,14 +1731,16 @@ Function GeneratedFeatureFile()
 			EndIf;
 			
 			If MetadataListParentRow.Name = "Constants" Then
-				MarkdownConstantValue = GetMarkdownConstantValue(MetadataListRow.Name);
+				MarkdownConstantValue = GetMarkdownConstantValue(MetadataListRow.Name, RefReplaceMetadataObjects);
 				If Not ValueIsFilled(MarkdownConstantValue) Then
 					Continue;
 				EndIf;
 				Scenarious.Add(ScenarioConstant(MetadataListRow.Name, MarkdownConstantValue, LangCode));
 			Else
-				MarkdownTables = GetMarkdownTables(MetadataTypeValueSingle(MetadataListParentRow.Name),
-					MetadataListRow.Name);
+				MarkdownTables = GetMarkdownTables(MetadataTypeValueSingle(MetadataListParentRow.Name)
+					, MetadataListRow.Name
+					,
+					, RefReplaceMetadataObjects);
 				ContinueFlag = True;
 				If ValueIsFilled(MarkdownTables.ObjectDataMarkdownTable) Then
 					ContinueFlag = False;
@@ -1711,6 +1790,8 @@ Function GenerateFeatureFileForRefsAtServer()
 	
 	Objects = GetRefsWithDependencies();
 	ObjectsByTypes = GroupItemsByType(Objects);
+	MetadataListValue = FormAttributeToValue("MetadataList");
+	RefReplaceMetadataObjects = GetRefReplaceMetadataObjects(MetadataListValue, ThisObject.ReplaceRefByAttribute);
 	
 	ObjectsByTypesTable = New ValueTable;
 	ObjectsByTypesTable.Columns.Add("TypePriority");
@@ -1755,8 +1836,11 @@ Function GenerateFeatureFileForRefsAtServer()
 		MetadataClass = TableRow.MetadataClass;
 		MetadataObjectName = TableRow.MetadataObjectName;
 	
-		MarkdownTables = GetMarkdownTables(MetadataClass, MetadataObjectName, TableRow.Objects);
-		
+		MarkdownTables = GetMarkdownTables(MetadataClass
+											, MetadataObjectName
+											, TableRow.Objects
+											, RefReplaceMetadataObjects);
+											
 		If IsBlankString(MarkdownTables.ObjectDataMarkdownTable) Then
 			Continue;
 		EndIf;
@@ -1955,7 +2039,7 @@ EndFunction
 #Region MarkdownTable
 
 &AtServerNoContext
-Function GetMarkdownTables(Val MetadataObjectPropertyName, Val MetadataObjectName, Val Objects = Undefined)
+Function GetMarkdownTables(Val MetadataObjectPropertyName, Val MetadataObjectName, Val Objects = Undefined, Val RefReplaceMetadataObjects)
 	ReturnValue = New Structure();
 	IsRegister = StrEndsWith(MetadataObjectPropertyName, "Register");
 	If IsRegister Then
@@ -1963,13 +2047,13 @@ Function GetMarkdownTables(Val MetadataObjectPropertyName, Val MetadataObjectNam
 	Else
 		ObjectData = GetDatabaseObjectsValueTableWithoutTabularSection(MetadataObjectPropertyName + "." + MetadataObjectName, Objects);
 	EndIf;
-	ObjectDataMarkdownTable = GetMarkdownTable(MetadataObjectPropertyName, MetadataObjectName, ObjectData);
+	ObjectDataMarkdownTable = GetMarkdownTable(MetadataObjectPropertyName, MetadataObjectName, ObjectData, RefReplaceMetadataObjects);
 	ReturnValue.Insert("ObjectDataMarkdownTable", ObjectDataMarkdownTable);
 	TabularSectionsDataMarkdownTables = New Structure;
 	If Not IsRegister Then
 		TabularSections = GetDatabaseObjectsValueTablesOfTabularSection(MetadataObjectPropertyName + "." + MetadataObjectName, Objects);
 		For Each ItemData In TabularSections Do
-			TabularSectionMarkdownTable = GetMarkdownTable(MetadataObjectPropertyName, MetadataObjectName, ItemData.Value);
+			TabularSectionMarkdownTable = GetMarkdownTable(MetadataObjectPropertyName, MetadataObjectName, ItemData.Value, RefReplaceMetadataObjects);
 			TabularSectionsDataMarkdownTables.Insert(ItemData.Key, TabularSectionMarkdownTable);
 		EndDo;
 	EndIf;
@@ -1978,7 +2062,7 @@ Function GetMarkdownTables(Val MetadataObjectPropertyName, Val MetadataObjectNam
 EndFunction
 
 &AtServerNoContext
-Function GetMarkdownTable(Val MetadataObjectPropertyName, Val MetadataObjectName, DataTable)
+Function GetMarkdownTable(Val MetadataObjectPropertyName, Val MetadataObjectName, DataTable, RefReplaceMetadataObjects)
 	ReturnValue = "";
 	MarkdownData = New Array;	 
 	
@@ -2013,7 +2097,7 @@ Function GetMarkdownTable(Val MetadataObjectPropertyName, Val MetadataObjectName
 			If Not TypeOf(Row[Column.Name]) = Type("Number") Then
 				Markdown.Add("'");
 			EndIf;
-			RowData = GeValuetStringRepresentation(Row[Column.Name]);
+			RowData = GeValuetStringRepresentation(Row[Column.Name], RefReplaceMetadataObjects);
 			Markdown.Add(RowData);
 			If Not TypeOf(Row[Column.Name]) = Type("Number") Then
 				Markdown.Add("'");
@@ -2032,7 +2116,7 @@ Function GetMarkdownTable(Val MetadataObjectPropertyName, Val MetadataObjectName
 EndFunction
 
 &AtServerNoContext
-Function GeValuetStringRepresentation(DataValue)
+Function GeValuetStringRepresentation(DataValue, RefReplaceMetadataObjects)
 	ReturnValue = "";
 	DataValueTypeOf = TypeOf(DataValue);
 	MetadataObject = Metadata.FindByType(DataValueTypeOf);
@@ -2067,7 +2151,20 @@ Function GeValuetStringRepresentation(DataValue)
 							+ "Name="
 							+ DataValue.PredefinedDataName;
 		Else
-			ReturnValue = GetURL(DataValue);
+			If RefReplaceMetadataObjects.Count() Then
+				MetadataObjectFullName = MetadataObject.FullName();
+				FoundRefReplaceMetadataObject = RefReplaceMetadataObjects.FindByValue(MetadataObjectFullName);
+				If FoundRefReplaceMetadataObject = Undefined Then
+					ReturnValue = GetURL(DataValue);
+				Else
+					ReturnValue = "FindByAttribute:"
+									+ FoundRefReplaceMetadataObject.Value + ";"
+									+ FoundRefReplaceMetadataObject.Presentation + ";"
+									+ DataValue[FoundRefReplaceMetadataObject.Presentation];
+				EndIf;
+			Else
+				ReturnValue = GetURL(DataValue);
+			EndIf;
 		EndIf;
 	ElsIf Metadata.Enums.Contains(MetadataObject) Then
 		If Not DataValue.IsEmpty() Then
@@ -2178,9 +2275,9 @@ EndProcedure
 #Region ConstantValue
 
 &AtServerNoContext
-Function GetMarkdownConstantValue(Val MetadataObjectName)
+Function GetMarkdownConstantValue(Val MetadataObjectName, Val RefReplaceMetadataObjects)
 	DataValue = Constants[MetadataObjectName].Get();
-	Return GeValuetStringRepresentation(DataValue);
+	Return GeValuetStringRepresentation(DataValue, RefReplaceMetadataObjects);
 EndFunction
 
 #EndRegion
@@ -2411,5 +2508,41 @@ Function LocalizedStringsServer()
 	ReturnData.Insert("s16f_ru", "Создаёт записи регистра сведений с ОбменДанными.Загрузка = Истина");
 	Return ReturnData;
 EndFunction
+
+&AtServer
+Procedure ProcessReplaceRefByAttributeAtServer()
+	MetadataListValue = FormAttributeToValue("MetadataList");
+	RefReplaceMetadataObjects = GetRefReplaceMetadataObjects(MetadataListValue, ThisObject.ReplaceRefByAttribute);
+	FeatureText = ThisObject.Feature.GetText();
+	Replaced = False;
+	For Each RefReplaceMetadataObject In RefReplaceMetadataObjects Do
+		Query = New Query;
+		Query.Text = "SELECT ALLOWED
+		|	QueryObject.Ref AS Ref,
+		|	QueryObject." + RefReplaceMetadataObject.Presentation + " AS " + RefReplaceMetadataObject.Presentation + "
+		|FROM
+		|	" + RefReplaceMetadataObject.Value + " AS QueryObject";
+		QuerySelection = Query.Execute().Select();
+		While QuerySelection.Next() Do
+			If Not Replaced Then
+				Replaced = True;
+			EndIf;
+			RefURL = GetURL(QuerySelection.Ref);
+			ReplaceString = "FindByAttribute:"
+									+ RefReplaceMetadataObject.Value + ";"
+									+ RefReplaceMetadataObject.Presentation + ";"
+									+ QuerySelection[RefReplaceMetadataObject.Presentation];
+			FeatureText = StrReplace(FeatureText, RefURL, ReplaceString);
+		EndDo;
+	EndDo;
+	If Replaced Then
+		ThisObject.Feature.SetText(FeatureText);
+	EndIf;
+EndProcedure
+
+&AtClient
+Procedure ProcessReplaceRefByAttribute(Command)
+	ProcessReplaceRefByAttributeAtServer();
+EndProcedure
 
 #EndRegion
