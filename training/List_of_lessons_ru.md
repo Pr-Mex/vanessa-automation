@@ -19,6 +19,7 @@
            - Панель "Работа с git" ![](https://github.com/Pr-Mex/vanessa-automation/blob/develop/training/pict/mortarboard.png?raw=true)[Запустить урок](ОписаниеПанелиРаботаСGit)
            - Инструменты
               - Краткий обзор доступных инструментов при работе с редактором ![](https://github.com/Pr-Mex/vanessa-automation/blob/develop/training/pict/mortarboard.png?raw=true)[Запустить урок](КраткийОбзорДоступныхИнструментовПриРаботеСРедактором)
+           - Кнопки создания, записи и запуска сценариев ![](https://github.com/Pr-Mex/vanessa-automation/blob/develop/training/pict/mortarboard.png?raw=true)[Запустить урок](КнопкиЗапускаСценариев)              
 
 ### Глава 3. Синтаксис языка Gherkin
 
