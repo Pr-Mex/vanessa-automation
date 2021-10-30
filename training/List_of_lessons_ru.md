@@ -6,20 +6,22 @@
 
 
 ### Глава 1. Знакомство с Vanessa Automation
-
    1. Что такое Vanessa Automation? ![](https://github.com/Pr-Mex/vanessa-automation/blob/develop/training/pict/mortarboard.png?raw=true)[Запустить урок](ЧтоТакоеVanessaAutomation)
    1. Знакомство с Vanessa Automation. Основные элементы формы. ![](https://github.com/Pr-Mex/vanessa-automation/blob/develop/training/pict/mortarboard.png?raw=true)[Запустить урок](ЗнакомствоСVanessaAutomationОсновныеЭлементыФормы)
 
 ### Глава 2. Подробное описание элементов формы Vanessa Automation
    1. ***Закладка "Запуск сценариев"***
-
        - Основные элементы закладки "Запуск сценариев" ![](https://github.com/Pr-Mex/vanessa-automation/blob/develop/training/pict/mortarboard.png?raw=true)[Запустить урок](ОсновныеЭлементыЗакладкиЗапускСценариев)
        - Панель инструментов редактора
+           - Краткий обзор доступных инструментов при работе с редактором (гаечный ключ) ![](https://github.com/Pr-Mex/vanessa-automation/blob/develop/training/pict/mortarboard.png?raw=true)[Запустить урок](КраткийОбзорДоступныхИнструментовПриРаботеСРедактором)
            - Панель "Дерево каталогов" ![](https://github.com/Pr-Mex/vanessa-automation/blob/develop/training/pict/mortarboard.png?raw=true)[Запустить урок](ОписаниеПанелиДеревоКаталогов)
            - Панель "Работа с git" ![](https://github.com/Pr-Mex/vanessa-automation/blob/develop/training/pict/mortarboard.png?raw=true)[Запустить урок](ОписаниеПанелиРаботаСGit)
-           - Инструменты
-              - Краткий обзор доступных инструментов при работе с редактором ![](https://github.com/Pr-Mex/vanessa-automation/blob/develop/training/pict/mortarboard.png?raw=true)[Запустить урок](КраткийОбзорДоступныхИнструментовПриРаботеСРедактором)
-           - Кнопки создания, записи и запуска сценариев ![](https://github.com/Pr-Mex/vanessa-automation/blob/develop/training/pict/mortarboard.png?raw=true)[Запустить урок](КнопкиЗапускаСценариев)              
+           - Настройки, доступные при работе с редактором (шестеренка)
+              - Сохранение и загрузка настроек Vanessa Automation ![](https://github.com/Pr-Mex/vanessa-automation/blob/develop/training/pict/mortarboard.png?raw=true)[Запустить урок](НастройкиВПанелиРедактораСохранитьЗагрузитьНастройки)
+              - Другие настройки ![](https://github.com/Pr-Mex/vanessa-automation/blob/develop/training/pict/mortarboard.png?raw=true)[Запустить урок](НастройкиВПанелиРедактораДругиеНастройки)
+           - Кнопки создания, сохранения и запуска сценариев. Часть1 ![](https://github.com/Pr-Mex/vanessa-automation/blob/develop/training/pict/mortarboard.png?raw=true)[Запустить урок](КнопкиЗапускаСценариевЧастьОдин)              
+           - Кнопки создания, сохранения и запуска сценариев. Часть2 ![](https://github.com/Pr-Mex/vanessa-automation/blob/develop/training/pict/mortarboard.png?raw=true)[Запустить урок](КнопкиЗапускаСценариевЧастьДва)              
+           - Управление озвучкой сценария и записью видео. ![](https://github.com/Pr-Mex/vanessa-automation/blob/develop/training/pict/mortarboard.png?raw=true)[Запустить урок](КнопкиОзвучкиИЗаписиВидео)              
 
 ### Глава 3. Синтаксис языка Gherkin
 
