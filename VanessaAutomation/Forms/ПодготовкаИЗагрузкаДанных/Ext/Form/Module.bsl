@@ -76,6 +76,12 @@ Procedure ПередОкончаниемСценария() Export
 	Return;
 EndProcedure
 
+// Возвращает данные команды
+&НаКлиенте
+Функция ДанныеКомандыVanessaAutomation(ИмяКоманды) Экспорт
+	Возврат ДанныеКомандыVanessaAutomationСервер(ИмяКоманды); 
+КонецФункции	 
+
 #EndRegion
 
 &AtClient
@@ -667,6 +673,16 @@ Procedure IRefillConstantByValueAtServer(ConstantName, ConstantValue)
 	FillTipicalObjectAttributesByValues(FilledValue, ConstantData, ConstantData);
 	Constants[ConstantName].Set(FilledValue[ConstantName]);
 EndProcedure
+
+// Делает отключение модуля
+&НаКлиенте
+Функция ОтключениеМодуля() Экспорт
+
+	Vanessa = Неопределено;
+	Контекст = Неопределено;
+	КонтекстСохраняемый = Неопределено;
+	
+КонецФункции	
 
 #EndRegion
 
@@ -2546,3 +2562,19 @@ Procedure ProcessReplaceRefByAttribute(Command)
 EndProcedure
 
 #EndRegion
+
+#Область ИнтерактивнаяСправка
+
+&НаСервере
+Функция ДанныеКомандыVanessaAutomationСервер(ИмяКоманды)
+	
+	Данные = Новый Структура;
+	Данные.Вставить("Заголовок", Команды[ИмяКоманды].Заголовок);
+	Данные.Вставить("Действие", Команды[ИмяКоманды].Действие);
+	Данные.Вставить("Подсказка", Команды[ИмяКоманды].Подсказка);
+	
+	Возврат Данные; 
+	
+КонецФункции	 
+
+#КонецОбласти
