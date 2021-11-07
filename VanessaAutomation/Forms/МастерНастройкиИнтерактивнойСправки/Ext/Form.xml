@@ -1,0 +1,295 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.10">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Мастер настройки интерактивной справки</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>en</v8:lang>
+			<v8:content>Online Help Customization Wizard</v8:content>
+		</v8:item>
+	</Title>
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаПродолжитьУрок" id="31">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<Enabled>false</Enabled>
+				<CommandName>Form.Command.ПродолжитьУрок</CommandName>
+				<ExtendedTooltip name="ФормаПродолжитьУрокРасширеннаяПодсказка" id="32"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="ГруппаНастройки" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настройки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Группа настройки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ShowTitle>false</ShowTitle>
+			<ExtendedTooltip name="ГруппаНастройкиРасширеннаяПодсказка" id="2"/>
+			<ChildItems>
+				<UsualGroup name="ГруппаВключенаКомпонента" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа включена компонента</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group enable component</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа включена компонента</v8:content>
+						</v8:item>
+					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаВключенаКомпонентаРасширеннаяПодсказка" id="4"/>
+					<ChildItems>
+						<PictureDecoration name="КартинкаВключенаКомпонентаОК" id="11">
+							<Width>2</Width>
+							<Height>1</Height>
+							<Picture>
+								<xr:Ref>StdPicture.AppearanceCheckIcon</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="КартинкаВключенаКомпонентаОККонтекстноеМеню" id="12"/>
+							<ExtendedTooltip name="КартинкаВключенаКомпонентаОКРасширеннаяПодсказка" id="13"/>
+						</PictureDecoration>
+						<PictureDecoration name="КартинкаВключенаКомпонентаОшибка" id="5">
+							<Width>2</Width>
+							<Height>1</Height>
+							<Picture>
+								<xr:Ref>StdPicture.AppearanceCrossIcon</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="КартинкаВключенаКомпонентаОшибкаКонтекстноеМеню" id="6"/>
+							<ExtendedTooltip name="КартинкаВключенаКомпонентаОшибкаРасширеннаяПодсказка" id="7"/>
+						</PictureDecoration>
+						<LabelDecoration name="ИспользованиеКомпонентыВыключено" id="33">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Выключено использование внешней компоненты</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Disabled use of external component</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ИспользованиеКомпонентыВыключеноКонтекстноеМеню" id="34"/>
+							<ExtendedTooltip name="ИспользованиеКомпонентыВыключеноРасширеннаяПодсказка" id="35"/>
+						</LabelDecoration>
+						<LabelDecoration name="ИспользованиеКомпонентыВключено" id="8">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Включено использование внешней компоненты</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Enabled use of external component</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ИспользованиеКомпонентыВключеноКонтекстноеМеню" id="9"/>
+							<ExtendedTooltip name="ИспользованиеКомпонентыВключеноРасширеннаяПодсказка" id="10"/>
+						</LabelDecoration>
+						<Button name="ВключитьИспользованиеВнешнейКомпоненты" id="14">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.ВключитьИспользованиеВнешнейКомпоненты</CommandName>
+							<ExtendedTooltip name="ВключитьИспользованиеВнешнейКомпонентыРасширеннаяПодсказка" id="15"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="ГруппаКешОзвучки" id="16">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Группа кеш озвучки</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Cash voice group</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="ГруппаКешОзвучкиРасширеннаяПодсказка" id="17"/>
+					<ChildItems>
+						<PictureDecoration name="КартинкаКешОзвучкиОК" id="18">
+							<Width>2</Width>
+							<Height>1</Height>
+							<Picture>
+								<xr:Ref>StdPicture.AppearanceCheckIcon</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="КартинкаКешОзвучкиОККонтекстноеМеню" id="19"/>
+							<ExtendedTooltip name="КартинкаКешОзвучкиОКРасширеннаяПодсказка" id="20"/>
+						</PictureDecoration>
+						<PictureDecoration name="КартинкаКешОзвучкиОшибка" id="21">
+							<Width>2</Width>
+							<Height>1</Height>
+							<Picture>
+								<xr:Ref>StdPicture.AppearanceCrossIcon</xr:Ref>
+								<xr:LoadTransparent>true</xr:LoadTransparent>
+							</Picture>
+							<ContextMenu name="КартинкаКешОзвучкиОшибкаКонтекстноеМеню" id="22"/>
+							<ExtendedTooltip name="КартинкаКешОзвучкиОшибкаРасширеннаяПодсказка" id="23"/>
+						</PictureDecoration>
+						<LabelDecoration name="КартинкаКешОзвучкиНеНайден" id="36">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Не найден кеш озвучки</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Voiceover cache not found</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="КартинкаКешОзвучкиНеНайденКонтекстноеМеню" id="37"/>
+							<ExtendedTooltip name="КартинкаКешОзвучкиНеНайденРасширеннаяПодсказка" id="38"/>
+						</LabelDecoration>
+						<LabelDecoration name="КартинкаКешОзвучкиНайден" id="24">
+							<Title formatted="false">
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Найден кеш озвучки</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Found the voice acting cache</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="КартинкаКешОзвучкиНайденКонтекстноеМеню" id="25"/>
+							<ExtendedTooltip name="КартинкаКешОзвучкиНайденРасширеннаяПодсказка" id="26"/>
+						</LabelDecoration>
+						<Button name="СкачатьКешОзвучки" id="29">
+							<Type>Hyperlink</Type>
+							<CommandName>Form.Command.СкачатьКешОзвучки</CommandName>
+							<ExtendedTooltip name="СкачатьКешОзвучкиРасширеннаяПодсказка" id="30"/>
+						</Button>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.VanessaAutomation</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ПроверяемыйФичаФайл" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверяемый фича файл</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СтрокаMDФайла" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строка MDФайла</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВключитьИспользованиеВнешнейКомпоненты" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Enable</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включить использование внешней компоненты</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВключитьИспользованиеВнешнейКомпоненты</Action>
+		</Command>
+		<Command name="СкачатьКешОзвучки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скачать</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Download</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Скачать кеш озвучки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СкачатьКешОзвучки</Action>
+		</Command>
+		<Command name="ПродолжитьУрок" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Продолжить урок</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Continue lesson</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Продолжить урок</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПродолжитьУрок</Action>
+		</Command>
+	</Commands>
+</Form>

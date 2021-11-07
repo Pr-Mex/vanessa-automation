@@ -140,6 +140,9 @@ If flag is set, when an error occurs in tree steps will be shown column with the
 If the checkbox is on, pending steps will set assembly status to failed on the execution on CI server.
 It is recommended to set this checkbox on.
 
+   * **distinguishbrokenorfailedbythenkeyword**:
+If the checkbox is on, assembly status will be set to Failed only if failing step starts with Then keyword. This helps to distinguish broken tests from unexpected behaviour.
+
    * **dosleepusingping**:
 If this option is enabled, then the Sleep() method will be called through a call to the Ping command. This is necessary if the testing client window is currently not responding to requests.
 

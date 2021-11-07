@@ -76,6 +76,12 @@ Procedure ПередОкончаниемСценария() Export
 	Return;
 EndProcedure
 
+// Возвращает данные команды
+&НаКлиенте
+Функция ДанныеКомандыVanessaAutomation(ИмяКоманды) Экспорт
+	Возврат ДанныеКомандыVanessaAutomationСервер(ИмяКоманды); 
+КонецФункции	 
+
 #EndRegion
 
 &AtClient
@@ -95,7 +101,17 @@ EndProcedure
 
 &AtServer
 Procedure IRunDatabaseCleanAtServer()
-	AdministrationInfoBaseDeletionMode.ClearDatabase();
+	
+	Try
+	
+		Execute("AdministrationInfoBaseDeletionMode.ClearDatabase()");
+		
+	Except
+		
+		Raise "Объект Администрирование Информационной базы недоступен"
+		
+	EndTry;
+	
 EndProcedure
 
 &AtClient
@@ -125,7 +141,7 @@ Procedure ЯПроверяюИлиСоздаюДляСправочникаОбъ
 EndProcedure
 
 &AtServerNoContext
-Procedure ICheckOrCreateCatalogObjectsAtServer(ObjectName, Values, DataExchange = False)
+Procedure ICheckOrCreateCatalogObjectsAtServer(ObjectName, Values, DataExchange = True)
 	ObjectValues = GetValueTableFromVanessaTableArray(Values);
 	ObjectAttributes = New ValueTable;
 	FillColumnsByStandardAttributes(ObjectAttributes, "Catalogs", ObjectName);
@@ -215,7 +231,7 @@ Procedure ЯПроверяюИлиСоздаюДляДокументаОбъек
 EndProcedure
 
 &AtServerNoContext
-Procedure ICheckOrCreateDocumentObjectsAtServer(ObjectName, Values, DataExchange = False)
+Procedure ICheckOrCreateDocumentObjectsAtServer(ObjectName, Values, DataExchange = True)
 	ObjectValues = GetValueTableFromVanessaTableArray(Values);	
 	ObjectAttributes = New ValueTable;
 	FillColumnsByStandardAttributes(ObjectAttributes, "Documents", ObjectName);
@@ -273,6 +289,7 @@ Procedure ICheckOrCreateDocumentObjectsAtServer(ObjectName, Values, DataExchange
 		Obj.DataExchange.Load = DataExchange;
 		If DocumentWriteModeValue = DocumentWriteMode.Posting Then
 			Obj.Write(DocumentWriteMode.Write);
+			Obj.DataExchange.Load = False;
 			Obj.Write(DocumentWriteMode.Posting);
 		Else
 			Obj.Write(DocumentWriteModeValue);
@@ -307,7 +324,7 @@ Procedure ЯПроверяюИлиСоздаюДляПланаВидовХара
 EndProcedure
 
 &AtServerNoContext
-Procedure ICheckOrCreateChartOfCharacteristicTypesObjectsAtServer(ObjectName, Values, DataExchange = False)	
+Procedure ICheckOrCreateChartOfCharacteristicTypesObjectsAtServer(ObjectName, Values, DataExchange = True)	
 	ObjectValues = GetValueTableFromVanessaTableArray(Values);
 	ObjectAttributes = New ValueTable;
 	FillColumnsByStandardAttributes(ObjectAttributes, "ChartsOfCharacteristicTypes", ObjectName);
@@ -461,7 +478,7 @@ Procedure ЯПроверяюИлиСоздаюДляРегистраСведен
 EndProcedure
 
 &AtServerNoContext
-Procedure ICheckOrCreateInformationRegisterRecordsAtServer(RegisterName, Values, UseRecordSets = False, DataExchange = False)	
+Procedure ICheckOrCreateInformationRegisterRecordsAtServer(RegisterName, Values, UseRecordSets = False, DataExchange = True)	
 	ObjectValues = GetValueTableFromVanessaTableArray(Values);	
 	ObjectAttributes = New ValueTable;
 	FillColumnsByStandardAttributes(ObjectAttributes, "InformationRegisters", RegisterName);
@@ -534,7 +551,7 @@ Procedure ICheckOrCreateInformationRegisterRecordsAtServer(RegisterName, Values,
 				EndDo;
 			EndDo;
 			If RegisterSet.Count() Then
-				RegisterSet.DataExchange = DataExchange;
+				RegisterSet.DataExchange.Load = DataExchange;
 				RegisterSet.Write(True);
 			EndIf;
 		EndDo;
@@ -657,6 +674,16 @@ Procedure IRefillConstantByValueAtServer(ConstantName, ConstantValue)
 	Constants[ConstantName].Set(FilledValue[ConstantName]);
 EndProcedure
 
+// Делает отключение модуля
+&НаКлиенте
+Функция ОтключениеМодуля() Экспорт
+
+	Vanessa = Неопределено;
+	Контекст = Неопределено;
+	КонтекстСохраняемый = Неопределено;
+	
+КонецФункции	
+
 #EndRegion
 
 #Region Events
@@ -681,6 +708,7 @@ Procedure OnOpen(Cancel)
 	EndIf;
 	FillStepsLanguage();
 	LocalizedStringFromServer = LocalizedStringsServer();
+	ChangeReplaceRefByAttribute();
 EndProcedure
 
 &AtClient
@@ -695,12 +723,14 @@ EndProcedure
 
 &AtClient
 Procedure MetadataListSelection(Item, RowSelected, Field, StandardProcessing)
-	CurrentRow = Items.MetadataList.CurrentRow;
-	MetadataListRow = MetadataList.FindByID(CurrentRow);
-	If MetadataListRow <> Undefined Then
-		MetadataListRowParent = MetadataListRow.GetParent();
-		If MetadataListRowParent <> Undefined Then
-			FillDataList(MetadataListRowParent.Name, MetadataListRow.Name);
+	If Field.Name = "MetadataListPresentation" Then
+		CurrentRow = Items.MetadataList.CurrentRow;
+		MetadataListRow = MetadataList.FindByID(CurrentRow);
+		If MetadataListRow <> Undefined Then
+			MetadataListRowParent = MetadataListRow.GetParent();
+			If MetadataListRowParent <> Undefined Then
+				FillDataList(MetadataListRowParent.Name, MetadataListRow.Name);
+			EndIf;
 		EndIf;
 	EndIf;
 EndProcedure
@@ -778,6 +808,16 @@ Procedure DataRefsOnStartEdit(Item, NewRow, Clone)
 		CurrentRow.IncludeUpstreamDependencies = IncludeUpstreamDependenciesDefault;
 		CurrentRow.IncludeDownstreamDependencies = IncludeDownstreamDependenciesDefault;
 	EndIf;	
+EndProcedure
+
+&НаКлиенте
+Процедура CloseForm(Команда)
+	Close();
+КонецПроцедуры
+
+&AtClient
+Procedure ReplaceRefByAttributeOnChange(Item)
+	ChangeReplaceRefByAttribute();
 EndProcedure
 
 #EndRegion
@@ -1136,6 +1176,26 @@ Function MetadataTypeValueSingle(Val MetadataTypeValue)
 EndFunction
 
 &AtServerNoContext
+Function MetadataTypeValueMultiple(Val MetadataTypeValue)
+	If MetadataTypeValue = "Catalog" Then
+		ReturnValue = "Catalogs";
+	ElsIf MetadataTypeValue = "Document" Then
+		ReturnValue = "Documents";
+	ElsIf MetadataTypeValue = "ChartOfCharacteristicTypes" Then
+		ReturnValue = "ChartsOfCharacteristicTypes";
+	ElsIf MetadataTypeValue = "InformationRegister" Then
+		ReturnValue = "InformationRegisters";
+	ElsIf MetadataTypeValue = "AccumulationRegister" Then
+		ReturnValue = "AccumulationRegisters";
+	ElsIf MetadataTypeValue = "Constant" Then
+		ReturnValue = "Constants";
+	Else
+		ReturnValue = "";
+	EndIf;
+	Return ReturnValue;
+EndFunction
+
+&AtServerNoContext
 Function MetadataTypeValueEnFromRu(Val MetadataTypeValue)
 	If MetadataTypeValue = "Справочник" Then
 		ReturnValue = "Catalog";
@@ -1223,18 +1283,24 @@ Function GetValueTableFromVanessaTableArray(Val TableArray)
 		Return ReturnValue;
 	EndIf;
 	
+	ColumnTypes = New Array;
+	ColumnTypes.Add("String");
+	ColumnTypes.Add("Number");
+	ColumnTypes.Add("Boolean");
 	ColumnsNames = TableArray[0];
 	For Each ColumnData In ColumnsNames Do
-		ReturnValue.Columns.Add(ColumnData.Value, New TypeDescription("String"));
+		ReturnValue.Columns.Add(ColumnData.Value, New TypeDescription(ColumnTypes));
 	EndDo;
 	TableArray.Delete(0);
 	For Each Row In TableArray Do
 		NewRow = ReturnValue.Add();
 		For Each ColumnData In ColumnsNames Do
 			CellValue = Row[ColumnData.Key];
-			CellValue = StrReplace(CellValue, "\\'", "\");
-			CellValue = StrReplace(CellValue, "\n", Chars.LF);
-			CellValue = StrReplace(CellValue, "\'", "'");
+			If TypeOf(Row[ColumnData.Key]) = Type("String") Then
+				CellValue = StrReplace(CellValue, "\\'", "\");
+				CellValue = StrReplace(CellValue, "\n", Chars.LF);
+				CellValue = StrReplace(CellValue, "\'", "'");
+			EndIf;
 			NewRow[ColumnData.Value] = CellValue;
 		EndDo; 
 	EndDo;
@@ -1438,49 +1504,62 @@ Procedure FillTipicalObjectAttributesByValues(Obj, Row, Column)
 EndProcedure
 
 &AtServerNoContext
-Function ParseStringValue(Val StringValue, Val ValueType)
+Function ParseStringValue(Val ParsingValue, Val ValueType)
 	If ValueType.ContainsType(Type("Boolean"))
-		And (StringValue = "True"
-			Or StringValue = "False") Then
-		Return ?(StringValue = "True", True, False);
+		And (ParsingValue = "True"
+			Or ParsingValue = "False") Then
+		Return ?(ParsingValue = "True", True, False);
 	EndIf;
-	If Left(StringValue, 10) = "e1cib/data" Then
-		Return GetObjectLinkFromObjectURL(StringValue);
+	If TypeOf(ParsingValue) = Type("Number")
+		And ValueType.ContainsType(Type("Number")) Then
+		Return ParsingValue;
 	EndIf;
-	If Left(StringValue, 4) = "Enum" And StrOccurrenceCount(StringValue, ".") = 2 Then
-		Return PredefinedValue(StringValue);
+	If Left(ParsingValue, 10) = "e1cib/data" Then
+		Return GetObjectLinkFromObjectURL(ParsingValue);
 	EndIf;
-	If TypeOf(StringValue) = Type("String")
-		And (StringValue = "ValueStorage"
-		or StringValue = "ХранилищеЗначения")Then
+	If Left(ParsingValue, 4) = "Enum" And StrOccurrenceCount(ParsingValue, ".") = 2 Then
+		Return PredefinedValue(ParsingValue);
+	EndIf;
+	If Left(ParsingValue, 13) = "ValueStorage:" Then
+		ParsingValue = StrReplace(ParsingValue, "ValueStorage:", "<d1p1:ValueStorage xmlns:d1p1=""http://v8.1c.ru/data"">");
+		ParsingValue = ParsingValue + "</d1p1:ValueStorage>";
+		Reader = New XMLReader();
+		Reader.SetString(ParsingValue);
+		Result = ReadXML(Reader);
+		Return Result;
+	EndIf;
+	If Left(ParsingValue, 16) = "FindByAttribute:" Then
+		Return GetObjectLinkByAttributeString(ParsingValue);
+	EndIf;
+	If Left(ParsingValue, 12) = "ValueStorage" Then	//For features without support of ValueStorage load
 		Return Undefined;
 	EndIf;
 	XMLTypeName = XMLType(ValueType.Types()[0]).TypeName;
 	XMLTypeNameParts = StrSplit(XMLTypeName, ".");
 	MetadataClass = XMLTypeNameParts[0];
-	If StrEndsWith(MetadataClass, "Ref") And ValueIsFilled(StringValue) Then
+	If StrEndsWith(MetadataClass, "Ref") And ValueIsFilled(ParsingValue) Then
 		Manager = New(Left(MetadataClass, StrLen(MetadataClass) - 3) + "Manager." + XMLTypeNameParts[1]);
-		Link = GetObjectLinkBySearchString(Manager, StringValue);
+		Link = GetObjectLinkBySearchString(Manager, ParsingValue);
 		If Link <> Undefined Then
 			Return Link;
 		EndIf;
 	EndIf;
-	ValueLen = StrLen(StringValue);
+	ValueLen = StrLen(ParsingValue);
 	If ValueLen = 36
-		And StrOccurrenceCount(StringValue, "-") = 4 Then
-		Return New UUID(StringValue);
+		And StrOccurrenceCount(ParsingValue, "-") = 4 Then
+		Return New UUID(ParsingValue);
 	EndIf;
 	If (ValueLen = 18 Or ValueLen = 19)
-		And StrOccurrenceCount(StringValue, ".") = 2
-		And StrOccurrenceCount(StringValue, ":") = 2 Then
-		DateString = Mid(StringValue, 7, 4)
-					+ Mid(StringValue, 4, 2)
-					+ Mid(StringValue, 1, 2)
+		And StrOccurrenceCount(ParsingValue, ".") = 2
+		And StrOccurrenceCount(ParsingValue, ":") = 2 Then
+		DateString = Mid(ParsingValue, 7, 4)
+					+ Mid(ParsingValue, 4, 2)
+					+ Mid(ParsingValue, 1, 2)
 					+ ?(ValueLen = 18, "0", "") 
-					+ StrReplace(Mid(StringValue, 12), ":", "");
+					+ StrReplace(Mid(ParsingValue, 12), ":", "");
 		Return Date(DateString);
 	EndIf;
-	Return StringValue;
+	Return ParsingValue;
 EndFunction
 
 &AtClient
@@ -1548,19 +1627,19 @@ Procedure AddStepsByLanguage(Vanessa, AllTests, LangCode)
 	Vanessa.ДобавитьШагВМассивТестов(AllTests
 										, LocalizedStringsClient()["s13a_" + LangCode]
 										, LocalizedStringsClient()["s13b_" + LangCode]
-										, StrTemplate(ScenarioCatalogActionString(LangCode, ThisObject.UseDataExhangeLoadTrue), LocalizedStringsClient()["s13d_" + LangCode], "", "")
+										, StrTemplate(ScenarioCatalogActionString(LangCode, True), LocalizedStringsClient()["s13d_" + LangCode], "", "")
 										, LocalizedStringsClient()["s13f_" + LangCode]
 										, "");
 	Vanessa.ДобавитьШагВМассивТестов(AllTests
 										, LocalizedStringsClient()["s14a_" + LangCode]
 										, LocalizedStringsClient()["s14b_" + LangCode]
-										, StrTemplate(ScenarioDocumentActionString(LangCode, ThisObject.UseDataExhangeLoadTrue), LocalizedStringsClient()["s14d_" + LangCode], "", "")
+										, StrTemplate(ScenarioDocumentActionString(LangCode, True), LocalizedStringsClient()["s14d_" + LangCode], "", "")
 										, LocalizedStringsClient()["s14f_" + LangCode]
 										, "");
 	Vanessa.ДобавитьШагВМассивТестов(AllTests
 										, LocalizedStringsClient()["s15a_" + LangCode]
 										, LocalizedStringsClient()["s15b_" + LangCode]
-										, StrTemplate(ScenarioChartOfCharacteristicTypesActionString(LangCode, ThisObject.UseDataExhangeLoadTrue), LocalizedStringsClient()["s15d_" + LangCode], "", "")
+										, StrTemplate(ScenarioChartOfCharacteristicTypesActionString(LangCode, True), LocalizedStringsClient()["s15d_" + LangCode], "", "")
 										, LocalizedStringsClient()["s15f_" + LangCode]
 										, "");
 	Vanessa.ДобавитьШагВМассивТестов(AllTests
@@ -1604,6 +1683,51 @@ Function IsWritableObjectField(Obj, FieldName)
 	Return ReturnValue;
 EndFunction
 
+&AtServerNoContext
+Function GetRefReplaceMetadataObjects(Val MetadataListValue, Val UseDataExhangeLoadTrue)
+	ReturnValue = New ValueList;
+	If UseDataExhangeLoadTrue Then
+		RefReplaceFilter = New Structure("UseSearchByAttribute", True);
+		FoundRows = MetadataListValue.Rows.FindRows(RefReplaceFilter, True);
+		For Each FoundRow In FoundRows Do
+			If Not IsBlankString(FoundRow.SearchAttribute) Then
+				ReturnValue.Add(FoundRow.FullName, FoundRow.SearchAttribute);
+			EndIf;
+		EndDo;
+	EndIf;
+	Return ReturnValue;
+EndFunction	
+
+&AtClient
+Procedure ChangeReplaceRefByAttribute()
+	Items.MetadataListSearchAttribute.Visible = ThisObject.ReplaceRefByAttribute;
+	Items.MetadataListUseSearchByAttribute.Visible = ThisObject.ReplaceRefByAttribute;
+EndProcedure
+
+&AtServerNoContext
+Function GetObjectLinkByAttributeString(Val ParsingString)
+	ColonPosition = StrFind(ParsingString, ":");
+	FirstSemicolonPosition = StrFind(ParsingString, ";");
+	SecondSemicolonPosition = StrFind(ParsingString, ";", , FirstSemicolonPosition + 1);
+	MetadataName = Mid(ParsingString, ColonPosition + 1, FirstSemicolonPosition - ColonPosition - 1);
+	AttributeName = Mid(ParsingString, FirstSemicolonPosition + 1, SecondSemicolonPosition - FirstSemicolonPosition - 1);
+	AttibuteValue = Mid(ParsingString, SecondSemicolonPosition + 1, StrLen(ParsingString) - SecondSemicolonPosition);
+	Query = New Query;
+	Query.Text = "SELECT
+	             |	QueryObject.Ref AS Ref
+	             |FROM
+	             |	" + MetadataName + " AS QueryObject
+				 |WHERE
+				 |	QueryObject." + AttributeName + " = &AttributeValue";
+	Query.SetParameter("AttributeValue", AttibuteValue);
+	QuerySelection = Query.Execute().Select();
+	If QuerySelection.Next() Then
+		Return QuerySelection.Ref;
+	Else
+		Return PredefinedValue(MetadataName + ".EmptyRef");
+	EndIf;
+EndFunction
+
 #Region GenerateFeature
 
 #Region FeatureFile
@@ -1614,6 +1738,7 @@ Function GeneratedFeatureFile()
 	ReturnValue = New Array;	
 	Scenarious = New Array;		
 	MetadataListValue = FormAttributeToValue("MetadataList");
+	RefReplaceMetadataObjects = GetRefReplaceMetadataObjects(MetadataListValue, ThisObject.ReplaceRefByAttribute);
 	
 	For Each MetadataListParentRow In MetadataListValue.Rows Do
 		For Each MetadataListRow In MetadataListParentRow.Rows Do
@@ -1622,14 +1747,16 @@ Function GeneratedFeatureFile()
 			EndIf;
 			
 			If MetadataListParentRow.Name = "Constants" Then
-				MarkdownConstantValue = GetMarkdownConstantValue(MetadataListRow.Name);
+				MarkdownConstantValue = GetMarkdownConstantValue(MetadataListRow.Name, RefReplaceMetadataObjects);
 				If Not ValueIsFilled(MarkdownConstantValue) Then
 					Continue;
 				EndIf;
 				Scenarious.Add(ScenarioConstant(MetadataListRow.Name, MarkdownConstantValue, LangCode));
 			Else
-				MarkdownTables = GetMarkdownTables(MetadataTypeValueSingle(MetadataListParentRow.Name),
-					MetadataListRow.Name);
+				MarkdownTables = GetMarkdownTables(MetadataTypeValueSingle(MetadataListParentRow.Name)
+					, MetadataListRow.Name
+					,
+					, RefReplaceMetadataObjects);
 				ContinueFlag = True;
 				If ValueIsFilled(MarkdownTables.ObjectDataMarkdownTable) Then
 					ContinueFlag = False;
@@ -1679,6 +1806,8 @@ Function GenerateFeatureFileForRefsAtServer()
 	
 	Objects = GetRefsWithDependencies();
 	ObjectsByTypes = GroupItemsByType(Objects);
+	MetadataListValue = FormAttributeToValue("MetadataList");
+	RefReplaceMetadataObjects = GetRefReplaceMetadataObjects(MetadataListValue, ThisObject.ReplaceRefByAttribute);
 	
 	ObjectsByTypesTable = New ValueTable;
 	ObjectsByTypesTable.Columns.Add("TypePriority");
@@ -1723,8 +1852,11 @@ Function GenerateFeatureFileForRefsAtServer()
 		MetadataClass = TableRow.MetadataClass;
 		MetadataObjectName = TableRow.MetadataObjectName;
 	
-		MarkdownTables = GetMarkdownTables(MetadataClass, MetadataObjectName, TableRow.Objects);
-		
+		MarkdownTables = GetMarkdownTables(MetadataClass
+											, MetadataObjectName
+											, TableRow.Objects
+											, RefReplaceMetadataObjects);
+											
 		If IsBlankString(MarkdownTables.ObjectDataMarkdownTable) Then
 			Continue;
 		EndIf;
@@ -1923,7 +2055,7 @@ EndFunction
 #Region MarkdownTable
 
 &AtServerNoContext
-Function GetMarkdownTables(Val MetadataObjectPropertyName, Val MetadataObjectName, Val Objects = Undefined)
+Function GetMarkdownTables(Val MetadataObjectPropertyName, Val MetadataObjectName, Val Objects = Undefined, Val RefReplaceMetadataObjects)
 	ReturnValue = New Structure();
 	IsRegister = StrEndsWith(MetadataObjectPropertyName, "Register");
 	If IsRegister Then
@@ -1931,13 +2063,13 @@ Function GetMarkdownTables(Val MetadataObjectPropertyName, Val MetadataObjectNam
 	Else
 		ObjectData = GetDatabaseObjectsValueTableWithoutTabularSection(MetadataObjectPropertyName + "." + MetadataObjectName, Objects);
 	EndIf;
-	ObjectDataMarkdownTable = GetMarkdownTable(MetadataObjectPropertyName, MetadataObjectName, ObjectData);
+	ObjectDataMarkdownTable = GetMarkdownTable(MetadataObjectPropertyName, MetadataObjectName, ObjectData, RefReplaceMetadataObjects);
 	ReturnValue.Insert("ObjectDataMarkdownTable", ObjectDataMarkdownTable);
 	TabularSectionsDataMarkdownTables = New Structure;
 	If Not IsRegister Then
 		TabularSections = GetDatabaseObjectsValueTablesOfTabularSection(MetadataObjectPropertyName + "." + MetadataObjectName, Objects);
 		For Each ItemData In TabularSections Do
-			TabularSectionMarkdownTable = GetMarkdownTable(MetadataObjectPropertyName, MetadataObjectName, ItemData.Value);
+			TabularSectionMarkdownTable = GetMarkdownTable(MetadataObjectPropertyName, MetadataObjectName, ItemData.Value, RefReplaceMetadataObjects);
 			TabularSectionsDataMarkdownTables.Insert(ItemData.Key, TabularSectionMarkdownTable);
 		EndDo;
 	EndIf;
@@ -1946,7 +2078,7 @@ Function GetMarkdownTables(Val MetadataObjectPropertyName, Val MetadataObjectNam
 EndFunction
 
 &AtServerNoContext
-Function GetMarkdownTable(Val MetadataObjectPropertyName, Val MetadataObjectName, DataTable)
+Function GetMarkdownTable(Val MetadataObjectPropertyName, Val MetadataObjectName, DataTable, RefReplaceMetadataObjects)
 	ReturnValue = "";
 	MarkdownData = New Array;	 
 	
@@ -1977,10 +2109,15 @@ Function GetMarkdownTable(Val MetadataObjectPropertyName, Val MetadataObjectName
 			If isUnsupportedAttribute(Column.Name) Then
 				Continue;
 			EndIf;
-			Markdown.Add("|'");
-			RowData = GeValuetStringRepresentation(Row[Column.Name]);
+			Markdown.Add("|");
+			If Not TypeOf(Row[Column.Name]) = Type("Number") Then
+				Markdown.Add("'");
+			EndIf;
+			RowData = GeValuetStringRepresentation(Row[Column.Name], RefReplaceMetadataObjects);
 			Markdown.Add(RowData);
-			Markdown.Add("'");
+			If Not TypeOf(Row[Column.Name]) = Type("Number") Then
+				Markdown.Add("'");
+			EndIf;
 		EndDo;
 		If Markdown.Count() Then
 			Markdown.Add("|");
@@ -1995,13 +2132,23 @@ Function GetMarkdownTable(Val MetadataObjectPropertyName, Val MetadataObjectName
 EndFunction
 
 &AtServerNoContext
-Function GeValuetStringRepresentation(DataValue)
+Function GeValuetStringRepresentation(DataValue, RefReplaceMetadataObjects)
 	ReturnValue = "";
 	DataValueTypeOf = TypeOf(DataValue);
 	MetadataObject = Metadata.FindByType(DataValueTypeOf);
 	If MetadataObject = Undefined Then
 		If DataValueTypeOf = Type("Boolean") Then
 			ReturnValue = Format(DataValue, "BF=False; BT=True;");
+		ElsIf DataValueTypeOf = Type("Number") Then
+			ReturnValue = Format(DataValue, "NDS=.; NGS=; NLZ=; NG=0");
+		ElsIf DataValueTypeOf = Type("ValueStorage") Then
+			Writer = New XMLWriter();
+			Writer.SetString();
+			WriteXML(Writer, DataValue);
+			ReturnValue = Writer.Close();
+			ReturnValue = StrReplace(ReturnValue, "<d1p1:ValueStorage xmlns:d1p1=""http://v8.1c.ru/data"">", "");
+			ReturnValue = StrReplace(ReturnValue, "</d1p1:ValueStorage>", "");
+			ReturnValue = "ValueStorage:" + ReturnValue;
 		Else
 			ReturnValue = String(DataValue);
 			ReturnValue = StrReplace(ReturnValue, "\", "\\");
@@ -2020,7 +2167,20 @@ Function GeValuetStringRepresentation(DataValue)
 							+ "Name="
 							+ DataValue.PredefinedDataName;
 		Else
-			ReturnValue = GetURL(DataValue);
+			If RefReplaceMetadataObjects.Count() Then
+				MetadataObjectFullName = MetadataObject.FullName();
+				FoundRefReplaceMetadataObject = RefReplaceMetadataObjects.FindByValue(MetadataObjectFullName);
+				If FoundRefReplaceMetadataObject = Undefined Then
+					ReturnValue = GetURL(DataValue);
+				Else
+					ReturnValue = "FindByAttribute:"
+									+ FoundRefReplaceMetadataObject.Value + ";"
+									+ FoundRefReplaceMetadataObject.Presentation + ";"
+									+ DataValue[FoundRefReplaceMetadataObject.Presentation];
+				EndIf;
+			Else
+				ReturnValue = GetURL(DataValue);
+			EndIf;
 		EndIf;
 	ElsIf Metadata.Enums.Contains(MetadataObject) Then
 		If Not DataValue.IsEmpty() Then
@@ -2131,9 +2291,9 @@ EndProcedure
 #Region ConstantValue
 
 &AtServerNoContext
-Function GetMarkdownConstantValue(Val MetadataObjectName)
+Function GetMarkdownConstantValue(Val MetadataObjectName, Val RefReplaceMetadataObjects)
 	DataValue = Constants[MetadataObjectName].Get();
-	Return GeValuetStringRepresentation(DataValue);
+	Return GeValuetStringRepresentation(DataValue, RefReplaceMetadataObjects);
 EndFunction
 
 #EndRegion
@@ -2311,9 +2471,9 @@ Function LocalizedStringsServer()
 	ReturnData.Insert("s12f_en", "Creates information register records, using record sets");
 	ReturnData.Insert("s12f_ru", "Создаёт записи регистра сведений, используя наборы записей");
 	
-	ReturnData.Insert("s13a_en", "ICheckOrCreateCatalogObjectsDataWithDataExchangeLoadTrue(ObjectName, Values)");
+	ReturnData.Insert("s13a_en", "ICheckOrCreateCatalogObjectsWithDataExchangeLoadTrue(ObjectName, Values)");
 	ReturnData.Insert("s13a_ru", "ЯПроверяюИлиСоздаюДляСправочникаОбъектыCОбменДаннымиЗагрузкаИстина(ИмяОбъекта, Значения)");
-	ReturnData.Insert("s13b_en", "ICheckOrCreateCatalogObjectsDataWithDataExchangeLoadTrue");
+	ReturnData.Insert("s13b_en", "ICheckOrCreateCatalogObjectsWithDataExchangeLoadTrue");
 	ReturnData.Insert("s13b_ru", "ЯПроверяюИлиСоздаюДляСправочникаОбъектыCОбменДаннымиЗагрузкаИстина");
 	ReturnData.Insert("s13c_en", "And I check or create catalog %1 objects with data exchange load true:%2%3");
 	ReturnData.Insert("s13c_ru", "И я проверяю или создаю для справочника %1 объекты с обмен данными загрузка истина:%2%3");
@@ -2326,7 +2486,7 @@ Function LocalizedStringsServer()
 	
 	ReturnData.Insert("s14a_en", "ICheckOrCreateDocumentObjectsWithDataExchangeLoadTrue(ObjectName, Values)");
 	ReturnData.Insert("s14a_ru", "ЯПроверяюИлиСоздаюДляДокументаОбъектыCОбменДаннымиЗагрузкаИстина(ИмяОбъекта, Значения)");
-	ReturnData.Insert("s14b_en", "ICheckOrCreateDocumentObjectsDataWithDataExchangeLoadTrue");
+	ReturnData.Insert("s14b_en", "ICheckOrCreateDocumentObjectsWithDataExchangeLoadTrue");
 	ReturnData.Insert("s14b_ru", "ЯПроверяюИлиСоздаюДляДокументаОбъектыCОбменДаннымиЗагрузкаИстина");
 	ReturnData.Insert("s14c_en", "And I check or create document %1 objects with data exchange load true:%2%3");
 	ReturnData.Insert("s14c_ru", "И я проверяю или создаю для документа %1 объекты с обмен данными загрузка истина:%2%3");
@@ -2365,4 +2525,56 @@ Function LocalizedStringsServer()
 	Return ReturnData;
 EndFunction
 
+&AtServer
+Procedure ProcessReplaceRefByAttributeAtServer()
+	MetadataListValue = FormAttributeToValue("MetadataList");
+	RefReplaceMetadataObjects = GetRefReplaceMetadataObjects(MetadataListValue, ThisObject.ReplaceRefByAttribute);
+	FeatureText = ThisObject.Feature.GetText();
+	Replaced = False;
+	For Each RefReplaceMetadataObject In RefReplaceMetadataObjects Do
+		Query = New Query;
+		Query.Text = "SELECT ALLOWED
+		|	QueryObject.Ref AS Ref,
+		|	QueryObject." + RefReplaceMetadataObject.Presentation + " AS " + RefReplaceMetadataObject.Presentation + "
+		|FROM
+		|	" + RefReplaceMetadataObject.Value + " AS QueryObject";
+		QuerySelection = Query.Execute().Select();
+		While QuerySelection.Next() Do
+			If Not Replaced Then
+				Replaced = True;
+			EndIf;
+			RefURL = GetURL(QuerySelection.Ref);
+			ReplaceString = "FindByAttribute:"
+									+ RefReplaceMetadataObject.Value + ";"
+									+ RefReplaceMetadataObject.Presentation + ";"
+									+ QuerySelection[RefReplaceMetadataObject.Presentation];
+			FeatureText = StrReplace(FeatureText, RefURL, ReplaceString);
+		EndDo;
+	EndDo;
+	If Replaced Then
+		ThisObject.Feature.SetText(FeatureText);
+	EndIf;
+EndProcedure
+
+&AtClient
+Procedure ProcessReplaceRefByAttribute(Command)
+	ProcessReplaceRefByAttributeAtServer();
+EndProcedure
+
 #EndRegion
+
+#Область ИнтерактивнаяСправка
+
+&НаСервере
+Функция ДанныеКомандыVanessaAutomationСервер(ИмяКоманды)
+	
+	Данные = Новый Структура;
+	Данные.Вставить("Заголовок", Команды[ИмяКоманды].Заголовок);
+	Данные.Вставить("Действие", Команды[ИмяКоманды].Действие);
+	Данные.Вставить("Подсказка", Команды[ИмяКоманды].Подсказка);
+	
+	Возврат Данные; 
+	
+КонецФункции	 
+
+#КонецОбласти

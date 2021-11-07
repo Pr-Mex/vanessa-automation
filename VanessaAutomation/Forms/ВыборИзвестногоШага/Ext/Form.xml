@@ -95,12 +95,18 @@
 				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 				<ExtendedTooltip name="ФормаВыгрузитьШагиВJSONРасширеннаяПодсказка" id="71"/>
 			</Button>
+			<Button name="ЗакрытьФормуИзвестныхШагов" id="126">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ЗакрытьФорму</CommandName>
+				<ExtendedTooltip name="ЗакрытьФормуИзвестныхШаговРасширеннаяПодсказка" id="127"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnReopen">ПриПовторномОткрытии</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
 	</Events>
 	<ChildItems>
 		<UsualGroup name="ГруппаПоиска" id="88">
@@ -467,6 +473,12 @@
 									<Events>
 										<Event name="Opening">ДеревоШаговИмяФайлаПолеОткрытие</Event>
 									</Events>
+								</InputField>
+								<InputField name="ДеревоШаговИмяПроцедуры" id="128">
+									<DataPath>Items.ДеревоШагов.CurrentData.ИмяПроцедуры</DataPath>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ContextMenu name="ДеревоШаговИмяПроцедурыКонтекстноеМеню" id="129"/>
+									<ExtendedTooltip name="ДеревоШаговИмяПроцедурыРасширеннаяПодсказка" id="130"/>
 								</InputField>
 								<InputField name="ДеревоШаговОписаниеШагаОригинал" id="118">
 									<DataPath>Items.ДеревоШагов.CurrentData.ОписаниеШагаОригинал</DataPath>
@@ -2639,6 +2651,29 @@
 			</Picture>
 			<Action>НайтиШаги</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗакрытьФорму" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Close</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть форму известных шагов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Close known steps form</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗакрытьФорму</Action>
 		</Command>
 	</Commands>
 </Form>
