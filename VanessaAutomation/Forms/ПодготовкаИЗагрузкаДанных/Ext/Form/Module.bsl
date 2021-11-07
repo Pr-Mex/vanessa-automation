@@ -668,6 +668,16 @@ Procedure IRefillConstantByValueAtServer(ConstantName, ConstantValue)
 	Constants[ConstantName].Set(FilledValue[ConstantName]);
 EndProcedure
 
+// Делает отключение модуля
+&НаКлиенте
+Функция ОтключениеМодуля() Экспорт
+
+	Vanessa = Неопределено;
+	Контекст = Неопределено;
+	КонтекстСохраняемый = Неопределено;
+	
+КонецФункции	
+
 #EndRegion
 
 #Region Events
