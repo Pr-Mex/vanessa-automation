@@ -36,6 +36,7 @@
 	Массив = Новый Массив;
 	Массив.Добавить("ariaLabel");
 	Массив.Добавить("automaticLayout");
+	Массив.Добавить("bracketPairGuides");
 	Массив.Добавить("contextmenu");
 	Массив.Добавить("domReadOnly");
 	Массив.Добавить("extraEditorClassName");
