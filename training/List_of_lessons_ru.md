@@ -25,8 +25,8 @@
 
 ### Глава 3. Синтаксис языка Gherkin
 
-   1. Что такое язык Gherkin? Запустить урок(ЧтоТакоеЯзыкGherkin)
-   1. Что такое feature файл? Запустить урок(ЧтоТакоеFeatureфайл)
+   1. Что такое язык Gherkin? ![](https://github.com/Pr-Mex/vanessa-automation/blob/develop/training/pict/mortarboard.png?raw=true)[Запустить урок](ЧтоТакоеЯзыкGherkin)
+   1. Как устроен feature файл? Заголовок фичи. ![](https://github.com/Pr-Mex/vanessa-automation/blob/develop/training/pict/mortarboard.png?raw=true)[Запустить урок](КакУстроенFeatureФайлЗаголовокФичи)
 
 
 ### Глава 4. Дерево известных шагов
