@@ -5730,6 +5730,22 @@
 																			<v8:content>Directory tree</v8:content>
 																		</v8:item>
 																	</Title>
+																	<CommandSet>
+																		<ExcludedCommand>Add</ExcludedCommand>
+																		<ExcludedCommand>Change</ExcludedCommand>
+																		<ExcludedCommand>Copy</ExcludedCommand>
+																		<ExcludedCommand>Delete</ExcludedCommand>
+																		<ExcludedCommand>EndEdit</ExcludedCommand>
+																		<ExcludedCommand>HierarchicalList</ExcludedCommand>
+																		<ExcludedCommand>List</ExcludedCommand>
+																		<ExcludedCommand>MoveDown</ExcludedCommand>
+																		<ExcludedCommand>MoveUp</ExcludedCommand>
+																		<ExcludedCommand>OutputList</ExcludedCommand>
+																		<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+																		<ExcludedCommand>SortListAsc</ExcludedCommand>
+																		<ExcludedCommand>SortListDesc</ExcludedCommand>
+																		<ExcludedCommand>Tree</ExcludedCommand>
+																	</CommandSet>
 																	<ToolTip>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
@@ -5740,7 +5756,15 @@
 																			<v8:content>File tree</v8:content>
 																		</v8:item>
 																	</ToolTip>
-																	<ContextMenu name="ДревоФайлаФичКонтекстноеМеню" id="2574"/>
+																	<ContextMenu name="ДревоФайлаФичКонтекстноеМеню" id="2574">
+																		<ChildItems>
+																			<Button name="ДревоФайлаФичКонтекстноеМенюЗагрузитьЭлементИзДереваКаталогов" id="3211">
+																				<Type>CommandBarButton</Type>
+																				<CommandName>Form.Command.ЗагрузитьЭлементИзДереваКаталогов</CommandName>
+																				<ExtendedTooltip name="ДревоФайлаФичКонтекстноеМенюЗагрузитьЭлементИзДереваКаталоговРасширеннаяПодсказка" id="3212"/>
+																			</Button>
+																		</ChildItems>
+																	</ContextMenu>
 																	<AutoCommandBar name="ДревоФайлаФичКоманднаяПанель" id="2575">
 																		<Autofill>false</Autofill>
 																	</AutoCommandBar>
@@ -25625,14 +25649,14 @@ If the voice acting file is not found in the directory, the process of generatin
 																<v8:lang>en</v8:lang>
 																<v8:content>If the option is enabled, then it becomes possible to:
 1. Move the mouse cursor over the required form element
-2. Pressing the ctrl+H keyboard shortcut will search for online help lessons that include this form element.
+2. Pressing the alt+H keyboard shortcut will search for online help lessons that include this form element.
 For this option to work, you must enable the use of the VanessaExt component.</v8:content>
 															</v8:item>
 															<v8:item>
 																<v8:lang>ru</v8:lang>
 																<v8:content>Если опция включена, то появляется возможность:
 1. Навести курсор мышки на интересующий элемент формы
-2. При нажатии сочетания клавиш ctrl+H будет выполнен поиск уроков интерактивной справки, в которых участвует данный элемент формы.
+2. При нажатии сочетания клавиш altl+H будет выполнен поиск уроков интерактивной справки, в которых участвует данный элемент формы.
 Для работы опции необходимо включить использование компоненты VanessaExt.</v8:content>
 															</v8:item>
 														</Title>
@@ -37874,6 +37898,25 @@ For this option to work, you must enable the use of the VanessaExt component.</v
 				</v8:item>
 			</ToolTip>
 			<Action>ЗагрузитьСписокКлиентовТестированияИзФайла</Action>
+		</Command>
+		<Command name="ЗагрузитьЭлементИзДереваКаталогов" id="164">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Load</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить элемент из дерева каталогов</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗагрузитьЭлементИзДереваКаталогов</Action>
 		</Command>
 		<Command name="ЗапуститьМобильноеПриложение" id="164">
 			<Title>
