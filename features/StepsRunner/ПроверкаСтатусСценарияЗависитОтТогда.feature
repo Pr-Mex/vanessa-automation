@@ -1,8 +1,13 @@
-# language: ru
+﻿# language: ru
 #parent uf:
 @UF5_формирование_результатов_выполнения_сценариев
 #parent ua:
 @UA34_указывать_настройки_выполнения_сценариев
+
+@IgnoreOn82Builds
+@IgnoreOnOFBuilds
+@IgnoreOnWeb
+
 
 #https://github.com/Pr-Mex/vanessa-automation/issues/696
 
