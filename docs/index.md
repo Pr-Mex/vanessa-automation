@@ -37,6 +37,11 @@
 * [Тестирование серверного поведения с Vanessa Automation](https://infostart.ru/1c/articles/1283198/)
 * [Практика применения DevOps. Тестирование](https://infostart.ru/1c/articles/1342422/)
 
+## СППР + Vanessa Automation
+
+* [Автоматизация тестирования в СППР 2.0. Часть 1](https://www.youtube.com/watch?v=1UBlV4kWx_o)
+* [Автоматизация тестирования в СППР 2.0. Часть 2](https://www.youtube.com/watch?v=gKJmJKIe-nA)
+
 ## Сборка из исходников
 
 В данном репозитории хранятся только исходники.
