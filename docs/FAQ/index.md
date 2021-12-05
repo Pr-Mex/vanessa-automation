@@ -227,3 +227,4 @@
 	Надо установить windows sdk.
 	Тогда появится файл вида C:\Program Files (x86)\Windows Kits\10\bin\10.0.19041.0\x64\inspect.exe
 	Это инспектр объектов UI Automation.
+	Также есть альтернативный [инспектр объектов](https://accessibilityinsights.io/en/downloads/)
