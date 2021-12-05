@@ -14277,25 +14277,48 @@ When working with Vanessa Automation Single it is allowed to leave the field bla
 																<Event name="OnChange">ПовторноЗапускатьСеансКлиентаТестированияПриПодключенииЕслиНеНайденЕгоПроцессПриИзменении</Event>
 															</Events>
 														</CheckBoxField>
+														<InputField name="ИнтервалЗапускаПроцессаКлиентаТестирования" id="3040">
+															<DataPath>Объект.ИнтервалЗапускаПроцессаКлиентаТестирования</DataPath>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<ContextMenu name="ИнтервалЗапускаПроцессаКлиентаТестированияКонтекстноеМеню" id="3041"/>
+															<ExtendedTooltip name="ИнтервалЗапускаПроцессаКлиентаТестированияРасширеннаяПодсказка" id="3042">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Specifies the interval at which an attempt will be made to start a testing client session.</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Задаёт интервал, с которым будет производиться попытка запустить сеанс клиента тестирования.</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+														</InputField>
+														<CheckBoxField name="ОпределятьРеальныйПортНаКоторомЗапустилсяКлиентТестирования" id="3220">
+															<DataPath>Объект.ОпределятьРеальныйПортНаКоторомЗапустилсяКлиентТестирования</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ОпределятьРеальныйПортНаКоторомЗапустилсяКлиентТестированияКонтекстноеМеню" id="3221"/>
+															<ExtendedTooltip name="ОпределятьРеальныйПортНаКоторомЗапустилсяКлиентТестированияРасширеннаяПодсказка" id="3222">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>If this option is enabled, then when the testing client connects, an attempt will be made to determine the real port on which the testing client was launched.
+It is necessary. since the testing client can change the port on which it started, despite the passed parameters.
+This issue is relevant when running tests on Linux.</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Если опция включена, то при подключении клиента тестирования будет происходить попытка определить реальный порт, на котором был запущен клиент тестирования.
+Это нужно. т.к. клиент тестирования может поменять порт, на котором он запустился, несмотря на переданные параметры.
+Эта проблема актуальна при запуске тестов в Linux.</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+														</CheckBoxField>
 													</ChildItems>
 												</UsualGroup>
-												<InputField name="ИнтервалЗапускаПроцессаКлиентаТестирования" id="3040">
-													<DataPath>Объект.ИнтервалЗапускаПроцессаКлиентаТестирования</DataPath>
-													<ToolTipRepresentation>Button</ToolTipRepresentation>
-													<ContextMenu name="ИнтервалЗапускаПроцессаКлиентаТестированияКонтекстноеМеню" id="3041"/>
-													<ExtendedTooltip name="ИнтервалЗапускаПроцессаКлиентаТестированияРасширеннаяПодсказка" id="3042">
-														<Title formatted="false">
-															<v8:item>
-																<v8:lang>en</v8:lang>
-																<v8:content>Specifies the interval at which an attempt will be made to start a testing client session.</v8:content>
-															</v8:item>
-															<v8:item>
-																<v8:lang>ru</v8:lang>
-																<v8:content>Задаёт интервал, с которым будет производиться попытка запустить сеанс клиента тестирования.</v8:content>
-															</v8:item>
-														</Title>
-													</ExtendedTooltip>
-												</InputField>
 												<UsualGroup name="ГруппаОтладкаКлиентаТестирования" id="859">
 													<Title>
 														<v8:item>
@@ -18521,11 +18544,20 @@ https://habr.com/ru/company/sberbank/blog/359302/</v8:content>
 																<Title formatted="false">
 																	<v8:item>
 																		<v8:lang>en</v8:lang>
-																		<v8:content>Enables the use of the UI Automation mechanism on Windows.</v8:content>
+																		<v8:content>Enables the use of the UI Automation mechanism in Windows to emulate movement and mouse clicks in steps from the Vanessa Automation standard steps library.
+For example, when the option is disabled, step
+And I click on the "TitleButton"
+just clicks on the button without performing any interactive actions.
+If the option is enabled, the mouse cursor is first moved to this button, and then the button will be pressed.</v8:content>
 																	</v8:item>
 																	<v8:item>
 																		<v8:lang>ru</v8:lang>
-																		<v8:content>Включает использование механизма UI Automation в Windows.</v8:content>
+																		<v8:content>Включает использование механизма UI Automation в Windows для эмуляции движения и кликов мшкой в шагах из стандартной библиотеки шагов Vanessa Automation.
+Например, когда опция выключена, шаг
+И я нажимаю на кнопку "ЗаголовокКнопки"
+просто нажмёт на пноку не выполняя интерактивных действий.
+Если опция включена, то курсор мышки сначала перемещён к данной кнопке, а затем уже кнопка будет нажата.
+</v8:content>
 																	</v8:item>
 																</Title>
 															</ExtendedTooltip>
