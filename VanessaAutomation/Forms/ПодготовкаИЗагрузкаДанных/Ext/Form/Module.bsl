@@ -698,6 +698,10 @@ EndProcedure
 &AtServer
 Procedure OnCreateAtServer(Cancel, StandardProcessing)	
 	MaxDownstreamDependenciesHierarchyLevel = 1;
+	
+	CreateFileForStorage = True;
+	UploadFileType = "bin";
+	
 EndProcedure
 
 &AtClient
@@ -819,6 +823,31 @@ EndProcedure
 Procedure ReplaceRefByAttributeOnChange(Item)
 	ChangeReplaceRefByAttribute();
 EndProcedure
+
+&AtClient
+Procedure PathToUploadНачалоВыбора(Элемент, ДанныеВыбора, СтандартнаяОбработка)
+	
+	СтандартнаяОбработка = Ложь;
+	
+	ОписаниеОповещения = Новый ОписаниеОповещения("ВыборПутиВыгрузкиЗаверщение", ЭтаФорма);
+	Диалог = Новый ДиалогВыбораФайла(РежимДиалогаВыбораФайла.ВыборКаталога);
+	Диалог.Показать(ОписаниеОповещения);
+	
+EndProcedure
+
+&AtClient
+Процедура ВыборПутиВыгрузкиЗаверщение(Результат, ДополнительныеПараметры = Неопределено) Экспорт
+	
+	Если Результат = Неопределено 
+			ИЛИ Результат.Количество() = 0 Тогда
+		
+		Возврат;
+		
+	КонецЕсли;
+	
+	PathToUpload = Результат[0];
+	
+КонецПроцедуры
 
 #EndRegion
 
@@ -2576,5 +2605,13 @@ EndProcedure
 	Возврат Данные; 
 	
 КонецФункции	 
+
+&НаКлиенте
+Процедура CreateFileForStorageПриИзменении(Элемент)
+	
+	Элементы.PathToUpload.Доступность   = CreateFileForStorage;
+	Элементы.UploadFileType.Доступность = CreateFileForStorage;
+	
+КонецПроцедуры
 
 #КонецОбласти

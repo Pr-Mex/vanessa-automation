@@ -112,6 +112,155 @@
 				</CheckBoxField>
 			</ChildItems>
 		</UsualGroup>
+		<UsualGroup name="GroupStorageToFile" id="175">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгружать ХранилищеЗначения в файл</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Upload Storage to File</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Group storage to file</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<ExtendedTooltip name="GroupStorageToFileРасширеннаяПодсказка" id="176"/>
+			<ChildItems>
+				<CheckBoxField name="CreateFileForStorage" id="177">
+					<DataPath>CreateFileForStorage</DataPath>
+					<CheckBoxType>Tumbler</CheckBoxType>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>БЛ=Нет; БИ=Да</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>БЛ=No; БИ=Yes</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="CreateFileForStorageКонтекстноеМеню" id="178"/>
+					<ExtendedTooltip name="CreateFileForStorageРасширеннаяПодсказка" id="179"/>
+					<Events>
+						<Event name="OnChange">CreateFileForStorageПриИзменении</Event>
+					</Events>
+				</CheckBoxField>
+				<UsualGroup name="GroupPath" id="186">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Group path</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Group path</v8:content>
+						</v8:item>
+					</ToolTip>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="GroupPathРасширеннаяПодсказка" id="187"/>
+					<ChildItems>
+						<InputField name="PathToUpload" id="180">
+							<DataPath>PathToUpload</DataPath>
+							<ChoiceButton>true</ChoiceButton>
+							<ContextMenu name="PathToUploadКонтекстноеМеню" id="181"/>
+							<ExtendedTooltip name="PathToUploadРасширеннаяПодсказка" id="182"/>
+							<Events>
+								<Event name="StartChoice">PathToUploadНачалоВыбора</Event>
+							</Events>
+						</InputField>
+						<CheckBoxField name="MakeRelativePath" id="188">
+							<DataPath>AbsPath</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>CheckBox</CheckBoxType>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>БЛ=Нет; БИ=Да</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>БЛ=No; БИ=Yes</v8:content>
+								</v8:item>
+							</EditFormat>
+							<ContextMenu name="MakeRelativePathКонтекстноеМеню" id="189"/>
+							<ExtendedTooltip name="MakeRelativePathРасширеннаяПодсказка" id="190"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+				<InputField name="UploadFileType" id="183">
+					<DataPath>UploadFileType</DataPath>
+					<MaxWidth>5</MaxWidth>
+					<HorizontalStretch>false</HorizontalStretch>
+					<ListChoiceMode>true</ListChoiceMode>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>BIN</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">bin</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>TXT</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">txt</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>JSON</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">json</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>PNG</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">png</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="UploadFileTypeКонтекстноеМеню" id="184"/>
+					<ExtendedTooltip name="UploadFileTypeРасширеннаяПодсказка" id="185"/>
+				</InputField>
+			</ChildItems>
+		</UsualGroup>
 		<Pages name="GroupPages" id="72">
 			<Title>
 				<v8:item>
@@ -602,6 +751,10 @@
 				<Column name="UseSearchByAttribute" id="1">
 					<Title>
 						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Искать по атрибуту</v8:content>
+						</v8:item>
+						<v8:item>
 							<v8:lang>en</v8:lang>
 							<v8:content>Use search by attribute</v8:content>
 						</v8:item>
@@ -612,6 +765,11 @@
 				</Column>
 				<Column name="SearchAttribute" id="2">
 					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Атрибут поиска
+</v8:content>
+						</v8:item>
 						<v8:item>
 							<v8:lang>en</v8:lang>
 							<v8:content>Search attribute</v8:content>
@@ -822,6 +980,77 @@
 			<Save>
 				<Field>ReplaceRefByAttribute</Field>
 			</Save>
+		</Attribute>
+		<Attribute name="CreateFileForStorage" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Upload
+</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="PathToUpload" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Path
+</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="UploadFileType" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>File type</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>5</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="AbsPath" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Абсолютный путь
+</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Absolute path</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
 		</Attribute>
 	</Attributes>
 	<Commands>
