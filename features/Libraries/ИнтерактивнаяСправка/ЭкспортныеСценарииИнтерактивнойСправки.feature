@@ -2,6 +2,7 @@
 
 @ExportScenarios
 @IgnoreOnCIMainBuild
+@ExternalUse
 
 Функционал: Экспортные сценарии интерактивной справки
 
