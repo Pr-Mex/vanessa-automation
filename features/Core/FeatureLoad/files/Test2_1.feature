@@ -12,5 +12,5 @@ To <business effect>
 Scenario: <описание сценария>
 
 	And I execute 1C:Enterprise script
-			| 'Сообщить("Hellow world1.")' |
+			| 'Сообщить("Hello world1.")' |
 	Then I raise "Текст исключения1" exception
