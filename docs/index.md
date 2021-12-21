@@ -42,6 +42,9 @@
 * [Автоматизация тестирования в СППР 2.0. Часть 1](https://www.youtube.com/watch?v=1UBlV4kWx_o)
 * [Автоматизация тестирования в СППР 2.0. Часть 2](https://www.youtube.com/watch?v=gKJmJKIe-nA)
 
+## Видео
+
+* [100+ тестов на Vanessa-Automation. Личный опыт без маркетинга.](https://www.youtube.com/watch?v=_YrmLnM9J1A)
 ## Сборка из исходников
 
 В данном репозитории хранятся только исходники.
