@@ -7149,11 +7149,16 @@
 
 &НаКлиенте
 Процедура ПолучитьСтрокуЗапуска(Команда)
+	ИмяEpf = "vanessa-automation.epf";
+	Если Объект.ВерсияПоставки = "single" Тогда
+		ИмяEpf = "vanessa-automation-single.epf";
+	КонецЕсли;	 
+	
 	Стр = """%1"" /N""%2"" /TestManager /Execute ""%3"" /IBConnectionString ""%4"" /C""%5""";
 	Стр = ПодставитьПараметрыВСтроку(Стр,
 		КаталогПрограммы() + "1cv8c",
 		ИмяПользователя(),
-		Объект.КаталогИнструментов + "\vanessa-automation.epf",
+		Объект.КаталогИнструментов + "\" + ИмяEpf,
 		СтрЗаменить(СтрокаСоединенияИнформационнойБазы(),"""",""""""),
 		"StartFeaturePlayer;QuietInstallVanessaExt;VAParams=C:\Temp\VAParams.json");
 		
