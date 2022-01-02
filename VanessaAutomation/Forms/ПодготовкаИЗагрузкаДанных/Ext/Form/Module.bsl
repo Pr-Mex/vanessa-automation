@@ -713,6 +713,9 @@ Procedure OnOpen(Cancel)
 	FillStepsLanguage();
 	LocalizedStringFromServer = LocalizedStringsServer();
 	ChangeReplaceRefByAttribute();
+	
+	CopyFormData(FormOwner.Объект, Object);
+	
 EndProcedure
 
 &AtClient
@@ -1769,6 +1772,22 @@ Function GeneratedFeatureFile()
 	MetadataListValue = FormAttributeToValue("MetadataList");
 	RefReplaceMetadataObjects = GetRefReplaceMetadataObjects(MetadataListValue, ThisObject.ReplaceRefByAttribute);
 	
+	If Not AbsPath Then
+					
+		PathToFeature = StrReplace(StrReplace(PathToUpload, "\", "/"), Object.КаталогПроекта, "$workspaceRoot");
+					
+	Else
+					
+		PathToFeature = PathToUpload;
+					
+	EndIf;
+	
+	ParamsValueStorage = New Structure("CreateFileForStorage, PathToUpload, PathToFeature, FileType"
+														, CreateFileForStorage
+														, PathToUpload
+														, PathToFeature
+														, UploadFileType);
+	
 	For Each MetadataListParentRow In MetadataListValue.Rows Do
 		For Each MetadataListRow In MetadataListParentRow.Rows Do
 			If Not MetadataListRow.Use Then
@@ -1776,28 +1795,13 @@ Function GeneratedFeatureFile()
 			EndIf;
 			
 			If MetadataListParentRow.Name = "Constants" Then
-				MarkdownConstantValue = GetMarkdownConstantValue(MetadataListRow.Name, RefReplaceMetadataObjects, CreateFileForStorage);
+				MarkdownConstantValue = GetMarkdownConstantValue(MetadataListRow.Name, RefReplaceMetadataObjects, ParamsValueStorage);
 				If Not ValueIsFilled(MarkdownConstantValue) Then
 					Continue;
 				EndIf;
 				Scenarious.Add(ScenarioConstant(MetadataListRow.Name, MarkdownConstantValue, LangCode));
 			Else
 				
-				If Not AbsPath Then
-					
-					PathToSave = StrReplace(StrReplace(PathToUpload, "\", "/"), Object.КаталогПроекта, "$workspaceRoot");
-					
-				Else
-					
-					PathToSave = PathToUpload;
-					
-				EndIf;
-				
-				ParamsValueStorage = New Structure("CreateFileForStorage, PathToUpload, PathToSave, FileType"
-														, CreateFileForStorage
-														, PathToUpload
-														, PathToSave
-														, UploadFileType);
 				MarkdownTables = GetMarkdownTables(MetadataTypeValueSingle(MetadataListParentRow.Name)
 					, MetadataListRow.Name
 					,
@@ -1860,6 +1864,23 @@ Function GenerateFeatureFileForRefsAtServer()
 	ObjectsByTypesTable.Columns.Add("MetadataClass");
 	ObjectsByTypesTable.Columns.Add("MetadataObjectName");
 	ObjectsByTypesTable.Columns.Add("Objects");
+	
+	If Not AbsPath Then
+					
+		PathToFeature = StrReplace(StrReplace(PathToUpload, "\", "/"), Object.КаталогПроекта, "$workspaceRoot");
+					
+	Else
+					
+		PathToFeature = PathToUpload;
+					
+	EndIf;
+	
+	ParamsValueStorage = New Structure("CreateFileForStorage, PathToUpload, PathToFeature, FileType"
+														, CreateFileForStorage
+														, PathToUpload
+														, PathToFeature
+														, UploadFileType);
+														
 	For Each KeyValuePair In ObjectsByTypes Do
 		ObjectsOfType = KeyValuePair.Value;
 		
@@ -1902,7 +1923,7 @@ Function GenerateFeatureFileForRefsAtServer()
 											, MetadataObjectName
 											, TableRow.Objects
 											, RefReplaceMetadataObjects
-											, CreateFileForStorage);
+											, ParamsValueStorage);
 											
 		If IsBlankString(MarkdownTables.ObjectDataMarkdownTable) Then
 			Continue;
@@ -2197,19 +2218,23 @@ Function GeValuetStringRepresentation(DataValue, RefReplaceMetadataObjects, Para
 				Hash= New DataHashing(HashFunction.SHA256);
 				Hash.Append(Binary);
 				
-				Name = String(Hash.HashSum);
+				Name = StrReplace(String(Hash.HashSum), " ", "");
 				
 				Path = ParamsValueStorage.PathToUpload
+						+ "/"
 						+ Name 
+						+ "."
 						+ ParamsValueStorage.FileType;
 						
 				Binary.Write(Path);
 				
-				Path = ParamsValueStorage.PathToSave
-						+ Name 
+				Path = ParamsValueStorage.PathToFeature
+						+ "/"
+						+ Name
+						+ "."
 						+ ParamsValueStorage.FileType;
 				
-				ReturnValue = "ValueStorage:" + Path;
+				ReturnValue = "ValueStoragePath:" + Path;
 				
 			Else
 				
@@ -2365,9 +2390,9 @@ EndProcedure
 #Region ConstantValue
 
 &AtServerNoContext
-Function GetMarkdownConstantValue(Val MetadataObjectName, Val RefReplaceMetadataObjects, CreateFileForStorage)
+Function GetMarkdownConstantValue(Val MetadataObjectName, Val RefReplaceMetadataObjects, ParamsValueStorage)
 	DataValue = Constants[MetadataObjectName].Get();
-	Return GeValuetStringRepresentation(DataValue, RefReplaceMetadataObjects, CreateFileForStorage);
+	Return GeValuetStringRepresentation(DataValue, RefReplaceMetadataObjects, ParamsValueStorage);
 EndFunction
 
 #EndRegion
