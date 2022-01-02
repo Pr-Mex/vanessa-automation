@@ -12509,6 +12509,27 @@
 														</InputField>
 													</ChildItems>
 												</UsualGroup>
+												<InputField name="СписокСценариевДляВыполнения" id="3223">
+													<DataPath>Объект.СписокСценариевДляВыполнения</DataPath>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<ContextMenu name="СписокСценариевДляВыполненияКонтекстноеМеню" id="3224"/>
+													<ExtendedTooltip name="СписокСценариевДляВыполненияРасширеннаяПодсказка" id="3225">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Allows you to set the order in which scripts are executed. The scripts will be executed in the order they are listed.
+Plus allows you to set a filter for executing scripts. Only scripts from the list will be executed.
+The script in the list is indicated by its name.</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Позволяет задать порядок выполнения сценариев. Сценарии будут выполняться в том порядке как они указаны в списке.
+Плюс позволяет задать фильтр на выполение сценариев. Будут выполняться только сценарии из списка.
+Сценрий в списке указывается с помощью его имени.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+												</InputField>
 												<UsualGroup name="ГруппаЯзык" id="2661">
 													<Title>
 														<v8:item>
@@ -26077,6 +26098,11 @@ For this option to work, you must enable the use of the VanessaExt component.</v
 													<CommandName>Form.Command.СоздатьИнструкциюПоОписаниюЭлементов</CommandName>
 													<ExtendedTooltip name="СоздатьИнструкциюПоОписаниюЭлементовРасширеннаяПодсказка" id="2949"/>
 												</Button>
+												<Button name="СгенерироватьMp3ПоКаталогуФичИнтерактивнойСправки" id="3230">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.СгенерироватьMp3ПоКаталогуФичИнтерактивнойСправки</CommandName>
+													<ExtendedTooltip name="СгенерироватьMp3ПоКаталогуФичИнтерактивнойСправкиРасширеннаяПодсказка" id="3231"/>
+												</Button>
 												<InputField name="КаталогИнструментовСлужебный" id="494">
 													<DataPath>Объект.КаталогИнструментов</DataPath>
 													<Title>
@@ -37962,7 +37988,7 @@ For this option to work, you must enable the use of the VanessaExt component.</v
 				</v8:item>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Запустить мобильный клиент</v8:content>
+					<v8:content>Запустить мобильное приложение</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -37972,6 +37998,25 @@ For this option to work, you must enable the use of the VanessaExt component.</v
 				</v8:item>
 			</ToolTip>
 			<Action>ЗапуститьМобильноеПриложение</Action>
+		</Command>
+		<Command name="СгенерироватьMp3ПоКаталогуФичИнтерактивнойСправки" id="166">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сгенерировать mp3 по каталогу фич интерактивной справки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Generate mp3 from the catalog of features of the online help</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сгенерировать mp3 по каталогу фич интерактивной справки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СгенерироватьMp3ПоКаталогуФичИнтерактивнойСправки</Action>
 		</Command>
 	</Commands>
 </Form>
