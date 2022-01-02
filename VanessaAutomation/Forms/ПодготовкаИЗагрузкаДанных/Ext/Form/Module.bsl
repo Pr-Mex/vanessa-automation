@@ -825,29 +825,29 @@ Procedure ReplaceRefByAttributeOnChange(Item)
 EndProcedure
 
 &AtClient
-Procedure PathToUploadНачалоВыбора(Элемент, ДанныеВыбора, СтандартнаяОбработка)
+Procedure PathToUploadНачалоВыбора(Item, Choose, StandardProcessing)
 	
-	СтандартнаяОбработка = Ложь;
+	StandardProcessing = False;
 	
-	ОписаниеОповещения = Новый ОписаниеОповещения("ВыборПутиВыгрузкиЗаверщение", ЭтаФорма);
-	Диалог = Новый ДиалогВыбораФайла(РежимДиалогаВыбораФайла.ВыборКаталога);
-	Диалог.Показать(ОписаниеОповещения);
+	NotifyDescription = New NotifyDescription("ChoosePathContinuation", ThisForm);
+	Diaolg = Новый FileDialog(FileDialogMode.ChooseDirectory);
+	Diaolg.Show(NotifyDescription);
 	
 EndProcedure
 
 &AtClient
-Процедура ВыборПутиВыгрузкиЗаверщение(Результат, ДополнительныеПараметры = Неопределено) Экспорт
+Procedure ChoosePathContinuation(Result, AdditionalParameters) Export
 	
-	Если Результат = Неопределено 
-			ИЛИ Результат.Количество() = 0 Тогда
+	If Result = Undefined 
+			OR Result.Count() = 0 Then
 		
-		Возврат;
+		Return;
 		
-	КонецЕсли;
+	EndIf;
 	
-	PathToUpload = Результат[0];
+	PathToUpload = Result[0];
 	
-КонецПроцедуры
+EndProcedure
 
 #EndRegion
 
@@ -1776,16 +1776,33 @@ Function GeneratedFeatureFile()
 			EndIf;
 			
 			If MetadataListParentRow.Name = "Constants" Then
-				MarkdownConstantValue = GetMarkdownConstantValue(MetadataListRow.Name, RefReplaceMetadataObjects);
+				MarkdownConstantValue = GetMarkdownConstantValue(MetadataListRow.Name, RefReplaceMetadataObjects, CreateFileForStorage);
 				If Not ValueIsFilled(MarkdownConstantValue) Then
 					Continue;
 				EndIf;
 				Scenarious.Add(ScenarioConstant(MetadataListRow.Name, MarkdownConstantValue, LangCode));
 			Else
+				
+				If Not AbsPath Then
+					
+					PathToSave = StrReplace(StrReplace(PathToUpload, "\", "/"), Object.КаталогПроекта, "$workspaceRoot");
+					
+				Else
+					
+					PathToSave = PathToUpload;
+					
+				EndIf;
+				
+				ParamsValueStorage = New Structure("CreateFileForStorage, PathToUpload, PathToSave, FileType"
+														, CreateFileForStorage
+														, PathToUpload
+														, PathToSave
+														, UploadFileType);
 				MarkdownTables = GetMarkdownTables(MetadataTypeValueSingle(MetadataListParentRow.Name)
 					, MetadataListRow.Name
 					,
-					, RefReplaceMetadataObjects);
+					, RefReplaceMetadataObjects
+					, ParamsValueStorage);
 				ContinueFlag = True;
 				If ValueIsFilled(MarkdownTables.ObjectDataMarkdownTable) Then
 					ContinueFlag = False;
@@ -1884,7 +1901,8 @@ Function GenerateFeatureFileForRefsAtServer()
 		MarkdownTables = GetMarkdownTables(MetadataClass
 											, MetadataObjectName
 											, TableRow.Objects
-											, RefReplaceMetadataObjects);
+											, RefReplaceMetadataObjects
+											, CreateFileForStorage);
 											
 		If IsBlankString(MarkdownTables.ObjectDataMarkdownTable) Then
 			Continue;
@@ -2084,7 +2102,7 @@ EndFunction
 #Region MarkdownTable
 
 &AtServerNoContext
-Function GetMarkdownTables(Val MetadataObjectPropertyName, Val MetadataObjectName, Val Objects = Undefined, Val RefReplaceMetadataObjects)
+Function GetMarkdownTables(Val MetadataObjectPropertyName, Val MetadataObjectName, Val Objects = Undefined, Val RefReplaceMetadataObjects, ParamsValueStorage)
 	ReturnValue = New Structure();
 	IsRegister = StrEndsWith(MetadataObjectPropertyName, "Register");
 	If IsRegister Then
@@ -2092,13 +2110,13 @@ Function GetMarkdownTables(Val MetadataObjectPropertyName, Val MetadataObjectNam
 	Else
 		ObjectData = GetDatabaseObjectsValueTableWithoutTabularSection(MetadataObjectPropertyName + "." + MetadataObjectName, Objects);
 	EndIf;
-	ObjectDataMarkdownTable = GetMarkdownTable(MetadataObjectPropertyName, MetadataObjectName, ObjectData, RefReplaceMetadataObjects);
+	ObjectDataMarkdownTable = GetMarkdownTable(MetadataObjectPropertyName, MetadataObjectName, ObjectData, RefReplaceMetadataObjects, ParamsValueStorage);
 	ReturnValue.Insert("ObjectDataMarkdownTable", ObjectDataMarkdownTable);
 	TabularSectionsDataMarkdownTables = New Structure;
 	If Not IsRegister Then
 		TabularSections = GetDatabaseObjectsValueTablesOfTabularSection(MetadataObjectPropertyName + "." + MetadataObjectName, Objects);
 		For Each ItemData In TabularSections Do
-			TabularSectionMarkdownTable = GetMarkdownTable(MetadataObjectPropertyName, MetadataObjectName, ItemData.Value, RefReplaceMetadataObjects);
+			TabularSectionMarkdownTable = GetMarkdownTable(MetadataObjectPropertyName, MetadataObjectName, ItemData.Value, RefReplaceMetadataObjects, ParamsValueStorage);
 			TabularSectionsDataMarkdownTables.Insert(ItemData.Key, TabularSectionMarkdownTable);
 		EndDo;
 	EndIf;
@@ -2107,7 +2125,7 @@ Function GetMarkdownTables(Val MetadataObjectPropertyName, Val MetadataObjectNam
 EndFunction
 
 &AtServerNoContext
-Function GetMarkdownTable(Val MetadataObjectPropertyName, Val MetadataObjectName, DataTable, RefReplaceMetadataObjects)
+Function GetMarkdownTable(Val MetadataObjectPropertyName, Val MetadataObjectName, DataTable, RefReplaceMetadataObjects, ParamsValueStorage)
 	ReturnValue = "";
 	MarkdownData = New Array;	 
 	
@@ -2142,7 +2160,7 @@ Function GetMarkdownTable(Val MetadataObjectPropertyName, Val MetadataObjectName
 			If Not TypeOf(Row[Column.Name]) = Type("Number") Then
 				Markdown.Add("'");
 			EndIf;
-			RowData = GeValuetStringRepresentation(Row[Column.Name], RefReplaceMetadataObjects);
+			RowData = GeValuetStringRepresentation(Row[Column.Name], RefReplaceMetadataObjects, ParamsValueStorage);
 			Markdown.Add(RowData);
 			If Not TypeOf(Row[Column.Name]) = Type("Number") Then
 				Markdown.Add("'");
@@ -2161,7 +2179,7 @@ Function GetMarkdownTable(Val MetadataObjectPropertyName, Val MetadataObjectName
 EndFunction
 
 &AtServerNoContext
-Function GeValuetStringRepresentation(DataValue, RefReplaceMetadataObjects)
+Function GeValuetStringRepresentation(DataValue, RefReplaceMetadataObjects, ParamsValueStorage)
 	ReturnValue = "";
 	DataValueTypeOf = TypeOf(DataValue);
 	MetadataObject = Metadata.FindByType(DataValueTypeOf);
@@ -2171,13 +2189,40 @@ Function GeValuetStringRepresentation(DataValue, RefReplaceMetadataObjects)
 		ElsIf DataValueTypeOf = Type("Number") Then
 			ReturnValue = Format(DataValue, "NDS=.; NGS=; NLZ=; NG=0");
 		ElsIf DataValueTypeOf = Type("ValueStorage") Then
-			Writer = New XMLWriter();
-			Writer.SetString();
-			WriteXML(Writer, DataValue);
-			ReturnValue = Writer.Close();
-			ReturnValue = StrReplace(ReturnValue, "<d1p1:ValueStorage xmlns:d1p1=""http://v8.1c.ru/data"">", "");
-			ReturnValue = StrReplace(ReturnValue, "</d1p1:ValueStorage>", "");
-			ReturnValue = "ValueStorage:" + ReturnValue;
+			
+			If ParamsValueStorage.CreateFileForStorage Then
+				
+				Binary = DataValue.Get();
+				
+				Hash= New DataHashing(HashFunction.SHA256);
+				Hash.Append(Binary);
+				
+				Name = String(Hash.HashSum);
+				
+				Path = ParamsValueStorage.PathToUpload
+						+ Name 
+						+ ParamsValueStorage.FileType;
+						
+				Binary.Write(Path);
+				
+				Path = ParamsValueStorage.PathToSave
+						+ Name 
+						+ ParamsValueStorage.FileType;
+				
+				ReturnValue = "ValueStorage:" + Path;
+				
+			Else
+				
+				Writer = New XMLWriter();
+				Writer.SetString();
+				WriteXML(Writer, DataValue);
+				ReturnValue = Writer.Close();
+				ReturnValue = StrReplace(ReturnValue, "<d1p1:ValueStorage xmlns:d1p1=""http://v8.1c.ru/data"">", "");
+				ReturnValue = StrReplace(ReturnValue, "</d1p1:ValueStorage>", "");
+				ReturnValue = "ValueStorage:" + ReturnValue;
+				
+			EndIf;
+			
 		Else
 			ReturnValue = String(DataValue);
 			ReturnValue = StrReplace(ReturnValue, "\", "\\");
@@ -2303,7 +2348,7 @@ Procedure FormatGerkinTable(TableArray)
 		ParametersRow = "| ";
 		For Kkk = 0 To LengthArray.Count() - 1 Do
 			Ch = TrimAll(ParametersArray[Kkk]);
-			While StrLen(Ch) < LengthArray[Kkk] Do
+			While StrLen(Ch) < min(LengthArray[Kkk], 1024) Do
 				Ch = Ch + " ";
 			EndDo;
 			ParametersRow = ParametersRow + Ch + " | ";
@@ -2320,9 +2365,9 @@ EndProcedure
 #Region ConstantValue
 
 &AtServerNoContext
-Function GetMarkdownConstantValue(Val MetadataObjectName, Val RefReplaceMetadataObjects)
+Function GetMarkdownConstantValue(Val MetadataObjectName, Val RefReplaceMetadataObjects, CreateFileForStorage)
 	DataValue = Constants[MetadataObjectName].Get();
-	Return GeValuetStringRepresentation(DataValue, RefReplaceMetadataObjects);
+	Return GeValuetStringRepresentation(DataValue, RefReplaceMetadataObjects, CreateFileForStorage);
 EndFunction
 
 #EndRegion
