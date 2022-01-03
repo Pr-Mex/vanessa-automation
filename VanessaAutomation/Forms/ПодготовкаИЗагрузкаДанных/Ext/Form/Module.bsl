@@ -1500,7 +1500,7 @@ Procedure FillDependenciesForObjects(ObjectData, ProcessingDependencies, Depende
 				Continue;
 			EndIf;
 			TypeName = XMLType.TypeName;
-			If Not (StrStartsWith(TypeName, "CatalogRef") Or StrStartsWith(TypeName, "DocumentRef") Or StrStartsWith(TypeName, "ChartOfCharacteristicTypesRef"))
+			If Not (Left(TypeName, 10) = "CatalogRef" Or Left(TypeName, 11) = "DocumentRef" Or Left(TypeName, 29) = "ChartOfCharacteristicTypesRef")
 			 Or DataValue.IsEmpty()
 			 Or Dependencies.Find(DataValue, "Item") <> Undefined Then
 				Continue;
@@ -2226,15 +2226,15 @@ Function GeValuetStringRepresentation(DataValue, RefReplaceMetadataObjects, Para
 					
 				Else
 					
-					Hash= New DataHashing(HashFunction.SHA256);
-					Hash.Append(Data);
+					Hash= New DataHashing(HashFunction.MD5);
+					Hash.Append(ValueToStringInternal(Data));
 					
 					Name = StrReplace(String(Hash.HashSum), " ", "");
 					
 				EndIf;
 				
 				Path = ParamsValueStorage.PathToUpload
-						+ "/"
+						+ ?(Right(ParamsValueStorage.PathToUpload, 1) = "/", "", "/")
 						+ Name 
 						+ ".bin";
 						
@@ -2245,7 +2245,7 @@ Function GeValuetStringRepresentation(DataValue, RefReplaceMetadataObjects, Para
 				Writer.Close();
 				
 				Path = ParamsValueStorage.PathToFeature
-						+ "/"
+						+ ?(Right(ParamsValueStorage.PathToUpload, 1) = "/", "", "/")
 						+ Name
 						+ ".bin";
 				
@@ -2693,10 +2693,9 @@ EndProcedure
 КонецФункции	 
 
 &НаКлиенте
-Процедура CreateFileForStorageПриИзменении(Элемент)
+Процедура CreateFileForStorageOnChange(Item)
 	
-	Элементы.PathToUpload.Доступность   = CreateFileForStorage;
-	Элементы.UploadFileType.Доступность = CreateFileForStorage;
+	Items.PathToUpload.Enabled = CreateFileForStorage;
 	
 КонецПроцедуры
 
