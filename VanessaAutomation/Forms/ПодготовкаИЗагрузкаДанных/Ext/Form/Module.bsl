@@ -119,7 +119,7 @@ Procedure ICheckOrCreateCatalogObjects(Val ObjectName, Val Values) Export
 	If Not Values.Count() Then
 		Return;
 	EndIf;
-	ICheckOrCreateCatalogObjectsAtServer(ObjectName, Values);
+	ICheckOrCreateCatalogObjectsAtServer(ObjectName, Values, False, Object.КаталогПроекта);
 EndProcedure
 
 &AtClient
@@ -132,7 +132,7 @@ Procedure ICheckOrCreateCatalogObjectsWithDataExchangeLoadTrue(Val ObjectName, V
 	If Not Values.Count() Then
 		Return;
 	EndIf;
-	ICheckOrCreateCatalogObjectsAtServer(ObjectName, Values, True);
+	ICheckOrCreateCatalogObjectsAtServer(ObjectName, Values, True, Object.КаталогПроекта);
 EndProcedure
 
 &AtClient
@@ -141,7 +141,7 @@ Procedure ЯПроверяюИлиСоздаюДляСправочникаОбъ
 EndProcedure
 
 &AtServerNoContext
-Procedure ICheckOrCreateCatalogObjectsAtServer(ObjectName, Values, DataExchange = True)
+Procedure ICheckOrCreateCatalogObjectsAtServer(ObjectName, Values, DataExchange = True, AdditionalParams = Undefined)
 	ObjectValues = GetValueTableFromVanessaTableArray(Values);
 	ObjectAttributes = New ValueTable;
 	FillColumnsByStandardAttributes(ObjectAttributes, "Catalogs", ObjectName);
@@ -194,7 +194,7 @@ Procedure ICheckOrCreateCatalogObjectsAtServer(ObjectName, Values, DataExchange 
 				Obj.DeletionMark = True;
 				Continue;
 			EndIf;
-			FillTipicalObjectAttributesByValues(Obj, Row, Column);
+			FillTipicalObjectAttributesByValues(Obj, Row, Column, AdditionalParams);
 		EndDo;
 		If Not ValueIsFilled(Obj.Code) Then
 			Obj.SetNewCode();
@@ -443,7 +443,7 @@ Procedure ICheckOrCreateInformationRegisterRecords(Val RegisterName, Val Values)
 	If Not Values.Count() Then
 		Return;
 	EndIf;
-	ICheckOrCreateInformationRegisterRecordsAtServer(RegisterName, Values);
+	ICheckOrCreateInformationRegisterRecordsAtServer(RegisterName, Values, False, False, Object.КаталогПроекта);
 EndProcedure
 
 &AtClient
@@ -456,7 +456,7 @@ Procedure ICheckOrCreateInformationRegisterRecordsUsingRecordSets(Val RegisterNa
 	If Not Values.Count() Then
 		Return;
 	EndIf;
-	ICheckOrCreateInformationRegisterRecordsAtServer(RegisterName, Values, True);
+	ICheckOrCreateInformationRegisterRecordsAtServer(RegisterName, Values, True, False, Object.КаталогПроекта);
 EndProcedure
 
 &AtClient
@@ -478,7 +478,7 @@ Procedure ЯПроверяюИлиСоздаюДляРегистраСведен
 EndProcedure
 
 &AtServerNoContext
-Procedure ICheckOrCreateInformationRegisterRecordsAtServer(RegisterName, Values, UseRecordSets = False, DataExchange = True)	
+Procedure ICheckOrCreateInformationRegisterRecordsAtServer(RegisterName, Values, UseRecordSets = False, DataExchange = True, workspaceRoot = "")	
 	ObjectValues = GetValueTableFromVanessaTableArray(Values);	
 	ObjectAttributes = New ValueTable;
 	FillColumnsByStandardAttributes(ObjectAttributes, "InformationRegisters", RegisterName);
@@ -531,7 +531,7 @@ Procedure ICheckOrCreateInformationRegisterRecordsAtServer(RegisterName, Values,
 			FoundRows = ObjectValues.FindRows(DimensionsFilter);
 			For Each MasterDimension In MasterDimensions Do
 				ValueType = RegisterSet.Filter[MasterDimension].Value;
-				DimensionValue = ParseStringValue(DimensionsSet[MasterDimension], RegisterSet.Filter[MasterDimension].ValueType);					
+				DimensionValue = ParseStringValue(DimensionsSet[MasterDimension], RegisterSet.Filter[MasterDimension].ValueType, workspaceRoot);
 				RegisterSet.Filter[MasterDimension].Set(DimensionValue);	
 			EndDo;
 			For Each Row In FoundRows Do
@@ -697,10 +697,9 @@ EndProcedure
 
 &AtServer
 Procedure OnCreateAtServer(Cancel, StandardProcessing)	
-	MaxDownstreamDependenciesHierarchyLevel = 1;
 	
-	CreateFileForStorage = True;
-	UploadFileType = "bin";
+	MaxDownstreamDependenciesHierarchyLevel = 1;
+	Parameters.Property("workspaceRoot", Object.КаталогПроекта);
 	
 EndProcedure
 
@@ -713,9 +712,7 @@ Procedure OnOpen(Cancel)
 	FillStepsLanguage();
 	LocalizedStringFromServer = LocalizedStringsServer();
 	ChangeReplaceRefByAttribute();
-	
-	CopyFormData(FormOwner.Объект, Object);
-	
+		
 EndProcedure
 
 &AtClient
@@ -1528,15 +1525,15 @@ Function EnumNameByRef(RefData) Export
 EndFunction
 
 &AtServerNoContext
-Procedure FillTipicalObjectAttributesByValues(Obj, Row, Column)
+Procedure FillTipicalObjectAttributesByValues(Obj, Row, Column, workspaceRoot = "")
 	If Not IsWritableObjectField(Obj, Column.Name) Then
 		Return;
 	EndIf;
-	Obj[Column.Name] = ParseStringValue(Row[Column.Name], Column.ValueType);
+	Obj[Column.Name] = ParseStringValue(Row[Column.Name], Column.ValueType, workspaceRoot);
 EndProcedure
 
 &AtServerNoContext
-Function ParseStringValue(Val ParsingValue, Val ValueType)
+Function ParseStringValue(Val ParsingValue, Val ValueType, workspaceRoot)
 	If ValueType.ContainsType(Type("Boolean"))
 		And (ParsingValue = "True"
 			Or ParsingValue = "False") Then
@@ -1558,6 +1555,17 @@ Function ParseStringValue(Val ParsingValue, Val ValueType)
 		Reader = New XMLReader();
 		Reader.SetString(ParsingValue);
 		Result = ReadXML(Reader);
+		Return Result;
+	EndIf;
+	If Left(ParsingValue, 17) = "ValueStoragePath:" Then
+		Path = StrReplace(ParsingValue, "ValueStoragePath:", "");
+		Path = StrReplace(Path, "$workspaceRoot", workspaceRoot);
+		
+		Reader = New XMLReader();
+		Reader.OpenFile(Path);
+		Result = ReadXML(Reader);
+		Reader.Close();
+		
 		Return Result;
 	EndIf;
 	If Left(ParsingValue, 16) = "FindByAttribute:" Then
@@ -1782,11 +1790,10 @@ Function GeneratedFeatureFile()
 					
 	EndIf;
 	
-	ParamsValueStorage = New Structure("CreateFileForStorage, PathToUpload, PathToFeature, FileType"
+	ParamsValueStorage = New Structure("CreateFileForStorage, PathToUpload, PathToFeature"
 														, CreateFileForStorage
 														, PathToUpload
-														, PathToFeature
-														, UploadFileType);
+														, PathToFeature);
 	
 	For Each MetadataListParentRow In MetadataListValue.Rows Do
 		For Each MetadataListRow In MetadataListParentRow.Rows Do
@@ -1875,11 +1882,10 @@ Function GenerateFeatureFileForRefsAtServer()
 					
 	EndIf;
 	
-	ParamsValueStorage = New Structure("CreateFileForStorage, PathToUpload, PathToFeature, FileType"
+	ParamsValueStorage = New Structure("CreateFileForStorage, PathToUpload, PathToFeature"
 														, CreateFileForStorage
 														, PathToUpload
-														, PathToFeature
-														, UploadFileType);
+														, PathToFeature);
 														
 	For Each KeyValuePair In ObjectsByTypes Do
 		ObjectsOfType = KeyValuePair.Value;
@@ -2213,26 +2219,35 @@ Function GeValuetStringRepresentation(DataValue, RefReplaceMetadataObjects, Para
 			
 			If ParamsValueStorage.CreateFileForStorage Then
 				
-				Binary = DataValue.Get();
-				
-				Hash= New DataHashing(HashFunction.SHA256);
-				Hash.Append(Binary);
-				
-				Name = StrReplace(String(Hash.HashSum), " ", "");
+				Data = DataValue.Get();
+				If Data = Undefined Then
+					
+					Name = "Undefined"
+					
+				Else
+					
+					Hash= New DataHashing(HashFunction.SHA256);
+					Hash.Append(Data);
+					
+					Name = StrReplace(String(Hash.HashSum), " ", "");
+					
+				EndIf;
 				
 				Path = ParamsValueStorage.PathToUpload
 						+ "/"
 						+ Name 
-						+ "."
-						+ ParamsValueStorage.FileType;
+						+ ".bin";
 						
-				Binary.Write(Path);
+				Writer = New XMLWriter();
+				Writer.OpenFile(Path);
+				Writer.WriteXMLDeclaration();
+				WriteXML(Writer, DataValue);
+				Writer.Close();
 				
 				Path = ParamsValueStorage.PathToFeature
 						+ "/"
 						+ Name
-						+ "."
-						+ ParamsValueStorage.FileType;
+						+ ".bin";
 				
 				ReturnValue = "ValueStoragePath:" + Path;
 				
@@ -2241,6 +2256,7 @@ Function GeValuetStringRepresentation(DataValue, RefReplaceMetadataObjects, Para
 				Writer = New XMLWriter();
 				Writer.SetString();
 				WriteXML(Writer, DataValue);
+				
 				ReturnValue = Writer.Close();
 				ReturnValue = StrReplace(ReturnValue, "<d1p1:ValueStorage xmlns:d1p1=""http://v8.1c.ru/data"">", "");
 				ReturnValue = StrReplace(ReturnValue, "</d1p1:ValueStorage>", "");
