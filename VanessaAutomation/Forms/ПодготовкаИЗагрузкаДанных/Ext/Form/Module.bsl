@@ -1498,14 +1498,17 @@ Procedure FillDependenciesForObjects(ObjectData, ProcessingDependencies, Depende
 				Continue;
 			EndIf;
 			DataValue = Row[Column.Name];
-			XMLType = XMLTypeOf(DataValue);
-			If XMLType = Undefined Then
+			TypeVal = TypeOf(DataValue);
+			
+			If TypeVal = Undefined Then
 				Continue;
 			EndIf;
-			TypeName = XMLType.TypeName;
-			If Not (Left(TypeName, 10) = "CatalogRef" Or Left(TypeName, 11) = "DocumentRef" Or Left(TypeName, 29) = "ChartOfCharacteristicTypesRef")
-			 Or DataValue.IsEmpty()
-			 Or Dependencies.Find(DataValue, "Item") <> Undefined Then
+			If Not (Documents.AllRefsType().ContainsType(TypeVal)
+						Or Catalogs.AllRefsType().ContainsType(TypeVal)
+						Or ChartsOfCharacteristicTypes.AllRefsType().ContainsType(TypeVal)) 
+				 	Or DataValue.IsEmpty()
+				 	Or Dependencies.Find(DataValue, "Item") <> Undefined Then
+				
 				Continue;
 			EndIf;		
 			PredefinedCheck = New Structure;
