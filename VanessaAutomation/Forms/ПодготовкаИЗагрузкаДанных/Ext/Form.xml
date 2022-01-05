@@ -173,7 +173,7 @@
 							<ContextMenu name="PathToUploadКонтекстноеМеню" id="181"/>
 							<ExtendedTooltip name="PathToUploadРасширеннаяПодсказка" id="182"/>
 							<Events>
-								<Event name="StartChoice">PathToUploadНачалоВыбора</Event>
+								<Event name="StartChoice">PathToUploadStartChoice</Event>
 							</Events>
 						</InputField>
 						<CheckBoxField name="MakeRelativePath" id="188">
@@ -1084,4 +1084,16 @@
 			<Action>ProcessReplaceRefByAttribute</Action>
 		</Command>
 	</Commands>
+	<Parameters>
+		<Parameter name="workspaceRoot">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
 </Form>
