@@ -847,6 +847,7 @@ Procedure ChoosePathContinuation(Result, AdditionalParameters) Export
 		
 	EndIf;
 	
+	//PathToUpload = StrReplace(Result[0], "//", "/");
 	PathToUpload = Result[0];
 	
 EndProcedure
@@ -1796,10 +1797,11 @@ EndFunction
 &AtServer
 Function ParamsValueStorageSaveToFile()
 	
-	MainPath = StrReplace(PathToUpload, "\", "/");
-	If Right(MainPath, 1) <> "/" Then
-		
-		MainPath = MainPath + "/";
+	MainPath = PathToUpload;
+	Div = GetPathSeparator();
+	If Right(MainPath, 1) <>  Div Then
+		                         
+		MainPath = MainPath + Div;
 		
 	EndIf;
 	
@@ -2716,6 +2718,7 @@ EndProcedure
 Процедура CreateFileForStorageOnChange(Item)
 	
 	Items.PathToUpload.Enabled = CreateFileForStorage;
+	Items.MakeAbsPath.Enabled = CreateFileForStorage;
 	
 КонецПроцедуры
 
