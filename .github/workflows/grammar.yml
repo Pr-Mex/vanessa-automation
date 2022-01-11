@@ -1,3 +1,11 @@
+name: Check grammar
+
+on:
+  push:
+    paths:
+    - 'VanessaAutomation\Forms\УправляемаяФорма\Ext\Form.xml'
+    - '.github\workflows\grammar.yml'
+    - 'tools\python\grammar\*'
 steps:
 - uses: actions/checkout@v2
 - uses: actions/setup-python@v2
