@@ -1,5 +1,5 @@
 import sys
 
 if 1 > 0:
-  print >> sys.stderr, "Something is seriously wrong."
+  print("Something is seriously wrong.", file=sys.stderr)
   sys.exit(1)
