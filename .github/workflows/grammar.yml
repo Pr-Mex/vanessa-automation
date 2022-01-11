@@ -3,14 +3,14 @@ name: Check grammar
 on:
   push:
     paths:
-      - 'VanessaAutomation\Forms\УправляемаяФорма\Ext\Form.xml'
-      - '.github\workflows\grammar.yml'
-      - 'tools\python\grammar\**'
+      - 'VanessaAutomation/Forms/УправляемаяФорма/Ext/Form.xml'
+      - '.github/workflows/grammar.yml'
+      - 'tools/python/grammar/**'
   pull_request:
     paths:
-      - 'VanessaAutomation\Forms\УправляемаяФорма\Ext\Form.xml'
-      - '.github\workflows\grammar.yml'
-      - 'tools\python\grammar\**'
+      - 'VanessaAutomation/Forms/УправляемаяФорма/Ext/Form.xml'
+      - '.github/workflows/grammar.yml'
+      - 'tools/python/grammar/**'
 jobs:
   CheckTooltips:
     runs-on: ubuntu-latest
