@@ -14,7 +14,7 @@ Et.register_namespace("", "http://v8.1c.ru/8.3/MDClasses")
 
 path_to_dict = os.path.join(os.path.dirname(__file__), "DictException.txt")
 with open(path_to_dict, "r", encoding="utf-8") as f:
-    our_dict = f.readlines()
+    our_dict = [x.strip() for x in f.readlines()]
 
 
 def getRuContent(obj: Et.Element):
