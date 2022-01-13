@@ -1,6 +1,10 @@
 import sys
 import os
 from xml.etree import ElementTree as et
+from pyaspeller import YandexSpeller
+
+
+speller = YandexSpeller(lang='ru', ignore_urls=True)
 
 namespaces = {'logform': 'http://v8.1c.ru/8.3/xcf/logform', 'core': 'http://v8.1c.ru/8.1/data/core'}
 et.register_namespace('', 'http://v8.1c.ru/8.3/MDClasses')
@@ -47,10 +51,41 @@ def getChildItems(item: et.Element)-> dict:
 
 def parseXML(path_to_form):
     form = et.parse(os.path.abspath(path_to_form)).getroot()
-    tooltips = getChildItems(form)
+    return getChildItems(form)
 
-    print(tooltips)
+
+def prepareText(text):
+    result = []
+    for line in text.split('\n'):
+        if line.strip():
+            result += line.split(' ')
+
+    result = [x.lower() for x in result if len(x) > 1]
+    return result
+
+
+def checkGrammar(text) -> list:
+    result = []
+    # find those words that may be misspelled
+    check = speller.spell(text)
+    for res in check:
+        if res['s']: # Есть варианты замены
+            result.append(f"{res['word']} -> {res['s']}")
+
+    return result
 
 
 if __name__ == "__main__":
-    parseXML('./VanessaAutomation/Forms/УправляемаяФорма/Ext/Form.xml')
+    items = parseXML('./VanessaAutomation/Forms/УправляемаяФорма/Ext/Form.xml')
+    exit_code = 0
+    for item, text in items.items():
+        mistakes = checkGrammar(text)
+        if mistakes:
+            print(item, file=sys.stderr)
+            for number, mistake in enumerate(mistakes, 1):
+                print(f"  {number}. {mistake}", file=sys.stderr)
+            exit_code = 1
+
+    sys.exit(exit_code)
+
+
