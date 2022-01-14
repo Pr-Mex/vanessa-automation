@@ -12,6 +12,11 @@ Enter tags in the field. If the tag is detected in the feature, the whole featur
       * **filtertags**:
 Enter tags in the field. If the tag is NOT detected in the feature, the whole feature will not be uploaded. You can also upload only the feature scenarios, which contain the tags from the list.
 
+   * **scenariofilter**:
+Allows you to set the order in which scripts are executed. The scripts will be executed in the order they are listed.
+Plus allows you to set a filter for executing scripts. Only scripts from the list will be executed.
+The script in the list is indicated by its name.
+
 *  Language
 
       * **gherkinlanguage**:
@@ -22,10 +27,26 @@ The field defines scenatio generating language. If any but not Russain is select
       * **addmetainformationclicking**:
 If the checkbox is on, data for translation into another language will be added when clicking the scenario step by step.
 
+      * **searchformelementsbyname**:
+If the flag is set, then when generating the script text after pasting, the steps in the script will search for form elements by their internal name.
+If the flag is unchecked, then when generating the script text after being pasted, the steps in the script will search for form elements by title, if possible.
+This is possible if there is only one element with the given heading in the given form.
+
+      * **ShowWindowToStopRecordingUserActions**:
+Enables the display of an additional window for conveniently stopping the recording of user actions and switching to the Vanessa Automation window. You must enable the use of the VanessaExt component.
+
 *  System settings
 
       * **thetreetagisenabledbydefault**:
 If the checkbox is on, feature file is considered as if it has @tree tag, even if it is absent. In other words, any uploaded feature file is considered as hierarchical.
+
+      * **useaddine**:
+Designed to manage Windows and Linux windows.
+Possibilities:
+Getting a list of windows and a list of processes
+Controlling the size and position of the window
+Taking a screenshot of a window and a screenshot
+https://github.com/lintest/VanessaExt
 
       * **usethegherkinparserfromthevanessaextaddin**:
 Sets the flag. that you need to use the Gherkin parser from the VanessaExt component. This parser is much faster than the built-in parser.
@@ -68,13 +89,18 @@ If this option is enabled, then the modal window when starting the test client m
 Specifies timeout in seconds of Vanessa Automation awaiting for TestClient launch. After timeout the exception will be risen.
 
       * **testclientports**:
-Specifies ports range to search for free port to run TestClient.
+Specifies ports range to search for free port to run TestClient. For example 48100-48200.
 
       * **starttestclientsessionagainonconnectionifitsprocessisnotfound**:
 Enables restarting the test client process if the previous run did not work (for example, if no license was obtained). For thick and thin clien only.
 
-   * **testclientprocessstartinterval**:
+      * **testclientprocessstartinterval**:
 Specifies the interval at which an attempt will be made to start a testing client session.
+
+      * **DetermineTheRealPortOnWhichTheTestingClientWasLaunched**:
+If this option is enabled, then when the testing client connects, an attempt will be made to determine the real port on which the testing client was launched.
+It is necessary. since the testing client can change the port on which it started, despite the passed parameters.
+This issue is relevant when running tests on Linux.
 
 *  TestClient debug
 
@@ -93,6 +119,7 @@ Launch parameters to be passed to TestClient.
 
       * **browserlaunchcommand**:
 This field indicates the command to launch the browser. If the field is empty, then the default browser will be used to start the web client.
+If there is a TestClientUrl string in the browser launch command, then it will be replaced with the test client connection string. Otherwise, the test client connection string will be appended to the end as the last parameter.
 
 *  Closing test client
 
@@ -101,6 +128,11 @@ If the flag is set, then when closing the testing client, it will be checked whe
 
       * **timeoutbeforeforciblyclosingtestclient**:
 The number of seconds to check that the testing client process completed on its own.
+
+*  Mobile client settings
+
+      * **PathToadb**:
+The path to the adb program file
 
 ## Running scenarios
 
@@ -132,6 +164,9 @@ If this option is enabled, the following sound notification will be issued at th
      3. The breakpoint was triggered.
 You must enable the use of the VanessaExt addin.
 This option only works under Windows.
+
+   * **ShowWindowForStoppingScriptExecution**:
+Enables the display of an additional window that allows you to stop the execution of the script. You need to enable the use of the VanessaExt component.
 
    * **showrownumberonerror**:
 If flag is set, when an error occurs in tree steps will be shown column with the row number in the tree, if this column was hidden.
@@ -198,6 +233,12 @@ SikuliX or VanessaExt is used for this option.
 
    * **useaddinforscreencapture**:
 To take screenshots, use the VanessaExt add-in instead of the screenshot creation command.
+
+   * **commandscreenshot**:
+The field specifies the console command that will be used when taking screenshots.
+For example:
+     1. "C: \ Program Files (x86) \ IrfanView \ i_view32.exe" / capture = 1 / convert =
+     2.nircmd savescreenshot
 
    * **outputscreenshot**:
 Screenshots directory.
@@ -290,6 +331,10 @@ The directory for features hierarchy calculation. See Help info for details.
          * **testsuites**:
 Sets grouping value for Allure report on the Suites tab. See Help info for details.
 
+         * **tagsskippingscript**:
+List of tags separated by ";".
+If the script contains such a tag, then the script will not be executed and the Allure report will have the skipped status.
+
       *  Customize the title slide features
 
             * **attacheventlogtotheallurereport**:
@@ -350,6 +395,11 @@ Generate a report in JUnit format based on the results of script execution.
          * **junitpath**:
 Report generation directory.
 
+         * **junitscreenshots**:
+From version 13.12 screenshots can be added to jUnit.
+For everything to work correctly - the Screenshot Directory must be located inside the Project Directory.
+Save the screenshots folder as artifacts.
+
    *  ASDS
 
          * **ModelingCreateReport**:
@@ -389,13 +439,17 @@ Enables a scenario execution report in the internal format.
 *  VanessaExt add-in + Chrome + UI Automation
 
       * **UseUIAutomation**:
-Enables the use of the UI Automation mechanism on Windows.
+Enables the use of the UI Automation mechanism in Windows to emulate movement and mouse clicks in steps from the Vanessa Automation standard steps library.
+For example, when the option is disabled, step
+And I click on the "TitleButton"
+just clicks on the button without performing any interactive actions.
+If the option is enabled, the mouse cursor is first moved to this button, and then the button will be pressed.
 
       * **usebrowserwebsocket**:
 Allows to execute external commands in the browser using WebSocket.
 
       * **emulatemousemovementswithVanessaExt**:
-Enables mouse movement emulation using VanessaExt add-in
+Enables mouse movement emulation using VanessaExt add-in. By default, this option enables mouse movement when the testing client is a browser. For thin and thick clients, you need to enable UI Automation option.
 
    *  Mouse actions emulation settings
 
@@ -432,6 +486,9 @@ Enables emulation of keyboard input using VanessaExt add-in
 
       * **findingpicturesusingaddinvanessaext**:
 If this option is enabled, then the steps performing image search on the screen will use the external addin VanessaExt instead of using SikuliX.
+
+      * **PictureSearchThreshold**:
+A number that determines the threshold for searching for a picture on the screen. The value can be set in the range from 0 to 1.
 
       * **ignorebrowsersearcherrors**:
 Allows to continue running the scenario if the form item is not found in the browser.
@@ -472,11 +529,31 @@ Specifies the narrator's voice.
 
       *  Microsoft TTS
 
+            * **audioenginetts**:
+The console command to be used when converting text to speech.
+The  balabolka_console program is used.
+
+            * **ttsvoice**:
+Specifies which voice will be used for voice acting. It is allowed to indicate not the full name of the voice in the system, but only a part, for example "Elena".
+You will need to install Microsoft Speech Platform x32 and Server Runtime Languages.
+
             * **speedofspeech**:
 Narrator's speech speed.
 Value range is from -10 to 10.
 
       *  Yandex TTS
+
+            * **yandexttslanguage**:
+Sets the language in which the speaker will speak. Details here.
+To control accent and pronunciation, see here.
+
+            * **yandexttsvoice**:
+Sets the voice for the announcer to speak. Details here.
+To control accent and pronunciation, see here.
+
+            * **yandexttsemotion**:
+Sets the emotion with which the announcer will speak. Details here.
+To control accent and pronunciation, see here.
 
             * **yandexttsspeed**:
 The speed (tempo) of synthesized speech.
@@ -485,7 +562,34 @@ Speech rate is specified as a fractional number in the range from 0.1 to 3.0.
             * **yandexttsquerytype**:
 Determines how the audio files will be received: through the official API or through the free interface. The recommended value is via the official API.
 
+            * **yandexttsfolderId**:
+The last part of the path of the address string in the Internet browser. https://console.cloud.yandex.ru/folders/Directory ID
+Required:
+              1. In the main Yandex.Cloud window, click the "Go to the current directory" link.
+              2. Copy the last part of the path from the address bar
+Example:
+https://console.cloud.yandex.ru/folders/b1gheo81t4a6eaafe5vd
+(Directory ID - b1gheo81t4a6eaafe5vd)
+Retrieving a Directory ID
+
+            * **yandexttsoauthtoken**:
+The OAuth token is used in the authentication procedure in Yandex.Cloud
+To receive an OAuth token, you need:
+              1. Follow the link https://cloud.yandex.ru/docs/iam/concepts/authorization/oauth-token;
+              2. Generate a token;
+              3. Save it to a text file;
+              4. Specify the path to the text file with the token.
+
       *  Group amazon TTS
+
+            * **amazonttslanguage**:
+See the correspondence of language and voice here.
+
+            * **amazonttsvoice**:
+See the correspondence of language and voice here.
+
+            * **amazonttsengine**:
+See the options for the value for the "Engine" field here.
 
             * **amazonttsregion**:
 The field specifies the region parameter. The default is us-east-1.
@@ -514,6 +618,10 @@ Allows you to set an arbitrary set of settings for generating voiceovers.
 
       *  SBER parameters
 
+            * **sberttsvoice**:
+Sets the voice to generate.
+Examples of voices can be found here
+
       *  Voice test
 
    *  Audio cache
@@ -533,6 +641,11 @@ Voice cache files directory.
 List of files that will be used for autocorrect spoken text.
 
 *  Video tutorial
+
+      * **videocreate**:
+Allows you to create video instructions.
+A video describing the settings is in this playlist.
+It is also recommended to read this FAQ.
 
       * **videopath**:
 Directory where will be placed result of assembly videos or animated screencast.
@@ -570,11 +683,21 @@ Command to start VLC for screen recording. You can specify bitrate and other par
 The directory for temporary files created on video recording and composing. The directory is cleared before each recording!
 
          * **convertcomand**:
-The path to the convert.exe executable file in the ImageMagick directory.
+The field describes how the Convert command will be invoked.
+For ImageMagick 7, just specify "magick convert."
+For older versions, you need to specify the path to the executable convert.exe file in the directory with the ImageMagick program.
 Example:
 "C:\Program Files\ImageMagick-X.X.X-Q16\convert.exe"
 Download: https://imagemagick.org/script/download.php
-During the installation, the following item is required for installation: Install legacy utilities (e. G. Convert)
+For versions earlier than 7 during the installation, the following item is required for installation: Install legacy utilities (e. G. Convert)
+
+         * **cachevideo**:
+If the flag is set then when the step is running
+And the video insert "TextInsert"
+there will be a check to see if there is already such a video fragment in the cache.
+If there is no fragment in the cache, it will be added there.
+If there is a fragment, then it will be taken from the cache.
+Setting the flag speeds up video assembly.
 
          * **videocachepath**:
 Video snippets directory.
@@ -647,9 +770,33 @@ Keyboard layout shwitches by pressing Ctrl+Shift emulation.
 
       *  Customize the title slide features
 
+            * **changefeaturetitleslide**:
+If the flag is set, then the standard file with the feature header will be replaced with the specified video file. The video file must be of the same resolution as the video being recorded. It must also have an audio track.
+
+            * **addmusictofeaturetitleslide**:
+If the check box is selected, music will be added to the video file with the feature title
+
+            * **featuretitleslidepath**:
+The path to the video file with the feature title, which will be added instead of the standard one.
+
       *  Final slide settings 
 
+            * **changefinalslide**:
+If the flag is set, then the standard final file will be replaced with the specified video file. The video file must be of the same resolution as the video being recorded. It must also have an audio track.
+
+            * **addmusictofinalslide**:
+If the check box is selected, music will be added to the final video file.
+
+            * **finalslidepath**:
+The path to the final video file that will be added instead of the standard final video file.
+
 *  SikuliX server (deprecated)
+
+      * **usesikulixserver**:
+SikuliX is a Java application that allows you to control mouse movements and clicks on the screen, as well as emulate keystrokes on the keyboard.
+SikuliX Server is a special software optimization for working with SikuliX. If the option is enabled, VA builds one large script from many SikuliX scripts, which can be run once and quickly execute the necessary commands that previously had to be run one at a time. This allows you to significantly save time for executing one SikuliX script, because no time wasted on launching SikuliX and unloading it from memory.
+Installation and configuration of SikuliX and SikuliX Server is described in help section 20.1
+Open Help
 
       * **emulatemousemovement**:
 If the checkbox is on, then the search of form element or control will be performed on steps execution. Mouse pointer will be moved to the detected element. 
@@ -681,6 +828,16 @@ If the option is set, then bookmarks will be displayed at the top. This is to gi
 
    * **syntaxcheckingineditor**:
 If the option is set, the script syntax is checked in the editor
+
+   * **ShowVariableValuesInEditorLines**:
+Enables displaying data by variable values in the editor (inline debug). Variable values are updated after the step line is executed.
+
+   * **showdifferencesineditorseparately**:
+Controls how differences are displayed when comparing files in the editor.
+If the option is enabled, then two columns are displayed, otherwise the differences are shown in the text of the file.
+
+   * **OpenStartPageAtStartup**:
+Enables display of the start page in the editor when Vanessa Automation starts.
 
    * **vanessaeditortheme**:
 Allows you to change the editor theme.
