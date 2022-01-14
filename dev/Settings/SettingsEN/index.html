@@ -899,6 +899,12 @@ Enter tags in the field. If the tag is NOT detected in the feature, the whole fe
 </ul>
 </li>
 <li>
+<p><strong>scenariofilter</strong>:
+Allows you to set the order in which scripts are executed. The scripts will be executed in the order they are listed.
+Plus allows you to set a filter for executing scripts. Only scripts from the list will be executed.
+The script in the list is indicated by its name.</p>
+</li>
+<li>
 <p>Language</p>
 <ul>
 <li><strong>gherkinlanguage</strong>:
@@ -908,8 +914,20 @@ The field defines scenatio generating language. If any but not Russain is select
 <li>
 <p>User actions recording</p>
 <ul>
-<li><strong>addmetainformationclicking</strong>:
-If the checkbox is on, data for translation into another language will be added when clicking the scenario step by step.</li>
+<li>
+<p><strong>addmetainformationclicking</strong>:
+If the checkbox is on, data for translation into another language will be added when clicking the scenario step by step.</p>
+</li>
+<li>
+<p><strong>searchformelementsbyname</strong>:
+If the flag is set, then when generating the script text after pasting, the steps in the script will search for form elements by their internal name.
+If the flag is unchecked, then when generating the script text after being pasted, the steps in the script will search for form elements by title, if possible.
+This is possible if there is only one element with the given heading in the given form.</p>
+</li>
+<li>
+<p><strong>ShowWindowToStopRecordingUserActions</strong>:
+Enables the display of an additional window for conveniently stopping the recording of user actions and switching to the Vanessa Automation window. You must enable the use of the VanessaExt component.</p>
+</li>
 </ul>
 </li>
 <li>
@@ -918,6 +936,15 @@ If the checkbox is on, data for translation into another language will be added 
 <li>
 <p><strong>thetreetagisenabledbydefault</strong>:
 If the checkbox is on, feature file is considered as if it has @tree tag, even if it is absent. In other words, any uploaded feature file is considered as hierarchical.</p>
+</li>
+<li>
+<p><strong>useaddine</strong>:
+Designed to manage Windows and Linux windows.
+Possibilities:
+Getting a list of windows and a list of processes
+Controlling the size and position of the window
+Taking a screenshot of a window and a screenshot
+https://github.com/lintest/VanessaExt</p>
 </li>
 <li>
 <p><strong>usethegherkinparserfromthevanessaextaddin</strong>:
@@ -976,17 +1003,23 @@ Specifies timeout in seconds of Vanessa Automation awaiting for TestClient launc
 </li>
 <li>
 <p><strong>testclientports</strong>:
-Specifies ports range to search for free port to run TestClient.</p>
+Specifies ports range to search for free port to run TestClient. For example 48100-48200.</p>
 </li>
 <li>
 <p><strong>starttestclientsessionagainonconnectionifitsprocessisnotfound</strong>:
 Enables restarting the test client process if the previous run did not work (for example, if no license was obtained). For thick and thin clien only.</p>
 </li>
-</ul>
-</li>
 <li>
 <p><strong>testclientprocessstartinterval</strong>:
 Specifies the interval at which an attempt will be made to start a testing client session.</p>
+</li>
+<li>
+<p><strong>DetermineTheRealPortOnWhichTheTestingClientWasLaunched</strong>:
+If this option is enabled, then when the testing client connects, an attempt will be made to determine the real port on which the testing client was launched.
+It is necessary. since the testing client can change the port on which it started, despite the passed parameters.
+This issue is relevant when running tests on Linux.</p>
+</li>
+</ul>
 </li>
 <li>
 <p>TestClient debug</p>
@@ -1012,7 +1045,8 @@ Launch parameters to be passed to TestClient.</p>
 <p>Browser launch string installation command group</p>
 <ul>
 <li><strong>browserlaunchcommand</strong>:
-This field indicates the command to launch the browser. If the field is empty, then the default browser will be used to start the web client.</li>
+This field indicates the command to launch the browser. If the field is empty, then the default browser will be used to start the web client.
+If there is a TestClientUrl string in the browser launch command, then it will be replaced with the test client connection string. Otherwise, the test client connection string will be appended to the end as the last parameter.</li>
 </ul>
 </li>
 <li>
@@ -1026,6 +1060,13 @@ If the flag is set, then when closing the testing client, it will be checked whe
 <p><strong>timeoutbeforeforciblyclosingtestclient</strong>:
 The number of seconds to check that the testing client process completed on its own.</p>
 </li>
+</ul>
+</li>
+<li>
+<p>Mobile client settings</p>
+<ul>
+<li><strong>PathToadb</strong>:
+The path to the adb program file</li>
 </ul>
 </li>
 </ul>
@@ -1068,6 +1109,10 @@ If this option is enabled, the following sound notification will be issued at th
 You must enable the use of the VanessaExt addin.
 This option only works under Windows.</li>
 </ol>
+</li>
+<li>
+<p><strong>ShowWindowForStoppingScriptExecution</strong>:
+Enables the display of an additional window that allows you to stop the execution of the script. You need to enable the use of the VanessaExt component.</p>
 </li>
 <li>
 <p><strong>showrownumberonerror</strong>:
@@ -1152,6 +1197,15 @@ SikuliX or VanessaExt is used for this option.</p>
 <li>
 <p><strong>useaddinforscreencapture</strong>:
 To take screenshots, use the VanessaExt add-in instead of the screenshot creation command.</p>
+</li>
+<li>
+<p><strong>commandscreenshot</strong>:
+The field specifies the console command that will be used when taking screenshots.
+For example:</p>
+<ol>
+<li>"C: \ Program Files (x86) \ IrfanView \ i_view32.exe" / capture = 1 / convert =
+ 2.nircmd savescreenshot</li>
+</ol>
 </li>
 <li>
 <p><strong>outputscreenshot</strong>:
@@ -1247,7 +1301,7 @@ If the field is empty, the log will not be output to a text file.</p>
 </code></pre></div>
 
 <p>Create a scenario execution report in Allure format.</p>
-<div class="codehilite"><pre><span></span><code> <span class="o">*</span> <span class="o">**</span><span class="n">setvariablevaluesinstepsallurereport</span><span class="o">**</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">setvariablevaluesinstepsallurereport</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
 </code></pre></div>
 
 <p>If this option is enabled, then in the parameters of the steps in which the variables were used, the variable names will be replaced with their values.</p>
@@ -1279,6 +1333,11 @@ If the field is empty, the log will not be output to a text file.</p>
 </code></pre></div>
 
 <p>Sets grouping value for Allure report on the Suites tab. See Help info for details.</p>
+<div class="codehilite"><pre><span></span><code> * **tagsskippingscript**:
+</code></pre></div>
+
+<p>List of tags separated by ";".
+If the script contains such a tag, then the script will not be executed and the Allure report will have the skipped status.</p>
 <ul>
 <li>
 <p>Customize the title slide features</p>
@@ -1302,7 +1361,7 @@ If the field is empty, the log will not be output to a text file.</p>
 </code></pre></div>
 
 <p>If the option is enabled, then when an error occurs, data on running OS processes will be collected.</p>
-<div class="codehilite"><pre><span></span><code><span class="o">*</span> <span class="o">**</span><span class="n">attachvariablestotheallurereport</span><span class="o">**</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">attachvariablestotheallurereport</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
 </code></pre></div>
 
 <p>If the option is enabled, data with Context and Global Context variable values will be collected when an error occurs.</p>
@@ -1358,6 +1417,12 @@ https://habr.com/ru/company/sberbank/blog/359302/</li>
 </code></pre></div>
 
 <p>Report generation directory.</p>
+<div class="codehilite"><pre><span></span><code> * **junitscreenshots**:
+</code></pre></div>
+
+<p>From version 13.12 screenshots can be added to jUnit.
+For everything to work correctly - the Screenshot Directory must be located inside the Project Directory.
+Save the screenshots folder as artifacts.</p>
 </li>
 <li>
 <p>ASDS</p>
@@ -1415,7 +1480,11 @@ Enables a scenario execution report in the internal format.</p>
 <ul>
 <li>
 <p><strong>UseUIAutomation</strong>:
-Enables the use of the UI Automation mechanism on Windows.</p>
+Enables the use of the UI Automation mechanism in Windows to emulate movement and mouse clicks in steps from the Vanessa Automation standard steps library.
+For example, when the option is disabled, step
+And I click on the "TitleButton"
+just clicks on the button without performing any interactive actions.
+If the option is enabled, the mouse cursor is first moved to this button, and then the button will be pressed.</p>
 </li>
 <li>
 <p><strong>usebrowserwebsocket</strong>:
@@ -1423,7 +1492,7 @@ Allows to execute external commands in the browser using WebSocket.</p>
 </li>
 <li>
 <p><strong>emulatemousemovementswithVanessaExt</strong>:
-Enables mouse movement emulation using VanessaExt add-in</p>
+Enables mouse movement emulation using VanessaExt add-in. By default, this option enables mouse movement when the testing client is a browser. For thin and thick clients, you need to enable UI Automation option.</p>
 </li>
 </ul>
 </li>
@@ -1484,6 +1553,10 @@ Enables emulation of keyboard input using VanessaExt add-in</p>
 If this option is enabled, then the steps performing image search on the screen will use the external addin VanessaExt instead of using SikuliX.</p>
 </li>
 <li>
+<p><strong>PictureSearchThreshold</strong>:
+A number that determines the threshold for searching for a picture on the screen. The value can be set in the range from 0 to 1.</p>
+</li>
+<li>
 <p><strong>ignorebrowsersearcherrors</strong>:
 Allows to continue running the scenario if the form item is not found in the browser.</p>
 </li>
@@ -1538,6 +1611,16 @@ Includes voice acting of the script execution according to the specified setting
 <ul>
 <li>
 <p>Microsoft TTS</p>
+<div class="codehilite"><pre><span></span><code>* **audioenginetts**:
+</code></pre></div>
+
+<p>The console command to be used when converting text to speech.
+The  balabolka_console program is used.</p>
+<div class="codehilite"><pre><span></span><code>* **ttsvoice**:
+</code></pre></div>
+
+<p>Specifies which voice will be used for voice acting. It is allowed to indicate not the full name of the voice in the system, but only a part, for example "Elena".
+You will need to install Microsoft Speech Platform x32 and Server Runtime Languages.</p>
 <div class="codehilite"><pre><span></span><code>* **speedofspeech**:
 </code></pre></div>
 
@@ -1546,6 +1629,21 @@ Value range is from -10 to 10.</p>
 </li>
 <li>
 <p>Yandex TTS</p>
+<div class="codehilite"><pre><span></span><code>* **yandexttslanguage**:
+</code></pre></div>
+
+<p>Sets the language in which the speaker will speak. Details here.
+To control accent and pronunciation, see here.</p>
+<div class="codehilite"><pre><span></span><code>* **yandexttsvoice**:
+</code></pre></div>
+
+<p>Sets the voice for the announcer to speak. Details here.
+To control accent and pronunciation, see here.</p>
+<div class="codehilite"><pre><span></span><code>* **yandexttsemotion**:
+</code></pre></div>
+
+<p>Sets the emotion with which the announcer will speak. Details here.
+To control accent and pronunciation, see here.</p>
 <div class="codehilite"><pre><span></span><code>* **yandexttsspeed**:
 </code></pre></div>
 
@@ -1555,10 +1653,42 @@ Speech rate is specified as a fractional number in the range from 0.1 to 3.0.</p
 </code></pre></div>
 
 <p>Determines how the audio files will be received: through the official API or through the free interface. The recommended value is via the official API.</p>
+<div class="codehilite"><pre><span></span><code>* **yandexttsfolderId**:
+</code></pre></div>
+
+<p>The last part of the path of the address string in the Internet browser. https://console.cloud.yandex.ru/folders/Directory ID
+Required:
+      1. In the main Yandex.Cloud window, click the "Go to the current directory" link.
+      2. Copy the last part of the path from the address bar
+Example:
+https://console.cloud.yandex.ru/folders/b1gheo81t4a6eaafe5vd
+(Directory ID - b1gheo81t4a6eaafe5vd)
+Retrieving a Directory ID</p>
+<div class="codehilite"><pre><span></span><code>* **yandexttsoauthtoken**:
+</code></pre></div>
+
+<p>The OAuth token is used in the authentication procedure in Yandex.Cloud
+To receive an OAuth token, you need:
+      1. Follow the link https://cloud.yandex.ru/docs/iam/concepts/authorization/oauth-token;
+      2. Generate a token;
+      3. Save it to a text file;
+      4. Specify the path to the text file with the token.</p>
 </li>
 <li>
 <p>Group amazon TTS</p>
-<div class="codehilite"><pre><span></span><code><span class="o">*</span> <span class="o">**</span><span class="n">amazonttsregion</span><span class="o">**:</span>
+<div class="codehilite"><pre><span></span><code>* **amazonttslanguage**:
+</code></pre></div>
+
+<p>See the correspondence of language and voice here.</p>
+<div class="codehilite"><pre><span></span><code>* **amazonttsvoice**:
+</code></pre></div>
+
+<p>See the correspondence of language and voice here.</p>
+<div class="codehilite"><pre><span></span><code>* **amazonttsengine**:
+</code></pre></div>
+
+<p>See the options for the value for the "Engine" field here.</p>
+<div class="codehilite"><pre><span></span><code><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">amazonttsregion</span><span class="o">**:</span><span class="w"></span>
 </code></pre></div>
 
 <p>The field specifies the region parameter. The default is us-east-1.</p>
@@ -1592,6 +1722,11 @@ The method should return the path to the mp3 file.</p>
 </li>
 <li>
 <p>SBER parameters</p>
+<div class="codehilite"><pre><span></span><code>* **sberttsvoice**:
+</code></pre></div>
+
+<p>Sets the voice to generate.
+Examples of voices can be found here</p>
 </li>
 <li>
 <p>Voice test</p>
@@ -1622,6 +1757,12 @@ Reduces voice generation costs.</p>
 <li>
 <p>Video tutorial</p>
 <ul>
+<li>
+<p><strong>videocreate</strong>:
+Allows you to create video instructions.
+A video describing the settings is in this playlist.
+It is also recommended to read this FAQ.</p>
+</li>
 <li>
 <p><strong>videopath</strong>:
 Directory where will be placed result of assembly videos or animated screencast.</p>
@@ -1658,7 +1799,7 @@ Create animated HTML screencast.</p>
 </code></pre></div>
 
 <p>Sets top indent</p>
-<div class="codehilite"><pre><span></span><code> <span class="o">*</span> <span class="o">**</span><span class="n">videocapturetool</span><span class="o">**</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">videocapturetool</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
 </code></pre></div>
 
 <p>If VLC is selected, VLC will be used for video recording. Otherwise, VanessaExt add-in that will call ffmpeg will be used.</p>
@@ -1673,11 +1814,22 @@ Create animated HTML screencast.</p>
 <div class="codehilite"><pre><span></span><code> * **convertcomand**:
 </code></pre></div>
 
-<p>The path to the convert.exe executable file in the ImageMagick directory.
+<p>The field describes how the Convert command will be invoked.
+For ImageMagick 7, just specify "magick convert."
+For older versions, you need to specify the path to the executable convert.exe file in the directory with the ImageMagick program.
 Example:
 "C:\Program Files\ImageMagick-X.X.X-Q16\convert.exe"
 Download: https://imagemagick.org/script/download.php
-During the installation, the following item is required for installation: Install legacy utilities (e. G. Convert)</p>
+For versions earlier than 7 during the installation, the following item is required for installation: Install legacy utilities (e. G. Convert)</p>
+<div class="codehilite"><pre><span></span><code> * **cachevideo**:
+</code></pre></div>
+
+<p>If the flag is set then when the step is running
+And the video insert "TextInsert"
+there will be a check to see if there is already such a video fragment in the cache.
+If there is no fragment in the cache, it will be added there.
+If there is a fragment, then it will be taken from the cache.
+Setting the flag speeds up video assembly.</p>
 <div class="codehilite"><pre><span></span><code> * **videocachepath**:
 </code></pre></div>
 
@@ -1769,15 +1921,46 @@ Keyboard layout shwitches by pressing Ctrl+Shift emulation.</p>
 <ul>
 <li>
 <p>Customize the title slide features</p>
+<div class="codehilite"><pre><span></span><code>* **changefeaturetitleslide**:
+</code></pre></div>
+
+<p>If the flag is set, then the standard file with the feature header will be replaced with the specified video file. The video file must be of the same resolution as the video being recorded. It must also have an audio track.</p>
+<div class="codehilite"><pre><span></span><code>* **addmusictofeaturetitleslide**:
+</code></pre></div>
+
+<p>If the check box is selected, music will be added to the video file with the feature title</p>
+<div class="codehilite"><pre><span></span><code>* **featuretitleslidepath**:
+</code></pre></div>
+
+<p>The path to the video file with the feature title, which will be added instead of the standard one.</p>
 </li>
 <li>
 <p>Final slide settings </p>
+<div class="codehilite"><pre><span></span><code>* **changefinalslide**:
+</code></pre></div>
+
+<p>If the flag is set, then the standard final file will be replaced with the specified video file. The video file must be of the same resolution as the video being recorded. It must also have an audio track.</p>
+<div class="codehilite"><pre><span></span><code>* **addmusictofinalslide**:
+</code></pre></div>
+
+<p>If the check box is selected, music will be added to the final video file.</p>
+<div class="codehilite"><pre><span></span><code>* **finalslidepath**:
+</code></pre></div>
+
+<p>The path to the final video file that will be added instead of the standard final video file.</p>
 </li>
 </ul>
 </li>
 <li>
 <p>SikuliX server (deprecated)</p>
 <ul>
+<li>
+<p><strong>usesikulixserver</strong>:
+SikuliX is a Java application that allows you to control mouse movements and clicks on the screen, as well as emulate keystrokes on the keyboard.
+SikuliX Server is a special software optimization for working with SikuliX. If the option is enabled, VA builds one large script from many SikuliX scripts, which can be run once and quickly execute the necessary commands that previously had to be run one at a time. This allows you to significantly save time for executing one SikuliX script, because no time wasted on launching SikuliX and unloading it from memory.
+Installation and configuration of SikuliX and SikuliX Server is described in help section 20.1
+Open Help</p>
+</li>
 <li>
 <p><strong>emulatemousemovement</strong>:
 If the checkbox is on, then the search of form element or control will be performed on steps execution. Mouse pointer will be moved to the detected element. 
@@ -1820,6 +2003,19 @@ If the option is set, then bookmarks will be displayed at the top. This is to gi
 <li>
 <p><strong>syntaxcheckingineditor</strong>:
 If the option is set, the script syntax is checked in the editor</p>
+</li>
+<li>
+<p><strong>ShowVariableValuesInEditorLines</strong>:
+Enables displaying data by variable values in the editor (inline debug). Variable values are updated after the step line is executed.</p>
+</li>
+<li>
+<p><strong>showdifferencesineditorseparately</strong>:
+Controls how differences are displayed when comparing files in the editor.
+If the option is enabled, then two columns are displayed, otherwise the differences are shown in the text of the file.</p>
+</li>
+<li>
+<p><strong>OpenStartPageAtStartup</strong>:
+Enables display of the start page in the editor when Vanessa Automation starts.</p>
 </li>
 <li>
 <p><strong>vanessaeditortheme</strong>:

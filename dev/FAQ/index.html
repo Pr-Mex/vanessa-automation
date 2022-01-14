@@ -754,19 +754,19 @@
     для <code>NirCMD</code>:</p>
 </li>
 </ol>
-<div class="codehilite"><pre><span></span><code>    <span class="nt">&quot;ДелатьСкриншотПриВозникновенииОшибки&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&quot;СниматьСкриншотКаждогоОкна1С&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&quot;КаталогOutputСкриншоты&quot;</span><span class="p">:</span> <span class="s2">&quot;$workspaceRoot/build/out/ScreenShots&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;КомандаСделатьСкриншот&quot;</span><span class="p">:</span> <span class="s2">&quot;nircmd savescreenshot &quot;</span>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nt">&quot;ДелатьСкриншотПриВозникновенииОшибки&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;СниматьСкриншотКаждогоОкна1С&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;КаталогOutputСкриншоты&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$workspaceRoot/build/out/ScreenShots&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;КомандаСделатьСкриншот&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;nircmd savescreenshot &quot;</span><span class="w"></span>
 </code></pre></div>
 
-<div class="codehilite"><pre><span></span><code><span class="n">или</span> <span class="n">для</span> <span class="n n-Quoted">`IrfanView`</span><span class="o">:</span>
+<div class="codehilite"><pre><span></span><code><span class="n">или</span><span class="w"> </span><span class="n">для</span><span class="w"> </span><span class="n n-Quoted">`IrfanView`</span><span class="o">:</span><span class="w"></span>
 </code></pre></div>
 
-<div class="codehilite"><pre><span></span><code>    <span class="nt">&quot;ДелатьСкриншотПриВозникновенииОшибки&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&quot;СниматьСкриншотКаждогоОкна1С&quot;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
-    <span class="nt">&quot;КаталогOutputСкриншоты&quot;</span><span class="p">:</span> <span class="s2">&quot;$workspaceRoot/build/out/ScreenShots&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;КомандаСделатьСкриншот&quot;</span><span class="p">:</span> <span class="err">&#39;</span><span class="s2">&quot;C:\Program Files (x86)\IrfanView\i_view32.exe&quot;</span> <span class="err">/cap</span><span class="kc">ture</span><span class="err">=</span><span class="mi">1</span> <span class="err">/co</span><span class="kc">n</span><span class="err">ver</span><span class="kc">t</span><span class="err">=&#39;</span>
+<div class="codehilite"><pre><span></span><code><span class="w">    </span><span class="nt">&quot;ДелатьСкриншотПриВозникновенииОшибки&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;СниматьСкриншотКаждогоОкна1С&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;КаталогOutputСкриншоты&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;$workspaceRoot/build/out/ScreenShots&quot;</span><span class="p">,</span><span class="w"></span>
+<span class="w">    </span><span class="nt">&quot;КомандаСделатьСкриншот&quot;</span><span class="p">:</span><span class="w"> </span><span class="err">&#39;</span><span class="s2">&quot;C:\Program Files (x86)\IrfanView\i_view32.exe&quot;</span><span class="w"> </span><span class="err">/cap</span><span class="kc">ture</span><span class="err">=</span><span class="mi">1</span><span class="w"> </span><span class="err">/co</span><span class="kc">n</span><span class="err">ver</span><span class="kc">t</span><span class="err">=&#39;</span><span class="w"></span>
 </code></pre></div>
 
 <ol>
@@ -921,9 +921,9 @@
 </li>
 </ul>
 <p>Для этого надо:</p>
-<div class="codehilite"><pre><span></span><code><span class="mf">1.</span> <span class="n">Обязательно</span> <span class="n">использовать</span> <span class="n">ключевое</span> <span class="n">слово</span> <span class="s">&quot;Если&quot;</span> <span class="p">(</span><span class="kr">If</span> <span class="n">для</span> <span class="n">английского</span> <span class="n">языка</span><span class="p">)</span>
-<span class="mf">2.</span> <span class="n">В</span> <span class="n">конце</span> <span class="n">шага</span> <span class="n">добавить</span> <span class="n">слово</span> <span class="n">Тогда</span> <span class="p">(</span><span class="kr">Then</span> <span class="n">для</span> <span class="n">английского</span> <span class="n">языка</span><span class="p">)</span>
-<span class="n">Пример</span>
+<div class="codehilite"><pre><span></span><code><span class="mf">1.</span><span class="w"> </span><span class="n">Обязательно</span><span class="w"> </span><span class="n">использовать</span><span class="w"> </span><span class="n">ключевое</span><span class="w"> </span><span class="n">слово</span><span class="w"> </span><span class="s">&quot;Если&quot;</span><span class="w"> </span><span class="p">(</span><span class="kr">If</span><span class="w"> </span><span class="n">для</span><span class="w"> </span><span class="n">английского</span><span class="w"> </span><span class="n">языка</span><span class="p">)</span><span class="w"></span>
+<span class="mf">2.</span><span class="w"> </span><span class="n">В</span><span class="w"> </span><span class="n">конце</span><span class="w"> </span><span class="n">шага</span><span class="w"> </span><span class="n">добавить</span><span class="w"> </span><span class="n">слово</span><span class="w"> </span><span class="n">Тогда</span><span class="w"> </span><span class="p">(</span><span class="kr">Then</span><span class="w"> </span><span class="n">для</span><span class="w"> </span><span class="n">английского</span><span class="w"> </span><span class="n">языка</span><span class="p">)</span><span class="w"></span>
+<span class="n">Пример</span><span class="w"></span>
 </code></pre></div>
 
 <p>```Gherkin</p>

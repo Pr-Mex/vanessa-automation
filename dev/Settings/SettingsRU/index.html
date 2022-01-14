@@ -899,6 +899,12 @@
 </ul>
 </li>
 <li>
+<p><strong>СписокСценариевДляВыполнения {scenariofilter}</strong>:
+Позволяет задать порядок выполнения сценариев. Сценарии будут выполняться в том порядке как они указаны в списке.
+Плюс позволяет задать фильтр на выполение сценариев. Будут выполняться только сценарии из списка.
+Сценрий в списке указывается с помощью его имени.</p>
+</li>
+<li>
 <p>Язык</p>
 <ul>
 <li><strong>ЯзыкГенератораGherkin {gherkinlanguage}</strong>:
@@ -917,6 +923,10 @@
 Если флаг установлен, то при генерации текста сценария после накликивания, шаги в сценарии будут искать элементы формы по внутреннему имени.
 Если флаг снят, то при генерации текста сценария после накликивания, шаги в сценарии будут искать элементы формы по заголовку, если это возможно.
 Это возможно в том случае, если в данной форме есть только один элемент с данным заголовком.</p>
+</li>
+<li>
+<p><strong>ПоказыватьОкноОстановкиЗаписиДействийПользователя {ShowWindowToStopRecordingUserActions}</strong>:
+Включает показ дополнительного окошка для удобной остановки записи действий пользователя и переключения в окно Vanessa Automation. Необходимо включить использование компоненты VanessaExt.</p>
 </li>
 </ul>
 </li>
@@ -993,17 +1003,23 @@ https://github.com/lintest/VanessaExt</p>
 </li>
 <li>
 <p><strong>ДиапазонПортовTestclient {testclientports}</strong>:
-Устанавливает диапазон портов, в котором будет производиться поиск свободного порта в системе для запуска клиента тестирования.</p>
+Устанавливает диапазон портов, в котором будет производиться поиск свободного порта в системе для запуска клиента тестирования. Например 48100-48200.</p>
 </li>
 <li>
 <p><strong>ПовторноЗапускатьСеансКлиентаТестированияПриПодключенииЕслиНеНайденЕгоПроцесс {starttestclientsessionagainonconnectionifitsprocessisnotfound}</strong>:
 Включает повторный запуск процесса клиента тестирования, если предыдущий запуск не сработал (например, если не была получена лицензия). Только для толстого и тонкого клиена.</p>
 </li>
-</ul>
-</li>
 <li>
 <p><strong>ИнтервалЗапускаПроцессаКлиентаТестирования {testclientprocessstartinterval}</strong>:
 Задаёт интервал, с которым будет производиться попытка запустить сеанс клиента тестирования.</p>
+</li>
+<li>
+<p><strong>ОпределятьРеальныйПортНаКоторомЗапустилсяКлиентТестирования {DetermineTheRealPortOnWhichTheTestingClientWasLaunched}</strong>:
+Если опция включена, то при подключении клиента тестирования будет происходить попытка определить реальный порт, на котором был запущен клиент тестирования.
+Это нужно. т.к. клиент тестирования может поменять порт, на котором он запустился, несмотря на переданные параметры.
+Эта проблема актуальна при запуске тестов в Linux.</p>
+</li>
+</ul>
 </li>
 <li>
 <p>Отладка клиента тестирования</p>
@@ -1029,7 +1045,8 @@ https://github.com/lintest/VanessaExt</p>
 <p>Группа команды установки строки запуска браузера</p>
 <ul>
 <li><strong>КомандаЗапускаБраузера {browserlaunchcommand}</strong>:
-В данном поле указывается команда запуска браузера. Если поле пустое, тогда для запуска web клиента будет использован браузер по умолчанию.</li>
+В данном поле указывается команда запуска браузера. Если поле пустое, тогда для запуска web клиента будет использован браузер по умолчанию.
+Если в команде запуска браузера содержится строка "TestClientUrl", то она будет заменена на строку подключения клиента тестирования. Иначе строка подключения клиента тестирования будет добавлена в конец последним параметром.</li>
 </ul>
 </li>
 <li>
@@ -1092,6 +1109,10 @@ https://github.com/lintest/VanessaExt</p>
 Необходимо включить использование компоненты VanessaExt.
 Опция работает только под Windows.</li>
 </ol>
+</li>
+<li>
+<p><strong>ПоказыватьОкноОстановкиВыполненияСценария {ShowWindowForStoppingScriptExecution}</strong>:
+Включет показ дополнительного окна, которое позволяет остановить выполнение сценария. Необходимо включить использование компоненты VanessaExt.</p>
 </li>
 <li>
 <p><strong>ПоказыватьНомерСтрокиДереваПриВозникновенииОшибки {showrownumberonerror}</strong>:
@@ -1285,7 +1306,7 @@ https://pr-mex.github.io/vanessa-automation/dev/ReturnStatus</p>
 </code></pre></div>
 
 <p>Формировать отчет в формате Allure по результатам выполнения сценариев.</p>
-<div class="codehilite"><pre><span></span><code> <span class="o">*</span> <span class="o">**</span><span class="err">ПодставлятьВОтчете</span><span class="n">AllureЗначенияПеременных</span> <span class="p">{</span><span class="n">setvariablevaluesinstepsallurereport</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ПодставлятьВОтчете</span><span class="n">AllureЗначенияПеременных</span><span class="w"> </span><span class="p">{</span><span class="n">setvariablevaluesinstepsallurereport</span><span class="p">}</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
 </code></pre></div>
 
 <p>Если опция включена, то в параметрах шагов, в которых использовались переменные, имена переменных будут заменены на их значения.</p>
@@ -1345,7 +1366,7 @@ https://pr-mex.github.io/vanessa-automation/dev/ReturnStatus</p>
 </code></pre></div>
 
 <p>Если опция включена, то при возникновении ошибки будут собраны данные о запущенных процессах ОС.</p>
-<div class="codehilite"><pre><span></span><code><span class="o">*</span> <span class="o">**</span><span class="err">ПрикладыватьКОтчету</span><span class="n">AllureДанныеОЗначенияхПеременных</span> <span class="p">{</span><span class="n">attachvariablestotheallurereport</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ПрикладыватьКОтчету</span><span class="n">AllureДанныеОЗначенияхПеременных</span><span class="w"> </span><span class="p">{</span><span class="n">attachvariablestotheallurereport</span><span class="p">}</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
 </code></pre></div>
 
 <p>Если опция включена, то при возникновении ошибки будут собраны данные со значениями переменных Контекста и Контекста глобального.</p>
@@ -1464,7 +1485,11 @@ https://habr.com/ru/company/sberbank/blog/359302/</li>
 <ul>
 <li>
 <p><strong>ИспользоватьUIAutomation {UseUIAutomation}</strong>:
-Включает использование механизма UI Automation в Windows.</p>
+Включает использование механизма UI Automation в Windows для эмуляции движения и кликов мшкой в шагах из стандартной библиотеки шагов Vanessa Automation.
+Например, когда опция выключена, шаг
+И я нажимаю на кнопку "ЗаголовокКнопки"
+просто нажмёт на пноку не выполняя интерактивных действий.
+Если опция включена, то курсор мышки сначала перемещён к данной кнопке, а затем уже кнопка будет нажата.</p>
 </li>
 <li>
 <p><strong>ИспользоватьБраузерПлюсWebSocket {usebrowserwebsocket}</strong>:
@@ -1492,7 +1517,7 @@ https://habr.com/ru/company/sberbank/blog/359302/</li>
 </li>
 <li>
 <p>Скорость перемещения мышки</p>
-<div class="codehilite"><pre><span></span><code><span class="o">*</span> <span class="o">**</span><span class="err">КоличествоШаговПриДвиженииМышки</span><span class="n">VanessaExt</span> <span class="p">{</span><span class="n">thenumberofstepswhenmovingthemouse</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">КоличествоШаговПриДвиженииМышки</span><span class="n">VanessaExt</span><span class="w"> </span><span class="p">{</span><span class="n">thenumberofstepswhenmovingthemouse</span><span class="p">}</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
 </code></pre></div>
 
 <p>Задаёт количество микро движений (шагов), которая совершает мышка на своём пути. Значение по умолчанию 150.</p>
@@ -1547,6 +1572,10 @@ https://habr.com/ru/company/sberbank/blog/359302/</li>
 <li>
 <p><strong>ПоискКартинокСПомощьюКомпонентыVanessaExt {findingpicturesusingaddinvanessaext}</strong>:
 Если опция включена, то шаги, выполняющие поиск картинок на экране, будут использовать внешнюю компоненту VanessaExt вместо использования SikuliX.</p>
+</li>
+<li>
+<p><strong>ПорогПоискаКартинки {PictureSearchThreshold}</strong>:
+Число, определяющее порог поиска картинки на экране. Значение может быть задано в диапазоне от 0 до 1.</p>
 </li>
 <li>
 <p><strong>ИгнорироватьОшибкиПоискаЭлементовВБраузере {ignorebrowsersearcherrors}</strong>:
@@ -1657,8 +1686,8 @@ https://habr.com/ru/company/sberbank/blog/359302/</li>
       1. В главном окне Яндекс.Облако нажать на ссылку "Перейти в текущий каталог".
       2. Скопировать последнюю часть путь из строки адреса
 Пример: 
-https://console.cloud.yandex.ru/folders/b1gheo81t4a6eаafe5vd
-(Идентификатор каталога - b1gheo81t4a6eаafe5vd)
+https://console.cloud.yandex.ru/folders/b1gheo81t4a6eaafe5vd
+(Идентификатор каталога - b1gheo81t4a6eaafe5vd)
 Получение идентификатора каталога </p>
 <div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоYandexTTSOauthToken {yandexttsoauthtoken}**:
 </code></pre></div>
@@ -1684,7 +1713,7 @@ https://console.cloud.yandex.ru/folders/b1gheo81t4a6eаafe5vd
 </code></pre></div>
 
 <p>Варианты значения для поля "Движок" смотрите здесь.</p>
-<div class="codehilite"><pre><span></span><code><span class="o">*</span> <span class="o">**</span><span class="err">ЗаписьВидео</span><span class="n">AmazonРегион</span> <span class="p">{</span><span class="n">amazonttsregion</span><span class="p">}</span><span class="o">**:</span>
+<div class="codehilite"><pre><span></span><code><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ЗаписьВидео</span><span class="n">AmazonРегион</span><span class="w"> </span><span class="p">{</span><span class="n">amazonttsregion</span><span class="p">}</span><span class="o">**:</span><span class="w"></span>
 </code></pre></div>
 
 <p>В поле указывается параметр регион. Значение по умолчанию: us-east-1.</p>
@@ -1803,7 +1832,7 @@ VoiceParams - дополнительные параметры озвучки, у
 </code></pre></div>
 
 <p>Задает отступ сверху</p>
-<div class="codehilite"><pre><span></span><code> <span class="o">*</span> <span class="o">**</span><span class="err">ЗаписьВидеоИнструмент</span> <span class="p">{</span><span class="n">videocapturetool</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
+<div class="codehilite"><pre><span></span><code><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ЗаписьВидеоИнструмент</span><span class="w"> </span><span class="p">{</span><span class="n">videocapturetool</span><span class="p">}</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
 </code></pre></div>
 
 <p>Если выбран вариант VLC, тогда для записи видео будет вызываться иснтрумент VLC. Иначе будет использована внешняя компонента VanessaExt, которая будет вызывать ffmpeg.</p>
@@ -1818,11 +1847,13 @@ VoiceParams - дополнительные параметры озвучки, у
 <div class="codehilite"><pre><span></span><code> * **ЗаписьВидеоКомандаConvert {convertcomand}**:
 </code></pre></div>
 
-<p>Путь к исполняемому файлу convert.exe в каталоге с программой ImageMagick.
+<p>В поле описывается как будет вызыаться команда Convert.
+Для версии ImageMagick 7 достаточно указать "magick convert."
+Для более старых версий нужно указать путь к исполняемому файлу convert.exe в каталоге с программой ImageMagick.
 Пример:
 "C:\Program Files\ImageMagick-Х.Х.Х-Q16\convert.exe"
 Скачать: https://imagemagick.org/script/download.php
-В процессе установки обязательным к установке является пункт: Install legacy utilities (e. g. convert)</p>
+Для версий младше 7 в процессе установки обязательным к установке является пункт: Install legacy utilities (e. g. convert)</p>
 <div class="codehilite"><pre><span></span><code> * **ЗаписьВидеоКэшироватьВидеоВставки {cachevideo}**:
 </code></pre></div>
 
@@ -2006,6 +2037,19 @@ SikuliX Server - это специальная программная оптим
 <li>
 <p><strong>ПроверкаСинтаксисаВРедакторе {syntaxcheckingineditor}</strong>:
 Опция для отключения проверки синтаксиса в редакторе сценариев</p>
+</li>
+<li>
+<p><strong>ПоказыватьЗначенияПеременныхВСтрокахРедактора {ShowVariableValuesInEditorLines}</strong>:
+Включает отображение в редакторе данных по значениям переменных (inline debug). Значения переменных обновляются после того как строка шага выполнена.</p>
+</li>
+<li>
+<p><strong>ПоказыватьРазличияВРедактореОтдельно {showdifferencesineditorseparately}</strong>:
+Управляет режимом отображения различий при сравнении файлов в редакторе.
+Если опция включена - то отображается два столбца, иначе различия показываются в тексте файла.</p>
+</li>
+<li>
+<p><strong>ОткрыватьНачальнуюСтраницуПриЗапуске {OpenStartPageAtStartup}</strong>:
+Включает отображение начальной страницы в редакторе при запуске Vanessa Automation.</p>
 </li>
 <li>
 <p><strong>ТемаРедактораVanessaEditor {vanessaeditortheme}</strong>:
