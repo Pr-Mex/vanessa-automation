@@ -237,6 +237,16 @@
 											<AutoCommandBar name="MetadataListCommandBar" id="49">
 												<Autofill>false</Autofill>
 												<ChildItems>
+													<Button name="MetadataListSelectAll" id="191">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.SelectAll</CommandName>
+														<ExtendedTooltip name="MetadataListSelectAllРасширеннаяПодсказка" id="192"/>
+													</Button>
+													<Button name="MetadataListDeselectAll" id="193">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.DeselectAll</CommandName>
+														<ExtendedTooltip name="MetadataListDeselectAllРасширеннаяПодсказка" id="194"/>
+													</Button>
 													<Button name="MetadataListGenerateFeature" id="113">
 														<Type>CommandBarButton</Type>
 														<DefaultButton>true</DefaultButton>
@@ -1082,6 +1092,44 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ProcessReplaceRefByAttribute</Action>
+		</Command>
+		<Command name="SelectAll" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Select all</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Select all</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>SelectAll</Action>
+		</Command>
+		<Command name="DeselectAll" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Deselect all</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Deselect all</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>DeselectAll</Action>
 		</Command>
 	</Commands>
 	<Parameters>
