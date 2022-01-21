@@ -775,6 +775,35 @@ Procedure SelectDependentItems(Command)
 EndProcedure
 
 &AtClient
+Procedure SelectAll(Команда)
+	SetMarks(True);
+EndProcedure
+
+&AtClient
+Procedure DeselectAll(Команда)
+	SetMarks(False);
+EndProcedure
+
+&AtClient
+Procedure SetMarks(Value)
+	
+	For Each MetadataTypeItem In MetadataList.GetItems() Do
+		
+		MetadataTypeItem.Use = Value;
+		
+		MetadataItems = MetadataTypeItem.GetItems();
+		
+		For Each MetadataItem In MetadataItems Do
+			
+			MetadataItem.Use = Value;
+			
+		EndDo;
+		
+	EndDo;
+	
+EndProcedure
+
+&AtClient
 Procedure AddObjectByURL(Command)
 	Notify = New NotifyDescription("AddObjectByURLContinuation", ThisObject);
 	ShowInputString(Notify, "", NStr("ru = 'Введите навигационные ссылки'"), , True);	
