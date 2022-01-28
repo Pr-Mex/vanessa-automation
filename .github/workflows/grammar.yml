@@ -1,0 +1,24 @@
+name: Check grammar
+
+on:
+  push:
+    paths:
+      - 'VanessaAutomation/Forms/УправляемаяФорма/Ext/Form.xml'
+      - '.github/workflows/grammar.yml'
+      - 'tools/python/grammar/**'
+  pull_request:
+    paths:
+      - 'VanessaAutomation/Forms/УправляемаяФорма/Ext/Form.xml'
+      - '.github/workflows/grammar.yml'
+      - 'tools/python/grammar/**'
+jobs:
+  CheckTextsOnMainForm:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: actions/setup-python@v2
+      with:
+        python-version: '3.9'
+        cache: 'pip'
+    - run: pip install -r tools/python/grammar/requirements.txt
+    - run: python tools/python/grammar/check.py

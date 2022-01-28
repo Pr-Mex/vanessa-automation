@@ -8,7 +8,7 @@
 
 ## BDD for 1С:Enterprise
 
-* Текущий релиз в ветке [Master: 1.2.037.1](https://github.com/Pr-Mex/vanessa-automation/tree/master)
+* Текущий релиз в ветке [Master: 1.2.038.1](https://github.com/Pr-Mex/vanessa-automation/tree/master)
 * Разработка ведется в ветке [Develop](https://github.com/Pr-Mex/vanessa-automation/tree/develop).
 * [Обсудить Ванессу](https://t.me/testspro1c) в телеграмм группе, и обсудить всё, что связано с тестированием в 1С.
 * [Подписаться на новости о проекте](https://t.me/VanessaAutomation) в телеграмм каналле.
@@ -37,6 +37,14 @@
 * [Тестирование серверного поведения с Vanessa Automation](https://infostart.ru/1c/articles/1283198/)
 * [Практика применения DevOps. Тестирование](https://infostart.ru/1c/articles/1342422/)
 
+## СППР + Vanessa Automation
+
+* [Автоматизация тестирования в СППР 2.0. Часть 1](https://www.youtube.com/watch?v=1UBlV4kWx_o)
+* [Автоматизация тестирования в СППР 2.0. Часть 2](https://www.youtube.com/watch?v=gKJmJKIe-nA)
+
+## Видео
+
+* [100+ тестов на Vanessa-Automation. Личный опыт без маркетинга.](https://www.youtube.com/watch?v=_YrmLnM9J1A)
 ## Сборка из исходников
 
 В данном репозитории хранятся только исходники.

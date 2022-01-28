@@ -52,13 +52,13 @@
 			|'  Соответствие.Вставить("startColumn", 1);'|
 			|'  Соответствие.Вставить("endLineNumber", 18);'|
 			|'  Соответствие.Вставить("endColumn", 1);'|
-			|'  VanessaTabs.current.editor.insertText("		\| \'Сообщить(""Hellow world 1."")\' \|", ЗаписатьОбъектJSON(Соответствие));'|
+			|'  VanessaTabs.current.editor.insertText("		\| \'Сообщить(""Hello world 1."")\' \|", ЗаписатьОбъектJSON(Соответствие));'|
 		И я нажимаю на кнопку с именем 'ВыполнитьПроизвольныйКод'
 		И пауза 1
 		И Я нажимаю на кнопку выполнить сценарии в Vanessa-Automation TestClient
 
 		Тогда в логе сообщений TestClient есть строки:
-			|'Hellow world 1.'|
+			|'Hello world 1.'|
 		И я очищаю окно сообщений пользователю
 
 
@@ -71,7 +71,7 @@
 			|'  Соответствие.Вставить("startColumn", 1);'|
 			|'  Соответствие.Вставить("endLineNumber", 18);'|
 			|'  Соответствие.Вставить("endColumn", 1);'|
-			|'  VanessaTabs.current.editor.insertText("		\| \'Сообщить(""Hellow world 2."")\' \|", ЗаписатьОбъектJSON(Соответствие));'|
+			|'  VanessaTabs.current.editor.insertText("		\| \'Сообщить(""Hello world 2."")\' \|", ЗаписатьОбъектJSON(Соответствие));'|
 		И я нажимаю на кнопку с именем 'ВыполнитьПроизвольныйКод'
 		И Пауза 1
 		И я нажимаю на кнопку с именем 'ВыполнитьПроизвольныйКод'
@@ -82,4 +82,4 @@
 		И Я нажимаю на кнопку выполнить сценарии в Vanessa-Automation TestClient
 
 		Тогда в логе сообщений TestClient есть строки:
-			|'Hellow world 2.'|
+			|'Hello world 2.'|
