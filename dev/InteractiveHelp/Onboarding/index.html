@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <link rel="canonical" href="https://pr-mex.github.io/vanessa-automation/dev/InteractiveHelp/%D0%97%D0%B0%D0%BF%D1%83%D1%81%D0%BA%D0%91%D0%B5%D0%B7%D0%9E%D1%82%D0%BA%D1%80%D1%8B%D1%82%D0%B8%D1%8F%D0%A4%D0%BE%D1%80%D0%BC%D1%8B/">
+        <link rel="canonical" href="https://pr-mex.github.io/vanessa-automation/dev/InteractiveHelp/Onboarding/">
       
       
       <link rel="shortcut icon" href="../../assets/images/logo.png">
@@ -17,7 +17,7 @@
     
     
       
-        <title>Как запустить сценарий Vanessa Automation без открытия формы - Vanessa Automation Dev</title>
+        <title>Как запустить сценарий, реализующий Onboarding - Vanessa Automation Dev</title>
       
     
     
@@ -58,7 +58,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#vanessa-automation" class="md-skip">
+        <a href="#onboarding" class="md-skip">
           Перейти к содержанию
         </a>
       
@@ -85,7 +85,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Как запустить сценарий Vanessa Automation без открытия формы
+              Как запустить сценарий, реализующий Onboarding
             
           </span>
         </div>
@@ -187,7 +187,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../Onboarding/" class="md-tabs__link md-tabs__link--active">
+        <a href="./" class="md-tabs__link md-tabs__link--active">
           InteractiveHelp
         </a>
       
@@ -466,11 +466,20 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../Onboarding/" title="Как запустить сценарий, реализующий Onboarding" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+    <a href="./" title="Как запустить сценарий, реализующий Onboarding" class="md-nav__link md-nav__link--active">
       Как запустить сценарий, реализующий Onboarding
     </a>
+    
   </li>
 
         
@@ -490,20 +499,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="Как запустить сценарий Vanessa Automation без открытия формы" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../%D0%97%D0%B0%D0%BF%D1%83%D1%81%D0%BA%D0%91%D0%B5%D0%B7%D0%9E%D1%82%D0%BA%D1%80%D1%8B%D1%82%D0%B8%D1%8F%D0%A4%D0%BE%D1%80%D0%BC%D1%8B/" title="Как запустить сценарий Vanessa Automation без открытия формы" class="md-nav__link">
       Как запустить сценарий Vanessa Automation без открытия формы
     </a>
-    
   </li>
 
         
@@ -761,7 +761,7 @@
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/pr-mex/vanessa-automation/edit/develop/docs/InteractiveHelp/ЗапускБезОткрытияФормы.md" title="Редактировать страницу" class="md-content__button md-icon">
+                  <a href="https://github.com/pr-mex/vanessa-automation/edit/develop/docs/InteractiveHelp/Onboarding.md" title="Редактировать страницу" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg>
                   </a>
                 
@@ -769,44 +769,39 @@
                   
                 
                 
-                <h1 id="vanessa-automation">Как запустить сценарий Vanessa Automation без открытия формы<a class="headerlink" href="#vanessa-automation" title="Permanent link">&para;</a></h1>
+                <h1 id="onboarding">Как запустить сценарий, реализующий Onboarding<a class="headerlink" href="#onboarding" title="Permanent link">&para;</a></h1>
 <ul>
-<li>Для запуска сценариев, когда надо запустить фича файл, нужно выполнить следующий код. Настройки нужно передавать согласно текущей задаче и окружению.</li>
+<li>Надо встроить в конфигурацию расширение VanessaInteractive.</li>
+<li>В каждую форму, в которой планиуруется запускать сценарий Onboarding нужно встроить код:</li>
 </ul>
-<div class="codehilite"><pre><span></span><code>        <span class="nv">Ванесса</span><span class="o">.</span><span class="nf">УстановитьФичаФайл</span><span class="p">(</span><span class="nv">ПутьКФичаФайлу</span><span class="p">);</span>
+<div class="codehilite"><pre><span></span><code><span class="kd">&amp;НаКлиенте</span>
+<span class="k">Функция</span> <span class="nf">ДанныеРеквизитовФормыOnboarding</span><span class="p">()</span> <span class="k">Экспорт</span>
+    <span class="k">Возврат</span> <span class="nf">ДанныеРеквизитовФормыOnboardingСервер</span><span class="p">();</span>
+<span class="k">КонецФункции</span>    
 
-        <span class="nv">СтруктураНастроек</span> <span class="o">=</span> <span class="k">Новый</span> <span class="nv">Структура</span><span class="p">;</span>
-        <span class="nv">СтруктураНастроек</span><span class="o">.</span><span class="nf">Вставить</span><span class="p">(</span><span class="s">&quot;ИспользоватьКомпонентуVanessaExt&quot;</span><span class="p">,</span> <span class="kc">Истина</span><span class="p">);</span>
-        <span class="nv">Ванесса</span><span class="o">.</span><span class="nf">УстановитьНастройкиПриЗапускеБезОткрытияФормы</span><span class="p">(</span><span class="nv">СтруктураНастроек</span><span class="p">);</span>
+<span class="kd">&amp;НаСервере</span>
+<span class="k">Функция</span> <span class="nf">ДанныеРеквизитовФормыOnboardingСервер</span><span class="p">()</span>
+    <span class="k">Возврат</span> <span class="nv">VanessaInteractive</span><span class="o">.</span><span class="nf">ДанныеРеквизитовФормыOnboarding</span><span class="p">(</span><span class="nv">ЭтаФорма</span><span class="p">);</span>
+<span class="k">КонецФункции</span>    
 
-        <span class="nv">Ванесса</span><span class="o">.</span><span class="nf">ВыполнитьСценарииБезОткрытияФормы</span><span class="p">();</span>
+<span class="kd">&amp;НаКлиенте</span>
+<span class="k">Процедура</span> <span class="nf">Расш1_OnboardingПосле</span><span class="p">(</span><span class="nv">Команда</span><span class="p">)</span>
+
+    <span class="nv">Ванесса</span> <span class="o">=</span> <span class="nv">VanessaInteractiveКлиент</span><span class="o">.</span><span class="nf">ПолучитьФормуVanessaAutomation</span><span class="p">();</span>
+    <span class="nv">Ванесса</span><span class="o">.</span><span class="nf">УстановитьТекстФичаФайла</span><span class="p">(</span><span class="nf">ТекстФичаФайла</span><span class="p">());</span>
+
+    <span class="nv">СтруктураНастроек</span> <span class="o">=</span> <span class="k">Новый</span> <span class="nv">Структура</span><span class="p">;</span>
+    <span class="nv">СтруктураНастроек</span><span class="o">.</span><span class="nf">Вставить</span><span class="p">(</span><span class="s">&quot;ИспользоватьКомпонентуVanessaExt&quot;</span><span class="p">,</span> <span class="kc">Истина</span><span class="p">);</span>
+    <span class="nv">Ванесса</span><span class="o">.</span><span class="nf">УстановитьНастройкиПриЗапускеБезОткрытияФормы</span><span class="p">(</span><span class="nv">СтруктураНастроек</span><span class="p">);</span>
+
+    <span class="nv">Ванесса</span><span class="o">.</span><span class="nf">ВыполнитьСценарииБезОткрытияФормы</span><span class="p">();</span>
+
+<span class="k">КонецПроцедуры</span>
 </code></pre></div>
 
 <ul>
-<li>Для запуска сценариев из переданного текста, нужно выполнить следующий код. Настройки нужно передавать согласно текущей задаче и окружению.</li>
-</ul>
-<div class="codehilite"><pre><span></span><code>        <span class="nv">Ванесса</span><span class="o">.</span><span class="nf">УстановитьТекстФичаФайла</span><span class="p">(</span><span class="nv">ТекстФичаФайла</span><span class="p">);</span>
-
-        <span class="nv">СтруктураНастроек</span> <span class="o">=</span> <span class="k">Новый</span> <span class="nv">Структура</span><span class="p">;</span>
-        <span class="nv">СтруктураНастроек</span><span class="o">.</span><span class="nf">Вставить</span><span class="p">(</span><span class="s">&quot;ИспользоватьКомпонентуVanessaExt&quot;</span><span class="p">,</span> <span class="kc">Истина</span><span class="p">);</span>
-        <span class="nv">Ванесса</span><span class="o">.</span><span class="nf">УстановитьНастройкиПриЗапускеБезОткрытияФормы</span><span class="p">(</span><span class="nv">СтруктураНастроек</span><span class="p">);</span>
-
-        <span class="nv">Ванесса</span><span class="o">.</span><span class="nf">ВыполнитьСценарииБезОткрытияФормы</span><span class="p">();</span>
-</code></pre></div>
-
-<ul>
-<li>Чтобы открыть форму Vanessa Automation для отладки надо выполнить код:</li>
-</ul>
-<div class="codehilite"><pre><span></span><code>        <span class="nv">Ванесса</span><span class="o">.</span><span class="nf">ОткрытьОсновнуюФорму</span><span class="p">();</span>
-</code></pre></div>
-
-<ul>
-<li>
-<p>Чтобы поймать событие начала выполнения сценариев надо обработать оповещение "ЗапускСценариевVanessaAutomation"</p>
-</li>
-<li>
-<p>Чтобы поймать событие окончания выполнения сценариев надо обработать оповещение "ОкончаниеВыполненияСценариевVanessaAutomation"</p>
-</li>
+<li>Функцию ТекстФичаФайла() надо реализовать самостоятельно. Она должна вернуть текст фича файла.</li>
+<li>Примеры таких фича файлов можно найти тут: examples\features\VAInteracive</li>
 </ul>
                 
               
@@ -826,7 +821,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="">
         
-          <a href="../SettingUpInteractiveHelp/" title="Как настроить работу интерактивной справки" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../FAQ/%D0%A0%D0%B5%D0%B6%D0%B8%D0%BC%20%D1%81%D0%BE%D0%B2%D0%BC%D0%B5%D1%81%D1%82%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8%208.2/" title="Режим совместимости 8.2" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
             </div>
@@ -835,19 +830,19 @@
                 <span class="md-footer-nav__direction">
                   Назад
                 </span>
-                Как настроить работу интерактивной справки
+                Режим совместимости 8.2
               </div>
             </div>
           </a>
         
         
-          <a href="../../MakeVASingle/MakeVASingle/" title="Параметры запуска из командной строки" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../SettingUpInteractiveHelp/" title="Как настроить работу интерактивной справки" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Вперед
                 </span>
-                Параметры запуска из командной строки
+                Как настроить работу интерактивной справки
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
