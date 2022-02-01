@@ -1,0 +1,131 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<MetaDataObject xmlns="http://v8.1c.ru/8.3/MDClasses" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:cmi="http://v8.1c.ru/8.2/managed-application/cmi" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xen="http://v8.1c.ru/8.3/xcf/enums" xmlns:xpr="http://v8.1c.ru/8.3/xcf/predef" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<HTTPService uuid="90d40b64-ca3f-412a-b045-6277680ff119">
+		<Properties>
+			<Name>Web_HTTPСервис1</Name>
+			<Synonym/>
+			<Comment/>
+			<RootURL>ExchangeWithWebClient</RootURL>
+			<ReuseSessions>DontUse</ReuseSessions>
+			<SessionMaxAge>20</SessionMaxAge>
+		</Properties>
+		<ChildObjects>
+			<URLTemplate uuid="801a1311-6978-4d7c-8d80-0bde90f04462">
+				<Properties>
+					<Name>ПолучитьНачальнуюСтраницу</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Получить начальную страницу</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/*</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="1c4432a3-f17e-420f-b0e9-3496d8fb7ac0">
+						<Properties>
+							<Name>GetHTML</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Get HTML</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>StartPageHTML</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="cceb2244-2eb3-4d4a-8bfe-b5c1d9180128">
+				<Properties>
+					<Name>ПолучитьСкрипты</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Получить скрипты</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/js/{ИмяФайла}</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="fb0073d7-7dff-4b09-bf18-909eaed6a8e8">
+						<Properties>
+							<Name>GetScript</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Get script</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>ПолутьСкриптыGetScript</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="2f7b11a5-cfbc-44c7-a149-92d8585a6137">
+				<Properties>
+					<Name>ПолучитьЗвуковойФайл</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Получить звуковой файл</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/sounds/*</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="9f207826-fe6a-42c7-8f21-5100ef833894">
+						<Properties>
+							<Name>GetSound</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Get sound</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>ПолучитьЗвуковойФайлGetSound</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+			<URLTemplate uuid="aa13cf4a-e9e4-4f8e-9dd8-538181d90616">
+				<Properties>
+					<Name>ПолучитьРесурсы</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Получить ресурсы</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Template>/js/src/*</Template>
+				</Properties>
+				<ChildObjects>
+					<Method uuid="d50151b5-5eb2-4561-a3b5-631e6199388f">
+						<Properties>
+							<Name>GetSrc</Name>
+							<Synonym>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Get src</v8:content>
+								</v8:item>
+							</Synonym>
+							<Comment/>
+							<HTTPMethod>GET</HTTPMethod>
+							<Handler>ПолучитьРесурсыGetSrc</Handler>
+						</Properties>
+					</Method>
+				</ChildObjects>
+			</URLTemplate>
+		</ChildObjects>
+	</HTTPService>
+</MetaDataObject>
