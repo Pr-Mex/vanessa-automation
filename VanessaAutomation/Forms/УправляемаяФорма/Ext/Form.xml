@@ -20283,15 +20283,39 @@ Speech rate is specified as a fractional number in the range from 0.1 to 3.0.</v
 																										<Event name="OnChange">ЗаписьВидеоYandexTTSВариантЗапросаПриИзменении</Event>
 																									</Events>
 																								</RadioButtonField>
-																								<InputField name="ЗаписьВидеоYandexTTSИдентификаторКаталога" id="1979">
-																									<DataPath>Объект.ЗаписьВидеоYandexTTSИдентификаторКаталога</DataPath>
-																									<ToolTipRepresentation>Button</ToolTipRepresentation>
-																									<ContextMenu name="ЗаписьВидеоYandexTTSИдентификаторКаталогаКонтекстноеМеню" id="1980"/>
-																									<ExtendedTooltip name="ЗаписьВидеоYandexTTSИдентификаторКаталогаРасширеннаяПодсказка" id="1981">
-																										<Title formatted="true">
-																											<v8:item>
-																												<v8:lang>ru</v8:lang>
-																												<v8:content>Последняя часть пути строки адреса в интернет браузере. &lt;colorstyle -14&gt;https://console.cloud.yandex.ru/folders/ИдентификаторКаталога&lt;/&gt;
+																								<UsualGroup name="ГруппаЗаписьВидеоYandexTTSИли" id="3243">
+																									<Title>
+																										<v8:item>
+																											<v8:lang>ru</v8:lang>
+																											<v8:content>Авторизация</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>en</v8:lang>
+																											<v8:content>Authorization</v8:content>
+																										</v8:item>
+																									</Title>
+																									<ToolTip>
+																										<v8:item>
+																											<v8:lang>ru</v8:lang>
+																											<v8:content>Группа запись видео yandex TTSИли</v8:content>
+																										</v8:item>
+																										<v8:item>
+																											<v8:lang>en</v8:lang>
+																											<v8:content>Group OR</v8:content>
+																										</v8:item>
+																									</ToolTip>
+																									<Group>Vertical</Group>
+																									<ExtendedTooltip name="ГруппаЗаписьВидеоYandexTTSИлиРасширеннаяПодсказка" id="3244"/>
+																									<ChildItems>
+																										<InputField name="ЗаписьВидеоYandexTTSИдентификаторКаталога" id="1979">
+																											<DataPath>Объект.ЗаписьВидеоYandexTTSИдентификаторКаталога</DataPath>
+																											<ToolTipRepresentation>Button</ToolTipRepresentation>
+																											<ContextMenu name="ЗаписьВидеоYandexTTSИдентификаторКаталогаКонтекстноеМеню" id="1980"/>
+																											<ExtendedTooltip name="ЗаписьВидеоYandexTTSИдентификаторКаталогаРасширеннаяПодсказка" id="1981">
+																												<Title formatted="true">
+																													<v8:item>
+																														<v8:lang>ru</v8:lang>
+																														<v8:content>Последняя часть пути строки адреса в интернет браузере. &lt;colorstyle -14&gt;https://console.cloud.yandex.ru/folders/ИдентификаторКаталога&lt;/&gt;
 
 Требуется:
 1. В главном окне Яндекс.Облако нажать на &lt;colorstyle -3&gt;ссылку "&lt;/&gt;&lt;colorstyle -3&gt;Перейти в текущий каталог&lt;/&gt;&lt;colorstyle -3&gt;".&lt;/&gt;
@@ -20302,8 +20326,8 @@ Speech rate is specified as a fractional number in the range from 0.1 to 3.0.</v
 (Идентификатор каталога - b1gheo81t4a6eaafe5vd)
 
 &lt;link https://cloud.yandex.ru/docs/resource-manager/operations/folder/get-id&gt;Получение идентификатора каталога &lt;/&gt;</v8:content>
-																											</v8:item>
-																											<v8:item>
+																													</v8:item>
+																													<v8:item>
 																												<v8:lang>en</v8:lang>
 																												<v8:content>&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;The last part of the path of the address string in the Internet browser. https://console.cloud.yandex.ru/folders/Directory ID&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
 
@@ -20317,28 +20341,28 @@ Speech rate is specified as a fractional number in the range from 0.1 to 3.0.</v
 
 &lt;link https://cloud.yandex.ru/docs/resource-manager/operations/folder/get-id&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;Retrieving a Directory ID&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
 																											</v8:item>
-																										</Title>
-																									</ExtendedTooltip>
-																								</InputField>
-																								<InputField name="ЗаписьВидеоYandexTTSOauthToken" id="1982">
-																									<DataPath>Объект.ЗаписьВидеоYandexTTSOauthToken</DataPath>
-																									<ToolTipRepresentation>Button</ToolTipRepresentation>
-																									<ChoiceButton>true</ChoiceButton>
-																									<ClearButton>true</ClearButton>
-																									<ContextMenu name="ЗаписьВидеоYandexTTSOauthTokenКонтекстноеМеню" id="1983"/>
-																									<ExtendedTooltip name="ЗаписьВидеоYandexTTSOauthTokenРасширеннаяПодсказка" id="1984">
-																										<Title formatted="true">
-																											<v8:item>
-																												<v8:lang>ru</v8:lang>
-																												<v8:content>OAuth-токен используется в процедуре аутентификации в Яндекс.Облаке
+																												</Title>
+																											</ExtendedTooltip>
+																										</InputField>
+																										<InputField name="ЗаписьВидеоYandexTTSOauthToken" id="1982">
+																											<DataPath>Объект.ЗаписьВидеоYandexTTSOauthToken</DataPath>
+																											<ToolTipRepresentation>Button</ToolTipRepresentation>
+																											<ChoiceButton>true</ChoiceButton>
+																											<ClearButton>true</ClearButton>
+																											<ContextMenu name="ЗаписьВидеоYandexTTSOauthTokenКонтекстноеМеню" id="1983"/>
+																											<ExtendedTooltip name="ЗаписьВидеоYandexTTSOauthTokenРасширеннаяПодсказка" id="1984">
+																												<Title formatted="true">
+																													<v8:item>
+																														<v8:lang>ru</v8:lang>
+																														<v8:content>OAuth-токен используется в процедуре аутентификации в Яндекс.Облаке
 
 Для получения OAuth-токена требуется:
 1. Перейти по ссылке &lt;link https://cloud.yandex.ru/docs/iam/concepts/authorization/oauth-token&gt;https://cloud.yandex.ru/docs/iam/concepts/authorization/oauth-token&lt;/&gt;;
 2. Сгенерировать токен;
 3. Сохранить его в текстовый файл;
 4. Указать путь к текстовому файлу с токеном.</v8:content>
-																											</v8:item>
-																											<v8:item>
+																													</v8:item>
+																													<v8:item>
 																												<v8:lang>en</v8:lang>
 																												<v8:content>&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;The OAuth token is used in the authentication procedure in Yandex.Cloud&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
 
@@ -20348,12 +20372,46 @@ Speech rate is specified as a fractional number in the range from 0.1 to 3.0.</v
 &lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;3. Save it to a text file;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
 &lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;4. Specify the path to the text file with the token.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
 																											</v8:item>
-																										</Title>
-																									</ExtendedTooltip>
-																									<Events>
-																										<Event name="StartChoice">ЗаписьВидеоYandexTTSOauthTokenНачалоВыбора</Event>
-																									</Events>
-																								</InputField>
+																												</Title>
+																											</ExtendedTooltip>
+																											<Events>
+																												<Event name="StartChoice">ЗаписьВидеоYandexTTSOauthTokenНачалоВыбора</Event>
+																											</Events>
+																										</InputField>
+																										<LabelDecoration name="ДекорацияЗаписьВидеоYandexTTSИли" id="3240">
+																											<Font bold="true" kind="AutoFont"/>
+																											<Title formatted="false">
+																												<v8:item>
+																													<v8:lang>ru</v8:lang>
+																													<v8:content>или</v8:content>
+																												</v8:item>
+																												<v8:item>
+																													<v8:lang>en</v8:lang>
+																													<v8:content>or</v8:content>
+																												</v8:item>
+																											</Title>
+																											<ContextMenu name="ДекорацияЗаписьВидеоYandexTTSИлиКонтекстноеМеню" id="3241"/>
+																											<ExtendedTooltip name="ДекорацияЗаписьВидеоYandexTTSИлиРасширеннаяПодсказка" id="3242"/>
+																										</LabelDecoration>
+																										<InputField name="ЗаписьВидеоYandexTTSApiKey" id="3237">
+																											<DataPath>Объект.ЗаписьВидеоYandexTTSApiKey</DataPath>
+																											<ToolTipRepresentation>Button</ToolTipRepresentation>
+																											<ContextMenu name="ЗаписьВидеоYandexTTSApiKeyКонтекстноеМеню" id="3238"/>
+																											<ExtendedTooltip name="ЗаписьВидеоYandexTTSApiKeyРасширеннаяПодсказка" id="3239">
+																												<Title formatted="true">
+																													<v8:item>
+																														<v8:lang>ru</v8:lang>
+																														<v8:content>API ключ используется в процедуре аутентификации в Яндекс.Облаке
+&lt;link https://cloud.yandex.ru/docs/iam/operations/api-key/create&gt;https://cloud.yandex.ru/docs/iam/operations/api-key/create&lt;/&gt;;
+
+
+Если указан, то авторизация будет через него, если нет, то будет через Токен</v8:content>
+																													</v8:item>
+																												</Title>
+																											</ExtendedTooltip>
+																										</InputField>
+																									</ChildItems>
+																								</UsualGroup>
 																							</ChildItems>
 																						</Page>
 																						<Page name="ГруппаAmazonTTS" id="2104">
