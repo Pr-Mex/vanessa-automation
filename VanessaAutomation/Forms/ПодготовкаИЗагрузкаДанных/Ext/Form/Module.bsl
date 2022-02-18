@@ -1591,7 +1591,7 @@ Procedure AddStepsByLanguage(Vanessa, AllTests, LangCode)
 	Vanessa.ДобавитьШагВМассивТестов(AllTests
 										, LocalizedStringsClient()["s5a_" + LangCode]
 										, LocalizedStringsClient()["s5b_" + LangCode]
-										, StrTemplate(ScenarioInformationRegisterActionString(LangCode), LocalizedStringsClient()["s5d_" + LangCode], "", "")
+										, StrTemplate(ScenarioInformationRegisterActionString(LangCode, ThisObject.UseDataExhangeLoadTrue), LocalizedStringsClient()["s5d_" + LangCode], "", "")
 										, LocalizedStringsClient()["s5f_" + LangCode]
 										, "");
 	Vanessa.ДобавитьШагВМассивТестов(AllTests
@@ -1779,7 +1779,7 @@ Function GeneratedFeatureFile()
 				ElsIf MetadataListParentRow.Name = "ChartsOfCharacteristicTypes" Then
 					Scenarious.Add(ScenarioChartOfCharacteristicTypes(MetadataListRow.Name, MarkdownTables, LangCode, ThisObject.UseDataExhangeLoadTrue));
 				ElsIf MetadataListParentRow.Name = "InformationRegisters" Then
-					Scenarious.Add(ScenarioInformationRegister(MetadataListRow.Name, MarkdownTables, LangCode));
+					Scenarious.Add(ScenarioInformationRegister(MetadataListRow.Name, MarkdownTables, LangCode, ThisObject.UseDataExhangeLoadTrue));
 				ElsIf MetadataListParentRow.Name = "AccumulationRegisters" Then
 					Scenarious.Add(ScenarioAccumulationRegister(MetadataListRow.Name, MarkdownTables, LangCode));
 				Else
@@ -1868,7 +1868,7 @@ Function GenerateFeatureFileForRefsAtServer()
 		ElsIf MetadataClass = "ChartOfCharacteristicTypes" Then
 			ScenarioActionString = ScenarioChartOfCharacteristicTypesActionString(LangCode, ThisObject.UseDataExhangeLoadTrue);
 		ElsIf MetadataClass = "InformationRegister" Then
-			ScenarioActionString = ScenarioInformationRegisterActionString(LangCode);
+			ScenarioActionString = ScenarioInformationRegisterActionString(LangCode, ThisObject.UseDataExhangeLoadTrue);
 		ElsIf MetadataClass = "AccumulationRegister" Then
 			ScenarioActionString = ScenarioAccumulationRegisterActionString(LangCode);
 		EndIf;
@@ -1995,18 +1995,18 @@ EndFunction
 #Region Scenario_InformationRegister
 
 &AtServerNoContext
-Function ScenarioInformationRegister(MetadataName, MarkdownTables, LangCode)
+Function ScenarioInformationRegister(MetadataName, MarkdownTables, LangCode, DataExchangeLoad)
 	Scenario = New Array;
-	Scenario.Add(StrTemplate(LocalizedStringsServer()["s5e_" + LangCode], MetadataName));
+	Scenario.Add(StrTemplate(LocalizedStringsServer()[?(DataExchangeLoad, "s16e_", "s5e_") + LangCode], MetadataName));
 	Scenario.Add("");
-	Scenario.Add(Chars.Tab + StrTemplate(ScenarioInformationRegisterActionString(LangCode), """" + MetadataName + """", Chars.LF, MarkdownTables.ObjectDataMarkdownTable));
+	Scenario.Add(Chars.Tab + StrTemplate(ScenarioInformationRegisterActionString(LangCode, DataExchangeLoad), """" + MetadataName + """", Chars.LF, MarkdownTables.ObjectDataMarkdownTable));
 	Scenario.Add("");
 	Return StrConcat(Scenario, Chars.LF);
 EndFunction
 
 &AtServerNoContext
-Function ScenarioInformationRegisterActionString(LangCode)
-	ReturnValue = LocalizedStringsServer()["s5c_" + LangCode];
+Function ScenarioInformationRegisterActionString(LangCode, DataExchangeLoad)
+	ReturnValue = LocalizedStringsServer()[?(DataExchangeLoad, "s16c_", "s5c_") + LangCode];
 	Return ReturnValue;
 EndFunction
 
