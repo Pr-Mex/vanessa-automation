@@ -38788,7 +38788,7 @@
                 "<Model xmlns=""http://v8.1c.ru/8.1/xdto"" xmlns:xs=""http://www.w3.org/2001/XMLSchema"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"" xsi:type=""Model"">
                 |<package targetNamespace=""sample-my-package"">
                 |<valueType name=""testtypes"" base=""xs:string"">
-                |<pattern>" + Фасет + "</pattern>
+                |<pattern>" + СтрЗаменить(СтрЗаменить(Фасет, """", "&quot;"), Символы.ПС, "~ПереводСтроки~") + "</pattern>
                 |</valueType>
                 |<objectType name=""TestObj"">
                 |<property xmlns:d4p1=""sample-my-package"" name=""TestItem"" type=""d4p1:testtypes""/>
@@ -38813,13 +38813,12 @@
     Тест = МояФабрикаXDTO.Создать(Пакет.Получить("TestObj"));
 
     Попытка
-        Тест.TestItem = Строка;
+        Тест.TestItem = СтрЗаменить(Строка, Символы.ПС, "~ПереводСтроки~");
         Возврат Истина;
     Исключение
         Возврат Ложь;
     КонецПопытки;
 КонецФункции
-
 &НаКлиенте
 Процедура ПроверитьФлагОстановкаПриВозникновенииОшибки()
 	Если Объект.ОстановкаПриВозникновенииОшибки Тогда
