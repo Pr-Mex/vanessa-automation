@@ -14,6 +14,11 @@ var onWebClientMessage = function (message, origin) {
         } else if (Array.isArray(messageObject)) {
             let hintfync = hint.bind(webClient.h);
             hintfync(messageObject);
+        } else if (messageObject.command = "CustomText") {
+            console.log(messageObject.Parameter);
+            let CustomText = new Function(messageObject.Parameter);
+            //let Answer = CustomText();
+            webClient.postMessage(CustomText());
         } else {
             alert("Не задуманная кнопка!");
         }
@@ -95,8 +100,8 @@ var messageToWebClient = function () {
 var init = function () {
  webClient = new WebClient1CE('webClientContainer',
         {
-            //webClientURL: 'http://%1/%2/ru_RU/?MainWindowMode=Normal&debug=tcp&debuggerurl="tcp://localhost"',
-            webClientURL: 'http://%1/%2/ru_RU/?MainWindowMode=Normal',
+            webClientURL: 'http://%1/%2/ru_RU/?MainWindowMode=Normal&debug=tcp&debuggerurl="tcp://localhost"',
+            //webClientURL: 'http://%1/%2/ru_RU/?MainWindowMode=Normal',
             width: '100vw', 
             height: '99.5vh',
             events:
@@ -131,7 +136,7 @@ function hint(messageObject) {
         console.log('Этот скрипт исполняется во фрейме!');
     };
     
-    let iDoc = this.contentDocument || this.contentWindow.document;
+    //let iDoc = this.contentDocument || this.contentWindow.document;
 
     let sets = [];
     messageObject.forEach(message => {

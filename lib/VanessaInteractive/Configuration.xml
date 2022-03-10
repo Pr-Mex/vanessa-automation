@@ -32,11 +32,15 @@
 			</xr:ContainedObject>
 		</InternalInfo>
 		<Properties>
-			<Name>VanessaInteractiveDemo</Name>
+			<Name>VanessaInteractiveWeb</Name>
 			<Synonym>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Управлние сайтом со встроенным Web клиентом 1С</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru1</v8:lang>
+					<v8:content>Vanessa interactive web</v8:content>
 				</v8:item>
 			</Synonym>
 			<Comment/>
@@ -44,10 +48,10 @@
 			<ObjectBelonging>Adopted</ObjectBelonging>
 			<KeepMappingToExtendedConfigurationObjectsByIDs>true</KeepMappingToExtendedConfigurationObjectsByIDs>
 			<NamePrefix>Web_</NamePrefix>
-			<ConfigurationExtensionCompatibilityMode>Version8_3_20</ConfigurationExtensionCompatibilityMode>
+			<ConfigurationExtensionCompatibilityMode>Version8_3_17</ConfigurationExtensionCompatibilityMode>
 			<ScriptVariant>Russian</ScriptVariant>
 			<Vendor/>
-			<Version>1.0.0.1</Version>
+			<Version>1.0.0.2</Version>
 			<DefaultLanguage>Language.Русский</DefaultLanguage>
 			<BriefInformation/>
 			<DetailedInformation/>
@@ -57,8 +61,8 @@
 		</Properties>
 		<ChildObjects>
 			<Language>Русский</Language>
+			<Subsystem>Web_VanessaInteractive</Subsystem>
 			<Role>Web_ОсновнаяРоль</Role>
-			<CommonTemplate>Web_ФормаВэбКлиента</CommonTemplate>
 			<CommonTemplate>Web_ЗвуковойФайл</CommonTemplate>
 			<CommonTemplate>Web_script_js</CommonTemplate>
 			<CommonTemplate>Web_enjoyhint_css</CommonTemplate>
@@ -66,13 +70,23 @@
 			<CommonTemplate>Web_IndexHTML</CommonTemplate>
 			<CommonTemplate>Web_casino_hand_webfont_ttf</CommonTemplate>
 			<CommonTemplate>Web_casino_hand_webfont_woff</CommonTemplate>
-			<CommonModule>РаботаСБраузером</CommonModule>
-			<CommonModule>РаботаСДанными</CommonModule>
 			<CommonModule>VanessaInteractive</CommonModule>
 			<CommonModule>VanessaInteractiveКлиент</CommonModule>
+			<CommonModule>РаботаСБраузером</CommonModule>
+			<CommonModule>РаботаСБраузеромПереопределяемый</CommonModule>
+			<CommonModule>РаботаСДанными</CommonModule>
 			<HTTPService>Web_HTTPСервис1</HTTPService>
+			<CommonCommand>Web_ЗапуститьСеансДемонстрайцииДемо</CommonCommand>
+			<CommonCommand>Web_ЗапуститьДемонстрациюДемо</CommonCommand>
+			<CommonCommand>Web_ПодготовкаДанных</CommonCommand>
+			<CommonCommand>Web_РаботаСВнешнимСайтом</CommonCommand>
+			<CommandGroup>Web_ДемонстрацияДемо</CommandGroup>
+			<CommandGroup>Web_РаботаСVA</CommandGroup>
 			<CommonForm>Web_РабочийСтол</CommonForm>
 			<CommonForm>Web_Демонстрация</CommonForm>
+			<CommonForm>Web_ПодготовкаДанныхДляСайта</CommonForm>
+			<CommonForm>Web_СамостоятельныйВнешнийСайт</CommonForm>
+			<Catalog>Web_Сценарии</Catalog>
 		</ChildObjects>
 	</Configuration>
 </MetaDataObject>
