@@ -169,13 +169,13 @@
 							<ChildItems>
 								<Button name="ПоказатьРамку" id="88">
 									<Type>UsualButton</Type>
-									<CommandName>Form.Command.ПоказатьРамкуГлавное</CommandName>
+									<CommandName>Form.Command.ПоказатьРамкуГлавноеVA</CommandName>
 									<ExtendedTooltip name="ПоказатьРамкуРасширеннаяПодсказка" id="89"/>
 								</Button>
-								<Button name="ПоказатьРамкуVA" id="94">
+								<Button name="ПоказатьРамкуVI" id="94">
 									<Type>UsualButton</Type>
-									<CommandName>Form.Command.ПоказатьРамкуVA</CommandName>
-									<ExtendedTooltip name="ПоказатьРамкуVAРасширеннаяПодсказка" id="95"/>
+									<CommandName>Form.Command.ПоказатьРамкуVI</CommandName>
+									<ExtendedTooltip name="ПоказатьРамкуVIРасширеннаяПодсказка" id="95"/>
 								</Button>
 							</ChildItems>
 						</UsualGroup>
@@ -220,6 +220,38 @@
 										</Button>
 									</ChildItems>
 								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="Группа9" id="106">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пример использования в VA</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="Группа9РасширеннаяПодсказка" id="107"/>
+					<ChildItems>
+						<UsualGroup name="Группа8" id="108">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>EnjoyHint</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="109"/>
+							<ChildItems>
+								<InputField name="Сценарий" id="112">
+									<DataPath>Сценарий</DataPath>
+									<ContextMenu name="СценарийКонтекстноеМеню" id="113"/>
+									<ExtendedTooltip name="СценарийРасширеннаяПодсказка" id="114"/>
+								</InputField>
+								<Button name="ВыполнитьШагВVA" id="110">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ВыполнитьШагВVA</CommandName>
+									<ExtendedTooltip name="ВыполнитьШагВVAРасширеннаяПодсказка" id="111"/>
+								</Button>
 							</ChildItems>
 						</UsualGroup>
 					</ChildItems>
@@ -316,6 +348,17 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="Сценарий" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сценарий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Web_Сценарии</v8:Type>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ВыполнитьПроизвольныйТекстJS" id="4">
@@ -348,7 +391,7 @@
 			</ToolTip>
 			<Action>ПримерТекстаJS</Action>
 		</Command>
-		<Command name="ПоказатьРамкуГлавное" id="2">
+		<Command name="ПоказатьРамкуГлавноеVA" id="2">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -358,12 +401,12 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Показать рамку главное</v8:content>
+					<v8:content>Показать рамку главное VA</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПоказатьРамку</Action>
 		</Command>
-		<Command name="ПоказатьРамкуVA" id="3">
+		<Command name="ПоказатьРамкуVI" id="3">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -373,7 +416,7 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Показать рамку VA</v8:content>
+					<v8:content>Показать рамку VI</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПоказатьРамкуVA</Action>
@@ -382,7 +425,7 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Подсказка подсистема "Главное"</v8:content>
+					<v8:content>Подсистема "Главное"</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -407,6 +450,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПодсказкаVI</Action>
+		</Command>
+		<Command name="ВыполнитьШагВVA" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить шаг</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить шаг ВVA</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполнитьШагВVA</Action>
 		</Command>
 	</Commands>
 </Form>
