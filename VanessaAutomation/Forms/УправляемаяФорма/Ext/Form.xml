@@ -14150,11 +14150,16 @@ When working with Vanessa Automation Single it is allowed to leave the field bla
 																<Title formatted="false">
 																	<v8:item>
 																		<v8:lang>ru</v8:lang>
-																		<v8:content>файловый путь или url по которому находятся настройки. По умолчанию каталог проекта (имя файла по умолчанию user_settings.json)  или localhost</v8:content>
+																		<v8:content>Файловый путь или url по которому находятся настройки. По умолчанию каталог проекта (имя файла по умолчанию user_settings.json)  или localhost.
+В результате чтения файла настроек будут созданы глобальные переменные.
+При запуске тестов из командной строки для создания переменных нужно передавать их в основном json файле настроек в параметре "GlobalVars", который является массивом значений вида Ключ:Значение.
+</v8:content>
 																	</v8:item>
 																	<v8:item>
 																		<v8:lang>en</v8:lang>
-																		<v8:content>file path or url for settings. By default, project directory (name of default file user_settings.json) or localhost</v8:content>
+																		<v8:content>The file path or url where the settings are located. By default, the project directory (default filename is user_settings.json) or localhost.
+As a result of reading the settings file, global variables will be created.
+When running tests from the command line, to create variables, you need to pass them in the main settings json file in the "GlobalVars" parameter, which is an array of Key:Value values.</v8:content>
 																	</v8:item>
 																</Title>
 															</ExtendedTooltip>
