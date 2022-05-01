@@ -760,6 +760,38 @@ Procedure GenerateFeature(Command)
 	Feature.Очистить();
 	Feature.ДобавитьСтроку(GeneratedFeatureFile());
 	Items.GroupPages.CurrentPage = Items.GroupPageFeature;
+	
+	SaveBinData();
+	
+EndProcedure
+
+&AtClient
+Procedure SaveBinData()
+	
+	If FilesToSave.Count() = 0 Then
+		
+		Return;
+		
+	EndIf;
+	
+	Notify = New NotifyDescription("SaveBinaryDataContinuation", ThisObject);
+	List = New Array;
+	
+	For Each elem In FilesToSave Do
+		
+		List.Add(New TransferableFileDescription(elem.Presentation, elem.Value)); 
+		
+	EndDo;
+	
+	BeginGettingFiles(Notify, List, PathToUpload, False);
+	
+EndProcedure
+
+&AtCLient
+Procedure SaveBinaryDataContinuation(Files, AdditionalParameters) Export
+	
+	
+	
 EndProcedure
 
 &AtClient
@@ -1861,6 +1893,7 @@ Function GeneratedFeatureFile()
 	MetadataListValue = FormAttributeToValue("MetadataList");
 	RefReplaceMetadataObjects = GetRefReplaceMetadataObjects(MetadataListValue, ThisObject.ReplaceRefByAttribute);		
 	ParamsValueStorage = ParamsValueStorageSaveToFile();
+	FilesToSave.Clear();
 	
 	For Each MetadataListParentRow In MetadataListValue.Rows Do
 		For Each MetadataListRow In MetadataListParentRow.Rows Do
@@ -1939,6 +1972,7 @@ Function GenerateFeatureFileForRefsAtServer()
 	ObjectsByTypesTable.Columns.Add("Objects");
 	
 	ParamsValueStorage = ParamsValueStorageSaveToFile();
+	FilesToSave.Clear();
 														
 	For Each KeyValuePair In ObjectsByTypes Do
 		ObjectsOfType = KeyValuePair.Value;
@@ -2285,21 +2319,25 @@ Function GeValuetStringRepresentation(DataValue, RefReplaceMetadataObjects)
 					
 				EndIf;
 				
-				Path = ParamsValueStorage.PathToUpload
-						+ Name 
-						+ ".bin";
+				TempPath = GetTempFileName("bin"); 
 						
 				Writer = New XMLWriter();
-				Writer.OpenFile(Path);
+				Writer.OpenFile(TempPath);
 				Writer.WriteXMLDeclaration();
 				WriteXML(Writer, DataValue);
 				Writer.Close();
+				
+				BinData = New BinaryData(TempPath);
+				AddressTemp = PutToTempStorage(BinData);
+				DeleteFiles(TempPath);
 				
 				PathFeat = ParamsValueStorage.PathToFeature
 							+ Name      
 							+ ".bin";
 				
 				ReturnValue = "ValueStoragePath:" + PathFeat;
+				
+				FilesToSave.Add(AddressTemp, Name + ".bin");
 				
 			Else
 				
