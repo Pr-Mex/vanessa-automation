@@ -122,7 +122,22 @@ Procedure ICheckOrCreateCatalogObjects(Val ObjectName, Val Values) Export
 	If Not Values.Count() Then
 		Return;
 	EndIf;
-	ICheckOrCreateCatalogObjectsAtServer(ObjectName, Values, False);
+	
+	Files = FilesToUpload(Values);
+	
+	If Files.Count() > 0 Then
+		
+	    Vanessa.ЗапретитьВыполнениеШагов();
+		AddParams = New Structure("Object, Name, Values, LoadTrue", "Catalog", ObjectName, Values, False);
+		Notify = New NotifyDescription("UploadBinaryDataContinuation", ThisObject, AddParams);
+		BeginPuttingFiles(Notify, Files, , False, ThisForm.UUID);
+		
+	Else
+		
+		ICheckOrCreateCatalogObjectsAtServer(ObjectName, Values, False);
+		
+	EndIf;
+	
 EndProcedure
 
 &AtClient
@@ -135,7 +150,21 @@ Procedure ICheckOrCreateCatalogObjectsWithDataExchangeLoadTrue(Val ObjectName, V
 	If Not Values.Count() Then
 		Return;
 	EndIf;
-	ICheckOrCreateCatalogObjectsAtServer(ObjectName, Values, True);
+	
+	Files = FilesToUpload(Values);
+	
+	If Files.Count() > 0 Then
+	    Vanessa.ЗапретитьВыполнениеШагов();
+		AddParams = New Structure("Object, Name, Values, LoadTrue", "Catalog", ObjectName, Values, True);
+		Notify = New NotifyDescription("UploadBinaryDataContinuation", ThisObject, AddParams);
+		BeginPuttingFiles(Notify, Files, , False, ThisForm.UUID);
+		
+	Else
+		
+		ICheckOrCreateCatalogObjectsAtServer(ObjectName, Values, True);
+		
+	EndIf;
+	
 EndProcedure
 
 &AtClient
@@ -212,7 +241,22 @@ Procedure ICheckOrCreateDocumentObjects(Val ObjectName, Val Values) Export
 	If Not Values.Count() Then
 		Return;
 	EndIf;
-	ICheckOrCreateDocumentObjectsAtServer(ObjectName, Values);
+	
+	Files = FilesToUpload(Values);
+	
+	If Files.Count() > 0 Then
+		
+	    Vanessa.ЗапретитьВыполнениеШагов();
+		AddParams = New Structure("Object, Name, Values, LoadTrue", "Documents", ObjectName, Values, False);
+		Notify = New NotifyDescription("UploadBinaryDataContinuation", ThisObject, AddParams);
+		BeginPuttingFiles(Notify, Files, , False, ThisForm.UUID);
+		
+	Else
+		
+		ICheckOrCreateDocumentObjectsAtServer(ObjectName, Values);
+		
+	EndIf;
+	
 EndProcedure
 
 &AtClient
@@ -225,7 +269,22 @@ Procedure ICheckOrCreateDocumentObjectsWithDataExchangeLoadTrue(Val ObjectName, 
 	If Not Values.Count() Then
 		Return;
 	EndIf;
-	ICheckOrCreateDocumentObjectsAtServer(ObjectName, Values, True);
+	
+	Files = FilesToUpload(Values);
+	
+	If Files.Count() > 0 Then
+		
+	    Vanessa.ЗапретитьВыполнениеШагов();
+		AddParams = New Structure("Object, Name, Values, LoadTrue", "Documents", ObjectName, Values, True);
+		Notify = New NotifyDescription("UploadBinaryDataContinuation", ThisObject, AddParams);
+		BeginPuttingFiles(Notify, Files, , False, ThisForm.UUID);
+		
+	Else
+		
+		ICheckOrCreateDocumentObjectsAtServer(ObjectName, Values, True);
+		
+	EndIf;
+	
 EndProcedure
 
 &AtClient
@@ -443,10 +502,26 @@ EndProcedure
 
 &AtClient
 Procedure ICheckOrCreateInformationRegisterRecords(Val RegisterName, Val Values) Export
+	
 	If Not Values.Count() Then
 		Return;
 	EndIf;
-	ICheckOrCreateInformationRegisterRecordsAtServer(RegisterName, Values, False, False);
+	
+	Files = FilesToUpload(Values);
+	
+	If Files.Count() > 0 Then
+		
+	    Vanessa.ЗапретитьВыполнениеШагов();
+		AddParams = New Structure("Object, Name, Values, LoadTrue, UseSet", "RegisterRecords", RegisterName, Values, False, False);
+		Notify = New NotifyDescription("UploadBinaryDataContinuation", ThisObject, AddParams);
+		BeginPuttingFiles(Notify, Files, , False, ThisForm.UUID);
+		
+	Else
+		
+		ICheckOrCreateInformationRegisterRecordsAtServer(RegisterName, Values, False, False);
+		
+	EndIf;
+		
 EndProcedure
 
 &AtClient
@@ -459,7 +534,22 @@ Procedure ICheckOrCreateInformationRegisterRecordsUsingRecordSets(Val RegisterNa
 	If Not Values.Count() Then
 		Return;
 	EndIf;
-	ICheckOrCreateInformationRegisterRecordsAtServer(RegisterName, Values, True, False);
+	
+	Files = FilesToUpload(Values);
+	
+	If Files.Count() > 0 Then
+		
+	    Vanessa.ЗапретитьВыполнениеШагов();
+		AddParams = New Structure("Object, Name, Values, UseSet, LoadTrue", "RegisterRecords", RegisterName, Values, True, False);
+		Notify = New NotifyDescription("UploadBinaryDataContinuation", ThisObject, AddParams);
+		BeginPuttingFiles(Notify, Files, , False, ThisForm.UUID);
+		
+	Else
+		
+		ICheckOrCreateInformationRegisterRecordsAtServer(RegisterName, Values, True, False);
+		
+	EndIf;
+	
 EndProcedure
 
 &AtClient
@@ -472,7 +562,20 @@ Procedure ICheckOrCreateInformationRegisterRecordsUsingRecordSetsWithDataExchang
 	If Not Values.Count() Then
 		Return;
 	EndIf;
-	ICheckOrCreateInformationRegisterRecordsAtServer(RegisterName, Values, True, True);
+	Files = FilesToUpload(Values);
+	
+	If Files.Count() > 0 Then
+		
+	    Vanessa.ЗапретитьВыполнениеШагов();
+		AddParams = New Structure("Object, Name, Values, LoadTrue, UseSet", "RegisterRecords", RegisterName, Values, True, True);
+		Notify = New NotifyDescription("UploadBinaryDataContinuation", ThisObject, AddParams);
+		BeginPuttingFiles(Notify, Files, , False, ThisForm.UUID);
+		
+	Else
+		
+		ICheckOrCreateInformationRegisterRecordsAtServer(RegisterName, Values, True, True);
+		
+	EndIf;
 EndProcedure
 
 &AtClient
@@ -1641,15 +1744,28 @@ Function ParseStringValue(Val ParsingValue, Val ValueType)
 		Return Result;
 	EndIf;
 	If Left(ParsingValue, 17) = "ValueStoragePath:" Then
+		
 		Path = StrReplace(ParsingValue, "ValueStoragePath:", "");
 		Path = StrReplace(Path, "$workspaceRoot", Parameters.workspaceRoot);
 		
-		Reader = New XMLReader();
-		Reader.OpenFile(Path);
-		Result = ReadXML(Reader);
-		Reader.Close();
+		For Each elem In FilesToSave Do
+			
+			If elem.Presentation = Path Then
+				
+				TempPath = GetTempFileName();
+				GetFromTempStorage(FilesToSave[0].Value).Write(TempPath);
+				
+				Reader = New XMLReader();
+				Reader.OpenFile(TempPath);
+				Result = ReadXML(Reader);
+				Reader.Close();
 		
-		Return Result;
+				Return Result;
+				
+			EndIf;
+				
+		EndDo;
+					
 	EndIf;
 	If Left(ParsingValue, 16) = "FindByAttribute:" Then
 		Return GetObjectLinkByAttributeString(ParsingValue);
@@ -2504,7 +2620,79 @@ EndFunction
 
 #EndRegion
 
+&AtClient
+Function FilesToUpload(Values)
+	
+	Files = New Array;
+	
+	For i = 1 to Values.Count() - 1 Do
+		
+		Row = Values[i];
+		For Each ParsingValue In Row Do
+			
+			If StrFind(ParsingValue.Value, "ValueStoragePath:") > 0 Then
+				
+				Path = StrReplace(ParsingValue.Value, "ValueStoragePath:", "");
+				Path = StrReplace(Path, "$workspaceRoot", Parameters.workspaceRoot);
+				
+				transfer = New TransferableFileDescription(Path);
+				
+				Files.Add(transfer);
+				
+			EndIf;
+			
+		EndDo;
+		
+	EndDo;
+	
+	Return Files;
+	
+EndFunction
+
+&AtClient
+Procedure UploadBinaryDataContinuation(Files, AdditionalParameters) Export
+	
+	If Files = Undefined Then
+		
+		Vanessa.ПродолжитьВыполнениеШагов(Истина, "Неудалось загрузить файлы на сервер");
+		Возврат;
+		
+	EndIf;
+	
+	FilesToSave.Clear();
+	
+	For Each File In Files Do
+		
+		FilesToSave.Add(File.Location, File.Name);
+		
+	EndDo;
+	
+	Vanessa.ПродолжитьВыполнениеШагов();
+	If AdditionalParameters.Object = "Catalog" Then
+		
+		ICheckOrCreateCatalogObjectsAtServer(AdditionalParameters.Name
+											, AdditionalParameters.Values
+											, AdditionalParameters.LoadTrue);
+											
+	ElsIf AdditionalParameters.Object = "Documents" Then
+	
+		ICheckOrCreateDocumentObjectsAtServer(AdditionalParameters.Name
+											, AdditionalParameters.Values
+											, AdditionalParameters.LoadTrue);
+											
+	ElsIf AdditionalParameters.Object = "RegisterRecords" Then
+											
+		ICheckOrCreateInformationRegisterRecordsAtServer(AdditionalParameters.Name
+															, AdditionalParameters.Values
+															, AdditionalParameters.UseSet
+															, AdditionalParameters.LoadTrue);
+		
+	EndIf;	
+	
+EndProcedure
+
 #EndRegion
+
 
 #Region Localization
 
