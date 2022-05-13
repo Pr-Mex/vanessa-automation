@@ -21,6 +21,7 @@
 	Когда Я открываю VanessaAutomation в режиме TestClient со стандартной библиотекой
 
 //https://github.com/Pr-Mex/vanessa-automation/issues/1507
+@IgnoreOnUFSovm82Builds
 Сценарий: Проверка исправления ошибки 1507. Старый парсер
 	* Проверка, что выключен новый парсер
 		И я перехожу к закладке с именем "ГруппаНастройки"
