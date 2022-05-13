@@ -31,7 +31,20 @@
 	Дано Я задаю параметры чтения области макета "R1C1:R10C10"
 
 
-
+@IgnoreOnUFSovm82Builds
+@IgnoreOnWeb
+@IgnoreOn836
+@IgnoreOn837
+@IgnoreOn838
+@IgnoreOn839
+@IgnoreOn8310
+@IgnoreOn8311
+@IgnoreOn8312
+@IgnoreOn8313
+@IgnoreOn8314
+@IgnoreOn8315
+@IgnoreOn8316
+@IgnoreOn8317
 Сценарий: Установка расширения VAExtension
 
 	Дано Я закрыл все окна клиентского приложения
@@ -55,6 +68,20 @@
 	
 
 //https://github.com/Pr-Mex/vanessa-automation/issues/1556
+@IgnoreOnUFSovm82Builds
+@IgnoreOnWeb
+@IgnoreOn836
+@IgnoreOn837
+@IgnoreOn838
+@IgnoreOn839
+@IgnoreOn8310
+@IgnoreOn8311
+@IgnoreOn8312
+@IgnoreOn8313
+@IgnoreOn8314
+@IgnoreOn8315
+@IgnoreOn8316
+@IgnoreOn8317
 Сценарий: Проверка значения области с пропусками
 	Когда я удаляю все элементы Справочника "Справочник3"
 	И В командном интерфейсе я выбираю 'Основная' 'Справочник3'
@@ -152,6 +179,7 @@
 		| '111' |
 		| '222' |
 
+@IgnoreOnWeb
 Сценарий: Сохранение табличного документа в файл
 	Когда я удаляю все элементы Справочника "Справочник3"
 	И В командном интерфейсе я выбираю 'Основная' 'Справочник3'

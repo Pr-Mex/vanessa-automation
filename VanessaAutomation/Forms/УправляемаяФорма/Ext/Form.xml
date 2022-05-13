@@ -1546,6 +1546,11 @@
 								<CommandName>Form.Command.ДобавитьПроверкуСообщенийПользователя</CommandName>
 								<ExtendedTooltip name="VanessaEditorДобавитьПроверкуСообщенийПользователяРасширеннаяПодсказка" id="2902"/>
 							</Button>
+							<Button name="VanessaEditorПолучитьШагОткрытияНавигационнойСсылкиТекущегоОкна" id="3261">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ПолучитьШагОткрытияНавигационнойСсылкиТекущегоОкна</CommandName>
+								<ExtendedTooltip name="VanessaEditorПолучитьШагОткрытияНавигационнойСсылкиТекущегоОкнаРасширеннаяПодсказка" id="3262"/>
+							</Button>
 						</ChildItems>
 					</ButtonGroup>
 					<ButtonGroup name="ГруппаVanessaEditorТаблоПеременных" id="2928">
@@ -1667,10 +1672,10 @@
 						</ToolTip>
 						<ExtendedTooltip name="ГруппаVanessaEditorПолучитьКоординатыОбластиРасширеннаяПодсказка" id="3252"/>
 						<ChildItems>
-							<Button name="ФормаПолучитьКоординатыОбласти" id="3253">
+							<Button name="VanessaEditorПолучитьКоординатыОбласти" id="3253">
 								<Type>CommandBarButton</Type>
 								<CommandName>Form.Command.ПолучитьКоординатыОбласти</CommandName>
-								<ExtendedTooltip name="ФормаПолучитьКоординатыОбластиРасширеннаяПодсказка" id="3254"/>
+								<ExtendedTooltip name="VanessaEditorПолучитьКоординатыОбластиРасширеннаяПодсказка" id="3254"/>
 							</Button>
 						</ChildItems>
 					</ButtonGroup>
@@ -8015,6 +8020,24 @@
 										</InputField>
 									</ChildItems>
 								</UsualGroup>
+								<LabelDecoration name="ДекорацияТребованияКГенерацииEPF" id="3258">
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<TextColor>style:FieldSelectionBackColor</TextColor>
+									<Title formatted="false">
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>1. Должен быть установлен толстый клиент.
+2. Должен работать запуск файловых баз на данном ПК.</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>1. A thick client must be installed.
+2. The launch of file databases on this PC should work.</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДекорацияТребованияКГенерацииEPFКонтекстноеМеню" id="3259"/>
+									<ExtendedTooltip name="ДекорацияТребованияКГенерацииEPFРасширеннаяПодсказка" id="3260"/>
+								</LabelDecoration>
 							</ChildItems>
 						</Page>
 						<Page name="ГруппаКаталогиБиблиотек" id="83">
@@ -8156,6 +8179,16 @@
 													<v8:content>Library directories</v8:content>
 												</v8:item>
 											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Каталоги библиотек</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Library directories</v8:content>
+												</v8:item>
+											</ToolTip>
 											<SearchStringLocation>None</SearchStringLocation>
 											<ViewStatusLocation>None</ViewStatusLocation>
 											<SearchControlLocation>None</SearchControlLocation>
@@ -25754,6 +25787,25 @@ For this option to work, you must enable the use of the VanessaExt component.</v
 														</Title>
 													</ExtendedTooltip>
 												</CheckBoxField>
+												<CheckBoxField name="ЗакрыватьСценарийИнтерактивнойСправкиПослеВыполнения" id="3255">
+													<DataPath>Объект.ЗакрыватьСценарийИнтерактивнойСправкиПослеВыполнения</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<ToolTipRepresentation>Button</ToolTipRepresentation>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ЗакрыватьСценарийИнтерактивнойСправкиПослеВыполненияКонтекстноеМеню" id="3256"/>
+													<ExtendedTooltip name="ЗакрыватьСценарийИнтерактивнойСправкиПослеВыполненияРасширеннаяПодсказка" id="3257">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>If this option is enabled, the editor tab containing the interacive help script will be closed after the successful completion of the interacive help lesson.</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Если опция включена, то после успешного выполнения урока интерактивной справки вкладка редактора, содержащая сценарий интерактивной справки, будет закрыта.</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+												</CheckBoxField>
 											</ChildItems>
 										</Page>
 										<Page name="СтраницаPID" id="1658">
@@ -36131,21 +36183,21 @@ For this option to work, you must enable the use of the VanessaExt component.</v
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Найти</v8:content>
+					<v8:content>Найти (Ctrl+F)</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
-					<v8:content>Find</v8:content>
+					<v8:content>Find (Ctrl+F)</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Поиск</v8:content>
+					<v8:content>Поиск (Ctrl+F)</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
-					<v8:content>Search</v8:content>
+					<v8:content>Search (Ctrl+F)</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>
@@ -36215,24 +36267,23 @@ For this option to work, you must enable the use of the VanessaExt component.</v
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Заменить</v8:content>
+					<v8:content>Заменить (Ctrl+H)</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
-					<v8:content>Replace</v8:content>
+					<v8:content>Replace (Ctrl+H)</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Заменить</v8:content>
+					<v8:content>Заменить (Ctrl+H)</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
-					<v8:content>Replace</v8:content>
+					<v8:content>Replace (Ctrl+H)</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Shortcut>Ctrl+H</Shortcut>
 			<Picture>
 				<xr:Ref>StdPicture.Replace</xr:Ref>
 				<xr:LoadTransparent>true</xr:LoadTransparent>
