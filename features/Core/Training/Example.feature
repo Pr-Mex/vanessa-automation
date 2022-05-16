@@ -3,6 +3,7 @@
 @IgnoreOnCIMainBuild
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
+@IgnoreOnNoSyncBuilds
 @IgnoreOnWeb
 @IgnoreOn836
 @IgnoreOn837
