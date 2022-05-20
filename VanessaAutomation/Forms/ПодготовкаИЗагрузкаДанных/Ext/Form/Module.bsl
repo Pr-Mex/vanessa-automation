@@ -1687,7 +1687,7 @@ Function ItIsDataForUpload(Value)
 	
 	TypeVal = TypeOf(Value);
 			
-	If TypeVal = Undefined Then
+	If TypeVal = TypeOf(Undefined) Then
 		
 		Return False;
 		
