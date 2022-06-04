@@ -2,7 +2,7 @@
 
 @Ignore
 
-Функциональность: Взаимодействие с GreenMail http://www.icegreen.com/greenmail/
+Функциональность: Взаимодействие с GreenMail https://greenmail-mail-test.github.io/greenmail/
 Как Тестировщик
 Я хочу проверить корректность отправки и получения электронных писем
 
