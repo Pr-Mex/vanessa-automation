@@ -54,6 +54,38 @@ Function ПолучитьМакетОбработки(Val TemplateName) Export
 	Return GetTemplateAtServer(TemplateName);
 EndFunction
 
+&AtServer
+Procedure SetAttributTypes()
+	
+	TypesArray = New Array;
+	
+	MetadataTypeMap = GetMetadataTypeMap();
+	
+	For Each MetadataTypeItem In MetadataTypeMap Do
+		For Each MetadataObj In Metadata[MetadataTypeItem.Key] Do
+			TypesArray.add(StrTemplate("%1.%2", MetadataTypeItem.Value, MetadataObj.Name));	
+		EndDo;
+	EndDo;
+	
+	DataRefsTypeRestriction = New TypeDescription(StrConcat(TypesArray, ","));
+	
+	Items.DataRefsRef.TypeRestriction = DataRefsTypeRestriction;
+	
+EndProcedure
+
+&AtServer
+Function GetMetadataTypeMap()
+	
+	MetadataTypeMap = New Map;
+	
+	MetadataTypeMap.Insert("Catalogs",  "CatalogRef");
+	MetadataTypeMap.Insert("Documents", "DocumentRef");
+	MetadataTypeMap.Insert("ChartsOfCharacteristicTypes", "ChartOfCharacteristicTypesRef");
+	
+	Return MetadataTypeMap;
+	
+EndFunction
+
 #EndRegion
 
 #Region WorkWithScenarious
@@ -805,6 +837,7 @@ EndProcedure
 Procedure OnCreateAtServer(Cancel, StandardProcessing)	
 	
 	MaxDownstreamDependenciesHierarchyLevel = 1;
+	SetAttributTypes();	
 	
 EndProcedure
 
