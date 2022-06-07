@@ -1428,6 +1428,52 @@
 						</FormattedDocumentField>
 					</ChildItems>
 				</Page>
+				<Page name="СтраницаHTML" id="357">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>HTML</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница HTML</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаHTMLРасширеннаяПодсказка" id="358"/>
+					<ChildItems>
+						<InputField name="ПолеДляПоискаЭлементаСправочника2" id="362">
+							<DataPath>ПолеДляПоискаЭлементаСправочника2_1</DataPath>
+							<ContextMenu name="ПолеДляПоискаЭлементаСправочника2КонтекстноеМеню" id="363"/>
+							<ExtendedTooltip name="ПолеДляПоискаЭлементаСправочника2РасширеннаяПодсказка" id="364"/>
+						</InputField>
+						<InputField name="ПолеДляПоискаЭлементаСправочника2_2" id="367">
+							<DataPath>ПолеДляПоискаЭлементаСправочника2_2</DataPath>
+							<ContextMenu name="ПолеДляПоискаЭлементаСправочника2_2КонтекстноеМеню" id="368"/>
+							<ExtendedTooltip name="ПолеДляПоискаЭлементаСправочника2_2РасширеннаяПодсказка" id="369"/>
+						</InputField>
+						<InputField name="ОтветHTML" id="370">
+							<DataPath>ОтветHTML</DataPath>
+							<ContextMenu name="ОтветHTMLКонтекстноеМеню" id="371"/>
+							<ExtendedTooltip name="ОтветHTMLРасширеннаяПодсказка" id="372"/>
+						</InputField>
+						<Button name="СоздатьHTMLСтраницуСЭлементомСправочника2" id="365">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.СоздатьHTMLСтраницуСЭлементомСправочника2</CommandName>
+							<Parameter xsi:nil="true"/>
+							<ExtendedTooltip name="СоздатьHTMLСтраницуСЭлементомСправочника2РасширеннаяПодсказка" id="366"/>
+						</Button>
+						<HTMLDocumentField name="HTMLДокументНаФорме" id="359">
+							<DataPath>HTMLДокументНаФорме</DataPath>
+							<ContextMenu name="HTMLДокументНаФормеКонтекстноеМеню" id="360"/>
+							<ExtendedTooltip name="HTMLДокументНаФормеРасширеннаяПодсказка" id="361"/>
+							<Events>
+								<Event name="OnClick">HTMLДокументНаФормеПриНажатии</Event>
+							</Events>
+						</HTMLDocumentField>
+					</ChildItems>
+				</Page>
 				<Page name="ГруппаТД" id="307">
 					<Title>
 						<v8:item>
@@ -2042,6 +2088,66 @@
 				<v8:Type>v8ui:FormattedString</v8:Type>
 			</Type>
 		</Attribute>
+		<Attribute name="HTMLДокументНаФорме" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>HTML документ на форме</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПолеДляПоискаЭлементаСправочника2_1" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле для поиска элемента справочника2_1</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПолеДляПоискаЭлементаСправочника2_2" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле для поиска элемента справочника2_2</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтветHTML" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ответ HTML</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ЗаполнитьРекСтрока1" id="1">
@@ -2566,6 +2672,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>КнопкаГиперссылка</Action>
+		</Command>
+		<Command name="СоздатьHTMLСтраницуСЭлементомСправочника2" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать HTML страницу с элементом справочника 2</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать HTMLСтраницу с элементом справочника2</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СоздатьHTMLСтраницуСЭлементомСправочника2</Action>
 		</Command>
 	</Commands>
 	<CommandInterface>
