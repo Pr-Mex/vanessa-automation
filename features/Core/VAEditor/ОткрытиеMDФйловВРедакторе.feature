@@ -19,6 +19,8 @@
 @IgnoreOn8316
 @IgnoreOn8317
 @IgnoreOn8318
+@IgnoreOn8319
+@IgnoreOn8320
 
 @ServerCodeCoverage
 
