@@ -11971,7 +11971,7 @@
 													<ToolTip>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Дополнительные паараметры подключения</v8:content>
+															<v8:content>Дополнительные параметры подключения</v8:content>
 														</v8:item>
 														<v8:item>
 															<v8:lang>en</v8:lang>
@@ -13734,11 +13734,11 @@ If {!expression} Is used, the expression will be evaluated on the server.</v8:co
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Прочее</v8:content>
+															<v8:content>Прочие настройки</v8:content>
 														</v8:item>
 														<v8:item>
 															<v8:lang>en</v8:lang>
-															<v8:content>Other</v8:content>
+															<v8:content>Other settings</v8:content>
 														</v8:item>
 													</Title>
 													<Behavior>Collapsible</Behavior>
@@ -14250,7 +14250,7 @@ If {!expression} Is used, the expression will be evaluated on the server.</v8:co
 																				<Title formatted="false">
 																					<v8:item>
 																						<v8:lang>ru</v8:lang>
-																						<v8:content>Позволяет управлять поведением Vanessa Automation при открытии: нужно ли загружать фича файл, с которым велась работа в предыдущей, сесии или нет.</v8:content>
+																						<v8:content>Позволяет управлять поведением Vanessa Automation при открытии: нужно ли загружать фича файл, с которым велась работа в предыдущей, сессии или нет.</v8:content>
 																					</v8:item>
 																					<v8:item>
 																						<v8:lang>en</v8:lang>
@@ -15175,6 +15175,16 @@ This issue is relevant when running tests on Linux.</v8:content>
 															<ChildItems>
 																<InputField name="АдресОтладчика" id="864">
 																	<DataPath>Объект.АдресОтладчика</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Адрес отладчика</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Debugger address</v8:content>
+																		</v8:item>
+																	</Title>
 																	<TitleLocation>Top</TitleLocation>
 																	<ToolTip>
 																		<v8:item>
@@ -15208,6 +15218,16 @@ This issue is relevant when running tests on Linux.</v8:content>
 																</InputField>
 																<InputField name="КлючиОтладки" id="861">
 																	<DataPath>Объект.КлючиОтладки</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Ключи отладки</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Debug keys</v8:content>
+																		</v8:item>
+																	</Title>
 																	<TitleLocation>Top</TitleLocation>
 																	<ToolTip>
 																		<v8:item>
@@ -15361,9 +15381,55 @@ If there is a TestClientUrl string in the browser launch command, then it will b
 															</Title>
 															<Width>50</Width>
 															<HorizontalStretch>false</HorizontalStretch>
+															<Group>Vertical</Group>
 															<Representation>None</Representation>
 															<ShowTitle>false</ShowTitle>
 															<ExtendedTooltip name="ГруппаЗакрытиеКлиентаТестированияЛевыйСтолбецРасширеннаяПодсказка" id="3333"/>
+															<ChildItems>
+																<CheckBoxField name="ЗакрыватьКлиентТестированияПринудительно" id="2745">
+																	<DataPath>Объект.ЗакрыватьКлиентТестированияПринудительно</DataPath>
+																	<TitleLocation>Right</TitleLocation>
+																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="ЗакрыватьКлиентТестированияПринудительноКонтекстноеМеню" id="2746"/>
+																	<ExtendedTooltip name="ЗакрыватьКлиентТестированияПринудительноРасширеннаяПодсказка" id="2747">
+																		<AutoMaxWidth>false</AutoMaxWidth>
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>If the flag is set, then when closing the testing client, it will be checked whether the testing client has closed by its PID. If the testing client has not closed normally, an attempt will be made to close it using the OS command.</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Если флаг установлен, то при закрытии клиента тестирования будет проверяться, закрылся ли клиент тестирования по его PID. Если клиент тестирования не закрылся штатно, то будет выполнена попытка закрыть его с помощью команды ОС.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																	<Events>
+																		<Event name="OnChange">ЗакрыватьКлиентТестированияПринудительноПриИзменении</Event>
+																	</Events>
+																</CheckBoxField>
+																<InputField name="ТаймаутПередПринудительнымЗакрытиемКлиентаТестирования" id="2748">
+																	<DataPath>Объект.ТаймаутПередПринудительнымЗакрытиемКлиентаТестирования</DataPath>
+																	<TitleLocation>Top</TitleLocation>
+																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																	<Width>15</Width>
+																	<ContextMenu name="ТаймаутПередПринудительнымЗакрытиемКлиентаТестированияКонтекстноеМеню" id="2749"/>
+																	<ExtendedTooltip name="ТаймаутПередПринудительнымЗакрытиемКлиентаТестированияРасширеннаяПодсказка" id="2750">
+																		<AutoMaxWidth>false</AutoMaxWidth>
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>The number of seconds to check that the testing client process completed on its own.</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Количество секунд, в течение которого будет проверяться, что процесс клиента тестирования завершился самостоятельно.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																</InputField>
+															</ChildItems>
 														</UsualGroup>
 														<UsualGroup name="ГруппаЗакрытиеКлиентаТестированияПравыйСтолбец" id="3334">
 															<Title>
@@ -15380,56 +15446,13 @@ If there is a TestClientUrl string in the browser launch command, then it will b
 															<ShowTitle>false</ShowTitle>
 															<ExtendedTooltip name="ГруппаЗакрытиеКлиентаТестированияПравыйСтолбецРасширеннаяПодсказка" id="3335"/>
 														</UsualGroup>
-														<CheckBoxField name="ЗакрыватьКлиентТестированияПринудительно" id="2745">
-															<DataPath>Объект.ЗакрыватьКлиентТестированияПринудительно</DataPath>
-															<TitleLocation>Right</TitleLocation>
-															<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-															<CheckBoxType>Auto</CheckBoxType>
-															<ContextMenu name="ЗакрыватьКлиентТестированияПринудительноКонтекстноеМеню" id="2746"/>
-															<ExtendedTooltip name="ЗакрыватьКлиентТестированияПринудительноРасширеннаяПодсказка" id="2747">
-																<AutoMaxWidth>false</AutoMaxWidth>
-																<Title formatted="false">
-																	<v8:item>
-																		<v8:lang>en</v8:lang>
-																		<v8:content>If the flag is set, then when closing the testing client, it will be checked whether the testing client has closed by its PID. If the testing client has not closed normally, an attempt will be made to close it using the OS command.</v8:content>
-																	</v8:item>
-																	<v8:item>
-																		<v8:lang>ru</v8:lang>
-																		<v8:content>Если флаг установлен, то при закрытии клиента тестирования будет проверяться, закрылся ли клиент тестирования по его PID. Если клиент тестирования не закрылся штатно, то будет выполнена попытка закрыть его с помощью команды ОС.</v8:content>
-																	</v8:item>
-																</Title>
-															</ExtendedTooltip>
-															<Events>
-																<Event name="OnChange">ЗакрыватьКлиентТестированияПринудительноПриИзменении</Event>
-															</Events>
-														</CheckBoxField>
-														<InputField name="ТаймаутПередПринудительнымЗакрытиемКлиентаТестирования" id="2748">
-															<DataPath>Объект.ТаймаутПередПринудительнымЗакрытиемКлиентаТестирования</DataPath>
-															<TitleLocation>Top</TitleLocation>
-															<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-															<Width>15</Width>
-															<ContextMenu name="ТаймаутПередПринудительнымЗакрытиемКлиентаТестированияКонтекстноеМеню" id="2749"/>
-															<ExtendedTooltip name="ТаймаутПередПринудительнымЗакрытиемКлиентаТестированияРасширеннаяПодсказка" id="2750">
-																<AutoMaxWidth>false</AutoMaxWidth>
-																<Title formatted="false">
-																	<v8:item>
-																		<v8:lang>en</v8:lang>
-																		<v8:content>The number of seconds to check that the testing client process completed on its own.</v8:content>
-																	</v8:item>
-																	<v8:item>
-																		<v8:lang>ru</v8:lang>
-																		<v8:content>Количество секунд, в течение которого будет проверяться, что процесс клиента тестирования завершился самостоятельно.</v8:content>
-																	</v8:item>
-																</Title>
-															</ExtendedTooltip>
-														</InputField>
 													</ChildItems>
 												</UsualGroup>
 												<UsualGroup name="ГруппаНастройкиМобильногоКлиента" id="3123">
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Mобильный клиент</v8:content>
+															<v8:content>Мобильный клиент</v8:content>
 														</v8:item>
 														<v8:item>
 															<v8:lang>en</v8:lang>
@@ -15450,6 +15473,7 @@ If there is a TestClientUrl string in the browser launch command, then it will b
 													<ChildItems>
 														<InputField name="ПутьКadb" id="3132">
 															<DataPath>Объект.ПутьКadb</DataPath>
+															<TitleLocation>Top</TitleLocation>
 															<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
 															<ContextMenu name="ПутьКadbКонтекстноеМеню" id="3133"/>
 															<ExtendedTooltip name="ПутьКadbРасширеннаяПодсказка" id="3134">
@@ -16172,193 +16196,55 @@ Actual when working in the step tree mode.</v8:content>
 														</CheckBoxField>
 													</ChildItems>
 												</UsualGroup>
-												<UsualGroup name="ГруппаОбновлениеДанныхВДереве" id="3348">
+												<UsualGroup name="ГруппаОбновлятьСтатистику" id="3622">
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Обновление данных в дереве</v8:content>
+															<v8:content>Обновление статистики выполнения сценариев</v8:content>
 														</v8:item>
 														<v8:item>
 															<v8:lang>en</v8:lang>
-															<v8:content>Updating data in the tree</v8:content>
+															<v8:content>Update of script execution statistics</v8:content>
 														</v8:item>
 													</Title>
 													<Behavior>Collapsible</Behavior>
 													<Collapsed>true</Collapsed>
 													<ControlRepresentation>Picture</ControlRepresentation>
-													<ExtendedTooltip name="ГруппаОбновлениеДанныхВДеревеРасширеннаяПодсказка" id="3349"/>
+													<ExtendedTooltip name="ГруппаОбновлятьСтатистикуРасширеннаяПодсказка" id="3623"/>
 													<ChildItems>
-														<UsualGroup name="ГруппаОбновлениеДанныхВДеревеЛевыйСтолбец" id="3350">
+														<UsualGroup name="ГруппаГруппаОбновлятьСтатистикуЛевыйСтолбец" id="3624">
 															<Title>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
-																	<v8:content>Группа обновление данных в дереве левый столбец</v8:content>
+																	<v8:content>Группа группа обновлять статистику левый столбец</v8:content>
 																</v8:item>
 																<v8:item>
 																	<v8:lang>en</v8:lang>
-																	<v8:content>Group data update in the tree left column</v8:content>
+																	<v8:content>Group group update statistics left column</v8:content>
 																</v8:item>
 															</Title>
 															<Width>50</Width>
 															<HorizontalStretch>false</HorizontalStretch>
 															<Representation>None</Representation>
 															<ShowTitle>false</ShowTitle>
-															<ExtendedTooltip name="ГруппаОбновлениеДанныхВДеревеЛевыйСтолбецРасширеннаяПодсказка" id="3351"/>
+															<ExtendedTooltip name="ГруппаГруппаОбновлятьСтатистикуЛевыйСтолбецРасширеннаяПодсказка" id="3625"/>
 															<ChildItems>
-																<CheckBoxField name="ОбновлятьСтатистикуВДереве" id="1880">
+																<CheckBoxField name="ОбновлятьСтатистикуВДереве" id="3626">
 																	<DataPath>Объект.ОбновлятьСтатистикуВДереве</DataPath>
 																	<TitleLocation>Right</TitleLocation>
 																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
 																	<CheckBoxType>Auto</CheckBoxType>
-																	<ContextMenu name="ОбновлятьСтатистикуВДеревеКонтекстноеМеню" id="1881"/>
-																	<ExtendedTooltip name="ОбновлятьСтатистикуВДеревеРасширеннаяПодсказка" id="1882">
+																	<ContextMenu name="ОбновлятьСтатистикуВДеревеКонтекстноеМеню" id="3627"/>
+																	<ExtendedTooltip name="ОбновлятьСтатистикуВДеревеРасширеннаяПодсказка" id="3628">
 																		<AutoMaxWidth>false</AutoMaxWidth>
 																		<Title formatted="false">
 																			<v8:item>
 																				<v8:lang>ru</v8:lang>
-																				<v8:content>Если флаг установлен, то во время выполнения сценария происходит обновление статистики: сколько шагов сценария прошло, сколько сценариев упало и подобное.
-Актуально при работе в режиме дерева шагов.</v8:content>
+																				<v8:content>Если флаг установлен, то во время выполнения сценария происходит обновление статистики: сколько шагов сценария прошло, сколько сценариев упало и так далее.</v8:content>
 																			</v8:item>
 																			<v8:item>
 																				<v8:lang>en</v8:lang>
-																				<v8:content>If the checkbox is on, scenario statistic will be collected: number of steps passed, number of scenarios failes etc.
-Actual when working in the step tree mode.
-</v8:content>
-																			</v8:item>
-																		</Title>
-																	</ExtendedTooltip>
-																</CheckBoxField>
-															</ChildItems>
-														</UsualGroup>
-														<UsualGroup name="ГруппаОбновлениеДанныхВДеревеПравыйСтолбец" id="3352">
-															<Title>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Группа обновление данных в дереве правый столбец</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>en</v8:lang>
-																	<v8:content>Data update group in tree right column</v8:content>
-																</v8:item>
-															</Title>
-															<Representation>None</Representation>
-															<ShowTitle>false</ShowTitle>
-															<ExtendedTooltip name="ГруппаОбновлениеДанныхВДеревеПравыйСтолбецРасширеннаяПодсказка" id="3353"/>
-															<ChildItems>
-																<CheckBoxField name="ОбновлятьДеревоПриНачалеВыполненияСценария" id="1957">
-																	<DataPath>Объект.ОбновлятьДеревоПриНачалеВыполненияСценария</DataPath>
-																	<TitleLocation>Right</TitleLocation>
-																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-																	<CheckBoxType>Auto</CheckBoxType>
-																	<ContextMenu name="ОбновлятьДеревоПриНачалеВыполненияСценарияКонтекстноеМеню" id="1958"/>
-																	<ExtendedTooltip name="ОбновлятьДеревоПриНачалеВыполненияСценарияРасширеннаяПодсказка" id="1959">
-																		<AutoMaxWidth>false</AutoMaxWidth>
-																		<Title formatted="false">
-																			<v8:item>
-																				<v8:lang>ru</v8:lang>
-																				<v8:content>Если флаг установлен, то при обновлении дерева шагов будет активизироваться текущая строка дерева. Рекомендуется снимать флаг при выполнении сценариев на CI сервере для ускорения выполнения сценариев.
-Актуально при работе в режиме дерева шагов.</v8:content>
-																			</v8:item>
-																			<v8:item>
-																				<v8:lang>en</v8:lang>
-																				<v8:content>If the checkbox is on, current row of the tree will be active on step execution. It is recomended to turn the checkbox off on CI server to fasten up.
-Actual when working in the step tree mode.</v8:content>
-																			</v8:item>
-																		</Title>
-																	</ExtendedTooltip>
-																</CheckBoxField>
-															</ChildItems>
-														</UsualGroup>
-													</ChildItems>
-												</UsualGroup>
-												<UsualGroup name="ГруппаВыполнениеСценариевСтатусы" id="3354">
-													<Title>
-														<v8:item>
-															<v8:lang>ru</v8:lang>
-															<v8:content>Статусы сценариев</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>en</v8:lang>
-															<v8:content>Script statuses</v8:content>
-														</v8:item>
-													</Title>
-													<Behavior>Collapsible</Behavior>
-													<Collapsed>true</Collapsed>
-													<ControlRepresentation>Picture</ControlRepresentation>
-													<ExtendedTooltip name="ГруппаВыполнениеСценариевСтатусыРасширеннаяПодсказка" id="3355"/>
-													<ChildItems>
-														<UsualGroup name="ГруппаВыполнениеСценариевСтатусыЛеваяКолонка" id="3356">
-															<Title>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Группа выполнение сценариев статусы левая колонка</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>en</v8:lang>
-																	<v8:content>Script execution group statuses left column</v8:content>
-																</v8:item>
-															</Title>
-															<Width>50</Width>
-															<HorizontalStretch>false</HorizontalStretch>
-															<Representation>None</Representation>
-															<ShowTitle>false</ShowTitle>
-															<ExtendedTooltip name="ГруппаВыполнениеСценариевСтатусыЛеваяКолонкаРасширеннаяПодсказка" id="3357"/>
-															<ChildItems>
-																<CheckBoxField name="ПриравниватьPendingКFailed" id="2055">
-																	<DataPath>Объект.ПриравниватьPendingКFailed</DataPath>
-																	<TitleLocation>Right</TitleLocation>
-																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-																	<CheckBoxType>Auto</CheckBoxType>
-																	<ContextMenu name="ПриравниватьPendingКFailedКонтекстноеМеню" id="2056"/>
-																	<ExtendedTooltip name="ПриравниватьPendingКFailedРасширеннаяПодсказка" id="2057">
-																		<AutoMaxWidth>false</AutoMaxWidth>
-																		<Title formatted="false">
-																			<v8:item>
-																				<v8:lang>ru</v8:lang>
-																				<v8:content>Если флаг установлен, то при выполнении сценариев на CI сервере, если будут найдены нереализованные шаги ("pending") статус сборки всё равно будет "failed".
-Флаг рекомендуется устанавливать.</v8:content>
-																			</v8:item>
-																			<v8:item>
-																				<v8:lang>en</v8:lang>
-																				<v8:content>If the checkbox is on, pending steps will set assembly status to failed on the execution on CI server.
-It is recommended to set this checkbox on.</v8:content>
-																			</v8:item>
-																		</Title>
-																	</ExtendedTooltip>
-																</CheckBoxField>
-															</ChildItems>
-														</UsualGroup>
-														<UsualGroup name="ГруппаВыполнениеСценариевСтатусыПраваяКолонка" id="3358">
-															<Title>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Группа выполнение сценариев статусы правая колонка</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>en</v8:lang>
-																	<v8:content>Script execution status group right column</v8:content>
-																</v8:item>
-															</Title>
-															<Representation>None</Representation>
-															<ShowTitle>false</ShowTitle>
-															<ExtendedTooltip name="ГруппаВыполнениеСценариевСтатусыПраваяКолонкаРасширеннаяПодсказка" id="3359"/>
-															<ChildItems>
-																<CheckBoxField name="РазличатьBrokenИFailedПоКлючевомуСловуТогда" id="3178">
-																	<DataPath>Объект.РазличатьBrokenИFailedПоКлючевомуСловуТогда</DataPath>
-																	<TitleLocation>Right</TitleLocation>
-																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-																	<CheckBoxType>Auto</CheckBoxType>
-																	<ContextMenu name="РазличатьBrokenИFailedПоКлючевомуСловуТогдаКонтекстноеМеню" id="3179"/>
-																	<ExtendedTooltip name="РазличатьBrokenИFailedПоКлючевомуСловуТогдаРасширеннаяПодсказка" id="3180">
-																		<AutoMaxWidth>false</AutoMaxWidth>
-																		<Title formatted="false">
-																			<v8:item>
-																				<v8:lang>ru</v8:lang>
-																				<v8:content>Если опция включена, то при возникновении ошибки статус сценария будет зависеть от того, с какого ключевого слова начинается шаг, на котором возникла ошибка. Если это слово Тогда, то статус сценария будет Failed. Во всех остальных случаях - Broken. Это помогает различать сломанные тесты от неожиданного поведения тестируемой системы.</v8:content>
-																			</v8:item>
-																			<v8:item>
-																				<v8:lang>en</v8:lang>
-																				<v8:content>If the checkbox is on, assembly status will be set to Failed only if failing step starts with Then keyword. This helps to distinguish broken tests from unexpected behaviour.</v8:content>
+																				<v8:content>If the flag is set, then statistics are updated during script execution: how many script steps have passed, how many scripts have crashed, and so on.</v8:content>
 																			</v8:item>
 																		</Title>
 																	</ExtendedTooltip>
@@ -16630,15 +16516,170 @@ Then "WindowTitle" window is opened
 														</UsualGroup>
 													</ChildItems>
 												</UsualGroup>
+												<UsualGroup name="ГруппаОбновлениеДанныхВДереве" id="3348">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Обновление данных в дереве в шагов</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Updating data in a tree in steps</v8:content>
+														</v8:item>
+													</Title>
+													<Behavior>Collapsible</Behavior>
+													<Collapsed>true</Collapsed>
+													<ControlRepresentation>Picture</ControlRepresentation>
+													<ExtendedTooltip name="ГруппаОбновлениеДанныхВДеревеРасширеннаяПодсказка" id="3349"/>
+													<ChildItems>
+														<UsualGroup name="ГруппаОбновлениеДанныхВДеревеЛевыйСтолбец" id="3352">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа обновление данных в дереве левый столбец</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Group data update in the tree left column</v8:content>
+																</v8:item>
+															</Title>
+															<Width>50</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаОбновлениеДанныхВДеревеЛевыйСтолбецРасширеннаяПодсказка" id="3353"/>
+															<ChildItems>
+																<CheckBoxField name="ОбновлятьДеревоПриНачалеВыполненияСценария" id="1957">
+																	<DataPath>Объект.ОбновлятьДеревоПриНачалеВыполненияСценария</DataPath>
+																	<TitleLocation>Right</TitleLocation>
+																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="ОбновлятьДеревоПриНачалеВыполненияСценарияКонтекстноеМеню" id="1958"/>
+																	<ExtendedTooltip name="ОбновлятьДеревоПриНачалеВыполненияСценарияРасширеннаяПодсказка" id="1959">
+																		<AutoMaxWidth>false</AutoMaxWidth>
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Если флаг установлен, то при обновлении дерева шагов будет активизироваться текущая строка дерева. Рекомендуется снимать флаг при выполнении сценариев на CI сервере для ускорения выполнения сценариев.
+Актуально при работе в режиме дерева шагов.</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>If the checkbox is on, current row of the tree will be active on step execution. It is recomended to turn the checkbox off on CI server to fasten up.
+Actual when working in the step tree mode.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																</CheckBoxField>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаВыполнениеСценариевСтатусы" id="3354">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Статусы сценариев</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Script statuses</v8:content>
+														</v8:item>
+													</Title>
+													<Behavior>Collapsible</Behavior>
+													<Collapsed>true</Collapsed>
+													<ControlRepresentation>Picture</ControlRepresentation>
+													<ExtendedTooltip name="ГруппаВыполнениеСценариевСтатусыРасширеннаяПодсказка" id="3355"/>
+													<ChildItems>
+														<UsualGroup name="ГруппаВыполнениеСценариевСтатусыЛеваяКолонка" id="3356">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа выполнение сценариев статусы левая колонка</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Script execution group statuses left column</v8:content>
+																</v8:item>
+															</Title>
+															<Width>50</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаВыполнениеСценариевСтатусыЛеваяКолонкаРасширеннаяПодсказка" id="3357"/>
+															<ChildItems>
+																<CheckBoxField name="ПриравниватьPendingКFailed" id="2055">
+																	<DataPath>Объект.ПриравниватьPendingКFailed</DataPath>
+																	<TitleLocation>Right</TitleLocation>
+																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="ПриравниватьPendingКFailedКонтекстноеМеню" id="2056"/>
+																	<ExtendedTooltip name="ПриравниватьPendingКFailedРасширеннаяПодсказка" id="2057">
+																		<AutoMaxWidth>false</AutoMaxWidth>
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Если флаг установлен, то при выполнении сценариев на CI сервере, если будут найдены нереализованные шаги ("Pending"/"Не реализовано") статус сборки всё равно будет "Failed"/"Ошибка".
+Флаг рекомендуется устанавливать.</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>If the checkbox is on, pending steps will set assembly status to failed on the execution on CI server.
+It is recommended to set this checkbox on.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																</CheckBoxField>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="ГруппаВыполнениеСценариевСтатусыПраваяКолонка" id="3358">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа выполнение сценариев статусы правая колонка</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Script execution status group right column</v8:content>
+																</v8:item>
+															</Title>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаВыполнениеСценариевСтатусыПраваяКолонкаРасширеннаяПодсказка" id="3359"/>
+															<ChildItems>
+																<CheckBoxField name="РазличатьBrokenИFailedПоКлючевомуСловуТогда" id="3178">
+																	<DataPath>Объект.РазличатьBrokenИFailedПоКлючевомуСловуТогда</DataPath>
+																	<TitleLocation>Right</TitleLocation>
+																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="РазличатьBrokenИFailedПоКлючевомуСловуТогдаКонтекстноеМеню" id="3179"/>
+																	<ExtendedTooltip name="РазличатьBrokenИFailedПоКлючевомуСловуТогдаРасширеннаяПодсказка" id="3180">
+																		<AutoMaxWidth>false</AutoMaxWidth>
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Если опция включена, то при возникновении ошибки статус сценария будет зависеть от того, с какого ключевого слова начинается шаг, на котором возникла ошибка. Если это слово Тогда, то статус сценария будет "Failed"/"Ошибка". Во всех остальных случаях - "Broken"/"Сломано". Это помогает различать сломанные тесты от реальных ошибок конфигурации.</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>If the checkbox is on, assembly status will be set to Failed only if failing step starts with Then keyword. In all other cases - Broken. This helps distinguish broken tests from real configuration errors.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																</CheckBoxField>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
 												<UsualGroup name="ГруппаВыполнениеСценариевПрочее" id="3360">
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Прочее</v8:content>
+															<v8:content>Прочие настройки выполнения сценариев</v8:content>
 														</v8:item>
 														<v8:item>
 															<v8:lang>en</v8:lang>
-															<v8:content>Other</v8:content>
+															<v8:content>Other script execution settings</v8:content>
 														</v8:item>
 													</Title>
 													<Behavior>Collapsible</Behavior>
@@ -16661,11 +16702,11 @@ Then "WindowTitle" window is opened
 															<ShowTitle>false</ShowTitle>
 															<ExtendedTooltip name="ГруппаВыполнениеСценариевПрочееПерваяСтрокаРасширеннаяПодсказка" id="3363"/>
 															<ChildItems>
-																<UsualGroup name="ГруппаВыполнениеСценариевПрочееПерваяСтрокаЛеавыйСтолбец" id="3366">
+																<UsualGroup name="ГруппаВыполнениеСценариевПрочееПерваяСтрокаЛевыйСтолбец" id="3366">
 																	<Title>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>Группа выполнение сценариев прочее первая строка леавый столбец</v8:content>
+																			<v8:content>Группа выполнение сценариев прочее первая строка левый столбец</v8:content>
 																		</v8:item>
 																		<v8:item>
 																			<v8:lang>en</v8:lang>
@@ -16676,7 +16717,7 @@ Then "WindowTitle" window is opened
 																	<HorizontalStretch>false</HorizontalStretch>
 																	<Representation>None</Representation>
 																	<ShowTitle>false</ShowTitle>
-																	<ExtendedTooltip name="ГруппаВыполнениеСценариевПрочееПерваяСтрокаЛеавыйСтолбецРасширеннаяПодсказка" id="3367"/>
+																	<ExtendedTooltip name="ГруппаВыполнениеСценариевПрочееПерваяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="3367"/>
 																	<ChildItems>
 																		<CheckBoxField name="ВыполнятьSleepЧерезPing" id="2655">
 																			<DataPath>Объект.ВыполнятьSleepЧерезPing</DataPath>
@@ -17343,7 +17384,7 @@ For the option to work, it is necessary to enable the use of the VanessaExt exte
 																	<Title>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>Способ снятия скриншотов внешей компонентой</v8:content>
+																			<v8:content>Способ снятия скриншотов внешней компонентой</v8:content>
 																		</v8:item>
 																		<v8:item>
 																			<v8:lang>en</v8:lang>
@@ -17995,11 +18036,11 @@ A video file will be created for each scenario.</v8:content>
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Логирование</v8:content>
+															<v8:content>Запись лога выполнения сценариев в файл</v8:content>
 														</v8:item>
 														<v8:item>
 															<v8:lang>en</v8:lang>
-															<v8:content>Logs</v8:content>
+															<v8:content>Writing the script execution log to a file</v8:content>
 														</v8:item>
 													</Title>
 													<Group>Vertical</Group>
@@ -27858,7 +27899,7 @@ SikuliX Server - это специальная программная оптим
 																<Title formatted="false">
 																	<v8:item>
 																		<v8:lang>ru</v8:lang>
-																		<v8:content>Если флаг установлен, то при выполнении шагов будет выполняться попытка найти элмент формы или элемент управления на экране и переместить курсор мышки к нему.
+																		<v8:content>Если флаг установлен, то при выполнении шагов будет выполняться попытка найти элемент формы или элемент управления на экране и переместить курсор мышки к нему.
 Для поиска картинки и передвижения мышки используется SikuliX. Картинка для поиска будет сгенерирована по тексту, полученному из элемента формы.
 Чтобы отключить движение мышки у конкретного шага надо использовать директиву #[DoNotMoveMouse].</v8:content>
 																	</v8:item>
@@ -28890,11 +28931,11 @@ If the option is enabled, then two columns are displayed, otherwise the differen
 													<ShowTitle>false</ShowTitle>
 													<ExtendedTooltip name="СтраницаНастройкиVanessaEditorСедьмаяСтрокаРасширеннаяПодсказка" id="3593"/>
 													<ChildItems>
-														<UsualGroup name="СтраницаНастройкиVanessaEditorСедьмаяСтрокаЛевыйСтлобец" id="3594">
+														<UsualGroup name="СтраницаНастройкиVanessaEditorСедьмаяСтрокаЛевыйСтолбец" id="3594">
 															<Title>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
-																	<v8:content>Страница настройки vanessa editor седьмая строка левый стлобец</v8:content>
+																	<v8:content>Страница настройки vanessa editor седьмая строка левый столбец</v8:content>
 																</v8:item>
 																<v8:item>
 																	<v8:lang>en</v8:lang>
@@ -28905,7 +28946,7 @@ If the option is enabled, then two columns are displayed, otherwise the differen
 															<HorizontalStretch>false</HorizontalStretch>
 															<Representation>None</Representation>
 															<ShowTitle>false</ShowTitle>
-															<ExtendedTooltip name="СтраницаНастройкиVanessaEditorСедьмаяСтрокаЛевыйСтлобецРасширеннаяПодсказка" id="3595"/>
+															<ExtendedTooltip name="СтраницаНастройкиVanessaEditorСедьмаяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="3595"/>
 															<ChildItems>
 																<Button name="НастройкаВидимостиКнопокПанелиРедактора" id="2730">
 																	<Type>Hyperlink</Type>
@@ -28914,11 +28955,11 @@ If the option is enabled, then two columns are displayed, otherwise the differen
 																</Button>
 															</ChildItems>
 														</UsualGroup>
-														<UsualGroup name="СтраницаНастройкиVanessaEditorСедьмаяСтрокаПравыйСтлобец" id="3596">
+														<UsualGroup name="СтраницаНастройкиVanessaEditorСедьмаяСтрокаПравыйСтолбец" id="3596">
 															<Title>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
-																	<v8:content>Страница настройки vanessa editor седьмая строка правый стлобец</v8:content>
+																	<v8:content>Страница настройки vanessa editor седьмая строка правый столбец</v8:content>
 																</v8:item>
 																<v8:item>
 																	<v8:lang>en</v8:lang>
@@ -28927,7 +28968,7 @@ If the option is enabled, then two columns are displayed, otherwise the differen
 															</Title>
 															<Representation>None</Representation>
 															<ShowTitle>false</ShowTitle>
-															<ExtendedTooltip name="СтраницаНастройкиVanessaEditorСедьмаяСтрокаПравыйСтлобецРасширеннаяПодсказка" id="3597"/>
+															<ExtendedTooltip name="СтраницаНастройкиVanessaEditorСедьмаяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="3597"/>
 															<ChildItems>
 																<Button name="VanessaEditorНастройкиРедактора" id="3154">
 																	<Type>Hyperlink</Type>
@@ -39134,7 +39175,7 @@ If the voice acting file is not found in the directory, the process of generatin
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Утилиты позволяют подсвечитьвать указатель мыши, рисовать стрелки к элементам форм. Необходимы для некоторых шагов SikuliX.</v8:content>
+					<v8:content>Утилиты позволяют подсвечивать указатель мыши, рисовать стрелки к элементам форм. Необходимы для некоторых шагов SikuliX.</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
