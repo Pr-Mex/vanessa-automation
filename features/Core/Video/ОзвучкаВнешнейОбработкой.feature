@@ -20,6 +20,7 @@
 @IgnoreOn8316
 @IgnoreOn8317
 @IgnoreOnWeb
+@IgnoreOnNoSyncBuilds
 @Video
 
 
