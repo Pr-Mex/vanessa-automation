@@ -1,6 +1,16 @@
 ﻿#language: ru
 
+@IgnoreOnCIMainBuild
 @Ignore
+@IgnoreOnWeb
+@IgnoreOnOFBuilds
+@IgnoreOn82Builds
+@IgnoreOn8312
+@IgnoreOn8313
+@IgnoreOn8314
+@IgnoreOn8315
+@IgnoreOn8316
+@IgnoreOn8317
 
 Функциональность: Взаимодействие с GreenMail https://greenmail-mail-test.github.io/greenmail/
 Как Тестировщик
