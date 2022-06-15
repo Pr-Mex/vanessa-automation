@@ -358,8 +358,6 @@ Procedure ICheckOrCreateChartOfAccountsObjectsAtServer(ObjectName, Values, DataE
 			If Predefined Then
 				Continue;
 			EndIf;
-			A = ChartsOfAccounts.ChartOfAccounts.CreateAccount();
-			A.Type = AccountType.
 			Obj = ChartsOfAccounts[ObjectName].CreateAccount();
 			Obj.SetNewObjectRef(Ref);
 		EndIf;		
