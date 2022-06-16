@@ -624,9 +624,15 @@ Procedure IRefillObjectTabularSectionAtServer(TabularSectionName, Values)
 	ObjectValues.Indexes.Add(RefColumnName);
 	ObjectsRefs = ObjectValues.Copy(, RefColumnName);
 	ObjectsRefs.GroupBy(RefColumnName);
-	ObjectAttributes = New ValueTable;
+	ObjectAttributes = New ValueTable;           
+	
 	Ref = GetObjectLinkFromObjectURL(ObjectValues[0][RefColumnName]);
-	FillColumnsByTabularSectionAttributes(ObjectAttributes, Ref.Metadata().TabularSections[TabularSectionName].Attributes);
+	If Lower(TabularSectionName) = Lower("ExtDimensionTypes") Then                                                  
+		FillColumnsByTabularSectionAttributes(ObjectAttributes, Ref.Metadata().StandardTabularSections[TabularSectionName].StandardAttributes);
+	Else
+		FillColumnsByTabularSectionAttributes(ObjectAttributes, Ref.Metadata().TabularSections[TabularSectionName].Attributes);
+	EndIf;              
+	
 	ColumnsNames = New Array;
 	For Each Column In ObjectAttributes.Columns Do
 		If ObjectValues.Columns.Find(Column.Name) = Undefined Then
@@ -1519,7 +1525,7 @@ Procedure FillColumnsByExtDimensionAccountingFlag(DataListValue, Val MetadataTyp
 	For Each Attribute In Metadata[MetadataTypeValue][MetadataValue].ExtDimensionAccountingFlags Do
 		AttributeType = Attribute.Type;
 		SupportedTypes = ExcludeUnsupportedType(AttributeType);
-		DataListValue.Columns.Add(Attribute.Name, SupportedTypes, Attribute.Synonym);
+		DataListValue.Columns.Add("ExtDimensionAccountingFlags_" + Attribute.Name, SupportedTypes, Attribute.Synonym);
 	EndDo;
 EndProcedure
 
