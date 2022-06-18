@@ -6,6 +6,7 @@
 @UA41_формировать_текстовые_инструкции
 
 @tree
+@IgnoreOnCIMainBuild
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 @IgnoreOn836
