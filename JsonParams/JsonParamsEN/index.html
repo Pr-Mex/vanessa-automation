@@ -1,0 +1,2321 @@
+
+
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+        <link rel="canonical" href="https://pr-mex.github.io/vanessa-automation/JsonParams/JsonParamsEN/">
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/logo.png">
+      <meta name="generator" content="mkdocs-1.3.0, mkdocs-material-5.0.0">
+    
+    
+      
+        <title>Description of parameters that can be passed in the VAParams.json file, which is used when launching Vanessa Automation from the command line. - Vanessa Automation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.c3000690.min.css">
+      
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.4444686e.min.css">
+      
+      
+        
+        
+        <meta name="theme-color" content="">
+      
+    
+    
+    
+      
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    <body dir="" data-md-color-primary="white" data-md-color-accent="red">
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#description-of-parameters-that-can-be-passed-in-the-vaparamsjson-file-which-is-used-when-launching-vanessa-automation-from-the-command-line" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="">
+    <a href="https://pr-mex.github.io/vanessa-automation/" title="Vanessa Automation" class="md-header-nav__button md-logo" aria-label="Vanessa Automation">
+      
+  <img src="../../assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Vanessa Automation
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Description of parameters that can be passed in the VAParams.json file, which is used when launching Vanessa Automation from the command line.
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Начните печатать для поиска
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header-nav__source">
+        
+<a href="https://github.com/pr-mex/vanessa-automation" title="Перейти к репозиторию" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pr-mex/vanessa-automation
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+        
+      
+      
+        
+          
+
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  <li class="md-tabs__item">
+    
+      <a href="../.." class="md-tabs__link">
+        Vanessa Automation
+      </a>
+    
+  </li>
+
+      
+        
+      
+        
+      
+        
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../FAQ/" class="md-tabs__link">
+          FAQ
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../InteractiveHelp/Onboarding/" class="md-tabs__link">
+          InteractiveHelp
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="./" class="md-tabs__link md-tabs__link--active">
+          JsonParams
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../MakeVASingle/MakeVASingle/" class="md-tabs__link">
+          MakeVASingle
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../TestDataGenerator/TestDataGenerator/" class="md-tabs__link">
+          TestDataGenerator
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../VAExtension/VAExtension/" class="md-tabs__link">
+          VAExtension
+        </a>
+      
+    </li>
+  
+
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+        <a href="../../mobile/mobile/" class="md-tabs__link">
+          Mobile
+        </a>
+      
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    <nav class="md-nav md-nav--primary" aria-label="" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://pr-mex.github.io/vanessa-automation/" title="Vanessa Automation" class="md-nav__button md-logo" aria-label="Vanessa Automation">
+      
+  <img src="../../assets/images/logo.png" alt="logo">
+
+    </a>
+    Vanessa Automation
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/pr-mex/vanessa-automation" title="Перейти к репозиторию" class="md-source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pr-mex/vanessa-automation
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../.." title="Vanessa Automation" class="md-nav__link">
+      Vanessa Automation
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../Changelog/" title="История версий" class="md-nav__link">
+      История версий
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../CommandSetting/" title="Параметры запуска из командной строки" class="md-nav__link">
+      Параметры запуска из командной строки
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item">
+    <a href="../../ReturnStatus/" title="Статус возврата" class="md-nav__link">
+      Статус возврата
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
+    
+    <label class="md-nav__link" for="nav-5">
+      FAQ
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="FAQ" data-md-level="1">
+      <label class="md-nav__title" for="nav-5">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        FAQ
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../FAQ/" title="Вопросы и ответы" class="md-nav__link">
+      Вопросы и ответы
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../FAQ/KnownProblems/" title="Известные проблемы" class="md-nav__link">
+      Известные проблемы
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../FAQ/MakeAutoVideo/" title="Как создать автовидеоинструкцию" class="md-nav__link">
+      Как создать автовидеоинструкцию
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../FAQ/NotAdd/" title="Отличия Vanessa-Automation от ADD" class="md-nav__link">
+      Отличия Vanessa-Automation от ADD
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../FAQ/%D0%A0%D0%B5%D0%B6%D0%B8%D0%BC%20%D1%81%D0%BE%D0%B2%D0%BC%D0%B5%D1%81%D1%82%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8%208.2/" title="Режим совместимости 8.2" class="md-nav__link">
+      Режим совместимости 8.2
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
+    
+    <label class="md-nav__link" for="nav-6">
+      InteractiveHelp
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="InteractiveHelp" data-md-level="1">
+      <label class="md-nav__title" for="nav-6">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        InteractiveHelp
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../InteractiveHelp/Onboarding/" title="Как запустить сценарий, реализующий Onboarding" class="md-nav__link">
+      Как запустить сценарий, реализующий Onboarding
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../InteractiveHelp/SettingUpInteractiveHelp/" title="Как настроить работу интерактивной справки" class="md-nav__link">
+      Как настроить работу интерактивной справки
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../InteractiveHelp/VanessaInteractiveDemo/" title="Vanessa Interactive" class="md-nav__link">
+      Vanessa Interactive
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../InteractiveHelp/%D0%97%D0%B0%D0%BF%D1%83%D1%81%D0%BA%D0%91%D0%B5%D0%B7%D0%9E%D1%82%D0%BA%D1%80%D1%8B%D1%82%D0%B8%D1%8F%D0%A4%D0%BE%D1%80%D0%BC%D1%8B/" title="Как запустить сценарий Vanessa Automation без открытия формы" class="md-nav__link">
+      Как запустить сценарий Vanessa Automation без открытия формы
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+    
+    <label class="md-nav__link" for="nav-7">
+      JsonParams
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="JsonParams" data-md-level="1">
+      <label class="md-nav__title" for="nav-7">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        JsonParams
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Description of parameters that can be passed in the VAParams.json file, which is used when launching Vanessa Automation from the command line.
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
+        </span>
+      </label>
+    
+    <a href="./" title="Description of parameters that can be passed in the VAParams.json file, which is used when launching Vanessa Automation from the command line." class="md-nav__link md-nav__link--active">
+      Description of parameters that can be passed in the VAParams.json file, which is used when launching Vanessa Automation from the command line.
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#this-file-was-created-automatically-based-on-vanessa-automation-form-data-send-pull-requests-to-the-form-fields-tooltips" class="md-nav__link">
+    This file was created automatically based on Vanessa Automation form data. Send pull requests to the form fields tooltips.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-template-for-this-file-can-be-obtained-by-uploading-the-vanessa-automation-settings-to-vaparamsjson-file" class="md-nav__link">
+    The template for this file can be obtained by uploading the Vanessa Automation settings to VAParams.json file.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#global-variables" class="md-nav__link">
+    Global variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#main-settings" class="md-nav__link">
+    Main settings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-client-settings" class="md-nav__link">
+    Test client settings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-scenarios" class="md-nav__link">
+    Running scenarios
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screenshots" class="md-nav__link">
+    Screenshots
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scenario-report" class="md-nav__link">
+    Scenario report
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-instructions" class="md-nav__link">
+    Auto instructions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vanessa-editor" class="md-nav__link">
+    Vanessa Editor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#libraries" class="md-nav__link">
+    Libraries
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-clients" class="md-nav__link">
+    Test clients
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../JsonParamsRU/" title="Описание параметров, которые можно передавать в файле VAParams.json, который используется при запуске Vanessa Automation из командной строки." class="md-nav__link">
+      Описание параметров, которые можно передавать в файле VAParams.json, который используется при запуске Vanessa Automation из командной строки.
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
+    
+    <label class="md-nav__link" for="nav-8">
+      MakeVASingle
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="MakeVASingle" data-md-level="1">
+      <label class="md-nav__title" for="nav-8">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        MakeVASingle
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../MakeVASingle/MakeVASingle/" title="Параметры запуска из командной строки" class="md-nav__link">
+      Параметры запуска из командной строки
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+    
+    <label class="md-nav__link" for="nav-9">
+      TestDataGenerator
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="TestDataGenerator" data-md-level="1">
+      <label class="md-nav__title" for="nav-9">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        TestDataGenerator
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../TestDataGenerator/TestDataGenerator/" title="Подготовка и загрузка данных" class="md-nav__link">
+      Подготовка и загрузка данных
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
+    
+    <label class="md-nav__link" for="nav-10">
+      VAExtension
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="VAExtension" data-md-level="1">
+      <label class="md-nav__title" for="nav-10">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        VAExtension
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../VAExtension/VAExtension/" title="Расширение VAExtension" class="md-nav__link">
+      Расширение VAExtension
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  <li class="md-nav__item md-nav__item--nested">
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
+    
+    <label class="md-nav__link" for="nav-11">
+      Mobile
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
+      </span>
+    </label>
+    <nav class="md-nav" aria-label="Mobile" data-md-level="1">
+      <label class="md-nav__title" for="nav-11">
+        <span class="md-nav__icon md-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        </span>
+        Mobile
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
+    <a href="../../mobile/mobile/" title="Тестирование мобильного клиента" class="md-nav__link">
+      Тестирование мобильного клиента
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+      </span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#this-file-was-created-automatically-based-on-vanessa-automation-form-data-send-pull-requests-to-the-form-fields-tooltips" class="md-nav__link">
+    This file was created automatically based on Vanessa Automation form data. Send pull requests to the form fields tooltips.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-template-for-this-file-can-be-obtained-by-uploading-the-vanessa-automation-settings-to-vaparamsjson-file" class="md-nav__link">
+    The template for this file can be obtained by uploading the Vanessa Automation settings to VAParams.json file.
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#global-variables" class="md-nav__link">
+    Global variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#main-settings" class="md-nav__link">
+    Main settings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-client-settings" class="md-nav__link">
+    Test client settings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#running-scenarios" class="md-nav__link">
+    Running scenarios
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#screenshots" class="md-nav__link">
+    Screenshots
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scenario-report" class="md-nav__link">
+    Scenario report
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#auto-instructions" class="md-nav__link">
+    Auto instructions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#vanessa-editor" class="md-nav__link">
+    Vanessa Editor
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#libraries" class="md-nav__link">
+    Libraries
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-clients" class="md-nav__link">
+    Test clients
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/pr-mex/vanessa-automation/edit/develop/docs/JsonParams/JsonParamsEN.md" title="Редактировать страницу" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg>
+                  </a>
+                
+                
+                  
+                
+                
+                <h1 id="description-of-parameters-that-can-be-passed-in-the-vaparamsjson-file-which-is-used-when-launching-vanessa-automation-from-the-command-line">Description of parameters that can be passed in the VAParams.json file, which is used when launching Vanessa Automation from the command line.<a class="headerlink" href="#description-of-parameters-that-can-be-passed-in-the-vaparamsjson-file-which-is-used-when-launching-vanessa-automation-from-the-command-line" title="Permanent link">&para;</a></h1>
+<h4 id="this-file-was-created-automatically-based-on-vanessa-automation-form-data-send-pull-requests-to-the-form-fields-tooltips">This file was created automatically based on Vanessa Automation form data. Send pull requests to the form fields tooltips.<a class="headerlink" href="#this-file-was-created-automatically-based-on-vanessa-automation-form-data-send-pull-requests-to-the-form-fields-tooltips" title="Permanent link">&para;</a></h4>
+<h4 id="the-template-for-this-file-can-be-obtained-by-uploading-the-vanessa-automation-settings-to-vaparamsjson-file">The template for this file can be obtained by uploading the Vanessa Automation settings to VAParams.json file.<a class="headerlink" href="#the-template-for-this-file-can-be-obtained-by-uploading-the-vanessa-automation-settings-to-vaparamsjson-file" title="Permanent link">&para;</a></h4>
+<h2 id="global-variables">Global variables<a class="headerlink" href="#global-variables" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Special</p>
+<ul>
+<li><strong>GlobalVars {GlobalVars}</strong>:
+An array of key and value objects. This array will be loaded into global variables and will be available when executing the script in the ContextSaved object.</li>
+</ul>
+</li>
+</ul>
+<h2 id="main-settings">Main settings<a class="headerlink" href="#main-settings" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>featurepath</strong>:
+      The directory of feature files or the name of a single feature file that will be executed during the testing session.</p>
+</li>
+<li>
+<p>Filter by tags</p>
+<ul>
+<li>
+<p><strong>ignoretags</strong>:
+     Enter tags in the field. If the tag is detected in the feature, the whole feature will not be uploaded. If the tag is found in the scenario, only this scenario will not be uploaded.</p>
+</li>
+<li>
+<p><strong>filtertags</strong>:
+     Enter tags in the field. If the tag is NOT detected in the feature, the whole feature will not be uploaded. You can also upload only the feature scenarios, which contain the tags from the list.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Scenario filter</p>
+<ul>
+<li><strong>scenariofilter</strong>:
+     Allows you to set the order in which scripts are executed. The scripts will be executed in the order they are listed.
+     Plus allows you to set a filter for executing scripts. Only scripts from the list will be executed.
+     The script in the list is indicated by its name.</li>
+</ul>
+</li>
+<li>
+<p>Feature file language</p>
+<ul>
+<li><strong>gherkinlanguage</strong>:
+     The field defines scenatio generating language. If any but not Russain is selected, Known steps will contain additional columns with the step along with its description in selected language.</li>
+</ul>
+</li>
+<li>
+<p>User actions recording</p>
+<ul>
+<li>
+<p><strong>addmetainformationclicking</strong>:
+     If the checkbox is on, data for translation into another language will be added when clicking the scenario step by step.</p>
+</li>
+<li>
+<p><strong>searchformelementsbyname</strong>:
+     If the flag is set, then when generating the script text after pasting, the steps in the script will search for form elements by their internal name.
+     If the flag is unchecked, then when generating the script text after being pasted, the steps in the script will search for form elements by title, if possible.
+     This is possible if there is only one element with the given heading in the given form.</p>
+</li>
+<li>
+<p><strong>ShowWindowToStopRecordingUserActions</strong>:
+     Enables the display of an additional window for conveniently stopping the recording of user actions and switching to the Vanessa Automation window. You must enable the use of the VanessaExt component.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>External component VanessaExt</p>
+<ul>
+<li>
+<p><strong>useaddine</strong>:
+     Designed to manage Windows and Linux windows.
+     Possibilities:
+     Getting a list of windows and a list of processes
+     Controlling the size and position of the window
+     Taking a screenshot of a window and a screenshot
+     https://github.com/lintest/VanessaExt</p>
+</li>
+<li>
+<p><strong>usethegherkinparserfromthevanessaextaddin</strong>:
+     Sets the flag. that you need to use the Gherkin parser from the VanessaExt component. This parser is much faster than the built-in parser.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>System directories</p>
+<ul>
+<li>
+<p><strong>projectpath</strong>:
+     The catalog with the tested project files, which are necessary for test execution.</p>
+</li>
+<li>
+<p><strong>instrpath</strong>:
+     The catalog of Vanessa Automation data processor. This field must be filled on the standard installation.
+     When working with Vanessa Automation Single it is allowed to leave the field blank.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>System settings</p>
+<ul>
+<li>
+<p><strong>thetreetagisenabledbydefault</strong>:
+     If the checkbox is on, feature file is considered as if it has @tree tag, even if it is absent. In other words, any uploaded feature file is considered as hierarchical.</p>
+</li>
+<li>
+<p><strong>EvaluateExpressionsInCurlyBraces</strong>:
+     Turns on the mode when any expression inside the parameters of the steps {} will be evaluated. If the section "Variables" is declared, but first an attempt will be made to find a variable from this section by the specified expression. Otherwise, an attempt will be made to evaluate the expression in {}.
+     If {expression} is used, then the expression will be evaluated on the client.
+     If {!expression} Is used, the expression will be evaluated on the server.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Other settings</p>
+<ul>
+<li>
+<p><strong>DownloadFeaturesOpen</strong>:
+     Allows you to control the behavior of Vanessa Automation when opening: do you need to upload a feature file with which the work was carried out in the previous session or not.</p>
+</li>
+<li>
+<p><strong>usersettingsprovider</strong>:
+     Custom settings provider</p>
+</li>
+<li>
+<p><strong>addressofcustomsettings</strong>:
+     The file path or url where the settings are located. By default, the project directory (default filename is user_settings.json) or localhost.
+     As a result of reading the settings file, global variables will be created.
+     When running tests from the command line, to create variables, you need to pass them in the main settings json file in the "GlobalVars" parameter, which is an array of Key:Value values.</p>
+</li>
+<li>
+<p><strong>commandtoopenfeatureintexteditor</strong>:
+     This field contains a text editor to open a feature file and position on the current line when clicking "Open .feature file in editor".</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="test-client-settings">Test client settings<a class="headerlink" href="#test-client-settings" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Test client launch</p>
+<ul>
+<li>
+<p><strong>runtestclientwithmaximizedwindow</strong>:
+     If the option is on, TestClient will launch in full-screen mode.</p>
+</li>
+<li>
+<p><strong>modalwindowwhenstartingtestclientiserror</strong>:
+     If this option is enabled, then the modal window when starting the test client means a test client connection error.</p>
+</li>
+<li>
+<p><strong>starttestclientsessionagainonconnectionifitsprocessisnotfound</strong>:
+     Enables restarting the test client process if the previous run did not work (for example, if no license was obtained). For thick and thin clien only.</p>
+</li>
+<li>
+<p><strong>DetermineTheRealPortOnWhichTheTestingClientWasLaunched</strong>:
+     If this option is enabled, then when the testing client connects, an attempt will be made to determine the real port on which the testing client was launched.
+     It is necessary. since the testing client can change the port on which it started, despite the passed parameters.
+     This issue is relevant when running tests on Linux.</p>
+</li>
+<li>
+<p><strong>testclientprocessstartinterval</strong>:
+     Specifies the interval at which an attempt will be made to start a testing client session.</p>
+</li>
+<li>
+<p><strong>testclientports</strong>:
+     Specifies ports range to search for free port to run TestClient. For example 48100-48200.</p>
+</li>
+<li>
+<p><strong>testclienttimeout</strong>:
+     Specifies timeout in seconds of Vanessa Automation awaiting for TestClient launch. After timeout the exception will be risen.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>TestClient debug</p>
+<ul>
+<li>
+<p><strong>testclientdebug</strong>:
+     If the check box is selected, TestClient will be launched with /debug and /debuggerURL startup keys.</p>
+</li>
+<li>
+<p><strong>testclientdebugaddress</strong>:
+     Address of debugger to be passed to TestClient.</p>
+</li>
+<li>
+<p><strong>testclientdebugkeys</strong>:
+     Launch parameters to be passed to TestClient.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Browser launch</p>
+<ul>
+<li><strong>browserlaunchcommand</strong>:
+     This field indicates the command to launch the browser. If the field is empty, then the default browser will be used to start the web client.
+     If there is a TestClientUrl string in the browser launch command, then it will be replaced with the test client connection string. Otherwise, the test client connection string will be appended to the end as the last parameter.</li>
+</ul>
+</li>
+<li>
+<p>Closing test client</p>
+<ul>
+<li>
+<p><strong>forceclosetestclient</strong>:
+     If the flag is set, then when closing the testing client, it will be checked whether the testing client has closed by its PID. If the testing client has not closed normally, an attempt will be made to close it using the OS command.</p>
+</li>
+<li>
+<p><strong>timeoutbeforeforciblyclosingtestclient</strong>:
+     The number of seconds to check that the testing client process completed on its own.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Mobile client</p>
+<ul>
+<li><strong>PathToadb</strong>:
+     The path to the adb program file</li>
+</ul>
+</li>
+</ul>
+<h2 id="running-scenarios">Running scenarios<a class="headerlink" href="#running-scenarios" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Logging and notification</p>
+<ul>
+<li>
+<p><strong>logtogr</strong>:
+     If the checkbox is on, scenario and steps beginning events will be written to the event log.</p>
+</li>
+<li>
+<p><strong>soundnotificationwhenscriptends</strong>:
+     If this option is enabled, the following sound notification will be issued at the end of the script execution:
+             1. Scripts completed successfully.
+             2. An error occurred while executing the script.
+             3. The breakpoint was triggered.
+     You must enable the use of the VanessaExt addin.
+     This option only works under Windows.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Script execution speed</p>
+<ul>
+<li>
+<p><strong>makestepsasync</strong>:
+     If the checkbox is on, each step will be executed asynchronously with the specified delay.
+     If the checkbox is off, the steps will be executed synchronously. Steps tree will be updated on each 100th step.
+     Scenario runs several times faster when the flag is off.</p>
+</li>
+<li>
+<p><strong>SpacingStepSpecifiedUser</strong>:
+     Specifies delay between steps in asynchronous mode.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>When an error occurs</p>
+<ul>
+<li>
+<p><strong>stoponerror</strong>:
+     If the checkbox is on, scenario will be executed until the first error occurs.
+     All the following scenarios will be skipped.</p>
+</li>
+<li>
+<p><strong>showrownumberonerror</strong>:
+     If flag is set, when an error occurs in tree steps will be shown column with the row number in the tree, if this column was hidden.
+     Actual when working in the step tree mode.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Stop script execution</p>
+<ul>
+<li><strong>ShowWindowForStoppingScriptExecution</strong>:
+     Enables the display of an additional window that allows you to stop the execution of the script. You need to enable the use of the VanessaExt component.</li>
+</ul>
+</li>
+<li>
+<p>Update of script execution statistics</p>
+<ul>
+<li><strong>updatestatistics</strong>:
+     If the flag is set, then statistics are updated during script execution: how many script steps have passed, how many scripts have crashed, and so on.</li>
+</ul>
+</li>
+<li>
+<p>Test execution stabilization</p>
+<ul>
+<li>
+<p><strong>numberofattemptstoperformanaction</strong>:
+     Sets maximum tries number for multiple steps.
+     Increasing this parameter may make scenarios execution more stable on the weak hardware.</p>
+</li>
+<li>
+<p><strong>timetofindwindow</strong>:
+     Maximum time to search for a window in a step
+     <code>Gherkin
+     Then "WindowTitle" window is opened</code></p>
+</li>
+<li>
+<p><strong>timeoutforasynchronoussteps</strong>:
+     Specifies the maximum time to wait for an asynchronous step.
+     For example, if the parameter value is set to 20 seconds and the step is used
+     <code>Gherkin
+     And I wait the field named "FieldName" will be filled in 10 seconds</code>
+     then in reality the maximum step time will be 20 seconds, not 10.</p>
+</li>
+<li>
+<p><strong>safeexecutionofsteps</strong>:
+     Adds delay for multiple actions, which may cause unstable scenario execution, e.g.: move to line, field value check etc.
+     This option slow the execution down .</p>
+</li>
+<li>
+<p><strong>pauseonwindowopening</strong>:
+     Additional pause value that will always be applied in a step
+     <code>Gherkin
+     Then "WindowTitle" window is opened</code></p>
+</li>
+</ul>
+</li>
+<li>
+<p>Updating data in a tree in steps</p>
+<ul>
+<li><strong>updatetreewhenscenariostarts</strong>:
+     If the checkbox is on, current row of the tree will be active on step execution. It is recomended to turn the checkbox off on CI server to fasten up.
+     Actual when working in the step tree mode.</li>
+</ul>
+</li>
+<li>
+<p>Script statuses</p>
+<ul>
+<li>
+<p><strong>pendingequalfailed</strong>:
+     If the checkbox is on, pending steps will set assembly status to failed on the execution on CI server.
+     It is recommended to set this checkbox on.</p>
+</li>
+<li>
+<p><strong>distinguishbrokenorfailedbythenkeyword</strong>:
+     If the checkbox is on, assembly status will be set to Failed only if failing step starts with Then keyword. In all other cases - Broken. This helps distinguish broken tests from real configuration errors.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Other script execution settings</p>
+<ul>
+<li>
+<p><strong>dosleepusingping</strong>:
+     If this option is enabled, then the Sleep() method will be called through a call to the Ping command. This is necessary if the testing client window is currently not responding to requests.</p>
+</li>
+<li>
+<p><strong>banoverwritingvariables</strong>:
+     If the checkbox is on, pending steps will set assembly status to failed on the execution on CI server.
+     It is recommended to set this checkbox on.</p>
+</li>
+<li>
+<p><strong>updateformtableswhengettingvalue</strong>:
+     If this option is enabled, then when receiving a table, the test will try to find and click on the "Refresh" table button and press it.
+     An update attempt will occur if there are several attempts to get the table value and the first attempt was unsuccessful.</p>
+</li>
+<li>
+<p><strong>getlayoutsusingextensionvaextension</strong>:
+     Enables retrieval of layout values (printable forms and reports) using the VAExtension.
+     Allows you to receive the entire layout with the design in the web client.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="screenshots">Screenshots<a class="headerlink" href="#screenshots" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>onerrorscreenshot</strong>:
+      Enables taking screenshots in case of an error.
+      To enable the option, make sure the "Screenshot creation command" field is filled in or VanessaExt is enabled.</p>
+</li>
+<li>
+<p><strong>onerrorscreenshoteverywindow</strong>:
+      Enables taking screenshots for each 1C window when an error occurs.
+      SikuliX or VanessaExt (recommended) is used for this option.</p>
+</li>
+<li>
+<p><strong>useaddinforscreencapture</strong>:
+      To take screenshots, use the VanessaExt add-in instead of the screenshot creation command.
+      For the option to work, it is necessary to enable the use of the VanessaExt external component.</p>
+</li>
+<li>
+<p><strong>outputscreenshot</strong>:
+      Screenshots directory.</p>
+</li>
+<li>
+<p><strong>screencaptureaddinmethod</strong>:
+      Full Screen - Gets a screenshot of the entire screen, including the operating system taskbar.
+      Current Test Client Window - Gets a screenshot of only the active test client window.
+      All testing client windows - gets a screenshot of all testing client windows</p>
+</li>
+<li>
+<p><strong>commandscreenshot</strong>:
+      The field specifies the console command that will be used when taking screenshots.
+      For example:
+           1. "C: \ Program Files (x86) \ IrfanView \ i_view32.exe" / capture = 1 / convert =
+           2. nircmd savescreenshot</p>
+</li>
+</ul>
+<h2 id="scenario-report">Scenario report<a class="headerlink" href="#scenario-report" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>General</p>
+<ul>
+<li>
+<p><strong>addtofeaturefilter</strong>:
+     This option is used when one report (e.g. Allure) is generated for several similar assemblies (e.g., the same tests). In this case "Current assembly name" field value will be added to the scenario name to avoid non-unique names. </p>
+</li>
+<li>
+<p><strong>createlogs</strong>:
+     If the flag is set, Vanessa Automation will upload the script execution status to a file.
+     Details here:
+     https://pr-mex.github.io/vanessa-automation/dev/ReturnStatus</p>
+</li>
+<li>
+<p><strong>buildname</strong>:
+     Unique assembly name used along with the parameter "Add uploading conditions to scenario name".</p>
+</li>
+<li>
+<p><strong>logpath</strong>:
+     The path to the file into which the script execution status will be uploaded.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Test video record</p>
+<ul>
+<li>
+<p><strong>recordtestrunvideo</strong>:
+     Enables video recording during the test. You must enable the use of an external VanessaExt add-in.
+     A video file will be created for each scenario.</p>
+</li>
+<li>
+<p><strong>thenumberofframesofvideotestsession</strong>:
+     The number of frames for recording video.</p>
+</li>
+<li>
+<p><strong>testrecordingvideocommand</strong>:
+     he command to run the "ffmpeg" application. It is recommended to set the path to ffmpeg in the "path" system variable.</p>
+</li>
+<li>
+<p><strong>directoryforrecordingvideotestexecution</strong>:
+     Directory for video files.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Logging events to a file or console</p>
+<ul>
+<li>
+<p><strong>logtotext</strong>:
+     Switches on scenario execution log.
+     Log events:
+             1. Scenario execution begin
+             2. Error event
+     Log output is possible either to a file, or to the console, or to a file and a console at the same time.</p>
+</li>
+<li>
+<p><strong>outputloginconsole</strong>:
+     Enables logging to the console.
+     For this option to work, you must enable the use of the VanessaExt addin.</p>
+</li>
+<li>
+<p><strong>logstepstotext</strong>:
+     Writes step beginning event to the log.</p>
+</li>
+<li>
+<p><strong>fulllog</strong>:
+     More details in the log
+             1. Number of tests in total
+             2. How many fell / successfully / missed
+             3. Time passed / left</p>
+</li>
+<li>
+<p><strong>textlogname</strong>:
+     Vanessa Automation log file name.
+     If the field is empty, then the log will not be output to a text file.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Allure</p>
+</li>
+<li>
+<p>Main settings</p>
+<div class="codehilite"><pre><span></span><code><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">allurecreatereport</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">Create</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">scenario</span><span class="w"> </span><span class="n">execution</span><span class="w"> </span><span class="n">report</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">Allure</span><span class="w"> </span><span class="n">format</span><span class="o">.</span><span class="w"></span>
+
+<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">setvariablevaluesinstepsallurereport</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">If</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">option</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">enabled</span><span class="p">,</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">parameters</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">steps</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">which</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">variables</span><span class="w"> </span><span class="n">were</span><span class="w"> </span><span class="n">used</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">variable</span><span class="w"> </span><span class="n">names</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">replaced</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">their</span><span class="w"> </span><span class="n">values</span><span class="o">.</span><span class="w"></span>
+
+<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">allurepath</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">Allure</span><span class="w"> </span><span class="n">reports</span><span class="w"> </span><span class="n">directory</span><span class="o">.</span><span class="w"> </span><span class="n">When</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="n">locally</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">directory</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">cleaned</span><span class="w"> </span><span class="n">up</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">time</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">scripts</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">run</span><span class="o">.</span><span class="w"></span>
+
+<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">allurepathbase</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">The</span><span class="w"> </span><span class="n">directory</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">which</span><span class="w"> </span><span class="n">report</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">generated</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">Allure</span><span class="w"> </span><span class="n">format</span><span class="p">,</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">subdirectories</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">created</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">assembly</span><span class="o">.</span><span class="w"> </span><span class="n">This</span><span class="w"> </span><span class="n">parameter</span><span class="w"> </span><span class="n">takes</span><span class="w"> </span><span class="n">precedence</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="s2">&quot;Allure Report Catalog&quot;</span><span class="w"> </span><span class="n">parameter</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">ignored</span><span class="o">.</span><span class="w"></span>
+
+<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">reportlevel1</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">Sets</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="n">level</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">grouping</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">Allure</span><span class="w"> </span><span class="n">report</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Behaviors</span><span class="w"> </span><span class="n">tab</span><span class="o">.</span><span class="w"> </span><span class="n">See</span><span class="w"> </span><span class="n">Help</span><span class="w"> </span><span class="n">info</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">details</span><span class="o">.</span><span class="w"></span>
+
+<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">reportlevel2</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">Sets</span><span class="w"> </span><span class="n">second</span><span class="w"> </span><span class="n">level</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">grouping</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">Allure</span><span class="w"> </span><span class="n">report</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Behaviors</span><span class="w"> </span><span class="n">tab</span><span class="o">.</span><span class="w"> </span><span class="n">See</span><span class="w"> </span><span class="n">Help</span><span class="w"> </span><span class="n">info</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">details</span><span class="o">.</span><span class="w"></span>
+
+<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">reportlevel3</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">Sets</span><span class="w"> </span><span class="n">third</span><span class="w"> </span><span class="n">level</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">grouping</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">Allure</span><span class="w"> </span><span class="n">report</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Behaviors</span><span class="w"> </span><span class="n">tab</span><span class="o">.</span><span class="w"> </span><span class="n">See</span><span class="w"> </span><span class="n">Help</span><span class="w"> </span><span class="n">info</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">details</span><span class="o">.</span><span class="w"></span>
+
+<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">directorytobuildhierarchy</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">The</span><span class="w"> </span><span class="n">directory</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">features</span><span class="w"> </span><span class="n">hierarchy</span><span class="w"> </span><span class="n">calculation</span><span class="o">.</span><span class="w"> </span><span class="n">See</span><span class="w"> </span><span class="n">Help</span><span class="w"> </span><span class="n">info</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">details</span><span class="o">.</span><span class="w"></span>
+
+<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">testsuites</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">Sets</span><span class="w"> </span><span class="n">grouping</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">Allure</span><span class="w"> </span><span class="n">report</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Suites</span><span class="w"> </span><span class="n">tab</span><span class="o">.</span><span class="w"> </span><span class="n">See</span><span class="w"> </span><span class="n">Help</span><span class="w"> </span><span class="n">info</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">details</span><span class="o">.</span><span class="w"></span>
+
+<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">tagsskippingscript</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">List</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">tags</span><span class="w"> </span><span class="n">separated</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="s2">&quot;;&quot;</span><span class="o">.</span><span class="w"></span>
+<span class="w">    </span><span class="n">If</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">script</span><span class="w"> </span><span class="n">contains</span><span class="w"> </span><span class="n">such</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">tag</span><span class="p">,</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">script</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">executed</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Allure</span><span class="w"> </span><span class="n">report</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">skipped</span><span class="w"> </span><span class="n">status</span><span class="o">.</span><span class="w"></span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Appendices to the report</p>
+<div class="codehilite"><pre><span></span><code><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">attacheventlogtotheallurereport</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">If</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="n">occurs</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="nb">log</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">attached</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">script</span><span class="o">.</span><span class="w"> </span><span class="n">Data</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">taken</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">moment</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">scenario</span><span class="w"> </span><span class="n">starts</span><span class="o">.</span><span class="w"></span>
+
+<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">attachnetworkconnectiondatatotheallurereport</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">If</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">option</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">enabled</span><span class="p">,</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">when</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="n">occurs</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">collected</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">network</span><span class="w"> </span><span class="n">connections</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">PC</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">which</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">tests</span><span class="w"> </span><span class="n">were</span><span class="w"> </span><span class="n">run</span><span class="o">.</span><span class="w"></span>
+
+<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">attachactiveformdatatotheallurereport</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">If</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">option</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">enabled</span><span class="p">,</span><span class="w"> </span><span class="n">states</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">items</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">active</span><span class="w"> </span><span class="n">form</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">collected</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">xlsx</span><span class="w"> </span><span class="n">format</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">case</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">error</span><span class="o">.</span><span class="w"></span>
+
+<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">attachallformsdatatotheallurereport</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">If</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">option</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">enabled</span><span class="p">,</span><span class="w"> </span><span class="n">states</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">items</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">all</span><span class="w"> </span><span class="n">forms</span><span class="w"> </span><span class="n">opened</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">TestClient</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">collected</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">xlsx</span><span class="w"> </span><span class="n">format</span><span class="o">.</span><span class="w"></span>
+
+<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">attachdataoftheoperatingsystemprocessestotheallurereport</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">If</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">option</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">enabled</span><span class="p">,</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">when</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="n">occurs</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">running</span><span class="w"> </span><span class="n">OS</span><span class="w"> </span><span class="n">processes</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">collected</span><span class="o">.</span><span class="w"></span>
+
+<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">attachvariablestotheallurereport</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">If</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">option</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">enabled</span><span class="p">,</span><span class="w"> </span><span class="n">data</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">Context</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">Global</span><span class="w"> </span><span class="n">Context</span><span class="w"> </span><span class="n">variable</span><span class="w"> </span><span class="n">values</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">collected</span><span class="w"> </span><span class="n">when</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">error</span><span class="w"> </span><span class="n">occurs</span><span class="o">.</span><span class="w"></span>
+
+<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">attachmxlfilestoallurereport</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">Files</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">reports</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">their</span><span class="w"> </span><span class="n">templates</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">attached</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Allure</span><span class="w"> </span><span class="n">report</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">mxl</span><span class="w"> </span><span class="n">format</span><span class="o">.</span><span class="w"></span>
+
+<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">attachmxlfilessavedinhtmlformattoallurereport</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">All</span><span class="w"> </span><span class="n">mxl</span><span class="w"> </span><span class="n">files</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">attached</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Allure</span><span class="w"> </span><span class="n">report</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">saved</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">HTML</span><span class="w"> </span><span class="n">format</span><span class="o">.</span><span class="w"> </span><span class="n">This</span><span class="w"> </span><span class="n">makes</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">easier</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">open</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">view</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">result</span><span class="o">.</span><span class="w"></span>
+
+<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">attachadditionaldatawhencomparingvaluewithreferenceallure</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">If</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">option</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">enabled</span><span class="p">,</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">when</span><span class="w"> </span><span class="n">comparing</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">layout</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">reference</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">when</span><span class="w"> </span><span class="n">comparing</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">table</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">reference</span><span class="p">,</span><span class="w"> </span><span class="n">additional</span><span class="w"> </span><span class="n">files</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">generated</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">a</span><span class="w"> </span><span class="n">picture</span><span class="w"> </span><span class="n">containing</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">difference</span><span class="w"> </span><span class="n">between</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">reference</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">current</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">table</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">layout</span><span class="w"></span>
+<span class="w">    </span><span class="n">a</span><span class="w"> </span><span class="n">picture</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">current</span><span class="w"> </span><span class="n">value</span><span class="w"></span>
+<span class="w">    </span><span class="n">picture</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">reference</span><span class="w"> </span><span class="n">value</span><span class="w"></span>
+<span class="w">    </span><span class="n">a</span><span class="w"> </span><span class="n">gif</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="n">showing</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">difference</span><span class="w"> </span><span class="n">between</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">current</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">reference</span><span class="w"> </span><span class="n">value</span><span class="o">.</span><span class="w"></span>
+<span class="w">    </span><span class="n">An</span><span class="w"> </span><span class="n">additional</span><span class="w"> </span><span class="n">section</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">also</span><span class="w"> </span><span class="n">appear</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Allure</span><span class="w"> </span><span class="n">report</span><span class="p">,</span><span class="w"> </span><span class="n">where</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">conveniently</span><span class="w"> </span><span class="n">view</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">comparison</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">reference</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">current</span><span class="w"> </span><span class="n">value</span><span class="o">.</span><span class="w"></span>
+<span class="w">    </span><span class="n">For</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">option</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">work</span><span class="p">,</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">necessary</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">ImageMagick</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="n">version</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">higher</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">ghostscript</span><span class="w"> </span><span class="n">package</span><span class="w"> </span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">ghostscript</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">download</span><span class="o">.</span><span class="n">html</span><span class="p">,</span><span class="w"> </span><span class="n">which</span><span class="w"> </span><span class="n">converts</span><span class="w"> </span><span class="n">pdf</span><span class="w"> </span><span class="n">files</span><span class="w"> </span><span class="n">into</span><span class="w"> </span><span class="n">pictures</span><span class="p">,</span><span class="w"> </span><span class="n">must</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">installed</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">PC</span><span class="w"> </span><span class="n">where</span><span class="w"> </span><span class="n">Vanessa</span><span class="w"> </span><span class="n">Automation</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">running</span><span class="o">.</span><span class="w"></span>
+<span class="w">    </span><span class="n">It</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">also</span><span class="w"> </span><span class="n">necessary</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">commands</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">form</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">executed</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">PC</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">magick</span><span class="w"> </span><span class="nb">convert</span><span class="w"> </span><span class="n">file</span><span class="o">.</span><span class="n">pdf</span><span class="w"> </span><span class="n">file</span><span class="o">.</span><span class="n">png</span><span class="w"></span>
+<span class="w">    </span><span class="n">An</span><span class="w"> </span><span class="n">example</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">seen</span><span class="w"> </span><span class="n">here</span><span class="o">.</span><span class="w"></span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Allure labels data</p>
+<div class="codehilite"><pre><span></span><code><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">DataAllureMarks</span><span class="o">**:</span><span class="w"></span>
+<span class="w">    </span><span class="n">The</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">map</span><span class="w"> </span><span class="n">script</span><span class="w"> </span><span class="n">tags</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">pace</span><span class="w"> </span><span class="n">marks</span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="n">If</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">regular</span><span class="w"> </span><span class="n">expression</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">specified</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">row</span><span class="p">,</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">regular</span><span class="w"> </span><span class="n">expression</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">applied</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">script</span><span class="w"> </span><span class="n">tag</span><span class="p">,</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">tag</span><span class="w"> </span><span class="n">matches</span><span class="w"> </span><span class="n">it</span><span class="p">,</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">tag</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="nl">TagName:</span><span class="w"> </span><span class="n">Value</span><span class="w"> </span><span class="n">format</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">added</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">report</span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="n">If</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">regular</span><span class="w"> </span><span class="n">expression</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">specified</span><span class="w"> </span><span class="n">in</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="n">row</span><span class="p">,</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">label</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">added</span><span class="w"> </span><span class="n">unconditionally</span><span class="p">.</span><span class="w"></span>
+<span class="w">    </span><span class="n">You</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">read</span><span class="w"> </span><span class="n">more</span><span class="w"> </span><span class="n">about</span><span class="w"> </span><span class="n">why</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">may</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">needed</span><span class="w"> </span><span class="n">here</span><span class="w"></span>
+<span class="w">    </span><span class="nl">https:</span><span class="c1">//habr.com/ru/company/sberbank/blog/359302/</span>
+</code></pre></div>
+
+</li>
+<li>
+<p>JUnit</p>
+<ul>
+<li>
+<p><strong>junitcreatereport</strong>:
+     Generate a report in JUnit format based on the results of script execution.</p>
+</li>
+<li>
+<p><strong>junitpath</strong>:
+     Report generation directory.</p>
+</li>
+<li>
+<p><strong>junitscreenshots</strong>:
+     From version 13.12 screenshots can be added to jUnit.
+     For everything to work correctly - the Screenshot Directory must be located inside the Project Directory.
+     Save the screenshots folder as artifacts.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>ASDS</p>
+<ul>
+<li>
+<p><strong>ModelingCreateReport</strong>:
+     Generate a report in the SPPR format based on the results of the scenarios.</p>
+</li>
+<li>
+<p><strong>modelingreportpath</strong>:
+     Report directory.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Cucumber</p>
+<ul>
+<li>
+<p><strong>cucumbercreatereport</strong>:
+     Generate a report in Cucumber format based on the script execution results.</p>
+</li>
+<li>
+<p><strong>cucumberreportpath</strong>:
+     Report directory.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Json</p>
+<ul>
+<li>
+<p><strong>logerrorstotext</strong>:
+     Create json file with the detailed information for each error.</p>
+</li>
+<li>
+<p><strong>CollectDataOnVariableValues</strong>:
+     Enables the collection of data about the values of variables.</p>
+</li>
+<li>
+<p><strong>getactiveformdataonerror</strong>:
+     If the option is on, the status of the elements of the active form will be collected in mxl format.</p>
+</li>
+<li>
+<p><strong>getallformsdataonerror</strong>:
+     If the option is on, the status of the elements of all forms opened in TestClient will be collected in mxl format.</p>
+</li>
+<li>
+<p><strong>collectdataoftheoperatingsystemprocesses</strong>:
+     If the option is enabled, then when an error occurs, data on running OS processes will be collected.</p>
+</li>
+<li>
+<p><strong>collectnetworkconnectiondata</strong>:
+     If the option is enabled, then when an error occurs, data will be collected on the network connections of the PC on which the tests were run.</p>
+</li>
+<li>
+<p><strong>texterrorslogname</strong>:
+     A directory for generating files with data about errors and the state of form elements and other data related to the error. The directory is cleared when the scripts start running.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Internal format</p>
+<ul>
+<li><strong>simplereport</strong>:
+     Enables a scenario execution report in the internal format.</li>
+</ul>
+</li>
+</ul>
+<h2 id="auto-instructions">Auto instructions<a class="headerlink" href="#auto-instructions" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>UI Automation</p>
+<ul>
+<li><strong>UseUIAutomation</strong>:
+     Enables the use of the UI Automation mechanism in Windows to emulate movement and mouse clicks in steps from the Vanessa Automation standard steps library.
+     For example, when the option is disabled, step
+     And I click on the "TitleButton"
+     just clicks on the button without performing any interactive actions.
+     If the option is enabled, the mouse cursor is first moved to this button, and then the button will be pressed.</li>
+</ul>
+</li>
+<li>
+<p>Working with the browser</p>
+<ul>
+<li>
+<p><strong>usebrowserwebsocket</strong>:
+     Allows to execute external commands in the browser using WebSocket.
+     For the option to work, you must enable the use of the VanessaExt component.</p>
+</li>
+<li>
+<p><strong>ignorebrowsersearcherrors</strong>:
+     Allows to continue running the scenario if the form item is not found in the browser.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Image search</p>
+<ul>
+<li>
+<p><strong>findingpicturesusingaddinvanessaext</strong>:
+     If this option is enabled, then the steps performing image search on the screen will use the external addin VanessaExt instead of using SikuliX.</p>
+</li>
+<li>
+<p><strong>PictureSearchThreshold</strong>:
+     A number that determines the threshold for searching for a picture on the screen. The value can be set in the range from 0 to 1.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Keyboard emulation</p>
+<ul>
+<li><strong>emulatekeyboardinputwithVanessaExt</strong>:
+     Enables emulation of keyboard input using VanessaExt add-in</li>
+</ul>
+</li>
+<li>
+<p>Mouse emulation</p>
+<ul>
+<li><strong>emulatemousemovementswithVanessaExt</strong>:
+     Enables mouse movement emulation using VanessaExt add-in.</li>
+</ul>
+</li>
+<li>
+<p>Mouse coordinate offset</p>
+</li>
+<li>
+<p>Mouse movement speed</p>
+</li>
+<li>
+<p>Mouse click highlight</p>
+<div class="codehilite"><pre><span></span><code> <span class="o">*</span> <span class="o">**</span><span class="nv">hlightmouseclicksinbrowser</span><span class="o">**</span>:
+    <span class="k">If</span> <span class="nv">this</span> <span class="nv">option</span> <span class="nv">is</span> <span class="nv">enabled</span>, <span class="nv">click</span> <span class="nv">highlighting</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">enabled</span> <span class="nv">using</span> <span class="nv">the</span> <span class="nv">external</span> <span class="nv">VanessaExt</span> <span class="nv">component</span>.
+</code></pre></div>
+
+<ul>
+<li>
+<p>Selecting a color for highlighting mouse clicks</p>
+<div class="codehilite"><pre><span></span><code><span class="o">*</span> <span class="o">**</span><span class="nv">mouseclickhighlightcolor</span><span class="o">**</span>:
+   <span class="nv">Number</span>. <span class="nv">Sets</span> <span class="nv">the</span> <span class="nv">color</span> <span class="k">for</span> <span class="nv">highlighting</span> <span class="nv">mouse</span> <span class="nv">clicks</span>.
+</code></pre></div>
+
+<ul>
+<li>
+<p><strong>mouseclickhighlightradius</strong>:
+    Sets the radius of the click animation.</p>
+</li>
+<li>
+<p><strong>mouseclickhighlightwidth</strong>:
+    Sets the width of the click animation.</p>
+</li>
+<li>
+<p><strong>mouseclickhighlightduration</strong>:
+    Sets the duration of the click animation.</p>
+</li>
+<li>
+<p><strong>mouseclickhighlighttransparency</strong>:
+    Sets the transparency of the click animation.</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>HTML and Markdown</p>
+<ul>
+<li>
+<p><strong>htmlcreate</strong>:
+     If the checkbox is on, HTML screencast will be created during scenario execution.
+     Specify console command for snapshots generation in  "Snapshot creating command" field.
+     Also use special instructions in the script, see Help info.</p>
+</li>
+<li>
+<p><strong>markdowncreate</strong>:
+     If the checkbox is on, MarkDown screencast will be created during scenario execution.
+     Specify console command for snapshots generation in  "Snapshot creating command" field or the screenshots flag is set by the "VanessaExt" component".
+     Also use special instructions in the script, see Help info.</p>
+</li>
+<li>
+<p><strong>htmlpath</strong>:
+     HTML instruction catalog</p>
+</li>
+<li>
+<p><strong>markdownpath</strong>:
+     Markdown Instruction Directory</p>
+</li>
+<li>
+<p><strong>autonumberingofsteps</strong>:
+     Adds auto numbering to the beginning of the step description text.
+     To ensure that leading zeros are not lost when exporting from MD format, the text is written to the code block.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Audio</p>
+</li>
+<li>
+<p>General</p>
+<div class="codehilite"><pre><span></span><code> * **soundscenarioexecution**:
+    Includes voice acting of the script execution according to the specified settings of the announcer&#39;s voice.
+</code></pre></div>
+
+</li>
+<li>
+<p>Voiceover by announcer</p>
+<div class="codehilite"><pre><span></span><code> * **ttstype**:
+    Specifies the narrator&#39;s voice.
+</code></pre></div>
+
+<ul>
+<li>
+<p>Microsoft TTS</p>
+<div class="codehilite"><pre><span></span><code><span class="o">*</span> <span class="o">**</span><span class="nv">audioenginetts</span><span class="o">**</span>:
+   <span class="nv">The</span> <span class="nv">console</span> <span class="nv">command</span> <span class="nv">to</span> <span class="nv">be</span> <span class="nv">used</span> <span class="nv">when</span> <span class="nv">converting</span> <span class="nv">text</span> <span class="nv">to</span> <span class="nv">speech</span>.
+   <span class="nv">The</span>  <span class="nv">balabolka_console</span> <span class="nv">program</span> <span class="nv">is</span> <span class="nv">used</span>.
+
+<span class="o">*</span> <span class="o">**</span><span class="nv">ttsvoice</span><span class="o">**</span>:
+   <span class="nv">Specifies</span> <span class="nv">which</span> <span class="nv">voice</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">used</span> <span class="k">for</span> <span class="nv">voice</span> <span class="nv">acting</span>. <span class="nv">It</span> <span class="nv">is</span> <span class="nv">allowed</span> <span class="nv">to</span> <span class="nv">indicate</span> <span class="nv">not</span> <span class="nv">the</span> <span class="nv">full</span> <span class="nv">name</span> <span class="nv">of</span> <span class="nv">the</span> <span class="nv">voice</span> <span class="nv">in</span> <span class="nv">the</span> <span class="nv">system</span>, <span class="nv">but</span> <span class="nv">only</span> <span class="nv">a</span> <span class="nv">part</span>, <span class="k">for</span> <span class="nv">example</span> <span class="s2">&quot;</span><span class="s">Elena</span><span class="s2">&quot;</span>.
+   <span class="nv">You</span> <span class="nv">will</span> <span class="nv">need</span> <span class="nv">to</span> <span class="nv">install</span> <span class="nv">Microsoft</span> <span class="nv">Speech</span> <span class="nv">Platform</span> <span class="nv">x32</span> <span class="nv">and</span> <span class="nv">Server</span> <span class="nv">Runtime</span> <span class="nv">Languages</span>.
+
+<span class="o">*</span> <span class="o">**</span><span class="nv">speedofspeech</span><span class="o">**</span>:
+   <span class="nv">Narrator</span><span class="s1">&#39;</span><span class="s">s speech speed.</span>
+   <span class="nv">Value</span> <span class="nv">range</span> <span class="nv">is</span> <span class="nv">from</span> <span class="o">-</span><span class="mi">10</span> <span class="nv">to</span> <span class="mi">10</span>.
+</code></pre></div>
+
+</li>
+<li>
+<p>Yandex TTS</p>
+<div class="codehilite"><pre><span></span><code><span class="o">*</span> <span class="o">**</span><span class="nv">yandexttslanguage</span><span class="o">**</span>:
+   <span class="nv">Sets</span> <span class="nv">the</span> <span class="nv">language</span> <span class="nv">in</span> <span class="nv">which</span> <span class="nv">the</span> <span class="nv">speaker</span> <span class="nv">will</span> <span class="nv">speak</span>. <span class="nv">Details</span> <span class="nv">here</span>.
+   <span class="nv">To</span> <span class="nv">control</span> <span class="nv">accent</span> <span class="nv">and</span> <span class="nv">pronunciation</span>, <span class="nv">see</span> <span class="nv">here</span>.
+
+<span class="o">*</span> <span class="o">**</span><span class="nv">yandexttsvoice</span><span class="o">**</span>:
+   <span class="nv">Sets</span> <span class="nv">the</span> <span class="nv">voice</span> <span class="k">for</span> <span class="nv">the</span> <span class="nv">announcer</span> <span class="nv">to</span> <span class="nv">speak</span>. <span class="nv">Details</span> <span class="nv">here</span>.
+   <span class="nv">To</span> <span class="nv">control</span> <span class="nv">accent</span> <span class="nv">and</span> <span class="nv">pronunciation</span>, <span class="nv">see</span> <span class="nv">here</span>.
+
+<span class="o">*</span> <span class="o">**</span><span class="nv">yandexttsemotion</span><span class="o">**</span>:
+   <span class="nv">Sets</span> <span class="nv">the</span> <span class="nv">emotion</span> <span class="nv">with</span> <span class="nv">which</span> <span class="nv">the</span> <span class="nv">announcer</span> <span class="nv">will</span> <span class="nv">speak</span>. <span class="nv">Details</span> <span class="nv">here</span>.
+   <span class="nv">To</span> <span class="nv">control</span> <span class="nv">accent</span> <span class="nv">and</span> <span class="nv">pronunciation</span>, <span class="nv">see</span> <span class="nv">here</span>.
+
+<span class="o">*</span> <span class="o">**</span><span class="nv">yandexttsspeed</span><span class="o">**</span>:
+   <span class="nv">The</span> <span class="nv">speed</span> <span class="ss">(</span><span class="nv">tempo</span><span class="ss">)</span> <span class="nv">of</span> <span class="nv">synthesized</span> <span class="nv">speech</span>.
+   <span class="nv">Speech</span> <span class="nv">rate</span> <span class="nv">is</span> <span class="nv">specified</span> <span class="nv">as</span> <span class="nv">a</span> <span class="nv">fractional</span> <span class="nv">number</span> <span class="nv">in</span> <span class="nv">the</span> <span class="nv">range</span> <span class="nv">from</span> <span class="mi">0</span>.<span class="mi">1</span> <span class="nv">to</span> <span class="mi">3</span>.<span class="mi">0</span>.
+
+<span class="o">*</span> <span class="o">**</span><span class="nv">yandexttsquerytype</span><span class="o">**</span>:
+   <span class="nv">Determines</span> <span class="nv">how</span> <span class="nv">the</span> <span class="nv">audio</span> <span class="nv">files</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">received</span>: <span class="nv">through</span> <span class="nv">the</span> <span class="nv">official</span> <span class="nv">API</span> <span class="nv">or</span> <span class="nv">through</span> <span class="nv">the</span> <span class="nv">free</span> <span class="nv">interface</span>. <span class="nv">The</span> <span class="nv">recommended</span> <span class="nv">value</span> <span class="nv">is</span> <span class="nv">via</span> <span class="nv">the</span> <span class="nv">official</span> <span class="nv">API</span>.
+</code></pre></div>
+
+<ul>
+<li>
+<p>Authorization</p>
+<ul>
+<li>
+<p><strong>yandexttsfolderId</strong>:
+      The last part of the path of the address string in the Internet browser. https://console.cloud.yandex.ru/folders/Directory ID
+      Required:
+                       1. In the main Yandex.Cloud window, click the "Go to the current directory" link.
+                       2. Copy the last part of the path from the address bar
+      Example:
+      https://console.cloud.yandex.ru/folders/b1gheo81t4a6eaafe5vd
+      (Directory ID - b1gheo81t4a6eaafe5vd)
+      Retrieving a Directory ID</p>
+</li>
+<li>
+<p><strong>yandexttsoauthtoken</strong>:
+      The OAuth token is used in the authentication procedure in Yandex.Cloud
+      To receive an OAuth token, you need:
+                       1. Follow the link https://cloud.yandex.ru/docs/iam/concepts/authorization/oauth-token;
+                       2. Generate a token;
+                       3. Save it to a text file;
+                       4. Specify the path to the text file with the token.</p>
+</li>
+<li>
+<p><strong>yandexttsapikey</strong>:
+      The API key is used in the authentication procedure in Yandex.Cloud
+      https://cloud.yandex.ru/docs/iam/operations/api-key/create
+      If specified, then authorization will be through it, if not, it will be through the Token</p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Group amazon TTS</p>
+<div class="codehilite"><pre><span></span><code><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">amazonttslanguage</span><span class="o">**:</span><span class="w"></span>
+<span class="w">   </span><span class="n">See</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">correspondence</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">language</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">voice</span><span class="w"> </span><span class="n">here</span><span class="p">.</span><span class="w"></span>
+
+<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">amazonttsvoice</span><span class="o">**:</span><span class="w"></span>
+<span class="w">   </span><span class="n">See</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">correspondence</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">language</span><span class="w"> </span><span class="k">and</span><span class="w"> </span><span class="n">voice</span><span class="w"> </span><span class="n">here</span><span class="p">.</span><span class="w"></span>
+
+<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">amazonttsengine</span><span class="o">**:</span><span class="w"></span>
+<span class="w">   </span><span class="n">See</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">options</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="s">&quot;Engine&quot;</span><span class="w"> </span><span class="n">field</span><span class="w"> </span><span class="n">here</span><span class="p">.</span><span class="w"></span>
+
+<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">amazonttsregion</span><span class="o">**:</span><span class="w"></span>
+<span class="w">   </span><span class="n">The</span><span class="w"> </span><span class="n">field</span><span class="w"> </span><span class="n">specifies</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">region</span><span class="w"> </span><span class="k">parameter</span><span class="p">.</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="k">default</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">us</span><span class="o">-</span><span class="n">east</span><span class="o">-</span><span class="mf">1.</span><span class="w"></span>
+
+<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">amazonttskey</span><span class="o">**:</span><span class="w"></span>
+<span class="w">   </span><span class="n">Amazon</span><span class="w"> </span><span class="n">cloud</span><span class="w"> </span><span class="n">access</span><span class="w"> </span><span class="n">key</span><span class="p">.</span><span class="w"></span>
+
+<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">amazonttssecretkey</span><span class="o">**:</span><span class="w"></span>
+<span class="w">   </span><span class="n">The</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="n">where</span><span class="w"> </span><span class="n">Amazon</span><span class="w"> </span><span class="n">cloud</span><span class="w"> </span><span class="n">private</span><span class="w"> </span><span class="n">key</span><span class="w"> </span><span class="n">is</span><span class="w"> </span><span class="n">stored</span><span class="p">.</span><span class="w"></span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Group other TTS engine</p>
+<div class="codehilite"><pre><span></span><code><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">pathprocessingenginetts</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
+<span class="w">   </span><span class="n">Allows</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">generate</span><span class="w"> </span><span class="n">voiceovers</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">step</span><span class="w"> </span><span class="n">using</span><span class="w"> </span><span class="n">external</span><span class="w"> </span><span class="n">processing</span><span class="o">.</span><span class="w"> </span><span class="n">Processing</span><span class="w"> </span><span class="n">should</span><span class="w"> </span><span class="n">contain</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="k">export</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">main</span><span class="w"> </span><span class="n">form</span><span class="p">:</span><span class="w"></span>
+<span class="w">   </span><span class="n">GetMp3File</span><span class="w"> </span><span class="p">(</span><span class="n">Vanessa</span><span class="p">,</span><span class="w"> </span><span class="n">VideoParams</span><span class="p">,</span><span class="w"> </span><span class="n">Text</span><span class="p">,</span><span class="w"> </span><span class="n">FileName</span><span class="p">,</span><span class="w"> </span><span class="n">VoiceParams</span><span class="p">)</span><span class="w"></span>
+<span class="w">   </span><span class="n">Where</span><span class="p">:</span><span class="w"></span>
+<span class="w">   </span><span class="n">Vanessa</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Vanessa</span><span class="w"> </span><span class="n">Automation</span><span class="w"> </span><span class="n">context</span><span class="w"> </span><span class="n">framework</span><span class="w"></span>
+<span class="w">   </span><span class="n">VideoParams</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">Structure</span><span class="w"> </span><span class="n">containing</span><span class="w"> </span><span class="n">video</span><span class="w"> </span><span class="n">recording</span><span class="w"> </span><span class="n">parameters</span><span class="w"></span>
+<span class="w">   </span><span class="n">Text</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">text</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">read</span><span class="w"></span>
+<span class="w">   </span><span class="n">FileName</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">current</span><span class="w"> </span><span class="n">video</span><span class="w"> </span><span class="n">clip</span><span class="w"></span>
+<span class="w">   </span><span class="n">VoiceParams</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">additional</span><span class="w"> </span><span class="n">voice</span><span class="w"> </span><span class="n">parameters</span><span class="w"> </span><span class="n">specified</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">feature</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="n">using</span><span class="w"> </span><span class="n">additional</span><span class="w"> </span><span class="n">directives</span><span class="w"></span>
+<span class="w">   </span><span class="n">The</span><span class="w"> </span><span class="n">method</span><span class="w"> </span><span class="n">should</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">mp3</span><span class="w"> </span><span class="n">file</span><span class="o">.</span><span class="w"></span>
+
+<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">SettingsOtherEngineTTS</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
+<span class="w">   </span><span class="n">Allows</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">set</span><span class="w"> </span><span class="n">an</span><span class="w"> </span><span class="n">arbitrary</span><span class="w"> </span><span class="n">set</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">settings</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">generating</span><span class="w"> </span><span class="n">voiceovers</span><span class="o">.</span><span class="w"></span>
+</code></pre></div>
+
+</li>
+<li>
+<p>SBER parameters</p>
+<div class="codehilite"><pre><span></span><code>* **sberttsvoice**:
+   Sets the voice to generate.
+   Examples of voices can be found here
+</code></pre></div>
+
+</li>
+<li>
+<p>Voice test</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Audio cache</p>
+<div class="codehilite"><pre><span></span><code> * **cachettsfiles**:
+    Switchs on voice file cashing.
+    Makes video assembly process faster.
+    Reduces external voice generation servises usage.
+    Reduces voice generation costs.
+
+ * **ttsfilescache**:
+    Voice cache files directory.
+</code></pre></div>
+
+</li>
+<li>
+<p>Replacements dictionaries</p>
+<div class="codehilite"><pre><span></span><code> <span class="o">*</span> <span class="o">**</span><span class="nv">changewordslib</span><span class="o">**</span>:
+    <span class="nv">List</span> <span class="nv">of</span> <span class="nv">files</span> <span class="nv">that</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">used</span> <span class="k">for</span> <span class="nv">autocorrect</span> <span class="nv">spoken</span> <span class="nv">text</span>.
+</code></pre></div>
+
+</li>
+<li>
+<p>Video</p>
+<ul>
+<li>
+<p><strong>videocreate</strong>:
+     Allows you to create video instructions.
+     A video describing the settings is in this playlist.
+     It is also recommended to read this FAQ.</p>
+</li>
+<li>
+<p><strong>videopath</strong>:
+     Directory where will be placed result of assembly videos or animated screencast.</p>
+</li>
+<li>
+<p><strong>instructiontypevideo</strong>:
+     Create a video tutorial.</p>
+</li>
+<li>
+<p><strong>instructiontypehtml</strong>:
+     Create animated HTML screencast.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Video settings</p>
+<ul>
+<li>
+<p>General</p>
+<div class="codehilite"><pre><span></span><code><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">videocapturetool</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
+<span class="w">   </span><span class="n">If</span><span class="w"> </span><span class="n">VLC</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">selected</span><span class="p">,</span><span class="w"> </span><span class="n">VLC</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">used</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">video</span><span class="w"> </span><span class="n">recording</span><span class="o">.</span><span class="w"> </span><span class="n">Otherwise</span><span class="p">,</span><span class="w"> </span><span class="n">VanessaExt</span><span class="w"> </span><span class="n">add</span><span class="o">-</span><span class="ow">in</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">call</span><span class="w"> </span><span class="n">ffmpeg</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">used</span><span class="o">.</span><span class="w"></span>
+
+<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">fps</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
+<span class="w">   </span><span class="n">Sets</span><span class="w"> </span><span class="n">shots</span><span class="w"> </span><span class="n">per</span><span class="w"> </span><span class="n">second</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">recording</span><span class="o">.</span><span class="w"></span>
+
+<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">tempfolderforvideo</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
+<span class="w">   </span><span class="n">The</span><span class="w"> </span><span class="n">directory</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">temporary</span><span class="w"> </span><span class="n">files</span><span class="w"> </span><span class="n">created</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">video</span><span class="w"> </span><span class="n">recording</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">composing</span><span class="o">.</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="n">directory</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">cleared</span><span class="w"> </span><span class="n">before</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">recording</span><span class="o">!</span><span class="w"></span>
+
+<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">cachevideo</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
+<span class="w">   </span><span class="n">If</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">flag</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">set</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">when</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">step</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">running</span><span class="w"></span>
+<span class="w">   </span><span class="n">And</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">video</span><span class="w"> </span><span class="n">insert</span><span class="w"> </span><span class="s2">&quot;TextInsert&quot;</span><span class="w"></span>
+<span class="w">   </span><span class="n">there</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">check</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">see</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="n">there</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">already</span><span class="w"> </span><span class="n">such</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">video</span><span class="w"> </span><span class="n">fragment</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">cache</span><span class="o">.</span><span class="w"></span>
+<span class="w">   </span><span class="n">If</span><span class="w"> </span><span class="n">there</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">no</span><span class="w"> </span><span class="n">fragment</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">cache</span><span class="p">,</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">added</span><span class="w"> </span><span class="n">there</span><span class="o">.</span><span class="w"></span>
+<span class="w">   </span><span class="n">If</span><span class="w"> </span><span class="n">there</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">fragment</span><span class="p">,</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">it</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">taken</span><span class="w"> </span><span class="n">from</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">cache</span><span class="o">.</span><span class="w"></span>
+<span class="w">   </span><span class="n">Setting</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">flag</span><span class="w"> </span><span class="n">speeds</span><span class="w"> </span><span class="n">up</span><span class="w"> </span><span class="n">video</span><span class="w"> </span><span class="n">assembly</span><span class="o">.</span><span class="w"></span>
+
+<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">videocachepath</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
+<span class="w">   </span><span class="n">Video</span><span class="w"> </span><span class="n">snippets</span><span class="w"> </span><span class="n">directory</span><span class="o">.</span><span class="w"></span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Screen</p>
+<div class="codehilite"><pre><span></span><code><span class="o">*</span> <span class="o">**</span><span class="nv">screenwidth</span><span class="o">**</span>:
+   <span class="nv">Sets</span> <span class="nv">screen</span> <span class="nv">width</span> <span class="k">for</span> <span class="nv">the</span> <span class="nv">recording</span>. <span class="nv">Maximum</span> <span class="nv">value</span> <span class="nv">is</span> <span class="nv">screen</span> <span class="nv">width</span> <span class="k">for</span> <span class="nv">the</span> <span class="nv">current</span> <span class="nv">resolution</span>. <span class="k">If</span> <span class="nv">the</span> <span class="nv">specified</span> <span class="nv">value</span> <span class="nv">is</span> <span class="nv">less</span> <span class="nv">than</span> <span class="nv">screen</span> <span class="nv">width</span>, <span class="nv">screen</span> <span class="nv">area</span> <span class="nv">beginning</span> <span class="nv">from</span> <span class="nv">upper</span> <span class="nv">left</span> <span class="nv">corner</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">recorded</span>.
+
+<span class="o">*</span> <span class="o">**</span><span class="nv">screenleft</span><span class="o">**</span>:
+   <span class="nv">Sets</span> <span class="nv">left</span> <span class="nv">indent</span>
+
+<span class="o">*</span> <span class="o">**</span><span class="nv">screenheight</span><span class="o">**</span>:
+   <span class="nv">Sets</span> <span class="nv">screen</span> <span class="nv">height</span> <span class="k">for</span> <span class="nv">the</span> <span class="nv">recording</span>. <span class="nv">Maximum</span> <span class="nv">value</span> <span class="nv">is</span> <span class="nv">screen</span> <span class="nv">height</span> <span class="k">for</span> <span class="nv">the</span> <span class="nv">current</span> <span class="nv">resolution</span>. <span class="k">If</span> <span class="nv">the</span> <span class="nv">specified</span> <span class="nv">value</span> <span class="nv">is</span> <span class="nv">less</span> <span class="nv">than</span> <span class="nv">screen</span> <span class="nv">height</span>, <span class="nv">screen</span> <span class="nv">area</span> <span class="nv">beginning</span> <span class="nv">from</span> <span class="nv">upper</span> <span class="nv">left</span> <span class="nv">corner</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">recorded</span>.
+
+<span class="o">*</span> <span class="o">**</span><span class="nv">screentop</span><span class="o">**</span>:
+   <span class="nv">Sets</span> <span class="nv">top</span> <span class="nv">indent</span>
+</code></pre></div>
+
+</li>
+<li>
+<p>Console commands</p>
+<div class="codehilite"><pre><span></span><code><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">ffmpegcomand</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
+<span class="w">   </span><span class="n">Video</span><span class="w"> </span><span class="n">running</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">processing</span><span class="w"> </span><span class="n">command</span><span class="o">.</span><span class="w"> </span><span class="n">Also</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">can</span><span class="w"> </span><span class="n">specify</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">full</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">ffmpeg</span><span class="o">.</span><span class="n">exe</span><span class="w"> </span><span class="n">file</span><span class="w"></span>
+<span class="w">   </span><span class="n">Default</span><span class="p">:</span><span class="w"> </span><span class="n">ffmpeg</span><span class="w"></span>
+
+<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">convertcomand</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
+<span class="w">   </span><span class="n">The</span><span class="w"> </span><span class="n">field</span><span class="w"> </span><span class="n">describes</span><span class="w"> </span><span class="n">how</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Convert</span><span class="w"> </span><span class="n">command</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">invoked</span><span class="o">.</span><span class="w"></span>
+<span class="w">   </span><span class="n">For</span><span class="w"> </span><span class="n">ImageMagick</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span><span class="w"> </span><span class="n">just</span><span class="w"> </span><span class="n">specify</span><span class="w"> </span><span class="s2">&quot;magick convert.&quot;</span><span class="w"></span>
+<span class="w">   </span><span class="n">For</span><span class="w"> </span><span class="n">older</span><span class="w"> </span><span class="n">versions</span><span class="p">,</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">need</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">specify</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">path</span><span class="w"> </span><span class="n">to</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">executable</span><span class="w"> </span><span class="nb">convert</span><span class="o">.</span><span class="n">exe</span><span class="w"> </span><span class="n">file</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">directory</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">ImageMagick</span><span class="w"> </span><span class="n">program</span><span class="o">.</span><span class="w"></span>
+<span class="w">   </span><span class="n">Example</span><span class="p">:</span><span class="w"></span>
+<span class="w">   </span><span class="s2">&quot;C:\Program Files\ImageMagick-X.X.X-Q16\convert.exe&quot;</span><span class="w"></span>
+<span class="w">   </span><span class="n">Download</span><span class="p">:</span><span class="w"> </span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">imagemagick</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">script</span><span class="o">/</span><span class="n">download</span><span class="o">.</span><span class="n">php</span><span class="w"></span>
+<span class="w">   </span><span class="n">For</span><span class="w"> </span><span class="n">versions</span><span class="w"> </span><span class="n">earlier</span><span class="w"> </span><span class="n">than</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="n">during</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">installation</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">following</span><span class="w"> </span><span class="n">item</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">required</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">installation</span><span class="p">:</span><span class="w"> </span><span class="n">Install</span><span class="w"> </span><span class="n">legacy</span><span class="w"> </span><span class="n">utilities</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="w"> </span><span class="n">G</span><span class="o">.</span><span class="w"> </span><span class="n">Convert</span><span class="p">)</span><span class="w"></span>
+</code></pre></div>
+
+<ul>
+<li><strong>comandrecvideo</strong>:
+    Command to start VLC for screen recording. You can specify bitrate and other parameters.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Audio settings</p>
+<div class="codehilite"><pre><span></span><code> * **dotts**:
+    Switches on the voicing of the video.
+</code></pre></div>
+
+<ul>
+<li>Music<div class="codehilite"><pre><span></span><code><span class="o">*</span> <span class="o">**</span><span class="nv">musicpath</span><span class="o">**</span>:
+   <span class="nv">mp3</span> <span class="nv">files</span> <span class="nv">directory</span>.
+   <span class="k">If</span> <span class="nv">this</span> <span class="nv">field</span> <span class="nv">is</span> <span class="nv">filled</span>, <span class="k">random</span> <span class="nv">mp3</span> <span class="nv">file</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">retrieved</span> <span class="nv">from</span> <span class="nv">this</span> <span class="nv">catalog</span> <span class="nv">as</span> <span class="nv">a</span> <span class="nv">soundtrack</span>.
+   <span class="k">If</span> <span class="nv">mp3</span> <span class="nv">file</span> <span class="nv">duration</span> <span class="nv">is</span> <span class="nv">less</span> <span class="nv">than</span> <span class="nv">the</span> <span class="nv">video</span><span class="s1">&#39;</span><span class="s">s, it will be repeated.</span>
+
+<span class="o">*</span> <span class="o">**</span><span class="nv">musicvolume</span><span class="o">**</span>:
+   <span class="nv">Value</span> <span class="nv">range</span> <span class="nv">is</span> <span class="nv">from</span> <span class="mi">0</span> <span class="nv">to</span> <span class="mi">1</span>.
+   <span class="k">If</span> <span class="nv">the</span> <span class="nv">specified</span> <span class="nv">value</span> <span class="nv">is</span> <span class="mi">0</span>, <span class="nv">it</span> <span class="nv">will</span> <span class="nv">not</span> <span class="nv">affect</span> <span class="nv">music</span> <span class="nv">volume</span>.
+   <span class="k">If</span> <span class="nv">value</span> <span class="nv">is</span> <span class="nv">greater</span> <span class="nv">than</span> <span class="nv">zero</span> <span class="ss">(</span><span class="nv">e</span>.<span class="nv">g</span>., <span class="mi">0</span>.<span class="mi">06</span><span class="ss">)</span>, <span class="nv">it</span> <span class="nv">will</span> <span class="nv">affect</span> <span class="nv">the</span> <span class="nv">volume</span> <span class="nv">of</span> <span class="nv">the</span> <span class="nv">soundtrack</span>.
+   <span class="nv">Recommended</span> <span class="nv">value</span> <span class="nv">is</span> <span class="mi">0</span>.<span class="mi">1</span> <span class="nv">or</span> <span class="nv">less</span>.
+</code></pre></div>
+
+</li>
+</ul>
+</li>
+<li>
+<p>More</p>
+<div class="codehilite"><pre><span></span><code> <span class="o">*</span> <span class="o">**</span><span class="nv">mousecurfile</span><span class="o">**</span>:
+    <span class="nv">The</span> <span class="nv">path</span> <span class="nv">to</span> <span class="nv">the</span> <span class="nv">image</span> <span class="nv">used</span> <span class="k">for</span> <span class="nv">mouse</span> <span class="nv">cursor</span> <span class="nv">appearance</span>.
+
+ <span class="o">*</span> <span class="o">**</span><span class="nv">watermarkfile</span><span class="o">**</span>:
+    <span class="nv">Png</span> <span class="nv">image</span> <span class="nv">used</span> <span class="nv">as</span> <span class="nv">a</span> <span class="nv">watermark</span>.
+    <span class="nv">Watermark</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">placed</span> <span class="nv">in</span> <span class="nv">the</span> <span class="nv">lower</span> <span class="nv">right</span> <span class="nv">corner</span> <span class="nv">of</span> <span class="nv">the</span> <span class="nv">video</span>.
+    <span class="nv">The</span> <span class="nv">image</span> <span class="nv">resolution</span> <span class="nv">must</span> <span class="nv">be</span> <span class="nv">less</span> <span class="nv">than</span> <span class="nv">the</span> <span class="nv">resolution</span> <span class="nv">in</span> <span class="nv">which</span> <span class="nv">the</span> <span class="nv">video</span> <span class="nv">is</span> <span class="nv">recorded</span>.
+
+ <span class="o">*</span> <span class="o">**</span><span class="nv">accelerationpercentage</span><span class="o">**</span>:
+    <span class="nv">Maximum</span> <span class="nv">speeding</span> <span class="nv">percentage</span> <span class="nv">available</span> <span class="k">for</span> <span class="nv">video</span> <span class="nv">snippet</span> <span class="ss">(</span><span class="k">for</span> <span class="nv">a</span> <span class="nv">single</span> <span class="nv">step</span><span class="ss">)</span>.
+    <span class="nv">Video</span> <span class="nv">assembly</span> <span class="nv">mechanism</span> <span class="nv">can</span> <span class="nv">speed</span> <span class="nv">up</span> <span class="nv">video</span> <span class="nv">snippet</span>, <span class="k">for</span> <span class="nv">example</span>, <span class="k">if</span> <span class="nv">soundtrack</span> <span class="k">for</span> <span class="nv">video</span> <span class="nv">is</span> <span class="mi">5</span> <span class="nv">seconds</span> <span class="nv">long</span>, <span class="nv">and</span> <span class="nv">video</span> <span class="nv">snippet</span> <span class="nv">is</span> <span class="mi">10</span> <span class="nv">seconds</span> <span class="nv">long</span>.
+    <span class="nv">Is</span> <span class="nv">the</span> <span class="nv">specified</span> <span class="nv">value</span> <span class="nv">is</span> <span class="mi">0</span>, <span class="nv">than</span> <span class="nv">there</span> <span class="nv">is</span> <span class="nv">no</span> <span class="nv">limit</span> <span class="nv">on</span> <span class="nv">the</span> <span class="nv">speeding</span> <span class="nv">up</span>.
+    <span class="nv">Recommended</span> <span class="nv">value</span> <span class="nv">is</span> <span class="mi">30</span><span class="o">%</span>.
+    <span class="k">Then</span> <span class="nv">in</span> <span class="nv">the</span> <span class="nv">example</span> <span class="nv">above</span> <span class="nv">the</span> <span class="nv">video</span> <span class="nv">will</span> <span class="nv">speed</span> <span class="nv">up</span> <span class="ss">(</span><span class="mi">10</span> <span class="o">*</span> <span class="ss">(</span><span class="mi">1</span><span class="o">-</span><span class="mi">0</span>.<span class="mi">3</span><span class="ss">))</span> <span class="nv">from</span> <span class="mi">10</span> <span class="nv">to</span> <span class="mi">7</span> <span class="nv">seconds</span>.
+
+ <span class="o">*</span> <span class="o">**</span><span class="nv">addsubtitles</span><span class="o">**</span>:
+    <span class="nv">Switches</span> <span class="nv">on</span> <span class="nv">adding</span> <span class="nv">video</span> <span class="nv">subtitles</span>.
+
+ <span class="o">*</span> <span class="o">**</span><span class="nv">groupofstepsasastep</span><span class="o">**</span>:
+    <span class="nv">Switches</span> <span class="nv">on</span> <span class="nv">the</span> <span class="nv">mode</span>, <span class="nv">when</span> <span class="nv">each</span> <span class="nv">first</span> <span class="nv">level</span> <span class="nv">group</span> <span class="nv">of</span> <span class="nv">scenario</span> <span class="nv">steps</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">converter</span> <span class="nv">to</span> <span class="nv">one</span> <span class="nv">step</span> <span class="nv">in</span> <span class="nv">automanual</span>.
+
+ <span class="o">*</span> <span class="o">**</span><span class="nv">hideservicewindows</span><span class="o">**</span>:
+    <span class="nv">Hides</span> <span class="nv">service</span> <span class="nv">console</span> <span class="nv">windows</span> <span class="nv">used</span> <span class="k">for</span> <span class="nv">video</span> <span class="nv">assembly</span>.
+    <span class="nv">Speeds</span> <span class="nv">up</span> <span class="nv">video</span> <span class="nv">assembly</span>. <span class="nv">This</span> <span class="nv">mode</span> <span class="nv">is</span> <span class="nv">recommended</span>.
+
+ <span class="o">*</span> <span class="o">**</span><span class="nv">disablescalingofsteps</span><span class="o">**</span>:
+    <span class="nv">Switches</span> <span class="nv">of</span> <span class="nv">video</span> <span class="nv">snippets</span> <span class="nv">scaling</span> <span class="nv">by</span> <span class="nv">time</span>.
+
+ <span class="o">*</span> <span class="o">**</span><span class="nv">turnofffeaturetitleslide</span><span class="o">**</span>:
+    <span class="nv">Switches</span> <span class="nv">off</span> <span class="nv">creating</span> <span class="nv">of</span> <span class="nv">video</span> <span class="nv">initial</span> <span class="nv">slide</span> <span class="nv">with</span> <span class="nv">feature</span> <span class="nv">file</span> <span class="nv">header</span>.
+
+ <span class="o">*</span> <span class="o">**</span><span class="nv">turnoffscenarioslide</span><span class="o">**</span>:
+    <span class="nv">Switches</span> <span class="nv">off</span> <span class="nv">creating</span> <span class="nv">of</span> <span class="nv">video</span> <span class="nv">initial</span> <span class="nv">slide</span> <span class="nv">with</span> <span class="nv">scenario</span> <span class="nv">header</span>.
+
+ <span class="o">*</span> <span class="o">**</span><span class="nv">turnofffinalslide</span><span class="o">**</span>:
+    <span class="nv">Switches</span> <span class="nv">off</span> <span class="nv">creating</span> <span class="nv">of</span> <span class="nv">video</span> <span class="nv">final</span> <span class="nv">slide</span> <span class="nv">with</span> <span class="nv">video</span> <span class="nv">total</span> <span class="nv">information</span>.
+
+ <span class="o">*</span> <span class="o">**</span><span class="nv">highlightmouseclicks</span><span class="o">**</span>:
+    <span class="nv">Switches</span> <span class="nv">on</span> <span class="nv">mouse</span> <span class="nv">clicks</span> <span class="nv">highlighting</span>. <span class="nv">Project</span> <span class="nv">utility</span> <span class="nv">UIToolsFor1C</span> <span class="nv">is</span> <span class="nv">used</span>.
+    <span class="nv">SikuliX</span> <span class="nv">emulates</span> <span class="nv">mouse</span> <span class="nv">clicks</span>.
+
+ <span class="o">*</span> <span class="o">**</span><span class="nv">emulatekeyboardinput</span><span class="o">**</span>:
+    <span class="nv">Switches</span> <span class="nv">on</span> <span class="nv">text</span> <span class="nv">input</span> <span class="nv">emulation</span>. <span class="nv">Project</span> <span class="nv">utility</span> <span class="nv">UIToolsFor1C</span> <span class="nv">is</span> <span class="nv">used</span>.
+    <span class="nv">Only</span> <span class="nv">Russian</span> <span class="nv">and</span> <span class="nv">English</span> <span class="nv">are</span> <span class="nv">available</span>.
+    <span class="nv">Keyboard</span> <span class="nv">layout</span> <span class="nv">shwitches</span> <span class="nv">by</span> <span class="nv">pressing</span> <span class="nv">Ctrl</span><span class="o">+</span><span class="nv">Shift</span> <span class="nv">emulation</span>.
+</code></pre></div>
+
+<ul>
+<li>
+<p>Customize the title slide features</p>
+<div class="codehilite"><pre><span></span><code><span class="o">*</span> <span class="o">**</span><span class="nv">changefeaturetitleslide</span><span class="o">**</span>:
+   <span class="k">If</span> <span class="nv">the</span> <span class="nv">flag</span> <span class="nv">is</span> <span class="nv">set</span>, <span class="k">then</span> <span class="nv">the</span> <span class="nv">standard</span> <span class="nv">file</span> <span class="nv">with</span> <span class="nv">the</span> <span class="nv">feature</span> <span class="nv">header</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">replaced</span> <span class="nv">with</span> <span class="nv">the</span> <span class="nv">specified</span> <span class="nv">video</span> <span class="nv">file</span>. <span class="nv">The</span> <span class="nv">video</span> <span class="nv">file</span> <span class="nv">must</span> <span class="nv">be</span> <span class="nv">of</span> <span class="nv">the</span> <span class="nv">same</span> <span class="nv">resolution</span> <span class="nv">as</span> <span class="nv">the</span> <span class="nv">video</span> <span class="nv">being</span> <span class="nv">recorded</span>. <span class="nv">It</span> <span class="nv">must</span> <span class="nv">also</span> <span class="nv">have</span> <span class="nv">an</span> <span class="nv">audio</span> <span class="nv">track</span>.
+
+<span class="o">*</span> <span class="o">**</span><span class="nv">addmusictofeaturetitleslide</span><span class="o">**</span>:
+   <span class="k">If</span> <span class="nv">the</span> <span class="nv">check</span> <span class="nv">box</span> <span class="nv">is</span> <span class="nv">selected</span>, <span class="nv">music</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">added</span> <span class="nv">to</span> <span class="nv">the</span> <span class="nv">video</span> <span class="nv">file</span> <span class="nv">with</span> <span class="nv">the</span> <span class="nv">feature</span> <span class="nv">title</span>
+
+<span class="o">*</span> <span class="o">**</span><span class="nv">featuretitleslidepath</span><span class="o">**</span>:
+   <span class="nv">The</span> <span class="nv">path</span> <span class="nv">to</span> <span class="nv">the</span> <span class="nv">video</span> <span class="nv">file</span> <span class="nv">with</span> <span class="nv">the</span> <span class="nv">feature</span> <span class="nv">title</span>, <span class="nv">which</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">added</span> <span class="nv">instead</span> <span class="nv">of</span> <span class="nv">the</span> <span class="nv">standard</span> <span class="nv">one</span>.
+</code></pre></div>
+
+</li>
+<li>
+<p>Final slide settings </p>
+<div class="codehilite"><pre><span></span><code><span class="o">*</span> <span class="o">**</span><span class="nv">changefinalslide</span><span class="o">**</span>:
+   <span class="k">If</span> <span class="nv">the</span> <span class="nv">flag</span> <span class="nv">is</span> <span class="nv">set</span>, <span class="k">then</span> <span class="nv">the</span> <span class="nv">standard</span> <span class="nv">final</span> <span class="nv">file</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">replaced</span> <span class="nv">with</span> <span class="nv">the</span> <span class="nv">specified</span> <span class="nv">video</span> <span class="nv">file</span>. <span class="nv">The</span> <span class="nv">video</span> <span class="nv">file</span> <span class="nv">must</span> <span class="nv">be</span> <span class="nv">of</span> <span class="nv">the</span> <span class="nv">same</span> <span class="nv">resolution</span> <span class="nv">as</span> <span class="nv">the</span> <span class="nv">video</span> <span class="nv">being</span> <span class="nv">recorded</span>. <span class="nv">It</span> <span class="nv">must</span> <span class="nv">also</span> <span class="nv">have</span> <span class="nv">an</span> <span class="nv">audio</span> <span class="nv">track</span>.
+
+<span class="o">*</span> <span class="o">**</span><span class="nv">addmusictofinalslide</span><span class="o">**</span>:
+   <span class="k">If</span> <span class="nv">the</span> <span class="nv">check</span> <span class="nv">box</span> <span class="nv">is</span> <span class="nv">selected</span>, <span class="nv">music</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">added</span> <span class="nv">to</span> <span class="nv">the</span> <span class="nv">final</span> <span class="nv">video</span> <span class="nv">file</span>.
+
+<span class="o">*</span> <span class="o">**</span><span class="nv">finalslidepath</span><span class="o">**</span>:
+   <span class="nv">The</span> <span class="nv">path</span> <span class="nv">to</span> <span class="nv">the</span> <span class="nv">final</span> <span class="nv">video</span> <span class="nv">file</span> <span class="nv">that</span> <span class="nv">will</span> <span class="nv">be</span> <span class="nv">added</span> <span class="nv">instead</span> <span class="nv">of</span> <span class="nv">the</span> <span class="nv">standard</span> <span class="nv">final</span> <span class="nv">video</span> <span class="nv">file</span>.
+</code></pre></div>
+
+</li>
+</ul>
+</li>
+<li>
+<p>SikuliX server (deprecated)</p>
+<ul>
+<li>
+<p><strong>usesikulixserver</strong>:
+     SikuliX is a Java application that allows you to control mouse movements and clicks on the screen, as well as emulate keystrokes on the keyboard.
+     SikuliX Server is a special software optimization for working with SikuliX. If the option is enabled, VA builds one large script from many SikuliX scripts, which can be run once and quickly execute the necessary commands that previously had to be run one at a time. This allows you to significantly save time for executing one SikuliX script, because no time wasted on launching SikuliX and unloading it from memory.
+     Installation and configuration of SikuliX and SikuliX Server is described in help section 20.1
+     Open Help</p>
+</li>
+<li>
+<p><strong>emulatemousemovement</strong>:
+     If the checkbox is on, then the search of form element or control will be performed on steps execution. Mouse pointer will be moved to the detected element. 
+     SikuliX is used for picture search and mouse movement. Picture will be generated by the text from the form element.
+     To disable mouse movement at a specific step, you should use the #[DoNotMoveMouse] directive.</p>
+</li>
+<li>
+<p><strong>sikulixscriptpath</strong>:
+     Script directory. Multiple directories can be used, separated by ";".</p>
+</li>
+<li>
+<p><strong>pathforpicturegeneration</strong>:
+     The directory in which pictures will be programmatically created to search for them on the screen.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="vanessa-editor">Vanessa Editor<a class="headerlink" href="#vanessa-editor" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>usecurrentformdatawhenselectingsteps</strong>:
+      Enables the ability to use data from the current test client form, such as field names, window titles, and so on, when adding steps.</p>
+</li>
+<li>
+<p><strong>showsubscenariolines</strong>:
+      Enables the display of subscript lines in the editor.</p>
+</li>
+<li>
+<p><strong>showcodeminiature</strong>:
+      Controls the display of the code miniature.</p>
+</li>
+<li>
+<p><strong>replacetabswithspaces</strong>:
+      The option determines whether tabs should be replaced with spaces in the editor.</p>
+</li>
+<li>
+<p><strong>showbookmarkstop</strong>:
+      If the option is set, then bookmarks will be displayed at the top. This is to give the script editor more room to display the script.</p>
+</li>
+<li>
+<p><strong>syntaxcheckingineditor</strong>:
+      Option to enable/disable syntax checking in script editor</p>
+</li>
+<li>
+<p><strong>showdifferencesineditorseparately</strong>:
+      Controls how differences are displayed when comparing files in the editor.
+      If the option is enabled, then two columns are displayed, otherwise the differences are shown in the text of the file.</p>
+</li>
+<li>
+<p><strong>OpenStartPageAtStartup</strong>:
+      Enables display of the start page in the editor when Vanessa Automation starts.</p>
+</li>
+<li>
+<p><strong>ShowVariableValuesInEditorLines</strong>:
+      Enables displaying data by variable values in the editor (inline debug). Variable values are updated after the step line is executed.</p>
+</li>
+<li>
+<p><strong>displayingtabsandspaces</strong>:
+      Changes the display mode of tabs and spaces</p>
+</li>
+<li>
+<p><strong>vanessaeditortheme</strong>:
+      Allows you to change the editor theme.</p>
+</li>
+</ul>
+<h2 id="libraries">Libraries<a class="headerlink" href="#libraries" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p>Re-code library</p>
+<ul>
+<li>
+<p><strong>librarycatalogs</strong>:
+     List of directories that contain epf files containing script steps and feature files containing export scripts.</p>
+</li>
+<li>
+<p><strong>stepsfrommetadata</strong>:
+     The list contains paths to forms within the configuration containing step descriptions.</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="test-clients">Test clients<a class="headerlink" href="#test-clients" title="Permanent link">&para;</a></h2>
+<ul>
+<li><strong>datatestclients</strong>:
+      A list of testing clients, which indicates:
+           1. Profile name
+           2. Synonym
+           3. Testing client type
+           4. String of connection to the base
+           5. Additional launch options
+           6. Computer name to establish connection
+           7. Port</li>
+</ul>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="">
+        
+          <a href="../../InteractiveHelp/%D0%97%D0%B0%D0%BF%D1%83%D1%81%D0%BA%D0%91%D0%B5%D0%B7%D0%9E%D1%82%D0%BA%D1%80%D1%8B%D1%82%D0%B8%D1%8F%D0%A4%D0%BE%D1%80%D0%BC%D1%8B/" title="Как запустить сценарий Vanessa Automation без открытия формы" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Назад
+                </span>
+                Как запустить сценарий Vanessa Automation без открытия формы
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../JsonParamsRU/" title="Описание параметров, которые можно передавать в файле VAParams.json, который используется при запуске Vanessa Automation из командной строки." class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Вперед
+                </span>
+                Описание параметров, которые можно передавать в файле VAParams.json, который используется при запуске Vanessa Automation из командной строки.
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+      <a href="https://github.com/Pr-Mex/vanessa-automation" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+      
+      
+      <a href="https://t.me/VanessaAutomation" target="_blank" rel="noopener" title="t.me" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.f45d2d8d.min.js"></script>
+      <script src="../../assets/javascripts/bundle.74d0b805.min.js"></script><script id="__lang" type="application/json">{"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.config.lang": "ru", "search.config.pipeline": "", "search.config.separator": "", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e # \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ["tabs", "instant"],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.7f7c8775.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
