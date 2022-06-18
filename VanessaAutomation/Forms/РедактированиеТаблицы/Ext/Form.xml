@@ -116,6 +116,16 @@
 								</Picture>
 								<ExtendedTooltip name="СписокКолонокСнятьВсеРасширеннаяПодсказка" id="41"/>
 							</Button>
+							<Button name="СписокКолонокСдвинутьКолонкуВВерх" id="44">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.СдвинутьКолонкуВВерх</CommandName>
+								<ExtendedTooltip name="СписокКолонокСдвинутьКолонкуВВерхРасширеннаяПодсказка" id="45"/>
+							</Button>
+							<Button name="СписокКолонокСдвинутьКолонкуВниз" id="46">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.СдвинутьКолонкуВниз</CommandName>
+								<ExtendedTooltip name="СписокКолонокСдвинутьКолонкуВнизРасширеннаяПодсказка" id="47"/>
+							</Button>
 						</ChildItems>
 					</AutoCommandBar>
 					<ExtendedTooltip name="СписокКолонокРасширеннаяПодсказка" id="22"/>
@@ -275,6 +285,52 @@
 			</ToolTip>
 			<Action>ОК</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СдвинутьКолонкуВВерх" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сдвинуть колонку в верх</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Move column to top</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сдвинуть колонку в верх</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveUp</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СдвинутьКолонкуВВерх</Action>
+		</Command>
+		<Command name="СдвинутьКолонкуВниз" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сдвинуть колонку вниз</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Move column down</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сдвинуть колонку вниз</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MoveDown</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СдвинутьКолонкуВниз</Action>
 		</Command>
 	</Commands>
 </Form>

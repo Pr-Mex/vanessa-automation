@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.8">
+	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаВыполнитьКод" id="4">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ВыполнитьКодКлиент</CommandName>
+				<ExtendedTooltip name="ФормаВыполнитьКодРасширеннаяПодсказка" id="5"/>
+			</Button>
+			<Button name="ФормаВыполнитьКодСервер" id="8">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ВыполнитьКодСервер</CommandName>
+				<ExtendedTooltip name="ФормаВыполнитьКодСерверРасширеннаяПодсказка" id="9"/>
+			</Button>
+			<Button name="ЗакрытьФорму" id="6">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ЗакрытьФорму</CommandName>
+				<ExtendedTooltip name="ЗакрытьФормуРасширеннаяПодсказка" id="7"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<InputField name="ЗначениеЗаголовокОкна" id="22">
+			<DataPath>ЗначениеЗаголовокОкна</DataPath>
+			<ContextMenu name="ЗначениеЗаголовокОкнаКонтекстноеМеню" id="23"/>
+			<ExtendedTooltip name="ЗначениеЗаголовокОкнаРасширеннаяПодсказка" id="24"/>
+		</InputField>
+		<InputField name="ЗначениеИмяЭлементаФормы" id="25">
+			<DataPath>ЗначениеИмяЭлементаФормы</DataPath>
+			<ContextMenu name="ЗначениеИмяЭлементаФормыКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ЗначениеИмяЭлементаФормыРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<InputField name="ИмяГиперссылки" id="16">
+			<DataPath>ИмяГиперссылки</DataPath>
+			<ContextMenu name="ИмяГиперссылкиКонтекстноеМеню" id="17"/>
+			<ExtendedTooltip name="ИмяГиперссылкиРасширеннаяПодсказка" id="18"/>
+		</InputField>
+		<InputField name="ТипГиперссылки" id="19">
+			<DataPath>ТипГиперссылки</DataPath>
+			<ContextMenu name="ТипГиперссылкиКонтекстноеМеню" id="20"/>
+			<ExtendedTooltip name="ТипГиперссылкиРасширеннаяПодсказка" id="21"/>
+		</InputField>
+		<CheckBoxField name="ВыражениеВычислено" id="13">
+			<DataPath>ВыражениеВычислено</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ВыражениеВычисленоКонтекстноеМеню" id="14"/>
+			<ExtendedTooltip name="ВыражениеВычисленоРасширеннаяПодсказка" id="15"/>
+		</CheckBoxField>
+		<CheckBoxField name="СсылкаНайдена" id="28">
+			<DataPath>СсылкаНайдена</DataPath>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="СсылкаНайденаКонтекстноеМеню" id="29"/>
+			<ExtendedTooltip name="СсылкаНайденаРасширеннаяПодсказка" id="30"/>
+		</CheckBoxField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.VAExtension_НажатьГиперссылкуHTMLДокумента</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ВыражениеВычислено" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выражение вычислено</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИмяГиперссылки" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя гиперссылки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТипГиперссылки" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип гиперссылки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗначениеЗаголовокОкна" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заголовок окна</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗначениеИмяЭлементаФормы" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя элемента формы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="СсылкаНайдена" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ссылка найдена</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыполнитьКодКлиент" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить код клиент</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить код клиент</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполнитьКодКлиент</Action>
+		</Command>
+		<Command name="ЗакрытьФорму" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть форму</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗакрытьФорму</Action>
+		</Command>
+		<Command name="ВыполнитьКодСервер" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить код сервер</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить код сервер</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполнитьКодСервер</Action>
+		</Command>
+	</Commands>
+</Form>

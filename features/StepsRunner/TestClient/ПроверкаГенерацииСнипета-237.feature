@@ -1,4 +1,4 @@
-# language: ru
+﻿# language: ru
 # encoding: utf-8
 #parent uf:
 @UF1_загрузка_и_обработка_features
@@ -30,6 +30,9 @@
 				Когда В панели разделов я выбираю "Основная"
 				И В панели функций я выбираю "Открыть vanessa automation"
 				Тогда открылось окно "*Vanessa Automation*"
+				И я нажимаю на кнопку с именем 'ФормаРазвернутьВсеГруппыВНастройках'
+				И Пауза 1
+								
 		
 		И установил флаг в  VanessaBehavoir в TestClient ПроверкаРаботыVanessaBehaviorВРежимеTestClient
 				И я перехожу к закладке с именем "ГруппаНастройки"

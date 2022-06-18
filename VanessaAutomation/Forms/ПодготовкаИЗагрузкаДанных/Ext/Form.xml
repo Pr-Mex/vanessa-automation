@@ -24,21 +24,16 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Группа настроек</v8:content>
+					<v8:content>Основные настройки</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
-					<v8:content>Group settings</v8:content>
+					<v8:content>Main settings</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Group settings</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Representation>None</Representation>
-			<ShowTitle>false</ShowTitle>
+			<Behavior>Collapsible</Behavior>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>NormalSeparation</Representation>
 			<ExtendedTooltip name="GroupSettingsРасширеннаяПодсказка" id="159"/>
 			<ChildItems>
 				<RadioButtonField name="StepsLanguage" id="86">
@@ -87,6 +82,16 @@
 				<CheckBoxField name="UseDataExhangeLoadTrue" id="155">
 					<DataPath>UseDataExhangeLoadTrue</DataPath>
 					<CheckBoxType>Tumbler</CheckBoxType>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>БЛ=Нет; БИ=Да</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>БЛ=No; БИ=Yes</v8:content>
+						</v8:item>
+					</EditFormat>
 					<ContextMenu name="UseDataExhangeLoadTrueКонтекстноеМеню" id="156"/>
 					<ExtendedTooltip name="UseDataExhangeLoadTrueРасширеннаяПодсказка" id="157"/>
 				</CheckBoxField>
@@ -104,12 +109,110 @@
 					</ToolTip>
 					<ToolTipRepresentation>Button</ToolTipRepresentation>
 					<CheckBoxType>Tumbler</CheckBoxType>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>БЛ=Нет; БИ=Да</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>БЛ=No; БИ=Yes</v8:content>
+						</v8:item>
+					</EditFormat>
 					<ContextMenu name="ReplaceRefByAttributeContextMenu" id="169"/>
 					<ExtendedTooltip name="ReplaceRefByAttributeExtendedTooltip" id="170"/>
 					<Events>
 						<Event name="OnChange">ReplaceRefByAttributeOnChange</Event>
 					</Events>
 				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="GroupStorageToFile" id="175">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгружать ХранилищеЗначения в файл</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Upload Storage to File</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры выгрузки ХранилищаЗначений в файлы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Parameters for upload ValueStorage to files</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="GroupStorageToFileРасширеннаяПодсказка" id="176"/>
+			<ChildItems>
+				<CheckBoxField name="CreateFileForStorage" id="177">
+					<DataPath>CreateFileForStorage</DataPath>
+					<CheckBoxType>Tumbler</CheckBoxType>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>БЛ=Нет; БИ=Да</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>БЛ=No; БИ=Yes</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="CreateFileForStorageКонтекстноеМеню" id="178"/>
+					<ExtendedTooltip name="CreateFileForStorageРасширеннаяПодсказка" id="179"/>
+					<Events>
+						<Event name="OnChange">CreateFileForStorageOnChange</Event>
+					</Events>
+				</CheckBoxField>
+				<UsualGroup name="GroupPath" id="186">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Group path</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="GroupPathРасширеннаяПодсказка" id="187"/>
+					<ChildItems>
+						<InputField name="PathToUpload" id="180">
+							<DataPath>PathToUpload</DataPath>
+							<ChoiceButton>true</ChoiceButton>
+							<ContextMenu name="PathToUploadКонтекстноеМеню" id="181"/>
+							<ExtendedTooltip name="PathToUploadРасширеннаяПодсказка" id="182"/>
+							<Events>
+								<Event name="StartChoice">PathToUploadStartChoice</Event>
+							</Events>
+						</InputField>
+						<CheckBoxField name="MakeAbsPath" id="188">
+							<DataPath>AbsPath</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>CheckBox</CheckBoxType>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>БЛ=Нет; БИ=Да</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>БЛ=No; БИ=Yes</v8:content>
+								</v8:item>
+							</EditFormat>
+							<ContextMenu name="MakeAbsPathКонтекстноеМеню" id="189"/>
+							<ExtendedTooltip name="MakeAbsPathРасширеннаяПодсказка" id="190"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
 		<Pages name="GroupPages" id="72">
@@ -152,6 +255,16 @@
 											<AutoCommandBar name="MetadataListCommandBar" id="49">
 												<Autofill>false</Autofill>
 												<ChildItems>
+													<Button name="MetadataListSelectAll" id="191">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.SelectAll</CommandName>
+														<ExtendedTooltip name="MetadataListSelectAllРасширеннаяПодсказка" id="192"/>
+													</Button>
+													<Button name="MetadataListDeselectAll" id="193">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.DeselectAll</CommandName>
+														<ExtendedTooltip name="MetadataListDeselectAllРасширеннаяПодсказка" id="194"/>
+													</Button>
 													<Button name="MetadataListGenerateFeature" id="113">
 														<Type>CommandBarButton</Type>
 														<DefaultButton>true</DefaultButton>
@@ -602,6 +715,10 @@
 				<Column name="UseSearchByAttribute" id="1">
 					<Title>
 						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Искать по атрибуту</v8:content>
+						</v8:item>
+						<v8:item>
 							<v8:lang>en</v8:lang>
 							<v8:content>Use search by attribute</v8:content>
 						</v8:item>
@@ -612,6 +729,11 @@
 				</Column>
 				<Column name="SearchAttribute" id="2">
 					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Атрибут поиска
+</v8:content>
+						</v8:item>
 						<v8:item>
 							<v8:lang>en</v8:lang>
 							<v8:content>Search attribute</v8:content>
@@ -760,11 +882,7 @@
 							<v8:content>Объект</v8:content>
 						</v8:item>
 					</Title>
-					<Type>
-						<v8:TypeSet>cfg:DocumentRef</v8:TypeSet>
-						<v8:TypeSet>cfg:ChartOfCharacteristicTypesRef</v8:TypeSet>
-						<v8:TypeSet>cfg:CatalogRef</v8:TypeSet>
-					</Type>
+					<Type/>
 				</Column>
 				<Column name="IncludeDownstreamDependencies" id="2">
 					<Title>
@@ -822,6 +940,95 @@
 			<Save>
 				<Field>ReplaceRefByAttribute</Field>
 			</Save>
+		</Attribute>
+		<Attribute name="CreateFileForStorage" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Upload</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>CreateFileForStorage</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="PathToUpload" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Path</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="UploadFileType" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>File type</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>5</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>UploadFileType</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="AbsPath" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Абсолютный путь</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Absolute path</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>AbsPath</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="FilesToSave" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Files to save</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
 		</Attribute>
 	</Attributes>
 	<Commands>
@@ -911,5 +1118,55 @@
 			</ToolTip>
 			<Action>ProcessReplaceRefByAttribute</Action>
 		</Command>
+		<Command name="SelectAll" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Select all</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Select all</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>SelectAll</Action>
+		</Command>
+		<Command name="DeselectAll" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Deselect all</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Deselect all</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>DeselectAll</Action>
+		</Command>
 	</Commands>
+	<Parameters>
+		<Parameter name="workspaceRoot">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
 </Form>
