@@ -546,8 +546,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../JsonParamsEN/" title="Description Vanessa Automation startup file parameters from the command line." class="md-nav__link">
-      Description Vanessa Automation startup file parameters from the command line.
+    <a href="../JsonParamsEN/" title="Description of parameters that can be passed in the VAParams.json file, which is used when launching Vanessa Automation from the command line." class="md-nav__link">
+      Description of parameters that can be passed in the VAParams.json file, which is used when launching Vanessa Automation from the command line.
     </a>
   </li>
 
@@ -1100,11 +1100,11 @@
 </ul>
 </li>
 <li>
-<p>Прочее</p>
+<p>Прочие настройки</p>
 <ul>
 <li>
 <p><strong>ЗагрузкаФичПриОткрытии {DownloadFeaturesOpen}</strong>:
-     Позволяет управлять поведением Vanessa Automation при открытии: нужно ли загружать фича файл, с которым велась работа в предыдущей, сесии или нет.</p>
+     Позволяет управлять поведением Vanessa Automation при открытии: нужно ли загружать фича файл, с которым велась работа в предыдущей, сессии или нет.</p>
 </li>
 <li>
 <p><strong>ПоставщикПользовательскихНастроек {usersettingsprovider}</strong>:
@@ -1199,7 +1199,7 @@
 </ul>
 </li>
 <li>
-<p>Mобильный клиент</p>
+<p>Мобильный клиент</p>
 <ul>
 <li><strong>ПутьКadb {PathToadb}</strong>:
      Путь к файлу программы adb</li>
@@ -1264,32 +1264,10 @@
 </ul>
 </li>
 <li>
-<p>Обновление данных в дереве</p>
+<p>Обновление статистики выполнения сценариев</p>
 <ul>
-<li>
-<p><strong>ОбновлятьСтатистикуВДереве {updatestatistics}</strong>:
-     Если флаг установлен, то во время выполнения сценария происходит обновление статистики: сколько шагов сценария прошло, сколько сценариев упало и подобное.
-     Актуально при работе в режиме дерева шагов.</p>
-</li>
-<li>
-<p><strong>ОбновлятьДеревоПриНачалеВыполненияСценария {updatetreewhenscenariostarts}</strong>:
-     Если флаг установлен, то при обновлении дерева шагов будет активизироваться текущая строка дерева. Рекомендуется снимать флаг при выполнении сценариев на CI сервере для ускорения выполнения сценариев.
-     Актуально при работе в режиме дерева шагов.</p>
-</li>
-</ul>
-</li>
-<li>
-<p>Статусы сценариев</p>
-<ul>
-<li>
-<p><strong>ПриравниватьPendingКFailed {pendingequalfailed}</strong>:
-     Если флаг установлен, то при выполнении сценариев на CI сервере, если будут найдены нереализованные шаги ("pending") статус сборки всё равно будет "failed".
-     Флаг рекомендуется устанавливать.</p>
-</li>
-<li>
-<p><strong>РазличатьBrokenИFailedПоКлючевомуСловуТогда {distinguishbrokenorfailedbythenkeyword}</strong>:
-     Если опция включена, то при возникновении ошибки статус сценария будет зависеть от того, с какого ключевого слова начинается шаг, на котором возникла ошибка. Если это слово Тогда, то статус сценария будет Failed. Во всех остальных случаях - Broken. Это помогает различать сломанные тесты от неожиданного поведения тестируемой системы.</p>
-</li>
+<li><strong>ОбновлятьСтатистикуВДереве {updatestatistics}</strong>:
+     Если флаг установлен, то во время выполнения сценария происходит обновление статистики: сколько шагов сценария прошло, сколько сценариев упало и так далее.</li>
 </ul>
 </li>
 <li>
@@ -1328,7 +1306,29 @@
 </ul>
 </li>
 <li>
-<p>Прочее</p>
+<p>Обновление данных в дереве в шагов</p>
+<ul>
+<li><strong>ОбновлятьДеревоПриНачалеВыполненияСценария {updatetreewhenscenariostarts}</strong>:
+     Если флаг установлен, то при обновлении дерева шагов будет активизироваться текущая строка дерева. Рекомендуется снимать флаг при выполнении сценариев на CI сервере для ускорения выполнения сценариев.
+     Актуально при работе в режиме дерева шагов.</li>
+</ul>
+</li>
+<li>
+<p>Статусы сценариев</p>
+<ul>
+<li>
+<p><strong>ПриравниватьPendingКFailed {pendingequalfailed}</strong>:
+     Если флаг установлен, то при выполнении сценариев на CI сервере, если будут найдены нереализованные шаги ("Pending"/"Не реализовано") статус сборки всё равно будет "Failed"/"Ошибка".
+     Флаг рекомендуется устанавливать.</p>
+</li>
+<li>
+<p><strong>РазличатьBrokenИFailedПоКлючевомуСловуТогда {distinguishbrokenorfailedbythenkeyword}</strong>:
+     Если опция включена, то при возникновении ошибки статус сценария будет зависеть от того, с какого ключевого слова начинается шаг, на котором возникла ошибка. Если это слово Тогда, то статус сценария будет "Failed"/"Ошибка". Во всех остальных случаях - "Broken"/"Сломано". Это помогает различать сломанные тесты от реальных ошибок конфигурации.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Прочие настройки выполнения сценариев</p>
 <ul>
 <li>
 <p><strong>ВыполнятьSleepЧерезPing {dosleepusingping}</strong>:
@@ -1434,7 +1434,7 @@
 </ul>
 </li>
 <li>
-<p>Логирование</p>
+<p>Запись событий в файл или консоль</p>
 <ul>
 <li>
 <p><strong>ДелатьЛогВыполненияСценариевВТекстовыйФайл {logtotext}</strong>:
@@ -1468,10 +1468,10 @@
 </ul>
 </li>
 <li>
-<p>Отчеты Allure, jUnit, СППР, Cucumber</p>
+<p>Allure</p>
 </li>
 <li>
-<p>Allure</p>
+<p>Основные настройки</p>
 <div class="codehilite"><pre><span></span><code><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ДелатьОтчетВФорматеАллюр</span><span class="w"> </span><span class="p">{</span><span class="n">allurecreatereport</span><span class="p">}</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="err">Формировать</span><span class="w"> </span><span class="err">отчет</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">формате</span><span class="w"> </span><span class="n">Allure</span><span class="w"> </span><span class="err">по</span><span class="w"> </span><span class="err">результатам</span><span class="w"> </span><span class="err">выполнения</span><span class="w"> </span><span class="err">сценариев</span><span class="o">.</span><span class="w"></span>
 
@@ -1501,96 +1501,108 @@
 
 <span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ТегиПропускающиеСценарий</span><span class="n">Allure</span><span class="w"> </span><span class="p">{</span><span class="n">tagsskippingscript</span><span class="p">}</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
 <span class="w">    </span><span class="err">Список</span><span class="w"> </span><span class="err">тегов</span><span class="p">,</span><span class="w"> </span><span class="err">разделённых</span><span class="w"> </span><span class="err">с</span><span class="w"> </span><span class="err">помощью</span><span class="w"> </span><span class="s2">&quot;;&quot;</span><span class="o">.</span><span class="w"></span>
-<span class="w">    </span><span class="err">Если</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">сценарии</span><span class="w"> </span><span class="err">есть</span><span class="w"> </span><span class="err">такой</span><span class="w"> </span><span class="err">тег</span><span class="p">,</span><span class="w"> </span><span class="err">тогда</span><span class="w"> </span><span class="err">сценарий</span><span class="w"> </span><span class="err">не</span><span class="w"> </span><span class="err">будет</span><span class="w"> </span><span class="err">выполняться</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">отчете</span><span class="w"> </span><span class="n">Allure</span><span class="w"> </span><span class="err">у</span><span class="w"> </span><span class="err">него</span><span class="w"> </span><span class="err">будет</span><span class="w"> </span><span class="err">статус</span><span class="w"> </span><span class="n">skipped</span><span class="o">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">Если</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">сценарии</span><span class="w"> </span><span class="err">есть</span><span class="w"> </span><span class="err">такой</span><span class="w"> </span><span class="err">тег</span><span class="p">,</span><span class="w"> </span><span class="err">тогда</span><span class="w"> </span><span class="err">сценарий</span><span class="w"> </span><span class="err">не</span><span class="w"> </span><span class="err">будет</span><span class="w"> </span><span class="err">выполняться</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">отчете</span><span class="w"> </span><span class="n">Allure</span><span class="w"> </span><span class="err">у</span><span class="w"> </span><span class="err">него</span><span class="w"> </span><span class="err">будет</span><span class="w"> </span><span class="err">статус</span><span class="w"> </span><span class="err">пропущен</span><span class="o">/</span><span class="n">skipped</span><span class="o">.</span><span class="w"></span>
 </code></pre></div>
 
-<ul>
+</li>
 <li>
-<p>Приложения к отчету Allure</p>
-<div class="codehilite"><pre><span></span><code><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ПрикладыватьКОтчету</span><span class="n">AllureЖурналРегистрацииВыполненияСценария</span><span class="w"> </span><span class="p">{</span><span class="n">attacheventlogtotheallurereport</span><span class="p">}</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
-<span class="w">   </span><span class="err">При</span><span class="w"> </span><span class="err">возникновении</span><span class="w"> </span><span class="err">ошибки</span><span class="w"> </span><span class="err">к</span><span class="w"> </span><span class="err">сценарию</span><span class="w"> </span><span class="err">будет</span><span class="w"> </span><span class="err">приложен</span><span class="w"> </span><span class="err">журнала</span><span class="w"> </span><span class="err">регистрации</span><span class="o">.</span><span class="w"> </span><span class="err">Данные</span><span class="w"> </span><span class="err">берутся</span><span class="w"> </span><span class="err">с</span><span class="w"> </span><span class="err">момента</span><span class="w"> </span><span class="err">начала</span><span class="w"> </span><span class="err">выполнения</span><span class="w"> </span><span class="err">сценария</span><span class="o">.</span><span class="w"></span>
+<p>Приложения к отчету</p>
+<div class="codehilite"><pre><span></span><code><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ПрикладыватьКОтчету</span><span class="n">AllureЖурналРегистрацииВыполненияСценария</span><span class="w"> </span><span class="p">{</span><span class="n">attacheventlogtotheallurereport</span><span class="p">}</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="err">При</span><span class="w"> </span><span class="err">возникновении</span><span class="w"> </span><span class="err">ошибки</span><span class="w"> </span><span class="err">к</span><span class="w"> </span><span class="err">сценарию</span><span class="w"> </span><span class="err">будет</span><span class="w"> </span><span class="err">приложен</span><span class="w"> </span><span class="err">журнала</span><span class="w"> </span><span class="err">регистрации</span><span class="o">.</span><span class="w"> </span><span class="err">Данные</span><span class="w"> </span><span class="err">берутся</span><span class="w"> </span><span class="err">с</span><span class="w"> </span><span class="err">момента</span><span class="w"> </span><span class="err">начала</span><span class="w"> </span><span class="err">выполнения</span><span class="w"> </span><span class="err">сценария</span><span class="o">.</span><span class="w"></span>
 
-<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ПрикладыватьКОтчету</span><span class="n">AllureДанныеОСостоянииАктивнойФормы</span><span class="w"> </span><span class="p">{</span><span class="n">attachactiveformdatatotheallurereport</span><span class="p">}</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
-<span class="w">   </span><span class="err">Если</span><span class="w"> </span><span class="err">опция</span><span class="w"> </span><span class="err">включена</span><span class="p">,</span><span class="w"> </span><span class="err">то</span><span class="w"> </span><span class="err">при</span><span class="w"> </span><span class="err">возникновении</span><span class="w"> </span><span class="err">ошибки</span><span class="w"> </span><span class="err">будут</span><span class="w"> </span><span class="err">собраны</span><span class="w"> </span><span class="err">данные</span><span class="w"> </span><span class="err">о</span><span class="w"> </span><span class="err">состоянии</span><span class="w"> </span><span class="err">элементов</span><span class="w"> </span><span class="err">активной</span><span class="w"> </span><span class="err">формы</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">формате</span><span class="w"> </span><span class="n">xlsx</span><span class="o">.</span><span class="w"></span>
+<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ПрикладыватьКОтчету</span><span class="n">AllureДанныеОСетевыхСоединениях</span><span class="w"> </span><span class="p">{</span><span class="n">attachnetworkconnectiondatatotheallurereport</span><span class="p">}</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="err">Если</span><span class="w"> </span><span class="err">опция</span><span class="w"> </span><span class="err">включена</span><span class="p">,</span><span class="w"> </span><span class="err">то</span><span class="w"> </span><span class="err">при</span><span class="w"> </span><span class="err">возникновении</span><span class="w"> </span><span class="err">ошибки</span><span class="w"> </span><span class="err">будут</span><span class="w"> </span><span class="err">собраны</span><span class="w"> </span><span class="err">данные</span><span class="w"> </span><span class="err">о</span><span class="w"> </span><span class="err">сетевых</span><span class="w"> </span><span class="err">соединениях</span><span class="w"> </span><span class="err">ПК</span><span class="p">,</span><span class="w"> </span><span class="err">на</span><span class="w"> </span><span class="err">котором</span><span class="w"> </span><span class="err">запускались</span><span class="w"> </span><span class="err">тесты</span><span class="o">.</span><span class="w"></span>
 
-<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ПрикладыватьКОтчету</span><span class="n">AllureДанныеОСостоянииВсехФорм</span><span class="w"> </span><span class="p">{</span><span class="n">attachallformsdatatotheallurereport</span><span class="p">}</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
-<span class="w">   </span><span class="err">Если</span><span class="w"> </span><span class="err">опция</span><span class="w"> </span><span class="err">включена</span><span class="p">,</span><span class="w"> </span><span class="err">то</span><span class="w"> </span><span class="err">при</span><span class="w"> </span><span class="err">возникновении</span><span class="w"> </span><span class="err">ошибки</span><span class="w"> </span><span class="err">будут</span><span class="w"> </span><span class="err">собраны</span><span class="w"> </span><span class="err">данные</span><span class="w"> </span><span class="err">о</span><span class="w"> </span><span class="err">состоянии</span><span class="w"> </span><span class="err">элементов</span><span class="w"> </span><span class="err">всех</span><span class="w"> </span><span class="err">форм</span><span class="w"> </span><span class="err">открытых</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">клиенте</span><span class="w"> </span><span class="err">тестирования</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">формате</span><span class="w"> </span><span class="n">xlsx</span><span class="o">.</span><span class="w"></span>
+<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ПрикладыватьКОтчету</span><span class="n">AllureДанныеОСостоянииАктивнойФормы</span><span class="w"> </span><span class="p">{</span><span class="n">attachactiveformdatatotheallurereport</span><span class="p">}</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="err">Если</span><span class="w"> </span><span class="err">опция</span><span class="w"> </span><span class="err">включена</span><span class="p">,</span><span class="w"> </span><span class="err">то</span><span class="w"> </span><span class="err">при</span><span class="w"> </span><span class="err">возникновении</span><span class="w"> </span><span class="err">ошибки</span><span class="w"> </span><span class="err">будут</span><span class="w"> </span><span class="err">собраны</span><span class="w"> </span><span class="err">данные</span><span class="w"> </span><span class="err">о</span><span class="w"> </span><span class="err">состоянии</span><span class="w"> </span><span class="err">элементов</span><span class="w"> </span><span class="err">активной</span><span class="w"> </span><span class="err">формы</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">формате</span><span class="w"> </span><span class="n">xlsx</span><span class="o">.</span><span class="w"></span>
 
-<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ПрикладыватьКОтчету</span><span class="n">AllureДанныеОСетевыхСоединениях</span><span class="w"> </span><span class="p">{</span><span class="n">attachnetworkconnectiondatatotheallurereport</span><span class="p">}</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
-<span class="w">   </span><span class="err">Если</span><span class="w"> </span><span class="err">опция</span><span class="w"> </span><span class="err">включена</span><span class="p">,</span><span class="w"> </span><span class="err">то</span><span class="w"> </span><span class="err">при</span><span class="w"> </span><span class="err">возникновении</span><span class="w"> </span><span class="err">ошибки</span><span class="w"> </span><span class="err">будут</span><span class="w"> </span><span class="err">собраны</span><span class="w"> </span><span class="err">данные</span><span class="w"> </span><span class="err">о</span><span class="w"> </span><span class="err">сетевых</span><span class="w"> </span><span class="err">соединениях</span><span class="w"> </span><span class="err">ПК</span><span class="p">,</span><span class="w"> </span><span class="err">на</span><span class="w"> </span><span class="err">котором</span><span class="w"> </span><span class="err">запускались</span><span class="w"> </span><span class="err">тесты</span><span class="o">.</span><span class="w"></span>
+<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ПрикладыватьКОтчету</span><span class="n">AllureДанныеОСостоянииВсехФорм</span><span class="w"> </span><span class="p">{</span><span class="n">attachallformsdatatotheallurereport</span><span class="p">}</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="err">Если</span><span class="w"> </span><span class="err">опция</span><span class="w"> </span><span class="err">включена</span><span class="p">,</span><span class="w"> </span><span class="err">то</span><span class="w"> </span><span class="err">при</span><span class="w"> </span><span class="err">возникновении</span><span class="w"> </span><span class="err">ошибки</span><span class="w"> </span><span class="err">будут</span><span class="w"> </span><span class="err">собраны</span><span class="w"> </span><span class="err">данные</span><span class="w"> </span><span class="err">о</span><span class="w"> </span><span class="err">состоянии</span><span class="w"> </span><span class="err">элементов</span><span class="w"> </span><span class="err">всех</span><span class="w"> </span><span class="err">форм</span><span class="w"> </span><span class="err">открытых</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">клиенте</span><span class="w"> </span><span class="err">тестирования</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">формате</span><span class="w"> </span><span class="n">xlsx</span><span class="o">.</span><span class="w"></span>
 
-<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ПрикладыватьКОтчету</span><span class="n">AllureДанныеОПроцессахОС</span><span class="w"> </span><span class="p">{</span><span class="n">attachdataoftheoperatingsystemprocessestotheallurereport</span><span class="p">}</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
-<span class="w">   </span><span class="err">Если</span><span class="w"> </span><span class="err">опция</span><span class="w"> </span><span class="err">включена</span><span class="p">,</span><span class="w"> </span><span class="err">то</span><span class="w"> </span><span class="err">при</span><span class="w"> </span><span class="err">возникновении</span><span class="w"> </span><span class="err">ошибки</span><span class="w"> </span><span class="err">будут</span><span class="w"> </span><span class="err">собраны</span><span class="w"> </span><span class="err">данные</span><span class="w"> </span><span class="err">о</span><span class="w"> </span><span class="err">запущенных</span><span class="w"> </span><span class="err">процессах</span><span class="w"> </span><span class="err">ОС</span><span class="o">.</span><span class="w"></span>
+<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ПрикладыватьКОтчету</span><span class="n">AllureДанныеОПроцессахОС</span><span class="w"> </span><span class="p">{</span><span class="n">attachdataoftheoperatingsystemprocessestotheallurereport</span><span class="p">}</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="err">Если</span><span class="w"> </span><span class="err">опция</span><span class="w"> </span><span class="err">включена</span><span class="p">,</span><span class="w"> </span><span class="err">то</span><span class="w"> </span><span class="err">при</span><span class="w"> </span><span class="err">возникновении</span><span class="w"> </span><span class="err">ошибки</span><span class="w"> </span><span class="err">будут</span><span class="w"> </span><span class="err">собраны</span><span class="w"> </span><span class="err">данные</span><span class="w"> </span><span class="err">о</span><span class="w"> </span><span class="err">запущенных</span><span class="w"> </span><span class="err">процессах</span><span class="w"> </span><span class="err">ОС</span><span class="o">.</span><span class="w"></span>
 
-<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ПрикладыватьКОтчету</span><span class="n">AllureДанныеОЗначенияхПеременных</span><span class="w"> </span><span class="p">{</span><span class="n">attachvariablestotheallurereport</span><span class="p">}</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
-<span class="w">   </span><span class="err">Если</span><span class="w"> </span><span class="err">опция</span><span class="w"> </span><span class="err">включена</span><span class="p">,</span><span class="w"> </span><span class="err">то</span><span class="w"> </span><span class="err">при</span><span class="w"> </span><span class="err">возникновении</span><span class="w"> </span><span class="err">ошибки</span><span class="w"> </span><span class="err">будут</span><span class="w"> </span><span class="err">собраны</span><span class="w"> </span><span class="err">данные</span><span class="w"> </span><span class="err">со</span><span class="w"> </span><span class="err">значениями</span><span class="w"> </span><span class="err">переменных</span><span class="w"> </span><span class="err">Контекста</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">Контекста</span><span class="w"> </span><span class="err">глобального</span><span class="o">.</span><span class="w"></span>
+<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ПрикладыватьКОтчету</span><span class="n">AllureДанныеОЗначенияхПеременных</span><span class="w"> </span><span class="p">{</span><span class="n">attachvariablestotheallurereport</span><span class="p">}</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="err">Если</span><span class="w"> </span><span class="err">опция</span><span class="w"> </span><span class="err">включена</span><span class="p">,</span><span class="w"> </span><span class="err">то</span><span class="w"> </span><span class="err">при</span><span class="w"> </span><span class="err">возникновении</span><span class="w"> </span><span class="err">ошибки</span><span class="w"> </span><span class="err">будут</span><span class="w"> </span><span class="err">собраны</span><span class="w"> </span><span class="err">данные</span><span class="w"> </span><span class="err">со</span><span class="w"> </span><span class="err">значениями</span><span class="w"> </span><span class="err">переменных</span><span class="w"> </span><span class="err">Контекста</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">Контекста</span><span class="w"> </span><span class="err">глобального</span><span class="o">.</span><span class="w"></span>
 
-<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ПрикладыватьФайлы</span><span class="n">MxlКОтчетуAllure</span><span class="w"> </span><span class="p">{</span><span class="n">attachmxlfilestoallurereport</span><span class="p">}</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
-<span class="w">   </span><span class="err">Файлы</span><span class="w"> </span><span class="err">отчетов</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">их</span><span class="w"> </span><span class="err">эталонов</span><span class="w"> </span><span class="err">будут</span><span class="w"> </span><span class="err">прикладываться</span><span class="w"> </span><span class="err">к</span><span class="w"> </span><span class="err">отчету</span><span class="w"> </span><span class="n">Allure</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">формате</span><span class="w"> </span><span class="n">mxl</span><span class="o">.</span><span class="w"></span>
+<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ПрикладыватьФайлы</span><span class="n">MxlКОтчетуAllure</span><span class="w"> </span><span class="p">{</span><span class="n">attachmxlfilestoallurereport</span><span class="p">}</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="err">Файлы</span><span class="w"> </span><span class="err">отчетов</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">их</span><span class="w"> </span><span class="err">эталонов</span><span class="w"> </span><span class="err">будут</span><span class="w"> </span><span class="err">прикладываться</span><span class="w"> </span><span class="err">к</span><span class="w"> </span><span class="err">отчету</span><span class="w"> </span><span class="n">Allure</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">формате</span><span class="w"> </span><span class="n">mxl</span><span class="o">.</span><span class="w"></span>
 
-<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ПрикладыватьФайлы</span><span class="n">MxlСохраненныеВФорматеHTMLКОтчетуAllure</span><span class="w"> </span><span class="p">{</span><span class="n">attachmxlfilessavedinhtmlformattoallurereport</span><span class="p">}</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
-<span class="w">   </span><span class="err">Все</span><span class="w"> </span><span class="n">mxl</span><span class="w"> </span><span class="err">файлы</span><span class="p">,</span><span class="w"> </span><span class="err">которые</span><span class="w"> </span><span class="err">будут</span><span class="w"> </span><span class="err">приложены</span><span class="w"> </span><span class="err">к</span><span class="w"> </span><span class="err">отчету</span><span class="w"> </span><span class="n">Allure</span><span class="w"> </span><span class="err">будут</span><span class="w"> </span><span class="err">сохраняться</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">формате</span><span class="w"> </span><span class="n">HTML</span><span class="o">.</span><span class="w"> </span><span class="err">Это</span><span class="w"> </span><span class="err">упрощает</span><span class="w"> </span><span class="err">открытие</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">просмотр</span><span class="w"> </span><span class="err">результата</span><span class="o">.</span><span class="w"></span>
+<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ПрикладыватьФайлы</span><span class="n">MxlСохраненныеВФорматеHTMLКОтчетуAllure</span><span class="w"> </span><span class="p">{</span><span class="n">attachmxlfilessavedinhtmlformattoallurereport</span><span class="p">}</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="err">Все</span><span class="w"> </span><span class="n">mxl</span><span class="w"> </span><span class="err">файлы</span><span class="p">,</span><span class="w"> </span><span class="err">которые</span><span class="w"> </span><span class="err">будут</span><span class="w"> </span><span class="err">приложены</span><span class="w"> </span><span class="err">к</span><span class="w"> </span><span class="err">отчету</span><span class="w"> </span><span class="n">Allure</span><span class="w"> </span><span class="err">будут</span><span class="w"> </span><span class="err">сохраняться</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">формате</span><span class="w"> </span><span class="n">HTML</span><span class="o">.</span><span class="w"> </span><span class="err">Это</span><span class="w"> </span><span class="err">упрощает</span><span class="w"> </span><span class="err">открытие</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">просмотр</span><span class="w"> </span><span class="err">результата</span><span class="o">.</span><span class="w"></span>
 
-<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ПрикладыватьДополнительныеДанныеПриСравненииЗначенияСЭталоном</span><span class="n">Allure</span><span class="w"> </span><span class="p">{</span><span class="n">attachadditionaldatawhencomparingvaluewithreferenceallure</span><span class="p">}</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
-<span class="w">   </span><span class="err">Если</span><span class="w"> </span><span class="err">опция</span><span class="w"> </span><span class="err">включена</span><span class="p">,</span><span class="w"> </span><span class="err">то</span><span class="w"> </span><span class="err">при</span><span class="w"> </span><span class="err">сравнении</span><span class="w"> </span><span class="err">макета</span><span class="w"> </span><span class="err">с</span><span class="w"> </span><span class="err">эталоном</span><span class="w"> </span><span class="err">или</span><span class="w"> </span><span class="err">при</span><span class="w"> </span><span class="err">сравнении</span><span class="w"> </span><span class="err">таблицы</span><span class="w"> </span><span class="err">с</span><span class="w"> </span><span class="err">эталоном</span><span class="w"> </span><span class="err">будут</span><span class="w"> </span><span class="err">формироваться</span><span class="w"> </span><span class="err">дополнительные</span><span class="w"> </span><span class="err">файлы</span><span class="p">:</span><span class="w"></span>
-<span class="w">   </span><span class="err">картинка</span><span class="p">,</span><span class="w"> </span><span class="err">содержащая</span><span class="w"> </span><span class="err">разницу</span><span class="w"> </span><span class="err">между</span><span class="w"> </span><span class="err">эталоном</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">текущим</span><span class="w"> </span><span class="err">значением</span><span class="w"> </span><span class="err">таблицы</span><span class="w"> </span><span class="err">или</span><span class="w"> </span><span class="err">макета</span><span class="w"></span>
-<span class="w">   </span><span class="err">картинка</span><span class="w"> </span><span class="err">текущего</span><span class="w"> </span><span class="err">значения</span><span class="w"></span>
-<span class="w">   </span><span class="err">картинка</span><span class="w"> </span><span class="err">эталонного</span><span class="w"> </span><span class="err">значения</span><span class="w"></span>
-<span class="w">   </span><span class="err">файл</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">формате</span><span class="w"> </span><span class="n">gif</span><span class="p">,</span><span class="w"> </span><span class="err">показывающий</span><span class="w"> </span><span class="err">разницу</span><span class="w"> </span><span class="err">между</span><span class="w"> </span><span class="err">текущим</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">эталонным</span><span class="w"> </span><span class="err">значением</span><span class="o">.</span><span class="w"></span>
-<span class="w">   </span><span class="err">Также</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">отчете</span><span class="w"> </span><span class="n">Allure</span><span class="w"> </span><span class="err">появится</span><span class="w"> </span><span class="err">дополнительная</span><span class="w"> </span><span class="err">секция</span><span class="p">,</span><span class="w"> </span><span class="err">где</span><span class="w"> </span><span class="err">можно</span><span class="w"> </span><span class="err">будет</span><span class="w"> </span><span class="err">удобно</span><span class="w"> </span><span class="err">просмотреть</span><span class="w"> </span><span class="err">сравнение</span><span class="w"> </span><span class="err">эталона</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">текущего</span><span class="w"> </span><span class="err">значения</span><span class="o">.</span><span class="w"></span>
-<span class="w">   </span><span class="err">Для</span><span class="w"> </span><span class="err">работы</span><span class="w"> </span><span class="err">опции</span><span class="w"> </span><span class="err">необходимо</span><span class="p">,</span><span class="w"> </span><span class="err">чтобы</span><span class="w"> </span><span class="err">на</span><span class="w"> </span><span class="err">ПК</span><span class="p">,</span><span class="w"> </span><span class="err">где</span><span class="w"> </span><span class="err">запускается</span><span class="w"> </span><span class="n">Vanessa</span><span class="w"> </span><span class="n">Automation</span><span class="w"> </span><span class="err">был</span><span class="w"> </span><span class="err">установлен</span><span class="w"> </span><span class="err">пакет</span><span class="w"> </span><span class="n">ImageMagick7</span><span class="w"> </span><span class="err">версии</span><span class="w"> </span><span class="err">или</span><span class="w"> </span><span class="err">выше</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">пакет</span><span class="w"> </span><span class="n">ghostscript</span><span class="w"> </span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">ghostscript</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">download</span><span class="o">.</span><span class="n">html</span><span class="p">,</span><span class="w"> </span><span class="err">который</span><span class="w"> </span><span class="err">выполняет</span><span class="w"> </span><span class="err">конвертацию</span><span class="w"> </span><span class="n">pdf</span><span class="w"> </span><span class="err">файлов</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">картинки</span><span class="o">.</span><span class="w"></span>
-<span class="w">   </span><span class="err">Также</span><span class="w"> </span><span class="err">необходимо</span><span class="p">,</span><span class="w"> </span><span class="err">чтобы</span><span class="w"> </span><span class="err">на</span><span class="w"> </span><span class="err">ПК</span><span class="w"> </span><span class="err">выполнялись</span><span class="w"> </span><span class="err">команды</span><span class="w"> </span><span class="err">вида</span><span class="p">:</span><span class="w"></span>
-<span class="w">   </span><span class="n">magick</span><span class="w"> </span><span class="nb">convert</span><span class="w"> </span><span class="n">file</span><span class="o">.</span><span class="n">pdf</span><span class="w"> </span><span class="n">file</span><span class="o">.</span><span class="n">png</span><span class="w"></span>
+<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ПрикладыватьДополнительныеДанныеПриСравненииЗначенияСЭталоном</span><span class="n">Allure</span><span class="w"> </span><span class="p">{</span><span class="n">attachadditionaldatawhencomparingvaluewithreferenceallure</span><span class="p">}</span><span class="o">**</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="err">Если</span><span class="w"> </span><span class="err">опция</span><span class="w"> </span><span class="err">включена</span><span class="p">,</span><span class="w"> </span><span class="err">то</span><span class="w"> </span><span class="err">при</span><span class="w"> </span><span class="err">сравнении</span><span class="w"> </span><span class="err">макета</span><span class="w"> </span><span class="err">с</span><span class="w"> </span><span class="err">эталоном</span><span class="w"> </span><span class="err">или</span><span class="w"> </span><span class="err">при</span><span class="w"> </span><span class="err">сравнении</span><span class="w"> </span><span class="err">таблицы</span><span class="w"> </span><span class="err">с</span><span class="w"> </span><span class="err">эталоном</span><span class="w"> </span><span class="err">будут</span><span class="w"> </span><span class="err">формироваться</span><span class="w"> </span><span class="err">дополнительные</span><span class="w"> </span><span class="err">файлы</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="err">картинка</span><span class="p">,</span><span class="w"> </span><span class="err">содержащая</span><span class="w"> </span><span class="err">разницу</span><span class="w"> </span><span class="err">между</span><span class="w"> </span><span class="err">эталоном</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">текущим</span><span class="w"> </span><span class="err">значением</span><span class="w"> </span><span class="err">таблицы</span><span class="w"> </span><span class="err">или</span><span class="w"> </span><span class="err">макета</span><span class="w"></span>
+<span class="w">    </span><span class="err">картинка</span><span class="w"> </span><span class="err">текущего</span><span class="w"> </span><span class="err">значения</span><span class="w"></span>
+<span class="w">    </span><span class="err">картинка</span><span class="w"> </span><span class="err">эталонного</span><span class="w"> </span><span class="err">значения</span><span class="w"></span>
+<span class="w">    </span><span class="err">файл</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">формате</span><span class="w"> </span><span class="n">gif</span><span class="p">,</span><span class="w"> </span><span class="err">показывающий</span><span class="w"> </span><span class="err">разницу</span><span class="w"> </span><span class="err">между</span><span class="w"> </span><span class="err">текущим</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">эталонным</span><span class="w"> </span><span class="err">значением</span><span class="o">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">Также</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">отчете</span><span class="w"> </span><span class="n">Allure</span><span class="w"> </span><span class="err">появится</span><span class="w"> </span><span class="err">дополнительная</span><span class="w"> </span><span class="err">секция</span><span class="p">,</span><span class="w"> </span><span class="err">где</span><span class="w"> </span><span class="err">можно</span><span class="w"> </span><span class="err">будет</span><span class="w"> </span><span class="err">удобно</span><span class="w"> </span><span class="err">просмотреть</span><span class="w"> </span><span class="err">сравнение</span><span class="w"> </span><span class="err">эталона</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">текущего</span><span class="w"> </span><span class="err">значения</span><span class="o">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">Для</span><span class="w"> </span><span class="err">работы</span><span class="w"> </span><span class="err">опции</span><span class="w"> </span><span class="err">необходимо</span><span class="p">,</span><span class="w"> </span><span class="err">чтобы</span><span class="w"> </span><span class="err">на</span><span class="w"> </span><span class="err">ПК</span><span class="p">,</span><span class="w"> </span><span class="err">где</span><span class="w"> </span><span class="err">запускается</span><span class="w"> </span><span class="n">Vanessa</span><span class="w"> </span><span class="n">Automation</span><span class="w"> </span><span class="err">был</span><span class="w"> </span><span class="err">установлен</span><span class="w"> </span><span class="err">пакет</span><span class="w"> </span><span class="n">ImageMagick7</span><span class="w"> </span><span class="err">версии</span><span class="w"> </span><span class="err">или</span><span class="w"> </span><span class="err">выше</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">пакет</span><span class="w"> </span><span class="n">ghostscript</span><span class="w"> </span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">ghostscript</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">download</span><span class="o">.</span><span class="n">html</span><span class="p">,</span><span class="w"> </span><span class="err">который</span><span class="w"> </span><span class="err">выполняет</span><span class="w"> </span><span class="err">конвертацию</span><span class="w"> </span><span class="n">pdf</span><span class="w"> </span><span class="err">файлов</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">картинки</span><span class="o">.</span><span class="w"></span>
+<span class="w">    </span><span class="err">Также</span><span class="w"> </span><span class="err">необходимо</span><span class="p">,</span><span class="w"> </span><span class="err">чтобы</span><span class="w"> </span><span class="err">на</span><span class="w"> </span><span class="err">ПК</span><span class="w"> </span><span class="err">выполнялись</span><span class="w"> </span><span class="err">команды</span><span class="w"> </span><span class="err">вида</span><span class="p">:</span><span class="w"></span>
+<span class="w">    </span><span class="n">magick</span><span class="w"> </span><span class="nb">convert</span><span class="w"> </span><span class="n">file</span><span class="o">.</span><span class="n">pdf</span><span class="w"> </span><span class="n">file</span><span class="o">.</span><span class="n">png</span><span class="w"></span>
+<span class="w">    </span><span class="err">Пример</span><span class="w"> </span><span class="err">результата</span><span class="w"> </span><span class="err">можно</span><span class="w"> </span><span class="err">посмотреть</span><span class="w"> </span><span class="err">тут</span><span class="o">.</span><span class="w"></span>
 </code></pre></div>
 
-<ul>
-<li><strong>ДанныеАллюрМеток {DataAllureMarks}</strong>:
+</li>
+<li>
+<p>Данные аллюр меток</p>
+<div class="codehilite"><pre><span></span><code> * **ДанныеАллюрМеток {DataAllureMarks}**:
     Таблица используется для установки соответствия тегов сценариев меткам аллюра.
     Если в  строке таблицы указано регулярное выражение, то к каждому тегу сценария применяется регулярное выражение из данной таблицы и если тег ему соответствует, то к отчету будет добавлена метка в формате ИмяМетки:Значение.
     Если в строке таблицы регулярное выражение не указано, то метка добавляется безусловно.
     Подробнее зачем это может быть нужно можно прочитать тут
-    https://habr.com/ru/company/sberbank/blog/359302/</li>
-</ul>
-</li>
-</ul>
+    https://habr.com/ru/company/sberbank/blog/359302/
+</code></pre></div>
+
 </li>
 <li>
 <p>JUnit</p>
-<div class="codehilite"><pre><span></span><code> * **ДелатьОтчетВФорматеjUnit {junitcreatereport}**:
-    Формировать отчет в формате JUnit по результатам выполнения сценариев.
-
- * **КаталогВыгрузкиjUnit {junitpath}**:
-    Каталог для формирования отчета.
-
- * **СкриншотыjUnit {junitscreenshots}**:
-    С версии 13.12 в jUnit можно добавлять скриншоты.
-    Чтобы все корректно работало - КаталогСкриншотов должен быть расположен внутри КаталогаПроекта.
-    Папку скриншотов сохранять как артефакты.
-</code></pre></div>
-
+<ul>
+<li>
+<p><strong>ДелатьОтчетВФорматеjUnit {junitcreatereport}</strong>:
+     Формировать отчет в формате JUnit по результатам выполнения сценариев.</p>
+</li>
+<li>
+<p><strong>КаталогВыгрузкиjUnit {junitpath}</strong>:
+     Каталог для формирования отчета.</p>
+</li>
+<li>
+<p><strong>СкриншотыjUnit {junitscreenshots}</strong>:
+     С версии 13.12 в jUnit можно добавлять скриншоты.
+     Чтобы все корректно работало - КаталогСкриншотов должен быть расположен внутри КаталогаПроекта.
+     Папку скриншотов сохранять как артефакты.</p>
+</li>
+</ul>
 </li>
 <li>
 <p>СППР</p>
-<div class="codehilite"><pre><span></span><code> * **ДелатьОтчетВФорматеСППР {ModelingCreateReport}**:
-    Формировать отчет в формате СППР по результатам выполнения сценариев.
-
- * **КаталогВыгрузкиСППР {modelingreportpath}**:
-    Каталог для формирования отчета.
-</code></pre></div>
-
+<ul>
+<li>
+<p><strong>ДелатьОтчетВФорматеСППР {ModelingCreateReport}</strong>:
+     Формировать отчет в формате СППР по результатам выполнения сценариев.</p>
+</li>
+<li>
+<p><strong>КаталогВыгрузкиСППР {modelingreportpath}</strong>:
+     Каталог для формирования отчета.</p>
+</li>
+</ul>
 </li>
 <li>
 <p>Cucumber</p>
-<div class="codehilite"><pre><span></span><code> * **ДелатьОтчетВФорматеCucumberJson {cucumbercreatereport}**:
-    Формировать отчет в формате Cucumber по результатам выполнения сценариев.
-
- * **КаталогВыгрузкиCucumberJson {cucumberreportpath}**:
-    Каталог для формирования отчета.
-</code></pre></div>
-
+<ul>
+<li>
+<p><strong>ДелатьОтчетВФорматеCucumberJson {cucumbercreatereport}</strong>:
+     Формировать отчет в формате Cucumber по результатам выполнения сценариев.</p>
 </li>
 <li>
-<p>Ошибки в формате json</p>
+<p><strong>КаталогВыгрузкиCucumberJson {cucumberreportpath}</strong>:
+     Каталог для формирования отчета.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Json</p>
 <ul>
 <li>
 <p><strong>ДелатьЛогОшибокВТекстовыйФайл {logerrorstotext}</strong>:
@@ -1623,7 +1635,7 @@
 </ul>
 </li>
 <li>
-<p>Отчет во внутреннем формате</p>
+<p>Внутренний формат</p>
 <ul>
 <li><strong>ДелатьОтчетВоВнутреннемФормате {simplereport}</strong>:
      Включает вывод отчет о запуске сценариев во внутреннем формате.</li>
@@ -1633,7 +1645,7 @@
 <h2 id="_7">Автоинструкции<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
-<p>Компонента VanessaExt + UI Automation</p>
+<p>UI Automation</p>
 <ul>
 <li><strong>ИспользоватьUIAutomation {UseUIAutomation}</strong>:
      Включает использование механизма UI Automation в Windows для эмуляции движения и кликов мышкой в шагах из стандартной библиотеки шагов Vanessa Automation.
@@ -1644,7 +1656,7 @@
 </ul>
 </li>
 <li>
-<p>Автоинструкции при работе с браузером</p>
+<p>Работа с браузером</p>
 <ul>
 <li>
 <p><strong>ИспользоватьБраузерПлюсWebSocket {usebrowserwebsocket}</strong>:
@@ -1652,20 +1664,21 @@
      Для работы опции необходимо включить использование компоненты VanessaExt.</p>
 </li>
 <li>
-<p><strong>ЭмулироватьВводКлавиатурыVanessaExt {emulatekeyboardinputwithVanessaExt}</strong>:
-     Включает эмуляцию ввода клавиатуры с помощью компоненты VanessaExt</p>
-</li>
-<li>
 <p><strong>ИгнорироватьОшибкиПоискаЭлементовВБраузере {ignorebrowsersearcherrors}</strong>:
      Позволяет не останавливать выполнение сценария если элемент формы не был найден в браузере.</p>
 </li>
 <li>
-<p><strong>ПоискКартинокСПомощьюКомпонентыVanessaExt {findingpicturesusingaddinvanessaext}</strong>:
-     Если опция включена, то шаги, выполняющие поиск картинок на экране, будут использовать внешнюю компоненту VanessaExt вместо использования SikuliX.</p>
-</li>
-<li>
 <p><strong>КоэффициентМасштабированияЭкрана {scalefactor}</strong>:
      Значение по умолчанию равно единице. Если используется масштабирование экрана в ОС, тогда нужно изменять устанавливать соответствующее значение. Например, при масштабировании в 150% в ОС надо установить значение коэффициента 1.5.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Поиск картинок</p>
+<ul>
+<li>
+<p><strong>ПоискКартинокСПомощьюКомпонентыVanessaExt {findingpicturesusingaddinvanessaext}</strong>:
+     Если опция включена, то шаги, выполняющие поиск картинок на экране, будут использовать внешнюю компоненту VanessaExt вместо использования SikuliX.</p>
 </li>
 <li>
 <p><strong>ПорогПоискаКартинки {PictureSearchThreshold}</strong>:
@@ -1674,10 +1687,17 @@
 </ul>
 </li>
 <li>
-<p>Эмуляция действий мышки</p>
+<p>Эмуляция клавиатуры</p>
+<ul>
+<li><strong>ЭмулироватьВводКлавиатурыVanessaExt {emulatekeyboardinputwithVanessaExt}</strong>:
+     Включает эмуляцию ввода клавиатуры с помощью компоненты VanessaExt</li>
+</ul>
+</li>
+<li>
+<p>Эмуляция мышки</p>
 <ul>
 <li><strong>ЭмулироватьДвиженияМышкиVanessaExt {emulatemousemovementswithVanessaExt}</strong>:
-     Включает эмуляцию движения мышки с помощью компоненты VanessaExt. По умолчанию опция включает перемещение мышки, когда клиентом тестирования является браузер. Для тонкого и толстого клиента нужно включать режим UI Automation.</li>
+     Включает эмуляцию движения мышки с помощью компоненты VanessaExt.</li>
 </ul>
 </li>
 <li>
@@ -1933,7 +1953,7 @@
 
 </li>
 <li>
-<p>Видеоинструкция</p>
+<p>Видео</p>
 <ul>
 <li>
 <p><strong>СоздаватьИнструкциюВидео {videocreate}</strong>:
@@ -2134,7 +2154,7 @@
 </li>
 <li>
 <p><strong>ЗаписьВидеоЭмулироватьДвиженияМышкиSikuliX {emulatemousemovement}</strong>:
-     Если флаг установлен, то при выполнении шагов будет выполняться попытка найти элмент формы или элемент управления на экране и переместить курсор мышки к нему.
+     Если флаг установлен, то при выполнении шагов будет выполняться попытка найти элемент формы или элемент управления на экране и переместить курсор мышки к нему.
      Для поиска картинки и передвижения мышки используется SikuliX. Картинка для поиска будет сгенерирована по тексту, полученному из элемента формы.
      Чтобы отключить движение мышки у конкретного шага надо использовать директиву #[DoNotMoveMouse].</p>
 </li>
@@ -2173,7 +2193,7 @@
 </li>
 <li>
 <p><strong>ПроверкаСинтаксисаВРедакторе {syntaxcheckingineditor}</strong>:
-      Опция для отключения проверки синтаксиса в редакторе сценариев</p>
+      Опция для включения/отключения проверки синтаксиса в редакторе сценариев</p>
 </li>
 <li>
 <p><strong>ПоказыватьРазличияВРедактореОтдельно {showdifferencesineditorseparately}</strong>:
@@ -2243,7 +2263,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="">
         
-          <a href="../JsonParamsEN/" title="Description Vanessa Automation startup file parameters from the command line." class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../JsonParamsEN/" title="Description of parameters that can be passed in the VAParams.json file, which is used when launching Vanessa Automation from the command line." class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
             </div>
@@ -2252,7 +2272,7 @@
                 <span class="md-footer-nav__direction">
                   Назад
                 </span>
-                Description Vanessa Automation startup file parameters from the command line.
+                Description of parameters that can be passed in the VAParams.json file, which is used when launching Vanessa Automation from the command line.
               </div>
             </div>
           </a>
