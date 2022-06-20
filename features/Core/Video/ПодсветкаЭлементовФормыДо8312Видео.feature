@@ -6,6 +6,7 @@
 @UA40_проверять_формирование_видеоинструкций
 
 @tree
+@IgnoreOnCIMainBuild
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 @IgnoreOn836
