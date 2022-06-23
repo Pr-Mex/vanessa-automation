@@ -783,6 +783,14 @@
                 
                 <h1 id="vanessa-automation">Как запустить сценарий Vanessa Automation без открытия формы<a class="headerlink" href="#vanessa-automation" title="Permanent link">&para;</a></h1>
 <ul>
+<li>Нужно получить основную форму Vanessa Automation</li>
+</ul>
+<div class="codehilite"><pre><span></span><code>        <span class="nv">ПараметрыФормы</span> <span class="o">=</span> <span class="k">Новый</span> <span class="nv">Структура</span><span class="p">;</span>
+        <span class="nv">ПараметрыФормы</span><span class="o">.</span><span class="nf">Вставить</span><span class="p">(</span><span class="s">&quot;ИнициализироватьVanessaEditor&quot;</span><span class="p">,</span> <span class="kc">Ложь</span><span class="p">);</span>
+        <span class="nv">Ванесса</span> <span class="o">=</span> <span class="nb">ПолучитьФорму</span><span class="p">(</span><span class="s">&quot;Обработка.VanessaAutomationsingle.Форма.УправляемаяФорма&quot;</span><span class="p">);</span>
+</code></pre></div>
+
+<ul>
 <li>Для запуска сценариев, когда надо запустить фича файл, нужно выполнить следующий код. Настройки нужно передавать согласно текущей задаче и окружению.</li>
 </ul>
 <div class="codehilite"><pre><span></span><code>        <span class="nv">Ванесса</span><span class="o">.</span><span class="nf">УстановитьФичаФайл</span><span class="p">(</span><span class="nv">ПутьКФичаФайлу</span><span class="p">);</span>
