@@ -161,7 +161,7 @@ Procedure ICheckOrCreateCatalogObjects(Val ObjectName, Val Values) Export
 		
 	    Vanessa.ЗапретитьВыполнениеШагов();
 		AddParams = New Structure("Object, Name, Values, LoadTrue", "Catalog", ObjectName, Values, False);
-		Notify = New NotifyDescription("UploadBinaryDataContinuation", ThisObject, AddParams);
+		Notify = New NotifyDescription("UploadBinaryDataContinuation", ThisForm, AddParams);
 		BeginPuttingFiles(Notify, Files, , False, ThisForm.UUID);
 		
 	Else
@@ -188,7 +188,7 @@ Procedure ICheckOrCreateCatalogObjectsWithDataExchangeLoadTrue(Val ObjectName, V
 	If Files.Count() > 0 Then
 	    Vanessa.ЗапретитьВыполнениеШагов();
 		AddParams = New Structure("Object, Name, Values, LoadTrue", "Catalog", ObjectName, Values, True);
-		Notify = New NotifyDescription("UploadBinaryDataContinuation", ThisObject, AddParams);
+		Notify = New NotifyDescription("UploadBinaryDataContinuation", ThisForm, AddParams);
 		BeginPuttingFiles(Notify, Files, , False, ThisForm.UUID);
 		
 	Else
@@ -280,7 +280,7 @@ Procedure ICheckOrCreateDocumentObjects(Val ObjectName, Val Values) Export
 		
 	    Vanessa.ЗапретитьВыполнениеШагов();
 		AddParams = New Structure("Object, Name, Values, LoadTrue", "Documents", ObjectName, Values, False);
-		Notify = New NotifyDescription("UploadBinaryDataContinuation", ThisObject, AddParams);
+		Notify = New NotifyDescription("UploadBinaryDataContinuation", ThisForm, AddParams);
 		BeginPuttingFiles(Notify, Files, , False, ThisForm.UUID);
 		
 	Else
@@ -308,7 +308,7 @@ Procedure ICheckOrCreateDocumentObjectsWithDataExchangeLoadTrue(Val ObjectName, 
 		
 	    Vanessa.ЗапретитьВыполнениеШагов();
 		AddParams = New Structure("Object, Name, Values, LoadTrue", "Documents", ObjectName, Values, True);
-		Notify = New NotifyDescription("UploadBinaryDataContinuation", ThisObject, AddParams);
+		Notify = New NotifyDescription("UploadBinaryDataContinuation", ThisForm, AddParams);
 		BeginPuttingFiles(Notify, Files, , False, ThisForm.UUID);
 		
 	Else
@@ -545,7 +545,7 @@ Procedure ICheckOrCreateInformationRegisterRecords(Val RegisterName, Val Values)
 		
 	    Vanessa.ЗапретитьВыполнениеШагов();
 		AddParams = New Structure("Object, Name, Values, LoadTrue, UseSet", "RegisterRecords", RegisterName, Values, False, False);
-		Notify = New NotifyDescription("UploadBinaryDataContinuation", ThisObject, AddParams);
+		Notify = New NotifyDescription("UploadBinaryDataContinuation", ThisForm, AddParams);
 		BeginPuttingFiles(Notify, Files, , False, ThisForm.UUID);
 		
 	Else
@@ -573,7 +573,7 @@ Procedure ICheckOrCreateInformationRegisterRecordsUsingRecordSets(Val RegisterNa
 		
 	    Vanessa.ЗапретитьВыполнениеШагов();
 		AddParams = New Structure("Object, Name, Values, UseSet, LoadTrue", "RegisterRecords", RegisterName, Values, True, False);
-		Notify = New NotifyDescription("UploadBinaryDataContinuation", ThisObject, AddParams);
+		Notify = New NotifyDescription("UploadBinaryDataContinuation", ThisForm, AddParams);
 		BeginPuttingFiles(Notify, Files, , False, ThisForm.UUID);
 		
 	Else
@@ -600,7 +600,7 @@ Procedure ICheckOrCreateInformationRegisterRecordsUsingRecordSetsWithDataExchang
 		
 	    Vanessa.ЗапретитьВыполнениеШагов();
 		AddParams = New Structure("Object, Name, Values, LoadTrue, UseSet", "RegisterRecords", RegisterName, Values, True, True);
-		Notify = New NotifyDescription("UploadBinaryDataContinuation", ThisObject, AddParams);
+		Notify = New NotifyDescription("UploadBinaryDataContinuation", ThisForm, AddParams);
 		BeginPuttingFiles(Notify, Files, , False, ThisForm.UUID);
 		
 	Else
@@ -910,7 +910,7 @@ Procedure SaveBinData()
 		
 	EndIf;
 	
-	Notify = New NotifyDescription("SaveBinaryDataContinuation", ThisObject);
+	Notify = New NotifyDescription("SaveBinaryDataContinuation", ThisForm);
 	List = New Array;
 	
 	For Each elem In FilesToSave Do
@@ -973,7 +973,7 @@ EndProcedure
 
 &AtClient
 Procedure AddObjectByURL(Command)
-	Notify = New NotifyDescription("AddObjectByURLContinuation", ThisObject);
+	Notify = New NotifyDescription("AddObjectByURLContinuation", ThisForm);
 	ShowInputString(Notify, "", NStr("ru = 'Введите навигационные ссылки'"), , True);	
 EndProcedure
 
@@ -1845,19 +1845,19 @@ Procedure AddStepsByLanguage(Vanessa, AllTests, LangCode)
 	Vanessa.ДобавитьШагВМассивТестов(AllTests
 										, LocalizedStringsClient()["s2a_" + LangCode]
 										, LocalizedStringsClient()["s2b_" + LangCode]
-										, StrTemplate(ScenarioCatalogActionString(LangCode, ThisObject.UseDataExhangeLoadTrue), LocalizedStringsClient()["s2d_" + LangCode], "", "")
+										, StrTemplate(ScenarioCatalogActionString(LangCode, ThisForm.UseDataExhangeLoadTrue), LocalizedStringsClient()["s2d_" + LangCode], "", "")
 										, LocalizedStringsClient()["s2f_" + LangCode]
 										, "");
 	Vanessa.ДобавитьШагВМассивТестов(AllTests
 										, LocalizedStringsClient()["s3a_" + LangCode]
 										, LocalizedStringsClient()["s3b_" + LangCode]
-										, StrTemplate(ScenarioDocumentActionString(LangCode, ThisObject.UseDataExhangeLoadTrue), LocalizedStringsClient()["s3d_" + LangCode], "", "")
+										, StrTemplate(ScenarioDocumentActionString(LangCode, ThisForm.UseDataExhangeLoadTrue), LocalizedStringsClient()["s3d_" + LangCode], "", "")
 										, LocalizedStringsClient()["s3f_" + LangCode]
 										, "");
 	Vanessa.ДобавитьШагВМассивТестов(AllTests
 										, LocalizedStringsClient()["s4a_" + LangCode]
 										, LocalizedStringsClient()["s4b_" + LangCode]
-										, StrTemplate(ScenarioChartOfCharacteristicTypesActionString(LangCode, ThisObject.UseDataExhangeLoadTrue), LocalizedStringsClient()["s4d_" + LangCode], "", "")
+										, StrTemplate(ScenarioChartOfCharacteristicTypesActionString(LangCode, ThisForm.UseDataExhangeLoadTrue), LocalizedStringsClient()["s4d_" + LangCode], "", "")
 										, LocalizedStringsClient()["s4f_" + LangCode]
 										, "");
 	Vanessa.ДобавитьШагВМассивТестов(AllTests
@@ -1924,8 +1924,8 @@ EndProcedure
 
 &AtClient
 Procedure FillStepsLanguage()
-	If Not ValueIsFilled(ThisObject.StepsLanguage) Then
-		ThisObject.StepsLanguage = "en";
+	If Not ValueIsFilled(ThisForm.StepsLanguage) Then
+		ThisForm.StepsLanguage = "en";
 	EndIf;
 EndProcedure
 
@@ -1972,8 +1972,8 @@ EndFunction
 
 &AtClient
 Procedure ChangeReplaceRefByAttribute()
-	Items.MetadataListSearchAttribute.Visible = ThisObject.ReplaceRefByAttribute;
-	Items.MetadataListUseSearchByAttribute.Visible = ThisObject.ReplaceRefByAttribute;
+	Items.MetadataListSearchAttribute.Visible = ThisForm.ReplaceRefByAttribute;
+	Items.MetadataListUseSearchByAttribute.Visible = ThisForm.ReplaceRefByAttribute;
 EndProcedure
 
 &AtServer
@@ -2036,11 +2036,11 @@ EndFunction
 
 &AtServer
 Function GeneratedFeatureFile()
-	LangCode = ThisObject.StepsLanguage;
+	LangCode = ThisForm.StepsLanguage;
 	ReturnValue = New Array;	
 	Scenarious = New Array;		
 	MetadataListValue = FormAttributeToValue("MetadataList");
-	RefReplaceMetadataObjects = GetRefReplaceMetadataObjects(MetadataListValue, ThisObject.ReplaceRefByAttribute);		
+	RefReplaceMetadataObjects = GetRefReplaceMetadataObjects(MetadataListValue, ThisForm.ReplaceRefByAttribute);
 	ParamsValueStorage = ParamsValueStorageSaveToFile();
 	FilesToSave.Clear();
 	
@@ -2078,11 +2078,11 @@ Function GeneratedFeatureFile()
 					Continue;
 				EndIf;
 				If MetadataListParentRow.Name = "Catalogs" Then
-					Scenarious.Add(ScenarioCatalog(MetadataListRow.Name, MarkdownTables, LangCode, ThisObject.UseDataExhangeLoadTrue));
+					Scenarious.Add(ScenarioCatalog(MetadataListRow.Name, MarkdownTables, LangCode, ThisForm.UseDataExhangeLoadTrue));
 				ElsIf MetadataListParentRow.Name = "Documents" Then
-					Scenarious.Add(ScenarioDocument(MetadataListRow.Name, MarkdownTables, LangCode, ThisObject.UseDataExhangeLoadTrue));
+					Scenarious.Add(ScenarioDocument(MetadataListRow.Name, MarkdownTables, LangCode, ThisForm.UseDataExhangeLoadTrue));
 				ElsIf MetadataListParentRow.Name = "ChartsOfCharacteristicTypes" Then
-					Scenarious.Add(ScenarioChartOfCharacteristicTypes(MetadataListRow.Name, MarkdownTables, LangCode, ThisObject.UseDataExhangeLoadTrue));
+					Scenarious.Add(ScenarioChartOfCharacteristicTypes(MetadataListRow.Name, MarkdownTables, LangCode, ThisForm.UseDataExhangeLoadTrue));
 				ElsIf MetadataListParentRow.Name = "InformationRegisters" Then
 					Scenarious.Add(ScenarioInformationRegister(MetadataListRow.Name, MarkdownTables, LangCode));
 				ElsIf MetadataListParentRow.Name = "AccumulationRegisters" Then
@@ -2104,7 +2104,7 @@ EndFunction
 
 &AtServer
 Function GenerateFeatureFileForRefsAtServer()	
-	LangCode = ThisObject.StepsLanguage;
+	LangCode = ThisForm.StepsLanguage;
 	ReturnValue = New Array;	
 	Scenarious = New Array;
 	AddComments = Not DontAddCommentsWithMetadataName;
@@ -2112,7 +2112,7 @@ Function GenerateFeatureFileForRefsAtServer()
 	Objects = GetRefsWithDependencies();
 	ObjectsByTypes = GroupItemsByType(Objects);
 	MetadataListValue = FormAttributeToValue("MetadataList");
-	RefReplaceMetadataObjects = GetRefReplaceMetadataObjects(MetadataListValue, ThisObject.ReplaceRefByAttribute);
+	RefReplaceMetadataObjects = GetRefReplaceMetadataObjects(MetadataListValue, ThisForm.ReplaceRefByAttribute);
 	
 	ObjectsByTypesTable = New ValueTable;
 	ObjectsByTypesTable.Columns.Add("TypePriority");
@@ -2171,11 +2171,11 @@ Function GenerateFeatureFileForRefsAtServer()
 		EndIf;
 
 		If MetadataClass = "Catalog" Then
-			ScenarioActionString = ScenarioCatalogActionString(LangCode, ThisObject.UseDataExhangeLoadTrue);
+			ScenarioActionString = ScenarioCatalogActionString(LangCode, ThisForm.UseDataExhangeLoadTrue);
 		ElsIf MetadataClass = "Document" Then
-			ScenarioActionString = ScenarioDocumentActionString(LangCode, ThisObject.UseDataExhangeLoadTrue);
+			ScenarioActionString = ScenarioDocumentActionString(LangCode, ThisForm.UseDataExhangeLoadTrue);
 		ElsIf MetadataClass = "ChartOfCharacteristicTypes" Then
-			ScenarioActionString = ScenarioChartOfCharacteristicTypesActionString(LangCode, ThisObject.UseDataExhangeLoadTrue);
+			ScenarioActionString = ScenarioChartOfCharacteristicTypesActionString(LangCode, ThisForm.UseDataExhangeLoadTrue);
 		ElsIf MetadataClass = "InformationRegister" Then
 			ScenarioActionString = ScenarioInformationRegisterActionString(LangCode);
 		ElsIf MetadataClass = "AccumulationRegister" Then
@@ -2953,8 +2953,8 @@ EndFunction
 &AtServer
 Procedure ProcessReplaceRefByAttributeAtServer()
 	MetadataListValue = FormAttributeToValue("MetadataList");
-	RefReplaceMetadataObjects = GetRefReplaceMetadataObjects(MetadataListValue, ThisObject.ReplaceRefByAttribute);
-	FeatureText = ThisObject.Feature.GetText();
+	RefReplaceMetadataObjects = GetRefReplaceMetadataObjects(MetadataListValue, ThisForm.ReplaceRefByAttribute);
+	FeatureText = ThisForm.Feature.GetText();
 	Replaced = False;
 	For Each RefReplaceMetadataObject In RefReplaceMetadataObjects Do
 		Query = New Query;
@@ -2977,7 +2977,7 @@ Procedure ProcessReplaceRefByAttributeAtServer()
 		EndDo;
 	EndDo;
 	If Replaced Then
-		ThisObject.Feature.SetText(FeatureText);
+		ThisForm.Feature.SetText(FeatureText);
 	EndIf;
 EndProcedure
 
