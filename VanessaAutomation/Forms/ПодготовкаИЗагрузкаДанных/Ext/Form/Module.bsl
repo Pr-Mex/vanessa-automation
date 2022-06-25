@@ -2677,7 +2677,7 @@ Function GeValuetStringRepresentation(DataValue, RefReplaceMetadataObjects)
 					
 				Else
 					
-					Hash= New DataHashing(HashFunction.MD5);
+					Hash = New DataHashing(HashFunction.MD5);
 					Hash.Append(ValueToStringInternal(Data));
 					
 					Name = StrReplace(String(Hash.HashSum), " ", "");
@@ -2731,9 +2731,10 @@ Function GeValuetStringRepresentation(DataValue, RefReplaceMetadataObjects)
 		If PredefinedCheck.Predefined <> Undefined
 			And PredefinedCheck.Predefined Then
 			ReturnValue = GetURL(DataValue);
-			ReturnValue = Left(ReturnValue, StrFind(ReturnValue, "=") - 1)
+			Manager = GetManagerByMetadataObject(MetadataObject);
+			ReturnValue = Left(ReturnValue, СтрНайти(ReturnValue, "=") - 1)
 							+ "Name="
-							+ DataValue.PredefinedDataName;
+							+ Manager.GetPredefinedItemName(DataValue);
 		Else
 			If RefReplaceMetadataObjects.Count() Then
 				MetadataObjectFullName = MetadataObject.FullName();
@@ -2769,6 +2770,24 @@ Function isMetadataObjectAndDataValueNotEmpty(MetadataObject, DataValue)
 				Or Metadata.ChartsOfAccounts.Contains(MetadataObject)
 				Or Metadata.ChartsOfCalculationTypes.Contains(MetadataObject))
 			And Not DataValue.IsEmpty();
+EndFunction
+
+&AtServer
+Function GetManagerByMetadataObject(MetadataObject) Export
+	ObjectName = MetadataObject.Name;
+	If Metadata.Catalogs.Contains(MetadataObject) Then
+		Return Catalogs[ObjectName];
+	ElsIf Metadata.Documents.Contains(MetadataObject) Then
+		Return Documents[ObjectName];
+	ElsIf Metadata.ChartsOfCharacteristicTypes.Contains(MetadataObject) Then
+		Return ChartsOfCharacteristicTypes[ObjectName];
+	ElsIf Metadata.ChartsOfAccounts.Contains(MetadataObject) Then
+		Return ChartsOfAccounts[ObjectName];
+	ElsIf Metadata.ChartsOfCalculationTypes.Contains(MetadataObject) Then
+		Return ChartsOfCalculationTypes[ObjectName];
+	Else
+		Return Undefined;
+	EndIf;
 EndFunction
 
 &AtServerNoContext
