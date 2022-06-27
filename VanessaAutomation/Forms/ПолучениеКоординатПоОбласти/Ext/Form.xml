@@ -5,8 +5,14 @@
 		<ChildItems>
 			<Button name="МониторингСобытийНачать" id="7">
 				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
 				<CommandName>Form.Command.МониторингСобытийНачать</CommandName>
 				<ExtendedTooltip name="МониторингСобытийНачатьРасширеннаяПодсказка" id="8"/>
+			</Button>
+			<Button name="ФормаКопироватьКонструкцию" id="35">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.КопироватьИЗакрыть</CommandName>
+				<ExtendedTooltip name="ФормаКопироватьКонструкциюРасширеннаяПодсказка" id="36"/>
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
@@ -16,35 +22,56 @@
 	</Events>
 	<ChildItems>
 		<UsualGroup name="Группа1" id="14">
-			<Group>AlwaysHorizontal</Group>
+			<Group>Vertical</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
 			<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="15"/>
 			<ChildItems>
-				<InputField name="ТочкаX" id="16">
-					<DataPath>ТочкаX</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<ContextMenu name="ТочкаXКонтекстноеМеню" id="17"/>
-					<ExtendedTooltip name="ТочкаXРасширеннаяПодсказка" id="18"/>
-				</InputField>
-				<InputField name="ТочкаY" id="19">
-					<DataPath>ТочкаY</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<ContextMenu name="ТочкаYКонтекстноеМеню" id="20"/>
-					<ExtendedTooltip name="ТочкаYРасширеннаяПодсказка" id="21"/>
-				</InputField>
-				<InputField name="Width" id="22">
-					<DataPath>ОбластьWidth</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<ContextMenu name="WidthКонтекстноеМеню" id="23"/>
-					<ExtendedTooltip name="WidthРасширеннаяПодсказка" id="24"/>
-				</InputField>
-				<InputField name="Height" id="25">
-					<DataPath>ОбластьHeight</DataPath>
-					<ReadOnly>true</ReadOnly>
-					<ContextMenu name="HeightКонтекстноеМеню" id="26"/>
-					<ExtendedTooltip name="HeightРасширеннаяПодсказка" id="27"/>
-				</InputField>
+				<UsualGroup name="Группа2" id="28">
+					<Group>AlwaysHorizontal</Group>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="29"/>
+					<ChildItems>
+						<InputField name="ТочкаX" id="16">
+							<DataPath>ТочкаX</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ТочкаXКонтекстноеМеню" id="17"/>
+							<ExtendedTooltip name="ТочкаXРасширеннаяПодсказка" id="18"/>
+						</InputField>
+						<InputField name="ТочкаY" id="19">
+							<DataPath>ТочкаY</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="ТочкаYКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="ТочкаYРасширеннаяПодсказка" id="21"/>
+						</InputField>
+						<InputField name="Width" id="22">
+							<DataPath>ОбластьWidth</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="WidthКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="WidthРасширеннаяПодсказка" id="24"/>
+						</InputField>
+						<InputField name="Height" id="25">
+							<DataPath>ОбластьHeight</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="HeightКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="HeightРасширеннаяПодсказка" id="27"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
+				<UsualGroup name="Группа3" id="30">
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="31"/>
+					<ChildItems>
+						<InputField name="КонструкцияШага" id="32">
+							<DataPath>КонструкцияШага</DataPath>
+							<ReadOnly>true</ReadOnly>
+							<ContextMenu name="КонструкцияШагаКонтекстноеМеню" id="33"/>
+							<ExtendedTooltip name="КонструкцияШагаРасширеннаяПодсказка" id="34"/>
+						</InputField>
+					</ChildItems>
+				</UsualGroup>
 			</ChildItems>
 		</UsualGroup>
 		<PictureField name="Принскрин" id="11">
@@ -175,17 +202,6 @@
 				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
-		<Attribute name="ИспользоватьКомпонентуVanessaExt" id="8">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Использовать компоненту vanessa ext</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:boolean</v8:Type>
-			</Type>
-		</Attribute>
 		<Attribute name="ДескрипторОсновногоОкнаVA" id="9">
 			<Title>
 				<v8:item>
@@ -213,6 +229,21 @@
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
+		<Attribute name="КонструкцияШага" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Конструкция шага</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="МониторингСобытийНачать" id="1">
@@ -234,6 +265,21 @@
 			</ToolTip>
 			<Action>МониторингСобытийНачать</Action>
 		</Command>
+		<Command name="КопироватьИЗакрыть" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Копировать и закрыть</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Копировать и закрыть</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КопироватьКонструкцию</Action>
+		</Command>
 	</Commands>
 	<Parameters>
 		<Parameter name="ДескрипторОсновногоОкнаТекущегоКлиентаТестирования">
@@ -244,11 +290,6 @@
 					<v8:FractionDigits>0</v8:FractionDigits>
 					<v8:AllowedSign>Any</v8:AllowedSign>
 				</v8:NumberQualifiers>
-			</Type>
-		</Parameter>
-		<Parameter name="ИспользоватьКомпонентуVanessaExt">
-			<Type>
-				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Parameter>
 		<Parameter name="ДескрипторОсновногоОкнаVA">
