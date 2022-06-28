@@ -287,7 +287,7 @@ Procedure ICheckOrCreateChartOfAccountsObjects(Val ObjectName, Val Values) Expor
 		
 	    Vanessa.ЗапретитьВыполнениеШагов();
 		AddParams = New Structure("Object, Name, Values, LoadTrue", "ChartOfAccounts", ObjectName, Values, False);
-		Notify = New NotifyDescription("UploadBinaryDataContinuation", ThisObject, AddParams);
+		Notify = New NotifyDescription("UploadBinaryDataContinuation", ThisForm, AddParams);
 		BeginPuttingFiles(Notify, Files, , False, ThisForm.UUID);
 		
 	Else
@@ -314,7 +314,7 @@ Procedure ICheckOrCreateChartOfAccountsObjectsWithDataExchangeLoadTrue(Val Objec
 	If Files.Count() > 0 Then
 	    Vanessa.ЗапретитьВыполнениеШагов();
 		AddParams = New Structure("Object, Name, Values, LoadTrue", "ChartOfAccounts", ObjectName, Values, True);
-		Notify = New NotifyDescription("UploadBinaryDataContinuation", ThisObject, AddParams);
+		Notify = New NotifyDescription("UploadBinaryDataContinuation", ThisForm, AddParams);
 		BeginPuttingFiles(Notify, Files, , False, ThisForm.UUID);
 		
 	Else
@@ -2031,7 +2031,7 @@ Procedure AddStepsByLanguage(Vanessa, AllTests, LangCode)
 	Vanessa.ДобавитьШагВМассивТестов(AllTests
 										, LocalizedStringsClient()["s17a_" + LangCode]
 										, LocalizedStringsClient()["s17b_" + LangCode]
-										, StrTemplate(ScenarioChartOfAccountsActionString(LangCode, ThisObject.UseDataExhangeLoadTrue), LocalizedStringsClient()["s17d_" + LangCode], "", "")
+										, StrTemplate(ScenarioChartOfAccountsActionString(LangCode, ThisForm.UseDataExhangeLoadTrue), LocalizedStringsClient()["s17d_" + LangCode], "", "")
 										, LocalizedStringsClient()["s17f_" + LangCode]
 										, "");									
 	Vanessa.ДобавитьШагВМассивТестов(AllTests
@@ -2731,9 +2731,16 @@ Function GeValuetStringRepresentation(DataValue, RefReplaceMetadataObjects)
 		If PredefinedCheck.Predefined <> Undefined
 			And PredefinedCheck.Predefined Then
 			ReturnValue = GetURL(DataValue);
-			ReturnValue = Left(ReturnValue, StrFind(ReturnValue, "=") - 1)
-							+ "Name="
-							+ DataValue.PredefinedDataName;
+			If (IsCompatibilityModeVersion8_3_2OrLess()) Then
+				Manager = GetManagerByMetadataObject(MetadataObject);
+				ReturnValue = Left(ReturnValue, StrFind(ReturnValue, "=") - 1)
+								+ "Name="
+								+ Manager.GetPredefinedItemName(DataValue);
+			Else
+				ReturnValue = Left(ReturnValue, StrFind(ReturnValue, "=") - 1)
+								+ "Name="
+								+ DataValue.PredefinedDataName;
+			EndIf;
 		Else
 			If RefReplaceMetadataObjects.Count() Then
 				MetadataObjectFullName = MetadataObject.FullName();
@@ -2760,6 +2767,32 @@ Function GeValuetStringRepresentation(DataValue, RefReplaceMetadataObjects)
 	Return ReturnValue;
 EndFunction
 
+&AtServerNoContext
+Function IsCompatibilityModeVersion8_3_2OrLess()
+	
+	Try
+		CurrentCompatibilityMode = Eval("Metadata.CompatibilityMode");
+	Except
+		Return False;
+	EndTry;
+	
+	Try
+		CompatibilityMode = Metadata.ObjectProperties.CompatibilityMode;
+	Except
+		Return False;
+	EndTry;
+	
+	Versions = New Array;
+	Versions.Add(CompatibilityMode.Version8_1);
+	Versions.Add(CompatibilityMode.Version8_2_13);
+	Versions.Add(CompatibilityMode.Version8_2_16);
+	Versions.Add(CompatibilityMode.Version8_3_1);
+	Versions.Add(CompatibilityMode.Version8_3_2);
+	
+	Return (Versions.Find(CurrentCompatibilityMode) <> Undefined);
+	
+EndFunction
+
 &AtServer
 Function isMetadataObjectAndDataValueNotEmpty(MetadataObject, DataValue)
 	Return MetadataObject <> Undefined
@@ -2769,6 +2802,24 @@ Function isMetadataObjectAndDataValueNotEmpty(MetadataObject, DataValue)
 				Or Metadata.ChartsOfAccounts.Contains(MetadataObject)
 				Or Metadata.ChartsOfCalculationTypes.Contains(MetadataObject))
 			And Not DataValue.IsEmpty();
+EndFunction
+
+&AtServer
+Function GetManagerByMetadataObject(MetadataObject) Export
+	ObjectName = MetadataObject.Name;
+	If Metadata.Catalogs.Contains(MetadataObject) Then
+		Return Catalogs[ObjectName];
+	ElsIf Metadata.Documents.Contains(MetadataObject) Then
+		Return Documents[ObjectName];
+	ElsIf Metadata.ChartsOfCharacteristicTypes.Contains(MetadataObject) Then
+		Return ChartsOfCharacteristicTypes[ObjectName];
+	ElsIf Metadata.ChartsOfAccounts.Contains(MetadataObject) Then
+		Return ChartsOfAccounts[ObjectName];
+	ElsIf Metadata.ChartsOfCalculationTypes.Contains(MetadataObject) Then
+		Return ChartsOfCalculationTypes[ObjectName];
+	Else
+		Return Undefined;
+	EndIf;
 EndFunction
 
 &AtServerNoContext
