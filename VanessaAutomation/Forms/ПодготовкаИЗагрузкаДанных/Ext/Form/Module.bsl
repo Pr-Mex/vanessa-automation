@@ -613,6 +613,8 @@ Procedure TryToWriteObject(Obj, MaxCount, Count = 0)
 				While DateStart + 1 > CurrentDate() Do
 				EndDo;
 				TryToWriteObject(Obj, MaxCount, Count);
+			Else
+				TryToWriteObject(Obj, MaxCount, MaxCount);
 			EndIf;
 		EndTry;                
 	EndIf;
