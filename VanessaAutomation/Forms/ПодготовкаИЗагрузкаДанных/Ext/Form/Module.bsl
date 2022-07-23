@@ -267,7 +267,7 @@ Procedure ICheckOrCreateCatalogObjectsAtServer(ObjectName, Values, DataExchange 
 			Obj.SetNewCode();
 		EndIf;
 		Obj.DataExchange.Load = DataExchange;
-		Obj.Write();
+		TryToWriteObject(Obj, 4);
 	EndDo;
 EndProcedure
 
@@ -387,7 +387,7 @@ Procedure ICheckOrCreateChartOfAccountsObjectsAtServer(ObjectName, Values, DataE
 			Obj.SetNewCode();
 		EndIf;
 		Obj.DataExchange.Load = DataExchange;
-		Obj.Write();
+		TryToWriteObject(Obj, 4);
 	EndDo;
 EndProcedure
 
@@ -593,11 +593,33 @@ Procedure ICheckOrCreateChartOfCharacteristicTypesObjectsAtServer(ObjectName, Va
 			FillTipicalObjectAttributesByValues(Obj, Row, Column);
 		EndDo;
 		Obj.DataExchange.Load = DataExchange;
-		Obj.Write();
+		TryToWriteObject(Obj, 4);
 	EndDo;
 EndProcedure
 
 #EndRegion
+
+&AtServer
+Procedure TryToWriteObject(Obj, MaxCount, Count = 0)
+	If Count > MaxCount - 1 Then
+		Obj.Write();
+	Else
+		Try
+			Obj.Write();
+		Except
+			If Find(ErrorDescription(), "Lock conflict during the transaction") Then
+				Count = Count + 1;                     
+				DateStart = CurrentDate();
+				While DateStart + 1 > CurrentDate() Do
+				EndDo;
+				TryToWriteObject(Obj, MaxCount, Count);
+			Else
+				TryToWriteObject(Obj, MaxCount, MaxCount);
+			EndIf;
+		EndTry;                
+	EndIf;
+EndProcedure
+
 
 &AtClient
 Procedure IRefillObjectTabularSection(Val TabularSectionName, Val Values) Export
