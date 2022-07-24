@@ -620,7 +620,6 @@ Procedure TryToWriteObject(Obj, MaxCount, Count = 0)
 	EndIf;
 EndProcedure
 
-
 &AtClient
 Procedure IRefillObjectTabularSection(Val TabularSectionName, Val Values) Export
 	If Not Values.Count() Then
@@ -720,6 +719,35 @@ EndProcedure
 &AtClient
 Procedure ЯПроверяюИлиСоздаюДляРегистраСведенийЗаписи(Val ИмяРегистра, Val Значения) Export
 	ICheckOrCreateInformationRegisterRecords(ИмяРегистра, Значения);
+EndProcedure
+
+&AtClient
+Procedure ICheckOrCreateInformationRegisterRecordsWithDataExchangeLoadTrue(Val RegisterName, Val Values) Export
+	
+	If Not Values.Count() Then
+		Return;
+	EndIf;
+	
+	Files = FilesToUpload(Values);
+	
+	If Files.Count() > 0 Then
+		
+	    Vanessa.ЗапретитьВыполнениеШагов();
+		AddParams = New Structure("Object, Name, Values, LoadTrue, UseSet", "RegisterRecords", RegisterName, Values, True, False);
+		Notify = New NotifyDescription("UploadBinaryDataContinuation", ThisForm, AddParams);
+		BeginPuttingFiles(Notify, Files, , False, ThisForm.UUID);
+		
+	Else
+		
+		ICheckOrCreateInformationRegisterRecordsAtServer(RegisterName, Values, False, True);
+		
+	EndIf;
+		
+EndProcedure
+
+&AtClient
+Procedure ЯПроверяюИлиСоздаюДляРегистраСведенийЗаписиСОбменДаннымиЗагрузкаИстина(Val ИмяРегистра, Val Значения) Export
+	ICheckOrCreateInformationRegisterRecordsWithDataExchangeLoadTrue(ИмяРегистра, Значения);
 EndProcedure
 
 &AtClient
