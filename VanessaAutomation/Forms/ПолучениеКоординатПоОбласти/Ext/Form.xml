@@ -9,11 +9,6 @@
 				<CommandName>Form.Command.МониторингСобытийНачать</CommandName>
 				<ExtendedTooltip name="МониторингСобытийНачатьРасширеннаяПодсказка" id="8"/>
 			</Button>
-			<Button name="ФормаКопироватьКонструкцию" id="35">
-				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.КопироватьИЗакрыть</CommandName>
-				<ExtendedTooltip name="ФормаКопироватьКонструкциюРасширеннаяПодсказка" id="36"/>
-			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -21,6 +16,18 @@
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
+		<LabelDecoration name="ДекорацияИдетПроцесс" id="51">
+			<TextColor>style:SpecialTextColor</TextColor>
+			<Font ref="style:NormalTextFont" height="12" kind="StyleItem"/>
+			<Title formatted="false">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Идет процесс выделения области.</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="ДекорацияИдетПроцессКонтекстноеМеню" id="52"/>
+			<ExtendedTooltip name="ДекорацияИдетПроцессРасширеннаяПодсказка" id="53"/>
+		</LabelDecoration>
 		<UsualGroup name="Группа1" id="14">
 			<Group>Vertical</Group>
 			<Representation>None</Representation>
@@ -60,6 +67,7 @@
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="Группа3" id="30">
+					<Group>AlwaysHorizontal</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="31"/>
@@ -70,6 +78,11 @@
 							<ContextMenu name="КонструкцияШагаКонтекстноеМеню" id="33"/>
 							<ExtendedTooltip name="КонструкцияШагаРасширеннаяПодсказка" id="34"/>
 						</InputField>
+						<Button name="КонструкцияШагаВБуфер" id="45">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.КонструкцияШагаВБуфер</CommandName>
+							<ExtendedTooltip name="КонструкцияШагаВБуферРасширеннаяПодсказка" id="46"/>
+						</Button>
 					</ChildItems>
 				</UsualGroup>
 				<UsualGroup name="Группа4" id="40">
@@ -78,19 +91,33 @@
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="41"/>
 					<ChildItems>
-						<InputField name="КонструкцияШагаПрочие" id="37">
-							<DataPath>КонструкцияШагаПрочие</DataPath>
-							<ClearButton>true</ClearButton>
-							<ListChoiceMode>true</ListChoiceMode>
-							<ContextMenu name="КонструкцияШагаПрочиеКонтекстноеМеню" id="38"/>
-							<ExtendedTooltip name="КонструкцияШагаПрочиеРасширеннаяПодсказка" id="39"/>
-							<Events>
-								<Event name="OnChange">КонструкцияШагаПрочиеПриИзменении</Event>
-								<Event name="Clearing">КонструкцияШагаПрочиеОчистка</Event>
-							</Events>
-						</InputField>
+						<UsualGroup name="Группа5" id="47">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="48"/>
+							<ChildItems>
+								<InputField name="КонструкцияШагаПрочие" id="37">
+									<DataPath>КонструкцияШагаПрочие</DataPath>
+									<ClearButton>true</ClearButton>
+									<ListChoiceMode>true</ListChoiceMode>
+									<ContextMenu name="КонструкцияШагаПрочиеКонтекстноеМеню" id="38"/>
+									<ExtendedTooltip name="КонструкцияШагаПрочиеРасширеннаяПодсказка" id="39"/>
+									<Events>
+										<Event name="OnChange">КонструкцияШагаПрочиеПриИзменении</Event>
+										<Event name="Clearing">КонструкцияШагаПрочиеОчистка</Event>
+									</Events>
+								</InputField>
+								<Button name="КонструкцияШагаПрочиеВБуфер" id="49">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.КонструкцияШагаПрочиеВБуфер</CommandName>
+									<ExtendedTooltip name="КонструкцияШагаПрочиеВБуферРасширеннаяПодсказка" id="50"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
 						<TextDocumentField name="КонструкцияШагаПрочиеТекст" id="42">
 							<DataPath>КонструкцияШагаПрочиеТекст</DataPath>
+							<ReadOnly>true</ReadOnly>
 							<TitleLocation>None</TitleLocation>
 							<ContextMenu name="КонструкцияШагаПрочиеТекстКонтекстноеМеню" id="43"/>
 							<ExtendedTooltip name="КонструкцияШагаПрочиеТекстРасширеннаяПодсказка" id="44"/>
@@ -363,20 +390,45 @@
 			</ToolTip>
 			<Action>МониторингСобытийНачать</Action>
 		</Command>
-		<Command name="КопироватьИЗакрыть" id="2">
+		<Command name="КонструкцияШагаВБуфер" id="3">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Копировать и закрыть</v8:content>
+					<v8:content>Копировать в буфер</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Копировать и закрыть</v8:content>
+					<v8:content>Конструкция шага в буфер</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action>КопироватьКонструкцию</Action>
+			<Picture>
+				<xr:Ref>StdPicture.ActivateTask</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КонструкцияШагаВБуфер</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="КонструкцияШагаПрочиеВБуфер" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Копировать в буфер</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Конструкция шага в буфер</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ActivateTask</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>КонструкцияШагаПрочиеВБуфер</Action>
+			<Representation>TextPicture</Representation>
 		</Command>
 	</Commands>
 	<Parameters>
