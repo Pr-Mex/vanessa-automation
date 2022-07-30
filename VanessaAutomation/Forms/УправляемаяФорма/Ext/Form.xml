@@ -11909,6 +11909,23 @@
 														<Value xsi:type="xs:string">МобильноеПриложение</Value>
 													</xr:Value>
 												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Обычное приложение</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Ordinary application</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">ОбычноеПриложение</Value>
+													</xr:Value>
+												</xr:Item>
 											</ChoiceList>
 											<ContextMenu name="ДанныеКлиентовТестированияТипКлиентаКонтекстноеМеню" id="1567"/>
 											<ExtendedTooltip name="ДанныеКлиентовТестированияТипКлиентаРасширеннаяПодсказка" id="1568"/>
@@ -12969,102 +12986,194 @@ The script in the list is indicated by its name.</v8:content>
 															<v8:content>External component VanessaExt</v8:content>
 														</v8:item>
 													</Title>
-													<Group>AlwaysHorizontal</Group>
+													<Group>Vertical</Group>
 													<Behavior>Collapsible</Behavior>
 													<Collapsed>true</Collapsed>
 													<ControlRepresentation>Picture</ControlRepresentation>
 													<ExtendedTooltip name="ГруппаИспользоватьКомпонентуVanessaExtРасширеннаяПодсказка" id="3269"/>
 													<ChildItems>
-														<UsualGroup name="ГруппаВключениеVanessaExt" id="2850">
+														<UsualGroup name="ГруппаВключениеVanessaExtПерваяСтрока" id="3724">
 															<Title>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
-																	<v8:content>Включение vanessa ext</v8:content>
+																	<v8:content>Группа включение vanessa ext первая строка</v8:content>
 																</v8:item>
 																<v8:item>
 																	<v8:lang>en</v8:lang>
-																	<v8:content>Enabling vanessa ext</v8:content>
+																	<v8:content>Group inclusion vanessa ext first line</v8:content>
 																</v8:item>
 															</Title>
-															<Width>50</Width>
-															<HorizontalStretch>false</HorizontalStretch>
-															<Group>Vertical</Group>
+															<Group>AlwaysHorizontal</Group>
 															<Representation>None</Representation>
 															<ShowTitle>false</ShowTitle>
-															<ExtendedTooltip name="ГруппаВключениеVanessaExtРасширеннаяПодсказка" id="2851"/>
+															<ExtendedTooltip name="ГруппаВключениеVanessaExtПерваяСтрокаРасширеннаяПодсказка" id="3725"/>
 															<ChildItems>
-																<CheckBoxField name="ИспользоватьКомпонентуVanessaExt" id="2320">
-																	<DataPath>Объект.ИспользоватьКомпонентуVanessaExt</DataPath>
-																	<TitleLocation>Right</TitleLocation>
-																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-																	<CheckBoxType>Auto</CheckBoxType>
-																	<ContextMenu name="ИспользоватьКомпонентуVanessaExtКонтекстноеМеню" id="2321"/>
-																	<ExtendedTooltip name="ИспользоватьКомпонентуVanessaExtРасширеннаяПодсказка" id="2322">
-																		<AutoMaxWidth>false</AutoMaxWidth>
-																		<Title formatted="true">
-																			<v8:item>
-																				<v8:lang>ru</v8:lang>
-																				<v8:content>Предназначена для управления окнами Windows и Linux. 
+																<UsualGroup name="ГруппаВключениеVanessaExtПерваяСтрокаЛевыйСтолбец" id="3726">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа включение vanessa ext первая строка левый столбец</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Group inclusion vanessa ext first row left column</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Width>50</Width>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<Group>Vertical</Group>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаВключениеVanessaExtПерваяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="3727"/>
+																	<ChildItems>
+																		<CheckBoxField name="ИспользоватьКомпонентуVanessaExt" id="2320">
+																			<DataPath>Объект.ИспользоватьКомпонентуVanessaExt</DataPath>
+																			<TitleLocation>Right</TitleLocation>
+																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="ИспользоватьКомпонентуVanessaExtКонтекстноеМеню" id="2321"/>
+																			<ExtendedTooltip name="ИспользоватьКомпонентуVanessaExtРасширеннаяПодсказка" id="2322">
+																				<AutoMaxWidth>false</AutoMaxWidth>
+																				<Title formatted="true">
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Предназначена для управления окнами Windows и Linux. 
 Возможности:
 - Получение списка окон и списка процессов
 - Управление размерами и положением окна
 - Получение снимка окна и снимка экрана
 &lt;link https://github.com/lintest/VanessaExt&gt;https://github.com/lintest/VanessaExt&lt;/&gt;</v8:content>
-																			</v8:item>
-																			<v8:item>
-																				<v8:lang>en</v8:lang>
-																				<v8:content>&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;Designed to manage Windows and Linux windows.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;Designed to manage Windows and Linux windows.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
 &lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;Possibilities:&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
 &lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;- Getting a list of windows and a list of processes&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
 &lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;- Controlling the size and position of the window&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
 &lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;- Taking a screenshot of a window and a screenshot&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
 &lt;link https://github.com/lintest/VanessaExt&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;https://github.com/lintest/VanessaExt&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
-																			</v8:item>
-																		</Title>
-																	</ExtendedTooltip>
-																	<Events>
-																		<Event name="OnChange">ИспользоватьКомпонентуVanessaExtПриИзменении</Event>
-																	</Events>
-																</CheckBoxField>
-																<LabelDecoration name="ДекорацияВерсияVanessaExt" id="2269">
-																	<Title formatted="false">
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
+																			<Events>
+																				<Event name="OnChange">ИспользоватьКомпонентуVanessaExtПриИзменении</Event>
+																			</Events>
+																		</CheckBoxField>
+																		<LabelDecoration name="ДекорацияВерсияVanessaExt" id="2269">
+																			<Title formatted="false">
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Версия компоненты</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>Component version</v8:content>
+																				</v8:item>
+																			</Title>
+																			<ContextMenu name="ДекорацияВерсияVanessaExtКонтекстноеМеню" id="2270"/>
+																			<ExtendedTooltip name="ДекорацияВерсияVanessaExtРасширеннаяПодсказка" id="2271"/>
+																		</LabelDecoration>
+																	</ChildItems>
+																</UsualGroup>
+																<UsualGroup name="ГруппаВключениеVanessaExtПерваяСтрокаПравыйСтолбец" id="3728">
+																	<Title>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>Версия компоненты</v8:content>
+																			<v8:content>Группа включение vanessa ext первая строка правый столбец</v8:content>
 																		</v8:item>
 																		<v8:item>
 																			<v8:lang>en</v8:lang>
-																			<v8:content>Component version</v8:content>
+																			<v8:content>Group inclusion vanessa ext first row left column</v8:content>
 																		</v8:item>
 																	</Title>
-																	<ContextMenu name="ДекорацияВерсияVanessaExtКонтекстноеМеню" id="2270"/>
-																	<ExtendedTooltip name="ДекорацияВерсияVanessaExtРасширеннаяПодсказка" id="2271"/>
-																</LabelDecoration>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаВключениеVanessaExtПерваяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="3729"/>
+																	<ChildItems>
+																		<CheckBoxField name="ИспользоватьПарсерGherkinИзКомпонентыVanessaExt" id="2923">
+																			<DataPath>Объект.ИспользоватьПарсерGherkinИзКомпонентыVanessaExt</DataPath>
+																			<TitleLocation>Right</TitleLocation>
+																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="ИспользоватьПарсерGherkinИзКомпонентыVanessaExtКонтекстноеМеню" id="2924"/>
+																			<ExtendedTooltip name="ИспользоватьПарсерGherkinИзКомпонентыVanessaExtРасширеннаяПодсказка" id="2925">
+																				<AutoMaxWidth>false</AutoMaxWidth>
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>Sets the flag. that you need to use the Gherkin parser from the VanessaExt component. This parser is much faster than the built-in parser.</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Устанавливает признак того. что нужно использовать парсер Gherkin из компоненты VanessaExt. Этот парсер работает гораздо быстрее, чем встроенный парсер.</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
+																			<Events>
+																				<Event name="OnChange">ИспользоватьПарсерGherkinИзКомпонентыVanessaExtПриИзменении</Event>
+																			</Events>
+																		</CheckBoxField>
+																	</ChildItems>
+																</UsualGroup>
 															</ChildItems>
 														</UsualGroup>
-														<CheckBoxField name="ИспользоватьПарсерGherkinИзКомпонентыVanessaExt" id="2923">
-															<DataPath>Объект.ИспользоватьПарсерGherkinИзКомпонентыVanessaExt</DataPath>
-															<TitleLocation>Right</TitleLocation>
-															<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-															<CheckBoxType>Auto</CheckBoxType>
-															<ContextMenu name="ИспользоватьПарсерGherkinИзКомпонентыVanessaExtКонтекстноеМеню" id="2924"/>
-															<ExtendedTooltip name="ИспользоватьПарсерGherkinИзКомпонентыVanessaExtРасширеннаяПодсказка" id="2925">
-																<AutoMaxWidth>false</AutoMaxWidth>
-																<Title formatted="false">
-																	<v8:item>
-																		<v8:lang>en</v8:lang>
-																		<v8:content>Sets the flag. that you need to use the Gherkin parser from the VanessaExt component. This parser is much faster than the built-in parser.</v8:content>
-																	</v8:item>
-																	<v8:item>
-																		<v8:lang>ru</v8:lang>
-																		<v8:content>Устанавливает признак того. что нужно использовать парсер Gherkin из компоненты VanessaExt. Этот парсер работает гораздо быстрее, чем встроенный парсер.</v8:content>
-																	</v8:item>
-																</Title>
-															</ExtendedTooltip>
-															<Events>
-																<Event name="OnChange">ИспользоватьПарсерGherkinИзКомпонентыVanessaExtПриИзменении</Event>
-															</Events>
-														</CheckBoxField>
+														<UsualGroup name="ГруппаВключениеVanessaExtВтораяСтрока" id="3730">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа включение vanessa ext вторая строка</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Group inclusion vanessa ext second line</v8:content>
+																</v8:item>
+															</Title>
+															<Group>AlwaysHorizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаВключениеVanessaExtВтораяСтрокаРасширеннаяПодсказка" id="3731"/>
+															<ChildItems>
+																<UsualGroup name="ГруппаВключениеVanessaExtВтораяСтрокаЛевыйСтолбец" id="3732">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа включение vanessa ext вторая строка левый столбец</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Group inclusion vanessa ext second row left column</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Width>50</Width>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<Group>Vertical</Group>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаВключениеVanessaExtВтораяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="3733"/>
+																	<ChildItems>
+																		<CheckBoxField name="ПоискФайловСПомощьюКомпоненты" id="3734">
+																			<DataPath>Объект.ПоискФайловСПомощьюКомпонентыVanessaExt</DataPath>
+																			<TitleLocation>Right</TitleLocation>
+																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="ПоискФайловСПомощьюКомпонентыКонтекстноеМеню" id="3735"/>
+																			<ExtendedTooltip name="ПоискФайловСПомощьюКомпонентыРасширеннаяПодсказка" id="3736">
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>Enables searching for files using the VanessaExt external component.</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Включает поиск файлов с помощью внешней компоненты VanessaExt.</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
+																		</CheckBoxField>
+																	</ChildItems>
+																</UsualGroup>
+															</ChildItems>
+														</UsualGroup>
 													</ChildItems>
 												</UsualGroup>
 												<UsualGroup name="ГруппаСистемныеКаталоги" id="3274">
@@ -19416,6 +19525,42 @@ If the field is empty, then the log will not be output to a text file.</v8:conte
 																					<Representation>None</Representation>
 																					<ShowTitle>false</ShowTitle>
 																					<ExtendedTooltip name="ГруппаПриложенияКОтчетуAllureПятаяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="3692"/>
+																					<ChildItems>
+																						<CheckBoxField name="ПрикладыватьФайлыXlsКОтчетуAllure" id="3721">
+																							<DataPath>Объект.ПрикладыватьФайлыXlsxКОтчетуAllure</DataPath>
+																							<TitleLocation>Right</TitleLocation>
+																							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																							<CheckBoxType>Auto</CheckBoxType>
+																							<ContextMenu name="ПрикладыватьФайлыXlsКОтчетуAllureКонтекстноеМеню" id="3722"/>
+																							<ExtendedTooltip name="ПрикладыватьФайлыXlsКОтчетуAllureРасширеннаяПодсказка" id="3723">
+																								<Title formatted="false">
+																									<v8:item>
+																										<v8:lang>en</v8:lang>
+																										<v8:content>Files of reports and their standards will be attached to the Allure report in xlsx format.</v8:content>
+																									</v8:item>
+																									<v8:item>
+																										<v8:lang>ru</v8:lang>
+																										<v8:content>Файлы отчетов и их эталонов будут прикладываться к отчету Allure в формате xlsx.</v8:content>
+																									</v8:item>
+																								</Title>
+																							</ExtendedTooltip>
+																						</CheckBoxField>
+																					</ChildItems>
+																				</UsualGroup>
+																				<UsualGroup name="ГруппаПриложенияКОтчетуAllureПятаяСтрокаПравыйСтолбец" id="3719">
+																					<Title>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Группа приложения к отчету allure пятая строка правый столбец</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>en</v8:lang>
+																							<v8:content>Allure report application group fifth row right column</v8:content>
+																						</v8:item>
+																					</Title>
+																					<Representation>None</Representation>
+																					<ShowTitle>false</ShowTitle>
+																					<ExtendedTooltip name="ГруппаПриложенияКОтчетуAllureПятаяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="3720"/>
 																					<ChildItems>
 																						<CheckBoxField name="ПрикладыватьДополнительныеДанныеПриСравненииЗначенияСЭталономAllure" id="2987">
 																							<DataPath>Объект.ПрикладыватьДополнительныеДанныеПриСравненииЗначенияСЭталономAllure</DataPath>

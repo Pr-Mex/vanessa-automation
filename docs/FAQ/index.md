@@ -85,7 +85,7 @@
 	* [Подробное описание механизма](http://its.1c.ru/db/v838doc#bookmark:dev:TI000001871).
 	* Если хотите выключить этот механизм для всех баз - пропишите в файле conf.cfg строку: **DisableUnsafeActionProtection=.***
 	* Также можно снять флаг "Защита от опасных действий" для конкретного пользователя
-	![](/images/protection.png)
+	![](./images/protection.png "Защита от опасных действий")​
 16. Как использовать Sikuli-скрипты. 
 	* Установите SikuliX согласно инструкции http://sikulix.com/quickstart/;
 	* Ознакомьтесь с http://sikulix-2014.readthedocs.io/en/latest/faq/010-command-line.html;

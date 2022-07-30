@@ -1124,6 +1124,9 @@ Procedure GenerateFeatureForRefs(Command)
 	Feature.Очистить();
 	Feature.ДобавитьСтроку(GenerateFeatureFileForRefsAtServer());
 	Items.GroupPages.CurrentPage = Items.GroupPageFeature;
+	
+	SaveBinData();
+	
 EndProcedure
 	
 &AtClient
