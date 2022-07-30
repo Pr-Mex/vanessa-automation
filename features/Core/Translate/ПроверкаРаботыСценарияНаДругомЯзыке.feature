@@ -1,4 +1,4 @@
-# language: ru
+﻿# language: ru
 # encoding: utf-8
 #parent uf:
 @UF11_Прочее
@@ -57,9 +57,7 @@
 		| 'СлужебнаяФичаEN1.feature'                                                             | ''        |
 		| 'For test english feature'                                                             | ''        |
 		| 'Background'                                                                           | ''        |
-		| 'Given I launch TestClient opening script or connect the existing one'                 | ''        |
-		| 'Given I open new TestClient session or connect the existing one'                      | 'Success' |
-		| 'And I close all client application windows'                                           | 'Success' |
+		| 'Given I launch TestClient opening script or connect the existing one'                 | 'Success' |
 		| 'Create record in spr1'                                                                | 'Success' |
 		| 'And In the command interface I select "Основная" "Справочник1"'                       | 'Success' |
 		| 'Then "Справочник1" window is opened'                                                  | 'Success' |
@@ -73,10 +71,8 @@
 		| 'Then "variable" variable is equal to 2'                                               | 'Success' |
 		| 'Close TestClient'                                                                     | 'Success' |
 		| 'And I close TestClient session'                                                       | 'Success' |
-
-
-
-
+	
+	
 
 
 
