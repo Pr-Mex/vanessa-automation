@@ -46058,6 +46058,7 @@
 	ТаблицаИменНоваяСтрока("ПрикладыватьКОтчетуAllureДанныеОСостоянииАктивнойФормы", "attachactiveformdatatotheallurereport", ТаблицаИмен, НижнийРегистр);
 	ТаблицаИменНоваяСтрока("ПрикладыватьКОтчетуAllureДанныеОЗначенияхПеременных", "attachvariablestotheallurereport", ТаблицаИмен, НижнийРегистр);
 	ТаблицаИменНоваяСтрока("ПрикладыватьФайлыMxlКОтчетуAllure", "attachmxlfilestoallurereport", ТаблицаИмен, НижнийРегистр);
+	ТаблицаИменНоваяСтрока("ПрикладыватьФайлыXlsxКОтчетуAllure", "attachxlsxfilestoallurereport", ТаблицаИмен, НижнийРегистр);
 	ТаблицаИменНоваяСтрока("ПрикладыватьФайлыMxlСохраненныеВФорматеHTMLКОтчетуAllure", "attachmxlfilessavedinhtmlformattoallurereport", ТаблицаИмен, НижнийРегистр);
 	ТаблицаИменНоваяСтрока("ПрикладыватьДополнительныеДанныеПриСравненииЗначенияСЭталономAllure", "attachadditionaldatawhencomparingvaluewithreferenceallure", ТаблицаИмен, НижнийРегистр);
 	ТаблицаИменНоваяСтрока("ПодставлятьВОтчетеAllureЗначенияПеременных", "setvariablevaluesinstepsallurereport", ТаблицаИмен, НижнийРегистр);
