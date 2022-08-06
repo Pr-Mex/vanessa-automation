@@ -13226,6 +13226,7 @@ The script in the list is indicated by its name.</v8:content>
 																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
 																	<ChoiceButton>true</ChoiceButton>
 																	<ClearButton>true</ClearButton>
+																	<OpenButton>true</OpenButton>
 																	<ContextMenu name="КаталогПроектаКонтекстноеМеню" id="718"/>
 																	<ExtendedTooltip name="КаталогПроектаРасширеннаяПодсказка" id="1384">
 																		<AutoMaxWidth>false</AutoMaxWidth>
@@ -13242,6 +13243,7 @@ The script in the list is indicated by its name.</v8:content>
 																	</ExtendedTooltip>
 																	<Events>
 																		<Event name="StartChoice">КаталогПроектаНачалоВыбора</Event>
+																		<Event name="Opening">КаталогПроектаОткрытие</Event>
 																	</Events>
 																</InputField>
 															</ChildItems>
@@ -13281,6 +13283,7 @@ The script in the list is indicated by its name.</v8:content>
 																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
 																	<ChoiceButton>true</ChoiceButton>
 																	<ClearButton>true</ClearButton>
+																	<OpenButton>true</OpenButton>
 																	<ContextMenu name="КаталогИнструментовКонтекстноеМеню" id="381"/>
 																	<ExtendedTooltip name="КаталогИнструментовРасширеннаяПодсказка" id="1382">
 																		<AutoMaxWidth>false</AutoMaxWidth>
@@ -13299,6 +13302,7 @@ When working with Vanessa Automation Single it is allowed to leave the field bla
 																	</ExtendedTooltip>
 																	<Events>
 																		<Event name="StartChoice">КаталогИнструментовНачалоВыбора</Event>
+																		<Event name="Opening">КаталогИнструментовОткрытие</Event>
 																	</Events>
 																</InputField>
 															</ChildItems>
@@ -30106,7 +30110,7 @@ If the voice acting file is not found in the directory, the process of generatin
 																			</v8:item>
 																			<v8:item>
 																				<v8:lang>en</v8:lang>
-																				<v8:content>Calculates PID of the current 1С session where Vanessa Automation is started.</v8:content>
+																				<v8:content>Calculates PID of the current 1C session where Vanessa Automation is started.</v8:content>
 																			</v8:item>
 																		</Title>
 																	</ExtendedTooltip>
@@ -30420,6 +30424,11 @@ If the voice acting file is not found in the directory, the process of generatin
 													<Type>UsualButton</Type>
 													<CommandName>Form.Command.СгенерироватьMp3ПоКаталогуФичИнтерактивнойСправки</CommandName>
 													<ExtendedTooltip name="СгенерироватьMp3ПоКаталогуФичИнтерактивнойСправкиРасширеннаяПодсказка" id="3231"/>
+												</Button>
+												<Button name="ПроверкаПереводаЭлементовФормы" id="3737">
+													<Type>UsualButton</Type>
+													<CommandName>Form.Command.ПроверкаПереводаЭлементовФормы</CommandName>
+													<ExtendedTooltip name="ПроверкаПереводаЭлементовФормыРасширеннаяПодсказка" id="3738"/>
 												</Button>
 												<InputField name="КаталогИнструментовСлужебный" id="494">
 													<DataPath>Объект.КаталогИнструментов</DataPath>
@@ -35757,11 +35766,11 @@ If the voice acting file is not found in the directory, the process of generatin
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Получить изменения формы gherkin</v8:content>
+					<v8:content>Получить изменения всей формы в виде шагов</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
-					<v8:content>Get gherkin form changes</v8:content>
+					<v8:content>Get whole form changes as steps</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПолучитьИзмененияФормыGherkinКнопка</Action>
@@ -35933,82 +35942,6 @@ If the voice acting file is not found in the directory, the process of generatin
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Check video recording</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>am</v8:lang>
-					<v8:content>መሆኑን ለማረጋገጥ ቪዲዮ ቀረጻ በመስጠት</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>az</v8:lang>
-					<v8:content>Yoxlamaq ki, video işləyəcək</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>bg</v8:lang>
-					<v8:content>Провери какво запис на видео ще работи</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>de</v8:lang>
-					<v8:content>Überprüfen, dass die Video-Aufnahme funktioniert</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>es</v8:lang>
-					<v8:content>Comprobar que la entrada de vídeo funcione</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>et</v8:lang>
-					<v8:content>Kontrollida, et video salvestamine töötab</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>fr</v8:lang>
-					<v8:content>Vérifier que l'enregistrement de la vidéo fonctionnera</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>hu</v8:lang>
-					<v8:content>Ellenőrizze, hogy a videofelvétel működik</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>it</v8:lang>
-					<v8:content>Verificare che la registrazione video funziona</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ka</v8:lang>
-					<v8:content>გადაამოწმონ, რომ ვიდეო გადაღება იმუშავებს</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>lt</v8:lang>
-					<v8:content>Patikrinkite, kad vaizdo įrašas bus dirbti</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>lv</v8:lang>
-					<v8:content>Pārbaudīt, kas ieraksta video strādās</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>mn</v8:lang>
-					<v8:content>Гэдгийг батлахын тулд видео бичлэг ажиллах болно</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>pl</v8:lang>
-					<v8:content>Sprawdzić, że nagrywanie wideo będzie działać</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>ro</v8:lang>
-					<v8:content>Verificați că înregistrarea video va funcționa</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>sl</v8:lang>
-					<v8:content>Preverite, da je video snemanje se bo delo</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>sv</v8:lang>
-					<v8:content>För att kontrollera att video-inspelning kommer att arbeta</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>tr</v8:lang>
-					<v8:content>Kontrol kayıt video çalışacaktır</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>vi</v8:lang>
-					<v8:content>Kiểm tra, bản ghi video sẽ làm việc</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПроверитьЧтоЗаписьВидеоБудетРаботать</Action>
@@ -39556,11 +39489,11 @@ If the voice acting file is not found in the directory, the process of generatin
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Получить изменения формы gherkin</v8:content>
+					<v8:content>Получить состояние текущего элемента в виде шага</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
-					<v8:content>Get gherkin form changes</v8:content>
+					<v8:content>Get the state of the current element as a step</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПолучитьСостояниеТекущегоЭлементаФормыКнопка</Action>
@@ -39722,7 +39655,7 @@ If the voice acting file is not found in the directory, the process of generatin
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
-					<v8:content>Сollapse tree to steps</v8:content>
+					<v8:content>Collapse tree to steps</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -39732,7 +39665,7 @@ If the voice acting file is not found in the directory, the process of generatin
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
-					<v8:content>Сollapse tree to steps</v8:content>
+					<v8:content>Collapse tree to steps</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>СвернутьДеревоДоШагов</Action>
@@ -41031,6 +40964,10 @@ If the voice acting file is not found in the directory, the process of generatin
 					<v8:lang>ru</v8:lang>
 					<v8:content>Добавить проверку сообщений пользователя</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Add User Post Validation</v8:content>
+				</v8:item>
 			</ToolTip>
 			<Action>ДобавитьПроверкуСообщенийПользователя</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
@@ -41890,17 +41827,21 @@ If the voice acting file is not found in the directory, the process of generatin
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Контекстное меню редактора</v8:content>
+					<v8:content>Контекстное меню Monaco</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
-					<v8:content>Show editor context menu</v8:content>
+					<v8:content>Show Monaco context menu</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Контекстное меню редактора</v8:content>
+					<v8:content>Контекстное меню Monaco</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Monaco context menu</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>VanessaEditorContextMenu</Action>
@@ -42121,8 +42062,12 @@ If the voice acting file is not found in the directory, the process of generatin
 			</Title>
 			<ToolTip>
 				<v8:item>
-					<v8:lang>en</v8:lang>
+					<v8:lang>ru</v8:lang>
 					<v8:content>Запустить мобильное приложение</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Launch mobile app</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ЗапуститьМобильноеПриложение</Action>
@@ -42161,6 +42106,10 @@ If the voice acting file is not found in the directory, the process of generatin
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Получить шаг открытия навигационной ссылки текущего окна</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Get the step of opening the navigation link of the current window</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПолучитьШагОткрытияНавигационнойСсылкиТекущегоОкна</Action>
@@ -42221,6 +42170,19 @@ If the voice acting file is not found in the directory, the process of generatin
 				</v8:item>
 			</ToolTip>
 			<Action>РазвернутьВсеГруппыВНастройках</Action>
+		</Command>
+		<Command name="ПроверкаПереводаЭлементовФормы" id="171">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Проверка перевода элементов формы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Checking the translation of form elements</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПроверкаПереводаЭлементовФормы</Action>
 		</Command>
 	</Commands>
 </Form>
