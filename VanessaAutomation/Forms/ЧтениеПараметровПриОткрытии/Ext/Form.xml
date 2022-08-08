@@ -7,6 +7,11 @@
 				<CommandName>Form.Command.ОткрытьОсновнуюФорму</CommandName>
 				<ExtendedTooltip name="ФормаОткрытьОсновнуюФормуРасширеннаяПодсказка" id="2"/>
 			</Button>
+			<Button name="ФормаОстановитьВыполнениеСценариев" id="3">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОстановитьВыполнениеСценариев</CommandName>
+				<ExtendedTooltip name="ФормаОстановитьВыполнениеСценариевРасширеннаяПодсказка" id="4"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -52,6 +57,19 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОткрытьОсновнуюФорму</Action>
+		</Command>
+		<Command name="ОстановитьВыполнениеСценариев" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остановить выполнение сценариев</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Stop script execution</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОстановитьВыполнениеСценариев</Action>
 		</Command>
 	</Commands>
 </Form>
