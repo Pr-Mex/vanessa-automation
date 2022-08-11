@@ -278,6 +278,11 @@
 									<CommandName>Form.Command.СнимокЭкранаБраузера</CommandName>
 									<ExtendedTooltip name="СнимокЭкранаБраузераРасширеннаяПодсказка" id="56"/>
 								</Button>
+								<Button name="сжатьФотоё1" id="63">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.сжатьФотоё1</CommandName>
+									<ExtendedTooltip name="сжатьФотоё1РасширеннаяПодсказка" id="64"/>
+								</Button>
 							</ChildItems>
 						</UsualGroup>
 						<PictureField name="ДанныеКартинки" id="57">
@@ -286,6 +291,40 @@
 							<ContextMenu name="ДанныеКартинкиКонтекстноеМеню" id="58"/>
 							<ExtendedTooltip name="ДанныеКартинкиРасширеннаяПодсказка" id="59"/>
 						</PictureField>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаHTML" id="65">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текст HTML</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Страница HTML</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="СтраницаHTMLРасширеннаяПодсказка" id="66"/>
+					<ChildItems>
+						<HTMLDocumentField name="ТекстHTML" id="67">
+							<DataPath>ТекстHTML</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="ТекстHTMLКонтекстноеМеню" id="68">
+								<ChildItems>
+									<Button name="ТекстHTMLКонтекстноеМенюТекстHTMLПодменю1" id="70">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ТекстHTMLПодменю1</CommandName>
+										<ExtendedTooltip name="ТекстHTMLКонтекстноеМенюТекстHTMLПодменю1РасширеннаяПодсказка" id="71"/>
+									</Button>
+								</ChildItems>
+							</ContextMenu>
+							<ExtendedTooltip name="ТекстHTMLРасширеннаяПодсказка" id="69"/>
+							<Events>
+								<Event name="OnClick">ТекстHTMLПриНажатии</Event>
+							</Events>
+						</HTMLDocumentField>
 					</ChildItems>
 				</Page>
 			</ChildItems>
@@ -483,6 +522,21 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="ТекстHTML" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст HTML</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ЗапуститьБраузер" id="1">
@@ -558,6 +612,36 @@
 			<Action>СнимокЭкранаБраузера</Action>
 			<Representation>TextPicture</Representation>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="сжатьФотоё1" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сжать фотоё1</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сжать фотоё1</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>сжатьФотоё1</Action>
+		</Command>
+		<Command name="ТекстHTMLПодменю1" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст HTMLПодменю1</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст HTMLПодменю1</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ТекстHTMLПодменю1</Action>
 		</Command>
 	</Commands>
 </Form>
