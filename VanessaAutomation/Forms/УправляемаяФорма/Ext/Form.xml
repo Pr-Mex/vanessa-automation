@@ -1685,6 +1685,28 @@
 							</Button>
 						</ChildItems>
 					</ButtonGroup>
+					<ButtonGroup name="ГруппаVanessaEditorПолучитьФормуНастройкиРаботыСБраузером" id="3719">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа vanessa editor получить форму настройки работы с браузером</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа vanessa editor получить форму настройки работы с браузером</v8:content>
+							</v8:item>
+						</ToolTip>
+						<ExtendedTooltip name="ГруппаVanessaEditorПолучитьФормуНастройкиРаботыСБраузеромРасширеннаяПодсказка" id="3720"/>
+						<ChildItems>
+							<Button name="VanessaEditorПолучитьФормуНастройкиРаботыСБраузером" id="3721">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ПолучитьФормуНастройкиРаботыСБраузером</CommandName>
+								<ExtendedTooltip name="VanessaEditorПолучитьФормуНастройкиРаботыСБраузеромРасширеннаяПодсказка" id="3722"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
 				</ChildItems>
 			</Popup>
 			<ButtonGroup name="ГруппаКоманднаяПанельVanessaEditor" id="2424">
@@ -12849,12 +12871,6 @@ The script in the list is indicated by its name.</v8:content>
 Если флаг снят, то при генерации текста сценария после накликивания, шаги в сценарии будут искать элементы формы &lt;b&gt;по заголовку&lt;/&gt;, &lt;b&gt;если это возможно&lt;/&gt;.
 Это возможно в том случае, если в данной форме есть только один элемент с данным заголовком.</v8:content>
 																			</v8:item>
-																			<v8:item>
-																				<v8:lang>en</v8:lang>
-																				<v8:content>&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;If the flag is set, then when generating the script text after pasting, the steps in the script will search for form elements by their internal name.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;If the flag is unchecked, then when generating the script text after being pasted, the steps in the script will search for form elements by title, if possible.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;This is possible if there is only one element with the given heading in the given form.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
-																			</v8:item>
 																		</Title>
 																	</ExtendedTooltip>
 																</CheckBoxField>
@@ -12967,6 +12983,7 @@ The script in the list is indicated by its name.</v8:content>
 - Управление размерами и положением окна
 - Получение снимка окна и снимка экрана
 &lt;link https://github.com/lintest/VanessaExt&gt;https://github.com/lintest/VanessaExt&lt;/&gt;</v8:content>
+<<<<<<< HEAD
 																					</v8:item>
 																					<v8:item>
 																						<v8:lang>en</v8:lang>
@@ -13001,6 +13018,17 @@ The script in the list is indicated by its name.</v8:content>
 																</UsualGroup>
 																<UsualGroup name="ГруппаВключениеVanessaExtПерваяСтрокаПравыйСтолбец" id="3728">
 																	<Title>
+=======
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																	<Events>
+																		<Event name="OnChange">ИспользоватьКомпонентуVanessaExtПриИзменении</Event>
+																	</Events>
+																</CheckBoxField>
+																<LabelDecoration name="ДекорацияВерсияVanessaExt" id="2269">
+																	<Title formatted="false">
+>>>>>>> 9bf68c5314318cea97dfdfd4d460c5e4bc3f2f61
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
 																			<v8:content>Группа включение vanessa ext первая строка правый столбец</v8:content>
@@ -17440,12 +17468,6 @@ For the option to work, it is necessary to enable the use of the VanessaExt exte
 &lt;b&gt;Текущее окно клиента тестирования&lt;/&gt; - получает скриншот только активного окна клиента тестирования.
 &lt;b&gt;Все окна клиента тестирования&lt;/&gt; - получает скриншот всех окон клиента тестирования</v8:content>
 																			</v8:item>
-																			<v8:item>
-																				<v8:lang>en</v8:lang>
-																				<v8:content>&lt;b&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;Full Screen&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt; - Gets a screenshot of the entire screen, including the operating system taskbar.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;b&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;Current Test Client Window&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt; - Gets a screenshot of only the active test client window.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;b&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;All testing client windows&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt; - gets a screenshot of all testing client windows&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
-																			</v8:item>
 																		</Title>
 																	</ExtendedTooltip>
 																</InputField>
@@ -17568,13 +17590,6 @@ For the option to work, it is necessary to enable the use of the VanessaExt exte
 Например:
 1. &lt;b&gt;"C:\Program Files (x86)\IrfanView\i_view32.exe" /capture=1 /convert=&lt;/&gt;
 2. &lt;b&gt;nircmd savescreenshot&lt;/&gt;</v8:content>
-																			</v8:item>
-																			<v8:item>
-																				<v8:lang>en</v8:lang>
-																				<v8:content>&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;The field specifies the console command that will be used when taking screenshots.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;For example:&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;1. &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;b&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;"C: \ Program Files (x86) \ IrfanView \ i_view32.exe" / capture = 1 / convert =&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;2. &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;b&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;nircmd savescreenshot&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
 																			</v8:item>
 																		</Title>
 																	</ExtendedTooltip>
@@ -17788,12 +17803,6 @@ For the option to work, it is necessary to enable the use of the VanessaExt exte
 																						<v8:content>Если флаг установлен, то Vanessa Automation будет выгружать статус выполнения сценариев в файл.
 Подробности тут:
 &lt;link https://pr-mex.github.io/vanessa-automation/dev/ReturnStatus&gt;https://pr-mex.github.io/vanessa-automation/dev/ReturnStatus&lt;/&gt;</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>en</v8:lang>
-																						<v8:content>&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;If the flag is set, Vanessa Automation will upload the script execution status to a file.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;Details here:&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;link https://pr-mex.github.io/vanessa-automation/dev/ReturnStatus&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;https://pr-mex.github.io/vanessa-automation/dev/ReturnStatus&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
 																					</v8:item>
 																				</Title>
 																			</ExtendedTooltip>
@@ -18998,11 +19007,6 @@ If the field is empty, then the log will not be output to a text file.</v8:conte
 																										<v8:content>Список тегов, разделённых с помощью ";".
 Если в сценарии есть такой тег, тогда сценарий не будет выполняться и отчете Allure у него будет статус &lt;b&gt;пропущен/&lt;/&gt;&lt;b&gt;skipped&lt;/&gt;&lt;b&gt;.&lt;/&gt;</v8:content>
 																									</v8:item>
-																									<v8:item>
-																										<v8:lang>en</v8:lang>
-																										<v8:content>&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;List of tags separated by ";".&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;If the script contains such a tag, then the script will not be executed and the Allure report will have the skipped status.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
-																									</v8:item>
 																								</Title>
 																							</ExtendedTooltip>
 																						</CheckBoxField>
@@ -19500,19 +19504,6 @@ If the field is empty, then the log will not be output to a text file.</v8:conte
 																								<AutoMaxWidth>false</AutoMaxWidth>
 																								<Title formatted="true">
 																									<v8:item>
-																										<v8:lang>en</v8:lang>
-																										<v8:content>If this option is enabled, then when comparing a layout with a reference or when comparing a table with a reference, additional files will be generated:
-- a picture containing the difference between the reference and the current value of the table or layout
-- a picture of the current value
-- picture of the reference value
-- a gif file showing the difference between the current and reference value.
-An additional section will also appear in the Allure report, where you can conveniently view a comparison of the reference and the current value.
-For this option to work, it is necessary that the ImageMagick 7 version or higher and the ghostscript package &lt;link https://www.ghostscript.com/download.html&gt;https://www.ghostscript.com/download.html&lt;/&gt;, which converts pdf files into pictures, must be installed on the PC where Vanessa Automation is running.
-It is also necessary that commands of the form are executed on the PC:
-magick convert file.pdf file.png
-An example result can be seen &lt;link https://www.youtube.com/watch?v=1xnp6CxCktA&amp;list=PLalsS95_a3a8iVPCLjFMY2wj4ZMG2XpVH&amp;index=3&amp;ab_channel=VSL&gt;here&lt;/&gt;.</v8:content>
-																									</v8:item>
-																									<v8:item>
 																										<v8:lang>ru</v8:lang>
 																										<v8:content>Если опция включена, то при сравнении макета с эталоном или при сравнении таблицы с эталоном будут формироваться дополнительные файлы:
 - картинка, содержащая разницу между эталоном и текущим значением таблицы или макета
@@ -19584,14 +19575,6 @@ magick convert file.pdf file.png
 Если в  строке таблицы указано регулярное выражение, то к каждому тегу сценария применяется регулярное выражение из данной таблицы и если тег ему соответствует, то к отчету будет добавлена метка в формате ИмяМетки:Значение.
 Если в строке таблицы регулярное выражение не указано, то метка добавляется безусловно.
 Подробнее зачем это может быть нужно можно прочитать тут
-&lt;link https://habr.com/ru/company/sberbank/blog/359302/&gt;https://habr.com/ru/company/sberbank/blog/359302/&lt;/&gt;</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>en</v8:lang>
-																						<v8:content>The table is used to map script tags to pace marks.
-If a regular expression is specified in a table row, then a regular expression from this table is applied to each script tag, and if the tag matches it, then a tag in the TagName: Value format will be added to the report.
-If no regular expression is specified in a table row, then the label is added unconditionally.
-You can read more about why this may be needed here
 &lt;link https://habr.com/ru/company/sberbank/blog/359302/&gt;https://habr.com/ru/company/sberbank/blog/359302/&lt;/&gt;</v8:content>
 																					</v8:item>
 																				</Title>
@@ -19938,12 +19921,6 @@ You can read more about why this may be needed here
 																				<v8:content>С версии &lt;link https://docs.gitlab.com/ee/ci/unit_test_reports.html#viewing-junit-screenshots-on-gitlab&gt;13.12&lt;/&gt; в jUnit можно добавлять скриншоты.
 Чтобы все корректно работало - КаталогСкриншотов должен быть расположен внутри КаталогаПроекта.
 Папку скриншотов сохранять как артефакты.</v8:content>
-																			</v8:item>
-																			<v8:item>
-																				<v8:lang>en</v8:lang>
-																				<v8:content>&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;From version &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;link https://docs.gitlab.com/ee/ci/unit_test_reports.html#viewing-junit-screenshots-on-gitlab&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;13.12&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt; screenshots can be added to jUnit.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;For everything to work correctly - the Screenshot Directory must be located inside the Project Directory.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;Save the screenshots folder as artifacts.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
 																			</v8:item>
 																		</Title>
 																	</ExtendedTooltip>
@@ -22616,10 +22593,6 @@ To ensure that leading zeros are not lost when exporting from MD format, the tex
 																		<v8:lang>ru</v8:lang>
 																		<v8:content>Подробнее про настройки озвучки текста диктором смотри &lt;link https://github.com/Pr-Mex/vanessa-automation/blob/develop/docs/FAQ/MakeAutoVideo.md&gt;тут&lt;/&gt;.</v8:content>
 																	</v8:item>
-																	<v8:item>
-																		<v8:lang>en</v8:lang>
-																		<v8:content>See &lt;link https://github.com/Pr-Mex/vanessa-automation/blob/develop/docs/FAQ/MakeAutoVideo.md&gt;here&lt;/&gt; for more information about settings for voice acting of the text by the announcer.</v8:content>
-																	</v8:item>
 																</Title>
 															</ExtendedTooltip>
 															<ChildItems>
@@ -23101,11 +23074,6 @@ To ensure that leading zeros are not lost when exporting from MD format, the tex
 																												<v8:content>Консольная команда, которая будет использована при конвертации текста в речь.
 Используется программа &lt;link http://www.cross-plus-a.ru/bconsole.html&gt;balabolka_console&lt;/&gt;.</v8:content>
 																											</v8:item>
-																											<v8:item>
-																												<v8:lang>en</v8:lang>
-																												<v8:content>&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;The console command to be used when converting text to speech.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;The &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt; &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;link http://www.cross-plus-a.ru/bconsole.html&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;balabolka_console&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt; program is used.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
-																											</v8:item>
 																										</Title>
 																									</ExtendedTooltip>
 																									<Events>
@@ -23210,11 +23178,6 @@ To ensure that leading zeros are not lost when exporting from MD format, the tex
 																												<v8:lang>ru</v8:lang>
 																												<v8:content>Указывает какой голос будет использован для озвучки. Допускается указывать не полное название голоса в системе, а только часть, например "Elena".
 Понадобится установить &lt;link https://www.microsoft.com/en-us/download/details.aspx?id=27225&gt;Microsoft Speech Platform х32&lt;/&gt; и &lt;link https://www.microsoft.com/en-us/download/details.aspx?id=27224&gt;Server Runtime Languages&lt;/&gt;.</v8:content>
-																											</v8:item>
-																											<v8:item>
-																												<v8:lang>en</v8:lang>
-																												<v8:content>&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;Specifies which voice will be used for voice acting. It is allowed to indicate not the full name of the voice in the system, but only a part, for example "Elena".&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;You will need to install &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;link https://www.microsoft.com/en-us/download/details.aspx?id=27225&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;Microsoft Speech Platform x32&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt; and&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;link https://www.microsoft.com/en-us/download/details.aspx?id=27224&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt; Server Runtime Languages&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
 																											</v8:item>
 																										</Title>
 																									</ExtendedTooltip>
@@ -23365,11 +23328,6 @@ Value range is from -10 to 10.</v8:content>
 																																<v8:lang>ru</v8:lang>
 																																<v8:content>Задаёт язык, на котором будет говорить диктор. Подробности &lt;link https://cloud.yandex.ru/docs/speechkit/tts/request&gt;здесь&lt;/&gt;.
 Управление ударением и произношением см &lt;link https://yandex.ru/dev/dialogs/alice/doc/speech-tuning-docpage/&gt;тут.&lt;/&gt;</v8:content>
-																															</v8:item>
-																															<v8:item>
-																																<v8:lang>en</v8:lang>
-																																<v8:content>&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;Sets the language in which the speaker will speak. Details &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;link https://cloud.yandex.ru/docs/speechkit/tts/request&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;here&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;link https://cloud.yandex.ru/docs/speechkit/tts/request&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;To control accent and pronunciation, see &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;link https://yandex.ru/dev/dialogs/alice/doc/speech-tuning-docpage/&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;here&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
 																															</v8:item>
 																														</Title>
 																													</ExtendedTooltip>
@@ -23545,11 +23503,6 @@ Value range is from -10 to 10.</v8:content>
 																																<v8:content>Задаёт голос, которым будет говорить диктор. Подробности &lt;link https://cloud.yandex.ru/docs/speechkit/tts/request&gt;здесь&lt;/&gt;.
 Управление ударением и произношением см &lt;link https://yandex.ru/dev/dialogs/alice/doc/speech-tuning-docpage/&gt;тут.&lt;/&gt;</v8:content>
 																															</v8:item>
-																															<v8:item>
-																																<v8:lang>en</v8:lang>
-																																<v8:content>&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;Sets the voice for the announcer to speak. Details &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;link https://cloud.yandex.ru/docs/speechkit/tts/request&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;here&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;To control accent and pronunciation, see &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;link https://yandex.ru/dev/dialogs/alice/doc/speech-tuning-docpage/&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;here&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
-																															</v8:item>
 																														</Title>
 																													</ExtendedTooltip>
 																												</InputField>
@@ -23658,11 +23611,6 @@ Value range is from -10 to 10.</v8:content>
 																																<v8:lang>ru</v8:lang>
 																																<v8:content>Задаёт эмоцию, с которой будет говорить диктор. Подробности &lt;link https://cloud.yandex.ru/docs/speechkit/tts/request&gt;здесь&lt;/&gt;.
 Управление ударением и произношением см &lt;link https://yandex.ru/dev/dialogs/alice/doc/speech-tuning-docpage/&gt;тут.&lt;/&gt;</v8:content>
-																															</v8:item>
-																															<v8:item>
-																																<v8:lang>en</v8:lang>
-																																<v8:content>&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;Sets the emotion with which the announcer will speak. Details &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;link https://cloud.yandex.ru/docs/speechkit/tts/request&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;here&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;To control accent and pronunciation, see &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;link https://yandex.ru/dev/dialogs/alice/doc/speech-tuning-docpage/&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;here&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
 																															</v8:item>
 																														</Title>
 																													</ExtendedTooltip>
@@ -23871,20 +23819,6 @@ Speech rate is specified as a fractional number in the range from 0.1 to 3.0.</v
 
 &lt;link https://cloud.yandex.ru/docs/resource-manager/operations/folder/get-id&gt;Получение идентификатора каталога &lt;/&gt;</v8:content>
 																													</v8:item>
-																													<v8:item>
-																														<v8:lang>en</v8:lang>
-																														<v8:content>&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;The last part of the path of the address string in the Internet browser. https://console.cloud.yandex.ru/folders/Directory ID&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;Required:&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;1. In the main Yandex.Cloud window, click the "Go to the current directory" link.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;2. Copy the last part of the path from the address bar&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;Example:&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;https://console.cloud.yandex.ru/folders/b1gheo81t4a6eaafe5vd&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;(Directory ID - b1gheo81t4a6eaafe5vd)&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-
-&lt;link https://cloud.yandex.ru/docs/resource-manager/operations/folder/get-id&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;Retrieving a Directory ID&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
-																													</v8:item>
 																												</Title>
 																											</ExtendedTooltip>
 																										</InputField>
@@ -23923,16 +23857,6 @@ Speech rate is specified as a fractional number in the range from 0.1 to 3.0.</v
 3. Сохранить его в текстовый файл;
 4. Указать путь к текстовому файлу с токеном.</v8:content>
 																															</v8:item>
-																															<v8:item>
-																																<v8:lang>en</v8:lang>
-																																<v8:content>&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;The OAuth token is used in the authentication procedure in Yandex.Cloud&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;To receive an OAuth token, you need:&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;1. Follow the link https://cloud.yandex.ru/docs/iam/concepts/authorization/oauth-token;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;2. Generate a token;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;3. Save it to a text file;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;4. Specify the path to the text file with the token.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
-																															</v8:item>
 																														</Title>
 																													</ExtendedTooltip>
 																													<Events>
@@ -23967,13 +23891,6 @@ Speech rate is specified as a fractional number in the range from 0.1 to 3.0.</v
 																																<v8:content>API ключ используется в процедуре аутентификации в Яндекс.Облаке
 &lt;link https://cloud.yandex.ru/docs/iam/operations/api-key/create&gt;https://cloud.yandex.ru/docs/iam/operations/api-key/create&lt;/&gt;
 Если указан, то авторизация будет через него, если нет, то будет через Токен</v8:content>
-																															</v8:item>
-																															<v8:item>
-																																<v8:lang>en</v8:lang>
-																																<v8:content>&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;The API key is used in the authentication procedure in Yandex.Cloud&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;link https://cloud.yandex.ru/docs/iam/operations/api-key/create&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;https://cloud.yandex.ru/docs/iam/operations/api-key/create&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;If specified, then authorization will be through it, if not, it will be through the Token&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-</v8:content>
 																															</v8:item>
 																														</Title>
 																													</ExtendedTooltip>
@@ -24255,10 +24172,6 @@ Speech rate is specified as a fractional number in the range from 0.1 to 3.0.</v
 																											<v8:item>
 																												<v8:lang>ru</v8:lang>
 																												<v8:content>Соответствие языка и голоса смотрите &lt;link https://docs.aws.amazon.com/en_us/polly/latest/dg/voicelist.html&gt;здесь&lt;/&gt;.</v8:content>
-																											</v8:item>
-																											<v8:item>
-																												<v8:lang>en</v8:lang>
-																												<v8:content>See the correspondence of language and voice &lt;link https://docs.aws.amazon.com/en_us/polly/latest/dg/voicelist.html&gt;here&lt;/&gt;.</v8:content>
 																											</v8:item>
 																										</Title>
 																									</ExtendedTooltip>
@@ -24744,10 +24657,6 @@ Speech rate is specified as a fractional number in the range from 0.1 to 3.0.</v
 																												<v8:lang>ru</v8:lang>
 																												<v8:content>Соответствие языка и голоса смотрите &lt;link https://docs.aws.amazon.com/en_us/polly/latest/dg/voicelist.html&gt;здесь&lt;/&gt;.</v8:content>
 																											</v8:item>
-																											<v8:item>
-																												<v8:lang>en</v8:lang>
-																												<v8:content>See the correspondence of language and voice &lt;link https://docs.aws.amazon.com/en_us/polly/latest/dg/voicelist.html&gt;here&lt;/&gt;.</v8:content>
-																											</v8:item>
 																										</Title>
 																									</ExtendedTooltip>
 																								</InputField>
@@ -24783,10 +24692,6 @@ Speech rate is specified as a fractional number in the range from 0.1 to 3.0.</v
 																											<v8:item>
 																												<v8:lang>ru</v8:lang>
 																												<v8:content>Варианты значения для поля "Движок" смотрите &lt;link https://docs.aws.amazon.com/en_us/polly/latest/dg/voicelist.html&gt;здесь&lt;/&gt;.</v8:content>
-																											</v8:item>
-																											<v8:item>
-																												<v8:lang>en</v8:lang>
-																												<v8:content>See the options for the value for the "Engine" field &lt;link https://docs.aws.amazon.com/en_us/polly/latest/dg/voicelist.html&gt;here&lt;/&gt;.</v8:content>
 																											</v8:item>
 																										</Title>
 																									</ExtendedTooltip>
@@ -25211,11 +25116,6 @@ The method should return the path to the mp3 file.</v8:content>
 																												<v8:content>Задает голос для генерации.
 Примеры голосов можно посмотреть &lt;link https://developer.sberdevices.ru/docs/ru/smartservices/synthesize_smartspeech#%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D1%8B-%D0%B3%D0%BE%D0%BB%D0%BE%D1%81%D0%BE%D0%B2-%D0%B4%D0%BB%D1%8F-%D1%81%D0%B8%D0%BD%D1%82%D0%B5%D0%B7%D0%B0&gt;здесь&lt;/&gt;</v8:content>
 																											</v8:item>
-																											<v8:item>
-																												<v8:lang>en</v8:lang>
-																												<v8:content>&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;Sets the voice to generate.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;Examples of voices can be found &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;link https://developer.sberdevices.ru/docs/ru/smartservices/synthesize_smartspeech#%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D1%8B-%D0%B3%D0%BE%D0%BB%D0%BE%D1%81%D0%BE%D0%B2-%D0%B4%D0%BB%D1%8F-%D1%81%D0%B8%D0%BD%D1%82%D0%B5%D0%B7%D0%B0&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;here&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
-																											</v8:item>
 																										</Title>
 																									</ExtendedTooltip>
 																								</InputField>
@@ -25246,17 +25146,6 @@ The method should return the path to the mp3 file.</v8:content>
 6. Нажать «Сохранить» и затем «Отправить на модерацию».
 7. После одобрения модерации вы получите доступ к вкладке «Доступы», где сможете взять client_id и client_secret, необходимые для работы API.</v8:content>
 																											</v8:item>
-																											<v8:item>
-																												<v8:lang>en</v8:lang>
-																												<v8:content>&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;Instructions for getting access to SmartSpeech API (it will take a couple of minutes):&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;1. Log in to SmartMarket Studio https://developers.sber.ru/studio&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;2. In the left pane, select or create a corporate space. Go through company verification.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;3. Select the SmartService project.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;4. Indicate the name of the project (any name you understand).&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;5. Select the checkbox next to SmartSpeech and fill out the request according to the instructions.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;6. Click “Save” and then “Submit for moderation”.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;7. After approving the moderation, you will get access to the "Access" tab, where you can get the client_id and client_secret required for the API to work.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
-																											</v8:item>
 																										</Title>
 																									</ExtendedTooltip>
 																								</LabelDecoration>
@@ -25285,16 +25174,6 @@ The method should return the path to the mp3 file.</v8:content>
 - указывать произношение аббревиатур и т.д.
 
 Подробнее можно почитать &lt;link https://developer.sberdevices.ru/docs/ru/developer_tools/ssml/overview&gt;здесь&lt;/&gt;</v8:content>
-																											</v8:item>
-																											<v8:item>
-																												<v8:lang>en</v8:lang>
-																												<v8:content>&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;When marking up text, you can:&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;- indicate pauses,&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;- text substitution during pronunciation,&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;- add sound effects&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;- indicate the pronunciation of abbreviations, etc.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;More details can be found &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;link https://developer.sberdevices.ru/docs/ru/developer_tools/ssml/overview&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;here&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
 																											</v8:item>
 																										</Title>
 																									</ExtendedTooltip>
@@ -25369,11 +25248,6 @@ The method should return the path to the mp3 file.</v8:content>
 																								<v8:lang>ru</v8:lang>
 																								<v8:content>Текст, который необходимо произнести.
 Управление ударением и произношением см &lt;link https://yandex.ru/dev/dialogs/alice/doc/speech-tuning-docpage/&gt;тут.&lt;/&gt;</v8:content>
-																							</v8:item>
-																							<v8:item>
-																								<v8:lang>en</v8:lang>
-																								<v8:content>&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;The text to be spoken.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;To control accent and pronunciation, see &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;link https://yandex.ru/dev/dialogs/alice/doc/speech-tuning-docpage/&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;here&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
 																							</v8:item>
 																						</Title>
 																					</ExtendedTooltip>
@@ -25807,12 +25681,6 @@ Reduces voice generation costs.</v8:content>
 																		<v8:content>Позволяет создавать видео инструкции.
 Видео по описанию настроек находится в этом &lt;link https://www.youtube.com/watch?v=QSDvDQDLyLk&amp;list=PLalsS95_a3a_m9ieRJgD3XPWCP9goa9GC&gt;плей листе&lt;/&gt;.
 Также рекомендуется прочитать этот &lt;link https://github.com/Pr-Mex/vanessa-automation/blob/develop/docs/FAQ/MakeAutoVideo.md&gt;FAQ.&lt;/&gt; </v8:content>
-																	</v8:item>
-																	<v8:item>
-																		<v8:lang>en</v8:lang>
-																		<v8:content>&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;Allows you to create video instructions.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;A video describing the settings is in this &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;link https://www.youtube.com/watch?v=QSDvDQDLyLk&amp;list=PLalsS95_a3a_m9ieRJgD3XPWCP9goa9GC&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;playlist&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;It is also recommended to read this &lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;link https://github.com/Pr-Mex/vanessa-automation/blob/develop/docs/FAQ/MakeAutoVideo.md&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;FAQ&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
 																	</v8:item>
 																</Title>
 															</ExtendedTooltip>
@@ -26658,15 +26526,6 @@ Reduces voice generation costs.</v8:content>
 Если фрагмент есть - то он будет взят из кэш.
 Установка флага ускоряет сборку видео.</v8:content>
 																													</v8:item>
-																													<v8:item>
-																														<v8:lang>en</v8:lang>
-																														<v8:content>&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;If the flag is set then when the step is running&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;And the video insert "TextInsert"&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;there will be a check to see if there is already such a video fragment in the cache.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;If there is no fragment in the cache, it will be added there.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;If there is a fragment, then it will be taken from the cache.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;Setting the flag speeds up video assembly.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
-																													</v8:item>
 																												</Title>
 																											</ExtendedTooltip>
 																											<Events>
@@ -27315,19 +27174,6 @@ Default: ffmpeg</v8:content>
 
 Скачать: &lt;link https://imagemagick.org/script/download.php&gt;https://imagemagick.org/script/download.php&lt;/&gt;
 Для версий младше 7 в процессе установки обязательным к установке является пункт: Install legacy utilities (e. g. convert)</v8:content>
-																									</v8:item>
-																									<v8:item>
-																										<v8:lang>en</v8:lang>
-																										<v8:content>The field describes how the Convert command will be invoked.
-For ImageMagick 7, just specify "magick convert."
-
-For older versions, you need to specify the path to the executable convert.exe file in the directory with the ImageMagick program.
-
-Example:
-"C:\Program Files\ImageMagick-X.X.X-Q16\convert.exe"
-
-Download: &lt;link https://imagemagick.org/script/download.php&gt;https://imagemagick.org/script/download.php&lt;/&gt;
-For versions earlier than 7 during the installation, the following item is required for installation: Install legacy utilities (e. G. Convert)</v8:content>
 																									</v8:item>
 																								</Title>
 																							</ExtendedTooltip>
@@ -28674,16 +28520,6 @@ SikuliX Server - это специальная программная оптим
 Описание установки и настройки SikuliX и SikuliX Server приведено в разделе справки 20.1
 
 &lt;link #&gt;Открыть справку&lt;/&gt;</v8:content>
-																	</v8:item>
-																	<v8:item>
-																		<v8:lang>en</v8:lang>
-																		<v8:content>&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;SikuliX is a Java application that allows you to control mouse movements and clicks on the screen, as well as emulate keystrokes on the keyboard.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;SikuliX Server is a special software optimization for working with SikuliX. If the option is enabled, VA builds one large script from many SikuliX scripts, which can be run once and quickly execute the necessary commands that previously had to be run one at a time. This allows you to significantly save time for executing one SikuliX script, because no time wasted on launching SikuliX and unloading it from memory.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;Installation and configuration of SikuliX and SikuliX Server is described in help section 20.1&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-
-&lt;link #&gt;&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;Open Help&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
 																	</v8:item>
 																</Title>
 																<Events>
@@ -31074,10 +30910,6 @@ If the voice acting file is not found in the directory, the process of generatin
 										<v8:item>
 											<v8:lang>ru</v8:lang>
 											<v8:content>Статистика</v8:content>
-										</v8:item>
-										<v8:item>
-											<v8:lang>en</v8:lang>
-											<v8:content>Statistics</v8:content>
 										</v8:item>
 									</Title>
 									<HorizontalAlign>Right</HorizontalAlign>
@@ -42171,6 +42003,7 @@ If the voice acting file is not found in the directory, the process of generatin
 			</ToolTip>
 			<Action>РазвернутьВсеГруппыВНастройках</Action>
 		</Command>
+<<<<<<< HEAD
 		<Command name="ПроверкаПереводаЭлементовФормы" id="171">
 			<Title>
 				<v8:item>
@@ -42183,6 +42016,26 @@ If the voice acting file is not found in the directory, the process of generatin
 				</v8:item>
 			</Title>
 			<Action>ПроверкаПереводаЭлементовФормы</Action>
+=======
+		<Command name="ПолучитьФормуНастройкиРаботыСБраузером" id="171">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить форму настройки работы с браузером</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить форму настройки работы с браузером</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.GeographicalSchema</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ПолучитьФормуНастройкиРаботыСБраузером</Action>
+>>>>>>> 9bf68c5314318cea97dfdfd4d460c5e4bc3f2f61
 		</Command>
 	</Commands>
 </Form>
