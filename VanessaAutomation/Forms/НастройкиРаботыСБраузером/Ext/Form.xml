@@ -84,39 +84,6 @@
 								</ButtonGroup>
 							</ChildItems>
 						</CommandBar>
-						<UsualGroup name="ГруппаБраузер" id="15">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа браузер</v8:content>
-								</v8:item>
-							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа браузер</v8:content>
-								</v8:item>
-							</ToolTip>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="ГруппаБраузерРасширеннаяПодсказка" id="16"/>
-							<ChildItems>
-								<InputField name="ИнтернетБраузер" id="9">
-									<DataPath>ИнтернетБраузер</DataPath>
-									<ChoiceButton>true</ChoiceButton>
-									<ContextMenu name="ИнтернетБраузерКонтекстноеМеню" id="10"/>
-									<ExtendedTooltip name="ИнтернетБраузерРасширеннаяПодсказка" id="11"/>
-									<Events>
-										<Event name="StartChoice">ИнтернетБраузерНачалоВыбора</Event>
-									</Events>
-								</InputField>
-								<InputField name="ПортБраузера" id="17">
-									<DataPath>ПортБраузера</DataPath>
-									<ContextMenu name="ПортБраузераКонтекстноеМеню" id="18"/>
-									<ExtendedTooltip name="ПортБраузераРасширеннаяПодсказка" id="19"/>
-								</InputField>
-							</ChildItems>
-						</UsualGroup>
 						<InputField name="АдресВебКлиента" id="20">
 							<DataPath>АдресВебКлиента</DataPath>
 							<ContextMenu name="АдресВебКлиентаКонтекстноеМеню" id="21"/>
@@ -488,37 +455,6 @@
 				<v8:Type>cfg:ExternalDataProcessorObject.VanessaAutomation</v8:Type>
 			</Type>
 			<MainAttribute>true</MainAttribute>
-		</Attribute>
-		<Attribute name="ИнтернетБраузер" id="2">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Интернет браузер</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:string</v8:Type>
-				<v8:StringQualifiers>
-					<v8:Length>0</v8:Length>
-					<v8:AllowedLength>Variable</v8:AllowedLength>
-				</v8:StringQualifiers>
-			</Type>
-		</Attribute>
-		<Attribute name="ПортБраузера" id="3">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Порт</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>xs:decimal</v8:Type>
-				<v8:NumberQualifiers>
-					<v8:Digits>10</v8:Digits>
-					<v8:FractionDigits>0</v8:FractionDigits>
-					<v8:AllowedSign>Any</v8:AllowedSign>
-				</v8:NumberQualifiers>
-			</Type>
 		</Attribute>
 		<Attribute name="АдресВебКлиента" id="4">
 			<Title>
