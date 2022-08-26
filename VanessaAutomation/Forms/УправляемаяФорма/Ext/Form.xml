@@ -1691,6 +1691,10 @@
 								<v8:lang>ru</v8:lang>
 								<v8:content>Группа vanessa editor работа с браузером</v8:content>
 							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Vanessa editor group working with the browser</v8:content>
+							</v8:item>
 						</Title>
 						<ToolTip>
 							<v8:item>
@@ -11863,7 +11867,16 @@
 													<xr:Presentation/>
 													<xr:CheckState>0</xr:CheckState>
 													<xr:Value xsi:type="FormChoiceListDesTimeValue">
-														<Presentation/>
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Мобильный клиент автономный</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Mobile client offline</v8:content>
+															</v8:item>
+														</Presentation>
 														<Value xsi:type="xs:string">МобильныйКлиентАвтономный</Value>
 													</xr:Value>
 												</xr:Item>
@@ -14917,27 +14930,6 @@ This issue is relevant when running tests on Linux.</v8:content>
 																				</Title>
 																			</ExtendedTooltip>
 																		</InputField>
-																		<InputField name="ДиапазонПортовTestclient" id="1683">
-																			<DataPath>Объект.ДиапазонПортовTestclient</DataPath>
-																			<TitleLocation>Top</TitleLocation>
-																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-																			<Width>30</Width>
-																			<HorizontalStretch>false</HorizontalStretch>
-																			<ContextMenu name="ДиапазонПортовTestclientКонтекстноеМеню" id="1684"/>
-																			<ExtendedTooltip name="ДиапазонПортовTestclientРасширеннаяПодсказка" id="1685">
-																				<AutoMaxWidth>false</AutoMaxWidth>
-																				<Title formatted="false">
-																					<v8:item>
-																						<v8:lang>ru</v8:lang>
-																						<v8:content>Устанавливает диапазон портов, в котором будет производиться поиск свободного порта в системе для запуска клиента тестирования. Например 48100-48200.</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>en</v8:lang>
-																						<v8:content>Specifies ports range to search for free port to run TestClient. For example 48100-48200.</v8:content>
-																					</v8:item>
-																				</Title>
-																			</ExtendedTooltip>
-																		</InputField>
 																	</ChildItems>
 																</UsualGroup>
 																<UsualGroup name="ГруппаЗапускКлиентаТестированияТретьяСтрокаПравыйСтолбец" id="3310">
@@ -14982,41 +14974,100 @@ This issue is relevant when running tests on Linux.</v8:content>
 																</UsualGroup>
 															</ChildItems>
 														</UsualGroup>
-														<UsualGroup name="ГруппаЗапускКлиентаТестированияЛевыйСтолбец" id="3290">
-															<Visible>false</Visible>
+														<UsualGroup name="ГруппаЗапускКлиентаТестированияЧетвертаяСтрока" id="3739">
 															<Title>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
-																	<v8:content>Группа запуск клиента тестирования левый столбец</v8:content>
+																	<v8:content>Группа запуск клиента тестирования четвертая строка</v8:content>
 																</v8:item>
 																<v8:item>
 																	<v8:lang>en</v8:lang>
-																	<v8:content>Test client launch group left column</v8:content>
+																	<v8:content>Test client launch group fourth line</v8:content>
 																</v8:item>
 															</Title>
-															<Width>50</Width>
-															<HorizontalStretch>false</HorizontalStretch>
-															<Group>Vertical</Group>
+															<Group>AlwaysHorizontal</Group>
 															<Representation>None</Representation>
 															<ShowTitle>false</ShowTitle>
-															<ExtendedTooltip name="ГруппаЗапускКлиентаТестированияЛевыйСтолбецРасширеннаяПодсказка" id="3291"/>
-														</UsualGroup>
-														<UsualGroup name="ГруппаЗапускКлиентаТестированияПравыйСтолбец" id="3292">
-															<Visible>false</Visible>
-															<Title>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>Группа запуск клиента тестирования правый столбец</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>en</v8:lang>
-																	<v8:content>Test client launch group right column</v8:content>
-																</v8:item>
-															</Title>
-															<Group>Vertical</Group>
-															<Representation>None</Representation>
-															<ShowTitle>false</ShowTitle>
-															<ExtendedTooltip name="ГруппаЗапускКлиентаТестированияПравыйСтолбецРасширеннаяПодсказка" id="3293"/>
+															<ExtendedTooltip name="ГруппаЗапускКлиентаТестированияЧетвертаяСтрокаРасширеннаяПодсказка" id="3740"/>
+															<ChildItems>
+																<UsualGroup name="ГруппаЗапускКлиентаТестированияЧетвертаяСтрокаЛевыйСтолбец" id="3741">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа запуск клиента тестирования четвертая строка левый столбец</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Test client launch group fourth row left column</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Width>50</Width>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаЗапускКлиентаТестированияЧетвертаяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="3742"/>
+																	<ChildItems>
+																		<InputField name="ДиапазонПортовTestclient" id="1683">
+																			<DataPath>Объект.ДиапазонПортовTestclient</DataPath>
+																			<TitleLocation>Top</TitleLocation>
+																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<Width>30</Width>
+																			<HorizontalStretch>false</HorizontalStretch>
+																			<ContextMenu name="ДиапазонПортовTestclientКонтекстноеМеню" id="1684"/>
+																			<ExtendedTooltip name="ДиапазонПортовTestclientРасширеннаяПодсказка" id="1685">
+																				<AutoMaxWidth>false</AutoMaxWidth>
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Устанавливает диапазон портов, в котором будет производиться поиск свободного порта в системе для запуска клиента тестирования. Например 48100-48200.</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>Specifies ports range to search for free port to run TestClient. For example 48100-48200.</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
+																		</InputField>
+																	</ChildItems>
+																</UsualGroup>
+																<UsualGroup name="ГруппаЗапускКлиентаТестированияЧетвертаяСтрокаПравыйСтолбец" id="3743">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа запуск клиента тестирования четвертая строка правый столбец</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Test client launch group fourth row right column</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаЗапускКлиентаТестированияЧетвертаяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="3744"/>
+																	<ChildItems>
+																		<InputField name="КаталогФайловВыводаСлужебныхСообщений" id="3745">
+																			<DataPath>Объект.КаталогФайловВыводаСлужебныхСообщений</DataPath>
+																			<TitleLocation>Top</TitleLocation>
+																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<ContextMenu name="КаталогФайловВыводаСлужебныхСообщенийКонтекстноеМеню" id="3746"/>
+																			<ExtendedTooltip name="КаталогФайловВыводаСлужебныхСообщенийРасширеннаяПодсказка" id="3747">
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>If the parameter is set, the /Out &lt;FileName&gt; parameter will be added when the test client is started.
+The file name will be generated according to the rule TestingClientName+LaunchDateTime.</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Если параметр задан, то при запуске клиента тестирования будет добавляться параметр /Out &lt;ИмяФайла&gt;.
+Имя файла будет генерироваться по правилу ИмяКлиентаТестирования+ДатаВремяЗапуска.</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
+																		</InputField>
+																	</ChildItems>
+																</UsualGroup>
+															</ChildItems>
 														</UsualGroup>
 													</ChildItems>
 												</UsualGroup>
