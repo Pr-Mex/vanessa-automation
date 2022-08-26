@@ -24,3 +24,16 @@ oscript MakeTrainingFeature.os <ПутьККаталогуФичИнтеракт
 ```
 oscript MakeTrainingFeature.os "C:\Commons\rep\vanessa-automation\training\features" "C:\Commons\rep\vanessa-automation\features\Core\Training\Example.feature"
 ```
+
+
+#### MakeInteractiveHelp.os
+
+Скрипт для пакетной сборки интерактивной справки в разных форматах (видео, MD и т.д.)
+Как запускать:
+```
+oscript MakeInteractiveHelp.os <ПутьКФайлуНастроекВФорматеJson>
+```
+Пример запуска:
+```
+oscript C:\Commons\rep\vanessa-automation\tools\onescript\MakeInteractiveHelp.os C:\Commons\rep\vanessa-automation\examples\MakeInteractiveHelp\MakeVideoInteractiveHelp.json
+```
