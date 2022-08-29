@@ -47,6 +47,7 @@
 * [100+ тестов на Vanessa-Automation. Личный опыт без маркетинга.](https://www.youtube.com/watch?v=_YrmLnM9J1A)
 * [Как создать видеоинструкцию в 1С? Пошаговый мастер класс от Виталия Чебана](https://www.youtube.com/watch?v=Jg1sSb-O-F0)
 * [Митап 1С:Community от КОРУС Консалтинг. Опыт применения автотестирования](https://www.youtube.com/watch?v=OAT_a25XIXQ)
+* [Автоматическое тестирование с использованием Vanessa в Yandex.Cloud](https://m.youtube.com/watch?v=vTAVedABBGQ)
 
 ## Сборка из исходников
 
