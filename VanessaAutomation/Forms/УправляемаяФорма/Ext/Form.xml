@@ -16519,6 +16519,72 @@ then in reality the maximum step time will be 20 seconds, not 10.</v8:content>
 																	<ShowTitle>false</ShowTitle>
 																	<ExtendedTooltip name="ГруппаПодсистемаСтабилизацияВыполненияТестовВтораяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="3385"/>
 																	<ChildItems>
+																		<InputField name="ПаузаПриОткрытииОкна" id="1883">
+																			<DataPath>Объект.ПаузаПриОткрытииОкна</DataPath>
+																			<TitleLocation>Top</TitleLocation>
+																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<Width>5</Width>
+																			<ContextMenu name="ПаузаПриОткрытииОкнаКонтекстноеМеню" id="1884"/>
+																			<ExtendedTooltip name="ПаузаПриОткрытииОкнаРасширеннаяПодсказка" id="1885">
+																				<AutoMaxWidth>false</AutoMaxWidth>
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Значение дополнительной паузы, которая будет всегда применяться в шагах
+```Gherkin
+Тогда открылось окно "ИмяОкна"
+И я жду открытия окна "Имя окна" в течении 60 секунд
+И я жду открытия окна отличного от "ИмяОкна" в течение 60 секунд
+```</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>Additional pause value that will always be applied in a step
+```Gherkin
+Then "WindowTitle" window is opened
+And I wait "WindowTitle" window opening in 60 seconds
+And I wait the window with header different from "WindowTitle" opening in 60 seconds
+```</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
+																		</InputField>
+																	</ChildItems>
+																</UsualGroup>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="ГруппаПодсистемаСтабилизацияВыполненияТестовТретьяСтрока" id="3752">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа подсистема стабилизация выполнения тестов третья строка</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Group subsystem stabilization of test execution third line</v8:content>
+																</v8:item>
+															</Title>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаПодсистемаСтабилизацияВыполненияТестовТретьяСтрокаРасширеннаяПодсказка" id="3753"/>
+															<ChildItems>
+																<UsualGroup name="ГруппаПодсистемаСтабилизацияВыполненияТестовТретьяСтрокаЛевыйСтолбец" id="3754">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа подсистема стабилизация выполнения тестов третья строка левый столбец</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Group subsystem test execution stabilization third row left column</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Width>50</Width>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаПодсистемаСтабилизацияВыполненияТестовТретьяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="3755"/>
+																	<ChildItems>
 																		<CheckBoxField name="БезопасноеВыполнениеШагов" id="1784">
 																			<DataPath>Объект.БезопасноеВыполнениеШагов</DataPath>
 																			<TitleLocation>Right</TitleLocation>
@@ -16544,32 +16610,6 @@ This option slow the execution down .</v8:content>
 																				<Event name="OnChange">БезопасноеВыполнениеШаговПриИзменении</Event>
 																			</Events>
 																		</CheckBoxField>
-																		<InputField name="ПаузаПриОткрытииОкна" id="1883">
-																			<DataPath>Объект.ПаузаПриОткрытииОкна</DataPath>
-																			<TitleLocation>Top</TitleLocation>
-																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-																			<Width>5</Width>
-																			<ContextMenu name="ПаузаПриОткрытииОкнаКонтекстноеМеню" id="1884"/>
-																			<ExtendedTooltip name="ПаузаПриОткрытииОкнаРасширеннаяПодсказка" id="1885">
-																				<AutoMaxWidth>false</AutoMaxWidth>
-																				<Title formatted="false">
-																					<v8:item>
-																						<v8:lang>ru</v8:lang>
-																						<v8:content>Значение дополнительной паузы, которая будет всегда применяться в шаге
-```Gherkin
-Тогда открылось окно "ИмяОкна"
-```</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>en</v8:lang>
-																						<v8:content>Additional pause value that will always be applied in a step
-```Gherkin
-Then "WindowTitle" window is opened
-```</v8:content>
-																					</v8:item>
-																				</Title>
-																			</ExtendedTooltip>
-																		</InputField>
 																	</ChildItems>
 																</UsualGroup>
 															</ChildItems>
