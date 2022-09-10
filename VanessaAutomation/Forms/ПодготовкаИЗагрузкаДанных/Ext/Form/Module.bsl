@@ -2804,6 +2804,7 @@ Function GeValuetStringRepresentation(DataValue, RefReplaceMetadataObjects)
 			ReturnValue = StrReplace(ReturnValue, Chars.LF, "\n");
 			ReturnValue = StrReplace(ReturnValue, Chars.CR, "");
 			ReturnValue = StrReplace(ReturnValue, "'", "\'");
+			ReturnValue = StrReplace(ReturnValue, "|", "\|");
 		EndIf;
 	ElsIf isMetadataObjectAndDataValueNotEmpty(MetadataObject, DataValue) Then
 		PredefinedCheck = New Structure;
