@@ -69,7 +69,6 @@
 		|'	Then the form attribute named \"Код\" became equal to \"\"'|
 		|'	Then the form attribute named \"Наименование\" became equal to \"\"'|
 		|''|
-		|''|
 
 
 
