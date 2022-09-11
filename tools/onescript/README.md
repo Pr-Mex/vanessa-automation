@@ -23,6 +23,7 @@ oscript MakeTrainingFeature.os <ПутьККаталогуФичИнтеракт
 Пример запуска:
 ```
 oscript MakeTrainingFeature.os "C:\Commons\rep\vanessa-automation\training\features" "C:\Commons\rep\vanessa-automation\features\Core\Training\Example.feature"
+oscript MakeTrainingFeature.os "C:\Commons\rep\vanessa-automation\training\features_en" "C:\Commons\rep\vanessa-automation\features\Core\Training\Example.feature"
 ```
 
 
