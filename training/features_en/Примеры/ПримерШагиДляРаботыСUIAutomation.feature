@@ -1,11 +1,11 @@
-﻿# language: ru
+﻿# language: en
 
-Feature: Примеры, шаги для работы с UI Automation.
+Feature: Examples, steps for working with UI Automation.
 
-Scenario: Примеры, шаги для работы с UI Automation.
+Scenario: Examples, steps for working with UI Automation.
 
 * Basic steps for working with the Automation UI.
-		And I click form item %1 PID %2 Title%3 Type UI Automation
+		And I click form item "PID" "Header" "Type" UI Automation
 		And I click on form element "PID" "Tooltip" UI Automation. Search by hint
 
 * Reference - technology description
@@ -19,5 +19,4 @@ Scenario: Примеры, шаги для работы с UI Automation.
 
 * How to get the PID of the Test Client process
 		And I read current Test Client profile data
-		And I click form item %1 PID %2 Title%3 Type UI Automation
-
+		And I click form item "$PIDTestClient$" "Header" "Type" UI Automation

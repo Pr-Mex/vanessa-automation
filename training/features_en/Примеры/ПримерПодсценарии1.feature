@@ -1,11 +1,11 @@
-﻿# language: ru
+﻿# language: en
 
 
-Feature: Работа с подсценариями.
+Feature: Working with subscripts.
 
 
-Scenario: Работа с подсценариями.
+Scenario: Working with subscripts.
 
-	И я вызываю подсценарий без параметров
+	And I call a subsript without parameters
 
-	И я вызываю подсценарий с параметром "ParameterValue"
+	And I call the sub script with the parameter "ParameterValue"

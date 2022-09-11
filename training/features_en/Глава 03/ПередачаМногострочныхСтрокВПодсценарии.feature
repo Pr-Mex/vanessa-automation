@@ -12,7 +12,7 @@
 * And upload a test example.
 		И я устанавливаю опцию VA в режиме обучения "ПроверкаСинтаксисаВРедакторе" "Истина"
 		И я устанавливаю опцию VA в режиме обучения "ПоказыватьСтрокиПодсценариевVanessaEdittor" "Ложь"
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыЭкспорт\ЭкспортныеСценарииСМногострочнымиСтроками.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\Экспорт\ЭкспортныеСценарииСМногострочнымиСтроками.feature"
 		И я позиционирую в центр строку редактора VA в режиме обучения 1
 	
 
@@ -21,7 +21,7 @@
 	
 		
 * Let's see what possibilities we have for transferring multiline strings to such subscripts.
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерПодсценарии3.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерПодсценарии3.feature"
 
 * In this example, two such parameters are passed to the subscript.
 		И Я делаю подсветку текста в редакторе VA в режиме обучения с 10 по 17 строку 'Passing parameters to the subscript' подсценарий

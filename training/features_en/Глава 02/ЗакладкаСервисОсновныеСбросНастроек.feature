@@ -15,13 +15,13 @@
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ГруппаСбросНастроек' UI Automation
 		И Пауза 1
 		И я делаю подсветку нескольких элементов VA с их заголовком "Settings reset" UI Automation
-			| 'Имя'                                |
+			| 'Name'                                |
 			| 'СброситьКешИзвестныхStepDefinition' |
 			| 'СброситьНастройкиVanessaAutomation' |
 
 * The first command allows to reset the cache of already read steps.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Steps cache reset" UI Automation
-			| 'Имя'                                |
+			| 'Name'                                |
 			| 'СброситьКешИзвестныхStepDefinition' |
 	
 * This is useful when step libraries have been moved.
@@ -29,7 +29,7 @@
 
 * The second command allows to reset all Vanessa Automation settings to defaults.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Reset to default values" UI Automation
-			| 'Имя'                                |
+			| 'Name'                                |
 			| 'СброситьНастройкиVanessaAutomation' |
 
 

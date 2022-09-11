@@ -20,7 +20,8 @@
 
 
 * To start the lesson, click Start Lesson hyperlink.
-		И Я делаю подсветку элемента формы VA по заголовку "Start lesson" "Link to start the lesson"
+		И я запоминаю строку "Запустить урок" в переменную "ТекстСтрелки"
+		И Я делаю подсветку элемента формы VA по заголовку "$ТекстСтрелки$" "Link to start the lesson"
 		
 
 * This list of lessons is also available on Vanessa Automation home page.
@@ -30,21 +31,22 @@
 		И Пауза 1
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'VanessaEditorWelcome' UI Automation	
 		И Пауза 1
-		Если существует элемент UI Automation "ЭтотСеанс" с именем "Open lessons list" и типом "edit" Тогда
+		И я запоминаю строку "Открыть список уроков" в переменную "ИмяЭлементаФормыОткрытьСписокУроков"
+		Если существует элемент UI Automation "ЭтотСеанс" с именем "$ИмяЭлементаФормыОткрытьСписокУроков$" и типом "edit" Тогда
 
 			И я делаю эффект затемнения у элементов формы UI Automation "ЭтотСеанс"
-				| 'Имя'                   | 'Type'  |
-				| 'Open lessons list' | 'edit' |
+				| 'Name'                                   | 'Type'  |
+				| '$ИмяЭлементаФормыОткрытьСписокУроков$' | 'edit' |
 				
-				| 'Имя'      | 'Value'              |
+				| 'Name'      | 'Value'              |
 				| 'text'     | 'Open lessons list' |
 				| 'duration' | 4000                    |
 		Иначе
 			И я делаю эффект затемнения у элементов формы UI Automation "ЭтотСеанс"
-				| 'Имя'               | 'Type'  |
+				| 'Name'               | 'Type'  |
 				| 'Open lessons list' | 'edit' |
 				
-				| 'Имя'      | 'Value'              |
+				| 'Name'      | 'Value'              |
 				| 'text'     | 'Open lessons list' |
 				| 'duration' | 4000                    |
 	
@@ -55,4 +57,4 @@
 * That's it, move on to the next lesson of the interactive help.
 
 
-
+//Do not translate 23, 34

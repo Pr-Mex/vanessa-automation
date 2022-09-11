@@ -1,33 +1,33 @@
-﻿# language: ru
+﻿# language: en
 
-@Тег1
-@Тег2
-@Тег3
+@Tag1
+@Tag2
+@Tag3
 
-Feature: Название функциональности
+Feature: Functionality name
 
-Как <Роль> я хочу
-<описание функциональности> 
+As <Role> I want
+<functionality description>
 To <business effect>
 
 Background:
-	Дано подготовка к выполнению сценариев часть 1
-	Дано подготовка к выполнению сценариев часть 2
+	Given preparation for the execution of scripts part 1
+	Given preparation for the execution of scripts part 2
 	
-@ТегСценария1
-@ТегСценария2
-Scenario: Сценарий 1
+@ScriptTag1
+@ScriptTag2
+Scenario: Scenario 1
 
-	Дано Начальные условия
+	Given initial conditions
 
-	Затем я выполняю действия
+	Then I do the steps
 
-	Тогда я получаю результат
+	Then I get the result
 
-Scenario: Сценарий 2
+Scenario: Scenario 2
 
-	Дано Начальные условия
+	Given initial conditions
 
-	Затем я выполняю действия
+	Then I do the steps
 	
-	Тогда я получаю результат
+	Then I get the result

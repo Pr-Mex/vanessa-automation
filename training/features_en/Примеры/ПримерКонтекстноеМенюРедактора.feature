@@ -1,7 +1,7 @@
-﻿# language: ru
+﻿# language: en
 
-Feature: Пример для работы с контекстным меню редактора
+Feature: Example for working with the context menu of the editor
 
-Scenario: Пример для работы с контекстным меню редактора
+Scenario: Example for working with the context menu of the editor
 
 	And I select current line in "TableName" table

@@ -15,7 +15,7 @@
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ГруппаИспользоватьКомпонентуVanessaExt' UI Automation
 		И Пауза 1
 		И я делаю подсветку нескольких элементов VA с их заголовком "Enable the use of VanessaExt component" UI Automation
-			| 'Имя'                              |
+			| 'Name'                              |
 			| 'ИспользоватьКомпонентуVanessaExt' |
 
 * It is recommended to expand the Vanessa Automation window to full screen or set the window size large enough so that the main elements of the form are visible.
@@ -27,7 +27,7 @@
 * When working with an interactive lesson, avoid moving the mouse or pressing keyboard keys. Otherwise, it may interfere with the interactive help.
 
 * If you have updated the full delivery or Single version of Vanessa Automation, it is better to delete the directory with the cache of voice files.
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерЧтоНужноЧтобыИнтерактивнаяСправкаРаботала.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерЧтоНужноЧтобыИнтерактивнаяСправкаРаботала.feature"
 		И Я делаю подсветку текста в редакторе VA в режиме обучения с 7 по 7 строку 'Directory of voiceover cache' подсценарий
 
 * If you have updated the version of Vanessa Automation Single, it is better to delete the directory where the interactive lesson files are located.

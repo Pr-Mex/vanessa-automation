@@ -10,14 +10,14 @@
 		И я открываю Vanessa Automation в режиме обучения
 
 * And upload a test example.
-		И я устанавливаю опцию VA в режиме обучения "ПроверкаСинтаксисаВРедакторе" "Истина"
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерЦиклов1.feature"
+		И я устанавливаю опцию VA в режиме обучения "ПроверкаСинтаксисаВРедакторе" "Ложь"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерЦиклов1.feature"
 
 * The first point. The loop step can start with any keyword.
-		И я делаю подсветку фрагмента текста в редакторе VA в режиме обучения подсценарий 'Given for each row of the table "TableName" I do' 'Example of loop step'
+		И я делаю подсветку фрагмента текста в редакторе VA в режиме обучения подсценарий 'And for each line of "TableName" table I do' 'Example of loop step'
 * If a step is a loop, then it is marked in the editor with a special mark on the left.
 * Steps that are inside the loop are separated by an additional indent.
-		И я делаю подсветку фрагмента текста в редакторе VA в режиме обучения подсценарий 'And Pause 1' 'Step inside the loop'
+		И я делаю подсветку фрагмента текста в редакторе VA в режиме обучения подсценарий 'And Delay 1' 'Step inside the loop'
 
 * Such steps are marked with a special mark when they are declared in epf files.
 * They are also highlighted in purple in the tree of known Vanessa Automation steps.
@@ -28,12 +28,12 @@
 * This step allows the loop to continue.
 		И я делаю подсветку фрагмента текста в редакторе VA в режиме обучения подсценарий 'Then I continue the loop' 'Continuation of loop execution'
 * It is an analogue of the Continue operator from the built-in 1C language.
-		И я делаю подсветку фрагмента текста в редакторе VA в режиме обучения подсценарий 'Then I continue the loop' 'Аналог оператора "Продолжить"'
+		И я делаю подсветку фрагмента текста в редакторе VA в режиме обучения подсценарий 'Then I continue the loop' 'Analog of the "Continue" operator'
 
 * There is also a special step that breaks the loop.
-		И я делаю подсветку фрагмента текста в редакторе VA в режиме обучения подсценарий 'Then I break the loop' 'Loop execution break'
+		И я делаю подсветку фрагмента текста в редакторе VA в режиме обучения подсценарий 'Then I interrupt the loop' 'Loop execution break'
 * This is an analogue of the Break operator from the built-in 1C language.
-		И я делаю подсветку фрагмента текста в редакторе VA в режиме обучения подсценарий 'Then I break the loop' 'Аналог оператора "Прервать"'
+		И я делаю подсветку фрагмента текста в редакторе VA в режиме обучения подсценарий 'Then I interrupt the loop' 'Analog of the "Abort" operator'
 
 * A significant point. The use of loops in the script text must be justified.
 * Please avoid using loops where possible.

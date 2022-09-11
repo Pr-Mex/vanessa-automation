@@ -19,12 +19,12 @@
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'КешАудио' UI Automation
 		И Пауза 1
 		И я делаю подсветку нескольких элементов VA с их заголовком "Audio cache" UI Automation
-			| 'Имя'                           |
+			| 'Name'                           |
 			| 'ЗаписьВидеоКэшироватьФайлыTTS' |
 	
 * Since many speech generation services are paid, Vanessa Automation provides the ability to cache voiceover files. To do this, set this checkbox.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Enable audio caching" UI Automation
-			| 'Имя'                           |
+			| 'Name'                           |
 			| 'ЗаписьВидеоКэшироватьФайлыTTS' |
 		И Пауза 1
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ЗаписьВидеоКэшироватьФайлыTTS' UI Automation	
@@ -32,7 +32,7 @@
 
 * Also it is necessary to specify cache directory.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Directory" UI Automation
-			| 'Имя'                     |
+			| 'Name'                     |
 			| 'ЗаписьВидеоКэшФайловTTS' |
 
 

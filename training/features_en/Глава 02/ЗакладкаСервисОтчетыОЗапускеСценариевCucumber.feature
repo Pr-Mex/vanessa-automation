@@ -17,12 +17,12 @@
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ГруппаCucumber' UI Automation
 		И Пауза 1
 		И я делаю подсветку нескольких элементов VA с их заголовком "Settings for generating a report in Cucumber format" UI Automation
-			| 'Имя'                             |
+			| 'Name'                             |
 			| 'ДелатьОтчетВФорматеCucumberJson' |
 
 * To generate a report, you need to set this checkbox.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Enabling a report in Cucumber format" UI Automation
-			| 'Имя'                             |
+			| 'Name'                             |
 			| 'ДелатьОтчетВФорматеCucumberJson' |
 		И Пауза 1
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ДелатьОтчетВФорматеCucumberJson' UI Automation
@@ -30,7 +30,7 @@
 
 * In this field, specify the directory to generate the report files
 		И я делаю подсветку нескольких элементов VA с их заголовком "Report directory" UI Automation
-			| 'Имя'                         |
+			| 'Name'                         |
 			| 'КаталогВыгрузкиCucumberJson' |
 	
 * That's it, move on to the next lesson of the interactive help.

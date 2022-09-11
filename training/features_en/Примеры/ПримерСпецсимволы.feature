@@ -1,29 +1,28 @@
-﻿# language: ru
+﻿# language: en
 
-Feature: Примеры использования спецсимволов
+Feature: Examples of using special characters
 
-Scenario: Примеры использования спецсимволов
+Scenario: Examples of using special characters
 * Escaping a quote character
-		Дано пример кавычка внутри кавычки "Part1 \" Part2" 
-		Дано пример кавычка внутри апострофов 'Part1 \" Part2' 
-		Дано пример кавычка внутри апострофов без экранирования 'Part1 " Part2' 
+		Given an example of a quote inside a quote "Part1 \" Part2" 
+		Given an example of a quote inside apostrophes 'Part1 \" Part2' 
+		Given an example of a quote inside apostrophes without escaping 'Part1 " Part2' 
 	
 * Escaping an apostrophe
-		Дано пример апостроф внутри кавычек "Part1 \' Part2" 
-		Дано пример апостроф внутри апострофов 'Part1 \' Part2' 
+		Given an example of an apostrophe inside quotes "Part1 \' Part2" 
+		Given an example of apostrophes within apostrophes 'Part1 \' Part2' 
 	
 * Escaping a pipe character
-		Дано пример шага, в который передаётся таблица Gherkin
-			| 'Часть1 \| Часть2' |
+		Given example of a step to which a Gherkin table is passed is given.
+			| 'Part 1 \| Part 2' |
 
 * Escaping a back slash
-		Дано пример экранирования обратной косой черты "\\\\ServerName" 
+		Given example of backslash escaping is given "\\\\ServerName" 
 
 * Escaping curly braces if the option to evaluate expression in curly braces is enabled
-		Дано пример экранирования обратной косой черты "Part1\{StringInCurlyBrackets\}Part2" 
+		Given example of backslash escaping is given "Part1\{StringInCurlyBrackets\}Part2" 
 
 * Line feed special character
-		Дано пример передачи в параметр шага символа перевода строки "Part1 \n Part2" 
-		Дано пример передачи в ячейку таблицы Gherkin символа перевода строки
+		Given example of passing a newline character to the step parameter is given "Part1 \n Part2" 
+		Given example of transferring a newline character to a Gherkin table cell is given.
 			| 'Part1 \n Part2' |
-

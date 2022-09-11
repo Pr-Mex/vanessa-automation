@@ -11,7 +11,7 @@
 
 * Let's upload a test case.
 		И я устанавливаю опцию VA в режиме обучения "ПроверкаСинтаксисаВРедакторе" "Истина"
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерКакИзменитьНастройкиVanessaAutomationВСценарии.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерКакИзменитьНастройкиVanessaAutomationВСценарии.feature"
 
 * There are special steps to operate Vanessa Automation settings during script execution.
 

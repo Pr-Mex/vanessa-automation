@@ -1,16 +1,15 @@
-﻿# language: ru
+﻿# language: en
 
 
-Feature: Работа с подсценариями. Передача таблиц.
+Feature: Working with subscripts. Transfer of tables.
 
 
-Scenario: Работа с подсценариями. Передача таблиц.
+Scenario: Working with subscripts. Transfer of tables.
 
-	И Я вызываю подсценарий и передаю в него одну таблицу
-		|'Новая простая таблица Gherkin'|
+	And I call a subscript and pass one table to it
+		|'New simple Gherkin table'|
 
-	И Я вызываю подсценарий и передаю в него несколько таблиц
+	And I call a subscript and pass several tables to it
 		||
 
-		|'Другая таблица Gherkin 2'|
-
+		|'Another Gherkin table 2'|

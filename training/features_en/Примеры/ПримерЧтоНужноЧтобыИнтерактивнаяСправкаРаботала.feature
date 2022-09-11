@@ -1,10 +1,9 @@
-﻿# language: ru
+﻿# language: en
 
-Feature: Что нужно, чтобы интерактивная справка работала?
+Feature: How to make the interactive help work?
 
-Scenario: Что нужно, чтобы интерактивная справка работала?
+Scenario: How to make the interactive help work?
 
 * HelpTTS Catalog
 	
 * Training Catalog
-

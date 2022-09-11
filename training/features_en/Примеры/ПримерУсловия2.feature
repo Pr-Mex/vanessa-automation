@@ -1,19 +1,18 @@
-﻿# language: ru
+﻿# language: en
 
-Feature: Примеры условий.
+Feature: Examples of conditions.
 
-Scenario: Примеры условий.
+Scenario: Examples of conditions.
 
 
-* You can use ElsIf and Else
+* You can use ElseIf and Else
 
-		If number of "TableName" table lines is "equal" 0 Then
-			// какие-то действия
-		ИначеЕсли в таблице "TableName" количество строк "equal" 1 Тогда
-			// какие-то действия
-		ИначеЕсли в таблице "TableName" количество строк "equal" 2 Тогда
-			// какие-то действия
-		Иначе	
-			// какие-то действия
-
+		If the number of rows in the table "TableName" is "equal" to 0 Then
+			// some actions
+		ElseIf the number of rows in table "TableName" is "equal" to 1 Then
+			// some actions
+		ElseIf the number of rows in table "TableName" is "equal" to 2 Then
+			// some actions
+		Else	
+			// some actions
 

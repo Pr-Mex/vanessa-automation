@@ -11,11 +11,11 @@
 
 * And upload a test example.
 		И я устанавливаю опцию VA в режиме обучения "ПроверкаСинтаксисаВРедакторе" "Ложь"
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерСпецсимволы.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерСпецсимволы.feature"
 
 * To begin with, let's consider the case when you need to pass a quotation mark inside the step parameter.
 * There is one string parameter in this step and it is framed by quotation marks.
-		И я делаю подсветку фрагмента текста в редакторе VA в строке в режиме обучения подсценарий 7 '"Part1 \\ Part2""' 'Step parameter'
+		И я делаю подсветку фрагмента текста в редакторе VA в строке в режиме обучения подсценарий 7 '"Part1 \\" Part2"' 'Step parameter'
 * To use a quote character inside a parameter, it is escaped with a backslash character.
 		И я делаю подсветку фрагмента текста в редакторе VA в строке в режиме обучения подсценарий 7 '\\"' 'Escaping quotation marks'
 
@@ -48,7 +48,7 @@
 
 * Curly braces can also be escaped.
 * If an expression in curly brackets is found inside the string and Vanessa Automation is set to calculate expressions in curly brackets, then an attempt will be made to calculate the expression.
-		И я делаю подсветку фрагмента текста в редакторе VA в строке в режиме обучения подсценарий 23 'CurlyBracketsString' 'Escaping curly braces'
+		И я делаю подсветку фрагмента текста в редакторе VA в строке в режиме обучения подсценарий 23 'StringInCurlyBrackets' 'Escaping curly braces'
 * If this option is disabled, then curly brackets can not be escaped.
 * This is done to maintain compatibility with the behavior of previous versions of Vanessa Automation.
 

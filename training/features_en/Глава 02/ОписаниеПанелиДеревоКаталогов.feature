@@ -16,8 +16,8 @@
 
 * It allows navigation through the file tree or quickly search for the required feature by file name or its contents.
 		И я перемещаю мышь в центр экрана
-		И я делаю подсветку элементов VA "ЭтотСеанс" "File panel" UI Automation
-			| 'Имя'                       | 'Type'  | 'РодительЭлемента'  |
+		И я делаю подсветку нескольких элементов VA с их заголовком "File panel" UI Automation
+			| 'Name'                       | 'Type'  | 'РодительЭлемента'  |
 			| 'ПутьКПапкеСФичами'         | ''     | ''                  |
 			| 'СтрокаДляПоискаВнутриФичи' | ''     | ''                  |
 			| 'ДревоФайлаФич'             | 'List' | 'ПутьКПапкеСФичами' |
@@ -61,7 +61,7 @@
 * At that there was a selection. Files with the specified string in their name are at the top of the list.
 		И я запоминаю элемент "ПараметрыШагов" с типом "" процесса "ЭтотСеанс" в переменную "IDЭлемента" UI Automation
 		И я делаю подсказку балун у элемента "$IDЭлемента$" UI Automation
-			| 'text' | 'В имени файла есть строка "Параметры"' |
+			| 'text' | 'There is a string "Parameters" in the file name' |
 
 * Next are the files containing this line.
 	

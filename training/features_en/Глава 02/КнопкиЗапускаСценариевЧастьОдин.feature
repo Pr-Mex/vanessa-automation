@@ -28,7 +28,7 @@
 			| 'Имя/ID'                 | 'Type' |
 			| 'Новый сценарий.feature' | ''    |
 
-			| 'Имя'  | 'Value'      |
+			| 'Name'  | 'Value'      |
 			| 'text' | 'New tab' |
 
 * We will talk about scripting syntax in separate lessons. And now let's move on.
@@ -85,15 +85,15 @@
 			И я запоминаю строку "Интерактивная справка. Знакомство с Vanessa Automation. Основные элементы формы. Description" в переменную "FieldName"
 
 		И я делаю эффект затемнения у элементов формы UI Automation "ЭтотСеанс"
-				| 'Имя/ID'    | 'Type' |
-				| '$ИмяПоля$' | ''    |
+				| 'Имя/ID'      | 'Type' |
+				| '$FieldName$' | ''    |
 
-				| 'Имя'  | 'Value'        |
+				| 'Name'  | 'Value'        |
 				| 'text' | 'String in the tree' |
 			
 		И Пауза 2
 			
-		И я делаю клик по элементу формы 'ЭтотСеанс' '$ИмяПоля$' '' UI Automation
+		И я делаю клик по элементу формы 'ЭтотСеанс' '$FieldName$' '' UI Automation
 		И Пауза 2
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ФормаПерейтиВVanessaEditor' UI Automation
 		И Пауза 2
@@ -125,8 +125,8 @@
 * And it remains to consider a few more commands. They allow to open recently opened files.
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ПодменюVanessaEditorЗагрузитьФичи' UI Automation
 		И Пауза 1
-		И я делаю подсветку элементов VA "ЭтотСеанс" "Recently opened files" UI Automation
-			| 'Имя'                |
+		И я делаю подсветку нескольких элементов VA с их заголовком "Recently opened files" UI Automation
+			| 'Name'                |
 			| 'МенюЗагрузитьФичи1' |
 			| 'МенюЗагрузитьФичи2' |
 			| 'МенюЗагрузитьФичи3' |

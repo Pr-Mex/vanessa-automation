@@ -1,19 +1,18 @@
-﻿# language: ru
+﻿# language: en
 
-Feature: Секция Переменные. Табличные.
+Feature: Variables section. Tabular.
 
-Переменные:
+Variables:
 
-	| 'Имя'                | 'Представление'  | 'Type'        |
-	| 'MainCounterparty1' | 'ООО Моя Фирма1' | 'Справочник' |
+	| 'Name'                | 'Performance'  | 'Type'        |
+	| 'MainCounterparty1' | 'OOO My Firma1' | 'Catalog' |
 
 * CompaniesList
-		| 'Имя'                | 'Представление'  | 'Type'        | 'Выражение'      |
-		| 'MainCounterparty2' | 'ООО Моя Фирма2' | 'Справочник' | '{Строка(2+2)}'  |
-		| 'MainCounterparty3' | 'ООО Моя Фирма3' | 'Справочник' | '{!Строка(2+2)}' |
+		| 'Name'                | 'Performance'  | 'Type'        | 'Expression'      |
+		| 'MainCounterparty2' | 'OOO My Firma2' | 'Catalog' | '{String(2+2)}'  |
+		| 'MainCounterparty3' | 'OOO My Firma3' | 'Catalog' | '{!String(2+2)}' |
 
-Scenario: Секция Переменные. Табличные.
+Scenario: Variables section. Tabular.
 	And I display "MainCounterparty1.Presentation" variable value
 	And I display "CounterpartyList.MainCounterparty2.Presentation" variable value
 	And I display "CounterpartyList.MainCounterparty3.Expression" variable value
-

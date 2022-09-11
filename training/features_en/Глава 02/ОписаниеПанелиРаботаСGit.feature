@@ -26,11 +26,11 @@
 		И Я делаю подсветку элемента VA "ДеревоGitОбновить" "Update status"
 	
 * These buttons add changes to the index and remove changes from the index
-		И я делаю подсветку элементов VA "ЭтотСеанс" "Working with index" UI Automation
-			| 'Имя'                               | 'Type' | 'РодительЭлемента' |
+		И я делаю подсветку нескольких элементов VA с их заголовком "Working with index" UI Automation
+			| 'Name'                               | 'Type' | 'РодительЭлемента' |
 			| 'ДеревоGitДобавитьВИндекс'          | ''    | ''                 |
 			| 'ДеревоGitДеревоGitУбратьИзИндекса' | ''    | ''                 |
-		И Пауза 5
+
 			
 
 * This button creates a new commit
@@ -43,16 +43,17 @@
 		И Я делаю подсветку элемента VA "ДеревоGitДеревоТекстСообщения" "MessageText"
 		
 * This field displays files and their statuses
-		Если я запоминаю элемент "File" с типом "List" процесса "ЭтотСеанс" в переменную "IDЭлемента" UI Automation тогда
+		И я запоминаю строку "Файл" в переменную "ИмяПоляДляПоиска"
+		Если я запоминаю элемент "$ИмяПоляДляПоиска$" с типом "List" процесса "ЭтотСеанс" в переменную "IDЭлемента" UI Automation тогда
 		Иначе
 			И я запоминаю элемент "File" с типом "List" процесса "ЭтотСеанс" в переменную "IDЭлемента" UI Automation 
 
 		
 		И я делаю эффект затемнения у элементов формы UI Automation "ЭтотСеанс"
-			| 'Имя'          | 'Type' |
+			| 'Name'          | 'Type' |
 			| '$IDЭлемента$' | ''    |
 			
-			| 'Имя'      | 'Value'         |
+			| 'Name'      | 'Value'         |
 			| 'text'     | 'Modified files' |
 			| 'duration' | 4000               |
 	
@@ -69,3 +70,5 @@
 		И Я делаю подсветку элемента VA "ДеревоGitPush" "Push"
 
 * That's it, move on to the next lesson of the interactive help.
+
+//Do not translate 46

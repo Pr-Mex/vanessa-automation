@@ -15,7 +15,7 @@
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ГруппаНастройкиОсновныеПрочее' UI Automation
 		И Пауза 1
 		И я делаю подсветку нескольких элементов VA с их заголовком "Other settings" UI Automation
-			| 'Имя'                                    |
+			| 'Name'                                    |
 			| 'ЗагрузкаФичПриОткрытии'                 |
 			| 'ЗапрашиватьПодтверждениеПриЗакрытии'    |
 			| 'ПоставщикПользовательскихНастроек'      |
@@ -24,23 +24,23 @@
 
 * This setting defines if it is necessary to restore the feature file that was last opened during the previous working session on Vanessa Automation launch.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Upload a feature on open" UI Automation
-			| 'Имя'                                    |
+			| 'Name'                                    |
 			| 'ЗагрузкаФичПриОткрытии'                 |
 
 * This setting is to define if to ask a question when closing the main Vanessa Automation form.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Question when closing the VA form" UI Automation
-			| 'Имя'                                 |
+			| 'Name'                                 |
 			| 'ЗапрашиватьПодтверждениеПриЗакрытии' |
 
 * This setting specifies the storage for scripts running general settings.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Settings provider" UI Automation
-			| 'Имя'                               |
+			| 'Name'                               |
 			| 'ПоставщикПользовательскихНастроек' |
 * This option is used very rarely.
 
 * And this setting determines the external editor to open the feature file.
 		И я делаю подсветку нескольких элементов VA с их заголовком "How to open a feature in an external editor" UI Automation
-			| 'Имя'                                    |
+			| 'Name'                                    |
 			| 'КомандаОткрытияФичиВТекстовомРедакторе' |
 
 * Now this option is rarely used, since Vanessa Automation has a built-in feature file editor.

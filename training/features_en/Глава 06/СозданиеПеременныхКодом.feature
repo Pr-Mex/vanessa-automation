@@ -10,7 +10,7 @@
 		И я открываю Vanessa Automation в режиме обучения
 
 * Let's upload a test case.
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерСозданиеПеременныхКодом.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерСозданиеПеременныхКодом.feature"
 
 * Variables can be created in the code in the built-in 1C language.
 	

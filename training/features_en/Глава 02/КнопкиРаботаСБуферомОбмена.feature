@@ -12,7 +12,7 @@
 
 * Excellent. Look. We will talk about this toolkit.
 		И я делаю подсветку нескольких элементов VA  "Working with clipboard" UI Automation
-			| 'Имя'                         |
+			| 'Name'                         |
 			| 'VanessaEditorClipboardCut'   |
 			| 'VanessaEditorClipboardPaste' |
 

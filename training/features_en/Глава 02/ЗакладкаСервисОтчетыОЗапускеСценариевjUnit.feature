@@ -17,12 +17,12 @@
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ГруппаjUnit' UI Automation
 		И Пауза 1
 		И я делаю подсветку нескольких элементов VA с их заголовком "Settings for generating a report in JUnit format" UI Automation
-			| 'Имя'                      |
+			| 'Name'                      |
 			| 'ДелатьОтчетВФорматеjUnit' |
 
 * To generate a report, you need to set this checkbox.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Enabling a report in JUnit format" UI Automation
-			| 'Имя'                      |
+			| 'Name'                      |
 			| 'ДелатьОтчетВФорматеjUnit' |
 		И Пауза 1
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ДелатьОтчетВФорматеjUnit' UI Automation
@@ -30,12 +30,12 @@
 
 * In this field, specify the directory to generate the report files
 		И я делаю подсветку нескольких элементов VA с их заголовком "Report directory" UI Automation
-			| 'Имя'                  |
+			| 'Name'                  |
 			| 'КаталогВыгрузкиJUnit' |
 	
 * This checkbox allows to attach screenshots to the report when working with Gitlab
 		И я делаю подсветку нескольких элементов VA с их заголовком "Attaching screenshots" UI Automation
-			| 'Имя'            |
+			| 'Name'            |
 			| 'СкриншотыjUnit' |
 
 * That's it, move on to the next lesson of the interactive help.

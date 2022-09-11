@@ -1,8 +1,8 @@
-﻿# language: ru
+﻿# language: en
 
-Feature: Пример как закрыть браузер после окончания выполнения тестов.
+Feature: Example of closing the browser after tests completion.
 
-Scenario: Пример как закрыть браузер после окончания выполнения тестов.
+Scenario: Example of closing the browser after tests completion.
 
 	And I close all browser tabs
 	

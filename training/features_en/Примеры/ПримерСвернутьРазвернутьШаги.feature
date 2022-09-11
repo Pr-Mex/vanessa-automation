@@ -1,8 +1,8 @@
-﻿# language: ru
+﻿# language: en
 
-Feature: Демонстрация свёртки/разворачивания групп шагов
+Feature: Demo of step groups collapse/expand
 
-Scenario: Демонстрация свёртки/разворачивания групп шагов один
+Scenario: Demo of step groups collapce/expand one
 
 * Group of steps 1
 * Group of steps 2
@@ -14,7 +14,7 @@ Scenario: Демонстрация свёртки/разворачивания �
 * Group of steps 3
 				And Delay 1
 				
-Scenario: Демонстрация свёртки/разворачивания групп шагов два
+Scenario: Demo of step groups collapce/expand two
 
 * Group of steps 1
 * Group of steps 2

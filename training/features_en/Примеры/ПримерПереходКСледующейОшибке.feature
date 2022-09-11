@@ -1,19 +1,18 @@
-﻿# language: ru
+﻿# language: en
 
-Feature: Демонстрация быстрого перехода к строке с ошибкой
+Feature: Demo of a quick jump to error line
 
-Scenario: Демонстрация быстрого перехода к строке с ошибкой 1
+Scenario: Demo of a quick jump to error line 1
 	And Delay 0.1
 	Then I raise "Test exception 1" exception
 
 
-Scenario: Демонстрация быстрого перехода к строке с ошибкой 2
+Scenario: Demo of a quick jump to error line 2
 	And Delay 0.1
 	Then I raise "Test exception 2" exception
 
 	
-Scenario: Демонстрация быстрого перехода к строке с ошибкой 3
+Scenario: Demo of a quick jump to error line 3
 	And Delay 0.1
 	Then I raise "Test exception 3" exception
 	
-

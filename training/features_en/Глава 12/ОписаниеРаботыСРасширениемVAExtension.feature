@@ -11,7 +11,7 @@
 
 * Let's upload a test case.
 		И я устанавливаю опцию VA в режиме обучения "ПроверкаСинтаксисаВРедакторе" "Истина"
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерОписаниеРаботыСРасширениемVAExtension.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерОписаниеРаботыСРасширениемVAExtension.feature"
 
 * The VAExtension universal extension allows to expand the capabilities of autotesting and bypass some API platform limitations.
 * The extension opens all functions menu, executes arbitrary code on Test Client side, and much more.

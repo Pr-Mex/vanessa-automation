@@ -11,7 +11,7 @@
 
 * And upload a test example.
 		И я устанавливаю опцию VA в режиме обучения "ПроверкаСинтаксисаВРедакторе" "Истина"
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерГорячиеКлавишиРедактора.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерГорячиеКлавишиРедактора.feature"
 
 * Let's start with the search. To open the text search dialog, press shortcut Control. Plus. F.
 		И Я делаю подсветку фрагмента текста в редакторе VA в режиме обучения подсценарий "Ctrl+F" 'Ctrl+F (for search)'

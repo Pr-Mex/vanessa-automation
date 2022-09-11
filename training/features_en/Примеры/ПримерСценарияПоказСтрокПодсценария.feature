@@ -1,12 +1,12 @@
-﻿# language: ru
+﻿# language: en
 
 
 
-Feature: Показ строк подсценария в редакторе
+Feature: Subscripts lines appearance in the editor
 
-Scenario: Показ строк подсценария в редакторе
+Scenario: Subscripts lines appearance in the editor
 
-	Дано Я запускаю подсценарий на выполнение
+	Given I launch a subscript for execution
 	
 	And I save "4+4" in "VariableName4" variable
 

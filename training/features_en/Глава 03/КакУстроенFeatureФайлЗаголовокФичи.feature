@@ -11,12 +11,12 @@
 
 * And let's upload a test example. With its help, we will clearly analyze the text in Gherkin language structure.
 		И я устанавливаю опцию VA в режиме обучения "ПроверкаСинтаксисаВРедакторе" "Ложь"
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерКакУстроенФичаФайл.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерКакУстроенФичаФайл.feature"
 
 * Look. There are several sections in the feature file structure.
 
 * At the very beginning of the file, a directive can be described, which indicates the language of this feature file.
-		И я делаю подсветку текста в редакторе VA в режиме обучения в строке 1 "Язык фича файла" подсценарий
+		И я делаю подсветку текста в редакторе VA в режиме обучения в строке 1 "Feature file language" подсценарий
 
 * If this string is not specified, then the default language is considered Russian.
 
@@ -30,7 +30,7 @@
 * Next is the name of the functionality that is implemented in the feature file.
 
 * First, the keyword Functionality or similar is written.
-		И я делаю подсветку фрагмента текста в редакторе VA в режиме обучения "Functionality:" "Keyword Functionality" подсценарий
+		И я делаю подсветку фрагмента текста в редакторе VA в режиме обучения "Feature:" "Keyword Feature" подсценарий
 
 * Next, the name of the functionality is placed on the right. For example: creating a Customer order, or checking stock balances, and so on.
 		И я делаю подсветку фрагмента текста в редакторе VA в режиме обучения "Functionality name" "Functionality name" подсценарий

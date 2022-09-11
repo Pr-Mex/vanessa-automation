@@ -11,7 +11,7 @@
 
 * Let's upload a test case.
 		И я устанавливаю опцию VA в режиме обучения "ПроверкаСинтаксисаВРедакторе" "Истина"
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерШагиДляРаботыСUIAutomation.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерШагиДляРаботыСUIAutomation.feature"
 
 * A significant point. The UI Automation mechanism is Microsoft technology. Therefore, it only works under Windows operating system.
 * To read more about this technology, follow this link.

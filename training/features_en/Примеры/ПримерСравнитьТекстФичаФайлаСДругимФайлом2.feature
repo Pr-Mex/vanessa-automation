@@ -1,9 +1,8 @@
-﻿# language: ru
+﻿# language: en
 
-Feature: Пример как сравнить текст фича файла с другим файлом
+Feature: Example of comparison feature file text with another file
 
-Scenario: Пример как сравнить текст фича файла с другим файлом
+Scenario: Example of comparison feature file text with another file
 
 * Steps group
 		And Delay 2
-

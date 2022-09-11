@@ -20,7 +20,7 @@
 * A separate type of auto-documentation is the interactive help that you are currently looking at.
 * But behind each type of auto-documentation there is a script in the Gherkin language, which is run in Vanessa Automation with certain settings.
 * To dive deeper into the topic of auto-documentation, follow this link.
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерАвтоинструкцииОбзорВозможностей.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерАвтоинструкцииОбзорВозможностей.feature"
 		И Я делаю подсветку текста в редакторе VA в режиме обучения с 8 по 8 строку 'To get acquainted with the topic - start with this' подсценарий
 
 * That's it, move on to the next lesson of the interactive help.

@@ -14,7 +14,7 @@
 		И Я делаю подсветку элемента формы VA по имени "ГруппаVanessaEditorПоискВТексте" "Text search and replace buttons"
 
 * Let's upload a test case
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерКнопкиПоиска.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерКнопкиПоиска.feature"
 
 * Use this command to find a fragment of text in the script. Or press the hotkey Control plus. F.
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ГруппаVanessaEditorПоискВТексте' UI Automation

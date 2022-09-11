@@ -17,19 +17,19 @@
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ГруппаПриВозникновенииОшибки' UI Automation
 		И Пауза 1
 		И я делаю подсветку нескольких элементов VA с их заголовком "Processing on error occurence" UI Automation
-			| 'Имя'                                               |
+			| 'Name'                                               |
 			| 'ОстановкаПриВозникновенииОшибки'                   |
 			| 'ПоказыватьНомерСтрокиДереваПриВозникновенииОшибки' |
 
 * If this checkbox is set, the testing session will be stopped on the first error occurence during script execution.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Stop at error" UI Automation
-			| 'Имя'                             |
+			| 'Name'                             |
 			| 'ОстановкаПриВозникновенииОшибки' |
 * This option is convenient when you need to find an issue in the script and fix it immediately.
 
 * Let's continue. This setting is outdated. It controls that when tests are run in tree mode, an additional column will be shown in the step tree if an error occurs.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Show tree line number" UI Automation
-			| 'Имя'                                               |
+			| 'Name'                                               |
 			| 'ПоказыватьНомерСтрокиДереваПриВозникновенииОшибки' |
 * This setting is left for compatibility.
 

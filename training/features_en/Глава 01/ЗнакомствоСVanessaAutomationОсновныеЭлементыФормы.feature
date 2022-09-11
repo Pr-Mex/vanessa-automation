@@ -13,15 +13,10 @@
 * Excellent. First, let's look here. There are six bookmarks on the main form of Vanessa Automation. Each of them has its own purpose. There will be a separate lesson for each bookmark, and now we will quickly talk about why they are needed.
 		И Пауза 3
 		
-		И я делаю подсветку элементов VA "ЭтотСеанс" "The main tabs of the form." UI Automation
-			| 'Имя'                |
+		И я делаю подсветку нескольких элементов VA с их заголовком "The main tabs of the form." UI Automation
+			| 'Name'                |
 			| 'ГруппаЗапускТестов' |
 			| 'ГруппаНастройки'    |
-
-	
-		И Пауза 4
-
-
 
 	//Закладка "Запуск сценариев"
 * On framework launch, the first one is active, which is called "Running Scripts".

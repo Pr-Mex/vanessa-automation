@@ -1,13 +1,12 @@
-﻿# language: ru
+﻿# language: en
 
 @ExportScenarios
 
-Feature: Демонстрация как параметр подсценария поместить в переменную.
+Feature: Demo of placing subscript parameter in a variable.
 
-Scenario: Тестовый экспортый сценарий с параметром "Parameter1"
+Scenario: Test export script with parameter "Parameter1"
 	
 	And I save "Parameter1" line to the variable "VariableName"
 	
 	
-
 

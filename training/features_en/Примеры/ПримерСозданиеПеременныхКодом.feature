@@ -1,20 +1,20 @@
-﻿# language: ru
+﻿# language: en
 
-Feature: Демонстрация как создавать переменные кодом
+Feature: Demo of creating variables by code
 
-Scenario: Демонстрация как создавать переменные кодом
+Scenario: Demo of creating variables by code
 
 * Creating a local variable
 			And I execute 1C:Enterprise script
 			"""bsl
-				Контекст.Вставить("LocalVariable", "ЗначениеЛокальнойПеременной");
+				Context.Insert("LocalVariable", "LocalVariableValue");
 			"""
 			And I display "LocalVariable" variable value
 		
 * Creating a global variable
 			And I execute 1C:Enterprise script
 			"""bsl
-				КонтекстСохраняемый.Вставить("ГлобальнаяПеременная", "ЗначениеГлобальнойПеременной");
+				ContextSaved.Insert("GlobalVariable", "GlobalVariableValue");
 			"""
 			And I display "$$GlobalVariable$$" variable value
 			

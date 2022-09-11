@@ -14,7 +14,7 @@
 		И Я делаю подсветку элемента формы VA по имени "ГруппаVanessaEditorСвернутьШаги" "Collapse/expand step groups"
 
 * Let's upload a test case
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерСвернутьРазвернутьШаги.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерСвернутьРазвернутьШаги.feature"
 
 * After feature file downloading, all step groups are displayed expanded.
 * It is often convenient to collapse part of the script lines.

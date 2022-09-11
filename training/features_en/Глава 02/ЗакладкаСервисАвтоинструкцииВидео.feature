@@ -17,7 +17,7 @@
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ГруппаРаботаСВидео' UI Automation
 		И Пауза 1
 		И я делаю подсветку нескольких элементов VA с их заголовком "Video settings" UI Automation
-			| 'Имя'                      |
+			| 'Name'                      |
 			| 'СоздаватьИнструкциюВидео' |
 
 * Creating video instructions is a very big topic.

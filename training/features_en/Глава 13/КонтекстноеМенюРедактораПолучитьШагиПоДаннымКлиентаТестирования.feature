@@ -11,7 +11,7 @@
 
 * Let's upload a test case.
 		И я устанавливаю опцию VA в режиме обучения "ПроверкаСинтаксисаВРедакторе" "Истина"
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерКонтекстноеМенюРедактораПустойСценарий.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерКонтекстноеМенюРедактораПустойСценарий.feature"
 
 
 * To get the steps that describe the state of Test client form, there are four commands.

@@ -11,7 +11,7 @@
 
 * And upload a test example.
 		И я устанавливаю опцию VA в режиме обучения "ПроверкаСинтаксисаВРедакторе" "Ложь"
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерПараметрыШагов.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерПараметрыШагов.feature"
 
 * Vanessa Automation steps support three types of parameters. It is String, Number, or Date.
 * String parameters are used the most commonly.

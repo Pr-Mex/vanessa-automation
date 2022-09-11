@@ -1,21 +1,20 @@
-﻿# language: ru
+﻿# language: en
 
-Feature: Примеры ключевых слов Gherkin
+Feature: Examples of Gherkin keywords
 
-Scenario: Примеры ключевых слов Gherkin
+Scenario: Examples of Gherkin keywords
 
-	Дано пример шага с ключевым словом Дано
+	Given an example of a step with the keyword Given
 	
-	Когда пример шага с ключевым словом Когда
+	When keyword step example When
 
-	И пример шага с ключевым словом И
+	And an example of a step with the And keyword
 
-	Тогда пример шага с ключевым словом Тогда
+	Then example step with Then keyword
 
-	К тому же пример шага с ключевым словом К тому же
+	Also addition, an example of a step with the keyword Also addition
 
-	// Полный список ключевых слов смотри по этой ссылке.
-	// Чтобы открыть ссылку надо сделать ctrl+Click
+	// See this link for a complete list of keywords.
+	// To open the link you need to do ctrl+Click
 	// https://github.com/cucumber/common/blob/main/gherkin/gherkin-languages.json
-
 

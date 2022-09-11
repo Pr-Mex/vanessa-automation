@@ -17,7 +17,7 @@
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ГруппаВыполнениеСценариевПрочее' UI Automation
 		И Пауза 1
 		И я делаю подсветку нескольких элементов VA с их заголовком "Other settings" UI Automation
-			| 'Имя'                                         |
+			| 'Name'                                         |
 			| 'ВыполнятьSleepЧерезPing'                     |
 			| 'ЗапрещатьПерезаписыватьПеременные'           |
 			| 'ОбновлятьТаблицыФормыПриПолученииЗначения'   |
@@ -25,26 +25,26 @@
 
 * If this option is enabled, Vanessa Automation pause will be executed via ping command.
 		И я делаю подсветку нескольких элементов VA с их заголовком "How to perform sleep" UI Automation
-			| 'Имя'                     |
+			| 'Name'                     |
 			| 'ВыполнятьSleepЧерезPing' |
 * This option may be needed only if VanessaExt component is disabled.
 
 * Let's continue. If this checkbox is set, then variables overwriting will be disables during script execution.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Restriction of overwriting variables" UI Automation
-			| 'Имя'                               |
+			| 'Name'                               |
 			| 'ЗапрещатьПерезаписыватьПеременные' |
 * This option should be used if necessary.
 
 
 * Let's continue. If this checkbox is set, then on attempt to get tables values on the form, Vanessa will try to update the table data, if possible.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Update form tables" UI Automation
-			| 'Имя'                                       |
+			| 'Name'                                       |
 			| 'ОбновлятьТаблицыФормыПриПолученииЗначения' |
 * This option can be used if necessary.
 
 * Let's continue. If this checkbox is set, then the VAExtension extension will be used to transfer template data from Test Client to Test Manager.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Pass template data" UI Automation
-			| 'Имя'                                         |
+			| 'Name'                                         |
 			| 'ПолучатьМакетыСПомощьюРасширенияVAExtension' |
 
 * This option is recommended for use. For its operation, it is necessary to install VAExtension extension to Test Client database.

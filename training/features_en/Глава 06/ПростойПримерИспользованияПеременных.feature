@@ -13,7 +13,7 @@
 * There are local and global variables.
 
 * Let's upload a test case.
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерДляЧегоНужныПеременные.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерДляЧегоНужныПеременные.feature"
 
 * First, let's look at an example of working with local variables.
 		И Я делаю подсветку текста в редакторе VA в режиме обучения с 7 по 9 строку 'Create and use a local variable' подсценарий

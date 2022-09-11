@@ -11,10 +11,10 @@
 
 * And upload a test example.
 		И я устанавливаю опцию VA в режиме обучения "ПроверкаСинтаксисаВРедакторе" "Ложь"
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерКакУстроенФичаФайл.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерКакУстроенФичаФайл.feature"
 
 * Next is the Context section. It is indicated by the corresponding keyword.
-		И я делаю подсветку фрагмента текста в редакторе VA в режиме обучения "Context:" "Keyword Context" подсценарий
+		И я делаю подсветку фрагмента текста в редакторе VA в режиме обучения "Background:" "Keyword Context" подсценарий
 * The meaning of this section is that it contains the steps that will be performed before each feature file script.
 * In this case, these are the two steps.
 		И я делаю подсветку текста в редакторе VA в режиме обучения с 14 по 15 строку "Steps in the Context section" подсценарий

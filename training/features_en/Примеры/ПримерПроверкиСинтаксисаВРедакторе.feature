@@ -1,12 +1,11 @@
-﻿# language: ru
+﻿# language: en
 
 
 
-Feature: Пример проверки синтаксиса в редакторе.
+Feature: Example of syntax control in the editor.
 
-Scenario: Пример проверки синтаксиса в редакторе.
+Scenario: Example of syntax control in the editor.
 	
-	Дано такого шага не существует
+	No such step exists
 	
-	И такого шага не существует
-
+	And there is no such step.

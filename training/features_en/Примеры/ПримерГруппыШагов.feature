@@ -1,21 +1,20 @@
-﻿# language: ru
+﻿# language: en
 
 @tree
 
-Feature: Группы шагов. Тег @tree
+Feature: Step groups. Tag @tree
 
-Scenario: Группы шагов. Тег @tree
+Scenario: Step groups. Tag @tree
 
 * Group of steps 1.
-		Дано Шаг внутри группы первого уровня
+		Given Step within the first level group
 		
 * Group of steps 2.
-			Дано Шаг внутри группы второго уровня
+			Given Step within the second level group
 
 * Another group of steps
-			Дано Шаг внутри группы второго уровня
+			Given Step within the second level group
 
-	Это тоже группа шагов. 
-		Дано Шаг внутри группы первого уровня
-
+	This is also a group of steps. 
+		Given Step within the first level group
 

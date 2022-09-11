@@ -10,13 +10,13 @@
 		И я открываю Vanessa Automation в режиме обучения
 
 * And upload a test example.
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерИспользованиеПеременныхВнутриПараметровШагов.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерИспользованиеПеременныхВнутриПараметровШагов.feature"
 
 * A variable can be passed as a parameter value in a step.
 * Also, a variable can be passed as part of the parameter value in a step.
 
 * This step creates one variable, CompanyName.
-		И Я делаю подсветку фрагмента текста в редакторе VA в строке в режиме обучения подсценарий 8 "CounterpartyName" 'Создаётся переменная "CounterpartyName"'
+		И Я делаю подсветку фрагмента текста в редакторе VA в строке в режиме обучения подсценарий 8 "CounterpartyName" '"Counterpartyname" variable is created'
 * Next, the value of this variable is passed to the second parameter of this step
 		И Я делаю подсветку фрагмента текста в редакторе VA в строке в режиме обучения подсценарий 9 "$ClientName$" 'A variable is passed to the step parameter'
 

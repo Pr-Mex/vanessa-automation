@@ -10,7 +10,7 @@
 		И я открываю Vanessa Automation в режиме обучения
 
 * Let's upload a test case.
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерКакИспользоватьПеременнуюДляВычисленияНаСервере.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерКакИспользоватьПеременнуюДляВычисленияНаСервере.feature"
 
 * There are two main options for passing a variable to an expression at the server.
 		И я перемещаю курсор к заголовку Vanessa Automation 

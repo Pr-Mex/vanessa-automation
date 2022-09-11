@@ -35,7 +35,7 @@
 * Let's upload a demo example.
 		И я делаю клик по заголовку Vanessa Automation
 		И Пауза 1
-		И я загружаю в режиме обучения VA тестовую фичу "$КаталогИнструментов$\training\features_en\ПримерыПримерСценарияПоказСтрокПодсценария.feature"
+		И я загружаю в режиме обучения VA тестовую фичу "$КаталогИнструментов$\training\features_en\Примеры\ПримерСценарияПоказСтрокПодсценария.feature"
 		
 * Excellent. In it, a special html insert has been added between the ninth and tenth lines, which shows the lines of this sub-script.
 * Now let's turn off the display of subscript lines
@@ -73,7 +73,7 @@
 		И Я делаю подсветку элемента VA "VanessaEditorПоказыватьЗначенияПеременныхВСтрокахРедактора" "Show variable values (inline debug)" и перемещаю курсор
 
 * To read more about this technology, follow this link.
-		И я загружаю в режиме обучения VA тестовую фичу "$КаталогИнструментов$\training\features_en\ПримерыПримерСценарияПоказСтрокПодсценария.feature"
+		И я загружаю в режиме обучения VA тестовую фичу "$КаталогИнструментов$\training\features_en\Примеры\ПримерСценарияПоказСтрокПодсценария.feature"
 		И Я запускаю сценарий VA в режиме обучения и жду окончания выполнения
 
 * At that information about the value of the variable that was assigned to it after performing the step appeared on the right in line eleven.
@@ -94,7 +94,7 @@
 * If this option is enabled, the editor will automatically check steps syntax. Let's upload a demo feature file.
 		И я делаю клик по заголовку Vanessa Automation
 		И Пауза 1
-		И я загружаю в режиме обучения VA тестовую фичу "$КаталогИнструментов$\training\features_en\ПримерыПримерПроверкиСинтаксисаВРедакторе.feature"
+		И я загружаю в режиме обучения VA тестовую фичу "$КаталогИнструментов$\training\features_en\Примеры\ПримерПроверкиСинтаксисаВРедакторе.feature"
 * The script has loaded and we see that the lines in the script are underlined in red, because these script steps were not found in the steps library.
 * If this option is disabled, the lines will no longer be underlined in color.
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ГруппаVanessaEditorНастройкиРедактора' UI Automation	
@@ -124,7 +124,7 @@
 * Which mode of displaying differences to use is up to user.
 * I would also like to note that two more buttons have appeared in the editor panel that allow you to navigate in the differences window.
 		И Я делаю подсветку нескольких элементов VA "Navigating the differences" UI Automation
-			| 'Имя'                       |
+			| 'Name'                       |
 			| 'VanessaEditorPreviousDiff' |
 			| 'VanessaEditorNextDiff'     |
 * When you click these buttons, you move to the next place where the text differs.
@@ -153,9 +153,12 @@
 * That's it, move on to the next lesson of the interactive help.
 		
 		Если существует элемент UI Automation "ЭтотСеанс" с именем "Отменить" и типом "button" Тогда
-			И я делаю клик по элементу формы 'ЭтотСеанс' 'Cancel visibility settings saving' UI Automation. Поиск по подсказке
+			И я запоминаю строку "Отменить сохранение настроек видимости" в переменную "ТекстПодсказки"
+			И я делаю клик по элементу формы 'ЭтотСеанс' '$ТекстПодсказки$' UI Automation. Поиск по подсказке
 		Иначе	
 			И я делаю клик по элементу формы 'ЭтотСеанс' 'Cancel' 'button' UI Automation
 
 		И Пауза 1
 		И я делаю клик по заголовку Vanessa Automation
+
+//Do not translate 156

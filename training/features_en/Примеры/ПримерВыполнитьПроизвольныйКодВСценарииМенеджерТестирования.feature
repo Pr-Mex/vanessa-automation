@@ -1,25 +1,24 @@
-﻿# language: ru
+﻿# language: en
 
-Feature: Примеры, как выполнить произвольный код в сценарии
+Feature: Examples of arbitrary code execution in a script
 
-Scenario: Примеры, как выполнить произвольный код в сценарии. На стороне МЕНЕДЖЕРА тестирования.
+Scenario: Examples of arbitrary code execution in a script. On TEST MANAGER side.
 
 * The code is executed at client
 		And I execute 1C:Enterprise script
 		"""bsl
-			Сообщить("Hello world.")
+			Message("Hello world.")
 		"""
 		
 * The code is executed at server with the context of Vanessa Automation
 		And I execute 1C:Enterprise script at server
 		"""bsl
-			Сообщить("Hello world.")
+			Message("Hello world.")
 		"""		
 	
 * The code is executed at server without the context of Vanessa Automation
 		And I execute 1C:Enterprise script at server no context
 		"""bsl
-			Сообщить("Hello world.")
+			Message("Hello world.")
 		"""		
 	
-

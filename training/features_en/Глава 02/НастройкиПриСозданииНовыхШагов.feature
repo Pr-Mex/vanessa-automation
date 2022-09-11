@@ -43,7 +43,7 @@
 
 * For more information on how to add a new step to the Gherkin step library, see this video.
 		И я устанавливаю опцию VA в режиме обучения "ПроверкаСинтаксисаВРедакторе" "Ложь"
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыКакСоздатьСвойШаг.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\КакСоздатьСвойШаг.feature"
 		И Пауза 1
 		И Я делаю подсветку текста в редакторе VA в режиме обучения с 8 по 8 строку 'For more information, see the video' подсценарий
 		

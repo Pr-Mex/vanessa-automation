@@ -11,7 +11,7 @@
 
 * Let's upload a test case.
 		И я устанавливаю опцию VA в режиме обучения "ПроверкаСинтаксисаВРедакторе" "Истина"
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерКакПравильноПроверитьДоступностьКнопкиПоля.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерКакПравильноПроверитьДоступностьКнопкиПоля.feature"
 
 * There are several steps that check the availability of form elements.
 		И Я делаю подсветку текста в редакторе VA в режиме обучения с 8 по 8 строку 'Example of element availability check' подсценарий
@@ -32,7 +32,7 @@
 * There is another solution to this problem.
 		
 * Try to perform an action with a form element, for example, click a button and check that an exception is being raised.
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерКакПравильноПроверитьДоступностьКнопкиПоля2.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерКакПравильноПроверитьДоступностьКнопкиПоля2.feature"
 
 * The first example uses a special step that checks the negative behavior of other steps.
 		И Я делаю подсветку текста в редакторе VA в режиме обучения с 10 по 11 строку 'Special step' подсценарий

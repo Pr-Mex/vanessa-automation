@@ -1,21 +1,20 @@
-﻿# language: ru
+﻿# language: en
 
-Feature: Примеры, как выполнить произвольный код в сценарии
+Feature: Examples of arbitrary code execution in a script
 
-Scenario: Примеры, как выполнить произвольный код в сценарии. На стороне КЛИЕНТА тестирования.
-	// Должно быть установлено расширение VAExtension
+Scenario: Examples of arbitrary code execution in a script. On TEST CLIENT side.
+	// VAExtension must be installed
 	// https://github.com/Pr-Mex/vanessa-automation/blob/develop/docs/VAExtension/VAExtension.md
 * The code is executed at client
 		And I execute the built-in language code (Extension)
 		"""bsl
-			Сообщить("Hello world.")
+			Message("Hello world.")
 		"""
 		
 * The code is executed at server
 		And I execute the built-in language code at server (Extension)
 		"""bsl
-			Сообщить("Hello world.")
+			Message("Hello world.")
 		"""
 	
 	
-

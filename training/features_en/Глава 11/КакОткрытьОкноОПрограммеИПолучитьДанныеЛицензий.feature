@@ -11,7 +11,7 @@
 
 * Let's upload a test case.
 		И я устанавливаю опцию VA в режиме обучения "ПроверкаСинтаксисаВРедакторе" "Истина"
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерКакОткрытьОкноОПрограммеИПолучитьДанныеЛицензий.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерКакОткрытьОкноОПрограммеИПолучитьДанныеЛицензий.feature"
 
 * This example opens the "About" window, and then puts the license information in a variable.
 * To reproduce the example, connect the Test client and execute the script.

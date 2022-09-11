@@ -1,8 +1,8 @@
-﻿# language: ru
+﻿# language: en
 
-Feature: Демонстрация работы с точками останова
+Feature: Demo of working with breakpoints
 
-Scenario: Демонстрация работы с точками останова
+Scenario: Demo of working with breakpoints
 
 	And Delay 0.1
 	And Delay 0.1
@@ -12,4 +12,3 @@ Scenario: Демонстрация работы с точками останов
 	And Delay 0.1
 	
 				
-

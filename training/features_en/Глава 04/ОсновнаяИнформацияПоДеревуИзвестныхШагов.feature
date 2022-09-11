@@ -11,6 +11,11 @@
 
 * The steps library is a special object where one can conveniently find a step to perform an action.
 * It is here.
+		Если существует элемент UI Automation "ЭтотСеанс" с именем "Генератор EPF" и типом "" Тогда
+			И я запоминаю строку "Истина" в переменную "ЯзыкРусский"
+		Иначе	
+			И я запоминаю строку "Ложь" в переменную "ЯзыкРусский"
+
 		И Я делаю подсветку элемента формы VA по имени "ГруппаVanessaEditorИнструменты" "Tools"
 		И Пауза 1
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ГруппаVanessaEditorИнструменты'
@@ -26,31 +31,37 @@
 		И Я делаю подсветку у дерева известных шагов "Tree of known steps"
 
 * Expand the tree nodes to get information about any step.
-		И я делаю клик по элементу формы 'ЭтотСеанс' 'UI' 'ListItem' UI Automation
+		Если существует элемент UI Automation "ЭтотСеанс" с именем "Built-in language" и типом "ListItem" Тогда
+			И Я запоминаю значение выражения 'Ложь' в переменную "ВДеревеШагиНаРусском"
+			И я делаю клик по элементу формы 'ЭтотСеанс' 'Built-in language' 'ListItem' UI Automation	
+		Иначе
+			И Я запоминаю значение выражения 'Истина' в переменную "ВДеревеШагиНаРусском"
+			И я делаю клик по элементу формы 'ЭтотСеанс' 'UI' 'ListItem' UI Automation
+			
 		И Пауза 1
 		И я нажимаю сочетание клавиш "Right"
 		И Пауза 1
 
-		И я делаю клик по элементу формы 'ЭтотСеанс' 'Всплывающие окна' 'ListItem' UI Automation
+		Если '$ВДеревеШагиНаРусском$' Тогда
+			И я делаю клик по элементу формы 'ЭтотСеанс' 'Всплывающие окна' 'ListItem' UI Automation
+		Иначе
+			И я делаю клик по элементу формы 'ЭтотСеанс' 'And I save "Expression" in "InitialCount" variable' 'ListItem' UI Automation	
 		И Пауза 1
 		И я нажимаю сочетание клавиш "Right"
 		И Пауза 1
 
-		И я делаю клик по элементу формы 'ЭтотСеанс' 'And I close warning window' 'ListItem' UI Automation
-		И Пауза 1
-		И я нажимаю сочетание клавиш "Right"
+		Если '$ВДеревеШагиНаРусском$' Тогда
+			И я делаю клик по элементу формы 'ЭтотСеанс' 'And I close warning window' 'ListItem' UI Automation
 		И Пауза 1
 		
 * Let's see what step information is available.
 * First of all, this is an example of how a step can be used in a script.
-		И Я делаю подсветку у строки дерева шагов 'And I close warning window' 'An example of usage a step in a script'
+		Если '$ВДеревеШагиНаРусском$' Тогда
+			И Я делаю подсветку у строки дерева шагов 'And I close warning window' 'An example of usage a step in a script'
+		Иначе	
+			И Я делаю подсветку у строки дерева шагов 'And I save "Expression" in "InitialCount" variable' 'An example of usage a step in a script'
 		
 * Here is information about epf file where the implementation of this step is located.
-		Если существует элемент UI Automation "ЭтотСеанс" с именем "File:" и типом "Text" Тогда
-			И я запоминаю строку "Истина" в переменную "ЯзыкРусский"
-		Иначе	
-			И я запоминаю строку "Ложь" в переменную "ЯзыкРусский"
-
 		Если '$ЯзыкРусский$' Тогда	
 			И Я делаю подсветку у поля дерева шагов 'File:' 'Which epf file contains the implementation of this step'
 		Иначе	

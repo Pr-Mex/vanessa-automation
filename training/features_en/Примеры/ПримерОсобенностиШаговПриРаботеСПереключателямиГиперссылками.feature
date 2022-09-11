@@ -1,8 +1,8 @@
-﻿# language: ru
+﻿# language: en
 
-Feature: Пример особенности шагов при работе с переключателями и гиперссылками.
+Feature: Example of the peculiarities of the steps when working with switches and hyperlinks.
 
-Scenario: Пример особенности шагов при работе с переключателями и гиперссылками.
+Scenario: Example of the peculiarities of the steps when working with switches and hyperlinks.
 
 * Switches
 		And I change the radio button named "ElementName" value to "SwitchValue"

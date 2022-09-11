@@ -62,7 +62,7 @@
 		И Я делаю подсветку элемента формы VA по имени и клик по нему "VanessaEditorПоказатьСкрытьТаблоПеременных" "Variables panel"
 
 * It controls the visibility of the panel, which displays the current state of variables and allows to edit them if necessary.
-		И я делаю подсветку у табло переменных VA
+		И я делаю подсветку у табло переменных VA "Variables panel"
 			
 
 * We will talk about this in more detail in work with variable panel section.

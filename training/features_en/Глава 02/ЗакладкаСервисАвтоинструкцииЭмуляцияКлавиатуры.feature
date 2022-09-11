@@ -17,12 +17,12 @@
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ГруппаЭмуляцияКлавиатуры' UI Automation
 		И Пауза 1
 		И я делаю подсветку нескольких элементов VA с их заголовком "Keyboard emulation settings" UI Automation
-			| 'Имя'                                 |
+			| 'Name'                                 |
 			| 'ЭмулироватьВводКлавиатурыVanessaExt' |
 
 * This checkbox specifies that text input into fields will be done by emulating keyboard input.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Enabling keyboard emulation" UI Automation
-			| 'Имя'                                 |
+			| 'Name'                                 |
 			| 'ЭмулироватьВводКлавиатурыVanessaExt' |
 * Enable VanessaExt component for this option.
 

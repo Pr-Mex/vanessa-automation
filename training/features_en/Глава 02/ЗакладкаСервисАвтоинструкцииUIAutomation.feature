@@ -17,12 +17,12 @@
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ГруппаАвтоинструкцииVanessaExtChrome' UI Automation
 		И Пауза 1
 		И я делаю подсветку нескольких элементов VA с их заголовком "UI Automation settings" UI Automation
-			| 'Имя'                      |
+			| 'Name'                      |
 			| 'ИспользоватьUIAutomation' |
 
 * This checkbox specifies that user wants to create auto-instructions using UI Automation in thin or thick client.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Enabling UI Automation for part of the steps" UI Automation
-			| 'Имя'                      |
+			| 'Name'                      |
 			| 'ИспользоватьUIAutomation' |
 * Enabling this option will cause some steps from the main library to try to search for form elements using UI Automation technology.
 * Thus, during the execution of a common script, you can get the effect of mouse movement, click animation and so on - using steps from the main step library.

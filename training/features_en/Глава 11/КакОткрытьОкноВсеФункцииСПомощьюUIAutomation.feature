@@ -11,7 +11,7 @@
 
 * Let's upload a test case.
 		И я устанавливаю опцию VA в режиме обучения "ПроверкаСинтаксисаВРедакторе" "Истина"
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерКакОткрытьОкноВсеФункцииСПомощьюUIAutomation.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерКакОткрытьОкноВсеФункцииСПомощьюUIAutomation.feature"
 
 * On the one hand, it is already possible to open the "All Functions" window using the VAExtension extension.
 * But if the extension is not connected, you can use this example, which will open the "All functions" window using UI Automation.

@@ -1,8 +1,8 @@
-﻿# language: ru
+﻿# language: en
 
-Feature: Демонстрация работы с выделенными строками
+Feature: Demo of working with selected lines
 
-Scenario: Демонстрация работы с выделенными строками
+Scenario: Demo of working with selected lines
 	And Delay 0.1
 	And Delay 0.1
 	And Delay 0.1
@@ -11,6 +11,5 @@ Scenario: Демонстрация работы с выделенными стр
 	And Delay 0.1
 	And Delay 0.1
 	And Delay 0.1
-
 
 

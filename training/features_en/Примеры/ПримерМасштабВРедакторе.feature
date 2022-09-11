@@ -1,19 +1,18 @@
-﻿# language: ru
+﻿# language: en
 
-Feature: Демонстрация изменения мастшаба
+Feature: Demo of scale change
 
-Scenario: Демонстрация изменения мастшаба 1
+Scenario: Demo of scale change 1
 	And Delay 0.1
 	Then I raise "Test exception 1" exception
 
 
-Scenario: Демонстрация изменения мастшаба 2
+Scenario: Demo of scale change 2
 	And Delay 0.1
 	Then I raise "Test exception 2" exception
 
 	
-Scenario: Демонстрация изменения мастшаба 3
+Scenario: Demo of scale change 3
 	And Delay 0.1
 	Then I raise "Test exception 3" exception
 	
-

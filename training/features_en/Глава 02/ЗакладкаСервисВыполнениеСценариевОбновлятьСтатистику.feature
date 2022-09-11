@@ -17,24 +17,24 @@
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ГруппаОбновлятьСтатистику' UI Automation
 		И Пауза 1
 		И я делаю подсветку нескольких элементов VA с их заголовком "Update script execution statistics" UI Automation
-			| 'Имя'                        |
+			| 'Name'                        |
 			| 'ОбновлятьСтатистикуВДереве' |
 
 * If this checkbox is set, then the information in the statistics field will be updated during the execution of the scripts.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Update script execution statistics" UI Automation
-			| 'Имя'                        |
+			| 'Name'                        |
 			| 'ОбновлятьСтатистикуВДереве' |
 
 		И Пауза 1
 			
 		И я делаю подсветку нескольких элементов VA с их заголовком "Statistical data" UI Automation
-			| 'Имя'        |
-			| 'Statistics' |
+			| 'Name'        |
+			| 'Статистика' |
 
 * Removing this checkbox makes sense only when running a very large number of scripts. Then removing the checkbox will slightly reduce the time of the testing session.
 
 * That's it, move on to the next lesson of the interactive help.
 
-
+//Do not translate 32
 
 

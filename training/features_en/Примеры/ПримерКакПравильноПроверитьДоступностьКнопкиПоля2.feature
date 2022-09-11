@@ -1,14 +1,14 @@
-﻿# language: ru
+﻿# language: en
 
-Feature: Как правильно проверить доступность кнопки, элемента или пункта меню.
+Feature: How to check the availability of a button, item or menu item correctly.
 
-Scenario: Как правильно проверить доступность кнопки, элемента или пункта меню.
+Scenario: How to check the availability of a button, item or menu item correctly.
 
 * Availability/visibility check through a special step
 
 		And a button named "ButtonName" exists
 		When I Check the steps for Exception
-				|'И я нажимаю на кнопку с именем "ButtonName"'|
+				|'And I click the button named "ButtonName"'|
 
 
 * Availability/visibility check through Try Except
@@ -22,4 +22,3 @@ Scenario: Как правильно проверить доступность к
 
 
 		
-

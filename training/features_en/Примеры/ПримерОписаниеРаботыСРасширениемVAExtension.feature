@@ -1,10 +1,9 @@
-﻿# language: ru
+﻿# language: en
 
-Feature: Примеры. Описание работы с расширением VAExtension.
+Feature: Examples. Description of working with VAExtension extension.
 
-Scenario: Примеры. Описание работы с расширением VAExtension.
+Scenario: Examples. Description of working with VAExtension extension.
 
 * Reference - extension description
 		//https://github.com/Pr-Mex/vanessa-automation/blob/develop/docs/VAExtension/VAExtension.md
-
 

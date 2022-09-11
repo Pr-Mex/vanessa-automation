@@ -1,13 +1,12 @@
-﻿# language: ru
+﻿# language: en
 
-Feature: Примеры, как выполнить выбор файла из диалога выбора файлов. Web клиент.
+Feature: Examples of file selection from the file selection dialog. Web client.
 
-Scenario: Примеры, как выполнить выбор файла из диалога выбора файлов. Web клиент.
+Scenario: Examples of file selection from the file selection dialog. Web client.
 
 * The action that launches the file selection dialog
 		And I click "Select a file" button
 		
 * A special step that replaces the result of file selection from the file selection dialog
 		And I select add-in file "FullPathToFile"
-
 

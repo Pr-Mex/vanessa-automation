@@ -19,32 +19,32 @@
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ГруппаАудиоОбщие' UI Automation
 		И Пауза 1
 		И я делаю подсветку нескольких элементов VA с их заголовком "General audio settings" UI Automation
-			| 'Имя'                                   |
+			| 'Name'                                   |
 			| 'ОзвучиватьВыполнениеСценария'          |
 			| 'ЗаписьВидеоГруппаШаговКакШаг1'         |
 			| 'ЗаписьВидеоКаталогДляВременныхФайлов1' |
 	
 * This checkbox enables the script execution voicing in real time.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Voice the execution of the script" UI Automation
-			| 'Имя'                          |
+			| 'Name'                          |
 			| 'ОзвучиватьВыполнениеСценария' |
 	
 * This option is convenient when debugging script voiceovers before compiling the video.
 * Also, this checkbox can be set and removed using this main panel button.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Voice the execution of the script" UI Automation
-			| 'Имя'                                              |
+			| 'Name'                                              |
 			| 'ПанельVanessaEditorОзвучиваниеВыполненияСценария' |
 
 * Let's continue. This checkbox enables the mode when a group of script steps is treated as one step for an auto-instruction.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Steps group as a step" UI Automation
-			| 'Имя'                           |
+			| 'Name'                           |
 			| 'ЗаписьВидеоГруппаШаговКакШаг1' |
 	
 * It is recommended to leave this option enabled.
 
 * Let's continue. This field specifies the directory where temporary voiceover files will be generated.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Temporary file directory" UI Automation
-			| 'Имя'                                   |
+			| 'Name'                                   |
 			| 'ЗаписьВидеоКаталогДляВременныхФайлов1' |
 	
 

@@ -17,31 +17,31 @@
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ГруппаНастройкиАвтоинструкцийПриРаботеСБраузером' UI Automation
 		И Пауза 1
 		И я делаю подсветку нескольких элементов VA с их заголовком "Browser settings" UI Automation
-			| 'Имя'                                        |
+			| 'Name'                                        |
 			| 'ИспользоватьБраузерПлюсWebSocket'           |
 			| 'ИгнорироватьОшибкиПоискаЭлементовВБраузере' |
 			| 'КоэффициентМасштабированияЭкрана'           |
 
 * This checkbox enables Chrome browser interaction through a special port.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Working with Chrome via special port" UI Automation
-			| 'Имя'                              |
+			| 'Name'                              |
 			| 'ИспользоватьБраузерПлюсWebSocket' |
 * This option should be used when you want to create an auto-instruction, an the Test Client is running in a browser.
 * Enabling this option will cause some steps from the main library to try to search for form elements directly in the browser.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Working with Chrome via special port" UI Automation
-			| 'Имя'                              |
+			| 'Name'                              |
 			| 'ИспользоватьБраузерПлюсWebSocket' |
 * Thus, during the execution of a common script, you can get the effect of mouse movement, click animation and so on - using steps from the main step library.
 
 * Let's continue. If this checkbox is set, then the script will not fail if the form element search fails in the browser.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Skip element search errors" UI Automation
-			| 'Имя'                                        |
+			| 'Name'                                        |
 			| 'ИгнорироватьОшибкиПоискаЭлементовВБраузере' |
 * This checkbox should be used according to the situation.
 
 * Let's continue. This field specifies the screen scaling factor.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Screen scale" UI Automation
-			| 'Имя'                              | 'Type' | 'ИмяЭлементаСТемжеРодителем' | 'ТолькоВертикальныеКоординаты' |
+			| 'Name'                              | 'Type' | 'ИмяЭлементаСТемжеРодителем' | 'ТолькоВертикальныеКоординаты' |
 			| 'КоэффициентМасштабированияЭкрана' | ''    | ''                           | 'Ложь'                         |
 * This value must be changed if screen scaling is used in the operating system.
 

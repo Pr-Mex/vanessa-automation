@@ -11,9 +11,13 @@
 
 * Let's upload a test case.
 		И я устанавливаю опцию VA в режиме обучения "ПроверкаСинтаксисаВРедакторе" "Истина"
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерКонтекстноеМенюРедактораТаблицыGherkin.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерКонтекстноеМенюРедактораТаблицыGherkin.feature"
 
 * In the context menu of the editor, it is possible to work with Gherkin tables.
+		Если существует элемент UI Automation "ЭтотСеанс" с именем "Генератор EPF" и типом "" Тогда
+			И я запоминаю строку "Истина" в переменную "ЯзыкРусский"
+		Иначе	
+			И я запоминаю строку "Ложь" в переменную "ЯзыкРусский"
 		И я делаю клик по элементу формы 'ЭтотСеанс' '' 'Document' правой кнопкой UI Automation
 		И Пауза 1
 
@@ -27,11 +31,14 @@
 * This window allows to quickly edit the table and put the result back into the script.
 
 * In this table, you can edit the cell values.
-		И я запоминаю родителя элемента "\'ИмяКолонки1\' ИмяКолонки1" с типом "" процесса "ЭтотСеанс" в переменную "IDЭлемента" UI Automation
+		И я запоминаю родителя элемента "\'ColumnName1\' ColumnName1" с типом "" процесса "ЭтотСеанс" в переменную "IDЭлемента" UI Automation
 		И я делаю подсветку элемента с ID '$IDЭлемента$' 'Edit cells'		
 
 * And this table controls columns visibility.
-		И я запоминаю родителя элемента "ИмяКолонки1 " с типом "" процесса "ЭтотСеанс" в переменную "IDЭлемента" UI Automation
+		Если '$ЯзыкРусский$' Тогда
+			И я запоминаю родителя элемента "ИмяКолонки1 " с типом "" процесса "ЭтотСеанс" в переменную "IDЭлемента" UI Automation
+		Иначе	
+			И я запоминаю родителя элемента "ColumnName1 " с типом "" процесса "ЭтотСеанс" в переменную "IDЭлемента" UI Automation
 		И я делаю подсветку элемента с ID '$IDЭлемента$' 'Column visibility'		
 
 * This button sets the visibility of all table columns.

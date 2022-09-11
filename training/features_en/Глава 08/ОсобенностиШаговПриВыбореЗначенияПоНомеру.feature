@@ -11,7 +11,7 @@
 
 * Let's upload a test case.
 		И я устанавливаю опцию VA в режиме обучения "ПроверкаСинтаксисаВРедакторе" "Истина"
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерОсобенностиШаговПриРаботеСПереключателямиГиперссылками.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерОсобенностиШаговПриРаботеСПереключателямиГиперссылками.feature"
 
 * There are two ways to set the switch value.
 * You can set its values by its presentation on the screen.

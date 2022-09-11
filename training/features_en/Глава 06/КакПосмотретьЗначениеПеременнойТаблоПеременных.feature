@@ -10,7 +10,7 @@
 		И я открываю Vanessa Automation в режиме обучения
 
 * And upload a test example.
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерПосмотретьЗначениеПеременной.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерПосмотретьЗначениеПеременной.feature"
 
 * And we will execute it
 		И Я запускаю сценарий VA в режиме обучения и жду окончания выполнения	
@@ -28,7 +28,7 @@
 		И Я делаю подсветку элемента формы VA по имени и клик по нему "VanessaEditorПоказатьСкрытьТаблоПеременных" "Variables panel"
 	
 * This tool allows you to view the values ​​of any variables. It also allows to change their values.
-		И я делаю подсветку у табло переменных VA
+		И я делаю подсветку у табло переменных VA "Variables panel"
 
 * That's it, move on to the next lesson of the interactive help.
 

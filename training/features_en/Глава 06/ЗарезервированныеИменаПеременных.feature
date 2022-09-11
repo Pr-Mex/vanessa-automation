@@ -10,7 +10,7 @@
 		И я открываю Vanessa Automation в режиме обучения
 
 * Let's upload a test case.
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерСлужебныеПеременные.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерСлужебныеПеременные.feature"
 
 * There are three service variables. To refer to a service variable, frame its name with dollar characters.
 

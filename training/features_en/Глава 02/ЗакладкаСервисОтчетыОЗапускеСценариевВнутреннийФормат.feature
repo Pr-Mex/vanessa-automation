@@ -17,12 +17,12 @@
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ГруппаОтчетВоВнутреннемФормате' UI Automation
 		И Пауза 1
 		И я делаю подсветку нескольких элементов VA с их заголовком "Settings for generating a report in internal format" UI Automation
-			| 'Имя'                            |
+			| 'Name'                            |
 			| 'ДелатьОтчетВоВнутреннемФормате' |
 
 * To generate a report, you need to set this checkbox.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Enabling the report in internal format" UI Automation
-			| 'Имя'                            |
+			| 'Name'                            |
 			| 'ДелатьОтчетВоВнутреннемФормате' |
 		И Пауза 1
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ДелатьОтчетВоВнутреннемФормате' UI Automation

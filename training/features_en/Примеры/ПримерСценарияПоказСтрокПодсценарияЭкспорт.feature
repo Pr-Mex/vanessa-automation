@@ -1,10 +1,10 @@
-﻿# language: ru
+﻿# language: en
 
 @ExportScenarios
 
-Feature: Экспортная фича для режима обучения
+Feature: Export feature for training mode
 
-Scenario: Я запускаю подсценарий на выполнение
+Scenario: I launch a subscript for execution
 
 	And I save "1+1" in "VariableName1" variable
 	And I save "2+2" in "VariableName2" variable

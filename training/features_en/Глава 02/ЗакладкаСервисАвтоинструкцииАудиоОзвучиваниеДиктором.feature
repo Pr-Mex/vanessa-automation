@@ -19,7 +19,7 @@
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ОзвучкаГолосом' UI Automation
 		И Пауза 1
 		И я делаю подсветку нескольких элементов VA с их заголовком "Voiceover by narrator" UI Automation
-			| 'Имя'                                |
+			| 'Name'                                |
 			| 'ЗаписьВидеоТипОзвучкиTTS'           |
 			| 'ЗаписьВидеоYandexTTSЯзык'           |
 			| 'ЗаписьВидеоYandexTTSГолос'          |
@@ -30,7 +30,7 @@
 * A significant point. Vanessa Automation supports different engines for text voiceover.
 * Now the screen displays the settings for voiceover by Yandex Speechkit technology.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Voiceover using Yandex Speechkit" UI Automation
-			| 'Имя'                                |
+			| 'Name'                                |
 			| 'ЗаписьВидеоТипОзвучкиTTS'           |
 			| 'ЗаписьВидеоYandexTTSЯзык'           |
 			| 'ЗаписьВидеоYandexTTSГолос'          |
@@ -64,7 +64,7 @@
 
 * A significant point. The current voiceover settings can always be checked using these elements.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Check settings" UI Automation
-			| 'Имя'                           |
+			| 'Name'                           |
 			| 'ТекстДляТестаГолоса'           |
 			| 'ТестГолосаПроизнести'          |
 			| 'ТестГолосаОткрытьФалйTTS_В_ОС' |

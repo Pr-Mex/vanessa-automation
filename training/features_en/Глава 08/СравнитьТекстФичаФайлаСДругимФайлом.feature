@@ -11,7 +11,7 @@
 
 * Let's upload a test case.
 		И я устанавливаю опцию VA в режиме обучения "ПроверкаСинтаксисаВРедакторе" "Истина"
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерСравнитьТекстФичаФайлаСДругимФайлом1.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерСравнитьТекстФичаФайлаСДругимФайлом1.feature"
 
 * There are situations when you need to compare the text of the current feature file with another feature file to quickly see the differences.
 * This can be done immediately in Vanessa Automation.
@@ -21,7 +21,7 @@
 		И Я делаю подсветку элемента VA "VanessaEditorСравнитьСДругимФичаФайлом" "Compare with another feature file" и перемещаю курсор
 
 * After executing the command, a dialog of differences between files will open
-		И я устанавливаю значение дополнительного параметра Vanessa Automation "ИмяФайлаДляСравнения" в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерСравнитьТекстФичаФайлаСДругимФайлом2.feature"
+		И я устанавливаю значение дополнительного параметра Vanessa Automation "ИмяФайлаДляСравнения" в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерСравнитьТекстФичаФайлаСДругимФайлом2.feature"
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'VanessaEditorСравнитьСДругимФичаФайлом' UI Automation
 		И Пауза 1
 		

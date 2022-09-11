@@ -1,8 +1,8 @@
-﻿# language: ru
+﻿# language: en
 
-Feature: Демонстрация как использовать переменные внутри параметров шагов
+Feature: Demo of using variables inside step parameters
 
-Scenario: Демонстрация как использовать переменные внутри параметров шагов
+Scenario: Demo of using variables inside step parameters
 
 * The entire parameter value is replaced by the variable value
 		And I save "Daisy LLC" line to the variable "CounterpartyName"
@@ -13,4 +13,3 @@ Scenario: Демонстрация как использовать переме�
 		And I save "Daisy" line to the variable "VariableDaisy"
 		And I input "$Variable1$ $Variable2$" text in the field named "Counterparty"
 		
-

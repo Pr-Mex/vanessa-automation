@@ -11,7 +11,7 @@
 		И я скрываю часть кнопок командной панели редактора в режиме обучения
 
 * Let's upload a test case.
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерМасштабВРедакторе.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерМасштабВРедакторе.feature"
 
 * Vanessa Automation editor allows to increase or decrease the text size.
 * Click this button to zoom in.

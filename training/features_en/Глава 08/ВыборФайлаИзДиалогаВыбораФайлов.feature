@@ -13,7 +13,7 @@
 
 * Let's upload a test case.
 		И я устанавливаю опцию VA в режиме обучения "ПроверкаСинтаксисаВРедакторе" "Истина"
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерВыборФайлаИзДиалогаВыбораФайловТонкий.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерВыборФайлаИзДиалогаВыбораФайловТонкий.feature"
 
 * In order to replace the result of file selection with the required one in thin and thick client, use a special step - and I select file.
 		И Я делаю подсветку текста в редакторе VA в режиме обучения с 8 по 8 строку 'Special step' подсценарий
@@ -30,7 +30,7 @@
 * Now let's talk file selection in web client.
 * Let's upload a test case.
 		И я устанавливаю опцию VA в режиме обучения "ПроверкаСинтаксисаВРедакторе" "Истина"
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерВыборФайлаИзДиалогаВыбораФайловWeb.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерВыборФайлаИзДиалогаВыбораФайловWeb.feature"
 
 
 * In the web client, step that leads to the file selection dialog must be performed first.

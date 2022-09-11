@@ -1,8 +1,8 @@
-﻿# language: ru
+﻿# language: en
 
-Feature: Как создать свой шаг
+Feature: How to create your own step
 
-Scenario: Как создать свой шаг
+Scenario: How to create your own step
 
 * Hyperlink opens via Ctrl+click
 //https://www.youtube.com/watch?v=xuxyb4Y16lQ

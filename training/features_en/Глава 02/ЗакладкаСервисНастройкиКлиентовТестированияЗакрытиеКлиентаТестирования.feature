@@ -17,20 +17,20 @@
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ГруппаЗакрытиеКлиентаТестирования' UI Automation
 		И Пауза 1
 		И я делаю подсветку нескольких элементов VA с их заголовком "Test client closing settings" UI Automation
-			| 'Имя'                                                    | 'Type' | 'ИмяЭлементаСТемжеРодителем' | 'ТолькоВертикальныеКоординаты' |
+			| 'Name'                                                    | 'Type' | 'ИмяЭлементаСТемжеРодителем' | 'ТолькоВертикальныеКоординаты' |
 			| 'ЗакрыватьКлиентТестированияПринудительно'               | ''    | ''                           | 'Ложь'                         |
 			| 'ТаймаутПередПринудительнымЗакрытиемКлиентаТестирования' | ''    | ''                           | 'Ложь'                         |
 
 * If this checkbox is set, then when the testing client is normally closed, it will be checked that the testing client has actually closed.
-		И я делаю подсветку нескольких элементов VA с их заголовком "Сlose Test client forcibly" UI Automation
-			| 'Имя'                                                    |
+		И я делаю подсветку нескольких элементов VA с их заголовком "Close Test client forcibly" UI Automation
+			| 'Name'                                                    |
 			| 'ЗакрыватьКлиентТестированияПринудительно'               |
 
 * If Test Client has not closed, its process will be terminated by operating system.
 
 * This field defines time range in seconds for Test Client to close independently.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Timeout for self closing" UI Automation
-			| 'Имя'                                                    | 'Type' | 'ИмяЭлементаСТемжеРодителем' | 'ТолькоВертикальныеКоординаты' |
+			| 'Name'                                                    | 'Type' | 'ИмяЭлементаСТемжеРодителем' | 'ТолькоВертикальныеКоординаты' |
 			| 'ТаймаутПередПринудительнымЗакрытиемКлиентаТестирования' | ''    | ''                           | 'Ложь'                         |
 
 * That's it, move on to the next lesson of the interactive help.

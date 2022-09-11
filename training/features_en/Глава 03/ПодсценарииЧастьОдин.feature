@@ -12,7 +12,7 @@
 * And upload a test example.
 		И я устанавливаю опцию VA в режиме обучения "ПроверкаСинтаксисаВРедакторе" "Истина"
 		И я устанавливаю опцию VA в режиме обучения "ПоказыватьСтрокиПодсценариевVanessaEdittor" "Ложь"
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыЭкспорт\ЭкспортныеСценарииПростые.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\Экспорт\ЭкспортныеСценарииПростые.feature"
 		И я позиционирую в центр строку редактора VA в режиме обучения 1
 	
 * To call this feature scripts from other scripts, specify a special tag in the tags section.
@@ -25,7 +25,7 @@
 
 * Parameters cannot be passed to this script because they are not declared in it.
 * And here is an example of a script where a parameter can be passed.
-		И я делаю подсветку фрагмента текста в редакторе VA в режиме обучения подсценарий 'Я вызываю подсценарий с параметром "Param1"' 'Scenario with the parameter'
+		И я делаю подсветку фрагмента текста в редакторе VA в режиме обучения подсценарий 'I'm calling a subscript with the parameter "Param1"' 'Scenario with the parameter'
 * This is the notification that the script can accept a parameter.
 		И Я делаю подсветку фрагмента текста в редакторе VA в строке в режиме обучения подсценарий 15 '"Param1"' 'Parameter declaration'
 
@@ -38,21 +38,21 @@
 		И Я делаю подсветку фрагмента текста в редакторе VA в режиме обучения подсценарий '[Parameter1]' 'Parameter is passed inside the string'
 
 * Now let's see how this subscript is called from other scripts. Let's open a test case.
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерПодсценарии1.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерПодсценарии1.feature"
 
 * To call a subscript, type any keyword from the Gherkin language followed by the name of the script.
 * Here is an example of calling the first subscript.
 		И Я делаю подсветку фрагмента текста в редакторе VA в режиме обучения подсценарий 'And I call a subsript without parameters' 'Calling a subscript'
 
 * And this is the call of the second subscript with the transferred parameter
-		И Я делаю подсветку фрагмента текста в редакторе VA в режиме обучения подсценарий 'И я вызываю подсценарий с параметром "ParameterValue"' 'Calling a subsript with the parameter'
+		И Я делаю подсветку фрагмента текста в редакторе VA в режиме обучения подсценарий 'And I call a subscript with the parameter "ParameterValue"' 'Calling a subsript with the parameter'
 
 * It's easy to see that calling a subscript is not much different from calling a regular script step.
 * To indicate a subscript call, the editor underlines such lines with a single line.
 
 * You can run this script execution. Then the values ​​of all variables will be displayed in the user message window.
-		И я делаю подсветку элементов VA "ЭтотСеанс" "Run the script for execution" UI Automation
-			| 'Имя'                                  |
+		И я делаю подсветку нескольких элементов VA с их заголовком "Run the script for execution" UI Automation
+			| 'Name'                                  |
 			| 'ПанельVanessaEditorВыполнитьСценарии' |
 
 

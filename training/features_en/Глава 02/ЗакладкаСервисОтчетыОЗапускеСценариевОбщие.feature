@@ -17,13 +17,13 @@
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ГруппаНастройкиОтчетовОбщие' UI Automation
 		И Пауза 1
 		И я делаю подсветку нескольких элементов VA с их заголовком "General settings" UI Automation
-			| 'Имя'                                     |
+			| 'Name'                                     |
 			| 'ДобавлятьКИмениСценарияУсловияВыгрузки'  |
 			| 'ВыгружатьСтатусВыполненияСценариевВФайл' |
 
 * Checkbox - prefix the script name with the assembly name. This option is useful when the same scripts are run in different environments.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Add the build name to the script name" UI Automation
-			| 'Имя'                                     |
+			| 'Name'                                     |
 			| 'ДобавлятьКИмениСценарияУсловияВыгрузки'  |
 * For example, there may be scripts that are run in the CI circuit in the thin client and in the web client.
 * For this case, you can set this checkbox.
@@ -31,7 +31,7 @@
 		И Пауза 1
 * In the appeared field, specify the unique assembly name.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Unique assembly name" UI Automation
-			| 'Имя'              |
+			| 'Name'              |
 			| 'ИмяТекущейСборки' |
 * To run tests in a thin client, you need to specify one assembly name. And another to run tests in the web client.
 * Thus, in this example, two test sessions will be launched. One with the first assembly name, and the second with another one.
@@ -41,7 +41,7 @@
 
 * Moving on. This checkbox enables the mechanism for uploading the build status to a file.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Upload the script execution status to a file" UI Automation
-			| 'Имя'                                     |
+			| 'Name'                                     |
 			| 'ВыгружатьСтатусВыполненияСценариевВФайл' |
 		И Пауза 1
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ВыгружатьСтатусВыполненияСценариевВФайл' UI Automation
@@ -49,7 +49,7 @@
 
 * If the checkbox is set, then in this field you need to enter the path to the file to upload the build status.
 		И я делаю подсветку нескольких элементов VA с их заголовком "File name" UI Automation
-			| 'Имя'                                             |
+			| 'Name'                                             |
 			| 'ПутьКФайлуДляВыгрузкиСтатусаВыполненияСценариев' |
 	
 * To find out more about the build statuses, follow this hyperlink.

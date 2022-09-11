@@ -1,23 +1,23 @@
-﻿# language: ru
+﻿# language: en
 
-Feature: Секция Переменные
+Feature: Variables section
 
-Переменные:
+Variables:
 
-	Перем1 = "VariableStringTypeInQuotes"
-	Перем2 = 'VariableStringTypeInApostrophes'
-	Перем3 = 
+	Var1 = "VariableStringTypeInQuotes"
+	Var2 = 'VariableStringTypeInApostrophes'
+	Var3 = 
 	"""
-	ЧастьСтроки1
-	ЧастьСтроки2
-	ЧастьСтроки3
+	PartString1
+	PartString2
+	PartString3
 	"""
-	Перем4 = "{String(1+1)}"
-	Перем5 = "{!String(1+1)}"
-	Перем6 = "Value={!String(1+1)}."
-	Перем7 = "PartLeft{Variable6}PartRight" 
+	Var4 = "{String(1+1)}"
+	Var5 = "{!String(1+1)}"
+	Var6 = "Value={!String(1+1)}."
+	Var7 = "PartLeft{Variable6}PartRight" 
 
-Scenario: Секция Переменные
+Scenario: Variables section
 	And I display "Var1" variable value
 	And I save "Part3{Variable2}Part4" line to the variable "NewVariable1"
 	And I display "NewVariable1" variable value
@@ -27,4 +27,3 @@ Scenario: Секция Переменные
 	And I display "Var6" variable value
 	And I display "Var7" variable value
 	
-

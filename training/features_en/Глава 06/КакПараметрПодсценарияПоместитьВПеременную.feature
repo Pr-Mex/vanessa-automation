@@ -10,7 +10,7 @@
 		И я открываю Vanessa Automation в режиме обучения
 
 * Let's upload a test case.
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерКакПараметрПодсценарияПоместитьВПеременную.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерКакПараметрПодсценарияПоместитьВПеременную.feature"
 
 * In this example, the export script has one parameter.
 		И Я делаю подсветку фрагмента текста в редакторе VA в строке в режиме обучения подсценарий 7 "Parameter1" 'Subscript parameter'

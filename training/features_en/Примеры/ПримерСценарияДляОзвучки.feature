@@ -1,18 +1,18 @@
-﻿# language: ru
+﻿# language: en
 
 
 
-Feature: Пример сценария для озвучки.
+Feature: An example of a script for voiceover.
 
-Scenario: Пример сценария для озвучки.
+Scenario: An example of a script for voiceover.
 
 * Here is the voiceover text
-		А тут выполняются действия, которые соответствуют тому, что говорит диктор
+		And here actions are performed that correspond to what the announcer says
 	
 * Here is also the voiceover text
-		И тут выполняются действия, которые соответствуют тому, что говорит диктор
+		And then actions are performed that correspond to what the announcer says
 
 * And so on
 
 
-	//И тестовый шаг для рамки вокруг текста рекдактора
+	// And a test step for a frame around the editor text

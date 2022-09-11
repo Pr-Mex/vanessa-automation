@@ -1,8 +1,8 @@
-﻿# language: ru
+﻿# language: en
 
-Feature: Примеры, как проверить равенство табличного документа эталону
+Feature: Examples of checking the equality of spreadsheet document and a template
 
-Scenario: Примеры, как проверить равенство табличного документа эталону
+Scenario: Examples of checking the equality of spreadsheet document and a template
 
 * The main option
 	
@@ -13,9 +13,9 @@ Scenario: Примеры, как проверить равенство табл�
 * A rarer option
 		
 		Then "SpreadsheetDocumentAttribute" spreadsheet document is equal
-			| 'Значение1' | 'Значение2' |
-			| 'Значение3' | '*'         |
+			| 'Value1' | 'Value2' |
+			| 'Value3' | '*'         |
 
 		Then "SpreadsheetDocumentAttribute" spreadsheet document is equal by template
-			| 'Значение1' | 'Значение2' |
-			| 'Значение3' | 'Знач*ние4' |
+			| 'Value1' | 'Value2' |
+			| 'Value3' | 'Va*ue4' |

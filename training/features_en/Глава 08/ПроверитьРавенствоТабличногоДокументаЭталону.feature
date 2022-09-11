@@ -11,12 +11,12 @@
 
 * And upload a test example.
 		И я устанавливаю опцию VA в режиме обучения "ПроверкаСинтаксисаВРедакторе" "Истина"
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерРавенствоТабличногоДокументаЭталону.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерРавенствоТабличногоДокументаЭталону.feature"
 
 	
 * The main way to compare a spreadsheet document with a template is to use the appropriate steps.
 * The main step to check is this one.
-		И Я делаю подсветку текста в редакторе VA в режиме обучения с 9 по 9 строку 'Comparison of a spreadsheet document with a template ' подсценарий
+		И Я делаю подсветку текста в редакторе VA в режиме обучения с 9 по 9 строку 'Comparison of a spreadsheet document with a template' подсценарий
 * There are two parameters in the step.
 * The first is the Spreadsheet document attribute name, as it is set in the configurator.
 		И Я делаю подсветку фрагмента текста в редакторе VA в строке в режиме обучения подсценарий 9 "AttributeName" 'Form element name'

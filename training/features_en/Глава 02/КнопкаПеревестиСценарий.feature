@@ -11,7 +11,7 @@
 		И я скрываю часть кнопок командной панели редактора в режиме обучения
 
 * Let's upload a test case.
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерПереводСценария.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерПереводСценария.feature"
 
 * Click this button to translate the steps in the current feature file
 		И Я делаю подсветку элемента формы VA по имени "VanessaEditorПеревестиТекстНаДругойЯзык" "Translation of the script into another language"

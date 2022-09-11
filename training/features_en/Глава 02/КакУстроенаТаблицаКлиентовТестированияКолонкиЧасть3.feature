@@ -19,20 +19,20 @@
 		И Я делаю подсветку элемента VA "ДанныеКлиентовТестированияИмяКомпьютера" "Computer name"
 		
 * If the Test Client is running on the same PC as the Test Manager, then the localhost value must be specified in the setup
-		И я устанавливаю в таблице VA "TestClientsData" в режиме обучения в колонке 'ИмяКомпьютера' 'localhost'
+		И я устанавливаю в таблице VA "ДанныеКлиентовТестирования" в режиме обучения в колонке 'ИмяКомпьютера' 'localhost'
 		И Пауза 1
 		И Я делаю подсветку элемента VA "ДанныеКлиентовТестированияИмяКомпьютера" "localhost"
 
 * If you need to launch a new test client, specify the value of the free port on this PC in the launch port column.
 		И Я делаю подсветку элемента VA "ДанныеКлиентовТестированияПорт" "Port"
 * Or just specify a value of 1.
-		И я устанавливаю в таблице VA "TestClientsData" в режиме обучения в колонке 'ПортЗапускаТестКлиента' '1'
+		И я устанавливаю в таблице VA "ДанныеКлиентовТестирования" в режиме обучения в колонке 'ПортЗапускаТестКлиента' '1'
 		И Пауза 1
 		И Я делаю подсветку элемента VA "ДанныеКлиентовТестированияПорт" "Port"
 * If you need to connect to an already running Test Client, specify the real value of the port in the port field, where Test Client was launched previously.
 		И Пауза 2
 	
-		И я устанавливаю в таблице VA "TestClientsData" в режиме обучения в колонке 'ПортЗапускаТестКлиента' '12345'
+		И я устанавливаю в таблице VA "ДанныеКлиентовТестирования" в режиме обучения в колонке 'ПортЗапускаТестКлиента' '12345'
 		И Пауза 1
 		И Я делаю подсветку элемента VA "ДанныеКлиентовТестированияПорт" "Port"
 * If port is specifed incorrectly, connection to a previously launched client will fail.

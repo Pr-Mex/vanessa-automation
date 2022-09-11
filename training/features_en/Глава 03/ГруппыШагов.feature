@@ -11,7 +11,7 @@
 
 * And upload a test example.
 		И я устанавливаю опцию VA в режиме обучения "ПроверкаСинтаксисаВРедакторе" "Истина"
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерГруппыШагов.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерГруппыШагов.feature"
 
 * Step groups are used to group script steps into logical blocks.
 
@@ -37,10 +37,10 @@
 		И Пауза 1
 * More precisely, any script line can become a group of steps because the groups are indented.
 * Here is an example when a group of steps is declared.
-		И я делаю подсветку фрагмента текста в редакторе VA в режиме обучения подсценарий "* Step group 1." 'Steps group declaration'
+		И я делаю подсветку фрагмента текста в редакторе VA в режиме обучения подсценарий "* Group of steps 1." 'Steps group declaration'
 * At that, there is a step or steps inside the group that have bigger indents than the group line.
 * Here is a step that belongs to this group.
-		И Я делаю подсветку фрагмента текста в редакторе VA в строке в режиме обучения подсценарий 10 "Given Step inside the first level group" 'Step within a steps group'
+		И Я делаю подсветку фрагмента текста в редакторе VA в строке в режиме обучения подсценарий 10 "Given Step within the first level group" 'Step within a steps group'
 * These steps also belong to this group.
 		И Я делаю подсветку текста в редакторе VA в режиме обучения с 12 по 16 строку 'Steps within a group' подсценарий
 
@@ -50,7 +50,7 @@
 
 * Third point. There can be other step groups in a step group. There are no restrictions on the number of nesting levels.
 * Here is an example of a nested group.
-		И Я делаю подсветку фрагмента текста в редакторе VA в строке в режиме обучения подсценарий 12 "* Step group 2." 'Nested group of steps'
+		И Я делаю подсветку фрагмента текста в редакторе VA в строке в режиме обучения подсценарий 12 "* Group of steps 2." 'Nested group of steps'
 
 * Fourth point. The script line itself, which is a group of steps, will not be executed during script execution.
 * Therefore, it is necessary to mind carefully the indents in the script text.

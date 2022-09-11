@@ -13,7 +13,7 @@
 * Vanessa Automation can build an Allure report.
 
 * To get started with Allure I recommend reading this overview article on Habr first.
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерОтчетОВыполненииСценариевВФорматеAllure.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерОтчетОВыполненииСценариевВФорматеAllure.feature"
 		И Я делаю подсветку текста в редакторе VA в режиме обучения с 8 по 8 строку 'Review article' подсценарий
 
 * And here you can see a real Allure report using the tests that are run to check the quality of Vanessa Automation itself.

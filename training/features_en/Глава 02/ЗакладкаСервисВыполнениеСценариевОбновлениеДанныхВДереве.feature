@@ -17,12 +17,12 @@
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ГруппаОбновлениеДанныхВДереве' UI Automation
 		И Пауза 1
 		И я делаю подсветку нескольких элементов VA с их заголовком "Update step tree data" UI Automation
-			| 'Имя'                                        |
+			| 'Name'                                        |
 			| 'ОбновлятьДеревоПриНачалеВыполненияСценария' |
 
 * This checkbox enables the mode of step tree update according to the current state of script execution.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Update step tree data" UI Automation
-			| 'Имя'                                        |
+			| 'Name'                                        |
 			| 'ОбновлятьДеревоПриНачалеВыполненияСценария' |
 * Enabling this option may reduce the speed of script execution, but it increases the visibility of its execution.
 * This option makes sense only when working in step tree mode.

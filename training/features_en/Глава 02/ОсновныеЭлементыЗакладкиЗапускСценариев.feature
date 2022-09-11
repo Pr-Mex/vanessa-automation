@@ -40,6 +40,10 @@
 		И Я делаю подсветку элемента формы VA по имени "КаталогФич" "Current file name"
 
 * And here is an inscription displaying the statistics of script execution.
-		И Я делаю подсветку элемента формы VA по имени "Statistics" "Statistics"
+		И я делаю подсветку нескольких элементов VA с их заголовком "Statistics" UI Automation
+			| 'Name'        |
+			| 'Статистика' |
 
 * That's it, move on to the next lesson of the interactive help.
+
+//Do not translate 45

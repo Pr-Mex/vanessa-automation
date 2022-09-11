@@ -1,9 +1,9 @@
-﻿# language: ru
+﻿# language: en
 
-Feature: Пример для работы с контекстным меню редактора. Таблицы Gherkin
+Feature: Example for working with the context menu of the editor. Gherkin Tables
 
-Scenario: Пример для работы с контекстным меню редактора. Таблицы Gherkin
+Scenario: Example for working with the context menu of the editor. Gherkin Tables
 
 	And I go to line in "TableName" table
-			| 'ИмяКолонки1'      | 'ИмяКолонки2'      |
-			| 'ЗначениеКолонки1' | 'ЗначениеКолонки2' |
+			| 'ColumnName1'      | 'ColumnName2'      |
+			| 'ColumnValue1' | 'ColumnValue2' |

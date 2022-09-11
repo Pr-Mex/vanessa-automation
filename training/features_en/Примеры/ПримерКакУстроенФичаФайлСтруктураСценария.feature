@@ -1,20 +1,19 @@
-﻿# language: ru
+﻿# language: en
 
-Feature: Название функциональности
+Feature: Functionality name
 
 
-Scenario Outline: Структура сценария 1
+Scenario Outline: Structure of script 1
 
-	Дано Начальные условия <Параметр1>
+	Given initial conditions <Parameter1>
 
-	Затем я выполняю действия <Параметр2> и другие действия "CommonParameter"
+	Then I do the <Parameter2> actions and other "RegularParameter" actions
 
-	Тогда я получаю результат <Параметр3>
+	Then I get the result <Parameter3>
 
 	Examples:
-		| 'Parameter1' | 'Parameter2' | 'Параметр3' |
-		| 'Значение1' | 'Значение2' | 'Значение3' |
-		| 'Значение4' | 'Значение5' | 'Значение6' |
-
+		| 'Parameter1' | 'Parameter2' | 'Parameter3' |
+		| 'Value1' | 'Value2' | 'Value3' |
+		| 'Value4' | 'Value5' | 'Value6' |
 
 

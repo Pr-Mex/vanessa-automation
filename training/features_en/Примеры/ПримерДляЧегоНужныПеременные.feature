@@ -1,8 +1,8 @@
-﻿# language: ru
+﻿# language: en
 
-Feature: Демонстрация работы с переменными
+Feature: Demo of working with variables
 
-Scenario: Первый сценарий
+Scenario: First script
 
 * Creating and using a local variable. It can only be used in this script.
 		And I save "Daisy LLC" line to the variable "CounterpartyName"
@@ -13,7 +13,6 @@ Scenario: Первый сценарий
 		And I save "Daisy LLC" line to the variable "$$AccountNameGlobally$$"
 	
 	
-Scenario: Второй сценарий
+Scenario: Second script
 
 	And I input "$$AccountNameGlobally$$" text in the field named "Client"
-

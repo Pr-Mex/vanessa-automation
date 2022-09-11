@@ -1,17 +1,17 @@
-﻿# language: ru
+﻿# language: en
 
-Feature: Примеры условий.
+Feature: Examples of conditions.
 
-Scenario: Примеры условий.
+Scenario: Examples of conditions.
 
 * Steps that are historically created as conditions
 
 		If current window header is "Window header" Then
 			And Delay 1
-			//какие-то действия
+			// some actions
 
 		If form element named "FieldName" is equal to "FieldValue" Then
-			// какие-то действия
+			// some actions
 
 
 
@@ -19,8 +19,7 @@ Scenario: Примеры условий.
 	
 		Given "AttributeName" spreadsheet document is equal to "TemplateName"
 
-		Если Табличный документ "AttributeName" равен макету "TemplateName" Тогда
-			// какие-то действия
-
+		If Spreadsheet document "AttributeName" is equal to layout "LayoutName" Then
+			// some actions
 
 

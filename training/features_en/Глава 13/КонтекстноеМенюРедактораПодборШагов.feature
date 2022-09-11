@@ -11,9 +11,14 @@
 
 * Let's upload a test case.
 		И я устанавливаю опцию VA в режиме обучения "ПроверкаСинтаксисаВРедакторе" "Истина"
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерКонтекстноеМенюРедактора.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерКонтекстноеМенюРедактора.feature"
 
 * The context menu of the editor allows to perform many useful actions
+		Если существует элемент UI Automation "ЭтотСеанс" с именем "Генератор EPF" и типом "" Тогда
+			И я запоминаю строку "Истина" в переменную "ЯзыкРусский"
+		Иначе	
+			И я запоминаю строку "Ложь" в переменную "ЯзыкРусский"
+
 		И Пауза 1
 		И я делаю клик по элементу формы 'ЭтотСеанс' '' 'Document' правой кнопкой UI Automation
 		И Пауза 1
@@ -25,7 +30,7 @@
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'VanessaEditorКонтекстноеМенюОткрытьОпределениеШага' UI Automation	
 		И Пауза 2
 * In this case, an attempt will be made to open the tree at the step at which the mouse click was made.
-		И Я делаю подсветку у строки дерева шагов 'And in "TableName" table I select current row' 'The tree opened on the step'
+		И Я делаю подсветку у строки дерева шагов 'And I select current line in "TableName" table' 'The tree opened on the step'
 
 * This allows to quickly get information about the current step and see the steps located nearby.
 * Also, double-click on the selected step will add the step to the script text.

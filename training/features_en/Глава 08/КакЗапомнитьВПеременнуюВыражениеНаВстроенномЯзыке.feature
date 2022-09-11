@@ -11,7 +11,7 @@
 
 * Let's upload a test case.
 		И я устанавливаю опцию VA в режиме обучения "ПроверкаСинтаксисаВРедакторе" "Истина"
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерКакЗапомнитьВПеременнуюВыражениеНаВстроенномЯзыке.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерКакЗапомнитьВПеременнуюВыражениеНаВстроенномЯзыке.feature"
 
 * This step calculates an arbitrary expression in the built-in 1C language and save it to a variable.
 		И Я делаю подсветку текста в редакторе VA в режиме обучения с 7 по 9 строку 'Special step. Local variable.' подсценарий

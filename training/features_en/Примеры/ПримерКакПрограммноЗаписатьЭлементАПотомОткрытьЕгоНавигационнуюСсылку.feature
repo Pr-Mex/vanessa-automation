@@ -1,19 +1,18 @@
-﻿# language: ru
+﻿# language: en
 
-Feature: Пример как программно записать элемент а потом открыть его навигационную ссылку.
+Feature: Example of programmatical recording of an element and then opening its navigation link.
 
-Scenario: Пример как программно записать элемент а потом открыть его навигационную ссылку.
+Scenario: Example of programmatical recording of an element and then opening its navigation link.
 
 	And I execute 1C:Enterprise script at server
 		"""bsl
-		НавигационнаяСсылка = ПолучитьНавигационнуюСсылку(Справочники.ИмяСправочника.НайтиПоКоду("$КодОбъекта$"));
-		Объект.ЗначениеНаСервере = НавигационнаяСсылка;
+		NavigationLink = GetURL(Catalogs.CatalogName.FindByCode("$ObjectCode$"));
+		Object.ValueOnServer = NavigationLink;
 		"""
 	
 	And I execute 1C:Enterprise script
 		"""bsl
-		Контекст.Вставить("MyVariable", Ванесса.Объект.ЗначениеНаСервере);
+		Context.Insert("MyVariable", Vanessa.Object.ValueOnServer);
 		"""
 	
 	Given I open hyperlink "$MyVariable$"
-

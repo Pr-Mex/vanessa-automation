@@ -1,19 +1,18 @@
-﻿# language: ru
+﻿# language: en
 
 
-Feature: Работа с подсценариями. Передача многострочных строк.
+Feature: Working with subscripts. Transition of multi-line lines.
 
 
-Scenario: Работа с подсценариями. Передача многострочных строк.
+Scenario: Working with subscripts. Transition of multi-line lines.
 
-	И Я вызываю подсценарий и передаю в него многострочные строки
+	And I call a subscript and pass multi-line lines to it
 		"""
-			НоваяЧастроСтроки1
-			НоваяЧастроСтроки2
+			NewFrequentStrings1
+			NewFrequentStrings2
 		"""
 		"""
-			НоваяЧастроСтроки3
-			НоваяЧастроСтроки4
+			NewFrequentStrings3
+			NewFrequentStrings4
 		"""
-
 

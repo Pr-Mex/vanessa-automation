@@ -17,24 +17,24 @@
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ГруппаПоискКартинок' UI Automation
 		И Пауза 1
 		И я делаю подсветку нескольких элементов VA с их заголовком "Picture search settings" UI Automation
-			| 'Имя'                                       |
+			| 'Name'                                       |
 			| 'ПоискКартинокСПомощьюКомпонентыVanessaExt' |
 			| 'ПорогПоискаКартинки'                       |
 
 * This checkbox specifies that steps searching for screen images will use the VanessaExt component.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Picture search using components" UI Automation
-			| 'Имя'                                       |
+			| 'Name'                                       |
 			| 'ПоискКартинокСПомощьюКомпонентыVanessaExt' |
 
 * Search quality factor is set in this field by a numeric value.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Search quality" UI Automation
-			| 'Имя'                 | 'Type' | 'ИмяЭлементаСТемжеРодителем' | 'ТолькоВертикальныеКоординаты' |
+			| 'Name'                 | 'Type' | 'ИмяЭлементаСТемжеРодителем' | 'ТолькоВертикальныеКоординаты' |
 			| 'ПорогПоискаКартинки' | ''    | ''                           | 'Ложь'                         |
 
 * If this checkbox is removed, then the image search will be carried out using the SikuliX tool, which is an outdated mechanism.
 * It is recommended to leave this checkbox set.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Picture search using components" UI Automation
-			| 'Имя'                                       |
+			| 'Name'                                       |
 			| 'ПоискКартинокСПомощьюКомпонентыVanessaExt' |
 
 * That's it, move on to the next lesson of the interactive help.

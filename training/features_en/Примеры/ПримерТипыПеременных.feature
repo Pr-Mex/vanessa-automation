@@ -1,12 +1,12 @@
-﻿# language: ru
+﻿# language: en
 
-Feature: Демонстрация какие бывают типы переменных
+Feature: Demo of variable types
 
-Scenario: Демонстрация какие бывают типы переменных
+Scenario: Demo of variable types
 
 * String variables. Main type.
 		And I save "\"MyString\"" in "VariableStringType" variable
-		And I save "\"Page1\" + \"Page2\"" in "VariableTwoStringsAddition" variable
+		And I save "\"Page 1\" + \"Page 2\"" in "VariableTwoStringsAddition" variable
 		And I save "String(1+1)" in "VariableAddNumbersAsString" variable
 		And I save "Left(CurrentDate(), 10)" in "CurrentDateAsString" variable
 
@@ -18,5 +18,4 @@ Scenario: Демонстрация какие бывают типы переме
 	
 	
 	
-
 

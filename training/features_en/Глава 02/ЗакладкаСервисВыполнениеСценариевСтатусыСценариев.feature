@@ -17,23 +17,23 @@
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ГруппаВыполнениеСценариевСтатусы' UI Automation
 		И Пауза 1
 		И я делаю подсветку нескольких элементов VA с их заголовком "Settings for calculating script statuses" UI Automation
-			| 'Имя'                                         |
+			| 'Name'                                         |
 			| 'ПриравниватьPendingКFailed'                  |
 			| 'РазличатьBrokenИFailedПоКлючевомуСловуТогда' |
 
 * If this checkbox is set and a step is found in the script for which there is no implementation, then the status of the script will be error.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Equate Pending to Failed" UI Automation
-			| 'Имя'                        |
+			| 'Name'                        |
 			| 'ПриравниватьPendingКFailed' |
 * If the checkbox is removed, then in this case the script status will be - not implemented.
 * It is recommended to set this checkbox.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Equate Pending to Failed" UI Automation
-			| 'Имя'                        |
+			| 'Name'                        |
 			| 'ПриравниватьPendingКFailed' |
 
 * Let's continue. This checkbox activates the mode when the step beginning with keyword Then, fails, the script status will be an error.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Broken or Failed" UI Automation
-			| 'Имя'                                         |
+			| 'Name'                                         |
 			| 'РазличатьBrokenИFailedПоКлючевомуСловуТогда' |
 * For steps that start with other keywords - the fail status will be broken, not an error.
 	

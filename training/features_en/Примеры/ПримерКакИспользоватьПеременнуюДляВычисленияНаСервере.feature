@@ -1,8 +1,8 @@
-﻿# language: ru
+﻿# language: en
 
-Feature: Демонстрация как использовать служебные переменные
+Feature: Demo of service variables usage
 
-Scenario: Демонстрация как использовать служебные переменные
+Scenario: Demo of service variables usage
 
 * The first option
 		And I save "C:\Temp\Untitled-2.xml" file content to the variable "VariableName1"
@@ -10,7 +10,7 @@ Scenario: Демонстрация как использовать служеб�
 		And I save "StrReplace($VariableName1$, Chars.LF, Chars.LF + \"|\")" in "VariableName1" variable
 		And I execute 1C:Enterprise script at server
 		"""bsl
-			Сообщить("$ИмяПеременной1$");
+			Message("$VariableName1$");
 		"""
 
 
@@ -18,14 +18,13 @@ Scenario: Демонстрация как использовать служеб�
 		And I save "C:\Temp\Untitled-2.xml" file content to the variable "VariableName2"
 		And I execute 1C:Enterprise script
 		"""bsl
-			Ванесса.Объект.ЗначениеНаСервере = Контекст.ИмяПеременной2;
+			Vanessa.Object.ValueOnServer = Context.VariableName2;
 		"""
 		And I execute 1C:Enterprise script at server
 		"""bsl
-			Сообщить(Объект.ЗначениеНаСервере);
+			Message(Object.ValueOnServer);
 		"""
 		And I execute 1C:Enterprise script
 		"""bsl
-			Контекст.ИмяПеременной2 = Ванесса.Объект.ЗначениеНаСервере;
+			Context.VariableName2 = Vanessa.Object.ValueOnServer;
 		"""
-

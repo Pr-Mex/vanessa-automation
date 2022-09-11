@@ -1,31 +1,30 @@
-﻿# language: ru
+﻿# language: en
 
 
 @ExportScenarios
 
 
-Feature: Подсценарии с таблицами.
+Feature: Subscripts with tables.
 
 
-Scenario: Я вызываю подсценарий и передаю в него одну таблицу
+Scenario: I call a subscript and pass one table to it
 
-	И какой-то шаг
-	И шаг принимающий таблицу
-		|'Простая таблица Gherkin'|
-	И какой-то шаг
+	And some step
+	And the step accepting the table
+		|'A simple Gherkin table'|
+	And some step
 
 
-Scenario: Я вызываю подсценарий и передаю в него несколько таблиц
+Scenario: I call a subscript and pass several tables to it
 
-	И первый шаг принимающий таблицу
-		|'Простая таблица Gherkin 1'|
+	And the first step is taking the table
+		|'A simple Gherkin table 1'|
 
-	И второй шаг принимающий таблицу
-		|'Простая таблица Gherkin 2'|
+	And the second step accepting the table
+		|'A simple Gherkin table 2'|
 
-	И третий шаг принимающий таблицу
-		|'Простая таблица Gherkin 3'|
+	And the third step accepting the table
+		|'A simple Gherkin table 3'|
 
-	И четвертый шаг принимающий таблицу
-		|'Простая таблица Gherkin 4'|
-
+	And the fourth step accepting the table
+		|'A simple Gherkin table 4'|

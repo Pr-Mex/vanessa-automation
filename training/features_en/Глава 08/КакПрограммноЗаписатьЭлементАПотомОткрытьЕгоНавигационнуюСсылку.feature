@@ -11,7 +11,7 @@
 
 * Let's upload a test case.
 		И я устанавливаю опцию VA в режиме обучения "ПроверкаСинтаксисаВРедакторе" "Истина"
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерКакПрограммноЗаписатьЭлементАПотомОткрытьЕгоНавигационнуюСсылку.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерКакПрограммноЗаписатьЭлементАПотомОткрытьЕгоНавигационнуюСсылку.feature"
 
 
 * In this example, the expression is evaluated on the server and then placed in the special attribute.

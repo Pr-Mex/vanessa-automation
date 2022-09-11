@@ -15,7 +15,7 @@
 
 * Now that we've cleared this up, let's upload a test case.
 		И я устанавливаю опцию VA в режиме обучения "ПроверкаСинтаксисаВРедакторе" "Истина"
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерВыполнитьПроизвольныйКодВСценарииМенеджерТестирования.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерВыполнитьПроизвольныйКодВСценарииМенеджерТестирования.feature"
 
 * This example shows three options to execute the code on the side of the test manager.
 * The first option is to execute the client code.
@@ -27,7 +27,7 @@
 * This option is preferred if you just want to call the server code of the test configuration, and Test Manager is running in the same database as Test Client.
 
 * Next, consider how to execute the code on the Test Client side.
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерВыполнитьПроизвольныйКодВСценарииКлиентТестирования.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерВыполнитьПроизвольныйКодВСценарииКлиентТестирования.feature"
 
 * To do this, VA Extension must be installed in the database where Test Client is launched.
 * If the extension is installed, then there are two options to execute arbitrary code on Test Client side.

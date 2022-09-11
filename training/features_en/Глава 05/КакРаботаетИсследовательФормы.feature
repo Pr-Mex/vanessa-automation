@@ -23,7 +23,7 @@
 		И Пауза 1
 
 * In order to fully see how the Form Explorer works, connect the Test Client.
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерИсследовательФормы.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерИсследовательФормы.feature"
 * We will skip that now.
 * For more detailed information on the Form Explorer, watch this video.
 		И я делаю подсветку текста в редакторе VA в режиме обучения с 8 по 8 строку "Video"

@@ -12,7 +12,7 @@
 * And upload a test example.
 		И я устанавливаю опцию VA в режиме обучения "ПроверкаСинтаксисаВРедакторе" "Ложь"
 		И я отключаю показ строк подсценариев в редакторе VA в режиме обучения
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерКакУстроенФичаФайлСекцияПеременныеТабличные.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерКакУстроенФичаФайлСекцияПеременныеТабличные.feature"
 		И я позиционирую в центр строку редактора VA в режиме обучения 1
 
 * In the Variables section, you can declare variable tables.
@@ -27,14 +27,14 @@
 * And here is an example of a table with set name. There can be many such tables.
 		И я делаю подсветку текста в редакторе VA в режиме обучения с 10 по 13 строку "Named variables table" подсценарий
 * The table name is set here. A mandatory symbol before the name of variable table is an asterisk.
-		И я делаю подсветку фрагмента текста в редакторе VA в режиме обучения подсценарий '* List of Contractors' 'Table name'
+		И я делаю подсветку фрагмента текста в редакторе VA в режиме обучения подсценарий '* CompaniesList' 'Table name'
 
 * The second point. The variable table must have two lines or more.
 * The first line specifies variable names for this table.
-		И я делаю подсветку фрагмента текста в редакторе VA в режиме обучения подсценарий '| \'Имя\'                | \'Представление\'  | \'Тип\'        |' 'Variable names'
+		И я делаю подсветку текста в редакторе VA в режиме обучения в строке 7 "Variable names" подсценарий
 
 * The following lines contain the values of variables.
-		И я делаю подсветку фрагмента текста в редакторе VA в режиме обучения подсценарий '| \'Client1\' | \'My Firm1\' | \'Catalog\' |' 'VariableValues'
+		И я делаю подсветку текста в редакторе VA в режиме обучения в строке 8 "Variable values" подсценарий
 
 * In the first column of the table, a name is always declared, with helps to get other values from this row.
 * For the first table it is indicated here
@@ -53,8 +53,8 @@
 		И я делаю подсветку фрагмента текста в редакторе VA в режиме обучения подсценарий 'CounterpartyList.MainCounterparty2.Presentation' 'Pass variable value into a step'
 
 * You can run this script execution. Then the values ​​of all variables will be displayed in the user message window.
-		И я делаю подсветку элементов VA "ЭтотСеанс" "Run the script for execution" UI Automation
-			| 'Имя'                                  |
+		И я делаю подсветку нескольких элементов VA с их заголовком "Run the script for execution" UI Automation
+			| 'Name'                                  |
 			| 'ПанельVanessaEditorВыполнитьСценарии' |
 			
 * That's it, move on to the next lesson of the interactive help.

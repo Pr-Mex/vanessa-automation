@@ -1,8 +1,8 @@
-﻿# language: ru
+﻿# language: en
 
-Feature: Демонстрация как использовать служебные переменные
+Feature: Demo of service variables usage
 
-Scenario: Демонстрация как использовать служебные переменные
+Scenario: Demo of service variables usage
 
 * Service variable ProjectCatalog
 		And I save "$ProjectPath$" in "ProjectLocation" variable
@@ -16,4 +16,3 @@ Scenario: Демонстрация как использовать служеб�
 		And I save "$FeaturePath$" in "FeatureFileLocation" variable
 		And I display "FeatureFileLocation" variable value
 		
-

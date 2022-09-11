@@ -1,8 +1,8 @@
-﻿# language: ru
+﻿# language: en
 
-Feature: Try/исключение.
+Feature: Try/Except.
 
-Scenario: Try/исключение.
+Scenario: Try/Except.
 
 * The example of Try Except usage.
 
@@ -13,15 +13,15 @@ Scenario: Try/исключение.
 			And I close current window
 			And I close current test client session
 			
-		// какие-то действия
+		// some actions
 
 * Try/Except with error registration
 
 		Try
 			And I go to line in "TableName" table
-				| 'ИмяКолонки'      |
-				| 'ЗначениеКолонки' |
+				| 'ColumnName'      |
+				| 'ColumnValue' |
 		Except
 			And I log the error "There is no required row in the table" by exception data
 			
-		// какие-то действия
+		// some actions

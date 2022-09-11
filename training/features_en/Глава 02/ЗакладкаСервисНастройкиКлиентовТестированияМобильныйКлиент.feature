@@ -17,7 +17,7 @@
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ГруппаНастройкиМобильногоКлиента' UI Automation
 		И Пауза 1
 		И я делаю подсветку нескольких элементов VA с их заголовком "Settings for working with mobile client" UI Automation
-			| 'Имя'                                      |
+			| 'Name'                                      |
 			| 'ПутьКadb'                                 |
 			| 'ПроверкаПодключенияКМобильномуУстройству' |
 			| 'ЗапуститьМобильныйКлиент'                 |
@@ -25,22 +25,22 @@
 
 * This field specifies the path to the adb application.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Path to adb" UI Automation
-			| 'Имя'                                      |
+			| 'Name'                                      |
 			| 'ПутьКadb'                                 |
 * This is a special application that provides access to a running emulator or Android device.
 
 * Next are special commands.
 * Checking the connection to the mobile device.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Check mobile device connection" UI Automation
-			| 'Имя'                                      |
+			| 'Name'                                      |
 			| 'ПроверкаПодключенияКМобильномуУстройству' |
 * Mobile client launch.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Mobile client launch" UI Automation
-			| 'Имя'                      |
+			| 'Name'                      |
 			| 'ЗапуститьМобильныйКлиент' |
 * Mobile application launch.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Mobile app launch" UI Automation
-			| 'Имя'                          |
+			| 'Name'                          |
 			| 'ЗапуститьМобильноеПриложение' |
 
 * That's it, move on to the next lesson of the interactive help.

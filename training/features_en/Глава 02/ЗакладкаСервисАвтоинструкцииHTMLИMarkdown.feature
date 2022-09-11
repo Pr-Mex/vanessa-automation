@@ -17,14 +17,14 @@
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'HTMLИMarkdown' UI Automation
 		И Пауза 1
 		И я делаю подсветку нескольких элементов VA с их заголовком "HTML and Markdown instructions" UI Automation
-			| 'Имя'                         |
+			| 'Name'                         |
 			| 'СоздаватьИнструкциюHTML'     |
 			| 'СоздаватьИнструкциюMarkdown' |
 			| 'АвтонумерацияШагов'          |
 
 * This checkbox enables generation of instructions in HTML format.
 		И я делаю подсветку нескольких элементов VA с их заголовком "HTML instruction format" UI Automation
-			| 'Имя'                     |
+			| 'Name'                     |
 			| 'СоздаватьИнструкциюHTML' |
 		И Пауза 1
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'СоздаватьИнструкциюHTML' UI Automation
@@ -34,12 +34,12 @@
 * After the script execution is completed, the final instruction in HTML format will be generated
 * This field specifies the directory in which the instruction will be generated.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Instructions directory" UI Automation
-			| 'Имя'                           |
+			| 'Name'                           |
 			| 'КаталогВыгрузкиИнструкцийHTML' |
 
 * The formation of instructions in the Markdown format works similarly.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Markdown instruction format" UI Automation
-			| 'Имя'                         |
+			| 'Name'                         |
 			| 'СоздаватьИнструкциюMarkdown' |
 		И Пауза 1
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'СоздаватьИнструкциюMarkdown' UI Automation
@@ -47,12 +47,12 @@
 			
 * This field specifies the directory in which Markdown format instruction will be generated.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Instructions directory" UI Automation
-			| 'Имя'                               |
+			| 'Name'                               |
 			| 'КаталогВыгрузкиИнструкцийMarkdown' |
 
 * Let's continue. This checkbox adds auto-numbering to the beginning of the step description text.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Instructions directory" UI Automation
-			| 'Имя'                |
+			| 'Name'                |
 			| 'АвтонумерацияШагов' |
 
 * That's it, move on to the next lesson of the interactive help.

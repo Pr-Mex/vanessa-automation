@@ -1,8 +1,8 @@
-﻿# language: ru
+﻿# language: en
 
-Feature: Как правильно проверить видимость или доступность кнопки, элемента или пункта меню.
+Feature: How to check the visibility or accessibility of a button, item or menu item correctly.
 
-Scenario: Как правильно проверить видимость или доступность кнопки, элемента или пункта меню.
+Scenario: How to check the visibility or accessibility of a button, item or menu item correctly.
 
 * Availability check
 		And form attribute named "ElementName" is available

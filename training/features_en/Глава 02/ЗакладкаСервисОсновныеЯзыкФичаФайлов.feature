@@ -15,7 +15,7 @@
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ГруппаЯзык' UI Automation
 		И Пауза 1
 		И я делаю подсветку нескольких элементов VA с их заголовком "Feature files language setting" UI Automation
-			| 'Имя'                   |
+			| 'Name'                   |
 			| 'ЯзыкГенератораGherkin' |
 
 * If you're going to create and run feature files in some other language, select the value in this field.

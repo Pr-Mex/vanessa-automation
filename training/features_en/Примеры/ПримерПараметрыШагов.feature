@@ -1,20 +1,19 @@
-﻿# language: ru
+﻿# language: en
 
-Feature: Примеры параметров шагов
+Feature: Examples of step parameters
 
-Scenario: Примеры параметров шагов
+Scenario: Examples of step parameters
 
 * Examples of steps with parameters of String type
-	И шаг с параметром типа Строка "Hello world!"
-	И шаг с параметром типа Строка 'Hello world!'
+	And a step with a String type parameter "Hello world!"
+	And a step with a String type parameter 'Hello world!'
 	
 * Examples of steps with parameters of Number type
-	И шаг с параметром типа Число 0
-	И шаг с параметром типа Число 10
-	И шаг с параметром типа Число 0.1
-	И шаг с параметром типа Число -0.123
+	And a step with a Number type parameter 0
+	And a step with a Number type parameter 10
+	And a step with a Number type parameter 0.1
+	And a step with a Number type parameter -0.123
 	
 * Examples of steps with parameters of Date type
-	И шаг с параметром типа Дата 08.04.81
-	И шаг с параметром типа Дата 08.04.1981
-
+	And a step with a Date type parameter 08.04.81
+	And a step with a Date type parameter 08.04.1981

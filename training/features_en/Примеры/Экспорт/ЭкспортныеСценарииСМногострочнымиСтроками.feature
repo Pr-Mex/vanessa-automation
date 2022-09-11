@@ -1,24 +1,23 @@
-﻿# language: ru
+﻿# language: en
 
 
 @ExportScenarios
 
 
-Feature: Подсценарии с многострочными строками.
+Feature: Subscripts with multiline lines.
 
 
-Scenario: Я вызываю подсценарий и передаю в него многострочные строки
+Scenario: I call a subscript and pass multi-line lines to it
 
-	Дано шаг принимающий многострочную строку
+	Given a step that accepts a multiline string
 		"""
-			ЧастроСтроки1
-			ЧастроСтроки2
-		"""
-
-	Дано шаг принимающий многострочную строку
-		"""
-			ЧастроСтроки3
-			ЧастроСтроки4
+			PartString1
+			PartString2
 		"""
 
+	Given a step that accepts a multiline string
+		"""
+			PartString3
+			PartString4
+		"""
 

@@ -15,14 +15,14 @@
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ГруппаИспользоватьКомпонентуVanessaExt' UI Automation
 		И Пауза 1
 		И я делаю подсветку нескольких элементов VA с их заголовком "VanessaExt component settings" UI Automation
-			| 'Имя'                                             |
+			| 'Name'                                             |
 			| 'ИспользоватьКомпонентуVanessaExt'                |
 			| 'ИспользоватьПарсерGherkinИзКомпонентыVanessaExt' |
 			| 'ПоискФайловСПомощьюКомпоненты'                   |
 
 * The main setting is the checkbox - enable the use of an external VanessaExt component.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Enable the use of an VanessaExt external component" UI Automation
-			| 'Имя'                                             |
+			| 'Name'                                             |
 			| 'ИспользоватьКомпонентуVanessaExt'               |
 
 * This component significantly expands the capabilities of Vanessa Automation.
@@ -30,25 +30,25 @@
 * This interactive help works mostly thanks to this external component.
 * It is recommended to set this checkbox.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Enable the use of an VanessaExt external component" UI Automation
-			| 'Имя'                                             |
+			| 'Name'                                             |
 			| 'ИспользоватьКомпонентуVanessaExt'               |
 
 
 * This checkbox defines which file feature parser will be used.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Usage of parser from component" UI Automation
-			| 'Имя'                                             |
+			| 'Name'                                             |
 			| 'ИспользоватьПарсерGherkinИзКомпонентыVanessaExt' |
 * If the checkbox is removed, the old parser built into Vanessa Automation will be used.
 * If the checkbox is set, a new parser from the VanessaExt component will be used.
 * The new parser works much faster, so it is recommended to leave this checkbox enabled.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Usage of parser from component" UI Automation
-			| 'Имя'                                             |
+			| 'Name'                                             |
 			| 'ИспользоватьПарсерGherkinИзКомпонентыVanessaExt' |
 
 
 * This flag defines if the component will be used in file search.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Usage of component for files search" UI Automation
-			| 'Имя'                           |
+			| 'Name'                           |
 			| 'ПоискФайловСПомощьюКомпоненты' |
 	
 * Enabling this option allows to speed up the file search a little.

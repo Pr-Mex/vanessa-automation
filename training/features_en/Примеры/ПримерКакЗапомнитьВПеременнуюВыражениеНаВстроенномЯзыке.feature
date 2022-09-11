@@ -1,8 +1,8 @@
-﻿# language: ru
+﻿# language: en
 
-Feature: Примеры, как запомнить в переменную выражение на встроенном языке 1С.
+Feature: Examples of storing the built-in 1C language expression in a variable.
 
-Scenario: Примеры, как запомнить в переменную выражение на встроенном языке 1С.
+Scenario: Examples of storing the built-in 1C language expression in a variable.
 
 * A special step that evaluates 1C built-in language expression and places it in a variable (local)
 		And I save "String(CurrentDate())" in "CurrentData" variable
@@ -16,9 +16,9 @@ Scenario: Примеры, как запомнить в переменную вы
 * Through direct execution of 1C code
 		And I execute 1C:Enterprise script
 		"""bsl
-			ТекЗначение = Строка(ТекущаяДата());
-			Контекст.Вставить("CurrentData2", ТекЗначение);
-			КонтекстСохраняемый.Вставить("CurrentData2Global", ТекЗначение);
+			CurrentValue = String(CurrentDate());
+			Context.Insert("CurrentData2", CurrentValue);
+			ContextSaved.Insert("CurrentData2Global", CurrentValue);
 		"""
 		And I display "CurrentData2" variable value
 		And I display "CurrentData2Global" variable value

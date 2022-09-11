@@ -1,8 +1,8 @@
-﻿# language: ru
+﻿# language: en
 
-Feature: Примеры, как изменить настройки Vanessa Automation во время выполнения сценария.
+Feature: Examples of changing Vanessa Automation settings during script execution.
 
-Scenario: Примеры, как изменить настройки Vanessa Automation во время выполнения сценария.
+Scenario: Examples of changing Vanessa Automation settings during script execution.
 
 * Changes to Vanessa Automation settings of the Boolean type (checkboxes)
 		And I remove Vanessa Automation settings checkbox "FlagName"

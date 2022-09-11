@@ -15,7 +15,7 @@
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ГруппаОтборПоСценариям' UI Automation
 		И Пауза 1
 		И я делаю подсветку нескольких элементов VA с их заголовком "Script filter" UI Automation
-			| 'Имя'                   |
+			| 'Name'                   |
 			| 'СписокСценариевДляВыполнения' |
 
 * You can specify script names in this list.

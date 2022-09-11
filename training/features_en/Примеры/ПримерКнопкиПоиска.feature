@@ -1,8 +1,8 @@
-﻿# language: ru
+﻿# language: en
 
-Feature: Демонстрация поиска
+Feature: Search demo
 
-Scenario: Демонстрация поиска
+Scenario: Search demo
 
 * Group of steps 1
 * Group of steps 2
@@ -14,4 +14,3 @@ Scenario: Демонстрация поиска
 * Group of steps 3
 				And Delay 1
 				
-

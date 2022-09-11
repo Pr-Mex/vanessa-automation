@@ -11,7 +11,7 @@
 		И я скрываю часть кнопок командной панели редактора в режиме обучения
 
 * Let's upload a test case.
-		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\ПримерыПримерТочкиОстанова.feature"
+		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерТочкиОстанова.feature"
 
 * Use this command to set a breakpoint. Or F9 hotkey.
 		И Я делаю подсветку элемента формы VA по имени "VanessaEditorSetBreakPoint" "Set/remove breakpoint"
@@ -47,7 +47,7 @@
 				| 'Имя/ID'  | 'Type'    |
 				| 'Перейти' | 'Button' |
 
-				| 'Имя'  | 'Value'                 |
+				| 'Name'  | 'Value'                 |
 				| 'text' | 'Go to breakpoint' |
 			И Пауза 4
 			И я делаю клик по элементу формы 'ЭтотСеанс' 'Перейти' 'Button' UI Automation
@@ -57,7 +57,7 @@
 				| 'Имя/ID'     | 'Type'    |
 				| 'Go to line' | 'Button' |
 
-				| 'Имя'  | 'Value'                 |
+				| 'Name'  | 'Value'                 |
 				| 'text' | 'Go to breakpoint' |
 
 			И Пауза 4
