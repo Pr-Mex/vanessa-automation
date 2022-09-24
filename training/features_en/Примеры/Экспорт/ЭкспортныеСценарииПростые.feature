@@ -7,12 +7,12 @@
 Feature: Subscripts.
 
 
-Scenario: I'm calling a subscript without parameters
+Scenario: I call a subsript without parameters
 
 	And Delay 1
 
 
-Scenario: I call the subscript with a parameter "Param1"
+Scenario: I call the sub script with the parameter "Param1"
 
 	And I save "Param1" line to the variable "VariableName1"
 	And I display "VariableName1" variable value

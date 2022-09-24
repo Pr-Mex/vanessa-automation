@@ -21,11 +21,11 @@
 
 * If this tag is specified in the feature, then all scripts from it can be called in other script.
 * Here is an example of declaring such a scenario.
-		И я делаю подсветку фрагмента текста в редакторе VA в режиме обучения подсценарий "I'm calling a subscript without parameters" 'Script declaration'
+		И я делаю подсветку фрагмента текста в редакторе VA в режиме обучения подсценарий "I call a subsript without parameters" 'Script declaration'
 
 * Parameters cannot be passed to this script because they are not declared in it.
 * And here is an example of a script where a parameter can be passed.
-		И я делаю подсветку фрагмента текста в редакторе VA в режиме обучения подсценарий 'I'm calling a subscript with the parameter "Param1"' 'Scenario with the parameter'
+		И я делаю подсветку фрагмента текста в редакторе VA в режиме обучения подсценарий 'I call the sub script with the parameter "Param1"' 'Scenario with the parameter'
 * This is the notification that the script can accept a parameter.
 		И Я делаю подсветку фрагмента текста в редакторе VA в строке в режиме обучения подсценарий 15 '"Param1"' 'Parameter declaration'
 
@@ -35,7 +35,7 @@
 		И Я делаю подсветку фрагмента текста в редакторе VA в строке в режиме обучения подсценарий 17 '"Param1"' 'Parameter is passed in the step'
 * The parameter can also be passed as part of step parameter.
 * To do this, the parameter name should be framed with square brackets.
-		И Я делаю подсветку фрагмента текста в редакторе VA в режиме обучения подсценарий '[Parameter1]' 'Parameter is passed inside the string'
+		И Я делаю подсветку фрагмента текста в редакторе VA в режиме обучения подсценарий '[Param1]' 'Parameter is passed inside the string'
 
 * Now let's see how this subscript is called from other scripts. Let's open a test case.
 		И я загружаю фичи в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Примеры\ПримерПодсценарии1.feature"
@@ -45,7 +45,7 @@
 		И Я делаю подсветку фрагмента текста в редакторе VA в режиме обучения подсценарий 'And I call a subsript without parameters' 'Calling a subscript'
 
 * And this is the call of the second subscript with the transferred parameter
-		И Я делаю подсветку фрагмента текста в редакторе VA в режиме обучения подсценарий 'And I call a subscript with the parameter "ParameterValue"' 'Calling a subsript with the parameter'
+		И Я делаю подсветку фрагмента текста в редакторе VA в режиме обучения подсценарий 'And I call the sub script with the parameter "ParameterValue"' 'Calling a subsript with the parameter'
 
 * It's easy to see that calling a subscript is not much different from calling a regular script step.
 * To indicate a subscript call, the editor underlines such lines with a single line.
