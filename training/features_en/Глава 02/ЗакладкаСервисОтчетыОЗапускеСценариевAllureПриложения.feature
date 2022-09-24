@@ -29,7 +29,7 @@
 			| 'ПрикладыватьФайлыMxlКОтчетуAllure'                                   |
 			| 'ПрикладыватьФайлыMxlСохраненныеВФорматеHTMLКОтчетуAllure'            |
 			| 'ПрикладыватьДополнительныеДанныеПриСравненииЗначенияСЭталономAllure' |
-			| 'ПрикладыватьФайлыXlsКОтчетуAllure'                                   |
+			| 'ПрикладыватьФайлыXlsxКОтчетуAllure'                                   |
 
 * This checkbox determines if a log file will be attached to the report.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Log data" UI Automation
@@ -76,7 +76,7 @@
 * This flag defines if excel files will be attached to the report.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Files in xlsx format" UI Automation
 			| 'Name'                                                                 |
-			| 'ПрикладыватьФайлыXlsКОтчетуAllure' |
+			| 'ПрикладыватьФайлыXlsxКОтчетуAllure' |
 
 * This checkbox defines if additional files helping to find differences between the layout standard and the actual layout value, will be attached to the report.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Additional information about templates comparison" UI Automation
