@@ -125,14 +125,45 @@
 									<v8:content>Группа текст javascript</v8:content>
 								</v8:item>
 							</ToolTip>
+							<Group>Vertical</Group>
 							<Behavior>PopUp</Behavior>
 							<ExtendedTooltip name="ГруппаТекстJavascriptРасширеннаяПодсказка" id="33"/>
 							<ChildItems>
-								<TextDocumentField name="ТекстJavaScript" id="23">
-									<DataPath>ТекстJavaScript</DataPath>
-									<ContextMenu name="ТекстJavaScriptКонтекстноеМеню" id="24"/>
-									<ExtendedTooltip name="ТекстJavaScriptРасширеннаяПодсказка" id="25"/>
-								</TextDocumentField>
+								<UsualGroup name="ГруппаJavaScript" id="124">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа java script</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа java script</v8:content>
+										</v8:item>
+									</ToolTip>
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаJavaScriptРасширеннаяПодсказка" id="125"/>
+									<ChildItems>
+										<TextDocumentField name="ТекстJavaScript" id="23">
+											<DataPath>ТекстJavaScript</DataPath>
+											<ContextMenu name="ТекстJavaScriptКонтекстноеМеню" id="24"/>
+											<ExtendedTooltip name="ТекстJavaScriptРасширеннаяПодсказка" id="25"/>
+										</TextDocumentField>
+										<TextDocumentField name="РезультатJSON" id="126">
+											<DataPath>РезультатJSON</DataPath>
+											<ContextMenu name="РезультатJSONКонтекстноеМеню" id="127"/>
+											<ExtendedTooltip name="РезультатJSONРасширеннаяПодсказка" id="128"/>
+										</TextDocumentField>
+									</ChildItems>
+								</UsualGroup>
+								<InputField name="КомандаШага" id="119">
+									<DataPath>КомандаШага</DataPath>
+									<ContextMenu name="КомандаШагаКонтекстноеМеню" id="120"/>
+									<ExtendedTooltip name="КомандаШагаРасширеннаяПодсказка" id="121"/>
+								</InputField>
 							</ChildItems>
 						</UsualGroup>
 						<UsualGroup name="ГруппаРисованиеКоординаты" id="34">
@@ -311,6 +342,11 @@
 										<Type>CommandBarButton</Type>
 										<CommandName>Form.Command.ПоказатьКомандыЭлементаБраузера</CommandName>
 										<ExtendedTooltip name="ТекстHTMLКонтекстноеМенюТекстHTMLПодменю1РасширеннаяПодсказка" id="71"/>
+									</Button>
+									<Button name="ТекстHTMLКонтекстноеМенюПоказатьКодHTML" id="122">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ПоказатьКодHTML</CommandName>
+										<ExtendedTooltip name="ТекстHTMLКонтекстноеМенюПоказатьКодHTMLРасширеннаяПодсказка" id="123"/>
 									</Button>
 								</ChildItems>
 							</ContextMenu>
@@ -696,6 +732,36 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="КомандаШага" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Команда шага</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РезультатJSON" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Результат JSON</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ЗапуститьБраузер" id="1">
@@ -826,6 +892,21 @@
 			</Picture>
 			<Action>КомандаБраузераВБуфер</Action>
 			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ПоказатьКодHTML" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать код HTML</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать команды элемента браузера</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказатьКодHTML</Action>
 		</Command>
 	</Commands>
 	<Parameters>
