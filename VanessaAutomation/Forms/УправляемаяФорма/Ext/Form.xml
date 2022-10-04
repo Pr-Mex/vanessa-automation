@@ -1685,6 +1685,36 @@
 							</Button>
 						</ChildItems>
 					</ButtonGroup>
+					<ButtonGroup name="ГруппаVanessaEditorРаботаСБраузером" id="3748">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа vanessa editor работа с браузером</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Vanessa editor group working with the browser</v8:content>
+							</v8:item>
+						</Title>
+						<ToolTip>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Группа vanessa editor работа с браузером</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Vanessa editor group working with browser</v8:content>
+							</v8:item>
+						</ToolTip>
+						<ExtendedTooltip name="ГруппаVanessaEditorРаботаСБраузеромРасширеннаяПодсказка" id="3749"/>
+						<ChildItems>
+							<Button name="ФормаНастройкиРаботыСБраузером" id="3750">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.НастройкиРаботыСБраузером</CommandName>
+								<ExtendedTooltip name="ФормаНастройкиРаботыСБраузеромРасширеннаяПодсказка" id="3751"/>
+							</Button>
+						</ChildItems>
+					</ButtonGroup>
 				</ChildItems>
 			</Popup>
 			<ButtonGroup name="ГруппаКоманднаяПанельVanessaEditor" id="2424">
@@ -11840,6 +11870,23 @@
 														<Presentation>
 															<v8:item>
 																<v8:lang>ru</v8:lang>
+																<v8:content>Мобильный клиент автономный</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Mobile client offline</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">МобильныйКлиентАвтономный</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
 																<v8:content>Обычное приложение</v8:content>
 															</v8:item>
 															<v8:item>
@@ -14883,27 +14930,6 @@ This issue is relevant when running tests on Linux.</v8:content>
 																				</Title>
 																			</ExtendedTooltip>
 																		</InputField>
-																		<InputField name="ДиапазонПортовTestclient" id="1683">
-																			<DataPath>Объект.ДиапазонПортовTestclient</DataPath>
-																			<TitleLocation>Top</TitleLocation>
-																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-																			<Width>30</Width>
-																			<HorizontalStretch>false</HorizontalStretch>
-																			<ContextMenu name="ДиапазонПортовTestclientКонтекстноеМеню" id="1684"/>
-																			<ExtendedTooltip name="ДиапазонПортовTestclientРасширеннаяПодсказка" id="1685">
-																				<AutoMaxWidth>false</AutoMaxWidth>
-																				<Title formatted="false">
-																					<v8:item>
-																						<v8:lang>ru</v8:lang>
-																						<v8:content>Устанавливает диапазон портов, в котором будет производиться поиск свободного порта в системе для запуска клиента тестирования. Например 48100-48200.</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>en</v8:lang>
-																						<v8:content>Specifies ports range to search for free port to run TestClient. For example 48100-48200.</v8:content>
-																					</v8:item>
-																				</Title>
-																			</ExtendedTooltip>
-																		</InputField>
 																	</ChildItems>
 																</UsualGroup>
 																<UsualGroup name="ГруппаЗапускКлиентаТестированияТретьяСтрокаПравыйСтолбец" id="3310">
@@ -14948,41 +14974,177 @@ This issue is relevant when running tests on Linux.</v8:content>
 																</UsualGroup>
 															</ChildItems>
 														</UsualGroup>
-														<UsualGroup name="ГруппаЗапускКлиентаТестированияЛевыйСтолбец" id="3290">
-															<Visible>false</Visible>
+														<UsualGroup name="ГруппаЗапускКлиентаТестированияЧетвертаяСтрока" id="3739">
 															<Title>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
-																	<v8:content>Группа запуск клиента тестирования левый столбец</v8:content>
+																	<v8:content>Группа запуск клиента тестирования четвертая строка</v8:content>
 																</v8:item>
 																<v8:item>
 																	<v8:lang>en</v8:lang>
-																	<v8:content>Test client launch group left column</v8:content>
+																	<v8:content>Test client launch group fourth line</v8:content>
 																</v8:item>
 															</Title>
-															<Width>50</Width>
-															<HorizontalStretch>false</HorizontalStretch>
-															<Group>Vertical</Group>
+															<Group>AlwaysHorizontal</Group>
 															<Representation>None</Representation>
 															<ShowTitle>false</ShowTitle>
-															<ExtendedTooltip name="ГруппаЗапускКлиентаТестированияЛевыйСтолбецРасширеннаяПодсказка" id="3291"/>
+															<ExtendedTooltip name="ГруппаЗапускКлиентаТестированияЧетвертаяСтрокаРасширеннаяПодсказка" id="3740"/>
+															<ChildItems>
+																<UsualGroup name="ГруппаЗапускКлиентаТестированияЧетвертаяСтрокаЛевыйСтолбец" id="3741">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа запуск клиента тестирования четвертая строка левый столбец</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Test client launch group fourth row left column</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Width>50</Width>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаЗапускКлиентаТестированияЧетвертаяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="3742"/>
+																	<ChildItems>
+																		<InputField name="ДиапазонПортовTestclient" id="1683">
+																			<DataPath>Объект.ДиапазонПортовTestclient</DataPath>
+																			<TitleLocation>Top</TitleLocation>
+																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<Width>30</Width>
+																			<HorizontalStretch>false</HorizontalStretch>
+																			<ContextMenu name="ДиапазонПортовTestclientКонтекстноеМеню" id="1684"/>
+																			<ExtendedTooltip name="ДиапазонПортовTestclientРасширеннаяПодсказка" id="1685">
+																				<AutoMaxWidth>false</AutoMaxWidth>
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Устанавливает диапазон портов, в котором будет производиться поиск свободного порта в системе для запуска клиента тестирования. Например 48100-48200.</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>Specifies ports range to search for free port to run TestClient. For example 48100-48200.</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
+																		</InputField>
+																	</ChildItems>
+																</UsualGroup>
+																<UsualGroup name="ГруппаЗапускКлиентаТестированияЧетвертаяСтрокаПравыйСтолбец" id="3743">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа запуск клиента тестирования четвертая строка правый столбец</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Test client launch group fourth row right column</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаЗапускКлиентаТестированияЧетвертаяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="3744"/>
+																	<ChildItems>
+																		<InputField name="КаталогФайловВыводаСлужебныхСообщений" id="3745">
+																			<DataPath>Объект.КаталогФайловВыводаСлужебныхСообщений</DataPath>
+																			<TitleLocation>Top</TitleLocation>
+																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<ContextMenu name="КаталогФайловВыводаСлужебныхСообщенийКонтекстноеМеню" id="3746"/>
+																			<ExtendedTooltip name="КаталогФайловВыводаСлужебныхСообщенийРасширеннаяПодсказка" id="3747">
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>If the parameter is set, the /Out &lt;FileName&gt; parameter will be added when the test client is started.
+The file name will be generated according to the rule TestingClientName+LaunchDateTime.</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Если параметр задан, то при запуске клиента тестирования будет добавляться параметр /Out &lt;ИмяФайла&gt;.
+Имя файла будет генерироваться по правилу ИмяКлиентаТестирования+ДатаВремяЗапуска.</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
+																		</InputField>
+																	</ChildItems>
+																</UsualGroup>
+															</ChildItems>
 														</UsualGroup>
-														<UsualGroup name="ГруппаЗапускКлиентаТестированияПравыйСтолбец" id="3292">
-															<Visible>false</Visible>
+														<UsualGroup name="ГруппаЗапускКлиентаТестированияПятаяСтрока" id="3756">
 															<Title>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
-																	<v8:content>Группа запуск клиента тестирования правый столбец</v8:content>
+																	<v8:content>Группа запуск клиента тестирования пятая строка</v8:content>
 																</v8:item>
 																<v8:item>
 																	<v8:lang>en</v8:lang>
-																	<v8:content>Test client launch group right column</v8:content>
+																	<v8:content>Test client launch group fifth line</v8:content>
 																</v8:item>
 															</Title>
-															<Group>Vertical</Group>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа запуск клиента тестирования пятая строка</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Group>AlwaysHorizontal</Group>
 															<Representation>None</Representation>
 															<ShowTitle>false</ShowTitle>
-															<ExtendedTooltip name="ГруппаЗапускКлиентаТестированияПравыйСтолбецРасширеннаяПодсказка" id="3293"/>
+															<ExtendedTooltip name="ГруппаЗапускКлиентаТестированияПятаяСтрокаРасширеннаяПодсказка" id="3757"/>
+															<ChildItems>
+																<UsualGroup name="ГруппаЗапускКлиентаТестированияПятаяСтрокаЛевыйСтолбец" id="3758">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа запуск клиента тестирования пятая строка левый столбец</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Test client launch group fifth row left column</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Group>Vertical</Group>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаЗапускКлиентаТестированияПятаяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="3759"/>
+																	<ChildItems>
+																		<CheckBoxField name="ОтключитьЗапускРеглЗаданийВФайловойБазе" id="3760">
+																			<DataPath>Объект.ОтключитьЗапускРеглЗаданийВФайловойБазе</DataPath>
+																			<TitleLocation>Right</TitleLocation>
+																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="ОтключитьЗапускРеглЗаданийВФайловойБазеКонтекстноеМеню" id="3761"/>
+																			<ExtendedTooltip name="ОтключитьЗапускРеглЗаданийВФайловойБазеРасширеннаяПодсказка" id="3762">
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Если опция включена, при запуске клиента тестирования в файловой базе будет отключен запуск регламентных заданий. Используется ключ командной строки /AllowExecuteScheduledJobs -Off</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>If this option is enabled, scheduled jobs execution will be disabled when new test client will start for a file infobase. Uses command line key /AllowExecuteScheduledJobs -Off</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
+																		</CheckBoxField>
+																	</ChildItems>
+																</UsualGroup>
+																<UsualGroup name="ГруппаЗапускКлиентаТестированияПятаяСтрокаПравыйСтолбец" id="3763">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа запуск клиента тестирования пятая строка правый столбец</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Test client launch group fifth row right column</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Group>Vertical</Group>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаЗапускКлиентаТестированияПятаяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="3764"/>
+																</UsualGroup>
+															</ChildItems>
 														</UsualGroup>
 													</ChildItems>
 												</UsualGroup>
@@ -16434,6 +16596,72 @@ then in reality the maximum step time will be 20 seconds, not 10.</v8:content>
 																	<ShowTitle>false</ShowTitle>
 																	<ExtendedTooltip name="ГруппаПодсистемаСтабилизацияВыполненияТестовВтораяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="3385"/>
 																	<ChildItems>
+																		<InputField name="ПаузаПриОткрытииОкна" id="1883">
+																			<DataPath>Объект.ПаузаПриОткрытииОкна</DataPath>
+																			<TitleLocation>Top</TitleLocation>
+																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<Width>5</Width>
+																			<ContextMenu name="ПаузаПриОткрытииОкнаКонтекстноеМеню" id="1884"/>
+																			<ExtendedTooltip name="ПаузаПриОткрытииОкнаРасширеннаяПодсказка" id="1885">
+																				<AutoMaxWidth>false</AutoMaxWidth>
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Значение дополнительной паузы, которая будет всегда применяться в шагах
+```Gherkin
+Тогда открылось окно "ИмяОкна"
+И я жду открытия окна "Имя окна" в течении 60 секунд
+И я жду открытия окна отличного от "ИмяОкна" в течение 60 секунд
+```</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>Additional pause value that will always be applied in a step
+```Gherkin
+Then "WindowTitle" window is opened
+And I wait "WindowTitle" window opening in 60 seconds
+And I wait the window with header different from "WindowTitle" opening in 60 seconds
+```</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
+																		</InputField>
+																	</ChildItems>
+																</UsualGroup>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="ГруппаПодсистемаСтабилизацияВыполненияТестовТретьяСтрока" id="3752">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа подсистема стабилизация выполнения тестов третья строка</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Group subsystem stabilization of test execution third line</v8:content>
+																</v8:item>
+															</Title>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаПодсистемаСтабилизацияВыполненияТестовТретьяСтрокаРасширеннаяПодсказка" id="3753"/>
+															<ChildItems>
+																<UsualGroup name="ГруппаПодсистемаСтабилизацияВыполненияТестовТретьяСтрокаЛевыйСтолбец" id="3754">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа подсистема стабилизация выполнения тестов третья строка левый столбец</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Group subsystem test execution stabilization third row left column</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Width>50</Width>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаПодсистемаСтабилизацияВыполненияТестовТретьяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="3755"/>
+																	<ChildItems>
 																		<CheckBoxField name="БезопасноеВыполнениеШагов" id="1784">
 																			<DataPath>Объект.БезопасноеВыполнениеШагов</DataPath>
 																			<TitleLocation>Right</TitleLocation>
@@ -16459,32 +16687,6 @@ This option slow the execution down .</v8:content>
 																				<Event name="OnChange">БезопасноеВыполнениеШаговПриИзменении</Event>
 																			</Events>
 																		</CheckBoxField>
-																		<InputField name="ПаузаПриОткрытииОкна" id="1883">
-																			<DataPath>Объект.ПаузаПриОткрытииОкна</DataPath>
-																			<TitleLocation>Top</TitleLocation>
-																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-																			<Width>5</Width>
-																			<ContextMenu name="ПаузаПриОткрытииОкнаКонтекстноеМеню" id="1884"/>
-																			<ExtendedTooltip name="ПаузаПриОткрытииОкнаРасширеннаяПодсказка" id="1885">
-																				<AutoMaxWidth>false</AutoMaxWidth>
-																				<Title formatted="false">
-																					<v8:item>
-																						<v8:lang>ru</v8:lang>
-																						<v8:content>Значение дополнительной паузы, которая будет всегда применяться в шаге
-```Gherkin
-Тогда открылось окно "ИмяОкна"
-```</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>en</v8:lang>
-																						<v8:content>Additional pause value that will always be applied in a step
-```Gherkin
-Then "WindowTitle" window is opened
-```</v8:content>
-																					</v8:item>
-																				</Title>
-																			</ExtendedTooltip>
-																		</InputField>
 																	</ChildItems>
 																</UsualGroup>
 															</ChildItems>
@@ -19454,13 +19656,13 @@ If the field is empty, then the log will not be output to a text file.</v8:conte
 																					<ShowTitle>false</ShowTitle>
 																					<ExtendedTooltip name="ГруппаПриложенияКОтчетуAllureПятаяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="3692"/>
 																					<ChildItems>
-																						<CheckBoxField name="ПрикладыватьФайлыXlsКОтчетуAllure" id="3721">
+																						<CheckBoxField name="ПрикладыватьФайлыXlsxКОтчетуAllure" id="3721">
 																							<DataPath>Объект.ПрикладыватьФайлыXlsxКОтчетуAllure</DataPath>
 																							<TitleLocation>Right</TitleLocation>
 																							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
 																							<CheckBoxType>Auto</CheckBoxType>
-																							<ContextMenu name="ПрикладыватьФайлыXlsКОтчетуAllureКонтекстноеМеню" id="3722"/>
-																							<ExtendedTooltip name="ПрикладыватьФайлыXlsКОтчетуAllureРасширеннаяПодсказка" id="3723">
+																							<ContextMenu name="ПрикладыватьФайлыXlsxКОтчетуAllureКонтекстноеМеню" id="3722"/>
+																							<ExtendedTooltip name="ПрикладыватьФайлыXlsxКОтчетуAllureРасширеннаяПодсказка" id="3723">
 																								<Title formatted="false">
 																									<v8:item>
 																										<v8:lang>en</v8:lang>
@@ -42196,15 +42398,33 @@ If the voice acting file is not found in the directory, the process of generatin
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Открыть редактор стилей HTML</v8:content>
+					<v8:content>Открыть редактор HTML</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьStyleHTML</Action>
+		</Command>
+		<Command name="НастройкиРаботыСБраузером" id="172">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Get the coordinates of the area for the screenshot</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Настройки работы с браузером</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Открыть редактор HTML</v8:content>
+					<v8:content>Настройки работы с браузером</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Browser settings form</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action>ОткрытьStyleHTML</Action>
+			<Action>НастройкиРаботыСБраузером</Action>
 		</Command>
 	</Commands>
 </Form>

@@ -85,7 +85,35 @@ Function GetMetadataTypeMap()
 
 	Return MetadataTypeMap;
 	
-EndFunction
+EndFunction   
+
+// Проверяет, является ли строка уникальным идентификатором.
+// В качестве уникального идентификатора предполагается строка вида
+// "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX", где X = [0..9,a..f].
+//
+// Параметры:
+//  ИдентификаторСтрока - Строка - проверяемая строка.
+//
+// Возвращаемое значение:
+//  Булево - Истина, если переданная строка является уникальным идентификатором.
+&AtServer
+Функция ЭтоУникальныйИдентификатор(Знач Строка)
+	
+	Шаблон = "XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX";
+	
+	Если СтрДлина(Шаблон) <> СтрДлина(Строка) Тогда
+		Возврат Ложь;
+	КонецЕсли;
+	Для Позиция = 1 По СтрДлина(Строка) Цикл
+		Если КодСимвола(Шаблон, Позиция) = 88 И ((КодСимвола(Строка, Позиция) < 48 Или КодСимвола(Строка, Позиция) > 57) И (КодСимвола(Строка, Позиция) < 97 Или КодСимвола(Строка, Позиция) > 102))
+			Или КодСимвола(Шаблон, Позиция) = 45 И КодСимвола(Строка, Позиция) <> 45 Тогда
+			Возврат Ложь;
+		КонецЕсли;
+	КонецЦикла;
+	
+	Возврат Истина;
+
+КонецФункции
 
 #EndRegion
 
@@ -2045,7 +2073,7 @@ Function ParseStringValue(Val ParsingValue, Val ValueType)
 	EndIf;
 	ValueLen = StrLen(ParsingValue);
 	If ValueLen = 36
-		And StrOccurrenceCount(ParsingValue, "-") = 4 Then
+		And ЭтоУникальныйИдентификатор(ParsingValue) Then
 		Return New UUID(ParsingValue);
 	EndIf;
 	If (ValueLen = 18 Or ValueLen = 19)
@@ -2776,6 +2804,7 @@ Function GeValuetStringRepresentation(DataValue, RefReplaceMetadataObjects)
 			ReturnValue = StrReplace(ReturnValue, Chars.LF, "\n");
 			ReturnValue = StrReplace(ReturnValue, Chars.CR, "");
 			ReturnValue = StrReplace(ReturnValue, "'", "\'");
+			ReturnValue = StrReplace(ReturnValue, "|", "\|");
 		EndIf;
 	ElsIf isMetadataObjectAndDataValueNotEmpty(MetadataObject, DataValue) Then
 		PredefinedCheck = New Structure;
