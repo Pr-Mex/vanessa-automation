@@ -17,7 +17,7 @@
 
 Проект использует принцип формирования автодокументации в формате Markdown и видео:
 
-* [Интерактивная справка в формате видео](https://www.youtube.com/channel/UCs1Wed_OCq889Lf41x02IsA/playlists).
+* [Интерактивная справка в формате видео](https://www.youtube.com/channel/UC-GC02tUKAXKWGZVaPKtg6w/playlists).
 * [Видео инструкции (разное)](https://www.youtube.com/channel/UC114RqHhG__1gET8pzs3AHA/playlists).
 * [Вебинар 2016 года](http://infostart.ru/webinars/537546/). 
 
