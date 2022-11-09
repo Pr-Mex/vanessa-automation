@@ -8,7 +8,7 @@
 Также у VA есть пользователи, которые вообще не говорят по русски.
 
 4. VA закрыта тестами. Полная сборка сейчас содержит больше 4000 сценариев. Релиз выпускается только когда все тесты проходят.
-Вот CI VA: http://84.237.195.35:32005/job/VAFullCheck/allure/
+Вот CI VA: http://vanessa.bit-erp.ru/job/VAFullCheck/allure/
 У add тоже есть CI, но там полгода ничего не собирается, хотя релизы ADD выходят.
 Вот CI ADD: http://ci.silverbulleters.org/job/ADD%20(CI-CD%20v1)/job/develop/
 
