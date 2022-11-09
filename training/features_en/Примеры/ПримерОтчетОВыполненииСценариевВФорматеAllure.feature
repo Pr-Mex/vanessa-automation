@@ -8,5 +8,5 @@ Scenario: Examples. Script execution report in Allure format.
 		//https://habr.com/ru/company/jugru/blog/337386/
 		
 * Report example. Vanessa Automation test. (ctrl+click to view)
-		//http://84.237.195.35:32005/job/VAFullCheck/allure/
+		//http://vanessa.bit-erp.ru/job/VAFullCheck/allure/
 		
