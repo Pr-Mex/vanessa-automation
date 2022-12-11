@@ -360,9 +360,6 @@
 Процедура ВыгрузитьДанныеVanessaEditor() Экспорт
 	Ванесса.VanessaTabs = Неопределено;
  	Ванесса.VanessaGherkinProvider = Неопределено;
-	Если Ванесса.Объект.ИспользоватьРедакторVanessaEditor Тогда
-		Ванесса.Элементы.VanessaEditor.Document.defaultView.location = "about:blank";
-	КонецЕсли;	 
 КонецПроцедуры 
 
 // Устанавливает тему редактора
