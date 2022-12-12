@@ -48,7 +48,7 @@
 		И Я делаю подсветку элемента VA "VanessaEditorФормаЗагрузитьОднуФичу" "Load one feature" и перемещаю курсор
 
 * Let's, for example, upload a feature file from new release of Vanessa Automation testing set.
-		И я загружаю фича файлы в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Глава 01\ЧтоТакоеVanessaAutomation.feature"
+		И я загружаю фича файлы в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Глава01\ЧтоТакоеVanessaAutomation.feature"
 		И Пауза 3
 		И выражение внутреннего языка 'КонтекстСохраняемый.ФормаVAВРежимеОбучения.ФлагСценарииЗагружены' стало Истинно в течение 20 секунд
 
@@ -61,7 +61,7 @@
 		И Я делаю подсветку элемента VA "VanessaEditorФормаЗагрузитьФичиИзКаталога" "Load multiple features" и перемещаю курсор
 
 * Let's upload some feature files from the directory. Again, let's use the files from the Vanessa Automation delivery.
-		И я загружаю фича файлы в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Глава 01"
+		И я загружаю фича файлы в VA в режиме обучения "$КаталогИнструментов$\training\features_en\Глава01"
 		И Пауза 3
 		И выражение внутреннего языка 'КонтекстСохраняемый.ФормаVAВРежимеОбучения.ФлагСценарииЗагружены' стало Истинно в течение 20 секунд 
 		И я разворчаваю все строки дерева в VA в режиме обучения

@@ -296,7 +296,7 @@
       * **ВыгружатьСтатусВыполненияСценариевВФайл {createlogs}**:
          Если флаг установлен, то Vanessa Automation будет выгружать статус выполнения сценариев в файл.
          Подробности тут:
-         https://pr-mex.github.io/vanessa-automation/dev/ReturnStatus
+         https://pr-mex.github.io/vanessa-automation/dev/ReturnStatus/ReturnStatus
 
       * **ИмяТекущейСборки {buildname}**:
          Уникальное имя сборки, которое используется совместно с параметром "Добавлять у имени сценария условия выгрузки".
