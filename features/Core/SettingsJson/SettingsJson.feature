@@ -76,7 +76,7 @@
 
 Сценарий: Загрузка настроек из файла ru
 
-	Если файл "$КаталогИнструментов$/features/Core/SettingsJson/VAParams_test_ru.json" существует
+	Если файл "$КаталогИнструментов$/features/Core/SettingsJson/VAParams_test_ru.json" существует Тогда
 		Тогда Я буду выбирать внешний файл "$КаталогИнструментов$/features/Core/SettingsJson/VAParams_test_ru.json"
 		И я нажимаю на кнопку "Загрузить настройки из файла..."
 		И пауза 2
