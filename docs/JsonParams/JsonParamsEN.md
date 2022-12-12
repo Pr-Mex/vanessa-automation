@@ -297,7 +297,7 @@ An array of key and value objects. This array will be loaded into global variabl
       * **createlogs**:
          If the flag is set, Vanessa Automation will upload the script execution status to a file.
          Details here:
-         https://pr-mex.github.io/vanessa-automation/dev/ReturnStatus
+         https://pr-mex.github.io/vanessa-automation/dev/ReturnStatus/ReturnStatus
 
       * **buildname**:
          Unique assembly name used along with the parameter "Add uploading conditions to scenario name".
