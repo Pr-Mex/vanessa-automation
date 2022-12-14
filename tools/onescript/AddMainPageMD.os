@@ -126,7 +126,7 @@
 			+ СтрШаблон(" [(Видео)](%1) [(PDF)](%2) [(MD)](%3)",
 			Ссылка,
 			ПрефиксГиперссылок + "PDF/" + ОкончаниеПути + ".pdf",
-			"https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MD/MainHelp/" + НомерРелиза + "/" + ОкончаниеПути + ".MD"
+			"https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/" + НомерРелиза + "/" + ОкончаниеПути + ".MD"
 			);
 		
 		МассивСтрок[Сч] = ТекСтр;
