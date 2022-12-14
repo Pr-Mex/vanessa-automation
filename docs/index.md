@@ -15,6 +15,8 @@
 
 ## Документация
 
+* [Основная документация](https://github.com/Pr-Mex/vanessa-automation/blob/develop/docs/MainHelp/index.MD).
+
 Проект использует принцип формирования автодокументации в формате Markdown, HTML, PDF и видео.
 
 * [Интерактивная справка в формате видео](https://www.youtube.com/channel/UC-GC02tUKAXKWGZVaPKtg6w/playlists).
