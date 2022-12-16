@@ -102,3 +102,15 @@ oscript ReplaceLinksMD.os <ПутьККаталогуMDФайлов> <Префи
 ```
 oscript C:\Commons\rep\vanessa-automation\tools\onescript\ReplaceLinksMD.os "C:\Temp\Markdown\FinalMD" "https://vanessa-files.do.bit-erp.ru/Doc/1.2.040.1"
 ```
+
+#### InsertLinksToVALessonsList.os
+
+Вставляет в основной список уроков VA ссылки на PDF, MD, видео из файла документации.
+Как запускать:
+```
+oscript InsertLinksToVALessonsList.os <ПутьКСпискуУроковVA> <ПутьКСпискуУроковИзРелиза>
+```
+Пример запуска:
+```
+oscript C:\Commons\rep\vanessa-automation\tools\onescript\InsertLinksToVALessonsList.os "C:\Commons\rep\vanessa-automation\training\List_of_lessons_ru.md" "C:\Commons\rep\vanessa-automation\docs\MainHelp\index.MD"
+```
