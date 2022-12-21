@@ -55,7 +55,7 @@ oscript C:\Commons\rep\vanessa-automation\tools\onescript\MakeOneHTMLFromMany.os
 
 #### MakePdfFromHtml.os
 
-Скрипт для сборки pdf файлов для каждого HTML файла из каталога с помощью Chrome
+Скрипт для сборки pdf файлов для каждого HTML файла из каталога с помощью Chrome.
 Как запускать:
 ```
 oscript MakePdfFromHtml.os <ПутьККаталогуHTMLФайлов> <ПутьКChrome>
@@ -67,7 +67,7 @@ oscript C:\Commons\rep\vanessa-automation\tools\onescript\MakePdfFromHtml.os "C:
 
 #### InsertVideoLinks.os
 
-Скрипт вставляет в файлы MD или HTML ссылки на видео инструкции
+Скрипт вставляет в файлы MD или HTML ссылки на видео инструкции.
 Как запускать:
 ```
 oscript InsertVideoLinks.os <Тип> <ПутьККаталогу> <JsonФайлСодержащийДанныеПоВидеоФайлам>
@@ -93,7 +93,7 @@ oscript C:\Commons\rep\vanessa-automation\tools\onescript\AddMainPageMD.os "C:\T
 
 #### ReplaceLinksMD.os
 
-Заменяет ссылки на картинки в MD файлах на ссылки на картинки в файлохранилище
+Заменяет ссылки на картинки в MD файлах на ссылки на картинки в файлохранилище.
 Как запускать:
 ```
 oscript ReplaceLinksMD.os <ПутьККаталогуMDФайлов> <ПрефиксГиперссылокФайлохранилища>
