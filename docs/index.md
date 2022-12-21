@@ -8,16 +8,17 @@
 
 ## BDD for 1С:Enterprise
 
-* Текущий релиз в ветке [Master: 1.2.039.1](https://github.com/Pr-Mex/vanessa-automation/tree/master)
+* Текущий **мажорный** релиз [1.2.039.1](https://github.com/Pr-Mex/vanessa-automation/releases/tag/1.2.039.1)
+* Текущий **минорный** релиз [1.2.039.11](https://github.com/Pr-Mex/vanessa-automation/releases/tag/1.2.039.11)
 * Разработка ведется в ветке [Develop](https://github.com/Pr-Mex/vanessa-automation/tree/develop).
 * [Обсудить Ванессу](https://t.me/testspro1c) в телеграм группе, и обсудить всё, что связано с тестированием в 1С.
 * [Подписаться на новости о проекте](https://t.me/VanessaAutomation) в телеграм канале.
 
 ## Документация
 
-* [Основная документация](https://github.com/Pr-Mex/vanessa-automation/blob/develop/docs/MainHelp/index.MD).
+* [Основная документация](https://github.com/Pr-Mex/vanessa-automation/blob/develop/docs/MainHelp/index.MD). Это уроки по Vanessa Automation собранные в формате видео, pdf и markdown.
 
-Проект использует принцип формирования автодокументации в формате Markdown, HTML, PDF и видео.
+#### Также можно посмотреть
 
 * [Интерактивная справка в формате видео](https://www.youtube.com/channel/UC-GC02tUKAXKWGZVaPKtg6w/playlists).
 * [Видео инструкции (разное)](https://www.youtube.com/channel/UC114RqHhG__1gET8pzs3AHA/playlists).
@@ -42,7 +43,7 @@
 * [Автоматизация тестирования в СППР 2.0. Часть 1](https://www.youtube.com/watch?v=1UBlV4kWx_o)
 * [Автоматизация тестирования в СППР 2.0. Часть 2](https://www.youtube.com/watch?v=gKJmJKIe-nA)
 
-## Видео
+## Видео материалы
 
 * [100+ тестов на Vanessa-Automation. Личный опыт без маркетинга.](https://www.youtube.com/watch?v=_YrmLnM9J1A)
 * [Как создать видеоинструкцию в 1С? Пошаговый мастер класс от Виталия Чебана](https://www.youtube.com/watch?v=Jg1sSb-O-F0)
@@ -106,16 +107,9 @@ VASingle отличается от обычной сборки тем, что п
 
 # Каждый сценарий состоит из последовательных связанных шагов
 
-Сценарий: Запуск в консольном режиме
-    Дано Пусть существует файл ".\vb-execute-profile.json"
-    И в переменную окружения V83PATH установлено значение "C:\Program Files (x86)\1cv8\8.3.6.2151\bin\1cv8.exe"
-    Когда я запускаю командную строку '%V83PATH% /Execute .\vanessa-automation.epf /C"StartFeaturePlayer;VBParams=.\vb-execute-profile.json'
-    Тогда появляется файл с результатами '.\BuildStatus.log'
-    И в каталоге ".\allurereport" существует HTML отчет о результатах проверки сценариев
-
 Сценарий: Запуск в интерактивном режиме
-    Дано Пусть я открыл обработку "vanessa-automation.epf"
-    Когда Я нажал кнопку "Загрузить фичи из каталога"
+    Дано я открыл обработку "vanessa-automation.epf"
+    Когда я нажал кнопку "Загрузить фичи из каталога"
     И указал каталог с требованиями заказчика равным ".\features"
     И затем нажал кнопку "Сгенерировать шаблоны обработок"
     Также в каталоге ".\features" возникли epf файлы идентичные имени feature файла
