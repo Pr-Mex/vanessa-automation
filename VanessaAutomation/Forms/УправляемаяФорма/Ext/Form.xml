@@ -22282,15 +22282,11 @@ For the option to work, you must enable the use of the VanessaExt component.</v8
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>HTML и Markdown</v8:content>
+															<v8:content>Текстовые инструкции</v8:content>
 														</v8:item>
 														<v8:item>
 															<v8:lang>en</v8:lang>
 															<v8:content>HTML and Markdown</v8:content>
-														</v8:item>
-														<v8:item>
-															<v8:lang>ro</v8:lang>
-															<v8:content>HTML si Markdown</v8:content>
 														</v8:item>
 													</Title>
 													<Group>Vertical</Group>
@@ -22299,166 +22295,88 @@ For the option to work, you must enable the use of the VanessaExt component.</v8
 													<ControlRepresentation>Picture</ControlRepresentation>
 													<ExtendedTooltip name="HTMLИMarkdownРасширеннаяПодсказка" id="1403"/>
 													<ChildItems>
-														<UsualGroup name="HTMLИMarkdownПерваяСтрока" id="3492">
+														<UsualGroup name="HTMLИнструкции" id="3806">
 															<Title>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
-																	<v8:content>HTML и Markdown первая строка</v8:content>
+																	<v8:content>HTML</v8:content>
 																</v8:item>
 																<v8:item>
 																	<v8:lang>en</v8:lang>
-																	<v8:content>HTML and Markdown first line</v8:content>
+																	<v8:content>HTML</v8:content>
 																</v8:item>
 															</Title>
-															<Group>AlwaysHorizontal</Group>
-															<Representation>None</Representation>
-															<ShowTitle>false</ShowTitle>
-															<ExtendedTooltip name="HTMLИMarkdownПерваяСтрокаРасширеннаяПодсказка" id="3493"/>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>HTMLИнструкции</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Group>Vertical</Group>
+															<Behavior>Collapsible</Behavior>
+															<ControlRepresentation>Picture</ControlRepresentation>
+															<ExtendedTooltip name="HTMLИнструкцииРасширеннаяПодсказка" id="3807"/>
 															<ChildItems>
-																<UsualGroup name="HTMLИMarkdownПерваяСтрокаЛевыйСтолбец" id="3494">
+																<CheckBoxField name="СоздаватьИнструкциюHTML" id="2960">
+																	<DataPath>Объект.СоздаватьИнструкциюHTML</DataPath>
 																	<Title>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>HTML и Markdown первая строка левый столбец</v8:content>
+																			<v8:content>Создавать HTML инструкцию</v8:content>
 																		</v8:item>
 																		<v8:item>
 																			<v8:lang>en</v8:lang>
-																			<v8:content>HTML and Markdown first line left column</v8:content>
+																			<v8:content>Make HTML instruction</v8:content>
 																		</v8:item>
 																	</Title>
-																	<Width>50</Width>
-																	<HorizontalStretch>false</HorizontalStretch>
-																	<Representation>None</Representation>
-																	<ShowTitle>false</ShowTitle>
-																	<ExtendedTooltip name="HTMLИMarkdownПерваяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="3495"/>
-																	<ChildItems>
-																		<CheckBoxField name="СоздаватьИнструкциюHTML" id="2960">
-																			<DataPath>Объект.СоздаватьИнструкциюHTML</DataPath>
-																			<Title>
-																				<v8:item>
-																					<v8:lang>ru</v8:lang>
-																					<v8:content>Создавать HTML инструкцию</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>en</v8:lang>
-																					<v8:content>Make HTML instruction</v8:content>
-																				</v8:item>
-																			</Title>
-																			<TitleLocation>Right</TitleLocation>
-																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-																			<CheckBoxType>Auto</CheckBoxType>
-																			<ContextMenu name="СоздаватьИнструкциюHTMLКонтекстноеМеню" id="2961"/>
-																			<ExtendedTooltip name="СоздаватьИнструкциюHTMLРасширеннаяПодсказка" id="2962">
-																				<AutoMaxWidth>false</AutoMaxWidth>
-																				<Title formatted="false">
-																					<v8:item>
-																						<v8:lang>ru</v8:lang>
-																						<v8:content>Если флаг установлен, то во время выполнения сценария будет создаваться скринкаст в формате HTML.
+																	<TitleLocation>Right</TitleLocation>
+																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="СоздаватьИнструкциюHTMLКонтекстноеМеню" id="2961"/>
+																	<ExtendedTooltip name="СоздаватьИнструкциюHTMLРасширеннаяПодсказка" id="2962">
+																		<AutoMaxWidth>false</AutoMaxWidth>
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Если флаг установлен, то во время выполнения сценария будет создаваться скринкаст в формате HTML.
 В поле "Команда создания скриншотов" должна быть указана консольная команда для снятия скриншотов.
 Также в тексте сценария возможно использовать специальные директивы, которые описаны в справке.</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>en</v8:lang>
-																						<v8:content>If the checkbox is on, HTML screencast will be created during scenario execution.
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>If the checkbox is on, HTML screencast will be created during scenario execution.
 Specify console command for snapshots generation in  "Snapshot creating command" field.
 Also use special instructions in the script, see Help info.</v8:content>
-																					</v8:item>
-																				</Title>
-																			</ExtendedTooltip>
-																			<Events>
-																				<Event name="OnChange">СоздаватьИнструкциюHTMLПриИзменении</Event>
-																			</Events>
-																		</CheckBoxField>
-																	</ChildItems>
-																</UsualGroup>
-																<UsualGroup name="HTMLИMarkdownПерваяСтрокаПраывйСтолбец" id="3496">
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																	<Events>
+																		<Event name="OnChange">СоздаватьИнструкциюHTMLПриИзменении</Event>
+																	</Events>
+																</CheckBoxField>
+																<UsualGroup name="КаталогиHTML" id="3500">
 																	<Title>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>HTML и Markdown первая строка правый столбец</v8:content>
+																			<v8:content>Каталоги HTML</v8:content>
 																		</v8:item>
 																		<v8:item>
 																			<v8:lang>en</v8:lang>
-																			<v8:content>HTML and Markdown first line left column</v8:content>
+																			<v8:content>HTML Directories</v8:content>
 																		</v8:item>
 																	</Title>
-																	<Representation>None</Representation>
-																	<ShowTitle>false</ShowTitle>
-																	<ExtendedTooltip name="HTMLИMarkdownПерваяСтрокаПраывйСтолбецРасширеннаяПодсказка" id="3497"/>
-																	<ChildItems>
-																		<CheckBoxField name="СоздаватьИнструкциюMarkdown" id="2972">
-																			<DataPath>Объект.СоздаватьИнструкциюMarkdown</DataPath>
-																			<Title>
-																				<v8:item>
-																					<v8:lang>ru</v8:lang>
-																					<v8:content>Создавать Markdown инструкцию</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>en</v8:lang>
-																					<v8:content>Make Markdown instruction</v8:content>
-																				</v8:item>
-																			</Title>
-																			<TitleLocation>Right</TitleLocation>
-																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-																			<CheckBoxType>Auto</CheckBoxType>
-																			<ContextMenu name="СоздаватьИнструкциюMarkdownКонтекстноеМеню" id="2973"/>
-																			<ExtendedTooltip name="СоздаватьИнструкциюMarkdownРасширеннаяПодсказка" id="2974">
-																				<AutoMaxWidth>false</AutoMaxWidth>
-																				<Title formatted="false">
-																					<v8:item>
-																						<v8:lang>ru</v8:lang>
-																						<v8:content>Если флаг установлен, то во время выполнения сценария будет создаваться скринкаст в формате MarkDown.
-В поле "Команда создания скриншотов" должна быть указана консольная команда для снятия скриншотов или установлен флаг скриншоты компонентой "VanessaExt".
-Также в тексте сценария возможно использовать специальные директивы, которые описаны в справке.</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>en</v8:lang>
-																						<v8:content>If the checkbox is on, MarkDown screencast will be created during scenario execution.
-Specify console command for snapshots generation in  "Snapshot creating command" field or the screenshots flag is set by the "VanessaExt" component".
-Also use special instructions in the script, see Help info.</v8:content>
-																					</v8:item>
-																				</Title>
-																			</ExtendedTooltip>
-																			<Events>
-																				<Event name="OnChange">СоздаватьИнструкциюMarkdownПриИзменении</Event>
-																			</Events>
-																		</CheckBoxField>
-																	</ChildItems>
-																</UsualGroup>
-															</ChildItems>
-														</UsualGroup>
-														<UsualGroup name="HTMLИMarkdownВтораяСтрока" id="3498">
-															<Title>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>HTML и Markdown вторая строка</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>en</v8:lang>
-																	<v8:content>HTML and Markdown second line</v8:content>
-																</v8:item>
-															</Title>
-															<Group>AlwaysHorizontal</Group>
-															<Representation>None</Representation>
-															<ShowTitle>false</ShowTitle>
-															<ExtendedTooltip name="HTMLИMarkdownВтораяСтрокаРасширеннаяПодсказка" id="3499"/>
-															<ChildItems>
-																<UsualGroup name="HTMLИMarkdownВтораяСтрокаЛевыйСтолбец" id="3500">
-																	<Title>
+																	<ToolTip>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>HTML и Markdown вторая строка левый столбец</v8:content>
+																			<v8:content>Каталоги HTML</v8:content>
 																		</v8:item>
-																		<v8:item>
-																			<v8:lang>en</v8:lang>
-																			<v8:content>HTML and Markdown second line left column</v8:content>
-																		</v8:item>
-																	</Title>
+																	</ToolTip>
 																	<Width>50</Width>
 																	<HorizontalStretch>false</HorizontalStretch>
+																	<Group>AlwaysHorizontal</Group>
 																	<Representation>None</Representation>
 																	<ShowTitle>false</ShowTitle>
-																	<ExtendedTooltip name="HTMLИMarkdownВтораяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="3501"/>
+																	<ExtendedTooltip name="КаталогиHTMLРасширеннаяПодсказка" id="3501"/>
 																	<ChildItems>
 																		<InputField name="КаталогВыгрузкиИнструкцийHTML" id="148">
 																			<DataPath>Объект.КаталогВыгрузкиИнструкцийHTML</DataPath>
@@ -22570,114 +22488,16 @@ Also use special instructions in the script, see Help info.</v8:content>
 																				<Event name="StartChoice">КаталогOutputИнструкцияHTMLНачалоВыбора</Event>
 																			</Events>
 																		</InputField>
-																		<Button name="ОткрытьРедакторHTML" id="3770">
-																			<Type>UsualButton</Type>
-																			<CommandName>Form.Command.ОткрытьРедакторHTML</CommandName>
-																			<ExtendedTooltip name="ОткрытьРедакторHTMLРасширеннаяПодсказка" id="3771"/>
-																		</Button>
-																	</ChildItems>
-																</UsualGroup>
-																<UsualGroup name="HTMLИMarkdownВтораяСтрокаПравыйСтолбец" id="3502">
-																	<Title>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>HTML и Markdown вторая строка правый столбец</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>en</v8:lang>
-																			<v8:content>HTML and Markdown second line left column</v8:content>
-																		</v8:item>
-																	</Title>
-																	<Representation>None</Representation>
-																	<ShowTitle>false</ShowTitle>
-																	<ExtendedTooltip name="HTMLИMarkdownВтораяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="3503"/>
-																	<ChildItems>
-																		<InputField name="КаталогВыгрузкиИнструкцийMarkdown" id="647">
-																			<DataPath>Объект.КаталогВыгрузкиИнструкцийMarkdown</DataPath>
+																		<InputField name="СтилиHTMLИнструкции" id="3803">
+																			<DataPath>Объект.СтилиHTMLИнструкции</DataPath>
 																			<Title>
 																				<v8:item>
 																					<v8:lang>ru</v8:lang>
-																					<v8:content>Каталог инструкций Markdown</v8:content>
+																					<v8:content>Файл CSS</v8:content>
 																				</v8:item>
 																				<v8:item>
 																					<v8:lang>en</v8:lang>
-																					<v8:content>Markdown documentation directory</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>am</v8:lang>
-																					<v8:content>ወደ ማውጫ አንድ Markdown ይከተሉ</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>az</v8:lang>
-																					<v8:content>Kataloq yaratmaq üçün təlimat Markdown</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>bg</v8:lang>
-																					<v8:content>Каталог за формиране на инструкции Markdown</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>de</v8:lang>
-																					<v8:content>Katalog für die Bildung von Markdown Anweisungen</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>es</v8:lang>
-																					<v8:content>El directorio para la formación de instrucciones Markdown</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>et</v8:lang>
-																					<v8:content>Kataloogi moodustamine juhiseid Markdown</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>fr</v8:lang>
-																					<v8:content>Catalogue de la formation des instructions Markdown</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>hu</v8:lang>
-																					<v8:content>A könyvtárba hozza létre a Árleszállítás utasítások</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>it</v8:lang>
-																					<v8:content>Catalogo per la formazione di istruzioni Markdown</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>ka</v8:lang>
-																					<v8:content>დირექტორია გენერირება Markdown ინსტრუქცია</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>lt</v8:lang>
-																					<v8:content>Katalogas forma instrukcijų Markdown</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>lv</v8:lang>
-																					<v8:content>Katalogs, lai veidotu instrukcijas Markdown</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>mn</v8:lang>
-																					<v8:content>Сан бий болгох Markdown заавар</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>pl</v8:lang>
-																					<v8:content>Katalog do tworzenia instrukcji Markdown</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>ro</v8:lang>
-																					<v8:content>Directorul pentru formarea de instrucțiuni Continua</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>sl</v8:lang>
-																					<v8:content>Imenik za ustvarjanje Markdown navodila</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>sv</v8:lang>
-																					<v8:content>Katalog för att skapa Wiki-instruktioner</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>tr</v8:lang>
-																					<v8:content>Katalog oluşturmak için talimatlar Markdown</v8:content>
-																				</v8:item>
-																				<v8:item>
-																					<v8:lang>vi</v8:lang>
-																					<v8:content>Thư mục để tạo bản hướng dẫn Markdown</v8:content>
+																					<v8:content>CSS file</v8:content>
 																				</v8:item>
 																			</Title>
 																			<TitleLocation>Top</TitleLocation>
@@ -22685,225 +22505,474 @@ Also use special instructions in the script, see Help info.</v8:content>
 																			<HorizontalStretch>false</HorizontalStretch>
 																			<ChoiceButton>true</ChoiceButton>
 																			<ClearButton>true</ClearButton>
-																			<ContextMenu name="КаталогВыгрузкиИнструкцийMarkdownКонтекстноеМеню" id="648"/>
-																			<ExtendedTooltip name="КаталогВыгрузкиИнструкцийMarkdownРасширеннаяПодсказка" id="1409">
+																			<ContextMenu name="СтилиHTMLИнструкцииКонтекстноеМеню" id="3804"/>
+																			<ExtendedTooltip name="СтилиHTMLИнструкцииРасширеннаяПодсказка" id="3805">
 																				<Title formatted="false">
 																					<v8:item>
-																						<v8:lang>en</v8:lang>
-																						<v8:content>Markdown Instruction Directory</v8:content>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Файл стилей</v8:content>
 																					</v8:item>
 																					<v8:item>
-																						<v8:lang>ru</v8:lang>
-																						<v8:content>Каталог Markdown инструкций</v8:content>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>Style File</v8:content>
 																					</v8:item>
 																				</Title>
 																			</ExtendedTooltip>
 																			<Events>
-																				<Event name="StartChoice">КаталогOutputИнструкцияMarkdownНачалоВыбора</Event>
+																				<Event name="OnChange">СтилиHTMLИнструкцииПриИзменении</Event>
+																				<Event name="StartChoice">СтилиДляHTMLИнструкцийНачалоВыбора</Event>
 																			</Events>
 																		</InputField>
-																	</ChildItems>
-																</UsualGroup>
-															</ChildItems>
-														</UsualGroup>
-														<UsualGroup name="HTMLИMarkdownТретьяСтрока" id="3772">
-															<Title>
-																<v8:item>
-																	<v8:lang>ru</v8:lang>
-																	<v8:content>HTML и Markdown третья строка</v8:content>
-																</v8:item>
-																<v8:item>
-																	<v8:lang>en</v8:lang>
-																	<v8:content>HTML and Markdown third line</v8:content>
-																</v8:item>
-															</Title>
-															<Group>AlwaysHorizontal</Group>
-															<Representation>None</Representation>
-															<ShowTitle>false</ShowTitle>
-															<ExtendedTooltip name="HTMLИMarkdownТретьяСтрокаРасширеннаяПодсказка" id="3773"/>
-															<ChildItems>
-																<UsualGroup name="HTMLИMarkdownТретьяСтрокаЛевыйСтолбец" id="3774">
-																	<Title>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>HTML и Markdown третья строка левый столбец</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>en</v8:lang>
-																			<v8:content>HTML and Markdown third row left column</v8:content>
-																		</v8:item>
-																	</Title>
-																	<Width>50</Width>
-																	<HorizontalStretch>false</HorizontalStretch>
-																	<Representation>None</Representation>
-																	<ShowTitle>false</ShowTitle>
-																	<ExtendedTooltip name="HTMLИMarkdownТретьяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="3775"/>
-																	<ChildItems>
-																		<CheckBoxField name="АвтонумерацияШагов" id="2966">
-																			<DataPath>Объект.АвтонумерацияШагов</DataPath>
+																		<Button name="ОткрытьРедакторHTML" id="3770">
+																			<Type>UsualButton</Type>
+																			<CommandName>Form.Command.ОткрытьРедакторHTML</CommandName>
 																			<Title>
 																				<v8:item>
 																					<v8:lang>ru</v8:lang>
-																					<v8:content>Автонумерация шагов инструкций</v8:content>
+																					<v8:content>Редактировать</v8:content>
 																				</v8:item>
 																				<v8:item>
 																					<v8:lang>en</v8:lang>
-																					<v8:content>Auto numbering of steps of instructions</v8:content>
+																					<v8:content>Edit</v8:content>
 																				</v8:item>
 																			</Title>
-																			<TitleLocation>Right</TitleLocation>
-																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-																			<CheckBoxType>Auto</CheckBoxType>
-																			<ContextMenu name="АвтонумерацияШаговКонтекстноеМеню" id="2967"/>
-																			<ExtendedTooltip name="АвтонумерацияШаговРасширеннаяПодсказка" id="2968">
-																				<Title formatted="false">
-																					<v8:item>
-																						<v8:lang>en</v8:lang>
-																						<v8:content>Adds auto numbering to the beginning of the step description text.
-To ensure that leading zeros are not lost when exporting from MD format, the text is written to the code block.</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>ru</v8:lang>
-																						<v8:content>Добавляет авто нумерацию в начало текста описания шага. 
-Для того, чтобы лидирующие нули не терялись при экспорте из MD формата, текст записывается в блок кода.</v8:content>
-																					</v8:item>
-																				</Title>
-																			</ExtendedTooltip>
-																		</CheckBoxField>
-																	</ChildItems>
-																</UsualGroup>
-																<UsualGroup name="HTMLИMarkdownТретьяСтрокаПравыйСтолбец" id="3781">
-																	<Title>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>HTML и Markdown третья строка правый столбец</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>en</v8:lang>
-																			<v8:content>HTML and Markdown third row right column</v8:content>
-																		</v8:item>
-																	</Title>
-																	<Representation>None</Representation>
-																	<ShowTitle>false</ShowTitle>
-																	<ExtendedTooltip name="HTMLИMarkdownТретьяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="3782"/>
-																	<ChildItems>
-																		<CheckBoxField name="ТекстовыеИнструкцииГруппаШаговКакШаг" id="3783">
-																			<DataPath>Объект.ТекстовыеИнструкцииГруппаШаговКакШаг</DataPath>
-																			<TitleLocation>Right</TitleLocation>
-																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-																			<CheckBoxType>Auto</CheckBoxType>
-																			<ContextMenu name="ТекстовыеИнструкцииГруппаШаговКакШагКонтекстноеМеню" id="3784"/>
-																			<ExtendedTooltip name="ТекстовыеИнструкцииГруппаШаговКакШагРасширеннаяПодсказка" id="3785">
-																				<Title formatted="false">
-																					<v8:item>
-																						<v8:lang>en</v8:lang>
-																						<v8:content>Enables the mode when a group of steps in a script will be interpreted as one step in a text instruction.
-If no additional tags are specified, then the screenshot will be taken after the last step in the group is completed.
-To take several screenshots for one group of steps, you need to use the @screenshot tag before the necessary steps.
-If you need to take only one screenshot for a group of steps, you can specify the @screenshot tag only once before the desired step.</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>ru</v8:lang>
-																						<v8:content>Включает режим, когда группа шагов в сценарии будет интерпретироваться как один шаг в текстовой инструкции.
-Если не указано дополнительных тегов, то скриншот будет сниматься после выполнения последнего шага в группе.
-Чтобы для  одной группы шагов сделать несколько скриншотов нужно использовать тег @screenshot перед нужными шагами.
-Если нужно сделать только один скриншот для группы шагов, то можно указать тег @screenshot только один раз перед нужным шагом.</v8:content>
-																					</v8:item>
-																				</Title>
-																			</ExtendedTooltip>
-																		</CheckBoxField>
+																			<ExtendedTooltip name="ОткрытьРедакторHTMLРасширеннаяПодсказка" id="3771"/>
+																		</Button>
 																	</ChildItems>
 																</UsualGroup>
 															</ChildItems>
 														</UsualGroup>
-														<UsualGroup name="HTMLИMarkdownЧетвертаяСтрока" id="3788">
+														<UsualGroup name="MarkdownИнструкции" id="3808">
 															<Title>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
-																	<v8:content>HTML и Markdown четвертая строка</v8:content>
+																	<v8:content>Markdown</v8:content>
 																</v8:item>
 																<v8:item>
 																	<v8:lang>en</v8:lang>
-																	<v8:content>HTML and Markdown fourth line</v8:content>
+																	<v8:content>Markdown</v8:content>
 																</v8:item>
 															</Title>
-															<Group>AlwaysHorizontal</Group>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Markdown инструкции</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Group>Vertical</Group>
+															<Behavior>Collapsible</Behavior>
+															<ControlRepresentation>Picture</ControlRepresentation>
 															<Representation>None</Representation>
-															<ShowTitle>false</ShowTitle>
-															<ExtendedTooltip name="HTMLИMarkdownЧетвертаяСтрокаРасширеннаяПодсказка" id="3789"/>
+															<ExtendedTooltip name="MarkdownИнструкцииРасширеннаяПодсказка" id="3809"/>
 															<ChildItems>
-																<UsualGroup name="HTMLИMarkdownЧетвертаяСтрокаЛевыйСтолбец" id="3790">
+																<CheckBoxField name="СоздаватьИнструкциюMarkdown" id="2972">
+																	<DataPath>Объект.СоздаватьИнструкциюMarkdown</DataPath>
 																	<Title>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>HTML и Markdown четвертая строка левый столбец</v8:content>
+																			<v8:content>Создавать Markdown инструкцию</v8:content>
 																		</v8:item>
 																		<v8:item>
 																			<v8:lang>en</v8:lang>
-																			<v8:content>HTML and Markdown fourth row left column</v8:content>
+																			<v8:content>Make Markdown instruction</v8:content>
 																		</v8:item>
 																	</Title>
-																	<Width>50</Width>
+																	<TitleLocation>Right</TitleLocation>
+																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="СоздаватьИнструкциюMarkdownКонтекстноеМеню" id="2973"/>
+																	<ExtendedTooltip name="СоздаватьИнструкциюMarkdownРасширеннаяПодсказка" id="2974">
+																		<AutoMaxWidth>false</AutoMaxWidth>
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Если флаг установлен, то во время выполнения сценария будет создаваться скринкаст в формате MarkDown.
+В поле "Команда создания скриншотов" должна быть указана консольная команда для снятия скриншотов или установлен флаг скриншоты компонентой "VanessaExt".
+Также в тексте сценария возможно использовать специальные директивы, которые описаны в справке.</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>If the checkbox is on, MarkDown screencast will be created during scenario execution.
+Specify console command for snapshots generation in  "Snapshot creating command" field or the screenshots flag is set by the "VanessaExt" component".
+Also use special instructions in the script, see Help info.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																	<Events>
+																		<Event name="OnChange">СоздаватьИнструкциюMarkdownПриИзменении</Event>
+																	</Events>
+																</CheckBoxField>
+																<InputField name="КаталогВыгрузкиИнструкцийMarkdown" id="647">
+																	<DataPath>Объект.КаталогВыгрузкиИнструкцийMarkdown</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Каталог инструкций Markdown</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Markdown documentation directory</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>am</v8:lang>
+																			<v8:content>ወደ ማውጫ አንድ Markdown ይከተሉ</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>az</v8:lang>
+																			<v8:content>Kataloq yaratmaq üçün təlimat Markdown</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>bg</v8:lang>
+																			<v8:content>Каталог за формиране на инструкции Markdown</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>de</v8:lang>
+																			<v8:content>Katalog für die Bildung von Markdown Anweisungen</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>es</v8:lang>
+																			<v8:content>El directorio para la formación de instrucciones Markdown</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>et</v8:lang>
+																			<v8:content>Kataloogi moodustamine juhiseid Markdown</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>fr</v8:lang>
+																			<v8:content>Catalogue de la formation des instructions Markdown</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>hu</v8:lang>
+																			<v8:content>A könyvtárba hozza létre a Árleszállítás utasítások</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>it</v8:lang>
+																			<v8:content>Catalogo per la formazione di istruzioni Markdown</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>ka</v8:lang>
+																			<v8:content>დირექტორია გენერირება Markdown ინსტრუქცია</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>lt</v8:lang>
+																			<v8:content>Katalogas forma instrukcijų Markdown</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>lv</v8:lang>
+																			<v8:content>Katalogs, lai veidotu instrukcijas Markdown</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>mn</v8:lang>
+																			<v8:content>Сан бий болгох Markdown заавар</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>pl</v8:lang>
+																			<v8:content>Katalog do tworzenia instrukcji Markdown</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>ro</v8:lang>
+																			<v8:content>Directorul pentru formarea de instrucțiuni Continua</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>sl</v8:lang>
+																			<v8:content>Imenik za ustvarjanje Markdown navodila</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>sv</v8:lang>
+																			<v8:content>Katalog för att skapa Wiki-instruktioner</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>tr</v8:lang>
+																			<v8:content>Katalog oluşturmak için talimatlar Markdown</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>vi</v8:lang>
+																			<v8:content>Thư mục để tạo bản hướng dẫn Markdown</v8:content>
+																		</v8:item>
+																	</Title>
+																	<TitleLocation>Top</TitleLocation>
+																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
 																	<HorizontalStretch>false</HorizontalStretch>
+																	<ChoiceButton>true</ChoiceButton>
+																	<ClearButton>true</ClearButton>
+																	<ContextMenu name="КаталогВыгрузкиИнструкцийMarkdownКонтекстноеМеню" id="648"/>
+																	<ExtendedTooltip name="КаталогВыгрузкиИнструкцийMarkdownРасширеннаяПодсказка" id="1409">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>Markdown Instruction Directory</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Каталог Markdown инструкций</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																	<Events>
+																		<Event name="StartChoice">КаталогOutputИнструкцияMarkdownНачалоВыбора</Event>
+																	</Events>
+																</InputField>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="ОбщиеНастройкиИнструкций" id="3810">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Общие настройки</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>General</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Общие настройки инструкций</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Group>Vertical</Group>
+															<Behavior>Collapsible</Behavior>
+															<ControlRepresentation>Picture</ControlRepresentation>
+															<Representation>None</Representation>
+															<ExtendedTooltip name="ОбщиеНастройкиИнструкцийРасширеннаяПодсказка" id="3811"/>
+															<ChildItems>
+																<UsualGroup name="ОбщиеПерваяСтрока" id="3772">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Общие первая строка</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>General first line</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ToolTip>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Общие первая строка</v8:content>
+																		</v8:item>
+																	</ToolTip>
+																	<Group>AlwaysHorizontal</Group>
 																	<Representation>None</Representation>
 																	<ShowTitle>false</ShowTitle>
-																	<ExtendedTooltip name="HTMLИMarkdownЧетвертаяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="3791"/>
+																	<ExtendedTooltip name="ОбщиеПерваяСтрокаРасширеннаяПодсказка" id="3773"/>
 																	<ChildItems>
-																		<CheckBoxField name="ДобавлятьИмяФичиВТекстовуюИнструкцию" id="3797">
-																			<DataPath>Объект.ДобавлятьИмяФичиВТекстовуюИнструкцию</DataPath>
-																			<TitleLocation>Right</TitleLocation>
-																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-																			<CheckBoxType>Auto</CheckBoxType>
-																			<ContextMenu name="ДобавлятьИмяФичиВТекстовуюИнструкциюКонтекстноеМеню" id="3798"/>
-																			<ExtendedTooltip name="ДобавлятьИмяФичиВТекстовуюИнструкциюРасширеннаяПодсказка" id="3799">
-																				<Title formatted="false">
-																					<v8:item>
-																						<v8:lang>en</v8:lang>
-																						<v8:content>If the flag is set, then information with the name of the feature will be added to the text instruction.</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>ru</v8:lang>
-																						<v8:content>Если флаг установлен, то в текстовую инструкцию будет добавлена информация с названием фичи.</v8:content>
-																					</v8:item>
-																				</Title>
-																			</ExtendedTooltip>
-																		</CheckBoxField>
+																		<UsualGroup name="ОбщиеПерваяСтрокаЛевыйСтолбец" id="3774">
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Общие первая строка левый столбец</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>General first row left column</v8:content>
+																				</v8:item>
+																			</Title>
+																			<ToolTip>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Общие первая строка левый столбец</v8:content>
+																				</v8:item>
+																			</ToolTip>
+																			<Width>50</Width>
+																			<HorizontalStretch>false</HorizontalStretch>
+																			<Representation>None</Representation>
+																			<ShowTitle>false</ShowTitle>
+																			<ExtendedTooltip name="ОбщиеПерваяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="3775"/>
+																			<ChildItems>
+																				<CheckBoxField name="АвтонумерацияШагов" id="2966">
+																					<DataPath>Объект.АвтонумерацияШагов</DataPath>
+																					<Title>
+																						<v8:item>
+																							<v8:lang>ru</v8:lang>
+																							<v8:content>Автонумерация шагов инструкций</v8:content>
+																						</v8:item>
+																						<v8:item>
+																							<v8:lang>en</v8:lang>
+																							<v8:content>Auto numbering of steps of instructions</v8:content>
+																						</v8:item>
+																					</Title>
+																					<TitleLocation>Right</TitleLocation>
+																					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																					<CheckBoxType>Auto</CheckBoxType>
+																					<ContextMenu name="АвтонумерацияШаговКонтекстноеМеню" id="2967"/>
+																					<ExtendedTooltip name="АвтонумерацияШаговРасширеннаяПодсказка" id="2968">
+																						<Title formatted="false">
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>Adds auto numbering to the beginning of the step description text.
+To ensure that leading zeros are not lost when exporting from MD format, the text is written to the code block.</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Добавляет авто нумерацию в начало текста описания шага. 
+Для того, чтобы лидирующие нули не терялись при экспорте из MD формата, текст записывается в блок кода.</v8:content>
+																							</v8:item>
+																						</Title>
+																					</ExtendedTooltip>
+																				</CheckBoxField>
+																			</ChildItems>
+																		</UsualGroup>
+																		<UsualGroup name="ОбщиеПерваяСтрокаПравыйСтолбец" id="3781">
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Общие первая строка правый столбец</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>General first row right column</v8:content>
+																				</v8:item>
+																			</Title>
+																			<ToolTip>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Общие первая строка правый столбец</v8:content>
+																				</v8:item>
+																			</ToolTip>
+																			<Representation>None</Representation>
+																			<ShowTitle>false</ShowTitle>
+																			<ExtendedTooltip name="ОбщиеПерваяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="3782"/>
+																			<ChildItems>
+																				<CheckBoxField name="ТекстовыеИнструкцииГруппаШаговКакШаг" id="3783">
+																					<DataPath>Объект.ТекстовыеИнструкцииГруппаШаговКакШаг</DataPath>
+																					<TitleLocation>Right</TitleLocation>
+																					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																					<CheckBoxType>Auto</CheckBoxType>
+																					<ContextMenu name="ТекстовыеИнструкцииГруппаШаговКакШагКонтекстноеМеню" id="3784"/>
+																					<ExtendedTooltip name="ТекстовыеИнструкцииГруппаШаговКакШагРасширеннаяПодсказка" id="3785">
+																						<Title formatted="false">
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>Enables the mode when a group of steps in a script will be interpreted as one step in a text instruction.
+If no additional tags are specified, then the screenshot will be taken after the last step in the group is completed.
+To take several screenshots for one group of steps, you need to use the @screenshot tag before the necessary steps.
+If you need to take only one screenshot for a group of steps, you can specify the @screenshot tag only once before the desired step.</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Включает режим, когда группа шагов в сценарии будет интерпретироваться как один шаг в текстовой инструкции.
+Если не указано дополнительных тегов, то скриншот будет сниматься после выполнения последнего шага в группе.
+Чтобы для  одной группы шагов сделать несколько скриншотов нужно использовать тег @screenshot перед нужными шагами.
+Если нужно сделать только один скриншот для группы шагов, то можно указать тег @screenshot только один раз перед нужным шагом.</v8:content>
+																							</v8:item>
+																						</Title>
+																					</ExtendedTooltip>
+																				</CheckBoxField>
+																			</ChildItems>
+																		</UsualGroup>
 																	</ChildItems>
 																</UsualGroup>
-																<UsualGroup name="HTMLИMarkdownЧетвертаяСтрокаПравыйСтолбец" id="3795">
+																<UsualGroup name="ОбщиеВтораяСтрока" id="3498">
 																	<Title>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>HTML и Markdown четвертая строка правый столбец</v8:content>
+																			<v8:content>Общие вторая строка</v8:content>
 																		</v8:item>
 																		<v8:item>
 																			<v8:lang>en</v8:lang>
-																			<v8:content>HTML and Markdown fourth row right column</v8:content>
+																			<v8:content>General second line</v8:content>
 																		</v8:item>
 																	</Title>
+																	<ToolTip>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Общие вторая строка</v8:content>
+																		</v8:item>
+																	</ToolTip>
+																	<Group>AlwaysHorizontal</Group>
 																	<Representation>None</Representation>
 																	<ShowTitle>false</ShowTitle>
-																	<ExtendedTooltip name="HTMLИMarkdownЧетвертаяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="3796"/>
+																	<ExtendedTooltip name="ОбщиеВтораяСтрокаРасширеннаяПодсказка" id="3499"/>
 																	<ChildItems>
-																		<CheckBoxField name="ДобавлятьИмяСценарияВТекстовуюИнструкцию" id="3800">
-																			<DataPath>Объект.ДобавлятьИмяСценарияВТекстовуюИнструкцию</DataPath>
-																			<TitleLocation>Right</TitleLocation>
-																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-																			<CheckBoxType>Auto</CheckBoxType>
-																			<ContextMenu name="ДобавлятьИмяСценарияВТекстовуюИнструкциюКонтекстноеМеню" id="3801"/>
-																			<ExtendedTooltip name="ДобавлятьИмяСценарияВТекстовуюИнструкциюРасширеннаяПодсказка" id="3802">
-																				<Title formatted="false">
-																					<v8:item>
-																						<v8:lang>ru</v8:lang>
-																						<v8:content>Если флаг установлен, то в текстовую инструкцию будет добавлена информация с названием сценария.</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>en</v8:lang>
-																						<v8:content>If the flag is set, then information with the name of the script will be added to the text instruction.</v8:content>
-																					</v8:item>
-																				</Title>
-																			</ExtendedTooltip>
-																		</CheckBoxField>
+																		<UsualGroup name="ОбщиеВтораяСтрокаЛевыйСтолбец" id="3790">
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Общие вторая строка левый столбец</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>General second row left column</v8:content>
+																				</v8:item>
+																			</Title>
+																			<ToolTip>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Общие вторая строка левый столбец</v8:content>
+																				</v8:item>
+																			</ToolTip>
+																			<Width>50</Width>
+																			<HorizontalStretch>false</HorizontalStretch>
+																			<Representation>None</Representation>
+																			<ShowTitle>false</ShowTitle>
+																			<ExtendedTooltip name="ОбщиеВтораяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="3791"/>
+																			<ChildItems>
+																				<CheckBoxField name="ДобавлятьИмяФичиВТекстовуюИнструкцию" id="3797">
+																					<DataPath>Объект.ДобавлятьИмяФичиВТекстовуюИнструкцию</DataPath>
+																					<TitleLocation>Right</TitleLocation>
+																					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																					<CheckBoxType>Auto</CheckBoxType>
+																					<ContextMenu name="ДобавлятьИмяФичиВТекстовуюИнструкциюКонтекстноеМеню" id="3798"/>
+																					<ExtendedTooltip name="ДобавлятьИмяФичиВТекстовуюИнструкциюРасширеннаяПодсказка" id="3799">
+																						<Title formatted="false">
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>If the flag is set, then information with the name of the feature will be added to the text instruction.</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Если флаг установлен, то в текстовую инструкцию будет добавлена информация с названием фичи.</v8:content>
+																							</v8:item>
+																						</Title>
+																					</ExtendedTooltip>
+																				</CheckBoxField>
+																			</ChildItems>
+																		</UsualGroup>
+																		<UsualGroup name="ОбщиеВтораяСтрокаПравыйСтолбец" id="3795">
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Общие вторая строка правый столбец</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>General second row right column</v8:content>
+																				</v8:item>
+																			</Title>
+																			<ToolTip>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Общие вторая строка правый столбец</v8:content>
+																				</v8:item>
+																			</ToolTip>
+																			<Representation>None</Representation>
+																			<ShowTitle>false</ShowTitle>
+																			<ExtendedTooltip name="ОбщиеВтораяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="3796"/>
+																			<ChildItems>
+																				<CheckBoxField name="ДобавлятьИмяСценарияВТекстовуюИнструкцию" id="3800">
+																					<DataPath>Объект.ДобавлятьИмяСценарияВТекстовуюИнструкцию</DataPath>
+																					<TitleLocation>Right</TitleLocation>
+																					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																					<CheckBoxType>Auto</CheckBoxType>
+																					<ContextMenu name="ДобавлятьИмяСценарияВТекстовуюИнструкциюКонтекстноеМеню" id="3801"/>
+																					<ExtendedTooltip name="ДобавлятьИмяСценарияВТекстовуюИнструкциюРасширеннаяПодсказка" id="3802">
+																						<Title formatted="false">
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Если флаг установлен, то в текстовую инструкцию будет добавлена информация с названием сценария.</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>If the flag is set, then information with the name of the script will be added to the text instruction.</v8:content>
+																							</v8:item>
+																						</Title>
+																					</ExtendedTooltip>
+																				</CheckBoxField>
+																			</ChildItems>
+																		</UsualGroup>
 																	</ChildItems>
 																</UsualGroup>
 															</ChildItems>
@@ -30421,7 +30490,7 @@ If the voice acting file is not found in the directory, the process of generatin
 													<CommandName>Form.Command.ПоказатьПомощникПриПервомЗапуске</CommandName>
 													<ExtendedTooltip name="ПоказатьПомощникПриПервомЗапускеРасширеннаяПодсказка" id="3264"/>
 												</Button>
-												<UsualGroup name="ГруппаВариантыОбучения" id="3803">
+												<UsualGroup name="ГруппаВариантыОбучения" id="3817">
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
@@ -30436,9 +30505,9 @@ If the voice acting file is not found in the directory, the process of generatin
 													<Behavior>Collapsible</Behavior>
 													<ControlRepresentation>Picture</ControlRepresentation>
 													<Representation>None</Representation>
-													<ExtendedTooltip name="ГруппаВариантыОбученияРасширеннаяПодсказка" id="3804"/>
+													<ExtendedTooltip name="ГруппаВариантыОбученияРасширеннаяПодсказка" id="3818"/>
 													<ChildItems>
-														<CheckBoxField name="ОбучениеЗапуститьУрок" id="3805">
+														<CheckBoxField name="ОбучениеЗапуститьУрок" id="3825">
 															<DataPath>Объект.ОбучениеЗапуститьУрок</DataPath>
 															<Title>
 																<v8:item>
@@ -30452,10 +30521,10 @@ If the voice acting file is not found in the directory, the process of generatin
 															</Title>
 															<TitleLocation>Right</TitleLocation>
 															<CheckBoxType>Auto</CheckBoxType>
-															<ContextMenu name="ОбучениеЗапуститьУрокКонтекстноеМеню" id="3806"/>
-															<ExtendedTooltip name="ОбучениеЗапуститьУрокРасширеннаяПодсказка" id="3807"/>
+															<ContextMenu name="ОбучениеЗапуститьУрокКонтекстноеМеню" id="3819"/>
+															<ExtendedTooltip name="ОбучениеЗапуститьУрокРасширеннаяПодсказка" id="3820"/>
 														</CheckBoxField>
-														<CheckBoxField name="ОбучениеВидео" id="3808">
+														<CheckBoxField name="ОбучениеВидео" id="3821">
 															<DataPath>Объект.ОбучениеВидео</DataPath>
 															<Title>
 																<v8:item>
@@ -30469,10 +30538,10 @@ If the voice acting file is not found in the directory, the process of generatin
 															</Title>
 															<TitleLocation>Right</TitleLocation>
 															<CheckBoxType>Auto</CheckBoxType>
-															<ContextMenu name="ОбучениеВидеоКонтекстноеМеню" id="3809"/>
-															<ExtendedTooltip name="ОбучениеВидеоРасширеннаяПодсказка" id="3810"/>
+															<ContextMenu name="ОбучениеВидеоКонтекстноеМеню" id="3822"/>
+															<ExtendedTooltip name="ОбучениеВидеоРасширеннаяПодсказка" id="3823"/>
 														</CheckBoxField>
-														<CheckBoxField name="ОбучениеPDF" id="3811">
+														<CheckBoxField name="ОбучениеPDF" id="3824">
 															<DataPath>Объект.ОбучениеPDF</DataPath>
 															<Title>
 																<v8:item>
@@ -42733,10 +42802,15 @@ If the voice acting file is not found in the directory, the process of generatin
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Открыть редактор стилей HTML</v8:content>
+					<v8:content>Редактировать стили</v8:content>
 				</v8:item>
 			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Change</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
 			<Action>ОткрытьStyleHTML</Action>
+			<Representation>Picture</Representation>
 		</Command>
 		<Command name="НастройкиРаботыСБраузером" id="172">
 			<Title>
