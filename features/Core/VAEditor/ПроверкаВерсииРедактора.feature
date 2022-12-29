@@ -1,6 +1,9 @@
 ﻿#language: ru
 
-@tree
+
+@IgnoreOn82Builds
+@IgnoreOnOFBuilds
+@IgnoreOnWeb
 
 Функционал: Проверка версии редактора
 
