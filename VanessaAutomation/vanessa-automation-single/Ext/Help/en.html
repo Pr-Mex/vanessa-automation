@@ -1,0 +1,465 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN"><html><head><meta content="text/html;charset=utf-8" http-equiv="content-type"></meta><link rel="stylesheet" type="text/css" href="v8help://service_book/service_style"></link><meta name="GENERATOR" content="MSHTML 11.00.9600.16518"></meta></head><body>
+<p><font size="3" face="Arial">Vanessa-Automation - это фреймворк для разработки в 1С используя методологию BDD.</font></p>
+<p><font size="3" face="Arial">Страница проекта: <a href="https://github.com/Pr-Mex/vanessa-automation">https://github.com/Pr-Mex/vanessa-automation</a></font></p>
+<p><font size="3" face="Arial">Vanessa-Automation является аналогом Cucumber для разработки на платформе 1С:Предприятие.</font></p>
+<p><font size="2" face="Arial">Поддерживаются версии платформы:</font></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p><font size="1" face="Arial"> 8.3.6 в режиме совместимости 8.2, 8.3.6, 8.3.7, 8.3.8, 8.3.9, 8.3.10, 8.3.11, 8.3.12, 8.3.13, 8.3.14, </font></p><span style="FONT-SIZE: x-small; FONT-FAMILY: Arial">8.3.15, </span><span style="FONT-SIZE: x-small; FONT-FAMILY: Arial">8.3.16.</span></blockquote>
+<p><font size="2" face="Arial">У обработки есть <strong>Managed form</strong> (она является основой) и <strong>Обычная форма</strong>.</font></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p><font size="1" face="Arial">Обычная форма поддерживается в <strong>ограниченном</strong> формате. Т.е. ошибки исправляются - новые фичи добавляются редко. Но вы можете добавить в неё нужные Вам фичи самостоятельно.</font></p></blockquote>
+<p><font size="2" face="Arial"></font> </p>
+<p><font size="3" face="Arial"></font> </p>
+<p><font size="3" face="Arial">Разделы справки:</font></p>
+<p>1 . <a href="#ПравилаНаписанияfeatureФайлов">Правила написания feature файлов.</a></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p><a href="#Основные секции feature файла.">1.1 Основные секции feature файла.</a></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p><a href="#Заголовок">1.1.1 Заголовок feature</a></p>
+<p><a href="#Сценарии">1.1.2 Сценарии</a></p>
+<p><a href="#Структура сценария">1.1.3 Структура сценария</a></p></blockquote>
+<p dir="ltr"><a href="#Тег @tree">#Тег @tree</a></p>
+<p><a href="#Тег @exportscenarios">#Тег @exportscenarios</a></p>
+<p>1.4 Передача в шаг таблицы.</p>
+<p>1.5 Вызов структуры сценария как вложенного сценария.</p>
+<p>1.6 Передача параметра таблицы (таблиц) во вложенный сценарий.</p></blockquote>
+<p dir="ltr">2. <a href="#Как загрузить feature файл.">Как загрузить feature файл. Тэги.</a></p>
+<p>3. <a href="#Как запустить feature файл на выполнение. Отладка.">Как запустить feature файл на выполнение. Отладка.</a></p>
+<p>4. <a href="#Как создать epf файл на основе feature файла.">Как создать epf файл на основе feature файла.</a></p>
+<p>5. <a href="#Описание настроек на закладке Сервис.">Описание настроек на закладке Сервис.</a></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p>* Открытие фичи в текстовом редакторе</p></blockquote>
+<p>6. Асинхронные вызовы</p>
+<p>7. <a href="#Как получить отчет Allure, jUnit, Cucmber report.">Как получить отчет Allure, jUnit, Cucmber report.</a></p>
+<p>8. <a href="#Быстрое создание файла сценария">Запись действий пользователя.</a></p>
+<p>9. <a href="#Как получить состояние формы TestClient">Как получить состояние формы TestClient.</a></p>
+<p>10. Как подключить свою библиотеку.</p>
+<p>11. Как поделиться своими шагами с коллегами при групповой разработке.</p>
+<p>12. Основные операции при работе с TestClient.</p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p>12.1 <a href="#Как сравнить табличный документ с эталоном.">Как сравнить табличный документ с эталоном.</a></p></blockquote>
+<p>13. Как создать автоинструкцию в формате HTML, MD.</p>
+<p>14. <a href="#14. Как создать автовидеоинструкцию.">Как создать автовидеоинструкцию.</a></p>
+<p>15. <a href="#15. Как узнать детали ошибки.">Как узнать детали ошибки.</a></p>
+<p>16. <a href="#16. Работа со сценариями на других языках.">Работа со сценариями на других языках.</a></p>
+<p>17. Список экспортных процедур и функций.</p>
+<p>18. Запуск Vanessa-Automation на CI.</p>
+<p>19. Инструкция для контрибьютерров.</p>
+<p>20. <a>SikuliX.</a></p>
+<blockquote style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 0px 40px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">
+<p>20.1 <a href="#20.1 Установка SikuliX">Установка SikuliX</a></p>
+<p>20.2 <a href="#20.2 SikuliX сервер">SikuliX сервер</a></p></blockquote>
+<p>21. <a href="#Работа с глобальными переменными.">Работа с глобальными переменными.</a></p>
+<p> </p>
+<p> </p>
+<p><a name="ПравилаНаписанияfeatureФайлов"><font size="4">1 . Правила написания feature файлов.</font></a></p>
+<p><font size="2"><a name="Основные секции feature файла."><strong>1.1 Основные секции feature файла.</strong></a></font></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p><font size="1">Feature файл должен быть написан на языке <strong>Gherkin</strong>.</font></p>
+<p>Feature файл содержит в себе две основные секции - это заголовок фичи и её сценарии.</p>
+<p align="center"><strong><font size="5"><a name="Заголовок">Заголовок</a></font>.</strong></p>
+<p>Заголовок фичи содержит в себе служебную секцию с директивой, указывающей на язык (русский, английский и т.д.) фичи.</p>
+<p align="center"><img src="_files/Директива.png"></img></p>
+<p>Далее в заголовке обычно идут теги, которые относятся ко всей фиче (ещё бывают теги, которые относятся к конкретному сценарию).</p>
+<p align="center"><img src="_files/Теги.png"></img></p>
+<p>Далее идёт часть, в которой используется ключевое слово <strong>Функционал</strong> или <strong>Функциональность </strong>и далее идёт название фичи.</p>
+<p align="center"><img src="_files/ИмяФичи.png"></img></p>
+<p>Далее идёт часть, в которой коротко даётся ответ на три вопроса: кто хочет, что он хочет и зачем это надо (бизнес польза).</p>
+<p align="center"><img src="_files/КтоЧтоЗачем.png"></img></p>
+<p>Далее идёт необязательная секция <strong>Контекст</strong>. В ней обычно описывают шаги, которые подготавливают выполнения сценария, но непосредственно к нему не относятся.</p>
+<p>В одном feature файле может быть много сценариев, и секция <strong>Контекст</strong> будет выполняться перед каждым сценарием.</p>
+<p align="center"><img src="_files/Контекст.png"></img></p>
+<p> </p>
+<p>Далее идёт часть, в которой могут располагаться либо простые сценарии, либо сценарии специального формата, которые в русском переводе "<strong>Scenario Outline"</strong> получили название "<strong>Структура сценария"</strong>.</p>
+<p> </p>
+<p align="center"><font size="5"><strong><a name="Сценарии">Scenarios</a></strong></font>.</p>
+<p>Обычный сценарий начинается с ключевого слова "<strong>Сценарий:</strong>", затем идёт имя сценария.</p>
+<p align="center"><img src="_files/ИмяСценария.png"></img></p>
+<p> </p>
+<p>Далее идут шаги сценария. Каждый шаг должен начинаться с ключевого слова, такого как <strong>Дано</strong>, <strong>Когда</strong>, <strong>Тогда</strong>, <strong>И</strong>, <strong>Затем</strong> и т.д.</p>
+<p>Полный список ключевых слов для каждого языка можно посмотреть здесь: <a href="https://github.com/cucumber/gherkin/blob/master/gherkin-languages.json#L2372">https://github.com/cucumber/gherkin/blob/master/gherkin-languages.json#L2372</a></p>
+<p>Ограничений на количество использований ключевых слов шагов нет. </p>
+<p align="center"><img src="_files/Шаги.png"></img></p>
+<p>У шагов могут быть параметры простых типов - число, строка, дата.</p>
+<p dir="ltr">Числа записываются как есть.</p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p align="center"><img src="_files/Числа.png"></img></p>
+<p> </p></blockquote>
+<p dir="ltr">Даты могут быть указаны в двух форматах</p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p align="center"><img src="_files/Даты.png"></img></p></blockquote>
+<p dir="ltr">Строки должны быть заключены либо в апострофы, либо в кавычки.</p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p align="center"><img src="_files/Строки2.png"></img></p></blockquote>
+<p> </p>
+<p><font size="2"><strong>Для строк действуют правила экранирования спецсимволов.</strong></font></p>
+<p><font size="2"><strong>\' - означает апостроф</strong></font></p>
+<p><font size="2"><strong>\" - означает кавычку</strong></font></p>
+<p><font size="2"><strong>\\ - означает одинарный слеш (\)</strong></font></p>
+<p align="center"><img src="_files/Апостроф.png"></img></p>
+<p> </p>
+<p align="center"><strong><font size="5"><a name="Структура сценария">Структура сценария</a></font></strong></p><font size="1">
+<p dir="ltr">Структура сценария допускает, что некоторые параметры в шагах указываются в специальных скобках.</p>
+<p dir="ltr">Такие параметры должны быть описаны в таблице, которая идёт после структуры сценария и начинается с ключевого слова <strong>"Примеры"</strong>.</p>
+<p dir="ltr">Таким образом, для каждой строки таблицы <strong>Примеров</strong> будет выполнен <strong>свой</strong> сценарий со <strong>своим</strong> набором параметров.</p>
+<p dir="ltr" align="center"><img src="_files/Outline01.png"></img></p></font>
+<p align="center"><strong><font size="5"></font></strong> </p>
+<p align="center"><strong><font size="5"></font></strong> </p>
+<p> </p></blockquote>
+<p dir="ltr"><a name="Тег @tree"><font size="2"><strong>1.2 Тег @tree</strong></font></a></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p>Vanessa-Automation умеет работать с <strong>расширенным</strong> синтаксисом языка сценариев <strong>Gherkin</strong>. Назовём его <strong>Turbo Gherkin</strong>.</p>
+<p>Если в заголовке фичи указан тег <strong>@tree</strong>, тогда парсер фич будет особым образом интерпретировать отступы (символы Tab, пробелы недопустимы!!!) в тексте.</p>
+<p>Шаги будут образовывать дерево шагов. Т.е. шаги с большим значением отступа будут считаться вложенными. Как в python.</p>
+<p>Это помогает структурировать текст feature файла.</p>
+<p align="center"><img src="_files/tree.png" width="1160" height="258"></img></p>
+<p> </p>
+<p align="center"><img src="_files/tree2.png"></img></p>
+<p> </p>
+<p>Таким образом, часть шагов оказалась внутри других шагов. Шаг, который является веткой дерева (выделен рамкой на картинке) - выполняться не будет.</p>
+<p> </p></blockquote>
+<p dir="ltr"><a name="Тег @exportscenarios"><font size="2"><strong>1.3 Тег @exportscenarios</strong></font></a></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p>Если в заголовке фичи указан тег @exportscenarios, тогда становится возможным вызывать один сценарий из другого (и передавать в него свои параметры).</p>
+<p>Например, есть такой сценарий, содержащий шаг <strong>"Когда Я открываю Visual Studio Code"</strong>:</p>
+<p align="center"><img src="_files/export01.png"></img></p>
+<p align="left">И рядом с ним (или в подчиненном каталоге, или в каталоге библиотек) лежит другой feature файл, у которого указан тег <strong>@exportscenarios</strong> и в нём есть сценарий с именем <strong>"Я открываю Visual studio code"</strong>.</p>
+<p align="center"><img src="_files/export02.png"></img></p>
+<p align="left">Тогда если загрузить первый сценарий в Vanessa-Automation - шаг <strong>"Когда Я открываю Visual Studio Code" </strong>загрузится как ветка дерева.</p>
+<p align="center"><img src="_files/export03.png"></img></p>
+<p align="left"> </p>
+<p align="left">Чтобы передать обычный параметр в подчиненный сценарий - надо чтобы строка с именем сценария содержала параметры. Например, есть вот такой сценарий:</p>
+<p align="center"><img src="_files/export05.png"></img></p>
+<p align="left">В него можно передать свой параметр <strong>"ИмяФайла"</strong>. </p>
+<p align="center"><img src="_files/export06.png"></img></p>
+<p align="left"> </p>
+<p align="left">Тогда в Vanessa-Automation это отобразится вот так:</p>
+<p align="center"><img src="_files/export07.png"></img></p>
+<p align="left"> </p>
+<p align="left"> </p>
+<p align="left"><font size="2"><strong>2. <a name="Как загрузить feature файл.">Как загрузить feature файл. Тэги.</a></strong></font></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p align="left"><font size="1">Vanessa-Automation позволяет загрузить либо один feature файл (Ctrl+F2), либо feature файлы из каталога (Alt+F2).</font></p>
+<p align="center"><img src="_files/LoadFeature01.png"></img></p>
+<p align="left">Если выбран пункт "Загрузить один файл" - тогда feature файл будет загружен, не смотря на наличие в нём тегов.</p>
+<p align="left">Если выбран пункт "Загрузить файлы из каталога" - тогда возможны варианты, в зависимости от указанных тегов в настройках Vanessa-Automation.</p>
+<p align="center"><img src="_files/Tags01.png"></img></p>
+<p align="left">Если заполнен список "Список исключаемых тэгов" - тогда если в feature файле указан такой тэг в заголовке feature, весь feature файл не будет загружен. Если тэг был указан у одного или нескольких сценариев, <br>данные сценарии не будет загружены, а остальные загрузятся.</p>
+<p align="left">Если заполнен список "Тэги для запуска" - тогда если в feature данный тэг не встречается нигде - весь feature файл будет проигнорирован. Если тэг есть в заголовке feature, тогда будут загружены все сценарии из feature.<br>Если тэг указан у одного или нескольких сценариев - тогда будут загружены только эти сценарии.<br><br></p></blockquote>
+<p dir="ltr" align="left"><strong><font size="2">3. <a name="Как запустить feature файл на выполнение. Отладка.">Как запустить feature файл на выполнение. Отладка.</a></font></strong></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p dir="ltr" align="left"><font size="1">Что выполнить все сценарии надо нажать на кнопку "<strong>Run scenarios</strong>".</font></p>
+<p dir="ltr" align="left"><font size="1">Если вы внесли изменения в epf или в фичу, тогда надо нажать на кнопку "<strong>Перезагрузить сценарии</strong>". Иначе будут использоваться старые версии фич и обработок.</font></p>
+<p dir="ltr" align="left"><font size="1">При постоянном внесении правок в фичу или в epf - удобно использовать кнопку "<strong>Reload and run</strong>".</font></p>
+<p dir="ltr" align="left"><font size="1">Также в Vanessa-Automation можно использовать следующие варианты запуска фич на выполнение (доступно в контекстном меню):</font></p>
+<p dir="ltr" align="center"><img src="_files/debug01.png"></img></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p dir="ltr" align="left"><font size="1">1. <strong>Run this scenario from current step</strong> (Ctrl+F5). Позволяет выполнить сценарий с текущего шага и до конца данного сценария. Другие сценарии выполняться не будут.</font></p>
+<p dir="ltr" align="left"><font size="1">2. <strong>Выполнить данный сценарий с текущего шага с продолжением</strong> (Ctrl+Shift+F5). Позволяет выполнить сценарий с текущего шага. Также будут выполнены сценарии, следующие за данным.</font></p>
+<p dir="ltr" align="left"><font size="1">3. <strong>Run selected scenario from beginning</strong> (Alt+F5).  Будет выполнен только данный сценарий начиная с первого шага.</font></p>
+<p dir="ltr" align="left"><font size="1">4. <strong>Перезагрузить и выполнить данный сценарий </strong>(Alt+F6).  Будут перечитаны данные фича файлов, epf файлов и будет выполнен только данный сценарий, начиная с первого шага.</font></p>
+<p dir="ltr" align="left"><font size="1">5. <strong>Run scenarios of this feature</strong> (Ctrl+Alt+F5). Будут выполнены все сценарии данной фичи.</font></p>
+<p dir="ltr" align="left"><font size="1">6. <strong>Run one step</strong> (F11). Будет выполнен только один шаг фичи. Можно выбрать любой шаг в дереве фич и выполнить его, включая шаги секции Контекст. Удобно использовать при отладке.</font></p>
+<p dir="ltr" align="left"><font size="1">7. <strong>Открыть feature файл в редакторе</strong>. Откроет приложение, которое ассоциировано с расширением <strong>feature</strong>.</font></p>
+<p dir="ltr" align="left"><font size="1">8. <strong>Открыть каталог feature</strong>. Откроет проводник с каталогом, где лежит feature файл.</font></p>
+<p dir="ltr" align="left"><font size="1">9. <strong>Run scenario from this step and save contexts</strong>. Будет выполнен сценарий с текущего шага. При этом будет выставлен флаг <strong>Save contexts before going through steps</strong> на закладке <strong>Service</strong>, т.е. при выполнении сценария будут запоминаться значения контекстов шагов. При таком режиме запуска удобно делать отладку сценария, когда шаги зависят от значений переменных <strong>Контекст</strong> и <strong>КонтекстСохраняемый</strong>. При первом запуске сценария с данной опцией возможно выполнение сценария с начала, если флаг <strong>Save contexts before going through steps</strong> ранее не был равен <strong>Истина</strong>. При последующих запусках сценарий будет выполняться с нужного шага.</font></p>
+<p dir="ltr" align="left"><font size="1">10. <strong>Collapse to features</strong>. Дерево фич будет свёрнуто до строк фич.</font></p>
+<p dir="ltr" align="left"><font size="1">11. <strong>Collapse to scenarios</strong>. Дерево фич будет свёрнуто до строк сценариев.</font></p>
+<p dir="ltr" align="center"><img src="_files/Run04.png"></img></p>
+<p dir="ltr" align="left"><font size="1">12. <strong>Breakpoint</strong> (F9). У строки шага будет установлена отметка брейкпоинта. Выполнение сценариев будет прервано на этом шаге, при этом сам шаг выполнен не будет. Далее удобно выполнять отладку по одному шагу (F11).</font></p>
+<p dir="ltr" align="left"><font size="1">13. <strong>Remove all breakpoints</strong> (Ctrl+F9). Убирает все брейкпоинты из дерева.</font></p></blockquote>
+<p dir="ltr" align="left"><font size="1"></font> </p>
+<p dir="ltr" align="left"><font size="1"></font> </p>
+<p dir="ltr" align="left"><font size="1"></font> </p></blockquote>
+<p dir="ltr" align="left"><font size="3"><strong>4. <a name="Как создать epf файл на основе feature файла.">Как создать epf файл на основе feature файла.</a></strong></font></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p dir="ltr" align="center"><font size="1"><img src="_files/Gen05.png"></img></font></p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p dir="ltr" align="left"><font size="1">1. Если мы работаем в режиме управляемых форм - надо выставить флаг "<strong>Generate managed form</strong>".</font></p>
+<p dir="ltr" align="left"><font size="1">2. Если выставить флаг "<strong>Create regions when generating code</strong>"  - внутри epf будут созданы области кода.</font></p>
+<p dir="ltr" align="center"><img src="_files/Gen03.png"></img></p>
+<p dir="ltr" align="left">3.  Флаг "<strong>Создавать закомментированный код для переиспользуемых процедур</strong>" сейчас не используется.</p>
+<p dir="ltr" align="left">4. Флаг "<strong>Put text module. instead regenerate and update step defintion</strong>" - позволяет вывести модуль в текстовый документ, не создавая epf.</p>
+<p dir="ltr" align="left">5. Если epf уже существует, тогда в неё будут добавлены новые шаги. При этом существующие процедуры, функции, макеты и т.д. в epf сохранятся.</p>
+<p dir="ltr" align="left">6. Epf будет создана с тем же именем файла, что и feature файл.</p>
+<p dir="ltr" align="left">7. EPF создаётся с помощью штатных средств платформы. В поле "<strong>Версия платформы для генерации EPF</strong>" надо указать путь к каталогу <strong>bin</strong> нужной версии платформы 8.3.10 или выше.</p>
+<p dir="ltr" align="left">8. Epf будет создана в каталоге "<strong>step_definitions</strong>", который будет находится в каталоге feature файла.</p>
+<p dir="ltr" align="left">9. Каждая epf должная обладать уникальным значением в поле "<strong>Name</strong>".  Если вы копируете (а не перемещаете) epf в другой каталог, тогда надо обеспечить уникальность этого поля.</p>
+<p dir="ltr" align="center"><img src="_files/Gen04.png"></img></p></blockquote></blockquote>
+<p dir="ltr" align="left"><strong><font size="3"></font></strong> </p>
+<p dir="ltr" align="left"><strong><font size="3"></font></strong> </p>
+<h2><a name="Описание настроек на закладке Сервис"></a>5. <a name="Описание настроек на закладке Сервис.">Описание настроек на закладке Сервис.</a></h2>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p>Поле "Команда открытия фичи в текстовом редакторе".</p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p>Позволяет указать команду, которая будет вызываться для открытия фичи в текстовом редакторе.</p>
+<p>В отличии от простого открытия файла, позволяет перейти сразу к нужной строке файла.</p>
+<p>Пример команд:</p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p>NotePad++: "C:\Program Files (x86)\Notepad++\notepad++.exe" %Feature% -n%LineNumber%</p>
+<p>VsCode: "C:\Program Files (x86)\Microsoft VS Code\code.exe" -g %Feature%:%LineNumber%</p></blockquote>
+<p dir="ltr">Примеры команд также доступны из контекстного меню поля.</p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p dir="ltr"><img src="_files/КонтекстноеМенюПолеКомандаТекстовогоРедактора.png"></img></p></blockquote>
+<p> </p>
+<p> </p></blockquote></blockquote>
+<h2>7<a name="Как получить отчет Allure, jUnit, Cucmber report.">. Как получить отчет Allure, jUnit, Cucmber report.</a></h2>
+<p> </p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p>1. Для формирования отчета в формате Yandex Allure нужно заполнить данные настройки</p>
+<p><img src="_files/Allure.png"></img></p>
+<p>2. При формировании отчета поддерживаются директивы, которые можно указать в feature файле.</p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p>Например:<br>#report.feature=уровень1<br>#report.story=уровень2</p>
+<p>Значения таких директив могут быть любыми.</p>
+<p dir="ltr">Таким образом можно задать нужную иерархию отчета (первый, второй и третий уровень дерева).</p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p dir="ltr"><img src="_files/Allure2.png"></img></p></blockquote>
+<p dir="ltr">Чтобы иерархия отчета строилась верно, нужно в управляющем json файле задать параметры. Например:</p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p style="MARGIN-RIGHT: 0px" dir="ltr"><em><font style="BACKGROUND-COLOR: #ffe100">"КаталогОтносительноКоторогоНадоСтроитьИерархию": "./features",<br>"УровеньОтчета1": "#report.epic=;Каталог1",<br>"УровеньОтчета2": "#report.feature=;Каталог2",<br>"УровеньОтчета3": "#report.story=;ИмяСценария"</font></em></p>
+<p dir="ltr">В данном примере, для вычисления первого уровня иерархии отчета сначала будет попытка найти в тексте фича файла строку вида "<font style="BACKGROUND-COLOR: #ffe100">#report.feature=уровень1</font>". Если не получится найти такую строку, тогда будет попытка вычислить имя каталога первого уровня относительно каталога (параметр КаталогОтносительноКоторогоНадоСтроитьИерархию), в котром лежат фича файлы (второе значение параметра "УровеньОтчета1" =  Каталог1).</p>
+<p dir="ltr">Также для параметров "УровеньОтчетаX" можно использовать значения "<font style="BACKGROUND-COLOR: #ffe100">ИмяФичи</font>" и "<font style="BACKGROUND-COLOR: #ffe100">ИмяСценария</font>".</p>
+<p dir="ltr">Такие же правила распространяются на поле "Группировка test suites".</p>
+<p dir="ltr">Также, если в управляюхем json указано значение параметра <em><font style="BACKGROUND-COLOR: #ffe100">"ДобавлятьКИмениСценарияУсловияВыгрузки": "Истина"</font></em>, то к имени сценария будет добавлятся имя сборки. Это полезно, когда один и тот же сценарий запускается в разных окружениях (сборках) и надо получить единый отчет по всем сборкам.</p>
+<p dir="ltr"><br> </p></blockquote>
+<p style="MARGIN-RIGHT: 0px" dir="ltr"></p></blockquote>
+<p dir="ltr">3. Отчеты в формате jUnit и Cucumber report формируются аналогично.</p>
+<p dir="ltr">4. Параметры формирования отчета также можно задать через json файл, когда ванесса запускается в режиме командной строки.</p>
+<p dir="ltr">5. Для структуры сценария имя "примера" будет взято из колоноки "Description" или "Описание".  Если такой колонки нет, тогда имя "примера" будет взято из определения примера в структуре сценария.</p>
+<p> </p></blockquote>
+<h2><a name="Быстрое создание файла сценария">8. Запись</a> действий пользователя.</h2>
+<h3>Запись поведения пользователя</h3>
+<p>1. На вкладке «Работа с UI» имеется набор кнопок, отвечающих за взаимодействие с клиентом тестирования из Vanessa Automation.</p>
+<p>«Подключит TestClient» - запуск клиента тестирования</p>
+<p>«Начать запись поведения» - запуск клиента тестирования и начало запись журнала действий пользователя.</p>
+<p>«Закончить запись поведения» - останавливает запись журнала действий пользователя и производит автоматическую конвертацию в сценарий на языке Gherkin.</p>
+<p align="center"><img id="Рисунок 10" src="_files/image001.jpg" width="624" height="414"></img></p>
+<h3>Создание сценария через запись действий пользователя.</h3>
+<p>Используя данную последовательность шагов удобно просить сотрудников компании воспроизвести ошибку в конфигурации или порядок рабочий действий для создания фичи и уменьшения технического долга.</p>
+<p>1.На рабочем месте пользователя запускаем конфигурацию в режиме предприятия с установленным параметром запуска <strong>/UILogRecorder</strong></p>
+<p align="center"><img id="Рисунок 2" src="_files/image002.png" width="458" height="448"></img></p>
+<p>2. Нажимаем «Начать запись»</p>
+<p align="center"><img id="Рисунок 3" src="_files/image003.png" width="493" height="69"></img></p>
+<p>3. Просим пользователя воспроизвести последовательность действий и по окончании нажимаем кнопку «Завершить»</p>
+<p align="center"><img id="Рисунок 4" src="_files/image004.jpg" width="492" height="82"></img></p>
+<p>4. Откроется файл журнала действий пользователя, который необходимо сохранить и передать разработчику</p>
+<p align="center"><img id="Рисунок 1" src="_files/image005.jpg" width="539" height="285"></img></p>
+<p>5. В дальнейшем для получения сценария на языке Gherkin необходимо в обработке Vanessa Automation перейти на вкладку «Работа с UI -&gt; Исходный XML». Вставить содержимое журнала действий пользователя в соответствующее окно.</p>
+<p> </p>
+<p align="center"><img id="Рисунок 5" src="_files/image006.jpg" width="624" height="414"></img></p>
+<p>Нажать кнопку «Преобразовать исходный XML» и получить готовый сценарий.</p>
+<p align="center"><img id="Рисунок 6" src="_files/image007.jpg" width="624" height="414"></img></p>
+<p>В дальнейшем полученный сценарий нужно отредактировать – заполнив описательную часть сценария.</p>
+<h3>Используя уже существующие шаги</h3>
+<p>Для добавления шагов в сценарий достаточно нажать кнопку «Добавить известный шаг» и добавить нужный функционал сценария двойным кликом мышки на нужной строке.</p>
+<p align="center"><img id="Рисунок 7" src="_files/image008.jpg" width="624" height="414"></img></p>
+<h3>Запуск полученного сценария</h3>
+<p>1. Сохраняем полученный сценарий и запускаем так, как описано в разделе <a href="#Как загрузить feature файл.">Как загрузить feature файл. Тэги.</a></p>
+<p>2. Для быстрой проверки корректности сценария нажимаем кнопку «Подготовить сценарий к выполнению». В этом случае произойдет загрузка сценария аналогично использованию команды «Загрузить фичи -&gt; Загрузить один файл»</p>
+<p><span style="BACKGROUND: yellow"><b>Внимание. </b>Полученный сценарий сохраняется в файл во временной директории операционной системы. В случае использования функции «<a href="#Как создать epf файл на основе feature файла.">Генерация EPF</a>», полученная таким образом обработка сохраниться рядом с файлом фичи.</span></p>
+<h2><span style="BACKGROUND: yellow"></span> </h2>
+<h2><span style="BACKGROUND: yellow"></span> </h2>
+<h2><span style="BACKGROUND: yellow"></span> </h2>
+<h1> </h1>
+<h1>9. <a name="Как получить состояние формы TestClient"><font style="BACKGROUND-COLOR: #ffffff">Как получить состояние формы TestClient.</font></a></h1></blockquote>
+<blockquote></blockquote>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p dir="ltr"><span style="BACKGROUND: yellow"><font style="BACKGROUND-COLOR: #ffffff">1. Выбрать опцию - Получить изменения формы. При этом будет сгенерирован текст шагов, которые описывают состояние активной формы TestClient.</font></span></p>
+<p dir="ltr"><span style="BACKGROUND: yellow"><font style="BACKGROUND-COLOR: #ffffff">2. Если перед получением состояние формы была выбрана опция - "Запомнить состояние формы TestClient", тогда при генерации шагов будут учитваться только изменения между сохраненным состоянием формы и текущим.</font></span></p>
+<h1><span style="BACKGROUND: yellow"><font style="BACKGROUND-COLOR: #ffffff"><img src="_files/izm.png"></img></font></span></h1>
+<p dir="ltr"><span style="BACKGROUND: yellow"><font style="BACKGROUND-COLOR: #ffffff"></font></span> </p>
+<p dir="ltr"><span style="BACKGROUND: yellow"><font style="BACKGROUND-COLOR: #ffffff">3. Также для исследования состояния формы можно выбрать опцию "Исследователь формы".  Данный компонент позволяет определить какой элемент формы в данный момент активен, получить сведения по нему и варианты текста шагов.</font></span></p>
+<p dir="ltr"><span style="BACKGROUND: yellow"><font style="BACKGROUND-COLOR: #ffffff"><img src="_files/exp.png"></img></font></span><span style="BACKGROUND: yellow"><font style="BACKGROUND-COLOR: #ffffff"></font></span></p>
+<p dir="ltr"><span style="BACKGROUND: yellow"><font style="BACKGROUND-COLOR: #ffffff"></font></span> </p>
+<p dir="ltr"><span style="BACKGROUND: yellow"><font size="3"></font></span> </p></blockquote>
+<h2><span style="BACKGROUND: yellow"><font style="BACKGROUND-COLOR: #ffffff">12. Основные операции при работе с TestClient.</font></span></h2>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<h3><span style="BACKGROUND: yellow"><a name="Как сравнить табличный документ с эталоном."><font style="BACKGROUND-COLOR: #ffffff">Как сравнить табличный документ с эталоном.</font></a></span></h3>
+<h3><span style="BACKGROUND: yellow"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><font face="Verdana">Надо понимать следующее. У платформы есть разные способы получить данные табличного документа из TestClient.</font></span></span></h3><span style="BACKGROUND: yellow"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><font face="Verdana">
+<ul dir="ltr"><li>
+<div>Если у вас версия платформы 8.3.8 и выше, тогда вам доступен метод <strong>ЗаписатьСодержимоеВФайл</strong>().<br>Этот метод позволяет сэмулировать сохранение табличного документа в файл. И таким образом его может получить TestManager для обработки.<br>Но этот метод не работет, когда TestClient запущен как Web клиент.<br>Плюс этот метод не сработает, если табличный документ не доступен для редактирования.<br><br>Поэтому у платформы есть второй метод: <strong>ПолучитьТекстОбласти</strong>(&lt;Область&gt;).<br><br><em>Хорошая новость</em>: этот метод позволяет обратиться к нужной ячейке по её адресу и получить её текст.<br><br><em>Плохая новость</em>: для обхода табличного документа таким способом нужно знать его высоту и ширину.<br><br><em>Хорошая новость</em>: в режиме Web клиента при вызове <strong>УстановитьТекущуюОбласть</strong>(&lt;Область&gt;), при попытке выйти за границы макета происходит возврат на его край.<br>Таким образом можно нащупать где заканчивается макет, и пользователю необязательно указывать его границы.<br><br><em>Плохая новость</em>: в тонком клиенте такой трюк не работает. При попытке активизировать ячейку за границей макета - это и проихсодит.<br><br>Поэтому пользователю надо знать границы макета заранее, чтобы прочитать его по ячейкам в тонком клиенте.<br><br></div>
+</li><li>
+<div>Как прочитать табличный документ в своём сценарии и сравнить с ожидаемым значением:<br>Для чтения макетов VB использует следущие методы:<br><strong>ПолучитьТабличныйДокументTestClient</strong> - возвращает ТабличныйДокумент <br><strong>ПолучитьТабДокИзTestClientКакМассив</strong> - возвращает массив<br><br>Вы можете использовать типовые шаги из поставки VB, такие как:<br><em>И Табличный документ "РеквизитТабличныйДокумент" стал равен макету "ИмяМакета"<br><br>И область "R1C1:R10C10" табличного документа "РеквизитТабличныйДокумент" равна макету "ИмяМакета"<br><br>И табличный документ "РеквизитТабличныйДокумент" стал равен:<br>| Значение1 | Значение2 |<br>| Значение3 | Значение4 |</em></div>
+</li><li>
+<div>Подведем итог выше сказанного:<br>1. Если у вас 8.3.8 и выше (<strong>лучше 8.3.10 и выше</strong>), тогда <strong>вы можете не указывать область чтения макетов</strong>.<br>VB будет их считывать целиком как в тонком клиенте так и в Web.<br><strong>Т.е. вам не придётся делать разные сценарии для тонкого клиента и web клиента.</strong><br>Но макет должнен быть "Доступен" пользователю (метод ТекущаяДоступность()).<br><br>2. Если вы хотите сравнить часть макета с эталоном - используйте шаг<br> <em>И область "R1C1:R10C10" табличного документа "РеквизитТабличныйДокумент" равна макету "ИмяМакета"</em> или подобные шаги<br><br>3. Если у вас версия платформы меньше 8.3.8 (<strong>не рекомендуется</strong>), тогда даже перед чтением макета целиком, надо будет указывать область чтения через специальный шаг <br> <em>Когда Я задаю параметры чтения области макета "R1C1:R100C20"<br></em>По умолчанию область чтения задана как "R1C1:R30C20" (30 рядов и 20 колонок).<br><strong>Важно! Если вы изменили область чтения, то она применится и при чтении следующих табличных документов.</strong></div></li></ul><p dir="ltr"><span style="BACKGROUND: yellow"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"></span></span> </p><span style="BACKGROUND: yellow"><font style="BACKGROUND-COLOR: #ffffff"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"></span></font></span></font>
+<h2><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><span style="BACKGROUND: yellow">
+<p dir="ltr"><font size="3"></font></p></span> </span></h2></span></span></blockquote>
+<h2 dir="ltr"><font style="BACKGROUND-COLOR: #ffffff"><a name="14. Как создать автовидеоинструкцию.">14. Как создать автовидеоинструкцию.</a></font></h2>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong>Первое что надо сделать:</strong></span></font></font></h2>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font size="+0"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong>1. Прочитать вот эту инструкцию <a href="https://github.com/Pr-Mex/vanessa-automation/blob/develop/MakeAutoVideo.md">https://github.com/Pr-Mex/vanessa-automation/blob/develop/MakeAutoVideo.md</a></strong></span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font size="+0"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong>2. Посмотреть вот это видео <a href="https://www.youtube.com/watch?v=BfXowJH5uP0">https://www.youtube.com/watch?v=BfXowJH5uP0</a></strong></span></font></font></h2></blockquote>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong>Далее изложу основные принципы:</strong></span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong>1. Каждый шаг в видеоинструкции будет озвучен и к нему будут добавлены субтитры.</strong></span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong>2. Каждый шаг видео может масштабироваться по времени (т.е. стать длиннее или короче). Это нужно, чтобы синхронизировать видеоряд и озвучку.</strong></span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong>3. Чтобы сделать видео вставку в произвольном месте нужно использовать шаг</strong></span></font></font></h2>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font style="BACKGROUND-COLOR: #faebd7" face="Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><em>И обратите внимание "Текст видеовставки."</em></span></font></h2></blockquote>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong>4. Все группы шагов будут автоматически преобразованы в видеовставку (белый текст на черном фоне). Вот пример.</strong></span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong><img src="_files/ПримерШагаГруппы.png"></img></strong></span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong>5. Есть специальные управляющие конструкции, которые надо указывать в тексте сценария перед нужным шагом или группой.</strong></span></font></font></h2>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">1) <strong>Произвольный текст шага</strong>. <em><font style="BACKGROUND-COLOR: #faebd7">autodoc.text</font></em> </span></font></font></h2>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">Пусть в сценарии есть шаг: <em><font style="BACKGROUND-COLOR: #faebd7">Когда В командном интерфейсе я выбираю "Основная" "Справочник1"</font></em></span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">Тогда если перед ним (т.е. строкой выше) написать: <em><font style="BACKGROUND-COLOR: #faebd7">#[autodoc.text] В интерфейсе \[я\] выбираю %2 и %1 ["" + ТекущаяДата()]</font></em></span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">тогда при формировании инструкции текст шага будет таким:</span></font></font></h2>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font style="BACKGROUND-COLOR: #faebd7" face="Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><em>В интерфейсе [я] выбираю "Справочник1" и "Основная" 08.04.1981 01:00</em></span></font></h2></blockquote>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">Т.е. <em>%2 </em>и<em> %1 </em>были заменены на параметры шага. Выражение <em>["" + ТекущаяДата()] </em>было вычислено через метод <em>Вычислить()</em>.</span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">А текст <em><font style="BACKGROUND-COLOR: #faebd7">\[я\]</font> </em>содержал в себе экранирование квадратных скобок.</span></font></font></h2></blockquote>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">2) <strong>Не включать шаг в инструкцию.</strong> <em><font style="BACKGROUND-COLOR: #faebd7">autodoc.ignorestep</font></em> Если перед шагом или группой шагов написать <em><font style="BACKGROUND-COLOR: #faebd7">#[autodoc.ignorestep]</font></em>, тогда он/они будет выполнен, но не попадёт в финальный видео файл.</span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">3) <strong>Отключить автомасштабирование шага или группы.</strong> <em><font style="BACKGROUND-COLOR: #faebd7">autodoc.donotscale</font></em> Если перед шагом или группой написать<font style="BACKGROUND-COLOR: #faebd7"> <em>#[autodoc.donotscale],</em></font> тогда он не будет сжиматься по времени для синхронизации голоса и видео.</span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">4) <strong>Сделать из группы шагов один шаг.</strong> <em><font style="BACKGROUND-COLOR: #faebd7">autodoc.groupsteps</font></em> </span></font></font></h2>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">Пусть в сценарии есть группа шагов с текстом: <em><font style="BACKGROUND-COLOR: #faebd7">Просто группа шагов</font></em></span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">Если перед ней написать <font style="BACKGROUND-COLOR: #faebd7"><em>#[autodoc.groupsteps] В интерфейсе я выбираю Справочник1 и Справочник2 ["" + 11 + 22]</em></font><font style="BACKGROUND-COLOR: #ffffff"> тогда</font></span></font></font></h2>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">а) Вся группа шагов будет восприниматься как один шаг.</span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">б) Специальная видеовставка для группы создаваться не будет.</span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">в) В финальном видео эта группа станет одним шагом с текстом <em><font style="BACKGROUND-COLOR: #faebd7">В интерфейсе я выбираю Справочник1 и Справочник2 1122</font></em></span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="BACKGROUND-COLOR: #faebd7; face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">г) Если после директивы <em><font style="BACKGROUND-COLOR: #faebd7">#[autodoc.groupsteps] </font></em> не указан текст, тогда будет использовано текущее имя группы.</span></font></font></h2></blockquote></blockquote><font size="+0"><font style="BACKGROUND-COLOR: #faebd7; face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">5) <strong>Исключить слайд сценария.</strong> <font style="BACKGROUND-COLOR: #faebd7"><em>autodoc.ignore.scenarioslide</em></font></span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><font style="BACKGROUND-COLOR: #faebd7"><font style="BACKGROUND-COLOR: #ffffff"> Для исключения слайда сценария с текстом <em><font style="BACKGROUND-COLOR: #faebd7">Сценарий. &lt;Текст сценария&gt;</font></em> надо перед строкой, где объявляется сценарий написать  <font style="BACKGROUND-COLOR: #faebd7"><em>#[autodoc.ignore.scenarioslide]</em></font></font></font></span></font></font></h2></blockquote></h2></span></font></font><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">6) <strong>Исключить слайд с заголовком фичи.</strong> <font style="BACKGROUND-COLOR: #faebd7"><em>autodoc.ignore.featureslide</em></font></span></font></font></h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">Для исключения слайда с заголовком фича файла надо перед строкой, где объявляется имя функциональности написать  <font style="BACKGROUND-COLOR: #faebd7"><em>#[autodoc.ignore.featureslide]</em></font></span></font></font></h2></blockquote></h2></span></font></font>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font face="Verdana"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">7<font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">) <strong>Исключить финальный слайд, где указана данные по сборке сценария.</strong> <font style="BACKGROUND-COLOR: #faebd7"><em>autodoc.ignore.finalslide</em></font></span></font></font> 
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">Для исключения слайда с заголовком фича файла надо перед строкой, где объявляется имя функциональности написать  <font style="BACKGROUND-COLOR: #faebd7"><em>#[autodoc.ignore.finalslide]</em></font></span></font></font></h2>
+<div></div></blockquote></h2></span></span></font></font></font></h2>
+<h2 style="FONT-SIZE: 15px; MARGIN-RIGHT: 0px" dir="ltr"><font face="Verdana"><font size="+0"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; FONT-WEIGHT: normal; ORPHANS: 2; WIDOWS: 2; font-variant-ligatures: normal"><span style="font-variant-ligatures: normal"><font size="+0"><span style="FONT-SIZE: 15px; font-variant-ligatures: normal">8) <strong>Изменить голос, для конкретного шага.</strong></span></font></span></span></font></font></h2></blockquote></blockquote></blockquote>
+<blockquote style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 0px 40px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<h2 style="FONT-SIZE: 15px; MARGIN-RIGHT: 0px" dir="ltr"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; FONT-WEIGHT: normal; ORPHANS: 2; WIDOWS: 2">В настройках видео задается основной голосовой движок и голос, который будет использоваться для озвучивания инструкции. </span></h2>
+<h2 style="FONT-SIZE: 15px; MARGIN-RIGHT: 0px" dir="ltr"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; FONT-WEIGHT: normal; ORPHANS: 2; WIDOWS: 2">Для изменения голоса перед шагом необходимо указать голосовой движок, голос и интонацию (для amazon можно указать язык). Параметры могут задаваться:</span></h2></blockquote></blockquote></blockquote></blockquote>
+<blockquote style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 0px 40px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">
+<blockquote style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 0px 40px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<h2 style="FONT-SIZE: 15px; MARGIN-RIGHT: 0px" dir="ltr"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; FONT-WEIGHT: normal; ORPHANS: 2; WIDOWS: 2">- кратко (для Уandex): </span><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; ORPHANS: 2; WIDOWS: 2">@YandexTTS: ermil,evil </span></h2>
+<div><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; ORPHANS: 2; WIDOWS: 2">- развернуто </span><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; FONT-WEIGHT: bold; ORPHANS: 2; WIDOWS: 2">@YandexTTS: voice = ermil; emotion = evil</span></div></blockquote></blockquote></blockquote></blockquote></blockquote>
+<blockquote style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 0px 40px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">
+<blockquote style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 0px 40px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">
+<blockquote style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 0px 40px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">
+<blockquote style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 0px 40px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<div>
+<h2 style="FONT-SIZE: 15px; MARGIN-RIGHT: 0px" dir="ltr"><span style="FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; ORPHANS: 2; WIDOWS: 2">@AmazonTTS: voice = Kimberly; lang = en-US</span></h2></div></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote></blockquote>
+<blockquote style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 0px 40px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<h2 style="FONT-SIZE: 15px; MARGIN-RIGHT: 0px" dir="ltr"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; FONT-WEIGHT: normal; ORPHANS: 2; WIDOWS: 2">При краткой записи первый параметр - голос, второй эмоция, при развернутой записи порядок не важен, параметры разделяются </span><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; ORPHANS: 2; WIDOWS: 2">;</span><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; FONT-WEIGHT: normal; ORPHANS: 2; WIDOWS: 2"> .</span></h2>
+<h2 style="FONT-SIZE: 15px; MARGIN-RIGHT: 0px" dir="ltr"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; FONT-WEIGHT: normal; ORPHANS: 2; WIDOWS: 2">У Yandex шесть голосов и три эмоции, у Amazon голосов намного больше, полный список можно увидеть на странице настройки аудио в выпадающих списках</span><span style="FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; FONT-WEIGHT: normal; ORPHANS: 2; WIDOWS: 2">. </span></h2></blockquote>
+<h2 style="FONT-SIZE: 15px; MARGIN-RIGHT: 0px" dir="ltr"><font face="Verdana"><font size="+0"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; ORPHANS: 2; WIDOWS: 2; font-variant-ligatures: normal"><span style="font-variant-ligatures: normal"><font size="+0"><span style="FONT-SIZE: 15px; font-variant-ligatures: normal"><span style="FONT-WEIGHT: normal">9) </span>Автоперемещение курсора мышки к элементу формы или элементу интерфейса.</span></font></span></span></font></font></h2></blockquote></blockquote></blockquote>
+<blockquote style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 0px 40px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">
+<blockquote style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 0px 40px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<h2 style="ORPHANS: 2; WIDOWS: 2; MARGIN-RIGHT: 0px" dir="ltr"><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px; FONT-WEIGHT: normal">Для включения опции нужно установить флаг "Эмулировать движения мышки".</span></font></h2>
+<h2 style="ORPHANS: 2; WIDOWS: 2; MARGIN-RIGHT: 0px" dir="ltr"><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px; FONT-WEIGHT: normal">Если флаг установлен, то при выполнении шагов будет выполняться попытка найти элемент формы или элемент управления на экране и переместить курсор мышки к нему.</span></font></h2>
+<div><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px">Для поиска картинки и передвижения мышки используется SikuliX. Картинка для поиска будет сгенерирована по тексту, полученному из элемента формы.</span></font></div>
+<div><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px">Чтобы отключить движение мышки у конкретного шага надо использовать директиву #[DoNotMoveMouse].</span></font></div></blockquote></blockquote></blockquote></blockquote>
+<blockquote style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 0px 40px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<h2 style="FONT-SIZE: 15px; MARGIN-RIGHT: 0px" dir="ltr"><font face="Verdana"><font size="+0"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; FONT-WEIGHT: normal; ORPHANS: 2; WIDOWS: 2; font-variant-ligatures: normal"><span style="font-variant-ligatures: normal"><font size="+0"><span style="FONT-SIZE: 15px; font-variant-ligatures: normal"></span></font></span></span></font></font> </h2></blockquote></blockquote></blockquote></blockquote>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font face="Verdana"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial"><strong></strong></span></font></font></font> </h2>
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font face="Verdana"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">
+<h2 dir="ltr"><font style="BACKGROUND-COLOR: #ffffff"><a name="15. Как узнать детали ошибки.">15. Как узнать детали ошибки.</a></font></h2>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p dir="ltr">Допустим у вас возникла ошибка сравнения двух таблиц. В дереве сценария это выглядит примерно так.</p>
+<p dir="ltr"><img src="_files/01.png"></img></p>
+<p dir="ltr"> </p>
+<p dir="ltr">Делаем двойной клик по строке упавшего шага (показан стрелкой). Тогда появится такое окно</p>
+<p dir="ltr"><img src="_files/05.png"></img></p>
+<p dir="ltr">В этом окне можно увидеть более детальную информацию об ошибке.</p>
+<p dir="ltr">Также, в том случае, если шаг проверял равенство таблиц или макетов, можно использовать кнопку "Сравнить таблицы", нажатие на которую покажет стандартное окно сравнения табличных документов.</p>
+<p dir="ltr">Если флаг "Только текст ячек выставлен" - то сравниваться будут только тексты ячеек макетов, без учёта их оформления.</p>
+<p dir="ltr"><img src="_files/04.png"></img></p></blockquote>
+<p dir="ltr"> </p>
+<h2 dir="ltr"><font style="BACKGROUND-COLOR: #ffffff"><a name="16. Работа со сценариями на других языках.">16. Работа со сценариями на других языках.</a></font></h2>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p dir="ltr">Vanessa-Automation позволяет работать со сценариями на разных яхыках.</p>
+<p dir="ltr">1. Чтобы выбрать язык, на котором вы хотите накликать фичу - надо использовать соответствующую настройку.</p>
+<p dir="ltr"><img src="_files/06.png"></img></p>
+<p dir="ltr">2. Далее, при накликиванни фичи ваш сценарий будет автоматически переводится на выбранный язык. Чтобы работал перевод - должен быть заполнен файл перевода шагов, расположенный тут</p>
+<p dir="ltr">{КаталогVB}\locales\Gherkin\  например en.mxl.</p>
+<p dir="ltr">3. Также вам станет досупна кнопка перевода сценария с русского языка на выбранный вами язык.</p>
+<p dir="ltr"><img src="_files/07.png"></img></p>
+<p dir="ltr">4. Также при просмотре дерева известных шагов - вы можете выбрать опцию "Показать шаги на Русском"</p>
+<p dir="ltr"><img src="_files/09.png"></img></p>
+<p dir="ltr">Это может помочь русскоговорящим пользователям при поиске шагов на другом языке.</p>
+<p dir="ltr">5. Также Исследователь форм будет предлагать вам шаги на том яызке, который указан в настройках.</p>
+<p dir="ltr"><img src="_files/10.png"></img></p>
+<p dir="ltr"> </p></blockquote>
+<h2><a name="20 SikuliX">20 SikuliX</a></h2>
+<div><a name="20 SikuliX"><br></a></div>
+<h2 dir="ltr"><a name="20.1 Установка SikuliX">20.1 Установка SikuliX</a></h2></span></font></font></font></h2></blockquote></blockquote>
+<blockquote style="BORDER-TOP: medium none; BORDER-RIGHT: medium none; BORDER-BOTTOM: medium none; PADDING-BOTTOM: 0px; PADDING-TOP: 0px; PADDING-LEFT: 0px; MARGIN: 0px 0px 0px 40px; BORDER-LEFT: medium none; PADDING-RIGHT: 0px">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p style="ORPHANS: 2; WIDOWS: 2"><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px">Последний дистрибутив можно скачать по <a href="https://raiman.github.io/SikuliX1/downloads.html">ссылке</a> (на момент написание статьи текущий релиз 1.1.3)</span></font></p>
+<p style="ORPHANS: 2; WIDOWS: 2"><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px">1. Скопировать скаченный файл в директорию D:\SikuliX\</span></font></p>
+<p style="ORPHANS: 2; WIDOWS: 2"><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px">2. Запустить файл и согласиться с установкой<br><img src="_files/2019-09-01_183720.png"></img><br><br></span></font></p>
+<p style="ORPHANS: 2; WIDOWS: 2"><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px">3. В настройка установки выбрать Pack1. Оставить по умолчанию язык - Python<br><img src="_files/2019-09-01_184021.png"></img> </span></font></p>
+<p style="ORPHANS: 2; WIDOWS: 2"><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px">3. Согласиться с установкой<br><img src="_files/2019-09-01_184333.png"></img><br><img src="_files/2019-09-01_184447.png"></img></span></font></p>
+<p style="ORPHANS: 2; WIDOWS: 2"><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px">4. В результате успешной установки будет выведено соответствующее окно.<br><img src="_files/2019-09-01_184832.png"></img></span></font></p>
+<p style="ORPHANS: 2; WIDOWS: 2"><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px">5. Прописать в системную переменную среды <b>Path</b> путь к каталогу SikuliX (D:\SikuliX). </span></font></p>
+<p style="ORPHANS: 2; WIDOWS: 2"><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px">Проверить правильность указания путь можно запустив консоль и выполнив команду: </span></font></p>
+<p style="ORPHANS: 2; WIDOWS: 2"><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px"><i>where runsikulix</i></span></font></p>
+<p style="ORPHANS: 2; WIDOWS: 2"><font face="Arial, Tahoma, Verdana, sans-serif"><span style="FONT-SIZE: 15px">в результате будет выведен путь нахождения команды<br><br><img src="_files/2019-09-01_191126.png"></img></span></font></p></blockquote></blockquote></blockquote>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<h2 style="MARGIN-RIGHT: 0px" dir="ltr"><font face="Verdana"><font size="+0"><font style="face: Verdana"><span style="FONT-SIZE: 15px; FONT-FAMILY: Arial, Tahoma, Verdana, sans-serif; WHITE-SPACE: normal; WORD-SPACING: 0px; TEXT-TRANSFORM: none; FLOAT: none; FONT-WEIGHT: normal; COLOR: rgb(0,0,0); FONT-STYLE: normal; ORPHANS: 2; WIDOWS: 2; DISPLAY: inline !important; LETTER-SPACING: normal; BACKGROUND-COLOR: rgb(255,255,255); TEXT-INDENT: 0px; font-variant-ligatures: normal; font-variant-caps: normal; -webkit-text-stroke-width: 0px; text-decoration-style: initial; text-decoration-color: initial">
+<h2 dir="ltr"><font style="BACKGROUND-COLOR: #ffffff"><a name="20.2 SikuliX сервер">20.2 SikuliX сервер</a></font></h2>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p dir="ltr"><br>1. SikuliX сервер нужен, чтобы ускорить работу сценариев, которые многократно вызывают скрипты SikuliX. Таким образом с помощью Vanessa Automation можно писать быстрые сценарии, которые могут интерактивно работать с экраном пользователя.</p>
+<p dir="ltr">2. Большая часть скриптов SikuliX не требует специальной адаптации для работы на SikuliX сервере.</p>
+<p dir="ltr">3. Чтобы использовать SikuliX сервер нужно установить флаг "Использовать SikuliX сервер" и указать каталоги (через точку с запятой) скриптов SikuliX.</p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p dir="ltr"><img src="_files/SikuliXСервер01.png"></img></p></blockquote>
+<p dir="ltr"><br>4. При такой настройке вызов <strong>Ванесса.ВыполнитьSikuliСкрипт()</strong> будет перенаправлен в метод <strong>Ванесса.ВыполнитьSikuliСкриптЧерезSikuliXСервер()</strong> (поэтому большую часть сценариев, которые уже используют SikuliX скрипты переделывать не надо).</p>
+<p dir="ltr">5. При этом будет запущен специальный сеанс SikuliX, если его ещё нет.</p>
+<p dir="ltr">6. Будет собран специальный SikuliX скрипт, который представляет собой компиляцию всех скриптов, которые были в каталоге (каталогах) в параметра "Каталоги скриптов SikuliX". Скрипт будет размещён в первом каталоге с именем <strong>SikuliXServer.sikuli</strong>.</p>
+<p dir="ltr">7. Скрипты, принимающие аргрументы вида "<strong>sys.argv[1]</strong>" также будут корректно обработаны.</p>
+<p dir="ltr">8. Запуск SikuliX сервера доступен через управляющий json файл. Параметры: "<strong>КаталогиСкриптовSikuliX</strong>" и "<strong>ИспользоватьSikuliXСервер</strong>".</p></blockquote>
+<p dir="ltr"> </p>
+<h2 dir="ltr"><font style="BACKGROUND-COLOR: #ffffff"><a name="Работа с глобальными переменными.">21. Работа с глобальными переменными.</a></font></h2>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p dir="ltr"><br>1. В Vanessa Automation есть возможность работать с глобальными переменными. Они бывают двух типов.</p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p dir="ltr">1) Переменные, которые хранятся в служебной структуре <strong>Контекст</strong>. Они существуют на время жизни одного сценария.</p>
+<p dir="ltr">2) Переменные, которые хранятся в служебной структуре <strong>КонтекстСохраняемый</strong>. Они существуют, пока открыта форма Vanessa Automation. </p></blockquote>
+<p dir="ltr">2. В стандартной библиоетке шагов Vanessa Automation есть готовые шаги, которые позволяют сохранить нужное значение в переменную, а затем его использовать. Например:</p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p dir="ltr"><em>И я запоминаю значение текущего поля как "ИмяПеременной"</em></p>
+<p dir="ltr"><em>И в поле с именем "ИмяПоля" ввожу значение переменной "ИмяПеременной"</em></p></blockquote>
+<p dir="ltr">3. Возможные варианты синтаксиса для сохранения значения переменной:</p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p dir="ltr"><em>И я запоминаю значение текущего поля как "ИмяПеременной" - </em>Переменная будет сохранена в Контекст</p>
+<p dir="ltr"><em>И я запоминаю значение текущего поля как "$ИмяПеременной$" - </em>Переменная будет сохранена в Контекст</p>
+<p dir="ltr"><em>И я запоминаю значение текущего поля как "$$ИмяПеременной$$" - </em>Переменная будет сохранена в КонтекстСохраняемый</p></blockquote>
+<p dir="ltr">4. Возможные варианты синтаксиса для чтения значения переменной:</p>
+<blockquote style="MARGIN-RIGHT: 0px" dir="ltr">
+<p dir="ltr"><em>И в поле с именем "ИмяПоля" ввожу значение переменной "ИмяПеременной" - </em>значение переменной будет взято из Контекста</p>
+<p dir="ltr"><em>И в поле с именем "ИмяПоля" ввожу значение переменной "$ИмяПеременной$" - </em>значение переменной будет взято из Контекста</p>
+<p dir="ltr"><em>И в поле с именем "ИмяПоля" ввожу значение переменной "$$ИмяПеременной$$" - </em>значение переменной будет взято из КонтекстаСохраняемого</p></blockquote>
+<p dir="ltr">5. Имена переменных должны соответствовать правилам помещения значений в Структуру (нельзя использовать пробелы, спецсимволы и т.д.)</p>
+<p dir="ltr"> </p></blockquote></span></font></font></font></h2></blockquote></blockquote></body></html>

@@ -1,0 +1,1179 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.14">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Подготовка и загрузка данных</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>en</v8:lang>
+			<v8:content>Test data generator</v8:content>
+		</v8:item>
+	</Title>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<SaveDataInSettings>UseList</SaveDataInSettings>
+	<AutoCommandBar name="FormCommandBar" id="-1">
+		<Autofill>false</Autofill>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">OnOpen</Event>
+		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
+	</Events>
+	<ChildItems>
+		<UsualGroup name="GroupSettings" id="158">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Основные настройки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Main settings</v8:content>
+				</v8:item>
+			</Title>
+			<Behavior>Collapsible</Behavior>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="GroupSettingsРасширеннаяПодсказка" id="159"/>
+			<ChildItems>
+				<RadioButtonField name="StepsLanguage" id="86">
+					<DataPath>StepsLanguage</DataPath>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Язык шагов</v8:content>
+						</v8:item>
+					</Title>
+					<RadioButtonType>Tumbler</RadioButtonType>
+					<ChoiceList>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>English</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">en</Value>
+							</xr:Value>
+						</xr:Item>
+						<xr:Item>
+							<xr:Presentation/>
+							<xr:CheckState>0</xr:CheckState>
+							<xr:Value xsi:type="FormChoiceListDesTimeValue">
+								<Presentation>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Russian</v8:content>
+									</v8:item>
+								</Presentation>
+								<Value xsi:type="xs:string">ru</Value>
+							</xr:Value>
+						</xr:Item>
+					</ChoiceList>
+					<ContextMenu name="StepsLanguageContextMenu" id="87"/>
+					<ExtendedTooltip name="StepsLanguageExtendedTooltip" id="88"/>
+					<Events>
+						<Event name="OnChange">StepsLanguageПриИзменении</Event>
+					</Events>
+				</RadioButtonField>
+				<CheckBoxField name="UseDataExhangeLoadTrue" id="155">
+					<DataPath>UseDataExhangeLoadTrue</DataPath>
+					<CheckBoxType>Tumbler</CheckBoxType>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>БЛ=Нет; БИ=Да</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>БЛ=No; БИ=Yes</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="UseDataExhangeLoadTrueКонтекстноеМеню" id="156"/>
+					<ExtendedTooltip name="UseDataExhangeLoadTrueРасширеннаяПодсказка" id="157"/>
+				</CheckBoxField>
+				<CheckBoxField name="ReplaceRefByAttribute" id="168">
+					<DataPath>ReplaceRefByAttribute</DataPath>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Если в дереве метаданных у объекта указан признак поиска по реквизиту и указано имя реквизита, то при генерации данных, ссылка будет заменена на значение этого реквизита (со служебными префиксами). При загрузке данных, поиск объекта будет производиться по реквизиту и его значению.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Если в дереве метаданных у объекта указан признак поиска по реквизиту и указано имя реквизита, то при генерации данных, ссылка будет заменена на значение этого реквизита (со служебными префиксами). При загрузке данных, поиск объекта будет производиться по реквизиту и его значению.</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ToolTipRepresentation>Button</ToolTipRepresentation>
+					<CheckBoxType>Tumbler</CheckBoxType>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>БЛ=Нет; БИ=Да</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>БЛ=No; БИ=Yes</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="ReplaceRefByAttributeContextMenu" id="169"/>
+					<ExtendedTooltip name="ReplaceRefByAttributeExtendedTooltip" id="170"/>
+					<Events>
+						<Event name="OnChange">ReplaceRefByAttributeOnChange</Event>
+					</Events>
+				</CheckBoxField>
+			</ChildItems>
+		</UsualGroup>
+		<UsualGroup name="GroupStorageToFile" id="175">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выгружать ХранилищеЗначения в файл</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Upload Storage to File</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Параметры выгрузки ХранилищаЗначений в файлы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Parameters for upload ValueStorage to files</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>NormalSeparation</Representation>
+			<ExtendedTooltip name="GroupStorageToFileРасширеннаяПодсказка" id="176"/>
+			<ChildItems>
+				<CheckBoxField name="CreateFileForStorage" id="177">
+					<DataPath>CreateFileForStorage</DataPath>
+					<CheckBoxType>Tumbler</CheckBoxType>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>БЛ=Нет; БИ=Да</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>БЛ=No; БИ=Yes</v8:content>
+						</v8:item>
+					</EditFormat>
+					<ContextMenu name="CreateFileForStorageКонтекстноеМеню" id="178"/>
+					<ExtendedTooltip name="CreateFileForStorageРасширеннаяПодсказка" id="179"/>
+					<Events>
+						<Event name="OnChange">CreateFileForStorageOnChange</Event>
+					</Events>
+				</CheckBoxField>
+				<UsualGroup name="GroupPath" id="186">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Group path</v8:content>
+						</v8:item>
+					</Title>
+					<HorizontalStretch>true</HorizontalStretch>
+					<Behavior>Usual</Behavior>
+					<Representation>None</Representation>
+					<ShowTitle>false</ShowTitle>
+					<ExtendedTooltip name="GroupPathРасширеннаяПодсказка" id="187"/>
+					<ChildItems>
+						<InputField name="PathToUpload" id="180">
+							<DataPath>PathToUpload</DataPath>
+							<ChoiceButton>true</ChoiceButton>
+							<ContextMenu name="PathToUploadКонтекстноеМеню" id="181"/>
+							<ExtendedTooltip name="PathToUploadРасширеннаяПодсказка" id="182"/>
+							<Events>
+								<Event name="StartChoice">PathToUploadStartChoice</Event>
+							</Events>
+						</InputField>
+						<CheckBoxField name="MakeAbsPath" id="188">
+							<DataPath>AbsPath</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>CheckBox</CheckBoxType>
+							<EditFormat>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>БЛ=Нет; БИ=Да</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>БЛ=No; БИ=Yes</v8:content>
+								</v8:item>
+							</EditFormat>
+							<ContextMenu name="MakeAbsPathКонтекстноеМеню" id="189"/>
+							<ExtendedTooltip name="MakeAbsPathРасширеннаяПодсказка" id="190"/>
+						</CheckBoxField>
+					</ChildItems>
+				</UsualGroup>
+			</ChildItems>
+		</UsualGroup>
+		<Pages name="GroupPages" id="72">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group pages</v8:content>
+				</v8:item>
+			</Title>
+			<PagesRepresentation>TabsOnTop</PagesRepresentation>
+			<ExtendedTooltip name="GroupPagesExtendedTooltip" id="73"/>
+			<ChildItems>
+				<Page name="GroupPageMain" id="74">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Main</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отбор по метаданным</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="GroupPageMainExtendedTooltip" id="75"/>
+					<ChildItems>
+						<UsualGroup name="GroupMetadataAndData" id="1">
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="GroupMetadataAndDataExtendedTooltip" id="2"/>
+							<ChildItems>
+								<UsualGroup name="GroupMetadata" id="3">
+									<Group>Vertical</Group>
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="GroupMetadataExtendedTooltip" id="4"/>
+									<ChildItems>
+										<Table name="MetadataList" id="48">
+											<Representation>Tree</Representation>
+											<DataPath>MetadataList</DataPath>
+											<ContextMenu name="MetadataListContextMenu" id="50"/>
+											<AutoCommandBar name="MetadataListCommandBar" id="49">
+												<Autofill>false</Autofill>
+												<ChildItems>
+													<Button name="MetadataListSelectAll" id="191">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.SelectAll</CommandName>
+														<ExtendedTooltip name="MetadataListSelectAllРасширеннаяПодсказка" id="192"/>
+													</Button>
+													<Button name="MetadataListDeselectAll" id="193">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.DeselectAll</CommandName>
+														<ExtendedTooltip name="MetadataListDeselectAllРасширеннаяПодсказка" id="194"/>
+													</Button>
+													<Button name="MetadataListGenerateFeature" id="113">
+														<Type>CommandBarButton</Type>
+														<DefaultButton>true</DefaultButton>
+														<DefaultItem>true</DefaultItem>
+														<CommandName>Form.Command.GenerateFeature</CommandName>
+														<ExtendedTooltip name="MetadataListGenerateFeatureРасширеннаяПодсказка" id="114"/>
+													</Button>
+													<Button name="MetadataListSelectDependentItems" id="111">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.SelectDependentItems</CommandName>
+														<ExtendedTooltip name="MetadataListSelectDependentItemsРасширеннаяПодсказка" id="112"/>
+													</Button>
+													<Button name="MetadataListCloseForm" id="160">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.CloseForm</CommandName>
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Закрыть</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Close</v8:content>
+															</v8:item>
+														</Title>
+														<ExtendedTooltip name="MetadataListCloseFormРасширеннаяПодсказка" id="161"/>
+													</Button>
+												</ChildItems>
+											</AutoCommandBar>
+											<ExtendedTooltip name="MetadataListExtendedTooltip" id="51"/>
+											<SearchStringAddition name="MetadataListSearchString" id="52">
+												<AdditionSource>
+													<Item>MetadataList</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="MetadataListSearchStringContextMenu" id="53"/>
+												<ExtendedTooltip name="MetadataListSearchStringExtendedTooltip" id="54"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="MetadataListViewStatus" id="58">
+												<AdditionSource>
+													<Item>MetadataList</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<HorizontalLocation>Left</HorizontalLocation>
+												<ContextMenu name="MetadataListViewStatusContextMenu" id="59"/>
+												<ExtendedTooltip name="MetadataListViewStatusExtendedTooltip" id="60"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="MetadataListSearchControl" id="55">
+												<AdditionSource>
+													<Item>MetadataList</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="MetadataListSearchControlContextMenu" id="56"/>
+												<ExtendedTooltip name="MetadataListSearchControlExtendedTooltip" id="57"/>
+											</SearchControlAddition>
+											<Events>
+												<Event name="Selection">MetadataListSelection</Event>
+											</Events>
+											<ChildItems>
+												<CheckBoxField name="MetadataListUse" id="64">
+													<DataPath>MetadataList.Use</DataPath>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="MetadataListUseContextMenu" id="65"/>
+													<ExtendedTooltip name="MetadataListUseExtendedTooltip" id="66"/>
+													<Events>
+														<Event name="OnChange">MetadataListUseOnChange</Event>
+													</Events>
+												</CheckBoxField>
+												<InputField name="MetadataListPresentation" id="67">
+													<DataPath>MetadataList.Presentation</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<ContextMenu name="MetadataListPresentationContextMenu" id="68"/>
+													<ExtendedTooltip name="MetadataListPresentationExtendedTooltip" id="69"/>
+												</InputField>
+												<CheckBoxField name="MetadataListUseSearchByAttribute" id="162">
+													<DataPath>MetadataList.UseSearchByAttribute</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="MetadataListUseSearchByAttributeContextMenu" id="163"/>
+													<ExtendedTooltip name="MetadataListUseSearchByAttributeExtendedTooltip" id="164"/>
+												</CheckBoxField>
+												<InputField name="MetadataListSearchAttribute" id="165">
+													<DataPath>MetadataList.SearchAttribute</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="MetadataListSearchAttributeContextMenu" id="166"/>
+													<ExtendedTooltip name="MetadataListSearchAttributeExtendedTooltip" id="167"/>
+												</InputField>
+												<InputField name="MetadataListName" id="61">
+													<DataPath>MetadataList.Name</DataPath>
+													<Visible>false</Visible>
+													<ReadOnly>true</ReadOnly>
+													<ContextMenu name="MetadataListNameContextMenu" id="62"/>
+													<ExtendedTooltip name="MetadataListNameExtendedTooltip" id="63"/>
+												</InputField>
+												<InputField name="MetadataListFullName" id="83">
+													<DataPath>MetadataList.FullName</DataPath>
+													<Visible>false</Visible>
+													<ReadOnly>true</ReadOnly>
+													<ContextMenu name="MetadataListFullNameContextMenu" id="84"/>
+													<ExtendedTooltip name="MetadataListFullNameExtendedTooltip" id="85"/>
+												</InputField>
+											</ChildItems>
+										</Table>
+									</ChildItems>
+								</UsualGroup>
+								<UsualGroup name="GroupData" id="27">
+									<Behavior>Usual</Behavior>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="GroupDataExtendedTooltip" id="28"/>
+									<ChildItems>
+										<Table name="DataList" id="29" DisplayImportance="High">
+											<Representation>List</Representation>
+											<UseAlternationRowColor>true</UseAlternationRowColor>
+											<DataPath>DataList</DataPath>
+											<RowFilter xsi:nil="true"/>
+											<ContextMenu name="DataListContextMenu" id="31"/>
+											<AutoCommandBar name="DataListCommandBar" id="30"/>
+											<ExtendedTooltip name="DataListExtendedTooltip" id="32"/>
+											<SearchStringAddition name="DataListSearchString" id="33">
+												<AdditionSource>
+													<Item>DataList</Item>
+													<Type>SearchStringRepresentation</Type>
+												</AdditionSource>
+												<ContextMenu name="DataListSearchStringContextMenu" id="34"/>
+												<ExtendedTooltip name="DataListSearchStringExtendedTooltip" id="35"/>
+											</SearchStringAddition>
+											<ViewStatusAddition name="DataListViewStatus" id="39">
+												<AdditionSource>
+													<Item>DataList</Item>
+													<Type>ViewStatusRepresentation</Type>
+												</AdditionSource>
+												<HorizontalLocation>Left</HorizontalLocation>
+												<ContextMenu name="DataListViewStatusContextMenu" id="40"/>
+												<ExtendedTooltip name="DataListViewStatusExtendedTooltip" id="41"/>
+											</ViewStatusAddition>
+											<SearchControlAddition name="DataListSearchControl" id="36">
+												<AdditionSource>
+													<Item>DataList</Item>
+													<Type>SearchControl</Type>
+												</AdditionSource>
+												<ContextMenu name="DataListSearchControlContextMenu" id="37"/>
+												<ExtendedTooltip name="DataListSearchControlExtendedTooltip" id="38"/>
+											</SearchControlAddition>
+										</Table>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="GroupPageFilterByRefs" id="93">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Filter by refs</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Отбор по ссылкам</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="GroupPageFilterByRefsРасширеннаяПодсказка" id="94"/>
+					<ChildItems>
+						<CheckBoxField name="IncludeUpstreamDependenciesDefault" id="117">
+							<DataPath>IncludeUpstreamDependenciesDefault</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="IncludeUpstreamDependenciesDefaultКонтекстноеМеню" id="118"/>
+							<ExtendedTooltip name="IncludeUpstreamDependenciesDefaultРасширеннаяПодсказка" id="119"/>
+							<Events>
+								<Event name="OnChange">IncludeUpstreamDependenciesDefaultOnChange</Event>
+							</Events>
+						</CheckBoxField>
+						<UsualGroup name="GroupIncludeDependencies" id="123">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Group include dependencies</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Group include dependencies</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>AlwaysHorizontal</Group>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="GroupIncludeDependenciesРасширеннаяПодсказка" id="124"/>
+							<ChildItems>
+								<CheckBoxField name="IncludeDownstreamDependenciesDefault" id="120">
+									<DataPath>IncludeDownstreamDependenciesDefault</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="IncludeDownstreamDependenciesDefaultКонтекстноеМеню" id="121"/>
+									<ExtendedTooltip name="IncludeDownstreamDependenciesDefaultРасширеннаяПодсказка" id="122"/>
+									<Events>
+										<Event name="OnChange">IncludeDownstreamDependenciesDefaultOnChange</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="MaxDownstreamDependenciesHierarchyLevel" id="128">
+									<DataPath>MaxDownstreamDependenciesHierarchyLevel</DataPath>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Рекомендуется значение не больше 1</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="MaxDownstreamDependenciesHierarchyLevelКонтекстноеМеню" id="129"/>
+									<ExtendedTooltip name="MaxDownstreamDependenciesHierarchyLevelРасширеннаяПодсказка" id="130"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<CheckBoxField name="DontAddCommentsWithMetadataName" id="125">
+							<DataPath>DontAddCommentsWithMetadataName</DataPath>
+							<TitleLocation>Right</TitleLocation>
+							<CheckBoxType>Auto</CheckBoxType>
+							<ContextMenu name="DontAddCommentsWithMetadataNameКонтекстноеМеню" id="126"/>
+							<ExtendedTooltip name="DontAddCommentsWithMetadataNameРасширеннаяПодсказка" id="127"/>
+						</CheckBoxField>
+						<Table name="DataRefs" id="133">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<DataPath>DataRefs</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="DataRefsКонтекстноеМеню" id="134"/>
+							<AutoCommandBar name="DataRefsКоманднаяПанель" id="135">
+								<ChildItems>
+									<Button name="DataRefsAddObjectByURL" id="131">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.AddObjectByURL</CommandName>
+										<ExtendedTooltip name="DataRefsAddObjectByURLРасширеннаяПодсказка" id="132"/>
+									</Button>
+									<Button name="DataRefsGenerateFeatureForRefs" id="115">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.GenerateFeatureForRefs</CommandName>
+										<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem"/>
+										<ExtendedTooltip name="DataRefsGenerateFeatureForRefsРасширеннаяПодсказка" id="116"/>
+									</Button>
+								</ChildItems>
+							</AutoCommandBar>
+							<ExtendedTooltip name="DataRefsРасширеннаяПодсказка" id="136"/>
+							<SearchStringAddition name="DataRefsСтрокаПоиска" id="137">
+								<AdditionSource>
+									<Item>DataRefs</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="DataRefsСтрокаПоискаКонтекстноеМеню" id="138"/>
+								<ExtendedTooltip name="DataRefsСтрокаПоискаРасширеннаяПодсказка" id="139"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="DataRefsСостояниеПросмотра" id="140">
+								<AdditionSource>
+									<Item>DataRefs</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="DataRefsСостояниеПросмотраКонтекстноеМеню" id="141"/>
+								<ExtendedTooltip name="DataRefsСостояниеПросмотраРасширеннаяПодсказка" id="142"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="DataRefsУправлениеПоиском" id="143">
+								<AdditionSource>
+									<Item>DataRefs</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="DataRefsУправлениеПоискомКонтекстноеМеню" id="144"/>
+								<ExtendedTooltip name="DataRefsУправлениеПоискомРасширеннаяПодсказка" id="145"/>
+							</SearchControlAddition>
+							<Events>
+								<Event name="OnStartEdit">DataRefsOnStartEdit</Event>
+							</Events>
+							<ChildItems>
+								<InputField name="DataRefsRef" id="146">
+									<DataPath>DataRefs.Item</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="DataRefsRefКонтекстноеМеню" id="147"/>
+									<ExtendedTooltip name="DataRefsRefРасширеннаяПодсказка" id="148"/>
+								</InputField>
+								<CheckBoxField name="DataRefsIncludeUpstreamDependencies" id="152">
+									<DataPath>DataRefs.IncludeUpstreamDependencies</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="DataRefsIncludeUpstreamDependenciesКонтекстноеМеню" id="153"/>
+									<ExtendedTooltip name="DataRefsIncludeUpstreamDependenciesРасширеннаяПодсказка" id="154"/>
+								</CheckBoxField>
+								<CheckBoxField name="DataRefsIncludeDownstreamDependencies" id="149">
+									<DataPath>DataRefs.IncludeDownstreamDependencies</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="DataRefsIncludeDownstreamDependenciesКонтекстноеМеню" id="150"/>
+									<ExtendedTooltip name="DataRefsIncludeDownstreamDependenciesРасширеннаяПодсказка" id="151"/>
+								</CheckBoxField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="GroupPageFeature" id="76">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Feature</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Фича</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="GroupPageFeatureExtendedTooltip" id="77"/>
+					<ChildItems>
+						<UsualGroup name="GroupFeatureCommand" id="171">
+							<Title>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Group feature command</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Group feature command</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Behavior>Usual</Behavior>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="GroupFeatureCommandExtendedTooltip" id="172"/>
+							<ChildItems>
+								<Button name="ProcessReplaceRefByAttribute" id="173">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ProcessReplaceRefByAttribute</CommandName>
+									<ExtendedTooltip name="ProcessReplaceRefByAttributeExtendedTooltip" id="174"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<TextDocumentField name="Feature" id="78">
+							<DataPath>Feature</DataPath>
+							<TitleLocation>None</TitleLocation>
+							<ContextMenu name="FeatureContextMenu" id="79"/>
+							<ExtendedTooltip name="FeatureExtendedTooltip" id="80"/>
+						</TextDocumentField>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Object" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.VanessaAutomationsingle</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="MetadataType" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Metadata type</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+			<Settings xsi:type="v8:TypeDescription"/>
+		</Attribute>
+		<Attribute name="MetadataList" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Metadata list</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Name" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Name</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Use" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Use</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Использовать</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Presentation" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Presentation</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Представление</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="FullName" id="12">
+					<Title>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Full name</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Полное имя</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="UseSearchByAttribute" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Искать по атрибуту</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Use search by attribute</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="SearchAttribute" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Атрибут поиска
+</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Search attribute</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>128</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="DataList" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Data list</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="Feature" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Feature</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/txtedt">d5p1:TextDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="StepsLanguage" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Steps language</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>16</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>StepsLanguage</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="Initialized" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Initialized</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="IncludeUpstreamDependenciesDefault" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включать восходящие зависимости (ссылки в объекте)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>IncludeUpstreamDependenciesDefault</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="IncludeDownstreamDependenciesDefault" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Включать нисходящие зависимости (ссылки на объект)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>IncludeDownstreamDependenciesDefault</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="DontAddCommentsWithMetadataName" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Не добавлять комментарии с именами объектов метаданных</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>DontAddCommentsWithMetadataName</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="MaxDownstreamDependenciesHierarchyLevel" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Макс. уровень иерархии</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>2</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<Save>
+				<Field>MaxDownstreamDependenciesHierarchyLevel</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="DataRefs" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Data refs</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Save>
+				<Field>DataRefs</Field>
+			</Save>
+			<Columns>
+				<Column name="Item" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект</v8:content>
+						</v8:item>
+					</Title>
+					<Type/>
+				</Column>
+				<Column name="IncludeDownstreamDependencies" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Включать нисходящие зависимости</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="IncludeUpstreamDependencies" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Включать восходящие зависимости</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="UseDataExhangeLoadTrue" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>DataExhange.Load</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>ОбменДанными.Загрузка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ReplaceRefByAttribute" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Replace ref by attribute</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заменять ссылку на реквизит</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>ReplaceRefByAttribute</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="CreateFileForStorage" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Upload</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>CreateFileForStorage</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="PathToUpload" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Path</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="UploadFileType" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>File type</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>5</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>UploadFileType</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="AbsPath" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Абсолютный путь</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Absolute path</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<Save>
+				<Field>AbsPath</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="FilesToSave" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Files to save</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="GenerateFeature" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Generate feature</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сгенерировать фичу</v8:content>
+				</v8:item>
+			</Title>
+			<Action>GenerateFeature</Action>
+		</Command>
+		<Command name="SelectDependentItems" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Select dependent items</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выбрать зависимые элементы</v8:content>
+				</v8:item>
+			</Title>
+			<Action>SelectDependentItems</Action>
+		</Command>
+		<Command name="GenerateFeatureForRefs" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сгенерировать фичу</v8:content>
+				</v8:item>
+			</Title>
+			<Action>GenerateFeatureForRefs</Action>
+		</Command>
+		<Command name="AddObjectByURL" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить по ссылке</v8:content>
+				</v8:item>
+			</Title>
+			<Action>AddObjectByURL</Action>
+		</Command>
+		<Command name="CloseForm" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть форму</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Close form</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть форму подготовки и загрузки данных</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Close the data preparation and loading form</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>CloseForm</Action>
+		</Command>
+		<Command name="ProcessReplaceRefByAttribute" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Replace ref by attribute</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заменить ссылки реквизитами</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Process replace ref by attribute</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ProcessReplaceRefByAttribute</Action>
+		</Command>
+		<Command name="SelectAll" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Select all</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Select all</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>SelectAll</Action>
+		</Command>
+		<Command name="DeselectAll" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Deselect all</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Deselect all</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>DeselectAll</Action>
+		</Command>
+	</Commands>
+	<Parameters>
+		<Parameter name="workspaceRoot">
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<KeyParameter>true</KeyParameter>
+		</Parameter>
+	</Parameters>
+</Form>
