@@ -1286,20 +1286,20 @@
 <ul>
 <li>Feature файлы пишутся на языке Turbo Gherkin - рекомендуется использовать встренный редактор (VAEditor), созданный на базе VSCode.</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="c"># encoding: utf-8</span><span class="nf"></span>
-<span class="c"># language: ru</span><span class="nf"></span>
+<div class="codehilite"><pre><span></span><code><span class="c"># encoding: utf-8</span>
+<span class="c"># language: ru</span>
 
 <span class="k">Функционал:</span><span class="nf"> Запуск и получение результатов запуска сценариев</span>
 <span class="nf">Как любой разработчик продукта</span>
 <span class="nf">Я хочу иметь возможность запустить проверку сценариев поведения на конфигурации 1С:Предприятие</span>
 
-<span class="c"># Контекст сценария выполняется всегда перед каждым сценарием</span><span class="nf"></span>
+<span class="c"># Контекст сценария выполняется всегда перед каждым сценарием</span>
 
-<span class="k">Контекст:</span><span class="nf"></span>
+<span class="k">Контекст:</span>
 <span class="nf">    Когда существует разрабатываемая мною конфигурация 1С</span>
 <span class="k">    И </span><span class="nf">существуют требования заказчика к ожидаемому поведения в каталоге &quot;</span><span class="s">.\features</span><span class="nf">&quot;</span>
 
-<span class="c"># Каждый сценарий состоит из последовательных связанных шагов</span><span class="nf"></span>
+<span class="c"># Каждый сценарий состоит из последовательных связанных шагов</span>
 
 <span class="k">Сценарий:</span><span class="nf"> Запуск в интерактивном режиме</span>
 <span class="nf">    Дано я открыл обработку &quot;vanessa-automation.epf&quot;</span>
@@ -1367,7 +1367,7 @@
 <a href="https://github.com/Pr-Mex/vanessa-automation/blob/develop/docs/JsonParams/JsonParamsEN.md">Описание всех параметров VAParams.json (en)</a>
 <a href="https://github.com/Pr-Mex/vanessa-automation/blob/develop/docs/CommandSetting/CommandSetting.md">Параметры, которые раньше можно было передавать только в командной строке, но теперь можно передавать в файле VAParams.json</a></p>
 <p>Профиль запуска предназначен для простого консольного запуска, пример подобной командной строки выглядит так:</p>
-<div class="codehilite"><pre><span></span><code><span class="c">%V83PATH% /Execute C:\vanessa-automation\vanessa-automation.epf /TESTMANAGER /C&quot;StartFeaturePlayer;VAParams=C:\VAParams.json&quot;</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="c">%V83PATH% /Execute C:\vanessa-automation\vanessa-automation.epf /TESTMANAGER /C&quot;StartFeaturePlayer;VAParams=C:\VAParams.json&quot;</span>
 </code></pre></div>
 
 <p>Описание всех параметров командной строки <a href="https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/CommandSetting/CommandSetting.md">можно найти тут</a></p>
@@ -1377,24 +1377,24 @@
 <ol>
 <li>У себя в каталоге с обработкой ванессы создать файл user_settings.json. Сам файл user_settings.json должен отвечать специальному формату:</li>
 </ol>
-<div class="codehilite"><pre><span></span><code><span class="p">{</span><span class="w"></span>
-<span class="w">    </span><span class="nt">&quot;userSettings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
-<span class="w">        </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;USERNAME_1&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;settings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">                </span><span class="nt">&quot;ИМЯ_ПЕРЕМЕННОЙ_1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ЗНАЧЕНИЕ_ПЕРЕМЕННОЙ_1&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">                </span><span class="nt">&quot;ИМЯ_ПЕРЕМЕННОЙ_2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ЗНАЧЕНИЕ_ПЕРЕМЕННОЙ_2&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="p">}</span><span class="w"></span>
-<span class="w">        </span><span class="p">},</span><span class="w"></span>
-<span class="w">        </span><span class="p">{</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;USERNAME_2&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="nt">&quot;settings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
-<span class="w">                </span><span class="nt">&quot;ИМЯ_ПЕРЕМЕННОЙ_1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ЗНАЧЕНИЕ_ПЕРЕМЕННОЙ_1&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">                </span><span class="nt">&quot;ИМЯ_ПЕРЕМЕННОЙ_2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ЗНАЧЕНИЕ_ПЕРЕМЕННОЙ_2&quot;</span><span class="p">,</span><span class="w"></span>
-<span class="w">            </span><span class="p">}</span><span class="w"></span>
-<span class="w">        </span><span class="p">}</span><span class="w"></span>
-<span class="w">    </span><span class="p">]</span><span class="w"></span>
-<span class="p">}</span><span class="w"></span>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+<span class="w">    </span><span class="nt">&quot;userSettings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;USERNAME_1&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;settings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;ИМЯ_ПЕРЕМЕННОЙ_1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ЗНАЧЕНИЕ_ПЕРЕМЕННОЙ_1&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;ИМЯ_ПЕРЕМЕННОЙ_2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ЗНАЧЕНИЕ_ПЕРЕМЕННОЙ_2&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">},</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">            </span><span class="nt">&quot;user&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;USERNAME_2&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="nt">&quot;settings&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;ИМЯ_ПЕРЕМЕННОЙ_1&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ЗНАЧЕНИЕ_ПЕРЕМЕННОЙ_1&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;ИМЯ_ПЕРЕМЕННОЙ_2&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;ЗНАЧЕНИЕ_ПЕРЕМЕННОЙ_2&quot;</span><span class="p">,</span>
+<span class="w">            </span><span class="p">}</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">    </span><span class="p">]</span>
+<span class="p">}</span>
 </code></pre></div>
 
 <ol>
