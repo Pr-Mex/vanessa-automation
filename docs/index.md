@@ -43,6 +43,10 @@
 * [Автоматизация тестирования в СППР 2.0. Часть 1](https://www.youtube.com/watch?v=1UBlV4kWx_o)
 * [Автоматизация тестирования в СППР 2.0. Часть 2](https://www.youtube.com/watch?v=gKJmJKIe-nA)
 
+## Внешняя компонента VanessaExt
+
+* [Применение внешних компонент для решения задач сценарного тестирования. Автор Денис Кандрашин.](https://infostart.ru/1c/articles/1788265/)
+
 ## Видео материалы
 
 * [100+ тестов на Vanessa-Automation. Личный опыт без маркетинга.](https://www.youtube.com/watch?v=_YrmLnM9J1A)
