@@ -1,4 +1,4 @@
-# language: ru
+﻿# language: ru
 # encoding: utf-8
 #parent uf:
 @UF8_Turbo_Gherkin
@@ -45,16 +45,12 @@
 		| 'And I call english subscenario "222"' |
 
 
-	
-	
 	Тогда таблица "ДеревоТестов" стала равной:
 		| 'Наименование'                                                         | 'Статус'  |
 		| 'СлужебнаяФичаEN4.feature'                                             | ''        |
 		| 'СлужебнаяФичаEN4'                                                     | ''        |
 		| 'Background'                                                           | ''        |
-		| 'Given I launch TestClient opening script or connect the existing one' | ''        |
-		| 'Given I open new TestClient session or connect the existing one'      | 'Success' |
-		| 'And I close all client application windows'                           | 'Success' |
+		| 'Given I launch TestClient opening script or connect the existing one' | 'Success' |
 		| 'СлужебнаяФичаEN4'                                                     | 'Success' |
 		| 'And In the command interface I select "Основная" "Справочник1"'       | 'Success' |
 		| 'Then "Справочник1" window is opened'                                  | 'Success' |
@@ -70,8 +66,9 @@
 		| 'And I close "Справочник1 (create)*" window'                           | 'Success' |
 		| 'Then "1C:Enterprise" window is opened'                                | 'Success' |
 		| 'And I click "No" button'                                              | 'Success' |
-
-
+	
+		
+	
 
 
 

@@ -7,6 +7,11 @@
 				<CommandName>Form.Command.ОткрытьОсновнуюФорму</CommandName>
 				<ExtendedTooltip name="ФормаОткрытьОсновнуюФормуРасширеннаяПодсказка" id="2"/>
 			</Button>
+			<Button name="ФормаОстановитьВыполнениеСценариев" id="3">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОстановитьВыполнениеСценариев</CommandName>
+				<ExtendedTooltip name="ФормаОстановитьВыполнениеСценариевРасширеннаяПодсказка" id="4"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -36,6 +41,58 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="ИспользуемоеИмяФайла" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Используемое имя файла</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВерсияРедактора" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Версия редактора</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="РежимСамотестирования" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Режим самотестирования</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЗапрещеныСинхронныеВызовы" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запрещены синхронные вызовы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ОткрытьОсновнуюФорму" id="1">
@@ -43,6 +100,10 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Открыть основную форму</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Open main form</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -52,6 +113,19 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ОткрытьОсновнуюФорму</Action>
+		</Command>
+		<Command name="ОстановитьВыполнениеСценариев" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Остановить выполнение сценариев</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Stop script execution</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ОстановитьВыполнениеСценариев</Action>
 		</Command>
 	</Commands>
 </Form>

@@ -24,21 +24,16 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Группа настроек</v8:content>
+					<v8:content>Основные настройки</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
-					<v8:content>Group settings</v8:content>
+					<v8:content>Main settings</v8:content>
 				</v8:item>
 			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Group settings</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Representation>None</Representation>
-			<ShowTitle>false</ShowTitle>
+			<Behavior>Collapsible</Behavior>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>NormalSeparation</Representation>
 			<ExtendedTooltip name="GroupSettingsРасширеннаяПодсказка" id="159"/>
 			<ChildItems>
 				<RadioButtonField name="StepsLanguage" id="86">
@@ -87,6 +82,16 @@
 				<CheckBoxField name="UseDataExhangeLoadTrue" id="155">
 					<DataPath>UseDataExhangeLoadTrue</DataPath>
 					<CheckBoxType>Tumbler</CheckBoxType>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>БЛ=Нет; БИ=Да</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>БЛ=No; БИ=Yes</v8:content>
+						</v8:item>
+					</EditFormat>
 					<ContextMenu name="UseDataExhangeLoadTrueКонтекстноеМеню" id="156"/>
 					<ExtendedTooltip name="UseDataExhangeLoadTrueРасширеннаяПодсказка" id="157"/>
 				</CheckBoxField>
@@ -104,6 +109,16 @@
 					</ToolTip>
 					<ToolTipRepresentation>Button</ToolTipRepresentation>
 					<CheckBoxType>Tumbler</CheckBoxType>
+					<EditFormat>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>БЛ=Нет; БИ=Да</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>БЛ=No; БИ=Yes</v8:content>
+						</v8:item>
+					</EditFormat>
 					<ContextMenu name="ReplaceRefByAttributeContextMenu" id="169"/>
 					<ExtendedTooltip name="ReplaceRefByAttributeExtendedTooltip" id="170"/>
 					<Events>
@@ -134,6 +149,9 @@
 				</v8:item>
 			</ToolTip>
 			<Group>Vertical</Group>
+			<Behavior>Collapsible</Behavior>
+			<ControlRepresentation>Picture</ControlRepresentation>
+			<Representation>NormalSeparation</Representation>
 			<ExtendedTooltip name="GroupStorageToFileРасширеннаяПодсказка" id="176"/>
 			<ChildItems>
 				<CheckBoxField name="CreateFileForStorage" id="177">
@@ -864,11 +882,7 @@
 							<v8:content>Объект</v8:content>
 						</v8:item>
 					</Title>
-					<Type>
-						<v8:TypeSet>cfg:DocumentRef</v8:TypeSet>
-						<v8:TypeSet>cfg:ChartOfCharacteristicTypesRef</v8:TypeSet>
-						<v8:TypeSet>cfg:CatalogRef</v8:TypeSet>
-					</Type>
+					<Type/>
 				</Column>
 				<Column name="IncludeDownstreamDependencies" id="2">
 					<Title>
@@ -1004,6 +1018,17 @@
 			<Save>
 				<Field>AbsPath</Field>
 			</Save>
+		</Attribute>
+		<Attribute name="FilesToSave" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Files to save</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
 		</Attribute>
 	</Attributes>
 	<Commands>
