@@ -767,7 +767,7 @@ Procedure ICheckOrCreateInformationRegisterRecordsWithDataExchangeLoadTrue(Val R
 		
 	Else
 		
-		ICheckOrCreateInformationRegisterRecordsAtServer(RegisterName, Values, False, True);
+		ICheckOrCreateInformationRegisterRecordsAtServer(RegisterName, Values, True, True);
 		
 	EndIf;
 		
