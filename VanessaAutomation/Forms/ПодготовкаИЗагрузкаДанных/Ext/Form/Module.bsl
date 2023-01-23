@@ -676,7 +676,7 @@ Procedure IRefillObjectTabularSectionAtServer(TabularSectionName, Values)
 	ObjectAttributes = New ValueTable;           
 	
 	Ref = GetObjectLinkFromObjectURL(ObjectValues[0][RefColumnName]);
-	If Lower(TabularSectionName) = Lower("ExtDimensionTypes") Then                                                  
+	If Lower(TabularSectionName) = Lower("ExtDimensionTypes") OR Нрег(TabularSectionName) = Нрег("ВидыСубконто") Then
 		FillColumnsByTabularSectionAttributes(ObjectAttributes, Ref.Metadata().StandardTabularSections[TabularSectionName].StandardAttributes);
 	Else
 		FillColumnsByTabularSectionAttributes(ObjectAttributes, Ref.Metadata().TabularSections[TabularSectionName].Attributes);
