@@ -3428,7 +3428,7 @@ Function TranslationList(Val TranslateString = "") Export
 	Else
 		TrString = Undefined;
 		Str.Property(TranslateString, TrString);
-		Return TrString;
+		Return ?(TrString = Undefined, TranslateString, TrString);
 	EndIf;
 EndFunction
 
