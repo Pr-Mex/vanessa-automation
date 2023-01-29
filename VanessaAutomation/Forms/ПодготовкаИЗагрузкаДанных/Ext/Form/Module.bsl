@@ -676,7 +676,8 @@ Procedure IRefillObjectTabularSectionAtServer(TabularSectionName, Values)
 	ObjectAttributes = New ValueTable;           
 	
 	Ref = GetObjectLinkFromObjectURL(ObjectValues[0][RefColumnName]);
-	If Lower(TabularSectionName) = Lower("ExtDimensionTypes") Then                                                  
+	TabularSectionName = TranslationList(TabularSectionName);
+	If Lower(TabularSectionName) = Lower("ExtDimensionTypes") Then
 		FillColumnsByTabularSectionAttributes(ObjectAttributes, Ref.Metadata().StandardTabularSections[TabularSectionName].StandardAttributes);
 	Else
 		FillColumnsByTabularSectionAttributes(ObjectAttributes, Ref.Metadata().TabularSections[TabularSectionName].Attributes);
@@ -3367,6 +3368,69 @@ EndProcedure
 Procedure ProcessReplaceRefByAttribute(Command)
 	ProcessReplaceRefByAttributeAtServer();
 EndProcedure
+
+&AtServer
+Function TranslationList(Val TranslateString = "") Export
+	If КодЛокализацииИнформационнойБазы() <> "ru_RU"  Then
+		Return TranslateString;
+	EndIf;
+	Str = New Structure;
+	Str.Insert("ИмяПредопределенныхДанных", "PredefinedDataName");
+	Str.Insert("Код", "Code");
+	Str.Insert("Наименование", "Description");
+	Str.Insert("ПометкаУдаления", "DeletionMark");
+	Str.Insert("Предопределенный", "Predefined");
+	Str.Insert("Ссылка", "Ref");
+	Str.Insert("ВидДвижения", "RecordType");
+	Str.Insert("Активность", "Active");
+	Str.Insert("НомерСтроки", "LineNumber");
+	Str.Insert("Регистратор", "Recorder");
+	Str.Insert("Период", "Period");
+	Str.Insert("ТипЗначения", "ValueType");
+	Str.Insert("ЭтоГруппа", "IsFolder");
+	Str.Insert("Родитель", "Parent");
+	Str.Insert("Порядок", "Order");
+	Str.Insert("ВидыСубконто", "ExtDimensionTypes");
+	Str.Insert("ТолькоОбороты", "TurnoversOnly");
+	Str.Insert("ВидСубконто", "ExtDimensionType");
+	Str.Insert("Забалансовый", "OffBalance");
+	Str.Insert("Вид", "Type");
+	Str.Insert("Владелец", "Owner");
+	Str.Insert("ВедущиеВидыРасчета", "LeadingCalculationTypes");
+	Str.Insert("ВидРасчета", "CalculationType");
+	Str.Insert("ВытесняющиеВидыРасчета", "DisplacingCalculationTypes");
+	Str.Insert("БазовыеВидыРасчета", "BaseCalculationTypes");
+	Str.Insert("ПериодДействияБазовый", "ActionPeriodIsBasic");
+	Str.Insert("Проведен", "Posted");
+	Str.Insert("Дата", "Date");
+	Str.Insert("Номер", "Number");
+	Str.Insert("ПериодРегистрации", "RegistrationPeriod");
+	Str.Insert("Сторно", "ReversingEntry");
+	Str.Insert("БазовыйПериодКонец", "EndOfBasePeriod");
+	Str.Insert("БазовыйПериодНачало", "BegOfBasePeriod");
+	Str.Insert("ПериодДействияКонец", "EndOfActionPeriod");
+	Str.Insert("ПериодДействияНачало", "BegOfActionPeriod");
+	Str.Insert("ПериодДействия", "ActionPeriod");
+	Str.Insert("ЭтотУзел", "ThisNode");
+	Str.Insert("НомерПринятого", "ReceivedNo");
+	Str.Insert("НомерОтправленного", "SentNo");
+	Str.Insert("Стартован", "Started");
+	Str.Insert("ВедущаяЗадача", "HeadTask");
+	Str.Insert("Завершен", "Completed");
+	Str.Insert("Выполнена", "Executed");
+	Str.Insert("ТочкаМаршрута", "RoutePoint");
+	Str.Insert("БизнесПроцесс", "BusinessProcess");
+	Str.Insert("Счет", "Account");
+	Str.Insert("ПериодДействияБазовый", "ActionPeriodIsBasic");
+	
+	If IsBlankString(TranslateString) Then
+		Return Str;
+	Else
+		TrString = Undefined;
+		Str.Property(TranslateString, TrString);
+		Return ?(TrString = Undefined, TranslateString, TrString);
+	EndIf;
+EndFunction
 
 #EndRegion
 
