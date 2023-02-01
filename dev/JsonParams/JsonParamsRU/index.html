@@ -1150,6 +1150,10 @@
 <p><strong>ИспользоватьПарсерGherkinИзКомпонентыVanessaExt {usethegherkinparserfromthevanessaextaddin}</strong>:
      Устанавливает признак того. что нужно использовать парсер Gherkin из компоненты VanessaExt. Этот парсер работает гораздо быстрее, чем встроенный парсер.</p>
 </li>
+<li>
+<p><strong>ПоискФайловСПомощьюКомпонентыVanessaExt {SearchingForFilesUsingTheVanessaExtComponent}</strong>:
+     Включает поиск файлов с помощью внешней компоненты VanessaExt.</p>
+</li>
 </ul>
 </li>
 <li>
@@ -1158,6 +1162,10 @@
 <li>
 <p><strong>КаталогПроекта {projectpath}</strong>:
      Каталог, где находятся файлы тестируемого проекта, необходимые для выполнения тестов.</p>
+</li>
+<li>
+<p><strong>ИспользоватьШаблонНовойФичи {UseTemplateForNewFeature}</strong>:
+     Если указан шаблон (в формате *.txt), то новый сценарий будет создаваться из него</p>
 </li>
 <li>
 <p><strong>КаталогИнструментов {instrpath}</strong>:
@@ -1233,12 +1241,21 @@
      Задаёт интервал, с которым будет производиться попытка запустить сеанс клиента тестирования.</p>
 </li>
 <li>
+<p><strong>ТаймаутЗапуска1С {testclienttimeout}</strong>:
+     Устанавливает максимальное время в секундах, в течение которого Vanessa Automation будет ждать запуска клиента тестирования. По истечении времени будет вызвано исключение.</p>
+</li>
+<li>
 <p><strong>ДиапазонПортовTestclient {testclientports}</strong>:
      Устанавливает диапазон портов, в котором будет производиться поиск свободного порта в системе для запуска клиента тестирования. Например 48100-48200.</p>
 </li>
 <li>
-<p><strong>ТаймаутЗапуска1С {testclienttimeout}</strong>:
-     Устанавливает максимальное время в секундах, в течение которого Vanessa Automation будет ждать запуска клиента тестирования. По истечении времени будет вызвано исключение.</p>
+<p><strong>КаталогФайловВыводаСлужебныхСообщений {DirectoryFilesOutputServiceMessages}</strong>:
+     Если параметр задан, то при запуске клиента тестирования будет добавляться параметр /Out &lt;ИмяФайла&gt;.
+     Имя файла будет генерироваться по правилу ИмяКлиентаТестирования+ДатаВремяЗапуска.</p>
+</li>
+<li>
+<p><strong>ОтключитьЗапускРеглЗаданийВФайловойБазе {DisableScheduledJobsExecutionForFileInfobase}</strong>:
+     Если опция включена, при запуске клиента тестирования в файловой базе будет отключен запуск регламентных заданий. Используется ключ командной строки /AllowExecuteScheduledJobs -Off</p>
 </li>
 </ul>
 </li>
@@ -1375,15 +1392,17 @@
      тогда в реальности максимальное время работы шага будет 20 секунд, а не 10.</p>
 </li>
 <li>
+<p><strong>ПаузаПриОткрытииОкна {pauseonwindowopening}</strong>:
+     Значение дополнительной паузы, которая будет всегда применяться в шагах
+     <code>Gherkin
+     Тогда открылось окно "ИмяОкна"
+     И я жду открытия окна "Имя окна" в течении 60 секунд
+     И я жду открытия окна отличного от "ИмяОкна" в течение 60 секунд</code></p>
+</li>
+<li>
 <p><strong>БезопасноеВыполнениеШагов {safeexecutionofsteps}</strong>:
      Добавляет паузу при выполнении многих действий, которые потенциально могут приводить к нестабильному выполнению сценариев, например: переход к строке, проверка значения поля и т.д.
      Данная опция существенно замедляет выполнение сценариев.</p>
-</li>
-<li>
-<p><strong>ПаузаПриОткрытииОкна {pauseonwindowopening}</strong>:
-     Значение дополнительной паузы, которая будет всегда применяться в шаге
-     <code>Gherkin
-     Тогда открылось окно "ИмяОкна"</code></p>
 </li>
 </ul>
 </li>
@@ -1613,6 +1632,9 @@
 <span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ПрикладыватьФайлы</span><span class="n">MxlСохраненныеВФорматеHTMLКОтчетуAllure</span><span class="w"> </span><span class="p">{</span><span class="n">attachmxlfilessavedinhtmlformattoallurereport</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
 <span class="w">    </span><span class="err">Все</span><span class="w"> </span><span class="n">mxl</span><span class="w"> </span><span class="err">файлы</span><span class="p">,</span><span class="w"> </span><span class="err">которые</span><span class="w"> </span><span class="err">будут</span><span class="w"> </span><span class="err">приложены</span><span class="w"> </span><span class="err">к</span><span class="w"> </span><span class="err">отчету</span><span class="w"> </span><span class="n">Allure</span><span class="w"> </span><span class="err">будут</span><span class="w"> </span><span class="err">сохраняться</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">формате</span><span class="w"> </span><span class="n">HTML</span><span class="o">.</span><span class="w"> </span><span class="err">Это</span><span class="w"> </span><span class="err">упрощает</span><span class="w"> </span><span class="err">открытие</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">просмотр</span><span class="w"> </span><span class="err">результата</span><span class="o">.</span>
 
+<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ПрикладыватьФайлы</span><span class="n">XlsxКОтчетуAllure</span><span class="w"> </span><span class="p">{</span><span class="n">attachxlsxfilestoallurereport</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
+<span class="w">    </span><span class="err">Файлы</span><span class="w"> </span><span class="err">отчетов</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">их</span><span class="w"> </span><span class="err">эталонов</span><span class="w"> </span><span class="err">будут</span><span class="w"> </span><span class="err">прикладываться</span><span class="w"> </span><span class="err">к</span><span class="w"> </span><span class="err">отчету</span><span class="w"> </span><span class="n">Allure</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">формате</span><span class="w"> </span><span class="n">xlsx</span><span class="o">.</span>
+
 <span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ПрикладыватьДополнительныеДанныеПриСравненииЗначенияСЭталоном</span><span class="n">Allure</span><span class="w"> </span><span class="p">{</span><span class="n">attachadditionaldatawhencomparingvaluewithreferenceallure</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
 <span class="w">    </span><span class="err">Если</span><span class="w"> </span><span class="err">опция</span><span class="w"> </span><span class="err">включена</span><span class="p">,</span><span class="w"> </span><span class="err">то</span><span class="w"> </span><span class="err">при</span><span class="w"> </span><span class="err">сравнении</span><span class="w"> </span><span class="err">макета</span><span class="w"> </span><span class="err">с</span><span class="w"> </span><span class="err">эталоном</span><span class="w"> </span><span class="err">или</span><span class="w"> </span><span class="err">при</span><span class="w"> </span><span class="err">сравнении</span><span class="w"> </span><span class="err">таблицы</span><span class="w"> </span><span class="err">с</span><span class="w"> </span><span class="err">эталоном</span><span class="w"> </span><span class="err">будут</span><span class="w"> </span><span class="err">формироваться</span><span class="w"> </span><span class="err">дополнительные</span><span class="w"> </span><span class="err">файлы</span><span class="p">:</span>
 <span class="w">    </span><span class="err">картинка</span><span class="p">,</span><span class="w"> </span><span class="err">содержащая</span><span class="w"> </span><span class="err">разницу</span><span class="w"> </span><span class="err">между</span><span class="w"> </span><span class="err">эталоном</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">текущим</span><span class="w"> </span><span class="err">значением</span><span class="w"> </span><span class="err">таблицы</span><span class="w"> </span><span class="err">или</span><span class="w"> </span><span class="err">макета</span>
@@ -1837,23 +1859,28 @@
 </ul>
 </li>
 <li>
-<p>HTML и Markdown</p>
-<ul>
-<li>
-<p><strong>СоздаватьИнструкциюHTML {htmlcreate}</strong>:
-     Если флаг установлен, то во время выполнения сценария будет создаваться скринкаст в формате HTML.
-     В поле "Команда создания скриншотов" должна быть указана консольная команда для снятия скриншотов.
-     Также в тексте сценария возможно использовать специальные директивы, которые описаны в справке.</p>
+<p>Текстовые инструкции</p>
 </li>
+<li>
+<p>HTML</p>
+<div class="codehilite"><pre><span></span><code> * **СоздаватьИнструкциюHTML {htmlcreate}**:
+    Если флаг установлен, то во время выполнения сценария будет создаваться скринкаст в формате HTML.
+    В поле &quot;Команда создания скриншотов&quot; должна быть указана консольная команда для снятия скриншотов.
+    Также в тексте сценария возможно использовать специальные директивы, которые описаны в справке.
+
+ * **КаталогВыгрузкиИнструкцийHTML {htmlpath}**:
+    Каталог HTML инструкций
+
+ * **СтилиHTML {htmlstyles}**:
+    Файл стилей
+</code></pre></div>
+
+<ul>
 <li>
 <p><strong>СоздаватьИнструкциюMarkdown {markdowncreate}</strong>:
      Если флаг установлен, то во время выполнения сценария будет создаваться скринкаст в формате MarkDown.
      В поле "Команда создания скриншотов" должна быть указана консольная команда для снятия скриншотов или установлен флаг скриншоты компонентой "VanessaExt".
      Также в тексте сценария возможно использовать специальные директивы, которые описаны в справке.</p>
-</li>
-<li>
-<p><strong>КаталогВыгрузкиИнструкцийHTML {htmlpath}</strong>:
-     Каталог HTML инструкций</p>
 </li>
 <li>
 <p><strong>КаталогВыгрузкиИнструкцийMarkdown {markdownpath}</strong>:
@@ -1863,6 +1890,21 @@
 <p><strong>АвтонумерацияШагов {autonumberingofsteps}</strong>:
      Добавляет авто нумерацию в начало текста описания шага. 
      Для того, чтобы лидирующие нули не терялись при экспорте из MD формата, текст записывается в блок кода.</p>
+</li>
+<li>
+<p><strong>ТекстовыеИнструкцииГруппаШаговКакШаг {TextStepGroupAsStep}</strong>:
+     Включает режим, когда группа шагов в сценарии будет интерпретироваться как один шаг в текстовой инструкции.
+     Если не указано дополнительных тегов, то скриншот будет сниматься после выполнения последнего шага в группе.
+     Чтобы для  одной группы шагов сделать несколько скриншотов нужно использовать тег @screenshot перед нужными шагами.
+     Если нужно сделать только один скриншот для группы шагов, то можно указать тег @screenshot только один раз перед нужным шагом.</p>
+</li>
+<li>
+<p><strong>ДобавлятьИмяФичиВТекстовуюИнструкцию {AddFeatureNameToTextInstruction}</strong>:
+     Если флаг установлен, то в текстовую инструкцию будет добавлена информация с названием фичи.</p>
+</li>
+<li>
+<p><strong>ДобавлятьИмяСценарияВТекстовуюИнструкцию {AddScenarioNameToTextInstruction}</strong>:
+     Если флаг установлен, то в текстовую инструкцию будет добавлена информация с названием сценария.</p>
 </li>
 </ul>
 </li>
@@ -2289,6 +2331,10 @@
 <li>
 <p><strong>ПоказыватьЗначенияПеременныхВСтрокахРедактора {ShowVariableValuesInEditorLines}</strong>:
       Включает отображение в редакторе данных по значениям переменных (inline debug). Значения переменных обновляются после того как строка шага выполнена.</p>
+</li>
+<li>
+<p><strong>ПриНажатииЭскейпВРедактореЗакрытьФорму {OnClickingEscapeInTheEditorCloseTheForm}</strong>:
+      Если при работе в редакторе была нажата клавиша Esc, то это вызовет событие закрытия формы Vanessa Automation.</p>
 </li>
 <li>
 <p><strong>ОтображениеТабуляцииИПробелов {displayingtabsandspaces}</strong>:
