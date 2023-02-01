@@ -60,6 +60,9 @@ An array of key and value objects. This array will be loaded into global variabl
       * **usethegherkinparserfromthevanessaextaddin**:
          Sets the flag. that you need to use the Gherkin parser from the VanessaExt component. This parser is much faster than the built-in parser.
 
+      * **SearchingForFilesUsingTheVanessaExtComponent**:
+         Enables searching for files using the VanessaExt external component.
+
 *  System directories
 
       * **projectpath**:
@@ -116,11 +119,18 @@ An array of key and value objects. This array will be loaded into global variabl
       * **testclientprocessstartinterval**:
          Specifies the interval at which an attempt will be made to start a testing client session.
 
+      * **testclienttimeout**:
+         Specifies timeout in seconds of Vanessa Automation awaiting for TestClient launch. After timeout the exception will be risen.
+
       * **testclientports**:
          Specifies ports range to search for free port to run TestClient. For example 48100-48200.
 
-      * **testclienttimeout**:
-         Specifies timeout in seconds of Vanessa Automation awaiting for TestClient launch. After timeout the exception will be risen.
+      * **DirectoryFilesOutputServiceMessages**:
+         If the parameter is set, the /Out <FileName> parameter will be added when the test client is started.
+         The file name will be generated according to the rule TestingClientName+LaunchDateTime.
+
+      * **DisableScheduledJobsExecutionForFileInfobase**:
+         If this option is enabled, scheduled jobs execution will be disabled when new test client will start for a file infobase. Uses command line key /AllowExecuteScheduledJobs -Off
 
 *  TestClient debug
 
@@ -217,15 +227,17 @@ An array of key and value objects. This array will be loaded into global variabl
          ```
          then in reality the maximum step time will be 20 seconds, not 10.
 
-      * **safeexecutionofsteps**:
-         Adds delay for multiple actions, which may cause unstable scenario execution, e.g.: move to line, field value check etc.
-         This option slow the execution down .
-
       * **pauseonwindowopening**:
          Additional pause value that will always be applied in a step
          ```Gherkin
          Then "WindowTitle" window is opened
+         And I wait "WindowTitle" window opening in 60 seconds
+         And I wait the window with header different from "WindowTitle" opening in 60 seconds
          ```
+
+      * **safeexecutionofsteps**:
+         Adds delay for multiple actions, which may cause unstable scenario execution, e.g.: move to line, field value check etc.
+         This option slow the execution down .
 
 *  Updating data in a tree in steps
 
@@ -297,7 +309,7 @@ An array of key and value objects. This array will be loaded into global variabl
       * **createlogs**:
          If the flag is set, Vanessa Automation will upload the script execution status to a file.
          Details here:
-         https://pr-mex.github.io/vanessa-automation/dev/ReturnStatus
+         https://pr-mex.github.io/vanessa-automation/dev/ReturnStatus/ReturnStatus
 
       * **buildname**:
          Unique assembly name used along with the parameter "Add uploading conditions to scenario name".
@@ -406,6 +418,9 @@ An array of key and value objects. This array will be loaded into global variabl
 
          * **attachmxlfilessavedinhtmlformattoallurereport**:
             All mxl files that will be attached to the Allure report will be saved in HTML format. This makes it easier to open and view the result.
+
+         * **attachxlsxfilestoallurereport**:
+            Files of reports and their standards will be attached to the Allure report in xlsx format.
 
          * **attachadditionaldatawhencomparingvaluewithreferenceallure**:
             If this option is enabled, then when comparing a layout with a reference or when comparing a table with a reference, additional files will be generated:
@@ -551,18 +566,23 @@ An array of key and value objects. This array will be loaded into global variabl
 
 *  HTML and Markdown
 
-      * **htmlcreate**:
-         If the checkbox is on, HTML screencast will be created during scenario execution.
-         Specify console command for snapshots generation in  "Snapshot creating command" field.
-         Also use special instructions in the script, see Help info.
+   *  HTML
+
+         * **htmlcreate**:
+            If the checkbox is on, HTML screencast will be created during scenario execution.
+            Specify console command for snapshots generation in  "Snapshot creating command" field.
+            Also use special instructions in the script, see Help info.
+
+         * **htmlpath**:
+            HTML instruction catalog
+
+         * **htmlstyles**:
+            Style File
 
       * **markdowncreate**:
          If the checkbox is on, MarkDown screencast will be created during scenario execution.
          Specify console command for snapshots generation in  "Snapshot creating command" field or the screenshots flag is set by the "VanessaExt" component".
          Also use special instructions in the script, see Help info.
-
-      * **htmlpath**:
-         HTML instruction catalog
 
       * **markdownpath**:
          Markdown Instruction Directory
@@ -570,6 +590,18 @@ An array of key and value objects. This array will be loaded into global variabl
       * **autonumberingofsteps**:
          Adds auto numbering to the beginning of the step description text.
          To ensure that leading zeros are not lost when exporting from MD format, the text is written to the code block.
+
+      * **TextStepGroupAsStep**:
+         Enables the mode when a group of steps in a script will be interpreted as one step in a text instruction.
+         If no additional tags are specified, then the screenshot will be taken after the last step in the group is completed.
+         To take several screenshots for one group of steps, you need to use the @screenshot tag before the necessary steps.
+         If you need to take only one screenshot for a group of steps, you can specify the @screenshot tag only once before the desired step.
+
+      * **AddFeatureNameToTextInstruction**:
+         If the flag is set, then information with the name of the feature will be added to the text instruction.
+
+      * **AddScenarioNameToTextInstruction**:
+         If the flag is set, then information with the name of the script will be added to the text instruction.
 
 *  Audio
 
@@ -911,6 +943,9 @@ An array of key and value objects. This array will be loaded into global variabl
 
    * **ShowVariableValuesInEditorLines**:
       Enables displaying data by variable values in the editor (inline debug). Variable values are updated after the step line is executed.
+
+   * **OnClickingEscapeInTheEditorCloseTheForm**:
+      If the Esc key is pressed while working in the editor, this will trigger the close event of the Vanessa Automation form.
 
    * **displayingtabsandspaces**:
       Changes the display mode of tabs and spaces

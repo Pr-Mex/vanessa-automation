@@ -10,11 +10,11 @@
 	<AutoTitle>false</AutoTitle>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
-			<Button name="ФормаОК" id="42">
+			<Button name="РедакторТаблицФормаОК" id="42">
 				<Type>CommandBarButton</Type>
 				<DefaultButton>true</DefaultButton>
 				<CommandName>Form.Command.ОК</CommandName>
-				<ExtendedTooltip name="ФормаОКРасширеннаяПодсказка" id="43"/>
+				<ExtendedTooltip name="РедакторТаблицФормаОКРасширеннаяПодсказка" id="43"/>
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
@@ -96,36 +96,77 @@
 					<AutoCommandBar name="СписокКолонокКоманднаяПанель" id="21">
 						<Autofill>false</Autofill>
 						<ChildItems>
-							<Button name="СписокКолонокПометитьВсе" id="38">
-								<Type>CommandBarButton</Type>
-								<Representation>Picture</Representation>
-								<CommandName>Form.Command.ПометитьВсе</CommandName>
-								<Picture>
-									<xr:Ref>StdPicture.CheckAll</xr:Ref>
-									<xr:LoadTransparent>true</xr:LoadTransparent>
-								</Picture>
-								<ExtendedTooltip name="СписокКолонокПометитьВсеРасширеннаяПодсказка" id="39"/>
-							</Button>
-							<Button name="СписокКолонокСнятьВсе" id="40">
-								<Type>CommandBarButton</Type>
-								<Representation>Picture</Representation>
-								<CommandName>Form.Command.СнятьВсе</CommandName>
-								<Picture>
-									<xr:Ref>StdPicture.UncheckAll</xr:Ref>
-									<xr:LoadTransparent>true</xr:LoadTransparent>
-								</Picture>
-								<ExtendedTooltip name="СписокКолонокСнятьВсеРасширеннаяПодсказка" id="41"/>
-							</Button>
-							<Button name="СписокКолонокСдвинутьКолонкуВВерх" id="44">
-								<Type>CommandBarButton</Type>
-								<CommandName>Form.Command.СдвинутьКолонкуВВерх</CommandName>
-								<ExtendedTooltip name="СписокКолонокСдвинутьКолонкуВВерхРасширеннаяПодсказка" id="45"/>
-							</Button>
-							<Button name="СписокКолонокСдвинутьКолонкуВниз" id="46">
-								<Type>CommandBarButton</Type>
-								<CommandName>Form.Command.СдвинутьКолонкуВниз</CommandName>
-								<ExtendedTooltip name="СписокКолонокСдвинутьКолонкуВнизРасширеннаяПодсказка" id="47"/>
-							</Button>
+							<ButtonGroup name="СписокКолонокПометки" id="48">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Список колонок пометки</v8:content>
+									</v8:item>
+								</Title>
+								<Representation>Compact</Representation>
+								<ExtendedTooltip name="СписокКолонокПометкиРасширеннаяПодсказка" id="49"/>
+								<ChildItems>
+									<Button name="РедакторТаблицСписокКолонокПометитьВсе" id="38">
+										<Type>CommandBarButton</Type>
+										<Representation>Picture</Representation>
+										<CommandName>Form.Command.ПометитьВсе</CommandName>
+										<Picture>
+											<xr:Ref>StdPicture.CheckAll</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="РедакторТаблицСписокКолонокПометитьВсеРасширеннаяПодсказка" id="39"/>
+									</Button>
+									<Button name="РедакторТаблицСписокКолонокСнятьВсе" id="40">
+										<Type>CommandBarButton</Type>
+										<Representation>Picture</Representation>
+										<CommandName>Form.Command.СнятьВсе</CommandName>
+										<Picture>
+											<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="РедакторТаблицСписокКолонокСнятьВсеРасширеннаяПодсказка" id="41"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+							<ButtonGroup name="СписокКолонокГруппаСдвинутьКолонку" id="50">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Список колонок группа сдвинуть колонку</v8:content>
+									</v8:item>
+								</Title>
+								<Representation>Compact</Representation>
+								<ExtendedTooltip name="СписокКолонокГруппаСдвинутьКолонкуРасширеннаяПодсказка" id="51"/>
+								<ChildItems>
+									<Button name="РедакторТаблицСписокКолонокСдвинутьКолонкуВВерх" id="44">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.СдвинутьКолонкуВВерх</CommandName>
+										<ExtendedTooltip name="РедакторТаблицСписокКолонокСдвинутьКолонкуВВерхРасширеннаяПодсказка" id="45"/>
+									</Button>
+									<Button name="РедакторТаблицСписокКолонокСдвинутьКолонкуВниз" id="46">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.СдвинутьКолонкуВниз</CommandName>
+										<ExtendedTooltip name="РедакторТаблицСписокКолонокСдвинутьКолонкуВнизРасширеннаяПодсказка" id="47"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
+							<ButtonGroup name="СписокКолонокГруппаДобавитьУдалить" id="52">
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Список колонок группа добавить удалить</v8:content>
+									</v8:item>
+								</Title>
+								<Representation>Compact</Representation>
+								<ExtendedTooltip name="СписокКолонокГруппаДобавитьУдалитьРасширеннаяПодсказка" id="53"/>
+								<ChildItems>
+									<Button name="РедакторТаблицСписокКолонокДобавитьКолонку" id="54">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.ДобавитьКолонку</CommandName>
+										<ExtendedTooltip name="РедакторТаблицСписокКолонокДобавитьКолонкуРасширеннаяПодсказка" id="55"/>
+									</Button>
+								</ChildItems>
+							</ButtonGroup>
 						</ChildItems>
 					</AutoCommandBar>
 					<ExtendedTooltip name="СписокКолонокРасширеннаяПодсказка" id="22"/>
@@ -155,6 +196,8 @@
 					</SearchControlAddition>
 					<Events>
 						<Event name="Selection">СписокКолонокВыбор</Event>
+						<Event name="BeforeAddRow">СписокКолонокПередНачаломДобавления</Event>
+						<Event name="BeforeDeleteRow">СписокКолонокПередУдалением</Event>
 					</Events>
 					<ChildItems>
 						<CheckBoxField name="СписокКолонокПометка" id="35">
@@ -216,6 +259,17 @@
 			</Type>
 			<Settings xsi:type="v8:TypeDescription"/>
 		</Attribute>
+		<Attribute name="СоздаваласьСлужебнаяКолонка" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создавалась служебная колонка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ПометитьВсе" id="1">
@@ -223,6 +277,10 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Пометить все</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Mark all</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -331,6 +389,30 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>СдвинутьКолонкуВниз</Action>
+		</Command>
+		<Command name="ДобавитьКолонку" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить колонку</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Add column</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить колонку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.CreateListItem</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ДобавитьКолонку</Action>
+			<Representation>Picture</Representation>
 		</Command>
 	</Commands>
 </Form>

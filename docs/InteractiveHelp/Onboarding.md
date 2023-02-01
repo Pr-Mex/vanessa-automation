@@ -1,6 +1,6 @@
 ﻿# Как запустить сценарий, реализующий Onboarding
 
-* Надо встроить в конфигурацию расширение VanessaInteractive.
+* Надо встроить в конфигурацию расширение [VanessaInteractive](https://github.com/Pr-Mex/vanessa-automation/tree/develop/lib/VanessaInteractive).
 * Внутрь расширения надо встроить Vanessa Automation Single.
 * В каждую форму, в которой планиуруется запускать сценарий Onboarding нужно встроить код:
 
