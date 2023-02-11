@@ -15570,6 +15570,38 @@ If there is a TestClientUrl string in the browser launch command, then it will b
 																</Title>
 															</ExtendedTooltip>
 														</InputField>
+														<CheckBoxField name="ИспользоватьБраузерПлюсWebSocket1" id="3836">
+															<DataPath>Объект.ИспользоватьБраузерПлюсWebSocket</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Использовать браузер +  web socket</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Use browser +  web socket</v8:content>
+																</v8:item>
+															</Title>
+															<TitleLocation>Right</TitleLocation>
+															<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ИспользоватьБраузерПлюсWebSocket1КонтекстноеМеню" id="3837"/>
+															<ExtendedTooltip name="ИспользоватьБраузерПлюсWebSocket1РасширеннаяПодсказка" id="3838">
+																<AutoMaxWidth>false</AutoMaxWidth>
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Позволяет выполнять внешние команды для браузера через WebSocket.
+Для работы опции необходимо включить использование компоненты VanessaExt.</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Allows to execute external commands in the browser using WebSocket.
+For the option to work, you must enable the use of the VanessaExt component.</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+														</CheckBoxField>
 													</ChildItems>
 												</UsualGroup>
 												<UsualGroup name="ГруппаЗакрытиеКлиентаТестирования" id="2751">
@@ -17438,11 +17470,11 @@ For the option to work, it is necessary to enable the use of the VanessaExt exte
 																</CheckBoxField>
 															</ChildItems>
 														</UsualGroup>
-														<UsualGroup name="СтраницаСкриншотыВтораяСтрокаПравыйСтолбец" id="3400">
+														<UsualGroup name="СтраницаСкриншотыВтораяСтрокаПравыйСтолбец" id="3842">
 															<Title>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
-																	<v8:content>Страница скриншоты вторая строка правый столбец</v8:content>
+																	<v8:content>Страница скриншоты вторая строка правй столбец</v8:content>
 																</v8:item>
 																<v8:item>
 																	<v8:lang>en</v8:lang>
@@ -17451,7 +17483,28 @@ For the option to work, it is necessary to enable the use of the VanessaExt exte
 															</Title>
 															<Representation>None</Representation>
 															<ShowTitle>false</ShowTitle>
-															<ExtendedTooltip name="СтраницаСкриншотыВтораяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="3401"/>
+															<ExtendedTooltip name="СтраницаСкриншотыВтораяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="3843"/>
+															<ChildItems>
+																<CheckBoxField name="СниматьСкриншотыБраузера" id="3839">
+																	<DataPath>Объект.СниматьСкриншотыБраузера</DataPath>
+																	<TitleLocation>Right</TitleLocation>
+																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="СниматьСкриншотыБраузераКонтекстноеМеню" id="3840"/>
+																	<ExtendedTooltip name="СниматьСкриншотыБраузераРасширеннаяПодсказка" id="3841">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>If this option is enabled, then if an error occurs when the browser is connected via the debug port, an attempt will be made to take a screenshot of the browser.</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Если опция включена, то при возникновении ошибки, когда бразуер подключен через debug порт, будет выполнена попытка сделать скриншот браузера.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																</CheckBoxField>
+															</ChildItems>
 														</UsualGroup>
 													</ChildItems>
 												</UsualGroup>
@@ -30902,6 +30955,7 @@ If the voice acting file is not found in the directory, the process of generatin
 															</ToolTip>
 															<Width>50</Width>
 															<HorizontalStretch>false</HorizontalStretch>
+															<Group>Vertical</Group>
 															<Representation>None</Representation>
 															<ShowTitle>false</ShowTitle>
 															<ExtendedTooltip name="СтраницаНастройкиПрочееВтораяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="3619"/>
@@ -30920,6 +30974,27 @@ If the voice acting file is not found in the directory, the process of generatin
 																			<v8:item>
 																				<v8:lang>ru</v8:lang>
 																				<v8:content>Позволяет получить строку запуска тестов из командной строки для данной базы.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																</Button>
+																<Button name="ПолучитьСтрокуЗапускаСВыводомЛогаВКонсоль" id="3844">
+																	<Type>Hyperlink</Type>
+																	<CommandName>Form.Command.ПолучитьСтрокуЗапускаСВыводомЛогаВКонсоль</CommandName>
+																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																	<ExtendedTooltip name="ПолучитьСтрокуЗапускаСВыводомЛогаВКонсольРасширеннаяПодсказка" id="3845">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>Allows you to get the test launch line from the command line for the given database. This launches Vanessa Automation using OneScript.
+In this case, the output of messages to the console will work. This is a faster way because no need to read the log from a text file.
+Click on the hyperlink for more details.</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Позволяет получить строку запуска тестов из командной строки для данной базы. При этом Vanessa Automation запускается с помощью OneScript.
+При этом будет работать вывод сообшений в консоль. Это более быстрый способ, т.к. не нужно читать лог из текстового файла.
+Нажми на гиперссылку, чтобы узнать подробности.</v8:content>
 																			</v8:item>
 																		</Title>
 																	</ExtendedTooltip>
@@ -42643,6 +42718,26 @@ If the voice acting file is not found in the directory, the process of generatin
 				</v8:item>
 			</ToolTip>
 			<Action>ПроверкаУникальностиЗаголовков</Action>
+		</Command>
+		<Command name="ПолучитьСтрокуЗапускаСВыводомЛогаВКонсоль" id="175">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить строку запуска из командной строки с выводом лога в консоль</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Get the startup line from the command line with log output to the console</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить строку запуска</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьСтрокуЗапускаСВыводомЛогаВКонсоль</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 </Form>
