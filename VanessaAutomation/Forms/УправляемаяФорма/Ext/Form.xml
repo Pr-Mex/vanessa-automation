@@ -13098,6 +13098,46 @@ The script in the list is indicated by its name.</v8:content>
 																		</CheckBoxField>
 																	</ChildItems>
 																</UsualGroup>
+																<UsualGroup name="ГруппаВключениеVanessaExtВтораяСтрокаПравыйСтолбец" id="3848">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа включение vanessa ext вторая строка правый столбец</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Group inclusion vanessa ext second row right column</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаВключениеVanessaExtВтораяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="3849"/>
+																	<ChildItems>
+																		<CheckBoxField name="ЗавершатьРаботуЕслиНеПолучилосьВыполнитьТихуюУстановкуКомпоненты" id="3850">
+																			<DataPath>Объект.ЗавершатьРаботуЕслиНеПолучилосьВыполнитьТихуюУстановкуКомпоненты</DataPath>
+																			<TitleLocation>Right</TitleLocation>
+																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="ЗавершатьРаботуЕслиНеПолучилосьВыполнитьТихуюУстановкуКомпонентыКонтекстноеМеню" id="3851"/>
+																			<ExtendedTooltip name="ЗавершатьРаботуЕслиНеПолучилосьВыполнитьТихуюУстановкуКомпонентыРасширеннаяПодсказка" id="3852">
+																				<Title formatted="true">
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>If the flag is set and the silent installation of the external component fails, the session will end with a return code of 4.
+Possible return statuses:
+&lt;link https://github.com/Pr-Mex/vanessa-automation/blob/develop/docs/ReturnStatus/ReturnStatus.md&gt;https://github.com/Pr-Mex/vanessa-automation/blob/develop/docs/ReturnStatus/ReturnStatus.md&lt;/&gt;</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Если флаг установлен и не получилось выполнить тихую установку внешней компоненты работа сеанса будет завершена с кодом возврата 4.
+Возможные статусы возврата:
+&lt;link https://github.com/Pr-Mex/vanessa-automation/blob/develop/docs/ReturnStatus/ReturnStatus.md&gt;https://github.com/Pr-Mex/vanessa-automation/blob/develop/docs/ReturnStatus/ReturnStatus.md&lt;/&gt;</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
+																		</CheckBoxField>
+																	</ChildItems>
+																</UsualGroup>
 															</ChildItems>
 														</UsualGroup>
 													</ChildItems>
@@ -16355,28 +16395,101 @@ Actual when working in the step tree mode.</v8:content>
 													<ControlRepresentation>Picture</ControlRepresentation>
 													<ExtendedTooltip name="ГруппаОстановитьВыполнениеСценарияРасширеннаяПодсказка" id="3347"/>
 													<ChildItems>
-														<CheckBoxField name="ПоказыватьОкноОстановкиВыполненияСценария" id="3144">
-															<DataPath>Объект.ПоказыватьОкноОстановкиВыполненияСценария</DataPath>
-															<TitleLocation>Right</TitleLocation>
-															<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-															<CheckBoxType>Auto</CheckBoxType>
-															<ContextMenu name="ПоказыватьОкноОстановкиВыполненияСценарияКонтекстноеМеню" id="3145"/>
-															<ExtendedTooltip name="ПоказыватьОкноОстановкиВыполненияСценарияРасширеннаяПодсказка" id="3146">
-																<Width>50</Width>
-																<AutoMaxWidth>false</AutoMaxWidth>
-																<HorizontalStretch>false</HorizontalStretch>
-																<Title formatted="false">
-																	<v8:item>
-																		<v8:lang>en</v8:lang>
-																		<v8:content>Enables the display of an additional window that allows you to stop the execution of the script. You need to enable the use of the VanessaExt component.</v8:content>
-																	</v8:item>
-																	<v8:item>
-																		<v8:lang>ru</v8:lang>
-																		<v8:content>Включает показ дополнительного окна, которое позволяет остановить выполнение сценария. Необходимо включить использование компоненты VanessaExt.</v8:content>
-																	</v8:item>
-																</Title>
-															</ExtendedTooltip>
-														</CheckBoxField>
+														<UsualGroup name="ГруппаОстановитьВыполнениеСценарияПерваяСтрока" id="3853">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа остановить выполнение сценария первая строка</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Group stop script execution first line</v8:content>
+																</v8:item>
+															</Title>
+															<Group>AlwaysHorizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаОстановитьВыполнениеСценарияПерваяСтрокаРасширеннаяПодсказка" id="3854"/>
+															<ChildItems>
+																<UsualGroup name="ГруппаОстановитьВыполнениеСценарияПерваяСтрокаЛевыйСтолбец" id="3855">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа остановить выполнение сценария первая строка левый столбец</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Group stop script execution first row left column</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Width>50</Width>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаОстановитьВыполнениеСценарияПерваяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="3856"/>
+																	<ChildItems>
+																		<CheckBoxField name="ПоказыватьОкноОстановкиВыполненияСценария" id="3144">
+																			<DataPath>Объект.ПоказыватьОкноОстановкиВыполненияСценария</DataPath>
+																			<TitleLocation>Right</TitleLocation>
+																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="ПоказыватьОкноОстановкиВыполненияСценарияКонтекстноеМеню" id="3145"/>
+																			<ExtendedTooltip name="ПоказыватьОкноОстановкиВыполненияСценарияРасширеннаяПодсказка" id="3146">
+																				<Width>50</Width>
+																				<AutoMaxWidth>false</AutoMaxWidth>
+																				<HorizontalStretch>false</HorizontalStretch>
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>Enables the display of an additional window that allows you to stop the execution of the script. You need to enable the use of the VanessaExt component.</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Включает показ дополнительного окна, которое позволяет остановить выполнение сценария. Необходимо включить использование компоненты VanessaExt.</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
+																		</CheckBoxField>
+																	</ChildItems>
+																</UsualGroup>
+																<UsualGroup name="ГруппаОстановитьВыполнениеСценарияПерваяСтрокаПравыйСтолбец" id="3860">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа остановить выполнение сценария первая строка правый столбец</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Group stop script execution first row right column</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаОстановитьВыполнениеСценарияПерваяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="3861"/>
+																	<ChildItems>
+																		<CheckBoxField name="ИспользоватьДляОстановкиВыполненияСценарияФайл" id="3862">
+																			<DataPath>Объект.ИспользоватьДляОстановкиВыполненияСценарияФайл</DataPath>
+																			<TitleLocation>Right</TitleLocation>
+																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="ИспользоватьДляОстановкиВыполненияСценарияФайлКонтекстноеМеню" id="3863"/>
+																			<ExtendedTooltip name="ИспользоватьДляОстановкиВыполненияСценарияФайлРасширеннаяПодсказка" id="3864">
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>If this option is enabled, then when you click the stop script execution button in a special window, a temporary file will be created, and Vanessa Automation will stop the script execution by checking for the presence of this file.</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Если опция включена, то при нажатии кнопки остановки выполнения сценария в специальном окошке будет создаваться временный файл, а Vanessa Automation будет останавливать выполнение работы сценария, проверяя наличие этого файла.</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
+																		</CheckBoxField>
+																	</ChildItems>
+																</UsualGroup>
+															</ChildItems>
+														</UsualGroup>
 													</ChildItems>
 												</UsualGroup>
 												<UsualGroup name="ГруппаОбновлятьСтатистику" id="3622">
