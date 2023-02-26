@@ -1885,6 +1885,12 @@
 										<CommandName>Form.Command.VanessaEditorПоказыватьРазличияВРедактореОтдельно</CommandName>
 										<ExtendedTooltip name="VanessaEditorПоказыватьРазличияВРедактореОтдельноРасширеннаяПодсказка" id="2849"/>
 									</Button>
+									<Button name="VanessaEditorПриГенерацииШаговИскатьЭлементыФормыПоИмени" id="3865">
+										<Type>CommandBarButton</Type>
+										<Check>true</Check>
+										<CommandName>Form.Command.VanessaEditorПриГенерацииШаговИскатьЭлементыФормыПоИмени</CommandName>
+										<ExtendedTooltip name="VanessaEditorПриГенерацииШаговИскатьЭлементыФормыПоИмениРасширеннаяПодсказка" id="3866"/>
+									</Button>
 									<ButtonGroup name="ГруппаVanessaEditorВидимостьКнопокПанелиРедактора" id="2846">
 										<Title>
 											<v8:item>
@@ -12859,6 +12865,9 @@ The script in the list is indicated by its name.</v8:content>
 																			</v8:item>
 																		</Title>
 																	</ExtendedTooltip>
+																	<Events>
+																		<Event name="OnChange">ИскатьЭлементыФормыПоИмениПриИзменении</Event>
+																	</Events>
 																</CheckBoxField>
 															</ChildItems>
 														</UsualGroup>
@@ -42820,6 +42829,29 @@ Click on the hyperlink for more details.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПоискСообщенийПользователюДляКоторыхНеУказанПеревод</Action>
+		</Command>
+		<Command name="VanessaEditorПриГенерацииШаговИскатьЭлементыФормыПоИмени" id="177">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>При генерации шагов искать элементы формы по имени</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>When generating steps, search for form elements by name</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показывать различия в редакторе отдельно</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>When generating steps, search for form elements by name</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>VanessaEditorПриГенерацииШаговИскатьЭлементыФормыПоИмени</Action>
 		</Command>
 	</Commands>
 </Form>
