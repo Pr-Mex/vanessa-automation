@@ -861,10 +861,8 @@ Procedure ICheckOrCreateInformationRegisterRecordsAtServer(RegisterName, Values,
 		MasterDimensions.Add(RecorderColumn.Name);		
 	ElsIf UseRecordSets Then
 		For Each Dimension In RegisterMetadata.Dimensions Do
-			If Dimension.Master Then
-				MasterDimensions.Add(Dimension.Name);
-			EndIf;			
-		EndDo;		
+			MasterDimensions.Add(Dimension.Name);
+		EndDo;
 		If RegisterMetadata.InformationRegisterPeriodicity <> Metadata.ObjectProperties.InformationRegisterPeriodicity.Nonperiodical Then
 			PeriodColumn = ObjectAttributes.Columns.Find("Period");
 			If PeriodColumn = Undefined Then
@@ -915,9 +913,6 @@ Procedure ICheckOrCreateInformationRegisterRecordsAtServer(RegisterName, Values,
 		For Each Row In ObjectValues Do
 			Obj = InformationRegisters[RegisterName].CreateRecordManager();
 			For Each Column In ObjectAttributes.Columns Do
-				//If Row[Column.Name] = "" Then
-				//	Continue;
-				//EndIf;
 				FillTipicalObjectAttributesByValues(Obj, Row, Column);
 			EndDo;
 			Obj.Write(True);
