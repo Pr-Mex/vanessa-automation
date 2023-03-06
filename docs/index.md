@@ -60,6 +60,7 @@
    - [Экспресс курс от Виталия Онянова](https://www.youtube.com/playlist?list=PLLbbYbSDiWvfWjD9MdX8C235JvT_YcqoN)
 * Платные
    - [Сценарное тестирование в 1С: настройка и практика использования](https://xn----1-bedvffifm4g.xn--p1ai/courses/1c-testing-qa-2022/)
+   - [Тестирование в 1С - от простого к сложному](https://silverbulleters.org/courses-bbd)
 
 ## Как стать контрибьютором (предложить свои доработки) проекта?
 * Об этом рассказано [в этой статье](https://infostart.ru/public/1092009/)
