@@ -22733,6 +22733,276 @@ Also use special instructions in the script, see Help info.</v8:content>
 																		</Button>
 																	</ChildItems>
 																</UsualGroup>
+																<UsualGroup name="ОзвучкаHTML" id="3890">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Генерация речи</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Speech generation</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ToolTip>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Озвучка HTML</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>HTML voice acting</v8:content>
+																		</v8:item>
+																	</ToolTip>
+																	<Group>Vertical</Group>
+																	<Behavior>Collapsible</Behavior>
+																	<ControlRepresentation>Picture</ControlRepresentation>
+																	<Representation>None</Representation>
+																	<ExtendedTooltip name="ОзвучкаHTMLРасширеннаяПодсказка" id="3891"/>
+																	<ChildItems>
+																		<CheckBoxField name="ВключитьОзвучкуHTML" id="3872">
+																			<DataPath>Объект.ВключитьОзвучкуHTML</DataPath>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Озвучивать шаги инструкции</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>Voice the steps of the instruction</v8:content>
+																				</v8:item>
+																			</Title>
+																			<TitleLocation>Right</TitleLocation>
+																			<ToolTipRepresentation>Button</ToolTipRepresentation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="ВключитьОзвучкуHTMLКонтекстноеМеню" id="3873"/>
+																			<ExtendedTooltip name="ВключитьОзвучкуHTMLРасширеннаяПодсказка" id="3874">
+																				<Title formatted="true">
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>Speech Synthesis technology built into browsers is used. Speech synthesis (text-to-speech or tts) involves receiving the synthesized text of the application and its speech reproduction.
+&lt;link https://developer.mozilla.org/ru/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API&gt;More detailed&lt;/&gt; 
+Text playback starts when you click on the step image.</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Используется встроенная в браузеры технология Синтеза речи. Синтез речи (text-to-speech или tts) подразумевает получение синтезированного текста приложения и его речевое воспроизведение.
+&lt;link https://developer.mozilla.org/ru/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#%D1%81%D0%B8%D0%BD%D1%82%D0%B5%D0%B7_%D1%80%D0%B5%D1%87%D0%B8&gt;Подробнее
+&lt;/&gt;Воспроизведение текста начинается при клике на картинку шага.</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
+																			<Events>
+																				<Event name="OnChange">ВключитьОзвучкуHTMLПриИзменении</Event>
+																			</Events>
+																		</CheckBoxField>
+																		<TrackBarField name="ТемпОзвучкиHTML" id="3869">
+																			<DataPath>Объект.ТемпОзвучкиHTML</DataPath>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Темп голоса</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>Voice tempo</v8:content>
+																				</v8:item>
+																			</Title>
+																			<TitleLocation>Top</TitleLocation>
+																			<Width>65</Width>
+																			<MaxWidth>10</MaxWidth>
+																			<HorizontalStretch>false</HorizontalStretch>
+																			<MaxValue>20</MaxValue>
+																			<LargeStep>1</LargeStep>
+																			<MarkingStep>1</MarkingStep>
+																			<ContextMenu name="ТемпОзвучкиHTMLКонтекстноеМеню" id="3870"/>
+																			<ExtendedTooltip name="ТемпОзвучкиHTMLРасширеннаяПодсказка" id="3871"/>
+																			<Events>
+																				<Event name="OnChange">ТемпОзвучкиHTMLПриИзменении</Event>
+																			</Events>
+																		</TrackBarField>
+																		<TrackBarField name="ДиапазонОзвучкиHTML" id="3875">
+																			<DataPath>Объект.ДиапазонОзвучкиHTML</DataPath>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Диапазон голоса</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>Voice range</v8:content>
+																				</v8:item>
+																			</Title>
+																			<TitleLocation>Top</TitleLocation>
+																			<Width>65</Width>
+																			<HorizontalStretch>false</HorizontalStretch>
+																			<MaxValue>20</MaxValue>
+																			<LargeStep>1</LargeStep>
+																			<MarkingStep>1</MarkingStep>
+																			<ContextMenu name="ДиапазонОзвучкиHTMLКонтекстноеМеню" id="3892"/>
+																			<ExtendedTooltip name="ДиапазонОзвучкиHTMLРасширеннаяПодсказка" id="3877"/>
+																			<Events>
+																				<Event name="OnChange">ДиапазонОзвучкиHTMLПриИзменении</Event>
+																			</Events>
+																		</TrackBarField>
+																		<InputField name="ГолосОзвучкиHTML" id="3878">
+																			<DataPath>Объект.ГолосОзвучкиHTML</DataPath>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Голос произношения</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>Voice pronunciation</v8:content>
+																				</v8:item>
+																			</Title>
+																			<TitleLocation>Top</TitleLocation>
+																			<ChoiceButtonRepresentation>ShowInDropList</ChoiceButtonRepresentation>
+																			<ListChoiceMode>true</ListChoiceMode>
+																			<ChoiceList>
+																				<xr:Item>
+																					<xr:Presentation/>
+																					<xr:CheckState>0</xr:CheckState>
+																					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																						<Presentation>
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Microsoft Irina - Russian (Russia)</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>Microsoft Irina - Russian (Russia)</v8:content>
+																							</v8:item>
+																						</Presentation>
+																						<Value xsi:type="xs:string">Microsoft Irina - Russian (Russia)</Value>
+																					</xr:Value>
+																				</xr:Item>
+																				<xr:Item>
+																					<xr:Presentation/>
+																					<xr:CheckState>0</xr:CheckState>
+																					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																						<Presentation>
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Microsoft Mark - English (United States)</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>Microsoft Mark - English (United States)</v8:content>
+																							</v8:item>
+																						</Presentation>
+																						<Value xsi:type="xs:string">Microsoft Mark - English (United States)</Value>
+																					</xr:Value>
+																				</xr:Item>
+																				<xr:Item>
+																					<xr:Presentation/>
+																					<xr:CheckState>0</xr:CheckState>
+																					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																						<Presentation>
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Microsoft Zira - English (United States)</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>Microsoft Zira - English (United States)</v8:content>
+																							</v8:item>
+																						</Presentation>
+																						<Value xsi:type="xs:string">Microsoft Zira - English (United States)</Value>
+																					</xr:Value>
+																				</xr:Item>
+																				<xr:Item>
+																					<xr:Presentation/>
+																					<xr:CheckState>0</xr:CheckState>
+																					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																						<Presentation>
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Microsoft David - English (United States)</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>Microsoft David - English (United States)</v8:content>
+																							</v8:item>
+																						</Presentation>
+																						<Value xsi:type="xs:string">Microsoft David - English (United States)</Value>
+																					</xr:Value>
+																				</xr:Item>
+																				<xr:Item>
+																					<xr:Presentation/>
+																					<xr:CheckState>0</xr:CheckState>
+																					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																						<Presentation>
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Microsoft Pavel - Russian (Russia)</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>Microsoft Pavel - Russian (Russia)</v8:content>
+																							</v8:item>
+																						</Presentation>
+																						<Value xsi:type="xs:string">Microsoft Pavel - Russian (Russia)</Value>
+																					</xr:Value>
+																				</xr:Item>
+																				<xr:Item>
+																					<xr:Presentation/>
+																					<xr:CheckState>0</xr:CheckState>
+																					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																						<Presentation>
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Google UK English Female</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>Google UK English Female</v8:content>
+																							</v8:item>
+																						</Presentation>
+																						<Value xsi:type="xs:string">Google UK English Female</Value>
+																					</xr:Value>
+																				</xr:Item>
+																				<xr:Item>
+																					<xr:Presentation/>
+																					<xr:CheckState>0</xr:CheckState>
+																					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																						<Presentation>
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Google UK English Male</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>Google UK English Male</v8:content>
+																							</v8:item>
+																						</Presentation>
+																						<Value xsi:type="xs:string">Google UK English Male</Value>
+																					</xr:Value>
+																				</xr:Item>
+																				<xr:Item>
+																					<xr:Presentation/>
+																					<xr:CheckState>0</xr:CheckState>
+																					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																						<Presentation>
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Google русский</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>Google русский</v8:content>
+																							</v8:item>
+																						</Presentation>
+																						<Value xsi:type="xs:string">Google русский</Value>
+																					</xr:Value>
+																				</xr:Item>
+																			</ChoiceList>
+																			<ContextMenu name="ГолосОзвучкиHTMLКонтекстноеМеню" id="3879"/>
+																			<ExtendedTooltip name="ГолосОзвучкиHTMLРасширеннаяПодсказка" id="3880"/>
+																		</InputField>
+																	</ChildItems>
+																</UsualGroup>
 															</ChildItems>
 														</UsualGroup>
 														<UsualGroup name="MarkdownИнструкции" id="3808">
