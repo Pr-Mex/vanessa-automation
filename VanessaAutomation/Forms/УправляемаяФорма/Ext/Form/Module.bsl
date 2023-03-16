@@ -33255,9 +33255,10 @@
 	Если Объект.ВключитьОзвучкуHTML Тогда
 		
 		ШаблонСкриптОзвучкиHTMLШаговИнструкции = "
+		|	let synth;
 		|	document.addEventListener('DOMContentLoaded', ready);
 		|	function ready(){
-		|		
+		|		synth = window.speechSynthesis;
 		|		const imageBtn = document.querySelectorAll('.image_btn');
 		|		imageBtn.forEach((elem) => {
 		|			elem.addEventListener('click', onClickImg);
@@ -33265,14 +33266,13 @@
 		|	};
 		|	
 		|	function onClickImg(elem){
-		|		const synth = window.speechSynthesis;
-		|		let MyVoices = synth.getVoices();
 		|		const utterThis = new SpeechSynthesisUtterance(elem.target.previousSibling.textContent);
 		|		utterThis.pitch = %1;
 		|		utterThis.rate = %2;
-		|		for (i = 0; i < MyVoices.length; i++) {
-		|			if (MyVoices[i].name === ""%3"") {
-		|				utterThis.voice = MyVoices[i];
+		|		const myVoices = synth.getVoices();;
+		|		for (i = 0; i < myVoices.length; i++) {
+		|			if (myVoices[i].name === ""%3"") {
+		|				utterThis.voice = myVoices[i];
 		|			}
 		|		};
 		|		synth.speak(utterThis);
