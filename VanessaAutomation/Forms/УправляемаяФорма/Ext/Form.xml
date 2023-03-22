@@ -15199,6 +15199,8 @@ The file name will be generated according to the rule TestingClientName+LaunchDa
 																			<v8:content>Test client launch group fifth row left column</v8:content>
 																		</v8:item>
 																	</Title>
+																	<Width>50</Width>
+																	<HorizontalStretch>false</HorizontalStretch>
 																	<Group>Vertical</Group>
 																	<Representation>None</Representation>
 																	<ShowTitle>false</ShowTitle>
@@ -15236,10 +15238,110 @@ The file name will be generated according to the rule TestingClientName+LaunchDa
 																			<v8:content>Test client launch group fifth row right column</v8:content>
 																		</v8:item>
 																	</Title>
-																	<Group>Vertical</Group>
 																	<Representation>None</Representation>
 																	<ShowTitle>false</ShowTitle>
 																	<ExtendedTooltip name="ГруппаЗапускКлиентаТестированияПятаяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="3764"/>
+																	<ChildItems>
+																		<CheckBoxField name="РазрешеноЗапускатьТолькоОдинКлиентТестирования" id="3922">
+																			<DataPath>Объект.РазрешеноЗапускатьТолькоОдинКлиентТестирования</DataPath>
+																			<TitleLocation>Right</TitleLocation>
+																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="РазрешеноЗапускатьТолькоОдинКлиентТестированияКонтекстноеМеню" id="3923"/>
+																			<ExtendedTooltip name="РазрешеноЗапускатьТолькоОдинКлиентТестированияРасширеннаяПодсказка" id="3924">
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>If this option is enabled, control will be enabled that more than one testing client cannot be connected at the same time.
+This can be useful if the computers on which the tests are run have a limited amount of RAM and you need to control the launch of unnecessary processes.</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Если опция включена, то будет включен контроль, что одновременно не может быть подключено более одного клиента тестирования.
+Это может быть полезно, если на компьютерах, на которых запускаются тесты, ограничен объем оперативной памяти и нужно контролировать запуск лишних процессов.</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
+																		</CheckBoxField>
+																	</ChildItems>
+																</UsualGroup>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="ГруппаЗапускКлиентаТестированияШестаяСтрока" id="3925">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа запуск клиента тестирования шестая строка</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Test client startup group sixth line</v8:content>
+																</v8:item>
+															</Title>
+															<Group>AlwaysHorizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаЗапускКлиентаТестированияШестаяСтрокаРасширеннаяПодсказка" id="3926"/>
+															<ChildItems>
+																<UsualGroup name="ГруппаЗапускКлиентаТестированияШестаяСтрокаЛевыйСтолбец" id="3927">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа запуск клиента тестирования шестая строка левый столбец</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Test client launch group sixth row left column</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Width>50</Width>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<Group>Vertical</Group>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаЗапускКлиентаТестированияШестаяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="3928"/>
+																	<ChildItems>
+																		<CheckBoxField name="ПроверкаСерверныхВызововВОбработчикахСобытий" id="3934">
+																			<DataPath>Объект.ПроверкаСерверныхВызововВОбработчикахСобытий</DataPath>
+																			<TitleLocation>Right</TitleLocation>
+																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="ПроверкаСерверныхВызововВОбработчикахСобытийКонтекстноеМеню" id="3935"/>
+																			<ExtendedTooltip name="ПроверкаСерверныхВызововВОбработчикахСобытийРасширеннаяПодсказка" id="3936">
+																				<Title formatted="true">
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>Adds the string /EnableCheckServerCalls to the launch options of test clients.
+When the test completes, it checks the "Technical Support Information" window for special messages about context server calls.
+If such messages were found, a script error will be raised.
+&lt;link https://its.1c.ru/db/pubv8devui/content/282/1&gt;Detailed information here&lt;/&gt;</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Добавляет к параметрам запуска клиентов тестирования строку /EnableCheckServerCalls.
+При завершении работы теста проверяет в окне "Информация для технической поддержки" наличие специальных сообщениий о контекстных серверных вызовах.
+Если такие сообщения были найдены, то будет вызвана ошибка сценария.
+&lt;link https://its.1c.ru/db/pubv8devui/content/282/1&gt;Подробная информация тут&lt;/&gt;</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
+																		</CheckBoxField>
+																	</ChildItems>
+																</UsualGroup>
+																<UsualGroup name="ГруппаЗапускКлиентаТестированияШестаяСтрокаПравыйСтолбец" id="3932">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа запуск клиента тестирования шестая строка правый столбец</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Test client launch group sixth row right column</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаЗапускКлиентаТестированияШестаяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="3933"/>
 																</UsualGroup>
 															</ChildItems>
 														</UsualGroup>
