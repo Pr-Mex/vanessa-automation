@@ -869,17 +869,17 @@
 <li>Внутрь расширения надо встроить Vanessa Automation Single.</li>
 <li>В каждую форму, в которой планиуруется запускать сценарий Onboarding нужно встроить код:</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="kd">&amp;НаКлиенте</span>
+<div class="codehilite"><pre><span></span><code><span class="nd">&amp;НаКлиенте</span>
 <span class="k">Функция</span> <span class="nf">ДанныеРеквизитовФормыOnboarding</span><span class="p">()</span> <span class="k">Экспорт</span>
     <span class="k">Возврат</span> <span class="nf">ДанныеРеквизитовФормыOnboardingСервер</span><span class="p">();</span>
 <span class="k">КонецФункции</span>    
 
-<span class="kd">&amp;НаСервере</span>
+<span class="nd">&amp;НаСервере</span>
 <span class="k">Функция</span> <span class="nf">ДанныеРеквизитовФормыOnboardingСервер</span><span class="p">()</span>
     <span class="k">Возврат</span> <span class="nv">VanessaInteractive</span><span class="o">.</span><span class="nf">ДанныеРеквизитовФормыOnboarding</span><span class="p">(</span><span class="nv">ЭтаФорма</span><span class="p">);</span>
 <span class="k">КонецФункции</span>    
 
-<span class="kd">&amp;НаКлиенте</span>
+<span class="nd">&amp;НаКлиенте</span>
 <span class="k">Процедура</span> <span class="nf">Расш1_OnboardingПосле</span><span class="p">(</span><span class="nv">Команда</span><span class="p">)</span>
 
     <span class="nv">Ванесса</span> <span class="o">=</span> <span class="nv">VanessaInteractiveКлиент</span><span class="o">.</span><span class="nf">ПолучитьФормуVanessaAutomation</span><span class="p">();</span>
