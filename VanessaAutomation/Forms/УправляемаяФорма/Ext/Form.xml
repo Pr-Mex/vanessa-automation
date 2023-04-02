@@ -1527,7 +1527,7 @@
 								<Title>
 									<v8:item>
 										<v8:lang>ru</v8:lang>
-										<v8:content>Получить состояние всей формы в виде шагов</v8:content>
+										<v8:content>Получить проверку всей формы в виде шагов</v8:content>
 									</v8:item>
 									<v8:item>
 										<v8:lang>en</v8:lang>
@@ -1550,6 +1550,11 @@
 								<Type>CommandBarButton</Type>
 								<CommandName>Form.Command.ПолучитьШагОткрытияНавигационнойСсылкиТекущегоОкна</CommandName>
 								<ExtendedTooltip name="VanessaEditorПолучитьШагОткрытияНавигационнойСсылкиТекущегоОкнаРасширеннаяПодсказка" id="3262"/>
+							</Button>
+							<Button name="VanessaEditorПолучитьШагПроверкиТекущегоОкна" id="3937">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.ПолучитьШагПроверкиТекущегоОкна</CommandName>
+								<ExtendedTooltip name="VanessaEditorПолучитьШагПроверкиТекущегоОкнаРасширеннаяПодсказка" id="3938"/>
 							</Button>
 						</ChildItems>
 					</ButtonGroup>
@@ -6876,7 +6881,7 @@
 																						<Title>
 																							<v8:item>
 																								<v8:lang>ru</v8:lang>
-																								<v8:content>Получить состояние всей формы в виде шагов</v8:content>
+																								<v8:content>Получить проверку всей формы в виде шагов</v8:content>
 																							</v8:item>
 																							<v8:item>
 																								<v8:lang>en</v8:lang>
@@ -6975,6 +6980,11 @@
 																						<Type>CommandBarButton</Type>
 																						<CommandName>Form.Command.ПолучитьШагОткрытияНавигационнойСсылкиТекущегоОкна</CommandName>
 																						<ExtendedTooltip name="VanessaEditorКонтекстноеМенюПолучитьШагОткрытияНавигационнойСсылкиТекущегоОкнаРасширеннаяПодсказка" id="3236"/>
+																					</Button>
+																					<Button name="VanessaEditorКонтекстноеМенюПолучитьШагПроверкиТекущегоОкна" id="3939">
+																						<Type>CommandBarButton</Type>
+																						<CommandName>Form.Command.ПолучитьШагПроверкиТекущегоОкна</CommandName>
+																						<ExtendedTooltip name="VanessaEditorКонтекстноеМенюПолучитьШагПроверкиТекущегоОкнаРасширеннаяПодсказка" id="3940"/>
 																					</Button>
 																				</ChildItems>
 																			</ButtonGroup>
@@ -9320,7 +9330,7 @@
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
-															<v8:content>Получить состояние всей формы в виде шагов</v8:content>
+															<v8:content>Получить проверку всей формы в виде шагов</v8:content>
 														</v8:item>
 														<v8:item>
 															<v8:lang>en</v8:lang>
@@ -40460,21 +40470,21 @@ Click on the hyperlink for more details.</v8:content>
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Получить состояние текущего элемента формы в виде шагов</v8:content>
+					<v8:content>Получить проверку текущего элемента формы в виде шагов</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
-					<v8:content>Get current form item state in steps</v8:content>
+					<v8:content>Get current form element validation in steps</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Получить состояние текущего элемента в виде шага</v8:content>
+					<v8:content>Получить проверку текущего элемента в виде шага</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
-					<v8:content>Get the state of the current element as a step</v8:content>
+					<v8:content>Get current form element validation in steps</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПолучитьСостояниеТекущегоЭлементаФормыКнопка</Action>
@@ -43397,6 +43407,29 @@ Click on the hyperlink for more details.</v8:content>
 			</ToolTip>
 			<Shortcut>Ctrl+Shift+I</Shortcut>
 			<Action>VanessaEditorПоказатьКраткуюИнформациюОШаге</Action>
+		</Command>
+		<Command name="ПолучитьШагПроверкиТекущегоОкна" id="179">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить шаг проверки текущего окна</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Get current window check step</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Получить шаг проверки текущего окна</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Get current window check step</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПолучитьШагПроверкиТекущегоОкна</Action>
 		</Command>
 	</Commands>
 </Form>
