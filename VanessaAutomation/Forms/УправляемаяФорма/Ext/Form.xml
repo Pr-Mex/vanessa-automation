@@ -19521,25 +19521,28 @@ If the field is empty, then the log will not be output to a text file.</v8:conte
 																					<ShowTitle>false</ShowTitle>
 																					<ExtendedTooltip name="ГруппаAllureОсновныеНастройкиПятаяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="3660"/>
 																					<ChildItems>
-																						<InputField name="ГруппировкаTestParentSuites" id="3905">
-																							<DataPath>Объект.ГруппировкаTestParentSuites</DataPath>
+																						<CheckBoxField name="ТегиПропускающиеСценарийAllure" id="2742">
+																							<DataPath>Объект.ТегиПропускающиеСценарийAllure</DataPath>
 																							<TitleLocation>Top</TitleLocation>
 																							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-																							<ContextMenu name="ГруппировкаTestParentSuitesКонтекстноеМеню" id="3906"/>
-																							<ExtendedTooltip name="ГруппировкаTestParentSuitesРасширеннаяПодсказка" id="3907">
+																							<CheckBoxType>Auto</CheckBoxType>
+																							<ContextMenu name="ТегиПропускающиеСценарийAllureКонтекстноеМеню" id="2743"/>
+																							<ExtendedTooltip name="ТегиПропускающиеСценарийAllureРасширеннаяПодсказка" id="2744">
 																								<AutoMaxWidth>false</AutoMaxWidth>
-																								<Title formatted="false">
+																								<Title formatted="true">
 																									<v8:item>
 																										<v8:lang>ru</v8:lang>
-																										<v8:content>Задаёт значение parent группировки в отчете Allure на закладке Suites. Подробности описаны в справке.</v8:content>
+																										<v8:content>Список тегов, разделённых с помощью ";".
+Если в сценарии есть такой тег, тогда сценарий не будет выполняться и отчете Allure у него будет статус &lt;b&gt;пропущен/&lt;/&gt;&lt;b&gt;skipped&lt;/&gt;&lt;b&gt;.&lt;/&gt;</v8:content>
 																									</v8:item>
 																									<v8:item>
 																										<v8:lang>en</v8:lang>
-																										<v8:content>Sets parent grouping value for Allure report on the Suites tab. See Help info for details.</v8:content>
+																										<v8:content>&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;List of tags separated by ";".&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
+&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;If the script contains such a tag, then the script will not be executed and the Allure report will have the skipped status.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
 																									</v8:item>
 																								</Title>
 																							</ExtendedTooltip>
-																						</InputField>
+																						</CheckBoxField>
 																					</ChildItems>
 																				</UsualGroup>
 																				<UsualGroup name="ГруппаAllureОсновныеНастройкиПятаяСтрокаПравыйСтолбец" id="3661">
@@ -19612,27 +19615,6 @@ If the field is empty, then the log will not be output to a text file.</v8:conte
 																					<Representation>None</Representation>
 																					<ShowTitle>false</ShowTitle>
 																					<ExtendedTooltip name="ГруппаAllureОсновныеНастройкиШестаяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="3904"/>
-																					<ChildItems>
-																						<InputField name="ГруппировкаTestSubSuites" id="3910">
-																							<DataPath>Объект.ГруппировкаTestSubSuites</DataPath>
-																							<TitleLocation>Top</TitleLocation>
-																							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-																							<ContextMenu name="ГруппировкаTestSubSuitesКонтекстноеМеню" id="3911"/>
-																							<ExtendedTooltip name="ГруппировкаTestSubSuitesРасширеннаяПодсказка" id="3912">
-																								<AutoMaxWidth>false</AutoMaxWidth>
-																								<Title formatted="false">
-																									<v8:item>
-																										<v8:lang>ru</v8:lang>
-																										<v8:content>Задаёт значение sub группировки в отчете Allure на закладке Suites. Подробности описаны в справке.</v8:content>
-																									</v8:item>
-																									<v8:item>
-																										<v8:lang>en</v8:lang>
-																										<v8:content>Sets sub grouping value for Allure report on the Suites tab. See Help info for details.</v8:content>
-																									</v8:item>
-																								</Title>
-																							</ExtendedTooltip>
-																						</InputField>
-																					</ChildItems>
 																				</UsualGroup>
 																				<UsualGroup name="ГруппаAllureОсновныеНастройкиШестаяСтрокаПравыйСтолбец" id="3908">
 																					<Title>
@@ -19648,30 +19630,6 @@ If the field is empty, then the log will not be output to a text file.</v8:conte
 																					<Representation>None</Representation>
 																					<ShowTitle>false</ShowTitle>
 																					<ExtendedTooltip name="ГруппаAllureОсновныеНастройкиШестаяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="3909"/>
-																					<ChildItems>
-																						<CheckBoxField name="ТегиПропускающиеСценарийAllure" id="2742">
-																							<DataPath>Объект.ТегиПропускающиеСценарийAllure</DataPath>
-																							<TitleLocation>Top</TitleLocation>
-																							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-																							<CheckBoxType>Auto</CheckBoxType>
-																							<ContextMenu name="ТегиПропускающиеСценарийAllureКонтекстноеМеню" id="2743"/>
-																							<ExtendedTooltip name="ТегиПропускающиеСценарийAllureРасширеннаяПодсказка" id="2744">
-																								<AutoMaxWidth>false</AutoMaxWidth>
-																								<Title formatted="true">
-																									<v8:item>
-																										<v8:lang>ru</v8:lang>
-																										<v8:content>Список тегов, разделённых с помощью ";".
-Если в сценарии есть такой тег, тогда сценарий не будет выполняться и отчете Allure у него будет статус &lt;b&gt;пропущен/&lt;/&gt;&lt;b&gt;skipped&lt;/&gt;&lt;b&gt;.&lt;/&gt;</v8:content>
-																									</v8:item>
-																									<v8:item>
-																										<v8:lang>en</v8:lang>
-																										<v8:content>&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;List of tags separated by ";".&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;If the script contains such a tag, then the script will not be executed and the Allure report will have the skipped status.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
-																									</v8:item>
-																								</Title>
-																							</ExtendedTooltip>
-																						</CheckBoxField>
-																					</ChildItems>
 																				</UsualGroup>
 																			</ChildItems>
 																		</UsualGroup>
