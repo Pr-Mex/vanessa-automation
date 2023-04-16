@@ -28,9 +28,7 @@
 			| 'УровеньОтчета2'                                 |
 			| 'УровеньОтчета3'                                 |
 			| 'КаталогОтносительноКоторогоНадоСтроитьИерархию' |
-			| 'ГруппировкаTestParentSuites'                    |
 			| 'ГруппировкаTestSuites'                          |
-			| 'ГруппировкаTestSubSuites'                       |
 			| 'ТегиПропускающиеСценарийAllure'                 |
 	
 * Set this checkbox to generate a report in the Allure format after the scripts are executed
