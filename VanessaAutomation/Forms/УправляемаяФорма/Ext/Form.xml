@@ -16707,6 +16707,60 @@ Actual when working in the step tree mode.</v8:content>
 													<ControlRepresentation>Picture</ControlRepresentation>
 													<ExtendedTooltip name="ГруппаПодсистемаСтабилизацияВыполненияТестовРасширеннаяПодсказка" id="2561"/>
 													<ChildItems>
+														<UsualGroup name="ГруппаПодсистемаСтабилизацияВыполненияТестовНулеваяСтрока" id="3941">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа подсистема стабилизация выполнения тестов нулевая строка</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Group subsystem stabilization of test execution zero line</v8:content>
+																</v8:item>
+															</Title>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаПодсистемаСтабилизацияВыполненияТестовНулеваяСтрокаРасширеннаяПодсказка" id="3942"/>
+															<ChildItems>
+																<UsualGroup name="ГруппаПодсистемаСтабилизацияВыполненияТестовНулеваяСтрокаЛевыйСтолбец" id="3943">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа подсистема стабилизация выполнения тестов нулевая строка левый столбец</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Group subsystem stabilization of test execution zero line left column</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Width>50</Width>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаПодсистемаСтабилизацияВыполненияТестовНулеваяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="3944"/>
+																	<ChildItems>
+																		<InputField name="КоличествоПопытокВыполненияСценария" id="3948">
+																			<DataPath>Объект.КоличествоПопытокВыполненияСценария</DataPath>
+																			<TitleLocation>Top</TitleLocation>
+																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<ContextMenu name="КоличествоПопытокВыполненияСценарияКонтекстноеМеню" id="3949"/>
+																			<ExtendedTooltip name="КоличествоПопытокВыполненияСценарияРасширеннаяПодсказка" id="3950">
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>If the setting specifies a value of more than one, then if the script was not executed successfully, several more attempts to execute the script will be made.</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Если в настройке указано значение более одного, тогда если сценарий не был выполнен успешно, будет выполнено ещё несколько попыток выполнения сценария.</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
+																		</InputField>
+																	</ChildItems>
+																</UsualGroup>
+															</ChildItems>
+														</UsualGroup>
 														<UsualGroup name="ГруппаПодсистемаСтабилизацияВыполненияТестовПерваяСтрока" id="3374">
 															<Title>
 																<v8:item>
@@ -19467,25 +19521,28 @@ If the field is empty, then the log will not be output to a text file.</v8:conte
 																					<ShowTitle>false</ShowTitle>
 																					<ExtendedTooltip name="ГруппаAllureОсновныеНастройкиПятаяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="3660"/>
 																					<ChildItems>
-																						<InputField name="ГруппировкаTestParentSuites" id="3905">
-																							<DataPath>Объект.ГруппировкаTestParentSuites</DataPath>
+																						<CheckBoxField name="ТегиПропускающиеСценарийAllure" id="2742">
+																							<DataPath>Объект.ТегиПропускающиеСценарийAllure</DataPath>
 																							<TitleLocation>Top</TitleLocation>
 																							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-																							<ContextMenu name="ГруппировкаTestParentSuitesКонтекстноеМеню" id="3906"/>
-																							<ExtendedTooltip name="ГруппировкаTestParentSuitesРасширеннаяПодсказка" id="3907">
+																							<CheckBoxType>Auto</CheckBoxType>
+																							<ContextMenu name="ТегиПропускающиеСценарийAllureКонтекстноеМеню" id="2743"/>
+																							<ExtendedTooltip name="ТегиПропускающиеСценарийAllureРасширеннаяПодсказка" id="2744">
 																								<AutoMaxWidth>false</AutoMaxWidth>
-																								<Title formatted="false">
+																								<Title formatted="true">
 																									<v8:item>
 																										<v8:lang>ru</v8:lang>
-																										<v8:content>Задаёт значение parent группировки в отчете Allure на закладке Suites. Подробности описаны в справке.</v8:content>
+																										<v8:content>Список тегов, разделённых с помощью ";".
+Если в сценарии есть такой тег, тогда сценарий не будет выполняться и отчете Allure у него будет статус &lt;b&gt;пропущен/&lt;/&gt;&lt;b&gt;skipped&lt;/&gt;&lt;b&gt;.&lt;/&gt;</v8:content>
 																									</v8:item>
 																									<v8:item>
 																										<v8:lang>en</v8:lang>
-																										<v8:content>Sets parent grouping value for Allure report on the Suites tab. See Help info for details.</v8:content>
+																										<v8:content>&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;List of tags separated by ";".&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
+&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;If the script contains such a tag, then the script will not be executed and the Allure report will have the skipped status.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
 																									</v8:item>
 																								</Title>
 																							</ExtendedTooltip>
-																						</InputField>
+																						</CheckBoxField>
 																					</ChildItems>
 																				</UsualGroup>
 																				<UsualGroup name="ГруппаAllureОсновныеНастройкиПятаяСтрокаПравыйСтолбец" id="3661">
@@ -19558,27 +19615,6 @@ If the field is empty, then the log will not be output to a text file.</v8:conte
 																					<Representation>None</Representation>
 																					<ShowTitle>false</ShowTitle>
 																					<ExtendedTooltip name="ГруппаAllureОсновныеНастройкиШестаяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="3904"/>
-																					<ChildItems>
-																						<InputField name="ГруппировкаTestSubSuites" id="3910">
-																							<DataPath>Объект.ГруппировкаTestSubSuites</DataPath>
-																							<TitleLocation>Top</TitleLocation>
-																							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-																							<ContextMenu name="ГруппировкаTestSubSuitesКонтекстноеМеню" id="3911"/>
-																							<ExtendedTooltip name="ГруппировкаTestSubSuitesРасширеннаяПодсказка" id="3912">
-																								<AutoMaxWidth>false</AutoMaxWidth>
-																								<Title formatted="false">
-																									<v8:item>
-																										<v8:lang>ru</v8:lang>
-																										<v8:content>Задаёт значение sub группировки в отчете Allure на закладке Suites. Подробности описаны в справке.</v8:content>
-																									</v8:item>
-																									<v8:item>
-																										<v8:lang>en</v8:lang>
-																										<v8:content>Sets sub grouping value for Allure report on the Suites tab. See Help info for details.</v8:content>
-																									</v8:item>
-																								</Title>
-																							</ExtendedTooltip>
-																						</InputField>
-																					</ChildItems>
 																				</UsualGroup>
 																				<UsualGroup name="ГруппаAllureОсновныеНастройкиШестаяСтрокаПравыйСтолбец" id="3908">
 																					<Title>
@@ -19594,30 +19630,6 @@ If the field is empty, then the log will not be output to a text file.</v8:conte
 																					<Representation>None</Representation>
 																					<ShowTitle>false</ShowTitle>
 																					<ExtendedTooltip name="ГруппаAllureОсновныеНастройкиШестаяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="3909"/>
-																					<ChildItems>
-																						<CheckBoxField name="ТегиПропускающиеСценарийAllure" id="2742">
-																							<DataPath>Объект.ТегиПропускающиеСценарийAllure</DataPath>
-																							<TitleLocation>Top</TitleLocation>
-																							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-																							<CheckBoxType>Auto</CheckBoxType>
-																							<ContextMenu name="ТегиПропускающиеСценарийAllureКонтекстноеМеню" id="2743"/>
-																							<ExtendedTooltip name="ТегиПропускающиеСценарийAllureРасширеннаяПодсказка" id="2744">
-																								<AutoMaxWidth>false</AutoMaxWidth>
-																								<Title formatted="true">
-																									<v8:item>
-																										<v8:lang>ru</v8:lang>
-																										<v8:content>Список тегов, разделённых с помощью ";".
-Если в сценарии есть такой тег, тогда сценарий не будет выполняться и отчете Allure у него будет статус &lt;b&gt;пропущен/&lt;/&gt;&lt;b&gt;skipped&lt;/&gt;&lt;b&gt;.&lt;/&gt;</v8:content>
-																									</v8:item>
-																									<v8:item>
-																										<v8:lang>en</v8:lang>
-																										<v8:content>&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;List of tags separated by ";".&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;
-&lt;font Almarai&gt;&lt;fontsize 8&gt;&lt;color #333333&gt;&lt;bgcolor #FFFFFF&gt;If the script contains such a tag, then the script will not be executed and the Allure report will have the skipped status.&lt;/&gt;&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
-																									</v8:item>
-																								</Title>
-																							</ExtendedTooltip>
-																						</CheckBoxField>
-																					</ChildItems>
 																				</UsualGroup>
 																			</ChildItems>
 																		</UsualGroup>
@@ -31851,20 +31863,10 @@ Click on the hyperlink for more details.</v8:content>
 													<ContextMenu name="УровеньОтчета3СлужебныйКонтекстноеМеню" id="1807"/>
 													<ExtendedTooltip name="УровеньОтчета3СлужебныйРасширеннаяПодсказка" id="1808"/>
 												</InputField>
-												<InputField name="ГруппировкаTestParentSuitesСлужебный" id="3913">
-													<DataPath>Объект.ГруппировкаTestParentSuites</DataPath>
-													<ContextMenu name="ГруппировкаTestParentSuitesСлужебныйКонтекстноеМеню" id="3914"/>
-													<ExtendedTooltip name="ГруппировкаTestParentSuitesСлужебныйРасширеннаяПодсказка" id="3881"/>
-												</InputField>
 												<InputField name="ГруппировкаTestSuitesСлужебный" id="3882">
 													<DataPath>Объект.ГруппировкаTestSuites</DataPath>
 													<ContextMenu name="ГруппировкаTestSuitesСлужебныйКонтекстноеМеню" id="3883"/>
 													<ExtendedTooltip name="ГруппировкаTestSuitesСлужебныйРасширеннаяПодсказка" id="3884"/>
-												</InputField>
-												<InputField name="ГруппировкаTestSubSuitesСлужебный" id="3885">
-													<DataPath>Объект.ГруппировкаTestSubSuites</DataPath>
-													<ContextMenu name="ГруппировкаTestSubSuitesСлужебныйКонтекстноеМеню" id="3886"/>
-													<ExtendedTooltip name="ГруппировкаTestSubSuitesСлужебныйРасширеннаяПодсказка" id="3887"/>
 												</InputField>
 												<InputField name="ИмяФайлаВнешнихКомандФреймворка" id="2240">
 													<DataPath>Объект.ИмяФайлаВнешнихКомандФреймворка</DataPath>
