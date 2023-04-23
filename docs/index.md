@@ -21,6 +21,7 @@
 #### Также можно посмотреть
 
 * [Интерактивная справка в формате видео](https://www.youtube.com/channel/UC-GC02tUKAXKWGZVaPKtg6w/playlists).
+* [Интерактивная справка в формате видео (на английском)](https://www.youtube.com/channel/UCs9tix1nAJC8-yRQpmZ92fQ/playlists).
 * [Видео инструкции (разное)](https://www.youtube.com/channel/UC114RqHhG__1gET8pzs3AHA/playlists).
 * [Вебинар 2016 года](http://infostart.ru/webinars/537546/). 
 
