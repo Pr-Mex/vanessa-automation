@@ -35,7 +35,7 @@
 	И Я запоминаю значение выражения 'ПолучитьСостояниеVanessaAutomation().ТекущаяФича.Каталог + "files\Test6_1.feature"' в переменную "TestFeature"	
 	Тогда я копирую файл "$TestFeature$" "C:\Temp\Optimization\Test.feature"
 
-	И я перехожу к закладке "Служебная"
+	И я перехожу к закладке с именем "ГруппаСлужебная"
 	И в поле 'Каталог фич (служебный)' я ввожу текст 'C:\Temp\Optimization\Test.feature'
 	
 	И Я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
@@ -52,7 +52,7 @@
 	И Я запоминаю значение выражения 'ПолучитьСостояниеVanessaAutomation().ТекущаяФича.Каталог + "files\Test6_2.feature"' в переменную "TestFeature"	
 	Тогда я копирую файл "$TestFeature$" "C:\Temp\Optimization\Test.feature"
 
-	И я перехожу к закладке "Служебная"
+	И я перехожу к закладке с именем "ГруппаСлужебная"
 	И в поле 'Каталог фич (служебный)' я ввожу текст 'C:\Temp\Optimization\Test.feature'
 	
 	И Я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
@@ -95,7 +95,7 @@
 	И Я запоминаю значение выражения 'ПолучитьСостояниеVanessaAutomation().ТекущаяФича.Каталог + "files\Test5_1.feature"' в переменную "TestFeature"	
 	Тогда я копирую файл "$TestFeature$" "C:\Temp\Optimization\Test.feature"
 
-	И я перехожу к закладке "Служебная"
+	И я перехожу к закладке с именем "ГруппаСлужебная"
 	И в поле 'Каталог фич (служебный)' я ввожу текст 'C:\Temp\Optimization\Test.feature'
 	
 	И Я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
@@ -159,7 +159,7 @@
 	И Я запоминаю значение выражения 'ПолучитьСостояниеVanessaAutomation().ТекущаяФича.Каталог + "files\Test4_1.feature"' в переменную "TestFeature"	
 	Тогда я копирую файл "$TestFeature$" "C:\Temp\Optimization\Test.feature"
 
-	И я перехожу к закладке "Служебная"
+	И я перехожу к закладке с именем "ГруппаСлужебная"
 	И в поле 'Каталог фич (служебный)' я ввожу текст 'C:\Temp\Optimization\Test.feature'
 	
 	И Я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
@@ -221,7 +221,7 @@
 	И Я запоминаю значение выражения 'ПолучитьСостояниеVanessaAutomation().ТекущаяФича.Каталог + "files\Test3_1.feature"' в переменную "TestFeature"	
 	Тогда я копирую файл "$TestFeature$" "C:\Temp\Optimization\Test.feature"
 
-	И я перехожу к закладке "Служебная"
+	И я перехожу к закладке с именем "ГруппаСлужебная"
 	И в поле 'Каталог фич (служебный)' я ввожу текст 'C:\Temp\Optimization\Test.feature'
 	
 	И я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
@@ -273,7 +273,7 @@
 	И Я запоминаю значение выражения 'ПолучитьСостояниеVanessaAutomation().ТекущаяФича.Каталог + "files\Test1_1.feature"' в переменную "TestFeature"	
 	Тогда я копирую файл "$TestFeature$" "C:\Temp\Optimization\Test.feature"
 
-	И я перехожу к закладке "Служебная"
+	И я перехожу к закладке с именем "ГруппаСлужебная"
 	И в поле 'Каталог фич (служебный)' я ввожу текст 'C:\Temp\Optimization\Test.feature'
 	
 	И я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
@@ -344,7 +344,7 @@
 	И Я запоминаю значение выражения 'ПолучитьСостояниеVanessaAutomation().ТекущаяФича.Каталог + "files\Test2_1.feature"' в переменную "TestFeature"	
 	Тогда я копирую файл "$TestFeature$" "C:\Temp\Optimization\Test.feature"
 
-	И я перехожу к закладке "Служебная"
+	И я перехожу к закладке с именем "ГруппаСлужебная"
 	И в поле 'Каталог фич (служебный)' я ввожу текст 'C:\Temp\Optimization\Test.feature'
 	
 	И я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
