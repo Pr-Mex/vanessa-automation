@@ -1,4 +1,4 @@
-﻿
+
 // IRP Team v.1.2
 
 #Region Variables
@@ -3207,7 +3207,7 @@ Function LocalizedStringsServer()
 	ReturnData.Insert("s9a_en", "#language: en");
 	ReturnData.Insert("s9a_ru", "#language: ru");
 	ReturnData.Insert("s9b_en", "@tree");
-	ReturnData.Insert("s9b_ru", "@дерево");
+	ReturnData.Insert("s9b_ru", "@tree");
 	ReturnData.Insert("s9c_en", "Feature: export scenarios");
 	ReturnData.Insert("s9c_ru", "Функционал: экспорт сценариев");
 	ReturnData.Insert("s9d_en", "Background:");
