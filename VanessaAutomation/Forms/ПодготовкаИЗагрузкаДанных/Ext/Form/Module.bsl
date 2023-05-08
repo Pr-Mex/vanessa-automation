@@ -1,4 +1,4 @@
-
+﻿
 // IRP Team v.1.2
 
 #Region Variables
@@ -3117,7 +3117,7 @@ Function LocalizedStringsServer()
 	ReturnData.Insert("s1c_en", "And I run database clean");
 	ReturnData.Insert("s1c_ru", "И Я запускаю очистку базы данных");
 	ReturnData.Insert("s1d_en", "Cleans the database");
-	ReturnData.Insert("s1d_ru", "Очищает базу данных");
+	ReturnData.Insert("s1d_ru", "Очищает базу данных. Работает только в серверных базах.");
 	
 	ReturnData.Insert("s2a_en", "ICheckOrCreateCatalogObjects(ObjectName, Values)");
 	ReturnData.Insert("s2a_ru", "ЯПроверяюИлиСоздаюДляСправочникаОбъекты(ИмяОбъекта, Значения)");
