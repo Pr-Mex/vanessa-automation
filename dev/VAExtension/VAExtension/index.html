@@ -13,7 +13,7 @@
       
       
       <link rel="shortcut icon" href="../../assets/images/logo.png">
-      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-5.0.0">
+      <meta name="generator" content="mkdocs-1.4.3, mkdocs-material-5.0.0">
     
     
       
@@ -933,6 +933,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#19" class="md-nav__link">
+    19. Открыть внешнюю обработку или отчет
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1145,6 +1152,13 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#19" class="md-nav__link">
+    19. Открыть внешнюю обработку или отчет
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1190,6 +1204,7 @@
 <li>Проверить признак формы "ТолькоПросмотр"</li>
 <li>Получить состояние объекта (Проведен, ПометкаУдаления, Код, Дата, Номер)</li>
 <li>Открыть внешнюю обработку или отчет</li>
+<li>Запомнить ID UI Automation элемента формы в переменную</li>
 </ol>
 <h2 id="1">1. Открытие окна "Функции технического специалиста" (Все функции).<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <p>Нужно использовать шаг</p>
@@ -1326,6 +1341,16 @@
 <p>Для этого надо использовать шаг</p>
 <div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я открываю внешнюю обработку или отчет &quot;</span><span class="s">ИмяФайла</span><span class="nf">&quot; (Расширение)</span>
 </code></pre></div>
+
+<h2 id="19">19. Открыть внешнюю обработку или отчет<a class="headerlink" href="#19" title="Permanent link">&para;</a></h2>
+<p>Для этого надо использовать шаг</p>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я запоминаю элемент формы клиента тестирования &quot;</span><span class="s">Заголвок элемента</span><span class="nf">&quot; в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot; UI Automation (расширение)</span>
+<span class="nf">    </span><span class="k">И </span><span class="nf">я запоминаю элемент формы клиента тестирования с именем &quot;</span><span class="s">ИмяЭлемента</span><span class="nf">&quot; в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot; UI Automation (расширение)</span>
+</code></pre></div>
+
+<p>Данные шаги работают следующим образом. Они заменяют текст подсказки элемента формы на специальное сгенерированное значение.
+Затем выполняют поиск элемента формы с помощью механизма UI Automation.
+Затем возвращают текст подсказки элемента формы обратно.</p>
                 
               
               
