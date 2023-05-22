@@ -1190,7 +1190,7 @@ EndProcedure
 &AtClient
 Procedure AddObjectByURL(Command)
 	Notify = New NotifyDescription("AddObjectByURLContinuation", ThisForm);
-    OpenForm(Left(ThisForm.ИмяФормы, StrFind(ThisForm.ИмяФормы, ".Форма.ПодготовкаИЗагрузкаДанных"))+ ".Форма.ВводСтрокиНавигационныхСсылок",, ThisForm,,,, Notify,  FormWindowOpeningMode.LockWholeInterface);
+    OpenForm("ВнешняяОбработка.VanessaAutomation.Форма.ВводСтрокиНавигационныхСсылок",, ThisForm,,,, Notify,  FormWindowOpeningMode.LockWholeInterface);
 EndProcedure
 
 &AtClient

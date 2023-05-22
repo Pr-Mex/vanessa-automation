@@ -1,6 +1,6 @@
 ﻿
-&НаКлиенте
-Процедура СorrectLine(Команда)
+&AtClient
+Procedure СorrectLine(Command)
 	
 	StringNavigationLinks = StrReplace(StringNavigationLinks, "'", "");
 	StringProcessed = "";
@@ -12,18 +12,18 @@
 	EndDo;
     StringNavigationLinks = StringProcessed;
 	
-КонецПроцедуры
+EndProcedure
 
-&НаКлиенте
-Процедура СloseWindowOk(Команда)
+&AtClient
+Procedure СloseWindowOk(Command)
 
 	Close(StringNavigationLinks);
 	
-КонецПроцедуры
+EndProcedure
 
-&НаКлиенте
-Процедура СloseWindowCancel(Команда)
+&AtClient
+Procedure СloseWindowCancel(Command)
 
 	Close();
 
-КонецПроцедуры
+EndProcedure
