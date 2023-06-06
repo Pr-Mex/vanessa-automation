@@ -1307,6 +1307,21 @@ Procedure FillMetadata()
 		MetadataListParentRow.Use = False;
 		MetadataListParentRow.Name = MetadataTypeItem.Value;
 		MetadataListParentRow.Presentation = MetadataTypeItem.Presentation;
+		If MetadataListParentRow.Name = "Constants" Then
+			MetadataListParentRow.Рicture =	PictureLib.Constant;
+		ElsIf MetadataListParentRow.Name = "Catalogs" Then
+			MetadataListParentRow.Рicture =	PictureLib.Catalog;
+		ElsIf MetadataListParentRow.Name = "Documents" Then
+			MetadataListParentRow.Рicture =	PictureLib.Document;
+		ElsIf MetadataListParentRow.Name = "ChartsOfAccounts" Then
+			MetadataListParentRow.Рicture =	PictureLib.ChartOfAccounts;
+		ElsIf MetadataListParentRow.Name = "ChartsOfCharacteristicTypes" Then
+			MetadataListParentRow.Рicture =	PictureLib.ChartOfCharacteristicTypes;
+		ElsIf MetadataListParentRow.Name = "InformationRegisters" Then
+			MetadataListParentRow.Рicture =	PictureLib.InformationRegister;
+		ElsIf MetadataListParentRow.Name = "AccumulationRegisters" Then
+			MetadataListParentRow.Рicture =	PictureLib.AccumulationRegister;
+        EndIf;
 		For Each Data In Metadata[MetadataTypeItem.Value] Do
 			MetadataListRow = MetadataListParentRow.Rows.Add();
 			MetadataListRow.Use = False;
