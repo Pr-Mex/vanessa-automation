@@ -17,7 +17,7 @@
 		И я делаю подсветку нескольких элементов VA с их заголовком "Editor settings" UI Automation
 			| 'Name'                                           |
 			| 'ИспользоватьДанныеТекущейФормыПриПодбореШагов' |
-			| 'ПоказыватьСтрокиПодсценариевVanessaEdittor'    |
+			| 'ПоказыватьСтрокиПодсценариевVanessaEditor'    |
 			| 'ПоказыватьМиниатюруКода'                       |
 			| 'ЗаменятьТабыНаПробелы'                         |
 			| 'ОтображатьЗакладкиСверху'                      |
@@ -39,7 +39,7 @@
 * This checkbox enables the display of subscript lines in the script editor.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Show subscript lines" UI Automation
 			| 'Name'                                        |
-			| 'ПоказыватьСтрокиПодсценариевVanessaEdittor' |
+			| 'ПоказыватьСтрокиПодсценариевVanessaEditor' |
 
 * This checkbox enables code thumbnail display
 		И я делаю подсветку нескольких элементов VA с их заголовком "Code thumbnail" UI Automation
