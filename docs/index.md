@@ -55,6 +55,7 @@
 * [Митап 1С:Community от КОРУС Консалтинг. Опыт применения автотестирования](https://www.youtube.com/watch?v=OAT_a25XIXQ)
 * [Автоматическое тестирование с использованием Vanessa в Yandex.Cloud](https://m.youtube.com/watch?v=vTAVedABBGQ)
 * [Как изменялся механизм формирования текстовых авто-инструкций. Мастер класс по созданию красивой инструкции.](https://youtu.be/ofMvDX6kIBg)
+* [Дымовые тесты с Vanessa-Automation (Виталий Онянов)](https://www.youtube.com/watch?v=xXCxMLdVt7I)
 
 ## Курсы
 * Бесплатные
