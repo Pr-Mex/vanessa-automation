@@ -1288,14 +1288,15 @@ EndProcedure
 
 &AtServer
 Procedure FillMetadataType()
+	RepresentationsInLanguage = RL();
 	MetadataType.Clear();
-	MetadataType.Add("Constants", RL().s1);
-	MetadataType.Add("Catalogs", RL().s2);
-	MetadataType.Add("Documents", RL().s3);
-	MetadataType.Add("ChartsOfAccounts", RL().s7);
-	MetadataType.Add("ChartsOfCharacteristicTypes", RL().s4);
-	MetadataType.Add("InformationRegisters", RL().s5);
-	MetadataType.Add("AccumulationRegisters", RL().s6);
+	MetadataType.Add("Constants", 					RepresentationsInLanguage.s1,, PictureLib.Constant);
+	MetadataType.Add("Catalogs", 					RepresentationsInLanguage.s2,, PictureLib.Catalog);
+	MetadataType.Add("Documents", 					RepresentationsInLanguage.s3,, PictureLib.Document);
+	MetadataType.Add("ChartsOfAccounts", 			RepresentationsInLanguage.s7,, PictureLib.ChartOfAccounts);
+	MetadataType.Add("ChartsOfCharacteristicTypes", RepresentationsInLanguage.s4,, PictureLib.ChartOfCharacteristicTypes);
+	MetadataType.Add("InformationRegisters", 		RepresentationsInLanguage.s5,, PictureLib.InformationRegister);
+	MetadataType.Add("AccumulationRegisters", 		RepresentationsInLanguage.s6,, PictureLib.AccumulationRegister);
 EndProcedure
 
 &AtServer
@@ -1306,22 +1307,8 @@ Procedure FillMetadata()
 		MetadataListParentRow = MetadataListObject.Rows.Add();
 		MetadataListParentRow.Use = False;
 		MetadataListParentRow.Name = MetadataTypeItem.Value;
-		MetadataListParentRow.Presentation = MetadataTypeItem.Presentation;
-		If MetadataListParentRow.Name = "Constants" Then
-			MetadataListParentRow.Рicture =	PictureLib.Constant;
-		ElsIf MetadataListParentRow.Name = "Catalogs" Then
-			MetadataListParentRow.Рicture =	PictureLib.Catalog;
-		ElsIf MetadataListParentRow.Name = "Documents" Then
-			MetadataListParentRow.Рicture =	PictureLib.Document;
-		ElsIf MetadataListParentRow.Name = "ChartsOfAccounts" Then
-			MetadataListParentRow.Рicture =	PictureLib.ChartOfAccounts;
-		ElsIf MetadataListParentRow.Name = "ChartsOfCharacteristicTypes" Then
-			MetadataListParentRow.Рicture =	PictureLib.ChartOfCharacteristicTypes;
-		ElsIf MetadataListParentRow.Name = "InformationRegisters" Then
-			MetadataListParentRow.Рicture =	PictureLib.InformationRegister;
-		ElsIf MetadataListParentRow.Name = "AccumulationRegisters" Then
-			MetadataListParentRow.Рicture =	PictureLib.AccumulationRegister;
-        EndIf;
+		MetadataListParentRow.Presentation = MetadataTypeItem.Presentation; 
+		MetadataListParentRow.Рicture =	MetadataTypeItem.Picture;
 		For Each Data In Metadata[MetadataTypeItem.Value] Do
 			MetadataListRow = MetadataListParentRow.Rows.Add();
 			MetadataListRow.Use = False;
