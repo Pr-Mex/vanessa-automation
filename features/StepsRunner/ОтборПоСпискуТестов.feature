@@ -7,6 +7,7 @@
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
+@IgnoreOnWeb
 
 Функционал: Запуск только тестов из списка
  
