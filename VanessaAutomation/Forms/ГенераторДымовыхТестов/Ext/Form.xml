@@ -19,11 +19,10 @@
 				<CommandName>Form.Command.СформироватьФайлы</CommandName>
 				<ExtendedTooltip name="ФормаСформироватьФайлыРасширеннаяПодсказка" id="8"/>
 			</Button>
-			<Button name="ФормаЗакрыть" id="9">
+			<Button name="ФормаЗакрытьФорму" id="90">
 				<Type>CommandBarButton</Type>
-				<Representation>PictureAndText</Representation>
-				<CommandName>Form.StandardCommand.Close</CommandName>
-				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="10"/>
+				<CommandName>Form.Command.ЗакрытьФорму</CommandName>
+				<ExtendedTooltip name="ФормаЗакрытьФормуРасширеннаяПодсказка" id="91"/>
 			</Button>
 			<Button name="ФормаСправка" id="17">
 				<Type>CommandBarButton</Type>
@@ -981,6 +980,29 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗагрузитьНастройкиСценариевИзФайла</Action>
+		</Command>
+		<Command name="ЗакрытьФорму" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Close</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть форму</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Close form</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗакрытьФорму</Action>
 		</Command>
 	</Commands>
 </Form>
