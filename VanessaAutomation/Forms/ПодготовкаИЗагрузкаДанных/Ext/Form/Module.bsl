@@ -618,7 +618,14 @@ Procedure ICheckOrCreateChartOfCharacteristicTypesObjectsAtServer(ObjectName, Va
 				Obj.DeletionMark = True;
 				Continue;
 			EndIf;
-			FillTipicalObjectAttributesByValues(Obj, Row, Column);
+			If Column.Name = "ValueType" Or Column.Name = "ТипЗначения" Then  
+				NewXMLReader = New XMLReader;
+				NewXMLReader.SetString(Row[Column.Name]);
+				Obj.ValueType = XDTOSerializer.ReadXML(NewXMLReader, Тип("ОписаниеТипов"));
+				NewXMLReader.Close();
+			Else
+				FillTipicalObjectAttributesByValues(Obj, Row, Column);
+			EndIf;
 		EndDo;
 		Obj.DataExchange.Load = DataExchange;
 		TryToWriteObject(Obj, 4);
@@ -2712,12 +2719,19 @@ Function GetMarkdownTable(Val MetadataObjectPropertyName, Val MetadataObjectName
 		For Each Column In DataTable.Columns Do
 			If isUnsupportedAttribute(Column.Name) Then
 				Continue;
-			EndIf;
+			EndIf; 			
 			Markdown.Add("|");
 			If Not TypeOf(Row[Column.Name]) = Type("Number") Then
 				Markdown.Add("'");
+			EndIf; 
+			If Column.Name = "ТипЗначения" Or Column.Name = "ValueType" Then
+				NewXMLWriter = New XMLWriter; 
+				NewXMLWriter.SetString();
+				XDTOSerializer.WriteXML(NewXMLWriter, Row[Column.Name]); 
+				RowData = GeValuetStringRepresentation(StrReplace(NewXMLWriter.Close(), Chars.LF, ""), RefReplaceMetadataObjects);
+			Else
+				RowData = GeValuetStringRepresentation(Row[Column.Name], RefReplaceMetadataObjects);
 			EndIf;
-			RowData = GeValuetStringRepresentation(Row[Column.Name], RefReplaceMetadataObjects);
 			Markdown.Add(RowData);
 			If Not TypeOf(Row[Column.Name]) = Type("Number") Then
 				Markdown.Add("'");
@@ -2911,8 +2925,6 @@ Function isUnsupportedAttribute(AttributeName)
 	UnsupportedAttributes.Add("Предопределенный");
 	UnsupportedAttributes.Add("PredefinedDataName");
 	UnsupportedAttributes.Add("ИмяПредопределенныхДанных");
-	UnsupportedAttributes.Add("ValueType");
-	UnsupportedAttributes.Add("ТипЗначения");
 	Return UnsupportedAttributes.Find(AttributeName) <> Undefined;
 EndFunction
 
