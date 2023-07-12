@@ -9,7 +9,7 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
-        <link rel="canonical" href="https://pr-mex.github.io/vanessa-automation/dev/MakeVASingle/MakeVASingle/">
+        <link rel="canonical" href="https://pr-mex.github.io/vanessa-automation/dev/Smoke/Smoke/">
       
       
       <link rel="shortcut icon" href="../../assets/images/logo.png">
@@ -17,7 +17,7 @@
     
     
       
-        <title>Параметры запуска из командной строки - Vanessa Automation Dev</title>
+        <title>Smoke - Vanessa Automation Dev</title>
       
     
     
@@ -57,11 +57,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#_1" class="md-skip">
-          Перейти к содержанию
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -85,7 +80,7 @@
           </span>
           <span class="md-header-nav__topic md-ellipsis">
             
-              Параметры запуска из командной строки
+              Smoke
             
           </span>
         </div>
@@ -222,7 +217,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="./" class="md-tabs__link md-tabs__link--active">
+        <a href="../../MakeVASingle/MakeVASingle/" class="md-tabs__link">
           MakeVASingle
         </a>
       
@@ -248,7 +243,7 @@
   
     <li class="md-tabs__item">
       
-        <a href="../../Smoke/Smoke/" class="md-tabs__link">
+        <a href="./" class="md-tabs__link md-tabs__link--active">
           Smoke
         </a>
       
@@ -624,12 +619,10 @@
       
       
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+  <li class="md-nav__item md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
     
     <label class="md-nav__link" for="nav-7">
       MakeVASingle
@@ -651,20 +644,11 @@
           
           
 
-  
 
-
-  <li class="md-nav__item md-nav__item--active">
-    
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-    
-      
-    
-    
-    <a href="./" title="Параметры запуска из командной строки" class="md-nav__link md-nav__link--active">
+  <li class="md-nav__item">
+    <a href="../../MakeVASingle/MakeVASingle/" title="Параметры запуска из командной строки" class="md-nav__link">
       Параметры запуска из командной строки
     </a>
-    
   </li>
 
         
@@ -719,10 +703,12 @@
       
       
 
+  
 
-  <li class="md-nav__item md-nav__item--nested">
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" checked>
     
     <label class="md-nav__link" for="nav-9">
       Smoke
@@ -744,11 +730,18 @@
           
           
 
+  
 
-  <li class="md-nav__item">
-    <a href="../../Smoke/Smoke/" title="Smoke" class="md-nav__link">
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+    
+    <a href="./" title="Smoke" class="md-nav__link md-nav__link--active">
       Smoke
     </a>
+    
   </li>
 
         
@@ -890,27 +883,12 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
-                <div class="md-sidebar__scrollwrap">
-                  <div class="md-sidebar__inner">
-                    
-<nav class="md-nav md-nav--secondary" aria-label="Содержание">
-  
-  
-    
-  
-  
-</nav>
-                  </div>
-                </div>
-              </div>
-            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
-                  <a href="https://github.com/pr-mex/vanessa-automation/edit/develop/docs/MakeVASingle/MakeVASingle.md" title="Редактировать страницу" class="md-content__button md-icon">
+                  <a href="https://github.com/pr-mex/vanessa-automation/edit/develop/docs/Smoke/Smoke.md" title="Редактировать страницу" class="md-content__button md-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg>
                   </a>
                 
@@ -918,23 +896,67 @@
                   
                 
                 
-                <h1 id="_1">Параметры запуска из командной строки<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>Перед сборкой Single надо выполнить скрипт Compile.bat, т.к. он собирается некторые артефакты, которые потом входят в состав Vanessa Automation.</p>
-<p>Для сборки Vanessa Automation Single нужно выполнить скрипт вида:</p>
-<div class="codehilite"><pre><span></span><code>oscript MakeVASingle.os &lt;ПутьКИсходникамVanessaAutomation&gt; &lt;КаталогСборки&gt; &lt;КаталогиБиблиотекЧерезТочкуСЗапятой&gt; &lt;BinКаталогПлатформы&gt; &lt;КаталогФайловойБазы&gt;
-</code></pre></div>
-
+                  <h1>Smoke</h1>
+                
+                <p><strong>Каталог файлов исключений</strong> - каталог, в котором хранятся текстовые файлы (*.txt) со списком объектов, которые будут исключены из тестирования. Имена и количество файлов произвольные однако имя файла должно начинаться  с типа объекта метаданных.</p>
+<p>Справочники.txt 
+Документы.txt
+ПланыВидовХарактеристик.txt
+ПланыСчетов.txt
+ПланыВидовРасчета.txt
+ЖурналыДокументов.txt
+Отчеты.txt
+Обработки.txt
+РегистрыСведений.txt
+РегистрыНакопления.txt
+РегистрыБухгалтерии.txt
+РегистрыРасчета.txt</p>
+<p>Каждая строчка в файле - один исключаемый объект. 
+пустые строки и строки которые начинаются с // (двух слешей) пропускаются</p>
+<p>Формат строки:</p>
+<p><strong>[ИмяОбъектаМетаданных].[ТипТеста].[Уточнение]</strong></p>
+<p><strong>[ИмяОбъектаМетаданных]</strong> - имя объекта конфигурации, как оно задано в конфигураторе
+<strong>[ТипТеста]</strong>- тип теста, который требуется исключить, возможны варианты:
+   - <strong>ФормаСписка</strong> - исключить открытие формы списка
+   - <strong>ФормаОбъекта</strong> - исключить открытие формы объекта
+   - <strong>Запись</strong> - исключить запись существующего элемента
+   - <strong>Копирование</strong> - исключить копирование существующего элемента
+   - <strong>ВводНаОсновании</strong> - исключить ввод на основании существующего элемента
+   - <strong>Печать</strong> - исключить проверку печатных форм</p>
+<p><strong>[Уточнение]</strong> - уточнение по типу теста, например:
+   - [ТипТеста] = Запись
+    это <strong>группа или элемент справочника</strong>. 
+    Если не указан, то и группа и элемент.
+   - [ТипТеста]  = ВводНаОсновании
+    это <strong>тип документа</strong>, который необходимо исключить из ввода на основании. 
+    Если не указан, то все типы.
+   - [ТипТеста]  = Печать
+    это <strong>имя печатной формы</strong>, которую необходимо исключить из проверки. 
+    Если не указан, то все печатные формы.</p>
+<p>Примеры:</p>
 <ul>
-<li>ПутьКИсходникамVanessaAutomation - Основной каталог проекта Vanessa Automation</li>
-<li>КаталогСборки - Каталог, где будут собраны файлы Vanessa Automation Single. Дайнный каталог будет очищен скриптом сборки. КаталогСборки не должен находится внутри каталога ПутьКИсходникамVanessaAutomation.</li>
-<li>КаталогиБиблиотекЧерезТочкуСЗапятой - Каталоги библиотек, которые надо встроить в Vanessa Automation Single.</li>
-<li>BinКаталогПлатформы - Каталог, в котором находятся исполнимые файлы платформы.</li>
-<li>КаталогФайловойБазы - Произвольная файловая база, в которую можно зайти без логина и пароля. Используется для вычисления кеша библиотек.</li>
+<li><strong>ТранспортноеСообщение</strong>
+       Полностью исключить из тестов объект с именем "ТранспортноеСообщение"</li>
+<li><strong>ВерсииРасширений.Запись</strong>
+       Исключить из тестов запись объекта с именем "ВерсииРасширений"</li>
+<li><strong>ГруппыДоступа.Запись.Группа</strong>
+       Исключить из тестов запись группы справочника с именем "ГруппыДоступа"</li>
+<li><strong>ТребованиеНакладная.ВводНаОсновании</strong>
+       Исключить из тестов ввод объектов на основании документа с именем "ТребованиеНакладная"</li>
+<li><strong>АвансовыйОтчет.ВводНаОсновании.СчетФактураПолученный</strong>
+       Исключить из тестов ввод объекта с именем "СчетФактураПолученный" на основании документа с именем "АвансовыйОтчет"</li>
+<li><strong>СчетФактураВыданный.Копирование</strong>
+       Исключить из тестов копирование объекта с именем "СчетФактураВыданный"</li>
+<li><strong>ПередачаОС.Печать</strong>
+       Исключить из тестов печать из объекта с именем "ПередачаОС"</li>
+<li><strong>ПередачаОС.Печать.УниверсальныйПередаточныйДокумент</strong>
+       Исключить из тестов печать печатной формы "УниверсальныйПередаточныйДокумент" из объекта с именем "ПередачаОС"</li>
 </ul>
-<p>Пример запуска скрипта:</p>
-<div class="codehilite"><pre><span></span><code><span class="n">oscript</span><span class="w"> </span><span class="n">C</span><span class="p">:</span>\<span class="n">vanessa</span><span class="o">-</span><span class="n">automation</span>\<span class="n">tools</span>\<span class="n">onescript</span>\<span class="n">MakeVASingle</span><span class="o">.</span><span class="n">os</span><span class="w"> </span><span class="s2">&quot;C:</span><span class="se">\v</span><span class="s2">anessa-automation&quot;</span><span class="w"> </span><span class="s2">&quot;C:\Temp\VASingle&quot;</span><span class="w"> </span><span class="s2">&quot;C:</span><span class="se">\v</span><span class="s2">anessa-automation</span><span class="se">\f</span><span class="s2">eatures\Libraries&quot;</span><span class="w"> </span><span class="s2">&quot;C:\Program Files (x86)</span><span class="se">\1</span><span class="s2">cv8\8.3.17.1811</span><span class="se">\b</span><span class="s2">in&quot;</span><span class="w"> </span>
-<span class="s2">&quot;C:\Bases\TempBase&quot;</span>
-</code></pre></div>
+<p><strong>Путь настройки файлов дымовых тестов</strong> - указывается путь к файлу в котором указаны виды дымовых тестов которые нужно сформировать.</p>
+<p>Для быстрой генерации файла настройки можно
+   1. открыть форму дымовых тестов
+   1. указать флажками нужные тесты на вкладке Настройка сценариев
+   1. потом нажать “Сохранить настройки сценариев в файл”</p>
                 
               
               
@@ -953,7 +975,7 @@
     <div class="md-footer-nav">
       <nav class="md-footer-nav__inner md-grid" aria-label="">
         
-          <a href="../../JsonParams/JsonParamsRU/" title="Описание параметров, которые можно передавать в файле VAParams.json, который используется при запуске Vanessa Automation из командной строки." class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+          <a href="../../ReturnStatus/ReturnStatus/" title="Статус возврата" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
             <div class="md-footer-nav__button md-icon">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
             </div>
@@ -962,19 +984,19 @@
                 <span class="md-footer-nav__direction">
                   Назад
                 </span>
-                Описание параметров, которые можно передавать в файле VAParams.json, который используется при запуске Vanessa Automation из командной строки.
+                Статус возврата
               </div>
             </div>
           </a>
         
         
-          <a href="../../ReturnStatus/ReturnStatus/" title="Статус возврата" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+          <a href="../../TestDataGenerator/TestDataGenerator/" title="Подготовка и загрузка данных" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
             <div class="md-footer-nav__title">
               <div class="md-ellipsis">
                 <span class="md-footer-nav__direction">
                   Вперед
                 </span>
-                Статус возврата
+                Подготовка и загрузка данных
               </div>
             </div>
             <div class="md-footer-nav__button md-icon">
