@@ -3215,8 +3215,8 @@ Function LocalizedStringsServer()
 	ReturnData.Insert("s8b_ru", "ЯВыполняюКодИВставляюВПеременную");
 	ReturnData.Insert("s8c_en", "And I execute code and put to varible ""Code"" ""VaribleName""");
 	ReturnData.Insert("s8c_ru", "И я выполняю код и вставляю в переменную ""Код"" ""ИмяПеременной""");
-	ReturnData.Insert("s8d_en", "Executes code and puts to varible");
-	ReturnData.Insert("s8d_ru", "Выполняет код и вставляет в переменную");
+	ReturnData.Insert("s8d_en", "Executes code and puts to varible" + Символы.ПС + "Code is running on the server side. Context and ContextKeepable are not available");
+	ReturnData.Insert("s8d_ru", "Выполняет код и вставляет в переменную" + Символы.ПС + "Код выполняется на стороне сервера, Контекст и КонтекстСохраняемый недоступны");
 	
 	ReturnData.Insert("s9a_en", "#language: en");
 	ReturnData.Insert("s9a_ru", "#language: ru");
