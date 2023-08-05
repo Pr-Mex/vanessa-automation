@@ -683,6 +683,24 @@
 	        rotateCarousel(currImage);
 
 	    });
+	    
+	    // Прокрутка слайдов стрелками клавиатуры
+        document.addEventListener('keydown', (event) => {
+	        const key = event.key; // "ArrowRight", "ArrowLeft", "ArrowUp", or "ArrowDown"
+	        switch (key) {
+	            case "ArrowLeft":
+	                if (currImage !== 0) {
+	                    currImage--;
+	                }
+	                break;
+	            case "ArrowRight":
+	                if (currImage !== n - 1) {
+	                    currImage++;
+	                }
+	                break;
+	        }
+	        rotateCarousel(currImage);
+    });
 
 	    // пролистывание слайдов при клике в оглавлении
 	    let contents_a = document.querySelectorAll('.toc_ol a');
