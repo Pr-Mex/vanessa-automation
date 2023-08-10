@@ -1205,7 +1205,7 @@
 <p>Внешняя компонента VanessaExt</p>
 <ul>
 <li>
-<p><strong>ИспользоватьКомпонентуVanessaExt {useaddine}</strong>:
+<p><strong>ИспользоватьКомпонентуVanessaExt {useaddin}</strong>:
      Предназначена для управления окнами Windows и Linux. 
      Возможности:
      Получение списка окон и списка процессов
@@ -1220,6 +1220,12 @@
 <li>
 <p><strong>ПоискФайловСПомощьюКомпонентыVanessaExt {SearchingForFilesUsingTheVanessaExtComponent}</strong>:
      Включает поиск файлов с помощью внешней компоненты VanessaExt.</p>
+</li>
+<li>
+<p><strong>ЗавершатьРаботуЕслиНеПолучилосьВыполнитьТихуюУстановкуКомпоненты {QuitIfSilentInstallationAddinFails}</strong>:
+     Если флаг установлен и не получилось выполнить тихую установку внешней компоненты работа сеанса будет завершена с кодом возврата 4.
+     Возможные статусы возврата:
+     https://github.com/Pr-Mex/vanessa-automation/blob/develop/docs/ReturnStatus/ReturnStatus.md</p>
 </li>
 </ul>
 </li>
@@ -1238,6 +1244,35 @@
 <p><strong>КаталогИнструментов {instrpath}</strong>:
      Каталог, где находится обработка Vanessa Automation. При работе со стандартной поставкой поле должно быть заполнено.
      При работе с Vanessa Automation Single допускается оставлять поле пустым.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Дымовые тесты</p>
+<ul>
+<li>
+<p><strong>КаталогГенерированияДымовыхТестов {SmokeTestGenerationPath}</strong>:
+     Каталог, в который будут записаны итоговые feature-файлы</p>
+</li>
+<li>
+<p><strong>КаталогФайловИсключаемыхОбъектовИзДымовогоТестирования {CatalogOfFilesOfExcludedObjectsFromTheSmokeTest}</strong>:
+     Каталог, в котором хранятся текстовые файлы с объектами-исключениями.</p>
+</li>
+<li>
+<p><strong>ПутьНастройкиСценариеДымовыхТестов {TheSetupPathOfTheSmokeTestScenario}</strong>:
+     Путь к файлу настройки сценариев (файл настройки можно сформировать на закладке "Настройка сценариев" в окне "Генератор дымовых тестов")</p>
+</li>
+<li>
+<p><strong>ИмяКонфигурацииПоставщика {NameOfTheVendorConfiguration}</strong>:
+     Имя конфигурации поставщика для сравнения конфигураций</p>
+</li>
+<li>
+<p><strong>ТолькоИзмененныеОтносительноКонфигурацииПоставщикаДляДымовогоТестирования {OnlyChangedRelativelyProviderConfiguration}</strong>:
+     Если этот флаг установлен, в feature-файлы будут включены только те объекты, которые имеют хотя бы один элемент в текущей базе данных, не помеченный на удаление.</p>
+</li>
+<li>
+<p><strong>ТолькоВведенныеОбъектыДляДымовогоТестирования {OnlyEnteredObjects}</strong>:
+     При включении данного флага в формировании feature-файлов расширенных действий будут участвовать только объекты, для которых в текущей информационной базе существует хотя бы один не помеченный на удаление элемент</p>
 </li>
 </ul>
 </li>
@@ -1323,6 +1358,18 @@
 <li>
 <p><strong>ОтключитьЗапускРеглЗаданийВФайловойБазе {DisableScheduledJobsExecutionForFileInfobase}</strong>:
      Если опция включена, при запуске клиента тестирования в файловой базе будет отключен запуск регламентных заданий. Используется ключ командной строки /AllowExecuteScheduledJobs -Off</p>
+</li>
+<li>
+<p><strong>РазрешеноЗапускатьТолькоОдинКлиентТестирования {OnlyOneTestClientAllowedToRun}</strong>:
+     Если опция включена, то будет включен контроль, что одновременно не может быть подключено более одного клиента тестирования.
+     Это может быть полезно, если на компьютерах, на которых запускаются тесты, ограничен объем оперативной памяти и нужно контролировать запуск лишних процессов.</p>
+</li>
+<li>
+<p><strong>ПроверкаСерверныхВызововВОбработчикахСобытий {CheckingServerCallsInEventHandlers}</strong>:
+     Добавляет к параметрам запуска клиентов тестирования строку /EnableCheckServerCalls.
+     При завершении работы теста проверяет в окне "Информация для технической поддержки" наличие специальных сообщений о контекстных серверных вызовах.
+     Если такие сообщения были найдены, то будет вызвана ошибка сценария.
+     Подробная информация тут</p>
 </li>
 </ul>
 </li>
@@ -1432,8 +1479,14 @@
 <li>
 <p>Остановить выполнение сценария</p>
 <ul>
-<li><strong>ПоказыватьОкноОстановкиВыполненияСценария {ShowWindowForStoppingScriptExecution}</strong>:
-     Включает показ дополнительного окна, которое позволяет остановить выполнение сценария. Необходимо включить использование компоненты VanessaExt.</li>
+<li>
+<p><strong>ПоказыватьОкноОстановкиВыполненияСценария {ShowWindowForStoppingScriptExecution}</strong>:
+     Включает показ дополнительного окна, которое позволяет остановить выполнение сценария. Необходимо включить использование компоненты VanessaExt.</p>
+</li>
+<li>
+<p><strong>ИспользоватьДляОстановкиВыполненияСценарияФайл {UseAFileToStopScriptExecution}</strong>:
+     Если опция включена, то при нажатии кнопки остановки выполнения сценария в специальном окошке будет создаваться временный файл, а Vanessa Automation будет останавливать выполнение работы сценария, проверяя наличие этого файла.</p>
+</li>
 </ul>
 </li>
 <li>
@@ -1446,6 +1499,10 @@
 <li>
 <p>Стабилизация выполнения тестов</p>
 <ul>
+<li>
+<p><strong>КоличествоПопытокВыполненияСценария {NumberOfAttemptsToExecuteTheScript}</strong>:
+     Если в настройке указано значение более одного, тогда если сценарий не был выполнен успешно, будет выполнено ещё несколько попыток выполнения сценария.</p>
+</li>
 <li>
 <p><strong>КоличествоПопытокВыполненияДействия {numberofattemptstoperformanaction}</strong>:
      Устанавливает количество попыток выполнения действий для многих шагов.
@@ -1530,7 +1587,7 @@
 <ul>
 <li>
 <p><strong>ДелатьСкриншотПриВозникновенииОшибки {onerrorscreenshot}</strong>:
-      Включает снятие скриншотов при возникновении ошибки.
+      Включает снятие скриншотов при возникновении ошибки или по требованию (перед шагом указан тег @screenshot).
       Для работы опции необходимо, чтобы было заполнено поле "Команда создания скриншотов" либо подключена внешняя компонента VanessaExt.</p>
 </li>
 <li>
@@ -1581,7 +1638,7 @@
      https://pr-mex.github.io/vanessa-automation/dev/ReturnStatus/ReturnStatus</p>
 </li>
 <li>
-<p><strong>ИмяТекущейСборки {buildname}</strong>:
+<p><strong>ИмяТекущейСборки {NameCurrentBuild}</strong>:
      Уникальное имя сборки, которое используется совместно с параметром "Добавлять у имени сценария условия выгрузки".</p>
 </li>
 <li>
@@ -1675,18 +1732,12 @@
 <span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">КаталогОтносительноКоторогоНадоСтроитьИерархию</span><span class="w"> </span><span class="p">{</span><span class="n">directorytobuildhierarchy</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
 <span class="w">    </span><span class="err">Каталог</span><span class="p">,</span><span class="w"> </span><span class="err">относительно</span><span class="w"> </span><span class="err">которого</span><span class="w"> </span><span class="err">рассчитывается</span><span class="w"> </span><span class="err">иерархия</span><span class="w"> </span><span class="err">фич</span><span class="o">.</span><span class="w"> </span><span class="err">Подробности</span><span class="w"> </span><span class="err">описаны</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">справке</span><span class="o">.</span>
 
-<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">Группировка</span><span class="n">TestParentSuites</span><span class="w"> </span><span class="p">{</span><span class="n">testparentsuites</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">    </span><span class="err">Задаёт</span><span class="w"> </span><span class="err">значение</span><span class="w"> </span><span class="err">группировки</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">отчете</span><span class="w"> </span><span class="n">Allure</span><span class="w"> </span><span class="err">на</span><span class="w"> </span><span class="err">закладке</span><span class="w"> </span><span class="n">Suites</span><span class="o">.</span><span class="w"> </span><span class="err">Подробности</span><span class="w"> </span><span class="err">описаны</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">справке</span><span class="o">.</span>
-
-<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">Группировка</span><span class="n">TestSuites</span><span class="w"> </span><span class="p">{</span><span class="n">testsuites</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">    </span><span class="err">Задаёт</span><span class="w"> </span><span class="err">значение</span><span class="w"> </span><span class="err">группировки</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">отчете</span><span class="w"> </span><span class="n">Allure</span><span class="w"> </span><span class="err">на</span><span class="w"> </span><span class="err">закладке</span><span class="w"> </span><span class="n">Suites</span><span class="o">.</span><span class="w"> </span><span class="err">Подробности</span><span class="w"> </span><span class="err">описаны</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">справке</span><span class="o">.</span>
-
-<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">Группировка</span><span class="n">TestSubSuites</span><span class="w"> </span><span class="p">{</span><span class="n">testsubsuites</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">    </span><span class="err">Задаёт</span><span class="w"> </span><span class="err">значение</span><span class="w"> </span><span class="err">группировки</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">отчете</span><span class="w"> </span><span class="n">Allure</span><span class="w"> </span><span class="err">на</span><span class="w"> </span><span class="err">закладке</span><span class="w"> </span><span class="n">Suites</span><span class="o">.</span><span class="w"> </span><span class="err">Подробности</span><span class="w"> </span><span class="err">описаны</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">справке</span><span class="o">.</span>
-
 <span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ТегиПропускающиеСценарий</span><span class="n">Allure</span><span class="w"> </span><span class="p">{</span><span class="n">tagsskippingscript</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
 <span class="w">    </span><span class="err">Список</span><span class="w"> </span><span class="err">тегов</span><span class="p">,</span><span class="w"> </span><span class="err">разделённых</span><span class="w"> </span><span class="err">с</span><span class="w"> </span><span class="err">помощью</span><span class="w"> </span><span class="s2">&quot;;&quot;</span><span class="o">.</span>
 <span class="w">    </span><span class="err">Если</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">сценарии</span><span class="w"> </span><span class="err">есть</span><span class="w"> </span><span class="err">такой</span><span class="w"> </span><span class="err">тег</span><span class="p">,</span><span class="w"> </span><span class="err">тогда</span><span class="w"> </span><span class="err">сценарий</span><span class="w"> </span><span class="err">не</span><span class="w"> </span><span class="err">будет</span><span class="w"> </span><span class="err">выполняться</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">отчете</span><span class="w"> </span><span class="n">Allure</span><span class="w"> </span><span class="err">у</span><span class="w"> </span><span class="err">него</span><span class="w"> </span><span class="err">будет</span><span class="w"> </span><span class="err">статус</span><span class="w"> </span><span class="err">пропущен</span><span class="o">/</span><span class="n">skipped</span><span class="o">.</span>
+
+<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">Группировка</span><span class="n">TestSuites</span><span class="w"> </span><span class="p">{</span><span class="n">testsuites</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
+<span class="w">    </span><span class="err">Задаёт</span><span class="w"> </span><span class="err">значение</span><span class="w"> </span><span class="err">группировки</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">отчете</span><span class="w"> </span><span class="n">Allure</span><span class="w"> </span><span class="err">на</span><span class="w"> </span><span class="err">закладке</span><span class="w"> </span><span class="n">Suites</span><span class="o">.</span><span class="w"> </span><span class="err">Подробности</span><span class="w"> </span><span class="err">описаны</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">справке</span><span class="o">.</span>
 </code></pre></div>
 
 </li>
@@ -1735,7 +1786,7 @@
 </li>
 <li>
 <p>Данные аллюр меток</p>
-<div class="codehilite"><pre><span></span><code> * **ДанныеАллюрМеток {DataAllureMarks}**:
+<div class="codehilite"><pre><span></span><code> <span class="k">*</span> **ДанныеАллюрМеток {DataAllureMarks}**:
     Таблица используется для установки соответствия тегов сценариев меткам аллюра.
     Если в  строке таблицы указано регулярное выражение, то к каждому тегу сценария применяется регулярное выражение из данной таблицы и если тег ему соответствует, то к отчету будет добавлена метка в формате ИмяМетки:Значение.
     Если в строке таблицы регулярное выражение не указано, то метка добавляется безусловно.
@@ -1890,10 +1941,10 @@
 </li>
 <li>
 <p>Смещение координат мышки</p>
-<div class="codehilite"><pre><span></span><code> * **СмещениеПоГоризонталиДвиженияМышкиVanessaExt {hrizontaloffset}**:
+<div class="codehilite"><pre><span></span><code> <span class="k">*</span> **СмещениеПоГоризонталиДвиженияМышкиVanessaExt {hrizontaloffset}**:
     Используется, когда надо сместить положение мышки по горизонтали на заданное число пикселей. Может принимать как положительные, так и отрицательные значения.
 
- * **СмещениеПоВертикалиДвиженияМышкиVanessaExt {verticaloffset}**:
+ <span class="k">*</span> **СмещениеПоВертикалиДвиженияМышкиVanessaExt {verticaloffset}**:
     Используется, когда надо сместить положение мышки по вертикали на заданное число пикселей. Может принимать как положительные, так и отрицательные значения.
 </code></pre></div>
 
@@ -1910,14 +1961,14 @@
 </li>
 <li>
 <p>Подсветка клика мышки</p>
-<div class="codehilite"><pre><span></span><code> * **ПодсвечиватьКликМышкиВБраузереVanessaExt {hlightmouseclicksinbrowser}**:
+<div class="codehilite"><pre><span></span><code> <span class="k">*</span> **ПодсвечиватьКликМышкиВБраузереVanessaExt {hlightmouseclicksinbrowser}**:
     Если опция включена, то будет включена подсветка кликов с помощью внешней компоненты VanessaExt.
 </code></pre></div>
 
 <ul>
 <li>
 <p>Выбор цвета подсветки кликов мышки</p>
-<div class="codehilite"><pre><span></span><code>* **ЦветПодсветкиКликаМышкиVanessaExt {mouseclickhighlightcolor}**:
+<div class="codehilite"><pre><span></span><code><span class="k">*</span> **ЦветПодсветкиКликаМышкиVanessaExt {mouseclickhighlightcolor}**:
    Число. Задаёт цвет, которым будут подсвечиваться клики мышки.
 </code></pre></div>
 
@@ -1944,19 +1995,32 @@
 </li>
 <li>
 <p>Текстовые инструкции</p>
+<ul>
+<li>
+<p><strong>СоздаватьИнструкциюHTML {htmlcreate}</strong>:
+     Если флаг установлен, то во время выполнения сценария будет создаваться скринкаст в формате HTML.
+     В поле "Команда создания скриншотов" должна быть указана консольная команда для снятия скриншотов.
+     Также в тексте сценария возможно использовать специальные директивы, которые описаны в справке.</p>
 </li>
 <li>
-<p>HTML</p>
-<div class="codehilite"><pre><span></span><code> * **СоздаватьИнструкциюHTML {htmlcreate}**:
-    Если флаг установлен, то во время выполнения сценария будет создаваться скринкаст в формате HTML.
-    В поле &quot;Команда создания скриншотов&quot; должна быть указана консольная команда для снятия скриншотов.
-    Также в тексте сценария возможно использовать специальные директивы, которые описаны в справке.
+<p><strong>КаталогВыгрузкиИнструкцийHTML {htmlpath}</strong>:
+     Каталог HTML инструкций</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Стили HTML</p>
+<div class="codehilite"><pre><span></span><code> <span class="k">*</span> **ВариантСтилейHTMLИнструкции {VariantsHTMLInstructions}**:
+    Вариант 3D Карусель - адаптирован как под ПК так и под мобильные устройства
+    Подробности тут.
 
- * **КаталогВыгрузкиИнструкцийHTML {htmlpath}**:
-    Каталог HTML инструкций
-
- * **СтилиHTML {htmlstyles}**:
+ <span class="k">*</span> **СтилиHTMLИнструкции {htmlstyles}**:
     Файл стилей
+
+ <span class="k">*</span> **ВключитьОзвучкуHTML {EnableHTMLVoiceover}**:
+    Используется встроенная в браузеры технология Синтеза речи. Синтез речи (text-to-speech или tts) подразумевает получение синтезированного текста приложения и его речевое воспроизведение.
+    Подробнее
+    Воспроизведение текста начинается при клике на картинку шага.
 </code></pre></div>
 
 <ul>
@@ -1997,7 +2061,7 @@
 </li>
 <li>
 <p>Общие</p>
-<div class="codehilite"><pre><span></span><code> * **ОзвучиватьВыполнениеСценария {soundscenarioexecution}**:
+<div class="codehilite"><pre><span></span><code> <span class="k">*</span> **ОзвучиватьВыполнениеСценария {soundscenarioexecution}**:
     Включает озвучку выполнения сценария согласно заданным настройкам голоса диктора.
 </code></pre></div>
 
@@ -2011,15 +2075,15 @@
 <ul>
 <li>
 <p>Microsoft TTS</p>
-<div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоПутьКДвижкуTTS {audioenginetts}**:
+<div class="codehilite"><pre><span></span><code><span class="k">*</span> **ЗаписьВидеоПутьКДвижкуTTS {audioenginetts}**:
    Консольная команда, которая будет использована при конвертации текста в речь.
    Используется программа balabolka_console.
 
-* **ЗаписьВидеоИмяTTS {ttsvoice}**:
+<span class="k">*</span> **ЗаписьВидеоИмяTTS {ttsvoice}**:
    Указывает какой голос будет использован для озвучки. Допускается указывать не полное название голоса в системе, а только часть, например &quot;Elena&quot;.
    Понадобится установить Microsoft Speech Platform х32 и Server Runtime Languages.
 
-* **ЗаписьВидеоСкоростьПроизношения {speedofspeech}**:
+<span class="k">*</span> **ЗаписьВидеоСкоростьПроизношения {speedofspeech}**:
    Скорость произношения текста диктором.
    Значения могут быть от -10 до 10.
 </code></pre></div>
@@ -2105,7 +2169,7 @@
 </li>
 <li>
 <p>Группа другой движок TTS</p>
-<div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоПутьКОбработкеДвижкаTTS {pathprocessingenginetts}**:
+<div class="codehilite"><pre><span></span><code><span class="k">*</span> **ЗаписьВидеоПутьКОбработкеДвижкаTTS {pathprocessingenginetts}**:
    Позволяет генерировать озвучку шага с помощью внешней обработки. Обработка должна в основной форме содержать экспортный метод:
    GetMp3File(Vanessa, VideoParams, Text, FileName, VoiceParams)
    где:
@@ -2116,20 +2180,20 @@
    VoiceParams - дополнительные параметры озвучки, указанные в фича файле с помощью дополнительных директив
    Метод должен возвращать путь к mp3 файлу.
 
-* **НастройкиДругогоДвижкаTTS {SettingsOtherEngineTTS}**:
+<span class="k">*</span> **НастройкиДругогоДвижкаTTS {SettingsOtherEngineTTS}**:
    Позволяет задать произвольный набор настроек для генерации файлов озвучки.
 </code></pre></div>
 
 </li>
 <li>
 <p>Параметры Сбер</p>
-<div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоСберTTSClientID {sberttsclientid}**:
+<div class="codehilite"><pre><span></span><code><span class="k">*</span> **ЗаписьВидеоСберTTSClientID {sberttsclientid}**:
    Идентификатор клиента, полученный в Smartmarket studio
 
-* **ЗаписьВидеоСберTTSClientSecret {sberttsclientsecret}**:
+<span class="k">*</span> **ЗаписьВидеоСберTTSClientSecret {sberttsclientsecret}**:
    Вторая часть идентификации клиента в Smartmarket studio
 
-* **ЗаписьВидеоСберTTSГолос {sberttsvoice}**:
+<span class="k">*</span> **ЗаписьВидеоСберTTSГолос {sberttsvoice}**:
    Задает голос для генерации.
    Примеры голосов можно посмотреть здесь
 </code></pre></div>
@@ -2142,20 +2206,20 @@
 </li>
 <li>
 <p>Кэш аудио</p>
-<div class="codehilite"><pre><span></span><code> * **ЗаписьВидеоКэшироватьФайлыTTS {cachettsfiles}**:
+<div class="codehilite"><pre><span></span><code> <span class="k">*</span> **ЗаписьВидеоКэшироватьФайлыTTS {cachettsfiles}**:
     Включает кэширование файлов озвучки.
     Ускоряет сборку видео.
     Позволяет сократить обращение к внешним сервисам для генерации речи.
     Позволяет сократить затраты на генерацию речи при использовании платных тарифов у сервисов генерации речи.
 
- * **ЗаписьВидеоКэшФайловTTS {ttsfilescache}**:
+ <span class="k">*</span> **ЗаписьВидеоКэшФайловTTS {ttsfilescache}**:
     Каталог, в котором хранится кэш файлов озвучки.
 </code></pre></div>
 
 </li>
 <li>
 <p>Словари замен</p>
-<div class="codehilite"><pre><span></span><code> * **ЗаписьВидеоСловарьЗамен {changewordslib}**:
+<div class="codehilite"><pre><span></span><code> <span class="k">*</span> **ЗаписьВидеоСловарьЗамен {changewordslib}**:
     Список файлов, которые будут использоваться для автозамены произносимого текста.
 </code></pre></div>
 
@@ -2212,16 +2276,16 @@
 </li>
 <li>
 <p>Экран</p>
-<div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоЭкранШирина {screenwidth}**:
+<div class="codehilite"><pre><span></span><code><span class="k">*</span> **ЗаписьВидеоЭкранШирина {screenwidth}**:
    Задаёт ширину экрана для записи видео. Значение не может быть больше чем ширина в текущем разрешении экрана. Если указать значение меньше, то в видео будет записываться часть экрана, начиная с верхнего левого угла.
 
-* **ЗаписьВидеоЭкранСлева {screenleft}**:
+<span class="k">*</span> **ЗаписьВидеоЭкранСлева {screenleft}**:
    Задает отступ слева
 
-* **ЗаписьВидеоЭкранВысота {screenheight}**:
+<span class="k">*</span> **ЗаписьВидеоЭкранВысота {screenheight}**:
    Задаёт высоту экрана для записи видео. Значение не может быть больше чем высота в текущем разрешении экрана. Если указать значение меньше, то в видео будет записываться часть экрана, начиная с верхнего левого угла.
 
-* **ЗаписьВидеоЭкранСверху {screentop}**:
+<span class="k">*</span> **ЗаписьВидеоЭкранСверху {screentop}**:
    Задает отступ сверху
 </code></pre></div>
 
@@ -2251,17 +2315,17 @@
 </li>
 <li>
 <p>Настройки аудио</p>
-<div class="codehilite"><pre><span></span><code> * **ЗаписьВидеоДелатьНаложениеTTS {dotts}**:
+<div class="codehilite"><pre><span></span><code> <span class="k">*</span> **ЗаписьВидеоДелатьНаложениеTTS {dotts}**:
     Включает озвучку видео диктором.
 </code></pre></div>
 
 <ul>
-<li>Музыка<div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоКаталогМузыки {musicpath}**:
+<li>Музыка<div class="codehilite"><pre><span></span><code><span class="k">*</span> **ЗаписьВидеоКаталогМузыки {musicpath}**:
    Каталог, в котором находятся файлы в формате mp3.
    Если поле заполнено, то из каталога будет случайным образом взят mp3 файл, который будет использован для музыкальной подложки.
    Если длина mp3 файла меньше, чем длина результирующего видео, то аудио трек будет зациклен нужное количество раз, чтобы соответствовать длине видео файла.
 
-* **ЗаписьВидеоГромкостьМузыки {musicvolume}**:
+<span class="k">*</span> **ЗаписьВидеоГромкостьМузыки {musicvolume}**:
    Возможно указывать значение от 0 до 1.
    Если значение поля 0, тогда громкость музыки изменяться не будет.
    Если указано значение отличное от нуля (например 0.06), тогда данное значение будет влиять на громкость музыкальной подложки.
@@ -2274,48 +2338,48 @@
 </li>
 <li>
 <p>Дополнительно</p>
-<div class="codehilite"><pre><span></span><code> * **ЗаписьВидеоФайлКурсораМышки {mousecurfile}**:
+<div class="codehilite"><pre><span></span><code> <span class="k">*</span> **ЗаписьВидеоФайлКурсораМышки {mousecurfile}**:
     Путь к картинке, которая используется для отрисовки курсора мышки.
 
- * **ЗаписьВидеоФайлВодянойЗнак {watermarkfile}**:
+ <span class="k">*</span> **ЗаписьВидеоФайлВодянойЗнак {watermarkfile}**:
     Картинка в формате png, которая будет использована для наложения водяного знака.
     Водяной знак будет расположен в правом нижнем углу видео.
     Разрешение картинки должно быть меньше, чем разрешение, в котором идёт запись видео.
 
- * **ЗаписьВидеоПроцентУскорения {accelerationpercentage}**:
+ <span class="k">*</span> **ЗаписьВидеоПроцентУскорения {accelerationpercentage}**:
     Максимальный процент ускорения, который возможен для фрагмента видео (одного шага видео).
     Механизм сборки видео может ускорить фрагмент видео, например, если длительность аудио трека для фрагмента была 5 секунд, а сам видео фрагмент получился 10 секунд.
     Если указано значение 0 - то ограничения на ускорение нет.
     Рекомендуется значение - 30%.
-    Тогда в приведенном примере видео ускорится (5 * 1.3) с 5 секунд до 6.5 секунд.
+    Тогда в приведенном примере видео ускорится (5 <span class="gs">* 1.3) с 5 секунд до 6.5 секунд.</span>
 
- * **ЗаписьВидеоДобавлятьСубтитры {addsubtitles}**:
+<span class="gs"> *</span> **ЗаписьВидеоДобавлятьСубтитры {addsubtitles}**:
     Включает добавление субтитров встроенных в видео.
 
- * **ЗаписьВидеоГруппаШаговКакШаг {groupofstepsasastep}**:
+ <span class="k">*</span> **ЗаписьВидеоГруппаШаговКакШаг {groupofstepsasastep}**:
     Включает режим, когда по умолчанию каждая группа шагов первого уровня в сценарии будет конвертироваться в один шаг в автоинструкции.
 
- * **ЗаписьВидеоСкрытьСлужебныеОкна {hideservicewindows}**:
+ <span class="k">*</span> **ЗаписьВидеоСкрытьСлужебныеОкна {hideservicewindows}**:
     Скрывает служебные консольные окна, которые используются для сборки видео.
     Ускоряет сборку видео. Рекомендуется.
 
- * **ЗаписьВидеоОтключитьМасштабированиеШаговПоВремени {disablescalingofsteps}**:
+ <span class="k">*</span> **ЗаписьВидеоОтключитьМасштабированиеШаговПоВремени {disablescalingofsteps}**:
     Отключает масштабирование видео фрагментов по времени.
 
- * **ЗаписьВидеоОтключитьСлайдСЗаголовкомФичи {turnofffeaturetitleslide}**:
+ <span class="k">*</span> **ЗаписьВидеоОтключитьСлайдСЗаголовкомФичи {turnofffeaturetitleslide}**:
     Отключает создание в видео начального слайда, в котором указывается название фича файла.
 
- * **ЗаписьВидеоОтключитьСлайдСценария {turnoffscenarioslide}**:
+ <span class="k">*</span> **ЗаписьВидеоОтключитьСлайдСценария {turnoffscenarioslide}**:
     Отключает создание в видео слайда, в котором выводится название сценария.
 
- * **ЗаписьВидеоОтключитьСлайдФинал {turnofffinalslide}**:
+ <span class="k">*</span> **ЗаписьВидеоОтключитьСлайдФинал {turnofffinalslide}**:
     Отключает создание в видео финального слайда, в котором выводится итоговая информация по видео.
 
- * **ЗаписьВидеоПодсвечиватьНажатияМышки {highlightmouseclicks}**:
+ <span class="k">*</span> **ЗаписьВидеоПодсвечиватьНажатияМышки {highlightmouseclicks}**:
     Включает подсветку кликов мышки. Используется утилита из проекта UIToolsFor1C.
     Эмуляция кликов мышки осуществляется с помощью SikuliX.
 
- * **ЗаписьВидеоЭмулироватьВводСКлавиатуры {emulatekeyboardinput}**:
+ <span class="k">*</span> **ЗаписьВидеоЭмулироватьВводСКлавиатуры {emulatekeyboardinput}**:
     Включает ввод эмуляцию ввода текста с клавиатуры с помощью утилиты из проекта UIToolsFor1C.
     Допускается ввод текста только на русском и английском языках.
     Переключение раскладки клавиатуры осуществляется с помощью эмуляции нажатия Ctrl+Shift.
@@ -2324,26 +2388,26 @@
 <ul>
 <li>
 <p>Настройки  слайда с заголовком фичи</p>
-<div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоЗаменитьСлайдЗаголовок {changefeaturetitleslide}**:
+<div class="codehilite"><pre><span></span><code><span class="k">*</span> **ЗаписьВидеоЗаменитьСлайдЗаголовок {changefeaturetitleslide}**:
    Если флаг установлен, то стандартный файл с заголовком фичи будет заменен на указанный видео файл. Видео файл должен быть того разрешения, что и записываемое видео. Также у него должна быть аудио дорожка.
 
-* **ЗаписьВидеоДобавитьМузыкуКСлайдуЗаголовок {addmusictofeaturetitleslide}**:
+<span class="k">*</span> **ЗаписьВидеоДобавитьМузыкуКСлайдуЗаголовок {addmusictofeaturetitleslide}**:
    Если флаг установлен, то к видео файлу с заголовком фичи будет добавлена музыка.
 
-* **ЗаписьВидеоПутьКСлайдуЗаголовок {featuretitleslidepath}**:
+<span class="k">*</span> **ЗаписьВидеоПутьКСлайдуЗаголовок {featuretitleslidepath}**:
    Путь к видео файлу с заголовком фичи,  который будет добавлен вместо стандартного.
 </code></pre></div>
 
 </li>
 <li>
 <p>Настройки финального слайда</p>
-<div class="codehilite"><pre><span></span><code>* **ЗаписьВидеоЗаменитьСлайдФинал {changefinalslide}**:
+<div class="codehilite"><pre><span></span><code><span class="k">*</span> **ЗаписьВидеоЗаменитьСлайдФинал {changefinalslide}**:
    Если флаг установлен, то стандартный финальный файл будет заменен на указанный видео файл. Видео файл должен быть того разрешения, что и записываемое видео. Также у него должна быть аудио дорожка.
 
-* **ЗаписьВидеоДобавитьМузыкуКСлайдуФинал {addmusictofinalslide}**:
+<span class="k">*</span> **ЗаписьВидеоДобавитьМузыкуКСлайдуФинал {addmusictofinalslide}**:
    Если флаг установлен, то к финальному видео файлу  будет добавлена музыка.
 
-* **ЗаписьВидеоПутьКСлайдуФинал {finalslidepath}**:
+<span class="k">*</span> **ЗаписьВидеоПутьКСлайдуФинал {finalslidepath}**:
    Путь к финальному видео файлу, который будет добавлен вместо стандартного финального видео файла.
 </code></pre></div>
 

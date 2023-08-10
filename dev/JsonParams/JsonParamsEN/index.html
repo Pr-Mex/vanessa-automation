@@ -1205,7 +1205,7 @@ An array of key and value objects. This array will be loaded into global variabl
 <p>External component VanessaExt</p>
 <ul>
 <li>
-<p><strong>useaddine</strong>:
+<p><strong>useaddin</strong>:
      Designed to manage Windows and Linux windows.
      Possibilities:
      Getting a list of windows and a list of processes
@@ -1221,6 +1221,12 @@ An array of key and value objects. This array will be loaded into global variabl
 <p><strong>SearchingForFilesUsingTheVanessaExtComponent</strong>:
      Enables searching for files using the VanessaExt external component.</p>
 </li>
+<li>
+<p><strong>QuitIfSilentInstallationAddinFails</strong>:
+     If the flag is set and the silent installation of the external component fails, the session will end with a return code of 4.
+     Possible return statuses:
+     https://github.com/Pr-Mex/vanessa-automation/blob/develop/docs/ReturnStatus/ReturnStatus.md</p>
+</li>
 </ul>
 </li>
 <li>
@@ -1231,9 +1237,42 @@ An array of key and value objects. This array will be loaded into global variabl
      The catalog with the tested project files, which are necessary for test execution.</p>
 </li>
 <li>
+<p><strong>UseTemplateForNewFeature</strong>:
+     If a template is specified (in *.txt format), then a new script will be created from it</p>
+</li>
+<li>
 <p><strong>instrpath</strong>:
      The catalog of Vanessa Automation data processor. This field must be filled on the standard installation.
      When working with Vanessa Automation Single it is allowed to leave the field blank.</p>
+</li>
+</ul>
+</li>
+<li>
+<p>Smoke Tests</p>
+<ul>
+<li>
+<p><strong>SmokeTestGenerationPath</strong>:
+     Directory in which the resulting feature-files will be written</p>
+</li>
+<li>
+<p><strong>CatalogOfFilesOfExcludedObjectsFromTheSmokeTest</strong>:
+     Directory in which text files with exception objects are stored.</p>
+</li>
+<li>
+<p><strong>TheSetupPathOfTheSmokeTestScenario</strong>:
+     Path to the script setup file (the setup file can be created on the "Script Setup" tab of the "Smoke test generator" window)</p>
+</li>
+<li>
+<p><strong>NameOfTheVendorConfiguration</strong>:
+     Vendor configuration name for configuration comparison</p>
+</li>
+<li>
+<p><strong>OnlyChangedRelativelyProviderConfiguration</strong>:
+     If this flag is set, feature-files will only include objects that have at least one item in the current database that is not marked for deletion.</p>
+</li>
+<li>
+<p><strong>OnlyEnteredObjects</strong>:
+     If this flag is set, only those objects that have at least one item in the current database that is not marked for deletion will be included in the creation of feature-files.</p>
 </li>
 </ul>
 </li>
@@ -1320,6 +1359,18 @@ An array of key and value objects. This array will be loaded into global variabl
 <p><strong>DisableScheduledJobsExecutionForFileInfobase</strong>:
      If this option is enabled, scheduled jobs execution will be disabled when new test client will start for a file infobase. Uses command line key /AllowExecuteScheduledJobs -Off</p>
 </li>
+<li>
+<p><strong>OnlyOneTestClientAllowedToRun</strong>:
+     If this option is enabled, control will be enabled that more than one testing client cannot be connected at the same time.
+     This can be useful if the computers on which the tests are run have a limited amount of RAM and you need to control the launch of unnecessary processes.</p>
+</li>
+<li>
+<p><strong>CheckingServerCallsInEventHandlers</strong>:
+     Adds the string /EnableCheckServerCalls to the launch options of test clients.
+     When the test completes, it checks the "Technical Support Information" window for special messages about context server calls.
+     If such messages were found, a script error will be raised.
+     Detailed information here</p>
+</li>
 </ul>
 </li>
 <li>
@@ -1342,9 +1393,16 @@ An array of key and value objects. This array will be loaded into global variabl
 <li>
 <p>Browser launch</p>
 <ul>
-<li><strong>browserlaunchcommand</strong>:
+<li>
+<p><strong>browserlaunchcommand</strong>:
      This field indicates the command to launch the browser. If the field is empty, then the default browser will be used to start the web client.
-     If there is a TestClientUrl string in the browser launch command, then it will be replaced with the test client connection string. Otherwise, the test client connection string will be appended to the end as the last parameter.</li>
+     If there is a TestClientUrl string in the browser launch command, then it will be replaced with the test client connection string. Otherwise, the test client connection string will be appended to the end as the last parameter.</p>
+</li>
+<li>
+<p><strong>usebrowserwebsocket</strong>:
+     Allows to execute external commands in the browser using WebSocket.
+     For the option to work, you must enable the use of the VanessaExt component.</p>
+</li>
 </ul>
 </li>
 <li>
@@ -1421,8 +1479,14 @@ An array of key and value objects. This array will be loaded into global variabl
 <li>
 <p>Stop script execution</p>
 <ul>
-<li><strong>ShowWindowForStoppingScriptExecution</strong>:
-     Enables the display of an additional window that allows you to stop the execution of the script. You need to enable the use of the VanessaExt component.</li>
+<li>
+<p><strong>ShowWindowForStoppingScriptExecution</strong>:
+     Enables the display of an additional window that allows you to stop the execution of the script. You need to enable the use of the VanessaExt component.</p>
+</li>
+<li>
+<p><strong>UseAFileToStopScriptExecution</strong>:
+     If this option is enabled, then when you click the stop script execution button in a special window, a temporary file will be created, and Vanessa Automation will stop the script execution by checking for the presence of this file.</p>
+</li>
 </ul>
 </li>
 <li>
@@ -1435,6 +1499,10 @@ An array of key and value objects. This array will be loaded into global variabl
 <li>
 <p>Test execution stabilization</p>
 <ul>
+<li>
+<p><strong>NumberOfAttemptsToExecuteTheScript</strong>:
+     If the setting specifies a value of more than one, then if the script was not executed successfully, several more attempts to execute the script will be made.</p>
+</li>
 <li>
 <p><strong>numberofattemptstoperformanaction</strong>:
      Sets maximum tries number for multiple steps.
@@ -1520,7 +1588,7 @@ An array of key and value objects. This array will be loaded into global variabl
 <ul>
 <li>
 <p><strong>onerrorscreenshot</strong>:
-      Enables taking screenshots in case of an error.
+      Enables taking screenshots in case of an error or on demand (the @screenshot tag is specified before the step).
       To enable the option, make sure the "Screenshot creation command" field is filled in or VanessaExt is enabled.</p>
 </li>
 <li>
@@ -1532,6 +1600,10 @@ An array of key and value objects. This array will be loaded into global variabl
 <p><strong>useaddinforscreencapture</strong>:
       To take screenshots, use the VanessaExt add-in instead of the screenshot creation command.
       For the option to work, it is necessary to enable the use of the VanessaExt external component.</p>
+</li>
+<li>
+<p><strong>TakeBrowserScreenshots</strong>:
+      If this option is enabled, then if an error occurs when the browser is connected via the debug port, an attempt will be made to take a screenshot of the browser.</p>
 </li>
 <li>
 <p><strong>outputscreenshot</strong>:
@@ -1567,7 +1639,7 @@ An array of key and value objects. This array will be loaded into global variabl
      https://pr-mex.github.io/vanessa-automation/dev/ReturnStatus/ReturnStatus</p>
 </li>
 <li>
-<p><strong>buildname</strong>:
+<p><strong>NameCurrentBuild</strong>:
      Unique assembly name used along with the parameter "Add uploading conditions to scenario name".</p>
 </li>
 <li>
@@ -1661,12 +1733,12 @@ An array of key and value objects. This array will be loaded into global variabl
 <span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">directorytobuildhierarchy</span><span class="o">**</span><span class="p">:</span>
 <span class="w">    </span><span class="n">The</span><span class="w"> </span><span class="n">directory</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">features</span><span class="w"> </span><span class="n">hierarchy</span><span class="w"> </span><span class="n">calculation</span><span class="o">.</span><span class="w"> </span><span class="n">See</span><span class="w"> </span><span class="n">Help</span><span class="w"> </span><span class="n">info</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">details</span><span class="o">.</span>
 
-<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">testsuites</span><span class="o">**</span><span class="p">:</span>
-<span class="w">    </span><span class="n">Sets</span><span class="w"> </span><span class="n">grouping</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">Allure</span><span class="w"> </span><span class="n">report</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Suites</span><span class="w"> </span><span class="n">tab</span><span class="o">.</span><span class="w"> </span><span class="n">See</span><span class="w"> </span><span class="n">Help</span><span class="w"> </span><span class="n">info</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">details</span><span class="o">.</span>
-
 <span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">tagsskippingscript</span><span class="o">**</span><span class="p">:</span>
 <span class="w">    </span><span class="n">List</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">tags</span><span class="w"> </span><span class="n">separated</span><span class="w"> </span><span class="n">by</span><span class="w"> </span><span class="s2">&quot;;&quot;</span><span class="o">.</span>
 <span class="w">    </span><span class="n">If</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">script</span><span class="w"> </span><span class="n">contains</span><span class="w"> </span><span class="n">such</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">tag</span><span class="p">,</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">script</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">executed</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Allure</span><span class="w"> </span><span class="n">report</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">have</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">skipped</span><span class="w"> </span><span class="n">status</span><span class="o">.</span>
+
+<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">testsuites</span><span class="o">**</span><span class="p">:</span>
+<span class="w">    </span><span class="n">Sets</span><span class="w"> </span><span class="n">grouping</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">Allure</span><span class="w"> </span><span class="n">report</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">Suites</span><span class="w"> </span><span class="n">tab</span><span class="o">.</span><span class="w"> </span><span class="n">See</span><span class="w"> </span><span class="n">Help</span><span class="w"> </span><span class="n">info</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">details</span><span class="o">.</span>
 </code></pre></div>
 
 </li>
@@ -1835,6 +1907,10 @@ An array of key and value objects. This array will be loaded into global variabl
 <p><strong>ignorebrowsersearcherrors</strong>:
      Allows to continue running the scenario if the form item is not found in the browser.</p>
 </li>
+<li>
+<p><strong>scalefactor</strong>:
+     The default value is one. If screen scaling is used in the OS, then you need to change to set the appropriate value. For example, when scaling to 150% in the OS, you need to set the coefficient value to 1.5.</p>
+</li>
 </ul>
 </li>
 <li>
@@ -1866,21 +1942,35 @@ An array of key and value objects. This array will be loaded into global variabl
 </li>
 <li>
 <p>Mouse coordinate offset</p>
+<div class="codehilite"><pre><span></span><code> <span class="k">*</span> **hrizontaloffset**:
+    It is used when it is necessary to shift the position of the mouse horizontally by a specified number of pixels. It can take both positive and negative values.
+
+ <span class="k">*</span> **verticaloffset**:
+    It is used when it is necessary to shift the position of the mouse vertically by a specified number of pixels. It can take both positive and negative values.
+</code></pre></div>
+
 </li>
 <li>
 <p>Mouse movement speed</p>
+<div class="codehilite"><pre><span></span><code><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">thenumberofstepswhenmovingthemouse</span><span class="o">**</span><span class="p">:</span>
+<span class="w">    </span><span class="n">Sets</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">number</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">micromovements</span><span class="w"> </span><span class="p">(</span><span class="n">steps</span><span class="p">)</span><span class="w"> </span><span class="n">that</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">mouse</span><span class="w"> </span><span class="n">makes</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">its</span><span class="w"> </span><span class="n">way</span><span class="o">.</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="n">default</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="mf">150.</span>
+
+<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">timeoutbetweenstepswhenmovingthemouse</span><span class="o">**</span><span class="p">:</span>
+<span class="w">    </span><span class="n">Sets</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="n">pause</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">milliseconds</span><span class="w"> </span><span class="n">between</span><span class="w"> </span><span class="n">micro</span><span class="w"> </span><span class="n">mouse</span><span class="w"> </span><span class="n">movements</span><span class="o">.</span><span class="w"> </span><span class="n">The</span><span class="w"> </span><span class="n">default</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="mf">3.</span>
+</code></pre></div>
+
 </li>
 <li>
 <p>Mouse click highlight</p>
-<div class="codehilite"><pre><span></span><code><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="nv">hlightmouseclicksinbrowser</span><span class="o">**</span>:
-<span class="w">    </span><span class="k">If</span><span class="w"> </span><span class="nv">this</span><span class="w"> </span><span class="nv">option</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">enabled</span>,<span class="w"> </span><span class="nv">click</span><span class="w"> </span><span class="nv">highlighting</span><span class="w"> </span><span class="nv">will</span><span class="w"> </span><span class="nv">be</span><span class="w"> </span><span class="nv">enabled</span><span class="w"> </span><span class="nv">using</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">external</span><span class="w"> </span><span class="nv">VanessaExt</span><span class="w"> </span><span class="nv">component</span>.
+<div class="codehilite"><pre><span></span><code> <span class="k">*</span> **hlightmouseclicksinbrowser**:
+    If this option is enabled, click highlighting will be enabled using the external VanessaExt component.
 </code></pre></div>
 
 <ul>
 <li>
 <p>Selecting a color for highlighting mouse clicks</p>
-<div class="codehilite"><pre><span></span><code><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="nv">mouseclickhighlightcolor</span><span class="o">**</span>:
-<span class="w">   </span><span class="nv">Number</span>.<span class="w"> </span><span class="nv">Sets</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">color</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">highlighting</span><span class="w"> </span><span class="nv">mouse</span><span class="w"> </span><span class="nv">clicks</span>.
+<div class="codehilite"><pre><span></span><code><span class="k">*</span> **mouseclickhighlightcolor**:
+   Number. Sets the color for highlighting mouse clicks.
 </code></pre></div>
 
 <ul>
@@ -1906,19 +1996,32 @@ An array of key and value objects. This array will be loaded into global variabl
 </li>
 <li>
 <p>HTML and Markdown</p>
+<ul>
+<li>
+<p><strong>htmlcreate</strong>:
+     If the checkbox is on, HTML screencast will be created during scenario execution.
+     Specify console command for snapshots generation in  "Snapshot creating command" field.
+     Also use special instructions in the script, see Help info.</p>
 </li>
 <li>
-<p>HTML</p>
-<div class="codehilite"><pre><span></span><code><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="nv">htmlcreate</span><span class="o">**</span>:
-<span class="w">    </span><span class="k">If</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">checkbox</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">on</span>,<span class="w"> </span><span class="nv">HTML</span><span class="w"> </span><span class="nv">screencast</span><span class="w"> </span><span class="nv">will</span><span class="w"> </span><span class="nv">be</span><span class="w"> </span><span class="nv">created</span><span class="w"> </span><span class="nv">during</span><span class="w"> </span><span class="nv">scenario</span><span class="w"> </span><span class="nv">execution</span>.
-<span class="w">    </span><span class="nv">Specify</span><span class="w"> </span><span class="nv">console</span><span class="w"> </span><span class="nv">command</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">snapshots</span><span class="w"> </span><span class="nv">generation</span><span class="w"> </span><span class="nv">in</span><span class="w">  </span><span class="s2">&quot;Snapshot creating command&quot;</span><span class="w"> </span><span class="nv">field</span>.
-<span class="w">    </span><span class="nv">Also</span><span class="w"> </span><span class="nv">use</span><span class="w"> </span><span class="nv">special</span><span class="w"> </span><span class="nv">instructions</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">script</span>,<span class="w"> </span><span class="nv">see</span><span class="w"> </span><span class="nv">Help</span><span class="w"> </span><span class="nv">info</span>.
+<p><strong>htmlpath</strong>:
+     HTML instruction catalog</p>
+</li>
+</ul>
+</li>
+<li>
+<p>HTML Styles</p>
+<div class="codehilite"><pre><span></span><code><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">VariantsHTMLInstructions</span><span class="o">**</span><span class="p">:</span>
+<span class="w">    </span><span class="mi">3</span><span class="n">D</span><span class="w"> </span><span class="n">Carousel</span><span class="w"> </span><span class="n">variant</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">adapted</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="n">both</span><span class="w"> </span><span class="n">PC</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">mobile</span>
+<span class="w">    </span><span class="n">Details</span><span class="w"> </span><span class="n">here</span><span class="o">.</span>
 
-<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="nv">htmlpath</span><span class="o">**</span>:
-<span class="w">    </span><span class="nv">HTML</span><span class="w"> </span><span class="nv">instruction</span><span class="w"> </span><span class="nv">catalog</span>
+<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">htmlstyles</span><span class="o">**</span><span class="p">:</span>
+<span class="w">    </span><span class="n">Style</span><span class="w"> </span><span class="n">File</span>
 
-<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="nv">htmlstyles</span><span class="o">**</span>:
-<span class="w">    </span><span class="nv">Style</span><span class="w"> </span><span class="nv">File</span>
+<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">EnableHTMLVoiceover</span><span class="o">**</span><span class="p">:</span>
+<span class="w">    </span><span class="n">Speech</span><span class="w"> </span><span class="n">Synthesis</span><span class="w"> </span><span class="n">technology</span><span class="w"> </span><span class="n">built</span><span class="w"> </span><span class="n">into</span><span class="w"> </span><span class="n">browsers</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">used</span><span class="o">.</span><span class="w"> </span><span class="n">Speech</span><span class="w"> </span><span class="n">synthesis</span><span class="w"> </span><span class="p">(</span><span class="n">text</span><span class="o">-</span><span class="n">to</span><span class="o">-</span><span class="n">speech</span><span class="w"> </span><span class="ow">or</span><span class="w"> </span><span class="n">tts</span><span class="p">)</span><span class="w"> </span><span class="n">involves</span><span class="w"> </span><span class="n">receiving</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">synthesized</span><span class="w"> </span><span class="n">text</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">application</span><span class="w"> </span><span class="ow">and</span><span class="w"> </span><span class="n">its</span><span class="w"> </span><span class="n">speech</span><span class="w"> </span><span class="n">reproduction</span><span class="o">.</span>
+<span class="w">    </span><span class="n">More</span><span class="w"> </span><span class="n">detailed</span><span class="w"> </span>
+<span class="w">    </span><span class="n">Text</span><span class="w"> </span><span class="n">playback</span><span class="w"> </span><span class="n">starts</span><span class="w"> </span><span class="n">when</span><span class="w"> </span><span class="n">you</span><span class="w"> </span><span class="n">click</span><span class="w"> </span><span class="n">on</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">step</span><span class="w"> </span><span class="n">image</span><span class="o">.</span>
 </code></pre></div>
 
 <ul>
@@ -1959,7 +2062,7 @@ An array of key and value objects. This array will be loaded into global variabl
 </li>
 <li>
 <p>General</p>
-<div class="codehilite"><pre><span></span><code> * **soundscenarioexecution**:
+<div class="codehilite"><pre><span></span><code> <span class="k">*</span> **soundscenarioexecution**:
     Includes voice acting of the script execution according to the specified settings of the announcer&#39;s voice.
 </code></pre></div>
 
@@ -1973,17 +2076,17 @@ An array of key and value objects. This array will be loaded into global variabl
 <ul>
 <li>
 <p>Microsoft TTS</p>
-<div class="codehilite"><pre><span></span><code><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="nv">audioenginetts</span><span class="o">**</span>:
-<span class="w">   </span><span class="nv">The</span><span class="w"> </span><span class="nv">console</span><span class="w"> </span><span class="nv">command</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">be</span><span class="w"> </span><span class="nv">used</span><span class="w"> </span><span class="nv">when</span><span class="w"> </span><span class="nv">converting</span><span class="w"> </span><span class="nv">text</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">speech</span>.
-<span class="w">   </span><span class="nv">The</span><span class="w">  </span><span class="nv">balabolka_console</span><span class="w"> </span><span class="nv">program</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">used</span>.
+<div class="codehilite"><pre><span></span><code><span class="k">*</span> **audioenginetts**:
+   The console command to be used when converting text to speech.
+   The  balabolka_console program is used.
 
-<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="nv">ttsvoice</span><span class="o">**</span>:
-<span class="w">   </span><span class="nv">Specifies</span><span class="w"> </span><span class="nv">which</span><span class="w"> </span><span class="nv">voice</span><span class="w"> </span><span class="nv">will</span><span class="w"> </span><span class="nv">be</span><span class="w"> </span><span class="nv">used</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">voice</span><span class="w"> </span><span class="nv">acting</span>.<span class="w"> </span><span class="nv">It</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">allowed</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">indicate</span><span class="w"> </span><span class="nv">not</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">full</span><span class="w"> </span><span class="nv">name</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">voice</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">system</span>,<span class="w"> </span><span class="nv">but</span><span class="w"> </span><span class="nv">only</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">part</span>,<span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">example</span><span class="w"> </span><span class="s2">&quot;Elena&quot;</span>.
-<span class="w">   </span><span class="nv">You</span><span class="w"> </span><span class="nv">will</span><span class="w"> </span><span class="nv">need</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">install</span><span class="w"> </span><span class="nv">Microsoft</span><span class="w"> </span><span class="nv">Speech</span><span class="w"> </span><span class="nv">Platform</span><span class="w"> </span><span class="nv">x32</span><span class="w"> </span><span class="nv">and</span><span class="w"> </span><span class="nv">Server</span><span class="w"> </span><span class="nv">Runtime</span><span class="w"> </span><span class="nv">Languages</span>.
+<span class="k">*</span> **ttsvoice**:
+   Specifies which voice will be used for voice acting. It is allowed to indicate not the full name of the voice in the system, but only a part, for example &quot;Elena&quot;.
+   You will need to install Microsoft Speech Platform x32 and Server Runtime Languages.
 
-<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="nv">speedofspeech</span><span class="o">**</span>:
-<span class="w">   </span><span class="nv">Narrator</span><span class="err">&#39;s speech speed.</span>
-<span class="err">   Value range is from -10 to 10.</span>
+<span class="k">*</span> **speedofspeech**:
+   Narrator&#39;s speech speed.
+   Value range is from -10 to 10.
 </code></pre></div>
 
 </li>
@@ -2085,7 +2188,13 @@ An array of key and value objects. This array will be loaded into global variabl
 </li>
 <li>
 <p>SBER parameters</p>
-<div class="codehilite"><pre><span></span><code>* **sberttsvoice**:
+<div class="codehilite"><pre><span></span><code><span class="k">*</span> **sberttsclientid**:
+   Client ID received in Smartmarket studio
+
+<span class="k">*</span> **sberttsclientsecret**:
+   The second part of client identification in Smartmarket studio
+
+<span class="k">*</span> **sberttsvoice**:
    Sets the voice to generate.
    Examples of voices can be found here
 </code></pre></div>
@@ -2098,21 +2207,21 @@ An array of key and value objects. This array will be loaded into global variabl
 </li>
 <li>
 <p>Audio cache</p>
-<div class="codehilite"><pre><span></span><code> * **cachettsfiles**:
+<div class="codehilite"><pre><span></span><code> <span class="k">*</span> **cachettsfiles**:
     Switchs on voice file cashing.
     Makes video assembly process faster.
     Reduces external voice generation servises usage.
     Reduces voice generation costs.
 
- * **ttsfilescache**:
+ <span class="k">*</span> **ttsfilescache**:
     Voice cache files directory.
 </code></pre></div>
 
 </li>
 <li>
 <p>Replacements dictionaries</p>
-<div class="codehilite"><pre><span></span><code><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="nv">changewordslib</span><span class="o">**</span>:
-<span class="w">    </span><span class="nv">List</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">files</span><span class="w"> </span><span class="nv">that</span><span class="w"> </span><span class="nv">will</span><span class="w"> </span><span class="nv">be</span><span class="w"> </span><span class="nv">used</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">autocorrect</span><span class="w"> </span><span class="nv">spoken</span><span class="w"> </span><span class="nv">text</span>.
+<div class="codehilite"><pre><span></span><code> <span class="k">*</span> **changewordslib**:
+    List of files that will be used for autocorrect spoken text.
 </code></pre></div>
 
 </li>
@@ -2168,17 +2277,17 @@ An array of key and value objects. This array will be loaded into global variabl
 </li>
 <li>
 <p>Screen</p>
-<div class="codehilite"><pre><span></span><code><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="nv">screenwidth</span><span class="o">**</span>:
-<span class="w">   </span><span class="nv">Sets</span><span class="w"> </span><span class="nv">screen</span><span class="w"> </span><span class="nv">width</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">recording</span>.<span class="w"> </span><span class="nv">Maximum</span><span class="w"> </span><span class="nv">value</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">screen</span><span class="w"> </span><span class="nv">width</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">current</span><span class="w"> </span><span class="nv">resolution</span>.<span class="w"> </span><span class="k">If</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">specified</span><span class="w"> </span><span class="nv">value</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">less</span><span class="w"> </span><span class="nv">than</span><span class="w"> </span><span class="nv">screen</span><span class="w"> </span><span class="nv">width</span>,<span class="w"> </span><span class="nv">screen</span><span class="w"> </span><span class="nv">area</span><span class="w"> </span><span class="nv">beginning</span><span class="w"> </span><span class="nv">from</span><span class="w"> </span><span class="nv">upper</span><span class="w"> </span><span class="nv">left</span><span class="w"> </span><span class="nv">corner</span><span class="w"> </span><span class="nv">will</span><span class="w"> </span><span class="nv">be</span><span class="w"> </span><span class="nv">recorded</span>.
+<div class="codehilite"><pre><span></span><code><span class="k">*</span> **screenwidth**:
+   Sets screen width for the recording. Maximum value is screen width for the current resolution. If the specified value is less than screen width, screen area beginning from upper left corner will be recorded.
 
-<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="nv">screenleft</span><span class="o">**</span>:
-<span class="w">   </span><span class="nv">Sets</span><span class="w"> </span><span class="nv">left</span><span class="w"> </span><span class="nv">indent</span>
+<span class="k">*</span> **screenleft**:
+   Sets left indent
 
-<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="nv">screenheight</span><span class="o">**</span>:
-<span class="w">   </span><span class="nv">Sets</span><span class="w"> </span><span class="nv">screen</span><span class="w"> </span><span class="nv">height</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">recording</span>.<span class="w"> </span><span class="nv">Maximum</span><span class="w"> </span><span class="nv">value</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">screen</span><span class="w"> </span><span class="nv">height</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">current</span><span class="w"> </span><span class="nv">resolution</span>.<span class="w"> </span><span class="k">If</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">specified</span><span class="w"> </span><span class="nv">value</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">less</span><span class="w"> </span><span class="nv">than</span><span class="w"> </span><span class="nv">screen</span><span class="w"> </span><span class="nv">height</span>,<span class="w"> </span><span class="nv">screen</span><span class="w"> </span><span class="nv">area</span><span class="w"> </span><span class="nv">beginning</span><span class="w"> </span><span class="nv">from</span><span class="w"> </span><span class="nv">upper</span><span class="w"> </span><span class="nv">left</span><span class="w"> </span><span class="nv">corner</span><span class="w"> </span><span class="nv">will</span><span class="w"> </span><span class="nv">be</span><span class="w"> </span><span class="nv">recorded</span>.
+<span class="k">*</span> **screenheight**:
+   Sets screen height for the recording. Maximum value is screen height for the current resolution. If the specified value is less than screen height, screen area beginning from upper left corner will be recorded.
 
-<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="nv">screentop</span><span class="o">**</span>:
-<span class="w">   </span><span class="nv">Sets</span><span class="w"> </span><span class="nv">top</span><span class="w"> </span><span class="nv">indent</span>
+<span class="k">*</span> **screentop**:
+   Sets top indent
 </code></pre></div>
 
 </li>
@@ -2207,21 +2316,21 @@ An array of key and value objects. This array will be loaded into global variabl
 </li>
 <li>
 <p>Audio settings</p>
-<div class="codehilite"><pre><span></span><code> * **dotts**:
+<div class="codehilite"><pre><span></span><code> <span class="k">*</span> **dotts**:
     Switches on the voicing of the video.
 </code></pre></div>
 
 <ul>
-<li>Music<div class="codehilite"><pre><span></span><code><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="nv">musicpath</span><span class="o">**</span>:
-<span class="w">   </span><span class="nv">mp3</span><span class="w"> </span><span class="nv">files</span><span class="w"> </span><span class="nv">directory</span>.
-<span class="w">   </span><span class="k">If</span><span class="w"> </span><span class="nv">this</span><span class="w"> </span><span class="nv">field</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">filled</span>,<span class="w"> </span><span class="k">random</span><span class="w"> </span><span class="nv">mp3</span><span class="w"> </span><span class="nv">file</span><span class="w"> </span><span class="nv">will</span><span class="w"> </span><span class="nv">be</span><span class="w"> </span><span class="nv">retrieved</span><span class="w"> </span><span class="nv">from</span><span class="w"> </span><span class="nv">this</span><span class="w"> </span><span class="nv">catalog</span><span class="w"> </span><span class="nv">as</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">soundtrack</span>.
-<span class="w">   </span><span class="k">If</span><span class="w"> </span><span class="nv">mp3</span><span class="w"> </span><span class="nv">file</span><span class="w"> </span><span class="nv">duration</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">less</span><span class="w"> </span><span class="nv">than</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">video</span><span class="err">&#39;s, it will be repeated.</span>
+<li>Music<div class="codehilite"><pre><span></span><code><span class="k">*</span> **musicpath**:
+   mp3 files directory.
+   If this field is filled, random mp3 file will be retrieved from this catalog as a soundtrack.
+   If mp3 file duration is less than the video&#39;s, it will be repeated.
 
-<span class="err">* **musicvolume**:</span>
-<span class="err">   Value range is from 0 to 1.</span>
-<span class="err">   If the specified value is 0, it will not affect music volume.</span>
-<span class="err">   If value is greater than zero (e.g., 0.06), it will affect the volume of the soundtrack.</span>
-<span class="err">   Recommended value is 0.1 or less.</span>
+<span class="k">*</span> **musicvolume**:
+   Value range is from 0 to 1.
+   If the specified value is 0, it will not affect music volume.
+   If value is greater than zero (e.g., 0.06), it will affect the volume of the soundtrack.
+   Recommended value is 0.1 or less.
 </code></pre></div>
 
 </li>
@@ -2229,77 +2338,77 @@ An array of key and value objects. This array will be loaded into global variabl
 </li>
 <li>
 <p>More</p>
-<div class="codehilite"><pre><span></span><code><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="nv">mousecurfile</span><span class="o">**</span>:
-<span class="w">    </span><span class="nv">The</span><span class="w"> </span><span class="nv">path</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">image</span><span class="w"> </span><span class="nv">used</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">mouse</span><span class="w"> </span><span class="nv">cursor</span><span class="w"> </span><span class="nv">appearance</span>.
+<div class="codehilite"><pre><span></span><code> <span class="k">*</span> **mousecurfile**:
+    The path to the image used for mouse cursor appearance.
 
-<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="nv">watermarkfile</span><span class="o">**</span>:
-<span class="w">    </span><span class="nv">Png</span><span class="w"> </span><span class="nv">image</span><span class="w"> </span><span class="nv">used</span><span class="w"> </span><span class="nv">as</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">watermark</span>.
-<span class="w">    </span><span class="nv">Watermark</span><span class="w"> </span><span class="nv">will</span><span class="w"> </span><span class="nv">be</span><span class="w"> </span><span class="nv">placed</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">lower</span><span class="w"> </span><span class="nv">right</span><span class="w"> </span><span class="nv">corner</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">video</span>.
-<span class="w">    </span><span class="nv">The</span><span class="w"> </span><span class="nv">image</span><span class="w"> </span><span class="nv">resolution</span><span class="w"> </span><span class="nv">must</span><span class="w"> </span><span class="nv">be</span><span class="w"> </span><span class="nv">less</span><span class="w"> </span><span class="nv">than</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">resolution</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">which</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">video</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">recorded</span>.
+ <span class="k">*</span> **watermarkfile**:
+    Png image used as a watermark.
+    Watermark will be placed in the lower right corner of the video.
+    The image resolution must be less than the resolution in which the video is recorded.
 
-<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="nv">accelerationpercentage</span><span class="o">**</span>:
-<span class="w">    </span><span class="nv">Maximum</span><span class="w"> </span><span class="nv">speeding</span><span class="w"> </span><span class="nv">percentage</span><span class="w"> </span><span class="nv">available</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">video</span><span class="w"> </span><span class="nv">snippet</span><span class="w"> </span><span class="ss">(</span><span class="k">for</span><span class="w"> </span><span class="nv">a</span><span class="w"> </span><span class="nv">single</span><span class="w"> </span><span class="nv">step</span><span class="ss">)</span>.
-<span class="w">    </span><span class="nv">Video</span><span class="w"> </span><span class="nv">assembly</span><span class="w"> </span><span class="nv">mechanism</span><span class="w"> </span><span class="nv">can</span><span class="w"> </span><span class="nv">speed</span><span class="w"> </span><span class="nv">up</span><span class="w"> </span><span class="nv">video</span><span class="w"> </span><span class="nv">snippet</span>,<span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">example</span>,<span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="nv">soundtrack</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">video</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="mi">5</span><span class="w"> </span><span class="nv">seconds</span><span class="w"> </span><span class="nv">long</span>,<span class="w"> </span><span class="nv">and</span><span class="w"> </span><span class="nv">video</span><span class="w"> </span><span class="nv">snippet</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="nv">seconds</span><span class="w"> </span><span class="nv">long</span>.
-<span class="w">    </span><span class="nv">Is</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">specified</span><span class="w"> </span><span class="nv">value</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="mi">0</span>,<span class="w"> </span><span class="nv">than</span><span class="w"> </span><span class="nv">there</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">no</span><span class="w"> </span><span class="nv">limit</span><span class="w"> </span><span class="nv">on</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">speeding</span><span class="w"> </span><span class="nv">up</span>.
-<span class="w">    </span><span class="nv">Recommended</span><span class="w"> </span><span class="nv">value</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="mi">30</span><span class="o">%</span>.
-<span class="w">    </span><span class="k">Then</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">example</span><span class="w"> </span><span class="nv">above</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">video</span><span class="w"> </span><span class="nv">will</span><span class="w"> </span><span class="nv">speed</span><span class="w"> </span><span class="nv">up</span><span class="w"> </span><span class="ss">(</span><span class="mi">10</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="ss">(</span><span class="mi">1</span><span class="o">-</span><span class="mi">0</span>.<span class="mi">3</span><span class="ss">))</span><span class="w"> </span><span class="nv">from</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="nv">seconds</span>.
+ <span class="k">*</span> **accelerationpercentage**:
+    Maximum speeding percentage available for video snippet (for a single step).
+    Video assembly mechanism can speed up video snippet, for example, if soundtrack for video is 5 seconds long, and video snippet is 10 seconds long.
+    Is the specified value is 0, than there is no limit on the speeding up.
+    Recommended value is 30%.
+    Then in the example above the video will speed up (10 <span class="gs">* (1-0.3)) from 10 to 7 seconds.</span>
 
-<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="nv">addsubtitles</span><span class="o">**</span>:
-<span class="w">    </span><span class="nv">Switches</span><span class="w"> </span><span class="nv">on</span><span class="w"> </span><span class="nv">adding</span><span class="w"> </span><span class="nv">video</span><span class="w"> </span><span class="nv">subtitles</span>.
+<span class="gs"> *</span> **addsubtitles**:
+    Switches on adding video subtitles.
 
-<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="nv">groupofstepsasastep</span><span class="o">**</span>:
-<span class="w">    </span><span class="nv">Switches</span><span class="w"> </span><span class="nv">on</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">mode</span>,<span class="w"> </span><span class="nv">when</span><span class="w"> </span><span class="nv">each</span><span class="w"> </span><span class="nv">first</span><span class="w"> </span><span class="nv">level</span><span class="w"> </span><span class="nv">group</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">scenario</span><span class="w"> </span><span class="nv">steps</span><span class="w"> </span><span class="nv">will</span><span class="w"> </span><span class="nv">be</span><span class="w"> </span><span class="nv">converter</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">one</span><span class="w"> </span><span class="nv">step</span><span class="w"> </span><span class="nv">in</span><span class="w"> </span><span class="nv">automanual</span>.
+ <span class="k">*</span> **groupofstepsasastep**:
+    Switches on the mode, when each first level group of scenario steps will be converter to one step in automanual.
 
-<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="nv">hideservicewindows</span><span class="o">**</span>:
-<span class="w">    </span><span class="nv">Hides</span><span class="w"> </span><span class="nv">service</span><span class="w"> </span><span class="nv">console</span><span class="w"> </span><span class="nv">windows</span><span class="w"> </span><span class="nv">used</span><span class="w"> </span><span class="k">for</span><span class="w"> </span><span class="nv">video</span><span class="w"> </span><span class="nv">assembly</span>.
-<span class="w">    </span><span class="nv">Speeds</span><span class="w"> </span><span class="nv">up</span><span class="w"> </span><span class="nv">video</span><span class="w"> </span><span class="nv">assembly</span>.<span class="w"> </span><span class="nv">This</span><span class="w"> </span><span class="nv">mode</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">recommended</span>.
+ <span class="k">*</span> **hideservicewindows**:
+    Hides service console windows used for video assembly.
+    Speeds up video assembly. This mode is recommended.
 
-<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="nv">disablescalingofsteps</span><span class="o">**</span>:
-<span class="w">    </span><span class="nv">Switches</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">video</span><span class="w"> </span><span class="nv">snippets</span><span class="w"> </span><span class="nv">scaling</span><span class="w"> </span><span class="nv">by</span><span class="w"> </span><span class="nv">time</span>.
+ <span class="k">*</span> **disablescalingofsteps**:
+    Switches of video snippets scaling by time.
 
-<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="nv">turnofffeaturetitleslide</span><span class="o">**</span>:
-<span class="w">    </span><span class="nv">Switches</span><span class="w"> </span><span class="nv">off</span><span class="w"> </span><span class="nv">creating</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">video</span><span class="w"> </span><span class="nv">initial</span><span class="w"> </span><span class="nv">slide</span><span class="w"> </span><span class="nv">with</span><span class="w"> </span><span class="nv">feature</span><span class="w"> </span><span class="nv">file</span><span class="w"> </span><span class="nv">header</span>.
+ <span class="k">*</span> **turnofffeaturetitleslide**:
+    Switches off creating of video initial slide with feature file header.
 
-<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="nv">turnoffscenarioslide</span><span class="o">**</span>:
-<span class="w">    </span><span class="nv">Switches</span><span class="w"> </span><span class="nv">off</span><span class="w"> </span><span class="nv">creating</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">video</span><span class="w"> </span><span class="nv">initial</span><span class="w"> </span><span class="nv">slide</span><span class="w"> </span><span class="nv">with</span><span class="w"> </span><span class="nv">scenario</span><span class="w"> </span><span class="nv">header</span>.
+ <span class="k">*</span> **turnoffscenarioslide**:
+    Switches off creating of video initial slide with scenario header.
 
-<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="nv">turnofffinalslide</span><span class="o">**</span>:
-<span class="w">    </span><span class="nv">Switches</span><span class="w"> </span><span class="nv">off</span><span class="w"> </span><span class="nv">creating</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">video</span><span class="w"> </span><span class="nv">final</span><span class="w"> </span><span class="nv">slide</span><span class="w"> </span><span class="nv">with</span><span class="w"> </span><span class="nv">video</span><span class="w"> </span><span class="nv">total</span><span class="w"> </span><span class="nv">information</span>.
+ <span class="k">*</span> **turnofffinalslide**:
+    Switches off creating of video final slide with video total information.
 
-<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="nv">highlightmouseclicks</span><span class="o">**</span>:
-<span class="w">    </span><span class="nv">Switches</span><span class="w"> </span><span class="nv">on</span><span class="w"> </span><span class="nv">mouse</span><span class="w"> </span><span class="nv">clicks</span><span class="w"> </span><span class="nv">highlighting</span>.<span class="w"> </span><span class="nv">Project</span><span class="w"> </span><span class="nv">utility</span><span class="w"> </span><span class="nv">UIToolsFor1C</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">used</span>.
-<span class="w">    </span><span class="nv">SikuliX</span><span class="w"> </span><span class="nv">emulates</span><span class="w"> </span><span class="nv">mouse</span><span class="w"> </span><span class="nv">clicks</span>.
+ <span class="k">*</span> **highlightmouseclicks**:
+    Switches on mouse clicks highlighting. Project utility UIToolsFor1C is used.
+    SikuliX emulates mouse clicks.
 
-<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="nv">emulatekeyboardinput</span><span class="o">**</span>:
-<span class="w">    </span><span class="nv">Switches</span><span class="w"> </span><span class="nv">on</span><span class="w"> </span><span class="nv">text</span><span class="w"> </span><span class="nv">input</span><span class="w"> </span><span class="nv">emulation</span>.<span class="w"> </span><span class="nv">Project</span><span class="w"> </span><span class="nv">utility</span><span class="w"> </span><span class="nv">UIToolsFor1C</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">used</span>.
-<span class="w">    </span><span class="nv">Only</span><span class="w"> </span><span class="nv">Russian</span><span class="w"> </span><span class="nv">and</span><span class="w"> </span><span class="nv">English</span><span class="w"> </span><span class="nv">are</span><span class="w"> </span><span class="nv">available</span>.
-<span class="w">    </span><span class="nv">Keyboard</span><span class="w"> </span><span class="nv">layout</span><span class="w"> </span><span class="nv">shwitches</span><span class="w"> </span><span class="nv">by</span><span class="w"> </span><span class="nv">pressing</span><span class="w"> </span><span class="nv">Ctrl</span><span class="o">+</span><span class="nv">Shift</span><span class="w"> </span><span class="nv">emulation</span>.
+ <span class="k">*</span> **emulatekeyboardinput**:
+    Switches on text input emulation. Project utility UIToolsFor1C is used.
+    Only Russian and English are available.
+    Keyboard layout shwitches by pressing Ctrl+Shift emulation.
 </code></pre></div>
 
 <ul>
 <li>
 <p>Customize the title slide features</p>
-<div class="codehilite"><pre><span></span><code><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="nv">changefeaturetitleslide</span><span class="o">**</span>:
-<span class="w">   </span><span class="k">If</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">flag</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">set</span>,<span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">standard</span><span class="w"> </span><span class="nv">file</span><span class="w"> </span><span class="nv">with</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">feature</span><span class="w"> </span><span class="nv">header</span><span class="w"> </span><span class="nv">will</span><span class="w"> </span><span class="nv">be</span><span class="w"> </span><span class="nv">replaced</span><span class="w"> </span><span class="nv">with</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">specified</span><span class="w"> </span><span class="nv">video</span><span class="w"> </span><span class="nv">file</span>.<span class="w"> </span><span class="nv">The</span><span class="w"> </span><span class="nv">video</span><span class="w"> </span><span class="nv">file</span><span class="w"> </span><span class="nv">must</span><span class="w"> </span><span class="nv">be</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">same</span><span class="w"> </span><span class="nv">resolution</span><span class="w"> </span><span class="nv">as</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">video</span><span class="w"> </span><span class="nv">being</span><span class="w"> </span><span class="nv">recorded</span>.<span class="w"> </span><span class="nv">It</span><span class="w"> </span><span class="nv">must</span><span class="w"> </span><span class="nv">also</span><span class="w"> </span><span class="nv">have</span><span class="w"> </span><span class="nv">an</span><span class="w"> </span><span class="nv">audio</span><span class="w"> </span><span class="nv">track</span>.
+<div class="codehilite"><pre><span></span><code><span class="k">*</span> **changefeaturetitleslide**:
+   If the flag is set, then the standard file with the feature header will be replaced with the specified video file. The video file must be of the same resolution as the video being recorded. It must also have an audio track.
 
-<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="nv">addmusictofeaturetitleslide</span><span class="o">**</span>:
-<span class="w">   </span><span class="k">If</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">check</span><span class="w"> </span><span class="nv">box</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">selected</span>,<span class="w"> </span><span class="nv">music</span><span class="w"> </span><span class="nv">will</span><span class="w"> </span><span class="nv">be</span><span class="w"> </span><span class="nv">added</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">video</span><span class="w"> </span><span class="nv">file</span><span class="w"> </span><span class="nv">with</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">feature</span><span class="w"> </span><span class="nv">title</span>
+<span class="k">*</span> **addmusictofeaturetitleslide**:
+   If the check box is selected, music will be added to the video file with the feature title
 
-<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="nv">featuretitleslidepath</span><span class="o">**</span>:
-<span class="w">   </span><span class="nv">The</span><span class="w"> </span><span class="nv">path</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">video</span><span class="w"> </span><span class="nv">file</span><span class="w"> </span><span class="nv">with</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">feature</span><span class="w"> </span><span class="nv">title</span>,<span class="w"> </span><span class="nv">which</span><span class="w"> </span><span class="nv">will</span><span class="w"> </span><span class="nv">be</span><span class="w"> </span><span class="nv">added</span><span class="w"> </span><span class="nv">instead</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">standard</span><span class="w"> </span><span class="nv">one</span>.
+<span class="k">*</span> **featuretitleslidepath**:
+   The path to the video file with the feature title, which will be added instead of the standard one.
 </code></pre></div>
 
 </li>
 <li>
 <p>Final slide settings </p>
-<div class="codehilite"><pre><span></span><code><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="nv">changefinalslide</span><span class="o">**</span>:
-<span class="w">   </span><span class="k">If</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">flag</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">set</span>,<span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">standard</span><span class="w"> </span><span class="nv">final</span><span class="w"> </span><span class="nv">file</span><span class="w"> </span><span class="nv">will</span><span class="w"> </span><span class="nv">be</span><span class="w"> </span><span class="nv">replaced</span><span class="w"> </span><span class="nv">with</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">specified</span><span class="w"> </span><span class="nv">video</span><span class="w"> </span><span class="nv">file</span>.<span class="w"> </span><span class="nv">The</span><span class="w"> </span><span class="nv">video</span><span class="w"> </span><span class="nv">file</span><span class="w"> </span><span class="nv">must</span><span class="w"> </span><span class="nv">be</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">same</span><span class="w"> </span><span class="nv">resolution</span><span class="w"> </span><span class="nv">as</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">video</span><span class="w"> </span><span class="nv">being</span><span class="w"> </span><span class="nv">recorded</span>.<span class="w"> </span><span class="nv">It</span><span class="w"> </span><span class="nv">must</span><span class="w"> </span><span class="nv">also</span><span class="w"> </span><span class="nv">have</span><span class="w"> </span><span class="nv">an</span><span class="w"> </span><span class="nv">audio</span><span class="w"> </span><span class="nv">track</span>.
+<div class="codehilite"><pre><span></span><code><span class="k">*</span> **changefinalslide**:
+   If the flag is set, then the standard final file will be replaced with the specified video file. The video file must be of the same resolution as the video being recorded. It must also have an audio track.
 
-<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="nv">addmusictofinalslide</span><span class="o">**</span>:
-<span class="w">   </span><span class="k">If</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">check</span><span class="w"> </span><span class="nv">box</span><span class="w"> </span><span class="nv">is</span><span class="w"> </span><span class="nv">selected</span>,<span class="w"> </span><span class="nv">music</span><span class="w"> </span><span class="nv">will</span><span class="w"> </span><span class="nv">be</span><span class="w"> </span><span class="nv">added</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">final</span><span class="w"> </span><span class="nv">video</span><span class="w"> </span><span class="nv">file</span>.
+<span class="k">*</span> **addmusictofinalslide**:
+   If the check box is selected, music will be added to the final video file.
 
-<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="nv">finalslidepath</span><span class="o">**</span>:
-<span class="w">   </span><span class="nv">The</span><span class="w"> </span><span class="nv">path</span><span class="w"> </span><span class="nv">to</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">final</span><span class="w"> </span><span class="nv">video</span><span class="w"> </span><span class="nv">file</span><span class="w"> </span><span class="nv">that</span><span class="w"> </span><span class="nv">will</span><span class="w"> </span><span class="nv">be</span><span class="w"> </span><span class="nv">added</span><span class="w"> </span><span class="nv">instead</span><span class="w"> </span><span class="nv">of</span><span class="w"> </span><span class="nv">the</span><span class="w"> </span><span class="nv">standard</span><span class="w"> </span><span class="nv">final</span><span class="w"> </span><span class="nv">video</span><span class="w"> </span><span class="nv">file</span>.
+<span class="k">*</span> **finalslidepath**:
+   The path to the final video file that will be added instead of the standard final video file.
 </code></pre></div>
 
 </li>
