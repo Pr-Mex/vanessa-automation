@@ -109,6 +109,8 @@
            - Vanessa Editor ![](mortarboard.png)[Запустить урок](ЗакладкаСервисVanessaEditor) [(Видео)](https://youtu.be/MYeyI_4MPTY) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.040.1/PDF/Глава02/ЗакладкаСервисVanessaEditor.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.040.1/Глава02/ЗакладкаСервисVanessaEditor.MD)
            - Обучение ![](mortarboard.png)[Запустить урок](ЗакладкаСервисОбучение) [(Видео)](https://youtu.be/gyF8YFMm2gI) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.040.1/PDF/Глава02/ЗакладкаСервисОбучение.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.040.1/Глава02/ЗакладкаСервисОбучение.MD)
            - Закладка прочее ![](mortarboard.png)[Запустить урок](ЗакладкаСервисПрочее) [(Видео)](https://youtu.be/pX-mkRaOoPg) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.040.1/PDF/Глава02/ЗакладкаСервисПрочее.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.040.1/Глава02/ЗакладкаСервисПрочее.MD)
+   7. ***Рекомендуемые настройки при первом запуске***
+       - Рекомендуемые настройки при первом запуске Vanessa Automation. ![](mortarboard.png)[Запустить урок](РекомендуемыеНастройкиПриПервомЗапуске)
            
 
 ### Глава 3. Синтаксис языка Gherkin
@@ -118,10 +120,12 @@
        1. Заголовок фичи. ![](mortarboard.png)[Запустить урок](КакУстроенFeatureФайлЗаголовокФичи) [(Видео)](https://youtu.be/6aPr9EVP0Us) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.040.1/PDF/Глава03/КакУстроенFeatureФайлЗаголовокФичи.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.040.1/Глава03/КакУстроенFeatureФайлЗаголовокФичи.MD)
        1. Секция "Контекст". ![](mortarboard.png)[Запустить урок](КакУстроенFeatureФайлСекцияКонтекст) [(Видео)](https://youtu.be/JcyTU93MVWM) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.040.1/PDF/Глава03/КакУстроенFeatureФайлСекцияКонтекст.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.040.1/Глава03/КакУстроенFeatureФайлСекцияКонтекст.MD)
        1. Секция "Сценарий". ![](mortarboard.png)[Запустить урок](КакУстроенFeatureФайлСекцияСценария) [(Видео)](https://youtu.be/HIQX2QY5ECA) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.040.1/PDF/Глава03/КакУстроенFeatureФайлСекцияСценария.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.040.1/Глава03/КакУстроенFeatureФайлСекцияСценария.MD)
+       1. Особенности создания имен сценариев. ![](mortarboard.png)[Запустить урок](ПравилаСозданияИменСценариев)
        1. Секция "Структура сценария". ![](mortarboard.png)[Запустить урок](КакУстроенFeatureФайлСекцияСтруктураСценария) [(Видео)](https://youtu.be/Yu7xIA7zx6A) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.040.1/PDF/Глава03/КакУстроенFeatureФайлСекцияСтруктураСценария.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.040.1/Глава03/КакУстроенFeatureФайлСекцияСтруктураСценария.MD)
        1. Секция "Переменные".
            - Простые переменные. ![](mortarboard.png)[Запустить урок](КакУстроенFeatureФайлСекцияПеременныеПростые) [(Видео)](https://youtu.be/fajaBnTUu70) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.040.1/PDF/Глава03/КакУстроенFeatureФайлСекцияПеременныеПростые.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.040.1/Глава03/КакУстроенFeatureФайлСекцияПеременныеПростые.MD)
            - Табличные переменные. ![](mortarboard.png)[Запустить урок](КакУстроенFeatureФайлСекцияПеременныеТабличные) [(Видео)](https://youtu.be/eBk9Ee076us) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.040.1/PDF/Глава03/КакУстроенFeatureФайлСекцияПеременныеТабличные.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.040.1/Глава03/КакУстроенFeatureФайлСекцияПеременныеТабличные.MD)
+           - Импорт переменных из других файлов. ![](mortarboard.png)[Запустить урок](ИмпортПеременныхИзДругихФайлов)
 
    1. Как устроены шаги сценариев.
        1. Ключевые слова шагов. ![](mortarboard.png)[Запустить урок](КлючевыеСловаШагов) [(Видео)](https://youtu.be/dV1X3uMsPhE) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.040.1/PDF/Глава03/КлючевыеСловаШагов.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.040.1/Глава03/КлючевыеСловаШагов.MD)
@@ -164,6 +168,7 @@
    1. Секция "Переменные".
         - Простые переменные. ![](mortarboard.png)[Запустить урок](КакУстроенFeatureФайлСекцияПеременныеПростые) [(Видео)](https://youtu.be/fajaBnTUu70) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.040.1/PDF/Глава03/КакУстроенFeatureФайлСекцияПеременныеПростые.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.040.1/Глава03/КакУстроенFeatureФайлСекцияПеременныеПростые.MD)
         - Табличные переменные. ![](mortarboard.png)[Запустить урок](КакУстроенFeatureФайлСекцияПеременныеТабличные) [(Видео)](https://youtu.be/eBk9Ee076us) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.040.1/PDF/Глава03/КакУстроенFeatureФайлСекцияПеременныеТабличные.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.040.1/Глава03/КакУстроенFeatureФайлСекцияПеременныеТабличные.MD)
+        - Импорт переменных из других файлов. ![](mortarboard.png)[Запустить урок](ИмпортПеременныхИзДругихФайлов)
    1. Работа с переменными.
         - Как запомнить в переменную выражение на встроенном языке 1С. ![](mortarboard.png)[Запустить урок](КакЗапомнитьВПеременнуюВыражениеНаВстроенномЯзыке) [(Видео)](https://youtu.be/Wy1-Ux7t8hQ) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.040.1/PDF/Глава08/КакЗапомнитьВПеременнуюВыражениеНаВстроенномЯзыке.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.040.1/Глава08/КакЗапомнитьВПеременнуюВыражениеНаВстроенномЯзыке.MD)
         - Как передать глобальные переменные через файл VAParams.json. ![](mortarboard.png)[Запустить урок](КакПередатьГлобальныеПеременныеЧерезФайлVAParamsJson)
@@ -199,6 +204,7 @@
    
 ### Глава 9. Allure. Отчет о запуске тестов в формате Allure
    * Отчет о выполнении сценариев в формате Allure. ![](mortarboard.png)[Запустить урок](ОтчетОВыполненииСценариевВФорматеAllure) [(Видео)](https://youtu.be/LHzYsyCbUMU) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.040.1/PDF/Глава09/ОтчетОВыполненииСценариевВФорматеAllure.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.040.1/Глава09/ОтчетОВыполненииСценариевВФорматеAllure.MD)
+   * Установка меток Allure (управление иерархией) из шагов сценария. ![](mortarboard.png)[Запустить урок](УстановкаМетокAllureИзШаговСценария)
 
 ### Глава 10. Автоинструкции/Автодокументация
    * Обзор возможностей. ![](mortarboard.png)[Запустить урок](АвтоинструкцииОбзорВозможностей) [(Видео)](https://youtu.be/Ji-cdbkKrB4) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.040.1/PDF/Глава10/АвтоинструкцииОбзорВозможностей.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.040.1/Глава10/АвтоинструкцииОбзорВозможностей.MD)
