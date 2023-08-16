@@ -38,6 +38,7 @@ oscript MakeInteractiveHelp.os <ПутьКФайлуНастроекВФорма
 ```
 oscript C:\Commons\rep\vanessa-automation\tools\onescript\MakeInteractiveHelp.os C:\Commons\rep\vanessa-automation\examples\MakeInteractiveHelp\MakeVideoInteractiveHelpVideo.json
 oscript C:\Commons\rep\vanessa-automation\tools\onescript\MakeInteractiveHelp.os C:\Commons\rep\vanessa-automation\examples\MakeInteractiveHelp\MakeVideoInteractiveHelpHtml.json
+oscript C:\Commons\rep\vanessa-automation\tools\onescript\MakeInteractiveHelp.os C:\Commons\rep\vanessa-automation\examples\MakeInteractiveHelp\MakeVideoInteractiveHelpHtml3D.json
 oscript C:\Commons\rep\vanessa-automation\tools\onescript\MakeInteractiveHelp.os C:\Commons\rep\vanessa-automation\examples\MakeInteractiveHelp\MakeVideoInteractiveHelpMD.json
 ```
 
@@ -113,4 +114,16 @@ oscript InsertLinksToVALessonsList.os <ПутьКСпискуУроковVA> <П
 Пример запуска:
 ```
 oscript C:\Commons\rep\vanessa-automation\tools\onescript\InsertLinksToVALessonsList.os "C:\Commons\rep\vanessa-automation\training\List_of_lessons_ru.md" "C:\Commons\rep\vanessa-automation\docs\MainHelp\index.MD"
+```
+
+#### NewLessons.os
+
+Вычисляяет какие уроки изменились или были добавлены.
+Как запускать:
+```
+oscript NewLessons.os <ПутьКСпискуТекущихУроковVA> <ПутьККаталогуУроковТекущий> <ПутьККаталогуУроковПредыдущий>
+```
+Пример запуска:
+```
+oscript C:\Commons\rep\vanessa-automation\tools\onescript\NewLessons.os "C:\Commons\rep\vanessa-automation\docs\MainHelp\index.MD" "C:\Commons\rep\vanessa-automation\training\features" "C:\Commons\rep\vanessa-automation-old\training\features"
 ```
