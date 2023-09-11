@@ -13601,44 +13601,114 @@ When working with Vanessa Automation Single it is allowed to leave the field bla
 															<ShowTitle>false</ShowTitle>
 															<ExtendedTooltip name="ГруппаДымовыеТестыЛевыйСтолбецРасширеннаяПодсказка" id="3962"/>
 															<ChildItems>
-																<InputField name="КаталогГенерированияДымовыхТестов" id="3965">
-																	<DataPath>Объект.КаталогГенерированияДымовыхТестов</DataPath>
+																<UsualGroup name="ГруппаДымовыеТестыЯзыкШагов" id="4009">
+																	<ToolTip>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа дымовые тесты язык шагов</v8:content>
+																		</v8:item>
+																	</ToolTip>
+																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаДымовыеТестыЯзыкШаговРасширеннаяПодсказка" id="4010">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Язык, на котором будут формироваться сценарии feature-файлов.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																	<ChildItems>
+																		<RadioButtonField name="ДымовыеТестыЯзыкШагов" id="3980">
+																			<DataPath>Объект.ДымовыеТестыЯзыкШагов</DataPath>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>Language of smoke test steps</v8:content>
+																				</v8:item>
+																			</Title>
+																			<TitleLocation>Left</TitleLocation>
+																			<RadioButtonType>Tumbler</RadioButtonType>
+																			<ChoiceList>
+																				<xr:Item>
+																					<xr:Presentation/>
+																					<xr:CheckState>0</xr:CheckState>
+																					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																						<Presentation>
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Русский</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>Russian</v8:content>
+																							</v8:item>
+																						</Presentation>
+																						<Value xsi:type="xs:string">ru</Value>
+																					</xr:Value>
+																				</xr:Item>
+																				<xr:Item>
+																					<xr:Presentation/>
+																					<xr:CheckState>0</xr:CheckState>
+																					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																						<Presentation>
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>English</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>English</v8:content>
+																							</v8:item>
+																						</Presentation>
+																						<Value xsi:type="xs:string">en</Value>
+																					</xr:Value>
+																				</xr:Item>
+																			</ChoiceList>
+																			<ContextMenu name="ДымовыеТестыЯзыкШаговКонтекстноеМеню" id="3981"/>
+																			<ExtendedTooltip name="ДымовыеТестыЯзыкШаговРасширеннаяПодсказка" id="3982"/>
+																		</RadioButtonField>
+																	</ChildItems>
+																</UsualGroup>
+																<InputField name="ДымовыеТестыКаталогВыходныхФайлов" id="3965">
+																	<DataPath>Объект.ДымовыеТестыКаталогВыходныхФайлов</DataPath>
 																	<TitleLocation>Top</TitleLocation>
 																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
 																	<ChoiceButton>true</ChoiceButton>
 																	<ClearButton>true</ClearButton>
 																	<OpenButton>true</OpenButton>
-																	<ContextMenu name="КаталогГенерированияДымовыхТестовКонтекстноеМеню" id="3966"/>
-																	<ExtendedTooltip name="КаталогГенерированияДымовыхТестовРасширеннаяПодсказка" id="3967">
-																		<Title formatted="true">
-																			<v8:item>
-																				<v8:lang>ru</v8:lang>
-																				<v8:content>Каталог, в который будут записаны итоговые feature-файлы</v8:content>
-																			</v8:item>
+																	<ContextMenu name="ДымовыеТестыКаталогВыходныхФайловКонтекстноеМеню" id="3966"/>
+																	<ExtendedTooltip name="ДымовыеТестыКаталогВыходныхФайловРасширеннаяПодсказка" id="3967">
+																		<Title formatted="false">
 																			<v8:item>
 																				<v8:lang>en</v8:lang>
 																				<v8:content>Directory in which the resulting feature-files will be written</v8:content>
 																			</v8:item>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Каталог, в который будут записаны итоговые feature-файлы</v8:content>
+																			</v8:item>
 																		</Title>
 																	</ExtendedTooltip>
 																	<Events>
-																		<Event name="StartChoice">КаталогГенерированияДымовыхТестовНачалоВыбора</Event>
-																		<Event name="Opening">КаталогГенерированияДымовыхТестовОткрытие</Event>
+																		<Event name="StartChoice">ДымовыеТестыКаталогВыходныхФайловНачалоВыбора</Event>
+																		<Event name="Opening">ДымовыеТестыКаталогВыходныхФайловОткрытие</Event>
 																	</Events>
 																</InputField>
-																<InputField name="КаталогФайловИсключаемыхОбъектовИзДымовогоТестирования" id="3968">
-																	<DataPath>Объект.КаталогФайловИсключаемыхОбъектовИзДымовогоТестирования</DataPath>
+																<InputField name="ДымовыеТестыКаталогФайловИсключений" id="3968">
+																	<DataPath>Объект.ДымовыеТестыКаталогФайловИсключений</DataPath>
 																	<TitleLocation>Top</TitleLocation>
 																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
 																	<ChoiceButton>true</ChoiceButton>
 																	<ClearButton>true</ClearButton>
 																	<OpenButton>true</OpenButton>
-																	<ContextMenu name="КаталогФайловИсключаемыхОбъектовИзДымовогоТестированияКонтекстноеМеню" id="3969"/>
-																	<ExtendedTooltip name="КаталогФайловИсключаемыхОбъектовИзДымовогоТестированияРасширеннаяПодсказка" id="3970">
-																		<Title formatted="true">
+																	<ContextMenu name="ДымовыеТестыКаталогФайловИсключенийКонтекстноеМеню" id="3969"/>
+																	<ExtendedTooltip name="ДымовыеТестыКаталогФайловИсключенийРасширеннаяПодсказка" id="3970">
+																		<Title formatted="false">
 																			<v8:item>
 																				<v8:lang>ru</v8:lang>
-																				<v8:content>Каталог, в котором хранятся текстовые файлы с объектами-исключениями.</v8:content>
+																				<v8:content>Каталог, в котором хранятся текстовые файлы с объектами-исключениям. Для каждого вида объектов метаданных или события должен быть отдельный файл ("Справочники", "Документы" и т. д.).</v8:content>
 																			</v8:item>
 																			<v8:item>
 																				<v8:lang>en</v8:lang>
@@ -13647,23 +13717,23 @@ When working with Vanessa Automation Single it is allowed to leave the field bla
 																		</Title>
 																	</ExtendedTooltip>
 																	<Events>
-																		<Event name="StartChoice">ПутьФайлИсключенияДымовыхТестовНачалоВыбора</Event>
-																		<Event name="Opening">ПутьФайлИсключенияДымовыхТестовОткрытие</Event>
+																		<Event name="StartChoice">ДымовыеТестыКаталогФайловИсключенийНачалоВыбора</Event>
+																		<Event name="Opening">ДымовыеТестыКаталогФайловИсключенийОткрытие</Event>
 																	</Events>
 																</InputField>
-																<InputField name="ПутьНастройкиСценариеДымовыхТестов" id="3977">
-																	<DataPath>Объект.ПутьНастройкиСценариеДымовыхТестов</DataPath>
+																<InputField name="ДымовыеТестыПутьКФайлуНастроекСценариев" id="3977">
+																	<DataPath>Объект.ДымовыеТестыПутьКФайлуНастроекСценариев</DataPath>
 																	<TitleLocation>Top</TitleLocation>
 																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
 																	<ChoiceButton>true</ChoiceButton>
 																	<ClearButton>true</ClearButton>
 																	<OpenButton>true</OpenButton>
-																	<ContextMenu name="ПутьНастройкиСценариеДымовыхТестовКонтекстноеМеню" id="3978"/>
-																	<ExtendedTooltip name="ПутьНастройкиСценариеДымовыхТестовРасширеннаяПодсказка" id="3979">
-																		<Title formatted="true">
+																	<ContextMenu name="ДымовыеТестыПутьКФайлуНастроекСценариевКонтекстноеМеню" id="3978"/>
+																	<ExtendedTooltip name="ДымовыеТестыПутьКФайлуНастроекСценариевРасширеннаяПодсказка" id="3979">
+																		<Title formatted="false">
 																			<v8:item>
 																				<v8:lang>ru</v8:lang>
-																				<v8:content>Путь к файлу настройки сценариев (файл настройки можно сформировать на закладке "Настройка сценариев" в окне "Генератор дымовых тестов")</v8:content>
+																				<v8:content>Путь к файлу настройки сценариев (файл настройки можно сформировать на закладке "Настройка сценариев" в окне "Генератор дымовых тестов").</v8:content>
 																			</v8:item>
 																			<v8:item>
 																				<v8:lang>en</v8:lang>
@@ -13672,8 +13742,8 @@ When working with Vanessa Automation Single it is allowed to leave the field bla
 																		</Title>
 																	</ExtendedTooltip>
 																	<Events>
-																		<Event name="StartChoice">ПутьНастройкиСценариеДымовыхТестовНачалоВыбора</Event>
-																		<Event name="Opening">ПутьНастройкиСценариеДымовыхТестовОткрытие</Event>
+																		<Event name="StartChoice">ДымовыеТестыПутьКФайлуНастроекСценариевНачалоВыбора</Event>
+																		<Event name="Opening">ДымовыеТестыПутьКФайлуНастроекСценариевОткрытие</Event>
 																	</Events>
 																</InputField>
 															</ChildItems>
@@ -13704,104 +13774,19 @@ When working with Vanessa Automation Single it is allowed to leave the field bla
 															<ShowTitle>false</ShowTitle>
 															<ExtendedTooltip name="ГруппаДымовыеТестыПравыйСтолбецРасширеннаяПодсказка" id="3964"/>
 															<ChildItems>
-																<InputField name="ИмяКонфигурацииПоставщика" id="3974">
-																	<DataPath>Объект.ИмяКонфигурацииПоставщика</DataPath>
-																	<TitleLocation>Top</TitleLocation>
-																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-																	<ContextMenu name="ИмяКонфигурацииПоставщикаКонтекстноеМеню" id="3975"/>
-																	<ExtendedTooltip name="ИмяКонфигурацииПоставщикаРасширеннаяПодсказка" id="3976">
-																		<Title formatted="true">
-																			<v8:item>
-																				<v8:lang>ru</v8:lang>
-																				<v8:content>Имя конфигурации поставщика для сравнения конфигураций</v8:content>
-																			</v8:item>
-																			<v8:item>
-																				<v8:lang>en</v8:lang>
-																				<v8:content>Vendor configuration name for configuration comparison</v8:content>
-																			</v8:item>
-																		</Title>
-																	</ExtendedTooltip>
-																</InputField>
-																<RadioButtonField name="ЯзыкШаговДымовыхТестов" id="3980">
-																	<DataPath>Объект.ЯзыкШаговДымовыхТестов</DataPath>
-																	<Title>
-																		<v8:item>
-																			<v8:lang>ru</v8:lang>
-																			<v8:content>Язык шагов дымовых тестов</v8:content>
-																		</v8:item>
-																		<v8:item>
-																			<v8:lang>en</v8:lang>
-																			<v8:content>Language of smoke test steps</v8:content>
-																		</v8:item>
-																	</Title>
-																	<TitleLocation>Left</TitleLocation>
-																	<RadioButtonType>Tumbler</RadioButtonType>
-																	<ChoiceList>
-																		<xr:Item>
-																			<xr:Presentation/>
-																			<xr:CheckState>0</xr:CheckState>
-																			<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																				<Presentation>
-																					<v8:item>
-																						<v8:lang>ru</v8:lang>
-																						<v8:content>English</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>en</v8:lang>
-																						<v8:content>English</v8:content>
-																					</v8:item>
-																				</Presentation>
-																				<Value xsi:type="xs:string">en</Value>
-																			</xr:Value>
-																		</xr:Item>
-																		<xr:Item>
-																			<xr:Presentation/>
-																			<xr:CheckState>0</xr:CheckState>
-																			<xr:Value xsi:type="FormChoiceListDesTimeValue">
-																				<Presentation>
-																					<v8:item>
-																						<v8:lang>ru</v8:lang>
-																						<v8:content>Русский</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>en</v8:lang>
-																						<v8:content>Russian</v8:content>
-																					</v8:item>
-																				</Presentation>
-																				<Value xsi:type="xs:string">ru</Value>
-																			</xr:Value>
-																		</xr:Item>
-																	</ChoiceList>
-																	<ContextMenu name="ЯзыкШаговДымовыхТестовКонтекстноеМеню" id="3981"/>
-																	<ExtendedTooltip name="ЯзыкШаговДымовыхТестовРасширеннаяПодсказка" id="3982"/>
-																</RadioButtonField>
-																<CheckBoxField name="ТолькоИзмененныеОтносительноКонфигурацииПоставщикаДляДымовогоТестирования" id="3971">
-																	<DataPath>Объект.ТолькоИзмененныеОтносительноКонфигурацииПоставщикаДляДымовогоТестирования</DataPath>
+																<LabelDecoration name="ДымовыеТестыПропуск" id="4003">
+																	<Height>3</Height>
+																	<ContextMenu name="ДымовыеТестыПропускКонтекстноеМеню" id="4004"/>
+																	<ExtendedTooltip name="ДымовыеТестыПропускРасширеннаяПодсказка" id="4005"/>
+																</LabelDecoration>
+																<CheckBoxField name="ДымовыеТестыТолькоВведенныеОбъекты" id="3983">
+																	<DataPath>Объект.ДымовыеТестыТолькоВведенныеОбъекты</DataPath>
 																	<TitleLocation>Right</TitleLocation>
 																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
 																	<CheckBoxType>Auto</CheckBoxType>
-																	<ContextMenu name="ТолькоИзмененныеОтносительноКонфигурацииПоставщикаДляДымовогоТестированияКонтекстноеМеню" id="3972"/>
-																	<ExtendedTooltip name="ТолькоИзмененныеОтносительноКонфигурацииПоставщикаДляДымовогоТестированияРасширеннаяПодсказка" id="3973">
-																		<Title formatted="true">
-																			<v8:item>
-																				<v8:lang>ru</v8:lang>
-																				<v8:content>Если этот флаг установлен, в feature-файлы будут включены только те объекты, которые имеют хотя бы один элемент в текущей базе данных, не помеченный на удаление.</v8:content>
-																			</v8:item>
-																			<v8:item>
-																				<v8:lang>en</v8:lang>
-																				<v8:content>If this flag is set, feature-files will only include objects that have at least one item in the current database that is not marked for deletion.</v8:content>
-																			</v8:item>
-																		</Title>
-																	</ExtendedTooltip>
-																</CheckBoxField>
-																<CheckBoxField name="ТолькоВведенныеОбъектыДляДымовогоТестирования" id="3983">
-																	<DataPath>Объект.ТолькоВведенныеОбъектыДляДымовогоТестирования</DataPath>
-																	<TitleLocation>Right</TitleLocation>
-																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-																	<CheckBoxType>Auto</CheckBoxType>
-																	<ContextMenu name="ТолькоВведенныеОбъектыДляДымовогоТестированияКонтекстноеМеню" id="3984"/>
-																	<ExtendedTooltip name="ТолькоВведенныеОбъектыДляДымовогоТестированияРасширеннаяПодсказка" id="3985">
-																		<Title formatted="true">
+																	<ContextMenu name="ДымовыеТестыТолькоВведенныеОбъектыКонтекстноеМеню" id="3984"/>
+																	<ExtendedTooltip name="ДымовыеТестыТолькоВведенныеОбъектыРасширеннаяПодсказка" id="3985">
+																		<Title formatted="false">
 																			<v8:item>
 																				<v8:lang>ru</v8:lang>
 																				<v8:content>При включении данного флага в формировании feature-файлов расширенных действий будут участвовать только объекты, для которых в текущей информационной базе существует хотя бы один не помеченный на удаление элемент</v8:content>
@@ -13813,6 +13798,46 @@ When working with Vanessa Automation Single it is allowed to leave the field bla
 																		</Title>
 																	</ExtendedTooltip>
 																</CheckBoxField>
+																<CheckBoxField name="ДымовыеТестыТолькоИзмененныеОтностительноКонфигурацииПоставщика" id="3971">
+																	<DataPath>Объект.ДымовыеТестыТолькоИзмененныеОтностительноКонфигурацииПоставщика</DataPath>
+																	<TitleLocation>Right</TitleLocation>
+																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="ДымовыеТестыТолькоИзмененныеОтностительноКонфигурацииПоставщикаКонтекстноеМеню" id="3972"/>
+																	<ExtendedTooltip name="ДымовыеТестыТолькоИзмененныеОтностительноКонфигурацииПоставщикаРасширеннаяПодсказка" id="3973">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>При включении данного флага в формировании feature-файлов будут участвовать только объекты измененные относительно конфигурации поставщика. Для построения отчета о сравнении конфигураций будет запущен конфигуторато текущей информационной базы.</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>If this flag is set, feature-files will only include objects that have at least one item in the current database that is not marked for deletion.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																	<Events>
+																		<Event name="OnChange">ДымовыеТестыТолькоИзмененныеОтностительноКонфигурацииПоставщикаПриИзменении</Event>
+																	</Events>
+																</CheckBoxField>
+																<InputField name="ДымовыеТестыИмяКонфигурацииПоставщика" id="3974">
+																	<DataPath>Объект.ДымовыеТестыИмяКонфигурацииПоставщика</DataPath>
+																	<TitleLocation>Top</TitleLocation>
+																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																	<ContextMenu name="ДымовыеТестыИмяКонфигурацииПоставщикаКонтекстноеМеню" id="3975"/>
+																	<ExtendedTooltip name="ДымовыеТестыИмяКонфигурацииПоставщикаРасширеннаяПодсказка" id="3976">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Имя конфигурации поставщика для сравнения конфигураций.</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>Vendor configuration name for configuration comparison</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																</InputField>
 															</ChildItems>
 														</UsualGroup>
 													</ChildItems>

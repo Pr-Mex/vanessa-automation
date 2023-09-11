@@ -10,7 +10,6 @@
 			<v8:content>Smoke tests</v8:content>
 		</v8:item>
 	</Title>
-	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
 			<Button name="ФормаСформироватьФайлы" id="7">
@@ -19,10 +18,11 @@
 				<CommandName>Form.Command.СформироватьФайлы</CommandName>
 				<ExtendedTooltip name="ФормаСформироватьФайлыРасширеннаяПодсказка" id="8"/>
 			</Button>
-			<Button name="ФормаЗакрытьФорму" id="90">
+			<Button name="ФормаЗакрыть" id="101">
 				<Type>CommandBarButton</Type>
-				<CommandName>Form.Command.ЗакрытьФорму</CommandName>
-				<ExtendedTooltip name="ФормаЗакрытьФормуРасширеннаяПодсказка" id="91"/>
+				<Representation>PictureAndText</Representation>
+				<CommandName>Form.StandardCommand.Close</CommandName>
+				<ExtendedTooltip name="ФормаЗакрытьРасширеннаяПодсказка" id="102"/>
 			</Button>
 			<Button name="ФормаСправка" id="17">
 				<Type>CommandBarButton</Type>
@@ -35,6 +35,7 @@
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="BeforeClose">ПередЗакрытием</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
 	</Events>
 	<ChildItems>
@@ -82,145 +83,267 @@
 							<v8:content>Page basic</v8:content>
 						</v8:item>
 					</ToolTip>
+					<Group>AlwaysHorizontal</Group>
 					<ExtendedTooltip name="СтраницаОсновноеРасширеннаяПодсказка" id="22"/>
 					<ChildItems>
-						<RadioButtonField name="ЯзыкШагов" id="84">
-							<DataPath>ЯзыкШагов</DataPath>
-							<RadioButtonType>Tumbler</RadioButtonType>
-							<ChoiceList>
-								<xr:Item>
-									<xr:Presentation/>
-									<xr:CheckState>0</xr:CheckState>
-									<xr:Value xsi:type="FormChoiceListDesTimeValue">
-										<Presentation>
+						<UsualGroup name="ГруппаЛевыйСтолбец" id="92">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа левый столбец</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа левый столбец</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаЛевыйСтолбецРасширеннаяПодсказка" id="93"/>
+							<ChildItems>
+								<UsualGroup name="ГруппаЯзыкШагов" id="96">
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа язык шагов</v8:content>
+										</v8:item>
+									</Title>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Группа язык шагов</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаЯзыкШаговРасширеннаяПодсказка" id="97">
+										<Title formatted="false">
 											<v8:item>
 												<v8:lang>ru</v8:lang>
-												<v8:content>English</v8:content>
+												<v8:content>Язык, на котором будут формироваться сценарии feature-файлов.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<ChildItems>
+										<RadioButtonField name="ЯзыкШагов" id="84">
+											<DataPath>ЯзыкШагов</DataPath>
+											<RadioButtonType>Tumbler</RadioButtonType>
+											<ChoiceList>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Русский</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Russian</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">ru</Value>
+													</xr:Value>
+												</xr:Item>
+												<xr:Item>
+													<xr:Presentation/>
+													<xr:CheckState>0</xr:CheckState>
+													<xr:Value xsi:type="FormChoiceListDesTimeValue">
+														<Presentation>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>English</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>English</v8:content>
+															</v8:item>
+														</Presentation>
+														<Value xsi:type="xs:string">en</Value>
+													</xr:Value>
+												</xr:Item>
+											</ChoiceList>
+											<ContextMenu name="ЯзыкШаговКонтекстноеМеню" id="85"/>
+											<ExtendedTooltip name="ЯзыкШаговРасширеннаяПодсказка" id="86"/>
+										</RadioButtonField>
+									</ChildItems>
+								</UsualGroup>
+								<InputField name="КаталогВыходныхФайлов" id="4">
+									<DataPath>КаталогВыходныхФайлов</DataPath>
+									<TitleLocation>Top</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Directory in which the resulting feature-files will be written</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ChoiceButton>true</ChoiceButton>
+									<ClearButton>true</ClearButton>
+									<OpenButton>true</OpenButton>
+									<ContextMenu name="КаталогВыходныхФайловКонтекстноеМеню" id="5"/>
+									<ExtendedTooltip name="КаталогВыходныхФайловРасширеннаяПодсказка" id="6">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Каталог, в который будут записаны итоговые feature-файлы.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="StartChoice">КаталогВыходныхФайловНачалоВыбора</Event>
+										<Event name="Opening">КаталогВыходныхФайловОткрытие</Event>
+									</Events>
+								</InputField>
+								<InputField name="КаталогФайловИсключений" id="1">
+									<DataPath>КаталогФайловИсключений</DataPath>
+									<TitleLocation>Top</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Directory in which text files with exception objects are stored.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ChoiceButton>true</ChoiceButton>
+									<ClearButton>true</ClearButton>
+									<OpenButton>true</OpenButton>
+									<ContextMenu name="КаталогФайловИсключенийКонтекстноеМеню" id="2"/>
+									<ExtendedTooltip name="КаталогФайловИсключенийРасширеннаяПодсказка" id="3">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Каталог, в котором хранятся текстовые файлы с объектами-исключениям. Для каждого вида объектов метаданных или события должен быть отдельный файл ("Справочники", "Документы" и т. д.).</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="StartChoice">КаталогФайловИсключенийНачалоВыбора</Event>
+										<Event name="Opening">КаталогФайловИсключенийОткрытие</Event>
+									</Events>
+								</InputField>
+								<InputField name="ПутьКФайлуНастроекСценариев" id="98">
+									<DataPath>ПутьКФайлуНастроекСценариев</DataPath>
+									<TitleLocation>Top</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ChoiceButton>true</ChoiceButton>
+									<ClearButton>true</ClearButton>
+									<OpenButton>true</OpenButton>
+									<ContextMenu name="ПутьКФайлуНастроекСценариевКонтекстноеМеню" id="99"/>
+									<ExtendedTooltip name="ПутьКФайлуНастроекСценариевРасширеннаяПодсказка" id="100">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Путь к файлу настройки сценариев (файл настройки можно сформировать на закладке "Настройка сценариев" в окне "Генератор дымовых тестов").</v8:content>
 											</v8:item>
 											<v8:item>
 												<v8:lang>en</v8:lang>
-												<v8:content>English</v8:content>
+												<v8:content>Path to the script setup file (the setup file can be created on the "Script Setup" tab of the "Smoke test generator" window)</v8:content>
 											</v8:item>
-										</Presentation>
-										<Value xsi:type="xs:string">en</Value>
-									</xr:Value>
-								</xr:Item>
-								<xr:Item>
-									<xr:Presentation/>
-									<xr:CheckState>0</xr:CheckState>
-									<xr:Value xsi:type="FormChoiceListDesTimeValue">
-										<Presentation>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="StartChoice">ПутьКФайлуНастроекСценариевНачалоВыбора</Event>
+										<Event name="Opening">ПутьКФайлуНастроекСценариевОткрытие</Event>
+									</Events>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаПравыйСтолбец" id="94">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа правый столбец</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа правый столбец</v8:content>
+								</v8:item>
+							</ToolTip>
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаПравыйСтолбецРасширеннаяПодсказка" id="95"/>
+							<ChildItems>
+								<LabelDecoration name="ДымовыеТестыПропуск" id="103">
+									<Height>3</Height>
+									<ContextMenu name="ДымовыеТестыПропускКонтекстноеМеню" id="104"/>
+									<ExtendedTooltip name="ДымовыеТестыПропускРасширеннаяПодсказка" id="105"/>
+								</LabelDecoration>
+								<CheckBoxField name="ТолькоВведенныеОбъекты" id="56">
+									<DataPath>ТолькоВведенныеОбъекты</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>If this flag is set, only those objects that have at least one item in the current database that is not marked for deletion will be included in the creation of feature-files.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ТолькоВведенныеОбъектыКонтекстноеМеню" id="57"/>
+									<ExtendedTooltip name="ТолькоВведенныеОбъектыРасширеннаяПодсказка" id="58">
+										<Title formatted="false">
 											<v8:item>
 												<v8:lang>ru</v8:lang>
-												<v8:content>Русский</v8:content>
+												<v8:content>При включении данного флага в формировании feature-файлов расширенных действий будут участвовать только объекты, для которых в текущей информационной базе существует хотя бы один не помеченный на удаление элемент.</v8:content>
 											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</CheckBoxField>
+								<CheckBoxField name="ТолькоИзмененныеОтностительноКонфигурацииПоставщика" id="14">
+									<DataPath>ТолькоИзмененныеОтностительноКонфигурацииПоставщика</DataPath>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>If this flag is set, feature-files will only include objects that have at least one item in the current database that is not marked for deletion.</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ТолькоИзмененныеОтностительноКонфигурацииПоставщикаКонтекстноеМеню" id="15"/>
+									<ExtendedTooltip name="ТолькоИзмененныеОтностительноКонфигурацииПоставщикаРасширеннаяПодсказка" id="16">
+										<Title formatted="false">
 											<v8:item>
-												<v8:lang>en</v8:lang>
-												<v8:content>Russian</v8:content>
+												<v8:lang>ru</v8:lang>
+												<v8:content>При включении данного флага в формировании feature-файлов будут участвовать только объекты измененные относительно конфигурации поставщика. Для построения отчета о сравнении конфигураций будет запущен конфигуторато текущей информационной базы.</v8:content>
 											</v8:item>
-										</Presentation>
-										<Value xsi:type="xs:string">ru</Value>
-									</xr:Value>
-								</xr:Item>
-							</ChoiceList>
-							<ContextMenu name="ЯзыкШаговКонтекстноеМеню" id="85"/>
-							<ExtendedTooltip name="ЯзыкШаговРасширеннаяПодсказка" id="86"/>
-						</RadioButtonField>
-						<InputField name="КаталогВыходныхФайлов" id="4">
-							<DataPath>КаталогВыходныхФайлов</DataPath>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Каталог, в который будут записаны итоговые feature-файлы</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>en</v8:lang>
-									<v8:content>Directory in which the resulting feature-files will be written</v8:content>
-								</v8:item>
-							</ToolTip>
-							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-							<ChoiceButton>true</ChoiceButton>
-							<ContextMenu name="КаталогВыходныхФайловКонтекстноеМеню" id="5"/>
-							<ExtendedTooltip name="КаталогВыходныхФайловРасширеннаяПодсказка" id="6"/>
-							<Events>
-								<Event name="StartChoice">КаталогВыходныхФайловНачалоВыбора</Event>
-							</Events>
-						</InputField>
-						<InputField name="КаталогФайловИсключений" id="1">
-							<DataPath>КаталогФайловИсключений</DataPath>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Каталог, в котором хранятся текстовые файлы с объектами-исключениям. Для каждого вида объектов метаданных должен быть отдельный файл ("Справочники", "Документы" и т. д.).</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>en</v8:lang>
-									<v8:content>Directory in which text files with exception objects are stored.</v8:content>
-								</v8:item>
-							</ToolTip>
-							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-							<ChoiceButton>true</ChoiceButton>
-							<ContextMenu name="КаталогФайловИсключенийКонтекстноеМеню" id="2"/>
-							<ExtendedTooltip name="КаталогФайловИсключенийРасширеннаяПодсказка" id="3"/>
-							<Events>
-								<Event name="StartChoice">КаталогФайловИсключенийНачалоВыбора</Event>
-							</Events>
-						</InputField>
-						<CheckBoxField name="ТолькоИзмененные" id="14">
-							<DataPath>ТолькоИзмененные</DataPath>
-							<TitleLocation>Right</TitleLocation>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>При включении данного флага в формировании feature-файлов будут участвовать только объекты измененные относительно конфигурации поставщика. Для построения отчета о сравнении будет запущен конфигуторато текущей информационной базы. </v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>en</v8:lang>
-									<v8:content>If this flag is set, feature-files will only include objects that have at least one item in the current database that is not marked for deletion.</v8:content>
-								</v8:item>
-							</ToolTip>
-							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-							<CheckBoxType>Auto</CheckBoxType>
-							<ContextMenu name="ТолькоИзмененныеКонтекстноеМеню" id="15"/>
-							<ExtendedTooltip name="ТолькоИзмененныеРасширеннаяПодсказка" id="16"/>
-							<Events>
-								<Event name="OnChange">ТолькоИзмененныеПриИзменении</Event>
-							</Events>
-						</CheckBoxField>
-						<InputField name="ИмяКонфигурацииПоставщика" id="11">
-							<DataPath>ИмяКонфигурацииПоставщика</DataPath>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Имя конфигурации поставщика для сравнения конфигураций</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>en</v8:lang>
-									<v8:content>Vendor configuration name for configuration comparison</v8:content>
-								</v8:item>
-							</ToolTip>
-							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-							<ContextMenu name="ИмяКонфигурацииПоставщикаКонтекстноеМеню" id="12"/>
-							<ExtendedTooltip name="ИмяКонфигурацииПоставщикаРасширеннаяПодсказка" id="13"/>
-						</InputField>
-						<CheckBoxField name="ТолькоВведенные" id="56">
-							<DataPath>ТолькоВведенные</DataPath>
-							<TitleLocation>Right</TitleLocation>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>При включении данного флага в формировании feature-файлов расширенных действий будут участвовать только объекты, для которых в текущей информационной базе существует хотя бы один не помеченный на удаление элемент</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>en</v8:lang>
-									<v8:content>If this flag is set, only those objects that have at least one item in the current database that is not marked for deletion will be included in the creation of feature-files.</v8:content>
-								</v8:item>
-							</ToolTip>
-							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-							<CheckBoxType>Auto</CheckBoxType>
-							<ContextMenu name="ТолькоВведенныеКонтекстноеМеню" id="57"/>
-							<ExtendedTooltip name="ТолькоВведенныеРасширеннаяПодсказка" id="58"/>
-						</CheckBoxField>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ТолькоИзмененныеОтностительноКонфигурацииПоставщикаПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+								<InputField name="ИмяКонфигурацииПоставщика" id="11">
+									<DataPath>ИмяКонфигурацииПоставщика</DataPath>
+									<TitleLocation>Top</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Vendor configuration name for configuration comparison</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<ContextMenu name="ИмяКонфигурацииПоставщикаКонтекстноеМеню" id="12"/>
+									<ExtendedTooltip name="ИмяКонфигурацииПоставщикаРасширеннаяПодсказка" id="13">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Имя конфигурации поставщика для сравнения конфигураций.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
 					</ChildItems>
 				</Page>
 				<Page name="СтраницаНастройкаСценариев" id="23">
@@ -257,6 +380,11 @@
 							<AutoCommandBar name="ТаблицаНастроекКоманднаяПанель" id="27">
 								<Autofill>false</Autofill>
 								<ChildItems>
+									<Button name="НастройкиСценариевПоУмолчанию" id="106">
+										<Type>CommandBarButton</Type>
+										<CommandName>Form.Command.НастройкиСценариевПоУмолчанию</CommandName>
+										<ExtendedTooltip name="НастройкиСценариевПоУмолчаниюРасширеннаяПодсказка" id="107"/>
+									</Button>
 									<Button name="ТаблицаНастроекСохранитьНастройкиСценариевВФайл" id="75">
 										<Type>CommandBarButton</Type>
 										<CommandName>Form.Command.СохранитьНастройкиСценариевВФайл</CommandName>
@@ -458,6 +586,7 @@
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
+			<SavedData>true</SavedData>
 		</Attribute>
 		<Attribute name="КаталогВыходныхФайлов" id="3">
 			<Title>
@@ -477,6 +606,7 @@
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
+			<SavedData>true</SavedData>
 		</Attribute>
 		<Attribute name="ИмяКонфигурацииПоставщика" id="4">
 			<Title>
@@ -496,8 +626,9 @@
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
+			<SavedData>true</SavedData>
 		</Attribute>
-		<Attribute name="ТолькоИзмененные" id="5">
+		<Attribute name="ТолькоИзмененныеОтностительноКонфигурацииПоставщика" id="5">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -511,6 +642,7 @@
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
+			<SavedData>true</SavedData>
 		</Attribute>
 		<Attribute name="ТаблицаНастроек" id="7">
 			<Title>
@@ -672,11 +804,11 @@
 				</Column>
 			</Columns>
 		</Attribute>
-		<Attribute name="ТолькоВведенные" id="8">
+		<Attribute name="ТолькоВведенныеОбъекты" id="8">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Только введенные в информационную базу объекты для расширенных действий</v8:content>
+					<v8:content>Только введенные объекты для расширенных действий</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
@@ -686,6 +818,7 @@
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
+			<SavedData>true</SavedData>
 		</Attribute>
 		<Attribute name="ЯзыкШагов" id="10">
 			<Title>
@@ -705,6 +838,7 @@
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
+			<SavedData>true</SavedData>
 		</Attribute>
 		<Attribute name="СоответствиеТекстовСообщений" id="11">
 			<Title>
@@ -719,15 +853,11 @@
 			</Title>
 			<Type/>
 		</Attribute>
-		<Attribute name="ПутьНастройкиСценариеДымовыхТестов" id="12">
+		<Attribute name="ПутьКФайлуНастроекСценариев" id="6">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Путь настройки сценарие дымовых тестов</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>The setup path of the smoke test scenario</v8:content>
+					<v8:content>Путь к файлу настроек сценариев</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -736,6 +866,18 @@
 					<v8:Length>0</v8:Length>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
+			</Type>
+			<SavedData>true</SavedData>
+		</Attribute>
+		<Attribute name="ЗапрещеныСинхронныеВызовы" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Запрещены синхронные вызовы</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
 		<ConditionalAppearance>
@@ -981,28 +1123,20 @@
 			</ToolTip>
 			<Action>ЗагрузитьНастройкиСценариевИзФайла</Action>
 		</Command>
-		<Command name="ЗакрытьФорму" id="4">
+		<Command name="НастройкиСценариевПоУмолчанию" id="4">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Закрыть</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Close</v8:content>
+					<v8:content>По умолчанию</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Закрыть форму</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Close form</v8:content>
+					<v8:content>Настройки сценариев по умолчанию</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action>ЗакрытьФорму</Action>
+			<Action>НастройкиСценариевПоУмолчанию</Action>
 		</Command>
 	</Commands>
 </Form>
