@@ -12974,17 +12974,102 @@ Default: ffmpeg</v8:content>
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="215977de-0ee2-4f1f-8c53-7f641c715690">
+			<Attribute uuid="e47a0baf-85cf-4ffe-b38a-01163ed759aa">
 				<Properties>
-					<Name>КаталогГенерированияДымовыхТестов</Name>
+					<Name>ВариантСтилейHTMLИнструкции</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Каталог генерирования дымовых тестов</v8:content>
+							<v8:content>Вариант стилей HTMLИнструкции</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>en</v8:lang>
-							<v8:content>Smoke test generation catalog</v8:content>
+							<v8:content>VariantsHTMLInstructions</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>2</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+					<PasswordMode>false</PasswordMode>
+					<Format/>
+					<EditFormat/>
+					<ToolTip/>
+					<MarkNegatives>false</MarkNegatives>
+					<Mask/>
+					<MultiLine>false</MultiLine>
+					<ExtendedEdit>false</ExtendedEdit>
+					<MinValue xsi:nil="true"/>
+					<MaxValue xsi:nil="true"/>
+					<FillChecking>DontCheck</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ChoiceParameterLinks/>
+					<ChoiceParameters/>
+					<QuickChoice>Auto</QuickChoice>
+					<CreateOnInput>Auto</CreateOnInput>
+					<ChoiceForm/>
+					<LinkByType/>
+					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="460c98cb-c5b4-439e-9006-a5d9014e2a93">
+				<Properties>
+					<Name>ДымовыеТестыЯзыкШагов</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Язык шагов</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Language of steps</v8:content>
+						</v8:item>
+					</Synonym>
+					<Comment/>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>16</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+					<PasswordMode>false</PasswordMode>
+					<Format/>
+					<EditFormat/>
+					<ToolTip/>
+					<MarkNegatives>false</MarkNegatives>
+					<Mask/>
+					<MultiLine>false</MultiLine>
+					<ExtendedEdit>false</ExtendedEdit>
+					<MinValue xsi:nil="true"/>
+					<MaxValue xsi:nil="true"/>
+					<FillChecking>DontCheck</FillChecking>
+					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
+					<ChoiceParameterLinks/>
+					<ChoiceParameters/>
+					<QuickChoice>Auto</QuickChoice>
+					<CreateOnInput>Auto</CreateOnInput>
+					<ChoiceForm/>
+					<LinkByType/>
+					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
+				</Properties>
+			</Attribute>
+			<Attribute uuid="215977de-0ee2-4f1f-8c53-7f641c715690">
+				<Properties>
+					<Name>ДымовыеТестыКаталогВыходныхФайлов</Name>
+					<Synonym>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Каталог выходных файлов</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Output directory</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -13018,15 +13103,15 @@ Default: ffmpeg</v8:content>
 			</Attribute>
 			<Attribute uuid="ff81dacd-1d85-4a68-a927-bf5a8857dcfe">
 				<Properties>
-					<Name>КаталогФайловИсключаемыхОбъектовИзДымовогоТестирования</Name>
+					<Name>ДымовыеТестыКаталогФайловИсключений</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Каталог файлов исключаемых объектов из дымового тестирования</v8:content>
+							<v8:content>Каталог файлов исключений</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>en</v8:lang>
-							<v8:content>Catalog of files of excluded objects from the smoke test</v8:content>
+							<v8:content>Exception files directory</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -13058,17 +13143,17 @@ Default: ffmpeg</v8:content>
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="01ab91c6-f545-431a-ad7a-888b3bda149c">
+			<Attribute uuid="74dc0c06-0862-4139-89da-907d3ae17d49">
 				<Properties>
-					<Name>ТолькоИзмененныеОтносительноКонфигурацииПоставщикаДляДымовогоТестирования</Name>
+					<Name>ДымовыеТестыТолькоВведенныеОбъекты</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Только измененные относительно конфигурации поставщика для дымового тестирования</v8:content>
+							<v8:content>Только введенные объекты для расширенных действий</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>en</v8:lang>
-							<v8:content>Only changed relatively provider configuration</v8:content>
+							<v8:content>Only entered objects for advanced actions</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -13096,17 +13181,17 @@ Default: ffmpeg</v8:content>
 					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
 				</Properties>
 			</Attribute>
-			<Attribute uuid="74dc0c06-0862-4139-89da-907d3ae17d49">
+			<Attribute uuid="01ab91c6-f545-431a-ad7a-888b3bda149c">
 				<Properties>
-					<Name>ТолькоВведенныеОбъектыДляДымовогоТестирования</Name>
+					<Name>ДымовыеТестыТолькоИзмененныеОтностительноКонфигурацииПоставщика</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Только введенные объекты</v8:content>
+							<v8:content>Только измененные отностительно конфигурации поставщика</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>en</v8:lang>
-							<v8:content>Only entered objects</v8:content>
+							<v8:content>Only changed relative to vendor configuration</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -13136,7 +13221,7 @@ Default: ffmpeg</v8:content>
 			</Attribute>
 			<Attribute uuid="74d70c25-8e12-4501-af10-81aa4a4f98fd">
 				<Properties>
-					<Name>ИмяКонфигурацииПоставщика</Name>
+					<Name>ДымовыеТестыИмяКонфигурацииПоставщика</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
@@ -13144,7 +13229,7 @@ Default: ffmpeg</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>en</v8:lang>
-							<v8:content>Name of the vendor configuration</v8:content>
+							<v8:content>Vendor Configuration Name</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -13178,15 +13263,15 @@ Default: ffmpeg</v8:content>
 			</Attribute>
 			<Attribute uuid="1ed80230-b91b-4592-a17e-6c98e6a1a67e">
 				<Properties>
-					<Name>ПутьНастройкиСценариеДымовыхТестов</Name>
+					<Name>ДымовыеТестыПутьКФайлуНастроекСценариев</Name>
 					<Synonym>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Путь настройки сценарие дымовых тестов</v8:content>
+							<v8:content>Путь к файлу настроек сценариев</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>en</v8:lang>
-							<v8:content>The setup path of the smoke test scenario</v8:content>
+							<v8:content>Path to script settings file</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -13196,91 +13281,6 @@ Default: ffmpeg</v8:content>
 							<v8:Length>0</v8:Length>
 							<v8:AllowedLength>Variable</v8:AllowedLength>
 						</v8:StringQualifiers>
-					</Type>
-					<PasswordMode>false</PasswordMode>
-					<Format/>
-					<EditFormat/>
-					<ToolTip/>
-					<MarkNegatives>false</MarkNegatives>
-					<Mask/>
-					<MultiLine>false</MultiLine>
-					<ExtendedEdit>false</ExtendedEdit>
-					<MinValue xsi:nil="true"/>
-					<MaxValue xsi:nil="true"/>
-					<FillChecking>DontCheck</FillChecking>
-					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
-					<ChoiceParameterLinks/>
-					<ChoiceParameters/>
-					<QuickChoice>Auto</QuickChoice>
-					<CreateOnInput>Auto</CreateOnInput>
-					<ChoiceForm/>
-					<LinkByType/>
-					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
-				</Properties>
-			</Attribute>
-			<Attribute uuid="460c98cb-c5b4-439e-9006-a5d9014e2a93">
-				<Properties>
-					<Name>ЯзыкШаговДымовыхТестов</Name>
-					<Synonym>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Язык шагов дымовых тестов</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>en</v8:lang>
-							<v8:content>Language of smoke test steps</v8:content>
-						</v8:item>
-					</Synonym>
-					<Comment/>
-					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>16</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
-					</Type>
-					<PasswordMode>false</PasswordMode>
-					<Format/>
-					<EditFormat/>
-					<ToolTip/>
-					<MarkNegatives>false</MarkNegatives>
-					<Mask/>
-					<MultiLine>false</MultiLine>
-					<ExtendedEdit>false</ExtendedEdit>
-					<MinValue xsi:nil="true"/>
-					<MaxValue xsi:nil="true"/>
-					<FillChecking>DontCheck</FillChecking>
-					<ChoiceFoldersAndItems>Items</ChoiceFoldersAndItems>
-					<ChoiceParameterLinks/>
-					<ChoiceParameters/>
-					<QuickChoice>Auto</QuickChoice>
-					<CreateOnInput>Auto</CreateOnInput>
-					<ChoiceForm/>
-					<LinkByType/>
-					<ChoiceHistoryOnInput>Auto</ChoiceHistoryOnInput>
-				</Properties>
-			</Attribute>
-			<Attribute uuid="e47a0baf-85cf-4ffe-b38a-01163ed759aa">
-				<Properties>
-					<Name>ВариантСтилейHTMLИнструкции</Name>
-					<Synonym>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Вариант стилей HTMLИнструкции</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>en</v8:lang>
-							<v8:content>VariantsHTMLInstructions</v8:content>
-						</v8:item>
-					</Synonym>
-					<Comment/>
-					<Type>
-						<v8:Type>xs:decimal</v8:Type>
-						<v8:NumberQualifiers>
-							<v8:Digits>2</v8:Digits>
-							<v8:FractionDigits>0</v8:FractionDigits>
-							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
-						</v8:NumberQualifiers>
 					</Type>
 					<PasswordMode>false</PasswordMode>
 					<Format/>
