@@ -9,6 +9,11 @@
 				<CommandName>Form.Command.ОбновитьТаблицу</CommandName>
 				<ExtendedTooltip name="ОбновитьТаблицуРасширеннаяПодсказка" id="27"/>
 			</Button>
+			<Button name="ФормаЗакрытьФорму" id="94">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ЗакрытьФорму</CommandName>
+				<ExtendedTooltip name="ФормаЗакрытьФормуРасширеннаяПодсказка" id="95"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -96,6 +101,13 @@
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="ОтборИсключитьРегламентныеЗаданияКонтекстноеМеню" id="86"/>
 					<ExtendedTooltip name="ОтборИсключитьРегламентныеЗаданияРасширеннаяПодсказка" id="87"/>
+				</CheckBoxField>
+				<CheckBoxField name="ВыполненаБыстраяПроверка" id="91">
+					<DataPath>ВыполненаБыстраяПроверка</DataPath>
+					<TitleLocation>Right</TitleLocation>
+					<CheckBoxType>Auto</CheckBoxType>
+					<ContextMenu name="ВыполненаБыстраяПроверкаКонтекстноеМеню" id="92"/>
+					<ExtendedTooltip name="ВыполненаБыстраяПроверкаРасширеннаяПодсказка" id="93"/>
 				</CheckBoxField>
 			</ChildItems>
 		</UsualGroup>
@@ -413,6 +425,17 @@
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
+		<Attribute name="ВыполненаБыстраяПроверка" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнена быстрая проверка</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ОбновитьТаблицу" id="1">
@@ -430,6 +453,21 @@
 			</ToolTip>
 			<Action>ОбновитьТаблицу</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗакрытьФорму" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть форму</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть форму</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗакрытьФорму</Action>
 		</Command>
 	</Commands>
 </Form>
