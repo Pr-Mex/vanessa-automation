@@ -27,6 +27,7 @@
 
 ## Статьи по Vanessa Automation
 
+* [100+ тестов на Vanessa-Automation. Личный опыт без маркетинга.](https://infostart.ru/1c/articles/1938621/)
 * [Vanessa-Automation — инструмент тестирования прикладных решений на платформе «1С: Предприятие» @Хабрахабр](https://habr.com/post/418303/)
 * [Vanessa-Automation — инструмент автодокументирования прикладных решений на платформе «1С: Предприятие». Кино и BDD. @Хабрахабр](https://habr.com/post/420175/)
 * [Как стать контрибьютерром VA](https://infostart.ru/public/1092009/)
@@ -55,7 +56,6 @@
 * [Митап 1С:Community от КОРУС Консалтинг. Опыт применения автотестирования](https://www.youtube.com/watch?v=OAT_a25XIXQ)
 * [Автоматическое тестирование с использованием Vanessa в Yandex.Cloud](https://m.youtube.com/watch?v=vTAVedABBGQ)
 * [Как изменялся механизм формирования текстовых авто-инструкций. Мастер класс по созданию красивой инструкции.](https://youtu.be/ofMvDX6kIBg)
-* [Дымовые тесты с Vanessa-Automation (Виталий Онянов)](https://www.youtube.com/watch?v=xXCxMLdVt7I)
 
 ## Курсы
 * Бесплатные
