@@ -83,6 +83,16 @@
 							<ChildItems>
 								<RadioButtonField name="ЯзыкШагов" id="84">
 									<DataPath>ЯзыкШагов</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Язык шагов</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Language of steps</v8:content>
+										</v8:item>
+									</Title>
 									<RadioButtonType>Tumbler</RadioButtonType>
 									<ChoiceList>
 										<xr:Item>
@@ -193,7 +203,7 @@
 												<Title formatted="false">
 													<v8:item>
 														<v8:lang>ru</v8:lang>
-														<v8:content>Каталог, в котором хранятся текстовые файлы с объектами-исключениям. Для каждого вида объектов метаданных или события должен быть отдельный файл ("Справочники", "Документы" и т. д.).</v8:content>
+														<v8:content>Каталог, в котором хранятся текстовые файлы с объектами-исключениями. Для каждого вида объектов метаданных или события должен быть отдельный файл ("Справочники", "Документы" и т. д.).</v8:content>
 													</v8:item>
 													<v8:item>
 														<v8:lang>en</v8:lang>
@@ -342,6 +352,16 @@
 										<Type>CommandBarButton</Type>
 										<CommandName>Form.Command.НастройкиСценариевПоУмолчанию</CommandName>
 										<ExtendedTooltip name="НастройкиСценариевПоУмолчаниюРасширеннаяПодсказка" id="107"/>
+									</Button>
+									<Button name="ТаблицаНастроекНастрокиСценариевСнятьВсе" id="112">
+										<Type>CommandBarButton</Type>
+										<Representation>Picture</Representation>
+										<CommandName>Form.Command.НастрокиСценариевСнятьВсе</CommandName>
+										<Picture>
+											<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="ТаблицаНастроекНастрокиСценариевСнятьВсеРасширеннаяПодсказка" id="113"/>
 									</Button>
 									<Button name="ТаблицаНастроекСохранитьНастройкиСценариевВФайл" id="75">
 										<Type>CommandBarButton</Type>
@@ -1064,6 +1084,29 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗакрытьФорму</Action>
+		</Command>
+		<Command name="НастрокиСценариевСнятьВсе" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все флаги</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Remove all flags</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все флаги</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Remove all flags</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастрокиСценариевСнятьВсе</Action>
 		</Command>
 	</Commands>
 </Form>
