@@ -1251,28 +1251,28 @@ An array of key and value objects. This array will be loaded into global variabl
 <p>Smoke Tests</p>
 <ul>
 <li>
-<p><strong>SmokeTestGenerationPath</strong>:
-     Directory in which the resulting feature-files will be written</p>
+<p><strong>SmokeTestsDirectoryOutputFiles</strong>:
+     The directory where the final feature files will be written.</p>
 </li>
 <li>
-<p><strong>CatalogOfFilesOfExcludedObjectsFromTheSmokeTest</strong>:
-     Directory in which text files with exception objects are stored.</p>
+<p><strong>SmokeTestsDirectoryFileExceptions</strong>:
+     The directory in which text files with exception objects are stored. For each type of metadata object or event there must be a separate file ("Directories", "Documents", etc.).</p>
 </li>
 <li>
-<p><strong>TheSetupPathOfTheSmokeTestScenario</strong>:
-     Path to the script setup file (the setup file can be created on the "Script Setup" tab of the "Smoke test generator" window)</p>
+<p><strong>SmokeTestsPathToFileSettingsScripts</strong>:
+     Path to the script configuration file (the configuration file can be created on the "Script Settings" tab in the "Smoke Test Generator" window).</p>
 </li>
 <li>
-<p><strong>NameOfTheVendorConfiguration</strong>:
-     Vendor configuration name for configuration comparison</p>
+<p><strong>SmokeTestsOnlyEnteredObjects</strong>:
+     When this flag is enabled, only objects for which there is at least one element not marked for deletion in the current infobase will participate in the generation of feature files of extended actions.</p>
 </li>
 <li>
-<p><strong>OnlyChangedRelativelyProviderConfiguration</strong>:
-     If this flag is set, feature-files will only include objects that have at least one item in the current database that is not marked for deletion.</p>
+<p><strong>SmokeTestsOnlyChangedRelativeToVendorConfiguration</strong>:
+     When this flag is enabled, only objects changed relative to the provider configuration will participate in the generation of feature files. To build a report on comparing configurations, the current infobase configurator will be launched.</p>
 </li>
 <li>
-<p><strong>OnlyEnteredObjects</strong>:
-     If this flag is set, only those objects that have at least one item in the current database that is not marked for deletion will be included in the creation of feature-files.</p>
+<p><strong>SmokeTestsVendorConfigurationName</strong>:
+     The name of the vendor configuration to compare configurations with.</p>
 </li>
 </ul>
 </li>
