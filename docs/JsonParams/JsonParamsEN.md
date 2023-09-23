@@ -82,23 +82,23 @@ An array of key and value objects. This array will be loaded into global variabl
 
 *  Smoke Tests
 
-      * **SmokeTestGenerationPath**:
-         Directory in which the resulting feature-files will be written
+      * **SmokeTestsDirectoryOutputFiles**:
+         The directory where the final feature files will be written.
 
-      * **CatalogOfFilesOfExcludedObjectsFromTheSmokeTest**:
-         Directory in which text files with exception objects are stored.
+      * **SmokeTestsDirectoryFileExceptions**:
+         The directory in which text files with exception objects are stored. For each type of metadata object or event there must be a separate file ("Directories", "Documents", etc.).
 
-      * **TheSetupPathOfTheSmokeTestScenario**:
-         Path to the script setup file (the setup file can be created on the "Script Setup" tab of the "Smoke test generator" window)
+      * **SmokeTestsPathToFileSettingsScripts**:
+         Path to the script configuration file (the configuration file can be created on the "Script Settings" tab in the "Smoke Test Generator" window).
 
-      * **NameOfTheVendorConfiguration**:
-         Vendor configuration name for configuration comparison
+      * **SmokeTestsOnlyEnteredObjects**:
+         When this flag is enabled, only objects for which there is at least one element not marked for deletion in the current infobase will participate in the generation of feature files of extended actions.
 
-      * **OnlyChangedRelativelyProviderConfiguration**:
-         If this flag is set, feature-files will only include objects that have at least one item in the current database that is not marked for deletion.
+      * **SmokeTestsOnlyChangedRelativeToVendorConfiguration**:
+         When this flag is enabled, only objects changed relative to the provider configuration will participate in the generation of feature files. To build a report on comparing configurations, the current infobase configurator will be launched.
 
-      * **OnlyEnteredObjects**:
-         If this flag is set, only those objects that have at least one item in the current database that is not marked for deletion will be included in the creation of feature-files.
+      * **SmokeTestsVendorConfigurationName**:
+         The name of the vendor configuration to compare configurations with.
 
 *  System settings
 
