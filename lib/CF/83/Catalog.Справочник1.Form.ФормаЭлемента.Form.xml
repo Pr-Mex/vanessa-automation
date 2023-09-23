@@ -550,6 +550,48 @@
 								</Title>
 							</ExtendedTooltip>
 						</RadioButtonField>
+						<RadioButtonField name="РеквизитПереключательВысотаСтроки2" id="384">
+							<DataPath>Объект.РеквизитПереключатель</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Реквизит переключатель высота строки 2</v8:content>
+								</v8:item>
+							</Title>
+							<TitleHeight>2</TitleHeight>
+							<RadioButtonType>Auto</RadioButtonType>
+							<ItemTitleHeight>2</ItemTitleHeight>
+							<ChoiceList>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Первое значение</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">1</Value>
+									</xr:Value>
+								</xr:Item>
+								<xr:Item>
+									<xr:Presentation/>
+									<xr:CheckState>0</xr:CheckState>
+									<xr:Value xsi:type="FormChoiceListDesTimeValue">
+										<Presentation>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Второе значение</v8:content>
+											</v8:item>
+										</Presentation>
+										<Value xsi:type="xs:decimal">2</Value>
+									</xr:Value>
+								</xr:Item>
+							</ChoiceList>
+							<ContextMenu name="РеквизитПереключательВысотаСтроки2КонтекстноеМеню" id="385"/>
+							<ExtendedTooltip name="РеквизитПереключательВысотаСтроки2РасширеннаяПодсказка" id="386"/>
+						</RadioButtonField>
 						<UsualGroup name="ГруппаРеквизитБыстрыйВыбор" id="257">
 							<Title>
 								<v8:item>
@@ -597,6 +639,46 @@
 							<ContextMenu name="РеквизитЧисло1КонтекстноеМеню" id="276"/>
 							<ExtendedTooltip name="РеквизитЧисло1РасширеннаяПодсказка" id="277"/>
 						</CheckBoxField>
+						<UsualGroup name="Группа2" id="376">
+							<Group>Horizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="377"/>
+							<ChildItems>
+								<InputField name="СписокМножественныйВыбор" id="373">
+									<DataPath>СписокМножественныйВыбор</DataPath>
+									<ChoiceButton>true</ChoiceButton>
+									<ClearButton>true</ClearButton>
+									<ChooseType>false</ChooseType>
+									<ContextMenu name="СписокМножественныйВыборКонтекстноеМеню" id="374"/>
+									<ExtendedTooltip name="СписокМножественныйВыборРасширеннаяПодсказка" id="375"/>
+								</InputField>
+								<Button name="СписокМножественныйВыборИзменитьТолькоПросмотр" id="378">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.СписокМножественныйВыборИзменитьТолькоПросмотр</CommandName>
+									<Parameter xsi:nil="true"/>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сменить только просмотр</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="СписокМножественныйВыборИзменитьТолькоПросмотрРасширеннаяПодсказка" id="379"/>
+								</Button>
+								<Button name="СписокМножественныйВыборИзменитьДоступность" id="380">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.СписокМножественныйВыборИзменитьДоступность</CommandName>
+									<Parameter xsi:nil="true"/>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сменить доступность</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="СписокМножественныйВыборИзменитьДоступностьРасширеннаяПодсказка" id="381"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
 					</ChildItems>
 				</Page>
 				<Page name="СтраницаТЧ" id="330">
@@ -1336,6 +1418,12 @@
 							<CommandName>Form.Command.НедоступнаяКоманда</CommandName>
 							<Parameter xsi:nil="true"/>
 							<ExtendedTooltip name="НедоступнаяКомандаРасширеннаяПодсказка" id="265"/>
+						</Button>
+						<Button name="КнопкаСЗаголовокомСПереносомСтроки" id="382">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.КнопкаСЗаголовокомСПереносомСтроки</CommandName>
+							<Parameter xsi:nil="true"/>
+							<ExtendedTooltip name="КнопкаСЗаголовокомСПереносомСтрокиРасширеннаяПодсказка" id="383"/>
 						</Button>
 					</ChildItems>
 				</Page>
@@ -2148,6 +2236,17 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="СписокМножественныйВыбор" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список множественный выбор</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ЗаполнитьРекСтрока1" id="1">
@@ -2687,6 +2786,51 @@
 				</v8:item>
 			</ToolTip>
 			<Action>СоздатьHTMLСтраницуСЭлементомСправочника2</Action>
+		</Command>
+		<Command name="СписокМножественныйВыборИзменитьТолькоПросмотр" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список множественный выбор изменить только просмотр</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список множественный выбор изменить только просмотр</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СписокМножественныйВыборИзменитьТолькоПросмотр</Action>
+		</Command>
+		<Command name="СписокМножественныйВыборИзменитьДоступность" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список множественный выбор изменить доступность</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список множественный выбор изменить только просмотр</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СписокМножественныйВыборИзменитьДоступность</Action>
+		</Command>
+		<Command name="КнопкаСЗаголовокомСПереносомСтроки" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>КнопкаСЗаголовокомСПереносомСтроки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>КнопкаСЗаголовокомСПереносомСтроки</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КнопкаСЗаголовокомСПереносомСтроки</Action>
 		</Command>
 	</Commands>
 	<CommandInterface>

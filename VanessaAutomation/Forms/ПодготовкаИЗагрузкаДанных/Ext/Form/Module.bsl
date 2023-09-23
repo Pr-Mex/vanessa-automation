@@ -618,7 +618,14 @@ Procedure ICheckOrCreateChartOfCharacteristicTypesObjectsAtServer(ObjectName, Va
 				Obj.DeletionMark = True;
 				Continue;
 			EndIf;
-			FillTipicalObjectAttributesByValues(Obj, Row, Column);
+			If Column.Name = "ValueType" Or Column.Name = "ТипЗначения" Then  
+				NewXMLReader = New XMLReader;
+				NewXMLReader.SetString(Row[Column.Name]);
+				Obj.ValueType = XDTOSerializer.ReadXML(NewXMLReader, Тип("ОписаниеТипов"));
+				NewXMLReader.Close();
+			Else
+				FillTipicalObjectAttributesByValues(Obj, Row, Column);
+			EndIf;
 		EndDo;
 		Obj.DataExchange.Load = DataExchange;
 		TryToWriteObject(Obj, 4);
@@ -861,10 +868,8 @@ Procedure ICheckOrCreateInformationRegisterRecordsAtServer(RegisterName, Values,
 		MasterDimensions.Add(RecorderColumn.Name);		
 	ElsIf UseRecordSets Then
 		For Each Dimension In RegisterMetadata.Dimensions Do
-			If Dimension.Master Then
-				MasterDimensions.Add(Dimension.Name);
-			EndIf;			
-		EndDo;		
+			MasterDimensions.Add(Dimension.Name);
+		EndDo;
 		If RegisterMetadata.InformationRegisterPeriodicity <> Metadata.ObjectProperties.InformationRegisterPeriodicity.Nonperiodical Then
 			PeriodColumn = ObjectAttributes.Columns.Find("Period");
 			If PeriodColumn = Undefined Then
@@ -915,9 +920,6 @@ Procedure ICheckOrCreateInformationRegisterRecordsAtServer(RegisterName, Values,
 		For Each Row In ObjectValues Do
 			Obj = InformationRegisters[RegisterName].CreateRecordManager();
 			For Each Column In ObjectAttributes.Columns Do
-				//If Row[Column.Name] = "" Then
-				//	Continue;
-				//EndIf;
 				FillTipicalObjectAttributesByValues(Obj, Row, Column);
 			EndDo;
 			Obj.Write(True);
@@ -1195,7 +1197,7 @@ EndProcedure
 &AtClient
 Procedure AddObjectByURL(Command)
 	Notify = New NotifyDescription("AddObjectByURLContinuation", ThisForm);
-	ShowInputString(Notify, "", NStr("ru = 'Введите навигационные ссылки'"), , True);	
+	OpenForm(Vanessa.ПолучитьИмяОбработкиVA() + ".Форма.ВводСтрокиНавигационныхСсылок",, ThisForm,,,, Notify,  FormWindowOpeningMode.LockWholeInterface);
 EndProcedure
 
 &AtClient
@@ -1293,14 +1295,15 @@ EndProcedure
 
 &AtServer
 Procedure FillMetadataType()
+	RepresentationsInLanguage = RL();
 	MetadataType.Clear();
-	MetadataType.Add("Constants", RL().s1);
-	MetadataType.Add("Catalogs", RL().s2);
-	MetadataType.Add("Documents", RL().s3);
-	MetadataType.Add("ChartsOfAccounts", RL().s7);
-	MetadataType.Add("ChartsOfCharacteristicTypes", RL().s4);
-	MetadataType.Add("InformationRegisters", RL().s5);
-	MetadataType.Add("AccumulationRegisters", RL().s6);
+	MetadataType.Add("Constants", 					RepresentationsInLanguage.s1,, PictureLib.Constant);
+	MetadataType.Add("Catalogs", 					RepresentationsInLanguage.s2,, PictureLib.Catalog);
+	MetadataType.Add("Documents", 					RepresentationsInLanguage.s3,, PictureLib.Document);
+	MetadataType.Add("ChartsOfAccounts", 			RepresentationsInLanguage.s7,, PictureLib.ChartOfAccounts);
+	MetadataType.Add("ChartsOfCharacteristicTypes", RepresentationsInLanguage.s4,, PictureLib.ChartOfCharacteristicTypes);
+	MetadataType.Add("InformationRegisters", 		RepresentationsInLanguage.s5,, PictureLib.InformationRegister);
+	MetadataType.Add("AccumulationRegisters", 		RepresentationsInLanguage.s6,, PictureLib.AccumulationRegister);
 EndProcedure
 
 &AtServer
@@ -1311,7 +1314,8 @@ Procedure FillMetadata()
 		MetadataListParentRow = MetadataListObject.Rows.Add();
 		MetadataListParentRow.Use = False;
 		MetadataListParentRow.Name = MetadataTypeItem.Value;
-		MetadataListParentRow.Presentation = MetadataTypeItem.Presentation;
+		MetadataListParentRow.Presentation = MetadataTypeItem.Presentation; 
+		MetadataListParentRow.Рicture =	MetadataTypeItem.Picture;
 		For Each Data In Metadata[MetadataTypeItem.Value] Do
 			MetadataListRow = MetadataListParentRow.Rows.Add();
 			MetadataListRow.Use = False;
@@ -2715,12 +2719,19 @@ Function GetMarkdownTable(Val MetadataObjectPropertyName, Val MetadataObjectName
 		For Each Column In DataTable.Columns Do
 			If isUnsupportedAttribute(Column.Name) Then
 				Continue;
-			EndIf;
+			EndIf; 			
 			Markdown.Add("|");
 			If Not TypeOf(Row[Column.Name]) = Type("Number") Then
 				Markdown.Add("'");
+			EndIf; 
+			If Column.Name = "ТипЗначения" Or Column.Name = "ValueType" Then
+				NewXMLWriter = New XMLWriter; 
+				NewXMLWriter.SetString();
+				XDTOSerializer.WriteXML(NewXMLWriter, Row[Column.Name]); 
+				RowData = GeValuetStringRepresentation(StrReplace(NewXMLWriter.Close(), Chars.LF, ""), RefReplaceMetadataObjects);
+			Else
+				RowData = GeValuetStringRepresentation(Row[Column.Name], RefReplaceMetadataObjects);
 			EndIf;
-			RowData = GeValuetStringRepresentation(Row[Column.Name], RefReplaceMetadataObjects);
 			Markdown.Add(RowData);
 			If Not TypeOf(Row[Column.Name]) = Type("Number") Then
 				Markdown.Add("'");
@@ -2914,8 +2925,6 @@ Function isUnsupportedAttribute(AttributeName)
 	UnsupportedAttributes.Add("Предопределенный");
 	UnsupportedAttributes.Add("PredefinedDataName");
 	UnsupportedAttributes.Add("ИмяПредопределенныхДанных");
-	UnsupportedAttributes.Add("ValueType");
-	UnsupportedAttributes.Add("ТипЗначения");
 	Return UnsupportedAttributes.Find(AttributeName) <> Undefined;
 EndFunction
 
@@ -3122,7 +3131,7 @@ Function LocalizedStringsServer()
 	ReturnData.Insert("s1c_en", "And I run database clean");
 	ReturnData.Insert("s1c_ru", "И Я запускаю очистку базы данных");
 	ReturnData.Insert("s1d_en", "Cleans the database");
-	ReturnData.Insert("s1d_ru", "Очищает базу данных");
+	ReturnData.Insert("s1d_ru", "Очищает базу данных. Работает только в серверных базах.");
 	
 	ReturnData.Insert("s2a_en", "ICheckOrCreateCatalogObjects(ObjectName, Values)");
 	ReturnData.Insert("s2a_ru", "ЯПроверяюИлиСоздаюДляСправочникаОбъекты(ИмяОбъекта, Значения)");
@@ -3206,13 +3215,13 @@ Function LocalizedStringsServer()
 	ReturnData.Insert("s8b_ru", "ЯВыполняюКодИВставляюВПеременную");
 	ReturnData.Insert("s8c_en", "And I execute code and put to varible ""Code"" ""VaribleName""");
 	ReturnData.Insert("s8c_ru", "И я выполняю код и вставляю в переменную ""Код"" ""ИмяПеременной""");
-	ReturnData.Insert("s8d_en", "Executes code and puts to varible");
-	ReturnData.Insert("s8d_ru", "Выполняет код и вставляет в переменную");
+	ReturnData.Insert("s8d_en", "Executes code and puts to varible" + Символы.ПС + "Code is running on the server side. Context and ContextKeepable are not available");
+	ReturnData.Insert("s8d_ru", "Выполняет код и вставляет в переменную" + Символы.ПС + "Код выполняется на стороне сервера, Контекст и КонтекстСохраняемый недоступны");
 	
 	ReturnData.Insert("s9a_en", "#language: en");
 	ReturnData.Insert("s9a_ru", "#language: ru");
 	ReturnData.Insert("s9b_en", "@tree");
-	ReturnData.Insert("s9b_ru", "@дерево");
+	ReturnData.Insert("s9b_ru", "@tree");
 	ReturnData.Insert("s9c_en", "Feature: export scenarios");
 	ReturnData.Insert("s9c_ru", "Функционал: экспорт сценариев");
 	ReturnData.Insert("s9d_en", "Background:");

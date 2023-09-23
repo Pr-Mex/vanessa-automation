@@ -86,8 +86,8 @@
 			<v8:content>Chi tiết lỗi</v8:content>
 		</v8:item>
 	</Title>
-	<Width>50</Width>
-	<Height>20</Height>
+	<Width>80</Width>
+	<Height>35</Height>
 	<WindowOpeningMode>LockOwnerWindow</WindowOpeningMode>
 	<SaveDataInSettings>UseList</SaveDataInSettings>
 	<AutoTitle>false</AutoTitle>
@@ -99,22 +99,15 @@
 				<CommandName>Form.Command.СравнитьТаблицы</CommandName>
 				<ExtendedTooltip name="ФормаСравнитьТаблицыРасширеннаяПодсказка" id="8"/>
 			</Button>
+			<Button name="ФормаАктуализироватьЗначение" id="17">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.АктуализироватьЗначение</CommandName>
+				<ExtendedTooltip name="ФормаАктуализироватьЗначениеРасширеннаяПодсказка" id="18"/>
+			</Button>
 			<Button name="ФормаПерейтиКСтрокеДереваСОшибкой" id="15">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.Command.ПерейтиКСтрокеДереваСОшибкой</CommandName>
 				<ExtendedTooltip name="ФормаПерейтиКСтрокеДереваСОшибкойРасширеннаяПодсказка" id="16"/>
-			</Button>
-			<Button name="ФормаАктуализироватьЗначение" id="17">
-				<Type>CommandBarButton</Type>
-				<Visible>false</Visible>
-				<CommandName>Form.Command.АктуализироватьЗначение</CommandName>
-				<ExtendedTooltip name="ФормаАктуализироватьЗначениеРасширеннаяПодсказка" id="18"/>
-			</Button>
-			<Button name="ФормаАктуализироватьТаблицу" id="19">
-				<Type>CommandBarButton</Type>
-				<Visible>false</Visible>
-				<CommandName>Form.Command.АктуализироватьТаблицу</CommandName>
-				<ExtendedTooltip name="ФормаАктуализироватьТаблицуРасширеннаяПодсказка" id="20"/>
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
@@ -126,6 +119,16 @@
 	<ChildItems>
 		<CheckBoxField name="ТолькоТекстЯчеек" id="9">
 			<DataPath>ТолькоТекстЯчеек</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Только текст ячеек</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Cell text only</v8:content>
+				</v8:item>
+			</Title>
 			<TitleLocation>Right</TitleLocation>
 			<CheckBoxType>Auto</CheckBoxType>
 			<ContextMenu name="ТолькоТекстЯчеекКонтекстноеМеню" id="10"/>
@@ -133,6 +136,16 @@
 		</CheckBoxField>
 		<CheckBoxField name="СУчетомРегулярныхВыражений" id="12">
 			<DataPath>СУчетомРегулярныхВыражений</DataPath>
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сравнение с учетом символа *</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Compare using *</v8:content>
+				</v8:item>
+			</Title>
 			<TitleLocation>Right</TitleLocation>
 			<CheckBoxType>Auto</CheckBoxType>
 			<ContextMenu name="СУчетомРегулярныхВыраженийКонтекстноеМеню" id="13"/>
@@ -142,6 +155,16 @@
 			<DataPath>ТекстОшибки</DataPath>
 			<ReadOnly>true</ReadOnly>
 			<TitleLocation>None</TitleLocation>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подробная информация об ошибке</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Detailed error information</v8:content>
+				</v8:item>
+			</ToolTip>
 			<AutoMaxWidth>false</AutoMaxWidth>
 			<MultiLine>true</MultiLine>
 			<ContextMenu name="ТекстОшибкиКонтекстноеМеню" id="5"/>
@@ -338,6 +361,10 @@
 					<v8:lang>ru</v8:lang>
 					<v8:content>Номер строки дерева</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Tree row number</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>xs:decimal</v8:Type>
@@ -530,21 +557,21 @@
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Перейти в дереве</v8:content>
+					<v8:content>Найти в дереве шагов</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
-					<v8:content>Jump in the tree</v8:content>
+					<v8:content>Find in steps tree</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Перейти в дереве</v8:content>
+					<v8:content>Найти в дереве шагов</v8:content>
 				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
-					<v8:content>Jump in the tree</v8:content>
+					<v8:content>Find in steps tree</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПерейтиКСтрокеДереваСОшибкой</Action>
@@ -555,29 +582,22 @@
 					<v8:lang>ru</v8:lang>
 					<v8:content>Актуализировать значение</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Update value</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Актуализировать значение</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Update value</v8:content>
+				</v8:item>
 			</ToolTip>
 			<Action>АктуализироватьЗначение</Action>
-		</Command>
-		<Command name="АктуализироватьТаблицу" id="4">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Актуализировать таблицу</v8:content>
-				</v8:item>
-			</Title>
-			<ToolTip>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Актуализировать таблицу</v8:content>
-				</v8:item>
-			</ToolTip>
-			<Action>АктуализироватьТаблицу</Action>
 		</Command>
 	</Commands>
 </Form>

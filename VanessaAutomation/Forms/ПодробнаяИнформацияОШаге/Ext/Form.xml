@@ -22,6 +22,11 @@
 				<CommandName>Form.Command.НайтиВДеревеШагов</CommandName>
 				<ExtendedTooltip name="ФормаНайтиВДеревеШаговРасширеннаяПодсказка" id="17"/>
 			</Button>
+			<Button name="ФормаЗакрытьФорму" id="18">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ЗакрытьФорму</CommandName>
+				<ExtendedTooltip name="ФормаЗакрытьФормуРасширеннаяПодсказка" id="19"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -211,8 +216,35 @@
 					<v8:lang>ru</v8:lang>
 					<v8:content>Найти в дереве шагов</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Find in the tree of steps</v8:content>
+				</v8:item>
 			</ToolTip>
 			<Action>НайтиВДеревеШагов</Action>
+		</Command>
+		<Command name="ЗакрытьФорму" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть форму</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Close form</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Закрыть форму</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Close form</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗакрытьФорму</Action>
 		</Command>
 	</Commands>
 </Form>

@@ -49,7 +49,7 @@ An array of key and value objects. This array will be loaded into global variabl
 
 *  External component VanessaExt
 
-      * **useaddine**:
+      * **useaddin**:
          Designed to manage Windows and Linux windows.
          Possibilities:
          Getting a list of windows and a list of processes
@@ -63,14 +63,42 @@ An array of key and value objects. This array will be loaded into global variabl
       * **SearchingForFilesUsingTheVanessaExtComponent**:
          Enables searching for files using the VanessaExt external component.
 
+      * **QuitIfSilentInstallationAddinFails**:
+         If the flag is set and the silent installation of the external component fails, the session will end with a return code of 4.
+         Possible return statuses:
+         https://github.com/Pr-Mex/vanessa-automation/blob/develop/docs/ReturnStatus/ReturnStatus.md
+
 *  System directories
 
       * **projectpath**:
          The catalog with the tested project files, which are necessary for test execution.
 
+      * **UseTemplateForNewFeature**:
+         If a template is specified (in *.txt format), then a new script will be created from it
+
       * **instrpath**:
          The catalog of Vanessa Automation data processor. This field must be filled on the standard installation.
          When working with Vanessa Automation Single it is allowed to leave the field blank.
+
+*  Smoke Tests
+
+      * **SmokeTestsDirectoryOutputFiles**:
+         The directory where the final feature files will be written.
+
+      * **SmokeTestsDirectoryFileExceptions**:
+         The directory in which text files with exception objects are stored. For each type of metadata object or event there must be a separate file ("Directories", "Documents", etc.).
+
+      * **SmokeTestsPathToFileSettingsScripts**:
+         Path to the script configuration file (the configuration file can be created on the "Script Settings" tab in the "Smoke Test Generator" window).
+
+      * **SmokeTestsOnlyEnteredObjects**:
+         When this flag is enabled, only objects for which there is at least one element not marked for deletion in the current infobase will participate in the generation of feature files of extended actions.
+
+      * **SmokeTestsOnlyChangedRelativeToVendorConfiguration**:
+         When this flag is enabled, only objects changed relative to the provider configuration will participate in the generation of feature files. To build a report on comparing configurations, the current infobase configurator will be launched.
+
+      * **SmokeTestsVendorConfigurationName**:
+         The name of the vendor configuration to compare configurations with.
 
 *  System settings
 
@@ -132,6 +160,16 @@ An array of key and value objects. This array will be loaded into global variabl
       * **DisableScheduledJobsExecutionForFileInfobase**:
          If this option is enabled, scheduled jobs execution will be disabled when new test client will start for a file infobase. Uses command line key /AllowExecuteScheduledJobs -Off
 
+      * **OnlyOneTestClientAllowedToRun**:
+         If this option is enabled, control will be enabled that more than one testing client cannot be connected at the same time.
+         This can be useful if the computers on which the tests are run have a limited amount of RAM and you need to control the launch of unnecessary processes.
+
+      * **CheckingServerCallsInEventHandlers**:
+         Adds the string /EnableCheckServerCalls to the launch options of test clients.
+         When the test completes, it checks the "Technical Support Information" window for special messages about context server calls.
+         If such messages were found, a script error will be raised.
+         Detailed information here
+
 *  TestClient debug
 
       * **testclientdebug**:
@@ -148,6 +186,10 @@ An array of key and value objects. This array will be loaded into global variabl
       * **browserlaunchcommand**:
          This field indicates the command to launch the browser. If the field is empty, then the default browser will be used to start the web client.
          If there is a TestClientUrl string in the browser launch command, then it will be replaced with the test client connection string. Otherwise, the test client connection string will be appended to the end as the last parameter.
+
+      * **usebrowserwebsocket**:
+         Allows to execute external commands in the browser using WebSocket.
+         For the option to work, you must enable the use of the VanessaExt component.
 
 *  Closing test client
 
@@ -202,12 +244,18 @@ An array of key and value objects. This array will be loaded into global variabl
       * **ShowWindowForStoppingScriptExecution**:
          Enables the display of an additional window that allows you to stop the execution of the script. You need to enable the use of the VanessaExt component.
 
+      * **UseAFileToStopScriptExecution**:
+         If this option is enabled, then when you click the stop script execution button in a special window, a temporary file will be created, and Vanessa Automation will stop the script execution by checking for the presence of this file.
+
 *  Update of script execution statistics
 
       * **updatestatistics**:
          If the flag is set, then statistics are updated during script execution: how many script steps have passed, how many scripts have crashed, and so on.
 
 *  Test execution stabilization
+
+      * **NumberOfAttemptsToExecuteTheScript**:
+         If the setting specifies a value of more than one, then if the script was not executed successfully, several more attempts to execute the script will be made.
 
       * **numberofattemptstoperformanaction**:
          Sets maximum tries number for multiple steps.
@@ -274,7 +322,7 @@ An array of key and value objects. This array will be loaded into global variabl
 ## Screenshots
 
    * **onerrorscreenshot**:
-      Enables taking screenshots in case of an error.
+      Enables taking screenshots in case of an error or on demand (the @screenshot tag is specified before the step).
       To enable the option, make sure the "Screenshot creation command" field is filled in or VanessaExt is enabled.
 
    * **onerrorscreenshoteverywindow**:
@@ -284,6 +332,9 @@ An array of key and value objects. This array will be loaded into global variabl
    * **useaddinforscreencapture**:
       To take screenshots, use the VanessaExt add-in instead of the screenshot creation command.
       For the option to work, it is necessary to enable the use of the VanessaExt external component.
+
+   * **TakeBrowserScreenshots**:
+      If this option is enabled, then if an error occurs when the browser is connected via the debug port, an attempt will be made to take a screenshot of the browser.
 
    * **outputscreenshot**:
       Screenshots directory.
@@ -311,7 +362,7 @@ An array of key and value objects. This array will be loaded into global variabl
          Details here:
          https://pr-mex.github.io/vanessa-automation/dev/ReturnStatus/ReturnStatus
 
-      * **buildname**:
+      * **NameCurrentBuild**:
          Unique assembly name used along with the parameter "Add uploading conditions to scenario name".
 
       * **logpath**:
@@ -386,12 +437,12 @@ An array of key and value objects. This array will be loaded into global variabl
          * **directorytobuildhierarchy**:
             The directory for features hierarchy calculation. See Help info for details.
 
-         * **testsuites**:
-            Sets grouping value for Allure report on the Suites tab. See Help info for details.
-
          * **tagsskippingscript**:
             List of tags separated by ";".
             If the script contains such a tag, then the script will not be executed and the Allure report will have the skipped status.
+
+         * **testsuites**:
+            Sets grouping value for Allure report on the Suites tab. See Help info for details.
 
    *  Appendices to the report
 
@@ -520,6 +571,9 @@ An array of key and value objects. This array will be loaded into global variabl
       * **ignorebrowsersearcherrors**:
          Allows to continue running the scenario if the form item is not found in the browser.
 
+      * **scalefactor**:
+         The default value is one. If screen scaling is used in the OS, then you need to change to set the appropriate value. For example, when scaling to 150% in the OS, you need to set the coefficient value to 1.5.
+
 *  Image search
 
       * **findingpicturesusingaddinvanessaext**:
@@ -540,7 +594,19 @@ An array of key and value objects. This array will be loaded into global variabl
 
    *  Mouse coordinate offset
 
+         * **hrizontaloffset**:
+            It is used when it is necessary to shift the position of the mouse horizontally by a specified number of pixels. It can take both positive and negative values.
+
+         * **verticaloffset**:
+            It is used when it is necessary to shift the position of the mouse vertically by a specified number of pixels. It can take both positive and negative values.
+
    *  Mouse movement speed
+
+         * **thenumberofstepswhenmovingthemouse**:
+            Sets the number of micromovements (steps) that the mouse makes on its way. The default value is 150.
+
+         * **timeoutbetweenstepswhenmovingthemouse**:
+            Sets a pause in milliseconds between micro mouse movements. The default value is 3.
 
    *  Mouse click highlight
 
@@ -566,18 +632,27 @@ An array of key and value objects. This array will be loaded into global variabl
 
 *  HTML and Markdown
 
-   *  HTML
+      * **htmlcreate**:
+         If the checkbox is on, HTML screencast will be created during scenario execution.
+         Specify console command for snapshots generation in  "Snapshot creating command" field.
+         Also use special instructions in the script, see Help info.
 
-         * **htmlcreate**:
-            If the checkbox is on, HTML screencast will be created during scenario execution.
-            Specify console command for snapshots generation in  "Snapshot creating command" field.
-            Also use special instructions in the script, see Help info.
+      * **htmlpath**:
+         HTML instruction catalog
 
-         * **htmlpath**:
-            HTML instruction catalog
+   *  HTML Styles
+
+         * **VariantsHTMLInstructions**:
+            3D Carousel variant - adapted for both PC and mobile
+            Details here.
 
          * **htmlstyles**:
             Style File
+
+         * **EnableHTMLVoiceover**:
+            Speech Synthesis technology built into browsers is used. Speech synthesis (text-to-speech or tts) involves receiving the synthesized text of the application and its speech reproduction.
+            More detailed 
+            Text playback starts when you click on the step image.
 
       * **markdowncreate**:
          If the checkbox is on, MarkDown screencast will be created during scenario execution.
@@ -712,6 +787,12 @@ An array of key and value objects. This array will be loaded into global variabl
                Allows you to set an arbitrary set of settings for generating voiceovers.
 
       *  SBER parameters
+
+            * **sberttsclientid**:
+               Client ID received in Smartmarket studio
+
+            * **sberttsclientsecret**:
+               The second part of client identification in Smartmarket studio
 
             * **sberttsvoice**:
                Sets the voice to generate.

@@ -43,6 +43,10 @@
 							<v8:lang>ru</v8:lang>
 							<v8:content>Язык шагов</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Step language</v8:content>
+						</v8:item>
 					</Title>
 					<RadioButtonType>Tumbler</RadioButtonType>
 					<ChoiceList>
@@ -51,6 +55,10 @@
 							<xr:CheckState>0</xr:CheckState>
 							<xr:Value xsi:type="FormChoiceListDesTimeValue">
 								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Английский</v8:content>
+									</v8:item>
 									<v8:item>
 										<v8:lang>en</v8:lang>
 										<v8:content>English</v8:content>
@@ -64,6 +72,10 @@
 							<xr:CheckState>0</xr:CheckState>
 							<xr:Value xsi:type="FormChoiceListDesTimeValue">
 								<Presentation>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Русский</v8:content>
+									</v8:item>
 									<v8:item>
 										<v8:lang>en</v8:lang>
 										<v8:content>Russian</v8:content>
@@ -99,12 +111,12 @@
 					<DataPath>ReplaceRefByAttribute</DataPath>
 					<ToolTip>
 						<v8:item>
-							<v8:lang>en</v8:lang>
+							<v8:lang>ru</v8:lang>
 							<v8:content>Если в дереве метаданных у объекта указан признак поиска по реквизиту и указано имя реквизита, то при генерации данных, ссылка будет заменена на значение этого реквизита (со служебными префиксами). При загрузке данных, поиск объекта будет производиться по реквизиту и его значению.</v8:content>
 						</v8:item>
 						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Если в дереве метаданных у объекта указан признак поиска по реквизиту и указано имя реквизита, то при генерации данных, ссылка будет заменена на значение этого реквизита (со служебными префиксами). При загрузке данных, поиск объекта будет производиться по реквизиту и его значению.</v8:content>
+							<v8:lang>en</v8:lang>
+							<v8:content>If in the object's metadata tree the attribute search attribute is specified and the attribute name is specified, then when generating data, the link will be replaced by the value of this attribute (with service prefixes). When loading data, the object will be searched for by the attribute and its value.</v8:content>
 						</v8:item>
 					</ToolTip>
 					<ToolTipRepresentation>Button</ToolTipRepresentation>
@@ -179,6 +191,10 @@
 							<v8:lang>ru</v8:lang>
 							<v8:content>Group path</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group path</v8:content>
+						</v8:item>
 					</Title>
 					<HorizontalStretch>true</HorizontalStretch>
 					<Representation>None</Representation>
@@ -217,6 +233,10 @@
 		</UsualGroup>
 		<Pages name="GroupPages" id="72">
 			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Group pages</v8:content>
+				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Group pages</v8:content>
@@ -333,12 +353,45 @@
 														<Event name="OnChange">MetadataListUseOnChange</Event>
 													</Events>
 												</CheckBoxField>
-												<InputField name="MetadataListPresentation" id="67">
-													<DataPath>MetadataList.Presentation</DataPath>
-													<ReadOnly>true</ReadOnly>
-													<ContextMenu name="MetadataListPresentationContextMenu" id="68"/>
-													<ExtendedTooltip name="MetadataListPresentationExtendedTooltip" id="69"/>
-												</InputField>
+												<ColumnGroup name="MetadataListPictureAndPresentation" id="198">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Список метаданных картинка и представление</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Metadata list picture and presentation</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Список метаданных картинка и представление</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Metadata list picture and presentation</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>InCell</Group>
+													<ExtendedTooltip name="MetadataListPictureAndPresentationРасширеннаяПодсказка" id="199"/>
+													<ChildItems>
+														<PictureField name="MetadataListРicture" id="195">
+															<DataPath>MetadataList.Рicture</DataPath>
+															<TitleLocation>None</TitleLocation>
+															<EditMode>EnterOnInput</EditMode>
+															<ContextMenu name="MetadataListРictureКонтекстноеМеню" id="196"/>
+															<ExtendedTooltip name="MetadataListРictureРасширеннаяПодсказка" id="197"/>
+														</PictureField>
+														<InputField name="MetadataListPresentation" id="67">
+															<DataPath>MetadataList.Presentation</DataPath>
+															<ReadOnly>true</ReadOnly>
+															<ContextMenu name="MetadataListPresentationContextMenu" id="68"/>
+															<ExtendedTooltip name="MetadataListPresentationExtendedTooltip" id="69"/>
+														</InputField>
+													</ChildItems>
+												</ColumnGroup>
 												<CheckBoxField name="MetadataListUseSearchByAttribute" id="162">
 													<DataPath>MetadataList.UseSearchByAttribute</DataPath>
 													<EditMode>EnterOnInput</EditMode>
@@ -442,12 +495,20 @@
 							<Title>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
+									<v8:content>Группа включает зависимости</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
 									<v8:content>Group include dependencies</v8:content>
 								</v8:item>
 							</Title>
 							<ToolTip>
 								<v8:item>
 									<v8:lang>ru</v8:lang>
+									<v8:content>Группа включает зависимости</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
 									<v8:content>Group include dependencies</v8:content>
 								</v8:item>
 							</ToolTip>
@@ -472,6 +533,10 @@
 										<v8:item>
 											<v8:lang>ru</v8:lang>
 											<v8:content>Рекомендуется значение не больше 1</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Recommended value is not more than 1</v8:content>
 										</v8:item>
 									</ToolTip>
 									<ContextMenu name="MaxDownstreamDependenciesHierarchyLevelКонтекстноеМеню" id="129"/>
@@ -578,11 +643,19 @@
 						<UsualGroup name="GroupFeatureCommand" id="171">
 							<Title>
 								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Group feature command</v8:content>
+								</v8:item>
+								<v8:item>
 									<v8:lang>en</v8:lang>
 									<v8:content>Group feature command</v8:content>
 								</v8:item>
 							</Title>
 							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Group feature command</v8:content>
+								</v8:item>
 								<v8:item>
 									<v8:lang>en</v8:lang>
 									<v8:content>Group feature command</v8:content>
@@ -620,6 +693,10 @@
 		<Attribute name="MetadataType" id="2">
 			<Title>
 				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Тип метаданных</v8:content>
+				</v8:item>
+				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Metadata type</v8:content>
 				</v8:item>
@@ -631,6 +708,10 @@
 		</Attribute>
 		<Attribute name="MetadataList" id="3">
 			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список метаданных</v8:content>
+				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Metadata list</v8:content>
@@ -747,10 +828,29 @@
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
+				<Column name="Рicture" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинка</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Рicture</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8ui:Picture</v8:Type>
+					</Type>
+				</Column>
 			</Columns>
 		</Attribute>
 		<Attribute name="DataList" id="4">
 			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Data list</v8:content>
+				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Data list</v8:content>
@@ -762,6 +862,10 @@
 		</Attribute>
 		<Attribute name="Feature" id="8">
 			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Фича</v8:content>
+				</v8:item>
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Feature</v8:content>
@@ -795,6 +899,10 @@
 					<v8:lang>ru</v8:lang>
 					<v8:content>Initialized</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Initialized</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
@@ -805,6 +913,10 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Включать восходящие зависимости (ссылки в объекте)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Include upstream dependencies (references in an object)</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -820,6 +932,10 @@
 					<v8:lang>ru</v8:lang>
 					<v8:content>Включать нисходящие зависимости (ссылки на объект)</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Include downstream dependencies (object references)</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
@@ -834,6 +950,10 @@
 					<v8:lang>ru</v8:lang>
 					<v8:content>Не добавлять комментарии с именами объектов метаданных</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Don't add comments with metadata object names</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
@@ -847,6 +967,10 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Макс. уровень иерархии</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Max hierarchy level</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -867,6 +991,10 @@
 					<v8:lang>ru</v8:lang>
 					<v8:content>Data refs</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Data refs</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>v8:ValueTable</v8:Type>
@@ -881,6 +1009,10 @@
 							<v8:lang>ru</v8:lang>
 							<v8:content>Объект</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Object</v8:content>
+						</v8:item>
 					</Title>
 					<Type/>
 				</Column>
@@ -889,6 +1021,10 @@
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Включать нисходящие зависимости</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Include downstream dependencies</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -900,6 +1036,10 @@
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Включать восходящие зависимости</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Include upstream dependencies</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -1025,6 +1165,10 @@
 					<v8:lang>ru</v8:lang>
 					<v8:content>Files to save</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Files to save</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>v8:ValueListType</v8:Type>
@@ -1064,6 +1208,10 @@
 					<v8:lang>ru</v8:lang>
 					<v8:content>Сгенерировать фичу</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Generate feature</v8:content>
+				</v8:item>
 			</Title>
 			<Action>GenerateFeatureForRefs</Action>
 		</Command>
@@ -1072,6 +1220,10 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Добавить по ссылке</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Add by link</v8:content>
 				</v8:item>
 			</Title>
 			<Action>AddObjectByURL</Action>
@@ -1112,6 +1264,10 @@
 			</Title>
 			<ToolTip>
 				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заменить ссылки реквизитами</v8:content>
+				</v8:item>
+				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Process replace ref by attribute</v8:content>
 				</v8:item>
@@ -1124,10 +1280,18 @@
 					<v8:lang>ru</v8:lang>
 					<v8:content>Select all</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Select all</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
+					<v8:content>Select all</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
 					<v8:content>Select all</v8:content>
 				</v8:item>
 			</ToolTip>
@@ -1143,10 +1307,18 @@
 					<v8:lang>ru</v8:lang>
 					<v8:content>Deselect all</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Deselect all</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
+					<v8:content>Deselect all</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
 					<v8:content>Deselect all</v8:content>
 				</v8:item>
 			</ToolTip>
