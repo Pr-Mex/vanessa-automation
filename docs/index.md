@@ -55,10 +55,12 @@
 * [Как создать видеоинструкцию в 1С? Пошаговый мастер класс от Виталия Чебана](https://www.youtube.com/watch?v=Jg1sSb-O-F0)
 * [Митап 1С:Community от КОРУС Консалтинг. Опыт применения автотестирования](https://www.youtube.com/watch?v=OAT_a25XIXQ)
 * [Автоматическое тестирование с использованием Vanessa в Yandex.Cloud](https://m.youtube.com/watch?v=vTAVedABBGQ)
-* [Как изменялся механизм формирования текстовых авто-инструкций. Мастер класс по созданию красивой инструкции.](https://youtu.be/ofMvDX6kIBg)
+* [Виктор Ермаков. Как изменялся механизм формирования текстовых авто-инструкций. Мастер класс по созданию красивой инструкции.](https://youtu.be/ofMvDX6kIBg)
+* [Евгений Исаев. Подход к автоматизации тестирования 1С. Remote API for testing (RAT).](https://youtu.be/ugrzirGXq1U)
 
 ## Курсы
 * Бесплатные
+   - [Бесплатные уроки](https://github.com/Pr-Mex/vanessa-automation/blob/develop/docs/MainHelp/index.MD)
    - [Экспресс курс от Виталия Онянова](https://www.youtube.com/playlist?list=PLLbbYbSDiWvfWjD9MdX8C235JvT_YcqoN)
 * Платные
    - [Сценарное тестирование в 1С: настройка и практика использования](https://xn----1-bedvffifm4g.xn--p1ai/courses/1c-testing-qa-2022/)
