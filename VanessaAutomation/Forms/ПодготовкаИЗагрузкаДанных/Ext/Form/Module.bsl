@@ -619,10 +619,18 @@ Procedure ICheckOrCreateChartOfCharacteristicTypesObjectsAtServer(ObjectName, Va
 				Continue;
 			EndIf;
 			If Column.Name = "ValueType" Or Column.Name = "ТипЗначения" Then  
-				NewXMLReader = New XMLReader;
-				NewXMLReader.SetString(Row[Column.Name]);
-				Obj.ValueType = XDTOSerializer.ReadXML(NewXMLReader, Тип("ОписаниеТипов"));
-				NewXMLReader.Close();
+				StartTmpl = "<TypeDescription xmlns=""http://v8.1c.ru/8.1/data/core"" xmlns:xs=""http://www.w3.org/2001/XMLSchema"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"">";
+                EndTmpl = "</TypeDescription>";
+                
+                ResultTypeDescription = Row[Column.Name];
+                If Not StrStartsWith(ResultTypeDescription, StartTmpl) Then
+                    ResultTypeDescription = StartTmpl + ResultTypeDescription + EndTmpl;
+                EndIf;
+                
+                NewXMLReader = New XMLReader;
+                NewXMLReader.SetString(ResultTypeDescription);
+                Obj.ValueType = XDTOSerializer.ReadXML(NewXMLReader, Тип("ОписаниеТипов"));
+                NewXMLReader.Close();
 			Else
 				FillTipicalObjectAttributesByValues(Obj, Row, Column);
 			EndIf;
@@ -2725,10 +2733,17 @@ Function GetMarkdownTable(Val MetadataObjectPropertyName, Val MetadataObjectName
 				Markdown.Add("'");
 			EndIf; 
 			If Column.Name = "ТипЗначения" Or Column.Name = "ValueType" Then
-				NewXMLWriter = New XMLWriter; 
-				NewXMLWriter.SetString();
-				XDTOSerializer.WriteXML(NewXMLWriter, Row[Column.Name]); 
-				RowData = GeValuetStringRepresentation(StrReplace(NewXMLWriter.Close(), Chars.LF, ""), RefReplaceMetadataObjects);
+                StartTmpl = "<TypeDescription xmlns=""http://v8.1c.ru/8.1/data/core"" xmlns:xs=""http://www.w3.org/2001/XMLSchema"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"">";
+                EndTmpl = "</TypeDescription>";
+
+                NewXMLWriter = New XMLWriter;
+                XMLWriterSettings = New XMLWriterSettings(, , False, False);
+                NewXMLWriter.SetString(XMLWriterSettings);
+                XDTOSerializer.WriteXML(NewXMLWriter, Row[Column.Name]); 
+                TypeXML = NewXMLWriter.Close(); 
+                TypeXML = StrReplace(TypeXML, StartTmpl, "");
+                TypeXML = StrReplace(TypeXML, EndTmpl, "");
+                RowData = GeValuetStringRepresentation(TypeXML, RefReplaceMetadataObjects);
 			Else
 				RowData = GeValuetStringRepresentation(Row[Column.Name], RefReplaceMetadataObjects);
 			EndIf;
