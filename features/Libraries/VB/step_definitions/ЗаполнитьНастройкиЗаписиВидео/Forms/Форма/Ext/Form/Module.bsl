@@ -153,6 +153,9 @@
 Функция ВОткрытойФормеВПолеЯВвожуКомандуДляIrfanView(ИмяПоля) Экспорт
 	ПутьКExe = "C:\Program Files (x86)\IrfanView\i_view32.exe";
 	Если НЕ Ванесса.ФайлСуществуетКомандаСистемы(ПутьКExe) Тогда
+		ПутьКExe = "C:\Program Files\IrfanView\i_view64.exe";
+	КонецЕсли;
+	Если НЕ Ванесса.ФайлСуществуетКомандаСистемы(ПутьКExe) Тогда
 		ПутьКExe = "C:\Program Files\IrfanView\i_view32.exe";
 	КонецЕсли;	 
 	
