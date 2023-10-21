@@ -3,7 +3,7 @@
 	<Title>
 		<v8:item>
 			<v8:lang>ru</v8:lang>
-			<v8:content>Дымовые тесты</v8:content>
+			<v8:content>Генератор дымовых тестов</v8:content>
 		</v8:item>
 		<v8:item>
 			<v8:lang>en</v8:lang>
@@ -54,77 +54,6 @@
 					</Title>
 					<ExtendedTooltip name="СтраницаОсновноеРасширеннаяПодсказка" id="22"/>
 					<ChildItems>
-						<UsualGroup name="ГруппаЯзыкШагов" id="96">
-							<Title>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа язык шагов</v8:content>
-								</v8:item>
-								<v8:item>
-									<v8:lang>en</v8:lang>
-									<v8:content>Group language steps</v8:content>
-								</v8:item>
-							</Title>
-							<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-							<Representation>None</Representation>
-							<ShowTitle>false</ShowTitle>
-							<ExtendedTooltip name="ГруппаЯзыкШаговРасширеннаяПодсказка" id="97">
-								<Title formatted="false">
-									<v8:item>
-										<v8:lang>ru</v8:lang>
-										<v8:content>Язык, на котором будут формироваться сценарии feature-файлов.</v8:content>
-									</v8:item>
-									<v8:item>
-										<v8:lang>en</v8:lang>
-										<v8:content>The language in which feature file scripts will be generated.</v8:content>
-									</v8:item>
-								</Title>
-							</ExtendedTooltip>
-							<ChildItems>
-								<RadioButtonField name="ЯзыкШагов" id="84">
-									<DataPath>ЯзыкШагов</DataPath>
-									<RadioButtonType>Tumbler</RadioButtonType>
-									<ChoiceList>
-										<xr:Item>
-											<xr:Presentation/>
-											<xr:CheckState>0</xr:CheckState>
-											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-												<Presentation>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>Русский</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>en</v8:lang>
-														<v8:content>Russian</v8:content>
-													</v8:item>
-												</Presentation>
-												<Value xsi:type="xs:string">ru</Value>
-											</xr:Value>
-										</xr:Item>
-										<xr:Item>
-											<xr:Presentation/>
-											<xr:CheckState>0</xr:CheckState>
-											<xr:Value xsi:type="FormChoiceListDesTimeValue">
-												<Presentation>
-													<v8:item>
-														<v8:lang>ru</v8:lang>
-														<v8:content>English</v8:content>
-													</v8:item>
-													<v8:item>
-														<v8:lang>en</v8:lang>
-														<v8:content>English</v8:content>
-													</v8:item>
-												</Presentation>
-												<Value xsi:type="xs:string">en</Value>
-											</xr:Value>
-										</xr:Item>
-									</ChoiceList>
-									<ContextMenu name="ЯзыкШаговКонтекстноеМеню" id="85"/>
-									<ExtendedTooltip name="ЯзыкШаговРасширеннаяПодсказка" id="86"/>
-								</RadioButtonField>
-							</ChildItems>
-						</UsualGroup>
 						<UsualGroup name="ГруппаДваСтолбца" id="108">
 							<Title>
 								<v8:item>
@@ -156,6 +85,87 @@
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаЛевыйСтолбецРасширеннаяПодсказка" id="93"/>
 									<ChildItems>
+										<UsualGroup name="ГруппаЯзыкШагов" id="96">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Группа язык шагов</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Group language steps</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<Representation>None</Representation>
+											<ShowTitle>false</ShowTitle>
+											<ExtendedTooltip name="ГруппаЯзыкШаговРасширеннаяПодсказка" id="97">
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Язык, на котором будут формироваться сценарии feature-файлов.</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>The language in which feature file scripts will be generated.</v8:content>
+													</v8:item>
+												</Title>
+											</ExtendedTooltip>
+											<ChildItems>
+												<RadioButtonField name="ЯзыкШагов" id="84">
+													<DataPath>ЯзыкШагов</DataPath>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Язык шагов</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Language of steps</v8:content>
+														</v8:item>
+													</Title>
+													<RadioButtonType>Tumbler</RadioButtonType>
+													<ChoiceList>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Русский</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Russian</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:string">ru</Value>
+															</xr:Value>
+														</xr:Item>
+														<xr:Item>
+															<xr:Presentation/>
+															<xr:CheckState>0</xr:CheckState>
+															<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																<Presentation>
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>English</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>English</v8:content>
+																	</v8:item>
+																</Presentation>
+																<Value xsi:type="xs:string">en</Value>
+															</xr:Value>
+														</xr:Item>
+													</ChoiceList>
+													<ContextMenu name="ЯзыкШаговКонтекстноеМеню" id="85"/>
+													<ExtendedTooltip name="ЯзыкШаговРасширеннаяПодсказка" id="86"/>
+												</RadioButtonField>
+											</ChildItems>
+										</UsualGroup>
 										<InputField name="КаталогВыходныхФайлов" id="4">
 											<DataPath>КаталогВыходныхФайлов</DataPath>
 											<TitleLocation>Top</TitleLocation>
@@ -193,7 +203,7 @@
 												<Title formatted="false">
 													<v8:item>
 														<v8:lang>ru</v8:lang>
-														<v8:content>Каталог, в котором хранятся текстовые файлы с объектами-исключениям. Для каждого вида объектов метаданных или события должен быть отдельный файл ("Справочники", "Документы" и т. д.).</v8:content>
+														<v8:content>Каталог, в котором хранятся текстовые файлы с объектами-исключениями. Для каждого вида объектов метаданных или события должен быть отдельный файл ("Справочники", "Документы" и т. д.).</v8:content>
 													</v8:item>
 													<v8:item>
 														<v8:lang>en</v8:lang>
@@ -249,6 +259,25 @@
 									<ShowTitle>false</ShowTitle>
 									<ExtendedTooltip name="ГруппаПравыйСтолбецРасширеннаяПодсказка" id="95"/>
 									<ChildItems>
+										<CheckBoxField name="ОчищатьКаталогВыходныхФайлов" id="114">
+											<DataPath>ОчищатьКаталогВыходныхФайлов</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ОчищатьКаталогВыходныхФайловКонтекстноеМеню" id="115"/>
+											<ExtendedTooltip name="ОчищатьКаталогВыходныхФайловРасширеннаяПодсказка" id="116">
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Если установлен, то feature-файлы в каталоге выходных файлов будут удалены перед началом формирования тестов.</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>If set, feature files in the output files directory will be deleted before tests are generated.</v8:content>
+													</v8:item>
+												</Title>
+											</ExtendedTooltip>
+										</CheckBoxField>
 										<CheckBoxField name="ТолькоВведенныеОбъекты" id="56">
 											<DataPath>ТолькоВведенныеОбъекты</DataPath>
 											<TitleLocation>Right</TitleLocation>
@@ -275,14 +304,14 @@
 											<CheckBoxType>Auto</CheckBoxType>
 											<ContextMenu name="ТолькоИзмененныеОтностительноКонфигурацииПоставщикаКонтекстноеМеню" id="15"/>
 											<ExtendedTooltip name="ТолькоИзмененныеОтностительноКонфигурацииПоставщикаРасширеннаяПодсказка" id="16">
-												<Title formatted="false">
+												<Title formatted="true">
 													<v8:item>
 														<v8:lang>ru</v8:lang>
-														<v8:content>При включении данного флага в формировании feature-файлов будут участвовать только объекты измененные относительно конфигурации поставщика. Для построения отчета о сравнении конфигураций будет запущен конфигуратор текущей информационной базы.</v8:content>
+														<v8:content>При включении данного флага в формировании feature-файлов будут участвовать только объекты измененные относительно конфигурации поставщика. Для построения отчета о сравнении конфигураций будет &lt;b&gt;запущен конфигуратор&lt;/&gt; текущей информационной базы с &lt;b&gt;текущим пользователем&lt;/&gt; и &lt;b&gt;пустым паролем&lt;/&gt;. </v8:content>
 													</v8:item>
 													<v8:item>
 														<v8:lang>en</v8:lang>
-														<v8:content>When this flag is enabled, only objects changed relative to the provider configuration will participate in the generation of feature files. To build a report on comparing configurations, the current infobase configurator will be launched.</v8:content>
+														<v8:content>When this flag is enabled, only objects changed relative to the provider configuration will participate in the generation of feature files. To build a report on comparing configurations, the current infobase &lt;b&gt;configurator&lt;/&gt; will be launched with the &lt;b&gt;current user&lt;/&gt; and an &lt;b&gt;empty password&lt;/&gt;.</v8:content>
 													</v8:item>
 												</Title>
 											</ExtendedTooltip>
@@ -342,6 +371,16 @@
 										<Type>CommandBarButton</Type>
 										<CommandName>Form.Command.НастройкиСценариевПоУмолчанию</CommandName>
 										<ExtendedTooltip name="НастройкиСценариевПоУмолчаниюРасширеннаяПодсказка" id="107"/>
+									</Button>
+									<Button name="ТаблицаНастроекНастрокиСценариевСнятьВсе" id="112">
+										<Type>CommandBarButton</Type>
+										<Representation>Picture</Representation>
+										<CommandName>Form.Command.НастрокиСценариевСнятьВсе</CommandName>
+										<Picture>
+											<xr:Ref>StdPicture.UncheckAll</xr:Ref>
+											<xr:LoadTransparent>true</xr:LoadTransparent>
+										</Picture>
+										<ExtendedTooltip name="ТаблицаНастроекНастрокиСценариевСнятьВсеРасширеннаяПодсказка" id="113"/>
 									</Button>
 									<Button name="ТаблицаНастроекСохранитьНастройкиСценариевВФайл" id="75">
 										<Type>CommandBarButton</Type>
@@ -816,6 +855,21 @@
 				<v8:Type>xs:boolean</v8:Type>
 			</Type>
 		</Attribute>
+		<Attribute name="ОчищатьКаталогВыходныхФайлов" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Очищать каталог выходных файлов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Clear output directory</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -1064,6 +1118,29 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ЗакрытьФорму</Action>
+		</Command>
+		<Command name="НастрокиСценариевСнятьВсе" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все флаги</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Remove all flags</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снять все флаги</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Remove all flags</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НастрокиСценариевСнятьВсе</Action>
 		</Command>
 	</Commands>
 </Form>
