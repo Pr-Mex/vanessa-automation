@@ -592,8 +592,21 @@ Procedure ICheckOrCreateChartOfCharacteristicTypesObjectsAtServer(ObjectName, Va
 	For Each ColumnName In ColumnsNames Do
 		ObjectAttributes.Columns.Delete(ColumnName);
 	EndDo;
+	
+	IsFolder = False;
+	FoundColumn = ObjectAttributes.Columns.Find("IsFolder");
+	If FoundColumn = Undefined Then
+		FoundColumn = ObjectAttributes.Columns.Find("ЭтоГруппа");	
+	EndIf;
+	
 	RefColumnName = ?(ObjectAttributes.Columns.Find("Ref") <> Undefined, "Ref", "Ссылка");
 	For Each Row In ObjectValues Do
+		If FoundColumn <> Undefined
+			And Row[FoundColumn.Name] = "True" Then
+			IsFolder = True;
+		Else
+			IsFolder = False;
+		EndIf;
 		Ref = GetObjectLinkFromObjectURL(Row[RefColumnName]);
 		If ValueIsFilled(Ref.DataVersion) Then
 			Obj = Ref.GetObject();
@@ -602,7 +615,11 @@ Procedure ICheckOrCreateChartOfCharacteristicTypesObjectsAtServer(ObjectName, Va
 			If Predefined Then
 				Continue;
 			EndIf;
-			Obj = ChartsOfCharacteristicTypes[ObjectName].CreateItem();
+			If IsFolder Then
+				Obj = ChartsOfCharacteristicTypes[ObjectName].CreateFolder();
+			Else
+				Obj = ChartsOfCharacteristicTypes[ObjectName].CreateItem();
+			EndIf;
 			Obj.SetNewObjectRef(Ref);
 		EndIf;		
 		
@@ -612,13 +629,17 @@ Procedure ICheckOrCreateChartOfCharacteristicTypesObjectsAtServer(ObjectName, Va
 			EndIf;
 			If Column.Name = RefColumnName Then
 				Continue;
+			EndIf; 
+			If Column.Name = "IsFolder" Or Column.Name = "ЭтоГруппа" Then
+				Continue;
 			EndIf;
 			If (Column.Name = "DeletionMark" Or Column.Name = "ПометкаУдаления")
 				And Row[Column.Name] = "True" Then
 				Obj.DeletionMark = True;
 				Continue;
 			EndIf;
-			If Column.Name = "ValueType" Or Column.Name = "ТипЗначения" Then  
+			If (Column.Name = "ValueType" Or Column.Name = "ТипЗначения") 
+				And Not IsFolder Then  
 				StartTmpl = "<TypeDescription xmlns=""http://v8.1c.ru/8.1/data/core"" xmlns:xs=""http://www.w3.org/2001/XMLSchema"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"">";
                 EndTmpl = "</TypeDescription>";
                 
