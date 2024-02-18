@@ -57,7 +57,7 @@
 * [Автоматическое тестирование с использованием Vanessa в Yandex.Cloud](https://m.youtube.com/watch?v=vTAVedABBGQ)
 * [Виктор Ермаков. Как изменялся механизм формирования текстовых авто-инструкций. Мастер класс по созданию красивой инструкции.](https://youtu.be/ofMvDX6kIBg)
 * [Евгений Исаев. Подход к автоматизации тестирования 1С. Remote API for testing (RAT).](https://youtu.be/ugrzirGXq1U)
-* [SoftOnIt. Кружок 1С #8 Тестирование 1С, с помощью "vanessa-automation".](https://www.youtube.com/watch?v=NIY9HdO5Xc0&t=261s)
+* [SoftOnIt. Кружок 1С #8 Тестирование 1С, с помощью "vanessa-automation".](https://www.youtube.com/watch?v=NIY9HdO5Xc0)
 
 ## Курсы
 * Бесплатные
