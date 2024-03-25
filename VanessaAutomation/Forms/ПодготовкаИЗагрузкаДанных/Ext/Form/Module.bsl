@@ -1194,6 +1194,31 @@ Procedure SelectDependentItems(Command)
 	SelectDependentItemsAtServer();
 EndProcedure
 
+&AtServer
+Procedure UpdateMetadataCountAtServer()
+    
+    Template = "SELECT SUM(1) AS Count FROM ";
+    
+    For Each MetaGroup In MetadataList.GetItems() Do
+        tmpCount = 0;
+        For Each MetaName In MetaGroup.GetItems() Do
+        
+            Query = New Query();
+            Query.Text = Template + MetaName.FullName;
+            QueryResult = Query.Execute().Select();
+            QueryResult.Next();
+            MetaName.Count = QueryResult.Count;
+            tmpCount = tmpCount + MetaName.Count;
+        EndDo;	 
+        MetaGroup.Count = tmpCount;
+    EndDo;
+EndProcedure
+
+&AtClient
+Procedure UpdateMetadataCount(Command)
+    UpdateMetadataCountAtServer();
+EndProcedure
+
 &AtClient
 Procedure SelectAll(Команда)
 	SetMarks(True);
