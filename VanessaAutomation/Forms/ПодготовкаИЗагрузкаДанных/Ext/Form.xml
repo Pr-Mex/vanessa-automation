@@ -160,8 +160,9 @@
 					<v8:content>Parameters for upload ValueStorage to files</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Group>Vertical</Group>
+			<Group>AlwaysHorizontal</Group>
 			<Behavior>Collapsible</Behavior>
+			<Collapsed>true</Collapsed>
 			<ControlRepresentation>Picture</ControlRepresentation>
 			<Representation>NormalSeparation</Representation>
 			<ExtendedTooltip name="GroupStorageToFileРасширеннаяПодсказка" id="176"/>
@@ -275,16 +276,80 @@
 											<AutoCommandBar name="MetadataListCommandBar" id="49">
 												<Autofill>false</Autofill>
 												<ChildItems>
-													<Button name="MetadataListSelectAll" id="191">
-														<Type>CommandBarButton</Type>
-														<CommandName>Form.Command.SelectAll</CommandName>
-														<ExtendedTooltip name="MetadataListSelectAllРасширеннаяПодсказка" id="192"/>
-													</Button>
-													<Button name="MetadataListDeselectAll" id="193">
-														<Type>CommandBarButton</Type>
-														<CommandName>Form.Command.DeselectAll</CommandName>
-														<ExtendedTooltip name="MetadataListDeselectAllРасширеннаяПодсказка" id="194"/>
-													</Button>
+													<ButtonGroup name="MetadataListGroupSelect" id="209">
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Выбор группы списка метаданных</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Metadata list group select</v8:content>
+															</v8:item>
+														</Title>
+														<ToolTip>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Выбор группы списка метаданных</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Metadata list group select</v8:content>
+															</v8:item>
+														</ToolTip>
+														<Representation>Compact</Representation>
+														<ExtendedTooltip name="MetadataListGroupSelectExtendedTooltip" id="210"/>
+														<ChildItems>
+															<Button name="MetadataListSelectAll" id="191">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.SelectAll</CommandName>
+																<ExtendedTooltip name="MetadataListSelectAllРасширеннаяПодсказка" id="192"/>
+															</Button>
+															<Button name="MetadataListDeselectAll" id="193">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.DeselectAll</CommandName>
+																<ExtendedTooltip name="MetadataListDeselectAllРасширеннаяПодсказка" id="194"/>
+															</Button>
+														</ChildItems>
+													</ButtonGroup>
+													<ButtonGroup name="MetadataListGroupSort" id="211">
+														<Title>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Сортировка группы списка метаданных</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Metadata list group sort</v8:content>
+															</v8:item>
+														</Title>
+														<ToolTip>
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Сортировка группы списка метаданных</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>Metadata list group sort</v8:content>
+															</v8:item>
+														</ToolTip>
+														<Representation>Compact</Representation>
+														<ExtendedTooltip name="MetadataListGroupSortExtendedTooltip" id="212"/>
+														<ChildItems>
+															<Button name="MetadataListSortListDesc" id="207">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Item.MetadataList.StandardCommand.SortListDesc</CommandName>
+																<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+																<ExtendedTooltip name="MetadataListSortListDescExtendedTooltip" id="208"/>
+															</Button>
+															<Button name="MetadataListSortListAsc" id="205">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Item.MetadataList.StandardCommand.SortListAsc</CommandName>
+																<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+																<ExtendedTooltip name="MetadataListSortListAscExtendedTooltip" id="206"/>
+															</Button>
+														</ChildItems>
+													</ButtonGroup>
 													<Button name="MetadataListGenerateFeature" id="113">
 														<Type>CommandBarButton</Type>
 														<DefaultButton>true</DefaultButton>
@@ -311,6 +376,11 @@
 															</v8:item>
 														</Title>
 														<ExtendedTooltip name="MetadataListCloseFormРасширеннаяПодсказка" id="161"/>
+													</Button>
+													<Button name="MetadataListUpdateMetadataCount" id="203">
+														<Type>CommandBarButton</Type>
+														<CommandName>Form.Command.UpdateMetadataCount</CommandName>
+														<ExtendedTooltip name="MetadataListUpdateMetadataCountExtendedTooltip" id="204"/>
 													</Button>
 												</ChildItems>
 											</AutoCommandBar>
@@ -418,6 +488,12 @@
 													<ReadOnly>true</ReadOnly>
 													<ContextMenu name="MetadataListFullNameContextMenu" id="84"/>
 													<ExtendedTooltip name="MetadataListFullNameExtendedTooltip" id="85"/>
+												</InputField>
+												<InputField name="MetadataListCount" id="200">
+													<DataPath>MetadataList.Count</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="MetadataListCountContextMenu" id="201"/>
+													<ExtendedTooltip name="MetadataListCountExtendedTooltip" id="202"/>
 												</InputField>
 											</ChildItems>
 										</Table>
@@ -841,6 +917,26 @@
 					</Title>
 					<Type>
 						<v8:Type>v8ui:Picture</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Count" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Счетчик</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Count</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
 					</Type>
 				</Column>
 			</Columns>
@@ -1327,6 +1423,29 @@
 				<xr:LoadTransparent>true</xr:LoadTransparent>
 			</Picture>
 			<Action>DeselectAll</Action>
+		</Command>
+		<Command name="UpdateMetadataCount" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить счетчик</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Update count</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить счетчик метаданных</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Update metadata count</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>UpdateMetadataCount</Action>
 		</Command>
 	</Commands>
 	<Parameters>
