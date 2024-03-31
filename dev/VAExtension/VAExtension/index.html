@@ -1056,6 +1056,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#27" class="md-nav__link">
+    27. Как установить текст письма в ДО
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28" class="md-nav__link">
+    28. Как узнать какие расширения установлены в клиент тестирования
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1324,6 +1338,20 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#27" class="md-nav__link">
+    27. Как установить текст письма в ДО
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#28" class="md-nav__link">
+    28. Как узнать какие расширения установлены в клиент тестирования
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1377,6 +1405,8 @@
 <li>Программное получение состояния объекта (справочника или документа)</li>
 <li>Программное сравнение варианта отчета с эталоном</li>
 <li>Запомнить навигационные ссылки, чтобы потом пометить на удаление объекты по ним</li>
+<li>Как установить текст письма в ДО</li>
+<li>Как узнать какие расширения установлены в клиент тестирования</li>
 </ol>
 <h2 id="1">1. Открытие окна "Функции технического специалиста" (Все функции).<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <p>Нужно использовать шаг</p>
@@ -1663,6 +1693,19 @@
 <p>Чтобы потом удалить накопленные ссылки в конце сценария нужно использовать шаг</p>
 <div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я устанавливаю пометку удаления объектам, указанным к удалению (расширение)</span>
 </code></pre></div>
+
+<h2 id="27">27. Как установить текст письма в ДО<a class="headerlink" href="#27" title="Permanent link">&para;</a></h2>
+<p>Например так:</p>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я выполняю выражение &#39;_ТекущееОкно.ТекстПисьма = &quot;</span><span class="nv">&lt;h3&gt;</span><span class="s">333333333333333333333&lt;/h3</span><span class="nf">&quot;&#39; в текущем окне (Расширение)</span>
+</code></pre></div>
+
+<h2 id="28">28. Как узнать какие расширения установлены в клиент тестирования<a class="headerlink" href="#28" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я получаю данные о подключенных расширениях клиента тестирования (Расширение)</span>
+</code></pre></div>
+
+<p>Данные шаг получает данные об установелнных расширениях и создаёт для каждого расширения переменную:
+Имя: Extension_ИмяРасширения
+Тип: Структура, содержащая свойства Name, Synonym, UID, Version, SafeMode, Active.",</p>
                 
               
               
