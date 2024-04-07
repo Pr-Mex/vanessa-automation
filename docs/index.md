@@ -245,7 +245,7 @@ Feature файлы могут писать все участники коман�
 
 ## Полезные ссылки:
 
-* [Cucumber](https://cukes.info/)
+* [Cucumber](https://cucumber.io/)
 * [Автоматизированное тестирование 1С](http://v8.1c.ru/overview/Term_000000816.htm)
 * [Yandex Allure](http://allure.qatools.ru/)
 * [Selenium](http://docs.seleniumhq.org/)
