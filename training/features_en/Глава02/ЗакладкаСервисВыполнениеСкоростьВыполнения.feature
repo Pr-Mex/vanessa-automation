@@ -18,15 +18,15 @@
 		И Пауза 1
 		И я делаю подсветку нескольких элементов VA с их заголовком "Script execution speed settings" UI Automation
 			| 'Name'                      |
-			| 'ВыполнятьШагиАссинхронно' |
+			| 'ВыполнятьШагиАсинхронно' |
 
 * This checkbox enables asynchronous step execution mode.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Asynchronous step execution mode" UI Automation
 			| 'Name'                      |
-			| 'ВыполнятьШагиАссинхронно' |
+			| 'ВыполнятьШагиАсинхронно' |
 * If the checkbox is set, then each next step will be performed after a pause.
 		И Пауза 1
-		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ВыполнятьШагиАссинхронно'
+		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ВыполнятьШагиАсинхронно'
 		И Пауза 1
 * In this field, specify the value of the pause between steps. The minimum value is one tenth of a second.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Pause between steps" UI Automation
@@ -36,7 +36,7 @@
 * During normal operation and when running tests in the CI circuit, it is recommended to remove this checkbox.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Asynchronous step execution mode" UI Automation
 			| 'Name'                      |
-			| 'ВыполнятьШагиАссинхронно' |
+			| 'ВыполнятьШагиАсинхронно' |
 
 
 * That's it, move on to the next lesson of the interactive help.
