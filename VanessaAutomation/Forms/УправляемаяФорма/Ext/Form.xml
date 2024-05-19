@@ -17365,6 +17365,7 @@ And I wait the window with header different from "WindowTitle" opening in 60 sec
 																	<v8:content>Group subsystem stabilization of test execution third line</v8:content>
 																</v8:item>
 															</Title>
+															<Group>AlwaysHorizontal</Group>
 															<Representation>None</Representation>
 															<ShowTitle>false</ShowTitle>
 															<ExtendedTooltip name="ГруппаПодсистемаСтабилизацияВыполненияТестовТретьяСтрокаРасширеннаяПодсказка" id="3753"/>
@@ -17386,13 +17387,53 @@ And I wait the window with header different from "WindowTitle" opening in 60 sec
 																	<ShowTitle>false</ShowTitle>
 																	<ExtendedTooltip name="ГруппаПодсистемаСтабилизацияВыполненияТестовТретьяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="3755"/>
 																	<ChildItems>
-																		<CheckBoxField name="БезопасноеВыполнениеШагов" id="1784">
+																		<InputField name="МаксимальноеВремяВыполненияДействия" id="4021">
+																			<DataPath>Объект.МаксимальноеВремяВыполненияДействия</DataPath>
+																			<TitleLocation>Top</TitleLocation>
+																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<ContextMenu name="МаксимальноеВремяВыполненияДействияКонтекстноеМеню" id="4022"/>
+																			<ExtendedTooltip name="МаксимальноеВремяВыполненияДействияРасширеннаяПодсказка" id="4023">
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Устанавливает максимальное время выполнения действий, которые возвращают значение в менеджер тестирования.
+При превышении заданного времени генерируется исключение "Превышено максимальное время выполнения действия на стороне клиента тестирования". При этом выполнение действия будет продолжено.
+Если параметр равен 0, команды ожидают окончания выполнения без проверки времени прошедшего с начала выполнения.</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>Sets the maximum execution time for actions that return a value to the test manager.
+If the specified time is exceeded, the exception "The maximum execution time of the action on the testing client side has been exceeded" is generated. In this case, the action will continue.
+If the parameter is 0, commands wait until the end of execution without checking the elapsed time since the start of execution.</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
+																		</InputField>
+																	</ChildItems>
+																</UsualGroup>
+																<UsualGroup name="ГруппаПодсистемаСтабилизацияВыполненияТестовТретьяСтрокаПравыйСтолбец" id="4016">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа подсистема стабилизация выполнения тестов третья строка правый столбец</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Group subsystem test execution stabilization third row left column</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Group>Vertical</Group>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаПодсистемаСтабилизацияВыполненияТестовТретьяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="4017"/>
+																	<ChildItems>
+																		<CheckBoxField name="БезопасноеВыполнениеШагов" id="4018">
 																			<DataPath>Объект.БезопасноеВыполнениеШагов</DataPath>
 																			<TitleLocation>Right</TitleLocation>
 																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
 																			<CheckBoxType>Auto</CheckBoxType>
-																			<ContextMenu name="БезопасноеВыполнениеШаговКонтекстноеМеню" id="1785"/>
-																			<ExtendedTooltip name="БезопасноеВыполнениеШаговРасширеннаяПодсказка" id="1786">
+																			<ContextMenu name="БезопасноеВыполнениеШаговКонтекстноеМеню" id="4019"/>
+																			<ExtendedTooltip name="БезопасноеВыполнениеШаговРасширеннаяПодсказка" id="4020">
 																				<AutoMaxWidth>false</AutoMaxWidth>
 																				<Title formatted="false">
 																					<v8:item>
