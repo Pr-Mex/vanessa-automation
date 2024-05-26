@@ -37,8 +37,9 @@
 * [Суровая практика BDD или: BDDSM-практики, или 50 оттенков желтого.](https://infostart.ru/public/1173711/)
 * [Vanessa, видеоинструкции для web-клиента](https://infostart.ru/public/1243801/)
 * [Генерация сценариев тестирования внешних печатных форм средствами Vanessa Automation](https://infostart.ru/public/1250707/)
-* [Тестирование серверного поведения с Vanessa Automation](https://infostart.ru/1c/articles/1283198/)
+* [Тестирование серверного поведения с Vanessa Automation. Инициатор данных.](https://infostart.ru/1c/articles/1283198/)
 * [Практика применения DevOps. Тестирование](https://infostart.ru/1c/articles/1342422/)
+* [Как настроить тестирование с Vanessa Automation и Gitlab с нуля](https://habr.com/ru/companies/samolet/articles/803345/)
 
 ## СППР + Vanessa Automation
 
@@ -244,7 +245,7 @@ Feature файлы могут писать все участники коман�
 
 ## Полезные ссылки:
 
-* [Cucumber](https://cukes.info/)
+* [Cucumber](https://cucumber.io/)
 * [Автоматизированное тестирование 1С](http://v8.1c.ru/overview/Term_000000816.htm)
 * [Yandex Allure](http://allure.qatools.ru/)
 * [Selenium](http://docs.seleniumhq.org/)
