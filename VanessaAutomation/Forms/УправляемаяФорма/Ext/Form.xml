@@ -21066,34 +21066,162 @@ You can read more about why this may be needed here
 																	<v8:content>Group SPPR Settings</v8:content>
 																</v8:item>
 															</ToolTip>
+															<Group>Vertical</Group>
 															<Representation>None</Representation>
 															<ShowTitle>false</ShowTitle>
 															<ExtendedTooltip name="ГруппаСППРНастройкиРасширеннаяПодсказка" id="2103"/>
 															<ChildItems>
-																<InputField name="КаталогВыгрузкиСППР" id="2099">
-																	<DataPath>Объект.КаталогВыгрузкиСППР</DataPath>
-																	<TitleLocation>Top</TitleLocation>
-																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-																	<ChoiceButton>true</ChoiceButton>
-																	<ClearButton>true</ClearButton>
-																	<ContextMenu name="КаталогВыгрузкиСППРКонтекстноеМеню" id="2100"/>
-																	<ExtendedTooltip name="КаталогВыгрузкиСППРРасширеннаяПодсказка" id="2101">
-																		<AutoMaxWidth>false</AutoMaxWidth>
-																		<Title formatted="false">
-																			<v8:item>
-																				<v8:lang>ru</v8:lang>
-																				<v8:content>Каталог для формирования отчета.</v8:content>
-																			</v8:item>
-																			<v8:item>
-																				<v8:lang>en</v8:lang>
-																				<v8:content>Report directory.</v8:content>
-																			</v8:item>
-																		</Title>
-																	</ExtendedTooltip>
-																	<Events>
-																		<Event name="StartChoice">КаталогВыгрузкиСППРНачалоВыбора</Event>
-																	</Events>
-																</InputField>
+																<UsualGroup name="ГруппаНастройкиСППРПерваяСтрока" id="4030">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа настройки СППР первая строка</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>SPPR settings group first line</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Group>AlwaysHorizontal</Group>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаНастройкиСППРПерваяСтрокаРасширеннаяПодсказка" id="4031"/>
+																	<ChildItems>
+																		<UsualGroup name="ГруппаНастройкиСППРПерваяСтрокаЛевыйСтолбец" id="4032">
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Группа настройки СППР первая строка левый столбец</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>SPPR settings group first line left column</v8:content>
+																				</v8:item>
+																			</Title>
+																			<Width>50</Width>
+																			<HorizontalStretch>false</HorizontalStretch>
+																			<Representation>None</Representation>
+																			<ShowTitle>false</ShowTitle>
+																			<ExtendedTooltip name="ГруппаНастройкиСППРПерваяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="4033"/>
+																			<ChildItems>
+																				<InputField name="КаталогВыгрузкиСППР" id="2099">
+																					<DataPath>Объект.КаталогВыгрузкиСППР</DataPath>
+																					<TitleLocation>Top</TitleLocation>
+																					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																					<ChoiceButton>true</ChoiceButton>
+																					<ClearButton>true</ClearButton>
+																					<ContextMenu name="КаталогВыгрузкиСППРКонтекстноеМеню" id="2100"/>
+																					<ExtendedTooltip name="КаталогВыгрузкиСППРРасширеннаяПодсказка" id="2101">
+																						<AutoMaxWidth>false</AutoMaxWidth>
+																						<Title formatted="false">
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Каталог для формирования отчета.</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>Report directory.</v8:content>
+																							</v8:item>
+																						</Title>
+																					</ExtendedTooltip>
+																					<Events>
+																						<Event name="StartChoice">КаталогВыгрузкиСППРНачалоВыбора</Event>
+																					</Events>
+																				</InputField>
+																			</ChildItems>
+																		</UsualGroup>
+																		<UsualGroup name="ГруппаНастройкиСППРПерваяСтрокаПравыйСтолбец" id="4034">
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Группа настройки СППР первая строка правый столбец</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>SPPR settings group first line right column</v8:content>
+																				</v8:item>
+																			</Title>
+																			<Representation>None</Representation>
+																			<ShowTitle>false</ShowTitle>
+																			<ExtendedTooltip name="ГруппаНастройкиСППРПерваяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="4035"/>
+																			<ChildItems>
+																				<InputField name="ИмяКонфигурацииСППР" id="4024">
+																					<DataPath>Объект.ИмяКонфигурацииСППР</DataPath>
+																					<TitleLocation>Top</TitleLocation>
+																					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																					<ContextMenu name="ИмяКонфигурацииСППРКонтекстноеМеню" id="4025"/>
+																					<ExtendedTooltip name="ИмяКонфигурацииСППРРасширеннаяПодсказка" id="4026">
+																						<Title formatted="false">
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Имя конфигурации для отчета</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>Configuration name for the report</v8:content>
+																							</v8:item>
+																						</Title>
+																					</ExtendedTooltip>
+																				</InputField>
+																			</ChildItems>
+																		</UsualGroup>
+																	</ChildItems>
+																</UsualGroup>
+																<UsualGroup name="ГруппаНастройкиСППРВтораяСтрока" id="4036">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа настройки СППР вторая строка</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>SPPR settings group second line</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Group>AlwaysHorizontal</Group>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаНастройкиСППРВтораяСтрокаРасширеннаяПодсказка" id="4037"/>
+																	<ChildItems>
+																		<UsualGroup name="ГруппаНастройкиСППРВтораяСтрокаЛевыйСтолбец" id="4038">
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Группа настройки СППР вторая строка левый столбец</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>SPPR settings group second line left column</v8:content>
+																				</v8:item>
+																			</Title>
+																			<Width>50</Width>
+																			<HorizontalStretch>false</HorizontalStretch>
+																			<Representation>None</Representation>
+																			<ShowTitle>false</ShowTitle>
+																			<ExtendedTooltip name="ГруппаНастройкиСППРВтораяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="4039"/>
+																			<ChildItems>
+																				<InputField name="ВерсияКонфигурацииСППР" id="4027">
+																					<DataPath>Объект.ВерсияКонфигурацииСППР</DataPath>
+																					<TitleLocation>Top</TitleLocation>
+																					<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																					<ContextMenu name="ВерсияКонфигурацииСППРКонтекстноеМеню" id="4028"/>
+																					<ExtendedTooltip name="ВерсияКонфигурацииСППРРасширеннаяПодсказка" id="4029">
+																						<Title formatted="false">
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Версия конфигурации для отчета</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>Configuration version for report</v8:content>
+																							</v8:item>
+																						</Title>
+																					</ExtendedTooltip>
+																				</InputField>
+																			</ChildItems>
+																		</UsualGroup>
+																	</ChildItems>
+																</UsualGroup>
 															</ChildItems>
 														</UsualGroup>
 													</ChildItems>
