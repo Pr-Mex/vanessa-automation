@@ -13497,6 +13497,7 @@ Possible return statuses:
 																	<v8:content>System directories group right column</v8:content>
 																</v8:item>
 															</Title>
+															<Group>Vertical</Group>
 															<Representation>None</Representation>
 															<ShowTitle>false</ShowTitle>
 															<ExtendedTooltip name="ГруппаСистемныеКаталогиПравыйСтолбецРасширеннаяПодсказка" id="3319"/>
@@ -13541,6 +13542,37 @@ When working with Vanessa Automation Single it is allowed to leave the field bla
 																	<Events>
 																		<Event name="StartChoice">КаталогИнструментовНачалоВыбора</Event>
 																		<Event name="Opening">КаталогИнструментовОткрытие</Event>
+																	</Events>
+																</InputField>
+																<InputField name="КаталогВременныхФайлов" id="4040">
+																	<DataPath>Объект.КаталогВременныхФайлов</DataPath>
+																	<TitleLocation>Top</TitleLocation>
+																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																	<ChoiceButton>true</ChoiceButton>
+																	<ClearButton>true</ClearButton>
+																	<OpenButton>true</OpenButton>
+																	<ContextMenu name="КаталогВременныхФайловКонтекстноеМеню" id="4041"/>
+																	<ExtendedTooltip name="КаталогВременныхФайловРасширеннаяПодсказка" id="4042">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>The directory in which temporary script files will be created.
+If a setting value is specified, then temporary script files will be created in it. If the setting value is not specified, then the user's temporary directory will be used. Usually this
+"C:\USERS%username%\APPDATA\LOCAL\TEMP".
+Setting is necessary because... Vanessa Automation can create bat files to run system commands, and some operating systems may prohibit running such files from the user's temporary directory.</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Каталог, в котором будут создаваться временные файлов скриптов.
+Если указано значение настройки - тогда временные файлы скриптов будут создаваться в нём. Если значение настройки не указано, тогда будет использоваться временный каталог пользователя. Обычно это
+"C:\USERS%username%\APPDATA\LOCAL\TEMP".
+Настройка нужна, т.к. Vanessa Automation может создавать bat файлы для запуска системных команд, а в некоторых ОС может быть установлен запрет на запуск таких файлов из временного каталога пользователя.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																	<Events>
+																		<Event name="StartChoice">КаталогВременныхФайловНачалоВыбора</Event>
+																		<Event name="Opening">КаталогВременныхФайловОткрытие</Event>
 																	</Events>
 																</InputField>
 															</ChildItems>
