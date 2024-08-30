@@ -1536,34 +1536,44 @@ Function GetDatabaseRegistersValueTable(Val MetadataObjectFullName, Val RecordKe
 		RecordKeyFields = New Array;
 		RecordKeysTable = New ValueTable;
 		RegisterMetadata = Metadata.FindByFullName(MetadataObjectFullName);
+		MetadataClass = StrSplit(MetadataObjectFullName, ".")[0];		
 		
 		For Each Dimension In RegisterMetadata.Dimensions Do
 			RecordKeysTable.Columns.Add(Dimension.Name, Dimension.Type);
 			RecordKeyFields.Add(Dimension.Name);
 		EndDo;	
-		If RegisterMetadata.InformationRegisterPeriodicity <> Metadata.ObjectProperties.InformationRegisterPeriodicity.Nonperiodical Then
-			RecordKeysTable.Columns.Add("Period", New TypeDescription("Date"));
-			RecordKeyFields.Add("Period");
-		EndIf;
-		If RegisterMetadata.WriteMode = Metadata.ObjectProperties.RegisterWriteMode.RecorderSubordinate Then
-			RecordKeysTable.Columns.Add("Recorder", New TypeDescription(Documents.AllRefsType().Types()));
-			RecordKeyFields.Add("Recorder");
-		EndIf;
+		If MetadataClass = "InformationRegister" Then
+			If RegisterMetadata.InformationRegisterPeriodicity <> Metadata.ObjectProperties.InformationRegisterPeriodicity.Nonperiodical Then
+				RecordKeysTable.Columns.Add("Period", New TypeDescription("Date"));
+				RecordKeyFields.Add("Period");
+			EndIf;
+			If RegisterMetadata.WriteMode = Metadata.ObjectProperties.RegisterWriteMode.RecorderSubordinate Then
+				RecordKeysTable.Columns.Add("Recorder", New TypeDescription(Documents.AllRefsType().Types()));
+				RecordKeyFields.Add("Recorder");
+			EndIf;
 		
-		For Each RecordKey In RecordKeysArray Do
-			FillPropertyValues(RecordKeysTable.Add(), RecordKey);			
-		EndDo;
-		Query.Text = StrTemplate("SELECT ALLOWED *
-			|INTO RecordKeysTable 
-			|FROM 
-			|	&RecordKeysTable AS RecordKeysTable
-			|;
-			|SELECT ALLOWED *
-			|FROM
-			|	%1 AS ObjectReg
-			| WHERE (%2) IN (SELECT * FROM RecordKeysTable)"
-			, MetadataObjectFullName, StrConcat(RecordKeyFields, ", "));
-		Query.SetParameter("RecordKeysTable", RecordKeysTable);
+			For Each RecordKey In RecordKeysArray Do
+				FillPropertyValues(RecordKeysTable.Add(), RecordKey);			
+			EndDo;
+			Query.Text = StrTemplate("SELECT ALLOWED *
+				|INTO RecordKeysTable 
+				|FROM 
+				|	&RecordKeysTable AS RecordKeysTable
+				|;
+				|SELECT ALLOWED *
+				|FROM
+				|	%1 AS ObjectReg
+				| WHERE (%2) IN (SELECT * FROM RecordKeysTable)"
+				, MetadataObjectFullName, StrConcat(RecordKeyFields, ", "));
+			Query.SetParameter("RecordKeysTable", RecordKeysTable);
+		Else
+			Query.Text = StrTemplate("SELECT ALLOWED *
+				|FROM
+				|	%1 AS ObjectReg
+				| WHERE (Recorder = &Recorder)"
+				, MetadataObjectFullName);
+			Query.SetParameter("Recorder", RecordKeys[0].Filter.Recorder.Value);
+		EndIf;
 	Else
 		Query.Text = StrTemplate("SELECT ALLOWED *
 								|FROM
@@ -1981,8 +1991,17 @@ Procedure ProcessingDownstreamDependenciesLoopForObjects(ProcessingDependencies,
 			MetadataObjectFullName = CurrentObjects[0].Metadata().FullName();
 			MetadataClass = MetadataTypeValueEnFromRu(StrSplit(MetadataObjectFullName, ".")[0]);		
 			For Each DataValue In CurrentObjects Do
-				If DataValue = Undefined
-				 Or ProcessedDependences[DataValue] <> Undefined
+				If DataValue = Undefined Then
+					Continue;
+				EndIf;
+				If MetadataClass = "Document" Then
+					For Each RegisterRecord In DataValue.GetObject().RegisterRecords Do
+						MetadataRecordFullName = RegisterRecord.Metadata().FullName();
+						MetadataClassRecords = MetadataTypeValueEnFromRu(StrSplit(MetadataRecordFullName, ".")[0]);		
+						Dependencies.Add().Item = RegisterRecord;
+					EndDo;
+				EndIf;
+				If ProcessedDependences[DataValue] <> Undefined
 				 Or Dependencies.Find(DataValue, "Item") <> Undefined Then
 					Continue;
 				EndIf;
