@@ -106,11 +106,27 @@
 ## Установка через OneScript
 Для обычной сборки
 
-* opm install vanessa-automation
+* Для текущей мажорной версии (например 1.2.041.1)
+```
+opm install vanessa-automation
+```
+
+* Для текущей релизной версии (например 1.2.041.22)
+```
+opm install vanessa-automation@SNAPSHOT
+```
 
 Для сборки VASingle.
 
-* opm install vanessa-automation-single
+* Для текущей мажорной версии (например 1.2.041.1)
+```
+opm install vanessa-automation-single
+```
+
+* Для текущей релизной версии (например 1.2.041.22)
+```
+opm install vanessa-automation-single@SNAPSHOT
+```
 
 VASingle отличается от обычной сборки тем, что поставляется в виде одного epf файла, который по функциональности полностью совпадает с основной сборкой.
 
