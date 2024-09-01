@@ -32880,10 +32880,68 @@ Click on the hyperlink for more details.</v8:content>
 							<v8:content>View variables</v8:content>
 						</v8:item>
 					</Title>
+					<Group>Vertical</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
 					<ExtendedTooltip name="ГруппаПросмотрПеременныхРасширеннаяПодсказка" id="1887"/>
 					<ChildItems>
+						<UsualGroup name="ГруппаКнопокПросмотрПеременных" id="4046">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Группа кнопок просмотр переменных</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Group of buttons to view variables</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаКнопокПросмотрПеременныхРасширеннаяПодсказка" id="4047"/>
+							<ChildItems>
+								<Button name="ТаблоПеременныхОбновитьТаблоПеременных" id="1943">
+									<Type>UsualButton</Type>
+									<Representation>Picture</Representation>
+									<Width>3</Width>
+									<CommandName>Form.Command.ОбновитьТаблоПеременных</CommandName>
+									<Picture>
+										<xr:Ref>StdPicture.Refresh</xr:Ref>
+										<xr:LoadTransparent>true</xr:LoadTransparent>
+									</Picture>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Обновить табло переменных</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Refresh variables board</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedTooltip name="ТаблоПеременныхОбновитьТаблоПеременныхРасширеннаяПодсказка" id="1944"/>
+								</Button>
+								<Button name="ТаблоПеременныхПоказатьСлужебныеПеременные" id="2527">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПоказатьСлужебныеПеременные</CommandName>
+									<ExtendedTooltip name="ТаблоПеременныхПоказатьСлужебныеПеременныеРасширеннаяПодсказка" id="2528"/>
+								</Button>
+								<Button name="ТаблоПеременныхЗакрытьТаблоПеременных" id="2058">
+									<Type>UsualButton</Type>
+									<Width>10</Width>
+									<CommandName>Form.Command.ЗакрытьТаблоПеременных</CommandName>
+									<ExtendedTooltip name="ТаблоПеременныхЗакрытьТаблоПеременныхРасширеннаяПодсказка" id="2059"/>
+								</Button>
+								<InputField name="ШагПроверкиЗначенияПеременной" id="4043">
+									<DataPath>ШагПроверкиЗначенияПеременной</DataPath>
+									<ReadOnly>true</ReadOnly>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ContextMenu name="ШагПроверкиЗначенияПеременнойКонтекстноеМеню" id="4044"/>
+									<ExtendedTooltip name="ШагПроверкиЗначенияПеременнойРасширеннаяПодсказка" id="4045"/>
+								</InputField>
+							</ChildItems>
+						</UsualGroup>
 						<Table name="ТаблоПеременных" id="1915">
 							<Representation>Tree</Representation>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
@@ -32904,28 +32962,6 @@ Click on the hyperlink for more details.</v8:content>
 							<ContextMenu name="ТаблоПеременныхКонтекстноеМеню" id="1916"/>
 							<AutoCommandBar name="ТаблоПеременныхКоманднаяПанель" id="1917">
 								<Autofill>false</Autofill>
-								<ChildItems>
-									<Button name="ТаблоПеременныхОбновитьТаблоПеременных" id="1943">
-										<Type>CommandBarButton</Type>
-										<Representation>Picture</Representation>
-										<CommandName>Form.Command.ОбновитьТаблоПеременных</CommandName>
-										<Picture>
-											<xr:Ref>StdPicture.Refresh</xr:Ref>
-											<xr:LoadTransparent>true</xr:LoadTransparent>
-										</Picture>
-										<ExtendedTooltip name="ТаблоПеременныхОбновитьТаблоПеременныхРасширеннаяПодсказка" id="1944"/>
-									</Button>
-									<Button name="ТаблоПеременныхПоказатьСлужебныеПеременные" id="2527">
-										<Type>CommandBarButton</Type>
-										<CommandName>Form.Command.ПоказатьСлужебныеПеременные</CommandName>
-										<ExtendedTooltip name="ТаблоПеременныхПоказатьСлужебныеПеременныеРасширеннаяПодсказка" id="2528"/>
-									</Button>
-									<Button name="ТаблоПеременныхЗакрытьТаблоПеременных" id="2058">
-										<Type>CommandBarButton</Type>
-										<CommandName>Form.Command.ЗакрытьТаблоПеременных</CommandName>
-										<ExtendedTooltip name="ТаблоПеременныхЗакрытьТаблоПеременныхРасширеннаяПодсказка" id="2059"/>
-									</Button>
-								</ChildItems>
 							</AutoCommandBar>
 							<ExtendedTooltip name="ТаблоПеременныхРасширеннаяПодсказка" id="1918"/>
 							<SearchStringAddition name="ТаблоПеременныхСтрокаПоиска" id="1919">
@@ -32955,6 +32991,7 @@ Click on the hyperlink for more details.</v8:content>
 							<Events>
 								<Event name="BeforeAddRow">ТаблоПеременныхПередНачаломДобавления</Event>
 								<Event name="BeforeDeleteRow">ТаблоПеременныхПередУдалением</Event>
+								<Event name="OnActivateRow">ТаблоПеременныхПриАктивизацииСтроки</Event>
 								<Event name="BeforeRowChange">ТаблоПеременныхПередНачаломИзменения</Event>
 							</Events>
 							<ChildItems>
@@ -36239,6 +36276,25 @@ Click on the hyperlink for more details.</v8:content>
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Template VanessaEditor</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ШагПроверкиЗначенияПеременной" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Шаг проверки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Verification step</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
