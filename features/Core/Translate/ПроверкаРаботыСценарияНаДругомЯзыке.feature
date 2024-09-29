@@ -56,27 +56,30 @@
 		И я перехожу к закладке с именем "ГруппаЗапускТестов"
 		
 		Тогда таблица "ДеревоТестов" стала равной:
-			| "Наименование"                                                                         | "Статус"  |
-			| "СлужебнаяФичаEN1.feature"                                                             | ""        |
-			| "For test english feature"                                                             | ""        |
-			| "Background"                                                                           | ""        |
-			| "Given I launch TestClient opening script or connect the existing one"                 | "Success" |
-			| "Create record in spr1"                                                                | "Success" |
-			| 'And In the command interface I select "Основная" "Справочник1"'                       | "Success" |
-			| 'Then "Справочник1" window is opened'                                                  | "Success" |
-			| 'And I click the button named "ФормаСоздать"'                                          | "Success" |
-			| 'Then "Справочник1 (create)" window is opened'                                         | "Success" |
-			| 'And I input "NewElementEN1" text in the field named "Наименование"'                   | "Success" |
-			| 'Then the form attribute named "Наименование" became equal to'                         | "Success" |
-			| 'Then the form attribute named "Наименование" became equal to'                         | "Success" |
-			| '\| \'NewElementEN1\' \|'                                                              | ""        |
-			| 'And I click "Save and close" button'                                                  | "Success" |
-			| 'And I save "1" in "variable" variable'                                                | "Success" |
-			| 'If the field named "Наименование" in "Список" table is set to \'NewElementEN1\' Then' | "Success" |
-			| 'And I save "2" in "variable" variable'                                                | "Success" |
-			| 'Then "variable" variable is equal to 2'                                               | "Success" |
-			| "Close TestClient"                                                                     | "Success" |
-			| "And I close TestClient session"                                                       | "Success" |
+			| 'Наименование'                                                                         | 'Статус'  |
+			| 'СлужебнаяФичаEN1.feature'                                                             | ''        |
+			| 'For test english feature'                                                             | ''        |
+			| 'Background'                                                                           | ''        |
+			| 'Given I launch TestClient opening script or connect the existing one'                 | 'Success' |
+			| 'Create record in spr1'                                                                | 'Failed'  |
+			| 'And In the command interface I select "Основная" "Справочник1"'                       | 'Success' |
+			| 'Then "Справочник1" window is opened'                                                  | 'Success' |
+			| 'And I click the button named "ФормаСоздать"'                                          | 'Success' |
+			| 'Then "Справочник1 (create)" window is opened'                                         | 'Success' |
+			| 'And I input "NewElementEN1" text in the field named "Наименование"'                   | 'Success' |
+			| 'Then the form attribute named "Наименование" became equal to'                         | 'Success' |
+			| 'Then the form attribute named "Наименование" became equal to'                         | 'Success' |
+			| '\| \'NewElementEN1\' \|'                                                              | ''        |
+			| 'And I click "Save and close" button'                                                  | 'Success' |
+			| 'And I save "1" in "variable" variable'                                                | 'Success' |
+			| 'If the field named "Наименование" in "Список" table is set to \'NewElementEN1\' Then' | 'Success' |
+			| 'And I save "2" in "variable" variable'                                                | 'Success' |
+			| 'Then "variable" variable is equal to 2'                                               | 'Success' |
+			| 'And I go to line in "Список" table'                                                   | 'Failed'  |
+			| '\| \'Код\'       \|'                                                                  | ''        |
+			| '\| \'000000001\' \|'                                                                  | ''        |
+			| 'Close TestClient'                                                                     | 'Success' |
+			| 'And I close TestClient session'                                                       | 'Success' |
 	
 	
 	* Проверка работы с новым парсером
@@ -105,27 +108,30 @@
 		И я перехожу к закладке с именем "ГруппаЗапускТестов"
 		
 		Тогда таблица "ДеревоТестов" стала равной:
-			| "Наименование"                                                                         | "Статус"  |
-			| "СлужебнаяФичаEN1.feature"                                                             | ""        |
-			| "For test english feature"                                                             | ""        |
-			| "Background"                                                                           | ""        |
-			| "Given I launch TestClient opening script or connect the existing one"                 | "Success" |
-			| "Create record in spr1"                                                                | "Success" |
-			| 'And In the command interface I select "Основная" "Справочник1"'                       | "Success" |
-			| 'Then "Справочник1" window is opened'                                                  | "Success" |
-			| 'And I click the button named "ФормаСоздать"'                                          | "Success" |
-			| 'Then "Справочник1 (create)" window is opened'                                         | "Success" |
-			| 'And I input "NewElementEN1" text in the field named "Наименование"'                   | "Success" |
-			| 'Then the form attribute named "Наименование" became equal to'                         | "Success" |
-			| 'Then the form attribute named "Наименование" became equal to'                         | "Success" |
-			| '\| \'NewElementEN1\' \|'                                                              | ""        |
-			| 'And I click "Save and close" button'                                                  | "Success" |
-			| 'And I save "1" in "variable" variable'                                                | "Success" |
-			| 'If the field named "Наименование" in "Список" table is set to \'NewElementEN1\' Then' | "Success" |
-			| 'And I save "2" in "variable" variable'                                                | "Success" |
-			| 'Then "variable" variable is equal to 2'                                               | "Success" |
-			| "Close TestClient"                                                                     | "Success" |
-			| "And I close TestClient session"                                                       | "Success" |
+			| 'Наименование'                                                                         | 'Статус'  |
+			| 'СлужебнаяФичаEN1.feature'                                                             | ''        |
+			| 'For test english feature'                                                             | ''        |
+			| 'Background'                                                                           | ''        |
+			| 'Given I launch TestClient opening script or connect the existing one'                 | 'Success' |
+			| 'Create record in spr1'                                                                | 'Failed'  |
+			| 'And In the command interface I select "Основная" "Справочник1"'                       | 'Success' |
+			| 'Then "Справочник1" window is opened'                                                  | 'Success' |
+			| 'And I click the button named "ФормаСоздать"'                                          | 'Success' |
+			| 'Then "Справочник1 (create)" window is opened'                                         | 'Success' |
+			| 'And I input "NewElementEN1" text in the field named "Наименование"'                   | 'Success' |
+			| 'Then the form attribute named "Наименование" became equal to'                         | 'Success' |
+			| 'Then the form attribute named "Наименование" became equal to'                         | 'Success' |
+			| '\| \'NewElementEN1\' \|'                                                              | ''        |
+			| 'And I click "Save and close" button'                                                  | 'Success' |
+			| 'And I save "1" in "variable" variable'                                                | 'Success' |
+			| 'If the field named "Наименование" in "Список" table is set to \'NewElementEN1\' Then' | 'Success' |
+			| 'And I save "2" in "variable" variable'                                                | 'Success' |
+			| 'Then "variable" variable is equal to 2'                                               | 'Success' |
+			| 'And I go to line in "Список" table'                                                   | 'Failed'  |
+			| '\| \'Код\'       \|'                                                                  | ''        |
+			| '\| \'000000001\' \|'                                                                  | ''        |
+			| 'Close TestClient'                                                                     | 'Success' |
+			| 'And I close TestClient session'                                                       | 'Success' |
 	
 	
 
