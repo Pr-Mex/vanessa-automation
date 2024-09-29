@@ -35,6 +35,11 @@ Scenario: Create record in spr1
 		And I save "2" in "variable" variable
 	Then "variable" variable is equal to 2
 
+	And I go to line in "Список" table
+		| 'Код'       |
+		| '000000001' |
+
+
 	
 Scenario: Close TestClient
 	And I close TestClient session
