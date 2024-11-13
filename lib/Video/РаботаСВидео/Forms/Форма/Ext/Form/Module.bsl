@@ -3032,7 +3032,7 @@
 	КонецЕсли;
 		
 	
-	Соединение = Новый HTTPСоединение("salute.online.sberbank.ru"
+	Соединение = Новый HTTPСоединение("ngw.devices.sberbank.ru"
 								, 9443
 								,
 								,
@@ -3045,7 +3045,7 @@
 	Заголовки.Вставить("Content-Type",  "application/x-www-form-urlencoded");
 								
 	Запрос = Новый HTTPЗапрос("api/v2/oauth", Заголовки);
-	Запрос.УстановитьТелоИзСтроки("scope=SBER_SPEECH");
+	Запрос.УстановитьТелоИзСтроки("scope=SALUTE_SPEECH_PERS");
 	
 	Результат = Соединение.ОтправитьДляОбработки(Запрос);
 	
