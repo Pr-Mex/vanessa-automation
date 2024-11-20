@@ -41,6 +41,11 @@
 				</Title>
 				<ExtendedTooltip name="ФормаДополнительныеСвойстваРасширеннаяПодсказка" id="440"/>
 			</Button>
+			<Button name="ФормаКонвертироватьМакет" id="547">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.КонвертироватьМакет</CommandName>
+				<ExtendedTooltip name="ФормаКонвертироватьМакетРасширеннаяПодсказка" id="548"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -1277,6 +1282,21 @@ If value is &gt; 1, then paged sub-elements of this level or lower according to<
 			</ToolTip>
 			<Action>ДополнительныеСвойства</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="КонвертироватьМакет" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Конвертировать макет</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Конвертировать макет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>КонвертироватьМакет</Action>
 		</Command>
 	</Commands>
 </Form>
