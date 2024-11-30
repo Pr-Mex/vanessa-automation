@@ -55,7 +55,7 @@
     * Прописать путь в Path
 6. Озвучка от Microsoft. (Устаревшее) 
     * Для озвучки голосом необходимо установить [Microsoft Speech Platform х32](https://www.microsoft.com/en-us/download/details.aspx?id=27225) и [Server Runtime Languages](https://www.microsoft.com/en-us/download/details.aspx?id=27224) `MSSpeech_TTS_ru-RU_Elena` или другую голосовую библиотеку. 
-    * Также понадобится голосовой движок [Балаболка консольный вариант](http://www.cross-plus-a.ru/bconsole.html) Необходимо прописать путь в Path.
+    * Также понадобится голосовой движок [Балаболка консольный вариант](https://cross-plus-a.com/bconsole.htm) Необходимо прописать путь в Path.
     * Если на компьютере нет аудиокарты (настоящей или виртуальной) - озвучка работать не будет из-за особенностей движка TTS.
 7. [Oscript](http://oscript.io/downloads) (Не обязательно)
     * Необходим при использовании VLC.
