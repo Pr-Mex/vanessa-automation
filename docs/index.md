@@ -40,6 +40,7 @@
 * [Тестирование серверного поведения с Vanessa Automation. Инициатор данных.](https://infostart.ru/1c/articles/1283198/)
 * [Практика применения DevOps. Тестирование](https://infostart.ru/1c/articles/1342422/)
 * [Как настроить тестирование с Vanessa Automation и Gitlab с нуля](https://habr.com/ru/companies/samolet/articles/803345/)
+* [Как убить трех зайцев одним сценарием: опыт использования Vanessa-Automation](https://habr.com/ru/companies/croc/articles/861134/)
 
 ## СППР + Vanessa Automation
 
@@ -59,6 +60,7 @@
 * [Виктор Ермаков. Как изменялся механизм формирования текстовых авто-инструкций. Мастер класс по созданию красивой инструкции.](https://youtu.be/ofMvDX6kIBg)
 * [Евгений Исаев. Подход к автоматизации тестирования 1С. Remote API for testing (RAT).](https://youtu.be/ugrzirGXq1U)
 * [SoftOnIt. Кружок 1С #8 Тестирование 1С, с помощью "vanessa-automation".](https://www.youtube.com/watch?v=NIY9HdO5Xc0)
+* [Андрей Хашкин. Опыт применения Vanessa-Automation и других инструментов для обучения и тестирования](https://www.youtube.com/watch?v=v3FKzo86c8A)
 
 ## Курсы
 * Бесплатные
