@@ -17151,6 +17151,7 @@ Actual when working in the step tree mode.</v8:content>
 																	<v8:content>Group subsystem stabilization of test execution zero line</v8:content>
 																</v8:item>
 															</Title>
+															<Group>AlwaysHorizontal</Group>
 															<Representation>None</Representation>
 															<ShowTitle>false</ShowTitle>
 															<ExtendedTooltip name="ГруппаПодсистемаСтабилизацияВыполненияТестовНулеваяСтрокаРасширеннаяПодсказка" id="3942"/>
@@ -17190,6 +17191,55 @@ Actual when working in the step tree mode.</v8:content>
 																				</Title>
 																			</ExtendedTooltip>
 																		</InputField>
+																	</ChildItems>
+																</UsualGroup>
+																<UsualGroup name="ГруппаПодсистемаСтабилизацияВыполненияТестовНулеваяСтрокаПравыйСтолбец" id="4054">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа подсистема стабилизация выполнения тестов первая строка правый столбец</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Test execution stabilization subsystem group first row right column</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаПодсистемаСтабилизацияВыполненияТестовНулеваяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="4055"/>
+																	<ChildItems>
+																		<CheckBoxField name="ОтключатьДляПолейВозможностьЗатиранияТекстаПриСерверномВызове" id="4056">
+																			<DataPath>Объект.ОтключатьДляПолейВозможностьЗатиранияТекстаПриСерверномВызове</DataPath>
+																			<TitleLocation>Right</TitleLocation>
+																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="ОтключатьДляПолейВозможностьЗатиранияТекстаПриСерверномВызовеКонтекстноеМеню" id="4057"/>
+																			<ExtendedTooltip name="ОтключатьДляПолейВозможностьЗатиранияТекстаПриСерверномВызовеРасширеннаяПодсказка" id="4058">
+																				<AutoMaxWidth>false</AutoMaxWidth>
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>There is a problem that when synchronizing the state of the form after the server call has completed, the text that the user is currently editing may be overwritten.
+In tests, this can manifest itself in such a way that the test entered a value into a field, but before it began working with another field, this value was returned to its previous state.
+This option enables a mechanism where the "EditTextUpdate" property of form fields will change after calling the step
+   ```Gherkin
+   Then "WindowTitle" window is opened
+   ```
+For this option to work, the VAExtension extension must be installed in the testing client database.</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Существует проблема, что при синхронизации состояния формы после завершения серверного вызова, может затираться текст, который в данный момент редактирует пользователь.
+В тестах это может проявляться так, что тест ввёл значение в поле, но до того как он начал работать с другим полем данное значение было возвращено в предыдущее состояние.
+Данная опция включает механизм, когда свойство "ОбновлениеТекстаРедактирования" у полей формы, будет изменяться после вызова шага
+   ```Gherkin
+   Тогда открылось окно "ИмяОкна"
+   ```
+Для работы опции в базе клиента тестирования должно быть установлено расширение VAExtension.</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
+																		</CheckBoxField>
 																	</ChildItems>
 																</UsualGroup>
 															</ChildItems>

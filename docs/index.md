@@ -9,7 +9,7 @@
 ## BDD for 1С:Enterprise
 
 * Текущий **мажорный** релиз [1.2.041.1](https://github.com/Pr-Mex/vanessa-automation/releases/tag/1.2.041.1)
-* Текущий **минорный** релиз [1.2.041.1](https://github.com/Pr-Mex/vanessa-automation/releases/tag/1.2.041.1)
+* Текущий **минорный** релиз [1.2.041.1](https://github.com/Pr-Mex/vanessa-automation/releases/tag/1.2.041.30)
 * Разработка ведется в ветке [Develop](https://github.com/Pr-Mex/vanessa-automation/tree/develop).
 * [Обсудить Ванессу](https://t.me/testspro1c) в телеграм группе, и обсудить всё, что связано с тестированием в 1С.
 * [Подписаться на новости о проекте](https://t.me/VanessaAutomation) в телеграм канале.
@@ -60,6 +60,7 @@
 * [Виктор Ермаков. Как изменялся механизм формирования текстовых авто-инструкций. Мастер класс по созданию красивой инструкции.](https://youtu.be/ofMvDX6kIBg)
 * [Евгений Исаев. Подход к автоматизации тестирования 1С. Remote API for testing (RAT).](https://youtu.be/ugrzirGXq1U)
 * [SoftOnIt. Кружок 1С #8 Тестирование 1С, с помощью "vanessa-automation".](https://www.youtube.com/watch?v=NIY9HdO5Xc0)
+* [Митап «Запускаем дымовые тесты с помощью Vanessa-Automation»](https://youtu.be/FQLX8TlpGvo)
 * [Андрей Хашкин. Опыт применения Vanessa-Automation и других инструментов для обучения и тестирования](https://www.youtube.com/watch?v=v3FKzo86c8A)
 
 ## Курсы
@@ -70,6 +71,7 @@
    - [Сценарное тестирование в 1С: настройка и практика использования](https://xn----1-bedvffifm4g.xn--p1ai/courses/1c-testing-qa-2022/)
    - [Тестирование в 1С - от простого к сложному](https://silverbulleters.org/courses-bbd)
    - [Автоматизированное тестирование в 1С. Онлайн-курс](https://infostart.ru/va-course)
+   - [Тестирование в 1С и создание документации (c использованием Vanessa-Automation)](https://uc1.1c.ru/course/testirovanie-v-1s-i-sozdanie-dokumentatsii-c-ispolzovaniem-vanessa-automation)
 
 ## Как стать контрибьютором (предложить свои доработки) проекта?
 * Об этом рассказано [в этой статье](https://infostart.ru/public/1092009/)
@@ -222,11 +224,12 @@ Feature файлы могут писать все участники коман�
 * **СписокТеговОтбор** - массив текстовых тэгов для запуска проверки поведения по сценариям, содержащим любой из указанных тэгов
 * и другие
 
-[Подробно про запуск Vanessa Automation из командной строки](https://github.com/Pr-Mex/vanessa-automation/blob/develop/docs/CommandSetting/CommandSetting.md)
-[Примеры JSON файлов](https://github.com/Pr-Mex/vanessa-automation/tree/develop/tools/JSON)
-[Описание всех параметров VAParams.json (ru)](https://github.com/Pr-Mex/vanessa-automation/blob/develop/docs/JsonParams/JsonParamsRU.md)
-[Описание всех параметров VAParams.json (en)](https://github.com/Pr-Mex/vanessa-automation/blob/develop/docs/JsonParams/JsonParamsEN.md)
-[Параметры, которые раньше можно было передавать только в командной строке, но теперь можно передавать в файле VAParams.json](https://github.com/Pr-Mex/vanessa-automation/blob/develop/docs/CommandSetting/CommandSetting.md)
+Ссылки
+* [Подробно про запуск Vanessa Automation из командной строки](https://github.com/Pr-Mex/vanessa-automation/blob/develop/docs/CommandSetting/CommandSetting.md)
+* [Примеры JSON файлов](https://github.com/Pr-Mex/vanessa-automation/tree/develop/tools/JSON)
+* [Описание всех параметров VAParams.json (ru)](https://github.com/Pr-Mex/vanessa-automation/blob/develop/docs/JsonParams/JsonParamsRU.md)
+* [Описание всех параметров VAParams.json (en)](https://github.com/Pr-Mex/vanessa-automation/blob/develop/docs/JsonParams/JsonParamsEN.md)
+* [Параметры, которые раньше можно было передавать только в командной строке, но теперь можно передавать в файле VAParams.json](https://github.com/Pr-Mex/vanessa-automation/blob/develop/docs/CommandSetting/CommandSetting.md)
 
 
 Профиль запуска предназначен для простого консольного запуска, пример подобной командной строки выглядит так:

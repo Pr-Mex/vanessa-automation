@@ -24,8 +24,16 @@
 				<CommandName>Form.Command.ВыполнитьВыражение</CommandName>
 				<ExtendedTooltip name="ВыполнитьВыражениеРасширеннаяПодсказка" id="20"/>
 			</Button>
+			<Button name="УстановитьСвойствоОбновлениеТекстаРедактирования" id="21">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.УстановитьСвойствоОбновлениеТекстаРедактирования</CommandName>
+				<ExtendedTooltip name="УстановитьСвойствоОбновлениеТекстаРедактированияРасширеннаяПодсказка" id="22"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
 	<ChildItems>
 		<InputField name="ЗначениеЗаголовокОкна" id="1">
 			<DataPath>ЗначениеЗаголовокОкна</DataPath>
@@ -45,9 +53,17 @@
 		</InputField>
 		<CheckBoxField name="ВыражениеВычислено" id="6">
 			<DataPath>ВыражениеВычислено</DataPath>
+			<TitleLocation>Right</TitleLocation>
 			<CheckBoxType>Auto</CheckBoxType>
 			<ContextMenu name="ВыражениеВычисленоКонтекстноеМеню" id="7"/>
 			<ExtendedTooltip name="ВыражениеВычисленоРасширеннаяПодсказка" id="8"/>
+		</CheckBoxField>
+		<CheckBoxField name="ВызыватьИсключение" id="23">
+			<DataPath>ВызыватьИсключение</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ВызыватьИсключениеКонтекстноеМеню" id="24"/>
+			<ExtendedTooltip name="ВызыватьИсключениеРасширеннаяПодсказка" id="25"/>
 		</CheckBoxField>
 	</ChildItems>
 	<Attributes>
@@ -113,6 +129,17 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="ВызыватьИсключение" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вызывать исключение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ВывестиДанные" id="1">
@@ -174,6 +201,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ВыполнитьВыражение</Action>
+		</Command>
+		<Command name="УстановитьСвойствоОбновлениеТекстаРедактирования" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить свойство обновление текста редактирования</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Установить свойство обновление текста редактирования</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>УстановитьСвойствоОбновлениеТекстаРедактирования</Action>
 		</Command>
 	</Commands>
 </Form>
