@@ -1779,6 +1779,9 @@ EndFunction
 
 &AtServer
 Function GetObjectLinkFromObjectURL(ObjectURL)
+	If Left(ObjectURL, 16) = "FindByAttribute:" Then
+		Return GetObjectLinkByAttributeString(ObjectURL);
+	EndIf;
 	Five = 5;
 	Nine = 9;
 	Eleven = 11;
