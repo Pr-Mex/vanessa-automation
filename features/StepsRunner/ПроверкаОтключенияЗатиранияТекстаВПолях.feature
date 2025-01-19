@@ -8,6 +8,10 @@
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 @IgnoreOnWeb
+@IgnoreOn8314
+@IgnoreOn8315
+@IgnoreOn8316
+@IgnoreOn8317
 
 Функционал: Проверка отключения затирания текста полей при серверном вызове
  
