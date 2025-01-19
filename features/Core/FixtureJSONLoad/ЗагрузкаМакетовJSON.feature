@@ -1,6 +1,7 @@
 ﻿# language: ru
 # encoding: utf-8
 @IgnoreOnOFBuilds
+@IgnoreOnUFSovm82Builds
 
 Функционал: Загрузка макетов json
         Как ответственный за закупки
