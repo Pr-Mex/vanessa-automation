@@ -55766,9 +55766,19 @@
 Процедура VanessaEditorПриНажатии(Элемент, ДанныеСобытия, СтандартнаяОбработка)
 
 	Element = ДанныеСобытия.Element;
+	КоличествоПопыток = 50;
 	Если Element.id = "VanessaEditorEventForwarder" Тогда
 		Пока Истина Цикл
-			msg = Элементы.VanessaEditor.Document.defaultView.popVanessaMessage();
+			Попытка
+				msg = Элементы.VanessaEditor.Document.defaultView.popVanessaMessage();
+			Исключение
+				КоличествоПопыток = КоличествоПопыток - 1;
+				Если КоличествоПопыток > 0 Тогда
+					Продолжить;
+				КонецЕсли;
+				msg = Неопределено;
+			КонецПопытки;
+			
 			Если (msg = Неопределено) Тогда Прервать; КонецЕсли;
 			VanessaEditorOnReceiveEventHandler(msg.type, msg.data);
 		КонецЦикла;
