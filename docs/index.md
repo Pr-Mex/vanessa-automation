@@ -8,8 +8,8 @@
 
 ## BDD for 1С:Enterprise
 
-* Текущий **мажорный** релиз [1.2.041.1](https://github.com/Pr-Mex/vanessa-automation/releases/tag/1.2.041.1)
-* Текущий **минорный** релиз [1.2.041.37](https://github.com/Pr-Mex/vanessa-automation/releases/tag/1.2.041.37)
+* Текущий **мажорный** релиз [1.2.042.1](https://github.com/Pr-Mex/vanessa-automation/releases/tag/1.2.042.1)
+* Текущий **минорный** релиз [1.2.042.1](https://github.com/Pr-Mex/vanessa-automation/releases/tag/1.2.042.1)
 * Разработка ведется в ветке [Develop](https://github.com/Pr-Mex/vanessa-automation/tree/develop).
 * [Обсудить Ванессу](https://t.me/testspro1c) в телеграм группе, и обсудить всё, что связано с тестированием в 1С.
 * [Подписаться на новости о проекте](https://t.me/VanessaAutomation) в телеграм канале.
@@ -112,24 +112,24 @@
 ## Установка через OneScript
 Для обычной сборки
 
-* Для текущей мажорной версии (например 1.2.041.1)
+* Для текущей мажорной версии (например 1.2.042.1)
 ```
 opm install vanessa-automation
 ```
 
-* Для текущей релизной версии (например 1.2.041.22)
+* Для текущей релизной версии (например 1.2.042.10)
 ```
 opm install vanessa-automation@SNAPSHOT
 ```
 
 Для сборки VASingle.
 
-* Для текущей мажорной версии (например 1.2.041.1)
+* Для текущей мажорной версии (например 1.2.042.1)
 ```
 opm install vanessa-automation-single
 ```
 
-* Для текущей релизной версии (например 1.2.041.22)
+* Для текущей релизной версии (например 1.2.042.10)
 ```
 opm install vanessa-automation-single@SNAPSHOT
 ```
