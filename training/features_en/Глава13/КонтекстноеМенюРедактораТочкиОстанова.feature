@@ -17,13 +17,13 @@
 		И Пауза 1
 		И я делаю клик по элементу формы 'ЭтотСеанс' '' 'Document' правой кнопкой UI Automation
 		И Пауза 1
-		И Я делаю подсветку элемента VA "ГруппаКонтекстногоМенюVanessaEditorБрейпоинты" "Breakpoints" и перемещаю курсор
+		И Я делаю подсветку элемента VA "ГруппаКонтекстногоМенюVanessaEditorБрейкпоинты" "Breakpoints" и перемещаю курсор
 
 * This menu item sets or removes a breakpoint. Hotkey F9.
 		И Я делаю подсветку элемента VA "VanessaEditorКонтекстноеМенюБрейкпоинт" "Set/remove breakpoint." и перемещаю курсор
 
 * The next menu item removes all breakpoints on this editor tab.
-		И Я делаю подсветку элемента VA "VanessaEditorКонтекстноеМенюБрейпоинтУбратьВсе" "Remove all breakpoints" и перемещаю курсор
+		И Я делаю подсветку элемента VA "VanessaEditorКонтекстноеМенюБрейкпоинтУбратьВсе" "Remove all breakpoints" и перемещаю курсор
 
 * That's it, move on to the next lesson of the interactive help.
 

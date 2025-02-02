@@ -22,11 +22,23 @@ Scenario: Create record in spr1
 	And I click the button named "ФормаСоздать"
 	Then "Справочник1 (create)" window is opened
 	And I input "NewElementEN1" text in the field named "Наименование"
+	Then the form attribute named "Наименование" became equal to
+		"""
+		NewElementEN1
+		"""
+	Then the form attribute named "Наименование" became equal to
+		| 'NewElementEN1' |
+	
 	And I click "Save and close" button
 	And I save "1" in "variable" variable
 	If the field named "Наименование" in "Список" table is set to 'NewElementEN1' Then
 		And I save "2" in "variable" variable
 	Then "variable" variable is equal to 2
+
+	And I go to line in "Список" table
+		| 'Код'       |
+		| '000000001' |
+
 
 	
 Scenario: Close TestClient

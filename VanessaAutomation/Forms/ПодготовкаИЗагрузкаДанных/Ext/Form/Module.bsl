@@ -592,8 +592,21 @@ Procedure ICheckOrCreateChartOfCharacteristicTypesObjectsAtServer(ObjectName, Va
 	For Each ColumnName In ColumnsNames Do
 		ObjectAttributes.Columns.Delete(ColumnName);
 	EndDo;
+	
+	IsFolder = False;
+	FoundColumn = ObjectAttributes.Columns.Find("IsFolder");
+	If FoundColumn = Undefined Then
+		FoundColumn = ObjectAttributes.Columns.Find("ЭтоГруппа");	
+	EndIf;
+	
 	RefColumnName = ?(ObjectAttributes.Columns.Find("Ref") <> Undefined, "Ref", "Ссылка");
 	For Each Row In ObjectValues Do
+		If FoundColumn <> Undefined
+			And Row[FoundColumn.Name] = "True" Then
+			IsFolder = True;
+		Else
+			IsFolder = False;
+		EndIf;
 		Ref = GetObjectLinkFromObjectURL(Row[RefColumnName]);
 		If ValueIsFilled(Ref.DataVersion) Then
 			Obj = Ref.GetObject();
@@ -602,7 +615,11 @@ Procedure ICheckOrCreateChartOfCharacteristicTypesObjectsAtServer(ObjectName, Va
 			If Predefined Then
 				Continue;
 			EndIf;
-			Obj = ChartsOfCharacteristicTypes[ObjectName].CreateItem();
+			If IsFolder Then
+				Obj = ChartsOfCharacteristicTypes[ObjectName].CreateFolder();
+			Else
+				Obj = ChartsOfCharacteristicTypes[ObjectName].CreateItem();
+			EndIf;
 			Obj.SetNewObjectRef(Ref);
 		EndIf;		
 		
@@ -612,17 +629,29 @@ Procedure ICheckOrCreateChartOfCharacteristicTypesObjectsAtServer(ObjectName, Va
 			EndIf;
 			If Column.Name = RefColumnName Then
 				Continue;
+			EndIf; 
+			If Column.Name = "IsFolder" Or Column.Name = "ЭтоГруппа" Then
+				Continue;
 			EndIf;
 			If (Column.Name = "DeletionMark" Or Column.Name = "ПометкаУдаления")
 				And Row[Column.Name] = "True" Then
 				Obj.DeletionMark = True;
 				Continue;
 			EndIf;
-			If Column.Name = "ValueType" Or Column.Name = "ТипЗначения" Then  
-				NewXMLReader = New XMLReader;
-				NewXMLReader.SetString(Row[Column.Name]);
-				Obj.ValueType = XDTOSerializer.ReadXML(NewXMLReader, Тип("ОписаниеТипов"));
-				NewXMLReader.Close();
+			If (Column.Name = "ValueType" Or Column.Name = "ТипЗначения") 
+				And Not IsFolder Then  
+				StartTmpl = "<TypeDescription xmlns=""http://v8.1c.ru/8.1/data/core"" xmlns:xs=""http://www.w3.org/2001/XMLSchema"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"">";
+                EndTmpl = "</TypeDescription>";
+                
+                ResultTypeDescription = Row[Column.Name];
+                If Not StrStartsWith(ResultTypeDescription, StartTmpl) Then
+                    ResultTypeDescription = StartTmpl + ResultTypeDescription + EndTmpl;
+                EndIf;
+                
+                NewXMLReader = New XMLReader;
+                NewXMLReader.SetString(ResultTypeDescription);
+                Obj.ValueType = XDTOSerializer.ReadXML(NewXMLReader, Тип("ОписаниеТипов"));
+                NewXMLReader.Close();
 			Else
 				FillTipicalObjectAttributesByValues(Obj, Row, Column);
 			EndIf;
@@ -1163,6 +1192,31 @@ EndProcedure
 &AtClient
 Procedure SelectDependentItems(Command)
 	SelectDependentItemsAtServer();
+EndProcedure
+
+&AtServer
+Procedure UpdateMetadataCountAtServer()
+    
+    Template = "SELECT SUM(1) AS Count FROM ";
+    
+    For Each MetaGroup In MetadataList.GetItems() Do
+        tmpCount = 0;
+        For Each MetaName In MetaGroup.GetItems() Do
+        
+            Query = New Query();
+            Query.Text = Template + MetaName.FullName;
+            QueryResult = Query.Execute().Select();
+            QueryResult.Next();
+            MetaName.Count = QueryResult.Count;
+            tmpCount = tmpCount + MetaName.Count;
+        EndDo;	 
+        MetaGroup.Count = tmpCount;
+    EndDo;
+EndProcedure
+
+&AtClient
+Procedure UpdateMetadataCount(Command)
+    UpdateMetadataCountAtServer();
 EndProcedure
 
 &AtClient
@@ -1725,6 +1779,9 @@ EndFunction
 
 &AtServer
 Function GetObjectLinkFromObjectURL(ObjectURL)
+	If Left(ObjectURL, 16) = "FindByAttribute:" Then
+		Return GetObjectLinkByAttributeString(ObjectURL);
+	EndIf;
 	Five = 5;
 	Nine = 9;
 	Eleven = 11;
@@ -2725,10 +2782,17 @@ Function GetMarkdownTable(Val MetadataObjectPropertyName, Val MetadataObjectName
 				Markdown.Add("'");
 			EndIf; 
 			If Column.Name = "ТипЗначения" Or Column.Name = "ValueType" Then
-				NewXMLWriter = New XMLWriter; 
-				NewXMLWriter.SetString();
-				XDTOSerializer.WriteXML(NewXMLWriter, Row[Column.Name]); 
-				RowData = GeValuetStringRepresentation(StrReplace(NewXMLWriter.Close(), Chars.LF, ""), RefReplaceMetadataObjects);
+                StartTmpl = "<TypeDescription xmlns=""http://v8.1c.ru/8.1/data/core"" xmlns:xs=""http://www.w3.org/2001/XMLSchema"" xmlns:xsi=""http://www.w3.org/2001/XMLSchema-instance"">";
+                EndTmpl = "</TypeDescription>";
+
+                NewXMLWriter = New XMLWriter;
+                XMLWriterSettings = New XMLWriterSettings(, , False, False);
+                NewXMLWriter.SetString(XMLWriterSettings);
+                XDTOSerializer.WriteXML(NewXMLWriter, Row[Column.Name]); 
+                TypeXML = NewXMLWriter.Close(); 
+                TypeXML = StrReplace(TypeXML, StartTmpl, "");
+                TypeXML = StrReplace(TypeXML, EndTmpl, "");
+                RowData = GeValuetStringRepresentation(TypeXML, RefReplaceMetadataObjects);
 			Else
 				RowData = GeValuetStringRepresentation(Row[Column.Name], RefReplaceMetadataObjects);
 			EndIf;

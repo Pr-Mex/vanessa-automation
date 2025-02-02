@@ -1,2 +1,2 @@
 
-oscript .\onescript\run-behavior-check-session.os .\JSON\Main.json
+oscript .\onescript\run-behavior-check-session.os .\JSON\Main.json true

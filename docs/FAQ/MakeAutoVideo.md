@@ -34,7 +34,9 @@
 1. [Пакет ImageMagick](https://imagemagick.org/script/download.php#windows) используется как источник местонахождения утилит ffmpeg и convert.
     * Необходимо выбирать пакет 7 версии.
     * Необходимо выбирать пакет, в котором есть "dll", например "ImageMagick-7.0.7-22-Q16-x64-dll.exe".
-    * Необходимо прописать путь в Path. 
+    * Необходимо прописать путь в Path.
+	* При установке ImageMagick должен быть установлен флаг установки FFmpeg.
+	![](./images/im_ffmpeg.png "FFmpeg")​
 2. Озвучка от Yandex. (Не обязательно) 
     * Нужно зарегистрироваться в [Yandex SpeechKit](https://cloud.yandex.ru/services/speechkit). 
     * Также нужно привязать карту. Далее у вас будет 2 месяца триального периода. Надо именно привязывать карту к облаку Yandex. Предыдущие привязки к другим сервисам Yandex не считаются.
@@ -53,7 +55,7 @@
     * Прописать путь в Path
 6. Озвучка от Microsoft. (Устаревшее) 
     * Для озвучки голосом необходимо установить [Microsoft Speech Platform х32](https://www.microsoft.com/en-us/download/details.aspx?id=27225) и [Server Runtime Languages](https://www.microsoft.com/en-us/download/details.aspx?id=27224) `MSSpeech_TTS_ru-RU_Elena` или другую голосовую библиотеку. 
-    * Также понадобится голосовой движок [Балаболка консольный вариант](http://www.cross-plus-a.ru/bconsole.html) Необходимо прописать путь в Path.
+    * Также понадобится голосовой движок [Балаболка консольный вариант](https://cross-plus-a.com/bconsole.htm) Необходимо прописать путь в Path.
     * Если на компьютере нет аудиокарты (настоящей или виртуальной) - озвучка работать не будет из-за особенностей движка TTS.
 7. [Oscript](http://oscript.io/downloads) (Не обязательно)
     * Необходим при использовании VLC.

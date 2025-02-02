@@ -7,7 +7,7 @@
 * Special
 
       * **GlobalVars {GlobalVars}**:
-An array of key and value objects. This array will be loaded into global variables and will be available when executing the script in the ContextSaved object.
+Структура, в которой будут находиться пары: ключ и значение. Данная структура будет загружена в глобальные переменные и эти переменные будут доступны при выполнении сценария в объекте КонтекстСохраняемый.
 
 ## Main settings
 
@@ -80,6 +80,12 @@ An array of key and value objects. This array will be loaded into global variabl
          The catalog of Vanessa Automation data processor. This field must be filled on the standard installation.
          When working with Vanessa Automation Single it is allowed to leave the field blank.
 
+      * **TemporaryFilesDirectory**:
+         The directory in which temporary script files will be created.
+         If a setting value is specified, then temporary script files will be created in it. If the setting value is not specified, then the user's temporary directory will be used. Usually this
+         "C:\USERS%username%\APPDATA\LOCAL\TEMP".
+         Setting is necessary because... Vanessa Automation can create bat files to run system commands, and some operating systems may prohibit running such files from the user's temporary directory.
+
 *  Smoke Tests
 
       * **SmokeTestsDirectoryOutputFiles**:
@@ -91,11 +97,14 @@ An array of key and value objects. This array will be loaded into global variabl
       * **SmokeTestsPathToFileSettingsScripts**:
          Path to the script configuration file (the configuration file can be created on the "Script Settings" tab in the "Smoke Test Generator" window).
 
+      * **SmokeTestsCleanDirectoryOutputFiles**:
+         If set, feature files in the output files directory will be deleted before tests are generated.
+
       * **SmokeTestsOnlyEnteredObjects**:
          When this flag is enabled, only objects for which there is at least one element not marked for deletion in the current infobase will participate in the generation of feature files of extended actions.
 
       * **SmokeTestsOnlyChangedRelativeToVendorConfiguration**:
-         When this flag is enabled, only objects changed relative to the provider configuration will participate in the generation of feature files. To build a report on comparing configurations, the current infobase configurator will be launched.
+         When this flag is enabled, only objects changed relative to the provider configuration will participate in the generation of feature files. To build a report on comparing configurations, the current infobase configurator will be launched with the current user and an empty password.
 
       * **SmokeTestsVendorConfigurationName**:
          The name of the vendor configuration to compare configurations with.
@@ -257,6 +266,15 @@ An array of key and value objects. This array will be loaded into global variabl
       * **NumberOfAttemptsToExecuteTheScript**:
          If the setting specifies a value of more than one, then if the script was not executed successfully, several more attempts to execute the script will be made.
 
+      * **DisableForFieldsAbilityToOverwriteTextWhenServerCall**:
+         There is a problem that when synchronizing the state of the form after the server call has completed, the text that the user is currently editing may be overwritten.
+         In tests, this can manifest itself in such a way that the test entered a value into a field, but before it began working with another field, this value was returned to its previous state.
+         This option enables a mechanism where the "EditTextUpdate" property of form fields will change after calling the step
+         ```Gherkin
+         Then "WindowTitle" window is opened
+         ```
+         For this option to work, the VAExtension extension must be installed in the testing client database.
+
       * **numberofattemptstoperformanaction**:
          Sets maximum tries number for multiple steps.
          Increasing this parameter may make scenarios execution more stable on the weak hardware.
@@ -282,6 +300,11 @@ An array of key and value objects. This array will be loaded into global variabl
          And I wait "WindowTitle" window opening in 60 seconds
          And I wait the window with header different from "WindowTitle" opening in 60 seconds
          ```
+
+      * **MaximumExecutionTimeAction**:
+         Sets the maximum execution time for actions that return a value to the test manager.
+         If the specified time is exceeded, the exception "The maximum execution time of the action on the testing client side has been exceeded" is generated. In this case, the action will continue.
+         If the parameter is 0, commands wait until the end of execution without checking the elapsed time since the start of execution.
 
       * **safeexecutionofsteps**:
          Adds delay for multiple actions, which may cause unstable scenario execution, e.g.: move to line, field value check etc.
@@ -514,6 +537,12 @@ An array of key and value objects. This array will be loaded into global variabl
 
       * **modelingreportpath**:
          Report directory.
+
+      * **ModelingConfigurationName**:
+         Configuration name for the report
+
+      * **ModelingConfigurationVersion**:
+         Configuration version for report
 
 *  Cucumber
 

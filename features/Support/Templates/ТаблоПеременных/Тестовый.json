@@ -1,0 +1,283 @@
+{
+	"uuid": "0dabab74-aa95-4520-a58b-bab322bb36e9",
+	"historyId": "Новая настройка.Новая настройка",
+	"name": "Новая настройка",
+	"fullName": "features/test.feature_новая настройка",
+	"testCaseId": "8d69928a4fe601bc191e34c7d6e178bc",
+	"start": 1719473738033,
+	"stop": 1719473789154,
+	"statusDetails": {
+		"known": false,
+		"muted": false,
+		"flaky": false,
+		"message": "Не удалось выполнить сравнение файлов:",
+		"trace": "{ВнешняяОбработка.Test.Форма.Форма.Форма(332)}: Не удалось выполнить сравнение файлов: не получен файл с результатом сравнения. Строка запуска: c:\\program files (x86)\\winmerge\\WinMergeU.exe \"C:\\Temp\\CI\\Файлы\\ТекстСлева.txt\" \"C:\\Temp\\CI\\Файлы\\ТекстСправа.txt\" -minimize -noninteractive -u -or \"C:\\Temp\\CI\\Файлы\\Новая настройка.html\"\n\nТехнические данные:\n        ЗаголовокАктивногоОкна: Начальная страница\n        ИмяАктивнойФормы: \n        ИмяФичи: Новая настройка\n        ИмяСценария: Новая настройка\n        НомерСтрокиДерева: 25\n        НомерСтрокиФичи: 39\n        ПолныйПутьКФиче: C:\\Temp\\CI\\Features\\Test.feature\n        ИмяФайла: C:/Commons/rep/vanessa-tools/features/Libraries/ПроектнаяГруппа/pgext.epf\n        ИмяПроцедуры: ЯЗапускаюУтилитуСравненияДляФайловИ\n        ИмяРаннера: Pautov-LV\n        ИмяКлиентаТестирования: Администратор\n        СинонимКлиентаТестирования: Администратор\n        ТипКлиентаТестирования: Тонкий\n        СтрокаСоединения: File=\"c:\\Bases\\Тест Ошибки\\УП (ERP)\\\"\n        ДопПараметрыПодключения: /AllowExecuteScheduledJobs -Off   /DisableStartupMessages   /DEBUG /N\"Администратор\" \n        PIDКлиентаТестирования: 24200\n        ВерсияVA: ver 1.2.041.23\n        ВерсияПлатформы: 8.3.24.1548\n        ТипПлатформы: Windows x86-64\n        РежимСовместимостиTestManager: Версия8_3_18\n        ВремяРаботыСценария: 0:00:51 (ч:м:с)\n        ДатаВремяОшибки: 27.06.2024 10:36:29"
+	},
+	"status": "failed",
+	"stage": "finished",
+	"steps": [
+		{
+			"name": "Подготовка тестовых данных",
+			"start": 1719473786025,
+			"stop": 1719473786329,
+			"status": "passed",
+			"stage": "finished",
+			"statusDetails": {
+				"known": false,
+				"muted": false,
+				"flaky": false
+			},
+			"parameters": [],
+			"attachments": [],
+			"steps": [
+				{
+					"name": "И В переменной \"ТекстСлева\" я запоминаю текст",
+					"start": 1719473786025,
+					"stop": 1719473786322,
+					"status": "passed",
+					"stage": "finished",
+					"statusDetails": {
+						"known": false,
+						"muted": false,
+						"flaky": false
+					},
+					"parameters": [
+						{
+							"name": "Парам1",
+							"value": "ТекстСлева"
+						}
+					],
+					"attachments": [
+						{
+							"name": "table",
+							"source": "d479885f-15f4-405d-837e-3973c4f0a9fd-attachment.csv",
+							"type": "text/csv"
+						}
+					],
+					"steps": []
+				},
+				{
+					"name": "И В переменной \"ТекстСправа\" я запоминаю текст",
+					"start": 1719473786328,
+					"stop": 1719473786329,
+					"status": "passed",
+					"stage": "finished",
+					"statusDetails": {
+						"known": false,
+						"muted": false,
+						"flaky": false
+					},
+					"parameters": [
+						{
+							"name": "Парам1",
+							"value": "ТекстСправа"
+						}
+					],
+					"attachments": [
+						{
+							"name": "table",
+							"source": "bf22f10f-882f-4255-bd4a-388519685ce6-attachment.csv",
+							"type": "text/csv"
+						}
+					],
+					"steps": []
+				}
+			]
+		},
+		{
+			"name": "* Сохранение файлов и запуск сравнения",
+			"start": 1719473786332,
+			"stop": 1719473789153,
+			"status": "passed",
+			"stage": "finished",
+			"statusDetails": {
+				"known": false,
+				"muted": false,
+				"flaky": false
+			},
+			"parameters": [],
+			"attachments": [],
+			"steps": [
+				{
+					"name": "И я сохраняю содержимое переменной \"ТекстСлева\" в файл \"ТекстСлева.txt\"",
+					"start": 1719473786332,
+					"stop": 1719473786339,
+					"status": "passed",
+					"stage": "finished",
+					"statusDetails": {
+						"known": false,
+						"muted": false,
+						"flaky": false
+					},
+					"parameters": [
+						{
+							"name": "Парам1",
+							"value": "ТекстСлева"
+						},
+						{
+							"name": "Парам2",
+							"value": "ТекстСлева.txt"
+						}
+					],
+					"attachments": [
+						{
+							"name": "ТекстСлева_attachments.txt",
+							"source": "66413a71-69fe-4989-9ea2-d23ded896c04-attachment.txt",
+							"type": "text/plain"
+						}
+					],
+					"steps": []
+				},
+				{
+					"name": "И я сохраняю содержимое переменной \"ТекстСправа\" в файл \"ТекстСправа.txt\"",
+					"start": 1719473786343,
+					"stop": 1719473786348,
+					"status": "passed",
+					"stage": "finished",
+					"statusDetails": {
+						"known": false,
+						"muted": false,
+						"flaky": false
+					},
+					"parameters": [
+						{
+							"name": "Парам1",
+							"value": "ТекстСправа"
+						},
+						{
+							"name": "Парам2",
+							"value": "ТекстСправа.txt"
+						}
+					],
+					"attachments": [
+						{
+							"name": "ТекстСправа.txt",
+							"source": "b1176ed0-7ba2-4def-9026-c4d61bce2ebc-attachment.txt",
+							"type": "text/plain"
+						}
+					],
+					"steps": []
+				},
+				{
+					"name": "И я запускаю утилиту сравнения для файлов \"ТекстСлева.txt\" и \"ТекстСправа.txt\"",
+					"start": 1719473786352,
+					"stop": 1719473789153,
+					"status": "failed",
+					"stage": "finished",
+					"statusDetails": {
+						"known": false,
+						"muted": false,
+						"flaky": false,
+						"message": "Не удалось выполнить сравнение файлов:",
+						"trace": "{ВнешняяОбработка.Test.Форма.Форма.Форма(332)}: Не удалось выполнить сравнение файлов: не получен файл с результатом сравнения. Строка запуска: c:\\program files (x86)\\winmerge\\WinMergeU.exe \"C:\\Temp\\CI\\Файлы\\ТекстСлева.txt\" \"C:\\Temp\\CI\\Файлы\\ТекстСправа.txt\" -minimize -noninteractive -u -or \"C:\\Temp\\CI\\Файлы\\Новая настройка.html\"\n\nТехнические данные:\n        ЗаголовокАктивногоОкна: Начальная страница\n        ИмяАктивнойФормы: \n        ИмяФичи: Новая настройка\n        ИмяСценария: Новая настройка\n        НомерСтрокиДерева: 25\n        НомерСтрокиФичи: 39\n        ПолныйПутьКФиче: C:\\Temp\\CI\\Features\\Test.feature\n        ИмяФайла: C:/Commons/rep/vanessa-tools/features/Libraries/ПроектнаяГруппа/pgext.epf\n        ИмяПроцедуры: ЯЗапускаюУтилитуСравненияДляФайловИ\n        ИмяРаннера: Pautov-LV\n        ИмяКлиентаТестирования: Администратор\n        СинонимКлиентаТестирования: Администратор\n        ТипКлиентаТестирования: Тонкий\n        СтрокаСоединения: File=\"c:\\Bases\\Тест Ошибки\\УП (ERP)\\\"\n        ДопПараметрыПодключения: /AllowExecuteScheduledJobs -Off   /DisableStartupMessages   /DEBUG /N\"Администратор\" \n        PIDКлиентаТестирования: 24200\n        ВерсияVA: ver 1.2.041.23\n        ВерсияПлатформы: 8.3.24.1548\n        ТипПлатформы: Windows x86-64\n        РежимСовместимостиTestManager: Версия8_3_18\n        ВремяРаботыСценария: 0:00:51 (ч:м:с)\n        ДатаВремяОшибки: 27.06.2024 10:36:29"
+					},
+					"parameters": [
+						{
+							"name": "Парам1",
+							"value": "ТекстСлева.txt"
+						},
+						{
+							"name": "Парам2",
+							"value": "ТекстСправа.txt"
+						}
+					],
+					"attachments": [],
+					"steps": []
+				}
+			]
+		},
+		{
+			"name": "* Проверка существования файла-отчета о сравнении (html или diff файл с именем в виде названия теста)",
+			"start": 1719473789154,
+			"stop": 1719473789154,
+			"status": "skipped",
+			"stage": "finished",
+			"statusDetails": {
+				"known": false,
+				"muted": false,
+				"flaky": false
+			},
+			"parameters": [],
+			"attachments": [],
+			"steps": [
+				{
+					"name": "Если файл \"$КаталогПроекта$//Файлы//Шаг сравнения файлов создает файл отчета.html\" существует Тогда",
+					"start": 1719473789154,
+					"stop": 1719473789154,
+					"status": "skipped",
+					"stage": "finished",
+					"statusDetails": {
+						"known": false,
+						"muted": false,
+						"flaky": false
+					},
+					"parameters": [
+						{
+							"name": "Парам1",
+							"value": "$КаталогПроекта$//Файлы//Шаг сравнения файлов создает файл отчета.html"
+						}
+					],
+					"attachments": [],
+					"steps": []
+				},
+				{
+					"name": "Иначе",
+					"start": 1719473789154,
+					"stop": 1719473789154,
+					"status": "skipped",
+					"stage": "finished",
+					"statusDetails": {
+						"known": false,
+						"muted": false,
+						"flaky": false
+					},
+					"parameters": [],
+					"attachments": [],
+					"steps": [
+						{
+							"name": "Тогда Файл \"$КаталогПроекта$//Файлы//Шаг сравнения файлов создает файл отчета.diff\" существует",
+							"start": 1719473789154,
+							"stop": 1719473789154,
+							"status": "skipped",
+							"stage": "finished",
+							"statusDetails": {
+								"known": false,
+								"muted": false,
+								"flaky": false
+							},
+							"parameters": [
+								{
+									"name": "Парам1",
+									"value": "$КаталогПроекта$//Файлы//Шаг сравнения файлов создает файл отчета.diff"
+								}
+							],
+							"attachments": [],
+							"steps": []
+						}
+					]
+				}
+			]
+		}
+	],
+	"parameters": [],
+	"labels": [
+		{
+			"name": "story",
+			"value": "Новая настройка"
+		}
+	],
+	"links": [],
+	"attachments": [
+		{
+			"name": "ТекстСлева.txt",
+			"source": "e45f9f37-7a0a-4368-8a7e-cd9d59025182-attachment.txt",
+			"type": "text/plain"
+		},
+		{
+			"name": "ТекстСправа.txt",
+			"source": "b019c35a-d673-4a85-94b1-25bfc7394cfd-attachment.txt",
+			"type": "text/plain"
+		}
+	],
+	"description": null
+}
