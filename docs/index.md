@@ -41,6 +41,7 @@
 * [Практика применения DevOps. Тестирование](https://infostart.ru/1c/articles/1342422/)
 * [Как настроить тестирование с Vanessa Automation и Gitlab с нуля](https://habr.com/ru/companies/samolet/articles/803345/)
 * [Как убить трех зайцев одним сценарием: опыт использования Vanessa-Automation](https://habr.com/ru/companies/croc/articles/861134/)
+* [Леонид Паутов, Анастасия Андриянова. Промышленное тестирование конфигураций в 1С](https://infostart.ru/1c/articles/2299156/)
 
 ## СППР + Vanessa Automation
 
@@ -62,6 +63,7 @@
 * [SoftOnIt. Кружок 1С #8 Тестирование 1С, с помощью "vanessa-automation".](https://www.youtube.com/watch?v=NIY9HdO5Xc0)
 * [Митап «Запускаем дымовые тесты с помощью Vanessa-Automation»](https://youtu.be/FQLX8TlpGvo)
 * [Андрей Хашкин. Опыт применения Vanessa-Automation и других инструментов для обучения и тестирования](https://www.youtube.com/watch?v=v3FKzo86c8A)
+* [Леонид Паутов, Анастасия Андриянова. Промышленное тестирование конфигураций в 1С](https://infostart.ru/video/w2299237/)
 
 ## Курсы
 * Бесплатные
