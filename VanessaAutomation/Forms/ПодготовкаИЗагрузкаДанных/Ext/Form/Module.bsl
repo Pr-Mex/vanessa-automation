@@ -661,6 +661,11 @@ Procedure ICheckOrCreateChartOfCharacteristicTypesObjectsAtServer(ObjectName, Va
 	EndDo;
 EndProcedure
 
+&AtServer
+Function StrStartsWith(Where, StartsWith)
+	return СтрНачинаетсяС(Where, StartsWith);
+EndFunction
+
 #EndRegion
 
 &AtServer
