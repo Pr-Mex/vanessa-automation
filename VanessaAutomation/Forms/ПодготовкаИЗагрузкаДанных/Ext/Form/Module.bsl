@@ -644,7 +644,7 @@ Procedure ICheckOrCreateChartOfCharacteristicTypesObjectsAtServer(ObjectName, Va
                 EndTmpl = "</TypeDescription>";
                 
                 ResultTypeDescription = Row[Column.Name];
-                If Not StrStartsWith(ResultTypeDescription, StartTmpl) Then
+                If Not StrStartsWith(ResultTypeDescription, StartTmpl) Then 
                     ResultTypeDescription = StartTmpl + ResultTypeDescription + EndTmpl;
                 EndIf;
                 
@@ -660,11 +660,6 @@ Procedure ICheckOrCreateChartOfCharacteristicTypesObjectsAtServer(ObjectName, Va
 		TryToWriteObject(Obj, 4);
 	EndDo;
 EndProcedure
-
-&AtServer
-Function StrStartsWith(Where, StartsWith)
-	return СтрНачинаетсяС(Where, StartsWith);
-EndFunction
 
 #EndRegion
 
