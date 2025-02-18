@@ -644,7 +644,7 @@ Procedure ICheckOrCreateChartOfCharacteristicTypesObjectsAtServer(ObjectName, Va
                 EndTmpl = "</TypeDescription>";
                 
                 ResultTypeDescription = Row[Column.Name];
-                If Not StrStartsWith(ResultTypeDescription, StartTmpl) Then
+                If Not StrStartsWith(ResultTypeDescription, StartTmpl) Then 
                     ResultTypeDescription = StartTmpl + ResultTypeDescription + EndTmpl;
                 EndIf;
                 
