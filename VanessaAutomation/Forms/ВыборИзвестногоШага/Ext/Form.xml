@@ -95,10 +95,10 @@
 				<LocationInCommandBar>InAdditionalSubmenu</LocationInCommandBar>
 				<ExtendedTooltip name="ФормаВыгрузитьШагиВJSONРасширеннаяПодсказка" id="71"/>
 			</Button>
-			<Button name="ФормаЗакрытьФорму" id="126">
+			<Button name="ЗакрытьФормуИзвестныхШагов" id="126">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.Command.ЗакрытьФорму</CommandName>
-				<ExtendedTooltip name="ФормаЗакрытьФормуРасширеннаяПодсказка" id="127"/>
+				<ExtendedTooltip name="ЗакрытьФормуИзвестныхШаговРасширеннаяПодсказка" id="127"/>
 			</Button>
 		</ChildItems>
 	</AutoCommandBar>
@@ -106,6 +106,7 @@
 		<Event name="OnOpen">ПриОткрытии</Event>
 		<Event name="OnReopen">ПриПовторномОткрытии</Event>
 		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
 	</Events>
 	<ChildItems>
 		<UsualGroup name="ГруппаПоиска" id="88">
@@ -203,6 +204,16 @@
 						</v8:item>
 					</Title>
 					<TitleLocation>None</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Поиск</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Search</v8:content>
+						</v8:item>
+					</ToolTip>
 					<ClearButton>true</ClearButton>
 					<InputHint>
 						<v8:item>
@@ -234,13 +245,11 @@
 					<v8:lang>ru</v8:lang>
 					<v8:content>Группа настройки видимых шагов</v8:content>
 				</v8:item>
-			</Title>
-			<ToolTip>
 				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа настройки видимых шагов</v8:content>
+					<v8:lang>en</v8:lang>
+					<v8:content>Visible steps setting group</v8:content>
 				</v8:item>
-			</ToolTip>
+			</Title>
 			<Group>Horizontal</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
@@ -259,6 +268,16 @@
 				<CheckBoxField name="ПоказатьШагиНаРусском" id="76">
 					<DataPath>ПоказатьШагиНаРусском</DataPath>
 					<TitleLocation>Right</TitleLocation>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Показать шаги на русском</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Show steps in Russian</v8:content>
+						</v8:item>
+					</ToolTip>
 					<CheckBoxType>Auto</CheckBoxType>
 					<ContextMenu name="ПоказатьШагиНаРусскомКонтекстноеМеню" id="77"/>
 					<ExtendedTooltip name="ПоказатьШагиНаРусскомРасширеннаяПодсказка" id="78"/>
@@ -289,13 +308,11 @@
 					<v8:lang>ru</v8:lang>
 					<v8:content>Группа дерево шагов</v8:content>
 				</v8:item>
-			</Title>
-			<ToolTip>
 				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Группа дерево шагов</v8:content>
+					<v8:lang>en</v8:lang>
+					<v8:content>Group tree steps</v8:content>
 				</v8:item>
-			</ToolTip>
+			</Title>
 			<Group>Vertical</Group>
 			<Representation>None</Representation>
 			<ShowTitle>false</ShowTitle>
@@ -307,13 +324,11 @@
 							<v8:lang>ru</v8:lang>
 							<v8:content>Группа дерево с описанием</v8:content>
 						</v8:item>
-					</Title>
-					<ToolTip>
 						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Группа дерево с описанием</v8:content>
+							<v8:lang>en</v8:lang>
+							<v8:content>Group tree with description</v8:content>
 						</v8:item>
-					</ToolTip>
+					</Title>
 					<Group>Horizontal</Group>
 					<Representation>None</Representation>
 					<ShowTitle>false</ShowTitle>
@@ -360,6 +375,7 @@
 							</SearchControlAddition>
 							<Events>
 								<Event name="Selection">ДеревоШаговВыбор</Event>
+								<Event name="OnActivateRow">ДеревоШаговПриАктивизацииСтроки</Event>
 							</Events>
 							<ChildItems>
 								<ColumnGroup name="ДеревоШаговГруппа" id="74">
@@ -393,13 +409,11 @@
 													<v8:lang>ru</v8:lang>
 													<v8:content>Группа дерево шагов тип шага и представление теста</v8:content>
 												</v8:item>
-											</Title>
-											<ToolTip>
 												<v8:item>
-													<v8:lang>ru</v8:lang>
-													<v8:content>Группа дерево шагов тип шага и представление теста</v8:content>
+													<v8:lang>en</v8:lang>
+													<v8:content>Step tree group step type and test view</v8:content>
 												</v8:item>
-											</ToolTip>
+											</Title>
 											<Group>InCell</Group>
 											<ExtendedTooltip name="ГруппаДеревоШаговТипШагаИПредставлениеТестаРасширеннаяПодсказка" id="97"/>
 											<ChildItems>
@@ -443,12 +457,6 @@
 									<v8:content>Additionally</v8:content>
 								</v8:item>
 							</Title>
-							<ToolTip>
-								<v8:item>
-									<v8:lang>ru</v8:lang>
-									<v8:content>Группа описания</v8:content>
-								</v8:item>
-							</ToolTip>
 							<Group>Vertical</Group>
 							<ExtendedTooltip name="ГруппаОписанияРасширеннаяПодсказка" id="117"/>
 							<ChildItems>
@@ -473,10 +481,26 @@
 										<Event name="Opening">ДеревоШаговИмяФайлаПолеОткрытие</Event>
 									</Events>
 								</InputField>
+								<InputField name="ДеревоШаговИмяПроцедуры" id="128">
+									<DataPath>Items.ДеревоШагов.CurrentData.ИмяПроцедуры</DataPath>
+									<AutoMaxWidth>false</AutoMaxWidth>
+									<ContextMenu name="ДеревоШаговИмяПроцедурыКонтекстноеМеню" id="129"/>
+									<ExtendedTooltip name="ДеревоШаговИмяПроцедурыРасширеннаяПодсказка" id="130"/>
+								</InputField>
 								<InputField name="ДеревоШаговОписаниеШагаОригинал" id="118">
 									<DataPath>Items.ДеревоШагов.CurrentData.ОписаниеШагаОригинал</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<TitleLocation>None</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Описание шага оригинал</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Description original</v8:content>
+										</v8:item>
+									</ToolTip>
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<MultiLine>true</MultiLine>
 									<ContextMenu name="ДеревоШаговОписаниеШагаОригиналКонтекстноеМеню" id="119"/>
@@ -486,11 +510,40 @@
 									<DataPath>Items.ДеревоШагов.CurrentData.ОписаниеШага</DataPath>
 									<ReadOnly>true</ReadOnly>
 									<TitleLocation>None</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Описание</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Description</v8:content>
+										</v8:item>
+									</ToolTip>
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<MultiLine>true</MultiLine>
 									<ContextMenu name="ДеревоШаговОписаниеШагаКонтекстноеМеню" id="99"/>
 									<ExtendedTooltip name="ДеревоШаговОписаниеШагаРасширеннаяПодсказка" id="100"/>
 								</InputField>
+								<HTMLDocumentField name="MarkdownViewer" id="131">
+									<DataPath>MarkdownViewer</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<ToolTip>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Описание</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Description</v8:content>
+										</v8:item>
+									</ToolTip>
+									<ContextMenu name="MarkdownViewerКонтекстноеМеню" id="132"/>
+									<ExtendedTooltip name="MarkdownViewerРасширеннаяПодсказка" id="133"/>
+									<Events>
+										<Event name="DocumentComplete">MarkdownViewerДокументСформирован</Event>
+									</Events>
+								</HTMLDocumentField>
 							</ChildItems>
 						</UsualGroup>
 					</ChildItems>
@@ -1413,6 +1466,10 @@
 							<v8:lang>ru</v8:lang>
 							<v8:content>Отступ</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Indent</v8:content>
+						</v8:item>
 					</Title>
 					<Type>
 						<v8:Type>xs:string</v8:Type>
@@ -2171,6 +2228,40 @@
 				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="ИспользоватьMarkdownViewer" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Использовать markdown viewer</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Use markdown viewer</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="MarkdownViewer" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Описание (Markdown)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Description (Markdown)</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>
 				<dcsset:selection>
@@ -2659,7 +2750,11 @@
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Закрыть форму</v8:content>
+					<v8:content>Закрыть форму известных шагов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Close known steps form</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ЗакрытьФорму</Action>

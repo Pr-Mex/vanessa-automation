@@ -1,0 +1,176 @@
+﻿var webClient = null;
+
+var onWebClientMessage = function (message, origin) {
+    
+    if (origin === 'http://%1') {
+        messageObject = JSON.parse(message);
+        if (messageObject.command == "ShowAlert") {
+            console.log(messageObject.Parameter);
+            alert(messageObject.Parameter);
+        } else if (messageObject.command == "PlaySound") {
+            PlaySound(messageObject.Parameter);
+        } else if (messageObject.command == "PlaySoundHTTP") {
+            PlaySoundHTTP(messageObject);
+        } else if (Array.isArray(messageObject)) {
+            let hintfync = hint.bind(webClient.h);
+            hintfync(messageObject);
+        } else if (messageObject.command = "CustomText") {
+            console.log(messageObject.Parameter);
+            let CustomText = new Function(messageObject.Parameter);
+            //let Answer = CustomText();
+            webClient.postMessage(CustomText());
+        } else {
+            alert("Не задуманная кнопка!");
+        }
+    }
+
+};
+
+async function PlaySound(AudioSrc) {
+    
+     let audio = document.querySelector('.myAudio');
+
+    if (AudioSrc !== "") {
+        webClient.postMessage(
+            String(new Date()) + " : Начало воспроизведения звукового файла"
+        );
+    } else {
+        webClient.postMessage(
+            String(new Date()) + " : Окончание воспроизведения звукового файла"
+        );
+    }
+
+    // const audio = new Audio();
+    audio.preload = 'auto';
+    audio.src = AudioSrc;
+
+    await playAudio(audio);
+
+    webClient.postMessage(
+        String(new Date()) + " : Окончание воспроизведения звукового файла"
+    );
+};
+
+function playAudio(audio) {
+    return new Promise(res=>{
+        audio.play();
+        audio.onended = res;
+    })
+};
+
+async function PlaySoundHTTP(messageObject) {
+    
+    let xhr = new XMLHttpRequest();
+    xhr.open('GET', messageObject.url, true, "Администратор", "");
+    xhr.setRequestHeader('AudioSrc', messageObject.AudioSrc);
+    xhr.send();
+
+    xhr.onload = async function() {
+        
+        const audio = new Audio();
+        audio.preload = 'auto';
+        
+        audio.src = xhr.response;
+        
+        webClient.postMessage(
+            String(new Date()) + " : Начало воспроизведения звукового файла"
+        );
+    
+        await playAudio(audio);
+    
+        webClient.postMessage(
+            String(new Date()) + " : Окончание воспроизведения звукового файла"
+        );
+        
+        
+        // alert(`Загружено: ${xhr.status}`);
+
+    };
+
+    xhr.onerror = function() { // происходит, только когда запрос совсем не получилось выполнить
+        alert(`Ошибка соединения`);
+    };
+   
+}
+
+var messageToWebClient = function () {
+    webClient.postMessage("Это сообщение из внешнего сайта");
+};
+
+var init = function () {
+ webClient = new WebClient1CE('webClientContainer',
+        {
+            webClientURL: 'http://%1/%2/ru_RU/?MainWindowMode=Normal&debug=tcp&debuggerurl="tcp://localhost"',
+            //webClientURL: 'http://%1/%2/ru_RU/?MainWindowMode=Normal',
+            width: '100vw', 
+            height: '99.5vh',
+            events:
+            {
+                onMessage: onWebClientMessage,
+                onStart: onStartWebClient
+            }
+        })
+    
+    // Убираем рамку вокруг фрейма.
+    webClient.h.style.border = '0px';
+
+};
+
+let onStartWebClient = function () {
+    // Сообщим 1С что мы успешно загрузились.
+    webClient.postMessage(
+        String("EndInit"));
+};
+
+function hint(messageObject) {
+    
+    if (window == top) {
+        console.log('Этот скрипт является окном верхнего уровня в браузере');
+    } else {
+        console.log('Этот скрипт исполняется во фрейме!');
+    };
+
+    if (this == top) {
+        console.log('Этот скрипт является окном верхнего уровня в браузере');
+    } else {
+        console.log('Этот скрипт исполняется во фрейме!');
+    };
+    
+    //let iDoc = this.contentDocument || this.contentWindow.document;
+
+    let sets = [];
+    messageObject.forEach(message => {
+       
+       let area = this.contentDocument.querySelector('span[id$=_' + message.title + ']>a');
+       if (area == undefined) {
+           area = this.contentDocument.querySelector('input[id$=_' + message.title + '_i0]');
+       }
+       if (area == undefined) {
+           area = this.contentDocument.querySelector('div[id$=_' + message.title + ']');
+       }
+        
+         let set = {};
+        set = {
+            'selector': area,
+            'event': "",
+            'description': message.description,
+            'nextButton': { className: "myNext", text: "Далее" },
+            'showNext': message.showNext,
+            'prevButton': { className: "myPrev", text: "Назад" },
+            'showPrev': message.showPrev,
+            'skipButton': { className: "mySkip", text: "Закончить" },
+            'showSkip': message.showSkip
+        };
+
+        if (message.event !== "") {
+            set.event = 'click'    
+        };
+        sets.push(set);
+    });
+
+    let enjoyhint = new EnjoyHint();
+    enjoyhint.set(sets);
+    enjoyhint.run(); 
+    // $('.enjoyhint_close_btn').hide();
+    // setTimeout(() => (enjoyhint.stop()), 6000);
+    }

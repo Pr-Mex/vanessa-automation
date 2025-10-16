@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<uilog xmlns:d1p1="http://v8.1c.ru/8.3/uilog">
+	<ClientApplicationWindow isMain="true">
+		<CommandInterface>
+			<CommandInterfaceGroup title="Панель разделов">
+				<CommandInterfaceButton title="Основная">
+					<click/>
+				</CommandInterfaceButton>
+			</CommandInterfaceGroup>
+			<CommandInterfaceGroup title="Меню функций">
+				<CommandInterfaceButton title="Справочник1">
+					<click/>
+				</CommandInterfaceButton>
+			</CommandInterfaceGroup>
+		</CommandInterface>
+	</ClientApplicationWindow>
+	<ClientApplicationWindow caption="Справочник1">
+		<Form title="Справочник1">
+			<FormTable name="Список" title="Список">
+				<gotoRow/>
+				<gotoRow direction="down">
+					<Field title="Код" cellText="000000002"/>
+					<Field title="Наименование" cellText="Тестовый Элемент 2"/>
+					<Field title="Рек строка1" cellText=""/>
+					<Field title="Рек строка2" cellText=""/>
+					<Field title="Реквизит булево" cellText="Нет"/>
+					<Field title="Реквизит быстрый выбор" cellText=""/>
+					<Field title="Реквизит дата" cellText=""/>
+					<Field title="Реквизит меню" cellText=""/>
+					<Field title="Реквизит переключатель" cellText=""/>
+					<Field title="Реквизит список" cellText=""/>
+					<Field title="Реквизит строка" cellText=""/>
+					<Field title="Реквизит текстовый документ" cellText=""/>
+					<Field title="Реквизит число" cellText=""/>
+					<Field title="Реквизит1" cellText=""/>
+					<Field title="Реквизит1 копия" cellText=""/>
+					<Field title="Реквизит2" cellText=""/>
+					<Field title="Реквизит3" cellText=""/>
+					<Field title="Составной реквизит" cellText=""/>
+				</gotoRow>
+				<choose/>
+			</FormTable>
+		</Form>
+	</ClientApplicationWindow>
+	<ClientApplicationWindow caption="Тестовый Элемент * (Справочник1)">
+		<Form title="Тестовый Элемент * (Справочник1)">
+			<FormGroup name="Группа3" title="Группа3">
+				<FormGroup name="Группа1" title="Основа">
+					<FormField name="Наименование" title="Наименование">
+						<inputText text="Тестовый Элемент 21"/>
+					</FormField>
+				</FormGroup>
+			</FormGroup>
+		</Form>
+	</ClientApplicationWindow>
+	<ClientApplicationWindow caption="Тестовый Элемент * (Справочник1) *">
+		<Form title="Тестовый Элемент * (Справочник1) *">
+			<FormGroup name="Группа3" title="Группа3">
+				<FormGroup name="Группа1" title="Основа">
+					<FormField name="Реквизит1" title="Реквизит1">
+						<activate/>
+						<startChoosing/>
+						<executeChoiceFromChoiceList presentation="ЗначениеПеречисления1"/>
+					</FormField>
+					<FormField name="РеквизитЧисло" title="Реквизит число">
+						<activate/>
+						<inputText text="1,00"/>
+					</FormField>
+					<FormField name="РеквизитСтрока" title="Реквизит строка">
+						<activate/>
+						<inputText text="111"/>
+					</FormField>
+					<FormField name="РеквизитПереключатель" title="Реквизит переключатель">
+						<activate/>
+						<selectOption presentation="Первое значение"/>
+					</FormField>
+					<FormField name="РеквизитЧисло1" title="Флаг три значения">
+						<activate/>
+						<setCheck/>
+						<setCheck/>
+					</FormField>
+				</FormGroup>
+				<FormGroup name="СтраницаТЧ" title="ТЧ">
+					<activate/>
+					<FormTable name="ТабличнаяЧасть1" title="ТабличнаяЧасть1">
+						<activate/>
+						<FormGroup name="ТабличнаяЧасть1КоманднаяПанель" title="Командная панель">
+							<FormButton name="ТабличнаяЧасть1Добавить" title="Добавить">
+								<click/>
+							</FormButton>
+						</FormGroup>
+						<FormField name="ТабличнаяЧасть1РеквизитЧисло" title="Реквизит число">
+							<inputText text="111,00"/>
+						</FormField>
+						<FormField name="ТабличнаяЧасть1РеквизитСтрока" title="Реквизит строка">
+							<activate/>
+							<inputText text="222"/>
+						</FormField>
+						<FormField name="ТабличнаяЧасть1РеквизитДата" title="Реквизит дата">
+							<activate/>
+						</FormField>
+						<gotoRow/>
+						<FormField name="ТабличнаяЧасть1РеквизитСправочник" title="Реквизит справочник">
+							<activate/>
+							<executeChoiceFromChoiceList presentation="ТестовыйЭлемент21"/>
+						</FormField>
+						<gotoNextItem/>
+						<endEditRow cancel="false"/>
+					</FormTable>
+				</FormGroup>
+			</FormGroup>
+		</Form>
+	</ClientApplicationWindow>
+</uilog>

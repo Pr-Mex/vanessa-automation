@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаВыполнитьФичаФайлИзКаталога" id="4">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ВыполнитьФичаФайлИзКаталога</CommandName>
+				<Parameter xsi:nil="true"/>
+				<ExtendedTooltip name="ФормаВыполнитьФичаФайлИзКаталогаРасширеннаяПодсказка" id="5"/>
+			</Button>
+			<Button name="ВыполнитьФичаФайлЧерезТекст" id="8">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ВыполнитьФичаФайлЧерезТекст</CommandName>
+				<Parameter xsi:nil="true"/>
+				<ExtendedTooltip name="ВыполнитьФичаФайлЧерезТекстРасширеннаяПодсказка" id="9"/>
+			</Button>
+			<Button name="ФормаВыполнитьФичаФайлЧерезТекстSingleWeb" id="13">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ВыполнитьФичаФайлЧерезТекстSingleWeb</CommandName>
+				<Parameter xsi:nil="true"/>
+				<ExtendedTooltip name="ФормаВыполнитьФичаФайлЧерезТекстSingleWebРасширеннаяПодсказка" id="14"/>
+			</Button>
+			<Button name="ФормаОткрытьФормуVA" id="6">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ОткрытьФормуVA</CommandName>
+				<Parameter xsi:nil="true"/>
+				<ExtendedTooltip name="ФормаОткрытьФормуVAРасширеннаяПодсказка" id="7"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<InputField name="ПутьКФичаФайлу" id="1">
+			<DataPath>ПутьКФичаФайлу</DataPath>
+			<ContextMenu name="ПутьКФичаФайлуКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="ПутьКФичаФайлуРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="ТекстФичаФайла" id="10">
+			<DataPath>ТекстФичаФайла</DataPath>
+			<MultiLine>true</MultiLine>
+			<ContextMenu name="ТекстФичаФайлаКонтекстноеМеню" id="11"/>
+			<ExtendedTooltip name="ТекстФичаФайлаРасширеннаяПодсказка" id="12"/>
+		</InputField>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:DataProcessorObject.ПроверкаЗапускаСценарияБезОткрытияФормы</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ПутьКФичаФайлу" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь к фича файлу</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>ПутьКФичаФайлу</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ВыполнитьФичаФайлИзКаталога" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить фича файл из каталога</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕстьЗащитаОтОпасныхДействий" id="4">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕстьПоддержкаАсинхронныхВызовов" id="5">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ЕстьПоддержкаНемодальныхФорм" id="6">
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекстФичаФайла" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст фича файла</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>ТекстФичаФайла</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ВыполнитьФичаЧерезТекст" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить фича через текст</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыполнитьФичаФайлИзКаталога" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить фича файл из каталога</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить фича файл из каталога</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполнитьФичаФайлИзКаталога</Action>
+		</Command>
+		<Command name="ОткрытьФормуVA" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть форму VA</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть форму VA</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьФормуVA</Action>
+		</Command>
+		<Command name="ВыполнитьФичаФайлЧерезТекст" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить фича файл через текст</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить фича файл через текст</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполнитьФичаФайлЧерезТекст</Action>
+		</Command>
+		<Command name="ВыполнитьФичаФайлЧерезТекстSingleWeb" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить фича файл через текст single web</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить фича файл через текст single web</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполнитьФичаФайлЧерезТекстSingleWeb</Action>
+		</Command>
+	</Commands>
+</Form>

@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.10">
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
+		<ChildItems>
+			<Button name="ФормаПрочитатьДанные" id="23">
+				<Type>CommandBarButton</Type>
+				<DefaultButton>true</DefaultButton>
+				<CommandName>Form.Command.ПрочитатьДанные</CommandName>
+				<ExtendedTooltip name="ФормаПрочитатьДанныеРасширеннаяПодсказка" id="24"/>
+			</Button>
+			<Button name="ФормаПеревестиФичи" id="28">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПеревестиФичи</CommandName>
+				<ExtendedTooltip name="ФормаПеревестиФичиРасширеннаяПодсказка" id="29"/>
+			</Button>
+			<Button name="ФормаНайтиПроблемыВПримерах" id="30">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.НайтиПроблемыВПримерах</CommandName>
+				<ExtendedTooltip name="ФормаНайтиПроблемыВПримерахРасширеннаяПодсказка" id="31"/>
+			</Button>
+			<Button name="ФормаПеревестиФайлУроков" id="35">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПеревестиФайлУроков</CommandName>
+				<ExtendedTooltip name="ФормаПеревестиФайлУроковРасширеннаяПодсказка" id="36"/>
+			</Button>
+		</ChildItems>
+	</AutoCommandBar>
+	<ChildItems>
+		<InputField name="КаталогУроков" id="1">
+			<DataPath>КаталогУроков</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="КаталогУроковКонтекстноеМеню" id="2"/>
+			<ExtendedTooltip name="КаталогУроковРасширеннаяПодсказка" id="3"/>
+		</InputField>
+		<InputField name="ИмяФайлаПеревода" id="25">
+			<DataPath>ИмяФайлаПеревода</DataPath>
+			<AutoMaxWidth>false</AutoMaxWidth>
+			<ContextMenu name="ИмяФайлаПереводаКонтекстноеМеню" id="26"/>
+			<ExtendedTooltip name="ИмяФайлаПереводаРасширеннаяПодсказка" id="27"/>
+		</InputField>
+		<Table name="ДанныеСловаря" id="4">
+			<Representation>List</Representation>
+			<AutoInsertNewRow>true</AutoInsertNewRow>
+			<EnableStartDrag>true</EnableStartDrag>
+			<EnableDrag>true</EnableDrag>
+			<DataPath>ДанныеСловаря</DataPath>
+			<RowFilter xsi:nil="true"/>
+			<ContextMenu name="ДанныеСловаряКонтекстноеМеню" id="5"/>
+			<AutoCommandBar name="ДанныеСловаряКоманднаяПанель" id="6"/>
+			<ExtendedTooltip name="ДанныеСловаряРасширеннаяПодсказка" id="7"/>
+			<SearchStringAddition name="ДанныеСловаряСтрокаПоиска" id="8">
+				<AdditionSource>
+					<Item>ДанныеСловаря</Item>
+					<Type>SearchStringRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДанныеСловаряСтрокаПоискаКонтекстноеМеню" id="9"/>
+				<ExtendedTooltip name="ДанныеСловаряСтрокаПоискаРасширеннаяПодсказка" id="10"/>
+			</SearchStringAddition>
+			<ViewStatusAddition name="ДанныеСловаряСостояниеПросмотра" id="11">
+				<AdditionSource>
+					<Item>ДанныеСловаря</Item>
+					<Type>ViewStatusRepresentation</Type>
+				</AdditionSource>
+				<ContextMenu name="ДанныеСловаряСостояниеПросмотраКонтекстноеМеню" id="12"/>
+				<ExtendedTooltip name="ДанныеСловаряСостояниеПросмотраРасширеннаяПодсказка" id="13"/>
+			</ViewStatusAddition>
+			<SearchControlAddition name="ДанныеСловаряУправлениеПоиском" id="14">
+				<AdditionSource>
+					<Item>ДанныеСловаря</Item>
+					<Type>SearchControl</Type>
+				</AdditionSource>
+				<ContextMenu name="ДанныеСловаряУправлениеПоискомКонтекстноеМеню" id="15"/>
+				<ExtendedTooltip name="ДанныеСловаряУправлениеПоискомРасширеннаяПодсказка" id="16"/>
+			</SearchControlAddition>
+			<ChildItems>
+				<InputField name="ДанныеСловаряОригинал" id="17">
+					<DataPath>ДанныеСловаря.Оригинал</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДанныеСловаряОригиналКонтекстноеМеню" id="18"/>
+					<ExtendedTooltip name="ДанныеСловаряОригиналРасширеннаяПодсказка" id="19"/>
+				</InputField>
+				<InputField name="ДанныеСловаряПеревод" id="20">
+					<DataPath>ДанныеСловаря.Перевод</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДанныеСловаряПереводКонтекстноеМеню" id="21"/>
+					<ExtendedTooltip name="ДанныеСловаряПереводРасширеннаяПодсказка" id="22"/>
+				</InputField>
+				<InputField name="ДанныеСловаряТип" id="32">
+					<DataPath>ДанныеСловаря.Тип</DataPath>
+					<EditMode>EnterOnInput</EditMode>
+					<ContextMenu name="ДанныеСловаряТипКонтекстноеМеню" id="33"/>
+					<ExtendedTooltip name="ДанныеСловаряТипРасширеннаяПодсказка" id="34"/>
+				</InputField>
+			</ChildItems>
+		</Table>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.СозданиеСловаряДляУроков</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="КаталогУроков" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Каталог уроков</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>КаталогУроков</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ДанныеСловаря" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Данные словаря</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Оригинал" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Оригинал</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Перевод" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Перевод</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЕстьПеревод" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Есть перевод</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Тип" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ИмяФайлаПеревода" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Имя файла перевода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>ИмяФайлаПеревода</Field>
+			</Save>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ПрочитатьДанные" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочитать</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Прочитать данные</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПрочитатьДанные</Action>
+		</Command>
+		<Command name="ПеревестиФичи" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перевести фичи</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перевести фичи</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПеревестиФичи</Action>
+		</Command>
+		<Command name="НайтиПроблемыВПримерах" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найти проблемы в примерах</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найти проблемы в примерах</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>НайтиПроблемыВПримерах</Action>
+		</Command>
+		<Command name="ПеревестиФайлУроков" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перевести файл уроков</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перевести файл уроков</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПеревестиФайлУроков</Action>
+		</Command>
+	</Commands>
+</Form>

@@ -26,6 +26,11 @@
 	И Я подключаю клиент тестирования "VanessaUserEN" из таблицы клиентов тестирования
 	И В командном интерфейсе я выбираю 'Main' 'Open vanessa automation'
 	Когда открылось окно '*autotest: Vanessa Automation*'
+	
+	И я нажимаю на кнопку с именем 'ФормаРазвернутьВсеГруппыВНастройках'
+	И Пауза 1
+	
+		
 	И я перехожу к закладке "Service"
 	И я устанавливаю флаг 'Check Vanessa Automation in test client mode'
 	И я перехожу к закладке "Extended"

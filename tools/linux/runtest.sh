@@ -46,4 +46,4 @@ export logapath=$WORKSPACE/build/
 export vanessarun=1
 export vanessashutdown=1
 
-"$oneC_root/1cv8" ENTERPRISE /Lru /VLru $CONN  /C"StartFeaturePalyer;" /Execute"$WORKSPACE\vanessa-behavior.epf" /outrunTest.txt /RunModeManagedApplication /TESTMANAGER
+"$oneC_root/1cv8" ENTERPRISE /Lru /VLru $CONN  /C"StartFeaturePlayer;" /Execute"$WORKSPACE\vanessa-automation.epf" /outrunTest.txt /RunModeManagedApplication /TESTMANAGER

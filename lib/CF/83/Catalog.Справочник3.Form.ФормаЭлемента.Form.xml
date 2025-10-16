@@ -13,6 +13,12 @@
 				</Title>
 				<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="43"/>
 				<ChildItems>
+					<Button name="ФормаОткрытьМакет" id="46">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ОткрытьМакет</CommandName>
+						<Parameter xsi:nil="true"/>
+						<ExtendedTooltip name="ФормаОткрытьМакетРасширеннаяПодсказка" id="47"/>
+					</Button>
 					<Button name="СформироватьОтчет" id="7">
 						<Type>CommandBarButton</Type>
 						<CommandName>Form.Command.СформироватьОтчет</CommandName>
@@ -72,6 +78,24 @@
 						<CommandName>Form.Command.ПоказатьОтчетВНовомОкнеИСохранитьВФайл</CommandName>
 						<Parameter xsi:nil="true"/>
 						<ExtendedTooltip name="ФормаПоказатьОтчетВНовомОкнеИСохранитьВФайлРасширеннаяПодсказка" id="45"/>
+					</Button>
+					<Button name="ФормаПоказатьМенюПривязанноеКФорме" id="48">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПоказатьМенюПривязанноеКФорме</CommandName>
+						<Parameter xsi:nil="true"/>
+						<ExtendedTooltip name="ФормаПоказатьМенюПривязанноеКФормеРасширеннаяПодсказка" id="49"/>
+					</Button>
+					<Button name="ФормаПоказатьСписокПривязанныйКФорме" id="50">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ПоказатьСписокПривязанныйКФорме</CommandName>
+						<Parameter xsi:nil="true"/>
+						<ExtendedTooltip name="ФормаПоказатьСписокПривязанныйКФормеРасширеннаяПодсказка" id="51"/>
+					</Button>
+					<Button name="ФормаЭмуляцияОкнаПроверкаПравомерности" id="52">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ЭмуляцияОкнаПроверкаПравомерности</CommandName>
+						<Parameter xsi:nil="true"/>
+						<ExtendedTooltip name="ФормаЭмуляцияОкнаПроверкаПравомерностиРасширеннаяПодсказка" id="53"/>
 					</Button>
 				</ChildItems>
 			</Popup>
@@ -418,6 +442,60 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПоказатьОтчетВНовомОкнеИСохранитьВФайл</Action>
+		</Command>
+		<Command name="ОткрытьМакет" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть макет</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть макет</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ОткрытьМакет</Action>
+		</Command>
+		<Command name="ПоказатьМенюПривязанноеКФорме" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать меню привязанное к форме</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать меню привязанное к форме</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказатьМенюПривязанноеКФорме</Action>
+		</Command>
+		<Command name="ПоказатьСписокПривязанныйКФорме" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать список привязанный к форме</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать список привязанный к форме</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказатьСписокПривязанныйКФорме</Action>
+		</Command>
+		<Command name="ЭмуляцияОкнаПроверкаПравомерности" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Эмуляция окна проверка правомерности</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ЭмуляцияОкнаПроверкаПравомерности</Action>
 		</Command>
 	</Commands>
 </Form>

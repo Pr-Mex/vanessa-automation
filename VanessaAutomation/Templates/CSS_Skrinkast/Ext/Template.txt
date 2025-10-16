@@ -1,0 +1,115 @@
+﻿@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+      
+      :root {
+        --main-bg-color: ; /* Цвет фона */
+        --main-color: #E06B2A; /*Основной цвет текста и кнопок*/
+        --main-color-contents: #6392D9; /*Цвет гиперссылок в оглавлении*/
+      }
+      
+      * {
+         box-sizing: border-box;
+      }
+      
+      html {
+         font-size: 10px; /*При изменении необходимо учитывать что верстка адаптивная, под разные размеры экрана*/
+      }
+
+      body {
+         background-color: var(--main-bg-color);
+      }
+
+      .caption {
+         margin: 20px;
+         border: 5px solid var(--main-color, #E06B2A);
+         background: white;
+         padding: 10px;
+         box-shadow: -3px -1px 3px -3px var(--main-color, #E06B2A), 5px 10px 20px -5px hsla(0, 0%, 0%, .4);
+      }
+
+      .caption img {
+         max-width: 100%;
+         height: auto;
+         display: block;
+         margin-left: auto;
+         margin-right: auto;
+      }
+
+      .caption figcaption {
+         padding: 10px;
+         color: white;
+         background: var(--main-color, #E06B2A);
+         text-align: center;
+         text-transform: uppercase;
+      }
+
+      .content {
+         padding: 0 20px 0 80px;
+      }
+
+      .toc-wrapper {
+         font-family: 'Montserrat', sans-serif;
+         width: 100%;
+         max-width: 768px;
+         position: relative;
+         padding: 10px 0 10px 20px;
+         margin: 80px 50px 40px;
+         border-left: 4px solid var(--main-color, #E06B2A);
+      }
+
+      .toc-wrapper:before {
+         content: "";
+         position: absolute;
+         top: 0px;
+         left: -50px;
+         width: 50px;
+         height: 60px;
+         background: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjxzdmcKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiAKICAgdmlld0JveD0iMCAwIDU4IDU4IgogICB2ZXJzaW9uPSIxLjEiICAgICAKICAgd2lkdGg9IjU4IgogICBoZWlnaHQ9IjU4Ij4gICAgIAogIDxwYXRoCiAgICAgZD0iTSA0Niw0MiBIIDIwIGEgMSwxIDAgMCAxIDAsLTIgaCAyNiBhIDEsMSAwIDAgMSAwLDIgeiBtIDAsLTggSCAyMCBhIDEsMSAwIDAgMSAwLC0yIGggMjYgYSAxLDEgMCAwIDEgMCwyIHogbSAwLC04IEggMjAgYSAxLDEgMCAwIDEgMCwtMiBoIDI2IGEgMSwxIDAgMCAxIDAsMiB6IG0gMCwtOCBIIDIwIGEgMSwxIDAgMCAxIDAsLTIgaCAyNiBhIDEsMSAwIDAgMSAwLDIgeiBNIDEzLDQzIGEgMiwyIDAgMSAxIDIsLTIgMiwyIDAgMCAxIC0yLDIgeiBtIDAsLTIgeiBtIDAsMCB6IG0gMCwwIHogbSAwLDAgeiBtIDAsMCB6IG0gMCwwIHogbSAwLDAgeiBtIDAsMCB6IG0gMCwtNiBhIDIsMiAwIDEgMSAyLC0yIDIsMiAwIDAgMSAtMiwyIHogbSAwLC0yIHogbSAwLDAgeiBtIDAsMCB6IG0gMCwwIHogbSAwLDAgeiBtIDAsMCB6IG0gMCwwIHogbSAwLDAgeiBtIDAsLTYgYSAyLDIgMCAxIDEgMiwtMiAyLDIgMCAwIDEgLTIsMiB6IG0gMCwtMiB6IG0gMCwwIHogbSAwLDAgeiBtIDAsMCB6IG0gMCwwIHogbSAwLDAgeiBtIDAsMCB6IG0gMCwwIHogbSAwLC02IGEgMiwyIDAgMSAxIDIsLTIgMiwyIDAgMCAxIC0yLDIgeiBtIDAsLTIgeiBtIDAsMCB6IG0gMCwwIHogbSAwLDAgeiBtIDAsMCB6IG0gMCwwIHogbSAwLDAgeiBtIDAsMCB6IgogICAgIGlkPSJwYXRoODI3IiAgICAgCiAgICAgc3R5bGU9ImZpbGw6I2ZmZmZmZjtmaWxsLW9wYWNpdHk6MSIgLz4KICA8cGF0aAogICAgIGQ9Ik0gMjksNTggQSAyOSwyOSAwIDEgMSA1OCwyOSAyOSwyOSAwIDAgMSAyOSw1OCBaIE0gMjksMiBBIDI3LDI3IDAgMSAwIDU2LDI5IDI3LDI3IDAgMCAwIDI5LDIgWiIKICAgICBpZD0icGF0aDgyOSIgICAgCiAgICAgc3R5bGU9ImZpbGw6I2ZmZmZmZjtmaWxsLW9wYWNpdHk6MSIgLz4KPC9zdmc+Cg==') 50% 50% no-repeat var(--main-color, #E06B2A);
+         background-size: 30px;
+         border-radius: 10px 5px 0 50%;
+      }
+
+      .toc-wrapper ol {
+         list-style: none;
+         counter-reset: li;
+         color: var(--main-color, #BC904A);
+         font-size: 4rem;
+         font-weight: bold;
+         -webkit-background-clip: text;
+      }
+
+      .toc_ol a, .toc_ul a {
+         color: var(--main-color-contents, #6392D9);
+      }
+
+      .toc_ol li, .toc_ul li {
+         transition: .3s linear;
+         font-size: 25px;
+         margin-top: 50px;
+         color: var(--main-color-contents, #6392D9);
+         font-weight: 500;
+      }
+      
+      .toc-wrapper:last-child {
+         margin-bottom: 0;
+      }
+
+      .toc_ol li:before {
+         counter-increment: li;
+         content: counters(li, ".");
+         margin-right: 10px;
+         font-weight: 700;
+         width: 38px;
+         height: 38px;
+         text-align: center;
+         line-height: 38px;
+         display: inline-block;
+         border: 1px solid transparent;
+         border-radius: 50%;
+         transition: .3s linear;
+         color: var(--main-color-contents, #6392D9);
+      }
+
+      .toc_ol li:hover:before, .toc_ul li:hover::before {
+         border-color: var(--main-color, #E06B2A);
+         color: var(--main-color, #E06B2A);
+      }

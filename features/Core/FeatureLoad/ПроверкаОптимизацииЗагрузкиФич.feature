@@ -35,7 +35,7 @@
 	И Я запоминаю значение выражения 'ПолучитьСостояниеVanessaAutomation().ТекущаяФича.Каталог + "files\Test6_1.feature"' в переменную "TestFeature"	
 	Тогда я копирую файл "$TestFeature$" "C:\Temp\Optimization\Test.feature"
 
-	И я перехожу к закладке "Служебная"
+	И я перехожу к закладке с именем "ГруппаСлужебная"
 	И в поле 'Каталог фич (служебный)' я ввожу текст 'C:\Temp\Optimization\Test.feature'
 	
 	И Я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
@@ -52,7 +52,7 @@
 	И Я запоминаю значение выражения 'ПолучитьСостояниеVanessaAutomation().ТекущаяФича.Каталог + "files\Test6_2.feature"' в переменную "TestFeature"	
 	Тогда я копирую файл "$TestFeature$" "C:\Temp\Optimization\Test.feature"
 
-	И я перехожу к закладке "Служебная"
+	И я перехожу к закладке с именем "ГруппаСлужебная"
 	И в поле 'Каталог фич (служебный)' я ввожу текст 'C:\Temp\Optimization\Test.feature'
 	
 	И Я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
@@ -95,7 +95,7 @@
 	И Я запоминаю значение выражения 'ПолучитьСостояниеVanessaAutomation().ТекущаяФича.Каталог + "files\Test5_1.feature"' в переменную "TestFeature"	
 	Тогда я копирую файл "$TestFeature$" "C:\Temp\Optimization\Test.feature"
 
-	И я перехожу к закладке "Служебная"
+	И я перехожу к закладке с именем "ГруппаСлужебная"
 	И в поле 'Каталог фич (служебный)' я ввожу текст 'C:\Temp\Optimization\Test.feature'
 	
 	И Я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
@@ -159,7 +159,7 @@
 	И Я запоминаю значение выражения 'ПолучитьСостояниеVanessaAutomation().ТекущаяФича.Каталог + "files\Test4_1.feature"' в переменную "TestFeature"	
 	Тогда я копирую файл "$TestFeature$" "C:\Temp\Optimization\Test.feature"
 
-	И я перехожу к закладке "Служебная"
+	И я перехожу к закладке с именем "ГруппаСлужебная"
 	И в поле 'Каталог фич (служебный)' я ввожу текст 'C:\Temp\Optimization\Test.feature'
 	
 	И Я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
@@ -221,7 +221,7 @@
 	И Я запоминаю значение выражения 'ПолучитьСостояниеVanessaAutomation().ТекущаяФича.Каталог + "files\Test3_1.feature"' в переменную "TestFeature"	
 	Тогда я копирую файл "$TestFeature$" "C:\Temp\Optimization\Test.feature"
 
-	И я перехожу к закладке "Служебная"
+	И я перехожу к закладке с именем "ГруппаСлужебная"
 	И в поле 'Каталог фич (служебный)' я ввожу текст 'C:\Temp\Optimization\Test.feature'
 	
 	И я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
@@ -273,13 +273,13 @@
 	И Я запоминаю значение выражения 'ПолучитьСостояниеVanessaAutomation().ТекущаяФича.Каталог + "files\Test1_1.feature"' в переменную "TestFeature"	
 	Тогда я копирую файл "$TestFeature$" "C:\Temp\Optimization\Test.feature"
 
-	И я перехожу к закладке "Служебная"
+	И я перехожу к закладке с именем "ГруппаСлужебная"
 	И в поле 'Каталог фич (служебный)' я ввожу текст 'C:\Temp\Optimization\Test.feature'
 	
 	И я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
 	И я нажимаю на кнопку выполнить сценарии в Vanessa-Automation TestClient
 	
-	Тогда в логе сообщений TestClient есть строка "Hellow world1"
+	Тогда в логе сообщений TestClient есть строка "Hello world1"
 	Тогда в логе сообщений TestClient есть строка "Текст исключения1"
 	
 	И я очищаю окно сообщений пользователю
@@ -310,7 +310,7 @@
 	И я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
 	И я нажимаю на кнопку выполнить сценарии в Vanessa-Automation TestClient
 
-	Тогда в логе сообщений TestClient есть строка "Hellow world2"
+	Тогда в логе сообщений TestClient есть строка "Hello world2"
 	Тогда в логе сообщений TestClient есть строка "Текст исключения2"
 	Тогда в логе сообщений TestClient есть строка "ВозможнаОптимизацияЗагрузкиФичи=Да"
 	Тогда в логе сообщений TestClient нет строки 'Пустой адрес снипета у шага'
@@ -344,13 +344,13 @@
 	И Я запоминаю значение выражения 'ПолучитьСостояниеVanessaAutomation().ТекущаяФича.Каталог + "files\Test2_1.feature"' в переменную "TestFeature"	
 	Тогда я копирую файл "$TestFeature$" "C:\Temp\Optimization\Test.feature"
 
-	И я перехожу к закладке "Служебная"
+	И я перехожу к закладке с именем "ГруппаСлужебная"
 	И в поле 'Каталог фич (служебный)' я ввожу текст 'C:\Temp\Optimization\Test.feature'
 	
 	И я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
 	И я нажимаю на кнопку выполнить сценарии в Vanessa-Automation TestClient
 	
-	Тогда в логе сообщений TestClient есть строка "Hellow world1"
+	Тогда в логе сообщений TestClient есть строка "Hello world1"
 	Тогда в логе сообщений TestClient есть строка "Текст исключения1"
 	
 	И я очищаю окно сообщений пользователю
@@ -387,7 +387,7 @@
 	И я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
 	И я нажимаю на кнопку выполнить сценарии в Vanessa-Automation TestClient
 
-	Тогда в логе сообщений TestClient есть строка "Hellow world2"
+	Тогда в логе сообщений TestClient есть строка "Hello world2"
 	Тогда в логе сообщений TestClient есть строка "Текст исключения2"
 	Тогда в логе сообщений TestClient есть строка "ВозможнаОптимизацияЗагрузкиФичи=Да"
 

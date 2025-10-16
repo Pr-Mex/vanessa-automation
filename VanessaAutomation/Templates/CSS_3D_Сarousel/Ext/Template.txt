@@ -1,0 +1,825 @@
+﻿<html><head>
+<meta http-equiv="content-type" content="text/html;charset=utf-8"><title>Нужно установливать название страницы программно</title>
+<style type="text/css">
+	@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap');
+	
+	:root {
+		--main-bg-color: #FFFAF0; /* Цвет фона */
+		--main-color: #BC904A; /*Основной цвет текста и кнопок*/
+		--main-color-contents: #6392D9; /*Цвет гиперссылок в оглавлении*/
+	}
+	
+	html {
+	    font-size: 10px; /*При изменении необходимо учитывать что верстка адаптивная, под разные размеры экрана*/
+	}
+
+	@media screen and (max-width: 1200px) {
+	    html {
+	        font-size: 9px;
+	    }
+	}
+
+	@media screen and (max-width: 1000px) {
+	    html {
+	        font-size: 8px;
+	    }
+	}
+
+	@media screen and (max-width: 900px) {
+	    html {
+	        font-size: 7px;
+	    }
+	}
+
+	@media screen and (max-width: 700px) {
+	    html {
+	        font-size: 6px;
+	    }
+	}
+
+	@media screen and (max-width: 600px) {
+	    html {
+	        font-size: 5px;
+	    }
+	}
+
+	@media screen and (max-width: 500px) {
+	    html {
+	        font-size: 4px;
+	    }
+	}
+
+	@media screen and (max-width: 400px) {
+	    html {
+	        font-size: 3px;
+	    }
+	}
+
+	@media screen and (max-width: 300px) {
+	    html {
+	        font-size: 2px;
+	    }
+	}
+
+	body {
+	    background-color: var(--main-bg-color, #FFFAF0);
+	    margin: 0;
+	    padding: 0 1rem;
+	}
+
+	main {
+	    display: flex;
+	    flex-direction: column;
+	    align-items: center;
+	}
+
+	/* КАРУСЕЛЬ+++ */
+	.carousel-3d {
+	    -webkit-perspective: 50rem;
+	    perspective: 70rem;
+	    display: flex;
+	    flex-direction: column;
+	    align-items: center;
+	    overflow: hidden;
+	    width: 100%;
+	}
+
+	.carousel-3d figure {
+	    width: 70%;
+	    -webkit-transform-style: preserve-3d;
+	    transform-style: preserve-3d;
+	    transition: -webkit-transform 0.5s;
+	    transition: transform 0.5s;
+	    transition: transform 0.5s, -webkit-transform 0.5s;
+	}
+
+	.image_btn,
+	.carousel-3d figure div {
+	    width: 100%;
+	    box-sizing: border-box;
+	    padding: 1rem;
+	}
+
+	.image_btn {
+	    user-select: none;
+	}
+
+	.carousel-3d figure div:not(:first-of-type),
+	.image_btn:not(:first-of-type) {
+	    position: absolute;
+	    left: 0;
+	    top: 0;
+	}
+
+	.carousel-3d figure div figcaption {
+	    font-size: 2rem;
+	    margin-left: 1rem;
+	    height: 8rem;
+	    font-family: 'Montserrat', sans-serif;
+	    color: var(--main-color, #BC904A);
+	    font-size: 2rem;
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	}
+	/* КАРУСЕЛЬ--- */
+
+	.buttons {
+	    display: flex;
+	}
+
+	/* стрелки вперед назад +++ */
+	.nav_button {
+	    cursor: pointer;
+	    position: absolute;
+	    width: 6.4rem;
+	    height: 6.4rem;
+	}
+
+	.next {
+	    bottom: 20vw;
+	    left: 84vw;
+	}
+
+	.next_off {
+	    visibility: hidden;
+	}
+
+	.prev {
+	    bottom: 20vw;
+	    right: 84vw;
+	}
+
+	.prev_off {
+	    visibility: hidden;
+	}
+	/* стрелки вперед назад --- */
+
+	/* ОГЛАВЛЕНИЕ +++ */
+	.toc-wrapper {
+	    position: fixed;
+	    font-family: 'Montserrat', sans-serif;
+	    width: 100%;
+	    height: 100%;
+	    z-index: 10;
+	    transform: translateX(-100%);
+	    transition: .3s all linear;
+	    background-color: var(--main-bg-color, #FFFAF0);
+	}
+
+	.toc-wrapper_active {
+	    transform: translateX(0%);
+	}
+
+	.toc-wrapper ol {
+	    list-style: none;
+	    counter-reset: li;
+	    font-size: 4rem;
+	    font-weight: bold;
+	    margin-bottom: 2rem;
+	    color: var(--main-color, #BC904A);
+	    -webkit-background-clip: text;
+	    width: 80%;
+	    margin: 4rem auto;
+	}
+
+	.toc_ol a,
+	.toc_ul a {
+	    color: var(--main-color-contents, #6392D9);
+	}
+
+	.toc_ol li,
+	.toc_ul li {
+	    transition: .3s linear;
+	    font-size: 2.5rem;
+	    margin-top: 5rem;
+	    color: var(--main-color-contents, #6392D9);
+	    font-weight: 500;
+	}
+
+	.toc-wrapper_active:last-child {
+	    margin-bottom: 0;
+	}
+
+	.toc_ol li:before {
+	    counter-increment: li;
+	    content: counters(li, ".");
+	    margin-right: 1rem;
+	    font-weight: 700;
+	    width: 3.8rem;
+	    height: 3.8rem;
+	    text-align: center;
+	    line-height: 3.8rem;
+	    display: inline-block;
+	    border: 0.1rem solid transparent;
+	    border-radius: 50%;
+	    transition: .3s linear;
+	    color: var(--main-color-contents, #6392D9);
+	}
+
+	.toc_ol li:hover:before,
+	.toc_ul li:hover::before {
+	    border-color: var(--main-color, #BC904A);
+	    color: var(--main-color, #BC904A);
+	}
+	/* ОГЛАВЛЕНИЕ --- */
+
+	/* Кнопка оглавление +++ */
+	.hamburger {
+	    position: fixed;
+	    z-index: 11;
+	    align-self: start;
+	    cursor: pointer;
+	    width: 4rem;
+	    height: 2.4rem;
+	    display: block;
+	    margin: 0.5rem 0 0 0.5rem;
+	}
+
+	.hamburger__line {
+	    display: block;
+	    width: 100%;
+	    height: 0;
+	    position: absolute;
+	    border: 0.1rem solid var(--main-color, #BC904A);
+	    transition: .3s all linear;
+
+	}
+
+	.hamburger__line_first {
+	    top: 0;
+	}
+
+	.hamburger__line_second {
+	    top: 0.8rem;
+	}
+
+	.hamburger__line_third {
+	    top: 1.6rem;
+	}
+
+	.hamburger__line_fourth {
+	    top: 2.4rem;
+	}
+
+	.hamburger_active .hamburger__line_first,
+	.hamburger_active .hamburger__line_fourth {
+	    opacity: 0;
+	}
+
+	.hamburger_active .hamburger__line_second {
+	    top: 50%;
+	    transform: translateY(-50%) rotate(45deg);
+	}
+
+	.hamburger_active .hamburger__line_third {
+	    top: 50%;
+	    transform: translateY(-50%) rotate(-45deg);
+	}
+
+	.hamburger_none {
+	    visibility: hidden;
+	}
+	/* Кнопка оглавление --- */
+
+	/* Кнопка настройки +++ */
+	.settings {
+	    position: fixed;
+	    z-index: 11;
+	    align-self: flex-end;
+	    cursor: pointer;
+	    display: block;
+	    width: 5rem;
+	    height: 5rem;
+	}
+	/* Кнопка настройки --- */
+
+	/* Страница настроек +++ */
+	.settings_list {
+	    position: fixed;
+	    font-family: 'Montserrat', sans-serif;
+	    font-size: 2rem;
+	    color: var(--main-color, #BC904A);
+	    width: 100%;
+	    height: 100%;
+	    z-index: 10;
+	    transform: translateX(100%);
+	    transition: .3s all linear;
+	    background-color: var(--main-bg-color, #FFFAF0);
+	}
+
+	.settings_list_active {
+	    transform: translateX(0%);
+	}
+
+	.settings_fieldset {
+	    width: 70rem;
+	    height: 50rem;
+	    margin: auto;
+	    
+	}
+
+	.settings_list div{
+	    margin: 5rem 0;
+	}
+
+	.settings_not {
+	    visibility: hidden;
+	}
+
+	.playAuto {
+	    display: flex;
+	}
+
+	#wrapper {
+	    padding: 1rem;
+	    border: 0.1rem solid rgba(0, 0, 0, 0.25);
+	    margin: 0.1rem auto;
+	    max-width: 35rem;
+	}
+
+	#wrapper > h2 {
+	  margin-bottom: 2rem;
+	  text-align: center;
+	  font-size: 1.25rem;
+	}
+
+	select {
+	  padding: 0.25em;
+	  border-radius: 0.2rem;
+	  max-width: 18rem;
+	  font-size: 0.95rem;
+	  cursor: pointer;
+	}
+
+	label {
+	  display: flex;
+	  align-items: center;
+	  justify-content: space-between;
+	  position: relative;
+	}
+
+	label + label {
+	  margin-top: 1.5rem;
+	}
+
+	label span {
+	  position: absolute;
+	  right: 4rem;
+	  top: -1.25rem;
+	}
+
+	input {
+	  cursor: pointer;
+	}
+
+	#buttons_sync {
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  margin: 3rem;
+	}
+	/* Страница настроек --- */
+
+	/* Блок проигрывание стоп +++ */
+	.play_pause {
+	    position: fixed;
+	    z-index: 11;
+	    left: 12vw;
+	    /* top: 0vw; */
+	    cursor: pointer;
+	    transition: .1s;
+	}
+
+	.play {
+	    position: fixed;
+	    margin: 0.5rem 0;
+	    width: 4rem;
+	    height: 4rem;
+	}
+
+	.play_not {
+	    visibility: hidden;
+	}
+
+	.pause {
+	    position: fixed;
+	    margin: 0.5rem 0;
+	    width: 4rem;
+	    height: 4rem;
+	}
+
+	.pause_not {
+	    visibility: hidden;
+	}
+
+	.play_pause_not {
+	    visibility: hidden;
+	}
+	/* Блок проигрывание стоп --- */
+</style>
+</head>
+<body>
+
+<header></header><main id="main"><span class="hamburger">
+	<span class="hamburger__line hamburger__line_first"></span>
+	<span class="hamburger__line hamburger__line_second"></span>
+	<span class="hamburger__line hamburger__line_third"></span>
+	<span class="hamburger__line hamburger__line_fourth"></span>
+</span>
+
+<div class="play_pause">
+	
+<div class="play">
+		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><g><path fill="var(--main-color, #BC904A)" d="M26,21v22l1.809,0.786l14.191-11v-1.572l-14.191-11L26,21z M28,23.058L39.381,32L28,40.942V23.058z"></path><path fill="var(--main-color, #BC904A)" d="M32,0c-8.547,0-16.583,3.33-22.626,9.375C3.329,15.417,0,23.453,0,32s3.329,16.583,9.374,22.626
+				C15.417,60.671,23.453,64,32,64s16.583-3.33,22.627-9.375C60.671,48.583,64,40.547,64,32s-3.329-16.583-9.374-22.626
+				C48.583,3.329,40.547,0,32,0z M53.213,53.212C47.546,58.879,40.013,62,32,62c-8.013,0-15.546-3.121-21.212-8.789
+				C5.121,47.546,2,40.013,2,32s3.121-15.546,8.788-21.212C16.454,5.121,23.987,2,32,2c8.013,0,15.546,3.122,21.213,8.789
+				C58.88,16.454,62,23.987,62,32S58.88,47.546,53.213,53.212z"></path></g></svg></div>
+	
+	
+<div class="pause pause_not">
+		<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><g><path fill="var(--main-color, #BC904A)" d="M22,21l-1,1v20l1,1h20l1-1V22l-1-1H22z M41,41H23V23h18V41z"></path><path fill="var(--main-color, #BC904A)" d="M32,0c-8.547,0-16.583,3.33-22.626,9.375C3.329,15.417,0,23.453,0,32s3.329,16.583,9.374,22.626
+	         C15.417,60.671,23.453,64,32,64s16.583-3.33,22.627-9.375C60.671,48.583,64,40.547,64,32s-3.329-16.583-9.374-22.626
+	         C48.583,3.329,40.547,0,32,0z M53.213,53.212C47.546,58.879,40.013,62,32,62c-8.013,0-15.546-3.121-21.212-8.789
+	         C5.121,47.546,2,40.013,2,32s3.121-15.546,8.788-21.212C16.454,5.121,23.987,2,32,2c8.013,0,15.546,3.122,21.213,8.789
+	         C58.88,16.454,62,23.987,62,32S58.88,47.546,53.213,53.212z"></path></g></svg></div>
+</div>
+
+<div class="settings">
+	<svg version="1.1" viewBox="0 0 19.05 19.050001" xmlns="http://www.w3.org/2000/svg"><defs id="defs1022"></defs><g id="layer1" style="opacity:1"><path d="M 10.681142,2.0221121 A 7.6253682,7.5923345 10.261742 0 0 8.3574386,2.0208068 L 7.7870103,3.8833232 A 5.7610277,5.7360705 10.261694 0 0 6.4452588,4.4385723 5.7610277,5.7360705 10.261694 0 0 5.4177709,5.1900415 L 3.5776972,4.7674767 A 7.6253682,7.5923345 10.261742 0 0 2.4164794,6.7694304 l 1.2910181,1.3794127 a 5.7610277,5.7360705 10.261694 0 0 0.048972,2.6933449 l -1.3351581,1.427515 a 7.6253682,7.5923345 10.261742 0 0 0.504057,1.047662 7.6253682,7.5923345 10.261742 0 0 0.6596745,0.956353 l 2.0538367,-0.469611 a 5.7610277,5.7360705 10.261694 0 0 2.0784301,1.107434 l 0.6522646,2.115752 a 7.6253682,7.5923345 10.261742 0 0 2.3229727,0.0026 L 11.38457,14.76816 a 5.7610277,5.7360705 10.261694 0 0 0.827685,-0.388728 5.7610277,5.7360705 10.261694 0 0 0.901212,-0.639866 l 2.360045,0.54437 a 7.6253682,7.5923345 10.261742 0 0 1.159951,-2.002685 l -1.651657,-1.764436 a 5.7610277,5.7360705 10.261694 0 0 0.03286,-2.013191 L 16.629343,6.7797093 A 7.6253682,7.5923345 10.261742 0 0 16.12449,5.7333204 7.6253682,7.5923345 10.261742 0 0 15.465589,4.7756875 L 13.306653,5.2701243 A 5.7610277,5.7360705 10.261694 0 0 11.297044,4.023148 Z m 0.01933,5.472113 A 2.3555049,2.3458608 8.8599608 0 1 11.564112,10.69905 2.3555049,2.3458608 8.8599608 0 1 8.3479628,11.555906 2.3555049,2.3458608 8.8599608 0 1 7.4830311,8.3503404 2.3555049,2.3458608 8.8599608 0 1 10.70047,7.4942251 Z" id="path13737" style="fill:none;fill-rule:evenodd;stroke:var(--main-color, #BC904A);stroke-width:0.499999;stroke-linecap:square;stroke-linejoin:bevel;stroke-miterlimit:4;stroke-dasharray:none;paint-order:markers fill stroke"></path></g></svg></div>
+
+<form class="settings_list">
+	
+	
+<fieldset class="settings_fieldset"><legend>Настройки</legend>
+		
+<div class="playAuto">
+			<input type="checkbox" id="playAuto" value="playAuto"><label for="playAuto">Озвучивать шаги автоматически при прокрутке</label>
+		</div>
+		
+		
+<div id="wrapper">
+			
+			
+<h2>Настройки Speech Synthesis Player</h2>
+				               <label>Голос:
+				                  <select id="select"></select></label>
+				               <label>Громкость:
+				                  <input id="volume" type="range" min="0" max="1" step="0.1" value="1"><span>1</span>
+				               </label>
+				               <label>Скорость:
+				                  <input id="rate" type="range" min="0" max="3" step="0.5" value="1"><span>1</span>
+				               </label>
+				               <label>Высота голоса:
+				                  <input id="pitch" type="range" min="0" max="2" step="0.5" value="1"><span>1</span>
+				               </label>
+				
+				
+			
+<div id="buttons_sync">
+				
+				
+<div class="play">
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><g><path fill="var(--main-color, #BC904A)" d="M26,21v22l1.809,0.786l14.191-11v-1.572l-14.191-11L26,21z M28,23.058L39.381,32L28,40.942V23.058z"></path><path fill="var(--main-color, #BC904A)" d="M32,0c-8.547,0-16.583,3.33-22.626,9.375C3.329,15.417,0,23.453,0,32s3.329,16.583,9.374,22.626
+								C15.417,60.671,23.453,64,32,64s16.583-3.33,22.627-9.375C60.671,48.583,64,40.547,64,32s-3.329-16.583-9.374-22.626
+								C48.583,3.329,40.547,0,32,0z M53.213,53.212C47.546,58.879,40.013,62,32,62c-8.013,0-15.546-3.121-21.212-8.789
+								C5.121,47.546,2,40.013,2,32s3.121-15.546,8.788-21.212C16.454,5.121,23.987,2,32,2c8.013,0,15.546,3.122,21.213,8.789
+								C58.88,16.454,62,23.987,62,32S58.88,47.546,53.213,53.212z"></path></g></svg></div>
+					
+					
+				
+<div class="pause pause_not">
+					<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><g><path fill="var(--main-color, #BC904A)" d="M22,21l-1,1v20l1,1h20l1-1V22l-1-1H22z M41,41H23V23h18V41z"></path><path fill="var(--main-color, #BC904A)" d="M32,0c-8.547,0-16.583,3.33-22.626,9.375C3.329,15.417,0,23.453,0,32s3.329,16.583,9.374,22.626
+								C15.417,60.671,23.453,64,32,64s16.583-3.33,22.627-9.375C60.671,48.583,64,40.547,64,32s-3.329-16.583-9.374-22.626
+								C48.583,3.329,40.547,0,32,0z M53.213,53.212C47.546,58.879,40.013,62,32,62c-8.013,0-15.546-3.121-21.212-8.789
+								C5.121,47.546,2,40.013,2,32s3.121-15.546,8.788-21.212C16.454,5.121,23.987,2,32,2c8.013,0,15.546,3.122,21.213,8.789
+								C58.88,16.454,62,23.987,62,32S58.88,47.546,53.213,53.212z"></path></g></svg></div>
+				
+			</div>
+			
+		</div>
+		
+	</fieldset></form>
+
+<div class="carousel-3d" id="carousel-3d" data-bfc="">
+	
+	<figure id="figure"><!-- тут заполняется кодом картинки и подписи к ним --></figure><nav>
+<div class="buttons">
+			
+<div class="nav_button prev">
+				<svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" enable-background="new 0 0 129 129"><g><path fill="var(--main-color, #BC904A)" d="m88.6,121.3c0.8,0.8 1.8,1.2 2.9,1.2s2.1-0.4 2.9-1.2c1.6-1.6 1.6-4.2 0-5.8l-51-51 51-51c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-54,53.9c-1.6,1.6-1.6,4.2 0,5.8l54,53.9z"></path></g></svg></div>
+						
+						
+			
+<div class="nav_button next">
+				<svg xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" enable-background="new 0 0 129 129"><g><path fill="var(--main-color, #BC904A)" d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z"></path></g></svg></div>
+		</div>
+	</nav></div>
+
+</main>
+<script>
+	const utterThis = new SpeechSynthesisUtterance();
+	let myVoices = [],
+	    plays = document.querySelectorAll(".play"),
+	    pauses = document.querySelectorAll(".pause_not"),
+	    playback = false; // флаг воспроизведения аудио в текущий момент
+
+
+	window.addEventListener("load", () => {
+	    myVoices = speechSynthesis.getVoices();
+	    speechSynthesis.onvoiceschanged = () => {
+	        myVoices = speechSynthesis.getVoices();
+	        player();
+	        carousel();
+	    };
+	});
+
+	function carousel() {
+	    let carousel_3d = document.querySelector(".carousel-3d"),
+	        figure = carousel_3d.querySelector("figure"),
+	        nav_buttons = document.querySelectorAll(".nav_button"),
+	        images = figure.children,
+	        n = images.length,
+	        gap = carousel_3d.dataset.gap || 0,
+	        bfc = "bfc" in carousel_3d.dataset,
+	        theta = 2 * Math.PI / n,
+	        currImage = 0,
+	        play_pause = document.querySelector(".play_pause"),
+	        settings_list = document.querySelector('.settings_list'),
+	        contents = document.querySelector('.toc-wrapper'),
+	        settings_button = document.querySelector('.settings'),
+	        hamburger = document.querySelector('.hamburger'),
+	        prev_button = document.querySelector('.prev'),
+	        next_button = document.querySelector('.next');
+
+	    // const imageBtn = document.querySelectorAll('.image_btn');
+	    // imageBtn.forEach((elem) => {
+	    //     elem.addEventListener('click', onClickImg);
+	    // });
+
+	    setupCarousel(n, parseFloat(getComputedStyle(images[0]).width));
+	    window.addEventListener("resize", () => {
+	        setupCarousel(n, parseFloat(getComputedStyle(images[0]).width));
+	    });
+	    setupNavigation();
+	    function setupCarousel(n, s) {
+	        var apothem = s / (2 * Math.tan(Math.PI / n));
+	        figure.style.transformOrigin = `50% 50% ${-apothem}px`;
+	        for (var i = 0; i < n; i++) images[i].style.padding = `0 ${gap}px`;
+	        for (i = 0; i < n; i++) {
+	            images[i].style.transformOrigin = `50% 50% ${-apothem}px`;
+	            images[i].style.transform = `rotateY(${i * theta}rad)`;
+	        }
+	        if (bfc)
+	            for (i = 0; i < n; i++) images[i].style.backfaceVisibility = "hidden";
+	        rotateCarousel(currImage);
+	    }
+	    function setupNavigation() {
+
+	        for (let index = 0; index < nav_buttons.length; index++) {
+	            const nav_button = nav_buttons[index];
+	            nav_button.addEventListener("click", onClick);
+	        }
+
+	        function onClick(e) {
+	            var t = e.currentTarget;
+	            if (t.classList.contains("next")) {
+	                if (currImage !== n - 1) {
+	                    currImage++;
+	                }
+	            } else {
+	                if (currImage !== 0) {
+	                    currImage--;
+	                }
+	            }
+	            rotateCarousel(currImage);
+	        }
+	    }
+
+	    function rotateCarousel(imageIndex) {
+	        figure.style.transform = `rotateY(${imageIndex * -theta}rad)`;
+	        if (playAuto.checked) {
+	            playStopChange();
+	            speakText(images[imageIndex].firstElementChild.textContent);
+	        }
+	        if (currImage === n - 1) {
+	            next_button.classList.add('next_off');
+	            prev_button.classList.remove('prev_off');
+	        } else if (currImage === 0) {
+	            prev_button.classList.add('prev_off');
+	            next_button.classList.remove('next_off');
+	        } else {
+	            prev_button.classList.remove('prev_off');
+	            next_button.classList.remove('next_off');
+	        }
+	    }
+
+	    var xClick;
+	    var mouseDown;
+	    // /* Смена слайдов мышкой */
+	    // figure.onmousedown = (event) => {
+	    //    xClick = event.pageX;
+	    //    mouseDown = true;
+	    // };
+	    // figure.onmouseup = (event) => {
+	    //    mouseDown = false;
+	    // };
+	    // figure.onmousemove = (event) => {
+	    //    if (mouseDown) {
+	    //       var xMove = event.pageX;
+	    //       if (Math.floor(xClick - xMove) > 5) {
+	    //          currImage++;
+	    //          rotateCarousel(currImage);
+	    //          mouseDown = false;
+	    //       }
+	    //       else if (Math.floor(xClick - xMove) < -5) {
+	    //          currImage--;
+	    //          rotateCarousel(currImage);
+	    //          mouseDown = false;
+	    //       }
+	    //    }
+	    // };
+	    /* Смена слайдов пальцем */
+	    figure.ontouchstart = (event) => {
+	        xClick = event.changedTouches[0].pageX;
+	        mouseDown = true;
+	    };
+	    figure.ontouchend = (event) => {
+	        mouseDown = false;
+	    };
+	    figure.ontouchmove = (event) => {
+	        if (mouseDown) {
+	            var xMove = event.changedTouches[0].pageX;
+	            if (Math.floor(xClick - xMove) > 5) {
+	                if (currImage !== n - 1) {
+	                    currImage++;
+	                    rotateCarousel(currImage);
+	                    mouseDown = false;
+	                }
+	            }
+	            else if (Math.floor(xClick - xMove) < -5) {
+	                if (currImage !== 0) {
+	                    currImage--;
+	                    rotateCarousel(currImage);
+	                    mouseDown = false;
+	                }
+	            }
+	        }
+	    };
+
+	    // Скролл мышки
+	    carousel_3d.addEventListener("wheel", (event) => {
+	        if (event.deltaY > 0) {
+	            // down
+	            if (currImage !== n - 1) {
+	                currImage++;
+	            }
+	        } else {
+	            // up
+	            if (currImage !== 0) {
+	                currImage--;
+	            }
+	        }
+	        rotateCarousel(currImage);
+
+	    });
+	    
+	    // Прокрутка слайдов стрелками клавиатуры
+        document.addEventListener('keydown', (event) => {
+	        const key = event.key; // "ArrowRight", "ArrowLeft", "ArrowUp", or "ArrowDown"
+	        switch (key) {
+	            case "ArrowLeft":
+	                if (currImage !== 0) {
+	                    currImage--;
+	                }
+	                break;
+	            case "ArrowRight":
+	                if (currImage !== n - 1) {
+	                    currImage++;
+	                }
+	                break;
+	        }
+	        rotateCarousel(currImage);
+    });
+
+	    // пролистывание слайдов при клике в оглавлении
+	    let contents_a = document.querySelectorAll('.toc_ol a');
+	    for (let index = 0; index < contents_a.length; index++) {
+	        const element = contents_a[index];
+	        element.addEventListener('click', (event) => {
+
+	            currImage = Number(event.currentTarget.id);
+	            rotateCarousel(currImage);
+	            visibilityEventHamburger();
+	        })
+	    };
+
+	    // Показ Оглавления
+	    hamburger.addEventListener('click', (e) => {
+	        visibilityEventHamburger();
+	    });
+
+	    function visibilityEventHamburger() {
+	        hamburger.classList.toggle('hamburger_active');
+	        contents.classList.toggle('toc-wrapper_active');
+	        play_pause.classList.toggle("play_pause_not");
+	        settings_button.classList.toggle("settings_not");
+	    }
+
+	    // Показ Настроек
+	    settings_button.addEventListener('click', (e) => {
+	        settings_list.classList.toggle('settings_list_active');
+	        hamburger.classList.toggle('hamburger_none');
+	        play_pause.classList.toggle("play_pause_not");
+	    });
+
+	    // function onClickImg(elem) {
+	    //     speakText(elem.target.previousElementSibling.textContent);
+	    // }
+
+	    function speakText(text) {
+	        if (playAuto.checked) {
+	            speechSynthesis.cancel();
+	        }
+	        utterThis.text = text;
+	        const voice = myVoices[select.value];
+	        utterThis.voice = voice;
+	        utterThis.lang = voice.lang;
+	        utterThis.volume = volume.value;
+	        utterThis.rate = rate.value;
+	        utterThis.pitch = pitch.value;
+	        speechSynthesis.speak(utterThis);
+	    }
+
+	    // Кнопки проигрывания на главном экране и на экране настроек
+	    let buttons_play = [].concat([...plays], [...pauses]);
+	    buttons_play.forEach(element => {
+	        element.addEventListener('click', ()=> {
+	            playPause('click');
+	        })
+	    });
+	    
+	    function playPause(event = '') {
+	        
+	        playStopChange(event);
+	        if(plays[0].classList.contains("play_not")) {
+	            speakText(images[currImage].firstElementChild.textContent);
+	        } else {
+	            playback = false;
+	            speechSynthesis.cancel();
+	        }
+	    }
+	};
+
+	// Создание настроек плеера
+	function player() {
+
+	    populateVoices(myVoices);
+	    function populateVoices(voices) {
+	        voices.forEach((voice, index) => {
+	            select.options[index] = new Option(voice.name, index);
+	        });
+
+	        const defaultVoiceIndex = voices.findIndex(
+	            (voice) => voice.name === "Google русский"
+	        );
+	        select.selectedIndex = defaultVoiceIndex;
+	        initializeHandlers();
+	    }
+
+	    function initializeHandlers() {
+	        utterThis.onstart = () => {
+	            playback = true;
+	        };
+	        utterThis.onend = () => {
+	            playback = false;
+	            playStopChange();
+	        };
+	        // utterThis.onerror = (err) => console.error(err);
+	        // utterThis.onpause = () => console.log("Paused");
+	        // utterThis.onresume = () => console.log("Resumed");
+
+	        wrapper.onchange = ({ target }) => {
+	            if (target.type !== "range") return;
+	            handleChange(target);
+	        };
+	    }
+
+	    function handleChange(el) {
+	        el.nextElementSibling.textContent = el.value;
+	    }
+
+	}
+
+	function playStopChange(event = '') {
+	    if(playback && playAuto.checked && event === '') {
+	        return;
+	    }
+	    plays.forEach(play => {
+	        play.classList.toggle('play_not');
+	    });
+	    pauses.forEach(pause => {
+	        pause.classList.toggle('pause_not');
+	    });
+	}
+</script></body></html>

@@ -1,0 +1,470 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.13">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Окно демонстрации</v8:content>
+		</v8:item>
+		<v8:item>
+			<v8:lang>ru1</v8:lang>
+			<v8:content>Демонстрация</v8:content>
+		</v8:item>
+	</Title>
+	<AutoTitle>false</AutoTitle>
+	<CommandSet>
+		<ExcludedCommand>Abort</ExcludedCommand>
+		<ExcludedCommand>Cancel</ExcludedCommand>
+		<ExcludedCommand>CustomizeForm</ExcludedCommand>
+		<ExcludedCommand>Help</ExcludedCommand>
+		<ExcludedCommand>Ignore</ExcludedCommand>
+		<ExcludedCommand>No</ExcludedCommand>
+		<ExcludedCommand>OK</ExcludedCommand>
+		<ExcludedCommand>OpenFromMainServer</ExcludedCommand>
+		<ExcludedCommand>OpenFromStandaloneServer</ExcludedCommand>
+		<ExcludedCommand>RestoreValues</ExcludedCommand>
+		<ExcludedCommand>Retry</ExcludedCommand>
+		<ExcludedCommand>SaveValues</ExcludedCommand>
+		<ExcludedCommand>Yes</ExcludedCommand>
+	</CommandSet>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="NotificationProcessing">ОбработкаОповещения</Event>
+		<Event name="OnOpen">ПриОткрытии</Event>
+		<Event name="OnCreateAtServer">ПриСозданииНаСервере</Event>
+		<Event name="OnClose">ПриЗакрытии</Event>
+	</Events>
+	<ChildItems>
+		<LabelDecoration name="Декорация1" id="37">
+			<Title formatted="true">
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>&lt;color #FF0000&gt;Все файлы выгружены и интегрированы в сайт!&lt;/&gt;</v8:content>
+				</v8:item>
+			</Title>
+			<ContextMenu name="Декорация1КонтекстноеМеню" id="38"/>
+			<ExtendedTooltip name="Декорация1РасширеннаяПодсказка" id="39"/>
+		</LabelDecoration>
+		<Pages name="Группа2" id="74">
+			<ExtendedTooltip name="Группа2РасширеннаяПодсказка" id="75"/>
+			<ChildItems>
+				<Page name="Группа4" id="78">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Выполнение произвольного скрипта JS</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="Группа4РасширеннаяПодсказка" id="79"/>
+					<ChildItems>
+						<Button name="ПримерТекстаJS" id="29">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ПримерТекстаJS</CommandName>
+							<ExtendedTooltip name="ПримерТекстаJSРасширеннаяПодсказка" id="30"/>
+						</Button>
+						<Button name="ВыполнитьПроизвольныйТекстJS" id="18">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ВыполнитьПроизвольныйТекстJS</CommandName>
+							<ExtendedTooltip name="ВыполнитьПроизвольныйТекстJSРасширеннаяПодсказка" id="19"/>
+						</Button>
+						<UsualGroup name="Группа1" id="53">
+							<Group>AlwaysHorizontal</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="Группа1РасширеннаяПодсказка" id="54"/>
+							<ChildItems>
+								<InputField name="ПолеТекста" id="26">
+									<DataPath>ПолеТекста</DataPath>
+									<TitleLocation>None</TitleLocation>
+									<Height>10</Height>
+									<MultiLine>true</MultiLine>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Текст JS</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="ПолеТекстаКонтекстноеМеню" id="27"/>
+									<ExtendedTooltip name="ПолеТекстаРасширеннаяПодсказка" id="28"/>
+								</InputField>
+								<Table name="ПолеОтвета" id="55">
+									<Representation>Tree</Representation>
+									<TitleLocation>Auto</TitleLocation>
+									<CommandBarLocation>None</CommandBarLocation>
+									<Header>false</Header>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>ПолеОтвета</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Ответ</v8:content>
+										</v8:item>
+									</Title>
+									<ViewStatusLocation>None</ViewStatusLocation>
+									<ContextMenu name="ПолеОтветаКонтекстноеМеню" id="56"/>
+									<AutoCommandBar name="ПолеОтветаКоманднаяПанель" id="57"/>
+									<ExtendedTooltip name="ПолеОтветаРасширеннаяПодсказка" id="58"/>
+									<SearchStringAddition name="ПолеОтветаСтрокаПоиска" id="59">
+										<AdditionSource>
+											<Item>ПолеОтвета</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ПолеОтветаСтрокаПоискаКонтекстноеМеню" id="60"/>
+										<ExtendedTooltip name="ПолеОтветаСтрокаПоискаРасширеннаяПодсказка" id="61"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ПолеОтветаСостояниеПросмотра" id="62">
+										<AdditionSource>
+											<Item>ПолеОтвета</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ПолеОтветаСостояниеПросмотраКонтекстноеМеню" id="63"/>
+										<ExtendedTooltip name="ПолеОтветаСостояниеПросмотраРасширеннаяПодсказка" id="64"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ПолеОтветаУправлениеПоиском" id="65">
+										<AdditionSource>
+											<Item>ПолеОтвета</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ПолеОтветаУправлениеПоискомКонтекстноеМеню" id="66"/>
+										<ExtendedTooltip name="ПолеОтветаУправлениеПоискомРасширеннаяПодсказка" id="67"/>
+									</SearchControlAddition>
+									<ChildItems>
+										<InputField name="ПолеОтвета1Ключ" id="68">
+											<DataPath>ПолеОтвета.Ключ</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПолеОтвета1КлючКонтекстноеМеню" id="69"/>
+											<ExtendedTooltip name="ПолеОтвета1КлючРасширеннаяПодсказка" id="70"/>
+										</InputField>
+										<InputField name="ПолеОтвета1Значение" id="71">
+											<DataPath>ПолеОтвета.Значение</DataPath>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ПолеОтвета1ЗначениеКонтекстноеМеню" id="72"/>
+											<ExtendedTooltip name="ПолеОтвета1ЗначениеРасширеннаяПодсказка" id="73"/>
+										</InputField>
+									</ChildItems>
+								</Table>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="Группа3" id="76">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пример использования</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="Группа3РасширеннаяПодсказка" id="77"/>
+					<ChildItems>
+						<UsualGroup name="Группа6" id="92">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Рамка</v8:content>
+								</v8:item>
+							</Title>
+							<Group>AlwaysHorizontal</Group>
+							<ExtendedTooltip name="Группа6РасширеннаяПодсказка" id="93"/>
+							<ChildItems>
+								<Button name="ПоказатьРамку" id="88">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПоказатьРамкуГлавноеVA</CommandName>
+									<ExtendedTooltip name="ПоказатьРамкуРасширеннаяПодсказка" id="89"/>
+								</Button>
+								<Button name="ПоказатьРамкуVI" id="94">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ПоказатьРамкуVI</CommandName>
+									<ExtendedTooltip name="ПоказатьРамкуVIРасширеннаяПодсказка" id="95"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="Группа5" id="90">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>EnjoyHint</v8:content>
+								</v8:item>
+							</Title>
+							<Group>Vertical</Group>
+							<ExtendedTooltip name="Группа5РасширеннаяПодсказка" id="91"/>
+							<ChildItems>
+								<InputField name="ТекстПодсказки" id="85">
+									<DataPath>ТекстПодсказки</DataPath>
+									<TitleLocation>Left</TitleLocation>
+									<MultiLine>false</MultiLine>
+									<InputHint>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Не обязательное поле</v8:content>
+										</v8:item>
+									</InputHint>
+									<ContextMenu name="ТекстПодсказкиКонтекстноеМеню" id="86"/>
+									<ExtendedTooltip name="ТекстПодсказкиРасширеннаяПодсказка" id="87"/>
+								</InputField>
+								<UsualGroup name="Группа7" id="100">
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="Группа7РасширеннаяПодсказка" id="101"/>
+									<ChildItems>
+										<Button name="ПодсказкаГлавное" id="96">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ПодсказкаГлавное</CommandName>
+											<ExtendedTooltip name="ПодсказкаГлавноеРасширеннаяПодсказка" id="97"/>
+										</Button>
+										<Button name="ПодсказкаVI" id="98">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.ПодсказкаVI</CommandName>
+											<ExtendedTooltip name="ПодсказкаVIРасширеннаяПодсказка" id="99"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+				<Page name="Группа9" id="106">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пример использования в VA</v8:content>
+						</v8:item>
+					</Title>
+					<ExtendedTooltip name="Группа9РасширеннаяПодсказка" id="107"/>
+					<ChildItems>
+						<UsualGroup name="Группа8" id="108">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>EnjoyHint</v8:content>
+								</v8:item>
+							</Title>
+							<ExtendedTooltip name="Группа8РасширеннаяПодсказка" id="109"/>
+							<ChildItems>
+								<InputField name="Сценарий" id="112">
+									<DataPath>Сценарий</DataPath>
+									<ContextMenu name="СценарийКонтекстноеМеню" id="113"/>
+									<ExtendedTooltip name="СценарийРасширеннаяПодсказка" id="114"/>
+								</InputField>
+								<Button name="ВыполнитьШагВVA" id="110">
+									<Type>UsualButton</Type>
+									<CommandName>Form.Command.ВыполнитьШагВVA</CommandName>
+									<ExtendedTooltip name="ВыполнитьШагВVAРасширеннаяПодсказка" id="111"/>
+								</Button>
+							</ChildItems>
+						</UsualGroup>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="АдресМакетаЗвука" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Адрес макета звука</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПолеТекста" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст JS</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ПолеОтвета" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Поле ответа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Ключ" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ключ</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Значение" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Значение</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТекстПодсказки" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст подсказки</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="Сценарий" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сценарий</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>cfg:CatalogRef.Web_Сценарии</v8:Type>
+			</Type>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ВыполнитьПроизвольныйТекстJS" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить произвольный текст JS</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить произвольный текст JS</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполнитьПроизвольныйТекстJS</Action>
+		</Command>
+		<Command name="ПримерТекстаJS" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пример текста JS</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пример текста JS</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПримерТекстаJS</Action>
+		</Command>
+		<Command name="ПоказатьРамкуГлавноеVA" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подсистема "Главное"</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать рамку главное VA</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказатьРамку</Action>
+		</Command>
+		<Command name="ПоказатьРамкуVI" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подсистема "Vanessa Interactive"</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать рамку VI</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПоказатьРамкуVA</Action>
+		</Command>
+		<Command name="ПодсказкаГлавное" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подсистема "Главное"</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подсказка главное</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодсказкаГлавное</Action>
+		</Command>
+		<Command name="ПодсказкаVI" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подсистема "Vanessa Interactive"</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подсказка VI</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПодсказкаVI</Action>
+		</Command>
+		<Command name="ВыполнитьШагВVA" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить шаг</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выполнить шаг ВVA</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыполнитьШагВVA</Action>
+		</Command>
+	</Commands>
+</Form>

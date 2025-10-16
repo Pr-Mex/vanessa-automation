@@ -1,0 +1,97 @@
+﻿
+### Глава 2. Настройки.
+   1. ***Закладка "Запуск сценариев"***
+       - Панель инструментов редактора
+           - Краткий обзор доступных инструментов при работе с редактором (гаечный ключ)  [(Видео)](https://youtu.be/qbSeYiZGHkI) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава02/КраткийОбзорДоступныхИнструментовПриРаботеСРедактором.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава02/КраткийОбзорДоступныхИнструментовПриРаботеСРедактором.MD)
+           - Настройки, доступные при работе с редактором (шестеренка)
+              - Другие настройки  [(Видео)](https://youtu.be/UZ6SY7J0ghg) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава02/НастройкиВПанелиРедактораДругиеНастройки.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава02/НастройкиВПанелиРедактораДругиеНастройки.MD)
+           - Открытие списка уроков.  [(Видео)](https://youtu.be/mtoYF2Lev1M) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава02/КнопкаОткрытияСпискаУроков.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава02/КнопкаОткрытияСпискаУроков.MD)
+           - Точки останова.  [(Видео)](https://youtu.be/Q12zLNxZn-8) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава02/КнопкиРаботаСТочкамиОстанова.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава02/КнопкиРаботаСТочкамиОстанова.MD)
+   5. ***Закладка "Клиенты тестирования"***
+       - Имя компьютера, Порт (1538 и 1541), Web клиент  [(Видео)](https://youtu.be/Fd_-qhT8Xl8) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава02/КакУстроенаТаблицаКлиентовТестированияКолонкиЧасть4.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава02/КакУстроенаТаблицаКлиентовТестированияКолонкиЧасть4.MD)
+   6. ***Закладка "Сервис"***
+       - Основные
+           - Внешняя компонента VanessaExt  [(Видео)](https://youtu.be/r-Vy33RmYTw) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава02/ЗакладкаСервисОсновныеВнешняяКомпонентаVanessaExt.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава02/ЗакладкаСервисОсновныеВнешняяКомпонентаVanessaExt.MD)
+           - (New) Дымовые тесты  [(Видео)](https://youtu.be/gKlKUfVpnAE) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава02/ЗакладкаСервисОсновныеДымовыеТесты.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава02/ЗакладкаСервисОсновныеДымовыеТесты.MD)
+       - Настройки клиентов тестирования
+           - Запуск клиента тестирования  [(Видео)](https://youtu.be/tvW0X18rIt8) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава02/ЗакладкаСервисНастройкиКлиентовТестированияЗапускКлиентаТестирования.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава02/ЗакладкаСервисНастройкиКлиентовТестированияЗапускКлиентаТестирования.MD)
+           - Запуск браузера  [(Видео)](https://youtu.be/mFReXOKjJUg) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава02/ЗакладкаСервисНастройкиКлиентовТестированияЗапускБраузера.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава02/ЗакладкаСервисНастройкиКлиентовТестированияЗапускБраузера.MD)
+       - Выполнение сценариев
+           - Остановить выполнение сценария  [(Видео)](https://youtu.be/oHCzuNCVxUY) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава02/ЗакладкаСервисВыполнениеСценариевОстановитьВыполнениеСценария.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава02/ЗакладкаСервисВыполнениеСценариевОстановитьВыполнениеСценария.MD)
+           - Стабилизация выполнения тестов  [(Видео)](https://youtu.be/t1O7J92r5GY) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава02/ЗакладкаСервисВыполнениеСценариевСтабилизацияВыполненияТестов.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава02/ЗакладкаСервисВыполнениеСценариевСтабилизацияВыполненияТестов.MD)
+       - Скриншоты
+           - Настройки снятия скриншотов.  [(Видео)](https://youtu.be/V_Od2vksI7k) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава02/ЗакладкаСервисСкриншоты.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава02/ЗакладкаСервисСкриншоты.MD)
+       - Отчеты о запуске сценариев
+           - Отчет в формате Allure
+              - Основные настройки  [(Видео)](https://youtu.be/pzA-6g_VGYc) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава02/ЗакладкаСервисОтчетыОЗапускеСценариевAllureОсновные.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава02/ЗакладкаСервисОтчетыОЗапускеСценариевAllureОсновные.MD)
+       - Автоинструкции
+           - Работа с браузером  [(Видео)](https://youtu.be/O9rH2gCwWwI) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава02/ЗакладкаСервисАвтоинструкцииРаботаСБраузером.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава02/ЗакладкаСервисАвтоинструкцииРаботаСБраузером.MD)
+           - HTML и Markdown  [(Видео)](https://youtu.be/DzOIRqyjtFQ) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава02/ЗакладкаСервисАвтоинструкцииHTMLИMarkdown.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава02/ЗакладкаСервисАвтоинструкцииHTMLИMarkdown.MD)
+       - Прочее
+           - Vanessa Editor  [(Видео)](https://youtu.be/VhE6O-uUwmA) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава02/ЗакладкаСервисVanessaEditor.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава02/ЗакладкаСервисVanessaEditor.MD)
+           - Закладка прочее  [(Видео)](https://youtu.be/feu8xytY4KA) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава02/ЗакладкаСервисПрочее.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава02/ЗакладкаСервисПрочее.MD)
+   7. ***Рекомендуемые настройки при первом запуске***
+       - (New) Рекомендуемые настройки при первом запуске Vanessa Automation.  [(Видео)](https://youtu.be/doYC151jo-w) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава02/РекомендуемыеНастройкиПриПервомЗапуске.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава02/РекомендуемыеНастройкиПриПервомЗапуске.MD)
+
+### Глава 3. Синтаксис языка Gherkin
+   1. Как устроен feature файл? Секции фича файла.
+       1. Секция "Сценарий".  [(Видео)](https://youtu.be/IjWuqPPErZ4) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава03/КакУстроенFeatureФайлСекцияСценария.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава03/КакУстроенFeatureФайлСекцияСценария.MD)
+       1. (New) Особенности создания имен сценариев.  [(Видео)](https://youtu.be/pmP6DXlvWLk) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава03/ПравилаСозданияИменСценариев.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава03/ПравилаСозданияИменСценариев.MD)
+       1. Секция "Переменные".
+           - (New) Импорт переменных из других файлов.  [(Видео)](https://youtu.be/_8h-xfnf-D0) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава03/ИмпортПеременныхИзДругихФайлов.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава03/ИмпортПеременныхИзДругихФайлов.MD)
+
+   1. Как устроены шаги сценариев.
+       1. (New) Тэг снятия скриншотов @screenshot.  [(Видео)](https://youtu.be/hx9yFZPO0GE) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава03/ТегСнятияСкриншотов.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава03/ТегСнятияСкриншотов.MD)
+       1. (New) Тэг записи видео выполнения сценария @recordvideo.  [(Видео)](https://youtu.be/-eELGdGWEA0) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава03/ТегЗаписиВидеоВыполненияСценария.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава03/ТегЗаписиВидеоВыполненияСценария.MD)
+   
+   1. Подсценарии.
+       1. Подсценарии. Тэг @exportscenarios. Передача параметров в подсценарии.  [(Видео)](https://youtu.be/79LG8K7MwJ0) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава03/ПодсценарииЧастьОдин.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава03/ПодсценарииЧастьОдин.MD)
+       1. Передача таблиц в подсценарии.  [(Видео)](https://youtu.be/ANC0qgZiFwo) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава03/ПередачаТаблицВПодсценарии.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава03/ПередачаТаблицВПодсценарии.MD)
+       1. Передача многострочных строк в подсценарии.  [(Видео)](https://youtu.be/cAEWDYB29PA) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава03/ПередачаМногострочныхСтрокВПодсценарии.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава03/ПередачаМногострочныхСтрокВПодсценарии.MD)
+
+### Глава 4. Библиотека доступных шагов
+   1. Дерево шагов с поддержкой других языков.  [(Видео)](https://youtu.be/mOJjCjQZwgk) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава04/ДеревоШаговДругиеЯзыки.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава04/ДеревоШаговДругиеЯзыки.MD)
+
+### Глава 6. Переменные.
+   1. Простые переменные.
+       1. Как использовать переменную для вычисления выражения на сервере.  [(Видео)](https://youtu.be/LbKdG7BToGA) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава06/КакИспользоватьПеременнуюДляВычисленияНаСервере.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава06/КакИспользоватьПеременнуюДляВычисленияНаСервере.MD)
+   1. Секция "Переменные".
+        - (New) Импорт переменных из других файлов.  [(Видео)](https://youtu.be/_8h-xfnf-D0) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава03/ИмпортПеременныхИзДругихФайлов.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава03/ИмпортПеременныхИзДругихФайлов.MD)
+   1. Работа с переменными.
+        - (New) Как передать глобальные переменные через файл VAParams.json.  [(Видео)](https://youtu.be/L01sQmN13o8) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава06/КакПередатьГлобальныеПеременныеЧерезФайлVAParamsJson.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава06/КакПередатьГлобальныеПеременныеЧерезФайлVAParamsJson.MD)
+        - (New) Как удалить переменные.  [(Видео)](https://youtu.be/TB_gbGSk3qQ) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава06/КакУдалитьПеременные.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава06/КакУдалитьПеременные.MD)
+        - (New) Как сравнить две переменные.  [(Видео)](https://youtu.be/NE-IhDFBQSE) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава06/КакСравнитьДвеПеременные.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава06/КакСравнитьДвеПеременные.MD)
+
+### Глава 8. Приёмы работы
+   1. Приёмы связанные с выполнением сценариев
+        - Как правильно проверить видимость/доступность кнопки, элемента или пункта меню.  [(Видео)](https://youtu.be/eFiPofC73sU) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава08/КакПравильноПроверитьДоступностьКнопкиПоля.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава08/КакПравильноПроверитьДоступностьКнопкиПоля.MD)
+        - (New) Когда надо использовать паузу.  [(Видео)](https://youtu.be/RKAEGjOfk_s) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава08/КогдаНадоИспользоватьПаузу.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава08/КогдаНадоИспользоватьПаузу.MD)
+        - (New) Как вызвать сохранение в файл табличного документа или поля текстового документа.  [(Видео)](https://youtu.be/5JwT7PPlZAA) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава08/КакВызватьСохранениеВФайлТабличногоДокументаИлиПоляТекстовогоДокумента.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава08/КакВызватьСохранениеВФайлТабличногоДокументаИлиПоляТекстовогоДокумента.MD)
+        - Выбор файла из диалога выбора файлов.  [(Видео)](https://youtu.be/7JRvTU-0e3o) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава08/ВыборФайлаИзДиалогаВыбораФайлов.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава08/ВыборФайлаИзДиалогаВыбораФайлов.MD)
+        - (New) Как вывести дополнительную информацию в лог выполнения сценариев.  [(Видео)](https://youtu.be/u_CE-I4ceUQ) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава08/КакВывестиДополнительнуюИнформациюВЛог.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава08/КакВывестиДополнительнуюИнформациюВЛог.MD)
+   1. Прочие
+        - (New) Как понять что пошло не так при запуске тестов в CI контуре.  [(Видео)](https://youtu.be/zPLez7v8AnA) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава08/КакПонятьЧтоПошлоНеТакПриЗапускеТестовВCIКонтуре.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава08/КакПонятьЧтоПошлоНеТакПриЗапускеТестовВCIКонтуре.MD)
+        - (New) Как получить шаги, проверяющие состояние формы.  [(Видео)](https://youtu.be/es4T-S5b96k) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава08/КакПолучитьШагиПроверяющиеСостояниеФормы.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава08/КакПолучитьШагиПроверяющиеСостояниеФормы.MD)
+        - (New) Как понять, что изменилось в форме, чтобы корректно дождаться нужного состояния формы.  [(Видео)](https://youtu.be/UGjID7kaNMM) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава08/КакПонятьЧтоИзменилосьВФормеЧтобыДождатьсяНужногоСостояния.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава08/КакПонятьЧтоИзменилосьВФормеЧтобыДождатьсяНужногоСостояния.MD)
+        - (New) Как быстро актуализировать шаг по данным ошибки.  [(Видео)](https://youtu.be/LvQ7KXelasE) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава08/КакБыстроАктуализироватьШагПоДаннымОшибки.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава08/КакБыстроАктуализироватьШагПоДаннымОшибки.MD)
+        - (New) Как получить подробную информацию о шаге.  [(Видео)](https://youtu.be/XjxFWc5kv_U) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава08/КакПолучитьПодробнуюИнформациюОШаге.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава08/КакПолучитьПодробнуюИнформациюОШаге.MD)
+        - (New) Когда в шагах можно использовать символ * (звездочка).  [(Видео)](https://youtu.be/KkbD27TA7UQ) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава08/КогдаВШагахМожноИспользоватьСимволЗвездочка.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава08/КогдаВШагахМожноИспользоватьСимволЗвездочка.MD)
+        - (New) Как посмотреть подробные детали ошибки. Гиперссылка "Детали".  [(Видео)](https://youtu.be/gvL35W-dkP0) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава08/КакПосмотретьПодробныеДеталиОшибкиГиперссылкаДетали.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава08/КакПосмотретьПодробныеДеталиОшибкиГиперссылкаДетали.MD)
+        - (New) Как тестировать HTML документ.  [(Видео)](https://youtu.be/BND69qBqmJc) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава08/КакТестироватьHTMLДокумент.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава08/КакТестироватьHTMLДокумент.MD)
+   
+### Глава 9. Allure. Отчет о запуске тестов в формате Allure
+   * Установка меток Allure (управление иерархией) из шагов сценария.  [(Видео)](https://youtu.be/WH1iZJpJHW0) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава09/УстановкаМетокAllureИзШаговСценария.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава09/УстановкаМетокAllureИзШаговСценария.MD)
+
+### Глава 13. Редактор сценариев VAEditor
+   1. Контекстное меню редактора.
+        - Точки останова.  [(Видео)](https://youtu.be/HUuoEI9YLDM) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава13/КонтекстноеМенюРедактораТочкиОстанова.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава13/КонтекстноеМенюРедактораТочкиОстанова.MD)
+        - Получить шаги по данным клиента тестирования.  [(Видео)](https://youtu.be/cJXmooN-cx0) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава13/КонтекстноеМенюРедактораПолучитьШагиПоДаннымКлиентаТестирования.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава13/КонтекстноеМенюРедактораПолучитьШагиПоДаннымКлиентаТестирования.MD)
+   1. Прочее.
+        - (New) Отображение картинок в редакторе.  [(Видео)](https://youtu.be/OzCbEZwpf84) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава08/ОтображениеКартинокВРедакторе.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава08/ОтображениеКартинокВРедакторе.MD)
+
+### Глава 14. Работа с браузером
+   * Описание прямой работы с браузером.  [(Видео)](https://youtu.be/Cv65y-MyYqQ) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава14/ОписаниеПрямойРаботыСБраузером.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава14/ОписаниеПрямойРаботыСБраузером.MD)
+
+### Глава 15. Решение технических проблем
+   * Появилось сообщение - (New) "Неизвестный идентификатор формы"  [(Видео)](https://youtu.be/EsIqUYSUIsQ) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава15/ПоявилосьСообщениеНеизвестныйИдентификаторФормы.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава15/ПоявилосьСообщениеНеизвестныйИдентификаторФормы.MD)
+   * Появилось сообщение - (New) "Обнаружен запрет синхронных вызовов"  [(Видео)](https://youtu.be/RRJgNe2UoOs) [(PDF)](https://vanessa-files.do.bit-erp.ru/Doc/1.2.041.1/PDF/Глава15/ПоявилосьСообщениеОбнаруженЗапретСинхронныхВызовов.pdf) [(MD)](https://github.com/Pr-Mex/vanessa-automation/tree/develop/docs/MainHelp/1.2.041.1/Глава15/ПоявилосьСообщениеОбнаруженЗапретСинхронныхВызовов.MD)

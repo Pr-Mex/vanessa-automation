@@ -5,6 +5,14 @@
 
 &НаКлиенте
 Перем КешДанныеПеревода;
+
+#КонецОбласти
+
+#Область ГлобальныеПеременные
+
+&НаКлиенте
+Перем КешКлючевыеСлова;
+
 #КонецОбласти
 
 #Область ЭкспортныеПроцедурыИФункции
@@ -16,3305 +24,30 @@
 	КешДанныеПеревода = Новый Соответствие;
 КонецФункции	 
 
-// Возвращает строку для получения ключевых слов Gherkin
+//Возвращает данные ключевых слов
 &НаКлиенте
-Функция КлючевыеСлова() Экспорт
-	Возврат "
-		|{
-		|  ""af"": {
-		|    ""and"": [
-		|      ""En""
-		|    ],
-		|    ""background"": [
-		|      ""Agtergrond""
-		|    ],
-		|    ""but"": [
-		|      ""Maar""
-		|    ],
-		|    ""examples"": [
-		|      ""Voorbeelde""
-		|    ],
-		|    ""feature"": [
-		|      ""Funksie"",
-		|      ""Besigheid Behoefte"",
-		|      ""Vermoë""
-		|    ],
-		|    ""given"": [
-		|      ""Gegewe""
-		|    ],
-		|    ""name"": ""Afrikaans"",
-		|    ""native"": ""Afrikaans"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Voorbeeld"",
-		|      ""Situasie""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Situasie Uiteensetting""
-		|    ],
-		|    ""then"": [
-		|      ""Dan""
-		|    ],
-		|    ""when"": [
-		|      ""Wanneer""
-		|    ]
-		|  },
-		|  ""am"": {
-		|    ""and"": [
-		|      ""Եվ""
-		|    ],
-		|    ""background"": [
-		|      ""Կոնտեքստ""
-		|    ],
-		|    ""but"": [
-		|      ""Բայց""
-		|    ],
-		|    ""examples"": [
-		|      ""Օրինակներ""
-		|    ],
-		|    ""feature"": [
-		|      ""Ֆունկցիոնալություն"",
-		|      ""Հատկություն""
-		|    ],
-		|    ""given"": [
-		|      ""Դիցուք""
-		|    ],
-		|    ""name"": ""Armenian"",
-		|    ""native"": ""հայերեն"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Օրինակ"",
-		|      ""Սցենար""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Սցենարի կառուցվացքը""
-		|    ],
-		|    ""then"": [
-		|      ""Ապա""
-		|    ],
-		|    ""when"": [
-		|      ""Եթե"",
-		|      ""Երբ""
-		|    ]
-		|  },
-		|  ""an"": {
-		|    ""and"": [
-		|      ""Y"",
-		|      ""E""
-		|    ],
-		|    ""background"": [
-		|      ""Antecedents""
-		|    ],
-		|    ""but"": [
-		|      ""Pero""
-		|    ],
-		|    ""examples"": [
-		|      ""Eixemplos""
-		|    ],
-		|    ""feature"": [
-		|      ""Caracteristica""
-		|    ],
-		|    ""given"": [
-		|      ""Dau"",
-		|      ""Dada"",
-		|      ""Daus"",
-		|      ""Dadas""
-		|    ],
-		|    ""name"": ""Aragonese"",
-		|    ""native"": ""Aragonés"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Eixemplo"",
-		|      ""Caso""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Esquema del caso""
-		|    ],
-		|    ""then"": [
-		|      ""Alavez"",
-		|      ""Allora"",
-		|      ""Antonces""
-		|    ],
-		|    ""when"": [
-		|      ""Cuan""
-		|    ]
-		|  },
-		|  ""ar"": {
-		|    ""and"": [
-		|      ""و""
-		|    ],
-		|    ""background"": [
-		|      ""الخلفية""
-		|    ],
-		|    ""but"": [
-		|      ""لكن""
-		|    ],
-		|    ""examples"": [
-		|      ""امثلة""
-		|    ],
-		|    ""feature"": [
-		|      ""خاصية""
-		|    ],
-		|    ""given"": [
-		|      ""بفرض""
-		|    ],
-		|    ""name"": ""Arabic"",
-		|    ""native"": ""العربية"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""مثال"",
-		|      ""سيناريو""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""سيناريو مخطط""
-		|    ],
-		|    ""then"": [
-		|      ""اذاً"",
-		|      ""ثم""
-		|    ],
-		|    ""when"": [
-		|      ""متى"",
-		|      ""عندما""
-		|    ]
-		|  },
-		|  ""ast"": {
-		|    ""and"": [
-		|      ""Y"",
-		|      ""Ya""
-		|    ],
-		|    ""background"": [
-		|      ""Antecedentes""
-		|    ],
-		|    ""but"": [
-		|      ""Peru""
-		|    ],
-		|    ""examples"": [
-		|      ""Exemplos""
-		|    ],
-		|    ""feature"": [
-		|      ""Carauterística""
-		|    ],
-		|    ""given"": [
-		|      ""Dáu"",
-		|      ""Dada"",
-		|      ""Daos"",
-		|      ""Daes""
-		|    ],
-		|    ""name"": ""Asturian"",
-		|    ""native"": ""asturianu"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Exemplo"",
-		|      ""Casu""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Esbozu del casu""
-		|    ],
-		|    ""then"": [
-		|      ""Entós""
-		|    ],
-		|    ""when"": [
-		|      ""Cuando""
-		|    ]
-		|  },
-		|  ""az"": {
-		|    ""and"": [
-		|      ""Və"",
-		|      ""Həm""
-		|    ],
-		|    ""background"": [
-		|      ""Keçmiş"",
-		|      ""Kontekst""
-		|    ],
-		|    ""but"": [
-		|      ""Amma"",
-		|      ""Ancaq""
-		|    ],
-		|    ""examples"": [
-		|      ""Nümunələr""
-		|    ],
-		|    ""feature"": [
-		|      ""Özəllik""
-		|    ],
-		|    ""given"": [
-		|      ""Tutaq ki"",
-		|      ""Verilir""
-		|    ],
-		|    ""name"": ""Azerbaijani"",
-		|    ""native"": ""Azərbaycanca"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Nümunə"",
-		|      ""Ssenari""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Ssenarinin strukturu""
-		|    ],
-		|    ""then"": [
-		|      ""O halda""
-		|    ],
-		|    ""when"": [
-		|      ""Əgər"",
-		|      ""Nə vaxt ki""
-		|    ]
-		|  },
-		|  ""bg"": {
-		|    ""and"": [
-		|      ""И""
-		|    ],
-		|    ""background"": [
-		|      ""Предистория""
-		|    ],
-		|    ""but"": [
-		|      ""Но""
-		|    ],
-		|    ""examples"": [
-		|      ""Примери""
-		|    ],
-		|    ""feature"": [
-		|      ""Функционалност""
-		|    ],
-		|    ""given"": [
-		|      ""Дадено""
-		|    ],
-		|    ""name"": ""Bulgarian"",
-		|    ""native"": ""български"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Пример"",
-		|      ""Сценарий""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Рамка на сценарий""
-		|    ],
-		|    ""then"": [
-		|      ""То""
-		|    ],
-		|    ""when"": [
-		|      ""Когато""
-		|    ]
-		|  },
-		|  ""bm"": {
-		|    ""and"": [
-		|      ""Dan""
-		|    ],
-		|    ""background"": [
-		|      ""Latar Belakang""
-		|    ],
-		|    ""but"": [
-		|      ""Tetapi"",
-		|      ""Tapi""
-		|    ],
-		|    ""examples"": [
-		|      ""Contoh""
-		|    ],
-		|    ""feature"": [
-		|      ""Fungsi""
-		|    ],
-		|    ""given"": [
-		|      ""Diberi"",
-		|      ""Bagi""
-		|    ],
-		|    ""name"": ""Malay"",
-		|    ""native"": ""Bahasa Melayu"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Senario"",
-		|      ""Situasi"",
-		|      ""Keadaan""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Kerangka Senario"",
-		|      ""Kerangka Situasi"",
-		|      ""Kerangka Keadaan"",
-		|      ""Garis Panduan Senario""
-		|    ],
-		|    ""then"": [
-		|      ""Maka"",
-		|      ""Kemudian""
-		|    ],
-		|    ""when"": [
-		|      ""Apabila""
-		|    ]
-		|  },
-		|  ""bs"": {
-		|    ""and"": [
-		|      ""I"",
-		|      ""A""
-		|    ],
-		|    ""background"": [
-		|      ""Pozadina""
-		|    ],
-		|    ""but"": [
-		|      ""Ali""
-		|    ],
-		|    ""examples"": [
-		|      ""Primjeri""
-		|    ],
-		|    ""feature"": [
-		|      ""Karakteristika""
-		|    ],
-		|    ""given"": [
-		|      ""Dato""
-		|    ],
-		|    ""name"": ""Bosnian"",
-		|    ""native"": ""Bosanski"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Primjer"",
-		|      ""Scenariju"",
-		|      ""Scenario""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Scenariju-obris"",
-		|      ""Scenario-outline""
-		|    ],
-		|    ""then"": [
-		|      ""Zatim""
-		|    ],
-		|    ""when"": [
-		|      ""Kada""
-		|    ]
-		|  },
-		|  ""ca"": {
-		|    ""and"": [
-		|      ""I""
-		|    ],
-		|    ""background"": [
-		|      ""Rerefons"",
-		|      ""Antecedents""
-		|    ],
-		|    ""but"": [
-		|      ""Però""
-		|    ],
-		|    ""examples"": [
-		|      ""Exemples""
-		|    ],
-		|    ""feature"": [
-		|      ""Característica"",
-		|      ""Funcionalitat""
-		|    ],
-		|    ""given"": [
-		|      ""Donat"",
-		|      ""Donada"",
-		|      ""Atès"",
-		|      ""Atesa""
-		|    ],
-		|    ""name"": ""Catalan"",
-		|    ""native"": ""català"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Exemple"",
-		|      ""Escenari""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Esquema de l'escenari""
-		|    ],
-		|    ""then"": [
-		|      ""Aleshores"",
-		|      ""Cal""
-		|    ],
-		|    ""when"": [
-		|      ""Quan""
-		|    ]
-		|  },
-		|  ""cs"": {
-		|    ""and"": [
-		|      ""A také"",
-		|      ""A""
-		|    ],
-		|    ""background"": [
-		|      ""Pozadí"",
-		|      ""Kontext""
-		|    ],
-		|    ""but"": [
-		|      ""Ale""
-		|    ],
-		|    ""examples"": [
-		|      ""Příklady""
-		|    ],
-		|    ""feature"": [
-		|      ""Požadavek""
-		|    ],
-		|    ""given"": [
-		|      ""Pokud"",
-		|      ""Za předpokladu""
-		|    ],
-		|    ""name"": ""Czech"",
-		|    ""native"": ""Česky"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Příklad"",
-		|      ""Scénář""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Náčrt Scénáře"",
-		|      ""Osnova scénáře""
-		|    ],
-		|    ""then"": [
-		|      ""Pak""
-		|    ],
-		|    ""when"": [
-		|      ""Když""
-		|    ]
-		|  },
-		|  ""cy-GB"": {
-		|    ""and"": [
-		|      ""A""
-		|    ],
-		|    ""background"": [
-		|      ""Cefndir""
-		|    ],
-		|    ""but"": [
-		|      ""Ond""
-		|    ],
-		|    ""examples"": [
-		|      ""Enghreifftiau""
-		|    ],
-		|    ""feature"": [
-		|      ""Arwedd""
-		|    ],
-		|    ""given"": [
-		|      ""Anrhegedig a""
-		|    ],
-		|    ""name"": ""Welsh"",
-		|    ""native"": ""Cymraeg"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Enghraifft"",
-		|      ""Scenario""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Scenario Amlinellol""
-		|    ],
-		|    ""then"": [
-		|      ""Yna""
-		|    ],
-		|    ""when"": [
-		|      ""Pryd""
-		|    ]
-		|  },
-		|  ""da"": {
-		|    ""and"": [
-		|      ""Og""
-		|    ],
-		|    ""background"": [
-		|      ""Baggrund""
-		|    ],
-		|    ""but"": [
-		|      ""Men""
-		|    ],
-		|    ""examples"": [
-		|      ""Eksempler""
-		|    ],
-		|    ""feature"": [
-		|      ""Egenskab""
-		|    ],
-		|    ""given"": [
-		|      ""Givet""
-		|    ],
-		|    ""name"": ""Danish"",
-		|    ""native"": ""dansk"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Eksempel"",
-		|      ""Scenarie""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Abstrakt Scenario""
-		|    ],
-		|    ""then"": [
-		|      ""Så""
-		|    ],
-		|    ""when"": [
-		|      ""Når""
-		|    ]
-		|  },
-		|  ""de"": {
-		|    ""and"": [
-		|      ""Und""
-		|    ],
-		|    ""background"": [
-		|      ""Grundlage"",
-		|      ""Hintergrund"",
-		|      ""Voraussetzungen"",
-		|      ""Vorbedingungen""
-		|    ],
-		|    ""but"": [
-		|      ""Aber""
-		|    ],
-		|    ""examples"": [
-		|      ""Beispiele""
-		|    ],
-		|    ""feature"": [
-		|      ""Funktionalität"",
-		|      ""Funktion""
-		|    ],
-		|    ""given"": [
-		|      ""Angenommen"",
-		|      ""Gegeben sei"",
-		|      ""Gegeben seien""
-		|    ],
-		|    ""name"": ""German"",
-		|    ""native"": ""Deutsch"",
-		|    ""rule"": [
-		|      ""Rule"",
-		|      ""Regel""
-		|    ],
-		|    ""scenario"": [
-		|      ""Beispiel"",
-		|      ""Szenario""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Szenariogrundriss"",
-		|      ""Szenarien""
-		|    ],
-		|    ""then"": [
-		|      ""Dann""
-		|    ],
-		|    ""when"": [
-		|      ""Wenn""
-		|    ]
-		|  },
-		|  ""el"": {
-		|    ""and"": [
-		|      ""Και""
-		|    ],
-		|    ""background"": [
-		|      ""Υπόβαθρο""
-		|    ],
-		|    ""but"": [
-		|      ""Αλλά""
-		|    ],
-		|    ""examples"": [
-		|      ""Παραδείγματα"",
-		|      ""Σενάρια""
-		|    ],
-		|    ""feature"": [
-		|      ""Δυνατότητα"",
-		|      ""Λειτουργία""
-		|    ],
-		|    ""given"": [
-		|      ""Δεδομένου""
-		|    ],
-		|    ""name"": ""Greek"",
-		|    ""native"": ""Ελληνικά"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Παράδειγμα"",
-		|      ""Σενάριο""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Περιγραφή Σεναρίου"",
-		|      ""Περίγραμμα Σεναρίου""
-		|    ],
-		|    ""then"": [
-		|      ""Τότε""
-		|    ],
-		|    ""when"": [
-		|      ""Όταν""
-		|    ]
-		|  },
-		|  ""em"": {
-		|    ""and"": [
-		|      """"
-		|    ],
-		|    ""background"": [
-		|      """"
-		|    ],
-		|    ""but"": [
-		|      """"
-		|    ],
-		|    ""examples"": [
-		|      """"
-		|    ],
-		|    ""feature"": [
-		|      """"
-		|    ],
-		|    ""given"": [
-		|      """"
-		|    ],
-		|    ""name"": ""Emoji"",
-		|    ""native"": """",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      """",
-		|      """"
-		|    ],
-		|    ""scenarioOutline"": [
-		|      """"
-		|    ],
-		|    ""then"": [
-		|      """"
-		|    ],
-		|    ""when"": [
-		|      """"
-		|    ]
-		|  },
-		|  ""en"": {
-		|    ""and"": [
-		|      ""And""
-		|    ],
-		|    ""background"": [
-		|      ""Background""
-		|    ],
-		|	 ""hyperlinks"": [
-		|	   ""Hyperlinks"",
-		|	   ""Links""
-		|    ],
-		|    ""but"": [
-		|      ""But""
-		|    ],
-		|    ""examples"": [
-		|      ""Examples"",
-		|      ""Scenarios""
-		|    ],
-		|    ""feature"": [
-		|      ""Feature"",
-		|      ""Functionality"",
-		|      ""Business Need"",
-		|      ""Ability""
-		|    ],
-		|    ""if"": [
-		|      ""If""
-		|    ],
-		|    ""elseif"": [
-		|      ""ElseIf""
-		|    ],
-		|    ""else"": [
-		|      ""Else""
-		|    ],
-		|    ""try"": [
-		|      ""try""
-		|    ],
-		|    ""except"": [
-		|      ""except""
-		|    ],
-		|    ""given"": [
-		|      ""Given""
-		|    ],
-		|    ""name"": ""English"",
-		|    ""native"": ""English"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Example"",
-		|      ""Scenario""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Scenario Outline"",
-		|      ""Scenario Template""
-		|    ],
-		|    ""then"": [
-		|      ""Then""
-		|    ],
-		|    ""when"": [
-		|      ""When""
-		|    ]
-		|  },
-		|  ""en-Scouse"": {
-		|    ""and"": [
-		|      ""An""
-		|    ],
-		|    ""background"": [
-		|      ""Dis is what went down""
-		|    ],
-		|    ""but"": [
-		|      ""Buh""
-		|    ],
-		|    ""examples"": [
-		|      ""Examples""
-		|    ],
-		|    ""feature"": [
-		|      ""Feature""
-		|    ],
-		|    ""given"": [
-		|      ""Givun"",
-		|      ""Youse know when youse got""
-		|    ],
-		|    ""name"": ""Scouse"",
-		|    ""native"": ""Scouse"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""The thing of it is""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Wharrimean is""
-		|    ],
-		|    ""then"": [
-		|      ""Dun"",
-		|      ""Den youse gotta""
-		|    ],
-		|    ""when"": [
-		|      ""Wun"",
-		|      ""Youse know like when""
-		|    ]
-		|  },
-		|  ""en-au"": {
-		|    ""and"": [
-		|      ""Too right""
-		|    ],
-		|    ""background"": [
-		|      ""First off""
-		|    ],
-		|    ""but"": [
-		|      ""Yeah nah""
-		|    ],
-		|    ""examples"": [
-		|      ""You'll wanna""
-		|    ],
-		|    ""feature"": [
-		|      ""Pretty much""
-		|    ],
-		|    ""given"": [
-		|      ""Y'know""
-		|    ],
-		|    ""name"": ""Australian"",
-		|    ""native"": ""Australian"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Awww, look mate""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Reckon it's like""
-		|    ],
-		|    ""then"": [
-		|      ""But at the end of the day I reckon""
-		|    ],
-		|    ""when"": [
-		|      ""It's just unbelievable""
-		|    ]
-		|  },
-		|  ""en-lol"": {
-		|    ""and"": [
-		|      ""AN""
-		|    ],
-		|    ""background"": [
-		|      ""B4""
-		|    ],
-		|    ""but"": [
-		|      ""BUT""
-		|    ],
-		|    ""examples"": [
-		|      ""EXAMPLZ""
-		|    ],
-		|    ""feature"": [
-		|      ""OH HAI""
-		|    ],
-		|    ""given"": [
-		|      ""I CAN HAZ""
-		|    ],
-		|    ""name"": ""LOLCAT"",
-		|    ""native"": ""LOLCAT"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""MISHUN""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""MISHUN SRSLY""
-		|    ],
-		|    ""then"": [
-		|      ""DEN""
-		|    ],
-		|    ""when"": [
-		|      ""WEN""
-		|    ]
-		|  },
-		|  ""en-old"": {
-		|    ""and"": [
-		|      ""Ond"",
-		|      ""7""
-		|    ],
-		|    ""background"": [
-		|      ""Aer"",
-		|      ""Ær""
-		|    ],
-		|    ""but"": [
-		|      ""Ac""
-		|    ],
-		|    ""examples"": [
-		|      ""Se the"",
-		|      ""Se þe"",
-		|      ""Se ðe""
-		|    ],
-		|    ""feature"": [
-		|      ""Hwaet"",
-		|      ""Hwæt""
-		|    ],
-		|    ""given"": [
-		|      ""Thurh"",
-		|      ""Þurh"",
-		|      ""Ðurh""
-		|    ],
-		|    ""name"": ""Old English"",
-		|    ""native"": ""Englisc"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Swa""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Swa hwaer swa"",
-		|      ""Swa hwær swa""
-		|    ],
-		|    ""then"": [
-		|      ""Tha"",
-		|      ""Þa"",
-		|      ""Ða"",
-		|      ""Tha the"",
-		|      ""Þa þe"",
-		|      ""Ða ðe""
-		|    ],
-		|    ""when"": [
-		|      ""Tha"",
-		|      ""Þa"",
-		|      ""Ða""
-		|    ]
-		|  },
-		|  ""en-pirate"": {
-		|    ""and"": [
-		|      ""Aye""
-		|    ],
-		|    ""background"": [
-		|      ""Yo-ho-ho""
-		|    ],
-		|    ""but"": [
-		|      ""Avast!""
-		|    ],
-		|    ""examples"": [
-		|      ""Dead men tell no tales""
-		|    ],
-		|    ""feature"": [
-		|      ""Ahoy matey!""
-		|    ],
-		|    ""given"": [
-		|      ""Gangway!""
-		|    ],
-		|    ""name"": ""Pirate"",
-		|    ""native"": ""Pirate"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Heave to""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Shiver me timbers""
-		|    ],
-		|    ""then"": [
-		|      ""Let go and haul""
-		|    ],
-		|    ""when"": [
-		|      ""Blimey!""
-		|    ]
-		|  },
-		|  ""eo"": {
-		|    ""and"": [
-		|      ""Kaj""
-		|    ],
-		|    ""background"": [
-		|      ""Fono""
-		|    ],
-		|    ""but"": [
-		|      ""Sed""
-		|    ],
-		|    ""examples"": [
-		|      ""Ekzemploj""
-		|    ],
-		|    ""feature"": [
-		|      ""Trajto""
-		|    ],
-		|    ""given"": [
-		|      ""Donitaĵo"",
-		|      ""Komence""
-		|    ],
-		|    ""name"": ""Esperanto"",
-		|    ""native"": ""Esperanto"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Ekzemplo"",
-		|      ""Scenaro"",
-		|      ""Kazo""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Konturo de la scenaro"",
-		|      ""Skizo"",
-		|      ""Kazo-skizo""
-		|    ],
-		|    ""then"": [
-		|      ""Do""
-		|    ],
-		|    ""when"": [
-		|      ""Se""
-		|    ]
-		|  },
-		|  ""es"": {
-		|    ""and"": [
-		|      ""Y"",
-		|      ""E""
-		|    ],
-		|    ""background"": [
-		|      ""Antecedentes""
-		|    ],
-		|    ""but"": [
-		|      ""Pero""
-		|    ],
-		|    ""examples"": [
-		|      ""Ejemplos""
-		|    ],
-		|    ""feature"": [
-		|      ""Característica""
-		|    ],
-		|    ""given"": [
-		|      ""Dado"",
-		|      ""Dada"",
-		|      ""Dados"",
-		|      ""Dadas""
-		|    ],
-		|    ""name"": ""Spanish"",
-		|    ""native"": ""español"",
-		|    ""rule"": [
-		|      ""Regla""
-		|    ],
-		|    ""scenario"": [
-		|      ""Ejemplo"",
-		|      ""Escenario""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Esquema del escenario""
-		|    ],
-		|    ""then"": [
-		|      ""Entonces""
-		|    ],
-		|    ""when"": [
-		|      ""Cuando""
-		|    ]
-		|  },
-		|  ""et"": {
-		|    ""and"": [
-		|      ""Ja""
-		|    ],
-		|    ""background"": [
-		|      ""Taust""
-		|    ],
-		|    ""but"": [
-		|      ""Kuid""
-		|    ],
-		|    ""examples"": [
-		|      ""Juhtumid""
-		|    ],
-		|    ""feature"": [
-		|      ""Omadus""
-		|    ],
-		|    ""given"": [
-		|      ""Eeldades""
-		|    ],
-		|    ""name"": ""Estonian"",
-		|    ""native"": ""eesti keel"",
-		|    ""rule"": [
-		|      ""Reegel""
-		|    ],
-		|    ""scenario"": [
-		|      ""Juhtum"",
-		|      ""Stsenaarium""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Raamjuhtum"",
-		|      ""Raamstsenaarium""
-		|    ],
-		|    ""then"": [
-		|      ""Siis""
-		|    ],
-		|    ""when"": [
-		|      ""Kui""
-		|    ]
-		|  },
-		|  ""fa"": {
-		|    ""and"": [
-		|      ""و""
-		|    ],
-		|    ""background"": [
-		|      ""زمینه""
-		|    ],
-		|    ""but"": [
-		|      ""اما""
-		|    ],
-		|    ""examples"": [
-		|      ""نمونه ها""
-		|    ],
-		|    ""feature"": [
-		|      ""وِیژگی""
-		|    ],
-		|    ""given"": [
-		|      ""با فرض""
-		|    ],
-		|    ""name"": ""Persian"",
-		|    ""native"": ""فارسی"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""مثال"",
-		|      ""سناریو""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""الگوی سناریو""
-		|    ],
-		|    ""then"": [
-		|      ""آنگاه""
-		|    ],
-		|    ""when"": [
-		|      ""هنگامی""
-		|    ]
-		|  },
-		|  ""fi"": {
-		|    ""and"": [
-		|      ""Ja""
-		|    ],
-		|    ""background"": [
-		|      ""Tausta""
-		|    ],
-		|    ""but"": [
-		|      ""Mutta""
-		|    ],
-		|    ""examples"": [
-		|      ""Tapaukset""
-		|    ],
-		|    ""feature"": [
-		|      ""Ominaisuus""
-		|    ],
-		|    ""given"": [
-		|      ""Oletetaan""
-		|    ],
-		|    ""name"": ""Finnish"",
-		|    ""native"": ""suomi"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Tapaus""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Tapausaihio""
-		|    ],
-		|    ""then"": [
-		|      ""Niin""
-		|    ],
-		|    ""when"": [
-		|      ""Kun""
-		|    ]
-		|  },
-		|  ""fr"": {
-		|    ""and"": [
-		|      ""Et que"",
-		|      ""Et qu'"",
-		|      ""Et""
-		|    ],
-		|    ""background"": [
-		|      ""Contexte""
-		|    ],
-		|    ""but"": [
-		|      ""Mais que"",
-		|      ""Mais qu'"",
-		|      ""Mais""
-		|    ],
-		|    ""examples"": [
-		|      ""Exemples""
-		|    ],
-		|    ""feature"": [
-		|      ""Fonctionnalité""
-		|    ],
-		|    ""given"": [
-		|      ""Soit"",
-		|      ""Sachant que"",
-		|      ""Sachant qu'"",
-		|      ""Sachant"",
-		|      ""Etant donné que"",
-		|      ""Etant donné qu'"",
-		|      ""Etant donné"",
-		|      ""Etant donnée"",
-		|      ""Etant donnés"",
-		|      ""Etant données"",
-		|      ""Étant donné que"",
-		|      ""Étant donné qu'"",
-		|      ""Étant donné"",
-		|      ""Étant donnée"",
-		|      ""Étant donnés"",
-		|      ""Étant données""
-		|    ],
-		|    ""name"": ""French"",
-		|    ""native"": ""français"",
-		|    ""rule"": [
-		|      ""Règle""
-		|    ],
-		|    ""scenario"": [
-		|      ""Exemple"",
-		|      ""Scénario""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Plan du scénario"",
-		|      ""Plan du Scénario""
-		|    ],
-		|    ""then"": [
-		|      ""Alors"",
-		|      ""Donc""
-		|    ],
-		|    ""when"": [
-		|      ""Quand"",
-		|      ""Lorsque"",
-		|      ""Lorsqu'""
-		|    ]
-		|  },
-		|  ""ga"": {
-		|    ""and"": [
-		|      ""Agus""
-		|    ],
-		|    ""background"": [
-		|      ""Cúlra""
-		|    ],
-		|    ""but"": [
-		|      ""Ach""
-		|    ],
-		|    ""examples"": [
-		|      ""Samplaí""
-		|    ],
-		|    ""feature"": [
-		|      ""Gné""
-		|    ],
-		|    ""given"": [
-		|      ""Cuir i gcás go"",
-		|      ""Cuir i gcás nach"",
-		|      ""Cuir i gcás gur"",
-		|      ""Cuir i gcás nár""
-		|    ],
-		|    ""name"": ""Irish"",
-		|    ""native"": ""Gaeilge"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Sampla"",
-		|      ""Cás""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Cás Achomair""
-		|    ],
-		|    ""then"": [
-		|      ""Ansin""
-		|    ],
-		|    ""when"": [
-		|      ""Nuair a"",
-		|      ""Nuair nach"",
-		|      ""Nuair ba"",
-		|      ""Nuair nár""
-		|    ]
-		|  },
-		|  ""gj"": {
-		|    ""and"": [
-		|      ""અને""
-		|    ],
-		|    ""background"": [
-		|      ""બેકગ્રાઉન્ડ""
-		|    ],
-		|    ""but"": [
-		|      ""પણ""
-		|    ],
-		|    ""examples"": [
-		|      ""ઉદાહરણો""
-		|    ],
-		|    ""feature"": [
-		|      ""લક્ષણ"",
-		|      ""વ્યાપાર જરૂર"",
-		|      ""ક્ષમતા""
-		|    ],
-		|    ""given"": [
-		|      ""આપેલ છે""
-		|    ],
-		|    ""name"": ""Gujarati"",
-		|    ""native"": ""ગુજરાતી"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""ઉદાહરણ"",
-		|      ""સ્થિતિ""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""પરિદ્દશ્ય રૂપરેખા"",
-		|      ""પરિદ્દશ્ય ઢાંચો""
-		|    ],
-		|    ""then"": [
-		|      ""પછી""
-		|    ],
-		|    ""when"": [
-		|      ""ક્યારે""
-		|    ]
-		|  },
-		|  ""gl"": {
-		|    ""and"": [
-		|      ""E""
-		|    ],
-		|    ""background"": [
-		|      ""Contexto""
-		|    ],
-		|    ""but"": [
-		|      ""Mais"",
-		|      ""Pero""
-		|    ],
-		|    ""examples"": [
-		|      ""Exemplos""
-		|    ],
-		|    ""feature"": [
-		|      ""Característica""
-		|    ],
-		|    ""given"": [
-		|      ""Dado"",
-		|      ""Dada"",
-		|      ""Dados"",
-		|      ""Dadas""
-		|    ],
-		|    ""name"": ""Galician"",
-		|    ""native"": ""galego"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Exemplo"",
-		|      ""Escenario""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Esbozo do escenario""
-		|    ],
-		|    ""then"": [
-		|      ""Entón"",
-		|      ""Logo""
-		|    ],
-		|    ""when"": [
-		|      ""Cando""
-		|    ]
-		|  },
-		|  ""he"": {
-		|    ""and"": [
-		|      ""וגם""
-		|    ],
-		|    ""background"": [
-		|      ""רקע""
-		|    ],
-		|    ""but"": [
-		|      ""אבל""
-		|    ],
-		|    ""examples"": [
-		|      ""דוגמאות""
-		|    ],
-		|    ""feature"": [
-		|      ""תכונה""
-		|    ],
-		|    ""given"": [
-		|      ""בהינתן""
-		|    ],
-		|    ""name"": ""Hebrew"",
-		|    ""native"": ""עברית"",
-		|    ""rule"": [
-		|      ""כלל""
-		|    ],
-		|    ""scenario"": [
-		|      ""דוגמא"",
-		|      ""תרחיש""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""תבנית תרחיש""
-		|    ],
-		|    ""then"": [
-		|      ""אז"",
-		|      ""אזי""
-		|    ],
-		|    ""when"": [
-		|      ""כאשר""
-		|    ]
-		|  },
-		|  ""hi"": {
-		|    ""and"": [
-		|      ""और"",
-		|      ""तथा""
-		|    ],
-		|    ""background"": [
-		|      ""पृष्ठभूमि""
-		|    ],
-		|    ""but"": [
-		|      ""पर"",
-		|      ""परन्तु"",
-		|      ""किन्तु""
-		|    ],
-		|    ""examples"": [
-		|      ""उदाहरण""
-		|    ],
-		|    ""feature"": [
-		|      ""रूप लेख""
-		|    ],
-		|    ""given"": [
-		|      ""अगर"",
-		|      ""यदि"",
-		|      ""चूंकि""
-		|    ],
-		|    ""name"": ""Hindi"",
-		|    ""native"": ""हिंदी"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""परिदृश्य""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""परिदृश्य रूपरेखा""
-		|    ],
-		|    ""then"": [
-		|      ""तब"",
-		|      ""तदा""
-		|    ],
-		|    ""when"": [
-		|      ""जब"",
-		|      ""कदा""
-		|    ]
-		|  },
-		|  ""hr"": {
-		|    ""and"": [
-		|      ""I""
-		|    ],
-		|    ""background"": [
-		|      ""Pozadina""
-		|    ],
-		|    ""but"": [
-		|      ""Ali""
-		|    ],
-		|    ""examples"": [
-		|      ""Primjeri"",
-		|      ""Scenariji""
-		|    ],
-		|    ""feature"": [
-		|      ""Osobina"",
-		|      ""Mogućnost"",
-		|      ""Mogucnost""
-		|    ],
-		|    ""given"": [
-		|      ""Zadan"",
-		|      ""Zadani"",
-		|      ""Zadano"",
-		|      ""Ukoliko""
-		|    ],
-		|    ""name"": ""Croatian"",
-		|    ""native"": ""hrvatski"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Primjer"",
-		|      ""Scenarij""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Skica"",
-		|      ""Koncept""
-		|    ],
-		|    ""then"": [
-		|      ""Onda""
-		|    ],
-		|    ""when"": [
-		|      ""Kada"",
-		|      ""Kad""
-		|    ]
-		|  },
-		|  ""ht"": {
-		|    ""and"": [
-		|      ""Ak"",
-		|      ""Epi"",
-		|      ""E""
-		|    ],
-		|    ""background"": [
-		|      ""Kontèks"",
-		|      ""Istorik""
-		|    ],
-		|    ""but"": [
-		|      ""Men""
-		|    ],
-		|    ""examples"": [
-		|      ""Egzanp""
-		|    ],
-		|    ""feature"": [
-		|      ""Karakteristik"",
-		|      ""Mak"",
-		|      ""Fonksyonalite""
-		|    ],
-		|    ""given"": [
-		|      ""Sipoze"",
-		|      ""Sipoze ke"",
-		|      ""Sipoze Ke""
-		|    ],
-		|    ""name"": ""Creole"",
-		|    ""native"": ""kreyòl"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Senaryo""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Plan senaryo"",
-		|      ""Plan Senaryo"",
-		|      ""Senaryo deskripsyon"",
-		|      ""Senaryo Deskripsyon"",
-		|      ""Dyagram senaryo"",
-		|      ""Dyagram Senaryo""
-		|    ],
-		|    ""then"": [
-		|      ""Lè sa a"",
-		|      ""Le sa a""
-		|    ],
-		|    ""when"": [
-		|      ""Lè"",
-		|      ""Le""
-		|    ]
-		|  },
-		|  ""hu"": {
-		|    ""and"": [
-		|      ""És""
-		|    ],
-		|    ""background"": [
-		|      ""Háttér""
-		|    ],
-		|    ""but"": [
-		|      ""De""
-		|    ],
-		|    ""examples"": [
-		|      ""Példák""
-		|    ],
-		|    ""feature"": [
-		|      ""Jellemző""
-		|    ],
-		|    ""given"": [
-		|      ""Amennyiben"",
-		|      ""Adott""
-		|    ],
-		|    ""name"": ""Hungarian"",
-		|    ""native"": ""magyar"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Példa"",
-		|      ""Forgatókönyv""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Forgatókönyv vázlat""
-		|    ],
-		|    ""then"": [
-		|      ""Akkor""
-		|    ],
-		|    ""when"": [
-		|      ""Majd"",
-		|      ""Ha"",
-		|      ""Amikor""
-		|    ]
-		|  },
-		|  ""id"": {
-		|    ""and"": [
-		|      ""Dan""
-		|    ],
-		|    ""background"": [
-		|      ""Dasar"",
-		|      ""Latar Belakang""
-		|    ],
-		|    ""but"": [
-		|      ""Tapi"",
-		|      ""Tetapi""
-		|    ],
-		|    ""examples"": [
-		|      ""Contoh"",
-		|      ""Misal""
-		|    ],
-		|    ""feature"": [
-		|      ""Fitur""
-		|    ],
-		|    ""given"": [
-		|      ""Dengan"",
-		|      ""Diketahui"",
-		|      ""Diasumsikan"",
-		|      ""Bila"",
-		|      ""Jika""
-		|    ],
-		|    ""name"": ""Indonesian"",
-		|    ""native"": ""Bahasa Indonesia"",
-		|    ""rule"": [
-		|      ""Rule"",
-		|      ""Aturan""
-		|    ],
-		|    ""scenario"": [
-		|      ""Skenario""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Skenario konsep"",
-		|      ""Garis-Besar Skenario""
-		|    ],
-		|    ""then"": [
-		|      ""Maka"",
-		|      ""Kemudian""
-		|    ],
-		|    ""when"": [
-		|      ""Ketika""
-		|    ]
-		|  },
-		|  ""is"": {
-		|    ""and"": [
-		|      ""Og""
-		|    ],
-		|    ""background"": [
-		|      ""Bakgrunnur""
-		|    ],
-		|    ""but"": [
-		|      ""En""
-		|    ],
-		|    ""examples"": [
-		|      ""Dæmi"",
-		|      ""Atburðarásir""
-		|    ],
-		|    ""feature"": [
-		|      ""Eiginleiki""
-		|    ],
-		|    ""given"": [
-		|      ""Ef""
-		|    ],
-		|    ""name"": ""Icelandic"",
-		|    ""native"": ""Íslenska"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Atburðarás""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Lýsing Atburðarásar"",
-		|      ""Lýsing Dæma""
-		|    ],
-		|    ""then"": [
-		|      ""Þá""
-		|    ],
-		|    ""when"": [
-		|      ""Þegar""
-		|    ]
-		|  },
-		|  ""it"": {
-		|    ""and"": [
-		|      ""E""
-		|    ],
-		|    ""background"": [
-		|      ""Contesto""
-		|    ],
-		|    ""but"": [
-		|      ""Ma""
-		|    ],
-		|    ""examples"": [
-		|      ""Esempi""
-		|    ],
-		|    ""feature"": [
-		|      ""Funzionalità""
-		|    ],
-		|    ""given"": [
-		|      ""Dato"",
-		|      ""Data"",
-		|      ""Dati"",
-		|      ""Date""
-		|    ],
-		|    ""name"": ""Italian"",
-		|    ""native"": ""italiano"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Esempio"",
-		|      ""Scenario""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Schema dello scenario""
-		|    ],
-		|    ""then"": [
-		|      ""Allora""
-		|    ],
-		|    ""when"": [
-		|      ""Quando""
-		|    ]
-		|  },
-		|  ""ja"": {
-		|    ""and"": [
-		|      ""かつ""
-		|    ],
-		|    ""background"": [
-		|      ""背景""
-		|    ],
-		|    ""but"": [
-		|      ""しかし"",
-		|      ""但し"",
-		|      ""ただし""
-		|    ],
-		|    ""examples"": [
-		|      ""例"",
-		|      ""サンプル""
-		|    ],
-		|    ""feature"": [
-		|      ""フィーチャ"",
-		|      ""機能""
-		|    ],
-		|    ""given"": [
-		|      ""前提""
-		|    ],
-		|    ""name"": ""Japanese"",
-		|    ""native"": ""日本語"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""シナリオ""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""シナリオアウトライン"",
-		|      ""シナリオテンプレート"",
-		|      ""テンプレ"",
-		|      ""シナリオテンプレ""
-		|    ],
-		|    ""then"": [
-		|      ""ならば""
-		|    ],
-		|    ""when"": [
-		|      ""もし""
-		|    ]
-		|  },
-		|  ""jv"": {
-		|    ""and"": [
-		|      ""Lan""
-		|    ],
-		|    ""background"": [
-		|      ""Dasar""
-		|    ],
-		|    ""but"": [
-		|      ""Tapi"",
-		|      ""Nanging"",
-		|      ""Ananging""
-		|    ],
-		|    ""examples"": [
-		|      ""Conto"",
-		|      ""Contone""
-		|    ],
-		|    ""feature"": [
-		|      ""Fitur""
-		|    ],
-		|    ""given"": [
-		|      ""Nalika"",
-		|      ""Nalikaning""
-		|    ],
-		|    ""name"": ""Javanese"",
-		|    ""native"": ""Basa Jawa"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Skenario""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Konsep skenario""
-		|    ],
-		|    ""then"": [
-		|      ""Njuk"",
-		|      ""Banjur""
-		|    ],
-		|    ""when"": [
-		|      ""Manawa"",
-		|      ""Menawa""
-		|    ]
-		|  },
-		|  ""ka"": {
-		|    ""and"": [
-		|      ""და""
-		|    ],
-		|    ""background"": [
-		|      ""კონტექსტი""
-		|    ],
-		|    ""but"": [
-		|      ""მაგრამ""
-		|    ],
-		|    ""examples"": [
-		|      ""მაგალითები""
-		|    ],
-		|    ""feature"": [
-		|      ""თვისება""
-		|    ],
-		|    ""given"": [
-		|      ""მოცემული""
-		|    ],
-		|    ""name"": ""Georgian"",
-		|    ""native"": ""ქართველი"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""მაგალითად"",
-		|      ""სცენარის""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""სცენარის ნიმუში""
-		|    ],
-		|    ""then"": [
-		|      ""მაშინ""
-		|    ],
-		|    ""when"": [
-		|      ""როდესაც""
-		|    ]
-		|  },
-		|  ""kn"": {
-		|    ""and"": [
-		|      ""ಮತ್ತು""
-		|    ],
-		|    ""background"": [
-		|      ""ಹಿನ್ನೆಲೆ""
-		|    ],
-		|    ""but"": [
-		|      ""ಆದರೆ""
-		|    ],
-		|    ""examples"": [
-		|      ""ಉದಾಹರಣೆಗಳು""
-		|    ],
-		|    ""feature"": [
-		|      ""ಹೆಚ್ಚಳ""
-		|    ],
-		|    ""given"": [
-		|      ""ನೀಡಿದ""
-		|    ],
-		|    ""name"": ""Kannada"",
-		|    ""native"": ""ಕನ್ನಡ"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""ಉದಾಹರಣೆ"",
-		|      ""ಕಥಾಸಾರಾಂಶ""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""ವಿವರಣೆ""
-		|    ],
-		|    ""then"": [
-		|      ""ನಂತರ""
-		|    ],
-		|    ""when"": [
-		|      ""ಸ್ಥಿತಿಯನ್ನು""
-		|    ]
-		|  },
-		|  ""ko"": {
-		|    ""and"": [
-		|      ""그리고""
-		|    ],
-		|    ""background"": [
-		|      ""배경""
-		|    ],
-		|    ""but"": [
-		|      ""하지만"",
-		|      ""단""
-		|    ],
-		|    ""examples"": [
-		|      ""예""
-		|    ],
-		|    ""feature"": [
-		|      ""기능""
-		|    ],
-		|    ""given"": [
-		|      ""조건"",
-		|      ""먼저""
-		|    ],
-		|    ""name"": ""Korean"",
-		|    ""native"": ""한국어"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""시나리오""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""시나리오 개요""
-		|    ],
-		|    ""then"": [
-		|      ""그러면""
-		|    ],
-		|    ""when"": [
-		|      ""만일"",
-		|      ""만약""
-		|    ]
-		|  },
-		|  ""lt"": {
-		|    ""and"": [
-		|      ""Ir""
-		|    ],
-		|    ""background"": [
-		|      ""Kontekstas""
-		|    ],
-		|    ""but"": [
-		|      ""Bet""
-		|    ],
-		|    ""examples"": [
-		|      ""Pavyzdžiai"",
-		|      ""Scenarijai"",
-		|      ""Variantai""
-		|    ],
-		|    ""feature"": [
-		|      ""Savybė""
-		|    ],
-		|    ""given"": [
-		|      ""Duota""
-		|    ],
-		|    ""name"": ""Lithuanian"",
-		|    ""native"": ""lietuvių kalba"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Pavyzdys"",
-		|      ""Scenarijus""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Scenarijaus šablonas""
-		|    ],
-		|    ""then"": [
-		|      ""Tada""
-		|    ],
-		|    ""when"": [
-		|      ""Kai""
-		|    ]
-		|  },
-		|  ""lu"": {
-		|    ""and"": [
-		|      ""an"",
-		|      ""a""
-		|    ],
-		|    ""background"": [
-		|      ""Hannergrond""
-		|    ],
-		|    ""but"": [
-		|      ""awer"",
-		|      ""mä""
-		|    ],
-		|    ""examples"": [
-		|      ""Beispiller""
-		|    ],
-		|    ""feature"": [
-		|      ""Funktionalitéit""
-		|    ],
-		|    ""given"": [
-		|      ""ugeholl""
-		|    ],
-		|    ""name"": ""Luxemburgish"",
-		|    ""native"": ""Lëtzebuergesch"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Beispill"",
-		|      ""Szenario""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Plang vum Szenario""
-		|    ],
-		|    ""then"": [
-		|      ""dann""
-		|    ],
-		|    ""when"": [
-		|      ""wann""
-		|    ]
-		|  },
-		|  ""lv"": {
-		|    ""and"": [
-		|      ""Un""
-		|    ],
-		|    ""background"": [
-		|      ""Konteksts"",
-		|      ""Situācija""
-		|    ],
-		|    ""but"": [
-		|      ""Bet""
-		|    ],
-		|    ""examples"": [
-		|      ""Piemēri"",
-		|      ""Paraugs""
-		|    ],
-		|    ""feature"": [
-		|      ""Funkcionalitāte"",
-		|      ""Fīča""
-		|    ],
-		|    ""given"": [
-		|      ""Kad""
-		|    ],
-		|    ""name"": ""Latvian"",
-		|    ""native"": ""latviešu"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Piemērs"",
-		|      ""Scenārijs""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Scenārijs pēc parauga""
-		|    ],
-		|    ""then"": [
-		|      ""Tad""
-		|    ],
-		|    ""when"": [
-		|      ""Ja""
-		|    ]
-		|  },
-		|  ""mk-Cyrl"": {
-		|    ""and"": [
-		|      ""И""
-		|    ],
-		|    ""background"": [
-		|      ""Контекст"",
-		|      ""Содржина""
-		|    ],
-		|    ""but"": [
-		|      ""Но""
-		|    ],
-		|    ""examples"": [
-		|      ""Примери"",
-		|      ""Сценарија""
-		|    ],
-		|    ""feature"": [
-		|      ""Функционалност"",
-		|      ""Бизнис потреба"",
-		|      ""Можност""
-		|    ],
-		|    ""given"": [
-		|      ""Дадено"",
-		|      ""Дадена""
-		|    ],
-		|    ""name"": ""Macedonian"",
-		|    ""native"": ""Македонски"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Пример"",
-		|      ""Сценарио"",
-		|      ""На пример""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Преглед на сценарија"",
-		|      ""Скица"",
-		|      ""Концепт""
-		|    ],
-		|    ""then"": [
-		|      ""Тогаш""
-		|    ],
-		|    ""when"": [
-		|      ""Кога""
-		|    ]
-		|  },
-		|  ""mk-Latn"": {
-		|    ""and"": [
-		|      ""I""
-		|    ],
-		|    ""background"": [
-		|      ""Kontekst"",
-		|      ""Sodrzhina""
-		|    ],
-		|    ""but"": [
-		|      ""No""
-		|    ],
-		|    ""examples"": [
-		|      ""Primeri"",
-		|      ""Scenaria""
-		|    ],
-		|    ""feature"": [
-		|      ""Funkcionalnost"",
-		|      ""Biznis potreba"",
-		|      ""Mozhnost""
-		|    ],
-		|    ""given"": [
-		|      ""Dadeno"",
-		|      ""Dadena""
-		|    ],
-		|    ""name"": ""Macedonian (Latin)"",
-		|    ""native"": ""Makedonski (Latinica)"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Scenario"",
-		|      ""Na primer""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Pregled na scenarija"",
-		|      ""Skica"",
-		|      ""Koncept""
-		|    ],
-		|    ""then"": [
-		|      ""Togash""
-		|    ],
-		|    ""when"": [
-		|      ""Koga""
-		|    ]
-		|  },
-		|  ""mn"": {
-		|    ""and"": [
-		|      ""Мөн"",
-		|      ""Тэгээд""
-		|    ],
-		|    ""background"": [
-		|      ""Агуулга""
-		|    ],
-		|    ""but"": [
-		|      ""Гэхдээ"",
-		|      ""Харин""
-		|    ],
-		|    ""examples"": [
-		|      ""Тухайлбал""
-		|    ],
-		|    ""feature"": [
-		|      ""Функц"",
-		|      ""Функционал""
-		|    ],
-		|    ""given"": [
-		|      ""Өгөгдсөн нь"",
-		|      ""Анх""
-		|    ],
-		|    ""name"": ""Mongolian"",
-		|    ""native"": ""монгол"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Сценар""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Сценарын төлөвлөгөө""
-		|    ],
-		|    ""then"": [
-		|      ""Тэгэхэд"",
-		|      ""Үүний дараа""
-		|    ],
-		|    ""when"": [
-		|      ""Хэрэв""
-		|    ]
-		|  },
-		|  ""ne"": {
-		|    ""and"": [
-		|      ""र"",
-		|      ""अनी""
-		|    ],
-		|    ""background"": [
-		|      ""पृष्ठभूमी""
-		|    ],
-		|    ""but"": [
-		|      ""तर""
-		|    ],
-		|    ""examples"": [
-		|      ""उदाहरण"",
-		|      ""उदाहरणहरु""
-		|    ],
-		|    ""feature"": [
-		|      ""सुविधा"",
-		|      ""विशेषता""
-		|    ],
-		|    ""given"": [
-		|      ""दिइएको"",
-		|      ""दिएको"",
-		|      ""यदि""
-		|    ],
-		|    ""name"": ""Nepali"",
-		|    ""native"": ""नेपाली"",
-		|    ""rule"": [
-		|      ""नियम""
-		|    ],
-		|    ""scenario"": [
-		|      ""परिदृश्य""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""परिदृश्य रूपरेखा""
-		|    ],
-		|    ""then"": [
-		|      ""त्यसपछि"",
-		|      ""अनी""
-		|    ],
-		|    ""when"": [
-		|      ""जब""
-		|    ]
-		|  },
-		|  ""nl"": {
-		|    ""and"": [
-		|      ""En""
-		|    ],
-		|    ""background"": [
-		|      ""Achtergrond""
-		|    ],
-		|    ""but"": [
-		|      ""Maar""
-		|    ],
-		|    ""examples"": [
-		|      ""Voorbeelden""
-		|    ],
-		|    ""feature"": [
-		|      ""Functionaliteit""
-		|    ],
-		|    ""given"": [
-		|      ""Gegeven"",
-		|      ""Stel""
-		|    ],
-		|    ""name"": ""Dutch"",
-		|    ""native"": ""Nederlands"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Voorbeeld"",
-		|      ""Scenario""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Abstract Scenario""
-		|    ],
-		|    ""then"": [
-		|      ""Dan""
-		|    ],
-		|    ""when"": [
-		|      ""Als"",
-		|      ""Wanneer""
-		|    ]
-		|  },
-		|  ""no"": {
-		|    ""and"": [
-		|      ""Og""
-		|    ],
-		|    ""background"": [
-		|      ""Bakgrunn""
-		|    ],
-		|    ""but"": [
-		|      ""Men""
-		|    ],
-		|    ""examples"": [
-		|      ""Eksempler""
-		|    ],
-		|    ""feature"": [
-		|      ""Egenskap""
-		|    ],
-		|    ""given"": [
-		|      ""Gitt""
-		|    ],
-		|    ""name"": ""Norwegian"",
-		|    ""native"": ""norsk"",
-		|    ""rule"": [
-		|      ""Regel""
-		|    ],
-		|    ""scenario"": [
-		|      ""Eksempel"",
-		|      ""Scenario""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Scenariomal"",
-		|      ""Abstrakt Scenario""
-		|    ],
-		|    ""then"": [
-		|      ""Så""
-		|    ],
-		|    ""when"": [
-		|      ""Når""
-		|    ]
-		|  },
-		|  ""pa"": {
-		|    ""and"": [
-		|      ""ਅਤੇ""
-		|    ],
-		|    ""background"": [
-		|      ""ਪਿਛੋਕੜ""
-		|    ],
-		|    ""but"": [
-		|      ""ਪਰ""
-		|    ],
-		|    ""examples"": [
-		|      ""ਉਦਾਹਰਨਾਂ""
-		|    ],
-		|    ""feature"": [
-		|      ""ਖਾਸੀਅਤ"",
-		|      ""ਮੁਹਾਂਦਰਾ"",
-		|      ""ਨਕਸ਼ ਨੁਹਾਰ""
-		|    ],
-		|    ""given"": [
-		|      ""ਜੇਕਰ"",
-		|      ""ਜਿਵੇਂ ਕਿ""
-		|    ],
-		|    ""name"": ""Panjabi"",
-		|    ""native"": ""ਪੰਜਾਬੀ"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""ਉਦਾਹਰਨ"",
-		|      ""ਪਟਕਥਾ""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""ਪਟਕਥਾ ਢਾਂਚਾ"",
-		|      ""ਪਟਕਥਾ ਰੂਪ ਰੇਖਾ""
-		|    ],
-		|    ""then"": [
-		|      ""ਤਦ""
-		|    ],
-		|    ""when"": [
-		|      ""ਜਦੋਂ""
-		|    ]
-		|  },
-		|  ""pl"": {
-		|    ""and"": [
-		|      ""Oraz"",
-		|      ""I""
-		|    ],
-		|    ""background"": [
-		|      ""Założenia""
-		|    ],
-		|    ""but"": [
-		|      ""Ale""
-		|    ],
-		|    ""examples"": [
-		|      ""Przykłady""
-		|    ],
-		|    ""feature"": [
-		|      ""Właściwość"",
-		|      ""Funkcja"",
-		|      ""Aspekt"",
-		|      ""Potrzeba biznesowa""
-		|    ],
-		|    ""given"": [
-		|      ""Zakładając"",
-		|      ""Mając"",
-		|      ""Zakładając, że""
-		|    ],
-		|    ""name"": ""Polish"",
-		|    ""native"": ""polski"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Przykład"",
-		|      ""Scenariusz""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Szablon scenariusza""
-		|    ],
-		|    ""then"": [
-		|      ""Wtedy""
-		|    ],
-		|    ""when"": [
-		|      ""Jeżeli"",
-		|      ""Jeśli"",
-		|      ""Gdy"",
-		|      ""Kiedy""
-		|    ]
-		|  },
-		|  ""pt"": {
-		|    ""and"": [
-		|      ""E""
-		|    ],
-		|    ""background"": [
-		|      ""Contexto"",
-		|      ""Cenário de Fundo"",
-		|      ""Cenario de Fundo"",
-		|      ""Fundo""
-		|    ],
-		|    ""but"": [
-		|      ""Mas""
-		|    ],
-		|    ""examples"": [
-		|      ""Exemplos"",
-		|      ""Cenários"",
-		|      ""Cenarios""
-		|    ],
-		|    ""feature"": [
-		|      ""Funcionalidade"",
-		|      ""Característica"",
-		|      ""Caracteristica""
-		|    ],
-		|    ""given"": [
-		|      ""Dado"",
-		|      ""Dada"",
-		|      ""Dados"",
-		|      ""Dadas""
-		|    ],
-		|    ""name"": ""Portuguese"",
-		|    ""native"": ""português"",
-		|    ""rule"": [
-		|      ""Regra""
-		|    ],
-		|    ""scenario"": [
-		|      ""Exemplo"",
-		|      ""Cenário"",
-		|      ""Cenario""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Esquema do Cenário"",
-		|      ""Esquema do Cenario"",
-		|      ""Delineação do Cenário"",
-		|      ""Delineacao do Cenario""
-		|    ],
-		|    ""then"": [
-		|      ""Então"",
-		|      ""Entao""
-		|    ],
-		|    ""when"": [
-		|      ""Quando""
-		|    ]
-		|  },
-		|  ""ro"": {
-		|    ""and"": [
-		|      ""Si"",
-		|      ""Și"",
-		|      ""Şi""
-		|    ],
-		|    ""background"": [
-		|      ""Context""
-		|    ],
-		|    ""but"": [
-		|      ""Dar""
-		|    ],
-		|    ""examples"": [
-		|      ""Exemple""
-		|    ],
-		|    ""feature"": [
-		|      ""Functionalitate"",
-		|      ""Funcționalitate"",
-		|      ""Funcţionalitate""
-		|    ],
-		|    ""given"": [
-		|      ""Date fiind"",
-		|      ""Dat fiind"",
-		|      ""Dată fiind"",
-		|      ""Dati fiind"",
-		|      ""Dați fiind"",
-		|      ""Daţi fiind""
-		|    ],
-		|    ""name"": ""Romanian"",
-		|    ""native"": ""română"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Exemplu"",
-		|      ""Scenariu""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Structura scenariu"",
-		|      ""Structură scenariu""
-		|    ],
-		|    ""then"": [
-		|      ""Atunci""
-		|    ],
-		|    ""when"": [
-		|      ""Cand"",
-		|      ""Când""
-		|    ]
-		|  },
-		|  ""ru"": {
-		|    ""and"": [
-		|      ""И"",
-		|      ""К тому же"",
-		|      ""Также""
-		|    ],
-		|    ""background"": [
-		|      ""Предыстория"",
-		|      ""Контекст""
-		|    ],
-		|	 ""hyperlinks"": [
-		|	   ""Гиперссылки"",
-		|	   ""Ссылки""
-		| 	 ],
-		|    ""but"": [
-		|      ""Но"",
-		|      ""А""
-		|    ],
-		|    ""examples"": [
-		|      ""Примеры""
-		|    ],
-		|    ""feature"": [
-		|      ""Функция"",
-		|      ""Функциональность"",
-		|      ""Функционал"",
-		|      ""Свойство""
-		|    ],
-		|    ""if"": [
-		|      ""Если""
-		|    ],
-		|    ""elseif"": [
-		|      ""ИначеЕсли""
-		|    ],
-		|    ""else"": [
-		|      ""Иначе""
-		|    ],
-		|    ""try"": [
-		|      ""Попытка""
-		|    ],
-		|    ""except"": [
-		|      ""Исключение""
-		|    ],
-		|    ""given"": [
-		|      ""Допустим"",
-		|      ""Дано"",
-		|      ""Пусть""
-		|    ],
-		|    ""name"": ""Russian"",
-		|    ""native"": ""русский"",
-		|    ""rule"": [
-		|      ""Правило""
-		|    ],
-		|    ""scenario"": [
-		|      ""Пример"",
-		|      ""Сценарий""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Структура сценария""
-		|    ],
-		|    ""then"": [
-		|      ""То"",
-		|      ""Затем"",
-		|      ""Тогда""
-		|    ],
-		|    ""when"": [
-		|      ""Когда""
-		|    ]
-		|  },
-		|  ""sk"": {
-		|    ""and"": [
-		|      ""A"",
-		|      ""A tiež"",
-		|      ""A taktiež"",
-		|      ""A zároveň""
-		|    ],
-		|    ""background"": [
-		|      ""Pozadie""
-		|    ],
-		|    ""but"": [
-		|      ""Ale""
-		|    ],
-		|    ""examples"": [
-		|      ""Príklady""
-		|    ],
-		|    ""feature"": [
-		|      ""Požiadavka"",
-		|      ""Funkcia"",
-		|      ""Vlastnosť""
-		|    ],
-		|    ""given"": [
-		|      ""Pokiaľ"",
-		|      ""Za predpokladu""
-		|    ],
-		|    ""name"": ""Slovak"",
-		|    ""native"": ""Slovensky"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Príklad"",
-		|      ""Scenár""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Náčrt Scenáru"",
-		|      ""Náčrt Scenára"",
-		|      ""Osnova Scenára""
-		|    ],
-		|    ""then"": [
-		|      ""Tak"",
-		|      ""Potom""
-		|    ],
-		|    ""when"": [
-		|      ""Keď"",
-		|      ""Ak""
-		|    ]
-		|  },
-		|  ""sl"": {
-		|    ""and"": [
-		|      ""In"",
-		|      ""Ter""
-		|    ],
-		|    ""background"": [
-		|      ""Kontekst"",
-		|      ""Osnova"",
-		|      ""Ozadje""
-		|    ],
-		|    ""but"": [
-		|      ""Toda"",
-		|      ""Ampak"",
-		|      ""Vendar""
-		|    ],
-		|    ""examples"": [
-		|      ""Primeri"",
-		|      ""Scenariji""
-		|    ],
-		|    ""feature"": [
-		|      ""Funkcionalnost"",
-		|      ""Funkcija"",
-		|      ""Možnosti"",
-		|      ""Moznosti"",
-		|      ""Lastnost"",
-		|      ""Značilnost""
-		|    ],
-		|    ""given"": [
-		|      ""Dano"",
-		|      ""Podano"",
-		|      ""Zaradi"",
-		|      ""Privzeto""
-		|    ],
-		|    ""name"": ""Slovenian"",
-		|    ""native"": ""Slovenski"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Primer"",
-		|      ""Scenarij""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Struktura scenarija"",
-		|      ""Skica"",
-		|      ""Koncept"",
-		|      ""Oris scenarija"",
-		|      ""Osnutek""
-		|    ],
-		|    ""then"": [
-		|      ""Nato"",
-		|      ""Potem"",
-		|      ""Takrat""
-		|    ],
-		|    ""when"": [
-		|      ""Ko"",
-		|      ""Ce"",
-		|      ""Če"",
-		|      ""Kadar""
-		|    ]
-		|  },
-		|  ""sr-Cyrl"": {
-		|    ""and"": [
-		|      ""И""
-		|    ],
-		|    ""background"": [
-		|      ""Контекст"",
-		|      ""Основа"",
-		|      ""Позадина""
-		|    ],
-		|    ""but"": [
-		|      ""Али""
-		|    ],
-		|    ""examples"": [
-		|      ""Примери"",
-		|      ""Сценарији""
-		|    ],
-		|    ""feature"": [
-		|      ""Функционалност"",
-		|      ""Могућност"",
-		|      ""Особина""
-		|    ],
-		|    ""given"": [
-		|      ""За дато"",
-		|      ""За дате"",
-		|      ""За дати""
-		|    ],
-		|    ""name"": ""Serbian"",
-		|    ""native"": ""Српски"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Пример"",
-		|      ""Сценарио"",
-		|      ""Пример""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Структура сценарија"",
-		|      ""Скица"",
-		|      ""Концепт""
-		|    ],
-		|    ""then"": [
-		|      ""Онда""
-		|    ],
-		|    ""when"": [
-		|      ""Када"",
-		|      ""Кад""
-		|    ]
-		|  },
-		|  ""sr-Latn"": {
-		|    ""and"": [
-		|      ""I""
-		|    ],
-		|    ""background"": [
-		|      ""Kontekst"",
-		|      ""Osnova"",
-		|      ""Pozadina""
-		|    ],
-		|    ""but"": [
-		|      ""Ali""
-		|    ],
-		|    ""examples"": [
-		|      ""Primeri"",
-		|      ""Scenariji""
-		|    ],
-		|    ""feature"": [
-		|      ""Funkcionalnost"",
-		|      ""Mogućnost"",
-		|      ""Mogucnost"",
-		|      ""Osobina""
-		|    ],
-		|    ""given"": [
-		|      ""Za dato"",
-		|      ""Za date"",
-		|      ""Za dati""
-		|    ],
-		|    ""name"": ""Serbian (Latin)"",
-		|    ""native"": ""Srpski (Latinica)"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Scenario"",
-		|      ""Primer""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Struktura scenarija"",
-		|      ""Skica"",
-		|      ""Koncept""
-		|    ],
-		|    ""then"": [
-		|      ""Onda""
-		|    ],
-		|    ""when"": [
-		|      ""Kada"",
-		|      ""Kad""
-		|    ]
-		|  },
-		|  ""sv"": {
-		|    ""and"": [
-		|      ""Och""
-		|    ],
-		|    ""background"": [
-		|      ""Bakgrund""
-		|    ],
-		|    ""but"": [
-		|      ""Men""
-		|    ],
-		|    ""examples"": [
-		|      ""Exempel""
-		|    ],
-		|    ""feature"": [
-		|      ""Egenskap""
-		|    ],
-		|    ""given"": [
-		|      ""Givet""
-		|    ],
-		|    ""name"": ""Swedish"",
-		|    ""native"": ""Svenska"",
-		|    ""rule"": [
-		|      ""Regel""
-		|    ],
-		|    ""scenario"": [
-		|      ""Scenario""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Abstrakt Scenario"",
-		|      ""Scenariomall""
-		|    ],
-		|    ""then"": [
-		|      ""Så""
-		|    ],
-		|    ""when"": [
-		|      ""När""
-		|    ]
-		|  },
-		|  ""ta"": {
-		|    ""and"": [
-		|      ""மேலும் "",
-		|      ""மற்றும்""
-		|    ],
-		|    ""background"": [
-		|      ""பின்னணி""
-		|    ],
-		|    ""but"": [
-		|      ""ஆனால் ""
-		|    ],
-		|    ""examples"": [
-		|      ""எடுத்துக்காட்டுகள்"",
-		|      ""காட்சிகள்"",
-		|      ""நிலைமைகளில்""
-		|    ],
-		|    ""feature"": [
-		|      ""அம்சம்"",
-		|      ""வணிக தேவை"",
-		|      ""திறன்""
-		|    ],
-		|    ""given"": [
-		|      ""கொடுக்கப்பட்ட""
-		|    ],
-		|    ""name"": ""Tamil"",
-		|    ""native"": ""தமிழ்"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""உதாரணமாக"",
-		|      ""காட்சி""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""காட்சி சுருக்கம்"",
-		|      ""காட்சி வார்ப்புரு""
-		|    ],
-		|    ""then"": [
-		|      ""அப்பொழுது""
-		|    ],
-		|    ""when"": [
-		|      ""எப்போது""
-		|    ]
-		|  },
-		|  ""th"": {
-		|    ""and"": [
-		|      ""และ""
-		|    ],
-		|    ""background"": [
-		|      ""แนวคิด""
-		|    ],
-		|    ""but"": [
-		|      ""แต่""
-		|    ],
-		|    ""examples"": [
-		|      ""ชุดของตัวอย่าง"",
-		|      ""ชุดของเหตุการณ์""
-		|    ],
-		|    ""feature"": [
-		|      ""โครงหลัก"",
-		|      ""ความต้องการทางธุรกิจ"",
-		|      ""ความสามารถ""
-		|    ],
-		|    ""given"": [
-		|      ""กำหนดให้""
-		|    ],
-		|    ""name"": ""Thai"",
-		|    ""native"": ""ไทย"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""เหตุการณ์""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""สรุปเหตุการณ์"",
-		|      ""โครงสร้างของเหตุการณ์""
-		|    ],
-		|    ""then"": [
-		|      ""ดังนั้น""
-		|    ],
-		|    ""when"": [
-		|      ""เมื่อ""
-		|    ]
-		|  },
-		|  ""te"": {
-		|    ""and"": [
-		|      ""మరియు""
-		|    ],
-		|    ""background"": [
-		|      ""నేపథ్యం""
-		|    ],
-		|    ""but"": [
-		|      ""కాని""
-		|    ],
-		|    ""examples"": [
-		|      ""ఉదాహరణలు""
-		|    ],
-		|    ""feature"": [
-		|      ""గుణము""
-		|    ],
-		|    ""given"": [
-		|      ""చెప్పబడినది""
-		|    ],
-		|    ""name"": ""Telugu"",
-		|    ""native"": ""తెలుగు"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""ఉదాహరణ"",
-		|      ""సన్నివేశం""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""కథనం""
-		|    ],
-		|    ""then"": [
-		|      ""అప్పుడు""
-		|    ],
-		|    ""when"": [
-		|      ""ఈ పరిస్థితిలో""
-		|    ]
-		|  },
-		|  ""tlh"": {
-		|    ""and"": [
-		|      ""'ej"",
-		|      ""latlh""
-		|    ],
-		|    ""background"": [
-		|      ""mo'""
-		|    ],
-		|    ""but"": [
-		|      ""'ach"",
-		|      ""'a""
-		|    ],
-		|    ""examples"": [
-		|      ""ghantoH"",
-		|      ""lutmey""
-		|    ],
-		|    ""feature"": [
-		|      ""Qap"",
-		|      ""Qu'meH 'ut"",
-		|      ""perbogh"",
-		|      ""poQbogh malja'"",
-		|      ""laH""
-		|    ],
-		|    ""given"": [
-		|      ""ghu' noblu'"",
-		|      ""DaH ghu' bejlu'""
-		|    ],
-		|    ""name"": ""Klingon"",
-		|    ""native"": ""tlhIngan"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""lut""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""lut chovnatlh""
-		|    ],
-		|    ""then"": [
-		|      ""vaj""
-		|    ],
-		|    ""when"": [
-		|      ""qaSDI'""
-		|    ]
-		|  },
-		|  ""tr"": {
-		|    ""and"": [
-		|      ""Ve""
-		|    ],
-		|    ""background"": [
-		|      ""Geçmiş""
-		|    ],
-		|    ""but"": [
-		|      ""Fakat"",
-		|      ""Ama""
-		|    ],
-		|    ""examples"": [
-		|      ""Örnekler""
-		|    ],
-		|    ""feature"": [
-		|      ""Özellik""
-		|    ],
-		|    ""given"": [
-		|      ""Diyelim ki""
-		|    ],
-		|    ""name"": ""Turkish"",
-		|    ""native"": ""Türkçe"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Örnek"",
-		|      ""Senaryo""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Senaryo taslağı""
-		|    ],
-		|    ""then"": [
-		|      ""O zaman""
-		|    ],
-		|    ""when"": [
-		|      ""Eğer ki""
-		|    ]
-		|  },
-		|  ""tt"": {
-		|    ""and"": [
-		|      ""Һәм"",
-		|      ""Вә""
-		|    ],
-		|    ""background"": [
-		|      ""Кереш""
-		|    ],
-		|    ""but"": [
-		|      ""Ләкин"",
-		|      ""Әмма""
-		|    ],
-		|    ""examples"": [
-		|      ""Үрнәкләр"",
-		|      ""Мисаллар""
-		|    ],
-		|    ""feature"": [
-		|      ""Мөмкинлек"",
-		|      ""Үзенчәлеклелек""
-		|    ],
-		|    ""given"": [
-		|      ""Әйтик""
-		|    ],
-		|    ""name"": ""Tatar"",
-		|    ""native"": ""Татарча"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Сценарий""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Сценарийның төзелеше""
-		|    ],
-		|    ""then"": [
-		|      ""Нәтиҗәдә""
-		|    ],
-		|    ""when"": [
-		|      ""Әгәр""
-		|    ]
-		|  },
-		|  ""uk"": {
-		|    ""and"": [
-		|      ""І"",
-		|      ""А також"",
-		|      ""Та""
-		|    ],
-		|    ""background"": [
-		|      ""Передумова""
-		|    ],
-		|    ""but"": [
-		|      ""Але""
-		|    ],
-		|    ""examples"": [
-		|      ""Приклади""
-		|    ],
-		|    ""feature"": [
-		|      ""Функціонал""
-		|    ],
-		|    ""given"": [
-		|      ""Припустимо"",
-		|      ""Припустимо, що"",
-		|      ""Нехай"",
-		|      ""Дано""
-		|    ],
-		|    ""name"": ""Ukrainian"",
-		|    ""native"": ""Українська"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Приклад"",
-		|      ""Сценарій""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Структура сценарію""
-		|    ],
-		|    ""then"": [
-		|      ""То"",
-		|      ""Тоді""
-		|    ],
-		|    ""when"": [
-		|      ""Якщо"",
-		|      ""Коли""
-		|    ]
-		|  },
-		|  ""ur"": {
-		|    ""and"": [
-		|      ""اور""
-		|    ],
-		|    ""background"": [
-		|      ""پس منظر""
-		|    ],
-		|    ""but"": [
-		|      ""لیکن""
-		|    ],
-		|    ""examples"": [
-		|      ""مثالیں""
-		|    ],
-		|    ""feature"": [
-		|      ""صلاحیت"",
-		|      ""کاروبار کی ضرورت"",
-		|      ""خصوصیت""
-		|    ],
-		|    ""given"": [
-		|      ""اگر"",
-		|      ""بالفرض"",
-		|      ""فرض کیا""
-		|    ],
-		|    ""name"": ""Urdu"",
-		|    ""native"": ""اردو"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""منظرنامہ""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""منظر نامے کا خاکہ""
-		|    ],
-		|    ""then"": [
-		|      ""پھر"",
-		|      ""تب""
-		|    ],
-		|    ""when"": [
-		|      ""جب""
-		|    ]
-		|  },
-		|  ""uz"": {
-		|    ""and"": [
-		|      ""Ва""
-		|    ],
-		|    ""background"": [
-		|      ""Тарих""
-		|    ],
-		|    ""but"": [
-		|      ""Лекин"",
-		|      ""Бирок"",
-		|      ""Аммо""
-		|    ],
-		|    ""examples"": [
-		|      ""Мисоллар""
-		|    ],
-		|    ""feature"": [
-		|      ""Функционал""
-		|    ],
-		|    ""given"": [
-		|      ""Агар""
-		|    ],
-		|    ""name"": ""Uzbek"",
-		|    ""native"": ""Узбекча"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Сценарий""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Сценарий структураси""
-		|    ],
-		|    ""then"": [
-		|      ""Унда""
-		|    ],
-		|    ""when"": [
-		|      ""Агар""
-		|    ]
-		|  },
-		|  ""vi"": {
-		|    ""and"": [
-		|      ""Và""
-		|    ],
-		|    ""background"": [
-		|      ""Bối cảnh""
-		|    ],
-		|    ""but"": [
-		|      ""Nhưng""
-		|    ],
-		|    ""examples"": [
-		|      ""Dữ liệu""
-		|    ],
-		|    ""feature"": [
-		|      ""Tính năng""
-		|    ],
-		|    ""given"": [
-		|      ""Biết"",
-		|      ""Cho""
-		|    ],
-		|    ""name"": ""Vietnamese"",
-		|    ""native"": ""Tiếng Việt"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""Tình huống"",
-		|      ""Kịch bản""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""Khung tình huống"",
-		|      ""Khung kịch bản""
-		|    ],
-		|    ""then"": [
-		|      ""Thì""
-		|    ],
-		|    ""when"": [
-		|      ""Khi""
-		|    ]
-		|  },
-		|  ""zh-CN"": {
-		|    ""and"": [
-		|      ""而且"",
-		|      ""并且"",
-		|      ""同时""
-		|    ],
-		|    ""background"": [
-		|      ""背景""
-		|    ],
-		|    ""but"": [
-		|      ""但是""
-		|    ],
-		|    ""examples"": [
-		|      ""例子""
-		|    ],
-		|    ""feature"": [
-		|      ""功能""
-		|    ],
-		|    ""given"": [
-		|      ""假如"",
-		|      ""假设"",
-		|      ""假定""
-		|    ],
-		|    ""name"": ""Chinese simplified"",
-		|    ""native"": ""简体中文"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""场景"",
-		|      ""剧本""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""场景大纲"",
-		|      ""剧本大纲""
-		|    ],
-		|    ""then"": [
-		|      ""那么""
-		|    ],
-		|    ""when"": [
-		|      ""当""
-		|    ]
-		|  },
-		|  ""zh-TW"": {
-		|    ""and"": [
-		|      ""而且"",
-		|      ""並且"",
-		|      ""同時""
-		|    ],
-		|    ""background"": [
-		|      ""背景""
-		|    ],
-		|    ""but"": [
-		|      ""但是""
-		|    ],
-		|    ""examples"": [
-		|      ""例子""
-		|    ],
-		|    ""feature"": [
-		|      ""功能""
-		|    ],
-		|    ""given"": [
-		|      ""假如"",
-		|      ""假設"",
-		|      ""假定""
-		|    ],
-		|    ""name"": ""Chinese traditional"",
-		|    ""native"": ""繁體中文"",
-		|    ""rule"": [
-		|      ""Rule""
-		|    ],
-		|    ""scenario"": [
-		|      ""場景"",
-		|      ""劇本""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""場景大綱"",
-		|      ""劇本大綱""
-		|    ],
-		|    ""then"": [
-		|      ""那麼""
-		|    ],
-		|    ""when"": [
-		|      ""當""
-		|    ]
-		|  },
-		|  ""mr"": {
-		|    ""and"": [
-		|      ""आणि"",
-		|      ""तसेच""
-		|    ],
-		|    ""background"": [
-		|      ""पार्श्वभूमी""
-		|    ],
-		|    ""but"": [
-		|      ""पण"",
-		|      ""परंतु""
-		|    ],
-		|    ""examples"": [
-		|      ""उदाहरण""
-		|    ],
-		|    ""feature"": [
-		|      ""वैशिष्ट्य"",
-		|      ""सुविधा""
-		|    ],
-		|    ""given"": [
-		|      ""जर"",
-		|      ""दिलेल्या प्रमाणे""
-		|    ],
-		|    ""name"": ""Marathi"",
-		|    ""native"": ""मराठी"",
-		|    ""rule"": [
-		|      ""नियम""
-		|    ],
-		|    ""scenario"": [
-		|      ""परिदृश्य""
-		|    ],
-		|    ""scenarioOutline"": [
-		|      ""परिदृश्य रूपरेखा""
-		|    ],
-		|    ""then"": [
-		|      ""मग"",
-		|      ""तेव्हा""
-		|    ],
-		|    ""when"": [
-		|      ""जेव्हा""
-		|    ]
-		|  }
-		|}"; 
+Функция КлючевыеСловаGherkin() Экспорт
 	
+	Если КешКлючевыеСлова = Неопределено Тогда
+		КешКлючевыеСлова = Ванесса.ПрочитатьОбъектJSON(КлючевыеСловаДляПарсераСтрокой(), Истина);
+	КонецЕсли;	 
+	
+	Возврат КешКлючевыеСлова;
 КонецФункции	 
 
 // Выполняет инициализацию парсера
 &НаКлиенте
 Процедура ИнициализацияПарсера() Экспорт
-	Ванесса.ВнешняяКомпонентаПарсерGherkin.НачатьУстановкуКлючевыеСлова(Вычислить("Новый ОписаниеОповещения"), КлючевыеСлова());
+	Ванесса.ВнешняяКомпонентаПарсерGherkin.НачатьУстановкуКлючевыеСлова(Ванесса.ОписаниеПустогоОбработчика(1), КлючевыеСловаДляПарсераСтрокой());
 КонецПроцедуры 
+
+// Делает отключение модуля
+&НаКлиенте
+Функция ОтключениеМодуля() Экспорт
+	Ванесса = Неопределено;
+	КешДанныеПеревода = Неопределено;
+	КешКлючевыеСлова = Неопределено;
+КонецФункции	 
 
 // Выполняет загрузку фича файлов
 &НаКлиенте
@@ -3326,9 +59,30 @@
 		КонецЕсли;	 
 		
 		МассивБиблиотек.Добавить(Элем.Значение);
-	КонецЦикла;	 
+	КонецЦикла;
+	
+	Если Ванесса.Объект.ВерсияПоставки = "single" Тогда
+		МассивБиблиотек.Добавить(Ванесса.КаталогВременнойФичиСодержащейЭкспортныеСценарииИзОсновнойПоставки());
+	КонецЕсли;
+
+	Если Ванесса.Объект.СписокСценариевДляВыполнения.Количество() > 0 Тогда 
+		ОтборСценариевПоИмениСценария = Новый Соответствие;
+		Для Каждого Элем Из Ванесса.Объект.СписокСценариевДляВыполнения Цикл
+			ОтборСценариевПоИмениСценария.Вставить(Элем.Значение, Истина);
+		КонецЦикла;
+		СтруктураПараметров.Вставить("ОтборСценариевПоИмениСценария", ОтборСценариевПоИмениСценария);
+	КонецЕсли;	
+	
+	Если Ванесса.Объект.СписокФичДляВыполнения.Количество() > 0 Тогда 
+		ОтборФичИзНастроек = Новый Соответствие;
+		Для Каждого Элем Из Ванесса.Объект.СписокФичДляВыполнения Цикл
+			ОтборФичИзНастроек.Вставить(Элем.Значение, Истина);
+		КонецЦикла;
+		СтруктураПараметров.Вставить("ОтборФичИзНастроек", ОтборФичИзНастроек);
+	КонецЕсли;	
 	
 	Если Ванесса.ЭтоКаталогКомандаСистемы(СтруктураПараметров.КаталогФич) Тогда
+		Ванесса.УстановитьФлагОжиданияСобытияЧтенияОтКомпоненты(Истина);
 		МассивБиблиотек.Добавить(СтруктураПараметров.КаталогФич);
 		
 		ТегиИсключения = Новый Массив;
@@ -3345,11 +99,20 @@
 		ФильтрТегов.Вставить("include", ТегиФильтры);
 		ФильтрТегов.Вставить("exclude", ТегиИсключения);
 		
-		Ванесса.ВнешняяКомпонентаПарсерGherkin.НачатьВызовСканироватьПапку(Вычислить("Новый ОписаниеОповещения"),
-			СтруктураПараметров.КаталогФич,
-			Ванесса.ЗаписатьОбъектJSON(МассивБиблиотек),
-			Ванесса.ЗаписатьОбъектJSON(ФильтрТегов)
-			);
+		Если Ванесса.ЭтоLinux Тогда
+			ОписаниеОповещения = Новый ОписаниеОповещения("ПолученРезультатЧтения", ЭтаФорма, СтруктураПараметров);
+			Ванесса.ВнешняяКомпонентаПарсерGherkin.НачатьВызовПрочитатьПапку(ОписаниеОповещения,
+				СтруктураПараметров.КаталогФич,
+				Ванесса.ЗаписатьОбъектJSON(МассивБиблиотек),
+				Ванесса.ЗаписатьОбъектJSON(ФильтрТегов)
+				);
+		Иначе
+			Ванесса.ВнешняяКомпонентаПарсерGherkin.НачатьВызовСканироватьПапку(Ванесса.ОписаниеПустогоОбработчика(3),
+				СтруктураПараметров.КаталогФич,
+				Ванесса.ЗаписатьОбъектJSON(МассивБиблиотек),
+				Ванесса.ЗаписатьОбъектJSON(ФильтрТегов)
+				);
+		КонецЕсли;
 		
 	Иначе
 		
@@ -3357,16 +120,47 @@
 		Файл = Новый Файл(СтруктураПараметров.КаталогФич);
 		МассивБиблиотек.Добавить(Файл.Путь);
 		
-		ОписаниеОповещения = Новый ОписаниеОповещения("ПолученРезультатЧтения", ЭтаФорма, СтруктураПараметров);
-		Ванесса.ВнешняяКомпонентаПарсерGherkin.НачатьВызовПрочитатьФайл(ОписаниеОповещения,
-			СтруктураПараметров.КаталогФич,
-			Ванесса.ЗаписатьОбъектJSON(МассивБиблиотек));
+		Если Ванесса.ЗапрещеныСинхронныеВызовы Тогда
+			ОписаниеОповещения = Новый ОписаниеОповещения("ПолученРезультатЧтения", ЭтаФорма, СтруктураПараметров);
+			Ванесса.ВнешняяКомпонентаПарсерGherkin.НачатьВызовПрочитатьФайл(ОписаниеОповещения,СтруктураПараметров.КаталогФич,Ванесса.ЗаписатьОбъектJSON(МассивБиблиотек));
+		Иначе		
+			ТекПараметрыВызова = Ванесса.ЗаписатьОбъектJSON(МассивБиблиотек);
+			РезультатВызова = Ванесса.ВнешняяКомпонентаПарсерGherkin.ПрочитатьФайл(
+				СтруктураПараметров.КаталогФич,
+				ТекПараметрыВызова);
+				
+			ПолученРезультатЧтения(РезультатВызова, ТекПараметрыВызова, СтруктураПараметров);
+		КонецЕсли;	 
 		
 	КонецЕсли;	 
-КонецПроцедуры 
+КонецПроцедуры
 
 &НаКлиенте
 Процедура ПолученРезультатЧтения(РезультатВызова, ПараметрыВызова, СтруктураПараметров) Экспорт
+	
+	ДополнительныеПараметры = Новый Структура;
+	ДополнительныеПараметры.Вставить("РезультатВызова", РезультатВызова);
+	ДополнительныеПараметры.Вставить("ПараметрыВызова", ПараметрыВызова);
+	ДополнительныеПараметры.Вставить("СтруктураПараметров", СтруктураПараметров);
+	
+	Если Ванесса.ЗапрещеныСинхронныеВызовы Тогда
+		ОписаниеОповещения = Новый ОписаниеОповещения("ПолученыПеременные", ЭтаФорма, ДополнительныеПараметры);
+		Ванесса.ВнешняяКомпонентаПарсерGherkin.НачатьПолучениеПеременные(ОписаниеОповещения);	
+	Иначе
+		ПолученыПеременные(Ванесса.ВнешняяКомпонентаПарсерGherkin.Переменные, ДополнительныеПараметры);
+	КонецЕсли;	 
+	
+КонецПроцедуры
+
+&НаКлиенте
+Процедура ПолученыПеременные(Результат, ДополнительныеПараметры) Экспорт
+	РезультатВызова = ДополнительныеПараметры.РезультатВызова;
+	ПараметрыВызова = ДополнительныеПараметры.ПараметрыВызова;
+	СтруктураПараметров = ДополнительныеПараметры.СтруктураПараметров;
+	
+	Если Ванесса.Объект.ИспользоватьРедакторVanessaEditor Тогда 
+		Ванесса.УстановитьДанныеЭкспортныхПеременныхГеркина(Результат);
+	КонецЕсли;	 
 	
 	ИдСтроки = -1;
 	
@@ -3383,6 +177,7 @@
 	СтруктураПараметров.Вставить("КоличествоШагов", 0);
 	СтруктураПараметров.Вставить("КоличествоPending", 0);
 	СтруктураПараметров.Вставить("РассчитыватьСтатистику", Истина);
+	СтруктураПараметров.Вставить("ТегиОтборНрег", ТегиОтборНрег());
 	
 	Дерево = Ванесса.Объект.ДеревоТестов;
 	ЭлементыДерева = Дерево.ПолучитьЭлементы();
@@ -3390,6 +185,51 @@
 	
 	Если ДанныеJSON <> Неопределено Тогда
 		Если ТипЗнч(ДанныеJSON) = Тип("Массив") Тогда
+			
+			Если Ванесса.Объект.СписокФичДляВыполнения.Количество() > 0 Тогда
+				ФильтрФичСоответствие = Новый Соответствие;
+				Счетчик = 0;
+				Для Каждого Элем Из Ванесса.Объект.СписокФичДляВыполнения Цикл
+					Счетчик = Счетчик + 1;
+					ФильтрФичСоответствие.Вставить(Элем.Значение, Счетчик);
+				КонецЦикла;
+				
+				СписокФич = Новый СписокЗначений;
+				
+				Счетчик = 0;
+				Для Каждого ДанныеФичи Из ДанныеJSON Цикл
+					
+					Счетчик = Счетчик + 1;
+					
+					Файл = Новый Файл(ДанныеФичи.filename);
+					
+					НомерФичиВСписке = ФильтрФичСоответствие[ДанныеФичи.filename];
+					Если НомерФичиВСписке = Неопределено Тогда
+						НомерФичиВСписке = ФильтрФичСоответствие[Файл.Имя];
+					КонецЕсли;	
+					Если НомерФичиВСписке = Неопределено Тогда
+						НомерФичиВСписке = ФильтрФичСоответствие[Файл.ИмяБезРасширения];
+					КонецЕсли;	
+					
+					Если НомерФичиВСписке = Неопределено Тогда
+						Продолжить;
+					КонецЕсли;
+					
+					СписокФич.Добавить(НомерФичиВСписке, XMLСтрока(Счетчик - 1));
+					
+				КонецЦикла;
+				
+				СписокФич.СортироватьПоЗначению();
+				
+				НовыйДанныеJSON = Новый Массив;
+				Для Каждого Элем Из СписокФич Цикл
+					НовыйДанныеJSON.Добавить(ДанныеJSON[Число(Элем.Представление)]);
+				КонецЦикла;
+				
+				ДанныеJSON = НовыйДанныеJSON;
+				
+			КонецЕсли;	
+			
 			КаталогиФичаФайлов = Новый Соответствие;
 			Для Каждого ДанныеФичи Из ДанныеJSON Цикл
 				ФайлФичи = Новый Файл(ДанныеФичи.filename);
@@ -3445,9 +285,125 @@
 КонецФункции	 
 
 &НаКлиенте
+Процедура ДобавитьВФичуДанныеПоПеременным(ПеременныеИзПарсера, СтруктураПараметров, ДанныеФичи, ПростыеПеременныеИзСекцииПеременныеЭтойФичи, ТаблицаПеременныхИзСекцииПеременныеЭтойФичи, ПростыеПеременныеКакВФайлеЭтойФичи, ПолныйПутьКФиче)
+	
+	Для Каждого ТекПеременная Из ПеременныеИзПарсера Цикл
+		Если ТекПеременная.Свойство("table") Тогда
+			Если ТекПеременная.Свойство("name") Тогда
+				ИмяТаблицыПеременных = СокрЛП(ТекПеременная.name);
+			Иначе
+				ИмяТаблицыПеременных = "";
+			КонецЕсли;	 
+			
+			ДанныеТаблицы = Новый Структура;
+			ДанныеТаблицы.Вставить("ПолныйПутьКФиче", ПолныйПутьКФиче);
+			ДанныеТаблицы.Вставить("Колонки", Новый Массив);
+			ДанныеТаблицы.Вставить("Значения", Новый Структура);
+			ТаблицаПеременныхИзСекцииПеременныеЭтойФичи.Вставить(НРег(ИмяТаблицыПеременных), ДанныеТаблицы);
+			
+			Для Каждого Элем Из ТекПеременная.table.head.tokens Цикл
+				ДанныеТаблицы.Колонки.Добавить(Элем.text);
+			КонецЦикла;	 
+			
+			ИдСтрокиТаблицы = -1;
+			Для Каждого Элем Из ТекПеременная.table.body Цикл
+				ИдСтрокиТаблицы = ИдСтрокиТаблицы + 1;
+				ДанныеСтроки = Новый Структура;
+				ДанныеСтроки.Вставить("_НомерСтроки_", Элем.line);
+				ДанныеСтроки.Вставить("_ИдСтрокиТаблицы_", ИдСтрокиТаблицы);
+				Для Сч = 0 По ДанныеТаблицы.Колонки.Количество() - 1 Цикл
+					ДанныеСтроки.Вставить(ДанныеТаблицы.Колонки[Сч], Элем.tokens[Сч].text);
+				КонецЦикла;	
+				ИмяПеременнойИзТаблицы = Элем.tokens[0].text;
+				Попытка
+					ДанныеТаблицы.Значения.Вставить(ИмяПеременнойИзТаблицы, ДанныеСтроки);	
+				Исключение
+					ВызватьИсключение Ванесса.ПодставитьПараметрыВСтроку(
+						Ванесса.Локализовать("Недопустимое значение в первой колонке таблицы <%1>."),ИмяПеременнойИзТаблицы);
+				КонецПопытки;
+				
+			КонецЦикла;	 
+			
+		Иначе
+			Если ТекПеременная.Свойство("lines") Тогда
+				// Это многострочная строка
+				ИмяПеременной = ТекПеременная.name;
+				
+				Массив = Новый Массив;
+				Для Каждого ДанныеСтроки Из ТекПеременная.lines.lines Цикл
+					Если ДанныеСтроки.Свойство("text") Тогда
+						Массив.Добавить(ДанныеСтроки.text);
+					Иначе	
+						Массив.Добавить("");
+					КонецЕсли;	 
+				КонецЦикла;	 
+				ЗначениеПеременной = Ванесса.МассивВСтроку(Массив, Символы.ПС);
+				
+				ДанныеПеременной = Новый Структура;
+				ДанныеПеременной.Вставить("Имя", ИмяПеременной);
+				ДанныеПеременной.Вставить("ПолныйПутьКФиче", ПолныйПутьКФиче);
+				ДанныеПеременной.Вставить("Значение", ЗначениеПеременной);
+				ДанныеПеременной.Вставить("Тип", "Строка");
+				ДанныеПеременной.Вставить("НомерСтроки", ТекПеременная.line);
+			Иначе	
+				// Это обычная переменная
+				ИмяПеременной = ТекПеременная.name;
+				ЗначениеПеременной = ТекПеременная.value.text;
+				ДанныеПеременной = Новый Структура;
+				ДанныеПеременной.Вставить("Имя", ИмяПеременной);
+				ДанныеПеременной.Вставить("ПолныйПутьКФиче", ПолныйПутьКФиче);
+				ДанныеПеременной.Вставить("Значение", ЗначениеПеременной);
+				ТипПеременной = ТипПараметраJson(ТекПеременная.value.type, ИмяПеременной);
+				ДанныеПеременной.Вставить("Тип", ТипПеременной);
+				ДанныеПеременной.Вставить("НомерСтроки", ТекПеременная.line);
+				
+			КонецЕсли;	 
+			
+			ПростыеПеременныеИзСекцииПеременныеЭтойФичи.Вставить(НРег(ИмяПеременной), ДанныеПеременной);
+			ПростыеПеременныеКакВФайлеЭтойФичи.Добавить(ИмяПеременной);
+		КонецЕсли;	 
+	КонецЦикла;	 
+КонецПроцедуры 
+
+&НаКлиенте
 Процедура ДобавитьФичу(ЭлементыРодителя, ДанныеФичи, ФайлФичи, ИдСтроки, КешСнипетовНаКлиенте, КаталогиФичаФайлов, СтруктураПараметров)
 	Если НЕ ДанныеФичи.Свойство("scenarios") Тогда
 		Возврат;
+	КонецЕсли;
+	
+	Если НЕ ДанныеФичи.Свойство("feature") Тогда
+		Возврат;
+	КонецЕсли;	
+	
+	Если ДанныеФичи.Свойство("variables") Тогда
+		
+		ПростыеПеременныеИзСекцииПеременныеЭтойФичи = Новый Соответствие;
+		ТаблицаПеременныхИзСекцииПеременныеЭтойФичи = Новый Соответствие;
+		ПростыеПеременныеКакВФайлеЭтойФичи = Новый Массив;
+		УниверсальноеИмяФайла = УниверсальноеИмяФайла(ДанныеФичи.filename);
+		СтруктураПараметров.ДанныеСекцииПеременные.ПростыеПеременные.Вставить(УниверсальноеИмяФайла, ПростыеПеременныеИзСекцииПеременныеЭтойФичи);
+		СтруктураПараметров.ДанныеСекцииПеременные.ТаблицыПеременных.Вставить(УниверсальноеИмяФайла, ТаблицаПеременныхИзСекцииПеременныеЭтойФичи);
+		СтруктураПараметров.ДанныеСекцииПеременные.ПростыеПеременныеКакВФайле.Вставить(УниверсальноеИмяФайла, ПростыеПеременныеКакВФайлеЭтойФичи);
+		
+		Если ДанныеФичи.variables.Свойство("items") Тогда
+			ДобавитьВФичуДанныеПоПеременным(ДанныеФичи.variables.items, СтруктураПараметров, ДанныеФичи,
+				ПростыеПеременныеИзСекцииПеременныеЭтойФичи, ТаблицаПеременныхИзСекцииПеременныеЭтойФичи, ПростыеПеременныеКакВФайлеЭтойФичи, "");
+		КонецЕсли;	 
+		
+		Если ДанныеФичи.variables.Свойство("import") И ДанныеФичи.variables.import <> Неопределено Тогда
+			Для Каждого ТекДанныеИмпорт Из ДанныеФичи.variables.import Цикл
+				Если ТекДанныеИмпорт.Свойство("items") Тогда
+					ДобавитьВФичуДанныеПоПеременным(ТекДанныеИмпорт.items, СтруктураПараметров, ДанныеФичи,
+						ПростыеПеременныеИзСекцииПеременныеЭтойФичи, ТаблицаПеременныхИзСекцииПеременныеЭтойФичи, ПростыеПеременныеКакВФайлеЭтойФичи, ТекДанныеИмпорт.path);
+				КонецЕсли;	 
+			КонецЦикла;	 
+		КонецЕсли;	 
+	КонецЕсли;	
+	
+	Если НЕ ДанныеФичи.Свойство("variables") ИЛИ (ПростыеПеременныеИзСекцииПеременныеЭтойФичи.Количество() = 0 И ТаблицаПеременныхИзСекцииПеременныеЭтойФичи.Количество() = 0) Тогда
+		СтруктураПараметров.ДанныеСекцииПеременные.ЕстьТаблицаПеременных.Вставить(УниверсальноеИмяФайла(ДанныеФичи.filename), Ложь);
+	Иначе	
+		СтруктураПараметров.ДанныеСекцииПеременные.ЕстьТаблицаПеременных.Вставить(УниверсальноеИмяФайла(ДанныеФичи.filename), Истина);
 	КонецЕсли;	 
 	
 	СтруктураПараметров.Вставить("ЯзыкФичи", ДанныеФичи.language);
@@ -3500,6 +456,15 @@
 	СтрокаФичи.ИдСтроки = ИдСтроки;
 	СтрокаФичи.Тип = "Фича";
 	СтрокаФичи.ПроизвольныеЗначения = Новый Структура;
+	Если ДанныеФичи.Свойство("language") Тогда
+		Если ЗначениеЗаполнено(ДанныеФичи.language) Тогда
+			СтрокаФичи.ПроизвольныеЗначения.Вставить("Язык", ДанныеФичи.language);
+		Иначе	
+			СтрокаФичи.ПроизвольныеЗначения.Вставить("Язык", "ru");
+		КонецЕсли;	 
+	Иначе	
+		СтрокаФичи.ПроизвольныеЗначения.Вставить("Язык", "ru");
+	КонецЕсли;	 
 	МассивКомментариев = Новый Массив;
 	Если ДанныеФичи.feature.Свойство("comments") Тогда
 		МассивКомментариев = СкопироватьМассивКомментариев(ДанныеФичи.feature.comments);
@@ -3516,6 +481,8 @@
 	КонецЕсли;	 
 	
 	ЭлементыФичи = СтрокаФичи.ПолучитьЭлементы();
+	
+	СтруктураПараметров.Вставить("ДанныеФичиПарсер", ДанныеФичи);
 
 	Если ДанныеФичи.Свойство("background") Тогда
 		ДобавитьСценарий(ЭлементыФичи, ДанныеФичи.background, ФайлФичи, ИдСтроки, КешСнипетовНаКлиенте, Истина, СтруктураПараметров);
@@ -3526,10 +493,52 @@
 			ДобавитьСценарий(ЭлементыФичи, ДанныеСценария, ФайлФичи, ИдСтроки, КешСнипетовНаКлиенте, Ложь, СтруктураПараметров);
 		КонецЦикла;	 
 	КонецЕсли;	 
+	
+	СтруктураПараметров.Удалить("ДанныеФичиПарсер");
 КонецПроцедуры 
 
 &НаКлиенте
 Процедура ДобавитьСценарий(ЭлементыФичи, ДанныеСценария, ФайлФичи, ИдСтроки, КешСнипетовНаКлиенте, ЭтоКонтекст, СтруктураПараметров)
+	
+	Если НЕ ЭтоКонтекст И НЕ ДанныеСценария.Свойство("name") Тогда
+		Возврат;
+	КонецЕсли;	 
+	
+	Если СтруктураПараметров.ТегиОтборНрег <> Неопределено И СтруктураПараметров.ТегиОтборНрег.Количество() > 0 И НЕ ЭтоКонтекст Тогда
+		//Если идёт загрузка одного сценария и есть отбор по тегам, то в дерево загружается только сценарии соответствующие отбору
+		ТегЕстьВСценарии = Ложь;
+		ТегЕстьВФиче = Ложь;
+		
+		Если ДанныеСценария.Свойство("tags") Тогда
+			Для Каждого Элем Из ДанныеСценария.tags Цикл
+				Если СтруктураПараметров.ТегиОтборНрег[НРег(Элем.text)] <> Неопределено Тогда
+					ТегЕстьВСценарии = Истина;
+					Прервать;
+				КонецЕсли;	 
+			КонецЦикла;	 
+		КонецЕсли;	 
+		
+		Если НЕ ТегЕстьВСценарии И СтруктураПараметров.ДанныеФичиПарсер.feature.Свойство("tags") Тогда
+			Для Каждого Элем Из СтруктураПараметров.ДанныеФичиПарсер.feature.tags Цикл
+				Если СтруктураПараметров.ТегиОтборНрег[НРег(Элем.text)] <> Неопределено Тогда
+					ТегЕстьВФиче = Истина;
+					Прервать;
+				КонецЕсли;	 
+			КонецЦикла;	 
+		КонецЕсли;	
+		
+		Если НЕ ТегЕстьВСценарии И НЕ ТегЕстьВФиче Тогда
+			Возврат;
+		КонецЕсли;	 
+		
+	КонецЕсли;	 
+	
+	Если СтруктураПараметров.Свойство("ОтборСценариевПоИмениСценария") И НЕ ЭтоКонтекст Тогда 
+		Если СтруктураПараметров.ОтборСценариевПоИмениСценария[СокрЛП(ДанныеСценария.name)] = Неопределено Тогда
+			Возврат;
+		КонецЕсли;	
+	КонецЕсли;	
+	
 	ИмяEpfФичаФайла = СтрЗаменить(СтрЗаменить(Нрег(ФайлФичи.ПолноеИмя), "\", "/"), ".feature", ".epf");
 	
 	СтрокаСценария = ЭлементыФичи.Добавить();
@@ -3543,16 +552,21 @@
 		КонецЕсли;	 
 	КонецЕсли;	 
 	СтрокаСценария.ФичаИмеетСвоюEPF = СтруктураПараметров.ФичаИмеетСвоюEPF;
-	СтрокаСценария.ПолныйПуть = ФайлФичи.ПолноеИмя + ":" + XMLСтрока(ДанныеСценария.line);
+	СтрокаСценария.ПолныйПуть = ФайлФичи.ПолноеИмя + ":" + Формат(ДанныеСценария.line, "ЧГ=; ЧН=0");
 	СтрокаСценария.ТипКартинки = 2;
 	Если СтрокаСценария.ДопТип = "Контекст" Тогда
 		СтрокаСценария.ТипКартинки = 7;
 	КонецЕсли;	 
-	СтрокаСценария.ПроизвольныеЗначения = Новый Структура;
 	Если ДанныеСценария.Свойство("comments") Тогда
+		Если ТипЗнч(СтрокаСценария.ПроизвольныеЗначения) <> Тип("Структура") Тогда
+			СтрокаСценария.ПроизвольныеЗначения = Новый Структура;
+		КонецЕсли;	
 		СтрокаСценария.ПроизвольныеЗначения.Вставить("МассивКомментариев", СкопироватьМассивКомментариев(ДанныеСценария.comments));
 	КонецЕсли;	 
 	Если ДанныеСценария.Свойство("tags") Тогда
+		Если ТипЗнч(СтрокаСценария.ПроизвольныеЗначения) <> Тип("Структура") Тогда
+			СтрокаСценария.ПроизвольныеЗначения = Новый Структура;
+		КонецЕсли;	
 		СтрокаСценария.ПроизвольныеЗначения.Вставить("МассивТегов", СкопироватьМассивТегов(ДанныеСценария.tags));
 	КонецЕсли;	 
 	
@@ -3579,9 +593,11 @@
 		СтрокаПримеры.ТипКартинки = -1;
 		СтрокаПримеры.НомерСтрокиВФиче = ДанныеСценария.examples.line;
 		
-		Для Каждого ДанныеПараметра Из ДанныеСценария.examples.head.tokens Цикл
-			СтрокаПримеры.ИменованныеПараметры.Добавить(ДанныеПараметра.text);
-		КонецЦикла;	 
+		Если ДанныеСценария.examples.head.Свойство("tokens") Тогда
+			Для Каждого ДанныеПараметра Из ДанныеСценария.examples.head.tokens Цикл
+				СтрокаПримеры.ИменованныеПараметры.Добавить(ДанныеПараметра.text);
+			КонецЦикла;	 
+		КонецЕсли;	
 		
 		ЭлементыПримеры = СтрокаПримеры.ПолучитьЭлементы();
 		
@@ -3605,9 +621,11 @@
 			СтрокаПримера.НомерСтрокиВФиче = ДанныеПримера.line;
 			
 			ЭлементыПримера = СтрокаПримера.ПолучитьЭлементы();
-			Для Каждого ДанныеШага Из ДанныеПримера.script.steps Цикл
-				ДобавитьШаг(ЭлементыПримера, ДанныеШага, ФайлФичи, ИдСтроки, КешСнипетовНаКлиенте, ИмяEpfФичаФайла, СтруктураПараметров);
-			КонецЦикла;	 
+			Если ДанныеПримера.Свойство("script") И ДанныеПримера.script <> Неопределено И ДанныеПримера.script.Свойство("steps") Тогда
+				Для Каждого ДанныеШага Из ДанныеПримера.script.steps Цикл
+					ДобавитьШаг(ЭлементыПримера, ДанныеШага, ФайлФичи, ИдСтроки, КешСнипетовНаКлиенте, ИмяEpfФичаФайла, СтруктураПараметров);
+				КонецЦикла;	 
+			КонецЕсли;	
 			
 		КонецЦикла;	 
 		
@@ -3633,20 +651,38 @@
 	СтрокаШага.Имя = СокрЛП(ДанныеШага.text);
 	СтрокаШага.ИмяШагаБезКлючевогоСлова = СокрЛ(Сред(СтрокаШага.Имя, СтрДлина(ДанныеШага.keyword.text) + 1));
 	Если ДанныеШага.Свойство("line") Тогда
-		СтрокаШага.ПолныйПуть = "    " + ФайлФичи.ПолноеИмя + ":" + XMLСтрока(ДанныеШага.line);
+		СтрокаШага.ПолныйПуть = "    " + ФайлФичи.ПолноеИмя + ":" + Формат(ДанныеШага.line, "ЧГ=; ЧН=0");
 	КонецЕсли;	 
 	СтрокаШага.ТипКартинки = 3;
-	СтрокаШага.ПроизвольныеЗначения = Новый Структура;
 	
 	Если ДанныеШага.Свойство("comments") Тогда
-		СтрокаШага.ПроизвольныеЗначения.Вставить("МассивКомментариевШага", СкопироватьМассивКомментариев(ДанныеШага.comments));
+		МассивКомментариевШага = Новый Массив;
+		Для Каждого Элем Из ДанныеШага.comments Цикл
+			МассивКомментариевШага.Добавить(Элем.text);
+		КонецЦикла;
+		
+		Если ТипЗнч(СтрокаШага.ПроизвольныеЗначения) <> Тип("Структура") Тогда
+			СтрокаШага.ПроизвольныеЗначения = Новый Структура;
+		КонецЕсли;	
+		
+		СтрокаШага.ПроизвольныеЗначения.Вставить("МассивКомментариевШага", МассивКомментариевШага);
 	Иначе
-		СтрокаШага.ПроизвольныеЗначения.Вставить("МассивКомментариевШага", Неопределено);
+		//СтрокаШага.ПроизвольныеЗначения.Вставить("МассивКомментариевШага", Неопределено);
 	КонецЕсли;	 
 	Если ДанныеШага.Свойство("tags") Тогда
-		СтрокаШага.ПроизвольныеЗначения.Вставить("МассивТеговШага", СкопироватьМассивТегов(ДанныеШага.tags));
+		//Массив тегов шага заполняется не так как массив тегов фичи или сценария
+		МассивТеговШага = Новый Массив;
+		Для Каждого Элем Из ДанныеШага.tags Цикл
+			МассивТеговШага.Добавить(Элем.text);
+		КонецЦикла;
+		
+		Если ТипЗнч(СтрокаШага.ПроизвольныеЗначения) <> Тип("Структура") Тогда
+			СтрокаШага.ПроизвольныеЗначения = Новый Структура;
+		КонецЕсли;
+		
+		СтрокаШага.ПроизвольныеЗначения.Вставить("МассивТеговШага", МассивТеговШага);
 	Иначе	
-		СтрокаШага.ПроизвольныеЗначения.Вставить("МассивТеговШага", Неопределено);
+		//СтрокаШага.ПроизвольныеЗначения.Вставить("МассивТеговШага", Неопределено);
 	КонецЕсли;	 
 	
 	ИдСтроки = ИдСтроки + 1;
@@ -3675,6 +711,9 @@
 	Если ДанныеСнипета = Неопределено И СтруктураПараметров.ЯзыкФичи <> "ru" Тогда
 		ДанныеПоСнипетамПеревод = КешДанныеПеревода[СтруктураПараметров.ЯзыкФичи].ДляПоискаПеревод;
 		ДанныеПеревода = ДанныеПоСнипетамПеревод[ДанныеШага.snippet];
+		Если ДанныеПеревода = Неопределено Тогда
+			ДанныеПеревода = ДанныеПоСнипетамПеревод["_" + ДанныеШага.snippet];
+		КонецЕсли;	 
 		
 		Если ДанныеПеревода = Неопределено И (ДанныеШага.keyword.type = "if" ИЛИ ДанныеШага.keyword.type = "elseif")
 				И НЕ ПустаяСтрока(ДанныеШага.snippet) Тогда
@@ -3696,6 +735,9 @@
 	КонецЕсли;	 
 	
 	Если ЭтоОбычныйШагОбернутыйВУсловие Тогда
+		Если ТипЗнч(СтрокаШага.ПроизвольныеЗначения) <> Тип("Структура") Тогда
+			СтрокаШага.ПроизвольныеЗначения = Новый Структура;
+		КонецЕсли;	
 		СтрокаШага.ПроизвольныеЗначения.Вставить("ЭтоОбычныйШагОбернутыйВУсловие", Истина);
 	КонецЕсли;	 
 	
@@ -3716,14 +758,30 @@
 		СтрокаШага.ДопТип = "УсловиеИначеЕсли";
 	КонецЕсли;	 
 	
-	Если ДанныеШага.Свойство("steps") Тогда
+	Если ДанныеШага.Свойство("steps")
+		И ВГРуппеЕстьРеальныеШаги(ДанныеШага.steps) И НЕ ЭтоПодсценарий //Обход https://github.com/lintest/VanessaExt/issues/88 "Неверное определение группы парсером Gherkin"
+		Тогда
 		СтрокаШага.Тип = "Область";
 		СтрокаШага.ЭтоЧужойСнипет = Ложь;
 	ИначеЕсли ЭтоПодсценарий Тогда
 		СтрокаШага.Тип = "ШагСценарий";
-		СтрокаШага.АдресСнипета = ДанныеШага.snippet.filename;
+		Если ДанныеШага.snippet.Свойство("filename") Тогда
+			СтрокаШага.АдресСнипета = ДанныеШага.snippet.filename;
+		КонецЕсли;	 
 		СтрокаШага.Снипет = "";
 		СтрокаШага.ТипКартинки = -1;
+		
+		Если ТипЗнч(СтрокаШага.ПроизвольныеЗначения) <> Тип("Структура") Тогда
+			СтрокаШага.ПроизвольныеЗначения = Новый Структура;
+		КонецЕсли;	 
+		
+		Если ДанныеШага.snippet.Свойство("steps") Тогда
+			Если ДанныеШага.snippet.steps.Количество() > 0 Тогда
+				НомерПервогоШага = ДанныеШага.snippet.steps[0].line;
+				СтрокаШага.ПроизвольныеЗначения.Вставить("НомерСтрокиВФиче", НомерПервогоШага - 1);
+			КонецЕсли;	 
+		КонецЕсли;	 
+		
 	Иначе	
 		СтрокаШага.Тип = "Шаг";
 	КонецЕсли;	
@@ -3742,20 +800,6 @@
 			
 			ПараметрШага.Значение = ДанныеПараметра;
 		КонецЦикла;	 
-		
-		Если ЗаменятьПорядокПараметров Тогда
-			Если МассивСоответствийПозицийПараметров.Количество() <> СтрокаШага.ЗначенияПараметров.Количество() Тогда
-				ВызватьИсключение Ванесса.ПодставитьПараметрыВСтроку(
-					Ванесса.Локализовать("Несоответствие числа параметров в шаге и в переводе шага <%1>: <%2> и <%3>."),
-					СокрЛП(СтрокаШага.Имя), СтрокаШага.ЗначенияПараметров.Количество(), МассивСоответствийПозицийПараметров.Количество());
-			КонецЕсли;	 
-			
-			Спс = Новый СписокЗначений;
-			Для Каждого Номер Из МассивСоответствийПозицийПараметров Цикл
-				Спс.Добавить(СтрокаШага.ЗначенияПараметров[Номер - 1].Значение);
-			КонецЦикла;	 
-			СтрокаШага.ЗначенияПараметров = Спс;
-		КонецЕсли;	 
 	КонецЕсли;	 
 	
 	Если ДанныеШага.Свойство("multilines") Тогда
@@ -3778,11 +822,36 @@
 		КонецЦикла;	 
 	КонецЕсли;	 
 	
+	КоличествоТаблиц = 0;
 	Если ДанныеШага.Свойство("tables") Тогда
 		СтрокаШага.ШагСПараметрамиВТаблице = Истина;
 		ЭлементыШага = СтрокаШага.ПолучитьЭлементы();
 		ДобавитьТаблицы(ЭлементыШага, ДанныеШага, ФайлФичи, ИдСтроки, КешСнипетовНаКлиенте, ИмяEpfФичаФайла);
+		КоличествоТаблиц = ДанныеШага.tables.Количество();
 	КонецЕсли;
+	
+	Если ЗаменятьПорядокПараметров и СтрокаШага.ЗначенияПараметров.Количество() > 0 Тогда
+		
+		//Далее условие предполагало провеку количества параметров у перевода. С учетом, что последний параметр может быть как обычным параметром, так и строкой.
+		//Но это некорректно работает для шага
+		//	And I go to line in "TableName" table
+		//	        |'Name'   |
+		//	        | 'Item1' |		
+		
+		//Если МассивСоответствийПозицийПараметров.Количество() <> СтрокаШага.ЗначенияПараметров.Количество() + КоличествоТаблиц Тогда
+		//	ВызватьИсключение Ванесса.ПодставитьПараметрыВСтроку(
+		//		Ванесса.Локализовать("Несоответствие числа параметров в шаге и в переводе шага <%1>: <%2> и <%3>."),
+		//		СокрЛП(СтрокаШага.Имя), СтрокаШага.ЗначенияПараметров.Количество() + КоличествоТаблиц, МассивСоответствийПозицийПараметров.Количество());
+		//КонецЕсли;	 
+		
+		Спс = Новый СписокЗначений;
+		Для Каждого Номер Из МассивСоответствийПозицийПараметров Цикл
+			Если СтрокаШага.ЗначенияПараметров.Количество() >= Номер Тогда
+				Спс.Добавить(СтрокаШага.ЗначенияПараметров[Номер - 1].Значение);
+			КонецЕсли;	
+		КонецЦикла;	 
+		СтрокаШага.ЗначенияПараметров = Спс;
+	КонецЕсли;	 
 	
 	Если СтрокаШага.Тип = "Область" И ПустаяСтрока(СтрокаШага.ДопТип) Тогда
 		СтрокаШага.Снипет = "";
@@ -3876,7 +945,12 @@
 		КонецЦикла;	 
 	ИначеЕсли ЭтоПодсценарий И СтрокаШага.ДопТип <> "СтруктураСценария" Тогда	
 		ЭлементыШага = СтрокаШага.ПолучитьЭлементы();
-		ФайлФичиПодсценария = Новый Файл(ДанныеШага.snippet.filename);
+		Если ДанныеШага.snippet.Свойство("filename") Тогда
+			ФайлФичиПодсценария = Новый Файл(ДанныеШага.snippet.filename);
+		Иначе	
+			ФайлФичиПодсценария = Новый Файл;
+		КонецЕсли;	 
+		
 		Для Каждого ДанныеПодчиненногоШага Из ДанныеШага.snippet.steps Цикл
 			ДобавитьШаг(ЭлементыШага, ДанныеПодчиненногоШага, ФайлФичиПодсценария, ИдСтроки, КешСнипетовНаКлиенте, ИмяEpfФичаФайла, СтруктураПараметров);
 		КонецЦикла;	 
@@ -3889,17 +963,35 @@
 	СтрокаГруппы = ЭлементыСценария.Добавить();
 	СтрокаГруппы.Имя = СокрЛП(ДанныеШага.text);
 	СтрокаГруппы.ТипКартинки = -1;
-	СтрокаГруппы.ПроизвольныеЗначения = Новый Структура;
 	
 	Если ДанныеШага.Свойство("comments") Тогда
-		СтрокаГруппы.ПроизвольныеЗначения.Вставить("МассивКомментариевШага", СкопироватьМассивКомментариев(ДанныеШага.comments));
+		МассивКомментариев = Новый Массив;
+		Для Каждого Элем Из ДанныеШага.comments Цикл
+			МассивКомментариев.Добавить(Элем.text);
+		КонецЦикла;
+		
+		Если ТипЗнч(СтрокаГруппы.ПроизвольныеЗначения) <> Тип("Структура") Тогда
+			СтрокаГруппы.ПроизвольныеЗначения = Новый Структура;
+		КонецЕсли;	
+		
+		СтрокаГруппы.ПроизвольныеЗначения.Вставить("МассивКомментариевШага", МассивКомментариев);
 	Иначе
-		СтрокаГруппы.ПроизвольныеЗначения.Вставить("МассивКомментариевШага", Неопределено);
+		//СтрокаГруппы.ПроизвольныеЗначения.Вставить("МассивКомментариевШага", Неопределено);
 	КонецЕсли;	 
 	Если ДанныеШага.Свойство("tags") Тогда
-		СтрокаГруппы.ПроизвольныеЗначения.Вставить("МассивТеговШага", СкопироватьМассивТегов(ДанныеШага.tags));
+		//Массив тегов шага заполняется не так как массив тегов фичи или сценария
+		МассивТегов = Новый Массив;
+		Для Каждого Элем Из ДанныеШага.tags Цикл
+			МассивТегов.Добавить(Элем.text);
+		КонецЦикла;
+		
+		Если ТипЗнч(СтрокаГруппы.ПроизвольныеЗначения) <> Тип("Структура") Тогда
+			СтрокаГруппы.ПроизвольныеЗначения = Новый Структура;
+		КонецЕсли;
+		
+		СтрокаГруппы.ПроизвольныеЗначения.Вставить("МассивТеговШага", МассивТегов);
 	Иначе	
-		СтрокаГруппы.ПроизвольныеЗначения.Вставить("МассивТеговШага", Неопределено);
+		//СтрокаГруппы.ПроизвольныеЗначения.Вставить("МассивТеговШага", Неопределено);
 	КонецЕсли;	 
 	
 	ИдСтроки = ИдСтроки + 1;
@@ -3941,7 +1033,7 @@
 		
 		СтрокаТаблицы = ЭлементыШага.Добавить();
 		СтрокаТаблицы.Имя = СокрЛП(ДанныеТаблицы.head.text);
-		СтрокаТаблицы.ПолныйПуть = "    " + ФайлФичи.ПолноеИмя + ":" + XMLСтрока(ДанныеТаблицы.head.line);
+		СтрокаТаблицы.ПолныйПуть = "    " + ФайлФичи.ПолноеИмя + ":" + Формат(ДанныеТаблицы.head.line, "ЧГ=; ЧН=0");
 		СтрокаТаблицы.ТипКартинки = -1;
 		СтрокаТаблицы.СтрокаПараметровШагаВВидеТаблицы = Истина;
 		СтрокаТаблицы.НомерСтрокиВФиче = ДанныеТаблицы.head.line;
@@ -3965,7 +1057,7 @@
 		Для Каждого ДанныеСтрок Из ДанныеТаблицы.body Цикл
 			СтрокаТаблицы = ЭлементыШага.Добавить();
 			СтрокаТаблицы.Имя = СокрЛП(ДанныеСтрок.text);
-			СтрокаТаблицы.ПолныйПуть = "    " + ФайлФичи.ПолноеИмя + ":" + XMLСтрока(ДанныеСтрок.line);
+			СтрокаТаблицы.ПолныйПуть = "    " + ФайлФичи.ПолноеИмя + ":" + Формат(ДанныеСтрок.line, "ЧГ=; ЧН=0");
 			СтрокаТаблицы.ТипКартинки = -1;
 			СтрокаТаблицы.СтрокаПараметровШагаВВидеТаблицы = Истина;
 			СтрокаТаблицы.НомерСтрокиВФиче = ДанныеСтрок.line;
@@ -3974,6 +1066,10 @@
 			СтрокаТаблицы.ИдСтроки = ИдСтроки;
 			
 			ПараметрыТаблицы = СтрокаТаблицы.ПараметрыТаблицы;
+			Если НЕ ДанныеСтрок.Свойство("tokens") Тогда
+				ВызватьИсключение Ванесса.ПодставитьПараметрыВСтроку(
+					Ванесса.Локализовать("Строка <%1> некорректно оформлена. Строка фичи <%2>"),ЗначениеЯчейкиJson.text, ДанныеСтрок.line);
+			КонецЕсли;	
 			Для Каждого ЗначениеЯчейкиJson Из ДанныеСтрок.tokens Цикл
 				ЗначениеЯчейки = Новый Структура;
 				ЗначениеЯчейки.Вставить("Значение", ЗначениеЯчейкиJson.text);
@@ -4034,6 +1130,7 @@
 			
 			ЭлементКаталогФичи.Имя = ИмяКаталога;
 			ЭлементКаталогФичи.Тип = "Каталог";
+			ЭлементКаталогФичи.ПолныйПуть = ИмяФайла;
 			ИдСтроки = ИдСтроки + 1;
 			ЭлементКаталогФичи.ИдСтроки = ИдСтроки;
 			
@@ -4099,5 +1196,83 @@
 	
 	Возврат Ложь;
 КонецФункции	 
+
+&НаКлиенте
+Функция КлючевыеСловаДляПарсераСтрокой()
+
+	ДвоичныеДанные = ПолучитьИзВременногоХранилища(Ванесса.МестоположениеКлючевыеСловаGherkin());
+	Поток = ДвоичныеДанные.ОткрытьПотокДляЧтения();
+	ИмяВременногоФайла = ПолучитьИмяВременногоФайла();
+	Ванесса.УдалитьФайлыКомандаСистемы(ИмяВременногоФайла);
+	ИмяВременнойПапки = ИмяВременногоФайла + ПолучитьРазделительПути();
+	ЧтениеZipФайла = Новый ЧтениеZipФайла(Поток);
+	Для каждого ЭлементZip из ЧтениеZipФайла.Элементы Цикл
+		ЧтениеZipФайла.Извлечь(ЭлементZip, ИмяВременнойПапки);
+		ИмяВременногоФайла = ИмяВременнойПапки + ЭлементZip.ПолноеИмя;
+		ДвоичныеДанные = Новый ДвоичныеДанные(ИмяВременногоФайла);
+		Поток = ДвоичныеДанные.ОткрытьПотокДляЧтения();
+		ЧтениеТекста = Новый ЧтениеТекста(Поток, КодировкаТекста.UTF8);
+		ТекстМакета = ЧтениеТекста.Прочитать();
+		ЧтениеТекста.Закрыть();
+		Ванесса.УдалитьФайлыКомандаСистемы(ИмяВременногоФайла);
+		Ванесса.УдалитьФайлыКомандаСистемы(ИмяВременнойПапки);
+		Возврат ТекстМакета;
+	КонецЦикла;
+	
+КонецФункции	 
+
+&НаКлиенте
+Функция УниверсальноеИмяФайла(Стр)
+	Возврат НРег(СтрЗаменить(Стр, "\", "/")); 
+КонецФункции
+
+&НаКлиенте
+Функция ТегиОтборНрег()
+	
+	Если Ванесса.Объект.СписокТеговОтбор.Количество() = 0 Тогда
+		Возврат Неопределено;
+	КонецЕсли;	 
+	
+	Результат = Новый Соответствие;
+	Для Каждого Элем Из Ванесса.Объект.СписокТеговОтбор Цикл
+		Результат.Вставить(НРег(Элем.Значение), Истина);
+	КонецЦикла;	 
+	
+	Возврат Результат; 
+	
+КонецФункции	 
+
+&НаКлиенте
+Процедура ВГРуппеЕстьРеальныеШагиРекурсивно(Шаги, Результат)
+	
+	Если Результат Тогда
+		Возврат;
+	КонецЕсли;
+	
+	Для Каждого ТекШаг Из Шаги Цикл
+		Если ТекШаг.Свойство("snippet") И НЕ ТекШаг.Свойство("steps") Тогда
+			Результат = Истина;
+			Прервать;
+		ИначеЕсли ТекШаг.Свойство("steps") Тогда
+			ВГРуппеЕстьРеальныеШагиРекурсивно(ТекШаг.steps, Результат)
+		КонецЕсли;
+		
+		Если Результат Тогда
+			Прервать;
+		КонецЕсли;	
+		
+	КонецЦикла;	
+	
+КонецПроцедуры
+
+&НаКлиенте
+Функция ВГРуппеЕстьРеальныеШаги(Шаги)
+	Результат = Ложь;
+	
+	ВГРуппеЕстьРеальныеШагиРекурсивно(Шаги, Результат);
+	
+	Возврат Результат;
+	
+КонецФункции	
 
 #КонецОбласти
