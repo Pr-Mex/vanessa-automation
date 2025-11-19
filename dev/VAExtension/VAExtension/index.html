@@ -1624,6 +1624,12 @@
 </code></pre></div>
 
 <p>Выражение пишется в виде '_ТекущееОкно.Заголовок = "Новый заголовок"' или '_CurrentWindow.Caption = "New caption"'.</p>
+<ul>
+<li>Пример. Изменение заголовка текущего окна клиента тестирования:</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="k">И </span><span class="nf">я выполняю выражение &#39;_ТекущееОкно.Заголовок = &quot;</span><span class="s">МойЗаголовок</span><span class="nf">&quot;&#39; в текущем окне (Расширение)</span>
+</code></pre></div>
+
 <h2 id="8">8. Выполнить метод текущей формы.<a class="headerlink" href="#8" title="Permanent link">&para;</a></h2>
 <p>Для выполнения произвольного метода текщей формы нужно выполнить шаг.</p>
 <div class="codehilite"><pre><span></span><code><span class="nf">   </span><span class="k">И </span><span class="nf">я выполняю выражение &quot;</span><span class="s">ВыражениеВстроенногоЯзыка</span><span class="nf">&quot; в текущем окне (Расширение)</span>
@@ -1873,8 +1879,7 @@
 В тестах это может проявляться так, что тест ввёл значение в поле, но до того как он начал работать с другим полем данное значение было возвращено в предыдущее состояние.
 Данный шаг меняет свойство "ОбновлениеТекстаРедактирования" у полей формы, чтобы избежать этого эффекта.
 Также есть возможность выполнить это для одного поля</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я отключаю обновление текста редактирования полей в текущем окне (расширение)</span>
-<span class="k">И </span><span class="nf">я отключаю обновление текста редактирования поля &quot;</span><span class="s">Заголовок поля</span><span class="nf">&quot; в текущем окне (расширение)</span>
+<div class="codehilite"><pre><span></span><code><span class="k">И </span><span class="nf">я отключаю обновление текста редактирования поля &quot;</span><span class="s">Заголовок поля</span><span class="nf">&quot; в текущем окне (расширение)</span>
 <span class="k">И </span><span class="nf">я отключаю обновление текста редактирования поля с именем &quot;</span><span class="s">ИмяПоля</span><span class="nf">&quot; в текущем окне (расширение)</span>
 </code></pre></div>
 
