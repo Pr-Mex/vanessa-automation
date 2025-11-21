@@ -477,6 +477,18 @@
 
 
   <li class="md-nav__item">
+    <a href="../../FAQ/UiAutomation/" title="Лайфхаки при работе с UI Automation" class="md-nav__link">
+      Лайфхаки при работе с UI Automation
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  <li class="md-nav__item">
     <a href="../../FAQ/%D0%91%D1%80%D0%B0%D1%83%D0%B7%D0%B5%D1%80/" title="Как подключить браузер Chrome через debug порт" class="md-nav__link">
       Как подключить браузер Chrome через debug порт
     </a>
@@ -1098,6 +1110,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#33-8_2-8_5" class="md-nav__link">
+    33. Прочитать текущий вариант интерфейса клиента тестирования (Версия8_2, Такси, Версия8_5)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    34. Проверить вариант интерфейса клиента тестирования
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    35. Проверить вариант интерфейса клиента тестирования
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1408,6 +1441,27 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#33-8_2-8_5" class="md-nav__link">
+    33. Прочитать текущий вариант интерфейса клиента тестирования (Версия8_2, Такси, Версия8_5)
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#34" class="md-nav__link">
+    34. Проверить вариант интерфейса клиента тестирования
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#35" class="md-nav__link">
+    35. Проверить вариант интерфейса клиента тестирования
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -1467,6 +1521,9 @@
 <li>Открытие табличного документа как будто это сделал пользователь.</li>
 <li>Отключение отката текста введенного в поле во время теста.</li>
 <li>Получение версии подсистемы.</li>
+<li>Прочитать текущий вариант интерфейса клиента тестирования (Версия8_2, Такси, Версия8_5)</li>
+<li>Проверить вариант интерфейса клиента тестирования</li>
+<li>Проверить запущен клиент тестирования в файловой базе или клиент серверной</li>
 </ol>
 <h2 id="1">1. Открытие окна "Функции технического специалиста" (Все функции).<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
 <p>Нужно использовать шаг</p>
@@ -1518,6 +1575,37 @@
 <span class="nf">   </span><span class="k">И </span><span class="nf">Я запоминаю значение выражения на сервере &#39;ВыражениеВстроенногоЯзыка&#39; в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot; (Расширение)</span>
 </code></pre></div>
 
+<ul>
+<li>Простой вариант вычисления выражения на сервере. Пример:</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="k">И </span><span class="nf">Я запоминаю значение выражения на сервере &#39;МойОбщийМодульСервер.МойМетод()&#39; в переменную &#39;Результат&#39; (Расширение)</span>
+</code></pre></div>
+
+<ul>
+<li>Есть более сложный вариант выражения, когда используется переопределение ЗначениеДляВозврата</li>
+<li>Можно передать произвольный код в шаг вычисления выражения и этот код сам должен установить значение переменной <strong>ЗначениеДляВозврата</strong>. Пример:</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="k">И </span><span class="nf">Я запоминаю в переменную &#39;Выражение&#39; значение</span>
+<span class="k">&quot;&quot;&quot;</span><span class="s">bsl</span>
+<span class="s">    Запрос = Новый Запрос;</span>
+<span class="s">    Запрос.Текст = </span>
+<span class="s">        &quot;ВЫБРАТЬ ПЕРВЫЕ 1</span>
+<span class="s">        |   Справочник1.Наименование КАК Наименование</span>
+<span class="s">        |ИЗ Справочник.Справочник1 КАК Справочник1</span>
+<span class="s">        |ГДЕ</span>
+<span class="s">        |   Справочник1.Код = &quot;&quot;000000001&quot;&quot;</span>
+<span class="s">        |УПОРЯДОЧИТЬ ПО Код&quot;;</span>
+<span class="s">    Выборка = Запрос.Выполнить().Выбрать();</span>
+<span class="s">    Если Выборка.Следующий() Тогда</span>
+<span class="s">        ЗначениеДляВозврата = Выборка.Наименование;</span>
+<span class="s">    Иначе</span>
+<span class="s">        ЗначениеДляВозврата = Неопределено;</span>
+<span class="s">    КонецЕсли;</span>
+<span class="k">&quot;&quot;&quot;</span>
+
+<span class="k">И </span><span class="nf">Я запоминаю значение выражения на сервере &#39;$Выражение$&#39; в переменную &#39;Результат&#39; (Расширение)</span>
+</code></pre></div>
+
 <h2 id="61">6.1 Получить произвольное значение из реквизита формы, объекта связанного с формой.<a class="headerlink" href="#61" title="Permanent link">&para;</a></h2>
 <p>Для вывода текущих значений активного окна клиента тестирования нужно выполнить шаг. При этом на стороне менеджера тестирования появится печатная форма. Данный шаг нужно использовать для отладки и не нужно использовать в реальных сценариях.</p>
 <div class="codehilite"><pre><span></span><code><span class="nf">   </span><span class="k">И </span><span class="nf">я вывожу данные текущего окна (Расширение)</span>
@@ -1536,6 +1624,12 @@
 </code></pre></div>
 
 <p>Выражение пишется в виде '_ТекущееОкно.Заголовок = "Новый заголовок"' или '_CurrentWindow.Caption = "New caption"'.</p>
+<ul>
+<li>Пример. Изменение заголовка текущего окна клиента тестирования:</li>
+</ul>
+<div class="codehilite"><pre><span></span><code><span class="k">И </span><span class="nf">я выполняю выражение &#39;_ТекущееОкно.Заголовок = &quot;</span><span class="s">МойЗаголовок</span><span class="nf">&quot;&#39; в текущем окне (Расширение)</span>
+</code></pre></div>
+
 <h2 id="8">8. Выполнить метод текущей формы.<a class="headerlink" href="#8" title="Permanent link">&para;</a></h2>
 <p>Для выполнения произвольного метода текщей формы нужно выполнить шаг.</p>
 <div class="codehilite"><pre><span></span><code><span class="nf">   </span><span class="k">И </span><span class="nf">я выполняю выражение &quot;</span><span class="s">ВыражениеВстроенногоЯзыка</span><span class="nf">&quot; в текущем окне (Расширение)</span>
@@ -1783,13 +1877,42 @@
 
 <p>Существует проблема, что при синхронизации состояния формы после завершения серверного вызова, может затираться текст, который в данный момент редактирует пользователь.
 В тестах это может проявляться так, что тест ввёл значение в поле, но до того как он начал работать с другим полем данное значение было возвращено в предыдущее состояние.
-Данный шаг меняет свойство "ОбновлениеТекстаРедактирования" у полей формы, чтобы избежать этого эффекта.</p>
+Данный шаг меняет свойство "ОбновлениеТекстаРедактирования" у полей формы, чтобы избежать этого эффекта.
+Также есть возможность выполнить это для одного поля</p>
+<div class="codehilite"><pre><span></span><code><span class="k">И </span><span class="nf">я отключаю обновление текста редактирования поля &quot;</span><span class="s">Заголовок поля</span><span class="nf">&quot; в текущем окне (расширение)</span>
+<span class="k">И </span><span class="nf">я отключаю обновление текста редактирования поля с именем &quot;</span><span class="s">ИмяПоля</span><span class="nf">&quot; в текущем окне (расширение)</span>
+</code></pre></div>
+
 <h2 id="32">32. Получение версии подсистемы.<a class="headerlink" href="#32" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я запоминаю версию конфигурации &quot;</span><span class="s">ИмяПодсистемы</span><span class="nf">&quot; как &quot;</span><span class="s">Версия</span><span class="nf">&quot; (расширение)</span>
 </code></pre></div>
 
 <p>Позволяет сохранить в переменную версию подсистемы из регистра "ВерсииПодсистем" ("SubsystemsVersions").
 Работает с конфигурациями с русскими и английскими метаданными.</p>
+<h2 id="33-8_2-8_5">33. Прочитать текущий вариант интерфейса клиента тестирования (Версия8_2, Такси, Версия8_5)<a class="headerlink" href="#33-8_2-8_5" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я запоминаю текущий вариант интерфейса в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot; (расширение)</span>
+</code></pre></div>
+
+<p>Позволяет сохранить в переменную строковое представление текущего варианта интерфейса клиента тестирования
+Возможные значения:
+ru: Версия8_2, Такси, Версия8_5
+en: Version8_2, Taxi, Version8_5</p>
+<h2 id="34">34. Проверить вариант интерфейса клиента тестирования<a class="headerlink" href="#34" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">Если </span><span class="nf">это интерфейс</span><span class="s">85</span><span class="nf"> (расширение) Тогда</span>
+<span class="nf">        //действия</span>
+<span class="nf">    </span><span class="k">Если </span><span class="nf">это интерфейс Такси (расширение) Тогда</span>
+<span class="nf">        //действия</span>
+<span class="nf">    </span><span class="k">Если </span><span class="nf">это интерфейс</span><span class="s">82</span><span class="nf"> (расширение) Тогда</span>
+<span class="nf">        //действия</span>
+</code></pre></div>
+
+<p>Позволяет проверить в каком интерфейсе запущен клиент тестирования</p>
+<h2 id="35">35. Проверить вариант интерфейса клиента тестирования<a class="headerlink" href="#35" title="Permanent link">&para;</a></h2>
+<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">клиент тестирования запущен в файловой базе (расширение)</span>
+<span class="nf">    </span><span class="k">И </span><span class="nf">клиент тестирования запущен в серверной базе (расширение)</span>
+</code></pre></div>
+
+<p>Позволяет проверить в каком интерфейсе запущен клиент тестирования</p>
                 
               
               
