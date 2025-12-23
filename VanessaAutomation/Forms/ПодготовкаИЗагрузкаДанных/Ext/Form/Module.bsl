@@ -480,8 +480,37 @@ Procedure ЯПроверяюИлиСоздаюДляДокументаОбъек
 	ICheckOrCreateDocumentObjectsWithDataExchangeLoadTrue(ИмяОбъекта, Значения);
 EndProcedure
 
+&AtClient
+Procedure ICheckOrCreateDocumentObjectsInWritePostingMode(Val ObjectName, Val Values) Export
+	
+	If Not Values.Count() Then
+		Return;
+	EndIf;
+	
+	Files = FilesToUpload(Values);
+	
+	If Files.Count() > 0 Then
+		
+	    Vanessa.ЗапретитьВыполнениеШагов();
+		AddParams = New Structure("Object, Name, Values, LoadTrue", "Documents", ObjectName, Values, True);
+		Notify = New NotifyDescription("UploadBinaryDataContinuation", ThisForm, AddParams);
+		BeginPuttingFiles(Notify, Files, , False, ThisForm.UUID);
+		
+	Else
+		
+		ICheckOrCreateDocumentObjectsAtServer(ObjectName, Values, False, DocumentWriteMode.Posting);
+		
+	EndIf;
+	
+EndProcedure
+
+&AtClient
+Procedure ЯПроверяюИлиСоздаюДляДокументаОбъектыВРежимеЗаписиПроведение(Val ИмяОбъекта, Val Значения) Export
+	ICheckOrCreateDocumentObjectsInWritePostingMode(ИмяОбъекта, Значения);
+EndProcedure
+
 &AtServer
-Procedure ICheckOrCreateDocumentObjectsAtServer(ObjectName, Values, DataExchange = True)
+Procedure ICheckOrCreateDocumentObjectsAtServer(ObjectName, Values, DataExchange = True, WriteMode = Undefined)
 	ObjectValues = GetValueTableFromVanessaTableArray(Values);	
 	ObjectAttributes = New ValueTable;
 	FillColumnsByStandardAttributes(ObjectAttributes, "Documents", ObjectName);
@@ -533,6 +562,11 @@ Procedure ICheckOrCreateDocumentObjectsAtServer(ObjectName, Values, DataExchange
 		Else
 			DocumentWriteModeValue = DocumentWriteMode.Write;
 		EndIf;
+		
+		If WriteMode <> Undefined Then
+			DocumentWriteModeValue = WriteMode;
+		EndIf;
+		
 		If Not ValueIsFilled(Obj.Number) Then
 			Obj.SetNewNumber();
 		EndIf;
@@ -2386,6 +2420,12 @@ Procedure AddStepsByLanguage(Vanessa, AllTests, LangCode)
 										, StrTemplate(LocalizedStringsClient()["s20c_" + LangCode], LocalizedStringsClient()["s20d_" + LangCode], "", "")
 										, LocalizedStringsClient()["s20f_" + LangCode]
 										, "");
+	Vanessa.ДобавитьШагВМассивТестов(AllTests
+										, LocalizedStringsClient()["s21a_" + LangCode]
+										, LocalizedStringsClient()["s21b_" + LangCode]
+										, StrTemplate(LocalizedStringsClient()["s21c_" + LangCode], LocalizedStringsClient()["s21d_" + LangCode], "", "")
+										, LocalizedStringsClient()["s21f_" + LangCode]
+										, "");
 EndProcedure
 
 &AtClient
@@ -3606,6 +3646,20 @@ Function LocalizedStringsServer()
 	ReturnData.Insert("s20e_ru", "Сценарий: Создание объектов для бизнес-процесса %1 с ОбменДанными.Загрузка = Истина");
 	ReturnData.Insert("s20f_en", "Creates business process objectss with DataExchange.Load = True");
 	ReturnData.Insert("s20f_ru", "Создаёт объекты бизнес-процесса с ОбменДанными.Загрузка = Истина");
+	
+	ReturnData.Insert("s21a_en", "ICheckOrCreateDocumentObjectsInWritePostingMode(ObjectName, Values)");
+	ReturnData.Insert("s21a_ru", "ЯПроверяюИлиСоздаюДляДокументаОбъектыВРежимеЗаписиПроведение(ИмяОбъекта, Значения)");
+	ReturnData.Insert("s21b_en", "ICheckOrCreateDocumentObjectsInWritePostingMode");
+	ReturnData.Insert("s21b_ru", "ЯПроверяюИлиСоздаюДляДокументаОбъектыВРежимеЗаписиПроведение");
+	ReturnData.Insert("s21c_en", "And I check or create document %1 objects in write posting mode:%2%3");
+	ReturnData.Insert("s21c_ru", "И я проверяю или создаю для документа %1 объекты в режиме записи проведение:%2%3");
+	ReturnData.Insert("s21d_en", """ObjectName""");
+	ReturnData.Insert("s21d_ru", """ИмяОбъекта""");
+	ReturnData.Insert("s21e_en", "Scenario: Create document %1 objects in write posting mode");
+	ReturnData.Insert("s21e_ru", "Сценарий: Создание объектов для документа %1 с записью в режиме проведения");
+	ReturnData.Insert("s21f_en", "Creates documents and writes them in posting mode");
+	ReturnData.Insert("s21f_ru", "Создаёт документы и записывает их в режиме проведения");
+
 	
 	Return ReturnData;
 EndFunction
