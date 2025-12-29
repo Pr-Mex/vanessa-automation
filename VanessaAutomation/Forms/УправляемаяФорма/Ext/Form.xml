@@ -19496,29 +19496,6 @@ For this option to work, you must enable the use of the VanessaExt addin.</v8:co
 																				<Event name="OnChange">ВыводитьЛогВКонсольПриИзменении</Event>
 																			</Events>
 																		</CheckBoxField>
-																		<CheckBoxField name="МаскироватьПарольВЛоге" id="4137">
-																			<DataPath>Объект.МаскироватьПарольВЛоге</DataPath>
-																			<TitleLocation>Right</TitleLocation>
-																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-																			<CheckBoxType>Auto</CheckBoxType>
-																			<ContextMenu name="МаскироватьПарольВЛогеКонтекстноеМеню" id="4138"/>
-																			<ExtendedTooltip name="МаскироватьПарольВЛогеРасширеннаяПодсказка" id="4139">
-																				<AutoMaxWidth>false</AutoMaxWidth>
-																				<Title formatted="false">
-																					<v8:item>
-																						<v8:lang>ru</v8:lang>
-																						<v8:content>Маскируется пароль пользователя в логе /P"*****"</v8:content>
-																					</v8:item>
-																					<v8:item>
-																						<v8:lang>en</v8:lang>
-																						<v8:content>The user's password is masked in the log /P"*****"</v8:content>
-																					</v8:item>
-																				</Title>
-																			</ExtendedTooltip>
-																			<Events>
-																				<Event name="OnChange">МаскироватьПарольВЛогеПриИзменении</Event>
-																			</Events>
-																		</CheckBoxField>
 																	</ChildItems>
 																</UsualGroup>
 															</ChildItems>
@@ -19654,7 +19631,7 @@ For this option to work, you must enable the use of the VanessaExt addin.</v8:co
 																			<v8:content>group log text third line left column</v8:content>
 																		</v8:item>
 																	</Title>
-																	<Behavior>Usual</Behavior>
+																	<Width>50</Width>
 																	<Representation>None</Representation>
 																	<ShowTitle>false</ShowTitle>
 																	<ExtendedTooltip name="ГруппаЛогТекстТретьяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="3439"/>
@@ -19684,6 +19661,46 @@ If the field is empty, then the log will not be output to a text file.</v8:conte
 																				<Event name="StartChoice">КаталогOutputВнутреннийФорматНачалоВыбора</Event>
 																			</Events>
 																		</InputField>
+																	</ChildItems>
+																</UsualGroup>
+																<UsualGroup name="ГруппаЛогТекстТретьяСтрокаПравыйСтолбец" id="4143">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа лог текст третья строка правый столбец</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Group log text third row right column</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаЛогТекстТретьяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="4144"/>
+																	<ChildItems>
+																		<CheckBoxField name="МаскироватьПарольВЛоге" id="4137">
+																			<DataPath>Объект.МаскироватьПарольВЛоге</DataPath>
+																			<TitleLocation>Right</TitleLocation>
+																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="МаскироватьПарольВЛогеКонтекстноеМеню" id="4138"/>
+																			<ExtendedTooltip name="МаскироватьПарольВЛогеРасширеннаяПодсказка" id="4139">
+																				<AutoMaxWidth>false</AutoMaxWidth>
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Маскируется пароль пользователя в логе /P"*****"</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>The user's password is masked in the log /P"*****"</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
+																			<Events>
+																				<Event name="OnChange">МаскироватьПарольВЛогеПриИзменении</Event>
+																			</Events>
+																		</CheckBoxField>
 																	</ChildItems>
 																</UsualGroup>
 															</ChildItems>
@@ -19831,7 +19848,6 @@ If the field is empty, then the log will not be output to a text file.</v8:conte
 																						</v8:item>
 																					</Title>
 																					<Group>Vertical</Group>
-																					<Behavior>Usual</Behavior>
 																					<Representation>None</Representation>
 																					<ShowTitle>false</ShowTitle>
 																					<ExtendedTooltip name="ГруппаAllureОсновныеНастройкиПерваяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="3694"/>
