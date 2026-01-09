@@ -1,4 +1,4 @@
-# language: ru
+﻿# language: ru
 # encoding: utf-8
 #parent uf:
 @UF4_Библиотека_шагов
@@ -6,6 +6,7 @@
 @UA6_Работать_с_подключением_Test_client
 
 @ExportScenarios
+@uf-part2
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 @IgnoreOnWeb

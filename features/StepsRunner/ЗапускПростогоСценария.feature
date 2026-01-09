@@ -4,6 +4,7 @@
 #parent ua:
 @UA11_запускать_сценарии_на_выполнение
 
+@uf-part2
 @MiddleCheck
 @FastCheck
 

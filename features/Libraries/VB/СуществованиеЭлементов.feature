@@ -1,10 +1,11 @@
-# language: ru
+﻿# language: ru
 # encoding: utf-8
 #parent uf:
 @UF4_Библиотека_шагов
 #parent ua:
 @UA53_Работа_с_данными
 
+@uf-part2
 @IgnoreOnWeb
 
 Функционал: Проверка существования элементов

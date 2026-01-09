@@ -5,6 +5,7 @@
 #parent uf:
 @UF1_загрузка_и_обработка_features
 
+@uf-part1
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 @IgnoreOnWeb

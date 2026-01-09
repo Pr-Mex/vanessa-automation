@@ -5,6 +5,7 @@
 #parent ua:
 @UA44_Прочая_активность_по_проверке
 
+@uf-part2
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 @IgnoreOn837

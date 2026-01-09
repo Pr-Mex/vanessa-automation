@@ -5,6 +5,7 @@
 #parent ua:
 @UA32_Создание_фиче_файлов
 
+@uf-part1
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 @IgnoreOnWeb

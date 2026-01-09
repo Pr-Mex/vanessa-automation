@@ -1,6 +1,7 @@
 ﻿# language: ru
 
 
+@uf-part1
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 @IgnoreOnWeb

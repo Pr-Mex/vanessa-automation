@@ -1,4 +1,4 @@
-# language: ru
+﻿# language: ru
 # encoding: utf-8
 #parent ua:
 @UA9_загружать_features
@@ -8,6 +8,7 @@
 
 @tree
 
+@uf-part2
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 @IgnoreOnWeb

@@ -1,4 +1,4 @@
-# language: ru
+﻿# language: ru
 # encoding: utf-8
 #parent uf:
 @UF2_запуск_сценариев_на_выполнение
@@ -7,6 +7,7 @@
 
 #https://github.com/silverbulleters/vanessa-behavior/issues/261
 
+@uf-part2
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 @IgnoreOnWeb

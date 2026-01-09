@@ -1,10 +1,11 @@
-# language: ru
+﻿# language: ru
 #parent uf:
 @UF4_Библиотека_шагов
 #parent ua:
 @UA5_Работать_с_контекстом_фич
 
 
+@uf-part2
 @IgnoreOnWeb
 
 

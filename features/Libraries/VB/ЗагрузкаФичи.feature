@@ -1,10 +1,11 @@
-# language: ru
+﻿# language: ru
 # encoding: utf-8
 #parent uf:
 @UF1_загрузка_и_обработка_features
 #parent ua:
 @UA9_загружать_features
 
+@uf-part2
 @IgnoreOnWeb
 
 Функционал: Загрузить фичу в vanessa-behavior 2

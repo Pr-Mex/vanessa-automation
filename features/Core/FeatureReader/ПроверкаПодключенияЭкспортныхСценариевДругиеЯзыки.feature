@@ -1,4 +1,4 @@
-# language: ru
+﻿# language: ru
 # encoding: utf-8
 #parent uf:
 @UF8_Turbo_Gherkin
@@ -7,6 +7,7 @@
 
 @tree
 
+@uf-part1
 @IgnoreOnOFBuilds
 @IgnoreOn82Builds
 @IgnoreOnWeb

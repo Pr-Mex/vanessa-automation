@@ -1,10 +1,11 @@
-# language: ru
+﻿# language: ru
 # encoding: utf-8
 #parent ua:
 @UA10_генерировать_EPF_файлы
 #parent uf:
 @UF1_загрузка_и_обработка_features
 
+@uf-part2
 @IgnoreOnLinux
 @OneThread
 @IgnoreOnWeb

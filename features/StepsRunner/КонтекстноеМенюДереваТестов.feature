@@ -5,6 +5,7 @@
 #parent ua:
 @UA38_манипулировать_загруженными_фичами
 
+@uf-part2
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 @IgnoreOnUFSovm82Builds

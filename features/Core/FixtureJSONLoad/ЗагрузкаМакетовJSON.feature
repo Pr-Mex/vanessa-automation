@@ -1,5 +1,6 @@
 ﻿# language: ru
 # encoding: utf-8
+@uf-part1
 @IgnoreOnOFBuilds
 @IgnoreOnUFSovm82Builds
 

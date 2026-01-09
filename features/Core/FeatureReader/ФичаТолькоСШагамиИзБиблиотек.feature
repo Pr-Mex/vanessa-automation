@@ -1,10 +1,11 @@
-# language: ru
+﻿# language: ru
 # encoding: utf-8
 #parent uf:
 @UF8_Turbo_Gherkin
 #parent ua:
 @UA39_использовать_экспортные_и_параметризованные_сценарии
 
+@uf-part1
 @IgnoreOnWeb
 
 Функционал: Проверка работы фичи, если все её шаги реализованы в других фичах

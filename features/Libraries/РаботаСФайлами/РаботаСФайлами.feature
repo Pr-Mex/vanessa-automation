@@ -6,6 +6,7 @@
 @UA1_Работать_с_макетами_данных
 
 
+@uf-part2
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 @IgnoreOnWeb

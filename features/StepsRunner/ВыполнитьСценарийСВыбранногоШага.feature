@@ -5,6 +5,7 @@
 #parent ua:
 @UA12_пошагово_выполнять_сценарии
 
+@uf-part2
 @IgnoreOnOFBuilds
 @IgnoreOnWeb
 @tree

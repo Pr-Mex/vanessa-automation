@@ -1,10 +1,11 @@
-# language: ru
+﻿# language: ru
 # encoding: utf-8
 #parent uf:
 @UF3_формирование_features
 #parent ua:
 @UA32_Создание_фиче_файлов
 
+@uf-part1
 @IgnoreOn82Builds
 @IgnoreOn836
 @IgnoreOn837

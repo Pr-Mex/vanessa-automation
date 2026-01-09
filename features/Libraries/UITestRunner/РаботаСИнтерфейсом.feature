@@ -5,6 +5,7 @@
 #parent ua:
 @UA2_Работать_с_UI_Всплывающие_окна
 
+@uf-part2
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 @IgnoreOn837

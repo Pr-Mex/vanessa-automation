@@ -5,6 +5,7 @@
 #parent ua:
 @UA14_Останавливать_выполнение_сценариев
 
+@uf-part1
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 @IgnoreOnWeb

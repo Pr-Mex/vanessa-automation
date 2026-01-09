@@ -4,6 +4,7 @@
 #parent ua:
 @UA18_формировать_отчёт_Allure
 
+@uf-part1
 @IgnoreOn82Builds
 @IgnoreOnUFSovm82Builds
 @IgnoreOnOFBuilds

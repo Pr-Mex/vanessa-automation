@@ -5,6 +5,7 @@
 #parent ua:
 @UA35_запускать_интерактивно
 
+@uf-part1
 @IgnoreOn82Builds
 @IgnoreOnUFSovm82Builds
 @IgnoreOnOFBuilds

@@ -7,6 +7,7 @@
 
 @tree
 
+@uf-part1
 @IgnoreOnOFBuilds
 @IgnoreOn82Builds
 @IgnoreOnWeb

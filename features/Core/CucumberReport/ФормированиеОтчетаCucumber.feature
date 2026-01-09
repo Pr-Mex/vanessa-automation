@@ -1,9 +1,10 @@
-# language: ru
+﻿# language: ru
 #parent uf:
 @UF5_формирование_результатов_выполнения_сценариев
 #parent ua:
 @UA19_формировать_отчет_Cucumber
 
+@uf-part1
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 @IgnoreOnWeb

@@ -5,6 +5,7 @@
 #parent ua:
 @UA45_Прочая_активность_вообще
 
+@uf-part2
 @IgnoreOnOFBuilds
 @IgnoreOn82Builds
 @IgnoreOnWeb

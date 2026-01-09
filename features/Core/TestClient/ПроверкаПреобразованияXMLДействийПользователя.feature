@@ -5,6 +5,7 @@
 #parent uf:
 @UF3_формирование_features
 
+@uf-part1
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 @IgnoreOnWeb

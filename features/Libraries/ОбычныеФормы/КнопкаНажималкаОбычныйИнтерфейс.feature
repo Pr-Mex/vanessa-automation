@@ -1,4 +1,4 @@
-# language: ru
+﻿# language: ru
 # encoding: utf-8
 #parent uf:
 @UF11_Прочее
@@ -7,6 +7,7 @@
 #encoding: utf-8
 
 
+@uf-part2
 @IgnoreOnUFBuilds
 
 Функционал: Интерактивное нажатие кнопки в обычной форме

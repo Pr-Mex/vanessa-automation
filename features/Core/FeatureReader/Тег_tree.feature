@@ -5,6 +5,7 @@
 #parent ua:
 @UA16_парсить_features
 
+@uf-part1
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 @IgnoreOnWeb

@@ -4,6 +4,7 @@
 #parent ua:
 @UA21_формировать_отчет_jUnit
 
+@uf-part1
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 @IgnoreOnWeb

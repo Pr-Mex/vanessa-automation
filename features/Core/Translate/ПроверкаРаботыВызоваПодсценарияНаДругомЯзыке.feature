@@ -5,6 +5,7 @@
 #parent ua:
 @UA39_использовать_экспортные_и_параметризованные_сценарии
 
+@uf-part2
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 @IgnoreOnWeb
