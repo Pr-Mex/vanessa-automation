@@ -4,7 +4,7 @@ from xml.etree import ElementTree as Et
 
 from pyaspeller import YandexSpeller
 
-speller = YandexSpeller(lang="ru", ignore_urls=True, ignore_latin=True)
+speller = YandexSpeller(lang="ru", ignore_urls=True, ignore_latin_letters=True)
 
 namespaces = {
     "logform": "http://v8.1c.ru/8.3/xcf/logform",

@@ -539,6 +539,108 @@ Document3.ListForm</v8:content>
 								</ColumnGroup>
 							</ChildItems>
 						</Table>
+						<UsualGroup name="СтраницаНастройкиОтбораДокументов" id="258">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница настройки отбора документов</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Document Selection Settings page</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница настройки отбора документов</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Document Selection Settings page</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="СтраницаНастройкиОтбораДокументовРасширеннаяПодсказка" id="259"/>
+							<ChildItems>
+								<InputField name="ДымовыеТестыНачальнаяДатаДляПодбораДокументов" id="255">
+									<DataPath>Объект.ДымовыеТестыНачальнаяДатаДляПодбораДокументов</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Начальная дата для подбора документов</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>The starting date for the selection of documents</v8:content>
+										</v8:item>
+									</Title>
+									<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+									<ContextMenu name="ДымовыеТестыНачальнаяДатаДляПодбораДокументовКонтекстноеМеню" id="256"/>
+									<ExtendedTooltip name="ДымовыеТестыНачальнаяДатаДляПодбораДокументовРасширеннаяПодсказка" id="257">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>При установке даты, подбор документов для дымовых тестов будет осуществлен от нее, то есть ДатаДокумента &gt;&gt;=  Начальная дата для подбора документов</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>When setting the date, the selection of documents for smoke tests will be carried out from it, that is, the DocumentDate &gt;&gt;= The starting date for the selection of documents</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>uz</v8:lang>
+												<v8:content>Sana o'rnatilganda, tutun sinovlari uchun hujjatlarni tanlash undan amalga oshiriladi, ya'ni Hujjat sanasi &gt;&gt;= Hujjatlarni tanlash uchun boshlanish sanasi</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>уз</v8:lang>
+												<v8:content>Сана ўрнатилганда, ундан тутун синовлари учун ҳужжатларни танлаш амалга оширилади , яъни ҳужжат санаси &gt;&gt;= ҳужжатларни танлашнинг бошланиш санаси</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">НачальнаяДатаДляПодбораДокументовПриИзменении</Event>
+									</Events>
+								</InputField>
+								<CheckBoxField name="ДымовыеТестыСортироватьДокументыПоДатеУбыв" id="263">
+									<DataPath>Объект.ДымовыеТестыСортироватьДокументыПоДатеУбыв</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сортировать по убыванию</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Sort in descending order</v8:content>
+										</v8:item>
+									</Title>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ДымовыеТестыСортироватьДокументыПоДатеУбывКонтекстноеМеню" id="264"/>
+									<ExtendedTooltip name="ДымовыеТестыСортироватьДокументыПоДатеУбывРасширеннаяПодсказка" id="265">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>При установке флага, при отборе документов будут браться последние из списка</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>When the flag is set, the last documents from the list will be selected</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>uz</v8:lang>
+												<v8:content>Bayroqni o'rnatishda, hujjatlarni tanlashda ro'yxatdagi oxirgilar olinadi</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>уз</v8:lang>
+												<v8:content>Байроқ ўрнатилганда рўйхатдаги охирги ҳужжатлар танланади.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ДымовыеТестыСортироватьДокументыПоДатеУбывПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
 						<Button name="ФормаСформироватьФайлы" id="7">
 							<Type>UsualButton</Type>
 							<DefaultButton>true</DefaultButton>
