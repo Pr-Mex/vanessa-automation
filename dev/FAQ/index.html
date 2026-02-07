@@ -1094,10 +1094,10 @@
 * Для файловой базы надо указать порт web сервера (обычно это 1538). Для серверной базы надо указать имя сервера и порт кластера (обычно 1541).
 * Т.е. TestManager общается с браузером либо через веб сервер для файловых баз, либо через сервер кластера для серверных баз.
 23. Как запомнить навигационную ссылку
-* Для окон, находящихся в панели открытых окон:
+* Для всех окон
     <code>Gherkin
     И я сохраняю навигационную ссылку текущего окна в переменную "ИмяПеременной"</code>
-* Также можно использовать внешнюю компоненту, например, так:
+* (Устарело) Также можно использовать внешнюю компоненту, например, так:
     <code>Gherkin
     И я закрываю все окна клиентского приложения
     И В командном интерфейсе я выбираю 'Основная' 'Справочник1'
@@ -1110,19 +1110,19 @@
 24. Как отключить появление окна, при падении в дамп процесса 1С на windows?
 * Нужно в реестре установить значения параметров</p>
 <div class="codehilite"><pre><span></span><code><span class="mf">1.</span><span class="w"> </span><span class="n">DontShowUI</span>
-<span class="w">    </span><span class="n">Ключ</span><span class="p">:</span><span class="w"> </span><span class="n">HKLM</span><span class="p">:</span><span class="err">\</span><span class="n">Software</span><span class="err">\</span><span class="n">Microsoft</span><span class="err">\</span><span class="n">Windows</span><span class="err">\</span><span class="n">Windows</span><span class="w"> </span><span class="n">Error</span><span class="w"> </span><span class="n">Reporting</span>
+<span class="w">    </span><span class="n">Ключ</span><span class="p">:</span><span class="w"> </span><span class="n">HKEY_LOCAL_MACHINE</span><span class="err">\</span><span class="n">Software</span><span class="err">\</span><span class="n">Microsoft</span><span class="err">\</span><span class="n">Windows</span><span class="err">\</span><span class="n">Windows</span><span class="w"> </span><span class="n">Error</span><span class="w"> </span><span class="n">Reporting</span>
 <span class="w">    </span><span class="n">Имя</span><span class="p">:</span><span class="w"> </span><span class="n">DontShowUI</span>
 <span class="w">    </span><span class="n">Значение</span><span class="p">:</span><span class="w"> </span><span class="mf">1</span>
 <span class="w">    </span><span class="n">Тип</span><span class="p">:</span><span class="w"> </span><span class="n">dword</span>
 
 <span class="mf">2.</span><span class="w"> </span><span class="n">ShutdownReasonOn</span>
-<span class="w">    </span><span class="n">Ключ</span><span class="p">:</span><span class="w"> </span><span class="n">HKLM</span><span class="p">:</span><span class="err">\</span><span class="n">SOFTWARE</span><span class="err">\</span><span class="n">Policies</span><span class="err">\</span><span class="n">Microsoft</span><span class="err">\</span><span class="n">Windows</span><span class="w"> </span><span class="n">NT</span><span class="err">\</span><span class="n">Reliability</span>
+<span class="w">    </span><span class="n">Ключ</span><span class="p">:</span><span class="w"> </span><span class="n">HKEY_LOCAL_MACHINE</span><span class="err">\</span><span class="n">SOFTWARE</span><span class="err">\</span><span class="n">Policies</span><span class="err">\</span><span class="n">Microsoft</span><span class="err">\</span><span class="n">Windows</span><span class="w"> </span><span class="n">NT</span><span class="err">\</span><span class="n">Reliability</span>
 <span class="w">    </span><span class="n">Имя</span><span class="p">:</span><span class="w"> </span><span class="n">ShutdownReasonOn</span>
 <span class="w">    </span><span class="n">Значение</span><span class="p">:</span><span class="w"> </span><span class="mf">0</span>
 <span class="w">    </span><span class="n">Тип</span><span class="p">:</span><span class="w"> </span><span class="n">dword</span>
 
 <span class="mf">3.</span><span class="w"> </span><span class="n">ShutdownReasonUI</span>
-<span class="w">    </span><span class="n">Ключ</span><span class="p">:</span><span class="w"> </span><span class="n">HKLM</span><span class="p">:</span><span class="err">\</span><span class="n">SOFTWARE</span><span class="err">\</span><span class="n">Policies</span><span class="err">\</span><span class="n">Microsoft</span><span class="err">\</span><span class="n">Windows</span><span class="w"> </span><span class="n">NT</span><span class="err">\</span><span class="n">Reliability</span>
+<span class="w">    </span><span class="n">Ключ</span><span class="p">:</span><span class="w"> </span><span class="n">HKEY_LOCAL_MACHINE</span><span class="err">\</span><span class="n">SOFTWARE</span><span class="err">\</span><span class="n">Policies</span><span class="err">\</span><span class="n">Microsoft</span><span class="err">\</span><span class="n">Windows</span><span class="w"> </span><span class="n">NT</span><span class="err">\</span><span class="n">Reliability</span>
 <span class="w">    </span><span class="n">Имя</span><span class="p">:</span><span class="w"> </span><span class="n">ShutdownReasonUI</span>
 <span class="w">    </span><span class="n">Значение</span><span class="p">:</span><span class="w"> </span><span class="mf">0</span>
 <span class="w">    </span><span class="n">Тип</span><span class="p">:</span><span class="w"> </span><span class="n">dword</span>

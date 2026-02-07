@@ -1179,12 +1179,23 @@
 </ul>
 </li>
 <li>
-<p>Отбор по сценариям</p>
+<p>Отбор по сценариям и фичам</p>
 <ul>
-<li><strong>СписокСценариевДляВыполнения {scenariofilter}</strong>:
-     Позволяет задать порядок выполнения сценариев. Сценарии будут выполняться в том порядке как они указаны в списке.
-     Плюс позволяет задать фильтр на выполнение сценариев. Будут выполняться только сценарии из списка.
-     Сценарий в списке указывается с помощью его имени.</li>
+<li>
+<p><strong>СписокСценариевДляВыполнения {scenariofilter}</strong>:
+     Позволяет задать фильтр на выполнение сценариев - будут выполняться только сценарии из списка.
+     Сценарии будут выполняться в том порядке как они указаны в фича файле.
+     Сценарий в списке указывается с помощью его имени.</p>
+</li>
+<li>
+<p><strong>СписокФичДляВыполнения {FeaturesToRun}</strong>:
+     Позволяет задать порядок выполнения фича файлов.
+     Также устанавливает отбор - будут запускаться фича файлы только из списка.
+     Можно передавать полный путь к фича файлу (c:\temp\my.feature).
+     Можно передавать имя фичи без полного пути (my.feature).
+     Можно передавать имя фичи без полного пути  и без расширения файла (my).
+     Настройка применяется, только если происходит загрузка фича файлов из каталога.</p>
+</li>
 </ul>
 </li>
 <li>
@@ -1379,13 +1390,17 @@
      Имя файла будет генерироваться по правилу ИмяКлиентаТестирования+ДатаВремяЗапуска.</p>
 </li>
 <li>
-<p><strong>ОтключитьЗапускРеглЗаданийВФайловойБазе {DisableScheduledJobsExecutionForFileInfobase}</strong>:
-     Если опция включена, при запуске клиента тестирования в файловой базе будет отключен запуск регламентных заданий. Используется ключ командной строки /AllowExecuteScheduledJobs -Off</p>
+<p><strong>ДополнительныеПараметрыЗапускаКлиентаТестирования {AdditionalParametersForLaunchingTheTestingClient}</strong>:
+     В поле указываются дополнительные ключи запуска клиента тестирования, которые будут передаваться запускаемому сеансу 1С</p>
 </li>
 <li>
 <p><strong>РазрешеноЗапускатьТолькоОдинКлиентТестирования {OnlyOneTestClientAllowedToRun}</strong>:
      Если опция включена, то будет включен контроль, что одновременно не может быть подключено более одного клиента тестирования.
      Это может быть полезно, если на компьютерах, на которых запускаются тесты, ограничен объем оперативной памяти и нужно контролировать запуск лишних процессов.</p>
+</li>
+<li>
+<p><strong>ОтключитьЗапускРеглЗаданийВФайловойБазе {DisableScheduledJobsExecutionForFileInfobase}</strong>:
+     Если опция включена, при запуске клиента тестирования в файловой базе будет отключен запуск регламентных заданий. Используется ключ командной строки /AllowExecuteScheduledJobs -Off</p>
 </li>
 <li>
 <p><strong>ПроверкаСерверныхВызововВОбработчикахСобытий {CheckingServerCallsInEventHandlers}</strong>:
@@ -1648,6 +1663,11 @@
       Каталог, в который будут складываться скриншоты.</p>
 </li>
 <li>
+<p><strong>ПроцессыДляСнятияСкриншотов {ProcessesForTakingScreenshots}</strong>:
+      Список имен процессов через точку с запятой.
+      Можно использовать символ *, чтобы экранировать один или несколько символов в имени процесса.</p>
+</li>
+<li>
 <p><strong>СпособСнятияСкриншотовВнешнейКомпонентой {screencaptureaddinmethod}</strong>:
       Весь экран - получает скриншот всего экрана, включая панель задач операционной системы.
       Текущее окно клиента тестирования - получает скриншот только активного окна клиента тестирования.
@@ -1740,6 +1760,10 @@
      Имя файла, куда будет выводиться лог Vanessa Automation.
      Если поле пустое - то лог в текстовый файл выводиться не будет.</p>
 </li>
+<li>
+<p><strong>МаскироватьПарольВЛоге {maskpwdinlog}</strong>:
+     Маскируется пароль пользователя в логе /P"<strong>*</strong>"</p>
+</li>
 </ul>
 </li>
 <li>
@@ -1752,6 +1776,9 @@
 
 <span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ПодставлятьВОтчете</span><span class="n">AllureЗначенияПеременных</span><span class="w"> </span><span class="p">{</span><span class="n">setvariablevaluesinstepsallurereport</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
 <span class="w">    </span><span class="err">Если</span><span class="w"> </span><span class="err">опция</span><span class="w"> </span><span class="err">включена</span><span class="p">,</span><span class="w"> </span><span class="err">то</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">параметрах</span><span class="w"> </span><span class="err">шагов</span><span class="p">,</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">которых</span><span class="w"> </span><span class="err">использовались</span><span class="w"> </span><span class="err">переменные</span><span class="p">,</span><span class="w"> </span><span class="err">имена</span><span class="w"> </span><span class="err">переменных</span><span class="w"> </span><span class="err">будут</span><span class="w"> </span><span class="err">заменены</span><span class="w"> </span><span class="err">на</span><span class="w"> </span><span class="err">их</span><span class="w"> </span><span class="err">значения</span><span class="o">.</span>
+
+<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">СписокИсключаемыхПеременных</span><span class="n">Allure</span><span class="w"> </span><span class="p">{</span><span class="n">allureexcludevars</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
+<span class="w">    </span><span class="err">Имена</span><span class="w"> </span><span class="err">переменных</span><span class="w"> </span><span class="err">из</span><span class="w"> </span><span class="err">списка</span><span class="w"> </span><span class="err">не</span><span class="w"> </span><span class="err">будут</span><span class="w"> </span><span class="err">заменены</span><span class="w"> </span><span class="err">на</span><span class="w"> </span><span class="err">их</span><span class="w"> </span><span class="err">значения</span>
 
 <span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">КаталогВыгрузки</span><span class="n">Allure</span><span class="w"> </span><span class="p">{</span><span class="n">allurepath</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
 <span class="w">    </span><span class="err">Каталог</span><span class="p">,</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">котором</span><span class="w"> </span><span class="err">формируются</span><span class="w"> </span><span class="err">данные</span><span class="w"> </span><span class="err">отчета</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">формате</span><span class="w"> </span><span class="n">Allure</span><span class="o">.</span><span class="w"> </span><span class="err">При</span><span class="w"> </span><span class="err">локальном</span><span class="w"> </span><span class="err">запуске</span><span class="w"> </span><span class="err">каталог</span><span class="w"> </span><span class="err">будет</span><span class="w"> </span><span class="err">очищаться</span><span class="w"> </span><span class="err">при</span><span class="w"> </span><span class="err">каждом</span><span class="w"> </span><span class="err">запуске</span><span class="w"> </span><span class="err">сценариев</span><span class="o">.</span>
@@ -2125,6 +2152,24 @@
 </code></pre></div>
 
 <ul>
+<li>
+<p>Озвучка от 1С</p>
+<div class="codehilite"><pre><span></span><code><span class="k">*</span> **ЗаписьВидео1СЛогин {1CttsLogin}**:
+   Логин для авторизации в сервисе синтеза речи
+
+<span class="k">*</span> **ЗаписьВидео1СГолос {1CttsVoice}**:
+   Голос для генерации речи в сервисе
+
+<span class="k">*</span> **ЗаписьВидео1СПароль {1CttsPassword}**:
+   Пароль для авторизации в сервисе синтеза речи.
+   Пароль указывается в текстовом файле.
+
+<span class="k">*</span> **ЗаписьВидео1ССкоростьРечи {1CttsSpeed}**:
+   Скорость (темп) синтезированной речи.
+   Скорость речи задается дробным числом в диапазоне от 0.8 до 2.
+</code></pre></div>
+
+</li>
 <li>
 <p>Microsoft TTS</p>
 <div class="codehilite"><pre><span></span><code><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ЗаписьВидеоПутьКДвижку</span><span class="n">TTS</span><span class="w"> </span><span class="p">{</span><span class="n">audioenginetts</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
