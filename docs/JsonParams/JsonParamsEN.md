@@ -7,7 +7,7 @@
 * Special
 
       * **GlobalVars {GlobalVars}**:
-Структура, в которой будут находиться пары: ключ и значение. Данная структура будет загружена в глобальные переменные и эти переменные будут доступны при выполнении сценария в объекте КонтекстСохраняемый.
+A structure that will contain key and value pairs. This structure will be loaded into global variables, and these variables will be available when executing the script in the ContextPersisted object.
 
 ## Main settings
 
@@ -22,12 +22,20 @@
       * **filtertags**:
          Enter tags in the field. If the tag is NOT detected in the feature, the whole feature will not be uploaded. You can also upload only the feature scenarios, which contain the tags from the list.
 
-*  Scenario filter
+*  Scenario filter and feature filter
 
       * **scenariofilter**:
-         Allows you to set the order in which scripts are executed. The scripts will be executed in the order they are listed.
-         Plus allows you to set a filter for executing scripts. Only scripts from the list will be executed.
-         The script in the list is indicated by its name.
+         Allows you to set a filter for executing scripts - only scripts from the list will be executed.
+         Scripts will be executed in the order they are specified in the feature file.
+         A script in the list is specified using its name.
+
+      * **FeaturesToRun**:
+         Allows you to set the order of execution of feature files.
+         Also sets the selection - only feature files from the list will be launched.
+         You can pass the full path to the feature file (c:\temp\my.feature).
+         You can pass the feature name without the full path (my.feature).
+         You can pass the feature name without the full path and without the file extension (my).
+         The setting is applied only if feature files are loaded from the directory.
 
 *  Feature file language
 
@@ -166,12 +174,15 @@
          If the parameter is set, the /Out <FileName> parameter will be added when the test client is started.
          The file name will be generated according to the rule TestingClientName+LaunchDateTime.
 
-      * **DisableScheduledJobsExecutionForFileInfobase**:
-         If this option is enabled, scheduled jobs execution will be disabled when new test client will start for a file infobase. Uses command line key /AllowExecuteScheduledJobs -Off
+      * **AdditionalParametersForLaunchingTheTestingClient**:
+         The field specifies additional keys for launching the testing client, which will be transferred to the launched 1C session.
 
       * **OnlyOneTestClientAllowedToRun**:
          If this option is enabled, control will be enabled that more than one testing client cannot be connected at the same time.
          This can be useful if the computers on which the tests are run have a limited amount of RAM and you need to control the launch of unnecessary processes.
+
+      * **DisableScheduledJobsExecutionForFileInfobase**:
+         If this option is enabled, scheduled jobs execution will be disabled when new test client will start for a file infobase. Uses command line key /AllowExecuteScheduledJobs -Off
 
       * **CheckingServerCallsInEventHandlers**:
          Adds the string /EnableCheckServerCalls to the launch options of test clients.
@@ -363,6 +374,10 @@
    * **outputscreenshot**:
       Screenshots directory.
 
+   * **ProcessesForTakingScreenshots**:
+      A semicolon-separated list of process names.
+      You can use the * character to escape one or more characters in a process name.
+
    * **screencaptureaddinmethod**:
       Full Screen - Gets a screenshot of the entire screen, including the operating system taskbar.
       Current Test Client Window - Gets a screenshot of only the active test client window.
@@ -433,6 +448,9 @@
          Vanessa Automation log file name.
          If the field is empty, then the log will not be output to a text file.
 
+      * **maskpwdinlog**:
+         The user's password is masked in the log /P"*****"
+
 *  Allure
 
    *  Main settings
@@ -442,6 +460,9 @@
 
          * **setvariablevaluesinstepsallurereport**:
             If this option is enabled, then in the parameters of the steps in which the variables were used, the variable names will be replaced with their values.
+
+         * **allureexcludevars**:
+            Enter tags in the field. If the tag is detected in the feature, the whole feature will not be uploaded. If the tag is found in the scenario, only this scenario will not be uploaded.
 
          * **allurepath**:
             Allure reports directory. When run locally, the directory will be cleaned up each time the scripts are run.
@@ -724,6 +745,22 @@
 
          * **ttstype**:
             Specifies the narrator's voice.
+
+      *  Voiceover from 1C
+
+            * **1CttsLogin**:
+               Login for authorization in the speech synthesis service
+
+            * **1CttsVoice**:
+               Voice for speech generation in the service
+
+            * **1CttsPassword**:
+               Password for authorization in the speech synthesis service.
+               The password is specified in the text file.
+
+            * **1CttsSpeed**:
+               Speed (tempo) of synthesized speech.
+               Speech speed is specified by a fractional number in the range from 0.8 to 2.
 
       *  Microsoft TTS
 

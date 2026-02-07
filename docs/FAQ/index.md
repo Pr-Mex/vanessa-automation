@@ -140,11 +140,11 @@
     * Для файловой базы надо указать порт web сервера (обычно это 1538). Для серверной базы надо указать имя сервера и порт кластера (обычно 1541).
 	* Т.е. TestManager общается с браузером либо через веб сервер для файловых баз, либо через сервер кластера для серверных баз.
 23. Как запомнить навигационную ссылку
-	* Для окон, находящихся в панели открытых окон:
+	* Для всех окон
 		```Gherkin
 		И я сохраняю навигационную ссылку текущего окна в переменную "ИмяПеременной"
 		```
-	* Также можно использовать внешнюю компоненту, например, так:
+	* (Устарело) Также можно использовать внешнюю компоненту, например, так:
 		```Gherkin
 		И я закрываю все окна клиентского приложения
 		И В командном интерфейсе я выбираю 'Основная' 'Справочник1'
@@ -159,19 +159,19 @@
 	* Нужно в реестре установить значения параметров
 	
 		1. DontShowUI
-			Ключ: HKLM:\Software\Microsoft\Windows\Windows Error Reporting
+			Ключ: HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\Windows Error Reporting
 			Имя: DontShowUI
 			Значение: 1
 			Тип: dword
 			
 		2. ShutdownReasonOn
-			Ключ: HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Reliability
+			Ключ: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Reliability
 			Имя: ShutdownReasonOn
 			Значение: 0
 			Тип: dword
 			
 		3. ShutdownReasonUI
-			Ключ: HKLM:\SOFTWARE\Policies\Microsoft\Windows NT\Reliability
+			Ключ: HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Reliability
 			Имя: ShutdownReasonUI
 			Значение: 0
 			Тип: dword
