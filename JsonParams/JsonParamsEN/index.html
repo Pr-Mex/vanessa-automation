@@ -880,8 +880,8 @@
 
 
   <li class="md-nav__item">
-    <a href="../../Smoke/Smoke/" title="Smoke" class="md-nav__link">
-      Smoke
+    <a href="../../Smoke/Smoke/" title="Генератор дымовых тестов" class="md-nav__link">
+      Генератор дымовых тестов
     </a>
   </li>
 
@@ -1155,7 +1155,7 @@
 <p>Special</p>
 <ul>
 <li><strong>GlobalVars {GlobalVars}</strong>:
-Структура, в которой будут находиться пары: ключ и значение. Данная структура будет загружена в глобальные переменные и эти переменные будут доступны при выполнении сценария в объекте КонтекстСохраняемый.</li>
+A structure that will contain key and value pairs. This structure will be loaded into global variables, and these variables will be available when executing the script in the ContextPersisted object.</li>
 </ul>
 </li>
 </ul>
@@ -1179,12 +1179,23 @@
 </ul>
 </li>
 <li>
-<p>Scenario filter</p>
+<p>Scenario filter and feature filter</p>
 <ul>
-<li><strong>scenariofilter</strong>:
-     Allows you to set the order in which scripts are executed. The scripts will be executed in the order they are listed.
-     Plus allows you to set a filter for executing scripts. Only scripts from the list will be executed.
-     The script in the list is indicated by its name.</li>
+<li>
+<p><strong>scenariofilter</strong>:
+     Allows you to set a filter for executing scripts - only scripts from the list will be executed.
+     Scripts will be executed in the order they are specified in the feature file.
+     A script in the list is specified using its name.</p>
+</li>
+<li>
+<p><strong>FeaturesToRun</strong>:
+     Allows you to set the order of execution of feature files.
+     Also sets the selection - only feature files from the list will be launched.
+     You can pass the full path to the feature file (c:\temp\my.feature).
+     You can pass the feature name without the full path (my.feature).
+     You can pass the feature name without the full path and without the file extension (my).
+     The setting is applied only if feature files are loaded from the directory.</p>
+</li>
 </ul>
 </li>
 <li>
@@ -1379,13 +1390,17 @@
      The file name will be generated according to the rule TestingClientName+LaunchDateTime.</p>
 </li>
 <li>
-<p><strong>DisableScheduledJobsExecutionForFileInfobase</strong>:
-     If this option is enabled, scheduled jobs execution will be disabled when new test client will start for a file infobase. Uses command line key /AllowExecuteScheduledJobs -Off</p>
+<p><strong>AdditionalParametersForLaunchingTheTestingClient</strong>:
+     The field specifies additional keys for launching the testing client, which will be transferred to the launched 1C session.</p>
 </li>
 <li>
 <p><strong>OnlyOneTestClientAllowedToRun</strong>:
      If this option is enabled, control will be enabled that more than one testing client cannot be connected at the same time.
      This can be useful if the computers on which the tests are run have a limited amount of RAM and you need to control the launch of unnecessary processes.</p>
+</li>
+<li>
+<p><strong>DisableScheduledJobsExecutionForFileInfobase</strong>:
+     If this option is enabled, scheduled jobs execution will be disabled when new test client will start for a file infobase. Uses command line key /AllowExecuteScheduledJobs -Off</p>
 </li>
 <li>
 <p><strong>CheckingServerCallsInEventHandlers</strong>:
@@ -1649,6 +1664,11 @@
       Screenshots directory.</p>
 </li>
 <li>
+<p><strong>ProcessesForTakingScreenshots</strong>:
+      A semicolon-separated list of process names.
+      You can use the * character to escape one or more characters in a process name.</p>
+</li>
+<li>
 <p><strong>screencaptureaddinmethod</strong>:
       Full Screen - Gets a screenshot of the entire screen, including the operating system taskbar.
       Current Test Client Window - Gets a screenshot of only the active test client window.
@@ -1741,6 +1761,10 @@
      Vanessa Automation log file name.
      If the field is empty, then the log will not be output to a text file.</p>
 </li>
+<li>
+<p><strong>maskpwdinlog</strong>:
+     The user's password is masked in the log /P"<strong>*</strong>"</p>
+</li>
 </ul>
 </li>
 <li>
@@ -1753,6 +1777,9 @@
 
 <span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">setvariablevaluesinstepsallurereport</span><span class="o">**</span><span class="p">:</span>
 <span class="w">    </span><span class="n">If</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">option</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">enabled</span><span class="p">,</span><span class="w"> </span><span class="n">then</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">parameters</span><span class="w"> </span><span class="n">of</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">steps</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">which</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">variables</span><span class="w"> </span><span class="n">were</span><span class="w"> </span><span class="n">used</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">variable</span><span class="w"> </span><span class="n">names</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">replaced</span><span class="w"> </span><span class="n">with</span><span class="w"> </span><span class="n">their</span><span class="w"> </span><span class="n">values</span><span class="o">.</span>
+
+<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">allureexcludevars</span><span class="o">**</span><span class="p">:</span>
+<span class="w">    </span><span class="n">Enter</span><span class="w"> </span><span class="n">tags</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">field</span><span class="o">.</span><span class="w"> </span><span class="n">If</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">tag</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">detected</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">feature</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">whole</span><span class="w"> </span><span class="n">feature</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">uploaded</span><span class="o">.</span><span class="w"> </span><span class="n">If</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">tag</span><span class="w"> </span><span class="k">is</span><span class="w"> </span><span class="n">found</span><span class="w"> </span><span class="ow">in</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">scenario</span><span class="p">,</span><span class="w"> </span><span class="n">only</span><span class="w"> </span><span class="n">this</span><span class="w"> </span><span class="n">scenario</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="ow">not</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">uploaded</span><span class="o">.</span>
 
 <span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">allurepath</span><span class="o">**</span><span class="p">:</span>
 <span class="w">    </span><span class="n">Allure</span><span class="w"> </span><span class="n">reports</span><span class="w"> </span><span class="n">directory</span><span class="o">.</span><span class="w"> </span><span class="n">When</span><span class="w"> </span><span class="n">run</span><span class="w"> </span><span class="n">locally</span><span class="p">,</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">directory</span><span class="w"> </span><span class="n">will</span><span class="w"> </span><span class="n">be</span><span class="w"> </span><span class="n">cleaned</span><span class="w"> </span><span class="n">up</span><span class="w"> </span><span class="n">each</span><span class="w"> </span><span class="n">time</span><span class="w"> </span><span class="n">the</span><span class="w"> </span><span class="n">scripts</span><span class="w"> </span><span class="n">are</span><span class="w"> </span><span class="n">run</span><span class="o">.</span>
@@ -2126,6 +2153,24 @@
 </code></pre></div>
 
 <ul>
+<li>
+<p>Voiceover from 1C</p>
+<div class="codehilite"><pre><span></span><code><span class="k">*</span> **1CttsLogin**:
+   Login for authorization in the speech synthesis service
+
+<span class="k">*</span> **1CttsVoice**:
+   Voice for speech generation in the service
+
+<span class="k">*</span> **1CttsPassword**:
+   Password for authorization in the speech synthesis service.
+   The password is specified in the text file.
+
+<span class="k">*</span> **1CttsSpeed**:
+   Speed (tempo) of synthesized speech.
+   Speech speed is specified by a fractional number in the range from 0.8 to 2.
+</code></pre></div>
+
+</li>
 <li>
 <p>Microsoft TTS</p>
 <div class="codehilite"><pre><span></span><code><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="n">audioenginetts</span><span class="o">**</span><span class="p">:</span>
