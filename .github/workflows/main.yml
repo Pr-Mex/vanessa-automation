@@ -11,35 +11,28 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: Checkout
-      uses: actions/checkout@v1
+      uses: actions/checkout@v6
       with:
         fetch-depth: 0
-    - name: Configure env vars for SonarCloud scan
-      env:  
-        ACTIONS_ALLOW_UNSECURE_COMMANDS: true
-      run: |
-        echo "::set-env name=PATH::/opt/sonar-scanner/bin:$PATH"
     
-    - name: Compute branch name
-      env:  
-        ACTIONS_ALLOW_UNSECURE_COMMANDS: true
-      uses: nixel2007/branch-name@v3
+    - name: Вычисление имени ветки
+      uses: nelonoel/branch-name@v1.0.1
     
     - name: Извлечение версии
       shell: bash
-      run: echo "##[set-output name=version;]` cat ./VanessaAutomation/Ext/ObjectModule.bsl | grep -oP '(?<=Версия \= ").[\d|.]*'`"
+      run: echo "version=$(grep -oP '(?<=Версия \= \").[\d|.]*' ./VanessaAutomation/Ext/ObjectModule.bsl)" >> "$GITHUB_OUTPUT"
       id: extract_version
+
+    - name: Настройка sonar-scanner
+      uses: warchant/setup-sonar-scanner@v9
 
     - name: SonarCloud Scan on push
       if:  github.event_name == 'push'
-      uses: nixel2007/sonarcloud-github-action@v1.4
       env:
-        ACTIONS_ALLOW_UNSECURE_COMMANDS: true
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      with:
-        args: >
-          -Dsonar.host.url=https://sonar.openbsl.ru
-          -Dsonar.branch.name=${{ env.BRANCH_NAME }}
+      run: |
+        sonar-scanner \
+          -Dsonar.host.url=https://sonar.openbsl.ru \
+          -Dsonar.branch.name=${{ env.BRANCH_NAME }} \
           -Dsonar.projectVersion=${{ steps.extract_version.outputs.version }}
-          
