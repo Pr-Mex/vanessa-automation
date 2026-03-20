@@ -127,3 +127,28 @@ oscript NewLessons.os <ПутьКСпискуТекущихУроковVA> <Пу
 ```
 oscript C:\Commons\rep\vanessa-automation\tools\onescript\NewLessons.os "C:\Commons\rep\vanessa-automation\docs\MainHelp\index.MD" "C:\Commons\rep\vanessa-automation\training\features" "C:\Commons\rep\vanessa-automation-old\training\features"
 ```
+
+#### CheckMissingTranslations.os
+
+Скрипт собирает строки из вызовов `Локализовать(...)`, сравнивает их с `locales/Messages/Templates/<lang>/Ext/Template.xml`, формирует YAML-отчёт по отсутствующим переводам и умеет применять заполненные переводы обратно в XML.
+
+Как запускать:
+```
+oscript CheckMissingTranslations.os <Язык> [КаталогПроекта]
+oscript CheckMissingTranslations.os <Язык> apply [КаталогПроекта] [ФайлОтчета]
+```
+
+Пример запуска:
+```
+oscript CheckMissingTranslations.os en
+oscript CheckMissingTranslations.os en apply
+```
+
+#### test-check-missing-translations.sh
+
+Bash-раннер для проверки `CheckMissingTranslations.os` на граничных случаях: мультистроки, пробелы в конце, XML-спецсимволы, обновление существующей строки, добавление новой строки и пропуск пустого перевода.
+
+Как запускать:
+```
+bash tools/onescript/test-check-missing-translations.sh
+```
