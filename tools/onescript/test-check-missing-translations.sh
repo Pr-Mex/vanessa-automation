@@ -64,6 +64,26 @@ assert_occurrences() {
   fi
 }
 
+assert_file_contains_all() {
+  local file_path="$1"
+  shift
+
+  python3 - "$file_path" "$@" <<'PY'
+from pathlib import Path
+import sys
+
+path = Path(sys.argv[1])
+content = path.read_text(encoding='utf-8')
+missing = [needle for needle in sys.argv[2:] if needle not in content]
+
+if missing:
+    print(f"Missing strings in {path}:", file=sys.stderr)
+    for needle in missing:
+        print(needle, file=sys.stderr)
+    raise SystemExit(1)
+PY
+}
+
 project_dir() {
   local name="$1"
   local dir="$TMP_DIR/$name"
@@ -252,6 +272,104 @@ EOF
   assert_contains "$xml_path" '<v8:content>New &lt;value&gt; &amp; result</v8:content>' 'translation должен быть экранирован в XML'
 
   pass 'apply: вставка новой строки и XML escaping'
+}
+
+test_apply_inserts_new_row_after_max_existing_index() {
+  local dir xml_path report_path
+  dir="$(project_dir apply-insert-after-max-index)"
+  xml_path="$dir/locales/Messages/Templates/en/Ext/Template.xml"
+  report_path="$dir/missing-translations-en.yaml"
+
+  cat > "$xml_path" <<'EOF'
+<?xml version="1.0" encoding="UTF-8"?>
+<document xmlns:v8="http://v8.1c.ru/8.1/data/ui">
+  <rowsItem>
+    <index>0</index>
+    <row>
+      <c>
+        <c>
+          <f>0</f>
+          <tl>
+            <v8:item>
+              <v8:lang>ru</v8:lang>
+              <v8:content>Строка поиска</v8:content>
+            </v8:item>
+          </tl>
+        </c>
+      </c>
+      <c>
+        <c>
+          <f>14</f>
+          <tl>
+            <v8:item>
+              <v8:lang>ru</v8:lang>
+              <v8:content></v8:content>
+            </v8:item>
+          </tl>
+        </c>
+      </c>
+    </row>
+  </rowsItem>
+  <rowsItem>
+    <index>5</index>
+    <row>
+      <c>
+        <c>
+          <f>0</f>
+          <tl>
+            <v8:item>
+              <v8:lang>ru</v8:lang>
+              <v8:content>Уже существующая строка</v8:content>
+            </v8:item>
+          </tl>
+        </c>
+      </c>
+      <c>
+        <c>
+          <f>14</f>
+          <tl>
+            <v8:item>
+              <v8:lang>ru</v8:lang>
+              <v8:content>Existing translation</v8:content>
+            </v8:item>
+          </tl>
+        </c>
+      </c>
+    </row>
+  </rowsItem>
+  <height>2</height>
+  <vgRows>2</vgRows>
+  <templateMode>0</templateMode>
+</document>
+EOF
+
+  cat > "$report_path" <<'EOF'
+language: en
+source_directory: VanessaAutomation
+template_path: locales\Messages\Templates\en\Ext\Template.xml
+total_unique_strings: 1
+template_entries: 1
+missing_count: 1
+missing_translations:
+  - occurrence_count: 1
+    source: |-
+      Новая строка после максимального индекса
+    translation: |-
+      New row after max index
+    occurrences:
+      - VanessaAutomation\Test.bsl:2
+EOF
+
+  run_apply "$dir" "$report_path"
+
+  assert_file_contains_all "$xml_path" \
+    '<index>6</index>' \
+    '<height>7</height>' \
+    '<vgRows>7</vgRows>' \
+    '<v8:content>New row after max index</v8:content>' \
+    || fail 'apply insert должен брать следующий index после максимального существующего index и обновлять размерность по нему'
+
+  pass 'apply: вставка после максимального index, а не по height'
 }
 
 test_apply_updates_existing_row_without_duplicate() {
@@ -473,6 +591,7 @@ main() {
   test_generate_reports_multiline_and_trailing_spaces
   test_generate_ignores_existing_translation_with_xml_entities
   test_apply_inserts_new_row_and_escapes_xml
+  test_apply_inserts_new_row_after_max_existing_index
   test_apply_updates_existing_row_without_duplicate
   test_apply_updates_existing_row_with_xml_entities
   test_apply_updates_existing_multiline_row
