@@ -32902,6 +32902,123 @@ Click on the hyperlink for more details.</v8:content>
 												</UsualGroup>
 											</ChildItems>
 										</Page>
+										<Page name="СтраницаMCP" id="4145">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>MCP</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страница MCP</v8:content>
+												</v8:item>
+											</ToolTip>
+											<ExtendedTooltip name="СтраницаMCPРасширеннаяПодсказка" id="4146"/>
+											<ChildItems>
+												<CommandBar name="MCPКоманды" id="4162">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>MCP Команды</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>MCPКоманды</v8:content>
+														</v8:item>
+													</ToolTip>
+													<ExtendedTooltip name="MCPКомандыРасширеннаяПодсказка" id="4163"/>
+													<ChildItems>
+														<Button name="MCPПодключить" id="4166">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Command.MCPПодключить</CommandName>
+															<ExtendedTooltip name="MCPПодключитьРасширеннаяПодсказка" id="4167"/>
+														</Button>
+														<Button name="MCPСтатус1" id="4168">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Command.MCPСтатус</CommandName>
+															<ExtendedTooltip name="MCPСтатус1РасширеннаяПодсказка" id="4169"/>
+														</Button>
+														<Button name="MCPОтключить" id="4164">
+															<Type>CommandBarButton</Type>
+															<CommandName>Form.Command.MCPОтключить</CommandName>
+															<ExtendedTooltip name="MCPОтключитьРасширеннаяПодсказка" id="4165"/>
+														</Button>
+													</ChildItems>
+												</CommandBar>
+												<UsualGroup name="ГруппаMCPВерх" id="4170">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа MCPВерх</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Группа MCPВерх</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>AlwaysHorizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="ГруппаMCPВерхРасширеннаяПодсказка" id="4171"/>
+													<ChildItems>
+														<CheckBoxField name="MCPВключитьЛог" id="4147">
+															<DataPath>Объект.MCPВключитьЛог</DataPath>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Включает логирование MCP Сервера в указанный файл</v8:content>
+																</v8:item>
+															</ToolTip>
+															<ToolTipRepresentation>Button</ToolTipRepresentation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="MCPВключитьЛогКонтекстноеМеню" id="4148"/>
+															<ExtendedTooltip name="MCPВключитьЛогРасширеннаяПодсказка" id="4149"/>
+														</CheckBoxField>
+														<InputField name="MCPПутьКЛогу" id="4150">
+															<DataPath>Объект.MCPПутьКЛогу</DataPath>
+															<ContextMenu name="MCPПутьКЛогуКонтекстноеМеню" id="4151"/>
+															<ExtendedTooltip name="MCPПутьКЛогуРасширеннаяПодсказка" id="4152"/>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+												<InputField name="MCPТаймаут" id="4153">
+													<DataPath>Объект.MCPТаймаут</DataPath>
+													<ContextMenu name="MCPТаймаутКонтекстноеМеню" id="4154"/>
+													<ExtendedTooltip name="MCPТаймаутРасширеннаяПодсказка" id="4155"/>
+												</InputField>
+												<InputField name="MCPПорт" id="4159">
+													<DataPath>Объект.MCPПорт</DataPath>
+													<ContextMenu name="MCPПортКонтекстноеМеню" id="4160"/>
+													<ExtendedTooltip name="MCPПортРасширеннаяПодсказка" id="4161"/>
+												</InputField>
+												<InputField name="MCPТокен" id="4172">
+													<DataPath>Объект.MCPТокен</DataPath>
+													<ClearButton>true</ClearButton>
+													<InputHint>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Любая строка с ключем</v8:content>
+														</v8:item>
+													</InputHint>
+													<ContextMenu name="MCPТокенКонтекстноеМеню" id="4173"/>
+													<ExtendedTooltip name="MCPТокенРасширеннаяПодсказка" id="4174"/>
+													<Events>
+														<Event name="OnChange">MCPТокенПриИзменении</Event>
+													</Events>
+												</InputField>
+												<TextDocumentField name="MCPСтатус" id="4156">
+													<DataPath>Объект.MCPСтатус</DataPath>
+													<ContextMenu name="MCPСтатусКонтекстноеМеню" id="4157"/>
+													<ExtendedTooltip name="MCPСтатусРасширеннаяПодсказка" id="4158"/>
+												</TextDocumentField>
+											</ChildItems>
+										</Page>
 									</ChildItems>
 								</Pages>
 							</ChildItems>
@@ -45330,6 +45447,66 @@ Click on the hyperlink for more details.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ЗагрузитьПеременные</Action>
+		</Command>
+		<Command name="MCPПодключить" id="194">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подключить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>MCPПодключить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.AppearanceFlagGreen</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>MCPПодключить</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="MCPОтключить" id="195">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отключить</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>MCPОтключить</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.AppearanceFlagRed</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>MCPОтключить</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="MCPСтатус" id="196">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Статус</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>MCPСтатус</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.DialogInformation</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>MCPСтатус</Action>
+			<Representation>TextPicture</Representation>
 		</Command>
 	</Commands>
 </Form>
