@@ -45597,7 +45597,7 @@ Command line: %2</v8:content>
                     <tl>
                         <v8:item>
                             <v8:lang>ru</v8:lang>
-                            <v8:content>Подстрока для поиска в тексте шага. Если не указана — возвращает все шаги.</v8:content>
+                            <v8:content>Поисковый запрос без учета регистра. Строка ищется как подстрока в выбранной области поиска. Для альтернатив по принципу ИЛИ используйте разделитель '|', например 'первая часть|вторая часть'. Если параметр не указан — возвращаются все шаги.</v8:content>
                         </v8:item>
                     </tl>
                 </c>
@@ -45608,7 +45608,7 @@ Command line: %2</v8:content>
                     <tl>
                         <v8:item>
                             <v8:lang>ru</v8:lang>
-                            <v8:content>Substring to search in the step text. If not specified, returns all steps.</v8:content>
+                            <v8:content>Case-insensitive search query. The string is searched as a substring in the selected search scope. For OR alternatives use the '|' separator, e.g. 'first part|second part'. If not specified, all steps are returned.</v8:content>
                         </v8:item>
                     </tl>
                 </c>
@@ -45651,7 +45651,7 @@ Command line: %2</v8:content>
                     <tl>
                         <v8:item>
                             <v8:lang>ru</v8:lang>
-                            <v8:content>Поиск доступных шагов (step definitions) Vanessa Automation. Фильтрация по подстроке в тексте шага и/или по категории. Возвращает Markdown со списком шагов, описанием, категорией и сниппетом для вставки. Используйте для поиска нужных шагов при написании BDD-тестов.</v8:content>
+                            <v8:content>Поиск доступных шагов (step definitions) Vanessa Automation. Параметр query ищется как подстрока без учета регистра в выбранной области поиска. Для поиска по принципу ИЛИ передайте несколько вариантов через символ '|', например 'первая часть|вторая часть'. Возвращает Markdown со списком шагов, описанием, категорией и сниппетом для вставки.</v8:content>
                         </v8:item>
                     </tl>
                 </c>
@@ -45662,7 +45662,7 @@ Command line: %2</v8:content>
                     <tl>
                         <v8:item>
                             <v8:lang>ru</v8:lang>
-                            <v8:content>Search for available Vanessa Automation steps (step definitions). Filter by substring in the step text and/or by category. Returns Markdown with a list of steps, description, category, and insertion snippet. Use it to find the required steps when writing BDD tests.</v8:content>
+                            <v8:content>Search for available Vanessa Automation steps (step definitions). The query parameter is searched as a case-insensitive substring in the selected search scope. For OR alternatives pass multiple variants separated by '|', e.g. 'first part|second part'. Returns Markdown with a list of steps, description, category, and insertion snippet.</v8:content>
                         </v8:item>
                     </tl>
                 </c>
