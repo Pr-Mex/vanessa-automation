@@ -510,6 +510,35 @@
 				</Title>
 				<ExtendedTooltip name="ВыполнитьСценарииРасширеннаяПодсказка" id="1258"/>
 			</Button>
+			<ButtonGroup name="ФормаГруппаDocker" id="4194">
+				<Visible>false</Visible>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Форма группа docker</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Форма группа docker</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Representation>Compact</Representation>
+				<ExtendedTooltip name="ФормаГруппаDockerРасширеннаяПодсказка" id="4195"/>
+				<ChildItems>
+					<Button name="ФормаDockerЗапуститьКонтейнер" id="4188">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.DockerЗапуститьКонтейнер</CommandName>
+						<ExtendedTooltip name="ФормаDockerЗапуститьКонтейнерРасширеннаяПодсказка" id="4189"/>
+					</Button>
+					<Button name="ФормаDockerОстановить" id="4190">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.DockerОстановить</CommandName>
+						<ExtendedTooltip name="ФормаDockerОстановитьРасширеннаяПодсказка" id="4191"/>
+					</Button>
+				</ChildItems>
+			</ButtonGroup>
 			<Button name="ОстановитьСценарии" id="2031">
 				<Type>CommandBarButton</Type>
 				<Representation>PictureAndText</Representation>
@@ -37223,6 +37252,528 @@ Klicka på hyperlänken för mer detaljer.</v8:content>
 																</Button>
 															</ChildItems>
 														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</Page>
+										<Page name="СтраницаDocker" id="4196">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Docker</v8:content>
+												</v8:item>
+											</Title>
+											<ToolTip>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Страница docker</v8:content>
+												</v8:item>
+											</ToolTip>
+											<Group>Vertical</Group>
+											<ScrollOnCompress>false</ScrollOnCompress>
+											<ExtendedTooltip name="СтраницаDockerРасширеннаяПодсказка" id="4197"/>
+											<ChildItems>
+												<CheckBoxField name="DockerИспользоватьВыполнениеВКонтейнере" id="4247">
+													<DataPath>Объект.DockerИспользоватьВыполнениеВКонтейнере</DataPath>
+													<TitleLocation>Right</TitleLocation>
+													<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+													<ContextMenu name="DockerИспользоватьВыполнениеВКонтейнереКонтекстноеМеню" id="4248"/>
+													<ExtendedTooltip name="DockerИспользоватьВыполнениеВКонтейнереРасширеннаяПодсказка" id="4249">
+														<Title formatted="false">
+															<v8:item>
+																<v8:lang>ru</v8:lang>
+																<v8:content>Будет доступно выполнение текущего сценария в docker-контейнере</v8:content>
+															</v8:item>
+														</Title>
+													</ExtendedTooltip>
+													<Events>
+														<Event name="OnChange">DockerИспользоватьВыполнениеВКонтейнереПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<UsualGroup name="DockerГруппаКаталогМонтирования" id="4223">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Каталог монтирования</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Docker группа каталог монтирования</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Vertical</Group>
+													<Behavior>Collapsible</Behavior>
+													<ControlRepresentation>Button</ControlRepresentation>
+													<Representation>WeakSeparation</Representation>
+													<ExtendedTooltip name="DockerГруппаКаталогМонтированияРасширеннаяПодсказка" id="4224"/>
+													<ChildItems>
+														<InputField name="DockerКаталогМонтирования" id="4198">
+															<DataPath>Объект.DockerКаталогМонтирования</DataPath>
+															<TitleLocation>Top</TitleLocation>
+															<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+															<ChoiceButton>true</ChoiceButton>
+															<ClearButton>true</ClearButton>
+															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+															<InputHint>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>C:\Каталог\Монтирования</v8:content>
+																</v8:item>
+															</InputHint>
+															<ContextMenu name="DockerКаталогМонтированияКонтекстноеМеню" id="4199"/>
+															<ExtendedTooltip name="DockerКаталогМонтированияРасширеннаяПодсказка" id="4200">
+																<Title formatted="true">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Каталог на локальном компьютере, который будет монтироваться в контейнер.
+Для варианта тестирования опубликованной файловой базы необходимо при первом запуске активировать лицензию 1С (например, комъюнити-лицензию). И сохранить в C:\Каталог\Монтирования\licenses. При последующих запусков лицензия будет браться из этого каталога</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+															<Events>
+																<Event name="StartChoice">DockerКаталогМонтированияНачалоВыбора</Event>
+															</Events>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="DockerГруппаОбразКонтейнераТестирования" id="4225">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Настройки контейнера тестирования</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Docker группа образ контейнера тестирования</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Vertical</Group>
+													<Behavior>Collapsible</Behavior>
+													<ControlRepresentation>Button</ControlRepresentation>
+													<Representation>WeakSeparation</Representation>
+													<ExtendedTooltip name="DockerГруппаОбразКонтейнераТестированияРасширеннаяПодсказка" id="4226"/>
+													<ChildItems>
+														<UsualGroup name="DockerГруппаКонтейнерТестирования" id="4234">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Docker группа контейнер тестирования</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Docker группа контейнер тестирования</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Group>AlwaysHorizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="DockerГруппаКонтейнерТестированияРасширеннаяПодсказка" id="4235"/>
+															<ChildItems>
+																<InputField name="DockerИмяОбразаТестирования" id="4204">
+																	<DataPath>Объект.DockerИмяОбразаТестирования</DataPath>
+																	<TitleLocation>Top</TitleLocation>
+																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																	<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+																	<InputHint>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>registry.hub.docker.com/логин/образ:версия</v8:content>
+																		</v8:item>
+																	</InputHint>
+																	<ContextMenu name="DockerИмяОбразаТестированияКонтекстноеМеню" id="4205"/>
+																	<ExtendedTooltip name="DockerИмяОбразаТестированияРасширеннаяПодсказка" id="4206">
+																		<Title formatted="true">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Имя образа docker, на основании которого будет создан контейнер для тестирования.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																</InputField>
+																<InputField name="DockerПортКонтейнераТестированияДляПросмотра" id="4231">
+																	<DataPath>Объект.DockerПортКонтейнераТестированияДляПросмотра</DataPath>
+																	<TitleLocation>Top</TitleLocation>
+																	<ToolTip>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Порт для подключения по VNC. Например: 5900</v8:content>
+																		</v8:item>
+																	</ToolTip>
+																	<ToolTipRepresentation>Button</ToolTipRepresentation>
+																	<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+																	<ContextMenu name="DockerПортКонтейнераТестированияДляПросмотраКонтекстноеМеню" id="4232"/>
+																	<ExtendedTooltip name="DockerПортКонтейнераТестированияДляПросмотраРасширеннаяПодсказка" id="4233"/>
+																</InputField>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="DockerГруппаПутиВнутриКаталоговКонтейнера" id="4253">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Docker группа пути внутри каталогов контейнера</v8:content>
+																</v8:item>
+															</Title>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="DockerГруппаПутиВнутриКаталоговКонтейнераРасширеннаяПодсказка" id="4254"/>
+															<ChildItems>
+																<InputField name="DockerКаталогПлатформыВнутриКонтейнераТестирования" id="4218">
+																	<DataPath>Объект.DockerКаталогПлатформыВнутриКонтейнераТестирования</DataPath>
+																	<TitleLocation>Top</TitleLocation>
+																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																	<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+																	<InputHint>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>/opt/1cv8/current/</v8:content>
+																		</v8:item>
+																	</InputHint>
+																	<ContextMenu name="DockerКаталогПлатформыВнутриКонтейнераТестированияКонтекстноеМеню" id="4219"/>
+																	<ExtendedTooltip name="DockerКаталогПлатформыВнутриКонтейнераТестированияРасширеннаяПодсказка" id="4220">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Путь к bin-каталогу платформы внутри контейнера</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																</InputField>
+																<InputField name="DockerКаталогЛицензийВнутриКонтейнераТестирования" id="4244">
+																	<DataPath>Объект.DockerКаталогЛицензийВнутриКонтейнераТестирования</DataPath>
+																	<TitleLocation>Top</TitleLocation>
+																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																	<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+																	<InputHint>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>/var/1C/licenses</v8:content>
+																		</v8:item>
+																	</InputHint>
+																	<ContextMenu name="DockerКаталогЛицензийВнутриКонтейнераТестированияКонтекстноеМеню" id="4245"/>
+																	<ExtendedTooltip name="DockerКаталогЛицензийВнутриКонтейнераТестированияРасширеннаяПодсказка" id="4246">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Каталог лицензий, где будут искаться программные лицензии для клиента</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																</InputField>
+															</ChildItems>
+														</UsualGroup>
+														<RadioButtonField name="DockerРасширениеЭкранаДляПросмотра" id="4236">
+															<DataPath>Объект.DockerРасширениеЭкранаДляПросмотра</DataPath>
+															<TitleLocation>Top</TitleLocation>
+															<RadioButtonType>Tumbler</RadioButtonType>
+															<ChoiceList>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>800х600</v8:content>
+																			</v8:item>
+																		</Presentation>
+																		<Value xsi:type="xs:decimal">0</Value>
+																	</xr:Value>
+																</xr:Item>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>1440х900</v8:content>
+																			</v8:item>
+																		</Presentation>
+																		<Value xsi:type="xs:decimal">1</Value>
+																	</xr:Value>
+																</xr:Item>
+																<xr:Item>
+																	<xr:Presentation/>
+																	<xr:CheckState>0</xr:CheckState>
+																	<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																		<Presentation>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>1920х1080</v8:content>
+																			</v8:item>
+																		</Presentation>
+																		<Value xsi:type="xs:decimal">2</Value>
+																	</xr:Value>
+																</xr:Item>
+															</ChoiceList>
+															<ContextMenu name="DockerРасширениеЭкранаДляПросмотраКонтекстноеМеню" id="4237"/>
+															<ExtendedTooltip name="DockerРасширениеЭкранаДляПросмотраРасширеннаяПодсказка" id="4238"/>
+														</RadioButtonField>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="DockerГруппаОбразКонтейнераПросмотрщика" id="4216">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Настройки контейнера просмотрщика</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Docker группа образ контейнера просмотрщика</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Vertical</Group>
+													<Behavior>Collapsible</Behavior>
+													<ControlRepresentation>Button</ControlRepresentation>
+													<Representation>WeakSeparation</Representation>
+													<ExtendedTooltip name="DockerГруппаОбразКонтейнераПросмотрщикаРасширеннаяПодсказка" id="4217"/>
+													<ChildItems>
+														<CheckBoxField name="DockerИспользоватьПросмотрщик" id="4241">
+															<DataPath>Объект.DockerИспользоватьПросмотрщик</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<ContextMenu name="DockerИспользоватьПросмотрщикКонтекстноеМеню" id="4242"/>
+															<ExtendedTooltip name="DockerИспользоватьПросмотрщикРасширеннаяПодсказка" id="4243"/>
+															<Events>
+																<Event name="OnChange">DockerИспользоватьПросмотрщикПриИзменении</Event>
+															</Events>
+														</CheckBoxField>
+														<UsualGroup name="DockerГруппаКонтейнерПросмотрщика" id="4239">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Docker группа контейнер просмотрщика</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Docker группа контейнер просмотрщика</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Group>AlwaysHorizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="DockerГруппаКонтейнерПросмотрщикаРасширеннаяПодсказка" id="4240"/>
+															<ChildItems>
+																<InputField name="DockerИмяОбразаПросмотрщика" id="4207">
+																	<DataPath>Объект.DockerИмяОбразаПросмотрщика</DataPath>
+																	<Enabled>false</Enabled>
+																	<TitleLocation>Top</TitleLocation>
+																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																	<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+																	<InputHint>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>theasp/novnc</v8:content>
+																		</v8:item>
+																	</InputHint>
+																	<ContextMenu name="DockerИмяОбразаПросмотрщикаКонтекстноеМеню" id="4208"/>
+																	<ExtendedTooltip name="DockerИмяОбразаПросмотрщикаРасширеннаяПодсказка" id="4209">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Имя образа docker, на основании которого будет создан служебный контейнер для возможности просмотра контейнера тестирования.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																</InputField>
+																<InputField name="DockerПортКонтейнераПросмотрщика" id="4210">
+																	<DataPath>Объект.DockerПортКонтейнераПросмотрщика</DataPath>
+																	<Enabled>false</Enabled>
+																	<TitleLocation>Top</TitleLocation>
+																	<ToolTip>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Например: 8081</v8:content>
+																		</v8:item>
+																	</ToolTip>
+																	<ToolTipRepresentation>Button</ToolTipRepresentation>
+																	<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+																	<ContextMenu name="DockerПортКонтейнераПросмотрщикаКонтекстноеМеню" id="4211"/>
+																	<ExtendedTooltip name="DockerПортКонтейнераПросмотрщикаРасширеннаяПодсказка" id="4212"/>
+																</InputField>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="DockerГруппаСозданиеБазыДляМенеджераТестирования" id="4221">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Создание базы для менеджера тестирования</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Docker группа создание базы для менеджера тестирования</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Vertical</Group>
+													<Behavior>Collapsible</Behavior>
+													<ControlRepresentation>Button</ControlRepresentation>
+													<Representation>WeakSeparation</Representation>
+													<ExtendedTooltip name="DockerГруппаСозданиеБазыДляМенеджераТестированияРасширеннаяПодсказка" id="4222"/>
+													<ChildItems>
+														<CheckBoxField name="DockerСоздаватьБазуДляМенеджераТестирования" id="4201">
+															<DataPath>Объект.DockerСоздаватьБазуДляМенеджераТестирования</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+															<ContextMenu name="DockerСоздаватьБазуДляМенеджераТестированияКонтекстноеМеню" id="4202"/>
+															<ExtendedTooltip name="DockerСоздаватьБазуДляМенеджераТестированияРасширеннаяПодсказка" id="4203">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Если флаг установлен в каталоге тестирования будет создана пустая база, которая будет использоваться для запуска менеджера тестирования.
+Если флаг не установлен, то в качестве менеджера тестирования будет использована база заданная ниже</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+															<Events>
+																<Event name="OnChange">DockerСоздаватьБазуДляМенеджераТестированияПриИзменении</Event>
+															</Events>
+														</CheckBoxField>
+														<UsualGroup name="DockerГруппаМенеджерТестирования" id="5999">
+															<Enabled>false</Enabled>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Docker группа менеджер тестирования</v8:content>
+																</v8:item>
+															</Title>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Docker группа менеджер тестирования</v8:content>
+																</v8:item>
+															</ToolTip>
+															<Group>Vertical</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="DockerГруппаМенеджерТестированияРасширеннаяПодсказка" id="6000"/>
+															<ChildItems>
+																<InputField name="DockerСтрокаСоединенияСБазойМенеджераТестирования" id="6001">
+																	<DataPath>Объект.DockerСтрокаСоединенияСБазойМенеджераТестирования</DataPath>
+																	<TitleLocation>Top</TitleLocation>
+																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																	<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+																	<InputHint>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>ws="http://host.docker.internal:8080/base";</v8:content>
+																		</v8:item>
+																	</InputHint>
+																	<ContextMenu name="DockerСтрокаСоединенияСБазойМенеджераТестированияКонтекстноеМеню" id="6002"/>
+																	<ExtendedTooltip name="DockerСтрокаСоединенияСБазойМенеджераТестированияРасширеннаяПодсказка" id="6003">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Будет использован в качестве менеджера тестирования</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																</InputField>
+																<UsualGroup name="DockerГруппаАутентификацияМенеджераТестирования" id="6009">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Docker группа аутентификация менеджера тестирования</v8:content>
+																		</v8:item>
+																	</Title>
+																	<ToolTip>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Docker группа аутентификация менеджера тестирования</v8:content>
+																		</v8:item>
+																	</ToolTip>
+																	<Group>AlwaysHorizontal</Group>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="DockerГруппаАутентификацияМенеджераТестированияРасширеннаяПодсказка" id="6010"/>
+																	<ChildItems>
+																		<InputField name="DockerЛогинБазыМенеджераТестирования" id="6005">
+																			<DataPath>Объект.DockerЛогинБазыМенеджераТестирования</DataPath>
+																			<TitleLocation>Top</TitleLocation>
+																			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+																			<ContextMenu name="DockerЛогинБазыМенеджераТестированияКонтекстноеМеню" id="6006"/>
+																			<ExtendedTooltip name="DockerЛогинБазыМенеджераТестированияРасширеннаяПодсказка" id="6007"/>
+																		</InputField>
+																		<InputField name="DockerПарольБазыМенеджераТестирования" id="6011">
+																			<DataPath>Объект.DockerПарольБазыМенеджераТестирования</DataPath>
+																			<TitleLocation>Top</TitleLocation>
+																			<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+																			<ContextMenu name="DockerПарольБазыМенеджераТестированияКонтекстноеМеню" id="6012"/>
+																			<ExtendedTooltip name="DockerПарольБазыМенеджераТестированияРасширеннаяПодсказка" id="6013"/>
+																		</InputField>
+																	</ChildItems>
+																</UsualGroup>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="DockerГруппаНастройкаКлиентовТестирования" id="4227">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Настройка клиентов тестирования</v8:content>
+														</v8:item>
+													</Title>
+													<ToolTip>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Docker группа настройка клиентов тестирования</v8:content>
+														</v8:item>
+													</ToolTip>
+													<Group>Vertical</Group>
+													<Behavior>Collapsible</Behavior>
+													<ControlRepresentation>Button</ControlRepresentation>
+													<Representation>WeakSeparation</Representation>
+													<ExtendedTooltip name="DockerГруппаНастройкаКлиентовТестированияРасширеннаяПодсказка" id="4228"/>
+													<ChildItems>
+														<CheckBoxField name="DockerЗаменятьСтрокуПодключенияИзКонтейнера" id="4250">
+															<DataPath>Объект.DockerЗаменятьСтрокуПодключенияИзКонтейнера</DataPath>
+															<TitleLocation>Right</TitleLocation>
+															<ContextMenu name="DockerЗаменятьСтрокуПодключенияИзКонтейнераКонтекстноеМеню" id="4251"/>
+															<ExtendedTooltip name="DockerЗаменятьСтрокуПодключенияИзКонтейнераРасширеннаяПодсказка" id="4252"/>
+															<Events>
+																<Event name="OnChange">DockerЗаменятьСтрокуПодключенияИзКонтейнераПриИзменении</Event>
+															</Events>
+														</CheckBoxField>
+														<InputField name="DockerСтрокаСоединенияСБазойТестированияДляКонтейнера" id="4213">
+															<DataPath>Объект.DockerСтрокаСоединенияСБазойТестированияДляКонтейнера</DataPath>
+															<Enabled>false</Enabled>
+															<TitleLocation>Top</TitleLocation>
+															<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+															<ExtendedEditMultipleValues>true</ExtendedEditMultipleValues>
+															<InputHint>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>ws="http://host.docker.internal:8080/base";</v8:content>
+																</v8:item>
+															</InputHint>
+															<ContextMenu name="DockerСтрокаСоединенияСБазойТестированияДляКонтейнераКонтекстноеМеню" id="4214"/>
+															<ExtendedTooltip name="DockerСтрокаСоединенияСБазойТестированияДляКонтейнераРасширеннаяПодсказка" id="4215" DisplayImportance="VeryHigh">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Строка соединения с базой тестирования, которая будет подменяться у клиента тестирования. Например, если база опубликована на локальной машине и имеет адрес http://localhost/base, то для правильной работы в контейнере нужно заменить ее на http://host.docker.internal/base
+Поддерживается два варианта:
+- база может быть клиент-серверная и доступна по IP внутри контейнера
+- база может быть файловая и опубликована, и доступна внутри контейнера
+Пример формата: ws="http://host.docker.internal:80/base"; здесь файловая база опубликована на локальном компьютере
+</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+														</InputField>
 													</ChildItems>
 												</UsualGroup>
 											</ChildItems>
