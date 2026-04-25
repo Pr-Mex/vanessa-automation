@@ -60878,19 +60878,19 @@
     
 	Если Объект.DockerСоздаватьБазуДляМенеджераТестирования Тогда
 		
-		СтрокаЗапуска = СтрШаблон("%1/1cv8c ENTERPRISE /F""%2"" /LicDstr Y /UseHwLicenses- /DisableStartupMessages /DisableStartupDialogs /DisableSplash /Visible /TESTMANAGER /Execute ""%3"" /C""""S1;StartFeaturePlayer;DisableUserSettingsLoader;DisableLoadTestClientsTable;NoLoadConfig;DisableLoadConfig;QuietInstallVanessaExtAndClose;VAParams=""""",
+		СтрокаЗапуска = СтрШаблон("%1/1cv8c ENTERPRISE /F""%2"" /LicDstr Y /UseHwLicenses- /Visible /TESTMANAGER /Execute ""%3"" /C""""S1;StartFeaturePlayer;DisableUserSettingsLoader;DisableLoadTestClientsTable;NoLoadConfig;DisableLoadConfig;QuietInstallVanessaExtAndClose;VAParams=""""",
 			Объект.DockerКаталогПлатформыВнутриКонтейнераТестирования, АдресБазыМенеджераТестирования, ПутьКVanessaAutomationВнутриКонтейнера);
 		
 		ВыполнитьКомандуОСБезПоказаЧерногоОкна("docker exec "+ИмяКонтейнераТестирования+" bash -c """+СтрокаЗапуска+"""",1);
 		
-		СтрокаЗапуска = СтрШаблон("%1/1cv8c ENTERPRISE /F""%2"" /LicDstr Y /UseHwLicenses- /DisableStartupMessages /DisableStartupDialogs /DisableSplash /Visible /TESTMANAGER /Execute ""%3"" /C""""S1;StartFeaturePlayer;DisableUserSettingsLoader;DisableLoadTestClientsTable;NoLoadConfig;DisableLoadConfig;VAParams=%4""""",
+		СтрокаЗапуска = СтрШаблон("%1/1cv8c ENTERPRISE /F""%2"" /LicDstr Y /UseHwLicenses- /Visible /TESTMANAGER /Execute ""%3"" /C""""S1;StartFeaturePlayer;DisableUserSettingsLoader;DisableLoadTestClientsTable;NoLoadConfig;DisableLoadConfig;VAParams=%4""""",
 			Объект.DockerКаталогПлатформыВнутриКонтейнераТестирования, АдресБазыМенеджератестирования, ПутьКVanessaAutomationВнутриКонтейнера, ИмяКаталогаТестирования+"/VAParams.json");  
 		
 		ВыполнитьКомандуОСБезПоказаЧерногоОкна("docker exec "+ИмяКонтейнераТестирования+" bash -c """+СтрокаЗапуска+"""",1);
 	
 	Иначе	
 	      
-		СтрокаЗапуска = СтрШаблон("%1/1cv8c ENTERPRISE /IBConnectionString \""%2\"" /N\""%3\"" Пароль /LicDstr Y /UseHwLicenses- /DisableStartupMessages /DisableStartupDialogs /DisableSplash /Visible /TESTMANAGER /Execute ""%4"" /C\""S1;StartFeaturePlayer;DisableUserSettingsLoader;DisableLoadTestClientsTable;NoLoadConfig;DisableLoadConfig;QuietInstallVanessaExtAndClose;VAParams=\""\""""",
+		СтрокаЗапуска = СтрШаблон("%1/1cv8c ENTERPRISE /IBConnectionString \""%2\"" /N\""%3\"" Пароль /LicDstr Y /UseHwLicenses- /Visible /TESTMANAGER /Execute ""%4"" /C\""S1;StartFeaturePlayer;DisableUserSettingsLoader;DisableLoadTestClientsTable;NoLoadConfig;DisableLoadConfig;QuietInstallVanessaExtAndClose;VAParams=\""\""""",
 			Объект.DockerКаталогПлатформыВнутриКонтейнераТестирования, Объект.DockerСтрокаСоединенияСБазойМенеджераТестирования, Объект.DockerЛогинБазыМенеджераТестирования,
 			ПутьКVanessaAutomationВнутриКонтейнера);
 		
@@ -60898,7 +60898,7 @@
 		
 		ВыполнитьКомандуОСБезПоказаЧерногоОкна("docker exec " + DockerПолучитьИмяКонтейнераТестирования() + " bash -c """ + СтрокаЗапуска + """", 1);
 		
-		СтрокаЗапуска = СтрШаблон("%1/1cv8c ENTERPRISE /IBConnectionString \""%2\"" /N\""%3\"" Пароль /LicDstr Y /UseHwLicenses- /DisableStartupMessages /DisableStartupDialogs /DisableSplash /Visible /TESTMANAGER /Execute ""%4"" /C\""S1;StartFeaturePlayer;DisableUserSettingsLoader;DisableLoadTestClientsTable;NoLoadConfig;DisableLoadConfig;VAParams=%5\""",
+		СтрокаЗапуска = СтрШаблон("%1/1cv8c ENTERPRISE /IBConnectionString \""%2\"" /N\""%3\"" Пароль /LicDstr Y /UseHwLicenses- /Visible /TESTMANAGER /Execute ""%4"" /C\""S1;StartFeaturePlayer;DisableUserSettingsLoader;DisableLoadTestClientsTable;NoLoadConfig;DisableLoadConfig;VAParams=%5\""",
 			Объект.DockerКаталогПлатформыВнутриКонтейнераТестирования, Объект.DockerСтрокаСоединенияСБазойМенеджераТестирования,  Объект.DockerЛогинБазыМенеджераТестирования,
 	 		ПутьКVanessaAutomationВнутриКонтейнера, "\"""+ИмяКаталогаТестирования+"/VAParams.json"+"\""");  
 		
