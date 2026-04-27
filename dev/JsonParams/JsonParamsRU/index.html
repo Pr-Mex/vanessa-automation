@@ -1,6 +1,4 @@
 
-
-
 <!doctype html>
 <html lang="ru" class="no-js">
   <head>
@@ -9,11 +7,21 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
+      
         <link rel="canonical" href="https://pr-mex.github.io/vanessa-automation/dev/JsonParams/JsonParamsRU/">
       
       
-      <link rel="shortcut icon" href="../../assets/images/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-5.0.0">
+        <link rel="prev" href="../JsonParamsEN/">
+      
+      
+        <link rel="next" href="../../MakeVASingle/MakeVASingle/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -21,28 +29,32 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.c3000690.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.4444686e.min.css">
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
+      
+
+
+    
+    
+      
+    
+    
       
         
         
-        <meta name="theme-color" content="">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
-      
-    
-    
-    
-    
-      
+
     
     
   </head>
@@ -50,8 +62,12 @@
   
     
     
-    <body dir="" data-md-color-primary="white" data-md-color-accent="red">
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="red">
   
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -67,68 +83,88 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid" aria-label="">
-    <a href="https://pr-mex.github.io/vanessa-automation/dev/" title="Vanessa Automation Dev" class="md-header-nav__button md-logo" aria-label="Vanessa Automation Dev">
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../.." title="Vanessa Automation Dev" class="md-header__button md-logo" aria-label="Vanessa Automation Dev" data-md-component="logo">
       
   <img src="../../assets/images/logo.png" alt="logo">
 
     </a>
-    <label class="md-header-nav__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
-    </label>
-    <div class="md-header-nav__title" data-md-component="header-title">
+    <label class="md-header__button md-icon" for="__drawer">
       
-        <div class="md-header-nav__ellipsis">
-          <span class="md-header-nav__topic md-ellipsis">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
             Vanessa Automation Dev
           </span>
-          <span class="md-header-nav__topic md-ellipsis">
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
             
               Описание параметров, которые можно передавать в файле VAParams.json, который используется при запуске Vanessa Automation из командной строки.
             
           </span>
         </div>
-      
+      </div>
     </div>
     
-      <label class="md-header-nav__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
-      </label>
       
-<div class="md-search" data-md-component="search" role="dialog">
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="" data-md-component="search-reset" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
-      </button>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Начните печатать для поиска
+            Инициализация поиска
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
   </div>
 </div>
+      
     
     
-      <div class="md-header-nav__source">
-        
-<a href="https://github.com/pr-mex/vanessa-automation" title="Перейти к репозиторию" class="md-source">
+      <div class="md-header__source">
+        <a href="https://github.com/pr-mex/vanessa-automation" title="Перейти к репозиторию" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     pr-mex/vanessa-automation
@@ -137,205 +173,322 @@
       </div>
     
   </nav>
+  
 </header>
     
     <div class="md-container" data-md-component="container">
       
-        
-      
       
         
           
-
-  
-
-<nav class="md-tabs md-tabs--active" aria-label="" data-md-component="tabs">
-  <div class="md-tabs__inner md-grid">
+            
+<nav class="md-tabs" aria-label="Вкладки" data-md-component="tabs">
+  <div class="md-grid">
     <ul class="md-tabs__list">
       
         
-  <li class="md-tabs__item">
-    
+  
+  
+  
+  
+    <li class="md-tabs__item">
       <a href="../.." class="md-tabs__link">
-        Vanessa Automation
-      </a>
+        
+  
+  
     
-  </li>
+  
+  Vanessa Automation
+
+      </a>
+    </li>
+  
 
       
         
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Changelog/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  История версий
+
+      </a>
+    </li>
+  
+
       
         
   
   
-    <li class="md-tabs__item">
-      
+  
+  
+    
+    
+      <li class="md-tabs__item">
         <a href="../../AI/" class="md-tabs__link">
-          AI
+          
+  
+  
+  AI
+
         </a>
-      
-    </li>
+      </li>
+    
   
 
       
         
   
   
-    <li class="md-tabs__item">
-      
+  
+  
+    
+    
+      <li class="md-tabs__item">
         <a href="../../CommandSetting/CommandSetting/" class="md-tabs__link">
-          CommandSetting
+          
+  
+  
+  CommandSetting
+
         </a>
-      
-    </li>
+      </li>
+    
   
 
       
         
   
   
-    <li class="md-tabs__item">
-      
+  
+  
+    
+    
+      <li class="md-tabs__item">
         <a href="../../FAQ/" class="md-tabs__link">
-          FAQ
+          
+  
+  
+  FAQ
+
         </a>
-      
-    </li>
+      </li>
+    
   
 
       
         
   
   
-    <li class="md-tabs__item">
-      
+  
+  
+    
+    
+      <li class="md-tabs__item">
         <a href="../../InteractiveHelp/Onboarding/" class="md-tabs__link">
-          InteractiveHelp
+          
+  
+  
+  InteractiveHelp
+
         </a>
-      
-    </li>
+      </li>
+    
   
 
       
         
   
   
-    <li class="md-tabs__item">
-      
-        <a href="../JsonParamsEN/" class="md-tabs__link md-tabs__link--active">
-          JsonParams
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../JsonParamsEN/" class="md-tabs__link">
+          
+  
+  
+  JsonParams
+
         </a>
-      
-    </li>
+      </li>
+    
   
 
       
         
   
   
-    <li class="md-tabs__item">
-      
+  
+  
+    
+    
+      <li class="md-tabs__item">
         <a href="../../MakeVASingle/MakeVASingle/" class="md-tabs__link">
-          MakeVASingle
+          
+  
+  
+  MakeVASingle
+
         </a>
-      
-    </li>
+      </li>
+    
   
 
       
         
   
   
-    <li class="md-tabs__item">
-      
+  
+  
+    
+    
+      <li class="md-tabs__item">
         <a href="../../ReturnStatus/ReturnStatus/" class="md-tabs__link">
-          ReturnStatus
+          
+  
+  
+  ReturnStatus
+
         </a>
-      
-    </li>
+      </li>
+    
   
 
       
         
   
   
-    <li class="md-tabs__item">
-      
+  
+  
+    
+    
+      <li class="md-tabs__item">
         <a href="../../Smoke/Smoke/" class="md-tabs__link">
-          Smoke
+          
+  
+  
+  Smoke
+
         </a>
-      
-    </li>
+      </li>
+    
   
 
       
         
   
   
-    <li class="md-tabs__item">
-      
+  
+  
+    
+    
+      <li class="md-tabs__item">
         <a href="../../TestDataGenerator/TestDataGenerator/" class="md-tabs__link">
-          TestDataGenerator
+          
+  
+  
+  TestDataGenerator
+
         </a>
-      
-    </li>
+      </li>
+    
   
 
       
         
   
   
-    <li class="md-tabs__item">
-      
+  
+  
+    
+    
+      <li class="md-tabs__item">
         <a href="../../UIAutomation/UIAutomation/" class="md-tabs__link">
-          UIAutomation
+          
+  
+  
+  UIAutomation
+
         </a>
-      
-    </li>
+      </li>
+    
   
 
       
         
   
   
-    <li class="md-tabs__item">
-      
+  
+  
+    
+    
+      <li class="md-tabs__item">
         <a href="../../VAExtension/VAExtension/" class="md-tabs__link">
-          VAExtension
+          
+  
+  
+  VAExtension
+
         </a>
-      
-    </li>
+      </li>
+    
   
 
       
         
   
   
-    <li class="md-tabs__item">
-      
+  
+  
+    
+    
+      <li class="md-tabs__item">
         <a href="../../mobile/mobile/" class="md-tabs__link">
-          Mobile
+          
+  
+  
+  Mobile
+
         </a>
-      
-    </li>
+      </li>
+    
   
 
       
     </ul>
   </div>
 </nav>
+          
         
       
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
             
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" aria-label="" data-md-level="0">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Навигация" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://pr-mex.github.io/vanessa-automation/dev/" title="Vanessa Automation Dev" class="md-nav__button md-logo" aria-label="Vanessa Automation Dev">
+    <a href="../.." title="Vanessa Automation Dev" class="md-nav__button md-logo" aria-label="Vanessa Automation Dev" data-md-component="logo">
       
   <img src="../../assets/images/logo.png" alt="logo">
 
@@ -344,11 +497,10 @@
   </label>
   
     <div class="md-nav__source">
-      
-<a href="https://github.com/pr-mex/vanessa-automation" title="Перейти к репозиторию" class="md-source">
+      <a href="https://github.com/pr-mex/vanessa-automation" title="Перейти к репозиторию" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     pr-mex/vanessa-automation
@@ -360,451 +512,899 @@
     
       
       
-      
-
-
-  <li class="md-nav__item">
-    <a href="../.." title="Vanessa Automation" class="md-nav__link">
-      Vanessa Automation
-    </a>
-  </li>
-
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
     
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../Changelog/" title="История версий" class="md-nav__link">
-      История версий
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
-    
-    <label class="md-nav__link" for="nav-3">
-      AI
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="AI" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-        </span>
-        AI
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../AI/" title="MCP в Vanessa Automation" class="md-nav__link">
-      MCP в Vanessa Automation
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
-    
-    <label class="md-nav__link" for="nav-4">
-      CommandSetting
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="CommandSetting" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-        </span>
-        CommandSetting
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../CommandSetting/CommandSetting/" title="Параметры запуска из командной строки" class="md-nav__link">
-      Параметры запуска из командной строки
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
-    
-    <label class="md-nav__link" for="nav-5">
-      FAQ
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="FAQ" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-        </span>
-        FAQ
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../FAQ/" title="Вопросы и ответы" class="md-nav__link">
-      Вопросы и ответы
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../FAQ/KnownProblems/" title="Известные проблемы" class="md-nav__link">
-      Известные проблемы
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../FAQ/MakeAutoVideo/" title="Как создать автовидеоинструкцию" class="md-nav__link">
-      Как создать автовидеоинструкцию
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../FAQ/NotAdd/" title="Отличия Vanessa-Automation от ADD" class="md-nav__link">
-      Отличия Vanessa-Automation от ADD
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../FAQ/%D0%91%D1%80%D0%B0%D1%83%D0%B7%D0%B5%D1%80/" title="Как подключить браузер Chrome через debug порт" class="md-nav__link">
-      Как подключить браузер Chrome через debug порт
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../FAQ/%D0%A0%D0%B5%D0%B6%D0%B8%D0%BC%20%D1%81%D0%BE%D0%B2%D0%BC%D0%B5%D1%81%D1%82%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8%208.2/" title="Режим совместимости 8.2" class="md-nav__link">
-      Режим совместимости 8.2
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
-    
-    <label class="md-nav__link" for="nav-6">
-      InteractiveHelp
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="InteractiveHelp" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-        </span>
-        InteractiveHelp
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../InteractiveHelp/Onboarding/" title="Как запустить сценарий, реализующий Onboarding" class="md-nav__link">
-      Как запустить сценарий, реализующий Onboarding
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../InteractiveHelp/SettingUpInteractiveHelp/" title="Как настроить работу интерактивной справки" class="md-nav__link">
-      Как настроить работу интерактивной справки
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../InteractiveHelp/VanessaInteractiveDemo/" title="Vanessa Interactive" class="md-nav__link">
-      Vanessa Interactive
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../InteractiveHelp/%D0%97%D0%B0%D0%BF%D1%83%D1%81%D0%BA%D0%91%D0%B5%D0%B7%D0%9E%D1%82%D0%BA%D1%80%D1%8B%D1%82%D0%B8%D1%8F%D0%A4%D0%BE%D1%80%D0%BC%D1%8B/" title="Как запустить сценарий Vanessa Automation без открытия формы" class="md-nav__link">
-      Как запустить сценарий Vanessa Automation без открытия формы
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
+  
+    Vanessa Automation
   
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
-    
-    <label class="md-nav__link" for="nav-7">
-      JsonParams
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="JsonParams" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-        </span>
-        JsonParams
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../JsonParamsEN/" title="Description of parameters that can be passed in the VAParams.json file, which is used when launching Vanessa Automation from the command line." class="md-nav__link">
-      Description of parameters that can be passed in the VAParams.json file, which is used when launching Vanessa Automation from the command line.
-    </a>
-  </li>
-
-        
-          
-          
-          
-
+  </span>
+  
   
 
+      </a>
+    </li>
+  
 
-  <li class="md-nav__item md-nav__item--active">
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
     
+  
+    История версий
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
       
     
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Описание параметров, которые можно передавать в файле VAParams.json, который используется при запуске Vanessa Automation из командной строки.
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
-        </span>
-      </label>
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
     
-    <a href="./" title="Описание параметров, которые можно передавать в файле VAParams.json, который используется при запуске Vanessa Automation из командной строки." class="md-nav__link md-nav__link--active">
-      Описание параметров, которые можно передавать в файле VAParams.json, который используется при запуске Vanessa Automation из командной строки.
-    </a>
+  
+    AI
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCP в Vanessa Automation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
     
       
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CommandSetting
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CommandSetting
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CommandSetting/CommandSetting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Параметры запуска из командной строки
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FAQ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Вопросы и ответы
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FAQ/KnownProblems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Известные проблемы
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FAQ/MakeAutoVideo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Как создать автовидеоинструкцию
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FAQ/NotAdd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Отличия Vanessa-Automation от ADD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FAQ/%D0%91%D1%80%D0%B0%D1%83%D0%B7%D0%B5%D1%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Как подключить браузер Chrome через debug порт
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FAQ/%D0%A0%D0%B5%D0%B6%D0%B8%D0%BC%20%D1%81%D0%BE%D0%B2%D0%BC%D0%B5%D1%81%D1%82%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8%208.2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Режим совместимости 8.2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    InteractiveHelp
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    InteractiveHelp
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../InteractiveHelp/Onboarding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Как запустить сценарий, реализующий Onboarding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../InteractiveHelp/SettingUpInteractiveHelp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Как настроить работу интерактивной справки
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../InteractiveHelp/VanessaInteractiveDemo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vanessa Interactive
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../InteractiveHelp/%D0%97%D0%B0%D0%BF%D1%83%D1%81%D0%BA%D0%91%D0%B5%D0%B7%D0%9E%D1%82%D0%BA%D1%80%D1%8B%D1%82%D0%B8%D1%8F%D0%A4%D0%BE%D1%80%D0%BC%D1%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Как запустить сценарий Vanessa Automation без открытия формы
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JsonParams
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    JsonParams
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../JsonParamsEN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Description of parameters that can be passed in the VAParams.json file, which is used when launching Vanessa Automation from the command line.
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Описание параметров, которые можно передавать в файле VAParams.json, который используется при запуске Vanessa Automation из командной строки.
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Описание параметров, которые можно передавать в файле VAParams.json, который используется при запуске Vanessa Automation из командной строки.
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
 <nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
   
   
     
   
   
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
       Содержание
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#vanessa-automation" class="md-nav__link">
-    Данный файл создан автоматически на основании данных формы Vanessa Automation. Пулреквесты нужно отправлять в подсказки к элементам формы.
+    <span class="md-ellipsis">
+      
+        Данный файл создан автоматически на основании данных формы Vanessa Automation. Пулреквесты нужно отправлять в подсказки к элементам формы.
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#vanessa-automation-vaparamsjson" class="md-nav__link">
-    Заготовку для этого файла можно получить выгрузив настройки Vanessa Automation в файл VAParams.json.
+    <span class="md-ellipsis">
+      
+        Заготовку для этого файла можно получить выгрузив настройки Vanessa Automation в файл VAParams.json.
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    Глобальные переменные
+    <span class="md-ellipsis">
+      
+        Глобальные переменные
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    Основные
+    <span class="md-ellipsis">
+      
+        Основные
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    Настройки клиентов тестирования
+    <span class="md-ellipsis">
+      
+        Настройки клиентов тестирования
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
-    Выполнение сценариев
+    <span class="md-ellipsis">
+      
+        Выполнение сценариев
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
-    Скриншоты
+    <span class="md-ellipsis">
+      
+        Скриншоты
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
-    Отчет о запуске сценариев
+    <span class="md-ellipsis">
+      
+        Отчет о запуске сценариев
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
-    Автоинструкции
+    <span class="md-ellipsis">
+      
+        Автоинструкции
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#vanessa-editor" class="md-nav__link">
-    Vanessa Editor
+    <span class="md-ellipsis">
+      
+        Vanessa Editor
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
-    Библиотеки
+    <span class="md-ellipsis">
+      
+        Библиотеки
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_9" class="md-nav__link">
-    Клиенты тестирования
+    <span class="md-ellipsis">
+      
+        Клиенты тестирования
+      
+    </span>
   </a>
   
 </li>
@@ -812,307 +1412,612 @@
     </ul>
   
 </nav>
-    
-  </li>
+      
+    </li>
+  
 
-        
-      </ul>
-    </nav>
-  </li>
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
 
     
       
       
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
+  
+  
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
     
-    <label class="md-nav__link" for="nav-8">
-      MakeVASingle
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="MakeVASingle" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-        </span>
-        MakeVASingle
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../MakeVASingle/MakeVASingle/" title="Параметры запуска из командной строки" class="md-nav__link">
-      Параметры запуска из командной строки
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
+    
     
       
       
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
-    
-    <label class="md-nav__link" for="nav-9">
-      ReturnStatus
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="ReturnStatus" data-md-level="1">
-      <label class="md-nav__title" for="nav-9">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-        </span>
-        ReturnStatus
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
         
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ReturnStatus/ReturnStatus/" title="Статус возврата" class="md-nav__link">
-      Статус возврата
-    </a>
-  </li>
-
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
         
-      </ul>
-    </nav>
-  </li>
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MakeVASingle
+  
 
     
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    MakeVASingle
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MakeVASingle/MakeVASingle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Параметры запуска из командной строки
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
-    
-    <label class="md-nav__link" for="nav-10">
-      Smoke
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Smoke" data-md-level="1">
-      <label class="md-nav__title" for="nav-10">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-        </span>
-        Smoke
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Smoke/Smoke/" title="Генератор дымовых тестов" class="md-nav__link">
-      Генератор дымовых тестов
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+    </li>
+  
 
     
       
       
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
+  
+  
+  
+  
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
     
-    <label class="md-nav__link" for="nav-11">
-      TestDataGenerator
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="TestDataGenerator" data-md-level="1">
-      <label class="md-nav__title" for="nav-11">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-        </span>
-        TestDataGenerator
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../TestDataGenerator/TestDataGenerator/" title="Подготовка и загрузка данных" class="md-nav__link">
-      Подготовка и загрузка данных
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
+    
     
       
       
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
       
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
-    
-    <label class="md-nav__link" for="nav-12">
-      UIAutomation
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="UIAutomation" data-md-level="1">
-      <label class="md-nav__title" for="nav-12">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-        </span>
-        UIAutomation
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
         
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../UIAutomation/UIAutomation/" title="Лайфхаки при работе с UI Automation" class="md-nav__link">
-      Лайфхаки при работе с UI Automation
-    </a>
-  </li>
-
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
         
-      </ul>
-    </nav>
-  </li>
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ReturnStatus
+  
 
     
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ReturnStatus
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ReturnStatus/ReturnStatus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Статус возврата
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13">
-    
-    <label class="md-nav__link" for="nav-13">
-      VAExtension
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="VAExtension" data-md-level="1">
-      <label class="md-nav__title" for="nav-13">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-        </span>
-        VAExtension
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../VAExtension/VAExtension/" title="Расширение VAExtension" class="md-nav__link">
-      Расширение VAExtension
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
+    </li>
+  
 
     
       
       
+  
+  
+  
+  
+    
+    
+    
+    
       
-
-
-  <li class="md-nav__item md-nav__item--nested">
+      
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14">
     
-    <label class="md-nav__link" for="nav-14">
-      Mobile
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Mobile" data-md-level="1">
-      <label class="md-nav__title" for="nav-14">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-        </span>
-        Mobile
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
+    <li class="md-nav__item md-nav__item--nested">
+      
         
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../mobile/mobile/" title="Тестирование мобильного клиента" class="md-nav__link">
-      Тестирование мобильного клиента
-    </a>
-  </li>
-
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
         
-      </ul>
-    </nav>
-  </li>
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Smoke
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Smoke
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Smoke/Smoke/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Генератор дымовых тестов
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TestDataGenerator
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    TestDataGenerator
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TestDataGenerator/TestDataGenerator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Подготовка и загрузка данных
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UIAutomation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UIAutomation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UIAutomation/UIAutomation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лайфхаки при работе с UI Automation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VAExtension
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    VAExtension
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../VAExtension/VAExtension/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Расширение VAExtension
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mobile
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Mobile
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mobile/mobile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тестирование мобильного клиента
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
 
     
   </ul>
@@ -1122,104 +2027,153 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
 <nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
   
   
     
   
   
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
       Содержание
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#vanessa-automation" class="md-nav__link">
-    Данный файл создан автоматически на основании данных формы Vanessa Automation. Пулреквесты нужно отправлять в подсказки к элементам формы.
+    <span class="md-ellipsis">
+      
+        Данный файл создан автоматически на основании данных формы Vanessa Automation. Пулреквесты нужно отправлять в подсказки к элементам формы.
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#vanessa-automation-vaparamsjson" class="md-nav__link">
-    Заготовку для этого файла можно получить выгрузив настройки Vanessa Automation в файл VAParams.json.
+    <span class="md-ellipsis">
+      
+        Заготовку для этого файла можно получить выгрузив настройки Vanessa Automation в файл VAParams.json.
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_1" class="md-nav__link">
-    Глобальные переменные
+    <span class="md-ellipsis">
+      
+        Глобальные переменные
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
-    Основные
+    <span class="md-ellipsis">
+      
+        Основные
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_3" class="md-nav__link">
-    Настройки клиентов тестирования
+    <span class="md-ellipsis">
+      
+        Настройки клиентов тестирования
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_4" class="md-nav__link">
-    Выполнение сценариев
+    <span class="md-ellipsis">
+      
+        Выполнение сценариев
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_5" class="md-nav__link">
-    Скриншоты
+    <span class="md-ellipsis">
+      
+        Скриншоты
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_6" class="md-nav__link">
-    Отчет о запуске сценариев
+    <span class="md-ellipsis">
+      
+        Отчет о запуске сценариев
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_7" class="md-nav__link">
-    Автоинструкции
+    <span class="md-ellipsis">
+      
+        Автоинструкции
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#vanessa-editor" class="md-nav__link">
-    Vanessa Editor
+    <span class="md-ellipsis">
+      
+        Vanessa Editor
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_8" class="md-nav__link">
-    Библиотеки
+    <span class="md-ellipsis">
+      
+        Библиотеки
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#_9" class="md-nav__link">
-    Клиенты тестирования
+    <span class="md-ellipsis">
+      
+        Клиенты тестирования
+      
+    </span>
   </a>
   
 </li>
@@ -1232,19 +2186,19 @@
               </div>
             
           
-          <div class="md-content">
-            <article class="md-content__inner md-typeset">
+          
+            <div class="md-content" data-md-component="content">
               
-                
-                  <a href="https://github.com/pr-mex/vanessa-automation/edit/develop/docs/JsonParams/JsonParamsRU.md" title="Редактировать страницу" class="md-content__button md-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg>
-                  </a>
-                
+              <article class="md-content__inner md-typeset">
                 
                   
-                
-                
-                <h1 id="vaparamsjson-vanessa-automation">Описание параметров, которые можно передавать в файле VAParams.json, который используется при запуске Vanessa Automation из командной строки.<a class="headerlink" href="#vaparamsjson-vanessa-automation" title="Permanent link">&para;</a></h1>
+
+
+  
+  
+
+
+<h1 id="vaparamsjson-vanessa-automation">Описание параметров, которые можно передавать в файле VAParams.json, который используется при запуске Vanessa Automation из командной строки.<a class="headerlink" href="#vaparamsjson-vanessa-automation" title="Permanent link">&para;</a></h1>
 <h4 id="vanessa-automation">Данный файл создан автоматически на основании данных формы Vanessa Automation. Пулреквесты нужно отправлять в подсказки к элементам формы.<a class="headerlink" href="#vanessa-automation" title="Permanent link">&para;</a></h4>
 <h4 id="vanessa-automation-vaparamsjson">Заготовку для этого файла можно получить выгрузив настройки Vanessa Automation в файл VAParams.json.<a class="headerlink" href="#vanessa-automation-vaparamsjson" title="Permanent link">&para;</a></h4>
 <h2 id="_1">Глобальные переменные<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
@@ -1645,8 +2599,8 @@
      Существует проблема, что при синхронизации состояния формы после завершения серверного вызова, может затираться текст, который в данный момент редактирует пользователь.
      В тестах это может проявляться так, что тест ввёл значение в поле, но до того как он начал работать с другим полем данное значение было возвращено в предыдущее состояние.
      Данная опция включает механизм, когда свойство "ОбновлениеТекстаРедактирования" у полей формы, будет изменяться после вызова шага
-     <code>Gherkin
-     Тогда открылось окно "ИмяОкна"</code>
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">Тогда открылось окно &quot;</span><span class="s">ИмяОкна</span><span class="nf">&quot;</span>
+</code></pre></div>
      Для работы опции в базе клиента тестирования должно быть установлено расширение VAExtension.</p>
 </li>
 <li>
@@ -1657,24 +2611,24 @@
 <li>
 <p><strong>КоличествоСекундПоискаОкна {timetofindwindow}</strong>:
      Максимальное время для поиска окна в шаге
-     <code>Gherkin
-     Тогда открылось окно "ИмяОкна"</code></p>
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nf">Тогда открылось окно &quot;</span><span class="s">ИмяОкна</span><span class="nf">&quot;</span>
+</code></pre></div></p>
 </li>
 <li>
 <p><strong>ТаймаутДляАсинхронныхШагов {timeoutforasynchronoussteps}</strong>:
      Указывает максимальное время ожидания для асинхронного шага.
      Например, если задано значение параметра равное 20 секунд и используется шаг
-     <code>Gherkin
-     И я жду, что поле с именем "ИмяПоля" перестанет быть пустым в течение 10 секунд</code>
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">И </span><span class="nf">я жду, что поле с именем &quot;</span><span class="s">ИмяПоля</span><span class="nf">&quot; перестанет быть пустым в течение </span><span class="s">10</span><span class="nf"> секунд</span>
+</code></pre></div>
      тогда в реальности максимальное время работы шага будет 20 секунд, а не 10.</p>
 </li>
 <li>
 <p><strong>ПаузаПриОткрытииОкна {pauseonwindowopening}</strong>:
      Значение дополнительной паузы, которая будет всегда применяться в шагах
-     <code>Gherkin
-     Тогда открылось окно "ИмяОкна"
-     И я жду открытия окна "Имя окна" в течении 60 секунд
-     И я жду открытия окна отличного от "ИмяОкна" в течение 60 секунд</code></p>
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nf">Тогда открылось окно &quot;</span><span class="s">ИмяОкна</span><span class="nf">&quot;</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">И </span><span class="nf">я жду открытия окна &quot;</span><span class="s">Имя окна</span><span class="nf">&quot; в течении </span><span class="s">60</span><span class="nf"> секунд</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">И </span><span class="nf">я жду открытия окна отличного от &quot;</span><span class="s">ИмяОкна</span><span class="nf">&quot; в течение </span><span class="s">60</span><span class="nf"> секунд</span>
+</code></pre></div></p>
 </li>
 <li>
 <p><strong>МаксимальноеВремяВыполненияДействия {MaximumExecutionTimeAction}</strong>:
@@ -1869,97 +2823,94 @@
 </li>
 <li>
 <p>Основные настройки</p>
-<div class="codehilite"><pre><span></span><code><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ДелатьОтчетВФорматеАллюр</span><span class="w"> </span><span class="p">{</span><span class="n">allurecreatereport</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">    </span><span class="err">Формировать</span><span class="w"> </span><span class="err">отчет</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">формате</span><span class="w"> </span><span class="n">Allure</span><span class="w"> </span><span class="err">по</span><span class="w"> </span><span class="err">результатам</span><span class="w"> </span><span class="err">выполнения</span><span class="w"> </span><span class="err">сценариев</span><span class="o">.</span>
+<div class="highlight"><pre><span></span><code> * **ДелатьОтчетВФорматеАллюр {allurecreatereport}**:
+    Формировать отчет в формате Allure по результатам выполнения сценариев.
 
-<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ПодставлятьВОтчете</span><span class="n">AllureЗначенияПеременных</span><span class="w"> </span><span class="p">{</span><span class="n">setvariablevaluesinstepsallurereport</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">    </span><span class="err">Если</span><span class="w"> </span><span class="err">опция</span><span class="w"> </span><span class="err">включена</span><span class="p">,</span><span class="w"> </span><span class="err">то</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">параметрах</span><span class="w"> </span><span class="err">шагов</span><span class="p">,</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">которых</span><span class="w"> </span><span class="err">использовались</span><span class="w"> </span><span class="err">переменные</span><span class="p">,</span><span class="w"> </span><span class="err">имена</span><span class="w"> </span><span class="err">переменных</span><span class="w"> </span><span class="err">будут</span><span class="w"> </span><span class="err">заменены</span><span class="w"> </span><span class="err">на</span><span class="w"> </span><span class="err">их</span><span class="w"> </span><span class="err">значения</span><span class="o">.</span>
+ * **ПодставлятьВОтчетеAllureЗначенияПеременных {setvariablevaluesinstepsallurereport}**:
+    Если опция включена, то в параметрах шагов, в которых использовались переменные, имена переменных будут заменены на их значения.
 
-<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">СписокИсключаемыхПеременных</span><span class="n">Allure</span><span class="w"> </span><span class="p">{</span><span class="n">allureexcludevars</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">    </span><span class="err">Имена</span><span class="w"> </span><span class="err">переменных</span><span class="w"> </span><span class="err">из</span><span class="w"> </span><span class="err">списка</span><span class="w"> </span><span class="err">не</span><span class="w"> </span><span class="err">будут</span><span class="w"> </span><span class="err">заменены</span><span class="w"> </span><span class="err">на</span><span class="w"> </span><span class="err">их</span><span class="w"> </span><span class="err">значения</span>
+ * **СписокИсключаемыхПеременныхAllure {allureexcludevars}**:
+    Имена переменных из списка не будут заменены на их значения
 
-<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">КаталогВыгрузки</span><span class="n">Allure</span><span class="w"> </span><span class="p">{</span><span class="n">allurepath</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">    </span><span class="err">Каталог</span><span class="p">,</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">котором</span><span class="w"> </span><span class="err">формируются</span><span class="w"> </span><span class="err">данные</span><span class="w"> </span><span class="err">отчета</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">формате</span><span class="w"> </span><span class="n">Allure</span><span class="o">.</span><span class="w"> </span><span class="err">При</span><span class="w"> </span><span class="err">локальном</span><span class="w"> </span><span class="err">запуске</span><span class="w"> </span><span class="err">каталог</span><span class="w"> </span><span class="err">будет</span><span class="w"> </span><span class="err">очищаться</span><span class="w"> </span><span class="err">при</span><span class="w"> </span><span class="err">каждом</span><span class="w"> </span><span class="err">запуске</span><span class="w"> </span><span class="err">сценариев</span><span class="o">.</span>
+ * **КаталогВыгрузкиAllure {allurepath}**:
+    Каталог, в котором формируются данные отчета в формате Allure. При локальном запуске каталог будет очищаться при каждом запуске сценариев.
 
-<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">КаталогВыгрузки</span><span class="n">AllureБазовый</span><span class="w"> </span><span class="p">{</span><span class="n">allurepathbase</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">    </span><span class="err">Каталог</span><span class="p">,</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">котором</span><span class="w"> </span><span class="err">формируются</span><span class="w"> </span><span class="err">данные</span><span class="w"> </span><span class="err">отчета</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">формате</span><span class="w"> </span><span class="n">Allure</span><span class="p">,</span><span class="w"> </span><span class="err">при</span><span class="w"> </span><span class="err">этом</span><span class="w"> </span><span class="err">для</span><span class="w"> </span><span class="err">каждой</span><span class="w"> </span><span class="err">сборки</span><span class="w"> </span><span class="err">будет</span><span class="w"> </span><span class="err">создаваться</span><span class="w"> </span><span class="err">подкаталоги</span><span class="o">.</span><span class="w"> </span><span class="err">Данный</span><span class="w"> </span><span class="err">параметр</span><span class="w"> </span><span class="err">имеет</span><span class="w"> </span><span class="err">приоритет</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">значение</span><span class="w"> </span><span class="err">параметра</span><span class="w"> </span><span class="s2">&quot;Каталог отчета Allure&quot;</span><span class="w"> </span><span class="err">будет</span><span class="w"> </span><span class="err">проигнорировано</span><span class="o">.</span>
+ * **КаталогВыгрузкиAllureБазовый {allurepathbase}**:
+    Каталог, в котором формируются данные отчета в формате Allure, при этом для каждой сборки будет создаваться подкаталоги. Данный параметр имеет приоритет и значение параметра &quot;Каталог отчета Allure&quot; будет проигнорировано.
 
-<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">УровеньОтчета</span><span class="mi">1</span><span class="w"> </span><span class="p">{</span><span class="n">reportlevel1</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">    </span><span class="err">Задаёт</span><span class="w"> </span><span class="err">первый</span><span class="w"> </span><span class="err">уровень</span><span class="w"> </span><span class="err">группировки</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">отчете</span><span class="w"> </span><span class="n">Allure</span><span class="w"> </span><span class="err">на</span><span class="w"> </span><span class="err">закладке</span><span class="w"> </span><span class="n">Behaviors</span><span class="o">.</span><span class="w"> </span><span class="err">Подробности</span><span class="w"> </span><span class="err">описаны</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">справке</span><span class="o">.</span>
+ * **УровеньОтчета1 {reportlevel1}**:
+    Задаёт первый уровень группировки в отчете Allure на закладке Behaviors. Подробности описаны в справке.
 
-<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">УровеньОтчета</span><span class="mi">2</span><span class="w"> </span><span class="p">{</span><span class="n">reportlevel2</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">    </span><span class="err">Задаёт</span><span class="w"> </span><span class="err">второй</span><span class="w"> </span><span class="err">уровень</span><span class="w"> </span><span class="err">группировки</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">отчете</span><span class="w"> </span><span class="n">Allure</span><span class="w"> </span><span class="err">на</span><span class="w"> </span><span class="err">закладке</span><span class="w"> </span><span class="n">Behaviors</span><span class="o">.</span><span class="w"> </span><span class="err">Подробности</span><span class="w"> </span><span class="err">описаны</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">справке</span><span class="o">.</span>
+ * **УровеньОтчета2 {reportlevel2}**:
+    Задаёт второй уровень группировки в отчете Allure на закладке Behaviors. Подробности описаны в справке.
 
-<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">УровеньОтчета</span><span class="mi">3</span><span class="w"> </span><span class="p">{</span><span class="n">reportlevel3</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">    </span><span class="err">Задаёт</span><span class="w"> </span><span class="err">третий</span><span class="w"> </span><span class="err">уровень</span><span class="w"> </span><span class="err">группировки</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">отчете</span><span class="w"> </span><span class="n">Allure</span><span class="w"> </span><span class="err">на</span><span class="w"> </span><span class="err">закладке</span><span class="w"> </span><span class="n">Behaviors</span><span class="o">.</span><span class="w"> </span><span class="err">Подробности</span><span class="w"> </span><span class="err">описаны</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">справке</span><span class="o">.</span>
+ * **УровеньОтчета3 {reportlevel3}**:
+    Задаёт третий уровень группировки в отчете Allure на закладке Behaviors. Подробности описаны в справке.
 
-<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">КаталогОтносительноКоторогоНадоСтроитьИерархию</span><span class="w"> </span><span class="p">{</span><span class="n">directorytobuildhierarchy</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">    </span><span class="err">Каталог</span><span class="p">,</span><span class="w"> </span><span class="err">относительно</span><span class="w"> </span><span class="err">которого</span><span class="w"> </span><span class="err">рассчитывается</span><span class="w"> </span><span class="err">иерархия</span><span class="w"> </span><span class="err">фич</span><span class="o">.</span><span class="w"> </span><span class="err">Подробности</span><span class="w"> </span><span class="err">описаны</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">справке</span><span class="o">.</span>
+ * **КаталогОтносительноКоторогоНадоСтроитьИерархию {directorytobuildhierarchy}**:
+    Каталог, относительно которого рассчитывается иерархия фич. Подробности описаны в справке.
 
-<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ТегиПропускающиеСценарий</span><span class="n">Allure</span><span class="w"> </span><span class="p">{</span><span class="n">tagsskippingscript</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">    </span><span class="err">Список</span><span class="w"> </span><span class="err">тегов</span><span class="p">,</span><span class="w"> </span><span class="err">разделённых</span><span class="w"> </span><span class="err">с</span><span class="w"> </span><span class="err">помощью</span><span class="w"> </span><span class="s2">&quot;;&quot;</span><span class="o">.</span>
-<span class="w">    </span><span class="err">Если</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">сценарии</span><span class="w"> </span><span class="err">есть</span><span class="w"> </span><span class="err">такой</span><span class="w"> </span><span class="err">тег</span><span class="p">,</span><span class="w"> </span><span class="err">тогда</span><span class="w"> </span><span class="err">сценарий</span><span class="w"> </span><span class="err">не</span><span class="w"> </span><span class="err">будет</span><span class="w"> </span><span class="err">выполняться</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">отчете</span><span class="w"> </span><span class="n">Allure</span><span class="w"> </span><span class="err">у</span><span class="w"> </span><span class="err">него</span><span class="w"> </span><span class="err">будет</span><span class="w"> </span><span class="err">статус</span><span class="w"> </span><span class="err">пропущен</span><span class="o">/</span><span class="n">skipped</span><span class="o">.</span>
+ * **ТегиПропускающиеСценарийAllure {tagsskippingscript}**:
+    Список тегов, разделённых с помощью &quot;;&quot;.
+    Если в сценарии есть такой тег, тогда сценарий не будет выполняться и отчете Allure у него будет статус пропущен/skipped.
 
-<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">Группировка</span><span class="n">TestSuites</span><span class="w"> </span><span class="p">{</span><span class="n">testsuites</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">    </span><span class="err">Задаёт</span><span class="w"> </span><span class="err">значение</span><span class="w"> </span><span class="err">группировки</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">отчете</span><span class="w"> </span><span class="n">Allure</span><span class="w"> </span><span class="err">на</span><span class="w"> </span><span class="err">закладке</span><span class="w"> </span><span class="n">Suites</span><span class="o">.</span><span class="w"> </span><span class="err">Подробности</span><span class="w"> </span><span class="err">описаны</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">справке</span><span class="o">.</span>
+ * **ГруппировкаTestSuites {testsuites}**:
+    Задаёт значение группировки в отчете Allure на закладке Suites. Подробности описаны в справке.
 </code></pre></div>
-
 </li>
 <li>
 <p>Приложения к отчету</p>
-<div class="codehilite"><pre><span></span><code><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ПрикладыватьКОтчету</span><span class="n">AllureЖурналРегистрацииВыполненияСценария</span><span class="w"> </span><span class="p">{</span><span class="n">attacheventlogtotheallurereport</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">    </span><span class="err">При</span><span class="w"> </span><span class="err">возникновении</span><span class="w"> </span><span class="err">ошибки</span><span class="w"> </span><span class="err">к</span><span class="w"> </span><span class="err">сценарию</span><span class="w"> </span><span class="err">будет</span><span class="w"> </span><span class="err">приложен</span><span class="w"> </span><span class="err">журнала</span><span class="w"> </span><span class="err">регистрации</span><span class="o">.</span><span class="w"> </span><span class="err">Данные</span><span class="w"> </span><span class="err">берутся</span><span class="w"> </span><span class="err">с</span><span class="w"> </span><span class="err">момента</span><span class="w"> </span><span class="err">начала</span><span class="w"> </span><span class="err">выполнения</span><span class="w"> </span><span class="err">сценария</span><span class="o">.</span>
+<div class="highlight"><pre><span></span><code> * **ПрикладыватьКОтчетуAllureЖурналРегистрацииВыполненияСценария {attacheventlogtotheallurereport}**:
+    При возникновении ошибки к сценарию будет приложен журнала регистрации. Данные берутся с момента начала выполнения сценария.
 
-<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ПрикладыватьКОтчету</span><span class="n">AllureДанныеОСетевыхСоединениях</span><span class="w"> </span><span class="p">{</span><span class="n">attachnetworkconnectiondatatotheallurereport</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">    </span><span class="err">Если</span><span class="w"> </span><span class="err">опция</span><span class="w"> </span><span class="err">включена</span><span class="p">,</span><span class="w"> </span><span class="err">то</span><span class="w"> </span><span class="err">при</span><span class="w"> </span><span class="err">возникновении</span><span class="w"> </span><span class="err">ошибки</span><span class="w"> </span><span class="err">будут</span><span class="w"> </span><span class="err">собраны</span><span class="w"> </span><span class="err">данные</span><span class="w"> </span><span class="err">о</span><span class="w"> </span><span class="err">сетевых</span><span class="w"> </span><span class="err">соединениях</span><span class="w"> </span><span class="err">ПК</span><span class="p">,</span><span class="w"> </span><span class="err">на</span><span class="w"> </span><span class="err">котором</span><span class="w"> </span><span class="err">запускались</span><span class="w"> </span><span class="err">тесты</span><span class="o">.</span>
+ * **ПрикладыватьКОтчетуAllureДанныеОСетевыхСоединениях {attachnetworkconnectiondatatotheallurereport}**:
+    Если опция включена, то при возникновении ошибки будут собраны данные о сетевых соединениях ПК, на котором запускались тесты.
 
-<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ПрикладыватьКОтчету</span><span class="n">AllureДанныеОСостоянииАктивнойФормы</span><span class="w"> </span><span class="p">{</span><span class="n">attachactiveformdatatotheallurereport</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">    </span><span class="err">Если</span><span class="w"> </span><span class="err">опция</span><span class="w"> </span><span class="err">включена</span><span class="p">,</span><span class="w"> </span><span class="err">то</span><span class="w"> </span><span class="err">при</span><span class="w"> </span><span class="err">возникновении</span><span class="w"> </span><span class="err">ошибки</span><span class="w"> </span><span class="err">будут</span><span class="w"> </span><span class="err">собраны</span><span class="w"> </span><span class="err">данные</span><span class="w"> </span><span class="err">о</span><span class="w"> </span><span class="err">состоянии</span><span class="w"> </span><span class="err">элементов</span><span class="w"> </span><span class="err">активной</span><span class="w"> </span><span class="err">формы</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">формате</span><span class="w"> </span><span class="n">xlsx</span><span class="o">.</span>
+ * **ПрикладыватьКОтчетуAllureДанныеОСостоянииАктивнойФормы {attachactiveformdatatotheallurereport}**:
+    Если опция включена, то при возникновении ошибки будут собраны данные о состоянии элементов активной формы в формате xlsx.
 
-<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ПрикладыватьКОтчету</span><span class="n">AllureДанныеОСостоянииВсехФорм</span><span class="w"> </span><span class="p">{</span><span class="n">attachallformsdatatotheallurereport</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">    </span><span class="err">Если</span><span class="w"> </span><span class="err">опция</span><span class="w"> </span><span class="err">включена</span><span class="p">,</span><span class="w"> </span><span class="err">то</span><span class="w"> </span><span class="err">при</span><span class="w"> </span><span class="err">возникновении</span><span class="w"> </span><span class="err">ошибки</span><span class="w"> </span><span class="err">будут</span><span class="w"> </span><span class="err">собраны</span><span class="w"> </span><span class="err">данные</span><span class="w"> </span><span class="err">о</span><span class="w"> </span><span class="err">состоянии</span><span class="w"> </span><span class="err">элементов</span><span class="w"> </span><span class="err">всех</span><span class="w"> </span><span class="err">форм</span><span class="w"> </span><span class="err">открытых</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">клиенте</span><span class="w"> </span><span class="err">тестирования</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">формате</span><span class="w"> </span><span class="n">xlsx</span><span class="o">.</span>
+ * **ПрикладыватьКОтчетуAllureДанныеОСостоянииВсехФорм {attachallformsdatatotheallurereport}**:
+    Если опция включена, то при возникновении ошибки будут собраны данные о состоянии элементов всех форм открытых в клиенте тестирования в формате xlsx.
 
-<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ПрикладыватьКОтчету</span><span class="n">AllureДанныеОПроцессахОС</span><span class="w"> </span><span class="p">{</span><span class="n">attachdataoftheoperatingsystemprocessestotheallurereport</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">    </span><span class="err">Если</span><span class="w"> </span><span class="err">опция</span><span class="w"> </span><span class="err">включена</span><span class="p">,</span><span class="w"> </span><span class="err">то</span><span class="w"> </span><span class="err">при</span><span class="w"> </span><span class="err">возникновении</span><span class="w"> </span><span class="err">ошибки</span><span class="w"> </span><span class="err">будут</span><span class="w"> </span><span class="err">собраны</span><span class="w"> </span><span class="err">данные</span><span class="w"> </span><span class="err">о</span><span class="w"> </span><span class="err">запущенных</span><span class="w"> </span><span class="err">процессах</span><span class="w"> </span><span class="err">ОС</span><span class="o">.</span>
+ * **ПрикладыватьКОтчетуAllureДанныеОПроцессахОС {attachdataoftheoperatingsystemprocessestotheallurereport}**:
+    Если опция включена, то при возникновении ошибки будут собраны данные о запущенных процессах ОС.
 
-<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ПрикладыватьКОтчету</span><span class="n">AllureДанныеОЗначенияхПеременных</span><span class="w"> </span><span class="p">{</span><span class="n">attachvariablestotheallurereport</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">    </span><span class="err">Если</span><span class="w"> </span><span class="err">опция</span><span class="w"> </span><span class="err">включена</span><span class="p">,</span><span class="w"> </span><span class="err">то</span><span class="w"> </span><span class="err">при</span><span class="w"> </span><span class="err">возникновении</span><span class="w"> </span><span class="err">ошибки</span><span class="w"> </span><span class="err">будут</span><span class="w"> </span><span class="err">собраны</span><span class="w"> </span><span class="err">данные</span><span class="w"> </span><span class="err">со</span><span class="w"> </span><span class="err">значениями</span><span class="w"> </span><span class="err">переменных</span><span class="w"> </span><span class="err">Контекста</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">Контекста</span><span class="w"> </span><span class="err">глобального</span><span class="o">.</span>
+ * **ПрикладыватьКОтчетуAllureДанныеОЗначенияхПеременных {attachvariablestotheallurereport}**:
+    Если опция включена, то при возникновении ошибки будут собраны данные со значениями переменных Контекста и Контекста глобального.
 
-<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ПрикладыватьФайлы</span><span class="n">MxlКОтчетуAllure</span><span class="w"> </span><span class="p">{</span><span class="n">attachmxlfilestoallurereport</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">    </span><span class="err">Файлы</span><span class="w"> </span><span class="err">отчетов</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">их</span><span class="w"> </span><span class="err">эталонов</span><span class="w"> </span><span class="err">будут</span><span class="w"> </span><span class="err">прикладываться</span><span class="w"> </span><span class="err">к</span><span class="w"> </span><span class="err">отчету</span><span class="w"> </span><span class="n">Allure</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">формате</span><span class="w"> </span><span class="n">mxl</span><span class="o">.</span>
+ * **ПрикладыватьФайлыMxlКОтчетуAllure {attachmxlfilestoallurereport}**:
+    Файлы отчетов и их эталонов будут прикладываться к отчету Allure в формате mxl.
 
-<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ПрикладыватьФайлы</span><span class="n">MxlСохраненныеВФорматеHTMLКОтчетуAllure</span><span class="w"> </span><span class="p">{</span><span class="n">attachmxlfilessavedinhtmlformattoallurereport</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">    </span><span class="err">Все</span><span class="w"> </span><span class="n">mxl</span><span class="w"> </span><span class="err">файлы</span><span class="p">,</span><span class="w"> </span><span class="err">которые</span><span class="w"> </span><span class="err">будут</span><span class="w"> </span><span class="err">приложены</span><span class="w"> </span><span class="err">к</span><span class="w"> </span><span class="err">отчету</span><span class="w"> </span><span class="n">Allure</span><span class="w"> </span><span class="err">будут</span><span class="w"> </span><span class="err">сохраняться</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">формате</span><span class="w"> </span><span class="n">HTML</span><span class="o">.</span><span class="w"> </span><span class="err">Это</span><span class="w"> </span><span class="err">упрощает</span><span class="w"> </span><span class="err">открытие</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">просмотр</span><span class="w"> </span><span class="err">результата</span><span class="o">.</span>
+ * **ПрикладыватьФайлыMxlСохраненныеВФорматеHTMLКОтчетуAllure {attachmxlfilessavedinhtmlformattoallurereport}**:
+    Все mxl файлы, которые будут приложены к отчету Allure будут сохраняться в формате HTML. Это упрощает открытие и просмотр результата.
 
-<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ПрикладыватьФайлы</span><span class="n">XlsxКОтчетуAllure</span><span class="w"> </span><span class="p">{</span><span class="n">attachxlsxfilestoallurereport</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">    </span><span class="err">Файлы</span><span class="w"> </span><span class="err">отчетов</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">их</span><span class="w"> </span><span class="err">эталонов</span><span class="w"> </span><span class="err">будут</span><span class="w"> </span><span class="err">прикладываться</span><span class="w"> </span><span class="err">к</span><span class="w"> </span><span class="err">отчету</span><span class="w"> </span><span class="n">Allure</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">формате</span><span class="w"> </span><span class="n">xlsx</span><span class="o">.</span>
+ * **ПрикладыватьФайлыXlsxКОтчетуAllure {attachxlsxfilestoallurereport}**:
+    Файлы отчетов и их эталонов будут прикладываться к отчету Allure в формате xlsx.
 
-<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ПрикладыватьДополнительныеДанныеПриСравненииЗначенияСЭталоном</span><span class="n">Allure</span><span class="w"> </span><span class="p">{</span><span class="n">attachadditionaldatawhencomparingvaluewithreferenceallure</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">    </span><span class="err">Если</span><span class="w"> </span><span class="err">опция</span><span class="w"> </span><span class="err">включена</span><span class="p">,</span><span class="w"> </span><span class="err">то</span><span class="w"> </span><span class="err">при</span><span class="w"> </span><span class="err">сравнении</span><span class="w"> </span><span class="err">макета</span><span class="w"> </span><span class="err">с</span><span class="w"> </span><span class="err">эталоном</span><span class="w"> </span><span class="err">или</span><span class="w"> </span><span class="err">при</span><span class="w"> </span><span class="err">сравнении</span><span class="w"> </span><span class="err">таблицы</span><span class="w"> </span><span class="err">с</span><span class="w"> </span><span class="err">эталоном</span><span class="w"> </span><span class="err">будут</span><span class="w"> </span><span class="err">формироваться</span><span class="w"> </span><span class="err">дополнительные</span><span class="w"> </span><span class="err">файлы</span><span class="p">:</span>
-<span class="w">    </span><span class="err">картинка</span><span class="p">,</span><span class="w"> </span><span class="err">содержащая</span><span class="w"> </span><span class="err">разницу</span><span class="w"> </span><span class="err">между</span><span class="w"> </span><span class="err">эталоном</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">текущим</span><span class="w"> </span><span class="err">значением</span><span class="w"> </span><span class="err">таблицы</span><span class="w"> </span><span class="err">или</span><span class="w"> </span><span class="err">макета</span>
-<span class="w">    </span><span class="err">картинка</span><span class="w"> </span><span class="err">текущего</span><span class="w"> </span><span class="err">значения</span>
-<span class="w">    </span><span class="err">картинка</span><span class="w"> </span><span class="err">эталонного</span><span class="w"> </span><span class="err">значения</span>
-<span class="w">    </span><span class="err">файл</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">формате</span><span class="w"> </span><span class="n">gif</span><span class="p">,</span><span class="w"> </span><span class="err">показывающий</span><span class="w"> </span><span class="err">разницу</span><span class="w"> </span><span class="err">между</span><span class="w"> </span><span class="err">текущим</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">эталонным</span><span class="w"> </span><span class="err">значением</span><span class="o">.</span>
-<span class="w">    </span><span class="err">Также</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">отчете</span><span class="w"> </span><span class="n">Allure</span><span class="w"> </span><span class="err">появится</span><span class="w"> </span><span class="err">дополнительная</span><span class="w"> </span><span class="err">секция</span><span class="p">,</span><span class="w"> </span><span class="err">где</span><span class="w"> </span><span class="err">можно</span><span class="w"> </span><span class="err">будет</span><span class="w"> </span><span class="err">удобно</span><span class="w"> </span><span class="err">просмотреть</span><span class="w"> </span><span class="err">сравнение</span><span class="w"> </span><span class="err">эталона</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">текущего</span><span class="w"> </span><span class="err">значения</span><span class="o">.</span>
-<span class="w">    </span><span class="err">Для</span><span class="w"> </span><span class="err">работы</span><span class="w"> </span><span class="err">опции</span><span class="w"> </span><span class="err">необходимо</span><span class="p">,</span><span class="w"> </span><span class="err">чтобы</span><span class="w"> </span><span class="err">на</span><span class="w"> </span><span class="err">ПК</span><span class="p">,</span><span class="w"> </span><span class="err">где</span><span class="w"> </span><span class="err">запускается</span><span class="w"> </span><span class="n">Vanessa</span><span class="w"> </span><span class="n">Automation</span><span class="w"> </span><span class="err">был</span><span class="w"> </span><span class="err">установлен</span><span class="w"> </span><span class="err">пакет</span><span class="w"> </span><span class="n">ImageMagick7</span><span class="w"> </span><span class="err">версии</span><span class="w"> </span><span class="err">или</span><span class="w"> </span><span class="err">выше</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">пакет</span><span class="w"> </span><span class="n">ghostscript</span><span class="w"> </span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">ghostscript</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">download</span><span class="o">.</span><span class="n">html</span><span class="p">,</span><span class="w"> </span><span class="err">который</span><span class="w"> </span><span class="err">выполняет</span><span class="w"> </span><span class="err">конвертацию</span><span class="w"> </span><span class="n">pdf</span><span class="w"> </span><span class="err">файлов</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">картинки</span><span class="o">.</span>
-<span class="w">    </span><span class="err">Также</span><span class="w"> </span><span class="err">необходимо</span><span class="p">,</span><span class="w"> </span><span class="err">чтобы</span><span class="w"> </span><span class="err">на</span><span class="w"> </span><span class="err">ПК</span><span class="w"> </span><span class="err">выполнялись</span><span class="w"> </span><span class="err">команды</span><span class="w"> </span><span class="err">вида</span><span class="p">:</span>
-<span class="w">    </span><span class="n">magick</span><span class="w"> </span><span class="nb">convert</span><span class="w"> </span><span class="n">file</span><span class="o">.</span><span class="n">pdf</span><span class="w"> </span><span class="n">file</span><span class="o">.</span><span class="n">png</span>
-<span class="w">    </span><span class="err">Пример</span><span class="w"> </span><span class="err">результата</span><span class="w"> </span><span class="err">можно</span><span class="w"> </span><span class="err">посмотреть</span><span class="w"> </span><span class="err">тут</span><span class="o">.</span>
-<span class="w">    </span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">ghostscript</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">download</span><span class="o">.</span><span class="n">html</span>
-<span class="w">    </span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">youtube</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">watch</span><span class="err">?</span><span class="n">v</span><span class="o">=</span><span class="mi">1</span><span class="n">xnp6CxCktA</span><span class="o">&amp;</span><span class="n">list</span><span class="o">=</span><span class="n">PLalsS95_a3a8iVPCLjFMY2wj4ZMG2XpVH</span><span class="o">&amp;</span><span class="n">index</span><span class="o">=</span><span class="mi">3</span><span class="o">&amp;</span><span class="n">ab_channel</span><span class="o">=</span><span class="n">VSL</span>
+ * **ПрикладыватьДополнительныеДанныеПриСравненииЗначенияСЭталономAllure {attachadditionaldatawhencomparingvaluewithreferenceallure}**:
+    Если опция включена, то при сравнении макета с эталоном или при сравнении таблицы с эталоном будут формироваться дополнительные файлы:
+    картинка, содержащая разницу между эталоном и текущим значением таблицы или макета
+    картинка текущего значения
+    картинка эталонного значения
+    файл в формате gif, показывающий разницу между текущим и эталонным значением.
+    Также в отчете Allure появится дополнительная секция, где можно будет удобно просмотреть сравнение эталона и текущего значения.
+    Для работы опции необходимо, чтобы на ПК, где запускается Vanessa Automation был установлен пакет ImageMagick7 версии или выше и пакет ghostscript https://www.ghostscript.com/download.html, который выполняет конвертацию pdf файлов в картинки.
+    Также необходимо, чтобы на ПК выполнялись команды вида:
+    magick convert file.pdf file.png
+    Пример результата можно посмотреть тут.
+    https://www.ghostscript.com/download.html
+    https://www.youtube.com/watch?v=1xnp6CxCktA&amp;list=PLalsS95_a3a8iVPCLjFMY2wj4ZMG2XpVH&amp;index=3&amp;ab_channel=VSL
 </code></pre></div>
-
 </li>
 <li>
 <p>Данные аллюр меток</p>
-<div class="codehilite"><pre><span></span><code> <span class="k">*</span> **ДанныеАллюрМеток {DataAllureMarks}**:
+<div class="highlight"><pre><span></span><code> * **ДанныеАллюрМеток {DataAllureMarks}**:
     Таблица используется для установки соответствия тегов сценариев меткам аллюра.
     Если в  строке таблицы указано регулярное выражение, то к каждому тегу сценария применяется регулярное выражение из данной таблицы и если тег ему соответствует, то к отчету будет добавлена метка в формате ИмяМетки:Значение.
     Если в строке таблицы регулярное выражение не указано, то метка добавляется безусловно.
     Подробнее зачем это может быть нужно можно прочитать тут
     https://habr.com/ru/company/sberbank/blog/359302/
 </code></pre></div>
-
 </li>
 <li>
 <p>JUnit</p>
@@ -2116,37 +3067,33 @@
 </li>
 <li>
 <p>Смещение координат мышки</p>
-<div class="codehilite"><pre><span></span><code> <span class="k">*</span> **СмещениеПоГоризонталиДвиженияМышкиVanessaExt {hrizontaloffset}**:
+<div class="highlight"><pre><span></span><code> * **СмещениеПоГоризонталиДвиженияМышкиVanessaExt {hrizontaloffset}**:
     Используется, когда надо сместить положение мышки по горизонтали на заданное число пикселей. Может принимать как положительные, так и отрицательные значения.
 
- <span class="k">*</span> **СмещениеПоВертикалиДвиженияМышкиVanessaExt {verticaloffset}**:
+ * **СмещениеПоВертикалиДвиженияМышкиVanessaExt {verticaloffset}**:
     Используется, когда надо сместить положение мышки по вертикали на заданное число пикселей. Может принимать как положительные, так и отрицательные значения.
 </code></pre></div>
-
 </li>
 <li>
 <p>Скорость перемещения мышки</p>
-<div class="codehilite"><pre><span></span><code><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">КоличествоШаговПриДвиженииМышки</span><span class="n">VanessaExt</span><span class="w"> </span><span class="p">{</span><span class="n">thenumberofstepswhenmovingthemouse</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">    </span><span class="err">Задаёт</span><span class="w"> </span><span class="err">количество</span><span class="w"> </span><span class="err">микродвижений</span><span class="w"> </span><span class="p">(</span><span class="err">шагов</span><span class="p">),</span><span class="w"> </span><span class="err">которая</span><span class="w"> </span><span class="err">совершает</span><span class="w"> </span><span class="err">мышка</span><span class="w"> </span><span class="err">на</span><span class="w"> </span><span class="err">своём</span><span class="w"> </span><span class="err">пути</span><span class="o">.</span><span class="w"> </span><span class="err">Значение</span><span class="w"> </span><span class="err">по</span><span class="w"> </span><span class="err">умолчанию</span><span class="w"> </span><span class="mf">150.</span>
+<div class="highlight"><pre><span></span><code> * **КоличествоШаговПриДвиженииМышкиVanessaExt {thenumberofstepswhenmovingthemouse}**:
+    Задаёт количество микродвижений (шагов), которая совершает мышка на своём пути. Значение по умолчанию 150.
 
-<span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ПаузаМеждуШагамиПриДвиженииМышки</span><span class="n">VanessaExt</span><span class="w"> </span><span class="p">{</span><span class="n">timeoutbetweenstepswhenmovingthemouse</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">    </span><span class="err">Задаёт</span><span class="w"> </span><span class="err">паузу</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">миллисекундах</span><span class="w"> </span><span class="err">между</span><span class="w"> </span><span class="err">микро</span><span class="w"> </span><span class="err">движениями</span><span class="w"> </span><span class="err">мышки</span><span class="o">.</span><span class="w"> </span><span class="err">Значение</span><span class="w"> </span><span class="err">по</span><span class="w"> </span><span class="err">умолчанию</span><span class="w"> </span><span class="mf">3.</span>
+ * **ПаузаМеждуШагамиПриДвиженииМышкиVanessaExt {timeoutbetweenstepswhenmovingthemouse}**:
+    Задаёт паузу в миллисекундах между микро движениями мышки. Значение по умолчанию 3.
 </code></pre></div>
-
 </li>
 <li>
 <p>Подсветка клика мышки</p>
-<div class="codehilite"><pre><span></span><code> <span class="k">*</span> **ПодсвечиватьКликМышкиВБраузереVanessaExt {hlightmouseclicksinbrowser}**:
+<div class="highlight"><pre><span></span><code> * **ПодсвечиватьКликМышкиВБраузереVanessaExt {hlightmouseclicksinbrowser}**:
     Если опция включена, то будет включена подсветка кликов с помощью внешней компоненты VanessaExt.
 </code></pre></div>
-
 <ul>
 <li>
 <p>Выбор цвета подсветки кликов мышки</p>
-<div class="codehilite"><pre><span></span><code><span class="k">*</span> **ЦветПодсветкиКликаМышкиVanessaExt {mouseclickhighlightcolor}**:
+<div class="highlight"><pre><span></span><code>* **ЦветПодсветкиКликаМышкиVanessaExt {mouseclickhighlightcolor}**:
    Число. Задаёт цвет, которым будут подсвечиваться клики мышки.
 </code></pre></div>
-
 <ul>
 <li>
 <p><strong>РадиусПодсветкиКликаМышкиVanessaExt {mouseclickhighlightradius}</strong>:
@@ -2185,21 +3132,20 @@
 </li>
 <li>
 <p>Стили HTML</p>
-<div class="codehilite"><pre><span></span><code> <span class="k">*</span> **ВариантСтилейHTMLИнструкции {VariantsHTMLInstructions}**:
+<div class="highlight"><pre><span></span><code> * **ВариантСтилейHTMLИнструкции {VariantsHTMLInstructions}**:
     Вариант 3D Карусель - адаптирован как под ПК так и под мобильные устройства
     Подробности тут.
     https://www.youtube.com/watch?v=dMmjG97nJ_w
 
- <span class="k">*</span> **СтилиHTMLИнструкции {htmlstyles}**:
+ * **СтилиHTMLИнструкции {htmlstyles}**:
     Файл стилей
 
- <span class="k">*</span> **ВключитьОзвучкуHTML {EnableHTMLVoiceover}**:
+ * **ВключитьОзвучкуHTML {EnableHTMLVoiceover}**:
     Используется встроенная в браузеры технология Синтеза речи. Синтез речи (text-to-speech или tts) подразумевает получение синтезированного текста приложения и его речевое воспроизведение.
     Подробнее
     Воспроизведение текста начинается при клике на картинку шага.
     https://developer.mozilla.org/ru/docs/Web/API/Web_Speech_API/Using_the_Web_Speech_API#%D1%81%D0%B8%D0%BD%D1%82%D0%B5%D0%B7_%D1%80%D0%B5%D1%87%D0%B8
 </code></pre></div>
-
 <ul>
 <li>
 <p><strong>СоздаватьИнструкциюMarkdown {markdowncreate}</strong>:
@@ -2238,82 +3184,77 @@
 </li>
 <li>
 <p>Общие</p>
-<div class="codehilite"><pre><span></span><code> <span class="k">*</span> **ОзвучиватьВыполнениеСценария {soundscenarioexecution}**:
+<div class="highlight"><pre><span></span><code> * **ОзвучиватьВыполнениеСценария {soundscenarioexecution}**:
     Включает озвучку выполнения сценария согласно заданным настройкам голоса диктора.
 </code></pre></div>
-
 </li>
 <li>
 <p>Озвучивание диктором</p>
-<div class="codehilite"><pre><span></span><code><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="nx">ЗаписьВидеоТипОзвучкиTTS</span><span class="w"> </span><span class="p">{</span><span class="nx">ttstype</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">    </span><span class="nx">Указывает</span><span class="w"> </span><span class="nx">какой</span><span class="w"> </span><span class="nx">голос</span><span class="w"> </span><span class="nx">нужно</span><span class="w"> </span><span class="nx">использовать</span><span class="w"> </span><span class="nx">для</span><span class="w"> </span><span class="nx">озвучки</span><span class="w"> </span><span class="nx">видео</span><span class="w"> </span><span class="nx">диктором</span><span class="p">.</span>
+<div class="highlight"><pre><span></span><code> * **ЗаписьВидеоТипОзвучкиTTS {ttstype}**:
+    Указывает какой голос нужно использовать для озвучки видео диктором.
 </code></pre></div>
-
 <ul>
 <li>
 <p>Озвучка от 1С</p>
-<div class="codehilite"><pre><span></span><code><span class="k">*</span> **ЗаписьВидео1СЛогин {1CttsLogin}**:
+<div class="highlight"><pre><span></span><code>* **ЗаписьВидео1СЛогин {1CttsLogin}**:
    Логин для авторизации в сервисе синтеза речи
 
-<span class="k">*</span> **ЗаписьВидео1СГолос {1CttsVoice}**:
+* **ЗаписьВидео1СГолос {1CttsVoice}**:
    Голос для генерации речи в сервисе
 
-<span class="k">*</span> **ЗаписьВидео1СПароль {1CttsPassword}**:
+* **ЗаписьВидео1СПароль {1CttsPassword}**:
    Пароль для авторизации в сервисе синтеза речи.
    Пароль указывается в текстовом файле.
 
-<span class="k">*</span> **ЗаписьВидео1ССкоростьРечи {1CttsSpeed}**:
+* **ЗаписьВидео1ССкоростьРечи {1CttsSpeed}**:
    Скорость (темп) синтезированной речи.
    Скорость речи задается дробным числом в диапазоне от 0.8 до 2.
 </code></pre></div>
-
 </li>
 <li>
 <p>Microsoft TTS</p>
-<div class="codehilite"><pre><span></span><code><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ЗаписьВидеоПутьКДвижку</span><span class="n">TTS</span><span class="w"> </span><span class="p">{</span><span class="n">audioenginetts</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">   </span><span class="err">Консольная</span><span class="w"> </span><span class="err">команда</span><span class="p">,</span><span class="w"> </span><span class="err">которая</span><span class="w"> </span><span class="err">будет</span><span class="w"> </span><span class="err">использована</span><span class="w"> </span><span class="err">при</span><span class="w"> </span><span class="err">конвертации</span><span class="w"> </span><span class="err">текста</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">речь</span><span class="o">.</span>
-<span class="w">   </span><span class="err">Используется</span><span class="w"> </span><span class="err">программа</span><span class="w"> </span><span class="n">balabolka_console</span><span class="o">.</span>
-<span class="w">   </span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">cross</span><span class="o">-</span><span class="n">plus</span><span class="o">-</span><span class="n">a</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">bconsole</span><span class="o">.</span><span class="n">htm</span>
+<div class="highlight"><pre><span></span><code>* **ЗаписьВидеоПутьКДвижкуTTS {audioenginetts}**:
+   Консольная команда, которая будет использована при конвертации текста в речь.
+   Используется программа balabolka_console.
+   https://cross-plus-a.com/bconsole.htm
 
-<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ЗаписьВидеоИмя</span><span class="n">TTS</span><span class="w"> </span><span class="p">{</span><span class="n">ttsvoice</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">   </span><span class="err">Указывает</span><span class="w"> </span><span class="err">какой</span><span class="w"> </span><span class="err">голос</span><span class="w"> </span><span class="err">будет</span><span class="w"> </span><span class="err">использован</span><span class="w"> </span><span class="err">для</span><span class="w"> </span><span class="err">озвучки</span><span class="o">.</span><span class="w"> </span><span class="err">Допускается</span><span class="w"> </span><span class="err">указывать</span><span class="w"> </span><span class="err">не</span><span class="w"> </span><span class="err">полное</span><span class="w"> </span><span class="err">название</span><span class="w"> </span><span class="err">голоса</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">системе</span><span class="p">,</span><span class="w"> </span><span class="err">а</span><span class="w"> </span><span class="err">только</span><span class="w"> </span><span class="err">часть</span><span class="p">,</span><span class="w"> </span><span class="err">например</span><span class="w"> </span><span class="s2">&quot;Elena&quot;</span><span class="o">.</span>
-<span class="w">   </span><span class="err">Понадобится</span><span class="w"> </span><span class="err">установить</span><span class="w"> </span><span class="n">Microsoft</span><span class="w"> </span><span class="n">Speech</span><span class="w"> </span><span class="n">Platform</span><span class="w"> </span><span class="err">х</span><span class="mi">32</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="n">Server</span><span class="w"> </span><span class="n">Runtime</span><span class="w"> </span><span class="n">Languages</span><span class="o">.</span>
-<span class="w">   </span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">www</span><span class="o">.</span><span class="n">microsoft</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">en</span><span class="o">-</span><span class="n">us</span><span class="o">/</span><span class="n">download</span><span class="o">/</span><span class="n">details</span><span class="o">.</span><span class="n">aspx</span><span class="err">?</span><span class="n">id</span><span class="o">=</span><span class="mi">27225</span>
+* **ЗаписьВидеоИмяTTS {ttsvoice}**:
+   Указывает какой голос будет использован для озвучки. Допускается указывать не полное название голоса в системе, а только часть, например &quot;Elena&quot;.
+   Понадобится установить Microsoft Speech Platform х32 и Server Runtime Languages.
+   https://www.microsoft.com/en-us/download/details.aspx?id=27225
 
-<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ЗаписьВидеоСкоростьПроизношения</span><span class="w"> </span><span class="p">{</span><span class="n">speedofspeech</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">   </span><span class="err">Скорость</span><span class="w"> </span><span class="err">произношения</span><span class="w"> </span><span class="err">текста</span><span class="w"> </span><span class="err">диктором</span><span class="o">.</span>
-<span class="w">   </span><span class="err">Значения</span><span class="w"> </span><span class="err">могут</span><span class="w"> </span><span class="err">быть</span><span class="w"> </span><span class="err">от</span><span class="w"> </span><span class="o">-</span><span class="mi">10</span><span class="w"> </span><span class="err">до</span><span class="w"> </span><span class="mf">10.</span>
+* **ЗаписьВидеоСкоростьПроизношения {speedofspeech}**:
+   Скорость произношения текста диктором.
+   Значения могут быть от -10 до 10.
 </code></pre></div>
-
 </li>
 <li>
 <p>Yandex TTS</p>
-<div class="codehilite"><pre><span></span><code><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="nx">ЗаписьВидеоYandexTTSЯзык</span><span class="w"> </span><span class="p">{</span><span class="nx">yandexttslanguage</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">   </span><span class="nx">Задаёт</span><span class="w"> </span><span class="nx">язык</span><span class="p">,</span><span class="w"> </span><span class="nx">на</span><span class="w"> </span><span class="nx">котором</span><span class="w"> </span><span class="nx">будет</span><span class="w"> </span><span class="nx">говорить</span><span class="w"> </span><span class="nx">диктор</span><span class="p">.</span><span class="w"> </span><span class="nx">Подробности</span><span class="w"> </span><span class="nx">здесь</span><span class="p">.</span>
-<span class="w">   </span><span class="nx">Управление</span><span class="w"> </span><span class="nx">ударением</span><span class="w"> </span><span class="nx">и</span><span class="w"> </span><span class="nx">произношением</span><span class="w"> </span><span class="nx">см</span><span class="w"> </span><span class="nx">тут</span><span class="p">.</span>
-<span class="w">   </span><span class="nx">https</span><span class="p">:</span><span class="c1">//cloud.yandex.ru/docs/speechkit/tts/request</span>
-<span class="w">   </span><span class="nx">https</span><span class="p">:</span><span class="c1">//yandex.ru/dev/dialogs/alice/doc/speech-tuning-docpage/</span>
+<div class="highlight"><pre><span></span><code>* **ЗаписьВидеоYandexTTSЯзык {yandexttslanguage}**:
+   Задаёт язык, на котором будет говорить диктор. Подробности здесь.
+   Управление ударением и произношением см тут.
+   https://cloud.yandex.ru/docs/speechkit/tts/request
+   https://yandex.ru/dev/dialogs/alice/doc/speech-tuning-docpage/
 
-<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="nx">ЗаписьВидеоYandexTTSГолос</span><span class="w"> </span><span class="p">{</span><span class="nx">yandexttsvoice</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">   </span><span class="nx">Задаёт</span><span class="w"> </span><span class="nx">голос</span><span class="p">,</span><span class="w"> </span><span class="nx">которым</span><span class="w"> </span><span class="nx">будет</span><span class="w"> </span><span class="nx">говорить</span><span class="w"> </span><span class="nx">диктор</span><span class="p">.</span><span class="w"> </span><span class="nx">Подробности</span><span class="w"> </span><span class="nx">здесь</span><span class="p">.</span>
-<span class="w">   </span><span class="nx">Управление</span><span class="w"> </span><span class="nx">ударением</span><span class="w"> </span><span class="nx">и</span><span class="w"> </span><span class="nx">произношением</span><span class="w"> </span><span class="nx">см</span><span class="w"> </span><span class="nx">тут</span><span class="p">.</span>
-<span class="w">   </span><span class="nx">https</span><span class="p">:</span><span class="c1">//cloud.yandex.ru/docs/speechkit/tts/request</span>
-<span class="w">   </span><span class="nx">https</span><span class="p">:</span><span class="c1">//yandex.ru/dev/dialogs/alice/doc/speech-tuning-docpage/</span>
+* **ЗаписьВидеоYandexTTSГолос {yandexttsvoice}**:
+   Задаёт голос, которым будет говорить диктор. Подробности здесь.
+   Управление ударением и произношением см тут.
+   https://cloud.yandex.ru/docs/speechkit/tts/request
+   https://yandex.ru/dev/dialogs/alice/doc/speech-tuning-docpage/
 
-<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="nx">ЗаписьВидеоYandexTTSЭмоция</span><span class="w"> </span><span class="p">{</span><span class="nx">yandexttsemotion</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">   </span><span class="nx">Задаёт</span><span class="w"> </span><span class="nx">эмоцию</span><span class="p">,</span><span class="w"> </span><span class="nx">с</span><span class="w"> </span><span class="nx">которой</span><span class="w"> </span><span class="nx">будет</span><span class="w"> </span><span class="nx">говорить</span><span class="w"> </span><span class="nx">диктор</span><span class="p">.</span><span class="w"> </span><span class="nx">Подробности</span><span class="w"> </span><span class="nx">здесь</span><span class="p">.</span>
-<span class="w">   </span><span class="nx">Управление</span><span class="w"> </span><span class="nx">ударением</span><span class="w"> </span><span class="nx">и</span><span class="w"> </span><span class="nx">произношением</span><span class="w"> </span><span class="nx">см</span><span class="w"> </span><span class="nx">тут</span><span class="p">.</span>
-<span class="w">   </span><span class="nx">https</span><span class="p">:</span><span class="c1">//cloud.yandex.ru/docs/speechkit/tts/request</span>
-<span class="w">   </span><span class="nx">https</span><span class="p">:</span><span class="c1">//yandex.ru/dev/dialogs/alice/doc/speech-tuning-docpage/</span>
+* **ЗаписьВидеоYandexTTSЭмоция {yandexttsemotion}**:
+   Задаёт эмоцию, с которой будет говорить диктор. Подробности здесь.
+   Управление ударением и произношением см тут.
+   https://cloud.yandex.ru/docs/speechkit/tts/request
+   https://yandex.ru/dev/dialogs/alice/doc/speech-tuning-docpage/
 
-<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="nx">ЗаписьВидеоYandexTTSСкорость</span><span class="w"> </span><span class="p">{</span><span class="nx">yandexttsspeed</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">   </span><span class="nx">Скорость</span><span class="w"> </span><span class="p">(</span><span class="nx">темп</span><span class="p">)</span><span class="w"> </span><span class="nx">синтезированной</span><span class="w"> </span><span class="nx">речи</span><span class="p">.</span>
-<span class="w">   </span><span class="nx">Скорость</span><span class="w"> </span><span class="nx">речи</span><span class="w"> </span><span class="nx">задается</span><span class="w"> </span><span class="nx">дробным</span><span class="w"> </span><span class="nx">числом</span><span class="w"> </span><span class="nx">в</span><span class="w"> </span><span class="nx">диапазоне</span><span class="w"> </span><span class="nx">от</span><span class="w"> </span><span class="m m-Double">0.1</span><span class="w"> </span><span class="nx">до</span><span class="w"> </span><span class="m m-Double">3.0</span><span class="p">.</span>
+* **ЗаписьВидеоYandexTTSСкорость {yandexttsspeed}**:
+   Скорость (темп) синтезированной речи.
+   Скорость речи задается дробным числом в диапазоне от 0.1 до 3.0.
 
-<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="nx">ЗаписьВидеоYandexTTSВариантЗапроса</span><span class="w"> </span><span class="p">{</span><span class="nx">yandexttsquerytype</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">   </span><span class="nx">Определяет</span><span class="w"> </span><span class="nx">как</span><span class="w"> </span><span class="nx">будут</span><span class="w"> </span><span class="nx">получены</span><span class="w"> </span><span class="nx">файлы</span><span class="w"> </span><span class="nx">озвучки</span><span class="p">:</span><span class="w"> </span><span class="nx">через</span><span class="w"> </span><span class="nx">официальное</span><span class="w"> </span><span class="nx">API</span><span class="w"> </span><span class="nx">или</span><span class="w"> </span><span class="nx">через</span><span class="w"> </span><span class="nx">бесплатный</span><span class="w"> </span><span class="nx">интерфейс</span><span class="p">.</span><span class="w"> </span><span class="nx">Рекомендуемое</span><span class="w"> </span><span class="nx">значение</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="nx">через</span><span class="w"> </span><span class="nx">официальное</span><span class="w"> </span><span class="nx">API</span><span class="p">.</span>
+* **ЗаписьВидеоYandexTTSВариантЗапроса {yandexttsquerytype}**:
+   Определяет как будут получены файлы озвучки: через официальное API или через бесплатный интерфейс. Рекомендуемое значение - через официальное API.
 </code></pre></div>
-
 <ul>
 <li>
 <p>Авторизация</p>
@@ -2352,32 +3293,31 @@
 </li>
 <li>
 <p>Группа amazon TTS</p>
-<div class="codehilite"><pre><span></span><code><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ЗаписьВидео</span><span class="n">AmazonЯзык</span><span class="w"> </span><span class="p">{</span><span class="n">amazonttslanguage</span><span class="p">}</span><span class="o">**:</span>
-<span class="w">   </span><span class="err">Соответствие</span><span class="w"> </span><span class="err">языка</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">голоса</span><span class="w"> </span><span class="err">смотрите</span><span class="w"> </span><span class="err">здесь</span><span class="p">.</span>
-<span class="w">   </span><span class="nl">https:</span><span class="c1">//docs.aws.amazon.com/en_us/polly/latest/dg/voicelist.html</span>
+<div class="highlight"><pre><span></span><code>* **ЗаписьВидеоAmazonЯзык {amazonttslanguage}**:
+   Соответствие языка и голоса смотрите здесь.
+   https://docs.aws.amazon.com/en_us/polly/latest/dg/voicelist.html
 
-<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ЗаписьВидео</span><span class="n">AmazonГолос</span><span class="w"> </span><span class="p">{</span><span class="n">amazonttsvoice</span><span class="p">}</span><span class="o">**:</span>
-<span class="w">   </span><span class="err">Соответствие</span><span class="w"> </span><span class="err">языка</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">голоса</span><span class="w"> </span><span class="err">смотрите</span><span class="w"> </span><span class="err">здесь</span><span class="p">.</span>
-<span class="w">   </span><span class="nl">https:</span><span class="c1">//docs.aws.amazon.com/en_us/polly/latest/dg/voicelist.html</span>
+* **ЗаписьВидеоAmazonГолос {amazonttsvoice}**:
+   Соответствие языка и голоса смотрите здесь.
+   https://docs.aws.amazon.com/en_us/polly/latest/dg/voicelist.html
 
-<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ЗаписьВидео</span><span class="n">AmazonДвижок</span><span class="w"> </span><span class="p">{</span><span class="n">amazonttsengine</span><span class="p">}</span><span class="o">**:</span>
-<span class="w">   </span><span class="err">Варианты</span><span class="w"> </span><span class="err">значения</span><span class="w"> </span><span class="err">для</span><span class="w"> </span><span class="err">поля</span><span class="w"> </span><span class="s">&quot;Движок&quot;</span><span class="w"> </span><span class="err">смотрите</span><span class="w"> </span><span class="err">здесь</span><span class="p">.</span>
-<span class="w">   </span><span class="nl">https:</span><span class="c1">//docs.aws.amazon.com/en_us/polly/latest/dg/voicelist.html</span>
+* **ЗаписьВидеоAmazonДвижок {amazonttsengine}**:
+   Варианты значения для поля &quot;Движок&quot; смотрите здесь.
+   https://docs.aws.amazon.com/en_us/polly/latest/dg/voicelist.html
 
-<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ЗаписьВидео</span><span class="n">AmazonРегион</span><span class="w"> </span><span class="p">{</span><span class="n">amazonttsregion</span><span class="p">}</span><span class="o">**:</span>
-<span class="w">   </span><span class="err">В</span><span class="w"> </span><span class="err">поле</span><span class="w"> </span><span class="err">указывается</span><span class="w"> </span><span class="err">параметр</span><span class="w"> </span><span class="err">регион</span><span class="p">.</span><span class="w"> </span><span class="err">Значение</span><span class="w"> </span><span class="err">по</span><span class="w"> </span><span class="err">умолчанию</span><span class="o">:</span><span class="w"> </span><span class="n">us</span><span class="o">-</span><span class="n">east</span><span class="o">-</span><span class="mf">1.</span>
+* **ЗаписьВидеоAmazonРегион {amazonttsregion}**:
+   В поле указывается параметр регион. Значение по умолчанию: us-east-1.
 
-<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ЗаписьВидео</span><span class="n">AmazonКлючДоступа</span><span class="w"> </span><span class="p">{</span><span class="n">amazonttskey</span><span class="p">}</span><span class="o">**:</span>
-<span class="w">   </span><span class="err">Ключ</span><span class="w"> </span><span class="err">доступа</span><span class="w"> </span><span class="err">к</span><span class="w"> </span><span class="err">облаку</span><span class="w"> </span><span class="n">Amazon</span><span class="p">.</span>
+* **ЗаписьВидеоAmazonКлючДоступа {amazonttskey}**:
+   Ключ доступа к облаку Amazon.
 
-<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ЗаписьВидео</span><span class="n">AmazonСекретныйКлюч</span><span class="w"> </span><span class="p">{</span><span class="n">amazonttssecretkey</span><span class="p">}</span><span class="o">**:</span>
-<span class="w">   </span><span class="err">Файл</span><span class="p">,</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">котором</span><span class="w"> </span><span class="err">хранится</span><span class="w"> </span><span class="err">секретный</span><span class="w"> </span><span class="err">ключ</span><span class="w"> </span><span class="err">для</span><span class="w"> </span><span class="err">доступа</span><span class="w"> </span><span class="err">к</span><span class="w"> </span><span class="err">облаку</span><span class="w"> </span><span class="n">Amazon</span><span class="p">.</span>
+* **ЗаписьВидеоAmazonСекретныйКлюч {amazonttssecretkey}**:
+   Файл, в котором хранится секретный ключ для доступа к облаку Amazon.
 </code></pre></div>
-
 </li>
 <li>
 <p>Группа другой движок TTS</p>
-<div class="codehilite"><pre><span></span><code><span class="k">*</span> **ЗаписьВидеоПутьКОбработкеДвижкаTTS {pathprocessingenginetts}**:
+<div class="highlight"><pre><span></span><code>* **ЗаписьВидеоПутьКОбработкеДвижкаTTS {pathprocessingenginetts}**:
    Позволяет генерировать озвучку шага с помощью внешней обработки. Обработка должна в основной форме содержать экспортный метод:
    GetMp3File(Vanessa, VideoParams, Text, FileName, VoiceParams)
    где:
@@ -2388,25 +3328,23 @@
    VoiceParams - дополнительные параметры озвучки, указанные в фича файле с помощью дополнительных директив
    Метод должен возвращать путь к mp3 файлу.
 
-<span class="k">*</span> **НастройкиДругогоДвижкаTTS {SettingsOtherEngineTTS}**:
+* **НастройкиДругогоДвижкаTTS {SettingsOtherEngineTTS}**:
    Позволяет задать произвольный набор настроек для генерации файлов озвучки.
 </code></pre></div>
-
 </li>
 <li>
 <p>Параметры Сбер</p>
-<div class="codehilite"><pre><span></span><code><span class="k">*</span> **ЗаписьВидеоСберTTSClientID {sberttsclientid}**:
+<div class="highlight"><pre><span></span><code>* **ЗаписьВидеоСберTTSClientID {sberttsclientid}**:
    Идентификатор клиента, полученный в Smartmarket studio
 
-<span class="k">*</span> **ЗаписьВидеоСберTTSClientSecret {sberttsclientsecret}**:
+* **ЗаписьВидеоСберTTSClientSecret {sberttsclientsecret}**:
    Вторая часть идентификации клиента в Smartmarket studio
 
-<span class="k">*</span> **ЗаписьВидеоСберTTSГолос {sberttsvoice}**:
+* **ЗаписьВидеоСберTTSГолос {sberttsvoice}**:
    Задает голос для генерации.
    Примеры голосов можно посмотреть здесь
    https://developer.sberdevices.ru/docs/ru/smartservices/synthesize_smartspeech#%D0%BF%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D1%8B-%D0%B3%D0%BE%D0%BB%D0%BE%D1%81%D0%BE%D0%B2-%D0%B4%D0%BB%D1%8F-%D1%81%D0%B8%D0%BD%D1%82%D0%B5%D0%B7%D0%B0
 </code></pre></div>
-
 </li>
 <li>
 <p>Тест голоса</p>
@@ -2415,23 +3353,21 @@
 </li>
 <li>
 <p>Кэш аудио</p>
-<div class="codehilite"><pre><span></span><code> <span class="k">*</span> **ЗаписьВидеоКэшироватьФайлыTTS {cachettsfiles}**:
+<div class="highlight"><pre><span></span><code> * **ЗаписьВидеоКэшироватьФайлыTTS {cachettsfiles}**:
     Включает кэширование файлов озвучки.
     Ускоряет сборку видео.
     Позволяет сократить обращение к внешним сервисам для генерации речи.
     Позволяет сократить затраты на генерацию речи при использовании платных тарифов у сервисов генерации речи.
 
- <span class="k">*</span> **ЗаписьВидеоКэшФайловTTS {ttsfilescache}**:
+ * **ЗаписьВидеоКэшФайловTTS {ttsfilescache}**:
     Каталог, в котором хранится кэш файлов озвучки.
 </code></pre></div>
-
 </li>
 <li>
 <p>Словари замен</p>
-<div class="codehilite"><pre><span></span><code> <span class="k">*</span> **ЗаписьВидеоСловарьЗамен {changewordslib}**:
+<div class="highlight"><pre><span></span><code> * **ЗаписьВидеоСловарьЗамен {changewordslib}**:
     Список файлов, которые будут использоваться для автозамены произносимого текста.
 </code></pre></div>
-
 </li>
 <li>
 <p>Видео</p>
@@ -2463,61 +3399,58 @@
 <ul>
 <li>
 <p>Основные</p>
-<div class="codehilite"><pre><span></span><code><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ЗаписьВидеоИнструмент</span><span class="w"> </span><span class="p">{</span><span class="n">videocapturetool</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">   </span><span class="err">Если</span><span class="w"> </span><span class="err">выбран</span><span class="w"> </span><span class="err">вариант</span><span class="w"> </span><span class="n">VLC</span><span class="p">,</span><span class="w"> </span><span class="err">тогда</span><span class="w"> </span><span class="err">для</span><span class="w"> </span><span class="err">записи</span><span class="w"> </span><span class="err">видео</span><span class="w"> </span><span class="err">будет</span><span class="w"> </span><span class="err">вызываться</span><span class="w"> </span><span class="err">инструмент</span><span class="w"> </span><span class="n">VLC</span><span class="o">.</span><span class="w"> </span><span class="err">Иначе</span><span class="w"> </span><span class="err">будет</span><span class="w"> </span><span class="err">использована</span><span class="w"> </span><span class="err">внешняя</span><span class="w"> </span><span class="err">компонента</span><span class="w"> </span><span class="n">VanessaExt</span><span class="p">,</span><span class="w"> </span><span class="err">которая</span><span class="w"> </span><span class="err">будет</span><span class="w"> </span><span class="err">вызывать</span><span class="w"> </span><span class="n">ffmpeg</span><span class="o">.</span>
+<div class="highlight"><pre><span></span><code>* **ЗаписьВидеоИнструмент {videocapturetool}**:
+   Если выбран вариант VLC, тогда для записи видео будет вызываться инструмент VLC. Иначе будет использована внешняя компонента VanessaExt, которая будет вызывать ffmpeg.
 
-<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ЗаписьВидеоКоличествоКадров</span><span class="w"> </span><span class="p">{</span><span class="n">fps</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">   </span><span class="err">Задаёт</span><span class="w"> </span><span class="err">количество</span><span class="w"> </span><span class="err">кадров</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">секунду</span><span class="p">,</span><span class="w"> </span><span class="err">снимаемых</span><span class="w"> </span><span class="err">с</span><span class="w"> </span><span class="err">экрана</span><span class="w"> </span><span class="err">во</span><span class="w"> </span><span class="err">время</span><span class="w"> </span><span class="err">записи</span><span class="w"> </span><span class="err">видео</span><span class="o">.</span>
+* **ЗаписьВидеоКоличествоКадров {fps}**:
+   Задаёт количество кадров в секунду, снимаемых с экрана во время записи видео.
 
-<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ЗаписьВидеоКаталогДляВременныхФайлов</span><span class="w"> </span><span class="p">{</span><span class="n">tempfolderforvideo</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">   </span><span class="err">Рабочий</span><span class="w"> </span><span class="err">каталог</span><span class="p">,</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">котором</span><span class="w"> </span><span class="err">создаются</span><span class="w"> </span><span class="err">промежуточные</span><span class="w"> </span><span class="err">файлы</span><span class="w"> </span><span class="err">во</span><span class="w"> </span><span class="err">время</span><span class="w"> </span><span class="err">записи</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">сборки</span><span class="w"> </span><span class="err">видео</span><span class="o">.</span><span class="w"> </span><span class="err">Каталог</span><span class="w"> </span><span class="err">очищается</span><span class="w"> </span><span class="err">перед</span><span class="w"> </span><span class="err">каждой</span><span class="w"> </span><span class="err">сборкой</span><span class="w"> </span><span class="err">видео</span><span class="o">!</span>
+* **ЗаписьВидеоКаталогДляВременныхФайлов {tempfolderforvideo}**:
+   Рабочий каталог, в котором создаются промежуточные файлы во время записи и сборки видео. Каталог очищается перед каждой сборкой видео!
 
-<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ЗаписьВидеоКэшироватьВидеоВставки</span><span class="w"> </span><span class="p">{</span><span class="n">cachevideo</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">   </span><span class="err">Если</span><span class="w"> </span><span class="err">флаг</span><span class="w"> </span><span class="err">установлен</span><span class="w"> </span><span class="err">то</span><span class="w"> </span><span class="err">при</span><span class="w"> </span><span class="err">работе</span><span class="w"> </span><span class="err">шага</span>
-<span class="w">   </span><span class="err">И</span><span class="w"> </span><span class="err">видеовставка</span><span class="w"> </span><span class="s2">&quot;ТекстВставки&quot;</span>
-<span class="w">   </span><span class="err">будет</span><span class="w"> </span><span class="err">происходить</span><span class="w"> </span><span class="err">проверка</span><span class="p">,</span><span class="w"> </span><span class="err">есть</span><span class="w"> </span><span class="err">ли</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">кэш</span><span class="w"> </span><span class="err">уже</span><span class="w"> </span><span class="err">такой</span><span class="w"> </span><span class="err">видеофрагмент</span><span class="o">.</span>
-<span class="w">   </span><span class="err">Если</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">кэш</span><span class="w"> </span><span class="err">фрагмента</span><span class="w"> </span><span class="err">нет</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="err">он</span><span class="w"> </span><span class="err">будет</span><span class="w"> </span><span class="err">туда</span><span class="w"> </span><span class="err">добавлен</span><span class="o">.</span>
-<span class="w">   </span><span class="err">Если</span><span class="w"> </span><span class="err">фрагмент</span><span class="w"> </span><span class="err">есть</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="err">то</span><span class="w"> </span><span class="err">он</span><span class="w"> </span><span class="err">будет</span><span class="w"> </span><span class="err">взят</span><span class="w"> </span><span class="err">из</span><span class="w"> </span><span class="err">кэш</span><span class="o">.</span>
-<span class="w">   </span><span class="err">Установка</span><span class="w"> </span><span class="err">флага</span><span class="w"> </span><span class="err">ускоряет</span><span class="w"> </span><span class="err">сборку</span><span class="w"> </span><span class="err">видео</span><span class="o">.</span>
+* **ЗаписьВидеоКэшироватьВидеоВставки {cachevideo}**:
+   Если флаг установлен то при работе шага
+   И видеовставка &quot;ТекстВставки&quot;
+   будет происходить проверка, есть ли в кэш уже такой видеофрагмент.
+   Если в кэш фрагмента нет - он будет туда добавлен.
+   Если фрагмент есть - то он будет взят из кэш.
+   Установка флага ускоряет сборку видео.
 
-<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ЗаписьВидеоКэшВидеоВставок</span><span class="w"> </span><span class="p">{</span><span class="n">videocachepath</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">   </span><span class="err">Каталог</span><span class="p">,</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">котором</span><span class="w"> </span><span class="err">хранятся</span><span class="w"> </span><span class="err">фрагменты</span><span class="w"> </span><span class="err">видеовставок</span><span class="o">.</span>
+* **ЗаписьВидеоКэшВидеоВставок {videocachepath}**:
+   Каталог, в котором хранятся фрагменты видеовставок.
 </code></pre></div>
-
 </li>
 <li>
 <p>Экран</p>
-<div class="codehilite"><pre><span></span><code><span class="k">*</span> **ЗаписьВидеоЭкранШирина {screenwidth}**:
+<div class="highlight"><pre><span></span><code>* **ЗаписьВидеоЭкранШирина {screenwidth}**:
    Задаёт ширину экрана для записи видео. Значение не может быть больше чем ширина в текущем разрешении экрана. Если указать значение меньше, то в видео будет записываться часть экрана, начиная с верхнего левого угла.
 
-<span class="k">*</span> **ЗаписьВидеоЭкранСлева {screenleft}**:
+* **ЗаписьВидеоЭкранСлева {screenleft}**:
    Задает отступ слева
 
-<span class="k">*</span> **ЗаписьВидеоЭкранВысота {screenheight}**:
+* **ЗаписьВидеоЭкранВысота {screenheight}**:
    Задаёт высоту экрана для записи видео. Значение не может быть больше чем высота в текущем разрешении экрана. Если указать значение меньше, то в видео будет записываться часть экрана, начиная с верхнего левого угла.
 
-<span class="k">*</span> **ЗаписьВидеоЭкранСверху {screentop}**:
+* **ЗаписьВидеоЭкранСверху {screentop}**:
    Задает отступ сверху
 </code></pre></div>
-
 </li>
 <li>
 <p>Команды консоли</p>
-<div class="codehilite"><pre><span></span><code><span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ЗаписьВидеоКоманда</span><span class="n">Ffmpeg</span><span class="w"> </span><span class="p">{</span><span class="n">ffmpegcomand</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">   </span><span class="err">Команда</span><span class="w"> </span><span class="err">для</span><span class="w"> </span><span class="err">работы</span><span class="w"> </span><span class="err">и</span><span class="w"> </span><span class="err">обработки</span><span class="w"> </span><span class="err">видео</span><span class="o">.</span><span class="w"> </span><span class="err">Также</span><span class="w"> </span><span class="err">допускается</span><span class="w"> </span><span class="err">указание</span><span class="w"> </span><span class="err">полного</span><span class="w"> </span><span class="err">пути</span><span class="w"> </span><span class="err">к</span><span class="w"> </span><span class="err">файлу</span><span class="w"> </span><span class="n">ffmpeg</span><span class="o">.</span><span class="n">exe</span>
-<span class="w">   </span><span class="err">По</span><span class="w"> </span><span class="err">умолчанию</span><span class="p">:</span><span class="w"> </span><span class="n">ffmpeg</span>
+<div class="highlight"><pre><span></span><code>* **ЗаписьВидеоКомандаFfmpeg {ffmpegcomand}**:
+   Команда для работы и обработки видео. Также допускается указание полного пути к файлу ffmpeg.exe
+   По умолчанию: ffmpeg
 
-<span class="o">*</span><span class="w"> </span><span class="o">**</span><span class="err">ЗаписьВидеоКоманда</span><span class="n">Convert</span><span class="w"> </span><span class="p">{</span><span class="n">convertcomand</span><span class="p">}</span><span class="o">**</span><span class="p">:</span>
-<span class="w">   </span><span class="err">В</span><span class="w"> </span><span class="err">поле</span><span class="w"> </span><span class="err">описывается</span><span class="w"> </span><span class="err">как</span><span class="w"> </span><span class="err">будет</span><span class="w"> </span><span class="err">вызываться</span><span class="w"> </span><span class="err">команда</span><span class="w"> </span><span class="n">Convert</span><span class="o">.</span>
-<span class="w">   </span><span class="err">Для</span><span class="w"> </span><span class="err">версии</span><span class="w"> </span><span class="n">ImageMagick</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="err">достаточно</span><span class="w"> </span><span class="err">указать</span><span class="w"> </span><span class="s2">&quot;magick convert.&quot;</span>
-<span class="w">   </span><span class="err">Для</span><span class="w"> </span><span class="err">более</span><span class="w"> </span><span class="err">старых</span><span class="w"> </span><span class="err">версий</span><span class="w"> </span><span class="err">нужно</span><span class="w"> </span><span class="err">указать</span><span class="w"> </span><span class="err">путь</span><span class="w"> </span><span class="err">к</span><span class="w"> </span><span class="err">исполняемому</span><span class="w"> </span><span class="err">файлу</span><span class="w"> </span><span class="nb">convert</span><span class="o">.</span><span class="n">exe</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">каталоге</span><span class="w"> </span><span class="err">с</span><span class="w"> </span><span class="err">программой</span><span class="w"> </span><span class="n">ImageMagick</span><span class="o">.</span>
-<span class="w">   </span><span class="err">Пример</span><span class="p">:</span>
-<span class="w">   </span><span class="s2">&quot;C:\Program Files\ImageMagick-Х.Х.Х-Q16\convert.exe&quot;</span>
-<span class="w">   </span><span class="err">Скачать</span><span class="p">:</span><span class="w"> </span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">imagemagick</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">script</span><span class="o">/</span><span class="n">download</span><span class="o">.</span><span class="n">php</span>
-<span class="w">   </span><span class="err">Для</span><span class="w"> </span><span class="err">версий</span><span class="w"> </span><span class="err">младше</span><span class="w"> </span><span class="mi">7</span><span class="w"> </span><span class="err">в</span><span class="w"> </span><span class="err">процессе</span><span class="w"> </span><span class="err">установки</span><span class="w"> </span><span class="err">обязательным</span><span class="w"> </span><span class="err">к</span><span class="w"> </span><span class="err">установке</span><span class="w"> </span><span class="err">является</span><span class="w"> </span><span class="err">пункт</span><span class="p">:</span><span class="w"> </span><span class="n">Install</span><span class="w"> </span><span class="n">legacy</span><span class="w"> </span><span class="n">utilities</span><span class="w"> </span><span class="p">(</span><span class="n">e</span><span class="o">.</span><span class="w"> </span><span class="n">g</span><span class="o">.</span><span class="w"> </span><span class="nb">convert</span><span class="p">)</span>
-<span class="w">   </span><span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">imagemagick</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">script</span><span class="o">/</span><span class="n">download</span><span class="o">.</span><span class="n">php</span>
+* **ЗаписьВидеоКомандаConvert {convertcomand}**:
+   В поле описывается как будет вызываться команда Convert.
+   Для версии ImageMagick 7 достаточно указать &quot;magick convert.&quot;
+   Для более старых версий нужно указать путь к исполняемому файлу convert.exe в каталоге с программой ImageMagick.
+   Пример:
+   &quot;C:\Program Files\ImageMagick-Х.Х.Х-Q16\convert.exe&quot;
+   Скачать: https://imagemagick.org/script/download.php
+   Для версий младше 7 в процессе установки обязательным к установке является пункт: Install legacy utilities (e. g. convert)
+   https://imagemagick.org/script/download.php
 </code></pre></div>
-
 <ul>
 <li><strong>ЗаписьВидеоКомандаНачатьЗаписьВидео {comandrecvideo}</strong>:
     Команда, которая будет запускать VLC для начала записи экрана. В команде возможно редактирование битрейта и других настроек.</li>
@@ -2527,102 +3460,97 @@
 </li>
 <li>
 <p>Настройки аудио</p>
-<div class="codehilite"><pre><span></span><code> <span class="k">*</span> **ЗаписьВидеоДелатьНаложениеTTS {dotts}**:
+<div class="highlight"><pre><span></span><code> * **ЗаписьВидеоДелатьНаложениеTTS {dotts}**:
     Включает озвучку видео диктором.
 </code></pre></div>
-
 <ul>
-<li>Музыка<div class="codehilite"><pre><span></span><code><span class="k">*</span> **ЗаписьВидеоКаталогМузыки {musicpath}**:
+<li>Музыка<div class="highlight"><pre><span></span><code>* **ЗаписьВидеоКаталогМузыки {musicpath}**:
    Каталог, в котором находятся файлы в формате mp3.
    Если поле заполнено, то из каталога будет случайным образом взят mp3 файл, который будет использован для музыкальной подложки.
    Если длина mp3 файла меньше, чем длина результирующего видео, то аудио трек будет зациклен нужное количество раз, чтобы соответствовать длине видео файла.
 
-<span class="k">*</span> **ЗаписьВидеоГромкостьМузыки {musicvolume}**:
+* **ЗаписьВидеоГромкостьМузыки {musicvolume}**:
    Возможно указывать значение от 0 до 1.
    Если значение поля 0, тогда громкость музыки изменяться не будет.
    Если указано значение отличное от нуля (например 0.06), тогда данное значение будет влиять на громкость музыкальной подложки.
    Чем больше значение - тем громче будет звучать музыкальная подложка.
    Рекомендуется указывать значение 0.1 или меньше.
 </code></pre></div>
-
 </li>
 </ul>
 </li>
 <li>
 <p>Дополнительно</p>
-<div class="codehilite"><pre><span></span><code> <span class="k">*</span> **ЗаписьВидеоФайлКурсораМышки {mousecurfile}**:
+<div class="highlight"><pre><span></span><code> * **ЗаписьВидеоФайлКурсораМышки {mousecurfile}**:
     Путь к картинке, которая используется для отрисовки курсора мышки.
 
- <span class="k">*</span> **ЗаписьВидеоФайлВодянойЗнак {watermarkfile}**:
+ * **ЗаписьВидеоФайлВодянойЗнак {watermarkfile}**:
     Картинка в формате png, которая будет использована для наложения водяного знака.
     Водяной знак будет расположен в правом нижнем углу видео.
     Разрешение картинки должно быть меньше, чем разрешение, в котором идёт запись видео.
 
- <span class="k">*</span> **ЗаписьВидеоПроцентУскорения {accelerationpercentage}**:
+ * **ЗаписьВидеоПроцентУскорения {accelerationpercentage}**:
     Максимальный процент ускорения, который возможен для фрагмента видео (одного шага видео).
     Механизм сборки видео может ускорить фрагмент видео, например, если длительность аудио трека для фрагмента была 5 секунд, а сам видео фрагмент получился 10 секунд.
     Если указано значение 0 - то ограничения на ускорение нет.
     Рекомендуется значение - 30%.
-    Тогда в приведенном примере видео ускорится (5 <span class="gs">* 1.3) с 5 секунд до 6.5 секунд.</span>
+    Тогда в приведенном примере видео ускорится (5 * 1.3) с 5 секунд до 6.5 секунд.
 
-<span class="gs"> *</span> **ЗаписьВидеоДобавлятьСубтитры {addsubtitles}**:
+ * **ЗаписьВидеоДобавлятьСубтитры {addsubtitles}**:
     Включает добавление субтитров встроенных в видео.
 
- <span class="k">*</span> **ЗаписьВидеоГруппаШаговКакШаг {groupofstepsasastep}**:
+ * **ЗаписьВидеоГруппаШаговКакШаг {groupofstepsasastep}**:
     Включает режим, когда по умолчанию каждая группа шагов первого уровня в сценарии будет конвертироваться в один шаг в автоинструкции.
 
- <span class="k">*</span> **ЗаписьВидеоСкрытьСлужебныеОкна {hideservicewindows}**:
+ * **ЗаписьВидеоСкрытьСлужебныеОкна {hideservicewindows}**:
     Скрывает служебные консольные окна, которые используются для сборки видео.
     Ускоряет сборку видео. Рекомендуется.
 
- <span class="k">*</span> **ЗаписьВидеоОтключитьМасштабированиеШаговПоВремени {disablescalingofsteps}**:
+ * **ЗаписьВидеоОтключитьМасштабированиеШаговПоВремени {disablescalingofsteps}**:
     Отключает масштабирование видео фрагментов по времени.
 
- <span class="k">*</span> **ЗаписьВидеоОтключитьСлайдСЗаголовкомФичи {turnofffeaturetitleslide}**:
+ * **ЗаписьВидеоОтключитьСлайдСЗаголовкомФичи {turnofffeaturetitleslide}**:
     Отключает создание в видео начального слайда, в котором указывается название фича файла.
 
- <span class="k">*</span> **ЗаписьВидеоОтключитьСлайдСценария {turnoffscenarioslide}**:
+ * **ЗаписьВидеоОтключитьСлайдСценария {turnoffscenarioslide}**:
     Отключает создание в видео слайда, в котором выводится название сценария.
 
- <span class="k">*</span> **ЗаписьВидеоОтключитьСлайдФинал {turnofffinalslide}**:
+ * **ЗаписьВидеоОтключитьСлайдФинал {turnofffinalslide}**:
     Отключает создание в видео финального слайда, в котором выводится итоговая информация по видео.
 
- <span class="k">*</span> **ЗаписьВидеоПодсвечиватьНажатияМышки {highlightmouseclicks}**:
+ * **ЗаписьВидеоПодсвечиватьНажатияМышки {highlightmouseclicks}**:
     Включает подсветку кликов мышки. Используется утилита из проекта UIToolsFor1C.
     Эмуляция кликов мышки осуществляется с помощью SikuliX.
 
- <span class="k">*</span> **ЗаписьВидеоЭмулироватьВводСКлавиатуры {emulatekeyboardinput}**:
+ * **ЗаписьВидеоЭмулироватьВводСКлавиатуры {emulatekeyboardinput}**:
     Включает ввод эмуляцию ввода текста с клавиатуры с помощью утилиты из проекта UIToolsFor1C.
     Допускается ввод текста только на русском и английском языках.
     Переключение раскладки клавиатуры осуществляется с помощью эмуляции нажатия Ctrl+Shift.
 </code></pre></div>
-
 <ul>
 <li>
 <p>Настройки  слайда с заголовком фичи</p>
-<div class="codehilite"><pre><span></span><code><span class="k">*</span> **ЗаписьВидеоЗаменитьСлайдЗаголовок {changefeaturetitleslide}**:
+<div class="highlight"><pre><span></span><code>* **ЗаписьВидеоЗаменитьСлайдЗаголовок {changefeaturetitleslide}**:
    Если флаг установлен, то стандартный файл с заголовком фичи будет заменен на указанный видео файл. Видео файл должен быть того разрешения, что и записываемое видео. Также у него должна быть аудио дорожка.
 
-<span class="k">*</span> **ЗаписьВидеоДобавитьМузыкуКСлайдуЗаголовок {addmusictofeaturetitleslide}**:
+* **ЗаписьВидеоДобавитьМузыкуКСлайдуЗаголовок {addmusictofeaturetitleslide}**:
    Если флаг установлен, то к видео файлу с заголовком фичи будет добавлена музыка.
 
-<span class="k">*</span> **ЗаписьВидеоПутьКСлайдуЗаголовок {featuretitleslidepath}**:
+* **ЗаписьВидеоПутьКСлайдуЗаголовок {featuretitleslidepath}**:
    Путь к видео файлу с заголовком фичи,  который будет добавлен вместо стандартного.
 </code></pre></div>
-
 </li>
 <li>
 <p>Настройки финального слайда</p>
-<div class="codehilite"><pre><span></span><code><span class="k">*</span> **ЗаписьВидеоЗаменитьСлайдФинал {changefinalslide}**:
+<div class="highlight"><pre><span></span><code>* **ЗаписьВидеоЗаменитьСлайдФинал {changefinalslide}**:
    Если флаг установлен, то стандартный финальный файл будет заменен на указанный видео файл. Видео файл должен быть того разрешения, что и записываемое видео. Также у него должна быть аудио дорожка.
 
-<span class="k">*</span> **ЗаписьВидеоДобавитьМузыкуКСлайдуФинал {addmusictofinalslide}**:
+* **ЗаписьВидеоДобавитьМузыкуКСлайдуФинал {addmusictofinalslide}**:
    Если флаг установлен, то к финальному видео файлу  будет добавлена музыка.
 
-<span class="k">*</span> **ЗаписьВидеоПутьКСлайдуФинал {finalslidepath}**:
+* **ЗаписьВидеоПутьКСлайдуФинал {finalslidepath}**:
    Путь к финальному видео файлу, который будет добавлен вместо стандартного финального видео файла.
 </code></pre></div>
-
 </li>
 </ul>
 </li>
@@ -2733,100 +3661,86 @@
            6. Имя компьютера для установления подключения
            7. Порт</li>
 </ul>
-                
-              
-              
-                
 
 
-              
-            </article>
-          </div>
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
       </main>
       
-        
-<footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="">
-        
-          <a href="../JsonParamsEN/" title="Description of parameters that can be passed in the VAParams.json file, which is used when launching Vanessa Automation from the command line." class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Назад
-                </span>
-                Description of parameters that can be passed in the VAParams.json file, which is used when launching Vanessa Automation from the command line.
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../../MakeVASingle/MakeVASingle/" title="Параметры запуска из командной строки" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Вперед
-                </span>
-                Параметры запуска из командной строки
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
+        <footer class="md-footer">
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
         
-        Made with
-        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-          Material for MkDocs
-        </a>
-      </div>
-      
-  <div class="md-footer-social">
+<div class="md-social">
+  
+    
+    
+    
     
       
       
-      <a href="https://github.com/Pr-Mex/vanessa-automation" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
-      </a>
+    
+    <a href="https://github.com/Pr-Mex/vanessa-automation" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
     
       
       
-      <a href="https://t.me/VanessaAutomation" target="_blank" rel="noopener" title="t.me" class="md-footer-social__link">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"/></svg>
-      </a>
     
-  </div>
-
+    <a href="https://t.me/VanessaAutomation" target="_blank" rel="noopener" title="t.me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496m115 168.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7.2-.7.3-3.1-1.2-4.4s-3.6-.8-5.1-.5c-2.2.5-37.1 23.5-104.6 69.1-9.9 6.8-18.9 10.1-26.9 9.9-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3.6-4.5 6.7-9 18.4-13.7 72.3-31.5 120.5-52.3 144.6-62.3 68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6.5 9.6 2.9 2 1.7 3.2 4.1 3.5 6.7.5 3.2.6 6.5.4 9.8z"/></svg>
+    </a>
+  
+</div>
+      
     </div>
   </div>
 </footer>
       
     </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
     
-      <script src="../../assets/javascripts/vendor.f45d2d8d.min.js"></script>
-      <script src="../../assets/javascripts/bundle.74d0b805.min.js"></script><script id="__lang" type="application/json">{"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.config.lang": "ru", "search.config.pipeline": "", "search.config.separator": "", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e # \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430"}</script>
+    
+    
       
-      <script>
-        app = initialize({
-          base: "../..",
-          features: ["tabs", "instant"],
-          search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.7f7c8775.min.js"
-          }, typeof search !== "undefined" && search)
-        })
-      </script>
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.instant"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>

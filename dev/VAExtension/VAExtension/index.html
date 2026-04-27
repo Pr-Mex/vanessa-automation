@@ -1,6 +1,4 @@
 
-
-
 <!doctype html>
 <html lang="ru" class="no-js">
   <head>
@@ -9,11 +7,21 @@
       <meta name="viewport" content="width=device-width,initial-scale=1">
       
       
+      
         <link rel="canonical" href="https://pr-mex.github.io/vanessa-automation/dev/VAExtension/VAExtension/">
       
       
-      <link rel="shortcut icon" href="../../assets/images/logo.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-5.0.0">
+        <link rel="prev" href="../../UIAutomation/UIAutomation/">
+      
+      
+        <link rel="next" href="../../mobile/mobile/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../assets/images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
     
     
       
@@ -21,28 +29,32 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.c3000690.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.4444686e.min.css">
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
       
+      
+
+
+    
+    
+      
+    
+    
       
         
         
-        <meta name="theme-color" content="">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
     
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
-        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
-        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
-      
-    
-    
-    
-    
-      
+
     
     
   </head>
@@ -50,8 +62,12 @@
   
     
     
-    <body dir="" data-md-color-primary="white" data-md-color-accent="red">
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="red">
   
+    
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
     <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
@@ -67,68 +83,88 @@
       
     </div>
     
-      <header class="md-header" data-md-component="header">
-  <nav class="md-header-nav md-grid" aria-label="">
-    <a href="https://pr-mex.github.io/vanessa-automation/dev/" title="Vanessa Automation Dev" class="md-header-nav__button md-logo" aria-label="Vanessa Automation Dev">
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../.." title="Vanessa Automation Dev" class="md-header__button md-logo" aria-label="Vanessa Automation Dev" data-md-component="logo">
       
   <img src="../../assets/images/logo.png" alt="logo">
 
     </a>
-    <label class="md-header-nav__button md-icon" for="__drawer">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,6H21V8H3V6M3,11H21V13H3V11M3,16H21V18H3V16Z" /></svg>
-    </label>
-    <div class="md-header-nav__title" data-md-component="header-title">
+    <label class="md-header__button md-icon" for="__drawer">
       
-        <div class="md-header-nav__ellipsis">
-          <span class="md-header-nav__topic md-ellipsis">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
             Vanessa Automation Dev
           </span>
-          <span class="md-header-nav__topic md-ellipsis">
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
             
               Расширение VAExtension
             
           </span>
         </div>
-      
+      </div>
     </div>
     
-      <label class="md-header-nav__button md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
-      </label>
       
-<div class="md-search" data-md-component="search" role="dialog">
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5,3A6.5,6.5 0 0,1 16,9.5C16,11.11 15.41,12.59 14.44,13.73L14.71,14H15.5L20.5,19L19,20.5L14,15.5V14.71L13.73,14.44C12.59,15.41 11.11,16 9.5,16A6.5,6.5 0 0,1 3,9.5A6.5,6.5 0 0,1 9.5,3M9.5,5C7,5 5,7 5,9.5C5,12 7,14 9.5,14C12,14 14,12 14,9.5C14,7 12,5 9.5,5Z" /></svg>
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-      <button type="reset" class="md-search__icon md-icon" aria-label="" data-md-component="search-reset" tabindex="-1">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19,6.41L17.59,5L12,10.59L6.41,5L5,6.41L10.59,12L5,17.59L6.41,19L12,13.41L17.59,19L19,17.59L13.41,12L19,6.41Z" /></svg>
-      </button>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
     </form>
     <div class="md-search__output">
-      <div class="md-search__scrollwrap" data-md-scrollfix>
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
-            Начните печатать для поиска
+            Инициализация поиска
           </div>
-          <ol class="md-search-result__list"></ol>
+          <ol class="md-search-result__list" role="presentation"></ol>
         </div>
       </div>
     </div>
   </div>
 </div>
+      
     
     
-      <div class="md-header-nav__source">
-        
-<a href="https://github.com/pr-mex/vanessa-automation" title="Перейти к репозиторию" class="md-source">
+      <div class="md-header__source">
+        <a href="https://github.com/pr-mex/vanessa-automation" title="Перейти к репозиторию" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     pr-mex/vanessa-automation
@@ -137,205 +173,322 @@
       </div>
     
   </nav>
+  
 </header>
     
     <div class="md-container" data-md-component="container">
       
-        
-      
       
         
           
-
-  
-
-<nav class="md-tabs md-tabs--active" aria-label="" data-md-component="tabs">
-  <div class="md-tabs__inner md-grid">
+            
+<nav class="md-tabs" aria-label="Вкладки" data-md-component="tabs">
+  <div class="md-grid">
     <ul class="md-tabs__list">
       
         
-  <li class="md-tabs__item">
-    
+  
+  
+  
+  
+    <li class="md-tabs__item">
       <a href="../.." class="md-tabs__link">
-        Vanessa Automation
-      </a>
+        
+  
+  
     
-  </li>
+  
+  Vanessa Automation
+
+      </a>
+    </li>
+  
 
       
         
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../Changelog/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  История версий
+
+      </a>
+    </li>
+  
+
       
         
   
   
-    <li class="md-tabs__item">
-      
+  
+  
+    
+    
+      <li class="md-tabs__item">
         <a href="../../AI/" class="md-tabs__link">
-          AI
+          
+  
+  
+  AI
+
         </a>
-      
-    </li>
+      </li>
+    
   
 
       
         
   
   
-    <li class="md-tabs__item">
-      
+  
+  
+    
+    
+      <li class="md-tabs__item">
         <a href="../../CommandSetting/CommandSetting/" class="md-tabs__link">
-          CommandSetting
+          
+  
+  
+  CommandSetting
+
         </a>
-      
-    </li>
+      </li>
+    
   
 
       
         
   
   
-    <li class="md-tabs__item">
-      
+  
+  
+    
+    
+      <li class="md-tabs__item">
         <a href="../../FAQ/" class="md-tabs__link">
-          FAQ
+          
+  
+  
+  FAQ
+
         </a>
-      
-    </li>
+      </li>
+    
   
 
       
         
   
   
-    <li class="md-tabs__item">
-      
+  
+  
+    
+    
+      <li class="md-tabs__item">
         <a href="../../InteractiveHelp/Onboarding/" class="md-tabs__link">
-          InteractiveHelp
+          
+  
+  
+  InteractiveHelp
+
         </a>
-      
-    </li>
+      </li>
+    
   
 
       
         
   
   
-    <li class="md-tabs__item">
-      
+  
+  
+    
+    
+      <li class="md-tabs__item">
         <a href="../../JsonParams/JsonParamsEN/" class="md-tabs__link">
-          JsonParams
+          
+  
+  
+  JsonParams
+
         </a>
-      
-    </li>
+      </li>
+    
   
 
       
         
   
   
-    <li class="md-tabs__item">
-      
+  
+  
+    
+    
+      <li class="md-tabs__item">
         <a href="../../MakeVASingle/MakeVASingle/" class="md-tabs__link">
-          MakeVASingle
+          
+  
+  
+  MakeVASingle
+
         </a>
-      
-    </li>
+      </li>
+    
   
 
       
         
   
   
-    <li class="md-tabs__item">
-      
+  
+  
+    
+    
+      <li class="md-tabs__item">
         <a href="../../ReturnStatus/ReturnStatus/" class="md-tabs__link">
-          ReturnStatus
+          
+  
+  
+  ReturnStatus
+
         </a>
-      
-    </li>
+      </li>
+    
   
 
       
         
   
   
-    <li class="md-tabs__item">
-      
+  
+  
+    
+    
+      <li class="md-tabs__item">
         <a href="../../Smoke/Smoke/" class="md-tabs__link">
-          Smoke
+          
+  
+  
+  Smoke
+
         </a>
-      
-    </li>
+      </li>
+    
   
 
       
         
   
   
-    <li class="md-tabs__item">
-      
+  
+  
+    
+    
+      <li class="md-tabs__item">
         <a href="../../TestDataGenerator/TestDataGenerator/" class="md-tabs__link">
-          TestDataGenerator
+          
+  
+  
+  TestDataGenerator
+
         </a>
-      
-    </li>
+      </li>
+    
   
 
       
         
   
   
-    <li class="md-tabs__item">
-      
+  
+  
+    
+    
+      <li class="md-tabs__item">
         <a href="../../UIAutomation/UIAutomation/" class="md-tabs__link">
-          UIAutomation
+          
+  
+  
+  UIAutomation
+
         </a>
-      
-    </li>
+      </li>
+    
   
 
       
         
   
   
-    <li class="md-tabs__item">
-      
-        <a href="./" class="md-tabs__link md-tabs__link--active">
-          VAExtension
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  
+  VAExtension
+
         </a>
-      
-    </li>
+      </li>
+    
   
 
       
         
   
   
-    <li class="md-tabs__item">
-      
+  
+  
+    
+    
+      <li class="md-tabs__item">
         <a href="../../mobile/mobile/" class="md-tabs__link">
-          Mobile
+          
+  
+  
+  Mobile
+
         </a>
-      
-    </li>
+      </li>
+    
   
 
       
     </ul>
   </div>
 </nav>
+          
         
       
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
           
             
-              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <nav class="md-nav md-nav--primary" aria-label="" data-md-level="0">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Навигация" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="https://pr-mex.github.io/vanessa-automation/dev/" title="Vanessa Automation Dev" class="md-nav__button md-logo" aria-label="Vanessa Automation Dev">
+    <a href="../.." title="Vanessa Automation Dev" class="md-nav__button md-logo" aria-label="Vanessa Automation Dev" data-md-component="logo">
       
   <img src="../../assets/images/logo.png" alt="logo">
 
@@ -344,11 +497,10 @@
   </label>
   
     <div class="md-nav__source">
-      
-<a href="https://github.com/pr-mex/vanessa-automation" title="Перейти к репозиторию" class="md-source">
+      <a href="https://github.com/pr-mex/vanessa-automation" title="Перейти к репозиторию" class="md-source" data-md-component="source">
   <div class="md-source__icon md-icon">
     
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05L244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
   </div>
   <div class="md-source__repository">
     pr-mex/vanessa-automation
@@ -360,878 +512,1684 @@
     
       
       
-      
-
-
-  <li class="md-nav__item">
-    <a href="../.." title="Vanessa Automation" class="md-nav__link">
-      Vanessa Automation
-    </a>
-  </li>
-
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
     
-      
-      
-      
-
-
-  <li class="md-nav__item">
-    <a href="../../Changelog/" title="История версий" class="md-nav__link">
-      История версий
-    </a>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3">
-    
-    <label class="md-nav__link" for="nav-3">
-      AI
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="AI" data-md-level="1">
-      <label class="md-nav__title" for="nav-3">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-        </span>
-        AI
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../AI/" title="MCP в Vanessa Automation" class="md-nav__link">
-      MCP в Vanessa Automation
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4">
-    
-    <label class="md-nav__link" for="nav-4">
-      CommandSetting
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="CommandSetting" data-md-level="1">
-      <label class="md-nav__title" for="nav-4">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-        </span>
-        CommandSetting
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../CommandSetting/CommandSetting/" title="Параметры запуска из командной строки" class="md-nav__link">
-      Параметры запуска из командной строки
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5">
-    
-    <label class="md-nav__link" for="nav-5">
-      FAQ
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="FAQ" data-md-level="1">
-      <label class="md-nav__title" for="nav-5">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-        </span>
-        FAQ
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../FAQ/" title="Вопросы и ответы" class="md-nav__link">
-      Вопросы и ответы
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../FAQ/KnownProblems/" title="Известные проблемы" class="md-nav__link">
-      Известные проблемы
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../FAQ/MakeAutoVideo/" title="Как создать автовидеоинструкцию" class="md-nav__link">
-      Как создать автовидеоинструкцию
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../FAQ/NotAdd/" title="Отличия Vanessa-Automation от ADD" class="md-nav__link">
-      Отличия Vanessa-Automation от ADD
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../FAQ/%D0%91%D1%80%D0%B0%D1%83%D0%B7%D0%B5%D1%80/" title="Как подключить браузер Chrome через debug порт" class="md-nav__link">
-      Как подключить браузер Chrome через debug порт
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../FAQ/%D0%A0%D0%B5%D0%B6%D0%B8%D0%BC%20%D1%81%D0%BE%D0%B2%D0%BC%D0%B5%D1%81%D1%82%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8%208.2/" title="Режим совместимости 8.2" class="md-nav__link">
-      Режим совместимости 8.2
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6">
-    
-    <label class="md-nav__link" for="nav-6">
-      InteractiveHelp
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="InteractiveHelp" data-md-level="1">
-      <label class="md-nav__title" for="nav-6">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-        </span>
-        InteractiveHelp
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../InteractiveHelp/Onboarding/" title="Как запустить сценарий, реализующий Onboarding" class="md-nav__link">
-      Как запустить сценарий, реализующий Onboarding
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../InteractiveHelp/SettingUpInteractiveHelp/" title="Как настроить работу интерактивной справки" class="md-nav__link">
-      Как настроить работу интерактивной справки
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../InteractiveHelp/VanessaInteractiveDemo/" title="Vanessa Interactive" class="md-nav__link">
-      Vanessa Interactive
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../InteractiveHelp/%D0%97%D0%B0%D0%BF%D1%83%D1%81%D0%BA%D0%91%D0%B5%D0%B7%D0%9E%D1%82%D0%BA%D1%80%D1%8B%D1%82%D0%B8%D1%8F%D0%A4%D0%BE%D1%80%D0%BC%D1%8B/" title="Как запустить сценарий Vanessa Automation без открытия формы" class="md-nav__link">
-      Как запустить сценарий Vanessa Automation без открытия формы
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7">
-    
-    <label class="md-nav__link" for="nav-7">
-      JsonParams
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="JsonParams" data-md-level="1">
-      <label class="md-nav__title" for="nav-7">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-        </span>
-        JsonParams
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../JsonParams/JsonParamsEN/" title="Description of parameters that can be passed in the VAParams.json file, which is used when launching Vanessa Automation from the command line." class="md-nav__link">
-      Description of parameters that can be passed in the VAParams.json file, which is used when launching Vanessa Automation from the command line.
-    </a>
-  </li>
-
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../JsonParams/JsonParamsRU/" title="Описание параметров, которые можно передавать в файле VAParams.json, который используется при запуске Vanessa Automation из командной строки." class="md-nav__link">
-      Описание параметров, которые можно передавать в файле VAParams.json, который используется при запуске Vanessa Automation из командной строки.
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8">
-    
-    <label class="md-nav__link" for="nav-8">
-      MakeVASingle
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="MakeVASingle" data-md-level="1">
-      <label class="md-nav__title" for="nav-8">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-        </span>
-        MakeVASingle
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../MakeVASingle/MakeVASingle/" title="Параметры запуска из командной строки" class="md-nav__link">
-      Параметры запуска из командной строки
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9">
-    
-    <label class="md-nav__link" for="nav-9">
-      ReturnStatus
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="ReturnStatus" data-md-level="1">
-      <label class="md-nav__title" for="nav-9">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-        </span>
-        ReturnStatus
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../ReturnStatus/ReturnStatus/" title="Статус возврата" class="md-nav__link">
-      Статус возврата
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-10" type="checkbox" id="nav-10">
-    
-    <label class="md-nav__link" for="nav-10">
-      Smoke
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Smoke" data-md-level="1">
-      <label class="md-nav__title" for="nav-10">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-        </span>
-        Smoke
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../Smoke/Smoke/" title="Генератор дымовых тестов" class="md-nav__link">
-      Генератор дымовых тестов
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-11" type="checkbox" id="nav-11">
-    
-    <label class="md-nav__link" for="nav-11">
-      TestDataGenerator
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="TestDataGenerator" data-md-level="1">
-      <label class="md-nav__title" for="nav-11">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-        </span>
-        TestDataGenerator
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../TestDataGenerator/TestDataGenerator/" title="Подготовка и загрузка данных" class="md-nav__link">
-      Подготовка и загрузка данных
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
-
-  <li class="md-nav__item md-nav__item--nested">
-    
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-12" type="checkbox" id="nav-12">
-    
-    <label class="md-nav__link" for="nav-12">
-      UIAutomation
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="UIAutomation" data-md-level="1">
-      <label class="md-nav__title" for="nav-12">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-        </span>
-        UIAutomation
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../UIAutomation/UIAutomation/" title="Лайфхаки при работе с UI Automation" class="md-nav__link">
-      Лайфхаки при работе с UI Automation
-    </a>
-  </li>
-
-        
-      </ul>
-    </nav>
-  </li>
-
-    
-      
-      
-      
-
+  
+    Vanessa Automation
   
 
-
-  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-13" type="checkbox" id="nav-13" checked>
-    
-    <label class="md-nav__link" for="nav-13">
-      VAExtension
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="VAExtension" data-md-level="1">
-      <label class="md-nav__title" for="nav-13">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-        </span>
-        VAExtension
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
-        
-        
-          
-          
-          
-
+  </span>
+  
   
 
+      </a>
+    </li>
+  
 
-  <li class="md-nav__item md-nav__item--active">
     
-    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
     
+  
+    История версий
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
       
     
     
-      <label class="md-nav__link md-nav__link--active" for="__toc">
-        Расширение VAExtension
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3,9H17V7H3V9M3,13H17V11H3V13M3,17H17V15H3V17M19,17H21V15H19V17M19,7V9H21V7H19M19,13H21V11H19V13Z" /></svg>
-        </span>
-      </label>
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
     
-    <a href="./" title="Расширение VAExtension" class="md-nav__link md-nav__link--active">
-      Расширение VAExtension
-    </a>
+  
+    AI
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../AI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCP в Vanessa Automation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
     
       
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CommandSetting
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CommandSetting
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../CommandSetting/CommandSetting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Параметры запуска из командной строки
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FAQ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Вопросы и ответы
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FAQ/KnownProblems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Известные проблемы
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FAQ/MakeAutoVideo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Как создать автовидеоинструкцию
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FAQ/NotAdd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Отличия Vanessa-Automation от ADD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FAQ/%D0%91%D1%80%D0%B0%D1%83%D0%B7%D0%B5%D1%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Как подключить браузер Chrome через debug порт
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../FAQ/%D0%A0%D0%B5%D0%B6%D0%B8%D0%BC%20%D1%81%D0%BE%D0%B2%D0%BC%D0%B5%D1%81%D1%82%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8%208.2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Режим совместимости 8.2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    InteractiveHelp
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    InteractiveHelp
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../InteractiveHelp/Onboarding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Как запустить сценарий, реализующий Onboarding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../InteractiveHelp/SettingUpInteractiveHelp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Как настроить работу интерактивной справки
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../InteractiveHelp/VanessaInteractiveDemo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vanessa Interactive
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../InteractiveHelp/%D0%97%D0%B0%D0%BF%D1%83%D1%81%D0%BA%D0%91%D0%B5%D0%B7%D0%9E%D1%82%D0%BA%D1%80%D1%8B%D1%82%D0%B8%D1%8F%D0%A4%D0%BE%D1%80%D0%BC%D1%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Как запустить сценарий Vanessa Automation без открытия формы
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JsonParams
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    JsonParams
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JsonParams/JsonParamsEN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Description of parameters that can be passed in the VAParams.json file, which is used when launching Vanessa Automation from the command line.
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../JsonParams/JsonParamsRU/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Описание параметров, которые можно передавать в файле VAParams.json, который используется при запуске Vanessa Automation из командной строки.
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MakeVASingle
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    MakeVASingle
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../MakeVASingle/MakeVASingle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Параметры запуска из командной строки
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ReturnStatus
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ReturnStatus
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../ReturnStatus/ReturnStatus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Статус возврата
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Smoke
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Smoke
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Smoke/Smoke/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Генератор дымовых тестов
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TestDataGenerator
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    TestDataGenerator
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../TestDataGenerator/TestDataGenerator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Подготовка и загрузка данных
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UIAutomation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UIAutomation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UIAutomation/UIAutomation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лайфхаки при работе с UI Automation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VAExtension
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    VAExtension
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Расширение VAExtension
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Расширение VAExtension
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
 <nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
   
   
     
   
   
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
       Содержание
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#1" class="md-nav__link">
-    1. Открытие окна "Функции технического специалиста" (Все функции).
+    <span class="md-ellipsis">
+      
+        1. Открытие окна "Функции технического специалиста" (Все функции).
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#2" class="md-nav__link">
-    2. Выполнить ожидание завершения фоновых заданий на стороне клиента тестирования.
+    <span class="md-ellipsis">
+      
+        2. Выполнить ожидание завершения фоновых заданий на стороне клиента тестирования.
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#3" class="md-nav__link">
-    3. Получить навигационную ссылку окна для любых окон, у которых возможно получить навигационную ссылку.
+    <span class="md-ellipsis">
+      
+        3. Получить навигационную ссылку окна для любых окон, у которых возможно получить навигационную ссылку.
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#4" class="md-nav__link">
-    4. Выполнить произвольный код на стороне клиента тестирования (клиентский код и серверный код).
+    <span class="md-ellipsis">
+      
+        4. Выполнить произвольный код на стороне клиента тестирования (клиентский код и серверный код).
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#5" class="md-nav__link">
-    5. Вычислить произвольное выражение на стороне клиента тестирования (клиентский код и серверный код).
+    <span class="md-ellipsis">
+      
+        5. Вычислить произвольное выражение на стороне клиента тестирования (клиентский код и серверный код).
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#61" class="md-nav__link">
-    6.1 Получить произвольное значение из реквизита формы, объекта связанного с формой.
+    <span class="md-ellipsis">
+      
+        6.1 Получить произвольное значение из реквизита формы, объекта связанного с формой.
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#62" class="md-nav__link">
-    6.2 Получить произвольное значение из реквизита формы, объекта связанного с формой.
+    <span class="md-ellipsis">
+      
+        6.2 Получить произвольное значение из реквизита формы, объекта связанного с формой.
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#7" class="md-nav__link">
-    7. Изменять произвольные данные формы, доступные для записи.
+    <span class="md-ellipsis">
+      
+        7. Изменять произвольные данные формы, доступные для записи.
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#8" class="md-nav__link">
-    8. Выполнить метод текущей формы.
+    <span class="md-ellipsis">
+      
+        8. Выполнить метод текущей формы.
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#9-web" class="md-nav__link">
-    9. Получать макеты из формы клиента тестирования без использования временных файлов. Также работает в web клиенте.
+    <span class="md-ellipsis">
+      
+        9. Получать макеты из формы клиента тестирования без использования временных файлов. Также работает в web клиенте.
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#10" class="md-nav__link">
-    10. Открытие окна "Настройка начальной страницы.
+    <span class="md-ellipsis">
+      
+        10. Открытие окна "Настройка начальной страницы.
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#11" class="md-nav__link">
-    11. Взаимодействие с активным окном.
+    <span class="md-ellipsis">
+      
+        11. Взаимодействие с активным окном.
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#12" class="md-nav__link">
-    12. Сортировка таблиц динамических списков
+    <span class="md-ellipsis">
+      
+        12. Сортировка таблиц динамических списков
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#13" class="md-nav__link">
-    13. Очистка табличного документа
+    <span class="md-ellipsis">
+      
+        13. Очистка табличного документа
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#14-html" class="md-nav__link">
-    14. Нажать на гиперссылку в поле HTML документа
+    <span class="md-ellipsis">
+      
+        14. Нажать на гиперссылку в поле HTML документа
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#15" class="md-nav__link">
-    15. Проверить признак модифицированности формы
+    <span class="md-ellipsis">
+      
+        15. Проверить признак модифицированности формы
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#16" class="md-nav__link">
-    16. Проверить признак формы "ТолькоПросмотр"
+    <span class="md-ellipsis">
+      
+        16. Проверить признак формы "ТолькоПросмотр"
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#17" class="md-nav__link">
-    17. Получить состояние объекта (Проведен, ПометкаУдаления, Код, Дата, Номер)
+    <span class="md-ellipsis">
+      
+        17. Получить состояние объекта (Проведен, ПометкаУдаления, Код, Дата, Номер)
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#18" class="md-nav__link">
-    18. Открыть внешнюю обработку или отчет
+    <span class="md-ellipsis">
+      
+        18. Открыть внешнюю обработку или отчет
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#19-id-ui-automation" class="md-nav__link">
-    19. Запомнить ID UI Automation элемента формы в переменную
+    <span class="md-ellipsis">
+      
+        19. Запомнить ID UI Automation элемента формы в переменную
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#20" class="md-nav__link">
-    20. Установка типа элементу формы
+    <span class="md-ellipsis">
+      
+        20. Установка типа элементу формы
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#21" class="md-nav__link">
-    21. Эмулятор работы сканера штрихкода
+    <span class="md-ellipsis">
+      
+        21. Эмулятор работы сканера штрихкода
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#22" class="md-nav__link">
-    22. Эмулятор внешних событий в модуле приложения
+    <span class="md-ellipsis">
+      
+        22. Эмулятор внешних событий в модуле приложения
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#23" class="md-nav__link">
-    23. Программное проведение документов и отмена проведение документов
+    <span class="md-ellipsis">
+      
+        23. Программное проведение документов и отмена проведение документов
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#24" class="md-nav__link">
-    24. Программное получение состояния объекта (справочника или документа)
+    <span class="md-ellipsis">
+      
+        24. Программное получение состояния объекта (справочника или документа)
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#25" class="md-nav__link">
-    25. Программное сравнение варианта отчета с эталоном
+    <span class="md-ellipsis">
+      
+        25. Программное сравнение варианта отчета с эталоном
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#26" class="md-nav__link">
-    26. Запомнить навигационные ссылки, чтобы потом пометить на удаление объекты по ним
+    <span class="md-ellipsis">
+      
+        26. Запомнить навигационные ссылки, чтобы потом пометить на удаление объекты по ним
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#27" class="md-nav__link">
-    27. Как установить текст письма в ДО
+    <span class="md-ellipsis">
+      
+        27. Как установить текст письма в ДО
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#28" class="md-nav__link">
-    28. Как узнать какие расширения установлены в клиент тестирования
+    <span class="md-ellipsis">
+      
+        28. Как узнать какие расширения установлены в клиент тестирования
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#29" class="md-nav__link">
-    29. Открытие текстового файла как будто это сделал пользователь.
+    <span class="md-ellipsis">
+      
+        29. Открытие текстового файла как будто это сделал пользователь.
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#30" class="md-nav__link">
-    30. Открытие табличного документа как будто это сделал пользователь.
+    <span class="md-ellipsis">
+      
+        30. Открытие табличного документа как будто это сделал пользователь.
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#31" class="md-nav__link">
-    31. Отключение отката текста введенного в поле во время теста.
+    <span class="md-ellipsis">
+      
+        31. Отключение отката текста введенного в поле во время теста.
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#32" class="md-nav__link">
-    32. Получение версии подсистемы.
+    <span class="md-ellipsis">
+      
+        32. Получение версии подсистемы.
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#33-8_2-8_5" class="md-nav__link">
-    33. Прочитать текущий вариант интерфейса клиента тестирования (Версия8_2, Такси, Версия8_5)
+    <span class="md-ellipsis">
+      
+        33. Прочитать текущий вариант интерфейса клиента тестирования (Версия8_2, Такси, Версия8_5)
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#34" class="md-nav__link">
-    34. Проверить вариант интерфейса клиента тестирования
+    <span class="md-ellipsis">
+      
+        34. Проверить вариант интерфейса клиента тестирования
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#35" class="md-nav__link">
-    35. Проверить вариант интерфейса клиента тестирования
+    <span class="md-ellipsis">
+      
+        35. Проверить вариант интерфейса клиента тестирования
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#36" class="md-nav__link">
-    36. Сохранить в переменную ссылку на справочник/документ и т.д. и потом открыть ссылку в клиенте тестирования
+    <span class="md-ellipsis">
+      
+        36. Сохранить в переменную ссылку на справочник/документ и т.д. и потом открыть ссылку в клиенте тестирования
+      
+    </span>
   </a>
   
 </li>
@@ -1239,55 +2197,102 @@
     </ul>
   
 </nav>
-    
-  </li>
+      
+    </li>
+  
 
-        
-      </ul>
-    </nav>
-  </li>
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
 
     
       
       
+  
+  
+  
+  
+    
+    
+    
+    
       
-
-
-  <li class="md-nav__item md-nav__item--nested">
+      
     
-      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-14" type="checkbox" id="nav-14">
     
-    <label class="md-nav__link" for="nav-14">
-      Mobile
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
-      </span>
-    </label>
-    <nav class="md-nav" aria-label="Mobile" data-md-level="1">
-      <label class="md-nav__title" for="nav-14">
-        <span class="md-nav__icon md-icon">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-        </span>
-        Mobile
-      </label>
-      <ul class="md-nav__list" data-md-scrollfix>
+    <li class="md-nav__item md-nav__item--nested">
+      
         
         
-          
-          
-          
-
-
-  <li class="md-nav__item">
-    <a href="../../mobile/mobile/" title="Тестирование мобильного клиента" class="md-nav__link">
-      Тестирование мобильного клиента
-    </a>
-  </li>
-
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
         
-      </ul>
-    </nav>
-  </li>
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mobile
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Mobile
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../mobile/mobile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тестирование мобильного клиента
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
 
     
   </ul>
@@ -1297,279 +2302,428 @@
               </div>
             
             
-              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
+
 <nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
   
   
     
   
   
     <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-      </span>
+      <span class="md-nav__icon md-icon"></span>
       Содержание
     </label>
-    <ul class="md-nav__list" data-md-scrollfix>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
   <a href="#1" class="md-nav__link">
-    1. Открытие окна "Функции технического специалиста" (Все функции).
+    <span class="md-ellipsis">
+      
+        1. Открытие окна "Функции технического специалиста" (Все функции).
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#2" class="md-nav__link">
-    2. Выполнить ожидание завершения фоновых заданий на стороне клиента тестирования.
+    <span class="md-ellipsis">
+      
+        2. Выполнить ожидание завершения фоновых заданий на стороне клиента тестирования.
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#3" class="md-nav__link">
-    3. Получить навигационную ссылку окна для любых окон, у которых возможно получить навигационную ссылку.
+    <span class="md-ellipsis">
+      
+        3. Получить навигационную ссылку окна для любых окон, у которых возможно получить навигационную ссылку.
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#4" class="md-nav__link">
-    4. Выполнить произвольный код на стороне клиента тестирования (клиентский код и серверный код).
+    <span class="md-ellipsis">
+      
+        4. Выполнить произвольный код на стороне клиента тестирования (клиентский код и серверный код).
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#5" class="md-nav__link">
-    5. Вычислить произвольное выражение на стороне клиента тестирования (клиентский код и серверный код).
+    <span class="md-ellipsis">
+      
+        5. Вычислить произвольное выражение на стороне клиента тестирования (клиентский код и серверный код).
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#61" class="md-nav__link">
-    6.1 Получить произвольное значение из реквизита формы, объекта связанного с формой.
+    <span class="md-ellipsis">
+      
+        6.1 Получить произвольное значение из реквизита формы, объекта связанного с формой.
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#62" class="md-nav__link">
-    6.2 Получить произвольное значение из реквизита формы, объекта связанного с формой.
+    <span class="md-ellipsis">
+      
+        6.2 Получить произвольное значение из реквизита формы, объекта связанного с формой.
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#7" class="md-nav__link">
-    7. Изменять произвольные данные формы, доступные для записи.
+    <span class="md-ellipsis">
+      
+        7. Изменять произвольные данные формы, доступные для записи.
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#8" class="md-nav__link">
-    8. Выполнить метод текущей формы.
+    <span class="md-ellipsis">
+      
+        8. Выполнить метод текущей формы.
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#9-web" class="md-nav__link">
-    9. Получать макеты из формы клиента тестирования без использования временных файлов. Также работает в web клиенте.
+    <span class="md-ellipsis">
+      
+        9. Получать макеты из формы клиента тестирования без использования временных файлов. Также работает в web клиенте.
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#10" class="md-nav__link">
-    10. Открытие окна "Настройка начальной страницы.
+    <span class="md-ellipsis">
+      
+        10. Открытие окна "Настройка начальной страницы.
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#11" class="md-nav__link">
-    11. Взаимодействие с активным окном.
+    <span class="md-ellipsis">
+      
+        11. Взаимодействие с активным окном.
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#12" class="md-nav__link">
-    12. Сортировка таблиц динамических списков
+    <span class="md-ellipsis">
+      
+        12. Сортировка таблиц динамических списков
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#13" class="md-nav__link">
-    13. Очистка табличного документа
+    <span class="md-ellipsis">
+      
+        13. Очистка табличного документа
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#14-html" class="md-nav__link">
-    14. Нажать на гиперссылку в поле HTML документа
+    <span class="md-ellipsis">
+      
+        14. Нажать на гиперссылку в поле HTML документа
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#15" class="md-nav__link">
-    15. Проверить признак модифицированности формы
+    <span class="md-ellipsis">
+      
+        15. Проверить признак модифицированности формы
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#16" class="md-nav__link">
-    16. Проверить признак формы "ТолькоПросмотр"
+    <span class="md-ellipsis">
+      
+        16. Проверить признак формы "ТолькоПросмотр"
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#17" class="md-nav__link">
-    17. Получить состояние объекта (Проведен, ПометкаУдаления, Код, Дата, Номер)
+    <span class="md-ellipsis">
+      
+        17. Получить состояние объекта (Проведен, ПометкаУдаления, Код, Дата, Номер)
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#18" class="md-nav__link">
-    18. Открыть внешнюю обработку или отчет
+    <span class="md-ellipsis">
+      
+        18. Открыть внешнюю обработку или отчет
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#19-id-ui-automation" class="md-nav__link">
-    19. Запомнить ID UI Automation элемента формы в переменную
+    <span class="md-ellipsis">
+      
+        19. Запомнить ID UI Automation элемента формы в переменную
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#20" class="md-nav__link">
-    20. Установка типа элементу формы
+    <span class="md-ellipsis">
+      
+        20. Установка типа элементу формы
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#21" class="md-nav__link">
-    21. Эмулятор работы сканера штрихкода
+    <span class="md-ellipsis">
+      
+        21. Эмулятор работы сканера штрихкода
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#22" class="md-nav__link">
-    22. Эмулятор внешних событий в модуле приложения
+    <span class="md-ellipsis">
+      
+        22. Эмулятор внешних событий в модуле приложения
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#23" class="md-nav__link">
-    23. Программное проведение документов и отмена проведение документов
+    <span class="md-ellipsis">
+      
+        23. Программное проведение документов и отмена проведение документов
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#24" class="md-nav__link">
-    24. Программное получение состояния объекта (справочника или документа)
+    <span class="md-ellipsis">
+      
+        24. Программное получение состояния объекта (справочника или документа)
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#25" class="md-nav__link">
-    25. Программное сравнение варианта отчета с эталоном
+    <span class="md-ellipsis">
+      
+        25. Программное сравнение варианта отчета с эталоном
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#26" class="md-nav__link">
-    26. Запомнить навигационные ссылки, чтобы потом пометить на удаление объекты по ним
+    <span class="md-ellipsis">
+      
+        26. Запомнить навигационные ссылки, чтобы потом пометить на удаление объекты по ним
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#27" class="md-nav__link">
-    27. Как установить текст письма в ДО
+    <span class="md-ellipsis">
+      
+        27. Как установить текст письма в ДО
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#28" class="md-nav__link">
-    28. Как узнать какие расширения установлены в клиент тестирования
+    <span class="md-ellipsis">
+      
+        28. Как узнать какие расширения установлены в клиент тестирования
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#29" class="md-nav__link">
-    29. Открытие текстового файла как будто это сделал пользователь.
+    <span class="md-ellipsis">
+      
+        29. Открытие текстового файла как будто это сделал пользователь.
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#30" class="md-nav__link">
-    30. Открытие табличного документа как будто это сделал пользователь.
+    <span class="md-ellipsis">
+      
+        30. Открытие табличного документа как будто это сделал пользователь.
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#31" class="md-nav__link">
-    31. Отключение отката текста введенного в поле во время теста.
+    <span class="md-ellipsis">
+      
+        31. Отключение отката текста введенного в поле во время теста.
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#32" class="md-nav__link">
-    32. Получение версии подсистемы.
+    <span class="md-ellipsis">
+      
+        32. Получение версии подсистемы.
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#33-8_2-8_5" class="md-nav__link">
-    33. Прочитать текущий вариант интерфейса клиента тестирования (Версия8_2, Такси, Версия8_5)
+    <span class="md-ellipsis">
+      
+        33. Прочитать текущий вариант интерфейса клиента тестирования (Версия8_2, Такси, Версия8_5)
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#34" class="md-nav__link">
-    34. Проверить вариант интерфейса клиента тестирования
+    <span class="md-ellipsis">
+      
+        34. Проверить вариант интерфейса клиента тестирования
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#35" class="md-nav__link">
-    35. Проверить вариант интерфейса клиента тестирования
+    <span class="md-ellipsis">
+      
+        35. Проверить вариант интерфейса клиента тестирования
+      
+    </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
   <a href="#36" class="md-nav__link">
-    36. Сохранить в переменную ссылку на справочник/документ и т.д. и потом открыть ссылку в клиенте тестирования
+    <span class="md-ellipsis">
+      
+        36. Сохранить в переменную ссылку на справочник/документ и т.д. и потом открыть ссылку в клиенте тестирования
+      
+    </span>
   </a>
   
 </li>
@@ -1582,19 +2736,19 @@
               </div>
             
           
-          <div class="md-content">
-            <article class="md-content__inner md-typeset">
+          
+            <div class="md-content" data-md-component="content">
               
-                
-                  <a href="https://github.com/pr-mex/vanessa-automation/edit/develop/docs/VAExtension/VAExtension.md" title="Редактировать страницу" class="md-content__button md-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71,7.04C21.1,6.65 21.1,6 20.71,5.63L18.37,3.29C18,2.9 17.35,2.9 16.96,3.29L15.12,5.12L18.87,8.87M3,17.25V21H6.75L17.81,9.93L14.06,6.18L3,17.25Z" /></svg>
-                  </a>
-                
+              <article class="md-content__inner md-typeset">
                 
                   
-                
-                
-                <h1 id="vaextension">Расширение VAExtension<a class="headerlink" href="#vaextension" title="Permanent link">&para;</a></h1>
+
+
+  
+  
+
+
+<h1 id="vaextension">Расширение VAExtension<a class="headerlink" href="#vaextension" title="Permanent link">&para;</a></h1>
 <p><strong>Расширение "VAExtension"</strong> предназначено для решения ряда технологических задач при запуске автотестов.
 Его необходимо установить в базу, в которой будет запускаться клиент тестирования.
 Исходники расширения можно скачать <a href="https://github.com/Pr-Mex/vanessa-automation/tree/develop/lib/VAExtension">тут</a>.
@@ -1639,330 +2793,289 @@
 <li>Сохранить в переменную ссылку на справочник/документ и т.д. и потом открыть ссылку в клиенте тестирования</li>
 </ol>
 <h2 id="1">1. Открытие окна "Функции технического специалиста" (Все функции).<a class="headerlink" href="#1" title="Permanent link">&para;</a></h2>
-<p>Нужно использовать шаг</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">   </span><span class="k">И </span><span class="nf">я открываю окно функции для технического специалиста (расширение)</span>
+<p>Нужно использовать шаг
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">   </span><span class="k">И </span><span class="nf">я открываю окно функции для технического специалиста (расширение)</span>
 </code></pre></div>
-
-<p><img alt="alt text" src="../pic/AllFunctions.png" title="Функции технического специалиста" />​</p>
+<img alt="alt text" src="../pic/AllFunctions.png" title="Функции технического специалиста" />​</p>
 <h2 id="2">2. Выполнить ожидание завершения фоновых заданий на стороне клиента тестирования.<a class="headerlink" href="#2" title="Permanent link">&para;</a></h2>
-<p>Нужно использовать шаги</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">   </span><span class="k">И </span><span class="nf">Я жду завершения выполнения всех фоновых заданий (Расширение)</span>
-<span class="nf">   </span><span class="k">И </span><span class="nf">Я жду завершения выполнения всех фоновых заданий в течение </span><span class="s">100</span><span class="nf"> секунд (Расширение)</span>
+<p>Нужно использовать шаги
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nf">   </span><span class="k">И </span><span class="nf">Я жду завершения выполнения всех фоновых заданий (Расширение)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nf">   </span><span class="k">И </span><span class="nf">Я жду завершения выполнения всех фоновых заданий в течение </span><span class="s">100</span><span class="nf"> секунд (Расширение)</span>
 </code></pre></div>
-
-<p><img alt="alt text" src="../pic/Fon.png" title="Ожидание завершения фоновых заданий" />​</p>
+<img alt="alt text" src="../pic/Fon.png" title="Ожидание завершения фоновых заданий" />​</p>
 <h2 id="3">3. Получить навигационную ссылку окна для любых окон, у которых возможно получить навигационную ссылку.<a class="headerlink" href="#3" title="Permanent link">&para;</a></h2>
-<p>Нужно использовать шаг</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">   </span><span class="k">И </span><span class="nf">я сохраняю навигационную ссылку текущего окна в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot; (Расширение)</span>
+<p>Нужно использовать шаг
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nf">   </span><span class="k">И </span><span class="nf">я сохраняю навигационную ссылку текущего окна в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot; (Расширение)</span>
 </code></pre></div>
-
-<p><img alt="alt text" src="../pic/Navig.png" title="Получение навигационной ссылки" />​</p>
+<img alt="alt text" src="../pic/Navig.png" title="Получение навигационной ссылки" />​</p>
 <h2 id="4">4. Выполнить произвольный код на стороне клиента тестирования (клиентский код и серверный код).<a class="headerlink" href="#4" title="Permanent link">&para;</a></h2>
-<p>Нужно использовать шаги</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">   </span><span class="k">И </span><span class="nf">я выполняю код встроенного языка (Расширение)</span>
-<span class="nf">   </span><span class="k">И </span><span class="nf">я выполняю код встроенного языка на сервере (Расширение)</span>
-<span class="nf">   </span><span class="k">И </span><span class="nf">я выполняю код встроенного языка на клиенте через буфер обмена (Расширение)</span>
-<span class="nf">   </span><span class="k">И </span><span class="nf">я выполняю код встроенного языка на сервере через буфер обмена (Расширение)</span>
-<span class="nf">   </span><span class="k">И </span><span class="nf">я выполняю код встроенного языка на сервере через буфер обмена в привилегированном режиме (Расширение)</span>
+<p>Нужно использовать шаги
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nf">   </span><span class="k">И </span><span class="nf">я выполняю код встроенного языка (Расширение)</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nf">   </span><span class="k">И </span><span class="nf">я выполняю код встроенного языка на сервере (Расширение)</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nf">   </span><span class="k">И </span><span class="nf">я выполняю код встроенного языка на клиенте через буфер обмена (Расширение)</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="nf">   </span><span class="k">И </span><span class="nf">я выполняю код встроенного языка на сервере через буфер обмена (Расширение)</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="nf">   </span><span class="k">И </span><span class="nf">я выполняю код встроенного языка на сервере через буфер обмена в привилегированном режиме (Расширение)</span>
 </code></pre></div>
-
-<p>Так же можно использовать шаги через файл события</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">   </span><span class="k">И </span><span class="nf">я выполняю код встроенного языка на клиенте через файл события (Расширение)</span>
-<span class="nf">   </span><span class="k">И </span><span class="nf">я выполняю код встроенного языка на сервере через файл события (Расширение)</span>
-<span class="nf">   </span><span class="k">И </span><span class="nf">я выполняю код встроенного языка на сервере через файл события в привилегированном режиме (Расширение)</span>
-<span class="nf">   </span><span class="k">И </span><span class="nf">я ожидаю &quot;</span><span class="s">10</span><span class="nf">&quot; секунд результат обработки последнего события через файл и запоминаю результат в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot;(Расширение)</span>
-</code></pre></div>
-
+Так же можно использовать шаги через файл события
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nf">   </span><span class="k">И </span><span class="nf">я выполняю код встроенного языка на клиенте через файл события (Расширение)</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nf">   </span><span class="k">И </span><span class="nf">я выполняю код встроенного языка на сервере через файл события (Расширение)</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nf">   </span><span class="k">И </span><span class="nf">я выполняю код встроенного языка на сервере через файл события в привилегированном режиме (Расширение)</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="nf">   </span><span class="k">И </span><span class="nf">я ожидаю &quot;</span><span class="s">10</span><span class="nf">&quot; секунд результат обработки последнего события через файл и запоминаю результат в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot;(Расширение)</span>
+</code></pre></div></p>
 <p>Для работы шага через файл события требуется предварительно запустить мониторинг каталога с событиями на стороне тестируемого приложения
-  Шаг запуска:</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">      </span><span class="k">И </span><span class="nf">я запускаю мониторинг каталога &quot;</span><span class="s">C:\temp</span><span class="nf">&quot; для внешних событий(Расширение)</span>
+  Шаг запуска:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nf">      </span><span class="k">И </span><span class="nf">я запускаю мониторинг каталога &quot;</span><span class="s">C:\temp</span><span class="nf">&quot; для внешних событий(Расширение)</span>
 </code></pre></div>
-
-<p>Шаг окончания работы</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">      </span><span class="k">И </span><span class="nf">я останавливаю мониторинг каталога внешних событий(Расширение)</span>
-</code></pre></div>
-
+  Шаг окончания работы
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nf">      </span><span class="k">И </span><span class="nf">я останавливаю мониторинг каталога внешних событий(Расширение)</span>
+</code></pre></div></p>
 <h2 id="5">5. Вычислить произвольное выражение на стороне клиента тестирования (клиентский код и серверный код).<a class="headerlink" href="#5" title="Permanent link">&para;</a></h2>
 <p>Нужно использовать шаги</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">   </span><span class="k">И </span><span class="nf">Я запоминаю значение выражения &#39;ВыражениеВстроенногоЯзыка&#39; в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot; (Расширение)</span>
-<span class="nf">   </span><span class="k">И </span><span class="nf">Я запоминаю значение выражения на сервере &#39;ВыражениеВстроенногоЯзыка&#39; в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot; (Расширение)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nf">   </span><span class="k">И </span><span class="nf">Я запоминаю значение выражения &#39;ВыражениеВстроенногоЯзыка&#39; в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot; (Расширение)</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nf">   </span><span class="k">И </span><span class="nf">Я запоминаю значение выражения на сервере &#39;ВыражениеВстроенногоЯзыка&#39; в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot; (Расширение)</span>
 </code></pre></div>
-
 <ul>
 <li>Простой вариант вычисления выражения на сервере. Пример:</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="k">И </span><span class="nf">Я запоминаю значение выражения на сервере &#39;МойОбщийМодульСервер.МойМетод()&#39; в переменную &#39;Результат&#39; (Расширение)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="k">И </span><span class="nf">Я запоминаю значение выражения на сервере &#39;МойОбщийМодульСервер.МойМетод()&#39; в переменную &#39;Результат&#39; (Расширение)</span>
 </code></pre></div>
-
 <ul>
 <li>Другой вариант выражения, когда используется переопределение ЗначениеДляВозврата</li>
 <li>Можно передать произвольный код в шаг вычисления выражения и этот код сам должен установить значение переменной <strong>ЗначениеДляВозврата</strong>. Пример, когда вычисляется выражение на клиенте:</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="k">И </span><span class="nf">Я запоминаю в переменную &#39;Выражение&#39; значение</span>
-<span class="k">&quot;&quot;&quot;</span><span class="s">bsl</span>
-<span class="s">    а = 1;</span>
-<span class="s">    б = 2;</span>
-<span class="s">    ЗначениеДляВозврата = а + б;</span>
-<span class="k">&quot;&quot;&quot;</span>
-
-<span class="k">И </span><span class="nf">Я запоминаю значение выражения &#39;$Выражение$&#39; в переменную &#39;Результат&#39; (Расширение)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="k">И </span><span class="nf">Я запоминаю в переменную &#39;Выражение&#39; значение</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="k">&quot;&quot;&quot;</span><span class="s">bsl</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="s">    а = 1;</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="s">    б = 2;</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="s">    ЗначениеДляВозврата = а + б;</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="k">&quot;&quot;&quot;</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="k">И </span><span class="nf">Я запоминаю значение выражения &#39;$Выражение$&#39; в переменную &#39;Результат&#39; (Расширение)</span>
 </code></pre></div>
-
 <ul>
 <li>Ещё пример выражения, когда используется переопределение ЗначениеДляВозврата</li>
 <li>Можно передать произвольный код в шаг вычисления выражения и этот код сам должен установить значение переменной <strong>ЗначениеДляВозврата</strong>. Пример, когда вычисляется выражение на сервере:</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="k">И </span><span class="nf">Я запоминаю в переменную &#39;Выражение&#39; значение</span>
-<span class="k">&quot;&quot;&quot;</span><span class="s">bsl</span>
-<span class="s">    Запрос = Новый Запрос;</span>
-<span class="s">    Запрос.Текст = </span>
-<span class="s">        &quot;ВЫБРАТЬ ПЕРВЫЕ 1</span>
-<span class="s">        |   Справочник1.Наименование КАК Наименование</span>
-<span class="s">        |ИЗ Справочник.Справочник1 КАК Справочник1</span>
-<span class="s">        |ГДЕ</span>
-<span class="s">        |   Справочник1.Код = &quot;&quot;000000001&quot;&quot;</span>
-<span class="s">        |УПОРЯДОЧИТЬ ПО Код&quot;;</span>
-<span class="s">    Выборка = Запрос.Выполнить().Выбрать();</span>
-<span class="s">    Если Выборка.Следующий() Тогда</span>
-<span class="s">        ЗначениеДляВозврата = Выборка.Наименование;</span>
-<span class="s">    Иначе</span>
-<span class="s">        ЗначениеДляВозврата = Неопределено;</span>
-<span class="s">    КонецЕсли;</span>
-<span class="k">&quot;&quot;&quot;</span>
-
-<span class="k">И </span><span class="nf">Я запоминаю значение выражения на сервере &#39;$Выражение$&#39; в переменную &#39;Результат&#39; (Расширение)</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="k">И </span><span class="nf">Я запоминаю в переменную &#39;Выражение&#39; значение</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">&quot;&quot;&quot;</span><span class="s">bsl</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="s">    Запрос = Новый Запрос;</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="s">    Запрос.Текст = </span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="s">        &quot;ВЫБРАТЬ ПЕРВЫЕ 1</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="s">        |   Справочник1.Наименование КАК Наименование</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="s">        |ИЗ Справочник.Справочник1 КАК Справочник1</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="s">        |ГДЕ</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="s">        |   Справочник1.Код = &quot;&quot;000000001&quot;&quot;</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="s">        |УПОРЯДОЧИТЬ ПО Код&quot;;</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="s">    Выборка = Запрос.Выполнить().Выбрать();</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="s">    Если Выборка.Следующий() Тогда</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="s">        ЗначениеДляВозврата = Выборка.Наименование;</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="s">    Иначе</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="s">        ЗначениеДляВозврата = Неопределено;</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="s">    КонецЕсли;</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="k">&quot;&quot;&quot;</span>
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a>
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="k">И </span><span class="nf">Я запоминаю значение выражения на сервере &#39;$Выражение$&#39; в переменную &#39;Результат&#39; (Расширение)</span>
 </code></pre></div>
-
 <ul>
 <li>Следующий пример показывает как получить из клиента тестирования объект произвольного типа, например Массив, который содержит заголовки элементов формы текущего окна</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="k">И </span><span class="nf">я запоминаю текущее окно как &#39;ЗаголовокОкна&#39;</span>
-<span class="k">И </span><span class="nf">Я запоминаю в переменную &#39;Выражение&#39; значение</span>
-<span class="k">&quot;&quot;&quot;</span><span class="s">bsl</span>
-<span class="s">    ТекОкно = VAExtensionКлиент.ПолучитьОкноПоЗаголовку(&quot;$ЗаголовокОкна$&quot;);</span>
-<span class="s">    Массив = Новый Массив;</span>
-<span class="s">    Для Каждого ТекЭлем Из ТекОкно.Элементы Цикл</span>
-<span class="s">        Попытка</span>
-<span class="s">            ТекЗаголовок = ТекЭлем.Заголовок;</span>
-<span class="s">            Если ЗначениеЗаполнено(ТекЗаголовок) Тогда</span>
-<span class="s">                Массив.Добавить(ТекЗаголовок);</span>
-<span class="s">            КонецЕсли;  </span>
-<span class="s">        Исключение</span>
-<span class="s">        Конецпопытки;   </span>
-<span class="s">    КонецЦикла;</span>
-<span class="s">    ЗначениеДляВозврата = VAExtensionОбщегоНазначения.ЗаписатьОбъектJSON(Массив);</span>
-<span class="k">&quot;&quot;&quot;</span>
-<span class="k">И </span><span class="nf">Я запоминаю значение выражения &#39;$Выражение$&#39; в переменную &#39;Результат&#39; (Расширение)</span>
-<span class="k">И </span><span class="nf">Я запоминаю значение выражения &#39;Ванесса.ПрочитатьОбъектJSON(Контекст.Результат)&#39; в переменную &#39;Результат&#39;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="k">И </span><span class="nf">я запоминаю текущее окно как &#39;ЗаголовокОкна&#39;</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="k">И </span><span class="nf">Я запоминаю в переменную &#39;Выражение&#39; значение</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="k">&quot;&quot;&quot;</span><span class="s">bsl</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="s">    ТекОкно = VAExtensionКлиент.ПолучитьОкноПоЗаголовку(&quot;$ЗаголовокОкна$&quot;);</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="s">    Массив = Новый Массив;</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="s">    Для Каждого ТекЭлем Из ТекОкно.Элементы Цикл</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="s">        Попытка</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="s">            ТекЗаголовок = ТекЭлем.Заголовок;</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="s">            Если ЗначениеЗаполнено(ТекЗаголовок) Тогда</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="s">                Массив.Добавить(ТекЗаголовок);</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="s">            КонецЕсли;  </span>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="s">        Исключение</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="s">        Конецпопытки;   </span>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="s">    КонецЦикла;</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="s">    ЗначениеДляВозврата = VAExtensionОбщегоНазначения.ЗаписатьОбъектJSON(Массив);</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="k">&quot;&quot;&quot;</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="k">И </span><span class="nf">Я запоминаю значение выражения &#39;$Выражение$&#39; в переменную &#39;Результат&#39; (Расширение)</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="k">И </span><span class="nf">Я запоминаю значение выражения &#39;Ванесса.ПрочитатьОбъектJSON(Контекст.Результат)&#39; в переменную &#39;Результат&#39;</span>
 </code></pre></div>
-
 <h2 id="61">6.1 Получить произвольное значение из реквизита формы, объекта связанного с формой.<a class="headerlink" href="#61" title="Permanent link">&para;</a></h2>
-<p>Для вывода текущих значений активного окна клиента тестирования нужно выполнить шаг. При этом на стороне менеджера тестирования появится печатная форма. Данный шаг нужно использовать для отладки и не нужно использовать в реальных сценариях.</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">   </span><span class="k">И </span><span class="nf">я вывожу данные текущего окна (Расширение)</span>
+<p>Для вывода текущих значений активного окна клиента тестирования нужно выполнить шаг. При этом на стороне менеджера тестирования появится печатная форма. Данный шаг нужно использовать для отладки и не нужно использовать в реальных сценариях.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nf">   </span><span class="k">И </span><span class="nf">я вывожу данные текущего окна (Расширение)</span>
 </code></pre></div>
-
-<p><img alt="alt text" src="../pic/CurWindow.png" title="Значения текущего окна" />​</p>
+<img alt="alt text" src="../pic/CurWindow.png" title="Значения текущего окна" />​</p>
 <h2 id="62">6.2 Получить произвольное значение из реквизита формы, объекта связанного с формой.<a class="headerlink" href="#62" title="Permanent link">&para;</a></h2>
-<p>Для получения значения произвольного реквизита формы нужно выполнить шаг.</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">   </span><span class="k">И </span><span class="nf">Я запоминаю значение текущего окна &#39;ВыражениеВстроенногоЯзыка&#39; в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot; (Расширение)</span>
+<p>Для получения значения произвольного реквизита формы нужно выполнить шаг.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nf">   </span><span class="k">И </span><span class="nf">Я запоминаю значение текущего окна &#39;ВыражениеВстроенногоЯзыка&#39; в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot; (Расширение)</span>
 </code></pre></div>
-
-<p>Выражение пишется в виде "_ТекущееОкно.Объект.ПометкаУдаления" или "_CurrentWindow.Object.DeletionMark".</p>
+Выражение пишется в виде "_ТекущееОкно.Объект.ПометкаУдаления" или "_CurrentWindow.Object.DeletionMark".</p>
 <h2 id="7">7. Изменять произвольные данные формы, доступные для записи.<a class="headerlink" href="#7" title="Permanent link">&para;</a></h2>
-<p>Для изменения значения произвольного реквизита текушей формы нужно выполнить шаг.</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">   </span><span class="k">И </span><span class="nf">я выполняю выражение &quot;</span><span class="s">ВыражениеВстроенногоЯзыка</span><span class="nf">&quot; в текущем окне (Расширение)</span>
+<p>Для изменения значения произвольного реквизита текушей формы нужно выполнить шаг.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nf">   </span><span class="k">И </span><span class="nf">я выполняю выражение &quot;</span><span class="s">ВыражениеВстроенногоЯзыка</span><span class="nf">&quot; в текущем окне (Расширение)</span>
 </code></pre></div>
-
-<p>Выражение пишется в виде '_ТекущееОкно.Заголовок = "Новый заголовок"' или '_CurrentWindow.Caption = "New caption"'.</p>
+ Выражение пишется в виде '_ТекущееОкно.Заголовок = "Новый заголовок"' или '_CurrentWindow.Caption = "New caption"'.</p>
 <ul>
-<li>Пример. Изменение заголовка текущего окна клиента тестирования:</li>
+<li>Пример. Изменение заголовка текущего окна клиента тестирования:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="k">И </span><span class="nf">я выполняю выражение &#39;_ТекущееОкно.Заголовок = &quot;</span><span class="s">МойЗаголовок</span><span class="nf">&quot;&#39; в текущем окне (Расширение)</span>
+</code></pre></div></li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="k">И </span><span class="nf">я выполняю выражение &#39;_ТекущееОкно.Заголовок = &quot;</span><span class="s">МойЗаголовок</span><span class="nf">&quot;&#39; в текущем окне (Расширение)</span>
-</code></pre></div>
-
 <h2 id="8">8. Выполнить метод текущей формы.<a class="headerlink" href="#8" title="Permanent link">&para;</a></h2>
-<p>Для выполнения произвольного метода текщей формы нужно выполнить шаг.</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">   </span><span class="k">И </span><span class="nf">я выполняю выражение &quot;</span><span class="s">ВыражениеВстроенногоЯзыка</span><span class="nf">&quot; в текущем окне (Расширение)</span>
+<p>Для выполнения произвольного метода текщей формы нужно выполнить шаг.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nf">   </span><span class="k">И </span><span class="nf">я выполняю выражение &quot;</span><span class="s">ВыражениеВстроенногоЯзыка</span><span class="nf">&quot; в текущем окне (Расширение)</span>
 </code></pre></div>
-
-<p>Выражение пишется в виде '_ТекущееОкно.ОткрытьСправкуФормы()' или '_CurrentWindow.ОткрытьСправкуФормы()'.</p>
+ Выражение пишется в виде '_ТекущееОкно.ОткрытьСправкуФормы()' или '_CurrentWindow.ОткрытьСправкуФормы()'.</p>
 <h2 id="9-web">9. Получать макеты из формы клиента тестирования без использования временных файлов. Также работает в web клиенте.<a class="headerlink" href="#9-web" title="Permanent link">&para;</a></h2>
 <p><img alt="alt text" src="../pic/GetMaket.png" title="Получение макета" />​
 При включении данной опции макеты, которые получает Vanessa Automation из клиента тестирования будут передаваться на сторону менеджера тестирования с помощью расширения. Это позволяет обойти проблему, что из web клиента макет можно прочитать только по ячейкам.
-При написании собственных шагов, работающих с табличными документами нужно использовать метод</p>
-<div class="codehilite"><pre><span></span><code>   <span class="nv">Ванесса</span><span class="o">.</span><span class="nf">ПолучитьТабличныйДокументTestClient</span><span class="p">(</span><span class="nv">ЭлементФормы</span><span class="p">)</span>
-</code></pre></div>
-
+При написании собственных шагов, работающих с табличными документами нужно использовать метод
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>   <span class="nv">Ванесса</span><span class="o">.</span><span class="nf">ПолучитьТабличныйДокументTestClient</span><span class="p">(</span><span class="nv">ЭлементФормы</span><span class="p">)</span>
+</code></pre></div></p>
 <h2 id="10">10. Открытие окна "Настройка начальной страницы.<a class="headerlink" href="#10" title="Permanent link">&para;</a></h2>
-<p>Нужно использовать шаг</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">   </span><span class="k">И </span><span class="nf">я открываю окно настройка начальной страницы (расширение)</span>
+<p>Нужно использовать шаг
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nf">   </span><span class="k">И </span><span class="nf">я открываю окно настройка начальной страницы (расширение)</span>
 </code></pre></div>
-
-<p><img alt="alt text" src="../pic/StartPage.png" title="Функции технического специалиста" />​</p>
+<img alt="alt text" src="../pic/StartPage.png" title="Функции технического специалиста" />​</p>
 <h2 id="11">11. Взаимодействие с активным окном.<a class="headerlink" href="#11" title="Permanent link">&para;</a></h2>
-<p>Нужно использовать шаги</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я запоминаю текущее окно как &quot;</span><span class="s">ЗаголовокОкна</span><span class="nf">&quot;</span>
-<span class="nf">    </span><span class="k">И </span><span class="nf">я выполняю код встроенного языка ( Расширение )</span>
-<span class="nf">    </span><span class="k">&quot;&quot;&quot;</span><span class="s">bsl</span>
-<span class="s">        ТекОкно = VAExtensionКлиент.ПолучитьОкноПоЗаголовку(&quot;$ЗаголовокОкна$&quot;);</span>
-<span class="s">        Список = ТекОкно.Список;</span>
-
-<span class="s">        Сортировка = Список.КомпоновщикНастроек.Настройки.Порядок.Элементы;</span>
-<span class="s">        Сортировка.Очистить();</span>
-
-<span class="s">        УсловиеСортировки = Сортировка.Добавить(Тип(&quot;ЭлементПорядкаКомпоновкиДанных&quot;));</span>
-<span class="s">        УсловиеСортировки.Поле = Новый ПолеКомпоновкиДанных(&quot;Код&quot;);</span>
-<span class="s">        УсловиеСортировки.ТипУпорядочивания = НаправлениеСортировкиКомпоновкиДанных.Возр;</span>
-<span class="s">        Список.КомпоновщикНастроек.ЗагрузитьНастройки(Список.КомпоновщикНастроек.Настройки);</span>
-<span class="s">    </span><span class="k">&quot;&quot;&quot;</span>
+<p>Нужно использовать шаги
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я запоминаю текущее окно как &quot;</span><span class="s">ЗаголовокОкна</span><span class="nf">&quot;</span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я выполняю код встроенного языка ( Расширение )</span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="nf">    </span><span class="k">&quot;&quot;&quot;</span><span class="s">bsl</span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="s">        ТекОкно = VAExtensionКлиент.ПолучитьОкноПоЗаголовку(&quot;$ЗаголовокОкна$&quot;);</span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="s">        Список = ТекОкно.Список;</span>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a>
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="s">        Сортировка = Список.КомпоновщикНастроек.Настройки.Порядок.Элементы;</span>
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="s">        Сортировка.Очистить();</span>
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a>
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="s">        УсловиеСортировки = Сортировка.Добавить(Тип(&quot;ЭлементПорядкаКомпоновкиДанных&quot;));</span>
+<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="s">        УсловиеСортировки.Поле = Новый ПолеКомпоновкиДанных(&quot;Код&quot;);</span>
+<a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a><span class="s">        УсловиеСортировки.ТипУпорядочивания = НаправлениеСортировкиКомпоновкиДанных.Возр;</span>
+<a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a><span class="s">        Список.КомпоновщикНастроек.ЗагрузитьНастройки(Список.КомпоновщикНастроек.Настройки);</span>
+<a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a><span class="s">    </span><span class="k">&quot;&quot;&quot;</span>
 </code></pre></div>
-
-<p>Такой код будет выполнен в контексте клиента тестирования.
+Такой код будет выполнен в контексте клиента тестирования.
 Метод VAExtensionКлиент.ПолучитьОкноПоЗаголовку() вернёт данные окна по его заголовку.
 Далее можно взаимодействовать с элементами окна.
 В данном примере происходит установка сортировки динамического списка с именем Список по колонке Код по возрастанию.</p>
-<p>Следующий пример показывает как получить из клиента тестирования объект произвольного типа, например Массив, который содержит заголовки элементов формы текущего окна</p>
-<div class="codehilite"><pre><span></span><code><span class="k">И </span><span class="nf">я запоминаю текущее окно как &#39;ЗаголовокОкна&#39;</span>
-<span class="k">И </span><span class="nf">Я запоминаю в переменную &#39;Выражение&#39; значение</span>
-<span class="k">&quot;&quot;&quot;</span><span class="s">bsl</span>
-<span class="s">    ТекОкно = VAExtensionКлиент.ПолучитьОкноПоЗаголовку(&quot;$ЗаголовокОкна$&quot;);</span>
-<span class="s">    Массив = Новый Массив;</span>
-<span class="s">    Для Каждого ТекЭлем Из ТекОкно.Элементы Цикл</span>
-<span class="s">        Попытка</span>
-<span class="s">            ТекЗаголовок = ТекЭлем.Заголовок;</span>
-<span class="s">            Если ЗначениеЗаполнено(ТекЗаголовок) Тогда</span>
-<span class="s">                Массив.Добавить(ТекЗаголовок);</span>
-<span class="s">            КонецЕсли;  </span>
-<span class="s">        Исключение</span>
-<span class="s">        Конецпопытки;   </span>
-
-<span class="s">    КонецЦикла;</span>
-<span class="s">    ЗначениеДляВозврата = VAExtensionОбщегоНазначения.ЗаписатьОбъектJSON(Массив);</span>
-<span class="k">&quot;&quot;&quot;</span>
-
-<span class="k">И </span><span class="nf">Я запоминаю значение выражения &#39;$Выражение$&#39; в переменную &#39;Результат&#39; (Расширение)</span>
-<span class="k">И </span><span class="nf">Я запоминаю значение выражения &#39;Ванесса.ПрочитатьОбъектJSON(Контекст.Результат)&#39; в переменную &#39;Результат&#39;</span>
-</code></pre></div>
-
+<p>Следующий пример показывает как получить из клиента тестирования объект произвольного типа, например Массив, который содержит заголовки элементов формы текущего окна
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="k">И </span><span class="nf">я запоминаю текущее окно как &#39;ЗаголовокОкна&#39;</span>
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a><span class="k">И </span><span class="nf">Я запоминаю в переменную &#39;Выражение&#39; значение</span>
+<a id="__codelineno-20-3" name="__codelineno-20-3" href="#__codelineno-20-3"></a><span class="k">&quot;&quot;&quot;</span><span class="s">bsl</span>
+<a id="__codelineno-20-4" name="__codelineno-20-4" href="#__codelineno-20-4"></a><span class="s">    ТекОкно = VAExtensionКлиент.ПолучитьОкноПоЗаголовку(&quot;$ЗаголовокОкна$&quot;);</span>
+<a id="__codelineno-20-5" name="__codelineno-20-5" href="#__codelineno-20-5"></a><span class="s">    Массив = Новый Массив;</span>
+<a id="__codelineno-20-6" name="__codelineno-20-6" href="#__codelineno-20-6"></a><span class="s">    Для Каждого ТекЭлем Из ТекОкно.Элементы Цикл</span>
+<a id="__codelineno-20-7" name="__codelineno-20-7" href="#__codelineno-20-7"></a><span class="s">        Попытка</span>
+<a id="__codelineno-20-8" name="__codelineno-20-8" href="#__codelineno-20-8"></a><span class="s">            ТекЗаголовок = ТекЭлем.Заголовок;</span>
+<a id="__codelineno-20-9" name="__codelineno-20-9" href="#__codelineno-20-9"></a><span class="s">            Если ЗначениеЗаполнено(ТекЗаголовок) Тогда</span>
+<a id="__codelineno-20-10" name="__codelineno-20-10" href="#__codelineno-20-10"></a><span class="s">                Массив.Добавить(ТекЗаголовок);</span>
+<a id="__codelineno-20-11" name="__codelineno-20-11" href="#__codelineno-20-11"></a><span class="s">            КонецЕсли;  </span>
+<a id="__codelineno-20-12" name="__codelineno-20-12" href="#__codelineno-20-12"></a><span class="s">        Исключение</span>
+<a id="__codelineno-20-13" name="__codelineno-20-13" href="#__codelineno-20-13"></a><span class="s">        Конецпопытки;   </span>
+<a id="__codelineno-20-14" name="__codelineno-20-14" href="#__codelineno-20-14"></a>
+<a id="__codelineno-20-15" name="__codelineno-20-15" href="#__codelineno-20-15"></a><span class="s">    КонецЦикла;</span>
+<a id="__codelineno-20-16" name="__codelineno-20-16" href="#__codelineno-20-16"></a><span class="s">    ЗначениеДляВозврата = VAExtensionОбщегоНазначения.ЗаписатьОбъектJSON(Массив);</span>
+<a id="__codelineno-20-17" name="__codelineno-20-17" href="#__codelineno-20-17"></a><span class="k">&quot;&quot;&quot;</span>
+<a id="__codelineno-20-18" name="__codelineno-20-18" href="#__codelineno-20-18"></a>
+<a id="__codelineno-20-19" name="__codelineno-20-19" href="#__codelineno-20-19"></a><span class="k">И </span><span class="nf">Я запоминаю значение выражения &#39;$Выражение$&#39; в переменную &#39;Результат&#39; (Расширение)</span>
+<a id="__codelineno-20-20" name="__codelineno-20-20" href="#__codelineno-20-20"></a><span class="k">И </span><span class="nf">Я запоминаю значение выражения &#39;Ванесса.ПрочитатьОбъектJSON(Контекст.Результат)&#39; в переменную &#39;Результат&#39;</span>
+</code></pre></div></p>
 <h2 id="12">12. Сортировка таблиц динамических списков<a class="headerlink" href="#12" title="Permanent link">&para;</a></h2>
-<p>Нужно использовать шаги</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; текущего окна я устанавливаю сортировку по колонке &quot;</span><span class="s">ИмяКолонки</span><span class="nf">&quot; по возрастанию (расширение)</span>
-<span class="nf">    </span><span class="k">И </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; текущего окна я устанавливаю сортировку по колонке &quot;</span><span class="s">ИмяКолонки</span><span class="nf">&quot; по убыванию (расширение)</span>
-</code></pre></div>
-
+<p>Нужно использовать шаги
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; текущего окна я устанавливаю сортировку по колонке &quot;</span><span class="s">ИмяКолонки</span><span class="nf">&quot; по возрастанию (расширение)</span>
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; текущего окна я устанавливаю сортировку по колонке &quot;</span><span class="s">ИмяКолонки</span><span class="nf">&quot; по убыванию (расширение)</span>
+</code></pre></div></p>
 <h2 id="13">13. Очистка табличного документа<a class="headerlink" href="#13" title="Permanent link">&para;</a></h2>
-<p>Нужно использовать шаг</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я очищаю табличный документ &quot;</span><span class="s">ИмяРеквизита</span><span class="nf">&quot; (расширение)</span>
-</code></pre></div>
-
+<p>Нужно использовать шаг
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я очищаю табличный документ &quot;</span><span class="s">ИмяРеквизита</span><span class="nf">&quot; (расширение)</span>
+</code></pre></div></p>
 <h2 id="14-html">14. Нажать на гиперссылку в поле HTML документа<a class="headerlink" href="#14-html" title="Permanent link">&para;</a></h2>
-<p>Для нажатия по представлению гиперссылки, которое видит пользователь</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">у поля с именем &quot;</span><span class="s">ИмяЭлемента</span><span class="nf">&quot; я нажимаю гиперссылку по представлению &quot;</span><span class="s">ЧастьПредставленияСсылки</span><span class="nf">&quot; (расширение)</span>
+<p>Для нажатия по представлению гиперссылки, которое видит пользователь
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">у поля с именем &quot;</span><span class="s">ИмяЭлемента</span><span class="nf">&quot; я нажимаю гиперссылку по представлению &quot;</span><span class="s">ЧастьПредставленияСсылки</span><span class="nf">&quot; (расширение)</span>
 </code></pre></div>
-
-<p>Для нажатия по значению гиперссылки</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">у поля с именем &quot;</span><span class="s">ИмяЭлемента</span><span class="nf">&quot; я нажимаю гиперссылку по значению &quot;</span><span class="s">ЧастьЗначенияСсылки</span><span class="nf">&quot; (расширение)</span>
+Для нажатия по значению гиперссылки
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">у поля с именем &quot;</span><span class="s">ИмяЭлемента</span><span class="nf">&quot; я нажимаю гиперссылку по значению &quot;</span><span class="s">ЧастьЗначенияСсылки</span><span class="nf">&quot; (расширение)</span>
 </code></pre></div>
-
-<p>Для нажатия по номеру гиперссылки</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">у поля с именем &quot;</span><span class="s">ИмяЭлемента</span><span class="nf">&quot; я нажимаю гиперссылку по номеру </span><span class="s">0</span><span class="nf"> (расширение)</span>
-</code></pre></div>
-
+Для нажатия по номеру гиперссылки
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">у поля с именем &quot;</span><span class="s">ИмяЭлемента</span><span class="nf">&quot; я нажимаю гиперссылку по номеру </span><span class="s">0</span><span class="nf"> (расширение)</span>
+</code></pre></div></p>
 <h2 id="15">15. Проверить признак модифицированности формы<a class="headerlink" href="#15" title="Permanent link">&para;</a></h2>
-<p>Нужно использовать шаги</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">форма текущего окна имеет признак модифицированности (расширение)</span>
-<span class="nf">    </span><span class="k">И </span><span class="nf">форма текущего окна не имеет признак модифицированности (расширение)</span>
-</code></pre></div>
-
+<p>Нужно использовать шаги
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">форма текущего окна имеет признак модифицированности (расширение)</span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="nf">    </span><span class="k">И </span><span class="nf">форма текущего окна не имеет признак модифицированности (расширение)</span>
+</code></pre></div></p>
 <h2 id="16">16. Проверить признак формы "ТолькоПросмотр"<a class="headerlink" href="#16" title="Permanent link">&para;</a></h2>
-<p>Нужно использовать шаги</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">форма текущего окна имеет признак только просмотр (расширение)</span>
-<span class="nf">    </span><span class="k">И </span><span class="nf">форма текущего окна не имеет признак только просмотр (расширение)</span>
-</code></pre></div>
-
+<p>Нужно использовать шаги
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">форма текущего окна имеет признак только просмотр (расширение)</span>
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a><span class="nf">    </span><span class="k">И </span><span class="nf">форма текущего окна не имеет признак только просмотр (расширение)</span>
+</code></pre></div></p>
 <h2 id="17">17. Получить состояние объекта (Проведен, ПометкаУдаления, Код, Дата, Номер)<a class="headerlink" href="#17" title="Permanent link">&para;</a></h2>
-<p>Некоторые свойства объектов, такие как ПометкаУдаления, Проведен могут не выведены на форму. Чтобы их получить из формы открытого объекта Справочника или Документа можно использовать шаг. После выполнения шага будут созданы соответствующие переменные.</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я получаю состояние текущего объекта (Расширение)</span>
-</code></pre></div>
-
+<p>Некоторые свойства объектов, такие как ПометкаУдаления, Проведен могут не выведены на форму. Чтобы их получить из формы открытого объекта Справочника или Документа можно использовать шаг. После выполнения шага будут созданы соответствующие переменные.
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я получаю состояние текущего объекта (Расширение)</span>
+</code></pre></div></p>
 <h2 id="18">18. Открыть внешнюю обработку или отчет<a class="headerlink" href="#18" title="Permanent link">&para;</a></h2>
-<p>Для этого надо использовать шаг</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я открываю внешнюю обработку или отчет &quot;</span><span class="s">ИмяФайла</span><span class="nf">&quot; (Расширение)</span>
-</code></pre></div>
-
+<p>Для этого надо использовать шаг
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я открываю внешнюю обработку или отчет &quot;</span><span class="s">ИмяФайла</span><span class="nf">&quot; (Расширение)</span>
+</code></pre></div></p>
 <h2 id="19-id-ui-automation">19. Запомнить ID UI Automation элемента формы в переменную<a class="headerlink" href="#19-id-ui-automation" title="Permanent link">&para;</a></h2>
-<p>Для этого надо использовать шаг</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я запоминаю элемент формы клиента тестирования &quot;</span><span class="s">Заголовок элемента</span><span class="nf">&quot; в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot; UI Automation (расширение)</span>
-<span class="nf">    </span><span class="k">И </span><span class="nf">я запоминаю элемент формы клиента тестирования с именем &quot;</span><span class="s">ИмяЭлемента</span><span class="nf">&quot; в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot; UI Automation (расширение)</span>
+<p>Для этого надо использовать шаг
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я запоминаю элемент формы клиента тестирования &quot;</span><span class="s">Заголовок элемента</span><span class="nf">&quot; в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot; UI Automation (расширение)</span>
+<a id="__codelineno-30-2" name="__codelineno-30-2" href="#__codelineno-30-2"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я запоминаю элемент формы клиента тестирования с именем &quot;</span><span class="s">ИмяЭлемента</span><span class="nf">&quot; в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot; UI Automation (расширение)</span>
 </code></pre></div>
-
-<p>Данные шаги работают следующим образом. Они заменяют текст подсказки элемента формы на специальное сгенерированное значение.
+Данные шаги работают следующим образом. Они заменяют текст подсказки элемента формы на специальное сгенерированное значение.
 Затем выполняют поиск элемента формы с помощью механизма UI Automation.
 Затем возвращают текст подсказки элемента формы обратно.</p>
 <h2 id="20">20. Установка типа элементу формы<a class="headerlink" href="#20" title="Permanent link">&para;</a></h2>
-<p>Нужно использовать шаги</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я запоминаю текущее окно как &quot;</span><span class="s">ЗаголовокОкна</span><span class="nf">&quot;</span>
-<span class="nf">    </span><span class="k">И </span><span class="nf">я выполняю код встроенного языка ( Расширение )</span>
-<span class="nf">    </span><span class="k">&quot;&quot;&quot;</span><span class="s">bsl</span>
-<span class="s">        ТекОкно = VAExtensionКлиент.ПолучитьОкноПоЗаголовку(&quot;$ЗаголовокОкна$&quot;);</span>
-<span class="s">        Массив = Новый Массив(); </span>
-<span class="s">        Массив.Добавить(Тип(&quot;СправочникСсылка.Справочник1&quot;)); </span>
-<span class="s">        ОписаниеТипа = Новый ОписаниеТипов(Массив); </span>
-<span class="s">        ТекОкно.Элементы.РеквизитСУстановкойТипа.ОграничениеТипа = ОписаниеТипа;</span>
-<span class="s">    </span><span class="k">&quot;&quot;&quot;</span>
+<p>Нужно использовать шаги
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я запоминаю текущее окно как &quot;</span><span class="s">ЗаголовокОкна</span><span class="nf">&quot;</span>
+<a id="__codelineno-31-2" name="__codelineno-31-2" href="#__codelineno-31-2"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я выполняю код встроенного языка ( Расширение )</span>
+<a id="__codelineno-31-3" name="__codelineno-31-3" href="#__codelineno-31-3"></a><span class="nf">    </span><span class="k">&quot;&quot;&quot;</span><span class="s">bsl</span>
+<a id="__codelineno-31-4" name="__codelineno-31-4" href="#__codelineno-31-4"></a><span class="s">        ТекОкно = VAExtensionКлиент.ПолучитьОкноПоЗаголовку(&quot;$ЗаголовокОкна$&quot;);</span>
+<a id="__codelineno-31-5" name="__codelineno-31-5" href="#__codelineno-31-5"></a><span class="s">        Массив = Новый Массив(); </span>
+<a id="__codelineno-31-6" name="__codelineno-31-6" href="#__codelineno-31-6"></a><span class="s">        Массив.Добавить(Тип(&quot;СправочникСсылка.Справочник1&quot;)); </span>
+<a id="__codelineno-31-7" name="__codelineno-31-7" href="#__codelineno-31-7"></a><span class="s">        ОписаниеТипа = Новый ОписаниеТипов(Массив); </span>
+<a id="__codelineno-31-8" name="__codelineno-31-8" href="#__codelineno-31-8"></a><span class="s">        ТекОкно.Элементы.РеквизитСУстановкойТипа.ОграничениеТипа = ОписаниеТипа;</span>
+<a id="__codelineno-31-9" name="__codelineno-31-9" href="#__codelineno-31-9"></a><span class="s">    </span><span class="k">&quot;&quot;&quot;</span>
 </code></pre></div>
-
-<p>Такой код будет выполнен в контексте клиента тестирования.
+Такой код будет выполнен в контексте клиента тестирования.
 Метод VAExtensionКлиент.ПолучитьОкноПоЗаголовку() вернёт данные окна по его заголовку.
 Далее можно взаимодействовать с элементами окна.
 В данном примере происходит установка элементу формы с именем "РеквизитСУстановкойТипа" типа "СправочникСсылка.Справочник1"</p>
 <h2 id="21">21. Эмулятор работы сканера штрихкода<a class="headerlink" href="#21" title="Permanent link">&para;</a></h2>
-<p>Для этого надо использовать шаг</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я эмулирую сканирование штрихкода БПО &quot;</span><span class="s">4670003110011</span><span class="nf">&quot; через буфер обмена</span>
-<span class="nf">    </span><span class="k">И </span><span class="nf">я эмулирую сканирование штрихкода БПО &quot;</span><span class="s">4670003110011</span><span class="nf">&quot; через файл события (Расширение)</span>
-<span class="nf">    </span><span class="k">И </span><span class="nf">я ожидаю &quot;</span><span class="s">10</span><span class="nf">&quot; секунд результат обработки последнего события через файл и запоминаю результат в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot;(Расширение)</span>
+<p>Для этого надо использовать шаг
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я эмулирую сканирование штрихкода БПО &quot;</span><span class="s">4670003110011</span><span class="nf">&quot; через буфер обмена</span>
+<a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я эмулирую сканирование штрихкода БПО &quot;</span><span class="s">4670003110011</span><span class="nf">&quot; через файл события (Расширение)</span>
+<a id="__codelineno-32-3" name="__codelineno-32-3" href="#__codelineno-32-3"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я ожидаю &quot;</span><span class="s">10</span><span class="nf">&quot; секунд результат обработки последнего события через файл и запоминаю результат в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot;(Расширение)</span>
 </code></pre></div>
-
-<p>Для работы шага через файл события требуется предварительно запустить мониторинг каталога с событиями на стороне тестируемого приложения
-  Шаг запуска:</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">      </span><span class="k">И </span><span class="nf">я запускаю мониторинг каталога &quot;</span><span class="s">C:\temp</span><span class="nf">&quot; для внешних событий(Расширение)</span>
+Для работы шага через файл события требуется предварительно запустить мониторинг каталога с событиями на стороне тестируемого приложения
+  Шаг запуска:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="nf">      </span><span class="k">И </span><span class="nf">я запускаю мониторинг каталога &quot;</span><span class="s">C:\temp</span><span class="nf">&quot; для внешних событий(Расширение)</span>
 </code></pre></div>
-
-<p>Шаг окончания работы</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">      </span><span class="k">И </span><span class="nf">я останавливаю мониторинг каталога внешних событий(Расширение)</span>
+  Шаг окончания работы
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="nf">      </span><span class="k">И </span><span class="nf">я останавливаю мониторинг каталога внешних событий(Расширение)</span>
 </code></pre></div>
-
-<p>Дополнительные шаги для генерации кодов маркировки Честного Знака и кодов упаковки SSCC</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">        </span><span class="k">И </span><span class="nf">я генерирую код маркировки честного знака для GTIN &quot;</span><span class="s">12345678901234</span><span class="nf">&quot; типа &quot;</span><span class="s">5</span><span class="nf">&quot; в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot; (расширение)</span>
-<span class="nf">        </span><span class="k">И </span><span class="nf">я генерирую код маркировки честного знака для GTIN &quot;</span><span class="s">12345678901234</span><span class="nf">&quot; типа &quot;</span><span class="s">23</span><span class="nf">&quot; в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot; (расширение)</span>
-<span class="nf">        </span><span class="k">И </span><span class="nf">я генерирую код маркировки честного знака для GTIN &quot;</span><span class="s">12345678901234</span><span class="nf">&quot; типа &quot;</span><span class="s">30</span><span class="nf">&quot; в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot; (расширение)</span>
-<span class="nf">        </span><span class="k">И </span><span class="nf">я генерирую код маркировки честного знака для GTIN &quot;</span><span class="s">12345678901234</span><span class="nf">&quot; типа &quot;</span><span class="s">31</span><span class="nf">&quot; в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot; (расширение)</span>
-<span class="nf">        </span><span class="k">И </span><span class="nf">я генерирую код маркировки честного знака для GTIN &quot;&quot; типа &quot;&quot; в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot; (расширение)</span>
-<span class="nf">        </span><span class="k">И </span><span class="nf">я генерирую SSCC честного знака для GS</span><span class="s">1</span><span class="nf"> &quot;</span><span class="s">460700958</span><span class="nf">&quot; уровня &quot;</span><span class="s">1</span><span class="nf">&quot; в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot; (расширение)</span>
-<span class="nf">        </span><span class="k">И </span><span class="nf">я генерирую SSCC честного знака для GS</span><span class="s">1</span><span class="nf"> &quot;</span><span class="s">460700958</span><span class="nf">&quot; уровня &quot;</span><span class="s">2</span><span class="nf">&quot; в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot; (расширение)</span>
-<span class="nf">        </span><span class="k">И </span><span class="nf">я генерирую SSCC честного знака для GS</span><span class="s">1</span><span class="nf"> &quot;&quot; уровня &quot;</span><span class="s">1</span><span class="nf">&quot; в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot; (расширение)</span>
-<span class="nf">        </span><span class="k">И </span><span class="nf">я генерирую SSCC честного знака для GS</span><span class="s">1</span><span class="nf"> &quot;&quot; уровня &quot;</span><span class="s">2</span><span class="nf">&quot; в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot; (расширение)</span>
+  Дополнительные шаги для генерации кодов маркировки Честного Знака и кодов упаковки SSCC
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="nf">        </span><span class="k">И </span><span class="nf">я генерирую код маркировки честного знака для GTIN &quot;</span><span class="s">12345678901234</span><span class="nf">&quot; типа &quot;</span><span class="s">5</span><span class="nf">&quot; в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot; (расширение)</span>
+<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="nf">        </span><span class="k">И </span><span class="nf">я генерирую код маркировки честного знака для GTIN &quot;</span><span class="s">12345678901234</span><span class="nf">&quot; типа &quot;</span><span class="s">23</span><span class="nf">&quot; в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot; (расширение)</span>
+<a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="nf">        </span><span class="k">И </span><span class="nf">я генерирую код маркировки честного знака для GTIN &quot;</span><span class="s">12345678901234</span><span class="nf">&quot; типа &quot;</span><span class="s">30</span><span class="nf">&quot; в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot; (расширение)</span>
+<a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a><span class="nf">        </span><span class="k">И </span><span class="nf">я генерирую код маркировки честного знака для GTIN &quot;</span><span class="s">12345678901234</span><span class="nf">&quot; типа &quot;</span><span class="s">31</span><span class="nf">&quot; в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot; (расширение)</span>
+<a id="__codelineno-35-5" name="__codelineno-35-5" href="#__codelineno-35-5"></a><span class="nf">        </span><span class="k">И </span><span class="nf">я генерирую код маркировки честного знака для GTIN &quot;&quot; типа &quot;&quot; в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot; (расширение)</span>
+<a id="__codelineno-35-6" name="__codelineno-35-6" href="#__codelineno-35-6"></a><span class="nf">        </span><span class="k">И </span><span class="nf">я генерирую SSCC честного знака для GS</span><span class="s">1</span><span class="nf"> &quot;</span><span class="s">460700958</span><span class="nf">&quot; уровня &quot;</span><span class="s">1</span><span class="nf">&quot; в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot; (расширение)</span>
+<a id="__codelineno-35-7" name="__codelineno-35-7" href="#__codelineno-35-7"></a><span class="nf">        </span><span class="k">И </span><span class="nf">я генерирую SSCC честного знака для GS</span><span class="s">1</span><span class="nf"> &quot;</span><span class="s">460700958</span><span class="nf">&quot; уровня &quot;</span><span class="s">2</span><span class="nf">&quot; в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot; (расширение)</span>
+<a id="__codelineno-35-8" name="__codelineno-35-8" href="#__codelineno-35-8"></a><span class="nf">        </span><span class="k">И </span><span class="nf">я генерирую SSCC честного знака для GS</span><span class="s">1</span><span class="nf"> &quot;&quot; уровня &quot;</span><span class="s">1</span><span class="nf">&quot; в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot; (расширение)</span>
+<a id="__codelineno-35-9" name="__codelineno-35-9" href="#__codelineno-35-9"></a><span class="nf">        </span><span class="k">И </span><span class="nf">я генерирую SSCC честного знака для GS</span><span class="s">1</span><span class="nf"> &quot;&quot; уровня &quot;</span><span class="s">2</span><span class="nf">&quot; в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot; (расширение)</span>
 </code></pre></div>
-
-<div class="codehilite"><pre><span></span><code>Типы кодов маркировки: 5 - Лекарственные препараты для медицинского применения, 23 - Биологически активные добавки к пище, 30 - Биологически активные добавки к пище (длинный код), 31 - Антисептики и дезинфицирующие средства (длинный код)
-</code></pre></div>
-
+    Типы кодов маркировки: 5 - Лекарственные препараты для медицинского применения, 23 - Биологически активные добавки к пище, 30 - Биологически активные добавки к пище (длинный код), 31 - Антисептики и дезинфицирующие средства (длинный код)</p>
 <h2 id="22">22. Эмулятор внешних событий в модуле приложения<a class="headerlink" href="#22" title="Permanent link">&para;</a></h2>
-<p>Для этого надо использовать шаг</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я вызываю внешнее событие &quot;</span><span class="s">Источник</span><span class="nf">&quot; с событием &quot;</span><span class="s">Событие</span><span class="nf">&quot; с данными &quot;</span><span class="s">Данные</span><span class="nf">&quot; через файл события (Расширение)</span>
-<span class="nf">    </span><span class="k">И </span><span class="nf">я ожидаю &quot;</span><span class="s">10</span><span class="nf">&quot; секунд результат обработки последнего события через файл и запоминаю результат в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot;(Расширение)</span>
+<p>Для этого надо использовать шаг
+<div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я вызываю внешнее событие &quot;</span><span class="s">Источник</span><span class="nf">&quot; с событием &quot;</span><span class="s">Событие</span><span class="nf">&quot; с данными &quot;</span><span class="s">Данные</span><span class="nf">&quot; через файл события (Расширение)</span>
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я ожидаю &quot;</span><span class="s">10</span><span class="nf">&quot; секунд результат обработки последнего события через файл и запоминаю результат в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot;(Расширение)</span>
 </code></pre></div>
-
-<p>Для работы шага через файл события требуется предварительно запустить мониторинг каталога с событиями на стороне тестируемого приложения
-  Шаг запуска:</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">      </span><span class="k">И </span><span class="nf">я запускаю мониторинг каталога &quot;</span><span class="s">C:\temp</span><span class="nf">&quot; для внешних событий(Расширение)</span>
+Для работы шага через файл события требуется предварительно запустить мониторинг каталога с событиями на стороне тестируемого приложения
+  Шаг запуска:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="nf">      </span><span class="k">И </span><span class="nf">я запускаю мониторинг каталога &quot;</span><span class="s">C:\temp</span><span class="nf">&quot; для внешних событий(Расширение)</span>
 </code></pre></div>
-
-<p>Шаг окончания работы</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">      </span><span class="k">И </span><span class="nf">я останавливаю мониторинг каталога внешних событий(Расширение)</span>
+  Шаг окончания работы
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="nf">      </span><span class="k">И </span><span class="nf">я останавливаю мониторинг каталога внешних событий(Расширение)</span>
 </code></pre></div>
-
-<p>Суть решения: Через отдельный шаг запустить на стороне тестируемого приложения мониторинг папки с файлами в определённом формате. (файлы событий)</p>
+Суть решения: Через отдельный шаг запустить на стороне тестируемого приложения мониторинг папки с файлами в определённом формате. (файлы событий)</p>
 <p>При появлении файла в определённом формате, тестируемое приложение выполняет одну из команд.</p>
 <ol>
 <li>Три вида команды выполнения встроенного кода. Код будет выполнен, даже когда интерфейс заблокирован модальным окном или окном с режимом "блокировать весь интерфейс"</li>
@@ -1980,220 +3093,190 @@
 <p>Так же данный функционал откроет возможность вести разработку и отладку и функциональное тестирование на 1С систем, которые используют внешние компоненты. Которые сложно-доступные во время тестирования. К примеру, эквайринговые системы, системы мониторинга GPS и т.д.</p>
 <p>А так же выполнить автоматизированное тестирование функциональности "Честный знак" в 1С.</p>
 <h2 id="23">23. Программное проведение документов и отмена проведение документов<a class="headerlink" href="#23" title="Permanent link">&para;</a></h2>
-<p>Для программного проведения документов на стороне клиента тестирования с помощью расширения нужно использовать шаги</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я выполняю проведение документа по навигационной ссылке &quot;</span><span class="s">НавСсылка</span><span class="nf">&quot; (расширение)</span>
-<span class="nf">    </span><span class="k">И </span><span class="nf">я выполняю проведение документа по навигационной ссылке &quot;</span><span class="s">НавСсылка</span><span class="nf">&quot; и получаю ошибку &quot;</span><span class="s">ТекстОшибки</span><span class="nf">&quot; (расширение)</span>
-<span class="nf">    </span><span class="k">И </span><span class="nf">я выполняю проведение документа по навигационной ссылке &quot;</span><span class="s">НавСсылка</span><span class="nf">&quot; и получаю ошибку &quot;</span><span class="s">ТекстОшибки</span><span class="nf">&quot; по шаблону (расширение)</span>
+<p>Для программного проведения документов на стороне клиента тестирования с помощью расширения нужно использовать шаги
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я выполняю проведение документа по навигационной ссылке &quot;</span><span class="s">НавСсылка</span><span class="nf">&quot; (расширение)</span>
+<a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я выполняю проведение документа по навигационной ссылке &quot;</span><span class="s">НавСсылка</span><span class="nf">&quot; и получаю ошибку &quot;</span><span class="s">ТекстОшибки</span><span class="nf">&quot; (расширение)</span>
+<a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я выполняю проведение документа по навигационной ссылке &quot;</span><span class="s">НавСсылка</span><span class="nf">&quot; и получаю ошибку &quot;</span><span class="s">ТекстОшибки</span><span class="nf">&quot; по шаблону (расширение)</span>
 </code></pre></div>
-
-<p>Для программной отмены проведения документов на стороне клиента тестирования с помощью расширения нужно использовать шаги</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я отменяю проведение документа по навигационной ссылке &quot;</span><span class="s">НавСсылка</span><span class="nf">&quot; (расширение)</span>
-<span class="nf">    </span><span class="k">И </span><span class="nf">я отменяю проведение документа по навигационной ссылке &quot;</span><span class="s">НавСсылка</span><span class="nf">&quot; и получаю ошибку &quot;</span><span class="s">ТекстОшибки</span><span class="nf">&quot; (расширение)</span>
-<span class="nf">    </span><span class="k">И </span><span class="nf">я отменяю проведение документа по навигационной ссылке &quot;</span><span class="s">НавСсылка</span><span class="nf">&quot; и получаю ошибку &quot;</span><span class="s">ТекстОшибки</span><span class="nf">&quot; по шаблону (расширение)</span>
+Для программной отмены проведения документов на стороне клиента тестирования с помощью расширения нужно использовать шаги
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я отменяю проведение документа по навигационной ссылке &quot;</span><span class="s">НавСсылка</span><span class="nf">&quot; (расширение)</span>
+<a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я отменяю проведение документа по навигационной ссылке &quot;</span><span class="s">НавСсылка</span><span class="nf">&quot; и получаю ошибку &quot;</span><span class="s">ТекстОшибки</span><span class="nf">&quot; (расширение)</span>
+<a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я отменяю проведение документа по навигационной ссылке &quot;</span><span class="s">НавСсылка</span><span class="nf">&quot; и получаю ошибку &quot;</span><span class="s">ТекстОшибки</span><span class="nf">&quot; по шаблону (расширение)</span>
 </code></pre></div>
-
-<p>Для программной отмены проведения всех документов данного сценария с помощью расширения нужно использовать шаг</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я отменяю проведение всех документов этого сценария по их навигационным ссылкам (расширение)</span>
-</code></pre></div>
-
+Для программной отмены проведения всех документов данного сценария с помощью расширения нужно использовать шаг
+<div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я отменяю проведение всех документов этого сценария по их навигационным ссылкам (расширение)</span>
+</code></pre></div></p>
 <h2 id="24">24. Программное получение состояния объекта (справочника или документа)<a class="headerlink" href="#24" title="Permanent link">&para;</a></h2>
 <p>Для программного получения состояния объекта (справочника или документа) нужно использовать шаг.
-Шаг создаст необходимые переменные: ТипЭлемента(Справочник,Документ),ПометкаУдаления(Истина,Ложь),Проведен(Истина,Ложь),Дата,Номер,Код</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я получаю состояние объекта по навигационной ссылке &quot;</span><span class="s">НавСсылка</span><span class="nf">&quot; (расширение)</span>
-</code></pre></div>
-
+Шаг создаст необходимые переменные: ТипЭлемента(Справочник,Документ),ПометкаУдаления(Истина,Ложь),Проведен(Истина,Ложь),Дата,Номер,Код
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я получаю состояние объекта по навигационной ссылке &quot;</span><span class="s">НавСсылка</span><span class="nf">&quot; (расширение)</span>
+</code></pre></div></p>
 <h2 id="25">25. Программное сравнение варианта отчета с эталоном<a class="headerlink" href="#25" title="Permanent link">&para;</a></h2>
-<p>Для программного сравнения варианта отчета с эталоном нужно использовать шаги</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">вариант отчета &quot;</span><span class="s">ИмяОтчета</span><span class="nf">&quot; &quot;</span><span class="s">ИмяВариантаОтчета</span><span class="nf">&quot; равен макету &quot;</span><span class="s">ИмяЭталона</span><span class="nf">&quot; (расширение)</span>
-<span class="nf">    </span><span class="k">И </span><span class="nf">вариант отчета &quot;</span><span class="s">ИмяОтчета</span><span class="nf">&quot; &quot;</span><span class="s">ИмяВариантаОтчета</span><span class="nf">&quot; равен макету &quot;</span><span class="s">ИмяЭталона</span><span class="nf">&quot; по шаблону (расширение)</span>
+<p>Для программного сравнения варианта отчета с эталоном нужно использовать шаги
+<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">вариант отчета &quot;</span><span class="s">ИмяОтчета</span><span class="nf">&quot; &quot;</span><span class="s">ИмяВариантаОтчета</span><span class="nf">&quot; равен макету &quot;</span><span class="s">ИмяЭталона</span><span class="nf">&quot; (расширение)</span>
+<a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a><span class="nf">    </span><span class="k">И </span><span class="nf">вариант отчета &quot;</span><span class="s">ИмяОтчета</span><span class="nf">&quot; &quot;</span><span class="s">ИмяВариантаОтчета</span><span class="nf">&quot; равен макету &quot;</span><span class="s">ИмяЭталона</span><span class="nf">&quot; по шаблону (расширение)</span>
 </code></pre></div>
-
-<p>ИмяОтчета задаётся, как указано имя объекта метаданных в конфигураторе.
+ИмяОтчета задаётся, как указано имя объекта метаданных в конфигураторе.
 ИмяВариантаОтчета задаётся как строка, которую видит пользователь при выборе варианта отчета.</p>
 <h2 id="26">26. Запомнить навигационные ссылки, чтобы потом пометить на удаление объекты по ним<a class="headerlink" href="#26" title="Permanent link">&para;</a></h2>
 <p>Сначала нужно запомнить навигационные ссылки в специальную переменную "LinksToDelete".
-Это делается с помощью шагов:</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я запоминаю навигационную ссылку текущего окна для удаления (расширение)</span>
-<span class="nf">    </span><span class="k">И </span><span class="nf">я запоминаю навигационную ссылку &quot;&quot;НавСсылка&quot;&quot; для удаления (расширение)</span>
+Это делается с помощью шагов:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я запоминаю навигационную ссылку текущего окна для удаления (расширение)</span>
+<a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я запоминаю навигационную ссылку &quot;&quot;НавСсылка&quot;&quot; для удаления (расширение)</span>
 </code></pre></div>
-
-<p>Чтобы потом удалить накопленные ссылки в конце сценария нужно использовать шаг</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я устанавливаю пометку удаления объектам, указанным к удалению (расширение)</span>
-</code></pre></div>
-
+Чтобы потом удалить накопленные ссылки в конце сценария нужно использовать шаг
+<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я устанавливаю пометку удаления объектам, указанным к удалению (расширение)</span>
+</code></pre></div></p>
 <h2 id="27">27. Как установить текст письма в ДО<a class="headerlink" href="#27" title="Permanent link">&para;</a></h2>
-<p>Например так:</p>
-<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я выполняю выражение &#39;_ТекущееОкно.ТекстПисьма = &quot;</span><span class="nv">&lt;h3&gt;</span><span class="s">333333333333333333333&lt;/h3</span><span class="nf">&quot;&#39; в текущем окне (Расширение)</span>
-</code></pre></div>
-
+<p>Например так:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я выполняю выражение &#39;_ТекущееОкно.ТекстПисьма = &quot;</span><span class="nv">&lt;h3&gt;</span><span class="s">333333333333333333333&lt;/h3</span><span class="nf">&quot;&#39; в текущем окне (Расширение)</span>
+</code></pre></div></p>
 <h2 id="28">28. Как узнать какие расширения установлены в клиент тестирования<a class="headerlink" href="#28" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я получаю данные о подключенных расширениях клиента тестирования (Расширение)</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я получаю данные о подключенных расширениях клиента тестирования (Расширение)</span>
 </code></pre></div>
-
-<p>Данные шаг получает данные об установелнных расширениях и создаёт для каждого расширения переменную:
+Данные шаг получает данные об установелнных расширениях и создаёт для каждого расширения переменную:
 Имя: Extension_ИмяРасширения
 Тип: Структура, содержащая свойства Name, Synonym, UID, Version, SafeMode, Active.",</p>
 <h2 id="29">29. Открытие текстового файла как будто это сделал пользователь.<a class="headerlink" href="#29" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я открываю текстовый файл &quot;</span><span class="s">ИмяФайла</span><span class="nf">&quot; &quot;</span><span class="s">UTF-8</span><span class="nf">&quot; (расширение)</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я открываю текстовый файл &quot;</span><span class="s">ИмяФайла</span><span class="nf">&quot; &quot;</span><span class="s">UTF-8</span><span class="nf">&quot; (расширение)</span>
 </code></pre></div>
-
-<p>Шаг открывает в клиенте тестирования текстовый файл как будто пользователь нажал на ctrl+O и открыл файл.
+Шаг открывает в клиенте тестирования текстовый файл как будто пользователь нажал на ctrl+O и открыл файл.
 Второй параметр является необязательным.</p>
 <h2 id="30">30. Открытие табличного документа как будто это сделал пользователь.<a class="headerlink" href="#30" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я открываю табличный документ &quot;</span><span class="s">ИмяФайла</span><span class="nf">&quot; (расширение)</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я открываю табличный документ &quot;</span><span class="s">ИмяФайла</span><span class="nf">&quot; (расширение)</span>
 </code></pre></div>
-
-<p>Шаг открывает в клиенте тестирования табличный документ как будто пользователь нажал на ctrl+O и открыл файл.</p>
+Шаг открывает в клиенте тестирования табличный документ как будто пользователь нажал на ctrl+O и открыл файл.</p>
 <h2 id="31">31. Отключение отката текста введенного в поле во время теста.<a class="headerlink" href="#31" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я отключаю обновление текста редактирования полей в текущем окне (расширение)</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я отключаю обновление текста редактирования полей в текущем окне (расширение)</span>
 </code></pre></div>
-
-<p>Существует проблема, что при синхронизации состояния формы после завершения серверного вызова, может затираться текст, который в данный момент редактирует пользователь.
+Существует проблема, что при синхронизации состояния формы после завершения серверного вызова, может затираться текст, который в данный момент редактирует пользователь.
 В тестах это может проявляться так, что тест ввёл значение в поле, но до того как он начал работать с другим полем данное значение было возвращено в предыдущее состояние.
 Данный шаг меняет свойство "ОбновлениеТекстаРедактирования" у полей формы, чтобы избежать этого эффекта.
-Также есть возможность выполнить это для одного поля</p>
-<div class="codehilite"><pre><span></span><code><span class="k">И </span><span class="nf">я отключаю обновление текста редактирования поля &quot;</span><span class="s">Заголовок поля</span><span class="nf">&quot; в текущем окне (расширение)</span>
-<span class="k">И </span><span class="nf">я отключаю обновление текста редактирования поля с именем &quot;</span><span class="s">ИмяПоля</span><span class="nf">&quot; в текущем окне (расширение)</span>
-</code></pre></div>
-
+Также есть возможность выполнить это для одного поля
+<div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a><span class="k">И </span><span class="nf">я отключаю обновление текста редактирования поля &quot;</span><span class="s">Заголовок поля</span><span class="nf">&quot; в текущем окне (расширение)</span>
+<a id="__codelineno-51-2" name="__codelineno-51-2" href="#__codelineno-51-2"></a><span class="k">И </span><span class="nf">я отключаю обновление текста редактирования поля с именем &quot;</span><span class="s">ИмяПоля</span><span class="nf">&quot; в текущем окне (расширение)</span>
+</code></pre></div></p>
 <h2 id="32">32. Получение версии подсистемы.<a class="headerlink" href="#32" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я запоминаю версию конфигурации &quot;</span><span class="s">ИмяПодсистемы</span><span class="nf">&quot; как &quot;</span><span class="s">Версия</span><span class="nf">&quot; (расширение)</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я запоминаю версию конфигурации &quot;</span><span class="s">ИмяПодсистемы</span><span class="nf">&quot; как &quot;</span><span class="s">Версия</span><span class="nf">&quot; (расширение)</span>
 </code></pre></div>
-
-<p>Позволяет сохранить в переменную версию подсистемы из регистра "ВерсииПодсистем" ("SubsystemsVersions").
+Позволяет сохранить в переменную версию подсистемы из регистра "ВерсииПодсистем" ("SubsystemsVersions").
 Работает с конфигурациями с русскими и английскими метаданными.</p>
 <h2 id="33-8_2-8_5">33. Прочитать текущий вариант интерфейса клиента тестирования (Версия8_2, Такси, Версия8_5)<a class="headerlink" href="#33-8_2-8_5" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я запоминаю текущий вариант интерфейса в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot; (расширение)</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я запоминаю текущий вариант интерфейса в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot; (расширение)</span>
 </code></pre></div>
-
-<p>Позволяет сохранить в переменную строковое представление текущего варианта интерфейса клиента тестирования
+Позволяет сохранить в переменную строковое представление текущего варианта интерфейса клиента тестирования
 Возможные значения:
 ru: Версия8_2, Такси, Версия8_5
 en: Version8_2, Taxi, Version8_5</p>
 <h2 id="34">34. Проверить вариант интерфейса клиента тестирования<a class="headerlink" href="#34" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">Если </span><span class="nf">это интерфейс</span><span class="s">85</span><span class="nf"> (расширение) Тогда</span>
-<span class="nf">        //действия</span>
-<span class="nf">    </span><span class="k">Если </span><span class="nf">это интерфейс Такси (расширение) Тогда</span>
-<span class="nf">        //действия</span>
-<span class="nf">    </span><span class="k">Если </span><span class="nf">это интерфейс</span><span class="s">82</span><span class="nf"> (расширение) Тогда</span>
-<span class="nf">        //действия</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="nf">    </span><span class="k">Если </span><span class="nf">это интерфейс</span><span class="s">85</span><span class="nf"> (расширение) Тогда</span>
+<a id="__codelineno-54-2" name="__codelineno-54-2" href="#__codelineno-54-2"></a><span class="nf">        //действия</span>
+<a id="__codelineno-54-3" name="__codelineno-54-3" href="#__codelineno-54-3"></a><span class="nf">    </span><span class="k">Если </span><span class="nf">это интерфейс Такси (расширение) Тогда</span>
+<a id="__codelineno-54-4" name="__codelineno-54-4" href="#__codelineno-54-4"></a><span class="nf">        //действия</span>
+<a id="__codelineno-54-5" name="__codelineno-54-5" href="#__codelineno-54-5"></a><span class="nf">    </span><span class="k">Если </span><span class="nf">это интерфейс</span><span class="s">82</span><span class="nf"> (расширение) Тогда</span>
+<a id="__codelineno-54-6" name="__codelineno-54-6" href="#__codelineno-54-6"></a><span class="nf">        //действия</span>
 </code></pre></div>
-
-<p>Позволяет проверить в каком интерфейсе запущен клиент тестирования</p>
+Позволяет проверить в каком интерфейсе запущен клиент тестирования</p>
 <h2 id="35">35. Проверить вариант интерфейса клиента тестирования<a class="headerlink" href="#35" title="Permanent link">&para;</a></h2>
-<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">клиент тестирования запущен в файловой базе (расширение)</span>
-<span class="nf">    </span><span class="k">И </span><span class="nf">клиент тестирования запущен в серверной базе (расширение)</span>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">клиент тестирования запущен в файловой базе (расширение)</span>
+<a id="__codelineno-55-2" name="__codelineno-55-2" href="#__codelineno-55-2"></a><span class="nf">    </span><span class="k">И </span><span class="nf">клиент тестирования запущен в серверной базе (расширение)</span>
 </code></pre></div>
-
-<p>Позволяет проверить в каком интерфейсе запущен клиент тестирования</p>
+Позволяет проверить в каком интерфейсе запущен клиент тестирования</p>
 <h2 id="36">36. Сохранить в переменную ссылку на справочник/документ и т.д. и потом открыть ссылку в клиенте тестирования<a class="headerlink" href="#36" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Вариант, когда менеджер тестирования и клиент тестирования работают в одной базе</li>
+<li>
+<p>Вариант, когда менеджер тестирования и клиент тестирования работают в одной базе
+<div class="highlight"><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я сохраняю ссылку на объект из текущего окна в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot;</span>
+<a id="__codelineno-56-2" name="__codelineno-56-2" href="#__codelineno-56-2"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я открываю объект по ссылке &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot; (расширение)</span>
+</code></pre></div></p>
+</li>
+<li>
+<p>Вариант, когда менеджер тестирования и клиент тестирования работают в разных базах
+<div class="highlight"><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я сохраняю строковое представление ссылки на объект из текущего окна в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot;</span>
+<a id="__codelineno-57-2" name="__codelineno-57-2" href="#__codelineno-57-2"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я открываю объект по строковому представлению ссылки &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot; (расширение)</span>
+</code></pre></div></p>
+</li>
 </ul>
-<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я сохраняю ссылку на объект из текущего окна в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot;</span>
-<span class="nf">    </span><span class="k">И </span><span class="nf">я открываю объект по ссылке &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot; (расширение)</span>
-</code></pre></div>
 
-<ul>
-<li>Вариант, когда менеджер тестирования и клиент тестирования работают в разных базах</li>
-</ul>
-<div class="codehilite"><pre><span></span><code><span class="nf">    </span><span class="k">И </span><span class="nf">я сохраняю строковое представление ссылки на объект из текущего окна в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot;</span>
-<span class="nf">    </span><span class="k">И </span><span class="nf">я открываю объект по строковому представлению ссылки &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot; (расширение)</span>
-</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
                 
-              
-              
-                
-
-
-              
-            </article>
-          </div>
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
       </main>
       
-        
-<footer class="md-footer">
-  
-    <div class="md-footer-nav">
-      <nav class="md-footer-nav__inner md-grid" aria-label="">
-        
-          <a href="../../UIAutomation/UIAutomation/" title="Лайфхаки при работе с UI Automation" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20,11V13H8L13.5,18.5L12.08,19.92L4.16,12L12.08,4.08L13.5,5.5L8,11H20Z" /></svg>
-            </div>
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Назад
-                </span>
-                Лайфхаки при работе с UI Automation
-              </div>
-            </div>
-          </a>
-        
-        
-          <a href="../../mobile/mobile/" title="Тестирование мобильного клиента" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
-            <div class="md-footer-nav__title">
-              <div class="md-ellipsis">
-                <span class="md-footer-nav__direction">
-                  Вперед
-                </span>
-                Тестирование мобильного клиента
-              </div>
-            </div>
-            <div class="md-footer-nav__button md-icon">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4,11V13H16L10.5,18.5L11.92,19.92L19.84,12L11.92,4.08L10.5,5.5L16,11H4Z" /></svg>
-            </div>
-          </a>
-        
-      </nav>
-    </div>
+        <footer class="md-footer">
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <div class="md-footer-copyright">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
         
-        Made with
-        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
-          Material for MkDocs
-        </a>
-      </div>
-      
-  <div class="md-footer-social">
+<div class="md-social">
+  
+    
+    
+    
     
       
       
-      <a href="https://github.com/Pr-Mex/vanessa-automation" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
-      </a>
+    
+    <a href="https://github.com/Pr-Mex/vanessa-automation" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
     
       
       
-      <a href="https://t.me/VanessaAutomation" target="_blank" rel="noopener" title="t.me" class="md-footer-social__link">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M248 8C111 8 0 119 0 256s111 248 248 248 248-111 248-248S385 8 248 8zm121.8 169.9l-40.7 191.8c-3 13.6-11.1 16.9-22.4 10.5l-62-45.7-29.9 28.8c-3.3 3.3-6.1 6.1-12.5 6.1l4.4-63.1 114.9-103.8c5-4.4-1.1-6.9-7.7-2.5l-142 89.4-61.2-19.1c-13.3-4.2-13.6-13.3 2.8-19.7l239.1-92.2c11.1-4 20.8 2.7 17.2 19.5z"/></svg>
-      </a>
     
-  </div>
-
+    <a href="https://t.me/VanessaAutomation" target="_blank" rel="noopener" title="t.me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496m115 168.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7.2-.7.3-3.1-1.2-4.4s-3.6-.8-5.1-.5c-2.2.5-37.1 23.5-104.6 69.1-9.9 6.8-18.9 10.1-26.9 9.9-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3.6-4.5 6.7-9 18.4-13.7 72.3-31.5 120.5-52.3 144.6-62.3 68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6.5 9.6 2.9 2 1.7 3.2 4.1 3.5 6.7.5 3.2.6 6.5.4 9.8z"/></svg>
+    </a>
+  
+</div>
+      
     </div>
   </div>
 </footer>
       
     </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
     
-      <script src="../../assets/javascripts/vendor.f45d2d8d.min.js"></script>
-      <script src="../../assets/javascripts/bundle.74d0b805.min.js"></script><script id="__lang" type="application/json">{"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.config.lang": "ru", "search.config.pipeline": "", "search.config.separator": "", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e # \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430"}</script>
+    
+    
       
-      <script>
-        app = initialize({
-          base: "../..",
-          features: ["tabs", "instant"],
-          search: Object.assign({
-            worker: "../../assets/javascripts/worker/search.7f7c8775.min.js"
-          }, typeof search !== "undefined" && search)
-        })
-      </script>
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.instant"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
     
   </body>
