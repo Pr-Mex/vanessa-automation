@@ -604,15 +604,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1204316" class="md-nav__link">
+  <a href="#1204317" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.2.043.16
+        1.2.043.17
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1.2.043.16">
+    <nav class="md-nav" aria-label="1.2.043.17">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2043,15 +2043,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1204316" class="md-nav__link">
+  <a href="#1204317" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.2.043.16
+        1.2.043.17
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1.2.043.16">
+    <nav class="md-nav" aria-label="1.2.043.17">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2196,7 +2196,7 @@
 
 
 <h1 id="_1">История версий<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="1204316">1.2.043.16<a class="headerlink" href="#1204316" title="Permanent link">&para;</a></h2>
+<h2 id="1204317">1.2.043.17<a class="headerlink" href="#1204317" title="Permanent link">&para;</a></h2>
 <h3 id="ai">AI<a class="headerlink" href="#ai" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Поддержка работы MCP для управления Vanessa Automation. #2516</li>
@@ -2204,6 +2204,7 @@
 <li>Нужен MCP инструмент - база знаний с ответами на часто возникающие вопросы. #2537</li>
 <li>Нужен MCP инструмент - информация о часто используемых шагах. #2538</li>
 <li>Исправление в некоторых инструментах MCP #2545 Спасибо @d_bbnk</li>
+<li>Нужен MCP инструмент для работы с командным интерфейсом. #2554</li>
 </ul>
 <h3 id="_2">Новые возможности<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2230,6 +2231,16 @@
 <li>Удалён забытый отладочный код в ЗаполнитьКешСоответствияШаговПоискПоИмени #2527 Спасибо @OlegKopeykin</li>
 <li>Исправлена подсказка флага ЗапрещатьПерезаписыватьПеременные #2528 Спасибо @OlegKopeykin</li>
 <li>Обновлен GitHub Actions versions (checkout, setup-python, gh-pages) #2535 Спасибо @OlegKopeykin</li>
+<li>ci: nelonoel/branch-name → github.ref_name в Sonar-workflow #2546 Спасибо @OlegKopeykin</li>
+<li>chore: удалён пустой файл .gitmodules #2544 Спасибо @OlegKopeykin</li>
+<li>Удалены неиспользуемые процедуры ВыгрузитьНаборПеременных и ЗагрузитьНаборПеременных #2531 Спасибо @OlegKopeykin</li>
+<li>docs(tools): структурная переработка README для контрибьюторов #2536 Спасибо @OlegKopeykin</li>
+<li>ci: обновление mkdocs-material 5.0.0 → 9.x + кеш pip для gh-pages #2541 Спасибо @OlegKopeykin</li>
+<li>feat(Дымовые тесты): Возможность отфильтровать только отсутствующие тесты в фича-файлах #2522 Спасибо @Kyrales</li>
+<li>cleanup: удалена неиспользуемая серверная процедура УдалитьИзТаблицаИзвестныхStepDefinitionДанныеПоФайлуСервер #2543 Спасибо @OlegKopeykin</li>
+<li>leanup: удалена неиспользуемая процедура ЗаписатьДопПараметрыШагаТекстовойИнструкцииВЛог #2542 Спасибо @OlegKopeykin</li>
+<li>Удалить unreachable JRE 6 путь и неиспользуемый параметр ЗапускЧерезСкрипт #2532 Спасибо @OlegKopeykin</li>
+<li>Удалена неиспользуемая процедура ПолучитьФормуНастройкиРаботыСБраузером #2529 Спасибо @OlegKopeykin</li>
 </ul>
 <h3 id="_5">Разные доработки<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2243,6 +2254,12 @@
 <li>Прикладывать к ошибкам сценарии, когда макетах есть оформление, а не только содержимое в виде массива данных. #2518</li>
 <li>Снижение потребления памяти, если упал шаг-условие #2525</li>
 <li>Шаги выполняющие пакетные команды конфигуратора должны выводить информацию в ЖР. #2539</li>
+<li>В JUnit не учитывается статус пропуска сценария установленный шагом И я останавливаю выполнение сценария "Skipped" #2523 Спасибо @1cgh</li>
+<li>Не учитывается каталог файлов исключений при генерации дымовых тестов из командной строки #2521 Спасибо @vsbronnikov</li>
+<li>Шаг 'И табличный документ "ИмяРеквизита" содержит значения' должен прикреплять текущее значение макета к отчету Allure #2555</li>
+<li>При поиске строк для локализации надо учитывать многострочные строки #2556</li>
+<li>Инструмент для вставки строк в макеты, которые обеспечивают локализацию #2557</li>
+<li>Инструмент для автоперевода макетов локализации #2559</li>
 </ul>
 <h3 id="_6">Исправление ошибок<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2251,6 +2268,7 @@
 <li>Утечка памяти при прохождении теста в 1.2.043.1 #2498 Спасибо @kakoytochelik</li>
 <li>При переносе кода в другой модуль сломалось две команды контекстного меню редактора #2540</li>
 <li>Выбор точного значения при установке фильтра на список #2533 Спасибо @ekh27</li>
+<li>Если установлена настройка повторного выполнения сценария и падал асинхронный шаг, то повторный запуск сценария всегда падал на этом шаге #2558</li>
 </ul>
 <h2 id="1204247">1.2.042.47<a class="headerlink" href="#1204247" title="Permanent link">&para;</a></h2>
 <h3 id="_7">Новые возможности<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
