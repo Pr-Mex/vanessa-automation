@@ -604,15 +604,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1204317" class="md-nav__link">
+  <a href="#1204318" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.2.043.17
+        1.2.043.18
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1.2.043.17">
+    <nav class="md-nav" aria-label="1.2.043.18">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2043,15 +2043,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1204317" class="md-nav__link">
+  <a href="#1204318" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.2.043.17
+        1.2.043.18
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1.2.043.17">
+    <nav class="md-nav" aria-label="1.2.043.18">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2196,7 +2196,7 @@
 
 
 <h1 id="_1">История версий<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="1204317">1.2.043.17<a class="headerlink" href="#1204317" title="Permanent link">&para;</a></h2>
+<h2 id="1204318">1.2.043.18<a class="headerlink" href="#1204318" title="Permanent link">&para;</a></h2>
 <h3 id="ai">AI<a class="headerlink" href="#ai" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Поддержка работы MCP для управления Vanessa Automation. #2516</li>
@@ -2241,6 +2241,11 @@
 <li>leanup: удалена неиспользуемая процедура ЗаписатьДопПараметрыШагаТекстовойИнструкцииВЛог #2542 Спасибо @OlegKopeykin</li>
 <li>Удалить unreachable JRE 6 путь и неиспользуемый параметр ЗапускЧерезСкрипт #2532 Спасибо @OlegKopeykin</li>
 <li>Удалена неиспользуемая процедура ПолучитьФормуНастройкиРаботыСБраузером #2529 Спасибо @OlegKopeykin</li>
+<li>fix: устранён дубль 9 сценариев в MiddleCheck part1+part2 (баг парсера: теги «съедаются» блоком Переменные #2549 Спасибо @OlegKopeykin</li>
+<li>Исправить в сериализаторе выгрузку объектов со ссылкой #2547 Спасибо @1cgh</li>
+<li>perf: убран временный файл при формировании CSV-attachment в Allure 2 #2553 Спасибо @OlegKopeykin</li>
+<li>fix: Дедупликация тегов фичи и сценария в Allure 2 отчёте по значению #2552 Спасибо @OlegKopeykin</li>
+<li>Cleanup: убраны неиспользуемые места в Allure 2 pipeline #2551 Спасибо @OlegKopeykin</li>
 </ul>
 <h3 id="_5">Разные доработки<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2269,6 +2274,8 @@
 <li>При переносе кода в другой модуль сломалось две команды контекстного меню редактора #2540</li>
 <li>Выбор точного значения при установке фильтра на список #2533 Спасибо @ekh27</li>
 <li>Если установлена настройка повторного выполнения сценария и падал асинхронный шаг, то повторный запуск сценария всегда падал на этом шаге #2558</li>
+<li>В Vanessa Automation Single могла очищаться таблица известных шагов. #2560</li>
+<li>В Vanessa Automation Single могли не подгружаться снипеты из объектов метаданных. #2561</li>
 </ul>
 <h2 id="1204247">1.2.042.47<a class="headerlink" href="#1204247" title="Permanent link">&para;</a></h2>
 <h3 id="_7">Новые возможности<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
