@@ -719,6 +719,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#cline-vscode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Плагин cline для VSCode
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1998,6 +2009,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#cline-vscode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Плагин cline для VSCode
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2056,6 +2078,19 @@
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://localhost:9874/mcp</span>
 </code></pre></div></li>
 </ul>
+<h3 id="cline-vscode">Плагин cline для VSCode<a class="headerlink" href="#cline-vscode" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Путь к файлу конфига: "C:\Users\ИмяПользователя\AppData\Roaming\Code\User\globalStorage\saoudrizwan.claude-dev\settings\cline_mcp_settings.json"
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">&quot;mcpServers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">&quot;VanessaAutomation&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;streamableHttp&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">      </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:9874/mcp&quot;</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">}</span>
+</code></pre></div></li>
+</ul>
 <h2 id="_2">Доступные инструменты:<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -2091,7 +2126,7 @@
 </tr>
 <tr>
 <td><strong>get_active_window_data</strong></td>
-<td>В зависимости от параметра <strong>type</strong> возвращает важные свойства активного окна клиента тестирования: <strong>window_caption</strong> (заголовок окна), <strong>navigation_link</strong> (навигационная ссылка), <strong>form_name</strong> (имя формы), <strong>form_caption</strong> (заголовок формы).</td>
+<td>В зависимости от параметра <strong>type</strong> возвращает важные свойства активного окна клиента тестирования: если type=<strong>window_caption</strong> - возвращает заголовок окна. По заголовку окна можно найти окно и получить его данные, можно активизировать окно, можно закрыть окно. Если type=<strong>navigation_link</strong> - возвращает навигационную ссылку активного окна. Навигационная ссылка потом может быть использована для открытия окна по навигационной ссылке. Также навигационная ссылка помогает понять с каким объектом метаданных связано активное окно. Если type=<strong>form_name</strong> - возвращает имя формы, подчиненной активному окну. Имя формы позволяет понять с каким объектом метаданных связано активное окно, т.к. в имени формы чаще всего содержится имя объекта метаданных. Если type=<strong>form_caption</strong> - возвращает заголовок формы, подчиненной активному окну. Чаще всего такой заголовок формы совпадает с заголовком окна-владельца и он нужен редко.</td>
 </tr>
 <tr>
 <td><strong>get_data_from_knowledge_base</strong></td>
@@ -2099,11 +2134,19 @@
 </tr>
 <tr>
 <td><strong>get_editor_state</strong></td>
-<td>Возвращает состояние Monaco-редактора Vanessa Automation: открытые вкладки, содержимое активного документа, позицию курсора, ошибки. Один вызов для полного понимания контекста редактора.</td>
+<td>Возвращает состояние Monaco-редактора Vanessa Automation: открытые вкладки, содержимое активного документа, позицию курсора, ошибки. Один вызов для полного понимания контекста редактора. Если feature файл загружен в редактор Vanessa Automation, то уже можно запускать его сценарии на выполнение с помощью <strong>run_scenario</strong>.</td>
+</tr>
+<tr>
+<td><strong>get_environment_data</strong></td>
+<td>Получает важные данные об окружении: текущая дата и время, версия платформы 1С:Предприятие, данные об операционной системе, какая используется VA - обычная или Single, в какой базе запущен менеджер тестирования.</td>
+</tr>
+<tr>
+<td><strong>get_extension_list</strong></td>
+<td>Получает список всех расширений, установленных в клиенте тестирования. Клиент тестирования должен быть подключен. Возвращает информацию о каждом расширении: Имя, Версия, Назначение; Флаги: Активно, БезопасныйРежим.</td>
 </tr>
 <tr>
 <td><strong>get_form_analysis</strong></td>
-<td>Возвращает информацию о текущей форме тестируемого приложения: дерево элементов или состояние формы как Gherkin-шаги. Требует подключённого клиента тестирования.</td>
+<td>Возвращает информацию о текущей форме тестируемого приложения: дерево элементов или состояние формы как Gherkin-шаги. Требует подключённого клиента тестирования. Важно обращать на флаг Видимости у элемента формы и групп, в которые он входит. Если у элемента Видимость=Истина, а у группы Видимость=Ложь, то скорее всего элемент формы не виден пользователю и он не может с ним взаимодействовать.</td>
 </tr>
 <tr>
 <td><strong>get_info_about_line_scenario</strong></td>
@@ -2115,7 +2158,15 @@
 </tr>
 <tr>
 <td><strong>get_VanessaAutomation_state</strong></td>
-<td>Возвращает текущее состояние Vanessa Automation в формате Markdown: выполняется ли сценарий, текущая фича (имя, путь, язык, теги), текущий сценарий (имя, статус, теги), текущий шаг (текст, статус, ошибка), подключен ли клиент тестирования.</td>
+<td>Возвращает текущее состояние Vanessa Automation в формате Markdown: выполняется ли сценарий, текущая фича (имя, путь, язык, теги), текущий сценарий (имя, статус, теги), текущий шаг (текст, статус, ошибка), подключен ли клиент тестирования. Используйте для получения контекста перед написанием или анализом тестов.</td>
+</tr>
+<tr>
+<td><strong>get_object_attributes</strong></td>
+<td>Получает значения реквизитов объекта (и их тип), связанного с открытой формой. Работает только для форм объектов (Справочники, Документы и т.п.), не работает для форм списков и служебных форм. Параметр <strong>data_mode</strong> определяет состав возвращаемых данных: 'all' (все данные - шапка и все табличные части), 'attributes_only' (только реквизиты шапки), 'single_attribute' (значение указанного реквизита шапки, требуется <strong>attribute_name</strong>), 'tabular_sections_only' (только все табличные части), 'single_tabular_section' (только указанная табличная часть, требуется <strong>tabular_section_name</strong>). Параметр <strong>only_filled</strong> определяет фильтровать ли пустые реквизиты: true (только заполненные), false (все реквизиты, по умолчанию). Возвращает данные в формате Markdown с именами, типами и значениями реквизитов.</td>
+</tr>
+<tr>
+<td><strong>get_table_data</strong></td>
+<td>Получает данные из таблицы базы данных. Цель - понять какие тестовые данные уже есть в базе, чтобы лучше понимать какими данными заполнять объекты в тестах. Нужно указать Тип - <strong>object_type</strong>: 1 = Справочник, 2 = Документ, 3 = Перечисление (обязательный параметр). Надо указать Вид - <strong>object_name</strong> (обязательный параметр). <strong>limit</strong> - сколько элементов возвращать (необязательный, по умолчанию 10). Для справочников будет возвращено Наименование, Код, Владелец (если такие поля есть). Если справочник подчинен другому справочнику, то можно указать владельца через параметр <strong>owner</strong>. Для документа будут возвращены Дата, Номер. Для справочников и документов будет также возвращена навигационная ссылка. Для документов можно передать <strong>date_start</strong> и <strong>date_end</strong> (оба необязательные, формат: "30.12.2025 15:45:55").</td>
 </tr>
 <tr>
 <td><strong>get_window_list_os</strong></td>
@@ -2123,19 +2174,15 @@
 </tr>
 <tr>
 <td><strong>get_window_list_testclient</strong></td>
-<td>Получает список внутренних окон клиента тестирования. Результат можно использовать для активизации окна или получения данных из текущего окна.</td>
-</tr>
-<tr>
-<td><strong>get_window_list_testclient_for_screenshots</strong></td>
-<td>Возвращает список окон клиента тестирования для снятия скриншотов с точки зрения операционной системы. Требует подключённого клиента тестирования.</td>
+<td>Получает список внутренних окон клиента тестирования. Результат можно использовать либо для активизации окна с помощью инструмента <strong>activate_window</strong>, либо для получения данных из текущего окна <strong>get_active_window_data</strong>. Результат нельзя использовать для получения скриншота окна, т.к. список внутренних окон клиента тестирования и список окон с точки зрения операционной системы - это разные вещи.</td>
 </tr>
 <tr>
 <td><strong>get_window_screenshot_os</strong></td>
-<td>Делает скриншот окна клиента тестирования и возвращает изображение для последующего анализа с помощью компьютерного зрения. Требует подключённого клиента тестирования. Параметр <strong>window_title</strong> определяет с какого окна надо снять скриншот.</td>
+<td>Делает скриншот окна клиента тестирования и возвращает изображение для последующего анализа скриншота с помощью компьютерного зрения. Параметр <strong>window_title</strong> определяет с какого окна нужно снять скриншот, т.к. у одного клиента тестирования может быть несколько окон. Параметр обязательный. Параметр <strong>color_mode</strong> определяет режим цвета: 'grayscale' (черно-белый, по умолчанию) или 'color' (цветной). Если клиент тестирования не подключён или не запущен, возвращает ошибку с подсказкой сначала вызвать <strong>connect_test_client</strong>. Чтобы получить список доступных окон для снятия скриншота надо вызвать <strong>get_window_list_testclient</strong>.</td>
 </tr>
 <tr>
 <td><strong>load_features</strong></td>
-<td>Загружает или перезагружает .feature файлы. Используйте после редактирования .feature файла, чтобы перечитать файл с диска в Vanessa Automation.</td>
+<td>Загружает или перезагружает .feature файлы. Используйте после того как вы отредактировали .feature файл, чтобы перечитать файл с диска в Vanessa Automation. Это лучший способ перезагрузить текущий файл в редакторе не указывая имя файла.</td>
 </tr>
 <tr>
 <td><strong>manage_breakpoints</strong></td>
@@ -2143,11 +2190,15 @@
 </tr>
 <tr>
 <td><strong>manage_command_interface</strong></td>
-<td>Универсальный инструмент для управления командным интерфейсом 1С:Предприятия. Поддерживаемые действия: <strong>get_section_panel</strong> (получить панель разделов), <strong>get_function_panel</strong> (получить панель функций), <strong>click_section_panel</strong> (нажать кнопку панели разделов), <strong>click_function_panel</strong> (нажать кнопку панели функций). Требует подключённого клиента тестирования.</td>
+<td>Универсальный инструмент для работы с командным интерфейсом 1С:Предприятия. Поддерживаемые действия (параметр action): <strong>get_section_panel</strong> (получить панель разделов - первый уровень), <strong>get_function_panel</strong> (получить панель функций - второй уровень). У функций есть навигационная ссылка, которую потом можно использовать для прямого вызова функции. <strong>click_section_panel</strong> (нажать кнопку панели разделов), <strong>click_function_panel</strong> (нажать кнопку панели функций). Для <strong>click_section_panel</strong>: <strong>command</strong> (обязательно) - имя кнопки для нажатия, <strong>returnFunctionPanel</strong> (необязательно) - вернуть содержимое панели функций после нажатия. Важный момент: после нажатия на кнопку панели разделов появляется панель функций для этой команды разделов. В этом случае, если нажать на эту же кнопку второй раз, то панель функций исчезнет и не получится получить команды из панели функций. Нужно будет нажать на кнопку панели разделов ещё раз. Для <strong>click_function_panel</strong>: <strong>command</strong> (обязательно) - имя кнопки для нажатия, <strong>group</strong> (необязательно) - имя группы, если команды не уникальны. Требует подключённого клиента тестирования.</td>
+</tr>
+<tr>
+<td><strong>manage_test_client_profiles</strong></td>
+<td>Универсальный инструмент для работы с таблицей профилей клиентов тестирования Vanessa Automation. Поддерживаемые действия (параметр action): <strong>get_list</strong> (получить список профилей), <strong>add</strong> (добавить профиль), <strong>edit</strong> (редактировать профиль). Для <strong>add</strong> и <strong>edit</strong>: <strong>name</strong> (обязательно) - имя профиля, <strong>synonym</strong> - синоним профиля, <strong>infobase_path</strong> - строка подключения к базе, <strong>additional_parameters</strong> - дополнительные параметры подключения, <strong>client_type</strong> - тип клиента (Тонкий (основной вариант), Толстый, Web, МобильныйКлиент, МобильноеПриложение, МобильныйКлиентАвтономный, ОбычноеПриложение), <strong>computer_name</strong> - имя компьютера. Уточнение: если параметры клиента тестирования изменились, то это может потребовать перезапуска клиента тестирования. Подробная информация про то как устроена таблица клиентов тестирования есть в базе знаний, инструмент <strong>get_data_from_knowledge_base</strong>.</td>
 </tr>
 <tr>
 <td><strong>manage_variables</strong></td>
-<td>Чтение, установка и удаление переменных тестового контекста. Действия: <strong>get</strong> (по умолчанию), <strong>set</strong>, <strong>delete</strong>. Переменные бывают локальные (существуют только во время выполнения сценария) и глобальные (существуют пока работает Vanessa Automation).</td>
+<td>Чтение, установка и удаление переменных тестового контекста. Действия с переменными: <strong>get</strong> (по умолчанию), <strong>set</strong>, <strong>delete</strong>. Переменные позволяют хранить произвольные значения в памяти Vanessa Automation. Переменные бывают локальные и глобальные. Локальные существуют только во время выполнения сценария. Перед началом выполнения сценария все локальные переменные удаляются. Глобальные переменные существуют пока работает Vanessa Automation и не удаляются перед выполнением сценария.</td>
 </tr>
 <tr>
 <td><strong>open_feature_file</strong></td>
@@ -2155,11 +2206,11 @@
 </tr>
 <tr>
 <td><strong>run_scenario</strong></td>
-<td>Запускает выполнение сценариев. Отправляет прогресс по каждому шагу. Режимы: <strong>all</strong> (все сценарии, по умолчанию), <strong>reloadAndRun</strong> (перезагрузить и запустить выбранный), <strong>selected</strong> (выбранный в дереве), <strong>fromCurrentStep</strong> (с текущего шага).</td>
+<td>Запускает выполнение сценариев. Отправляет прогресс по каждому шагу (step N/M). Возвращает итоговый результат после завершения. Если указан <strong>filePath</strong> — загрузит фичу, откроет в редакторе и запустит. Режимы: <strong>all</strong> (по умолчанию — все сценарии загруженного feature файла или feature файлов), <strong>reloadAndRun</strong> (перезагрузить и запустить выбранный), <strong>selected</strong> (выбранный в редакторе, перед этим надо вызвать <strong>select_scenario</strong>), <strong>fromCurrentStep</strong> (с текущего шага, перед этим нужно вызвать <strong>select_step</strong>), <strong>reloadAndRunFromLine</strong> (перезагрузить фича файл и выполнить сценарий с указанной строки).</td>
 </tr>
 <tr>
 <td><strong>search_for_steps_by_keywords</strong></td>
-<td>Ищет шаги Vanessa Automation по переданной строке поиска и возвращает их в формате Markdown. Поиск производится по представлению шагов, описании шагов и типу шагов.</td>
+<td>Ищет шаги Vanessa Automation по переданной строке поиска и возвращает их в формате Markdown. Поиск производится по: представлению шагов, описании шагов и типу шагов. В любой параметр можно передавать несколько значений, разделенных вертикальной чертой</td>
 </tr>
 <tr>
 <td><strong>select_scenario</strong></td>
@@ -2171,7 +2222,11 @@
 </tr>
 <tr>
 <td><strong>stop_scenario</strong></td>
-<td>Посылает команду Vanessa Automation остановить выполнение сценариев. На обработку команды может понадобиться время.</td>
+<td>Посылает команду Vanessa Automation, что нужно остановить выполнение сценариев. На обработку команды может понадобиться время.</td>
+</tr>
+<tr>
+<td><strong>voice_notification</strong></td>
+<td>Возвращает информацию о доступных типах голосовых уведомлений для ИИ агента. Полезно в тех случаях, если ИИ агент работает в отдельной виртуальной машине, выполняет какое-то длинное задание и пользователю удобно получать голосовое уведомление о: задании выполненном, необходимости принять решение, ошибке при выполнении задания. Возвращает список доступных типов уведомлений и их описание в формате Markdown. Параметры: <strong>notification_type</strong> (обязательный) - тип уведомления: 'task_completed' (задание выполнено), 'decision_required' (нужно принять решение), 'task_cannot_be_completed' (задание не может быть выполнено), 'error_occurred' (возникла ошибка при выполнении задания). <strong>language</strong> (необязательный) - язык озвучки: 'ru' (русский, по умолчанию), 'en' (английский).</td>
 </tr>
 </tbody>
 </table>
