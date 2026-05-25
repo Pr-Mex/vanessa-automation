@@ -604,15 +604,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1204322" class="md-nav__link">
+  <a href="#1204323" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.2.043.22
+        1.2.043.23
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1.2.043.22">
+    <nav class="md-nav" aria-label="1.2.043.23">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -809,6 +809,62 @@
     
   
     MCP в Vanessa Automation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AI/Instructions/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📘 Руководство по созданию сценариев тестирования
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../AI/%D0%9F%D1%80%D0%B8%D0%BC%D0%B5%D1%80%D0%9F%D1%80%D0%BE%D0%BC%D1%82%D0%B0%D0%94%D0%BB%D1%8F%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ПримерПромтаДляЗадачи
   
 
     
@@ -2043,15 +2099,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1204322" class="md-nav__link">
+  <a href="#1204323" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.2.043.22
+        1.2.043.23
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1.2.043.22">
+    <nav class="md-nav" aria-label="1.2.043.23">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2196,7 +2252,7 @@
 
 
 <h1 id="_1">История версий<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="1204322">1.2.043.22<a class="headerlink" href="#1204322" title="Permanent link">&para;</a></h2>
+<h2 id="1204323">1.2.043.23<a class="headerlink" href="#1204323" title="Permanent link">&para;</a></h2>
 <h3 id="ai">AI<a class="headerlink" href="#ai" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Поддержка работы MCP для управления Vanessa Automation. #2516</li>
@@ -2213,6 +2269,8 @@
 <li>Нужен инструмент для получения данных из базы данных клиента тестирования. #2580</li>
 <li>Когда ИИ пытается найти элемент формы, которого нет, надо сразу возвращать кнопки, флаги, поля, которые есть. #2587</li>
 <li>Нужен инструмент для сохранения табличного документа в файл. #2588</li>
+<li>Нужен инструмент для получения данных текущего элемента формы. #2593</li>
+<li>Нужен инструмент - оператор #2594</li>
 </ul>
 <h3 id="_2">Новые возможности<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2262,6 +2320,11 @@
 <li>fix: защита от Неопределено в ВремяНачала/ВремяОкончания при формировании отчётов (Allure 2, Cucumber JSON, XLS, TeamCity) #2567 Спасибо @OlegKopeykin</li>
 <li>fix: дать Chrome время на старт перед подключением к :9222 (flaky 'Снятие скриншота в браузере') #2583 Спасибо @OlegKopeykin</li>
 <li>cleanup: 8 dead vars в VanessaAutomation/Forms/РедакторТекста/Module.bsl #2582 Спасибо @OlegKopeykin</li>
+<li>cleanup: 10 dead vars в lib/Video/РаботаСВидео/Forms/Форма/Module.bsl #2581 Спасибо @OlegKopeykin</li>
+<li>сleanup: 25 dead local/module vars в lib/FeatureReader/.../ObjectModule.bsl #2573 Спасибо @OlegKopeykin</li>
+<li>сleanup: удалены 4 write-only модульные переменные в УправляемаяФорма #2570 Спасибо @OlegKopeykin</li>
+<li>cleanup: исправлены опечатки в именах функций Allure 2 #2569 Спасибо @OlegKopeykin</li>
+<li>perf(allure2): O(N²) → O(N) накопление CSV-attachment в DataTable #2568 Спасибо @OlegKopeykin</li>
 </ul>
 <h3 id="_5">Разные доработки<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2293,6 +2356,8 @@
 <li>Если установлена настройка повторного выполнения сценария и падал асинхронный шаг, то повторный запуск сценария всегда падал на этом шаге #2558</li>
 <li>В Vanessa Automation Single могла очищаться таблица известных шагов. #2560</li>
 <li>В Vanessa Automation Single могли не подгружаться снипеты из объектов метаданных. #2561</li>
+<li>Для флагов с типом число теперь используется корректная проверка на представление значения. #2595</li>
+<li>Исправление проблемы, когда не работала актуализация шага из-за шагов в попытке исключение. #2596</li>
 </ul>
 <h2 id="1204247">1.2.042.47<a class="headerlink" href="#1204247" title="Permanent link">&para;</a></h2>
 <h3 id="_7">Новые возможности<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
