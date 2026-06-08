@@ -697,6 +697,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#1-mcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Пример запуска сеанса 1С из командной строки так, чтобы сразу запустился MCP сервер
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -724,6 +735,17 @@
     <span class="md-ellipsis">
       
         Плагин cline для VSCode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#roo-code-vscode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Плагин Roo Code для VSCode
       
     </span>
   </a>
@@ -2104,6 +2126,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#1-mcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Пример запуска сеанса 1С из командной строки так, чтобы сразу запустился MCP сервер
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2131,6 +2164,17 @@
     <span class="md-ellipsis">
       
         Плагин cline для VSCode
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#roo-code-vscode" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Плагин Roo Code для VSCode
       
     </span>
   </a>
@@ -2242,13 +2286,13 @@
 <p><strong>Настройте LLM с поддержкой MCP</strong>. У вас должна быть работающая LLM, к которой можно подключить MCP инструменты. Например, VSCode + плагин Cline — это среда, где вы пишете промты.</p>
 </li>
 <li>
-<p><strong>Установите расширение в базу менеджера тестирования</strong>. В базу менеджера тестирования необходимо поставить расширение из <a href="https://github.com/Pr-Mex/vanessa-automation/blob/develop/docs/AI/index.md">инструкции</a>.</p>
+<p><strong>Установите расширение в базу менеджера тестирования</strong>. В базу менеджера тестирования необходимо поставить расширение из <a href="https://github.com/1c-neurofish/onec-client-mcp-devkit/releases">проекта</a>.</p>
 </li>
 <li>
 <p><strong>Запустите MCP сервер</strong>. Нажмите на кнопку <strong>Запустить</strong> в расширении.</p>
 </li>
 <li>
-<p><strong>Настройте MCP клиент в вашей IDE</strong>. В вашей IDE, где работает LLM, необходимо прописать настройки MCP сервера, который запущен в менеджере тестирования. В инструкции ниже приведены примеры настроек для плагина Continue (для VSCode) и плагина Cline (тоже для VSCode).</p>
+<p><strong>Настройте MCP клиент в вашей IDE</strong>. В вашей IDE, где работает LLM, необходимо прописать настройки MCP сервера, который запущен в менеджере тестирования. В инструкции ниже приведены примеры настроек для плагина Continue (для VSCode), плагина Cline и плагина Roo Code (тоже для VSCode).</p>
 </li>
 <li>
 <p><strong>Включите внешнюю компоненту VanessaExt</strong>. В Vanessa Automation необходимо включить использование внешней компоненты VanessaExt.</p>
@@ -2260,30 +2304,84 @@
 <p><strong>Настройка завершена</strong>. После выполнения всех шагов MCP готов к работе.</p>
 </li>
 </ol>
+<h2 id="1-mcp">Пример запуска сеанса 1С из командной строки так, чтобы сразу запустился MCP сервер<a class="headerlink" href="#1-mcp" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="s2">&quot;C:\Program Files\1cv8\8.3.27.2130\bin\1cv8c.exe&quot;</span> ENTERPRISE /TESTMANAGER /IBConnectionString <span class="s2">&quot;File=&quot;&quot;c:\Bases\8.3.27&quot;&quot;;&quot;</span> /Execute <span class="s2">&quot;C:\Commons\rep\vanessa-automation\vanessa-automation.epf&quot;</span> /C <span class="s2">&quot;runMcp;mcpPort=9876&quot;</span>
+</code></pre></div>
 <h2 id="_2">Примеры конфигов для разных сред управления ИИ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
 <h3 id="continue-vscode">Плагин Continue для VSCode<a class="headerlink" href="#continue-vscode" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Путь к файлу конфига: "C:\Users\ИмяПользователя.continue\mcpServers\VanessaAutomation.yaml"
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VanessaAutomation</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.0.1</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nt">schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
-<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="nt">mcpServers</span><span class="p">:</span>
-<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VanessaAutomation</span>
-<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">streamable-http</span>
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://localhost:9874/mcp</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VanessaAutomation</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">0.0.1</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nt">schema</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="nt">mcpServers</span><span class="p">:</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">VanessaAutomation</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">streamable-http</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http://localhost:9874/mcp</span>
 </code></pre></div></li>
 </ul>
 <h3 id="cline-vscode">Плагин cline для VSCode<a class="headerlink" href="#cline-vscode" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Путь к файлу конфига: "C:\Users\ИмяПользователя\AppData\Roaming\Code\User\globalStorage\saoudrizwan.claude-dev\settings\cline_mcp_settings.json"
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">&quot;mcpServers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">    </span><span class="nt">&quot;VanessaAutomation&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;streamableHttp&quot;</span><span class="p">,</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">      </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:9874/mcp&quot;</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="p">}</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">}</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">&quot;mcpServers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nt">&quot;VanessaAutomation&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">      </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;streamableHttp&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">      </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:9874/mcp&quot;</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="p">}</span>
+</code></pre></div></li>
+</ul>
+<h3 id="roo-code-vscode">Плагин Roo Code для VSCode<a class="headerlink" href="#roo-code-vscode" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Путь к файлу конфига: "C:\Users\ИмяПользователя\AppData\Roaming\Code\User\globalStorage\rooveterinaryinc.roo-cline\settings\mcp_settings.json"
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">    </span><span class="nt">&quot;mcpServers&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">        </span><span class="nt">&quot;VanessaAutomation&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">            </span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;streamable-http&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">            </span><span class="nt">&quot;url&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;http://localhost:9874/mcp&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">            </span><span class="nt">&quot;alwaysAllow&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">                </span><span class="s2">&quot;check_syntax&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">                </span><span class="s2">&quot;close_test_client&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">                </span><span class="s2">&quot;connect_test_client&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">                </span><span class="s2">&quot;execute_feature_step&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">                </span><span class="s2">&quot;frequently_used_steps&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">                </span><span class="s2">&quot;get_active_window_data&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">                </span><span class="s2">&quot;get_data_from_knowledge_base&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">                </span><span class="s2">&quot;get_editor_state&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">                </span><span class="s2">&quot;get_environment_data&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a><span class="w">                </span><span class="s2">&quot;get_extension_list&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a><span class="w">                </span><span class="s2">&quot;get_form_analysis&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a><span class="w">                </span><span class="s2">&quot;get_form_element_data&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a><span class="w">                </span><span class="s2">&quot;get_info_about_line_scenario&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a><span class="w">                </span><span class="s2">&quot;get_object_attributes&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a><span class="w">                </span><span class="s2">&quot;get_table_data&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">                </span><span class="s2">&quot;get_test_results&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="w">                </span><span class="s2">&quot;get_VanessaAutomation_state&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">                </span><span class="s2">&quot;get_window_list_os&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">                </span><span class="s2">&quot;get_window_list_testclient&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="w">                </span><span class="s2">&quot;get_window_screenshot_os&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="w">                </span><span class="s2">&quot;load_features&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="w">                </span><span class="s2">&quot;manage_breakpoints&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="w">                </span><span class="s2">&quot;manage_command_interface&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a><span class="w">                </span><span class="s2">&quot;manage_form_elements&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a><span class="w">                </span><span class="s2">&quot;manage_test_client_profiles&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a><span class="w">                </span><span class="s2">&quot;manage_variables&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a><span class="w">                </span><span class="s2">&quot;open_feature_file&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a><span class="w">                </span><span class="s2">&quot;run_scenario&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a><span class="w">                </span><span class="s2">&quot;save_table_document_to_file&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a><span class="w">                </span><span class="s2">&quot;search_for_steps_by_keywords&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a><span class="w">                </span><span class="s2">&quot;select_scenario&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a><span class="w">                </span><span class="s2">&quot;select_step&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a><span class="w">                </span><span class="s2">&quot;stop_scenario&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a><span class="w">                </span><span class="s2">&quot;user_actions_recording&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a><span class="w">                </span><span class="s2">&quot;voice_notification&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a><span class="w">                </span><span class="s2">&quot;window_management&quot;</span>
+<a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a><span class="w">            </span><span class="p">]</span>
+<a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a><span class="p">}</span>
 </code></pre></div></li>
 </ul>
 <h2 id="_3">Доступные инструменты:<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
@@ -2301,16 +2399,16 @@
 <td>Проверяет синтаксис Gherkin в активном документе редактора Vanessa Automation или в указанном feature-файле. Возвращает Markdown с найденными ошибками: неизвестные шаги, структурные проблемы, ошибки ключевых слов.</td>
 </tr>
 <tr>
+<td><strong>close_test_client</strong></td>
+<td>Закрывает сеанс клиента тестирования по имени профиля. Если профиль не указан — закрывает текущий подключенный профиль. Используйте для завершения работы с клиентом тестирования после выполнения тестов.</td>
+</tr>
+<tr>
 <td><strong>connect_test_client</strong></td>
 <td>Подключает клиент тестирования 1С по имени профиля. Необходимо для работы <strong>get_form_analysis</strong>, <strong>execute_feature_step</strong> и запуска сценариев, которым требуется клиент тестирования для работы.</td>
 </tr>
 <tr>
 <td><strong>execute_feature_step</strong></td>
 <td>Выполняет шаг из .feature файла по номеру строки. Валидирует что файл открыт в редакторе, активирует вкладку при необходимости.</td>
-</tr>
-<tr>
-<td><strong>execute_step_from_text</strong></td>
-<td>Выполняет произвольный текст, в котором содержится шаг Vanessa Automation. Параметр <strong>stepText</strong> обязателен. Нельзя вызывать шаги, которые в себе содержат строку 'в течение' т.к. они работают асинхронно и Vanessa Automation не будет ждать завершения выполнения такого шага при работе инструмента <strong>execute_step_from_text</strong>. Такие шаги нужно выполнять в рамках feature файла.</td>
 </tr>
 <tr>
 <td><strong>frequently_used_steps</strong></td>
@@ -2386,11 +2484,11 @@
 </tr>
 <tr>
 <td><strong>manage_command_interface</strong></td>
-<td>Универсальный инструмент для работы с командным интерфейсом 1С:Предприятия. Поддерживаемые действия (параметр action): <strong>get_section_panel</strong> (получить панель разделов - первый уровень), <strong>get_function_panel</strong> (получить панель функций - второй уровень). У функций есть навигационная ссылка, которую потом можно использовать для прямого вызова функции. <strong>click_section_panel</strong> (нажать кнопку панели разделов), <strong>click_function_panel</strong> (нажать кнопку панели функций). Для <strong>click_section_panel</strong>: <strong>command</strong> (обязательно) - имя кнопки для нажатия, <strong>returnFunctionPanel</strong> (необязательно) - вернуть содержимое панели функций после нажатия. Важный момент: после нажатия на кнопку панели разделов появляется панель функций для этой команды разделов. В этом случае, если нажать на эту же кнопку второй раз, то панель функций исчезнет и не получится получить команды из панели функций. Нужно будет нажать на кнопку панели разделов ещё раз. Для <strong>click_function_panel</strong>: <strong>command</strong> (обязательно) - имя кнопки для нажатия, <strong>group</strong> (необязательно) - имя группы, если команды не уникальны. Требует подключённого клиента тестирования.</td>
+<td>Универсальный инструмент для работы с командным интерфейсом 1С:Предприятия. Поддерживаемые действия (параметр action): <strong>get_section_panel</strong> (получить панель разделов - первый уровень), <strong>get_function_panel</strong> (получить панель функций - второй уровень). У функций есть навигационная ссылка, которую потом можно использовать для прямого вызова функции. <strong>click_section_panel</strong> (нажать кнопку панели разделов), <strong>click_function_panel</strong> (нажать кнопку панели функций). Для <strong>click_section_panel</strong>: <strong>command</strong> (обязательно) - имя кнопки для нажатия, <strong>returnFunctionPanel</strong> (необязательно) - вернуть содержимое панели функций после нажатия. Важный момент: после нажатия на кнопку панели разделов появляется панель функций для этой команды разделов. В этом случае, если нажать на кнопку панели разделов ещё раз, то панель функций исчезнет и не получится получить команды из панели функций. Нужно будет нажать на кнопку панели разделов ещё раз. Для <strong>click_function_panel</strong>: <strong>command</strong> (обязательно) - имя кнопки для нажатия, <strong>group</strong> (необязательно) - имя группы, если команды не уникальны. Требует подключённого клиента тестирования.</td>
 </tr>
 <tr>
 <td><strong>manage_form_elements</strong></td>
-<td>Универсальный инструмент для управления элементами формы клиента тестирования. Поддерживаемые действия (параметр action): <strong>click_button</strong> (нажать кнопку), <strong>input_text</strong> (ввести текст в поле), <strong>open_dropdown</strong> (открыть выпадающий список), <strong>get_dropdown_state</strong> (получить состояние открытого списка), <strong>select_from_dropdown</strong> (выбрать значение из списка), <strong>set_value</strong> (установить значение в поле), <strong>open_choice_form</strong> (открыть форму выбора), <strong>set_radio_button</strong> (установить переключатель), <strong>set_checkbox</strong> (установить флаг), <strong>unset_checkbox</strong> (снять флаг), <strong>toggle_checkbox</strong> (переключить флаг), <strong>click_hyperlink</strong> (нажать гиперссылку), <strong>simulate_tab</strong> (эмуляция TAB), <strong>activate_column</strong> (активизировать колонку таблицы), <strong>navigate_next_column</strong> (переход к следующей колонке), <strong>navigate_previous_column</strong> (переход к предыдущей колонке), <strong>start_edit_row</strong> (начать редактирование строки), <strong>end_edit_row</strong> (закончить редактирование строки), <strong>navigate_to_row</strong> (переход к строке по ключу), <strong>select_row</strong> (выбрать строку), <strong>create_new</strong> (создать новый элемент), <strong>switch_tab</strong> (переключить закладку), <strong>toggle_group</strong> (развернуть/свернуть группу), <strong>activate_header_element</strong> (активизировать элемент шапки). Для элементов в таблицах используйте параметр <strong>table_name</strong>. Требует подключённого клиента тестирования.</td>
+<td>Универсальный инструмент для управления элементами формы клиента тестирования. Поддерживаемые действия (параметр action): <strong>click_button</strong> (нажать кнопку), <strong>input_text</strong> (ввести текст в поле), <strong>open_dropdown</strong> (открыть выпадающий список), <strong>get_dropdown_state</strong> (получить состояние открытого списка), <strong>select_from_dropdown</strong> (выбрать значение из списка), <strong>set_value</strong> (установить значение в поле), <strong>open_choice_form</strong> (открыть форму выбора), <strong>set_radio_button</strong> (установить переключатель), <strong>set_checkbox</strong> (установить флаг), <strong>unset_checkbox</strong> (снять флаг), <strong>toggle_checkbox</strong> (переключить флаг), <strong>click_hyperlink</strong> (нажать гиперссылку), <strong>simulate_tab</strong> (эмуляция TAB), <strong>activate_column</strong> (активизировать колонку таблицы), <strong>navigate_next_column</strong> (переход к следующей колонке), <strong>navigate_previous_column</strong> (переход к предыдущей колонке), <strong>start_edit_row</strong> (начать редактирование строки), <strong>end_edit_row</strong> (закончить редактирование строки), <strong>navigate_to_row</strong> (переход к строке по ключу), <strong>navigate_next_row</strong> (переход к следующей строке таблицы), <strong>navigate_previous_row</strong> (переход к предыдущей строке таблицы), <strong>select_row</strong> (выбрать строку), <strong>get_selected_rows</strong> (вернуть значение выделенных/текущей строки таблицы), <strong>create_new</strong> (создать новый элемент), <strong>switch_tab</strong> (переключить закладку), <strong>toggle_group</strong> (развернуть/свернуть группу), <strong>activate_header_element</strong> (активизировать элемент шапки), <strong>clear_field</strong> (очистить поле), <strong>clear_message_window</strong> (очистить окно сообщений пользователю), <strong>select_from_form_dropdown</strong> (выбрать значение из списка выбора формы). Для элементов в таблицах используйте параметр <strong>table_name</strong>. Требует подключённого клиента тестирования.</td>
 </tr>
 <tr>
 <td><strong>manage_test_client_profiles</strong></td>
@@ -2414,7 +2512,7 @@
 </tr>
 <tr>
 <td><strong>search_for_steps_by_keywords</strong></td>
-<td>Ищет шаги Vanessa Automation по переданной строке поиска и возвращает их в формате Markdown. Поиск производится по: представлению шагов, описании шагов и типу шагов. В любой параметр можно передавать несколько значений, разделенных вертикальной чертой</td>
+<td>Ищет шаги Vanessa Automation по переданной строке поиска и возвращает их в формате Markdown. Поиск производится по: представлению шагов, описании шагов и типу шагов. В любой параметр можно передавать несколько значений, разделенных вертикальной чертой |. Пример поиска шагов в представлении которых встречается слово "кнопка": search_name = "кнопка|кнопки|кнопку". Пример исключения шагов в представлении которых встречается слово "поле": exclude_name = "поле|поля". Пример поиска шагов в описании которых встречается слово "клиент тестирования": search_description = "клиент тестирования". Пример исключения шагов в описании которых встречается слово "гиперссылка": exclude_description = "гиперссылка|гиперссылки". Пример поиска шагов в типе которых встречается строка "Объекты конфигурации": search_type = "Объекты конфигурации". Пример исключения шагов в описании которых встречается строка "Переменные среды": exclude_type = "Переменные среды".</td>
 </tr>
 <tr>
 <td><strong>select_scenario</strong></td>
@@ -2427,6 +2525,10 @@
 <tr>
 <td><strong>stop_scenario</strong></td>
 <td>Посылает команду Vanessa Automation, что нужно остановить выполнение сценариев. На обработку команды может понадобиться время.</td>
+</tr>
+<tr>
+<td><strong>user_actions_recording</strong></td>
+<td>Управляет записью действий пользователя в клиенте тестирования. Поддерживаемые действия (параметр action): <strong>start</strong> (начать запись), <strong>stop</strong> (остановить запись и получить шаги). При остановке записи возвращается текст шагов в формате Turbo Gherkin, которые были выполнены пользователем за время записи. Требует подключённого клиента тестирования.</td>
 </tr>
 <tr>
 <td><strong>voice_notification</strong></td>
@@ -2479,11 +2581,11 @@
 3. <strong>При создании новых задач</strong> — адаптируйте пример под свои потребности, сохраняя общую структуру</p>
 <hr />
 <h2 id="_5">🔗 Рекомендуемый порядок работы с файлами<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h2>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>1. Instructions.md      →  Изучить общие принципы работы
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>         ↓
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>2. Memory.MD            →  Загрузить накопленный опыт
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>         ↓
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>3. ПримерПромтаДляЗадачи.md  →  Оформить задачу по примеру
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>1. Instructions.md      →  Изучить общие принципы работы
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>         ↓
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>2. Memory.MD            →  Загрузить накопленный опыт
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>         ↓
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>3. ПримерПромтаДляЗадачи.md  →  Оформить задачу по примеру
 </code></pre></div>
 <hr />
 
