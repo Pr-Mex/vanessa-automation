@@ -604,15 +604,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1204324" class="md-nav__link">
+  <a href="#1204327" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.2.043.24
+        1.2.043.27
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1.2.043.24">
+    <nav class="md-nav" aria-label="1.2.043.27">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2241,15 +2241,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1204324" class="md-nav__link">
+  <a href="#1204327" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.2.043.24
+        1.2.043.27
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1.2.043.24">
+    <nav class="md-nav" aria-label="1.2.043.27">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2394,7 +2394,7 @@
 
 
 <h1 id="_1">История версий<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="1204324">1.2.043.24<a class="headerlink" href="#1204324" title="Permanent link">&para;</a></h2>
+<h2 id="1204327">1.2.043.27<a class="headerlink" href="#1204327" title="Permanent link">&para;</a></h2>
 <h3 id="ai">AI<a class="headerlink" href="#ai" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Поддержка работы MCP для управления Vanessa Automation. #2516</li>
@@ -2415,6 +2415,7 @@
 <li>Нужен инструмент - оператор #2594</li>
 <li>Нужен инструмент для выключения и выключения записи действий пользователя #2610</li>
 <li>Нужен инструмент для закрытия клиента тестирования #2611</li>
+<li>Возможность вызывать несколько действий в форме за один вызов инструмента. #2622</li>
 </ul>
 <h3 id="_2">Новые возможности<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2427,6 +2428,8 @@
 <li>И я открываю объект по ссылке "ИмяПеременной" (расширение) #2491</li>
 <li>И я открываю объект по строковому представлению ссылки "ИмяПеременной" (расширение) #2491</li>
 <li>Тогда появилось окно предупреждения системы #2591</li>
+<li>И я помечаю на удаление документы "ВидДокумента" содержащих комментарий "ТекстКомментария" (Расширение) #2623</li>
+<li>И я распаковываю архив "ПутьКФайлу" в каталог "ИмяКаталога" #2624</li>
 </ul>
 <h3 id="_4">Пул реквесты<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2473,6 +2476,16 @@
 <li>сleanup: 13 dead local vars в VanessaAutomation/Ext/ObjectModule.bsl #2572 Спасибо @OlegKopeykin</li>
 <li>docs(allure2): cleanup фикстур Issue-34 — опечатки, cross-refs, осмысленные Функциональность #2571 Спасибо @OlegKopeykin</li>
 <li>cleanup: удалён мёртвый блок Если ШагВложенный &lt;&gt; Неопределено в ЗаписатьВыполнениеШагаАллюр2 #2565 Спасибо @OlegKopeykin</li>
+<li>cleanup: dead code в отчетах jUnit/CucumberJson/СППР/Allure2 (ObjectModule) #2601 Спасибо @OlegKopeykin</li>
+<li>cleanup: удаление повторных вставок одинаковых ключей в коллекции #2603 Спасибо @OlegKopeykin</li>
+<li>cleanup: Удаление мёртвой формы ГенераторТестов #2604 Спасибо @OlegKopeykin</li>
+<li>cleanup: Удаление мёртвой процедуры УстановитьИмяОбластиПеременных (РедакторТекста) #2605 Спасибо @OlegKopeykin</li>
+<li>fix: дефекты генерируемого EN-текста в генераторе дымовых тестов #2612 Спасибо @OlegKopeykin</li>
+<li>Обновление редактора VAEditor, версия 1.3.7.10 #2606 Спасибо @OlegKopeykin @lintest</li>
+<li>fix: опечатка ВидОбъектаРП у РегистрРасчета в генераторе дымовых тестов #2618 Спасибо @OlegKopeykin</li>
+<li>cleanup: удаление 10 мёртвых модульных переменных VanessaAutomation #2617 Спасибо @OlegKopeykin</li>
+<li>cleanup: удаление 6 мёртвых экспортных методов VA (6 коммитов) #2607 Спасибо @OlegKopeykin</li>
+<li>fix: ИнтернетПочта: исправления текстов регистраций шагов (опечатки, описания, аннотации) #2616 Спасибо @OlegKopeykin</li>
 </ul>
 <h3 id="_5">Разные доработки<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2493,6 +2506,7 @@
 <li>Инструмент для вставки строк в макеты, которые обеспечивают локализацию #2557</li>
 <li>Инструмент для автоперевода макетов локализации #2559</li>
 <li>При запуске сборки в CI VA надо выводить данные о потреблении памяти процессами 1С #2584</li>
+<li>При проверке переключателей поддержать проверку значения в старом и новом формате - представление данных и отображаемый текст. #2621</li>
 </ul>
 <h3 id="_6">Исправление ошибок<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2507,6 +2521,7 @@
 <li>Для флагов с типом число теперь используется корректная проверка на представление значения. #2595</li>
 <li>Исправление проблемы, когда не работала актуализация шага из-за шагов в попытке исключение. #2596</li>
 <li>Когда в сценарии есть несколько регистраций ошибки по данным исключения, то ошибка в формате json накапливала описание ошибки, а это неправильно #2609</li>
+<li>Затирание символа % в теле пароля пользователя. ВА 1.2.043.1 #2503 Спасибо @TatyanaOv</li>
 </ul>
 <h2 id="1204247">1.2.042.47<a class="headerlink" href="#1204247" title="Permanent link">&para;</a></h2>
 <h3 id="_7">Новые возможности<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
