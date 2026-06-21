@@ -515,7 +515,11 @@
 				<Title>
 					<v8:item>
 						<v8:lang>ru</v8:lang>
-						<v8:content>Форма группа docker</v8:content>
+						<v8:content>Выполнение в docker</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Run in Docker</v8:content>
 					</v8:item>
 				</Title>
 				<ToolTip>
@@ -4129,6 +4133,8 @@
 											<ChildItems>
 												<Table name="ДеревоТестов" id="66">
 													<Representation>Tree</Representation>
+													<HorizontalLines>false</HorizontalLines>
+													<VerticalLines>false</VerticalLines>
 													<AutoInsertNewRow>true</AutoInsertNewRow>
 													<InitialTreeView>ExpandAllLevels</InitialTreeView>
 													<EnableStartDrag>true</EnableStartDrag>
@@ -6253,6 +6259,8 @@
 																	<Representation>Tree</Representation>
 																	<SelectionMode>SingleRow</SelectionMode>
 																	<Header>false</Header>
+																	<HorizontalLines>false</HorizontalLines>
+																	<VerticalLines>false</VerticalLines>
 																	<AutoInsertNewRow>true</AutoInsertNewRow>
 																	<EnableStartDrag>true</EnableStartDrag>
 																	<EnableDrag>true</EnableDrag>
@@ -6651,6 +6659,8 @@
 																	<Representation>Tree</Representation>
 																	<ReadOnly>true</ReadOnly>
 																	<AutoMaxWidth>false</AutoMaxWidth>
+																	<HorizontalLines>false</HorizontalLines>
+																	<VerticalLines>false</VerticalLines>
 																	<AutoInsertNewRow>true</AutoInsertNewRow>
 																	<EnableStartDrag>true</EnableStartDrag>
 																	<EnableDrag>true</EnableDrag>
@@ -11759,6 +11769,8 @@
 							<ChildItems>
 								<Table name="ДанныеКлиентовТестирования" id="959">
 									<Representation>List</Representation>
+									<HorizontalLines>false</HorizontalLines>
+									<VerticalLines>false</VerticalLines>
 									<AutoInsertNewRow>true</AutoInsertNewRow>
 									<EnableStartDrag>true</EnableStartDrag>
 									<EnableDrag>true</EnableDrag>
@@ -23300,6 +23312,8 @@ Ett exempelresultat kan ses &lt;link https://www.youtube.com/watch?v=1xnp6CxCktA
 																		<Table name="ДанныеАллюрМеток" id="1985">
 																			<Representation>List</Representation>
 																			<Height>4</Height>
+																			<HorizontalLines>false</HorizontalLines>
+																			<VerticalLines>false</VerticalLines>
 																			<AutoInsertNewRow>true</AutoInsertNewRow>
 																			<VerticalStretch>false</VerticalStretch>
 																			<EnableStartDrag>true</EnableStartDrag>
@@ -30858,6 +30872,8 @@ Metoden ska returnera sökvägen till mp3-filen.</v8:content>
 																								</InputField>
 																								<Table name="НастройкиДругогоДвижкаTTS" id="2998">
 																									<Representation>List</Representation>
+																									<HorizontalLines>false</HorizontalLines>
+																									<VerticalLines>false</VerticalLines>
 																									<AutoInsertNewRow>true</AutoInsertNewRow>
 																									<EnableStartDrag>true</EnableStartDrag>
 																									<EnableDrag>true</EnableDrag>
@@ -35431,6 +35447,8 @@ För att inaktivera musrörelse vid ett specifikt steg, använd direktivet #[DoN
 																<Table name="ПрофилиПоискаКартинокСТекстом" id="2160">
 																	<Representation>List</Representation>
 																	<Height>4</Height>
+																	<HorizontalLines>false</HorizontalLines>
+																	<VerticalLines>false</VerticalLines>
 																	<AutoInsertNewRow>true</AutoInsertNewRow>
 																	<VerticalStretch>false</VerticalStretch>
 																	<EnableStartDrag>true</EnableStartDrag>
@@ -37262,6 +37280,10 @@ Klicka på hyperlänken för mer detaljer.</v8:content>
 													<v8:lang>ru</v8:lang>
 													<v8:content>Docker</v8:content>
 												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Docker</v8:content>
+												</v8:item>
 											</Title>
 											<ToolTip>
 												<v8:item>
@@ -37283,6 +37305,10 @@ Klicka på hyperlänken för mer detaljer.</v8:content>
 																<v8:lang>ru</v8:lang>
 																<v8:content>Будет доступно выполнение текущего сценария в docker-контейнере</v8:content>
 															</v8:item>
+															<v8:item>
+																<v8:lang>en</v8:lang>
+																<v8:content>The current script will be available to run in a Docker container</v8:content>
+															</v8:item>
 														</Title>
 													</ExtendedTooltip>
 													<Events>
@@ -37294,6 +37320,10 @@ Klicka på hyperlänken för mer detaljer.</v8:content>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
 															<v8:content>Каталог монтирования</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Mount directory</v8:content>
 														</v8:item>
 													</Title>
 													<ToolTip>
@@ -37321,11 +37351,15 @@ Klicka på hyperlänken för mer detaljer.</v8:content>
 															</InputHint>
 															<ContextMenu name="DockerКаталогМонтированияКонтекстноеМеню" id="4204"/>
 															<ExtendedTooltip name="DockerКаталогМонтированияРасширеннаяПодсказка" id="4205">
-																<Title formatted="true">
+																<Title formatted="false">
 																	<v8:item>
 																		<v8:lang>ru</v8:lang>
 																		<v8:content>Каталог на локальном компьютере, который будет монтироваться в контейнер.
 Для варианта тестирования опубликованной файловой базы необходимо при первом запуске активировать лицензию 1С (например, комъюнити-лицензию). И сохранить в C:\Каталог\Монтирования\licenses. При последующих запусков лицензия будет браться из этого каталога</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>The directory on the local computer that will be mounted into the container. For testing a published file-based database, you need to activate a 1C license (e.g., a community license) on the first run. Save it to C:\Mount\Directory\licenses. On subsequent runs, the license will be taken from this directory.</v8:content>
 																	</v8:item>
 																</Title>
 															</ExtendedTooltip>
@@ -37340,6 +37374,10 @@ Klicka på hyperlänken för mer detaljer.</v8:content>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
 															<v8:content>Настройки контейнера тестирования</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Testing container settings</v8:content>
 														</v8:item>
 													</Title>
 													<ToolTip>
@@ -37357,7 +37395,11 @@ Klicka på hyperlänken för mer detaljer.</v8:content>
 															<Title>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
-																	<v8:content>Docker группа контейнер тестирования</v8:content>
+																	<v8:content>Контейнер тестирования</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Testing container</v8:content>
 																</v8:item>
 															</Title>
 															<ToolTip>
@@ -37386,7 +37428,11 @@ Klicka på hyperlänken för mer detaljer.</v8:content>
 																		<Title formatted="true">
 																			<v8:item>
 																				<v8:lang>ru</v8:lang>
-																				<v8:content>Имя образа docker, на основании которого будет создан контейнер для тестирования.</v8:content>
+																				<v8:content>Имя образа docker, на основании которого будет создан контейнер для тестирования</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>&lt;font Arial&gt;&lt;fontsize 10&gt;&lt;color #0f1115&gt;The name of the Docker image that will be used to create the testing container&lt;/&gt;&lt;/&gt;&lt;/&gt;</v8:content>
 																			</v8:item>
 																		</Title>
 																	</ExtendedTooltip>
@@ -37410,7 +37456,11 @@ Klicka på hyperlänken för mer detaljer.</v8:content>
 															<Title>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
-																	<v8:content>Docker группа пути внутри каталогов контейнера</v8:content>
+																	<v8:content>Пути внутри каталогов контейнера</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Paths inside container directories</v8:content>
 																</v8:item>
 															</Title>
 															<Representation>None</Representation>
@@ -37434,6 +37484,10 @@ Klicka på hyperlänken för mer detaljer.</v8:content>
 																				<v8:lang>ru</v8:lang>
 																				<v8:content>Путь к bin-каталогу платформы внутри контейнера</v8:content>
 																			</v8:item>
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>The path to the platform's bin directory inside the container</v8:content>
+																			</v8:item>
 																		</Title>
 																	</ExtendedTooltip>
 																</InputField>
@@ -37453,6 +37507,10 @@ Klicka på hyperlänken för mer detaljer.</v8:content>
 																			<v8:item>
 																				<v8:lang>ru</v8:lang>
 																				<v8:content>Каталог лицензий, где будут искаться программные лицензии для клиента</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>The license directory where software licenses for the client will be searched for</v8:content>
 																			</v8:item>
 																		</Title>
 																	</ExtendedTooltip>
@@ -37515,6 +37573,10 @@ Klicka på hyperlänken för mer detaljer.</v8:content>
 															<v8:lang>ru</v8:lang>
 															<v8:content>Настройки контейнера просмотрщика</v8:content>
 														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Viewer container settings</v8:content>
+														</v8:item>
 													</Title>
 													<ToolTip>
 														<v8:item>
@@ -37541,7 +37603,11 @@ Klicka på hyperlänken för mer detaljer.</v8:content>
 															<Title>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
-																	<v8:content>Docker группа контейнер просмотрщика</v8:content>
+																	<v8:content>Контейнер просмотрщика</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Viewer container</v8:content>
 																</v8:item>
 															</Title>
 															<ToolTip>
@@ -37573,6 +37639,10 @@ Klicka på hyperlänken för mer detaljer.</v8:content>
 																				<v8:lang>ru</v8:lang>
 																				<v8:content>Имя образа docker, на основании которого будет создан служебный контейнер для возможности просмотра контейнера тестирования.</v8:content>
 																			</v8:item>
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>The name of the Docker image that will be used to create a utility container for viewing the testing container</v8:content>
+																			</v8:item>
 																		</Title>
 																	</ExtendedTooltip>
 																</InputField>
@@ -37600,6 +37670,10 @@ Klicka på hyperlänken för mer detaljer.</v8:content>
 															<v8:lang>ru</v8:lang>
 															<v8:content>Создание базы для менеджера тестирования</v8:content>
 														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Create database for testing manager</v8:content>
+														</v8:item>
 													</Title>
 													<ToolTip>
 														<v8:item>
@@ -37625,6 +37699,11 @@ Klicka på hyperlänken för mer detaljer.</v8:content>
 																		<v8:content>Если флаг установлен в каталоге тестирования будет создана пустая база, которая будет использоваться для запуска менеджера тестирования.
 Если флаг не установлен, то в качестве менеджера тестирования будет использована база заданная ниже</v8:content>
 																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>If the flag is set, an empty database will be created in the testing directory, which will be used to run the testing manager. 
+If the flag is not set, the database specified below will be used as the testing manager</v8:content>
+																	</v8:item>
 																</Title>
 															</ExtendedTooltip>
 															<Events>
@@ -37636,7 +37715,11 @@ Klicka på hyperlänken för mer detaljer.</v8:content>
 															<Title>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
-																	<v8:content>Docker группа менеджер тестирования</v8:content>
+																	<v8:content>Менеджер тестирования</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Testing manager</v8:content>
 																</v8:item>
 															</Title>
 															<ToolTip>
@@ -37667,6 +37750,10 @@ Klicka på hyperlänken för mer detaljer.</v8:content>
 																				<v8:lang>ru</v8:lang>
 																				<v8:content>Будет использован в качестве менеджера тестирования</v8:content>
 																			</v8:item>
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>Will be used as the testing manager</v8:content>
+																			</v8:item>
 																		</Title>
 																	</ExtendedTooltip>
 																</InputField>
@@ -37674,7 +37761,11 @@ Klicka på hyperlänken för mer detaljer.</v8:content>
 																	<Title>
 																		<v8:item>
 																			<v8:lang>ru</v8:lang>
-																			<v8:content>Docker группа аутентификация менеджера тестирования</v8:content>
+																			<v8:content>Аутентификация менеджера тестирования</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Testing manager authentication</v8:content>
 																		</v8:item>
 																	</Title>
 																	<ToolTip>
@@ -37711,6 +37802,10 @@ Klicka på hyperlänken för mer detaljer.</v8:content>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
 															<v8:content>Настройка клиентов тестирования</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Testing client configuration</v8:content>
 														</v8:item>
 													</Title>
 													<ToolTip>
@@ -37756,6 +37851,14 @@ Klicka på hyperlänken för mer detaljer.</v8:content>
 - база может быть файловая и опубликована, и доступна внутри контейнера
 Пример формата: ws="http://host.docker.internal:80/base"; здесь файловая база опубликована на локальном компьютере
 </v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>The testing database connection string that will be replaced for the testing client. For example, if the database is published on the local machine and has the address http://localhost/base, it needs to be changed to http://host.docker.internal/base for proper operation inside the container. 
+Two options are supported:
+- the database can be client-server and accessible via IP inside the container.
+- the database can be file-based and published, and accessible inside the container.
+Example format: ws="http://host.docker.internal:80/base"; here, the file-based database is published on the local computer.</v8:content>
 																	</v8:item>
 																</Title>
 															</ExtendedTooltip>
@@ -38255,6 +38358,8 @@ Klicka på hyperlänken för mer detaljer.</v8:content>
 											<ChildItems>
 												<Table name="ТаблицаИзвестныхStepDefinition" id="1486">
 													<Representation>List</Representation>
+													<HorizontalLines>false</HorizontalLines>
+													<VerticalLines>false</VerticalLines>
 													<AutoInsertNewRow>true</AutoInsertNewRow>
 													<EnableStartDrag>true</EnableStartDrag>
 													<EnableDrag>true</EnableDrag>
@@ -38650,6 +38755,8 @@ Klicka på hyperlänken för mer detaljer.</v8:content>
 						</UsualGroup>
 						<Table name="ТаблоПеременных" id="1915">
 							<Representation>Tree</Representation>
+							<HorizontalLines>false</HorizontalLines>
+							<VerticalLines>false</VerticalLines>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
@@ -51949,6 +52056,10 @@ Klicka på hyperlänken för mer detaljer.</v8:content>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Запустить контейнер и выполнить</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Start container and execute</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
@@ -51963,6 +52074,10 @@ Klicka på hyperlänken för mer detaljer.</v8:content>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Остановить контейнер</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Stop the container</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
