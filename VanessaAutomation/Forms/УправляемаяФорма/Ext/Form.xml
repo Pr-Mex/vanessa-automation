@@ -510,39 +510,6 @@
 				</Title>
 				<ExtendedTooltip name="ВыполнитьСценарииРасширеннаяПодсказка" id="1258"/>
 			</Button>
-			<ButtonGroup name="ФормаГруппаDocker" id="4194">
-				<Visible>false</Visible>
-				<Title>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Выполнение в docker</v8:content>
-					</v8:item>
-					<v8:item>
-						<v8:lang>en</v8:lang>
-						<v8:content>Run in Docker</v8:content>
-					</v8:item>
-				</Title>
-				<ToolTip>
-					<v8:item>
-						<v8:lang>ru</v8:lang>
-						<v8:content>Форма группа docker</v8:content>
-					</v8:item>
-				</ToolTip>
-				<Representation>Compact</Representation>
-				<ExtendedTooltip name="ФормаГруппаDockerРасширеннаяПодсказка" id="4195"/>
-				<ChildItems>
-					<Button name="ФормаDockerЗапуститьКонтейнер" id="4188">
-						<Type>CommandBarButton</Type>
-						<CommandName>Form.Command.DockerЗапуститьКонтейнер</CommandName>
-						<ExtendedTooltip name="ФормаDockerЗапуститьКонтейнерРасширеннаяПодсказка" id="4189"/>
-					</Button>
-					<Button name="ФормаDockerОстановить" id="4190">
-						<Type>CommandBarButton</Type>
-						<CommandName>Form.Command.DockerОстановить</CommandName>
-						<ExtendedTooltip name="ФормаDockerОстановитьРасширеннаяПодсказка" id="4191"/>
-					</Button>
-				</ChildItems>
-			</ButtonGroup>
 			<Button name="ОстановитьСценарии" id="2031">
 				<Type>CommandBarButton</Type>
 				<Representation>PictureAndText</Representation>
@@ -659,6 +626,39 @@
 				</Title>
 				<ExtendedTooltip name="ФормаПерезагрузитьИВыполнитьРасширеннаяПодсказка" id="1259"/>
 			</Button>
+			<ButtonGroup name="ФормаГруппаDocker" id="4194">
+				<Visible>false</Visible>
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Выполнение в docker</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Run in Docker</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Форма группа docker</v8:content>
+					</v8:item>
+				</ToolTip>
+				<Representation>Compact</Representation>
+				<ExtendedTooltip name="ФормаГруппаDockerРасширеннаяПодсказка" id="4195"/>
+				<ChildItems>
+					<Button name="ФормаDockerЗапуститьКонтейнер" id="4188">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.DockerЗапуститьКонтейнер</CommandName>
+						<ExtendedTooltip name="ФормаDockerЗапуститьКонтейнерРасширеннаяПодсказка" id="4189"/>
+					</Button>
+					<Button name="ФормаDockerОстановить" id="4190">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.DockerОстановить</CommandName>
+						<ExtendedTooltip name="ФормаDockerОстановитьРасширеннаяПодсказка" id="4191"/>
+					</Button>
+				</ChildItems>
+			</ButtonGroup>
 			<Popup name="ГруппаВидимостьКолонок" id="1586">
 				<Title>
 					<v8:item>
@@ -2792,6 +2792,16 @@
 									</v8:item>
 								</Title>
 								<ExtendedTooltip name="ПанельVanessaEditorВыполнитьСценарииРасширеннаяПодсказка" id="2715"/>
+							</Button>
+							<Button name="ПанельVanessaEditorDockerЗапуститьКонтейнер" id="5152">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.DockerЗапуститьКонтейнер</CommandName>
+								<ExtendedTooltip name="ПанельVanessaEditorDockerЗапуститьКонтейнерРасширеннаяПодсказка" id="5153"/>
+							</Button>
+							<Button name="ПанельVanessaEditorDockerОстановить" id="5154">
+								<Type>CommandBarButton</Type>
+								<CommandName>Form.Command.DockerОстановить</CommandName>
+								<ExtendedTooltip name="ПанельVanessaEditorDockerОстановитьРасширеннаяПодсказка" id="5155"/>
 							</Button>
 							<Button name="ПанельVanessaEditorОстановитьСценарии" id="2716">
 								<Type>CommandBarButton</Type>
@@ -52064,7 +52074,7 @@ Example format: ws="http://host.docker.internal:80/base"; here, the file-based d
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Docker запустить контейнер</v8:content>
+					<v8:content>Запустить контейнер</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>DockerЗапуститьКонтейнер</Action>
@@ -52083,7 +52093,7 @@ Example format: ws="http://host.docker.internal:80/base"; here, the file-based d
 			<ToolTip>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
-					<v8:content>Docker остановить</v8:content>
+					<v8:content>Остановить</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>DockerОстановить</Action>
