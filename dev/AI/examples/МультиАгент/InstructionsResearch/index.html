@@ -1,0 +1,3964 @@
+
+<!doctype html>
+<html lang="ru" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://pr-mex.github.io/vanessa-automation/dev/AI/examples/%D0%9C%D1%83%D0%BB%D1%8C%D1%82%D0%B8%D0%90%D0%B3%D0%B5%D0%BD%D1%82/InstructionsResearch/">
+      
+      
+        <link rel="prev" href="../../%D0%97%D0%B0%D0%BF%D1%83%D1%81%D0%BA%D0%B0%D0%B5%D0%BC%D0%9F%D1%80%D0%BE%D0%BC%D0%BF%D1%82%D1%8B%D0%92%D0%A0%D1%83%D1%87%D0%BD%D1%83%D1%8E/%D0%9E%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B8/">
+      
+      
+        <link rel="next" href="../InstructionsWriteScenario/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../../../../assets/images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>📘 Руководство по работе исследователя в клиенте тестирования - Vanessa Automation Dev</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="red">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#_1" class="md-skip">
+          Перейти к содержанию
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Верхний колонтитул">
+    <a href="../../../.." title="Vanessa Automation Dev" class="md-header__button md-logo" aria-label="Vanessa Automation Dev" data-md-component="logo">
+      
+  <img src="../../../../assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Vanessa Automation Dev
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              📘 Руководство по работе исследователя в клиенте тестирования
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Поиск" placeholder="Поиск" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Поиск">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Очистить" aria-label="Очистить" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Инициализация поиска
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/pr-mex/vanessa-automation" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pr-mex/vanessa-automation
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Вкладки" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../.." class="md-tabs__link">
+        
+  
+  
+    
+  
+  Vanessa Automation
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../../../Changelog/" class="md-tabs__link">
+        
+  
+  
+    
+  
+  История версий
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../../../" class="md-tabs__link">
+          
+  
+  
+  AI
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../CommandSetting/CommandSetting/" class="md-tabs__link">
+          
+  
+  
+  CommandSetting
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../FAQ/" class="md-tabs__link">
+          
+  
+  
+  FAQ
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../InteractiveHelp/Onboarding/" class="md-tabs__link">
+          
+  
+  
+  InteractiveHelp
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../InternetMail/InternetMail/" class="md-tabs__link">
+          
+  
+  
+  InternetMail
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../JsonParams/JsonParamsEN/" class="md-tabs__link">
+          
+  
+  
+  JsonParams
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../MakeVASingle/MakeVASingle/" class="md-tabs__link">
+          
+  
+  
+  MakeVASingle
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../ReturnStatus/ReturnStatus/" class="md-tabs__link">
+          
+  
+  
+  ReturnStatus
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../Smoke/Smoke/" class="md-tabs__link">
+          
+  
+  
+  Smoke
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../TestDataGenerator/TestDataGenerator/" class="md-tabs__link">
+          
+  
+  
+  TestDataGenerator
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../UIAutomation/UIAutomation/" class="md-tabs__link">
+          
+  
+  
+  UIAutomation
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../VAExtension/VAExtension/" class="md-tabs__link">
+          
+  
+  
+  VAExtension
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../../mobile/mobile/" class="md-tabs__link">
+          
+  
+  
+  Mobile
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Навигация" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../../.." title="Vanessa Automation Dev" class="md-nav__button md-logo" aria-label="Vanessa Automation Dev" data-md-component="logo">
+      
+  <img src="../../../../assets/images/logo.png" alt="logo">
+
+    </a>
+    Vanessa Automation Dev
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/pr-mex/vanessa-automation" title="Перейти к репозиторию" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    pr-mex/vanessa-automation
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vanessa Automation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Changelog/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    История версий
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    AI
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    AI
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MCP в Vanessa Automation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Examples
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Examples
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_1" id="__nav_3_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ЗапускаемПромптыВРучную
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ЗапускаемПромптыВРучную
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D0%97%D0%B0%D0%BF%D1%83%D1%81%D0%BA%D0%B0%D0%B5%D0%BC%D0%9F%D1%80%D0%BE%D0%BC%D0%BF%D1%82%D1%8B%D0%92%D0%A0%D1%83%D1%87%D0%BD%D1%83%D1%8E/1.%D0%98%D1%81%D1%81%D0%BB%D0%B5%D0%B4%D0%BE%D0%B2%D0%B0%D0%BD%D0%B8%D0%B5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    1.Исследование
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D0%97%D0%B0%D0%BF%D1%83%D1%81%D0%BA%D0%B0%D0%B5%D0%BC%D0%9F%D1%80%D0%BE%D0%BC%D0%BF%D1%82%D1%8B%D0%92%D0%A0%D1%83%D1%87%D0%BD%D1%83%D1%8E/2.%D0%A1%D1%86%D0%B5%D0%BD%D0%B0%D1%80%D0%B8%D0%B9/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    2.Сценарий
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D0%97%D0%B0%D0%BF%D1%83%D1%81%D0%BA%D0%B0%D0%B5%D0%BC%D0%9F%D1%80%D0%BE%D0%BC%D0%BF%D1%82%D1%8B%D0%92%D0%A0%D1%83%D1%87%D0%BD%D1%83%D1%8E/InstructionsResearch/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📘 Руководство по работе исследователя в клиенте тестирования
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D0%97%D0%B0%D0%BF%D1%83%D1%81%D0%BA%D0%B0%D0%B5%D0%BC%D0%9F%D1%80%D0%BE%D0%BC%D0%BF%D1%82%D1%8B%D0%92%D0%A0%D1%83%D1%87%D0%BD%D1%83%D1%8E/InstructionsWriteScenario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📘 Руководство по созданию сценариев тестирования
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../%D0%97%D0%B0%D0%BF%D1%83%D1%81%D0%BA%D0%B0%D0%B5%D0%BC%D0%9F%D1%80%D0%BE%D0%BC%D0%BF%D1%82%D1%8B%D0%92%D0%A0%D1%83%D1%87%D0%BD%D1%83%D1%8E/%D0%9E%D0%BF%D0%B8%D1%81%D0%B0%D0%BD%D0%B8%D0%B5%D0%97%D0%B0%D0%B4%D0%B0%D1%87%D0%B8/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ОписаниеЗадачи
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_2_2" id="__nav_3_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    МультиАгент
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_3_2_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    МультиАгент
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📘 Руководство по работе исследователя в клиенте тестирования
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📘 Руководство по работе исследователя в клиенте тестирования
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚨 СТОП! КРИТИЧЕСКОЕ ПРЕДУПРЕЖДЕНИЕ ПЕРЕД НАЧАЛОМ РАБОТЫ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚨 СТОП! ЗАПРЕТ СОЗДАНИЯ ТЕСТОВЫХ ДАННЫХ (КРИТИЧНО)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚨 СТОП! ЗАПРЕТ СОЗДАНИЯ ТЕСТОВЫХ ДАННЫХ (КРИТИЧНО)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        К вспомогательным тестовым данным относятся:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Что Исследователь МОЖЕТ создавать:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Что делать при отсутствии данных:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❌ Антипаттерны (ЗАПРЕЩЕНО):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Почему это критически важно:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ Важные правила выполнения
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚠️ Важные правила выполнения">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚨 КРИТИЧЕСКОЕ ПРАВИЛО - АНАЛИЗ СКРИНШОТОВ ПРИ ЛЮБЫХ ПРОБЛЕМАХ
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        После закрытия формы или после проведения документа ОБЯЗАТЕЛЬНО проверять на скриншоте, что форма закрылась.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manage_form_elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚨 Алгоритм действий ПРИ ОШИБКЕ manage_form_elements или любого другого инструмента
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Работа с полями формы
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🖼️ Обязательное создание скриншотов (КРИТИЧНО ВАЖНО)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🖼️ Обязательное создание скриншотов (КРИТИЧНО ВАЖНО)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Когда ОБЯЗАТЕЛЬНО нужно делать скриншоты:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Пример правильного использования:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📁 Расположение скриншотов в проекте
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Требования к исследователю при работе с формами
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 Требования к исследователю при работе с формами">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Изучение модальных окон
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Изучение имен кнопок
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Изучение структуры отчетов
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Запись всех шагов сценария
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Изучение структуры таблиц
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Использование инструментов записи действий
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. ⚠️ Повторное включение записи действий при продолжении исследования
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Проверка состояния после ключевых операций
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Фиксация числовых значений и документов
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Перед началом работы надо закрыть все открытые окна в клиенте тестирования.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        - это нужно сделать, т.к. от работы предыдущих агентов могли остаться открытые окна.
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔧 Проверка доступности функционала через константы
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 Проверка доступности функционала через константы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ Важное замечание о недоступных документах
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚨 КРИТИЧЕСКОЕ ТРЕБОВАНИЕ - ПРОВЕРКА КОНСТАНТ ПЕРЕД НАЧАЛОМ ИССЛЕДОВАНИЯ
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🆕 Отсутствие необходимых тестовых данных в базе
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🆕 Отсутствие необходимых тестовых данных в базе">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❗ Критически важное правило
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚫 АБСОЛЮТНЫЙ ЗАПРЕТ
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Почему это важно
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Допустимое исключение (ЕДИНСТВЕННОЕ)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Что делать исследователю при отсутствии данных (пошаговый алгоритм)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#md" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Шаблон записи в РезультатИсследования.MD:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Конкретные примеры антипаттернов
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Правильный подход:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Чек-лист для исследователя перед завершением исследования:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Чек-лист самопроверки при ошибке
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../InstructionsWriteScenario/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    📘 Руководство по созданию сценариев тестирования
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    CommandSetting
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    CommandSetting
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../CommandSetting/CommandSetting/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Параметры запуска из командной строки
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    FAQ
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    FAQ
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../FAQ/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Вопросы и ответы
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../FAQ/KnownProblems/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Известные проблемы
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../FAQ/MakeAutoVideo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Как создать автовидеоинструкцию
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../FAQ/NotAdd/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Отличия Vanessa-Automation от ADD
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../FAQ/%D0%91%D1%80%D0%B0%D1%83%D0%B7%D0%B5%D1%80/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Как подключить браузер Chrome через debug порт
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../FAQ/%D0%A0%D0%B5%D0%B6%D0%B8%D0%BC%20%D1%81%D0%BE%D0%B2%D0%BC%D0%B5%D1%81%D1%82%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8%208.2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Режим совместимости 8.2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    InteractiveHelp
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    InteractiveHelp
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../InteractiveHelp/Onboarding/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Как запустить сценарий, реализующий Onboarding
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../InteractiveHelp/SettingUpInteractiveHelp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Как настроить работу интерактивной справки
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../InteractiveHelp/VanessaInteractiveDemo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Vanessa Interactive
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../InteractiveHelp/%D0%97%D0%B0%D0%BF%D1%83%D1%81%D0%BA%D0%91%D0%B5%D0%B7%D0%9E%D1%82%D0%BA%D1%80%D1%8B%D1%82%D0%B8%D1%8F%D0%A4%D0%BE%D1%80%D0%BC%D1%8B/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Как запустить сценарий Vanessa Automation без открытия формы
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    InternetMail
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    InternetMail
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../InternetMail/InternetMail/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тестирование электронной почты (библиотека ИнтернетПочта)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    JsonParams
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    JsonParams
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../JsonParams/JsonParamsEN/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Description of parameters that can be passed in the VAParams.json file, which is used when launching Vanessa Automation from the command line.
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../JsonParams/JsonParamsRU/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Описание параметров, которые можно передавать в файле VAParams.json, который используется при запуске Vanessa Automation из командной строки.
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        
+          
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MakeVASingle
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    MakeVASingle
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../MakeVASingle/MakeVASingle/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Параметры запуска из командной строки
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        
+          
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    ReturnStatus
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    ReturnStatus
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../ReturnStatus/ReturnStatus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Статус возврата
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        
+          
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Smoke
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Smoke
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../Smoke/Smoke/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Генератор дымовых тестов
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+        
+          
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    TestDataGenerator
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_12_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_12">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    TestDataGenerator
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../TestDataGenerator/TestDataGenerator/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Подготовка и загрузка данных
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+        
+          
+          <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    UIAutomation
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_13_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_13">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    UIAutomation
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../UIAutomation/UIAutomation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Лайфхаки при работе с UI Automation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_14" >
+        
+          
+          <label class="md-nav__link" for="__nav_14" id="__nav_14_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VAExtension
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_14_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_14">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    VAExtension
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../VAExtension/VAExtension/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Расширение VAExtension
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+      
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_15" >
+        
+          
+          <label class="md-nav__link" for="__nav_15" id="__nav_15_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Mobile
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_15_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_15">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Mobile
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../../mobile/mobile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Тестирование мобильного клиента
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚨 СТОП! КРИТИЧЕСКОЕ ПРЕДУПРЕЖДЕНИЕ ПЕРЕД НАЧАЛОМ РАБОТЫ
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚨 СТОП! ЗАПРЕТ СОЗДАНИЯ ТЕСТОВЫХ ДАННЫХ (КРИТИЧНО)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🚨 СТОП! ЗАПРЕТ СОЗДАНИЯ ТЕСТОВЫХ ДАННЫХ (КРИТИЧНО)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        К вспомогательным тестовым данным относятся:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Что Исследователь МОЖЕТ создавать:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Что делать при отсутствии данных:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❌ Антипаттерны (ЗАПРЕЩЕНО):
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Почему это критически важно:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ Важные правила выполнения
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="⚠️ Важные правила выполнения">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚨 КРИТИЧЕСКОЕ ПРАВИЛО - АНАЛИЗ СКРИНШОТОВ ПРИ ЛЮБЫХ ПРОБЛЕМАХ
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        После закрытия формы или после проведения документа ОБЯЗАТЕЛЬНО проверять на скриншоте, что форма закрылась.
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#manage_form_elements" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚨 Алгоритм действий ПРИ ОШИБКЕ manage_form_elements или любого другого инструмента
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_11" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Работа с полями формы
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_12" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🖼️ Обязательное создание скриншотов (КРИТИЧНО ВАЖНО)
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🖼️ Обязательное создание скриншотов (КРИТИЧНО ВАЖНО)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_13" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Когда ОБЯЗАТЕЛЬНО нужно делать скриншоты:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Пример правильного использования:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_15" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📁 Расположение скриншотов в проекте
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_16" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Требования к исследователю при работе с формами
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="📋 Требования к исследователю при работе с формами">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Изучение модальных окон
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Изучение имен кнопок
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Изучение структуры отчетов
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Запись всех шагов сценария
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        5. Изучение структуры таблиц
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        6. Использование инструментов записи действий
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#7" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        7. ⚠️ Повторное включение записи действий при продолжении исследования
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#8" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        8. Проверка состояния после ключевых операций
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#9" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        9. Фиксация числовых значений и документов
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#10" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        10. Перед началом работы надо закрыть все открытые окна в клиенте тестирования.
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        - это нужно сделать, т.к. от работы предыдущих агентов могли остаться открытые окна.
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_17" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🔧 Проверка доступности функционала через константы
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🔧 Проверка доступности функционала через константы">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ⚠️ Важное замечание о недоступных документах
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚨 КРИТИЧЕСКОЕ ТРЕБОВАНИЕ - ПРОВЕРКА КОНСТАНТ ПЕРЕД НАЧАЛОМ ИССЛЕДОВАНИЯ
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_19" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🆕 Отсутствие необходимых тестовых данных в базе
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="🆕 Отсутствие необходимых тестовых данных в базе">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#_20" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ❗ Критически важное правило
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_21" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        🚫 АБСОЛЮТНЫЙ ЗАПРЕТ
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_22" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Почему это важно
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_23" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Допустимое исключение (ЕДИНСТВЕННОЕ)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_24" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Что делать исследователю при отсутствии данных (пошаговый алгоритм)
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#md" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Шаблон записи в РезультатИсследования.MD:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_25" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Конкретные примеры антипаттернов
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#_26" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Правильный подход:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#-_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Чек-лист для исследователя перед завершением исследования:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#-_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        📋 Чек-лист самопроверки при ошибке
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="_1">📘 Руководство по работе исследователя в клиенте тестирования<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
+<h2 id="_2">🚨 СТОП! КРИТИЧЕСКОЕ ПРЕДУПРЕЖДЕНИЕ ПЕРЕД НАЧАЛОМ РАБОТЫ<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p><strong>ЗАПРЕЩЕНО использовать упрощённые параметры инструментов!</strong></p>
+<p>Когда в инструкции явно указан параметр (например, <code>format=all</code>), нужно использовать <strong>ТОЧНО</strong> этот параметр. Нельзя сначала вызывать с упрощённым параметром (<code>format=short_info</code>) для "быстрой оценки", а потом с полным.</p>
+<p><strong>Пример ЗАПРЕЩЁННОГО действия:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># ❌ НЕПРАВИЛЬНО - сначала short_info, потом all</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">get_data_from_knowledge_base</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s2">&quot;short_info&quot;</span><span class="p">)</span>  <span class="c1"># для &quot;быстрой оценки&quot;</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">get_data_from_knowledge_base</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">)</span>          <span class="c1"># потом полное чтение</span>
+</code></pre></div></p>
+<p><strong>Пример ПРАВИЛЬНОГО действия:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># ✅ ПРАВИЛЬНО - сразу полное чтение</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">get_data_from_knowledge_base</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">)</span>
+</code></pre></div></p>
+<p><strong>Это правило применяется ко ВСЕМ инструментам и параметрам, явно указанным в инструкциях.</strong></p>
+<hr />
+<h2 id="_3">🚨 СТОП! ЗАПРЕТ СОЗДАНИЯ ТЕСТОВЫХ ДАННЫХ (КРИТИЧНО)<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h2>
+<p><strong>Исследователю КАТЕГОРИЧЕСКИ ЗАПРЕЩЕНО самостоятельно создавать вспомогательные тестовые данные в клиенте тестирования через UI, BSL или любым другим способом.</strong></p>
+<h3 id="_4">К вспомогательным тестовым данным относятся:<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>❌ Справочники: СтраныМира, Партнёры, Контрагенты, СоглашенияСПоставщиками, Номенклатура</li>
+<li>❌ Документы-основания (если они не являются частью самого сценария)</li>
+<li>❌ Любые другие объекты НСИ, которые нужны для выполнения сценария, но <strong>НЕ упомянуты</strong> в исходном сценарии как шаги</li>
+</ul>
+<h3 id="_5">Что Исследователь МОЖЕТ создавать:<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>✅ Документы, <strong>явно указанные</strong> в исходном сценарии как шаги (например: «Когда: Я создаю заявку на закупку», «И Я добавляю товар в таблицу "Товары"»)</li>
+<li>✅ Любые новые элементы, создание которых <strong>прямо описано в шагах сценария</strong></li>
+</ul>
+<h3 id="_6">Что делать при отсутствии данных:<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>НЕ создавать</strong> недостающие данные через UI/BSL/любым способом</li>
+<li><strong>НЕ пытаться «обойти»</strong> сценарий (например, использовать российского партнёра вместо партнёра ЕАЭС)</li>
+<li><strong>Зафиксировать факт отсутствия</strong> в файле <code>research/РезультатИсследования_&lt;NN&gt;_&lt;КраткоеНазвание&gt;.MD</code> в разделе «⛔ Блокеры / Отсутствующие тестовые данные»:</li>
+<li>какие именно данные отсутствуют,</li>
+<li>в каком справочнике / документе их ожидали,</li>
+<li>с какими ключевыми реквизитами они должны быть</li>
+<li><strong>Завершить исследование</strong> с пометкой о блокере и перейти к следующему сценарию</li>
+</ol>
+<h3 id="_7">❌ Антипаттерны (ЗАПРЕЩЕНО):<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
+<ul>
+<li>❌ «Создам партнёра ЕАЭС сам, чтобы быстрее получить результат»</li>
+<li>❌ «Использую российского партнёра — для НДС разница небольшая»</li>
+<li>❌ «Подготовлю данные во время исследования — это же логично»</li>
+<li>❌ «Создам данные через BSL, это быстрее, чем через UI»</li>
+</ul>
+<h3 id="_8">Почему это критически важно:<a class="headerlink" href="#_8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>🚫 <strong>Невоспроизводимость в CI:</strong> Если исследователь создаст данные в своей базе, в CI их не будет — сценарий упадёт при запуске тестов</li>
+<li>🚫 <strong>Смешение ролей:</strong> Подготовка данных — это отдельная задача, не входящая в обязанности исследователя</li>
+<li>🚫 <strong>Загрязнение базы:</strong> Неконтролируемые тестовые данные усложняют поддержку и удаление</li>
+<li>🚫 <strong>Нарушение протокола:</strong> Управляющий Агент не сможет корректно оценить наличие тестовых данных (Шаг 2.3б), если они созданы неявно в ходе исследования</li>
+</ul>
+<p><strong>Подробные правила см. в разделе «🆕 Отсутствие необходимых тестовых данных в базе» ниже.</strong></p>
+<p>---## Технические инструкции:</p>
+<ol>
+<li>Сначала прочитай целевой файл и пойми его логику.</li>
+<li><strong>СРАЗУ</strong> прочитай базу знаний Vanessa Automation: <code>get_data_from_knowledge_base, format=all</code> (НЕ используй <code>format=short_info</code> перед этим!)</li>
+<li>Также прочитай файл Memory.MD, в нём есть полезная информация.</li>
+<li>Ты должен:</li>
+<li>Выполнить все пункты задачи вручную.</li>
+<li>Ты должен проделать всё что требуется в задаче "вручную", т.е. с помощью только указанных инструментов (другие инструменты использовать нельзя):<ul>
+<li>manage_command_interface</li>
+<li>manage_form_elements</li>
+<li>execute_form_actions</li>
+<li>get_active_window_data</li>
+<li>get_window_list_testclient</li>
+<li>window_management</li>
+<li>get_form_analysis</li>
+<li>get_window_list_os</li>
+<li>get_window_screenshot_os</li>
+<li>get_data_from_knowledge_base</li>
+<li>get_object_attributes</li>
+<li>get_table_data</li>
+<li>get_form_element_data</li>
+<li>user_actions_recording</li>
+<li>save_table_document_to_file</li>
+</ul>
+</li>
+<li>Сначала получи все команды командного интерфейса (панель разделов и панель функций для каждого элемента панели разделов) с помощью инструмента manage_command_interface, action=get_all (важный момент, это надо сделать до начала записи действий пользователя). </li>
+<li>Затем посмотри какие тестовые данные есть в базе данных клиента тестирования (важный момент, это надо сделать до начала записи действий пользователя).    </li>
+</ol>
+<blockquote>
+<p><strong>⚠️ ВАЖНО:</strong> Получение командного интерфейса и анализ тестовых данных в базе <strong>выполняется отдельным субагентом АнализДанныхИИнтерфейса</strong> ДО запуска Исследователя. Результат сохраняется в файл <code>data/АнализДанных_&lt;NN&gt;_&lt;ИмяСценария&gt;.MD</code>.</p>
+<p><strong>Исследователь ОБЯЗАН в начале работы:</strong>
+1. Прочитать файл <code>data/АнализДанных_&lt;NN&gt;_&lt;ИмяСценария&gt;.MD</code>
+2. Использовать подготовленные там данные о командном интерфейсе и тестовых данных
+3. <strong>НЕ ВЫЗЫВАТЬ самостоятельно</strong> <code>manage_command_interface, action=get_all</code> — эта работа уже выполнена
+4. <strong>НЕ ИСКАТЬ самостоятельно</strong> данные в базе через <code>get_table_data</code> — рекомендации уже в файле</p>
+<p>Допускается точечный поиск конкретных элементов через <code>get_table_data</code>, если в файле АнализДанных их нет.
+- Ты должен собрать <strong>подробную</strong> информацию о каждой форме, которую ты открывал и с которой взаимодействовал:
+  - Какие поля формы шапки заполнялись (имя поля, заголовок поля, тип поля).
+  - Какие поля таблиц формы шапки заполнялись (имя таблицы, имя поля, заголовок поля, тип поля).
+  - Какие кнопки нажимались (имя кнопки и заголовок кнопки).
+- Ты должен собрать <strong>подробную</strong> информацию о том какие команды ты использовал из командного интерфейса и для чего. 
+- Ты должен выполнить "вручную" обязательно все пункты из задачи.
+- Перед началом выполнения действий "вручную" нужно <strong>ОБЯЗАТЕЛЬНО</strong> включить запись действий пользователя с помощью инструмента user_actions_recording
+- После окончания "ручных" действий нужно остановить запись действий пользователя и получить от инструмента user_actions_recording шаги сценария.
+- Текст сценария надо очистить от мусорных действий, если они в нём есть.
+- Ты должен вернуть полученную информацию о формах и шаги сценария в  файл "РезультатИсследования.MD"
+- Нужно статраться использовать инструмент execute_form_actions, чтобы за один вызов выполнить несколько действий, т.к. он позволяет выполнить несколько действий с формой за один вызов инструмента и это существенно ускоряет исследование.
+- Лучше в инструменте execute_form_actions за один вызов выполнять максимальное число возможных действий, до 10 за один вызов.</p>
+</blockquote>
+<h2 id="_9">⚠️ Важные правила выполнения<a class="headerlink" href="#_9" title="Permanent link">&para;</a></h2>
+<h3 id="-">🚨 КРИТИЧЕСКОЕ ПРАВИЛО - АНАЛИЗ СКРИНШОТОВ ПРИ ЛЮБЫХ ПРОБЛЕМАХ<a class="headerlink" href="#-" title="Permanent link">&para;</a></h3>
+<p><strong>Если текстовый ответ инструмента не показывает ожидаемый результат или вы не можете найти нужный элемент формы:</strong></p>
+<ol>
+<li><strong>СРАЗУ сделайте скриншот</strong> через <code>get_window_screenshot_os</code></li>
+<li><strong>ПРОЧИТАЙТЕ скриншот</strong> через <code>read_file</code></li>
+<li><strong>Проанализируйте визуальную информацию</strong> - что реально отображается на экране</li>
+<li><strong>ТОЛЬКО ПОСЛЕ анализа скриншота</strong> принимайте решение о дальнейших действиях</li>
+</ol>
+<p><strong>Почему это важно:</strong>
+- Текстовые ответы инструментов (get_form_analysis, manage_form_elements) могут не показывать все элементы формы
+- Элементы могут быть невидимы, заблокированы или находиться в другом месте
+- Визуальный анализ скриншота позволяет увидеть реальное состояние приложения
+- Без скриншота вы работаете вслепую и можете принимать неверные решения</p>
+<p><strong>Пример проблемы:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Проблема: Не могу найти гиперссылку для открытия отчета &quot;Остатки и доступность товаров&quot;
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Текстовый ответ: Элемента формы с именем &lt;...&gt; не найдено.
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Решение: Сделал скриншот -&gt; прочитал его -&gt; увидел что отчет доступен через командный интерфейс
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>         &quot;Склад и доставка&quot; -&gt; &quot;Отчеты по складу&quot;
+</code></pre></div></p>
+<p><strong>Алгоритм при любой проблеме:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>1. get_window_screenshot_os - сделать скриншот
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>2. read_file - прочитать скриншот
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>3. analyze - проанализировать что на экране
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>4. decide - принять решение на основе визуальной информации
+</code></pre></div></p>
+<hr />
+<h3 id="_10">После закрытия формы или после проведения документа ОБЯЗАТЕЛЬНО проверять на скриншоте, что форма закрылась.<a class="headerlink" href="#_10" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Для проверки закрытия формы используйте инструмент <code>get_window_screenshot_os</code> для получения скриншота и убедитесь, что форма больше не отображается.</li>
+<li>Если не получается выполнить какое-то действие - ОБЯЗАТЕЛЬНО посмотри, что происходит на скриншоте.</li>
+<li>Постоянно проверяй содержимое окна сообщений пользователю.</li>
+<li>Если по смыслу выполняемых действий должно смениться активное окно - ОБЯЗАТЕЛЬНО убедись в этом, прочитав скриншот.</li>
+<li>Нужный клиент тестирования уже подключен и называется ERP. Запускать клиента тестирования не надо.</li>
+</ul>
+<h3 id="manage_form_elements">🚨 Алгоритм действий ПРИ ОШИБКЕ manage_form_elements или любого другого инструмента<a class="headerlink" href="#manage_form_elements" title="Permanent link">&para;</a></h3>
+<p><strong>Если инструмент вернул ошибку (ACTION_FAILED, MCP error, etc.):</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>1. НЕМЕДЛЕННО вызвать get_window_screenshot_os
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>2. НЕМЕДЛЕННО вызвать read_file для скриншота
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>3. Проанализировать скриншот:
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>   - Какое окно сейчас активно?
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>   - Какие элементы видны на самом деле?
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>   - Есть ли сообщения об ошибках на форме?
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>   - Правильное ли имя элемента я использовал?
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>4. Только после анализа скриншота принимать решение об исправлении действия
+</code></pre></div>
+<p><strong>Пример правильной последовательности:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>❌ НЕПРАВИЛЬНО:
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>   manage_form_elements (ошибка) → попробовать другое действие → attempt_completion
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>✅ ПРАВИЛЬНО:
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>   manage_form_elements (ошибка) → get_window_screenshot_os → 
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>   read_file → анализ → исправить действие → повторить
+</code></pre></div></p>
+<h2 id="_11">📋 Работа с полями формы<a class="headerlink" href="#_11" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Перед тем как заполнять поля формы ОБЯЗАТЕЛЬНО вызовите инструмент <code>get_object_attributes</code> с параметром <code>data_mode='all'</code>, чтобы понять какие поля являются ссылочными (содержат ссылки на справочники или другие объекты).</li>
+<li>Перед попыткой заполнить ссылочное поле ОБЯЗАТЕЛЬНО убедитесь, что в базе данных есть такой элемент с помощью инструмента <code>get_table_data</code>. Например, для проверки наличия номенклатуры используйте:</li>
+<li><code>object_type=1</code> (Справочник)</li>
+<li><code>object_name="Номенклатура"</code></li>
+<li>При необходимости используйте параметр <code>name_filter</code> для поиска конкретного элемента</li>
+<li>Никогда не заполняйте ссылочные поля значениями, которых нет в базе данных - это приведет к ошибке и форма будет заблокирована, пока не очистить поле.</li>
+</ul>
+<h2 id="_12">🖼️ Обязательное создание скриншотов (КРИТИЧНО ВАЖНО)<a class="headerlink" href="#_12" title="Permanent link">&para;</a></h2>
+<p><strong>Внимание!</strong> Не полагайтесь только на текстовые ответы инструментов. Визуальный анализ скриншотов критически важен для понимания реального состояния клиентского приложения 1С.</p>
+<h3 id="_13">Когда ОБЯЗАТЕЛЬНО нужно делать скриншоты:<a class="headerlink" href="#_13" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>После проведения документа</strong> - используйте <code>get_window_screenshot_os</code> для подтверждения, что форма закрылась.</li>
+<li><strong>После смены активного окна</strong> - делайте скриншот для подтверждения, что открыто правильное окно.</li>
+<li><strong>При возникновении любой ошибки выполнения действия</strong> - ПЕРВЫМ действием делайте скриншот текущего состояния окна.</li>
+<li><strong>После выполнения ключевых шагов сценария</strong> - делайте скриншот для визуального подтверждения корректности состояния формы.</li>
+<li><strong>При работе с модальными окнами</strong> - делайте скриншот для понимания контекста диалога.</li>
+</ol>
+<h3 id="_14">Пример правильного использования:<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Шаг 1: Нажать кнопку &quot;Провести и закрыть&quot;
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>Шаг 2: Сделать скриншот инструментом get_window_screenshot_os
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>Шаг 3: Прочитать скриншот инструментом read_file
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>Шаг 4: Убедиться, что форма закрыта (на скриншоте видно другое окно)
+</code></pre></div>
+<p><strong>Важно:</strong> Скриншоты нужно делать НЕ ТОЛЬКО при ошибках, но и после успешного выполнения ключевых операций для визуального подтверждения правильного состояния системы.</p>
+<h3 id="_15">📁 Расположение скриншотов в проекте<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h3>
+<p><strong>Все скриншоты должны сохраняться в каталоге проекта в подкаталоге <code>png</code>!</strong></p>
+<p>Структура каталогов проекта:
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>&lt;корень_проекта&gt;/                # Например: &lt;ПутьКПроекту&gt; (см. ПараметрыКонфигурации.MD)
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>├── png/                        # ✅ ВСЕ скриншоты сохраняются ЗДЕСЬ
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>│   ├── scenario_1_step_1.png
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>│   ├── scenario_1_step_2.png
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>│   ├── scenario_2_step_1.png
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>│   └── ...
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>├── features/                   # Feature файлы
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>├── research/                   # Результаты исследований
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>├── InstructionsResearch.md
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>├── InstructionsWriteScenario.md
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>├── ТестПлан.MD
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>└── ...
+</code></pre></div></p>
+<p><strong>Правила именования скриншотов:</strong>
+- Используйте префикс <code>scenario_&lt;номер&gt;_&lt;описание&gt;.png</code>
+- Пример: <code>scenario_1_zayavka_sozdanie.png</code>, <code>scenario_3_otchet_otkloneniya.png</code>
+- Или используйте описательное имя: <code>zayavka_000002_form.png</code>, <code>zayavka_000002_tovary.png</code></p>
+<p><strong>Перед созданием первого скриншота:</strong>
+1. Убедитесь, что каталог <code>png/</code> существует в корне проекта
+2. Если каталог не существует — создайте его командой:
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>png
+</code></pre></div></p>
+<p><strong>Пример вызова инструмента:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>инструмент: get_window_screenshot_os
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>параметр: file_name=png/scenario_1_step_1.png
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>параметр: window_title=&quot;Заявка на закупку (создание)*&quot;
+</code></pre></div></p>
+<p><strong>❌ ЗАПРЕЩЕНО:</strong>
+- Сохранять скриншоты во временных каталогах ОС (<code>/tmp</code>, <code>C:\Users\...\Temp</code>)
+- Сохранять скриншоты в домашнем каталоге пользователя
+- Сохранять скриншоты в любом месте вне каталога проекта
+- Использовать абсолютные пути вне проекта</p>
+<hr />
+<h2 id="_16">📋 Требования к исследователю при работе с формами<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h2>
+<h3 id="1">1. Изучение модальных окон<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
+<ul>
+<li>При любом взаимодействии с формой, где может появиться модальное окно, необходимо делать скриншот и записывать текст модального окна и кнопки</li>
+<li>Записывать ВСЕ модальные окна: подтверждения проведения, выбора действия, подтверждения удаления и т.д.</li>
+<li>Записывать заголовок модального окна, текст сообщения и имена/заголовки всех кнопок</li>
+</ul>
+<h3 id="2">2. Изучение имен кнопок<a class="headerlink" href="#2" title="Permanent link">&para;</a></h3>
+<ul>
+<li>После нажатия кнопки всегда вызывать <code>get_form_analysis</code> и записывать ВСЕ кнопки шапки формы с их именами и заголовками</li>
+<li>Записывать имена кнопок управления документом: проведение, отмена проведения, запись, создание на основании</li>
+<li>Записывать имена кнопок модальных окон</li>
+</ul>
+<h3 id="3">3. Изучение структуры отчетов<a class="headerlink" href="#3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>После формирования отчета вызывать <code>get_form_element_data</code> для элемента табличного документа и записывать структуру данных</li>
+<li>Записывать имена элементов табличного документа и адреса ячеек с заголовками колонок для последующей проверки</li>
+<li>Записывать структуру данных для возможности последующей проверки содержимого отчета</li>
+</ul>
+<h3 id="4">4. Запись всех шагов сценария<a class="headerlink" href="#4" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Записывать КАЖДЫЙ шаг взаимодействия с формой, включая:</li>
+<li>Навигацию по закладкам формы</li>
+<li>Активизацию полей и вызов контекстных меню</li>
+<li>Поиск/фильтрацию документов (активизация поля → контекстное меню "Найти" → ввод Pattern → кнопка Find)</li>
+<li>Отмену проведения документов перед созданием документов на основании</li>
+<li>Установку специальных значений полей (виды обеспечения, статусы, флаги)</li>
+<li>Завершение редактирования строк после работы с выпадающими списками</li>
+<li>Записывать шаги навигации между формами и возврата к предыдущим документам</li>
+</ul>
+<h3 id="5">5. Изучение структуры таблиц<a class="headerlink" href="#5" title="Permanent link">&para;</a></h3>
+<ul>
+<li>После открытия формы с таблицей вызывать <code>get_form_analysis</code> с форматом <code>elements</code> для получения полной структуры</li>
+<li>Записывать реальные имена колонок таблиц для последующей работы с данными</li>
+<li>Записывать информацию о вложенной структуре таблиц (возможность развертывания строк, группировки)</li>
+<li>Записывать имена элементов управления внутри таблицы (кнопки, выпадающие списки, поля ввода)</li>
+</ul>
+<h3 id="6">6. Использование инструментов записи действий<a class="headerlink" href="#6" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Всегда включать запись действий пользователя перед началом ручных действий</li>
+<li>Записывать шаги в формате Turbo Gherkin с помощью <code>user_actions_recording</code></li>
+<li>Не полагаться только на ручное изучение форм через <code>get_form_analysis</code></li>
+</ul>
+<h3 id="7">7. ⚠️ Повторное включение записи действий при продолжении исследования<a class="headerlink" href="#7" title="Permanent link">&para;</a></h3>
+<p><strong>Важное правило:</strong> Если запись действий была остановлена (например, из-за возникновения проблемы или ошибки), но исследование продолжается для выполнения других сценариев — <strong>ОБЯЗАТЕЛЬНО включите запись действий снова</strong> перед продолжением.</p>
+<p><strong>Сценарии, когда требуется повторное включение:</strong>
+- Исследование продолжается после возникновения ошибки в предыдущем сценарии
+- Переход к следующему сценарию после остановки записи
+- Продолжение исследования после анализа проблемы и принятия решения о продолжении
+- Выполнение независимых сценариев после проблем с предыдущим</p>
+<p><strong>Порядок действий:</strong>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>1. Остановить запись (если ещё не остановлена): user_actions_recording, action=&#39;stop&#39;
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>2. Выполнить необходимые действия для анализа/продолжения
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>3. ПЕРЕД началом нового сценария: user_actions_recording, action=&#39;start&#39;
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>4. Выполнить сценарий
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>5. Остановить запись: user_actions_recording, action=&#39;stop&#39;
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>6. Сохранить полученные шаги
+</code></pre></div></p>
+<p><strong>Пример ситуации:</strong>
+- Сценарий 1: Запись включена → Выполнен → Запись остановлена
+- Сценарий 2: Возникла ошибка → Запись остановлена
+- Сценарий 3-5: <strong>Требуется снова включить запись</strong> перед началом!</p>
+<p><strong>Почему это важно:</strong>
+- Без повторного включения записи шаги сценариев 3-5 не будут сохранены
+- Невозможно восстановить шаги для автотестов постфактум
+- Теряется ценность исследования для последующей автоматизации</p>
+<h3 id="8">8. Проверка состояния после ключевых операций<a class="headerlink" href="#8" title="Permanent link">&para;</a></h3>
+<ul>
+<li>После каждой ключевой операции (проведение, закрытие, навигация) делать скриншот и анализировать его</li>
+<li>Проверять скриншотами, что форма закрылась после проведения/записи</li>
+<li>Проверять скриншотами, что открылось правильное окно после навигации</li>
+<li>Проверять содержимое окна сообщений пользователю на наличие предупреждений и ошибок</li>
+</ul>
+<h3 id="9">9. Фиксация числовых значений и документов<a class="headerlink" href="#9" title="Permanent link">&para;</a></h3>
+<p><strong>При работе с документами:</strong>
+- Записывать номера всех созданных документов (например: Заказ клиента 0000-000059 от 13.06.2026)
+- Фиксировать дату и время проведения каждого документа
+- Записывать суммы и количества из каждого документа
+- Сохранять навигационные ссылки на документы для последующей проверки</p>
+<p><strong>При работе с остатками:</strong>
+- Записывать точные числовые значения ДО и ПОСЛЕ каждой операции
+- Проверять математическую корректность изменений
+- Фиксировать любые расхождения в отчете</p>
+<h3 id="10">10. Перед началом работы надо закрыть все открытые окна в клиенте тестирования.<a class="headerlink" href="#10" title="Permanent link">&para;</a></h3>
+<h2 id="-_1">- это нужно сделать, т.к. от работы предыдущих агентов могли остаться открытые окна.<a class="headerlink" href="#-_1" title="Permanent link">&para;</a></h2>
+<h2 id="_17">🔧 Проверка доступности функционала через константы<a class="headerlink" href="#_17" title="Permanent link">&para;</a></h2>
+<h3 id="_18">⚠️ Важное замечание о недоступных документах<a class="headerlink" href="#_18" title="Permanent link">&para;</a></h3>
+<p><strong>Если при попытке создать документ или открыть форму вы получаете ошибку "Неверно задана навигационная ссылка" или документ не найден в хозяйственных операциях:</strong></p>
+<ol>
+<li>
+<p><strong>Возможная причина:</strong> Функционал отключен на уровне констант конфигурации 1С.</p>
+</li>
+<li>
+<p><strong>Как проверить:</strong></p>
+</li>
+<li>Откройте файл <code>const.MD</code> в корневой папке проекта</li>
+<li>Найдите константу с названием интересующего документа/функции</li>
+<li>
+<p>Проверьте значение: <code>Да</code> (включено) или <code>Нет</code> (отключено)</p>
+</li>
+<li>
+<p><strong>Примеры констант:</strong>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>- **Использовать заявки на закупку**: Нет
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>- **Использовать заказы поставщикам**: Да
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>- **Использовать запросы коммерческих предложений поставщиков**: Нет
+</code></pre></div></p>
+</li>
+<li>
+<p><strong>Что делать если функционал отключен:</strong></p>
+</li>
+<li><strong>ОБЯЗАТЕЛЬНО</strong> включить функционал через форму настроек перед продолжением исследования</li>
+</ol>
+<p><strong>Важно:</strong> Перед началом исследования рекомендуется заранее проверить файл <code>const.MD</code> на предмет включенного/отключенного функционала, чтобы понимать какие документы и возможности доступны в данной демо-базе.</p>
+<hr />
+<h3 id="-_2">🚨 КРИТИЧЕСКОЕ ТРЕБОВАНИЕ - ПРОВЕРКА КОНСТАНТ ПЕРЕД НАЧАЛОМ ИССЛЕДОВАНИЯ<a class="headerlink" href="#-_2" title="Permanent link">&para;</a></h3>
+<p><strong>Перед началом выполнения любого сценария исследования:</strong></p>
+<ol>
+<li><strong>ОБЯЗАТЕЛЬНО</strong> прочитай файл <code>const.MD</code> полностью</li>
+<li><strong>Найди все константы</strong>, относящиеся к объектам исследования (документы, справочники, отчеты)</li>
+<li><strong>Если функционал отключен (значение "Нет"):</strong></li>
+<li>НЕ продолжай исследование на аналогах</li>
+<li>НЕ записывай в результаты что "функционал недоступен"</li>
+<li><strong>СРАЗУ включи функционал</strong> через форму настроек</li>
+<li>
+<p>Только после включения продолжай исследование</p>
+</li>
+<li>
+<p><strong>Запрещено:</strong></p>
+</li>
+<li>❌ Использовать документы-аналоги вместо требуемых (например, "Заказ поставщику" вместо "Заявка на закупку")</li>
+<li>❌ Пропускать сценарии с формулировкой "функционал отключен"</li>
+<li>
+<p>❌ Завершать исследование до включения требуемого функционала</p>
+</li>
+<li>
+<p><strong>Порядок включения функционала:</strong>
+   <div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>1. Прочитать const.MD
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>2. Найти отключенные константы по теме исследования
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>3. Открыть форму настроек
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>4. Включить нужные опции через manage_form_elements или execute_form_actions
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>5. Сохранить настройки
+<a id="__codelineno-12-6" name="__codelineno-12-6" href="#__codelineno-12-6"></a>6. Проверить что функционал стал доступен (открыть форму документа)
+<a id="__codelineno-12-7" name="__codelineno-12-7" href="#__codelineno-12-7"></a>7. ТОЛЬКО ПОСЛЕ этого продолжить исследование
+</code></pre></div></p>
+</li>
+</ol>
+<hr />
+<h2 id="_19">🆕 Отсутствие необходимых тестовых данных в базе<a class="headerlink" href="#_19" title="Permanent link">&para;</a></h2>
+<h3 id="_20">❗ Критически важное правило<a class="headerlink" href="#_20" title="Permanent link">&para;</a></h3>
+<p><strong>Если сценарий требует определённых данных (заявка, документ, контрагент, номенклатура и т.п.), но их нет в базе — исследователь НЕ ДОЛЖЕН создавать их самостоятельно.</strong> Вместо этого он обязан <strong>зафиксировать факт отсутствия данных в <code>РезультатИсследования.MD</code></strong> (в разделе «Блокеры / Отсутствующие тестовые данные»), чтобы эта информация была передана для подготовки тестовой базы.</p>
+<h3 id="_21">🚫 АБСОЛЮТНЫЙ ЗАПРЕТ<a class="headerlink" href="#_21" title="Permanent link">&para;</a></h3>
+<p>Это <strong>НЕ рекомендация</strong>, а <strong>АБСОЛЮТНЫЙ ЗАПРЕТ</strong>. Исследователь <strong>НЕ ИМЕЕТ ПРАВА</strong> создавать вспомогательные тестовые данные, даже если:
+- Сценарий невозможно выполнить без этих данных
+- Создание данных кажется «логичным» или «быстрым решением»
+- Создание занимает всего несколько кликов в UI
+- Удалось найти инструкцию в Memory.MD или АнализДанных о том, как это сделать</p>
+<h3 id="_22">Почему это важно<a class="headerlink" href="#_22" title="Permanent link">&para;</a></h3>
+<ul>
+<li>❗ <strong>Тестовая база в CI не совпадает с базой исследователя.</strong> Если исследователь создаст данные в своей базе во время исследования, то при запуске теста в CI этих данных уже не будет — сценарий упадёт.</li>
+<li>❗ <strong>Вспомогательные тестовые данные (контрагенты, номенклатура, заявки, документы и т.п.) должны заранее присутствовать в тестовой базе.</strong> Их подготовка — это отдельная задача, не входящая в обязанности исследователя сценария.</li>
+<li>❗ <strong>Создание данных в исследовательской базе делает результат исследования невоспроизводимым</strong> в тестовой среде CI.</li>
+<li>❗ <strong>Создание данных исследователем нарушает Шаг 2.3б протокола Управляющего Агента</strong> — Управляющий Агент проверяет наличие данных перед запуском Писателя, и неявно созданные данные невозможно отследить.</li>
+<li>❗ <strong>Создание данных запутывает Код-Ревьюера</strong> — он не может отличить данные, которые были в базе, от данных, которые создал исследователь.</li>
+</ul>
+<h3 id="_23">Допустимое исключение (ЕДИНСТВЕННОЕ)<a class="headerlink" href="#_23" title="Permanent link">&para;</a></h3>
+<p>Создание нового элемента в рамках сценария допустимо <strong>ТОЛЬКО если сам сценарий явно требует</strong> создания нового документа/записи как шага сценария (например: «создать заявку», «ввести новое поступление», «оформить новый документ»). Такие шаги являются частью сценария, а не подготовкой вспомогательных данных, и описываются в шагах сценария.</p>
+<h3 id="_24">Что делать исследователю при отсутствии данных (пошаговый алгоритм)<a class="headerlink" href="#_24" title="Permanent link">&para;</a></h3>
+<ol>
+<li><strong>Прекратить попытки выполнить сценарий</strong> — не пытаться найти обходной путь</li>
+<li><strong>Проверить наличие</strong> требуемых данных через <code>get_table_data</code> (точечный поиск)</li>
+<li><strong>Подтвердить отсутствие</strong> данных — если их действительно нет</li>
+<li><strong>Записать в <code>РезультатИсследования_&lt;NN&gt;_&lt;КраткоеНазвание&gt;.MD</code></strong> в раздел «⛔ Блокеры / Отсутствующие тестовые данные»:</li>
+<li>какие именно данные отсутствуют (с конкретными именами/идентификаторами)</li>
+<li>в каком справочнике / документе / регистре их ожидали</li>
+<li>с какими ключевыми реквизитами они должны быть (по сценарию)</li>
+<li>какие значения полей должны быть заполнены (если известны)</li>
+<li><strong>Предложить рекомендации</strong> по подготовке данных (если есть экспертные знания)</li>
+<li><strong>Завершить исследование</strong> с пометкой ⛔ «Заблокировано: отсутствуют тестовые данные»</li>
+<li><strong>Не создавать данные самостоятельно</strong> и не пытаться «обойти» сценарий</li>
+<li><strong>Перейти к следующему сценарию</strong></li>
+</ol>
+<h3 id="md">Шаблон записи в <code>РезультатИсследования.MD</code>:<a class="headerlink" href="#md" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="gu">## ⛔ Блокеры / Отсутствующие тестовые данные</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="gu">### Что отсутствует</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>| Тип объекта | Наименование | Ключевые реквизиты | Примечание |
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a>|---|---|---|---|
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a>| Справочник.СтраныМира | БЕЛАРУСЬ | Код = 112, Наименование = БЕЛАРУСЬ | Критично для сценария |
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a>| Справочник.Партнеры | Поставщик ЕАЭС | Поставщик = Истина, Страна = БЕЛАРУСЬ | — |
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a>| Справочник.Контрагенты | Контрагент ЕАЭС | Партнер = &lt;Поставщик ЕАЭС&gt;, СтранаРегистрации = БЕЛАРУСЬ, ВидКонтрагента = ЮрЛицоНерезидент | — |
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a>| Справочник.СоглашенияСПоставщиками | Закупка ЕАЭС | ХозяйственнаяОперация = ЗакупкаВСтранахЕАЭС | — |
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="gu">### Рекомендации по подготовке</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a>
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="k">1.</span> Создать страну БЕЛАРУСЬ через UI-классификатор ОКСМ (BSL НЕ работает)
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="k">2.</span> Создать партнёра <span class="sb">`Поставщик ЕАЭС`</span> с признаком <span class="sb">`Поставщик = Истина`</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a><span class="k">3.</span> Создать контрагента с <span class="sb">`СтранаРегистрации = БЕЛАРУСЬ`</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a><span class="k">4.</span> Создать соглашение с <span class="sb">`ХозяйственнаяОперация = ЗакупкаВСтранахЕАЭС`</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a>
+<a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a><span class="gu">### Статус</span>
+<a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a>
+<a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a>⛔ <span class="gs">**Заблокировано:**</span> сценарий не может быть выполнен через UI до подготовки указанных данных.
+</code></pre></div>
+<h3 id="_25">Конкретные примеры антипаттернов<a class="headerlink" href="#_25" title="Permanent link">&para;</a></h3>
+<ul>
+<li>❌ «В базе нет нужного контрагента — создам его через форму создания», а сценарий не требует создания нового контрагента.</li>
+<li>❌ «Нет подходящей заявки — заведу её, чтобы прогнать сценарий», а сценарий не требует создания новой заявки.</li>
+<li>❌ «Добавлю номенклатуру вручную, чтобы пройти шаг сценария», а сценарий не требует создания новой номенклатуры.</li>
+<li>❌ «Создам документ-основание, чтобы проверить ввод на основании», а сценарий не требует создавать документ-основание.</li>
+<li>❌ «В базе нет стран ЕАЭС — добавлю Беларусь через ОКСМ, чтобы протестировать метод <code>ПараметрыНалогообложенияНДС</code>».</li>
+<li>❌ «В базе нет партнёра-импортёра — создам через BSL, чтобы не блокировать сценарий».</li>
+<li>❌ «Использую существующего партнёра <code>Поставщик1</code> (Россия), хотя сценарий требует ЕАЭС — для НДС разница не критична».</li>
+<li>❌ «Создам соглашение с хоз. операцией «ЗакупкаПоИмпорту», хотя в АнализДанных указано «ЗакупкаВСтранахЕАЭС» — это почти одно и то же».</li>
+</ul>
+<h3 id="_26">Правильный подход:<a class="headerlink" href="#_26" title="Permanent link">&para;</a></h3>
+<ul>
+<li>✅ Обнаружил отсутствие → записал в <code>РезультатИсследования.MD</code> в раздел «Блокеры / Отсутствующие тестовые данные».</li>
+<li>✅ Указал, какие именно данные нужны и в каком виде (справочник/документ, ключевые реквизиты).</li>
+<li>✅ Предложил рекомендации по подготовке (если есть экспертные знания).</li>
+<li>✅ Завершил исследование с пометкой ⛔ «Заблокировано».</li>
+<li>✅ Продолжил работу над другими сценариями.</li>
+</ul>
+<p><strong>Запомните:</strong> Исследователь описывает <strong>как выполнять сценарий в имеющейся тестовой базе</strong>, а не наполняет базу под сценарий. Подготовка недостающих тестовых данных — отдельная задача, которая решается до запуска тестов в CI.</p>
+<h3 id="-_3">Чек-лист для исследователя перед завершением исследования:<a class="headerlink" href="#-_3" title="Permanent link">&para;</a></h3>
+<ul>
+<li>[ ] Все модальные окна записаны с именами кнопок</li>
+<li>[ ] Все кнопки форм записаны с именами и заголовками</li>
+<li>[ ] Структура всех таблиц записана с именами колонок</li>
+<li>[ ] Структура всех отчетов записана с адресами ячеек</li>
+<li>[ ] Все шаги поиска/фильтрации документов записаны</li>
+<li>[ ] Все шаги отмены проведения записаны</li>
+<li>[ ] Все шаги работы с видами обеспечения записаны</li>
+<li>[ ] Все шаги завершения редактирования строк записаны</li>
+<li>[ ] Скриншоты ключевых состояний сохранены</li>
+<li>[ ] Запись действий пользователя выполнена</li>
+<li>[ ] Результат записан в файл "РезультатИсследования.MD"</li>
+<li>[ ] Заполнена таблица остатков ДО и ПОСЛЕ операций с точными числами</li>
+<li>[ ] Проверена математическая корректность изменений остатков</li>
+<li>[ ] Записаны номера всех созданных документов с датами</li>
+<li>[ ] Сделаны скриншоты всех отчетов по остаткам (ДО и ПОСЛЕ)</li>
+<li>[ ] Сохранены навигационные ссылки на созданные документы</li>
+</ul>
+<h2 id="-_4">📋 Чек-лист самопроверки при ошибке<a class="headerlink" href="#-_4" title="Permanent link">&para;</a></h2>
+<p>Перед тем как предпринимать следующее действие после ошибки, ответь:
+- [ ] Я сделал скриншот сразу после ошибки?
+- [ ] Я прочитал скриншот через read_file?
+- [ ] Я записал, что вижу на скриншоте?
+- [ ] Я понял причину ошибки из визуального анализа?
+- [ ] Моё следующее действие основано на анализе скриншота?</p>
+<p>Если хотя бы один пункт не выполнен — ВЕРНИСЬ к шагу 1.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        
+<div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/Pr-Mex/vanessa-automation" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M173.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6m-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3m44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9M252.8 8C114.1 8 8 113.3 8 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C436.2 457.8 504 362.9 504 252 504 113.3 391.5 8 252.8 8M105.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1m-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7m32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1m-11.4-14.7c-1.6 1-1.6 3.6 0 5.9s4.3 3.3 5.6 2.3c1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2"/></svg>
+    </a>
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://t.me/VanessaAutomation" target="_blank" rel="noopener" title="t.me" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M256 8a248 248 0 1 0 0 496 248 248 0 1 0 0-496m115 168.7c-3.7 39.2-19.9 134.4-28.1 178.3-3.5 18.6-10.3 24.8-16.9 25.4-14.4 1.3-25.3-9.5-39.3-18.7-21.8-14.3-34.2-23.2-55.3-37.2-24.5-16.1-8.6-25 5.3-39.5 3.7-3.8 67.1-61.5 68.3-66.7.2-.7.3-3.1-1.2-4.4s-3.6-.8-5.1-.5c-2.2.5-37.1 23.5-104.6 69.1-9.9 6.8-18.9 10.1-26.9 9.9-8.9-.2-25.9-5-38.6-9.1-15.5-5-27.9-7.7-26.8-16.3.6-4.5 6.7-9 18.4-13.7 72.3-31.5 120.5-52.3 144.6-62.3 68.9-28.6 83.2-33.6 92.5-33.8 2.1 0 6.6.5 9.6 2.9 2 1.7 3.2 4.1 3.5 6.7.5 3.2.6 6.5.4 9.8z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../../..", "features": ["navigation.tabs", "navigation.instant"], "search": "../../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "\u0421\u043a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u043d\u043e \u0432 \u0431\u0443\u0444\u0435\u0440", "clipboard.copy": "\u041a\u043e\u043f\u0438\u0440\u043e\u0432\u0430\u0442\u044c \u0432 \u0431\u0443\u0444\u0435\u0440", "search.result.more.one": "\u0415\u0449\u0451 1 \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.more.other": "\u0415\u0449\u0451 # \u043d\u0430 \u044d\u0442\u043e\u0439 \u0441\u0442\u0440\u0430\u043d\u0438\u0446\u0435", "search.result.none": "\u0421\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439 \u043d\u0435 \u043d\u0430\u0439\u0434\u0435\u043d\u043e", "search.result.one": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e 1 \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0435", "search.result.other": "\u041d\u0430\u0439\u0434\u0435\u043d\u043e \u0441\u043e\u0432\u043f\u0430\u0434\u0435\u043d\u0438\u0439: #", "search.result.placeholder": "\u041d\u0430\u0447\u043d\u0438\u0442\u0435 \u043f\u0435\u0447\u0430\u0442\u0430\u0442\u044c \u0434\u043b\u044f \u043f\u043e\u0438\u0441\u043a\u0430", "search.result.term.missing": "\u041e\u0442\u0441\u0443\u0442\u0441\u0442\u0432\u0443\u0435\u0442", "select.version": "\u0412\u044b\u0431\u0435\u0440\u0438\u0442\u0435 \u0432\u0435\u0440\u0441\u0438\u044e"}, "version": null}</script>
+    
+    
+      <script src="../../../../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>
