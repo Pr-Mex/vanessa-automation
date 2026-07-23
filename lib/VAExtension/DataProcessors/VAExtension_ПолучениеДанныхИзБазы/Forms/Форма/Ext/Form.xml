@@ -86,6 +86,21 @@
 			<ContextMenu name="ДляУстановкиПараметровКонтекстноеМеню" id="52"/>
 			<ExtendedTooltip name="ДляУстановкиПараметровРасширеннаяПодсказка" id="53"/>
 		</InputField>
+		<InputField name="НачальныйНомер" id="62">
+			<DataPath>НачальныйНомер</DataPath>
+			<ContextMenu name="НачальныйНомерКонтекстноеМеню" id="63"/>
+			<ExtendedTooltip name="НачальныйНомерРасширеннаяПодсказка" id="64"/>
+		</InputField>
+		<InputField name="КонечныйНомер" id="65">
+			<DataPath>КонечныйНомер</DataPath>
+			<ContextMenu name="КонечныйНомерКонтекстноеМеню" id="66"/>
+			<ExtendedTooltip name="КонечныйНомерРасширеннаяПодсказка" id="67"/>
+		</InputField>
+		<InputField name="ВидОтбораПоНаименованию" id="68">
+			<DataPath>ВидОтбораПоНаименованию</DataPath>
+			<ContextMenu name="ВидОтбораПоНаименованиюКонтекстноеМеню" id="69"/>
+			<ExtendedTooltip name="ВидОтбораПоНаименованиюРасширеннаяПодсказка" id="70"/>
+		</InputField>
 	</ChildItems>
 	<Attributes>
 		<Attribute name="Объект" id="1">
@@ -265,6 +280,53 @@
 				<v8:Type>xs:string</v8:Type>
 				<v8:StringQualifiers>
 					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="НачальныйНомер" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Начальный номер</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="КонечныйНомер" id="15">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Конечный номер</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ВидОтбораПоНаименованию" id="16">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид отбора по наименованию</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>20</v8:Length>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
