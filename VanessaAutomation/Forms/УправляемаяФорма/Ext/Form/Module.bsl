@@ -1290,7 +1290,7 @@
 	
 	ЗадатьВопросПоИзмененнымФайлам = Ложь;
 	Если Объект.ИспользоватьРедакторVanessaEditor Тогда
-		Если VanessaTabs <> Неопределено Тогда
+		Если VanessaTabs <> Неопределено И VanessaTabs.tabStack <> Неопределено Тогда
 			Для Сч = 0 По VanessaTabs.tabStack.length - 1 Цикл
 				Если VanessaTabs.tabStack[Сч].modified Тогда
 					ЗадатьВопросПоИзмененнымФайлам = Истина;
