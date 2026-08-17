@@ -2632,7 +2632,7 @@
 <li><strong>Отступ сверху</strong> - задает отступ сверху.</li>
 <li><strong>Инструмент для записи видео</strong> - по умолчанию выбран вариант FFmpeg, для записи видео будет использована внешняя компонента VanessaExt, которая вызывает ffmpeg. При переключении на VLC для записи видео будет использоваться VLC.</li>
 <li><strong>Команда начать запись видео</strong> - вызов VLC для старта записи видео. VLC используется, потому что умеет записывать видео и управляется по tcp с (помощью OneScript). Пример команды: 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>&quot;C:\Program Files (x86)\VideoLAN\VLC\vlc.exe&quot; screen://  -I rc --rc-quiet --rc-host=127.0.0.1:8082 --nommx :screen-mouse-image=&quot;&lt;screenmouseimage&gt;&quot; :screen-fps=&lt;fps&gt;       :screen-width=&lt;screenwidth&gt; :screen-height=&lt;screenheight&gt; :screen-top=0 :screen-left=0 :screen-caching=100 :sout=#transcode{vcodec=mp4v,vb=400,fps=&lt;fps&gt;,scale=1,width=&lt;screenwidth&gt;,height=&lt;screenheight&gt;,acodec=none}:duplicate{dst=std{access=file,mux=mp4,dst=&lt;dst&gt;}}
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>"C:\Program Files (x86)\VideoLAN\VLC\vlc.exe" screen://  -I rc --rc-quiet --rc-host=127.0.0.1:8082 --nommx :screen-mouse-image="&lt;screenmouseimage&gt;" :screen-fps=&lt;fps&gt;       :screen-width=&lt;screenwidth&gt; :screen-height=&lt;screenheight&gt; :screen-top=0 :screen-left=0 :screen-caching=100 :sout=#transcode{vcodec=mp4v,vb=400,fps=&lt;fps&gt;,scale=1,width=&lt;screenwidth&gt;,height=&lt;screenheight&gt;,acodec=none}:duplicate{dst=std{access=file,mux=mp4,dst=&lt;dst&gt;}}
 </code></pre></div></li>
 <li><strong>Каталог временных файлов</strong> - каталог, в котором создаются промежуточные файлы во время записи и сборки видео. <strong>Каталог очищается перед каждой сборкой видео!</strong></li>
 <li><strong>Команда ffmpeg</strong> - как будет вызываться ffmpeg.</li>
@@ -2842,10 +2842,10 @@
 <li>Вопрос: Как открыть кнопку "Eщё"?
    Ответ:
    С указанием имени командной панели:
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">И </span><span class="nf">я нажимаю на HTML элемент &quot;</span><span class="s">elem(\&#39;allActionsГруппаКоманднаяПанель\&#39;)</span><span class="nf">&quot; в браузере</span>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">И </span><span class="nf">я нажимаю на HTML элемент "</span><span class="s">elem(\'allActionsГруппаКоманднаяПанель\')</span><span class="nf">" в браузере</span>
 </code></pre></div>
     или (второй вариант):
-    <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">И </span><span class="nf">я нажимаю на HTML элемент &quot;</span><span class="s">querySelectElemByTitle(\&#39;.pressBox\&#39;, \&#39;Еще\&#39;)</span><span class="nf">&quot; в браузере</span>
+    <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">И </span><span class="nf">я нажимаю на HTML элемент "</span><span class="s">querySelectElemByTitle(\'.pressBox\', \'Еще\')</span><span class="nf">" в браузере</span>
 </code></pre></div></li>
 </ol>
 

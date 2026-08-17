@@ -624,15 +624,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1204335" class="md-nav__link">
+  <a href="#1204337" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.2.043.35
+        1.2.043.37
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1.2.043.35">
+    <nav class="md-nav" aria-label="1.2.043.37">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2518,15 +2518,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#1204335" class="md-nav__link">
+  <a href="#1204337" class="md-nav__link">
     <span class="md-ellipsis">
       
-        1.2.043.35
+        1.2.043.37
       
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="1.2.043.35">
+    <nav class="md-nav" aria-label="1.2.043.37">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -2671,7 +2671,7 @@
 
 
 <h1 id="_1">История версий<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<h2 id="1204335">1.2.043.35<a class="headerlink" href="#1204335" title="Permanent link">&para;</a></h2>
+<h2 id="1204337">1.2.043.37<a class="headerlink" href="#1204337" title="Permanent link">&para;</a></h2>
 <h3 id="ai">AI<a class="headerlink" href="#ai" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Поддержка работы MCP для управления Vanessa Automation. #2516 Спасибо @DitriXNew</li>
@@ -2718,6 +2718,10 @@
 <li>И я помечаю на удаление документы "ВидДокумента" содержащих комментарий "ТекстКомментария" (Расширение) #2623</li>
 <li>И я распаковываю архив "ПутьКФайлу" в каталог "ИмяКаталога" #2624</li>
 <li>И я отменяю проведение всех документов этого сценария, которые проводились, по их навигационным ссылкам (расширение) #2650</li>
+<li>И форма текущего окна имеет признак модифицированности #2676</li>
+<li>И форма текущего окна не имеет признак модифицированности #2676</li>
+<li>И я жду, что у формы текущего окна пропадёт признак модифицированности в течение 10 секунд #2676</li>
+<li>И я жду, что у формы текущего окна появится признак модифицированности в течение 10 секунд #2676</li>
 </ul>
 <h3 id="_4">Пул реквесты<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2785,6 +2789,7 @@
 <li>Обновление компоненты VanessaExt, версия 1.3.9.135 #2640 Спасибо @steel-code-agent @lintest</li>
 <li>Обновление редактора VAEditor, версия 1.3.7.16 #2626 Спасибо @OlegKopeykin @lintest</li>
 <li>Обновление компоненты VanessaExt, версия 1.3.9.139- #2658 Спасибо @lintest</li>
+<li>Примеры использования в описаниях шагов: Цикл, ПереборМассива #2663 Спасибо @lyaginww</li>
 </ul>
 <h3 id="_5">Разные доработки<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2825,6 +2830,7 @@
 <li>Затирание символа % в теле пароля пользователя. ВА 1.2.043.1 #2503 Спасибо @TatyanaOv</li>
 <li>Расширение не открывало внешний отчет #2628</li>
 <li>Найдена проблема при проверке представления переключателя в условии #2652</li>
+<li>Поведение шага "таблица содержит строки" и "таблица содержит строки по шаблону" приведено к одинаковому #2677</li>
 </ul>
 <h2 id="1204247">1.2.042.47<a class="headerlink" href="#1204247" title="Permanent link">&para;</a></h2>
 <h3 id="_7">Новые возможности<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
@@ -3848,9 +3854,9 @@
 <li>И в таблице "ИмяТаблицы" текущего окна я устанавливаю сортировку по колонке "ИмяКолонки" по возрастанию (расширение) #1301</li>
 <li>И в таблице "ИмяТаблицы" текущего окна я устанавливаю сортировку по колонке "ИмяКолонки" по убыванию (расширение) #1301</li>
 <li>Установка настроек Vanessa-Automation с помощью шагов #1210
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я устанавливаю флаг настройки Vanessa-Automation &quot;</span><span class="s">ИмяФлага</span><span class="nf">&quot;</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я снимаю флаг настройки Vanessa-Automation &quot;</span><span class="s">ИмяФлага</span><span class="nf">&quot;</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я устанавливаю настройку Vanessa-Automation &quot;</span><span class="s">ИмяНастройки</span><span class="nf">&quot; &quot;</span><span class="s">ЗначениеНастройки</span><span class="nf">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я устанавливаю флаг настройки Vanessa-Automation "</span><span class="s">ИмяФлага</span><span class="nf">"</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я снимаю флаг настройки Vanessa-Automation "</span><span class="s">ИмяФлага</span><span class="nf">"</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я устанавливаю настройку Vanessa-Automation "</span><span class="s">ИмяНастройки</span><span class="nf">" "</span><span class="s">ЗначениеНастройки</span><span class="nf">"</span>
 </code></pre></div></li>
 <li>Проверка равенства файлов. И файл "ИмяФайла1" равен файлу "ИмяФайла2" #1211</li>
 <li>И я открываю окно настройка начальной страницы (расширение) #1212</li>
@@ -3951,7 +3957,7 @@
 <h4 id="_44">Регистрация ошибок<a class="headerlink" href="#_44" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Регистрация нескольких ошибок с помощью шага #1062
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>    И я регистрирую ошибку по данным исключения &quot;Описание ошибки&quot;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>    И я регистрирую ошибку по данным исключения "Описание ошибки"
 </code></pre></div></li>
 </ul>
 <h4 id="allure_1">Отчет в формате Allure<a class="headerlink" href="#allure_1" title="Permanent link">&para;</a></h4>
@@ -4003,20 +4009,20 @@
 <li>И я выключаю чтение табличных документов только по ячейкам #1073</li>
 <li>Шаг, который останавливает выполнение всех сценариев фича файла: Затем я останавливаю выполнение сценариев данной фичи #1109</li>
 <li>Шаги для определения типа и вида реквизита #1056
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я запоминаю тип текущего поля в переменную &quot;</span><span class="s">ТипПоля</span><span class="nf">&quot;</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я запоминаю вид текущего поля в переменную &quot;</span><span class="s">ВидПоля</span><span class="nf">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я запоминаю тип текущего поля в переменную "</span><span class="s">ТипПоля</span><span class="nf">"</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я запоминаю вид текущего поля в переменную "</span><span class="s">ВидПоля</span><span class="nf">"</span>
 </code></pre></div></li>
 <li>Шаг, рисующий рамку вокруг элемента панели функций #1163</li>
 <li>Шаг, проверяющий значение выражения встроенного языка #1175
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">выражение внутреннего языка &#39;Выражение&#39; имеет значение &#39;Значение&#39;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">выражение внутреннего языка 'Выражение' имеет значение 'Значение'</span>
 </code></pre></div></li>
 <li>Шаг И я завершаю выполнение процессов клиентов тестирования #1176</li>
 <li>Шаги открытия/закрытия подсказки поля в браузере #1154 Спасибо @CryptKat
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я открываю подсказку поля с именем &quot;</span><span class="s">ИмяПоля</span><span class="nf">&quot; в браузере</span>
-<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я закрываю подсказку поля с именем &quot;</span><span class="s">ИмяПоля</span><span class="nf">&quot; в браузере</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я открываю подсказку поля с именем "</span><span class="s">ИмяПоля</span><span class="nf">" в браузере</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я закрываю подсказку поля с именем "</span><span class="s">ИмяПоля</span><span class="nf">" в браузере</span>
 </code></pre></div></li>
 <li>Шаг нажатия на любой элемент в бразуере #1154 Спасибо @CryptKat
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я нажимаю на HTML элемент &quot;</span><span class="s">elem(\&#39;НужноеПолеФормы\\\#extTooltipBtn\&#39;)</span><span class="nf">&quot; в браузере</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я нажимаю на HTML элемент "</span><span class="s">elem(\'НужноеПолеФормы\\\#extTooltipBtn\')</span><span class="nf">" в браузере</span>
 </code></pre></div></li>
 <li>Шаг, рисующий анимацию загрузки в браузере #1148 Спасибо @ViktorErmakov
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я показываю анимацию загрузки в браузере</span>
@@ -4028,17 +4034,17 @@
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я показываю серию подсказок EnjoyHint в браузере</span>
 </code></pre></div></li>
 <li>Шаги нажатия на подменю командной панели формы в браузере #1132 Спасибо @CryptKat
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я нажимаю на подменю с именем &quot;</span><span class="s">ФормаСоздатьНаОсновании</span><span class="nf">&quot; командной панели формы в браузере</span>
-<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я нажимаю на подменю &quot;</span><span class="s">Создать на основании</span><span class="nf">&quot; командной панели формы в браузере</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я нажимаю на подменю с именем "</span><span class="s">ФормаСоздатьНаОсновании</span><span class="nf">" командной панели формы в браузере</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я нажимаю на подменю "</span><span class="s">Создать на основании</span><span class="nf">" командной панели формы в браузере</span>
 </code></pre></div></li>
 <li>Шаги открытия форм объектов метаданных #1130 Спасибо @DoublesunRUS 
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nf">    Дано Я открываю общую форму &quot;</span><span class="s">ИмяОбщейФормы</span><span class="nf">&quot;</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nf">    Дано Я открываю основную форму журнала документов &quot;</span><span class="s">ИмяЖурналаДокументов</span><span class="nf">&quot;</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="nf">    Дано Я открываю основную форму плана видов расчета &quot;</span><span class="s">ИмяПВР</span><span class="nf">&quot;</span>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="nf">    Дано Я открываю основную форму списка плана видов расчета &quot;</span><span class="s">ИмяПВР</span><span class="nf">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nf">    Дано Я открываю общую форму "</span><span class="s">ИмяОбщейФормы</span><span class="nf">"</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nf">    Дано Я открываю основную форму журнала документов "</span><span class="s">ИмяЖурналаДокументов</span><span class="nf">"</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="nf">    Дано Я открываю основную форму плана видов расчета "</span><span class="s">ИмяПВР</span><span class="nf">"</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="nf">    Дано Я открываю основную форму списка плана видов расчета "</span><span class="s">ИмяПВР</span><span class="nf">"</span>
 </code></pre></div></li>
 <li>Шаг для рисования рамки вокруг картинки ВК #1077 Спасибо @lintest
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я рисую рамку вокруг картинки &quot;</span><span class="s">ИмяКартинки</span><span class="nf">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я рисую рамку вокруг картинки "</span><span class="s">ИмяКартинки</span><span class="nf">"</span>
 </code></pre></div></li>
 </ul>
 <h3 id="_51">Разные доработки<a class="headerlink" href="#_51" title="Permanent link">&para;</a></h3>
@@ -4728,28 +4734,28 @@ VA не должна использовать Попытка Исключени�
 <h3 id="_99">Новые шаги<a class="headerlink" href="#_99" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Добавлен шаг условие, проверяющий наличие команды в панели разделов #277
-<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nf">    </span><span class="k">Если </span><span class="nf">в панели разделов есть команда &quot;</span><span class="s">ИмяКоманды</span><span class="nf">&quot; Тогда</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="nf">    </span><span class="k">Если </span><span class="nf">в панели разделов есть команда "</span><span class="s">ИмяКоманды</span><span class="nf">" Тогда</span>
 </code></pre></div></li>
 <li>Добавлен шаг условие, проверяющий наличие команды в панели функций #277
-<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nf">    </span><span class="k">Если </span><span class="nf">в панели функций есть команда &quot;</span><span class="s">ИмяКоманды</span><span class="nf">&quot; Тогда</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="nf">    </span><span class="k">Если </span><span class="nf">в панели функций есть команда "</span><span class="s">ИмяКоманды</span><span class="nf">" Тогда</span>
 </code></pre></div></li>
 <li>Добавлен шаг условие, проверяющий наличие команды в панели открытых #277
-<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nf">    </span><span class="k">Если </span><span class="nf">в панели открытых есть команда &quot;</span><span class="s">ИмяКоманды</span><span class="nf">&quot; Тогда</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nf">    </span><span class="k">Если </span><span class="nf">в панели открытых есть команда "</span><span class="s">ИмяКоманды</span><span class="nf">" Тогда</span>
 </code></pre></div></li>
 <li>Добавлены шаги условия, проверяющие наличие колонки в таблице #278
-<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nf">    </span><span class="k">Если </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; есть колонка &quot;</span><span class="s">Заголовок колонки</span><span class="nf">&quot; Тогда</span>
-<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="nf">    </span><span class="k">Если </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; есть колонка с именем &quot;</span><span class="s">ИмяКолонки</span><span class="nf">&quot; Тогда</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a><span class="nf">    </span><span class="k">Если </span><span class="nf">в таблице "</span><span class="s">ИмяТаблицы</span><span class="nf">" есть колонка "</span><span class="s">Заголовок колонки</span><span class="nf">" Тогда</span>
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a><span class="nf">    </span><span class="k">Если </span><span class="nf">в таблице "</span><span class="s">ИмяТаблицы</span><span class="nf">" есть колонка с именем "</span><span class="s">ИмяКолонки</span><span class="nf">" Тогда</span>
 </code></pre></div></li>
 <li>Добавлены шаги условия, проверяющие отсутствие колонки в таблице #278
-<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nf">    </span><span class="k">Если </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; нет колонки &quot;</span><span class="s">Заголовок колонки</span><span class="nf">&quot; Тогда</span>
-<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="nf">    </span><span class="k">Если </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; нет колонки с именем &quot;</span><span class="s">ИмяКолонки</span><span class="nf">&quot; Тогда</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nf">    </span><span class="k">Если </span><span class="nf">в таблице "</span><span class="s">ИмяТаблицы</span><span class="nf">" нет колонки "</span><span class="s">Заголовок колонки</span><span class="nf">" Тогда</span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="nf">    </span><span class="k">Если </span><span class="nf">в таблице "</span><span class="s">ИмяТаблицы</span><span class="nf">" нет колонки с именем "</span><span class="s">ИмяКолонки</span><span class="nf">" Тогда</span>
 </code></pre></div></li>
 <li>Добавлены шаги условия, проверяющие заполненность ячейки таблицы #279
-<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nf">    </span><span class="k">Если </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; поле &quot;</span><span class="s">Заголовок поля</span><span class="nf">&quot; заполнено Тогда</span>
-<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="nf">    </span><span class="k">Если </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; поле с именем &quot;</span><span class="s">ИмяПоля</span><span class="nf">&quot; заполнено Тогда</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a><span class="nf">    </span><span class="k">Если </span><span class="nf">в таблице "</span><span class="s">ИмяТаблицы</span><span class="nf">" поле "</span><span class="s">Заголовок поля</span><span class="nf">" заполнено Тогда</span>
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a><span class="nf">    </span><span class="k">Если </span><span class="nf">в таблице "</span><span class="s">ИмяТаблицы</span><span class="nf">" поле с именем "</span><span class="s">ИмяПоля</span><span class="nf">" заполнено Тогда</span>
 </code></pre></div></li>
 <li>Добавлен шаг условие, проверяющий содержание платформенного сообщения #280
-<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nf">    </span><span class="k">Если </span><span class="nf">появилось предупреждение, содержащее текст &quot;</span><span class="s">Текст</span><span class="nf">&quot; тогда</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nf">    </span><span class="k">Если </span><span class="nf">появилось предупреждение, содержащее текст "</span><span class="s">Текст</span><span class="nf">" тогда</span>
 </code></pre></div></li>
 </ul>
 <h3 id="_100">Разные доработки<a class="headerlink" href="#_100" title="Permanent link">&para;</a></h3>
@@ -4772,43 +4778,43 @@ VA не должна использовать Попытка Исключени�
 <h3 id="_103">Новые шаги<a class="headerlink" href="#_103" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Добавлен шаг, устанавливающий значение константы. Спасибо @nixel2007.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я устанавливаю в константу &quot;</span><span class="s">ИмяКонстанты</span><span class="nf">&quot; значение &quot;</span><span class="s">ЗначениеКонстанты</span><span class="nf">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я устанавливаю в константу "</span><span class="s">ИмяКонстанты</span><span class="nf">" значение "</span><span class="s">ЗначениеКонстанты</span><span class="nf">"</span>
 </code></pre></div></li>
 <li>Добавлен шаг, ожидающий закрытия TestClient. Спасибо @zeegin.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я жду когда закроется TestClient &quot;</span><span class="s">ИмяПрофиля</span><span class="nf">&quot; в течение </span><span class="s">10</span><span class="nf"> секунд</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я жду когда закроется TestClient "</span><span class="s">ИмяПрофиля</span><span class="nf">" в течение </span><span class="s">10</span><span class="nf"> секунд</span>
 </code></pre></div></li>
 <li>Добавлен шаг, ожидающий завершения процесса. Спасибо @zeegin.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я жду когда завершится процесс с ИД процесса &quot;</span><span class="s">PID</span><span class="nf">&quot; в течение </span><span class="s">10</span><span class="nf"> секунд</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я жду когда завершится процесс с ИД процесса "</span><span class="s">PID</span><span class="nf">" в течение </span><span class="s">10</span><span class="nf"> секунд</span>
 </code></pre></div></li>
 <li>Добавлены шаги, проверяющие содержание выпадающего списка элемента, принадлежащего таблице #250
-<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; выпадающий список &quot;</span><span class="s">Заголовок элемента</span><span class="nf">&quot; содержит значения</span>
-<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="k">        |</span><span class="s"> &#39;Значение1&#39;</span><span class="k"> |</span>
-<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="k">        |</span><span class="s"> &#39;Значение2&#39;</span><span class="k"> |</span>
-<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; выпадающий список с именем &quot;</span><span class="s">ИмяЭлемента</span><span class="nf">&quot; содержит значения</span>
-<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="k">        |</span><span class="s"> &#39;Значение1&#39;</span><span class="k"> |</span>
-<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="k">        |</span><span class="s"> &#39;Значение2&#39;</span><span class="k"> |</span>
-<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; выпадающий список &quot;</span><span class="s">Заголовок элемента</span><span class="nf">&quot; стал равен:</span>
-<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a><span class="k">        |</span><span class="s"> &#39;Значение1&#39;</span><span class="k"> |</span>
-<a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a><span class="k">        |</span><span class="s"> &#39;Значение2&#39;</span><span class="k"> |</span>
-<a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; выпадающий список с именем &quot;</span><span class="s">ИмяЭлемента</span><span class="nf">&quot; стал равен:</span>
-<a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a><span class="k">        |</span><span class="s"> &#39;Значение1&#39;</span><span class="k"> |</span>
-<a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a><span class="k">        |</span><span class="s"> &#39;Значение2&#39;</span><span class="k"> |</span>
-<a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; выпадающий список &quot;</span><span class="s">Заголовок элемента</span><span class="nf">&quot; не содержит значения</span>
-<a id="__codelineno-22-14" name="__codelineno-22-14" href="#__codelineno-22-14"></a><span class="k">        |</span><span class="s"> &#39;Значение1&#39;</span><span class="k"> |</span>
-<a id="__codelineno-22-15" name="__codelineno-22-15" href="#__codelineno-22-15"></a><span class="k">        |</span><span class="s"> &#39;Значение2&#39;</span><span class="k"> |</span>
-<a id="__codelineno-22-16" name="__codelineno-22-16" href="#__codelineno-22-16"></a><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; выпадающий список с именем &quot;</span><span class="s">ИмяЭлемента</span><span class="nf">&quot; не содержит значения</span>
-<a id="__codelineno-22-17" name="__codelineno-22-17" href="#__codelineno-22-17"></a><span class="k">        |</span><span class="s"> &#39;Значение1&#39;</span><span class="k"> |</span>
-<a id="__codelineno-22-18" name="__codelineno-22-18" href="#__codelineno-22-18"></a><span class="k">        |</span><span class="s"> &#39;Значение2&#39;</span><span class="k"> |</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице "</span><span class="s">ИмяТаблицы</span><span class="nf">" выпадающий список "</span><span class="s">Заголовок элемента</span><span class="nf">" содержит значения</span>
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a><span class="k">        |</span><span class="s"> 'Значение1'</span><span class="k"> |</span>
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a><span class="k">        |</span><span class="s"> 'Значение2'</span><span class="k"> |</span>
+<a id="__codelineno-22-4" name="__codelineno-22-4" href="#__codelineno-22-4"></a><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице "</span><span class="s">ИмяТаблицы</span><span class="nf">" выпадающий список с именем "</span><span class="s">ИмяЭлемента</span><span class="nf">" содержит значения</span>
+<a id="__codelineno-22-5" name="__codelineno-22-5" href="#__codelineno-22-5"></a><span class="k">        |</span><span class="s"> 'Значение1'</span><span class="k"> |</span>
+<a id="__codelineno-22-6" name="__codelineno-22-6" href="#__codelineno-22-6"></a><span class="k">        |</span><span class="s"> 'Значение2'</span><span class="k"> |</span>
+<a id="__codelineno-22-7" name="__codelineno-22-7" href="#__codelineno-22-7"></a><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице "</span><span class="s">ИмяТаблицы</span><span class="nf">" выпадающий список "</span><span class="s">Заголовок элемента</span><span class="nf">" стал равен:</span>
+<a id="__codelineno-22-8" name="__codelineno-22-8" href="#__codelineno-22-8"></a><span class="k">        |</span><span class="s"> 'Значение1'</span><span class="k"> |</span>
+<a id="__codelineno-22-9" name="__codelineno-22-9" href="#__codelineno-22-9"></a><span class="k">        |</span><span class="s"> 'Значение2'</span><span class="k"> |</span>
+<a id="__codelineno-22-10" name="__codelineno-22-10" href="#__codelineno-22-10"></a><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице "</span><span class="s">ИмяТаблицы</span><span class="nf">" выпадающий список с именем "</span><span class="s">ИмяЭлемента</span><span class="nf">" стал равен:</span>
+<a id="__codelineno-22-11" name="__codelineno-22-11" href="#__codelineno-22-11"></a><span class="k">        |</span><span class="s"> 'Значение1'</span><span class="k"> |</span>
+<a id="__codelineno-22-12" name="__codelineno-22-12" href="#__codelineno-22-12"></a><span class="k">        |</span><span class="s"> 'Значение2'</span><span class="k"> |</span>
+<a id="__codelineno-22-13" name="__codelineno-22-13" href="#__codelineno-22-13"></a><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице "</span><span class="s">ИмяТаблицы</span><span class="nf">" выпадающий список "</span><span class="s">Заголовок элемента</span><span class="nf">" не содержит значения</span>
+<a id="__codelineno-22-14" name="__codelineno-22-14" href="#__codelineno-22-14"></a><span class="k">        |</span><span class="s"> 'Значение1'</span><span class="k"> |</span>
+<a id="__codelineno-22-15" name="__codelineno-22-15" href="#__codelineno-22-15"></a><span class="k">        |</span><span class="s"> 'Значение2'</span><span class="k"> |</span>
+<a id="__codelineno-22-16" name="__codelineno-22-16" href="#__codelineno-22-16"></a><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице "</span><span class="s">ИмяТаблицы</span><span class="nf">" выпадающий список с именем "</span><span class="s">ИмяЭлемента</span><span class="nf">" не содержит значения</span>
+<a id="__codelineno-22-17" name="__codelineno-22-17" href="#__codelineno-22-17"></a><span class="k">        |</span><span class="s"> 'Значение1'</span><span class="k"> |</span>
+<a id="__codelineno-22-18" name="__codelineno-22-18" href="#__codelineno-22-18"></a><span class="k">        |</span><span class="s"> 'Значение2'</span><span class="k"> |</span>
 </code></pre></div></li>
 <li>Добавлены шаги, открывающие выпадающий список в таблице #251
-<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; я открываю выпадающий список &quot;</span><span class="s">Заголовок списка</span><span class="nf">&quot;</span>
-<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; я открываю выпадающий список с именем &quot;</span><span class="s">ИмяРеквизита</span><span class="nf">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице "</span><span class="s">ИмяТаблицы</span><span class="nf">" я открываю выпадающий список "</span><span class="s">Заголовок списка</span><span class="nf">"</span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице "</span><span class="s">ИмяТаблицы</span><span class="nf">" я открываю выпадающий список с именем "</span><span class="s">ИмяРеквизита</span><span class="nf">"</span>
 </code></pre></div></li>
 <li>Добавлен шаг, копирующий файл #252
-<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="nf">    Тогда я копирую файл &quot;</span><span class="s">ИмяФайлаИсточник</span><span class="nf">&quot; &quot;</span><span class="s">ИмяФайлаПриемник</span><span class="nf">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a><span class="nf">    Тогда я копирую файл "</span><span class="s">ИмяФайлаИсточник</span><span class="nf">" "</span><span class="s">ИмяФайлаПриемник</span><span class="nf">"</span>
 </code></pre></div></li>
 <li>Добавлен шаг, перемещающий файл #252
-<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="nf">    Тогда я перемещаю файл &quot;</span><span class="s">ИмяФайлаИсточник</span><span class="nf">&quot; &quot;</span><span class="s">ИмяФайлаПриемник</span><span class="nf">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a><span class="nf">    Тогда я перемещаю файл "</span><span class="s">ИмяФайлаИсточник</span><span class="nf">" "</span><span class="s">ИмяФайлаПриемник</span><span class="nf">"</span>
 </code></pre></div></li>
 </ul>
 <h3 id="_104">Разные доработки<a class="headerlink" href="#_104" title="Permanent link">&para;</a></h3>
@@ -4835,25 +4841,25 @@ VA не должна использовать Попытка Исключени�
 <h3 id="_107">Новые шаги<a class="headerlink" href="#_107" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Добавлен шаг, подключающий клиент тестирования, запущенный из другого приложения. #223
-<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="nf">    Затем Я подключаю уже запущенный клиент тестирования &quot;</span><span class="s">ИмяПрофиля</span><span class="nf">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="nf">    Затем Я подключаю уже запущенный клиент тестирования "</span><span class="s">ИмяПрофиля</span><span class="nf">"</span>
 </code></pre></div></li>
 <li>Добавлен шаг, запоминающий строку в переменную. #224
-<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я запоминаю строку &#39;НужнаяСтрока&#39; в переменную &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я запоминаю строку 'НужнаяСтрока' в переменную "</span><span class="s">ИмяПеременной</span><span class="nf">"</span>
 </code></pre></div></li>
 <li>Добавлен шаг, делающий двойной клик на картинку. #235
-<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="nf">    Дано двойной клик на картинку &quot;</span><span class="s">ИмяКартинки</span><span class="nf">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a><span class="nf">    Дано двойной клик на картинку "</span><span class="s">ИмяКартинки</span><span class="nf">"</span>
 </code></pre></div></li>
 <li>Добавлен шаг, эмулирующий вращение колеса мышки с зажатой клавишей ctrl. Нужно для эмуляции изменения масштаба. #236
-<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я вращаю колесо мышки &quot;</span><span class="s">Направление</span><span class="nf">&quot; </span><span class="s">5</span><span class="nf"> раз с зажатой клавишей ctrl</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я вращаю колесо мышки "</span><span class="s">Направление</span><span class="nf">" </span><span class="s">5</span><span class="nf"> раз с зажатой клавишей ctrl</span>
 </code></pre></div></li>
 <li>Добавлен шаг условие, проверяющий наличие картинки на экране #237
-<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="nf">    </span><span class="k">Если </span><span class="nf">есть картинка &quot;</span><span class="s">ИмяКартинки</span><span class="nf">&quot; тогда</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="nf">    </span><span class="k">Если </span><span class="nf">есть картинка "</span><span class="s">ИмяКартинки</span><span class="nf">" тогда</span>
 </code></pre></div></li>
 <li>Добавлен шаг, эмулирующий клик правой кнопки на картинке #242
-<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="nf">    Дано клик правой кнопкой на картинку &quot;</span><span class="s">ИмяКартинки</span><span class="nf">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-31-1" name="__codelineno-31-1" href="#__codelineno-31-1"></a><span class="nf">    Дано клик правой кнопкой на картинку "</span><span class="s">ИмяКартинки</span><span class="nf">"</span>
 </code></pre></div></li>
 <li>Добавлен шаг, эмулирующий перемещение курсора мышки к картинке #243
-<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="nf">    Дано курсор к картинке &quot;</span><span class="s">ИмяКартинки</span><span class="nf">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a><span class="nf">    Дано курсор к картинке "</span><span class="s">ИмяКартинки</span><span class="nf">"</span>
 </code></pre></div></li>
 </ul>
 <h3 id="_108">Исправление ошибок<a class="headerlink" href="#_108" title="Permanent link">&para;</a></h3>
@@ -4880,24 +4886,24 @@ VA не должна использовать Попытка Исключени�
 <h3 id="_110">Новые шаги<a class="headerlink" href="#_110" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Добавлен шаг, помещающий текст в буфер обмена. #202
-<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я помещаю в буфер обмена строку &quot;</span><span class="s">Нужная строка</span><span class="nf">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я помещаю в буфер обмена строку "</span><span class="s">Нужная строка</span><span class="nf">"</span>
 </code></pre></div></li>
 <li>Добавлен шаг, получающий версию конфигурации #200
-<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я запоминаю версию конфигурации &quot;</span><span class="s">ИмяПодсистемы</span><span class="nf">&quot; как &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я запоминаю версию конфигурации "</span><span class="s">ИмяПодсистемы</span><span class="nf">" как "</span><span class="s">ИмяПеременной</span><span class="nf">"</span>
 </code></pre></div></li>
 <li>Добавлены шаги, раскрывающие узлы дерева вместе с подчиненными узлами. Нужен режим совместимости 8.3.13 или выше. #201
-<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">   в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; я разворачиваю текущую строку с подчиненными</span>
-<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="nf">    </span><span class="k">И </span><span class="nf">   в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; я разворачиваю строку с подчиненными:</span>
-<a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="k">        |</span><span class="s"> &#39;ИмяКолонки&#39;</span><span class="k"> |</span>
-<a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a><span class="k">        |</span><span class="s"> &#39;ЗначениеКолонки&#39;</span><span class="k"> |</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">   в таблице "</span><span class="s">ИмяТаблицы</span><span class="nf">" я разворачиваю текущую строку с подчиненными</span>
+<a id="__codelineno-35-2" name="__codelineno-35-2" href="#__codelineno-35-2"></a><span class="nf">    </span><span class="k">И </span><span class="nf">   в таблице "</span><span class="s">ИмяТаблицы</span><span class="nf">" я разворачиваю строку с подчиненными:</span>
+<a id="__codelineno-35-3" name="__codelineno-35-3" href="#__codelineno-35-3"></a><span class="k">        |</span><span class="s"> 'ИмяКолонки'</span><span class="k"> |</span>
+<a id="__codelineno-35-4" name="__codelineno-35-4" href="#__codelineno-35-4"></a><span class="k">        |</span><span class="s"> 'ЗначениеКолонки'</span><span class="k"> |</span>
 </code></pre></div></li>
 <li>Добавлен шаг, подключающий раннее запущенный клиент тестирования. Если сеанс не найден, то выдаётся исключение. Добавлен тест. #199
 <div class="highlight"><pre><span></span><code><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a><span class="nf">    Когда Я подключаю уже запущенный клиент тестирования с параметрами:</span>
-<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="k">        |</span><span class="s"> &#39;Имя подключения&#39;</span><span class="k"> |</span><span class="s">  &#39;Порт&#39;</span><span class="k"> |</span><span class="s"> &#39;Строка соединения&#39;</span><span class="k"> |</span><span class="s"> &#39;Логин&#39;</span><span class="k"> |</span><span class="s"> &#39;Пароль&#39;</span><span class="k"> |</span>
-<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="k">        |</span><span class="s"> &#39;ИмяПрофиля&#39;</span><span class="k">      |</span><span class="s">  &#39;1538&#39;</span><span class="k"> |</span><span class="s"> &#39;СтрокаСоединения&#39;</span><span class="k">  |</span><span class="s"> &#39;Админ&#39;</span><span class="k"> |</span><span class="s"> &#39;Админ&#39;</span><span class="k">  |</span>
+<a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a><span class="k">        |</span><span class="s"> 'Имя подключения'</span><span class="k"> |</span><span class="s">  'Порт'</span><span class="k"> |</span><span class="s"> 'Строка соединения'</span><span class="k"> |</span><span class="s"> 'Логин'</span><span class="k"> |</span><span class="s"> 'Пароль'</span><span class="k"> |</span>
+<a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="k">        |</span><span class="s"> 'ИмяПрофиля'</span><span class="k">      |</span><span class="s">  '1538'</span><span class="k"> |</span><span class="s"> 'СтрокаСоединения'</span><span class="k">  |</span><span class="s"> 'Админ'</span><span class="k"> |</span><span class="s"> 'Админ'</span><span class="k">  |</span>
 </code></pre></div></li>
 <li>Добавлен шаг, который активизирует строку таблице клиентов тестирования. Это может быть нужно для корректной работы шага "Дано Я открыл новый сеанс TestClient или подключил уже существующий", т.к. он подключает клиент тестирования, соответствующий активной строке таблицы клиентов.
-<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице клиентов тестирования я активизирую строку &#39;Этот клиент&#39;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице клиентов тестирования я активизирую строку 'Этот клиент'</span>
 </code></pre></div></li>
 </ul>
 <h3 id="_111">Разные доработки<a class="headerlink" href="#_111" title="Permanent link">&para;</a></h3>
@@ -4928,19 +4934,19 @@ VA не должна использовать Попытка Исключени�
 <h3 id="_115">Новые шаги<a class="headerlink" href="#_115" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Вывод произвольной информации в лог с помощью шага #166
-<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я добавляю информацию в лог &quot;</span><span class="s">Текст</span><span class="nf">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я добавляю информацию в лог "</span><span class="s">Текст</span><span class="nf">"</span>
 </code></pre></div></li>
 <li>Добавлен шаг, ожидающий появления картинки на экране #171
-<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я жду картинки &quot;</span><span class="s">ИмяКартинки</span><span class="nf">&quot; в течение </span><span class="s">20</span><span class="nf"> секунд</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я жду картинки "</span><span class="s">ИмяКартинки</span><span class="nf">" в течение </span><span class="s">20</span><span class="nf"> секунд</span>
 </code></pre></div></li>
 <li>Добавлен шаг, эмулирующий нажатия хоткеев #181
-<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="nf">    Дано я нажимаю хоткей &quot;</span><span class="s">o</span><span class="nf">&quot; &quot;</span><span class="s">ctrl</span><span class="nf">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a><span class="nf">    Дано я нажимаю хоткей "</span><span class="s">o</span><span class="nf">" "</span><span class="s">ctrl</span><span class="nf">"</span>
 </code></pre></div></li>
 <li>Добавлен шаг, эмулирующий нажатие ENTER #182
 <div class="highlight"><pre><span></span><code><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a><span class="nf">    Дано я нажимаю ENTER</span>
 </code></pre></div></li>
 <li>Добавлен шаг, определяющий координаты картинки на экране #172
-<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я определяю координаты картинки &quot;</span><span class="s">ИмяКартинки</span><span class="nf">&quot; как &quot;</span><span class="s">ИмяПеременной</span><span class="nf">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я определяю координаты картинки "</span><span class="s">ИмяКартинки</span><span class="nf">" как "</span><span class="s">ИмяПеременной</span><span class="nf">"</span>
 </code></pre></div></li>
 </ul>
 <h3 id="_116">Исправление ошибок<a class="headerlink" href="#_116" title="Permanent link">&para;</a></h3>
@@ -4950,7 +4956,7 @@ VA не должна использовать Попытка Исключени�
 <li>Исправлена ошибка получения подробного текста ошибки, когда в ошибке был большой стек вызова. #174</li>
 <li>Рефакторинг интерфейса. #165</li>
 <li>Исправлена ошибка в шаге #173
-<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я подключаю TestClient &quot;</span><span class="s">ИмяКлиента</span><span class="nf">&quot; логин &quot;</span><span class="s">Логин</span><span class="nf">&quot; пароль &quot;</span><span class="s">Пароль</span><span class="nf">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я подключаю TestClient "</span><span class="s">ИмяКлиента</span><span class="nf">" логин "</span><span class="s">Логин</span><span class="nf">" пароль "</span><span class="s">Пароль</span><span class="nf">"</span>
 </code></pre></div></li>
 </ul>
 <h3 id="_117">Разные доработки<a class="headerlink" href="#_117" title="Permanent link">&para;</a></h3>
@@ -4965,11 +4971,11 @@ VA не должна использовать Попытка Исключени�
 <li>Актуализирована информация по созданию автовидео на новых версиях платформы. #130</li>
 <li>Добавлена опция при записи автовидео: Группа шагов как шаг. #137</li>
 <li>Добавлен шаг, рисующий стрелку от одной картинки до другой #138
-<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="nf">        Затем я рисую стрелку от &quot;</span><span class="s">Картинка1</span><span class="nf">&quot; до &quot;</span><span class="s">Картинка2</span><span class="nf">&quot;</span>
-<a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a><span class="k">            |</span><span class="s">&#39;Цвет&#39;</span><span class="k">          |</span><span class="s"> &#39;Золотистый&#39;</span><span class="k">   |</span>
-<a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a><span class="k">            |</span><span class="s">&#39;Длительность&#39;</span><span class="k">  |</span><span class="s"> &#39;5000&#39;</span><span class="k">         |</span>
-<a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a><span class="k">            |</span><span class="s">&#39;ТочкаОткуда&#39;</span><span class="k">   |</span><span class="s"> &#39;СерединаПраво&#39;</span><span class="k">|</span>
-<a id="__codelineno-44-5" name="__codelineno-44-5" href="#__codelineno-44-5"></a><span class="k">            |</span><span class="s">&#39;ТочкаКуда&#39;</span><span class="k">     |</span><span class="s"> &#39;СерединаЛево&#39;</span><span class="k"> |</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-44-1" name="__codelineno-44-1" href="#__codelineno-44-1"></a><span class="nf">        Затем я рисую стрелку от "</span><span class="s">Картинка1</span><span class="nf">" до "</span><span class="s">Картинка2</span><span class="nf">"</span>
+<a id="__codelineno-44-2" name="__codelineno-44-2" href="#__codelineno-44-2"></a><span class="k">            |</span><span class="s">'Цвет'</span><span class="k">          |</span><span class="s"> 'Золотистый'</span><span class="k">   |</span>
+<a id="__codelineno-44-3" name="__codelineno-44-3" href="#__codelineno-44-3"></a><span class="k">            |</span><span class="s">'Длительность'</span><span class="k">  |</span><span class="s"> '5000'</span><span class="k">         |</span>
+<a id="__codelineno-44-4" name="__codelineno-44-4" href="#__codelineno-44-4"></a><span class="k">            |</span><span class="s">'ТочкаОткуда'</span><span class="k">   |</span><span class="s"> 'СерединаПраво'</span><span class="k">|</span>
+<a id="__codelineno-44-5" name="__codelineno-44-5" href="#__codelineno-44-5"></a><span class="k">            |</span><span class="s">'ТочкаКуда'</span><span class="k">     |</span><span class="s"> 'СерединаЛево'</span><span class="k"> |</span>
 </code></pre></div></li>
 <li>Добавлена настройка (Отключить масштабирование шагов по времени), позволяющая отключить масштабирование шагов при записи автовидео. #155</li>
 <li>Изменено описание шагов, что было, понятно как происходит поиск элемента: по заголовку или по имени. #136</li>
@@ -4984,35 +4990,35 @@ VA не должна использовать Попытка Исключени�
 <h3 id="12018">1.2.018<a class="headerlink" href="#12018" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Добавлен шаг #117
-<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">Файл &quot;</span><span class="s">ИмяФайла</span><span class="nf">&quot; существует</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-45-1" name="__codelineno-45-1" href="#__codelineno-45-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">Файл "</span><span class="s">ИмяФайла</span><span class="nf">" существует</span>
 </code></pre></div></li>
 <li>Добавлена возможность прикрепить произвольный файл к сценарию, чтобы потом он был использован при регистрации в bug tracker.</li>
 <li>Добавлен файл с описанием отличий от проекта ADD.</li>
 <li>Добавлен шаг #125
-<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="nf">    Затем я выгружаю базу &#39;СтрокаСоединения&#39; в DT &quot;</span><span class="s">ПутьКDT</span><span class="nf">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-46-1" name="__codelineno-46-1" href="#__codelineno-46-1"></a><span class="nf">    Затем я выгружаю базу 'СтрокаСоединения' в DT "</span><span class="s">ПутьКDT</span><span class="nf">"</span>
 </code></pre></div>
 Рефакторинг шагов, предназначенных для работы с подключениями TestClient. Лишние шаги удалены из справки, но совместимость с ними поддерживается. #122
 Исправлена ошибка копирования профиля, когда неверно формировалась строка дополнительных параметров.</li>
 <li>Добавлены шаги #121
-<div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="nf">    Тогда значение поля &quot;</span><span class="s">ИмяПоля</span><span class="nf">&quot; не содержит текст &quot;</span><span class="s">Подстрока</span><span class="nf">&quot;</span>
-<a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a><span class="nf">    Тогда значение поля с именем &quot;</span><span class="s">ИмяПоля</span><span class="nf">&quot; не содержит текст &quot;</span><span class="s">Подстрока</span><span class="nf">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-47-1" name="__codelineno-47-1" href="#__codelineno-47-1"></a><span class="nf">    Тогда значение поля "</span><span class="s">ИмяПоля</span><span class="nf">" не содержит текст "</span><span class="s">Подстрока</span><span class="nf">"</span>
+<a id="__codelineno-47-2" name="__codelineno-47-2" href="#__codelineno-47-2"></a><span class="nf">    Тогда значение поля с именем "</span><span class="s">ИмяПоля</span><span class="nf">" не содержит текст "</span><span class="s">Подстрока</span><span class="nf">"</span>
 </code></pre></div></li>
 <li>Добавлен шаг условие #126
-<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="nf">    </span><span class="k">Если </span><span class="nf">Файл &quot;</span><span class="s">ИмяФайла</span><span class="nf">&quot; существует тогда</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-48-1" name="__codelineno-48-1" href="#__codelineno-48-1"></a><span class="nf">    </span><span class="k">Если </span><span class="nf">Файл "</span><span class="s">ИмяФайла</span><span class="nf">" существует тогда</span>
 </code></pre></div></li>
 <li>Добавлен шаг #126
-<div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="nf">    Тогда я удаляю файл &quot;</span><span class="s">ИмяФайла</span><span class="nf">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-49-1" name="__codelineno-49-1" href="#__codelineno-49-1"></a><span class="nf">    Тогда я удаляю файл "</span><span class="s">ИмяФайла</span><span class="nf">"</span>
 </code></pre></div></li>
 <li>Добавлен шаг #123
 <div class="highlight"><pre><span></span><code><a id="__codelineno-50-1" name="__codelineno-50-1" href="#__codelineno-50-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">у текущего элемента формы я вызываю запись содержимого в файл</span>
 </code></pre></div></li>
 <li>Добавлены шаги #124
-<div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; я активизирую колонку &quot;</span><span class="s">ИмяКолонки</span><span class="nf">&quot; в группе &quot;</span><span class="s">ИмяГруппы</span><span class="nf">&quot;</span>
-<a id="__codelineno-51-2" name="__codelineno-51-2" href="#__codelineno-51-2"></a><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; я активизирую колонку с именем &quot;</span><span class="s">ИмяКолонки</span><span class="nf">&quot; в группе &quot;</span><span class="s">ИмяГруппы</span><span class="nf">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-51-1" name="__codelineno-51-1" href="#__codelineno-51-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице "</span><span class="s">ИмяТаблицы</span><span class="nf">" я активизирую колонку "</span><span class="s">ИмяКолонки</span><span class="nf">" в группе "</span><span class="s">ИмяГруппы</span><span class="nf">"</span>
+<a id="__codelineno-51-2" name="__codelineno-51-2" href="#__codelineno-51-2"></a><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице "</span><span class="s">ИмяТаблицы</span><span class="nf">" я активизирую колонку с именем "</span><span class="s">ИмяКолонки</span><span class="nf">" в группе "</span><span class="s">ИмяГруппы</span><span class="nf">"</span>
 </code></pre></div></li>
 <li>Рефакторинг шагов работы с клиентом тестирования. #122</li>
 <li>Добавлен шаг
-<div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; в текущее поле я ввожу текст &#39;НужныйТекст&#39;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-52-1" name="__codelineno-52-1" href="#__codelineno-52-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице "</span><span class="s">ИмяТаблицы</span><span class="nf">" в текущее поле я ввожу текст 'НужныйТекст'</span>
 </code></pre></div></li>
 </ul>
 <h3 id="12017">1.2.017<a class="headerlink" href="#12017" title="Permanent link">&para;</a></h3>
@@ -5022,22 +5028,22 @@ VA не должна использовать Попытка Исключени�
 <li>Исправление ошибки генерации шага при нажатии на контекстное меню отчета. #108</li>
 <li>Добавлен шаг #101
 <div class="highlight"><pre><span></span><code><a id="__codelineno-53-1" name="__codelineno-53-1" href="#__codelineno-53-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">затем я выполняю код встроенного языка на сервере</span>
-<a id="__codelineno-53-2" name="__codelineno-53-2" href="#__codelineno-53-2"></a><span class="k">        |</span><span class="s"> &#39;Сообщить(&quot;Hello world!&quot;);&#39;</span><span class="k"> |</span>
+<a id="__codelineno-53-2" name="__codelineno-53-2" href="#__codelineno-53-2"></a><span class="k">        |</span><span class="s"> 'Сообщить("Hello world!");'</span><span class="k"> |</span>
 </code></pre></div>
 <em>Добавлен шаг #103
-<div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">поле таблицы &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; с именем &quot;</span><span class="s">ИмяПоля</span><span class="nf">&quot; имеет заголовок &quot;</span><span class="s">Текст заголовка</span><span class="nf">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-54-1" name="__codelineno-54-1" href="#__codelineno-54-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">поле таблицы "</span><span class="s">ИмяТаблицы</span><span class="nf">" с именем "</span><span class="s">ИмяПоля</span><span class="nf">" имеет заголовок "</span><span class="s">Текст заголовка</span><span class="nf">"</span>
 </code></pre></div>
 </em>Добавлен шаг #104
-<div class="highlight"><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">у поля таблицы &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; с именем &quot;</span><span class="s">ИмяПоля</span><span class="nf">&quot; текст подсказки равен &quot;</span><span class="s">Текст подсказки</span><span class="nf">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-55-1" name="__codelineno-55-1" href="#__codelineno-55-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">у поля таблицы "</span><span class="s">ИмяТаблицы</span><span class="nf">" с именем "</span><span class="s">ИмяПоля</span><span class="nf">" текст подсказки равен "</span><span class="s">Текст подсказки</span><span class="nf">"</span>
 </code></pre></div></li>
 <li>Добавлен шаг для установки значения переключателя по части строки, используя символ *. Работает в 8.3.12 и выше. #109
-<div class="highlight"><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я меняю значение переключателя &#39;ИмяРеквизита&#39; на &#39;Значение*&#39; по шаблону</span>
-<a id="__codelineno-56-2" name="__codelineno-56-2" href="#__codelineno-56-2"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я меняю значение переключателя с именем &#39;ИмяРеквизита&#39; на &#39;Значение*&#39; по шаблону</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-56-1" name="__codelineno-56-1" href="#__codelineno-56-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я меняю значение переключателя 'ИмяРеквизита' на 'Значение*' по шаблону</span>
+<a id="__codelineno-56-2" name="__codelineno-56-2" href="#__codelineno-56-2"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я меняю значение переключателя с именем 'ИмяРеквизита' на 'Значение*' по шаблону</span>
 </code></pre></div></li>
 <li>Добавлен шаг для заполнения таблицы формы #110
-<div class="highlight"><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я заполняю таблицу &quot;</span><span class="s">ТабличнаяЧасть1</span><span class="nf">&quot; данными</span>
-<a id="__codelineno-57-2" name="__codelineno-57-2" href="#__codelineno-57-2"></a><span class="k">    |</span><span class="s"> &#39;ИмяКолонки1&#39;</span><span class="k"> |</span><span class="s"> &#39;ИмяКолонки2&#39;</span><span class="k"> |</span>
-<a id="__codelineno-57-3" name="__codelineno-57-3" href="#__codelineno-57-3"></a><span class="k">    |</span><span class="s"> &#39;Значение1&#39;</span><span class="k">   |</span><span class="s"> &#39;Значение2&#39;</span><span class="k">   |</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-57-1" name="__codelineno-57-1" href="#__codelineno-57-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я заполняю таблицу "</span><span class="s">ТабличнаяЧасть1</span><span class="nf">" данными</span>
+<a id="__codelineno-57-2" name="__codelineno-57-2" href="#__codelineno-57-2"></a><span class="k">    |</span><span class="s"> 'ИмяКолонки1'</span><span class="k"> |</span><span class="s"> 'ИмяКолонки2'</span><span class="k"> |</span>
+<a id="__codelineno-57-3" name="__codelineno-57-3" href="#__codelineno-57-3"></a><span class="k">    |</span><span class="s"> 'Значение1'</span><span class="k">   |</span><span class="s"> 'Значение2'</span><span class="k">   |</span>
 </code></pre></div></li>
 <li>Добавлен перевод новых шагов на английский язык.</li>
 <li>Добавлена возможность в управляющем json указывать значения на английском языке. Спасибо @hawk911.</li>
@@ -5056,7 +5062,7 @@ VA не должна использовать Попытка Исключени�
 <li>Тесты NoSync и Совместимость с 8.2 переведены с 8.3.12 на 8.3.13. #91</li>
 <li>Тег @tree теперь не обязателен для указания и включен по умолчанию. #92.</li>
 <li>Добавлен шаг условие, который проверяет режим совместимости в базе. #93
-<div class="highlight"><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a><span class="nf">    </span><span class="k">Если </span><span class="nf">установлен режим совместимости &quot;</span><span class="s">8.3.12</span><span class="nf">&quot; Тогда</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-58-1" name="__codelineno-58-1" href="#__codelineno-58-1"></a><span class="nf">    </span><span class="k">Если </span><span class="nf">установлен режим совместимости "</span><span class="s">8.3.12</span><span class="nf">" Тогда</span>
 </code></pre></div></li>
 <li>Добавлен тест, проверяющий получение данных из макета, который открыт в независимом окне. #94</li>
 <li>Исправлено: Условия, проверяющие видимость элементов, выдают ошибку в 8.3.13. #95</li>
@@ -5080,67 +5086,67 @@ VA не должна использовать Попытка Исключени�
 <li>Оптимизация работы с файлами для режима запрета синхронных вызовов. #80</li>
 <li>Рефакторинг. Уменьшение количества серверных вызовов при открытии обработки. #81</li>
 <li>Добавлен забытый шаг #82
-<div class="highlight"><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я жду, что поле с именем &quot;</span><span class="s">ИмяПоля</span><span class="nf">&quot; перестанет быть пустым в течение </span><span class="s">30</span><span class="nf"> секунд</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-59-1" name="__codelineno-59-1" href="#__codelineno-59-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">я жду, что поле с именем "</span><span class="s">ИмяПоля</span><span class="nf">" перестанет быть пустым в течение </span><span class="s">30</span><span class="nf"> секунд</span>
 </code></pre></div></li>
 <li>Добавлены шаги для проверки вхождения элементов формы в группы: #83
-<div class="highlight"><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">в группе &quot;</span><span class="s">ИмяГруппы</span><span class="nf">&quot; содержатся элементы</span>
-<a id="__codelineno-60-2" name="__codelineno-60-2" href="#__codelineno-60-2"></a><span class="k">        |</span><span class="s"> &#39;ГруппаРеквизит1&#39;</span><span class="k"> |</span>
-<a id="__codelineno-60-3" name="__codelineno-60-3" href="#__codelineno-60-3"></a><span class="k">        |</span><span class="s"> &#39;ГруппаРеквизит2&#39;</span><span class="k"> |</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-60-1" name="__codelineno-60-1" href="#__codelineno-60-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">в группе "</span><span class="s">ИмяГруппы</span><span class="nf">" содержатся элементы</span>
+<a id="__codelineno-60-2" name="__codelineno-60-2" href="#__codelineno-60-2"></a><span class="k">        |</span><span class="s"> 'ГруппаРеквизит1'</span><span class="k"> |</span>
+<a id="__codelineno-60-3" name="__codelineno-60-3" href="#__codelineno-60-3"></a><span class="k">        |</span><span class="s"> 'ГруппаРеквизит2'</span><span class="k"> |</span>
 <a id="__codelineno-60-4" name="__codelineno-60-4" href="#__codelineno-60-4"></a>
-<a id="__codelineno-60-5" name="__codelineno-60-5" href="#__codelineno-60-5"></a><span class="nf">    </span><span class="k">И </span><span class="nf">в группе с именем &quot;</span><span class="s">ИмяГруппы</span><span class="nf">&quot; содержатся элементы</span>
-<a id="__codelineno-60-6" name="__codelineno-60-6" href="#__codelineno-60-6"></a><span class="k">        |</span><span class="s"> &#39;ГруппаРеквизит1&#39;</span><span class="k"> |</span>
-<a id="__codelineno-60-7" name="__codelineno-60-7" href="#__codelineno-60-7"></a><span class="k">        |</span><span class="s"> &#39;ГруппаРеквизит2&#39;</span><span class="k"> |</span>
+<a id="__codelineno-60-5" name="__codelineno-60-5" href="#__codelineno-60-5"></a><span class="nf">    </span><span class="k">И </span><span class="nf">в группе с именем "</span><span class="s">ИмяГруппы</span><span class="nf">" содержатся элементы</span>
+<a id="__codelineno-60-6" name="__codelineno-60-6" href="#__codelineno-60-6"></a><span class="k">        |</span><span class="s"> 'ГруппаРеквизит1'</span><span class="k"> |</span>
+<a id="__codelineno-60-7" name="__codelineno-60-7" href="#__codelineno-60-7"></a><span class="k">        |</span><span class="s"> 'ГруппаРеквизит2'</span><span class="k"> |</span>
 <a id="__codelineno-60-8" name="__codelineno-60-8" href="#__codelineno-60-8"></a>
-<a id="__codelineno-60-9" name="__codelineno-60-9" href="#__codelineno-60-9"></a><span class="nf">    </span><span class="k">И </span><span class="nf">в группе &quot;</span><span class="s">ИмяГруппы</span><span class="nf">&quot; не содержатся элементы</span>
-<a id="__codelineno-60-10" name="__codelineno-60-10" href="#__codelineno-60-10"></a><span class="k">        |</span><span class="s"> &#39;НеСуществующаяГруппаРеквизит1&#39;</span><span class="k"> |</span>
-<a id="__codelineno-60-11" name="__codelineno-60-11" href="#__codelineno-60-11"></a><span class="k">        |</span><span class="s"> &#39;НеСуществующаяГруппаРеквизит2&#39;</span><span class="k"> |</span>
+<a id="__codelineno-60-9" name="__codelineno-60-9" href="#__codelineno-60-9"></a><span class="nf">    </span><span class="k">И </span><span class="nf">в группе "</span><span class="s">ИмяГруппы</span><span class="nf">" не содержатся элементы</span>
+<a id="__codelineno-60-10" name="__codelineno-60-10" href="#__codelineno-60-10"></a><span class="k">        |</span><span class="s"> 'НеСуществующаяГруппаРеквизит1'</span><span class="k"> |</span>
+<a id="__codelineno-60-11" name="__codelineno-60-11" href="#__codelineno-60-11"></a><span class="k">        |</span><span class="s"> 'НеСуществующаяГруппаРеквизит2'</span><span class="k"> |</span>
 <a id="__codelineno-60-12" name="__codelineno-60-12" href="#__codelineno-60-12"></a>
-<a id="__codelineno-60-13" name="__codelineno-60-13" href="#__codelineno-60-13"></a><span class="nf">    </span><span class="k">И </span><span class="nf">в группе с именем &quot;</span><span class="s">ИмяГруппы</span><span class="nf">&quot; не содержатся элементы</span>
-<a id="__codelineno-60-14" name="__codelineno-60-14" href="#__codelineno-60-14"></a><span class="k">        |</span><span class="s"> &#39;НеСуществующаяГруппаРеквизит1&#39;</span><span class="k"> |</span>
-<a id="__codelineno-60-15" name="__codelineno-60-15" href="#__codelineno-60-15"></a><span class="k">        |</span><span class="s"> &#39;НеСуществующаяГруппаРеквизит2&#39;</span><span class="k"> |</span>
+<a id="__codelineno-60-13" name="__codelineno-60-13" href="#__codelineno-60-13"></a><span class="nf">    </span><span class="k">И </span><span class="nf">в группе с именем "</span><span class="s">ИмяГруппы</span><span class="nf">" не содержатся элементы</span>
+<a id="__codelineno-60-14" name="__codelineno-60-14" href="#__codelineno-60-14"></a><span class="k">        |</span><span class="s"> 'НеСуществующаяГруппаРеквизит1'</span><span class="k"> |</span>
+<a id="__codelineno-60-15" name="__codelineno-60-15" href="#__codelineno-60-15"></a><span class="k">        |</span><span class="s"> 'НеСуществующаяГруппаРеквизит2'</span><span class="k"> |</span>
 </code></pre></div></li>
 <li>Добавлены шаги, для ожидания, что поле в таблице изменит значение: #84
-<div class="highlight"><pre><span></span><code><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; у поля &quot;</span><span class="s">Имя элемента</span><span class="nf">&quot; я жду значения отличного от &quot;</span><span class="s">Значение</span><span class="nf">&quot; в течение </span><span class="s">20</span><span class="nf"> секунд</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-61-1" name="__codelineno-61-1" href="#__codelineno-61-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице "</span><span class="s">ИмяТаблицы</span><span class="nf">" у поля "</span><span class="s">Имя элемента</span><span class="nf">" я жду значения отличного от "</span><span class="s">Значение</span><span class="nf">" в течение </span><span class="s">20</span><span class="nf"> секунд</span>
 <a id="__codelineno-61-2" name="__codelineno-61-2" href="#__codelineno-61-2"></a>
-<a id="__codelineno-61-3" name="__codelineno-61-3" href="#__codelineno-61-3"></a><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; у поля с именем &quot;</span><span class="s">ИмяЭлемента</span><span class="nf">&quot; я жду значения отличного от &quot;</span><span class="s">Значение</span><span class="nf">&quot; в течение </span><span class="s">20</span><span class="nf"> секунд</span>
+<a id="__codelineno-61-3" name="__codelineno-61-3" href="#__codelineno-61-3"></a><span class="nf">    </span><span class="k">И </span><span class="nf">в таблице "</span><span class="s">ИмяТаблицы</span><span class="nf">" у поля с именем "</span><span class="s">ИмяЭлемента</span><span class="nf">" я жду значения отличного от "</span><span class="s">Значение</span><span class="nf">" в течение </span><span class="s">20</span><span class="nf"> секунд</span>
 </code></pre></div></li>
 <li>Добавлены шаги, проверяющие, что поле существует на форме и невидимо пользователю #85
-<div class="highlight"><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">элемент формы &quot;</span><span class="s">Имя поля</span><span class="nf">&quot; существует и невидим на форме</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-62-1" name="__codelineno-62-1" href="#__codelineno-62-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">элемент формы "</span><span class="s">Имя поля</span><span class="nf">" существует и невидим на форме</span>
 <a id="__codelineno-62-2" name="__codelineno-62-2" href="#__codelineno-62-2"></a>
-<a id="__codelineno-62-3" name="__codelineno-62-3" href="#__codelineno-62-3"></a><span class="nf">    </span><span class="k">И </span><span class="nf">элемент формы с именем &quot;</span><span class="s">ИмяПоля</span><span class="nf">&quot; существует и невидим на форме</span>
+<a id="__codelineno-62-3" name="__codelineno-62-3" href="#__codelineno-62-3"></a><span class="nf">    </span><span class="k">И </span><span class="nf">элемент формы с именем "</span><span class="s">ИмяПоля</span><span class="nf">" существует и невидим на форме</span>
 </code></pre></div></li>
 <li>Добавлены шаги, для проверки командного интерфейса #86
 <div class="highlight"><pre><span></span><code><a id="__codelineno-63-1" name="__codelineno-63-1" href="#__codelineno-63-1"></a><span class="nf">    </span><span class="k">И </span><span class="nf">панель разделов равна</span>
-<a id="__codelineno-63-2" name="__codelineno-63-2" href="#__codelineno-63-2"></a><span class="k">        |</span><span class="s"> &#39;ПунктМеню1&#39;</span><span class="k"> |</span>
-<a id="__codelineno-63-3" name="__codelineno-63-3" href="#__codelineno-63-3"></a><span class="k">        |</span><span class="s"> &#39;ПунктМеню1&#39;</span><span class="k"> |</span>
+<a id="__codelineno-63-2" name="__codelineno-63-2" href="#__codelineno-63-2"></a><span class="k">        |</span><span class="s"> 'ПунктМеню1'</span><span class="k"> |</span>
+<a id="__codelineno-63-3" name="__codelineno-63-3" href="#__codelineno-63-3"></a><span class="k">        |</span><span class="s"> 'ПунктМеню1'</span><span class="k"> |</span>
 <a id="__codelineno-63-4" name="__codelineno-63-4" href="#__codelineno-63-4"></a>
 <a id="__codelineno-63-5" name="__codelineno-63-5" href="#__codelineno-63-5"></a><span class="nf">    </span><span class="k">И </span><span class="nf">панель разделов содержит пункты меню</span>
-<a id="__codelineno-63-6" name="__codelineno-63-6" href="#__codelineno-63-6"></a><span class="k">        |</span><span class="s"> &#39;ПунктМеню1&#39;</span><span class="k"> |</span>
-<a id="__codelineno-63-7" name="__codelineno-63-7" href="#__codelineno-63-7"></a><span class="k">        |</span><span class="s"> &#39;ПунктМеню1&#39;</span><span class="k"> |</span>
+<a id="__codelineno-63-6" name="__codelineno-63-6" href="#__codelineno-63-6"></a><span class="k">        |</span><span class="s"> 'ПунктМеню1'</span><span class="k"> |</span>
+<a id="__codelineno-63-7" name="__codelineno-63-7" href="#__codelineno-63-7"></a><span class="k">        |</span><span class="s"> 'ПунктМеню1'</span><span class="k"> |</span>
 <a id="__codelineno-63-8" name="__codelineno-63-8" href="#__codelineno-63-8"></a>
 <a id="__codelineno-63-9" name="__codelineno-63-9" href="#__codelineno-63-9"></a><span class="nf">    </span><span class="k">И </span><span class="nf">панель разделов не содержит пункты меню</span>
-<a id="__codelineno-63-10" name="__codelineno-63-10" href="#__codelineno-63-10"></a><span class="k">        |</span><span class="s"> &#39;ПунктМеню1&#39;</span><span class="k"> |</span>
-<a id="__codelineno-63-11" name="__codelineno-63-11" href="#__codelineno-63-11"></a><span class="k">        |</span><span class="s"> &#39;ПунктМеню1&#39;</span><span class="k"> |</span>
+<a id="__codelineno-63-10" name="__codelineno-63-10" href="#__codelineno-63-10"></a><span class="k">        |</span><span class="s"> 'ПунктМеню1'</span><span class="k"> |</span>
+<a id="__codelineno-63-11" name="__codelineno-63-11" href="#__codelineno-63-11"></a><span class="k">        |</span><span class="s"> 'ПунктМеню1'</span><span class="k"> |</span>
 <a id="__codelineno-63-12" name="__codelineno-63-12" href="#__codelineno-63-12"></a>
 <a id="__codelineno-63-13" name="__codelineno-63-13" href="#__codelineno-63-13"></a><span class="nf">    </span><span class="k">И </span><span class="nf">панель функций равна</span>
-<a id="__codelineno-63-14" name="__codelineno-63-14" href="#__codelineno-63-14"></a><span class="k">        |</span><span class="s"> &#39;ПунктМеню1&#39;</span><span class="k"> |</span>
-<a id="__codelineno-63-15" name="__codelineno-63-15" href="#__codelineno-63-15"></a><span class="k">        |</span><span class="s"> &#39;ПунктМеню1&#39;</span><span class="k"> |</span>
+<a id="__codelineno-63-14" name="__codelineno-63-14" href="#__codelineno-63-14"></a><span class="k">        |</span><span class="s"> 'ПунктМеню1'</span><span class="k"> |</span>
+<a id="__codelineno-63-15" name="__codelineno-63-15" href="#__codelineno-63-15"></a><span class="k">        |</span><span class="s"> 'ПунктМеню1'</span><span class="k"> |</span>
 <a id="__codelineno-63-16" name="__codelineno-63-16" href="#__codelineno-63-16"></a>
 <a id="__codelineno-63-17" name="__codelineno-63-17" href="#__codelineno-63-17"></a><span class="nf">    </span><span class="k">И </span><span class="nf">панель функций содержит пункты меню</span>
-<a id="__codelineno-63-18" name="__codelineno-63-18" href="#__codelineno-63-18"></a><span class="k">        |</span><span class="s"> &#39;ПунктМеню1&#39;</span><span class="k"> |</span>
-<a id="__codelineno-63-19" name="__codelineno-63-19" href="#__codelineno-63-19"></a><span class="k">        |</span><span class="s"> &#39;ПунктМеню1&#39;</span><span class="k"> |</span>
+<a id="__codelineno-63-18" name="__codelineno-63-18" href="#__codelineno-63-18"></a><span class="k">        |</span><span class="s"> 'ПунктМеню1'</span><span class="k"> |</span>
+<a id="__codelineno-63-19" name="__codelineno-63-19" href="#__codelineno-63-19"></a><span class="k">        |</span><span class="s"> 'ПунктМеню1'</span><span class="k"> |</span>
 <a id="__codelineno-63-20" name="__codelineno-63-20" href="#__codelineno-63-20"></a>
 <a id="__codelineno-63-21" name="__codelineno-63-21" href="#__codelineno-63-21"></a><span class="nf">    </span><span class="k">И </span><span class="nf">панель функций не содержит пункты меню</span>
-<a id="__codelineno-63-22" name="__codelineno-63-22" href="#__codelineno-63-22"></a><span class="k">        |</span><span class="s"> &#39;ПунктМеню1&#39;</span><span class="k"> |</span>
-<a id="__codelineno-63-23" name="__codelineno-63-23" href="#__codelineno-63-23"></a><span class="k">        |</span><span class="s"> &#39;ПунктМеню1&#39;</span><span class="k"> |</span>
+<a id="__codelineno-63-22" name="__codelineno-63-22" href="#__codelineno-63-22"></a><span class="k">        |</span><span class="s"> 'ПунктМеню1'</span><span class="k"> |</span>
+<a id="__codelineno-63-23" name="__codelineno-63-23" href="#__codelineno-63-23"></a><span class="k">        |</span><span class="s"> 'ПунктМеню1'</span><span class="k"> |</span>
 <a id="__codelineno-63-24" name="__codelineno-63-24" href="#__codelineno-63-24"></a>
-<a id="__codelineno-63-25" name="__codelineno-63-25" href="#__codelineno-63-25"></a><span class="nf">    </span><span class="k">И </span><span class="nf">группа &quot;</span><span class="s">ЗаголовокГруппы</span><span class="nf">&quot; в панели функций содержит пункты меню    </span>
-<a id="__codelineno-63-26" name="__codelineno-63-26" href="#__codelineno-63-26"></a><span class="k">        |</span><span class="s"> &#39;ПунктМеню1&#39;</span><span class="k"> |</span>
-<a id="__codelineno-63-27" name="__codelineno-63-27" href="#__codelineno-63-27"></a><span class="k">        |</span><span class="s"> &#39;ПунктМеню1&#39;</span><span class="k"> |</span>
+<a id="__codelineno-63-25" name="__codelineno-63-25" href="#__codelineno-63-25"></a><span class="nf">    </span><span class="k">И </span><span class="nf">группа "</span><span class="s">ЗаголовокГруппы</span><span class="nf">" в панели функций содержит пункты меню    </span>
+<a id="__codelineno-63-26" name="__codelineno-63-26" href="#__codelineno-63-26"></a><span class="k">        |</span><span class="s"> 'ПунктМеню1'</span><span class="k"> |</span>
+<a id="__codelineno-63-27" name="__codelineno-63-27" href="#__codelineno-63-27"></a><span class="k">        |</span><span class="s"> 'ПунктМеню1'</span><span class="k"> |</span>
 <a id="__codelineno-63-28" name="__codelineno-63-28" href="#__codelineno-63-28"></a>
-<a id="__codelineno-63-29" name="__codelineno-63-29" href="#__codelineno-63-29"></a><span class="nf">    </span><span class="k">И </span><span class="nf">группа &quot;</span><span class="s">ЗаголовокГруппы</span><span class="nf">&quot; в панели функций не содержит пункты меню </span>
-<a id="__codelineno-63-30" name="__codelineno-63-30" href="#__codelineno-63-30"></a><span class="k">        |</span><span class="s"> &#39;ПунктМеню1&#39;</span><span class="k"> |</span>
-<a id="__codelineno-63-31" name="__codelineno-63-31" href="#__codelineno-63-31"></a><span class="k">        |</span><span class="s"> &#39;ПунктМеню1&#39;</span><span class="k"> |</span>
+<a id="__codelineno-63-29" name="__codelineno-63-29" href="#__codelineno-63-29"></a><span class="nf">    </span><span class="k">И </span><span class="nf">группа "</span><span class="s">ЗаголовокГруппы</span><span class="nf">" в панели функций не содержит пункты меню </span>
+<a id="__codelineno-63-30" name="__codelineno-63-30" href="#__codelineno-63-30"></a><span class="k">        |</span><span class="s"> 'ПунктМеню1'</span><span class="k"> |</span>
+<a id="__codelineno-63-31" name="__codelineno-63-31" href="#__codelineno-63-31"></a><span class="k">        |</span><span class="s"> 'ПунктМеню1'</span><span class="k"> |</span>
 </code></pre></div></li>
 </ul>
 <h3 id="12014">1.2.014<a class="headerlink" href="#12014" title="Permanent link">&para;</a></h3>
@@ -5426,9 +5432,9 @@ VA не должна использовать Попытка Исключени�
 <h3 id="11125">1.1.125<a class="headerlink" href="#11125" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Добавил шаг, чтобы можно было переходить к строке таблицы, когда значения заданы с использованием символа *
-<div class="highlight"><pre><span></span><code><a id="__codelineno-64-1" name="__codelineno-64-1" href="#__codelineno-64-1"></a><span class="k">И </span><span class="nf">    в таблице &quot;</span><span class="s">Список</span><span class="nf">&quot; я перехожу к строке по шаблону</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-64-1" name="__codelineno-64-1" href="#__codelineno-64-1"></a><span class="k">И </span><span class="nf">    в таблице "</span><span class="s">Список</span><span class="nf">" я перехожу к строке по шаблону</span>
 <a id="__codelineno-64-2" name="__codelineno-64-2" href="#__codelineno-64-2"></a><span class="k">  |</span><span class="s"> Код</span><span class="k">       |</span><span class="s"> Наименование</span><span class="k">       |</span>
-<a id="__codelineno-64-3" name="__codelineno-64-3" href="#__codelineno-64-3"></a><span class="k">  |</span><span class="s"> &quot;00000000*&quot;</span><span class="k"> |</span><span class="s"> &#39;*Элемент*2&#39;</span><span class="k">             |</span>
+<a id="__codelineno-64-3" name="__codelineno-64-3" href="#__codelineno-64-3"></a><span class="k">  |</span><span class="s"> "00000000*"</span><span class="k"> |</span><span class="s"> '*Элемент*2'</span><span class="k">             |</span>
 </code></pre></div></li>
 <li>Теперь при смене активного окна автоматически снимается фиксирование формы для поиска элемента.</li>
 <li>Исправил ошибку, когда web клиент не переподключался.</li>
@@ -5443,10 +5449,10 @@ VA не должна использовать Попытка Исключени�
 <li>Убрал из epf явное использование СтрШаблон.</li>
 <li>
 <p>Добавил шаги условий:
-<div class="highlight"><pre><span></span><code><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a><span class="k">Если </span><span class="nf">таблица &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; равна макету &quot;</span><span class="s">ИмяМакета</span><span class="nf">&quot; тогда</span>
-<a id="__codelineno-65-2" name="__codelineno-65-2" href="#__codelineno-65-2"></a><span class="k">Если </span><span class="nf">таблица &quot;</span><span class="s">ИмяТаблицы</span><span class="nf">&quot; равна переданной тогда</span>
-<a id="__codelineno-65-3" name="__codelineno-65-3" href="#__codelineno-65-3"></a><span class="k">        |</span><span class="s"> &#39;Имя колонки&#39;</span><span class="k"> |</span>
-<a id="__codelineno-65-4" name="__codelineno-65-4" href="#__codelineno-65-4"></a><span class="k">        |</span><span class="s"> &#39;Значение&#39;</span><span class="k">    |</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-65-1" name="__codelineno-65-1" href="#__codelineno-65-1"></a><span class="k">Если </span><span class="nf">таблица "</span><span class="s">ИмяТаблицы</span><span class="nf">" равна макету "</span><span class="s">ИмяМакета</span><span class="nf">" тогда</span>
+<a id="__codelineno-65-2" name="__codelineno-65-2" href="#__codelineno-65-2"></a><span class="k">Если </span><span class="nf">таблица "</span><span class="s">ИмяТаблицы</span><span class="nf">" равна переданной тогда</span>
+<a id="__codelineno-65-3" name="__codelineno-65-3" href="#__codelineno-65-3"></a><span class="k">        |</span><span class="s"> 'Имя колонки'</span><span class="k"> |</span>
+<a id="__codelineno-65-4" name="__codelineno-65-4" href="#__codelineno-65-4"></a><span class="k">        |</span><span class="s"> 'Значение'</span><span class="k">    |</span>
 </code></pre></div></p>
 </li>
 <li>
@@ -5468,7 +5474,7 @@ VA не должна использовать Попытка Исключени�
 <em>Как узнать детали ошибки.</em>
 <em>Работа со сценариями на других языках.</em></li>
 <li>Добавил шаги для фиксирования формы, в которой надо искать элементы
-<div class="highlight"><pre><span></span><code><a id="__codelineno-66-1" name="__codelineno-66-1" href="#__codelineno-66-1"></a><span class="k">И </span><span class="nf">я фиксирую форму &quot;</span><span class="s">ИмяФормы</span><span class="nf">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-66-1" name="__codelineno-66-1" href="#__codelineno-66-1"></a><span class="k">И </span><span class="nf">я фиксирую форму "</span><span class="s">ИмяФормы</span><span class="nf">"</span>
 <a id="__codelineno-66-2" name="__codelineno-66-2" href="#__codelineno-66-2"></a><span class="k">И </span><span class="nf">я отменяю фиксирование формы</span>
 </code></pre></div></li>
 </ul>
@@ -5483,8 +5489,8 @@ VA не должна использовать Попытка Исключени�
 <li>Решение #691</li>
 <li>Переделал работу с шагами выбора из списка.
 Теперь генерируются шаги вида
-<div class="highlight"><pre><span></span><code><a id="__codelineno-67-1" name="__codelineno-67-1" href="#__codelineno-67-1"></a><span class="k">И </span><span class="nf">из выпадающего списка &quot;</span><span class="s">ИмяПоля</span><span class="nf">&quot; я выбираю точное значение &quot;</span><span class="s">ЗначениеПоля</span><span class="nf">&quot;</span>
-<a id="__codelineno-67-2" name="__codelineno-67-2" href="#__codelineno-67-2"></a><span class="k">И </span><span class="nf">из выпадающего списка &quot;</span><span class="s">ИмяПоля</span><span class="nf">&quot; я выбираю по строке &quot;</span><span class="s">ЧастьСтроки</span><span class="nf">&quot;</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-67-1" name="__codelineno-67-1" href="#__codelineno-67-1"></a><span class="k">И </span><span class="nf">из выпадающего списка "</span><span class="s">ИмяПоля</span><span class="nf">" я выбираю точное значение "</span><span class="s">ЗначениеПоля</span><span class="nf">"</span>
+<a id="__codelineno-67-2" name="__codelineno-67-2" href="#__codelineno-67-2"></a><span class="k">И </span><span class="nf">из выпадающего списка "</span><span class="s">ИмяПоля</span><span class="nf">" я выбираю по строке "</span><span class="s">ЧастьСтроки</span><span class="nf">"</span>
 </code></pre></div></li>
 </ul>
 <h3 id="11119">1.1.119<a class="headerlink" href="#11119" title="Permanent link">&para;</a></h3>

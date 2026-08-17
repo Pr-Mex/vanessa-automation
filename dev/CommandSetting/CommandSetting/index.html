@@ -2483,7 +2483,7 @@
 </tbody>
 </table>
 <p>Данные параметры нужно передавать в командной строке запуска платформы в параметре /C. Например полная строка запуска может выглядеть так:</p>
-<div class="highlight"><pre><span></span><code>&quot;C:\Program Files (x86)\1cv8\8.3.23.1739\bin\1cv8c&quot; /N&quot;&quot; /TestManager /Execute &quot;C:\Commons\rep\vanessa-automation\vanessa-automation.epf&quot; /IBConnectionString &quot;File=&quot;&quot;c:\Bases\TestBaseTestManager&quot;&quot;;&quot; /C&quot;StartFeaturePlayer;QuietInstallVanessaExt;VAParams=C:\Temp\VAParams.json&quot;
+<div class="highlight"><pre><span></span><code>"C:\Program Files (x86)\1cv8\8.3.23.1739\bin\1cv8c" /N"" /TestManager /Execute "C:\Commons\rep\vanessa-automation\vanessa-automation.epf" /IBConnectionString "File=""c:\Bases\TestBaseTestManager"";" /C"StartFeaturePlayer;QuietInstallVanessaExt;VAParams=C:\Temp\VAParams.json"
 </code></pre></div>
 <p>При передаче указанных выше параметров внутри параметра /C - их порядок не важен.
 Также любой параметр из VAParams.json можно также передать в тексте командной строки. Можно передавать имя параметра как на русском, так и на английском языке.
@@ -2496,7 +2496,7 @@
 </code></pre></div>
 <p>Пример, когда данные клиентов тестирования передаются через командную строку. При этом нужно учесть, что символ ";" нужно экранировать так: "\;"
 По сути в данном случае клиенты тестирования передаются через строку в формате json.</p>
-<div class="highlight"><pre><span></span><code>StartFeaturePlayer;VAParams=C:\Temp\VAParams.json;ДанныеКлиентовТестирования=[{&quot;Имя&quot;:&quot;ТестПодключенияRu&quot;,&quot;Синоним&quot;:&quot;ТестПодключенияRu&quot;,&quot;ПутьКИнфобазе&quot;:&quot;File=\&quot;g:\\Bases\\8.3.24\&quot;\;&quot;,&quot;ПортЗапускаТестКлиента&quot;:48010,&quot;ДопПараметры&quot;:&quot;&quot;,&quot;ТипКлиента&quot;:&quot;Тонкий&quot;,&quot;ИмяКомпьютера&quot;:&quot;222&quot;},{&quot;Имя&quot;:&quot;СППР&quot;,&quot;Синоним&quot;:&quot;&quot;,&quot;ПутьКИнфобазе&quot;:&quot;Srvr=\&quot;srv1\&quot;\;Ref=\&quot;base\&quot;\;&quot;,&quot;ПортЗапускаТестКлиента&quot;:48002,&quot;ДопПараметры&quot;:&quot;&quot;,&quot;ТипКлиента&quot;:&quot;Тонкий&quot;,&quot;ИмяКомпьютера&quot;:&quot;localhost&quot;}]
+<div class="highlight"><pre><span></span><code>StartFeaturePlayer;VAParams=C:\Temp\VAParams.json;ДанныеКлиентовТестирования=[{"Имя":"ТестПодключенияRu","Синоним":"ТестПодключенияRu","ПутьКИнфобазе":"File=\"g:\\Bases\\8.3.24\"\;","ПортЗапускаТестКлиента":48010,"ДопПараметры":"","ТипКлиента":"Тонкий","ИмяКомпьютера":"222"},{"Имя":"СППР","Синоним":"","ПутьКИнфобазе":"Srvr=\"srv1\"\;Ref=\"base\"\;","ПортЗапускаТестКлиента":48002,"ДопПараметры":"","ТипКлиента":"Тонкий","ИмяКомпьютера":"localhost"}]
 </code></pre></div>
 <p>Также любые параметры, указанные в этом файле или в файле VAParams.json можно передавать через переменные среды. Для этого нужно использовать формат <strong>VANESSA_КЛЮЧ</strong>.
 Пример, когда через переменные среды передаётся флаг формирования отчета в формате Allure: <strong>VANESSA_allurecreatereport</strong>=true ИЛИ <strong>VANESSA_ДелатьОтчетВФорматеАллюр</strong>=true.

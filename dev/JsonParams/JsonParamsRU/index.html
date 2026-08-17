@@ -3074,7 +3074,7 @@
      Существует проблема, что при синхронизации состояния формы после завершения серверного вызова, может затираться текст, который в данный момент редактирует пользователь.
      В тестах это может проявляться так, что тест ввёл значение в поле, но до того как он начал работать с другим полем данное значение было возвращено в предыдущее состояние.
      Данная опция включает механизм, когда свойство "ОбновлениеТекстаРедактирования" у полей формы, будет изменяться после вызова шага
-     <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">Тогда открылось окно &quot;</span><span class="s">ИмяОкна</span><span class="nf">&quot;</span>
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nf">Тогда открылось окно "</span><span class="s">ИмяОкна</span><span class="nf">"</span>
 </code></pre></div>
      Для работы опции в базе клиента тестирования должно быть установлено расширение VAExtension.</p>
 </li>
@@ -3086,23 +3086,23 @@
 <li>
 <p><strong>КоличествоСекундПоискаОкна {timetofindwindow}</strong>:
      Максимальное время для поиска окна в шаге
-     <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nf">Тогда открылось окно &quot;</span><span class="s">ИмяОкна</span><span class="nf">&quot;</span>
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nf">Тогда открылось окно "</span><span class="s">ИмяОкна</span><span class="nf">"</span>
 </code></pre></div></p>
 </li>
 <li>
 <p><strong>ТаймаутДляАсинхронныхШагов {timeoutforasynchronoussteps}</strong>:
      Указывает максимальное время ожидания для асинхронного шага.
      Например, если задано значение параметра равное 20 секунд и используется шаг
-     <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">И </span><span class="nf">я жду, что поле с именем &quot;</span><span class="s">ИмяПоля</span><span class="nf">&quot; перестанет быть пустым в течение </span><span class="s">10</span><span class="nf"> секунд</span>
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">И </span><span class="nf">я жду, что поле с именем "</span><span class="s">ИмяПоля</span><span class="nf">" перестанет быть пустым в течение </span><span class="s">10</span><span class="nf"> секунд</span>
 </code></pre></div>
      тогда в реальности максимальное время работы шага будет 20 секунд, а не 10.</p>
 </li>
 <li>
 <p><strong>ПаузаПриОткрытииОкна {pauseonwindowopening}</strong>:
      Значение дополнительной паузы, которая будет всегда применяться в шагах
-     <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nf">Тогда открылось окно &quot;</span><span class="s">ИмяОкна</span><span class="nf">&quot;</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">И </span><span class="nf">я жду открытия окна &quot;</span><span class="s">Имя окна</span><span class="nf">&quot; в течении </span><span class="s">60</span><span class="nf"> секунд</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">И </span><span class="nf">я жду открытия окна отличного от &quot;</span><span class="s">ИмяОкна</span><span class="nf">&quot; в течение </span><span class="s">60</span><span class="nf"> секунд</span>
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nf">Тогда открылось окно "</span><span class="s">ИмяОкна</span><span class="nf">"</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">И </span><span class="nf">я жду открытия окна "</span><span class="s">Имя окна</span><span class="nf">" в течении </span><span class="s">60</span><span class="nf"> секунд</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">И </span><span class="nf">я жду открытия окна отличного от "</span><span class="s">ИмяОкна</span><span class="nf">" в течение </span><span class="s">60</span><span class="nf"> секунд</span>
 </code></pre></div></p>
 </li>
 <li>
@@ -3312,7 +3312,7 @@
     Каталог, в котором формируются данные отчета в формате Allure. При локальном запуске каталог будет очищаться при каждом запуске сценариев.
 
  * **КаталогВыгрузкиAllureБазовый {allurepathbase}**:
-    Каталог, в котором формируются данные отчета в формате Allure, при этом для каждой сборки будет создаваться подкаталоги. Данный параметр имеет приоритет и значение параметра &quot;Каталог отчета Allure&quot; будет проигнорировано.
+    Каталог, в котором формируются данные отчета в формате Allure, при этом для каждой сборки будет создаваться подкаталоги. Данный параметр имеет приоритет и значение параметра "Каталог отчета Allure" будет проигнорировано.
 
  * **УровеньОтчета1 {reportlevel1}**:
     Задаёт первый уровень группировки в отчете Allure на закладке Behaviors. Подробности описаны в справке.
@@ -3327,7 +3327,7 @@
     Каталог, относительно которого рассчитывается иерархия фич. Подробности описаны в справке.
 
  * **ТегиПропускающиеСценарийAllure {tagsskippingscript}**:
-    Список тегов, разделённых с помощью &quot;;&quot;.
+    Список тегов, разделённых с помощью ";".
     Если в сценарии есть такой тег, тогда сценарий не будет выполняться и отчете Allure у него будет статус пропущен/skipped.
 
  * **ГруппировкаTestSuites {testsuites}**:
@@ -3695,7 +3695,7 @@
    https://cross-plus-a.com/bconsole.htm
 
 * **ЗаписьВидеоИмяTTS {ttsvoice}**:
-   Указывает какой голос будет использован для озвучки. Допускается указывать не полное название голоса в системе, а только часть, например &quot;Elena&quot;.
+   Указывает какой голос будет использован для озвучки. Допускается указывать не полное название голоса в системе, а только часть, например "Elena".
    Понадобится установить Microsoft Speech Platform х32 и Server Runtime Languages.
    https://www.microsoft.com/en-us/download/details.aspx?id=27225
 
@@ -3778,7 +3778,7 @@
    https://docs.aws.amazon.com/en_us/polly/latest/dg/voicelist.html
 
 * **ЗаписьВидеоAmazonДвижок {amazonttsengine}**:
-   Варианты значения для поля &quot;Движок&quot; смотрите здесь.
+   Варианты значения для поля "Движок" смотрите здесь.
    https://docs.aws.amazon.com/en_us/polly/latest/dg/voicelist.html
 
 * **ЗаписьВидеоAmazonРегион {amazonttsregion}**:
@@ -3886,7 +3886,7 @@
 
 * **ЗаписьВидеоКэшироватьВидеоВставки {cachevideo}**:
    Если флаг установлен то при работе шага
-   И видеовставка &quot;ТекстВставки&quot;
+   И видеовставка "ТекстВставки"
    будет происходить проверка, есть ли в кэш уже такой видеофрагмент.
    Если в кэш фрагмента нет - он будет туда добавлен.
    Если фрагмент есть - то он будет взят из кэш.
@@ -3919,10 +3919,10 @@
 
 * **ЗаписьВидеоКомандаConvert {convertcomand}**:
    В поле описывается как будет вызываться команда Convert.
-   Для версии ImageMagick 7 достаточно указать &quot;magick convert.&quot;
+   Для версии ImageMagick 7 достаточно указать "magick convert."
    Для более старых версий нужно указать путь к исполняемому файлу convert.exe в каталоге с программой ImageMagick.
    Пример:
-   &quot;C:\Program Files\ImageMagick-Х.Х.Х-Q16\convert.exe&quot;
+   "C:\Program Files\ImageMagick-Х.Х.Х-Q16\convert.exe"
    Скачать: https://imagemagick.org/script/download.php
    Для версий младше 7 в процессе установки обязательным к установке является пункт: Install legacy utilities (e. g. convert)
    https://imagemagick.org/script/download.php

@@ -3074,7 +3074,7 @@ A structure that will contain key and value pairs. This structure will be loaded
      There is a problem that when synchronizing the state of the form after the server call has completed, the text that the user is currently editing may be overwritten.
      In tests, this can manifest itself in such a way that the test entered a value into a field, but before it began working with another field, this value was returned to its previous state.
      This option enables a mechanism where the "EditTextUpdate" property of form fields will change after calling the step
-     <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">Then </span><span class="nf">&quot;</span><span class="s">WindowTitle</span><span class="nf">&quot; window is opened</span>
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="k">Then </span><span class="nf">"</span><span class="s">WindowTitle</span><span class="nf">" window is opened</span>
 </code></pre></div>
      For this option to work, the VAExtension extension must be installed in the testing client database.</p>
 </li>
@@ -3086,23 +3086,23 @@ A structure that will contain key and value pairs. This structure will be loaded
 <li>
 <p><strong>timetofindwindow</strong>:
      Maximum time to search for a window in a step
-     <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">Then </span><span class="nf">&quot;</span><span class="s">WindowTitle</span><span class="nf">&quot; window is opened</span>
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="k">Then </span><span class="nf">"</span><span class="s">WindowTitle</span><span class="nf">" window is opened</span>
 </code></pre></div></p>
 </li>
 <li>
 <p><strong>timeoutforasynchronoussteps</strong>:
      Specifies the maximum time to wait for an asynchronous step.
      For example, if the parameter value is set to 20 seconds and the step is used
-     <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">And </span><span class="nf">I wait the field named &quot;</span><span class="s">FieldName</span><span class="nf">&quot; will be filled in </span><span class="s">10</span><span class="nf"> seconds</span>
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="k">And </span><span class="nf">I wait the field named "</span><span class="s">FieldName</span><span class="nf">" will be filled in </span><span class="s">10</span><span class="nf"> seconds</span>
 </code></pre></div>
      then in reality the maximum step time will be 20 seconds, not 10.</p>
 </li>
 <li>
 <p><strong>pauseonwindowopening</strong>:
      Additional pause value that will always be applied in a step
-     <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">Then </span><span class="nf">&quot;</span><span class="s">WindowTitle</span><span class="nf">&quot; window is opened</span>
-<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">And </span><span class="nf">I wait &quot;</span><span class="s">WindowTitle</span><span class="nf">&quot; window opening in </span><span class="s">60</span><span class="nf"> seconds</span>
-<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">And </span><span class="nf">I wait the window with header different from &quot;</span><span class="s">WindowTitle</span><span class="nf">&quot; opening in </span><span class="s">60</span><span class="nf"> seconds</span>
+     <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="k">Then </span><span class="nf">"</span><span class="s">WindowTitle</span><span class="nf">" window is opened</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="k">And </span><span class="nf">I wait "</span><span class="s">WindowTitle</span><span class="nf">" window opening in </span><span class="s">60</span><span class="nf"> seconds</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="k">And </span><span class="nf">I wait the window with header different from "</span><span class="s">WindowTitle</span><span class="nf">" opening in </span><span class="s">60</span><span class="nf"> seconds</span>
 </code></pre></div></p>
 </li>
 <li>
@@ -3312,7 +3312,7 @@ A structure that will contain key and value pairs. This structure will be loaded
     Allure reports directory. When run locally, the directory will be cleaned up each time the scripts are run.
 
  * **allurepathbase**:
-    The directory in which report data is generated in Allure format, and subdirectories will be created for each assembly. This parameter takes precedence and the value of the &quot;Allure Report Catalog&quot; parameter will be ignored.
+    The directory in which report data is generated in Allure format, and subdirectories will be created for each assembly. This parameter takes precedence and the value of the "Allure Report Catalog" parameter will be ignored.
 
  * **reportlevel1**:
     Sets first level of grouping in Allure report on the Behaviors tab. See Help info for details.
@@ -3327,7 +3327,7 @@ A structure that will contain key and value pairs. This structure will be loaded
     The directory for features hierarchy calculation. See Help info for details.
 
  * **tagsskippingscript**:
-    List of tags separated by &quot;;&quot;.
+    List of tags separated by ";".
     If the script contains such a tag, then the script will not be executed and the Allure report will have the skipped status.
 
  * **testsuites**:
@@ -3661,13 +3661,13 @@ A structure that will contain key and value pairs. This structure will be loaded
 <li>
 <p>General</p>
 <div class="highlight"><pre><span></span><code> * **soundscenarioexecution**:
-    Includes voice acting of the script execution according to the specified settings of the announcer&#39;s voice.
+    Includes voice acting of the script execution according to the specified settings of the announcer's voice.
 </code></pre></div>
 </li>
 <li>
 <p>Voiceover by announcer</p>
 <div class="highlight"><pre><span></span><code> * **ttstype**:
-    Specifies the narrator&#39;s voice.
+    Specifies the narrator's voice.
 </code></pre></div>
 <ul>
 <li>
@@ -3695,12 +3695,12 @@ A structure that will contain key and value pairs. This structure will be loaded
    http://www.cross-plus-a.ru/bconsole.html
 
 * **ttsvoice**:
-   Specifies which voice will be used for voice acting. It is allowed to indicate not the full name of the voice in the system, but only a part, for example &quot;Elena&quot;.
+   Specifies which voice will be used for voice acting. It is allowed to indicate not the full name of the voice in the system, but only a part, for example "Elena".
    You will need to install Microsoft Speech Platform x32 and Server Runtime Languages.
    https://www.microsoft.com/en-us/download/details.aspx?id=27225
 
 * **speedofspeech**:
-   Narrator&#39;s speech speed.
+   Narrator's speech speed.
    Value range is from -10 to 10.
 </code></pre></div>
 </li>
@@ -3777,7 +3777,7 @@ A structure that will contain key and value pairs. This structure will be loaded
    https://docs.aws.amazon.com/en_us/polly/latest/dg/voicelist.html
 
 * **amazonttsengine**:
-   See the options for the value for the &quot;Engine&quot; field here.
+   See the options for the value for the "Engine" field here.
    https://docs.aws.amazon.com/en_us/polly/latest/dg/voicelist.html
 
 * **amazonttsregion**:
@@ -3885,7 +3885,7 @@ A structure that will contain key and value pairs. This structure will be loaded
 
 * **cachevideo**:
    If the flag is set then when the step is running
-   And the video insert &quot;TextInsert&quot;
+   And the video insert "TextInsert"
    there will be a check to see if there is already such a video fragment in the cache.
    If there is no fragment in the cache, it will be added there.
    If there is a fragment, then it will be taken from the cache.
@@ -3918,10 +3918,10 @@ A structure that will contain key and value pairs. This structure will be loaded
 
 * **convertcomand**:
    The field describes how the Convert command will be invoked.
-   For ImageMagick 7, just specify &quot;magick convert.&quot;
+   For ImageMagick 7, just specify "magick convert."
    For older versions, you need to specify the path to the executable convert.exe file in the directory with the ImageMagick program.
    Example:
-   &quot;C:\Program Files\ImageMagick-X.X.X-Q16\convert.exe&quot;
+   "C:\Program Files\ImageMagick-X.X.X-Q16\convert.exe"
    Download: https://imagemagick.org/script/download.php
    For versions earlier than 7 during the installation, the following item is required for installation: Install legacy utilities (e. G. Convert)
    https://imagemagick.org/script/download.php
@@ -3942,7 +3942,7 @@ A structure that will contain key and value pairs. This structure will be loaded
 <li>Music<div class="highlight"><pre><span></span><code>* **musicpath**:
    mp3 files directory.
    If this field is filled, random mp3 file will be retrieved from this catalog as a soundtrack.
-   If mp3 file duration is less than the video&#39;s, it will be repeated.
+   If mp3 file duration is less than the video's, it will be repeated.
 
 * **musicvolume**:
    Value range is from 0 to 1.

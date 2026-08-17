@@ -3415,12 +3415,12 @@
 <p>Когда в инструкции явно указан параметр (например, <code>format=all</code>), нужно использовать <strong>ТОЧНО</strong> этот параметр. Нельзя сначала вызывать с упрощённым параметром (<code>format=short_info</code>) для "быстрой оценки", а потом с полным.</p>
 <p><strong>Пример ЗАПРЕЩЁННОГО действия:</strong>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># ❌ НЕПРАВИЛЬНО - сначала short_info, потом all</span>
-<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">get_data_from_knowledge_base</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s2">&quot;short_info&quot;</span><span class="p">)</span>  <span class="c1"># для &quot;быстрой оценки&quot;</span>
-<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">get_data_from_knowledge_base</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">)</span>          <span class="c1"># потом полное чтение</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="n">get_data_from_knowledge_base</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s2">"short_info"</span><span class="p">)</span>  <span class="c1"># для "быстрой оценки"</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="n">get_data_from_knowledge_base</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s2">"all"</span><span class="p">)</span>          <span class="c1"># потом полное чтение</span>
 </code></pre></div></p>
 <p><strong>Пример ПРАВИЛЬНОГО действия:</strong>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="c1"># ✅ ПРАВИЛЬНО - сразу полное чтение</span>
-<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">get_data_from_knowledge_base</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s2">&quot;all&quot;</span><span class="p">)</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="n">get_data_from_knowledge_base</span><span class="p">(</span><span class="nb">format</span><span class="o">=</span><span class="s2">"all"</span><span class="p">)</span>
 </code></pre></div></p>
 <p><strong>Это правило применяется ко ВСЕМ инструментам и параметрам, явно указанным в инструкциях.</strong></p>
 <hr />
@@ -3526,10 +3526,10 @@
 - Визуальный анализ скриншота позволяет увидеть реальное состояние приложения
 - Без скриншота вы работаете вслепую и можете принимать неверные решения</p>
 <p><strong>Пример проблемы:</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Проблема: Не могу найти гиперссылку для открытия отчета &quot;Остатки и доступность товаров&quot;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>Проблема: Не могу найти гиперссылку для открытия отчета "Остатки и доступность товаров"
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>Текстовый ответ: Элемента формы с именем &lt;...&gt; не найдено.
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>Решение: Сделал скриншот -&gt; прочитал его -&gt; увидел что отчет доступен через командный интерфейс
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>         &quot;Склад и доставка&quot; -&gt; &quot;Отчеты по складу&quot;
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>         "Склад и доставка" -&gt; "Отчеты по складу"
 </code></pre></div></p>
 <p><strong>Алгоритм при любой проблеме:</strong>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>1. get_window_screenshot_os - сделать скриншот
@@ -3585,7 +3585,7 @@
 <li><strong>При работе с модальными окнами</strong> - делайте скриншот для понимания контекста диалога.</li>
 </ol>
 <h3 id="_14">Пример правильного использования:<a class="headerlink" href="#_14" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Шаг 1: Нажать кнопку &quot;Провести и закрыть&quot;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>Шаг 1: Нажать кнопку "Провести и закрыть"
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>Шаг 2: Сделать скриншот инструментом get_window_screenshot_os
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>Шаг 3: Прочитать скриншот инструментом read_file
 <a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>Шаг 4: Убедиться, что форма закрыта (на скриншоте видно другое окно)
@@ -3619,7 +3619,7 @@
 <p><strong>Пример вызова инструмента:</strong>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>инструмент: get_window_screenshot_os
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>параметр: file_name=png/scenario_1_step_1.png
-<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>параметр: window_title=&quot;Заявка на закупку (создание)*&quot;
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>параметр: window_title="Заявка на закупку (создание)*"
 </code></pre></div></p>
 <p><strong>❌ ЗАПРЕЩЕНО:</strong>
 - Сохранять скриншоты во временных каталогах ОС (<code>/tmp</code>, <code>C:\Users\...\Temp</code>)
@@ -3678,11 +3678,11 @@
 - Продолжение исследования после анализа проблемы и принятия решения о продолжении
 - Выполнение независимых сценариев после проблем с предыдущим</p>
 <p><strong>Порядок действий:</strong>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>1. Остановить запись (если ещё не остановлена): user_actions_recording, action=&#39;stop&#39;
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>1. Остановить запись (если ещё не остановлена): user_actions_recording, action='stop'
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>2. Выполнить необходимые действия для анализа/продолжения
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>3. ПЕРЕД началом нового сценария: user_actions_recording, action=&#39;start&#39;
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>3. ПЕРЕД началом нового сценария: user_actions_recording, action='start'
 <a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>4. Выполнить сценарий
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>5. Остановить запись: user_actions_recording, action=&#39;stop&#39;
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a>5. Остановить запись: user_actions_recording, action='stop'
 <a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a>6. Сохранить полученные шаги
 </code></pre></div></p>
 <p><strong>Пример ситуации:</strong>
