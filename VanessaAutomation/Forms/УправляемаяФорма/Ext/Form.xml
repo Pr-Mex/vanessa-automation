@@ -3900,6 +3900,30 @@
 								</Title>
 								<ExtendedTooltip name="VanessaEditorПеревестиТекстНаДругойЯзыкРасширеннаяПодсказка" id="2565"/>
 							</Button>
+							<Button name="VanessaEditorВыровнятьТаблицыGherkin" id="4145">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<CommandName>Form.Command.ВыровнятьТаблицыGherkin</CommandName>
+								<Picture>
+									<xr:Abs>Picture.png</xr:Abs>
+									<xr:LoadTransparent>false</xr:LoadTransparent>
+								</Picture>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Выровнять таблицы</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Align tables</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>sv</v8:lang>
+										<v8:content>Justera tabeller</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="VanessaEditorВыровнятьТаблицыGherkinРасширеннаяПодсказка" id="4146"/>
+							</Button>
 						</ChildItems>
 					</ButtonGroup>
 				</ChildItems>
@@ -7591,6 +7615,25 @@
 																						</Title>
 																						<ExtendedTooltip name="VanessaEditorКонтекстноеМенюРедактироватьТаблицуТекстРасширеннаяПодсказка" id="2509"/>
 																					</Button>
+																					<Button name="VanessaEditorКонтекстноеМенюВыровнятьТаблицыGherkin" id="4147">
+																						<Type>CommandBarButton</Type>
+																						<CommandName>Form.Command.ВыровнятьТаблицыGherkin</CommandName>
+																						<Title>
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Выровнять таблицы</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>Align tables</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>sv</v8:lang>
+																								<v8:content>Justera tabeller</v8:content>
+																							</v8:item>
+																						</Title>
+																						<ExtendedTooltip name="VanessaEditorКонтекстноеМенюВыровнятьТаблицыGherkinРасширеннаяПодсказка" id="4148"/>
+																					</Button>
 																					<Button name="VanessaEditorКонтекстноеМенюПолучитьМакетПоТаблице" id="2510">
 																						<Type>CommandBarButton</Type>
 																						<CommandName>Form.Command.ПолучитьМакетПоТаблице</CommandName>
@@ -10557,6 +10600,25 @@
 																			</v8:item>
 																		</Title>
 																		<ExtendedTooltip name="СгенерированныйСценарийКонтекстноеМенюРедактироватьТаблицуТекстРасширеннаяПодсказка" id="1604"/>
+																	</Button>
+																	<Button name="СгенерированныйСценарийКонтекстноеМенюВыровнятьТаблицыGherkin" id="4149">
+																		<Type>CommandBarButton</Type>
+																		<CommandName>Form.Command.ВыровнятьТаблицыGherkin</CommandName>
+																		<Title>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Выровнять таблицы</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>Align tables</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>sv</v8:lang>
+																				<v8:content>Justera tabeller</v8:content>
+																			</v8:item>
+																		</Title>
+																		<ExtendedTooltip name="СгенерированныйСценарийКонтекстноеМенюВыровнятьТаблицыGherkinРасширеннаяПодсказка" id="4150"/>
 																	</Button>
 																	<Button name="СгенерированныйСценарийКонтекстноеМенюПолучитьМакетПоТаблице" id="1720">
 																		<Type>CommandBarButton</Type>
@@ -46206,6 +46268,38 @@ Klicka på hyperlänken för mer detaljer.</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ПоказатьСкрытьВсеКолонки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВыровнятьТаблицыGherkin" id="194">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выровнять таблицы Gherkin</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Align Gherkin tables</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Justera Gherkin-tabeller</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Выровнять разметку всех таблиц Gherkin в тексте фичи</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Align the markup of all Gherkin tables in the feature text</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Justera markeringen av alla Gherkin-tabeller i feature-texten</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВыровнятьТаблицыGherkin</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 		<Command name="РедактироватьТаблицуТекст" id="59">
