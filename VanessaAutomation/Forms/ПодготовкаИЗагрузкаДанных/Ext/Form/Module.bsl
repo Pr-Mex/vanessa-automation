@@ -518,6 +518,9 @@ Procedure ICheckOrCreateDocumentObjectsAtServer(ObjectName, Values, DataExchange
 				Continue;
 			EndIf;
 			If Column.Name = "Posted" Or Column.Name = "Проведен" Then
+				If DataExchange Then
+					Obj.Posted = (Row[Column.Name] = "True");
+				EndIf;
 				Continue;
 			EndIf;
 			If (Column.Name = "DeletionMark" Or Column.Name = "ПометкаУдаления")
@@ -529,9 +532,10 @@ Procedure ICheckOrCreateDocumentObjectsAtServer(ObjectName, Values, DataExchange
 		EndDo;
 		FoundColumn = ObjectAttributes.Columns.Find("Posted");
 		If FoundColumn = Undefined Then
-			FoundColumn = ObjectAttributes.Columns.Find("Проведен");	
+			FoundColumn = ObjectAttributes.Columns.Find("Проведен");
 		EndIf;
-		If FoundColumn <> Undefined
+		If Not DataExchange
+			And FoundColumn <> Undefined
 			And Row[FoundColumn.Name] = "True" Then
 			DocumentWriteModeValue = DocumentWriteMode.Posting;
 		Else
