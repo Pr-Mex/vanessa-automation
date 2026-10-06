@@ -48,17 +48,6 @@ Function ПолучитьСписокТестов(КонтекстФреймво
 EndFunction
 	
 &AtServer
-Function GetTemplateAtServer(Val TemplateName)
-	ObjectServer = FormAttributeToValue("Object");
-	Return ObjectServer.GetTemplate(TemplateName);
-EndFunction
-	
-&AtClient
-Function ПолучитьМакетОбработки(Val TemplateName) Export
-	Return GetTemplateAtServer(TemplateName);
-EndFunction
-
-&AtServer
 Procedure SetAttributTypes()
 	
 	TypesArray = New Array;
