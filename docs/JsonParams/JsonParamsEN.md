@@ -455,7 +455,7 @@ A structure that will contain key and value pairs. This structure will be loaded
          With a value greater than 1 the file writing is no longer fully line-by-line: the current step may appear in the file with a delay (until the buffer is full).
 
       * **maskpwdinlog**:
-         The user's password is masked in the log /P"*****"
+         The user's password is masked in the log /P="*****"
 
 *  Allure
 
