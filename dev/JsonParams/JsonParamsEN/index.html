@@ -2807,6 +2807,13 @@ A structure that will contain key and value pairs. This structure will be loaded
 <p><strong>ShowWindowToStopRecordingUserActions</strong>:
      Enables the display of an additional window for conveniently stopping the recording of user actions and switching to the Vanessa Automation window. You must enable the use of the VanessaExt component.</p>
 </li>
+<li>
+<p><strong>removespacebeforestarinwindowtitle</strong>:
+     If the flag is set, the space before the trailing star in the window title is removed while recording user actions: the step contains "Title (creation)<em>".
+     Such a step matches both the modified and the unmodified form.
+     If the flag is unchecked, the title is recorded as the platform shows it: "Title (creation) </em>".
+     When recording user actions at the request of an AI agent, the space is always removed regardless of the flag.</p>
+</li>
 </ul>
 </li>
 <li>
@@ -2858,7 +2865,8 @@ A structure that will contain key and value pairs. This structure will be loaded
      The directory in which temporary script files will be created.
      If a setting value is specified, then temporary script files will be created in it. If the setting value is not specified, then the user's temporary directory will be used. Usually this
      "C:\USERS%username%\APPDATA\LOCAL\TEMP".
-     Setting is necessary because... Vanessa Automation can create bat files to run system commands, and some operating systems may prohibit running such files from the user's temporary directory.</p>
+     Setting is necessary because... Vanessa Automation can create bat files to run system commands, and some operating systems may prohibit running such files from the user's temporary directory.
+     The directory must exist in advance. In modes where synchronous calls are prohibited and the server-side optimization of file operations is unavailable, Vanessa Automation neither checks nor creates the directory.</p>
 </li>
 </ul>
 </li>
@@ -3020,7 +3028,12 @@ A structure that will contain key and value pairs. This structure will be loaded
 <li>
 <p><strong>browserlaunchcommand</strong>:
      This field indicates the command to launch the browser. If the field is empty, then the default browser will be used to start the web client.
-     If there is a TestClientUrl string in the browser launch command, then it will be replaced with the test client connection string. Otherwise, the test client connection string will be appended to the end as the last parameter.</p>
+     If there is a TestClientUrl string in the browser launch command, then it will be replaced with the test client connection string. Otherwise, the test client connection string will be appended to the end as the last parameter.
+     The "Chrome" and "Chrome+debug" buttons fill the command automatically and add keys for stable test runs: --disable-background-timer-throttling, --disable-renderer-backgrounding, --disable-backgrounding-occluded-windows and, on Windows, --disable-features=CalculateNativeWinOcclusion. These keys disable throttling of timers and lowering of the priority of background Chrome tabs: during a test run the browser window is often covered by the Vanessa Automation window, and without these keys Chrome treats the tab as background.
+     The "Chrome+debug" variant additionally adds the --remote-debugging-port=9222 and --user-data-dir keys (on Linux the profile directory is taken from the temporary files directory).
+     Starting with Chrome 136 the --remote-debugging-port key works only together with --user-data-dir, so in the "Use browser + web socket" mode the launch command must contain the --user-data-dir key.
+     If you need to add your own --disable-features key, append new features to the existing list separated by commas instead of repeating the key: when a key is repeated, only the last value takes effect.
+     An already saved command (in settings or in the launch parameters file) must be refilled with the button so that the new keys get into it.</p>
 </li>
 <li>
 <p><strong>usebrowserwebsocket</strong>:
@@ -3355,7 +3368,7 @@ A structure that will contain key and value pairs. This structure will be loaded
 </li>
 <li>
 <p><strong>maskpwdinlog</strong>:
-     The user's password is masked in the log /P"<strong>*</strong>"</p>
+     The user's password is masked in the log /P="<strong>*</strong>"</p>
 </li>
 </ul>
 </li>
@@ -3470,6 +3483,10 @@ A structure that will contain key and value pairs. This structure will be loaded
      For everything to work correctly - the Screenshot Directory must be located inside the Project Directory.
      Save the screenshots folder as artifacts.
      https://docs.gitlab.com/ee/ci/unit_test_reports.html#viewing-junit-screenshots-on-gitlab</p>
+</li>
+<li>
+<p><strong>writescriptsinjunitviatestsuite</strong>:
+     Enable to write each scenario of the jUnit report into its own testsuite named after the scenario. Run metadata is added to every testsuite.</p>
 </li>
 </ul>
 </li>

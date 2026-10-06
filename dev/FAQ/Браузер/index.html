@@ -1365,6 +1365,24 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Как подключить браузер Chrome через debug порт
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1381,6 +1399,47 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Содержание">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ключи для стабильной работы тестов
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Шаг «И Нужно сбросить браузер»
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2404,6 +2463,36 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Содержание
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ключи для стабильной работы тестов
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Шаг «И Нужно сбросить браузер»
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2445,6 +2534,21 @@
 </ul>
 </li>
 </ol>
+<h2 id="_1">Ключи для стабильной работы тестов<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>При прогоне тестов окно браузера часто перекрыто окном Vanessa Automation, и Chrome считает вкладку фоновой: троттлит таймеры JavaScript и понижает приоритет процесса рендеринга. Из-за этого тесты работают нестабильно.</p>
+<p>Кнопки "Chrome" и "Chrome+debug" добавляют в команду запуска ключи, которые это отключают:</p>
+<ul>
+<li><code>--disable-background-timer-throttling</code> - отключает троттлинг таймеров в фоновых вкладках.</li>
+<li><code>--disable-renderer-backgrounding</code> - не понижает приоритет процесса рендеринга фоновых вкладок.</li>
+<li><code>--disable-backgrounding-occluded-windows</code> - не считает вкладку фоновой, если ее окно перекрыто другим окном.</li>
+<li><code>--disable-features=CalculateNativeWinOcclusion</code> (только Windows) - отключает расчет окклюзии окна на уровне Windows.</li>
+</ul>
+<p>Если команда запуска браузера уже сохранена в настройках или в файле параметров запуска, перезаполните ее кнопкой или допишите ключи руками. Если добавляете свой ключ <code>--disable-features</code>, новые фичи дописывайте в существующий список через запятую, а не указывайте ключ повторно: при повторе ключа действует только последнее значение.</p>
+<p>Для режима "Использовать браузер + web socket" в команде обязателен ключ <code>--user-data-dir</code>: начиная с Chrome 136 ключ <code>--remote-debugging-port</code> без него не работает. Пример команды для Windows:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>"C:\Program Files\Google\Chrome\Application\chrome.exe" --remote-debugging-port=9222 --user-data-dir=C:\temp\chrome_debug_profile --disable-background-timer-throttling --disable-renderer-backgrounding --disable-backgrounding-occluded-windows --disable-features=CalculateNativeWinOcclusion
+</code></pre></div>
+<h2 id="_2">Шаг «И Нужно сбросить браузер»<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<p>Шаг «И Нужно сбросить браузер» закрывает и заново запускает браузер из команды запуска браузера. Закрытие выполняется принудительно по имени процесса браузера (<code>chrome.exe</code>, <code>chromium</code> и т.п.), поэтому закрываются все процессы этого браузера у текущего пользователя, включая личные окна. Перед прогоном сценариев с этим шагом сохраните работу в личном браузере.</p>
 
 
 
