@@ -49,8 +49,8 @@
 	|'Tests tree'|
 	|'Main'|
 	|'Run from this step'|
-	|'Run from this step and continue'|
-	|'Run from beginning'|
+	|'Run from current step, then the remaining scenarios'|
+	|'Run the scenario from the beginning'|
 	|'Reload and run this scenario'|
 	|'Run scenarios of this feature'|
 	|'Run one step'|
@@ -78,7 +78,7 @@
 	|'Breakpoints'|
 	|'Main'|
 	|'Run from this step'|
-	|'Run from beginning'|
+	|'Run the scenario from the beginning'|
 	|'Run one step'|
 	|'Open feature file in editor'|
 	|'Open .feature file in editor'|
@@ -714,8 +714,8 @@
 	|'Add line to libraries list'|
 	|'Form explorer'|
 	|'Form explorer'|
-	|'Get layout from table'|
-	|'Get layout from table'|
+	|'Convert Gherkin table to spreadsheet document'|
+	|'Convert Gherkin table to spreadsheet document'|
 	|'Clear'|
 	|'Clear generated scenario'|
 	|'Get current form item state'|

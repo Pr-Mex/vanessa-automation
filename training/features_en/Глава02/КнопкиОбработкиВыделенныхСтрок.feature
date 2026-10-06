@@ -46,7 +46,7 @@
 		И Я делаю подсветку текста в редакторе VA в режиме обучения с 8 по 10 строку 'Rows are now in Gherkin table format' подсценарий
 
 * Next to it there is a command that aligns the markup of all Gherkin tables in the feature text.
-		И Я делаю подсветку элемента формы VA по имени "VanessaEditorВыровнятьТаблицыGherkin" "Align tables"
+		И Я делаю подсветку элемента формы VA по имени "VanessaEditorВыровнятьТаблицыGherkin" "Align columns of Gherkin tables"
 
 * Our example contains a table with broken markup.
 		И Я делаю подсветку текста в редакторе VA в режиме обучения с 15 по 16 строку 'The table markup is broken' подсценарий
