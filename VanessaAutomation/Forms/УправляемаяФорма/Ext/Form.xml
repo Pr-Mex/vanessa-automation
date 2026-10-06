@@ -17692,12 +17692,14 @@ Om sådana meddelanden hittas kommer ett skriptfel att uppstå.
 																	<v8:item>
 																		<v8:lang>ru</v8:lang>
 																		<v8:content>В данном поле указывается команда запуска браузера. Если поле пустое, тогда для запуска web клиента будет использован браузер по умолчанию.
-Если в команде запуска браузера содержится строка "TestClientUrl", то она будет заменена на строку подключения клиента тестирования. Иначе строка подключения клиента тестирования будет добавлена в конец последним параметром.</v8:content>
+Если в команде запуска браузера содержится строка "TestClientUrl", то она будет заменена на строку подключения клиента тестирования. Иначе строка подключения клиента тестирования будет добавлена в конец последним параметром.
+Кнопки "Chrome" и "Chrome+debug" заполняют команду автоматически и добавляют ключи для стабильной работы тестов: --disable-background-timer-throttling, --disable-renderer-backgrounding, --disable-backgrounding-occluded-windows, а в Windows еще и --disable-features=CalculateNativeWinOcclusion. Для режима "Использовать браузер + web socket" в команде обязателен ключ --user-data-dir (начиная с Chrome 136 ключ --remote-debugging-port без него не работает).</v8:content>
 																	</v8:item>
 																	<v8:item>
 																		<v8:lang>en</v8:lang>
 																		<v8:content>This field indicates the command to launch the browser. If the field is empty, then the default browser will be used to start the web client.
-If there is a TestClientUrl string in the browser launch command, then it will be replaced with the test client connection string. Otherwise, the test client connection string will be appended to the end as the last parameter.</v8:content>
+If there is a TestClientUrl string in the browser launch command, then it will be replaced with the test client connection string. Otherwise, the test client connection string will be appended to the end as the last parameter.
+The "Chrome" and "Chrome+debug" buttons fill the command automatically and add keys for stable test runs: --disable-background-timer-throttling, --disable-renderer-backgrounding, --disable-backgrounding-occluded-windows and, on Windows, --disable-features=CalculateNativeWinOcclusion. The "Use browser + web socket" mode requires the --user-data-dir key in the command (starting with Chrome 136 the --remote-debugging-port key does not work without it).</v8:content>
 																	</v8:item>
 																	<v8:item>
 																		<v8:lang>sv</v8:lang>

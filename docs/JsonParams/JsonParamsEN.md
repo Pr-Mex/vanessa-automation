@@ -207,6 +207,11 @@ A structure that will contain key and value pairs. This structure will be loaded
       * **browserlaunchcommand**:
          This field indicates the command to launch the browser. If the field is empty, then the default browser will be used to start the web client.
          If there is a TestClientUrl string in the browser launch command, then it will be replaced with the test client connection string. Otherwise, the test client connection string will be appended to the end as the last parameter.
+         The "Chrome" and "Chrome+debug" buttons fill the command automatically and add keys for stable test runs: --disable-background-timer-throttling, --disable-renderer-backgrounding, --disable-backgrounding-occluded-windows and, on Windows, --disable-features=CalculateNativeWinOcclusion. These keys disable throttling of timers and lowering of the priority of background Chrome tabs: during a test run the browser window is often covered by the Vanessa Automation window, and without these keys Chrome treats the tab as background.
+         The "Chrome+debug" variant additionally adds the --remote-debugging-port=9222 and --user-data-dir keys (on Linux the profile directory is taken from the temporary files directory).
+         Starting with Chrome 136 the --remote-debugging-port key works only together with --user-data-dir, so in the "Use browser + web socket" mode the launch command must contain the --user-data-dir key.
+         If you need to add your own --disable-features key, append new features to the existing list separated by commas instead of repeating the key: when a key is repeated, only the last value takes effect.
+         An already saved command (in settings or in the launch parameters file) must be refilled with the button so that the new keys get into it.
 
       * **usebrowserwebsocket**:
          Allows to execute external commands in the browser using WebSocket.
