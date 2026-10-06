@@ -99,6 +99,7 @@ A structure that will contain key and value pairs. This structure will be loaded
          If a setting value is specified, then temporary script files will be created in it. If the setting value is not specified, then the user's temporary directory will be used. Usually this
          "C:\USERS%username%\APPDATA\LOCAL\TEMP".
          Setting is necessary because... Vanessa Automation can create bat files to run system commands, and some operating systems may prohibit running such files from the user's temporary directory.
+         The directory must exist in advance. In modes where synchronous calls are prohibited and the server-side optimization of file operations is unavailable, Vanessa Automation neither checks nor creates the directory.
 
 *  Smoke Tests
 
