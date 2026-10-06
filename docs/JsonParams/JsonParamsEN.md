@@ -55,6 +55,12 @@ A structure that will contain key and value pairs. This structure will be loaded
       * **ShowWindowToStopRecordingUserActions**:
          Enables the display of an additional window for conveniently stopping the recording of user actions and switching to the Vanessa Automation window. You must enable the use of the VanessaExt component.
 
+      * **removespacebeforestarinwindowtitle**:
+         If the flag is set, the space before the trailing star in the window title is removed while recording user actions: the step contains "Title (creation)*".
+         Such a step matches both the modified and the unmodified form.
+         If the flag is unchecked, the title is recorded as the platform shows it: "Title (creation) *".
+         When recording user actions at the request of an AI agent, the space is always removed regardless of the flag.
+
 *  External component VanessaExt
 
       * **useaddin**:
