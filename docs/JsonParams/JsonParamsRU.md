@@ -561,6 +561,9 @@
          Папку скриншотов сохранять как артефакты.
          https://docs.gitlab.com/ee/ci/unit_test_reports.html#viewing-junit-screenshots-on-gitlab
 
+      * **ЗаписыватьСценарииВJunitЧерезTestSuite {WriteScriptsInjUnitViaTestSuite}**:
+         Включите, чтобы в jUnit-отчете каждый сценарий писался в свой testsuite, названный именем сценария. Метаданные прогона добавляются в каждый testsuite.
+
 *  СППР
 
       * **ДелатьОтчетВФорматеСППР {ModelingCreateReport}**:

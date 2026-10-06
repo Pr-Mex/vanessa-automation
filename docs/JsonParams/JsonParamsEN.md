@@ -561,6 +561,9 @@ A structure that will contain key and value pairs. This structure will be loaded
          Save the screenshots folder as artifacts.
          https://docs.gitlab.com/ee/ci/unit_test_reports.html#viewing-junit-screenshots-on-gitlab
 
+      * **writescriptsinjunitviatestsuite**:
+         Enable to write each scenario of the jUnit report into its own testsuite named after the scenario. Run metadata is added to every testsuite.
+
 *  ASDS
 
       * **ModelingCreateReport**:
