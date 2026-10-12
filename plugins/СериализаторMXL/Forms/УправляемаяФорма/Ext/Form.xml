@@ -46,6 +46,51 @@
 				<CommandName>Form.Command.КонвертироватьМакет</CommandName>
 				<ExtendedTooltip name="ФормаКонвертироватьМакетРасширеннаяПодсказка" id="548"/>
 			</Button>
+			<Popup name="ФормаЕщеВозможности" id="549">
+				<Title>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Еще возможности</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>More features</v8:content>
+					</v8:item>
+				</Title>
+				<ToolTip>
+					<v8:item>
+						<v8:lang>ru</v8:lang>
+						<v8:content>Работа с данными макета</v8:content>
+					</v8:item>
+					<v8:item>
+						<v8:lang>en</v8:lang>
+						<v8:content>Working with the layout data</v8:content>
+					</v8:item>
+				</ToolTip>
+				<ExtendedTooltip name="ФормаЕщеВозможностиРасширеннаяПодсказка" id="550"/>
+				<ChildItems>
+					<Button name="ФормаЗагрузитьДанныеМакетаВБазу" id="551">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ЗагрузитьДанныеМакетаВБазу</CommandName>
+						<ExtendedTooltip name="ФормаЗагрузитьДанныеМакетаВБазуРасширеннаяПодсказка" id="552"/>
+					</Button>
+					<Button name="ФормаИсключитьТипыИзМакета" id="553">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.ИсключитьТипыИзМакета</CommandName>
+						<ExtendedTooltip name="ФормаИсключитьТипыИзМакетаРасширеннаяПодсказка" id="554"/>
+					</Button>
+					<Button name="ФормаУдалитьДанныеПоМакету" id="555">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.УдалитьДанныеПоМакету</CommandName>
+						<ExtendedTooltip name="ФормаУдалитьДанныеПоМакетуРасширеннаяПодсказка" id="556"/>
+					</Button>
+					<Button name="ФормаУдалитьДанныеПоМакетуКаскадно" id="557">
+						<Type>CommandBarButton</Type>
+						<CommandName>Form.Command.УдалитьДанныеПоМакетуКаскадно</CommandName>
+						<ExtendedTooltip name="ФормаУдалитьДанныеПоМакетуКаскадноРасширеннаяПодсказка" id="558"/>
+					</Button>
+				</ChildItems>
+			</Popup>
 		</ChildItems>
 	</AutoCommandBar>
 	<Events>
@@ -210,6 +255,13 @@ If value is &gt; 1, then paged sub-elements of this level or lower according to<
 												</InputField>
 											</ChildItems>
 										</UsualGroup>
+										<LabelField name="ИтогВыгрузки" id="559">
+											<DataPath>ИтогВыгрузки</DataPath>
+											<TitleLocation>None</TitleLocation>
+											<AutoMaxWidth>false</AutoMaxWidth>
+											<ContextMenu name="ИтогВыгрузкиКонтекстноеМеню" id="560"/>
+											<ExtendedTooltip name="ИтогВыгрузкиРасширеннаяПодсказка" id="561"/>
+										</LabelField>
 										<UsualGroup name="Группа1" id="78">
 											<HorizontalStretch>true</HorizontalStretch>
 											<Group>Horizontal</Group>
@@ -340,6 +392,26 @@ If value is &gt; 1, then paged sub-elements of this level or lower according to<
 																<Event name="OnChange">ДеревоМетаданныхВыгружатьПриНеобходимостиПриИзменении</Event>
 															</Events>
 														</CheckBoxField>
+														<InputField name="ДеревоМетаданныхВыбратьПервые" id="562">
+															<DataPath>Объект.ДеревоМетаданных.ВыбратьПервые</DataPath>
+															<ToolTip>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Ограничение количества выгружаемых объектов, для регистров - наборов записей (ВЫБРАТЬ ПЕРВЫЕ). 0 - без ограничения</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Limit of the number of uploaded objects, for registers - record sets (SELECT TOP). 0 - no limit</v8:content>
+																</v8:item>
+															</ToolTip>
+															<EditMode>EnterOnInput</EditMode>
+															<Width>10</Width>
+															<ContextMenu name="ДеревоМетаданныхВыбратьПервыеКонтекстноеМеню" id="563"/>
+															<ExtendedTooltip name="ДеревоМетаданныхВыбратьПервыеРасширеннаяПодсказка" id="564"/>
+															<Events>
+																<Event name="OnChange">ДеревоМетаданныхВыбратьПервыеПриИзменении</Event>
+															</Events>
+														</InputField>
 													</ChildItems>
 												</Table>
 												<Table name="КомпоновщикОтбор" id="79">
@@ -372,6 +444,11 @@ If value is &gt; 1, then paged sub-elements of this level or lower according to<
 																	</v8:item>
 																</Title>
 																<ExtendedTooltip name="КомпоновщикОтборПоказатьРезультатОтбораРасширеннаяПодсказка" id="468"/>
+															</Button>
+															<Button name="КомпоновщикОтборЗаполнитьОтборИзБуфераОбмена" id="565">
+																<Type>CommandBarButton</Type>
+																<CommandName>Form.Command.ЗаполнитьОтборИзБуфераОбмена</CommandName>
+																<ExtendedTooltip name="КомпоновщикОтборЗаполнитьОтборИзБуфераОбменаРасширеннаяПодсказка" id="566"/>
 															</Button>
 														</ChildItems>
 													</AutoCommandBar>
@@ -947,6 +1024,26 @@ If value is &gt; 1, then paged sub-elements of this level or lower according to<
 							<v8:Type>xs:boolean</v8:Type>
 						</Type>
 					</Column>
+					<Column name="ВыбратьПервые" id="8">
+						<Title>
+							<v8:item>
+								<v8:lang>ru</v8:lang>
+								<v8:content>Выбрать первые</v8:content>
+							</v8:item>
+							<v8:item>
+								<v8:lang>en</v8:lang>
+								<v8:content>Select first</v8:content>
+							</v8:item>
+						</Title>
+						<Type>
+							<v8:Type>xs:decimal</v8:Type>
+							<v8:NumberQualifiers>
+								<v8:Digits>10</v8:Digits>
+								<v8:FractionDigits>0</v8:FractionDigits>
+								<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+							</v8:NumberQualifiers>
+						</Type>
+					</Column>
 				</AdditionalColumns>
 			</Columns>
 		</Attribute>
@@ -987,6 +1084,25 @@ If value is &gt; 1, then paged sub-elements of this level or lower according to<
 			</Title>
 			<Type>
 				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/txtedt">d5p1:TextDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ИтогВыгрузки" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Итог выгрузки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Upload total</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
 		<ConditionalAppearance>
@@ -1297,6 +1413,151 @@ If value is &gt; 1, then paged sub-elements of this level or lower according to<
 				</v8:item>
 			</ToolTip>
 			<Action>КонвертироватьМакет</Action>
+		</Command>
+		<Command name="ЗагрузитьДанныеМакетаВБазу" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Загрузить данные макета в базу</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Load the layout data to the database</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать в базе данные по макету</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Create the layout data in the database</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ReadChanges</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗагрузитьДанныеМакетаВБазу</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ИсключитьТипыИзМакета" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исключить типы из макета</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Exclude types from the layout</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Исключить из макета объекты выбранных типов. База данных не изменяется</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Exclude objects of the selected types from the layout. The database is not changed</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.MarkToDelete</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ИсключитьТипыИзМакета</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УдалитьДанныеПоМакету" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить данные по макету</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Delete data by the layout</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить из базы объекты макета выбранных типов (поиск по реквизиту Ссылка)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Delete the layout objects of the selected types from the database (search by the Ref attribute)</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Delete</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УдалитьДанныеПоМакету</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="УдалитьДанныеПоМакетуКаскадно" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить данные по макету каскадно</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Delete data by the layout cascading</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Удалить из базы объекты макета выбранных типов и объекты из их ссылочных реквизитов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Delete the layout objects of the selected types and objects from their reference attributes from the database</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Delete</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>УдалитьДанныеПоМакетуКаскадно</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаполнитьОтборИзБуфераОбмена" id="13">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить отбор из буфера обмена</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Fill the filter from the clipboard</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заполнить значение текущего условия отбора значениями, вставленными из буфера обмена: GUID, представлением документа, наименованием или кодом. Для вида сравнения "В списке" используются все строки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Fill the current filter condition with the values pasted from the clipboard: GUID, document presentation, description or code. All lines are used for the "In list" comparison</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.ShowData</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ЗаполнитьОтборИзБуфераОбмена</Action>
+			<Representation>TextPicture</Representation>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 </Form>
