@@ -453,15 +453,15 @@ Document3.ListForm</v8:content>
 										<CommandName>Form.Command.НастройкиСценариевПоУмолчанию</CommandName>
 										<ExtendedTooltip name="НастройкиСценариевПоУмолчаниюРасширеннаяПодсказка" id="107"/>
 									</Button>
-									<Button name="ТаблицаНастроекНастрокиСценариевСнятьВсе" id="112">
+									<Button name="ТаблицаНастроекНастройкиСценариевСнятьВсе" id="112">
 										<Type>CommandBarButton</Type>
 										<Representation>Picture</Representation>
-										<CommandName>Form.Command.НастрокиСценариевСнятьВсе</CommandName>
+										<CommandName>Form.Command.НастройкиСценариевСнятьВсе</CommandName>
 										<Picture>
 											<xr:Ref>StdPicture.UncheckAll</xr:Ref>
 											<xr:LoadTransparent>true</xr:LoadTransparent>
 										</Picture>
-										<ExtendedTooltip name="ТаблицаНастроекНастрокиСценариевСнятьВсеРасширеннаяПодсказка" id="113"/>
+										<ExtendedTooltip name="ТаблицаНастроекНастройкиСценариевСнятьВсеРасширеннаяПодсказка" id="113"/>
 									</Button>
 									<Button name="ТаблицаНастроекСохранитьНастройкиСценариевВФайл" id="75">
 										<Type>CommandBarButton</Type>
@@ -986,23 +986,6 @@ Document3.ListForm</v8:content>
 											<CheckBoxType>Auto</CheckBoxType>
 											<ContextMenu name="ДеревоМетаданныхЕстьЗаписиКонтекстноеМеню" id="212"/>
 											<ExtendedTooltip name="ДеревоМетаданныхЕстьЗаписиРасширеннаяПодсказка" id="213"/>
-										</CheckBoxField>
-										<InputField name="ДеревоМетаданныхТипыРеквизитов" id="162">
-											<DataPath>ДеревоМетаданных.ТипыРеквизитов</DataPath>
-											<Visible>false</Visible>
-											<ReadOnly>true</ReadOnly>
-											<EditMode>EnterOnInput</EditMode>
-											<ContextMenu name="ДеревоМетаданныхТипыРеквизитовКонтекстноеМеню" id="163"/>
-											<ExtendedTooltip name="ДеревоМетаданныхТипыРеквизитовРасширеннаяПодсказка" id="164"/>
-										</InputField>
-										<CheckBoxField name="ДеревоМетаданныхСтандартныйРеквизит" id="165">
-											<DataPath>ДеревоМетаданных.СтандартныйРеквизит</DataPath>
-											<Visible>false</Visible>
-											<ReadOnly>true</ReadOnly>
-											<EditMode>EnterOnInput</EditMode>
-											<CheckBoxType>Auto</CheckBoxType>
-											<ContextMenu name="ДеревоМетаданныхСтандартныйРеквизитКонтекстноеМеню" id="166"/>
-											<ExtendedTooltip name="ДеревоМетаданныхСтандартныйРеквизитРасширеннаяПодсказка" id="167"/>
 										</CheckBoxField>
 										<ColumnGroup name="ДеревоМетаданныхГруппаОсновныеДействия" id="174">
 											<Title>
@@ -1825,48 +1808,6 @@ Document3.ListForm</v8:content>
 						</v8:StringQualifiers>
 					</Type>
 				</Column>
-				<Column name="ТипыРеквизитов" id="65">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Типы реквизитов</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>en</v8:lang>
-							<v8:content>Types of props</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>sv</v8:lang>
-							<v8:content>Typer av egenskaper</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:string</v8:Type>
-						<v8:StringQualifiers>
-							<v8:Length>0</v8:Length>
-							<v8:AllowedLength>Variable</v8:AllowedLength>
-						</v8:StringQualifiers>
-					</Type>
-				</Column>
-				<Column name="СтандартныйРеквизит" id="70">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Стандартный реквизит</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>en</v8:lang>
-							<v8:content>Standard props</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>sv</v8:lang>
-							<v8:content>Standardegenskaper</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:boolean</v8:Type>
-					</Type>
-				</Column>
 				<Column name="Пометка" id="109">
 					<Title>
 						<v8:item>
@@ -1900,30 +1841,6 @@ Document3.ListForm</v8:content>
 					</Title>
 					<Type>
 						<v8:Type>v8ui:Picture</v8:Type>
-					</Type>
-				</Column>
-				<Column name="ИмяДлина" id="122">
-					<Title>
-						<v8:item>
-							<v8:lang>ru</v8:lang>
-							<v8:content>Имя длина</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>en</v8:lang>
-							<v8:content>Name length</v8:content>
-						</v8:item>
-						<v8:item>
-							<v8:lang>sv</v8:lang>
-							<v8:content>Namnlängd</v8:content>
-						</v8:item>
-					</Title>
-					<Type>
-						<v8:Type>xs:decimal</v8:Type>
-						<v8:NumberQualifiers>
-							<v8:Digits>10</v8:Digits>
-							<v8:FractionDigits>0</v8:FractionDigits>
-							<v8:AllowedSign>Any</v8:AllowedSign>
-						</v8:NumberQualifiers>
 					</Type>
 				</Column>
 				<Column name="ФормаСписка" id="1">
@@ -2131,44 +2048,6 @@ Document3.ListForm</v8:content>
 					</Type>
 				</Column>
 			</Columns>
-		</Attribute>
-		<Attribute name="КартинкаРеквизит" id="15">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Картинка реквизит</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Picture props</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>sv</v8:lang>
-					<v8:content>Bildegenskaper</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>v8ui:Picture</v8:Type>
-			</Type>
-		</Attribute>
-		<Attribute name="КартинкаТаблица" id="16">
-			<Title>
-				<v8:item>
-					<v8:lang>ru</v8:lang>
-					<v8:content>Картинка таблица</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>en</v8:lang>
-					<v8:content>Picture table</v8:content>
-				</v8:item>
-				<v8:item>
-					<v8:lang>sv</v8:lang>
-					<v8:content>Bildtabell</v8:content>
-				</v8:item>
-			</Title>
-			<Type>
-				<v8:Type>v8ui:Picture</v8:Type>
-			</Type>
 		</Attribute>
 		<Attribute name="ТекстКодСценария" id="17">
 			<Title>
@@ -3039,7 +2918,7 @@ Document3.ListForm</v8:content>
 			</ToolTip>
 			<Action>ЗакрытьФорму</Action>
 		</Command>
-		<Command name="НастрокиСценариевСнятьВсе" id="6">
+		<Command name="НастройкиСценариевСнятьВсе" id="6">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -3068,7 +2947,7 @@ Document3.ListForm</v8:content>
 					<v8:content>Ta bort alla flaggor</v8:content>
 				</v8:item>
 			</ToolTip>
-			<Action>НастрокиСценариевСнятьВсе</Action>
+			<Action>НастройкиСценариевСнятьВсе</Action>
 		</Command>
 		<Command name="ОбновитьСтруктуруМетаданных" id="7">
 			<Title>
