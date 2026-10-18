@@ -3484,8 +3484,14 @@
 				Текст.ДобавитьСтроку("
 				|		* Print the form " + ИмяГруппы + "
 				|			Then '$ЗаголовокФормы$'  window is opened
-				|			If '" + ИмяКоманды + "' attribute is present on the form Then
-				|				And I click the button named '" + ИмяКоманды + "'
+				|			And I save """" value to ""ИмяКомандыПечатнойФормы"" variable
+				|			If '" + ИмяКоманды1 + "' attribute is present on the form Then
+				|				And I save """ + ИмяКоманды1 + """ value to ""ИмяКомандыПечатнойФормы"" variable
+				|			ElseIf '" + ИмяКоманды2 + "' attribute is present on the form Then
+				|				And I save """ + ИмяКоманды2 + """ value to ""ИмяКомандыПечатнойФормы"" variable
+				|
+				|			If 'ValueIsFilled($ИмяКомандыПечатнойФормы$)' Then
+				|				And I click the button named '$ИмяКомандыПечатнойФормы$'
 				|				If the warning is displayed then
 				|					Then I raise ""Failed to print form """ + ИмяГруппы + """ " + ПредставлениеОбъекта + """ exception" + " 
 				|				If current form name is ""ErrorWindow"" Then
