@@ -3273,7 +3273,7 @@
 				|					Тогда я вызываю исключение ""Не удалось провести и закрыть элемент " + ПредставлениеОбъекта + """" + "
 				|				Если появилось окно с заголовком ""ErrorWindow"" Тогда
 				|					Тогда я вызываю исключение ""Не удалось провести и закрыть элемент " + ПредставлениеОбъекта + """" + "
-				|	 Иначе
+				|	Иначе
 				|		@screenshot
 				|		И обратите внимание ""Нет проведенного документа""
 				|		Тогда я останавливаю выполнение сценария ""Skipped""
@@ -3384,7 +3384,7 @@
 				|					Then I raise ""Failed to Posting and close the document " + ПредставлениеОбъекта + """ exception" + "
 				|				If current form name is ""ErrorWindow"" Then
 				|					Then I raise ""Failed to Posting and close the document " + ПредставлениеОбъекта + """ exception" + "
-				|	 Else
+				|	Else
 				|		@screenshot
 				|		And note ""No posted document""
 				|		Then I stop script execution ""Skipped""
