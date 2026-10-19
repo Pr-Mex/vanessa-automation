@@ -3088,6 +3088,7 @@
 		|
 		|	* Search for a link to an existing item
 		|		And I execute 1C:Enterprise script at server 
+		|			| 'Объект.ЗначениеНаСервере = Undefined;'			|
 		|			| 'Query = Новый Query;'								|
 		|			| 'Query.Text = """ + ТекстЗапросаНаАнглийском + """;'	|" + СтрокаУстановкиПараметра + "
 		|			| 'QueryResult = Query.Execute();'						|
