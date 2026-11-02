@@ -298,13 +298,13 @@
 
 	// 4. get_vanessa_automation_state
 	Инстр = MCPНовоеОписаниеИнструмента("get_vanessa_automation_state",
-		"Возвращает текущее состояние Vanessa Automation: выполняется ли сценарий, текущая фича (имя, путь, язык, теги), текущий сценарий (имя, статус, теги, treeRowId — идентификатор строки сценария в дереве, заполняется во время выполнения), текущий шаг (id, текст, значения параметров, номер строки, статус; статус Running означает, что шаг выполняется), подключён ли клиент тестирования.
-		|По умолчанию ответ выводится в формате Markdown. Параметр format=json возвращает машиночитаемый объект: schemaVersion (1.1), mcpVersion, vaVersion, runId, isRunning, ok, stateAvailable/stateReason, текущая фича (tags — массив строк)/сценарий (isComplete — есть финальный статус или результат одиночного шага), текущий шаг (name/lineNumber/id/status/statusRaw), упавший шаг (name/lineNumber/id/status/statusRaw/error), счётчики; полный список шагов — в get_test_results. Значения параметров шага в JSON не выводятся.
+		"Возвращает текущее состояние Vanessa Automation: выполняется ли сценарий, текущая фича (имя, путь, язык, теги), текущий сценарий (имя, статус, теги, treeRowId — идентификатор строки сценария в дереве, заполняется во время выполнения), текущий шаг (id, текст, значения параметров, номер строки, статус; stepFile — файл, в котором записан шаг, isSubScenarioStep — признак шага подсценария, для подсценария subScenarioCallLine — строка вызова и callId — идентификатор вхождения вызова; статус Running означает, что шаг выполняется), подключён ли клиент тестирования.
+		|По умолчанию ответ выводится в формате Markdown. Параметр format=json возвращает машиночитаемый объект: schemaVersion (1.1), mcpVersion, vaVersion, runId, isRunning, ok, stateAvailable/stateReason, текущая фича (tags — массив строк)/сценарий (resultKind — scenario или single_step; isComplete — есть финальный статус или результат одиночного шага), текущий шаг (name/lineNumber/id/status/statusRaw), упавший шаг (name/lineNumber/id/status/statusRaw/error), счётчики; полный список шагов — в get_test_results. Значения параметров шага в JSON не выводятся.
 		|Результат сценария выводится компактно: статус, время, упавший шаг, краткая ошибка, один блок технических данных и подробности ошибки в details. Полная детализация — в get_test_results по scenarioId.
 		|Данные о фиче, сценарии и шаге относятся к прогону, а не к файлу в редакторе (файл редактора — manage_editor). Используйте для получения контекста перед написанием или анализом тестов.",
 		"ПолучитьСостояниеVanessaAutomation", Неопределено, Ложь);
 	Инстр.Свойства.Добавить(MCPНовоеСвойствоОписания("format", "string",
-		"Формат ответа: markdown (по умолчанию) или json. JSON содержит schemaVersion (1.1), mcpVersion, vaVersion, runId, isRunning, ok, stateAvailable/stateReason, текущую фичу (tags — массив строк), сценарий (isComplete — есть финальный статус или результат одиночного шага), текущий шаг (name/lineNumber/id/status/statusRaw), упавший шаг (name/lineNumber/id/status/statusRaw/error), счётчики; полный список шагов — в get_test_results; значения параметров шага в JSON не выводятся; отсутствующие строковые значения передаются пустой строкой, tags — всегда массив строк, isComplete — булево."));
+		"Формат ответа: markdown (по умолчанию) или json. JSON содержит schemaVersion (1.1), mcpVersion, vaVersion, runId, isRunning, ok, stateAvailable/stateReason, текущую фичу (tags — массив строк), сценарий (resultKind — scenario или single_step; isComplete — есть финальный статус или результат одиночного шага), текущий шаг (name/lineNumber/id/status/statusRaw), упавший шаг (name/lineNumber/id/status/statusRaw/error), счётчики; полный список шагов — в get_test_results; значения параметров шага в JSON не выводятся; отсутствующие строковые значения передаются пустой строкой, tags — всегда массив строк, isComplete — булево."));
 	Инструменты.Добавить(Инстр);
 
 	// 5. check_syntax
@@ -359,7 +359,8 @@
 		|- line_info — информация о строке сценария;
 		|- list_breakpoints, toggle_breakpoint, remove_all_breakpoints — точки останова.
 		|Для activate_tab, get_tab_content, save_tab и close_tab укажите ровно один селектор: index, filePath или title. Параметр type — необязательный фильтр edit/diff/viewer.
-		|save_tab пишет файл даже без изменений (как Ctrl+S) и возвращает saved, wasModified, treeReloaded, treeReady, treeError.
+		|index — текущая позиция вкладки; активная вкладка всегда последняя, поэтому после активации индексы меняются. Для повторных вызовов надёжнее filePath или title.
+		|save_tab пишет файл даже без изменений (как Ctrl+S) и возвращает saved, wasModified, treeReloaded, treeReady, treeError. При синхронной перезагрузке дерева save_tab сразу финализирует её, поэтому close_tab не требует отдельного ожидания treeReady.
 		|Фоновая вкладка другого файла сохраняется без переключения дерева. Перезагрузка дерева асинхронная: при treeReady=false дождитесь завершения перед execute_feature_step.
 		|Активация не перечитывает файл и не перезагружает дерево фич.",
 		"УправлятьРедактором", Ложь, Ложь);
@@ -462,12 +463,12 @@
 
 	// 16. execute_feature_step
 	Инстр = MCPНовоеОписаниеИнструмента("execute_feature_step",
-		"Выполняет шаг из .feature файла по номеру строки. Если фича уже загружена, выполняет шаг без повторной загрузки; иначе загружает файл в редактор. Внешние изменения файла на диске не проверяются: для их подхвата используйте reload=true или open_feature_file. Если идёт загрузка, возвращает ACTION_FAILED с причиной BUSY — повторите вызов после её завершения.",
+		"Выполняет шаг, исполняемое условие, группу шагов или строку таблицы параметров из .feature файла по номеру строки. Строка вызова подсценария выполняется, если в его поддереве есть исполняемые шаги; строки таблиц параметров выполняются через шаг-владелец. Заголовки сценариев, фич, примеров и строки структур сценария отклоняются. Если фича уже загружена, выполняет шаг без повторной загрузки; иначе загружает файл в редактор. Внешние изменения файла на диске не проверяются: для их подхвата используйте reload=true или open_feature_file. Если идёт загрузка, возвращает ACTION_FAILED с причиной BUSY — повторите вызов после её завершения.",
 		"ВыполнитьОдинШагВФичаФайле", Истина, Ложь);
 	Инстр.Свойства.Добавить(MCPНовоеСвойствоОписания("filePath", "string", "Путь к .feature файлу. Если параметр не указан, то команда будет выполняться в текущей вкладке редактора в уже открытом файле."));
 	Инстр.Свойства.Добавить(MCPНовоеСвойствоОписания("lineNumber", "integer", "Номер строки в файле (начиная с 1).", Истина));
 	Инстр.Свойства.Добавить(MCPНовоеСвойствоОписания("reload", "boolean", "Принудительно загрузить фичу перед шагом. По умолчанию false: уже загруженная фича выполняется без загрузки."));
-	Инстр.Свойства.Добавить(MCPНовоеСвойствоОписания("details", "boolean", "Вернуть расширенный ответ: режим, номера строк, файл дерева. По умолчанию false — прежний текст."));
+	Инстр.Свойства.Добавить(MCPНовоеСвойствоОписания("details", "boolean", "Вернуть расширенный ответ: режим, requestedLine/executedLine, файл дерева. executedLine — фактически выполненная строка: для строки таблицы — строка шага-владельца, для группы шагов — первый исполняемый шаг. По умолчанию false — прежний текст."));
 	Инструменты.Добавить(Инстр);
 
 	// 17. manage_test_client
@@ -513,14 +514,14 @@
 
 	// 20. get_test_results
 	Инстр = MCPНовоеОписаниеИнструмента("get_test_results",
-		"Подробные результаты выполнения сценария: статус каждого шага, время, ошибки. Если scenarioId не указан — результат последнего сценария.
-		|По умолчанию ответ выводится в формате Markdown. Параметр format=json возвращает машиночитаемый объект: schemaVersion (1.1), mcpVersion, vaVersion, runId, isRunning, ok, requestedScenarioId, scenarioId/treeRowId, имя сценария и фичи, статус, isComplete (есть финальный статус или результат одиночного шага), ошибку, шаги с id/lineNumber/status/error и счётчики; при отсутствии результата ok=false, isComplete=false и reason: result_not_ready, no_results или scenario_not_run; значения параметров шага в JSON не выводятся.
+		"Подробные результаты выполнения сценария: статус каждого шага, время, ошибки. Для шага подсценария дополнительно выводятся файл шага, строка вызова и идентификатор вхождения вызова. Если scenarioId не указан — результат последнего сценария.
+		|По умолчанию ответ выводится в формате Markdown. Параметр format=json возвращает машиночитаемый объект: schemaVersion (1.1), mcpVersion, vaVersion, runId, isRunning, ok, requestedScenarioId, scenarioId/treeRowId, имя сценария и фичи, status/statusRaw (у одиночного шага статус берётся из его шага), resultKind (scenario или single_step), isComplete (есть финальный статус или результат одиночного шага), ошибку, шаги с id/lineNumber/status/error и счётчики; ok означает успешность вызова, а не успешность теста, результат теста — status; при отсутствии результата ok=false, isComplete=false и reason: result_not_ready, no_results или scenario_not_run; значения параметров шага в JSON не выводятся.
 		|Во время прогона доступны результаты уже завершённых сценариев: ответ помечается как неполный (прогон ещё идёт).
 		|Для результата одиночного шага (execute_feature_step) выводится отметка «Результат выполнения одиночного шага» и строка «Сценарий не завершён» не печатается.",
 		"ПолучитьРезультатВыполненияТестов", Ложь, Ложь);
 	Инстр.Свойства.Добавить(MCPНовоеСвойствоОписания("scenarioId", "string", "Числовой ID строки сценария в дереве (поле treeRowId в currentScenario из get_vanessa_automation_state; заполняется во время выполнения — снимайте во время прогона). Если не указан — последний выполненный."));
 	Инстр.Свойства.Добавить(MCPНовоеСвойствоОписания("format", "string",
-		"Формат ответа: markdown (по умолчанию) или json. JSON содержит schemaVersion (1.1), mcpVersion, vaVersion, runId, isRunning, ok, requestedScenarioId, scenarioId/treeRowId, имя сценария и фичи, статус, isComplete (есть финальный статус или результат одиночного шага), ошибку, шаги с id/lineNumber/status/error и счётчики; при отсутствии результата ok=false, isComplete=false и reason: result_not_ready, no_results или scenario_not_run; значения параметров шага не выводятся; отсутствующие строковые значения передаются пустой строкой, isComplete — булево."));
+		"Формат ответа: markdown (по умолчанию) или json. JSON содержит schemaVersion (1.1), mcpVersion, vaVersion, runId, isRunning, ok, requestedScenarioId, scenarioId/treeRowId, имя сценария и фичи, status/statusRaw (у одиночного шага статус берётся из его шага), resultKind (scenario или single_step), isComplete (есть финальный статус или результат одиночного шага), ошибку, шаги с id/lineNumber/status/error и счётчики; ok означает успешность вызова, а не успешность теста, результат теста — status; при отсутствии результата ok=false, isComplete=false и reason: result_not_ready, no_results или scenario_not_run; значения параметров шага не выводятся; отсутствующие строковые значения передаются пустой строкой, isComplete — булево."));
 	Инструменты.Добавить(Инстр);
 
 	// 21. get_window_list_os
@@ -650,6 +651,7 @@
 		"Управление точками останова в Gherkin-сценариях. Действия: toggle (по умолчанию), remove_all, list.
 		|Остановка на точке останова прекращает весь прогон: шаг с точкой останова не выполняется, сценарии после него тоже.
 		|Точки учитываются по паре (файл шага, строка), поэтому точка на шаге внутри вызванного сценария срабатывает и при вызове из другого сценария. Для такого шага toggle возвращает примечание о семантике: при повторном выполнении шага точка сработает снова. Любая строка вызова вложенного подсценария пока не проверяется.
+		|Новая точка ставится на исполняемый шаг, условие или строку вызова подсценария; заголовки сценариев/фич и строки таблиц отклоняются как INVALID_PARAMS. Проверка выполняется, если строка найдена в дереве. Снятие ранее поставленной точки не блокируется.
 		|list возвращает точки по данным редактора: переключение через toggle видно сразу, изменения мышью в редакторе могут отображаться с запаздыванием; отдельной строкой выводится число участников следующего прогона (массив движка). Точки других открытых вкладок показываются отдельным разделом: они учитываются по файлу шага и сработают, если в прогоне выполняются шаги из соответствующего файла; в счётчик текущей вкладки не входят, точки-вставки других вкладок в прогоне не участвуют.
 		|При загрузке или перезагрузке фичи точки останова не переносятся: номера строк могли измениться, поэтому проверьте их заново.
 		|Счётчик удалённых точек в remove_all строится по тем же данным редактора. remove_all очищает только текущую вкладку; если в других вкладках остались точки, ответ об этом предупреждает.",
@@ -938,20 +940,20 @@
 	// 37. manage_form_elements
 	Инстр = MCPНовоеОписаниеИнструмента("manage_form_elements",
 		"Универсальный инструмент для управления элементами формы клиента тестирования.
-		|Поддерживаемые действия (параметр action): 63 действия; полный перечень действий, требования к параметрам каждого действия и правила выбора - в вопросе №127 базы знаний (как получить - ниже).
+		|Поддерживаемые действия (параметр action): 63 действия; полный перечень действий, требования к параметрам каждого действия и правила выбора - в вопросе №129 базы знаний (как получить - ниже).
 		|
-		|Каталог действий: полное описание всех 63 действий и требований к параметрам - вопрос №127 базы знаний. Получить целиком: get_data_from_knowledge_base, format=""questions"", question_number=127. Найти при смещении нумерации: get_data_from_knowledge_base, format=""question_search"", search_string=""manage_form_elements"".
+		|Каталог действий: полное описание всех 63 действий и требований к параметрам - вопрос №129 базы знаний. Получить целиком: get_data_from_knowledge_base, format=""questions"", question_number=129. Найти при смещении нумерации: get_data_from_knowledge_base, format=""question_search"", search_string=""manage_form_elements"".
 		|
 		|Часть действий (полный список действий - в каталоге): переходы по таблице (activate_column, navigate_next_column/previous_column, start_edit_row/end_edit_row, navigate_to_row, navigate_next_row/previous_row, choose_row, goto_first_row/last_row, goto_next_item/previous_item, go_one_level_down/up, is_expanded, select_all_rows, select_row, add_row, copy_row, delete_row, switch_row_delete_mark, set_cell_text, set_order), чтение выделенных строк (get_selected_rows), группы и закладки (switch_tab, toggle_group), работа с областями табличного документа (begin_edit_current_area, end_edit_current_area, get_current_area_address, get_current_area_text, get_doc_area_horizontal_size, get_doc_area_vertical_size, set_area_text, set_current_area), значения (decrease_value, increase_value, goto_value, clear_field), модальные диалоги (manage_modal_dialog), прочее (simulate_tab, cancel_edit, current_opened, current_modified, select_from_form_dropdown, execute_choice_from_menu, goto_date, click_hyperlink, get_formatted_string_hyperlink_presentations, clear_message_window, create_new, toggle_checkbox, unset_checkbox, set_checkbox, set_radio_button).
 		|
-		|Полные описания действий, правило выбора действия по типу поля, правила работы с таблицами и особенности модальных диалогов - вопрос №127 базы знаний.
+		|Полные описания действий, правило выбора действия по типу поля, правила работы с таблицами и особенности модальных диалогов - вопрос №129 базы знаний.
 		|
 		|Для элементов в таблицах используйте параметр table_name: колонку можно указывать как внутренним именем поля формы (например, ТоварыКоличество), так и заголовком колонки (например, Количество).
-		|Правило выбора значения (сокращённо; полное - в вопросе №127): ссылочные типы и перечисления - set_value (по строке; exact_match=true для точного значения), простые типы - input_text и set_cell_text; ввод текста в ссылочное поле значение не выбирает; фиксация - simulate_tab для шапки, end_edit_row для таблиц.
+		|Правило выбора значения (сокращённо; полное - в вопросе №129): ссылочные типы и перечисления - set_value (по строке; exact_match=true для точного значения), простые типы - input_text и set_cell_text; ввод текста в ссылочное поле значение не выбирает; фиксация - simulate_tab для шапки, end_edit_row для таблиц.
 		|Колонка таблицы может быть фактически нередактируемой, хотя по данным элемента формы это не видно - старт редактирования по такой колонке завершается ошибкой, активизируйте редактируемую колонку действием activate_column.
 		|Требует подключённого клиента тестирования.",
 		"УправлениеЭлементамиФормы", Ложь, Ложь);
-	Инстр.Свойства.Добавить(MCPНовоеСвойствоОписания("action", "string", "Действие над элементом формы. Обязательный параметр. Допустимые значения: 'click_button', 'input_text', 'open_dropdown', 'get_dropdown_state', 'select_from_dropdown', 'set_value', 'open_choice_form', 'set_radio_button', 'set_checkbox', 'unset_checkbox', 'toggle_checkbox', 'click_hyperlink', 'simulate_tab', 'activate_column', 'navigate_next_column', 'navigate_previous_column', 'start_edit_row', 'end_edit_row', 'navigate_to_row', 'navigate_next_row', 'navigate_previous_row', 'choose_row', 'get_selected_rows', 'create_new', 'switch_tab', 'toggle_group', 'activate_header_element', 'clear_field', 'clear_message_window', 'select_from_form_dropdown', 'add_row', 'copy_row', 'delete_row', 'go_one_level_down', 'go_one_level_up', 'goto_first_row', 'goto_last_row', 'goto_next_item', 'goto_previous_item', 'is_expanded', 'select_all_rows', 'select_row', 'set_cell_text', 'set_order', 'switch_row_delete_mark', 'begin_edit_current_area', 'end_edit_current_area', 'get_current_area_address', 'get_current_area_text', 'get_doc_area_horizontal_size', 'get_doc_area_vertical_size', 'get_formatted_string_hyperlink_presentations', 'set_area_text', 'set_current_area', 'cancel_edit', 'current_opened', 'decrease_value', 'increase_value', 'goto_value', 'current_modified', 'execute_choice_from_menu', 'goto_date', 'manage_modal_dialog'. Подробное описание каждого действия и требуемых параметров - вопрос №127 базы знаний: get_data_from_knowledge_base, format=""questions"", question_number=127 (поиск при смещении нумерации: format=""question_search"", search_string=""manage_form_elements"").", Истина));
+	Инстр.Свойства.Добавить(MCPНовоеСвойствоОписания("action", "string", "Действие над элементом формы. Обязательный параметр. Допустимые значения: 'click_button', 'input_text', 'open_dropdown', 'get_dropdown_state', 'select_from_dropdown', 'set_value', 'open_choice_form', 'set_radio_button', 'set_checkbox', 'unset_checkbox', 'toggle_checkbox', 'click_hyperlink', 'simulate_tab', 'activate_column', 'navigate_next_column', 'navigate_previous_column', 'start_edit_row', 'end_edit_row', 'navigate_to_row', 'navigate_next_row', 'navigate_previous_row', 'choose_row', 'get_selected_rows', 'create_new', 'switch_tab', 'toggle_group', 'activate_header_element', 'clear_field', 'clear_message_window', 'select_from_form_dropdown', 'add_row', 'copy_row', 'delete_row', 'go_one_level_down', 'go_one_level_up', 'goto_first_row', 'goto_last_row', 'goto_next_item', 'goto_previous_item', 'is_expanded', 'select_all_rows', 'select_row', 'set_cell_text', 'set_order', 'switch_row_delete_mark', 'begin_edit_current_area', 'end_edit_current_area', 'get_current_area_address', 'get_current_area_text', 'get_doc_area_horizontal_size', 'get_doc_area_vertical_size', 'get_formatted_string_hyperlink_presentations', 'set_area_text', 'set_current_area', 'cancel_edit', 'current_opened', 'decrease_value', 'increase_value', 'goto_value', 'current_modified', 'execute_choice_from_menu', 'goto_date', 'manage_modal_dialog'. Подробное описание каждого действия и требуемых параметров - вопрос №129 базы знаний: get_data_from_knowledge_base, format=""questions"", question_number=129 (поиск при смещении нумерации: format=""question_search"", search_string=""manage_form_elements"").", Истина));
 	Инстр.Свойства.Добавить(MCPНовоеСвойствоОписания("element_name", "string", "Имя элемента формы (внутреннее имя) для выполнения действия. Обязательный параметр для большинства действий. Для ячейки таблицы (с table_name) допускается заголовок колонки вместо внутреннего имени. Для действия 'switch_tab' - имя закладки/страницы формы (группы формы). Для действия 'manage_modal_dialog' - заголовок или имя кнопки модального диалога."));
 	Инстр.Свойства.Добавить(MCPНовоеСвойствоОписания("table_name", "string", "Имя табличной части, если элемент находится в таблице. Если поле или кнопка находится в таблице, то этот параметр обязательно указывать."));
 	Инстр.Свойства.Добавить(MCPНовоеСвойствоОписания("value", "string", "Значение для ввода/выбора. Используется для действий: input_text, set_value, select_from_dropdown, activate_column (имя реквизита табличной части, полное имя поля формы или заголовок колонки). Для navigate_to_row используйте отдельный параметр row_criteria. Необязательный параметр."));
@@ -989,7 +991,7 @@
 		|
 		|Ответ - компактный отчёт: одна строка на выполненное действие вида 'N действие адрес ok' (например, '1 set_value Менеджер=Admin ok (""Admin"")'). Полезная нагрузка read-действий (например, содержимое списка у get_dropdown_state, данные строк у get_selected_rows) приводится полной строкой сразу под итогом действия; ошибки приводятся с полным текстом.
 		|
-		|Описание действий (значения action) и требований к их параметрам - вопрос №127 базы знаний (общий каталог действий формы): get_data_from_knowledge_base, format=""questions"", question_number=127 (поиск при смещении нумерации: format=""question_search"", search_string=""manage_form_elements"").
+		|Описание действий (значения action) и требований к их параметрам - вопрос №129 базы знаний (общий каталог действий формы): get_data_from_knowledge_base, format=""questions"", question_number=129 (поиск при смещении нумерации: format=""question_search"", search_string=""manage_form_elements"").
 		|
 		|Модальные диалоги: диалог проверяется перед каждым действием, после последнего действия и при ошибке действия (диалог может появиться с задержкой - после цепочки асинхронных обработчиков). Появление модального диалога приостанавливает цепочку: результат возвращается со статусом paused_modal_dialog (это не ошибка), в нём - выполненные действия, текст диалога, его кнопки и машиночитаемый остаток цепочки (блок json). Действия, которые уже выполнены, повторять не нужно.
 		|Диалоги не закрываются автоматически: ожидаемый диалог закрывайте действием manage_modal_dialog прямо в цепочке сразу после действия, которое его вызывает (element_name - заголовок или имя кнопки диалога); неожиданный диалог - ответом на паузу (manage_modal_dialog через manage_form_elements) и продолжением остатка.
@@ -1662,7 +1664,14 @@
 	УпавшийШаг = MCPПервыйУпавшийШаг(Шаги);
 	Краткий.Вставить("failedStep", MCPКраткоеОписаниеШага(УпавшийШаг));
 	
-	ИсточникОшибки = MCPИсточникОшибкиСценария(Результат, УпавшийШаг);
+	// Движок может оставить данные ошибки от падения, обработанного Попытка/Исключение.
+	// При итоговом Success они не относятся к результату.
+	УспешныйРезультат = НРег(MCPСтрокаИлиПустая(MCPБезопасноеСвойство(Результат, "Статус"))) = "success";
+	Если УспешныйРезультат Тогда
+		ИсточникОшибки = "";
+	Иначе
+		ИсточникОшибки = MCPИсточникОшибкиСценария(Результат, УпавшийШаг);
+	КонецЕсли;
 	ТекстОшибки = MCPОбрезатьТехническиеДанные(ИсточникОшибки);
 	Краткий.Вставить("error", ТекстОшибки);
 	
@@ -1671,10 +1680,12 @@
 		Краткий.Вставить("technicalData", ТехническиеДанные);
 	КонецЕсли;
 	
-	Подробности = MCPОбрезатьТехническиеДанные(MCPПодробностиОшибкиИзРезультата(Результат));
-	Если ЗначениеЗаполнено(Подробности)
-		И СокрЛП(Подробности) <> СокрЛП(ТекстОшибки) Тогда
-		Краткий.Вставить("details", Подробности);
+	Если НЕ УспешныйРезультат Тогда
+		Подробности = MCPОбрезатьТехническиеДанные(MCPПодробностиОшибкиИзРезультата(Результат));
+		Если ЗначениеЗаполнено(Подробности)
+			И СокрЛП(Подробности) <> СокрЛП(ТекстОшибки) Тогда
+			Краткий.Вставить("details", Подробности);
+		КонецЕсли;
 	КонецЕсли;
 	
 	Краткий.Вставить("steps", MCPКраткиеШагиСценария(Шаги));
@@ -1852,6 +1863,11 @@
 	
 	Для Каждого ИскомыйСтатус Из Ванесса._СтрРазделить("Failed,Broken", ",") Цикл
 		Для Каждого Шаг Из Шаги Цикл
+			// Обработанное секцией Попытка/Исключение падение не считается упавшим шагом:
+			// движок исключает такие записи при расчёте статуса сценария.
+			Если MCPБезопасноеСвойство(Шаг, "ШагУпалВСекцииПопыткаИсключение") = Истина Тогда
+				Продолжить;
+			КонецЕсли;
 			Если MCPСтрокаИлиПустая(MCPБезопасноеСвойство(Шаг, "Статус")) = ИскомыйСтатус Тогда
 				Возврат Шаг;
 			КонецЕсли;
