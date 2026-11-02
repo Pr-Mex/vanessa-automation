@@ -37290,6 +37290,140 @@ Om röstfilen inte hittas i katalogen startas processen för att generera röstn
 												</UsualGroup>
 											</ChildItems>
 										</Page>
+										<Page name="СтраницаAI" id="4545">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>AI</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>AI</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>sv</v8:lang>
+													<v8:content>AI</v8:content>
+												</v8:item>
+											</Title>
+											<ExtendedTooltip name="СтраницаAIРасширеннаяПодсказка" id="4546"/>
+											<ChildItems>
+												<UsualGroup name="СтраницаAIПерваяСтрока" id="4547">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Страница AI первая строка</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>AI page first line</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>sv</v8:lang>
+															<v8:content>AI-sida första raden</v8:content>
+														</v8:item>
+													</Title>
+													<Group>AlwaysHorizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="СтраницаAIПерваяСтрокаРасширеннаяПодсказка" id="4548"/>
+													<ChildItems>
+														<UsualGroup name="СтраницаAIПерваяСтрокаЛевыйСтолбец" id="4549">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Страница AI первая строка левый столбец</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>AI page first row left column</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>sv</v8:lang>
+																	<v8:content>AI-sida första raden vänster kolumn</v8:content>
+																</v8:item>
+															</Title>
+															<Width>50</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="СтраницаAIПерваяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="4550"/>
+															<ChildItems>
+																<CheckBoxField name="ЗапускатьСерверMCPПриЗапускеVA" id="4551">
+																	<DataPath>Объект.ЗапускатьСерверMCPПриЗапускеVA</DataPath>
+																	<TitleLocation>Right</TitleLocation>
+																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="ЗапускатьСерверMCPПриЗапускеVAКонтекстноеМеню" id="4552"/>
+																	<ExtendedTooltip name="ЗапускатьСерверMCPПриЗапускеVAРасширеннаяПодсказка" id="4553">
+																		<AutoMaxWidth>false</AutoMaxWidth>
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>Determines whether to start the MCP server automatically at Vanessa Automation startup if it is not running yet. The server starts after MCP tools registration and only if the client_mcp extension is installed. If an external plugin has installed its own MCP transport, the setting has no effect.</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Определяет, нужно ли при запуске Vanessa Automation автоматически запускать сервер MCP, если он ещё не запущен. Сервер запускается после регистрации инструментов MCP и только если установлено расширение client_mcp. Если внешний плагин установил свой MCP-транспорт, настройка не действует.</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>sv</v8:lang>
+																				<v8:content>Bestämmer om MCP-servern ska startas automatiskt när Vanessa Automation startar, om den inte redan körs. Servern startas efter registreringen av MCP-verktyg och endast om tillägget client_mcp är installerat. Om ett externt plugin har installerat sin egen MCP-transport har inställningen ingen effekt.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																</CheckBoxField>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="СтраницаAIПерваяСтрокаПравыйСтолбец" id="4554">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Страница AI первая строка правый столбец</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>AI page first row right column</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>sv</v8:lang>
+																	<v8:content>AI-sida första raden höger kolumn</v8:content>
+																</v8:item>
+															</Title>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="СтраницаAIПерваяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="4555"/>
+															<ChildItems>
+								<InputField name="ПортСервераMCP" id="4556">
+									<DataPath>Объект.ПортСервераMCP</DataPath>
+									<TitleLocation>Top</TitleLocation>
+									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+									<Width>30</Width>
+									<HorizontalStretch>false</HorizontalStretch>
+									<ContextMenu name="ПортСервераMCPКонтекстноеМеню" id="4557"/>
+									<ExtendedTooltip name="ПортСервераMCPРасширеннаяПодсказка" id="4558">
+										<AutoMaxWidth>false</AutoMaxWidth>
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>Determines the port on which the MCP server is started at automatic startup. If the port is not set or is invalid, port 9874 is used. The setting has no effect if an external plugin has installed its own MCP transport.</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Определяет порт, на котором будет запущен сервер MCP при автозапуске. Если порт не задан или задан неверно, используется порт 9874. Настройка не действует, если внешний плагин установил свой MCP-транспорт.</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>sv</v8:lang>
+												<v8:content>Bestämmer porten där MCP-servern startas vid automatisk start. Om porten inte är angiven eller är ogiltig används port 9874. Inställningen har ingen effekt om ett externt plugin har installerat sin egen MCP-transport.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</InputField>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+											</ChildItems>
+										</Page>
 										<Page name="СтраницаНастройкиПрочее" id="1658">
 											<Title>
 												<v8:item>

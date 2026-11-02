@@ -107,6 +107,7 @@
        - Other
            - Vanessa Editor ![](mortarboard.png)[Запустить урок](ЗакладкаСервисVanessaEditor)
            - Learning ![](mortarboard.png)[Запустить урок](ЗакладкаСервисОбучение)
+           - AI ![](mortarboard.png)[Запустить урок](ЗакладкаСервисAI)
            - Tab "Other" ![](mortarboard.png)[Запустить урок](ЗакладкаСервисПрочее)
            
 

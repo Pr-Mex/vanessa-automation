@@ -1147,6 +1147,14 @@ A structure that will contain key and value pairs. This structure will be loaded
    * **vanessaeditortheme**:
       Allows you to change the editor theme.
 
+## AI
+
+   * **StartMCPServerOnVAStartup**:
+      Determines whether to start the MCP server automatically at Vanessa Automation startup if it is not running yet. The server starts after MCP tools registration and only if the client_mcp extension is installed. If an external plugin has installed its own MCP transport, the setting has no effect.
+
+   * **MCPServerPort**:
+      Determines the port on which the MCP server is started at automatic startup. If the port is not set or is invalid, port 9874 is used. The setting has no effect if an external plugin has installed its own MCP transport.
+
 ## Libraries
 
 *  Re-code library
