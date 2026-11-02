@@ -232,6 +232,9 @@ A structure that will contain key and value pairs. This structure will be loaded
       * **timeoutbeforeforciblyclosingtestclient**:
          The number of seconds to check that the testing client process completed on its own.
 
+      * **closetestclient**:
+         If the flag is set, then after all scenarios finish Vanessa Automation will close the testing clients from the testing clients table. Closing errors do not interrupt the completion: the client might have been closed normally inside the scenario itself. The setting is usually used when running from the command line (the closetestclient parameter in the VAParams.json file). The flag also applies to interactive runs; when settings are loaded from a file in interactive mode, it is reset. The setting has no effect in the web client.
+
 *  Mobile client
 
       * **PathToadb**:
