@@ -1166,7 +1166,7 @@ A structure that will contain key and value pairs. This structure will be loaded
       Determines the port on which the MCP server is started at automatic startup. If the port is not set or is invalid, port 9874 is used. The setting has no effect if an external plugin has installed its own MCP transport.
 
    * **WriteMCPServiceDataToEventLog**:
-      Enables writing MCP service data to the event log. Events are written with the `VanessaAutomation.MCP.` prefix at the "Information" level. Disabled by default.
+      Enables writing MCP service data to the event log: calls to Vanessa Automation tools that had no start event are written as the `VanessaAutomation.MCP.Инструмент.Запрос` event (tool name, call id and parameter names without values). Events are written with the `VanessaAutomation.MCP.` prefix at the "Information" level. Disabled by default.
 
 ## Libraries
 

@@ -37562,30 +37562,6 @@ Om röstfilen inte hittas i katalogen startas processen för att generera röstn
 																		</Title>
 																	</ExtendedTooltip>
 																</CheckBoxField>
-																<CheckBoxField name="AIЗаписыватьСлужебныеДанныеВЖР" id="4577">
-																	<DataPath>Объект.AIЗаписыватьСлужебныеДанныеВЖР</DataPath>
-																	<TitleLocation>Right</TitleLocation>
-																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-																	<CheckBoxType>Auto</CheckBoxType>
-																	<ContextMenu name="AIЗаписыватьСлужебныеДанныеВЖРКонтекстноеМеню" id="4578"/>
-																	<ExtendedTooltip name="AIЗаписыватьСлужебныеДанныеВЖРРасширеннаяПодсказка" id="4579">
-																		<AutoMaxWidth>false</AutoMaxWidth>
-																		<Title formatted="false">
-																			<v8:item>
-																				<v8:lang>en</v8:lang>
-																				<v8:content>Enables writing MCP service data to the event log: server startup and tool registration, run start and completion, feature loading, syntax checks, refusals, and errors. Disabled by default. Intended for MCP diagnostics; full form field values, entered text, and clipboard contents are not written to MCP events.</v8:content>
-																			</v8:item>
-																			<v8:item>
-																				<v8:lang>ru</v8:lang>
-																				<v8:content>Включает запись служебных данных MCP в журнал регистрации: запуск сервера и регистрацию инструментов, запуск и завершение прогонов, загрузку фич, проверку синтаксиса, отказы и ошибки. По умолчанию выключено. Предназначено для диагностики работы MCP; полные значения полей формы, вводимый текст и содержимое буфера обмена не записываются в события MCP.</v8:content>
-																			</v8:item>
-																			<v8:item>
-																				<v8:lang>sv</v8:lang>
-																				<v8:content>Aktiverar skrivning av MCP-tjänstdata till händelseloggen: serverstart och registrering av verktyg, start och avslut av körningar, inläsning av feature-filer, syntaxkontroller, avslag och fel. Inaktiverad som standard. Avsedd för MCP-diagnostik; fullständiga fältvärden, inmatad text och urklippsinnehåll loggas inte i MCP-händelser.</v8:content>
-																			</v8:item>
-																		</Title>
-																	</ExtendedTooltip>
-																</CheckBoxField>
 															</ChildItems>
 														</UsualGroup>
 														<UsualGroup name="СтраницаAIПерваяСтрокаПравыйСтолбец" id="4554">
@@ -37607,32 +37583,120 @@ Om röstfilen inte hittas i katalogen startas processen för att generera röstn
 															<ShowTitle>false</ShowTitle>
 															<ExtendedTooltip name="СтраницаAIПерваяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="4555"/>
 															<ChildItems>
-								<InputField name="ПортСервераMCP" id="4556">
-									<DataPath>Объект.ПортСервераMCP</DataPath>
-									<TitleLocation>Top</TitleLocation>
-									<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
-									<Width>30</Width>
-									<HorizontalStretch>false</HorizontalStretch>
-									<ContextMenu name="ПортСервераMCPКонтекстноеМеню" id="4557"/>
-									<ExtendedTooltip name="ПортСервераMCPРасширеннаяПодсказка" id="4558">
-										<AutoMaxWidth>false</AutoMaxWidth>
-										<Title formatted="false">
-											<v8:item>
-												<v8:lang>en</v8:lang>
-												<v8:content>Determines the port on which the MCP server is started at automatic startup. If the port is not set or is invalid, port 9874 is used. The setting has no effect if an external plugin has installed its own MCP transport.</v8:content>
-											</v8:item>
-											<v8:item>
-												<v8:lang>ru</v8:lang>
-												<v8:content>Определяет порт, на котором будет запущен сервер MCP при автозапуске. Если порт не задан или задан неверно, используется порт 9874. Настройка не действует, если внешний плагин установил свой MCP-транспорт.</v8:content>
-											</v8:item>
-											<v8:item>
-												<v8:lang>sv</v8:lang>
-												<v8:content>Bestämmer porten där MCP-servern startas vid automatisk start. Om porten inte är angiven eller är ogiltig används port 9874. Inställningen har ingen effekt om ett externt plugin har installerat sin egen MCP-transport.</v8:content>
-											</v8:item>
-										</Title>
-									</ExtendedTooltip>
-								</InputField>
+																<CheckBoxField name="AIЗаписыватьСлужебныеДанныеВЖР" id="4577">
+																	<DataPath>Объект.AIЗаписыватьСлужебныеДанныеВЖР</DataPath>
+																	<TitleLocation>Right</TitleLocation>
+																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="AIЗаписыватьСлужебныеДанныеВЖРКонтекстноеМеню" id="4578"/>
+																	<ExtendedTooltip name="AIЗаписыватьСлужебныеДанныеВЖРРасширеннаяПодсказка" id="4579">
+																		<AutoMaxWidth>false</AutoMaxWidth>
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>Enables writing MCP service data to the event log: MCP tool calls, server startup and tool registration, run start and completion, feature loading, syntax checks, refusals, and errors. Disabled by default. Intended for MCP diagnostics; full form field values, entered text, and clipboard contents are not written to MCP events.</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Включает запись служебных данных MCP в журнал регистрации: вызовы инструментов MCP, запуск сервера и регистрацию инструментов, запуск и завершение прогонов, загрузку фич, проверку синтаксиса, отказы и ошибки. По умолчанию выключено. Предназначено для диагностики работы MCP; полные значения полей формы, вводимый текст и содержимое буфера обмена не записываются в события MCP.</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>sv</v8:lang>
+																				<v8:content>Aktiverar skrivning av MCP-tjänstdata till händelseloggen: MCP-verktygsanrop, serverstart och registrering av verktyg, start och avslut av körningar, inläsning av feature-filer, syntaxkontroller, avslag och fel. Inaktiverad som standard. Avsedd för MCP-diagnostik; fullständiga fältvärden, inmatad text och urklippsinnehåll loggas inte i MCP-händelser.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																</CheckBoxField>
 															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="СтраницаAIВтораяСтрока" id="4580">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Страница AI вторая строка</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>AI page second line</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>sv</v8:lang>
+															<v8:content>AI-sida andra raden</v8:content>
+														</v8:item>
+													</Title>
+													<Group>AlwaysHorizontal</Group>
+													<Representation>None</Representation>
+													<ShowTitle>false</ShowTitle>
+													<ExtendedTooltip name="СтраницаAIВтораяСтрокаРасширеннаяПодсказка" id="4581"/>
+													<ChildItems>
+														<UsualGroup name="СтраницаAIВтораяСтрокаЛевыйСтолбец" id="4582">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Страница AI вторая строка левый столбец</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>AI page second row left column</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>sv</v8:lang>
+																	<v8:content>AI-sida andra raden vänster kolumn</v8:content>
+																</v8:item>
+															</Title>
+															<Width>50</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="СтраницаAIВтораяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="4583"/>
+															<ChildItems>
+																<InputField name="ПортСервераMCP" id="4556">
+																	<DataPath>Объект.ПортСервераMCP</DataPath>
+																	<TitleLocation>Top</TitleLocation>
+																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																	<Width>30</Width>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<ContextMenu name="ПортСервераMCPКонтекстноеМеню" id="4557"/>
+																	<ExtendedTooltip name="ПортСервераMCPРасширеннаяПодсказка" id="4558">
+																		<AutoMaxWidth>false</AutoMaxWidth>
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>Determines the port on which the MCP server is started at automatic startup. If the port is not set or is invalid, port 9874 is used. The setting has no effect if an external plugin has installed its own MCP transport.</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Определяет порт, на котором будет запущен сервер MCP при автозапуске. Если порт не задан или задан неверно, используется порт 9874. Настройка не действует, если внешний плагин установил свой MCP-транспорт.</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>sv</v8:lang>
+																				<v8:content>Bestämmer porten där MCP-servern startas vid automatisk start. Om porten inte är angiven eller är ogiltig används port 9874. Inställningen har ingen effekt om ett externt plugin har installerat sin egen MCP-transport.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																</InputField>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="СтраницаAIВтораяСтрокаПравыйСтолбец" id="4584">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Страница AI вторая строка правый столбец</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>AI page second row right column</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>sv</v8:lang>
+																	<v8:content>AI-sida andra raden höger kolumn</v8:content>
+																</v8:item>
+															</Title>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="СтраницаAIВтораяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="4585"/>
 														</UsualGroup>
 													</ChildItems>
 												</UsualGroup>
