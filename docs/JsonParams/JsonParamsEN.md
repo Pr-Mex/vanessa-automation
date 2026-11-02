@@ -162,11 +162,13 @@ A structure that will contain key and value pairs. This structure will be loaded
 
       * **starttestclientsessionagainonconnectionifitsprocessisnotfound**:
          Enables restarting the test client process if the previous run did not work (for example, if no license was obtained). For thick and thin clien only.
+         When VanessaExt supports process identity, the decision is made by the PID + StartTime pair: while the started process is alive, a second instance is not launched. A restart is performed only after the previous process started by this session is confirmed terminated; processes found by port are not terminated automatically.
 
       * **DetermineTheRealPortOnWhichTheTestingClientWasLaunched**:
          If this option is enabled, then when the testing client connects, an attempt will be made to determine the real port on which the testing client was launched.
          It is necessary. since the testing client can change the port on which it started, despite the passed parameters.
          This issue is relevant when running tests on Linux.
+         When the process identity (PID + StartTime) is known, the port is determined by PID on every connection wait iteration, starting from the first one, regardless of this option. The option controls the previous port detection mechanism based on a PID snapshot.
 
       * **testclientprocessstartinterval**:
          Specifies the interval at which an attempt will be made to start a testing client session.
