@@ -1893,6 +1893,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#libraries" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2690,6 +2701,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#ai" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        AI
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#libraries" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2809,9 +2831,9 @@ A structure that will contain key and value pairs. This structure will be loaded
 </li>
 <li>
 <p><strong>removespacebeforestarinwindowtitle</strong>:
-     If the flag is set, the space before the trailing star in the window title is removed while recording user actions: the step contains "Title (creation)<em>".
+     If the flag is set, the space before the trailing star in the window title is removed while recording user actions: the step contains "Title (creation)*".
      Such a step matches both the modified and the unmodified form.
-     If the flag is unchecked, the title is recorded as the platform shows it: "Title (creation) </em>".
+     If the flag is unchecked, the title is recorded as the platform shows it: "Title (creation) *".
      When recording user actions at the request of an AI agent, the space is always removed regardless of the flag.</p>
 </li>
 </ul>
@@ -2849,7 +2871,7 @@ A structure that will contain key and value pairs. This structure will be loaded
 <ul>
 <li>
 <p><strong>projectpath</strong>:
-     The catalog with the tested project files, which are necessary for test execution.</p>
+     Project directory: the base for relative paths and $workspaceRoot, project files, Allure TestOps export, and MCP tools. Can be filled automatically by the user settings loader.</p>
 </li>
 <li>
 <p><strong>UseTemplateForNewFeature</strong>:
@@ -2857,8 +2879,7 @@ A structure that will contain key and value pairs. This structure will be loaded
 </li>
 <li>
 <p><strong>instrpath</strong>:
-     The catalog of Vanessa Automation data processor. This field must be filled on the standard installation.
-     When working with Vanessa Automation Single it is allowed to leave the field blank.</p>
+     Vanessa Automation tools directory. Base for framework files (libraries, plugins, vendor). Usually filled automatically with the directory of the main VA data processor; may be empty for Vanessa Automation Single.</p>
 </li>
 <li>
 <p><strong>TemporaryFilesDirectory</strong>:
@@ -2957,13 +2978,15 @@ A structure that will contain key and value pairs. This structure will be loaded
 </li>
 <li>
 <p><strong>starttestclientsessionagainonconnectionifitsprocessisnotfound</strong>:
-     Enables restarting the test client process if the previous run did not work (for example, if no license was obtained). For thick and thin clien only.</p>
+     Enables restarting the test client process if the previous run did not work (for example, if no license was obtained). For thick and thin clien only.
+     When VanessaExt supports process identity, the decision is made by the PID + StartTime pair: while the started process is alive, a second instance is not launched. A restart is performed only after the previous process started by this session is confirmed terminated; processes found by port are not terminated automatically.</p>
 </li>
 <li>
 <p><strong>DetermineTheRealPortOnWhichTheTestingClientWasLaunched</strong>:
      If this option is enabled, then when the testing client connects, an attempt will be made to determine the real port on which the testing client was launched.
      It is necessary. since the testing client can change the port on which it started, despite the passed parameters.
-     This issue is relevant when running tests on Linux.</p>
+     This issue is relevant when running tests on Linux.
+     When the process identity (PID + StartTime) is known, the port is determined by PID on every connection wait iteration, starting from the first one, regardless of this option. The option controls the previous port detection mechanism based on a PID snapshot.</p>
 </li>
 <li>
 <p><strong>testclientprocessstartinterval</strong>:
@@ -3053,6 +3076,10 @@ A structure that will contain key and value pairs. This structure will be loaded
 <p><strong>timeoutbeforeforciblyclosingtestclient</strong>:
      The number of seconds to check that the testing client process completed on its own.</p>
 </li>
+<li>
+<p><strong>closetestclient</strong>:
+     If the flag is set, then after all scenarios finish Vanessa Automation will close the testing clients from the testing clients table. Closing errors do not interrupt the completion: the client might have been closed normally inside the scenario itself. The setting is usually used when running from the command line (the closetestclient parameter in the VAParams.json file). The flag also applies to interactive runs; when settings are loaded from a file in interactive mode, it is reset. The setting has no effect in the web client.</p>
+</li>
 </ul>
 </li>
 <li>
@@ -3071,6 +3098,12 @@ A structure that will contain key and value pairs. This structure will be loaded
 <li>
 <p><strong>logtogr</strong>:
      If the checkbox is on, scenario and steps beginning events will be written to the event log.</p>
+</li>
+<li>
+<p><strong>keeponlylastloopiteration</strong>:
+     If the checkbox is on, only the last iteration of a loop remains in the step execution results.
+     Previous iterations are deleted together with their nested steps, and the Allure report shows the number of collapsed iterations in the loop step name.
+     The option can be changed while a scenario is running.</p>
 </li>
 <li>
 <p><strong>soundnotificationwhenscriptends</strong>:
@@ -3368,7 +3401,7 @@ A structure that will contain key and value pairs. This structure will be loaded
 </li>
 <li>
 <p><strong>maskpwdinlog</strong>:
-     The user's password is masked in the log /P="<strong>*</strong>"</p>
+     The user's password is masked in the log /P="*****"</p>
 </li>
 </ul>
 </li>
@@ -3378,7 +3411,10 @@ A structure that will contain key and value pairs. This structure will be loaded
 <li>
 <p>Main settings</p>
 <div class="highlight"><pre><span></span><code> * **allurecreatereport**:
-    Create a scenario execution report in Allure format.
+    Create a scenario execution report in Allure format. The output directory is specified in the Allure settings.
+
+ * **MergeScenarioOutlineExamplesInAllure**:
+    Merge all examples of one scenario outline into a single test case with parameters in the Allure report. Works when the project directory is set and the feature file is inside it.
 
  * **setvariablevaluesinstepsallurereport**:
     If this option is enabled, then in the parameters of the steps in which the variables were used, the variable names will be replaced with their values.
@@ -3811,7 +3847,7 @@ A structure that will contain key and value pairs. This structure will be loaded
    Speech rate is specified as a fractional number in the range from 0.1 to 3.0.
 
 * **yandexttsquerytype**:
-   Determines how the audio files will be received: through the official API or through the free interface. The recommended value is via the official API.
+   Determines how the audio files will be received: through the official API or through the web interface without authorization. The recommended value is via the official API.
 </code></pre></div>
 <ul>
 <li>
@@ -3911,13 +3947,10 @@ A structure that will contain key and value pairs. This structure will be loaded
 <li>
 <p>Audio cache</p>
 <div class="highlight"><pre><span></span><code> * **cachettsfiles**:
-    Switchs on voice file cashing.
-    Makes video assembly process faster.
-    Reduces external voice generation servises usage.
-    Reduces voice generation costs.
+    Turns on caching of synthesized speech files on the local disk. Speeds up video assembly and reduces calls to speech synthesis services. When caching is enabled, the cache directory must be specified and exist.
 
  * **ttsfilescache**:
-    Voice cache files directory.
+    Directory for cached speech files. Must exist; subdirectories for voices and parameters are created automatically.
 </code></pre></div>
 </li>
 <li>
@@ -3963,7 +3996,7 @@ A structure that will contain key and value pairs. This structure will be loaded
    Sets shots per second number for the recording.
 
 * **tempfolderforvideo**:
-   The directory for temporary files created on video recording and composing. The directory is cleared before each recording!
+   Working directory for intermediate files during video recording and assembly, and for voice generation. The directory is cleared before each video build — do not store important files there.
 
 * **cachevideo**:
    If the flag is set then when the step is running
@@ -3995,17 +4028,17 @@ A structure that will contain key and value pairs. This structure will be loaded
 <li>
 <p>Console commands</p>
 <div class="highlight"><pre><span></span><code>* **ffmpegcomand**:
-   Video running and processing command. Also you can specify a full path to ffmpeg.exe file
+   Command for video processing. You can also specify the full path to ffmpeg.exe.
    Default: ffmpeg
 
 * **convertcomand**:
    The field describes how the Convert command will be invoked.
-   For ImageMagick 7, just specify "magick convert."
+   For ImageMagick 7, specify the value magick convert (without quotes).
    For older versions, you need to specify the path to the executable convert.exe file in the directory with the ImageMagick program.
    Example:
-   "C:\Program Files\ImageMagick-X.X.X-Q16\convert.exe"
+   C:\Program Files\ImageMagick-X.X.X-Q16\convert.exe
    Download: https://imagemagick.org/script/download.php
-   For versions earlier than 7 during the installation, the following item is required for installation: Install legacy utilities (e. G. Convert)
+   For versions earlier than 7 during the installation, the following item is required for installation: Install legacy utilities (e.g. convert)
    https://imagemagick.org/script/download.php
 </code></pre></div>
 <ul>
@@ -4070,13 +4103,13 @@ A structure that will contain key and value pairs. This structure will be loaded
     Switches of video snippets scaling by time.
 
  * **turnofffeaturetitleslide**:
-    Switches off creating of video initial slide with feature file header.
+    Disables the intro slide with the feature header (text from the feature file header). It can also be disabled with the #[autodoc.ignore.featureslide] marker.
 
  * **turnoffscenarioslide**:
-    Switches off creating of video initial slide with scenario header.
+    Disables the video slide with the scenario title. It can also be disabled with the #[autodoc.ignore.scenarioslide] marker.
 
  * **turnofffinalslide**:
-    Switches off creating of video final slide with video total information.
+    Disables the final video slide with summary information (number of scenarios and steps, VA and build script versions, link). It can also be disabled with the #[autodoc.ignore.finalslide] marker.
 
  * **highlightmouseclicks**:
     Switches on mouse clicks highlighting. Project utility UIToolsFor1C is used.
@@ -4193,6 +4226,21 @@ A structure that will contain key and value pairs. This structure will be loaded
       Allows you to change the editor theme.</p>
 </li>
 </ul>
+<h2 id="ai">AI<a class="headerlink" href="#ai" title="Permanent link">&para;</a></h2>
+<ul>
+<li>
+<p><strong>StartMCPServerOnVAStartup</strong>:
+      Determines whether to start the MCP server automatically at Vanessa Automation startup if it is not running yet. The server starts after MCP tools registration and only if the client_mcp extension is installed. If an external plugin has installed its own MCP transport, the setting has no effect.</p>
+</li>
+<li>
+<p><strong>MCPServerPort</strong>:
+      Determines the port on which the MCP server is started at automatic startup. If the port is not set or is invalid, port 9874 is used. The setting has no effect if an external plugin has installed its own MCP transport.</p>
+</li>
+<li>
+<p><strong>WriteMCPServiceDataToEventLog</strong>:
+      Enables writing MCP service data to the event log: calls to Vanessa Automation tools that had no start event are written as the <code>VanessaAutomation.MCP.Инструмент.Запрос</code> event (tool name, call id and parameter names without values). Events are written with the <code>VanessaAutomation.MCP.</code> prefix at the "Information" level. Disabled by default.</p>
+</li>
+</ul>
 <h2 id="libraries">Libraries<a class="headerlink" href="#libraries" title="Permanent link">&para;</a></h2>
 <ul>
 <li>
@@ -4200,11 +4248,11 @@ A structure that will contain key and value pairs. This structure will be loaded
 <ul>
 <li>
 <p><strong>librarycatalogs</strong>:
-     List of directories that contain epf files containing script steps and feature files containing export scripts.</p>
+     List of directories containing epf files with scenario steps and feature files with export scenarios.</p>
 </li>
 <li>
 <p><strong>stepsfrommetadata</strong>:
-     The list contains paths to forms within the configuration containing step descriptions.</p>
+     List of full names of configuration forms from which step descriptions are loaded.</p>
 </li>
 </ul>
 </li>
