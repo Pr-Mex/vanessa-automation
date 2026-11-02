@@ -247,6 +247,11 @@ A structure that will contain key and value pairs. This structure will be loaded
       * **logtogr**:
          If the checkbox is on, scenario and steps beginning events will be written to the event log.
 
+      * **keeponlylastloopiteration**:
+         If the checkbox is on, only the last iteration of a loop remains in the step execution results.
+         Previous iterations are deleted together with their nested steps, and the Allure report shows the number of collapsed iterations in the loop step name.
+         The option can be changed while a scenario is running.
+
       * **soundnotificationwhenscriptends**:
          If this option is enabled, the following sound notification will be issued at the end of the script execution:
                  1. Scripts completed successfully.
