@@ -1163,6 +1163,9 @@ A structure that will contain key and value pairs. This structure will be loaded
    * **MCPServerPort**:
       Determines the port on which the MCP server is started at automatic startup. If the port is not set or is invalid, port 9874 is used. The setting has no effect if an external plugin has installed its own MCP transport.
 
+   * **WriteMCPServiceDataToEventLog**:
+      Enables writing MCP service data to the event log. Events are written with the `VanessaAutomation.MCP.` prefix at the "Information" level. Disabled by default.
+
 ## Libraries
 
 *  Re-code library
