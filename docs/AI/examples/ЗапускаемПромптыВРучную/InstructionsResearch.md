@@ -11,6 +11,7 @@
 	- manage_command_interface
 	- manage_form_elements
 	- execute_form_actions
+	- get_active_form_element
 	- get_active_window_data
 	- get_window_list_testclient
 	- window_management
