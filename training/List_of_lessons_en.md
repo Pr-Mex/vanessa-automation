@@ -207,5 +207,6 @@
         - Get the steps by test client data. ![](mortarboard.png)[Запустить урок](КонтекстноеМенюРедактораПолучитьШагиПоДаннымКлиентаТестирования)
         - Move to the next error line. ![](mortarboard.png)[Запустить урок](КонтекстноеМенюРедактораПерейтиКСледующейСтрокеСОшибкой)
         - Monaco context menu. ![](mortarboard.png)[Запустить урок](КонтекстноеМенюРедактораКонтекстноеМенюMonaco)
+        - Tabs. ![](mortarboard.png)[Запустить урок](КонтекстноеМенюРедактораВкладки)
    1. Other.
         - Editor keyboard shortcuts. ![](mortarboard.png)[Запустить урок](ГорячиеКлавишиРедактора)
