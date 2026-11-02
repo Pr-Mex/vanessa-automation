@@ -85,14 +85,13 @@ A structure that will contain key and value pairs. This structure will be loaded
 *  System directories
 
       * **projectpath**:
-         The catalog with the tested project files, which are necessary for test execution.
+         Project directory: the base for relative paths and $workspaceRoot, project files, Allure TestOps export, and MCP tools. Can be filled automatically by the user settings loader.
 
       * **UseTemplateForNewFeature**:
          If a template is specified (in *.txt format), then a new script will be created from it
 
       * **instrpath**:
-         The catalog of Vanessa Automation data processor. This field must be filled on the standard installation.
-         When working with Vanessa Automation Single it is allowed to leave the field blank.
+         Vanessa Automation tools directory. Base for framework files (libraries, plugins, vendor). Usually filled automatically with the directory of the main VA data processor; may be empty for Vanessa Automation Single.
 
       * **TemporaryFilesDirectory**:
          The directory in which temporary script files will be created.
@@ -484,7 +483,10 @@ A structure that will contain key and value pairs. This structure will be loaded
    *  Main settings
 
          * **allurecreatereport**:
-            Create a scenario execution report in Allure format.
+            Create a scenario execution report in Allure format. The output directory is specified in the Allure settings.
+
+         * **MergeScenarioOutlineExamplesInAllure**:
+            Merge all examples of one scenario outline into a single test case with parameters in the Allure report. Works when the project directory is set and the feature file is inside it.
 
          * **setvariablevaluesinstepsallurereport**:
             If this option is enabled, then in the parameters of the steps in which the variables were used, the variable names will be replaced with their values.
@@ -834,7 +836,7 @@ A structure that will contain key and value pairs. This structure will be loaded
                Speech rate is specified as a fractional number in the range from 0.1 to 3.0.
 
             * **yandexttsquerytype**:
-               Determines how the audio files will be received: through the official API or through the free interface. The recommended value is via the official API.
+               Determines how the audio files will be received: through the official API or through the web interface without authorization. The recommended value is via the official API.
 
          *  Authorization
 
@@ -919,13 +921,10 @@ A structure that will contain key and value pairs. This structure will be loaded
    *  Audio cache
 
          * **cachettsfiles**:
-            Switchs on voice file cashing.
-            Makes video assembly process faster.
-            Reduces external voice generation servises usage.
-            Reduces voice generation costs.
+            Turns on caching of synthesized speech files on the local disk. Speeds up video assembly and reduces calls to speech synthesis services. When caching is enabled, the cache directory must be specified and exist.
 
          * **ttsfilescache**:
-            Voice cache files directory.
+            Directory for cached speech files. Must exist; subdirectories for voices and parameters are created automatically.
 
    *  Replacements dictionaries
 
@@ -961,7 +960,7 @@ A structure that will contain key and value pairs. This structure will be loaded
                Sets shots per second number for the recording.
 
             * **tempfolderforvideo**:
-               The directory for temporary files created on video recording and composing. The directory is cleared before each recording!
+               Working directory for intermediate files during video recording and assembly, and for voice generation. The directory is cleared before each video build — do not store important files there.
 
             * **cachevideo**:
                If the flag is set then when the step is running
@@ -991,17 +990,17 @@ A structure that will contain key and value pairs. This structure will be loaded
       *  Console commands
 
             * **ffmpegcomand**:
-               Video running and processing command. Also you can specify a full path to ffmpeg.exe file
+               Command for video processing. You can also specify the full path to ffmpeg.exe.
                Default: ffmpeg
 
             * **convertcomand**:
                The field describes how the Convert command will be invoked.
-               For ImageMagick 7, just specify "magick convert."
+               For ImageMagick 7, specify the value magick convert (without quotes).
                For older versions, you need to specify the path to the executable convert.exe file in the directory with the ImageMagick program.
                Example:
-               "C:\Program Files\ImageMagick-X.X.X-Q16\convert.exe"
+               C:\Program Files\ImageMagick-X.X.X-Q16\convert.exe
                Download: https://imagemagick.org/script/download.php
-               For versions earlier than 7 during the installation, the following item is required for installation: Install legacy utilities (e. G. Convert)
+               For versions earlier than 7 during the installation, the following item is required for installation: Install legacy utilities (e.g. convert)
                https://imagemagick.org/script/download.php
 
          * **comandrecvideo**:
@@ -1060,13 +1059,13 @@ A structure that will contain key and value pairs. This structure will be loaded
             Switches of video snippets scaling by time.
 
          * **turnofffeaturetitleslide**:
-            Switches off creating of video initial slide with feature file header.
+            Disables the intro slide with the feature header (text from the feature file header). It can also be disabled with the #[autodoc.ignore.featureslide] marker.
 
          * **turnoffscenarioslide**:
-            Switches off creating of video initial slide with scenario header.
+            Disables the video slide with the scenario title. It can also be disabled with the #[autodoc.ignore.scenarioslide] marker.
 
          * **turnofffinalslide**:
-            Switches off creating of video final slide with video total information.
+            Disables the final video slide with summary information (number of scenarios and steps, VA and build script versions, link). It can also be disabled with the #[autodoc.ignore.finalslide] marker.
 
          * **highlightmouseclicks**:
             Switches on mouse clicks highlighting. Project utility UIToolsFor1C is used.
@@ -1173,10 +1172,10 @@ A structure that will contain key and value pairs. This structure will be loaded
 *  Re-code library
 
       * **librarycatalogs**:
-         List of directories that contain epf files containing script steps and feature files containing export scripts.
+         List of directories containing epf files with scenario steps and feature files with export scenarios.
 
       * **stepsfrommetadata**:
-         The list contains paths to forms within the configuration containing step descriptions.
+         List of full names of configuration forms from which step descriptions are loaded.
 
 ## Test clients
 

@@ -194,9 +194,9 @@
 	|'1c win ctrl group'|
 	|'1c win ctrl group'|
 	|'Tools directory'|
-	|'The catalog of Vanessa Automation data processor. This field must be filled on the standard installation.'|
+	|'Vanessa Automation tools directory. Base for framework files (libraries, plugins, vendor). Usually filled automatically with the directory of the main VA data processor; may be empty for Vanessa Automation Single.'|
 	|'Project directory'|
-	|'The catalog with the tested project files, which are necessary for test execution.'|
+	|'Project directory: the base for relative paths and $workspaceRoot, project files, Allure TestOps export, and MCP tools. Can be filled automatically by the user settings loader.'|
 	|'Load features upon opening VA'|
 	|'Load'|
 	|'Load and run'|
@@ -297,7 +297,7 @@
 	|'Reports page'|
 	|'Allure'|
 	|'Create data for Allure report'|
-	|'Create a scenario execution report in Allure format.'|
+	|'Create a scenario execution report in Allure format. The output directory is specified in the Allure settings.'|
 	|'Allure settings'|
 	|'Allure report directory'|
 	|'Temporary directory for Allure results'|
@@ -374,7 +374,7 @@
 	|'Video tutorials directory'|
 	|'Directory where will be placed result of assembly videos or animated screencast.'|
 	|'Project directory'|
-	|'Test project files directory.'|
+	|'Project directory: the base for relative paths and $workspaceRoot, project files, Allure TestOps export, and MCP tools. Can be filled automatically by the user settings loader.'|
 	|'Video tutorial type'|
 	|'Create a video tutorial.'|
 	|'Create animated HTML screencast.'|
@@ -407,8 +407,8 @@
 	|'Comand to start video recording'|
 	|'Command to start VLC for screen recording. You can specify bitrate and other parameters.'|
 	|'Temporary files directory'|
-	|'Directory where files will be saved at the time of compile video instructions.'|
-	|'The directory for temporary files created on video recording and composing. The directory is cleared before each recording!'|
+	|'Working directory for intermediate files during video recording and assembly, and for voice generation. The directory is cleared before each video build — do not store important files there.'|
+	|'Working directory for intermediate files during video recording and assembly, and for voice generation. The directory is cleared before each video build — do not store important files there.'|
 	|'ffmpeg command'|
 	|'Convert command'|
 	//|'Path to executed file convert.exe in ImageMagick directory.'|
@@ -468,8 +468,8 @@
 	|'What to say'|
 	|'Generates mp3 file with the specified text and runs it in the default player.'|
 	|'Audio cache'|
-	|'Switchs on voice file cashing.'|
-	|'Voice cache files directory.'|
+	|'Turns on caching of synthesized speech files on the local disk. Speeds up video assembly and reduces calls to speech synthesis services. When caching is enabled, the cache directory must be specified and exist.'|
+	|'Directory for cached speech files. Must exist; subdirectories for voices and parameters are created automatically.'|
 	|'Replacements dictionaries'|
 	|'Substitution dictionaries'|
 	|'More'|
@@ -486,9 +486,9 @@
 	|'Hides service console windows used for video assembly.'|
 	|'Switches of video snippets scaling by time.'|
 	|'Video settings extra right'|
-	|'Switches off creating of video initial slide with feature file header.'|
-	|'Switches off creating of video initial slide with scenario header.'|
-	|'Switches off creating of video final slide with video total information.'|
+	|'Disables the intro slide with the feature header (text from the feature file header). It can also be disabled with the #[autodoc.ignore.featureslide] marker.'|
+	|'Disables the video slide with the scenario title. It can also be disabled with the #[autodoc.ignore.scenarioslide] marker.'|
+	|'Disables the final video slide with summary information (number of scenarios and steps, VA and build script versions, link). It can also be disabled with the #[autodoc.ignore.finalslide] marker.'|
 	|'Move mouse to active control'|
 	|'Show active form controls'|
 	|'Group slides settings'|

@@ -1146,12 +1146,16 @@
 					<EditFormat/>
 					<ToolTip>
 						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Формировать отчет о выполнении сценариев в формате Allure. Каталог выгрузки задается в настройках Allure.</v8:content>
+						</v8:item>
+						<v8:item>
 							<v8:lang>en</v8:lang>
-							<v8:content>Create a scenario execution report in Allure format.</v8:content>
+							<v8:content>Create a scenario execution report in Allure format. The output directory is specified in the Allure settings.</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>sv</v8:lang>
-							<v8:content>Skapa en scenariokörningsrapport i Allure-format.</v8:content>
+							<v8:content>Skapa en rapport över scenariokörningens resultat i Allure-format. Utdatakatalogen anges i Allure-inställningarna.</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
@@ -1185,7 +1189,7 @@
 						</v8:item>
 						<v8:item>
 							<v8:lang>sv</v8:lang>
-							<v8:content>Slå ihop scenariooutline-exempel i Allure</v8:content>
+							<v8:content>Slå ihop scenariomall-exempel i Allure</v8:content>
 						</v8:item>
 					</Synonym>
 					<Comment/>
@@ -1198,15 +1202,15 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Объединять все примеры одной структуры сценария в один тест-кейс при выгрузке отчета в формате Allure.</v8:content>
+							<v8:content>Объединять все примеры одной структуры сценария в один тест-кейс с параметрами при выгрузке отчета Allure. Работает, если заполнен Каталог проекта и feature-файл находится внутри него.</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>en</v8:lang>
-							<v8:content>Merge all examples of one scenario outline into a single test case in the Allure report.</v8:content>
+							<v8:content>Merge all examples of one scenario outline into a single test case with parameters in the Allure report. Works when the project directory is set and the feature file is inside it.</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>sv</v8:lang>
-							<v8:content>Slå ihop alla exempel från en scenariooutline till ett testfall i Allure-rapporten.</v8:content>
+							<v8:content>Slå ihop alla exempel från en scenariomall till ett testfall med parametrar i Allure-rapporten. Fungerar när projektkatalogen är angiven och feature-filen ligger i den.</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
@@ -2205,22 +2209,28 @@
 							<v8:lang>ru</v8:lang>
 							<v8:content>Голос синтезированной речи.
 
-- женские голоса: alyss, jane, oksana и omazh;
-- мужские голоса: zahar и ermil.</v8:content>
+- женские голоса: alyss, jane, oksana, omazh, alena;
+- мужские голоса: zahar, ermil, filipp.
+
+По умолчанию: oksana.</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>en</v8:lang>
 							<v8:content>Synthesized speech voice.
 
-- Female voices: Alyss, Jane, Oksana and Omazh.
-- Male voices: Zahar и Ermil.</v8:content>
+- Female voices: alyss, jane, oksana, omazh, alena.
+- Male voices: zahar, ermil, filipp.
+
+Default: oksana.</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>sv</v8:lang>
 							<v8:content>Syntetiserad talröst.
 
-- Kvinnliga röster: Alyss, Jane, Oksana och Omazh.
-- Manliga röster: Zahar och Ermil.</v8:content>
+- Kvinnliga röster: alyss, jane, oksana, omazh, alena.
+- Manliga röster: zahar, ermil, filipp.
+
+Standard: oksana.</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
@@ -2368,7 +2378,29 @@
 
 - good — радостный, доброжелательный;
 - evil — раздраженный;
-- neutral — нейтральный.</v8:content>
+- neutral — нейтральный.
+
+По умолчанию: good.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Emotional tone of the voice.
+
+- good — joyful, friendly;
+- evil — irritated;
+- neutral — neutral.
+
+Default: good.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Känslouttryck i rösten.
+
+- good — glad, vänlig;
+- evil — irriterad;
+- neutral — neutral.
+
+Standard: good.</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
@@ -2471,8 +2503,23 @@
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Вариант запроса:
-- через API (требует токен)
-- через веб-интерфейс (не требует регистрации и токена)</v8:content>
+
+- API — официальный API Yandex SpeechKit; требует авторизации (OAuth-токен или API-ключ);
+- Веб-интерфейс — без авторизации.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Request option:
+
+- API — official Yandex SpeechKit API; requires authorization (OAuth token or API key);
+- Web interface — no authorization required.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Begäransalternativ:
+
+- API — officiellt API för Yandex SpeechKit; kräver autentisering (OAuth-token eller API-nyckel);
+- Webbgränssnitt — ingen autentisering krävs.</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
@@ -2969,7 +3016,30 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Программный инструмент для записи видео</v8:content>
+							<v8:content>Инструмент записи видео:
+
+- FFmpeg — запись через внешнюю компоненту VanessaExt (рекомендуется);
+- VLC media player — запись через VLC.
+
+По умолчанию: FFmpeg.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Video recording tool:
+
+- FFmpeg — recording via the VanessaExt add-in (recommended);
+- VLC media player — recording via VLC.
+
+Default: FFmpeg.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Verktyg för videoinspelning:
+
+- FFmpeg — inspelning via VanessaExt-tillägget (rekommenderas);
+- VLC media player — inspelning via VLC.
+
+Standard: FFmpeg.</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
@@ -3020,15 +3090,15 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Каталог в которой будут сохранены файлы на время формирования видеоинструкций.</v8:content>
+							<v8:content>Рабочий каталог для промежуточных файлов при записи и сборке видео, а также при генерации озвучки. Каталог очищается перед каждой сборкой видео — не храните в нём нужные файлы.</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>en</v8:lang>
-							<v8:content>The directory where files will be stored during video tutorials generation.</v8:content>
+							<v8:content>Working directory for intermediate files during video recording and assembly, and for voice generation. The directory is cleared before each video build — do not store important files there.</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>sv</v8:lang>
-							<v8:content>Katalogen där filer lagras under generering av videohandledningar.</v8:content>
+							<v8:content>Arbetskatalog för mellanfiler vid videoinspelning och montering samt vid röstgenerering. Katalogen rensas före varje videobygge — lagra inte viktiga filer där.</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
@@ -3172,7 +3242,15 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Расширенная подсказка</v8:content>
+							<v8:content>Команда Convert из ImageMagick для создания изображений для слайдов и текстовых видеовставок. Для ImageMagick 7 используется значение magick convert (без кавычек). Для старых версий: полный путь к convert.exe.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>ImageMagick Convert command used to create images for slides and text video inserts. For ImageMagick 7, use the value magick convert (without quotes). For older versions: the full path to convert.exe.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>ImageMagick-kommandot Convert som används för att skapa bilder för slides och textvideoklipp. För ImageMagick 7 används värdet magick convert (utan citattecken). För äldre versioner: full sökväg till convert.exe.</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
@@ -3223,19 +3301,19 @@
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Команда для работы и обработки видео. Также допускается указание полного пути к файлу ffmpeg.exe
+							<v8:content>Команда для обработки видео. Также можно указать полный путь к ffmpeg.exe.
 
 По умолчанию: ffmpeg</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>en</v8:lang>
-							<v8:content>Video running and processing command. Also you can specify a full path to ffmpeg.exe file   
+							<v8:content>Command for video processing. You can also specify the full path to ffmpeg.exe.
 
 Default: ffmpeg</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>sv</v8:lang>
-							<v8:content>Kommando för videokörning och bearbetning. Du kan även ange en fullständig sökväg till ffmpeg.exe   
+							<v8:content>Kommando för videobearbetning. Du kan även ange den fullständiga sökvägen till ffmpeg.exe.
 
 Standard: ffmpeg</v8:content>
 						</v8:item>
@@ -3418,7 +3496,15 @@ Standard: ffmpeg</v8:content>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Признак кеширования озвучивания в файлах на локальном диске.</v8:content>
+							<v8:content>Включает кэширование файлов синтезированной речи на локальном диске. Ускоряет сборку видео и снижает число обращений к сервисам синтеза речи. При включённом кэшировании каталог кэша должен быть заполнен и существовать.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Turns on caching of synthesized speech files on the local disk. Speeds up video assembly and reduces calls to speech synthesis services. When caching is enabled, the cache directory must be specified and exist.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Aktiverar cachning av syntetiserade röstfiler på den lokala disken. Snabbar upp videomonteringen och minskar antalet anrop till taltjänster. När cachning är aktiverad måste cachekatalogen vara angiven och finnas.</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
@@ -3469,7 +3555,15 @@ Standard: ffmpeg</v8:content>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Путь к каталогу кеширования озвучивания.</v8:content>
+							<v8:content>Каталог для хранения кэша файлов синтезированной речи. Должен существовать; подкаталоги по голосам и параметрам создаются автоматически.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Directory for cached speech files. Must exist; subdirectories for voices and parameters are created automatically.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Katalog för cachade röstfiler. Måste finnas; underkataloger för röster och parametrar skapas automatiskt.</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
@@ -3558,15 +3652,15 @@ Standard: ffmpeg</v8:content>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Отключает слайд видеоинструкции в начале видео с информацией из блока "Функционал" файла фичи</v8:content>
+							<v8:content>Отключает начальный слайд видео с заголовком фичи (текстом из заголовочной части feature-файла). Также отключается маркером #[autodoc.ignore.featureslide].</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>en</v8:lang>
-							<v8:content>Disables video tutorial slide at the beginning of the video with information from the "Functionality" block of feature file</v8:content>
+							<v8:content>Disables the intro slide with the feature header (text from the feature file header). It can also be disabled with the #[autodoc.ignore.featureslide] marker.</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>sv</v8:lang>
-							<v8:content>Inaktiverar videoinstruktionsbilden i början av videon med information från "Funktionalitet"-blocket i feature-filen</v8:content>
+							<v8:content>Inaktiverar startbilden med feature-rubriken (text från feature-filens rubrikdel). Den kan även stängas av med markören #[autodoc.ignore.featureslide].</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
@@ -3613,15 +3707,15 @@ Standard: ffmpeg</v8:content>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Отключает слайд видеоинструкции с информацией о заголовке сценария</v8:content>
+							<v8:content>Отключает слайд видео с названием сценария. Также отключается маркером #[autodoc.ignore.scenarioslide].</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>en</v8:lang>
-							<v8:content>Disables the video tutorial slide with scenario title details</v8:content>
+							<v8:content>Disables the video slide with the scenario title. It can also be disabled with the #[autodoc.ignore.scenarioslide] marker.</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>sv</v8:lang>
-							<v8:content>Inaktiverar videoinstruktionsbilden med scenariotiteldetaljer</v8:content>
+							<v8:content>Inaktiverar videobilden med scenariots rubrik. Den kan även stängas av med markören #[autodoc.ignore.scenarioslide].</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
@@ -3668,15 +3762,15 @@ Standard: ffmpeg</v8:content>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Отключает слайд видеоинструкции в конце видео с инфорамцией по сборке сценария</v8:content>
+							<v8:content>Отключает финальный слайд видео с итоговой информацией (количество сценариев и шагов, версии VA и скрипта сборки, ссылка). Также отключается маркером #[autodoc.ignore.finalslide].</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>en</v8:lang>
-							<v8:content>Disables video tutorial slide at the end of the video with information about scenario build</v8:content>
+							<v8:content>Disables the final video slide with summary information (number of scenarios and steps, VA and build script versions, link). It can also be disabled with the #[autodoc.ignore.finalslide] marker.</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>sv</v8:lang>
-							<v8:content>Inaktiverar videoinstruktionsbilden i slutet av videon med information om scenariobygge</v8:content>
+							<v8:content>Inaktiverar videons slutbild med sammanfattande information (antal scenarier och steg, versioner av VA och byggskriptet, länk). Den kan även stängas av med markören #[autodoc.ignore.finalslide].</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
@@ -6198,15 +6292,15 @@ Standard: ffmpeg</v8:content>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Каталог с файлами библиотек.</v8:content>
+							<v8:content>Список каталогов, в которых находятся epf-файлы с шагами сценариев и feature-файлы с экспортными сценариями.</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>en</v8:lang>
-							<v8:content>Library files directory</v8:content>
+							<v8:content>List of directories containing epf files with scenario steps and feature files with export scenarios.</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>sv</v8:lang>
-							<v8:content>Katalog för biblioteksfiler</v8:content>
+							<v8:content>Lista över kataloger som innehåller epf-filer med scenariosteg och feature-filer med exporterscenarier.</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
@@ -6261,15 +6355,15 @@ Standard: ffmpeg</v8:content>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Каталог относительно которого будет строиться путь к дополнительным файлам фреймворка. По умолчанию является каталогом содержащим основную обработку VA.</v8:content>
+							<v8:content>Каталог инструментов Vanessa Automation. База для путей к дополнительным файлам фреймворка (библиотеки, плагины, vendor). Обычно заполняется автоматически каталогом основной обработки VA; для Vanessa Automation Single может быть пустым.</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>en</v8:lang>
-							<v8:content>Root directory for additional framework files. By default, it is a directory for the main VA data processor.</v8:content>
+							<v8:content>Vanessa Automation tools directory. Base for framework files (libraries, plugins, vendor). Usually filled automatically with the directory of the main VA data processor; may be empty for Vanessa Automation Single.</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>sv</v8:lang>
-							<v8:content>Rotkatalog för ytterligare ramverksfiler. Som standard är det katalogen för huvudbehandlingen VA.</v8:content>
+							<v8:content>Katalog för Vanessa Automations verktyg. Bas för ramverksfiler (bibliotek, plugin, vendor). Fylls vanligtvis i automatiskt med katalogen för huvudbearbetningen Vanessa Automation; kan vara tom för Vanessa Automation Single.</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
@@ -6530,7 +6624,15 @@ Standard: ffmpeg</v8:content>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Универсальный каталог с дополнительными файлами для проекта. Проектом по умолчанию выступает конфигурация для которой разрабатываются тесты.</v8:content>
+							<v8:content>Каталог проекта: база для относительных путей и $workspaceRoot, файлов проекта, выгрузки Allure TestOps и MCP-инструментов. Может заполняться автоматически загрузчиком пользовательских настроек.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Project directory: the base for relative paths and $workspaceRoot, project files, Allure TestOps export, and MCP tools. Can be filled automatically by the user settings loader.</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Projektkatalog: bas för relativa sökvägar och $workspaceRoot, projektfiler, Allure TestOps-export och MCP-verktyg. Kan fyllas i automatiskt av laddaren för användarinställningar.</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
@@ -6999,15 +7101,15 @@ Standard: ffmpeg</v8:content>
 					<ToolTip>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Метаданные библиотек</v8:content>
+							<v8:content>Список полных имён форм конфигурации, из которых загружаются описания шагов.</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>en</v8:lang>
-							<v8:content>Library metadata</v8:content>
+							<v8:content>List of full names of configuration forms from which step descriptions are loaded.</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>sv</v8:lang>
-							<v8:content>Biblioteksmetadata</v8:content>
+							<v8:content>Lista över fullständiga namn på konfigurationsformulär som stegbeskrivningar läses från.</v8:content>
 						</v8:item>
 					</ToolTip>
 					<MarkNegatives>false</MarkNegatives>
