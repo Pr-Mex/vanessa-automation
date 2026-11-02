@@ -1168,6 +1168,32 @@ Procedure IRefillConstantByValueAtServer(ConstantName, ConstantValue)
 	Constants[ConstantName].Set(FilledValue[ConstantName]);
 EndProcedure
 
+&НаКлиенте
+Процедура ЯПерезаполняюПараметрСеансаЗначением(Знач ИмяПараметраСеанса, Знач ЗначениеПараметраСеанса) Экспорт
+	ПерезаполнитьПараметрСеансаЗначениемНаСервере(ИмяПараметраСеанса, ЗначениеПараметраСеанса);
+КонецПроцедуры
+
+&НаСервере
+Процедура ПерезаполнитьПараметрСеансаЗначениемНаСервере(ИмяПараметраСеанса, ЗначениеПараметраСеанса)
+	Если Метаданные.ПараметрыСеанса.Найти(ИмяПараметраСеанса) = Неопределено Тогда
+		ТекстСообщения = НСтр("ru = 'Параметр сеанса <%1> не найден в конфигурации.'");
+		ТекстСообщения = СтрЗаменить(ТекстСообщения, "%1", ИмяПараметраСеанса);
+		ВызватьИсключение ТекстСообщения;
+	КонецЕсли;
+	
+	ДанныеПараметра = Новый Структура;
+	ДанныеПараметра.Вставить("Name", ИмяПараметраСеанса);
+	ДанныеПараметра.Вставить("ValueType", Метаданные.ПараметрыСеанса[ИмяПараметраСеанса].Тип);
+	ДанныеПараметра.Вставить(ИмяПараметраСеанса, ЗначениеПараметраСеанса);
+	
+	ЗаполненноеЗначение = Новый Структура;
+	ЗаполненноеЗначение.Вставить(ИмяПараметраСеанса, ПараметрыСеанса[ИмяПараметраСеанса]);
+	
+	FillTipicalObjectAttributesByValues(ЗаполненноеЗначение, ДанныеПараметра, ДанныеПараметра);
+	ПараметрыСеанса[ИмяПараметраСеанса] = ЗаполненноеЗначение[ИмяПараметраСеанса];
+	ОбновитьПовторноИспользуемыеЗначения();
+КонецПроцедуры
+
 // Executes feature generation and switches to the Feature tab
 // This exported procedure is used to programmatically trigger feature generation
 // from external forms (e.g., Smoke Test Generator) after opening this form.
@@ -2357,6 +2383,12 @@ Procedure AddStepsByLanguage(Vanessa, AllTests, LangCode)
 										, LocalizedStringsClient()["s10f_" + LangCode]
 										, "");
 	Vanessa.ДобавитьШагВМассивТестов(AllTests
+										, LocalizedStringsClient()["s21a_" + LangCode]
+										, LocalizedStringsClient()["s21b_" + LangCode]
+										, StrTemplate(СтрокаСценарияПараметраСеанса(LangCode), LocalizedStringsClient()["s21d_" + LangCode], LocalizedStringsClient()["s21g_" + LangCode])
+										, LocalizedStringsClient()["s21f_" + LangCode]
+										, "");
+	Vanessa.ДобавитьШагВМассивТестов(AllTests
 										, LocalizedStringsClient()["s12a_" + LangCode]
 										, LocalizedStringsClient()["s12b_" + LangCode]
 										, StrTemplate(LocalizedStringsClient()["s12c_" + LangCode], LocalizedStringsClient()["s12d_" + LangCode], "", "")
@@ -2878,6 +2910,12 @@ Function ScenarioConstantActionString(LangCode)
 	ReturnValue = LocalizedStringsServer()["s10c_" + LangCode];
 	Return ReturnValue;
 EndFunction
+
+&НаСервере
+Функция СтрокаСценарияПараметраСеанса(LangCode)
+	ВозвращаемоеЗначение = LocalizedStringsServer()["s21c_" + LangCode];
+	Возврат ВозвращаемоеЗначение;
+КонецФункции
 
 #EndRegion
 
@@ -3624,6 +3662,19 @@ Function LocalizedStringsServer()
 	ReturnData.Insert("s20e_ru", "Сценарий: Создание объектов для бизнес-процесса %1 с ОбменДанными.Загрузка = Истина");
 	ReturnData.Insert("s20f_en", "Creates business process objectss with DataExchange.Load = True");
 	ReturnData.Insert("s20f_ru", "Создаёт объекты бизнес-процесса с ОбменДанными.Загрузка = Истина");
+	
+	ReturnData.Insert("s21a_en", "ЯПерезаполняюПараметрСеансаЗначением(ИмяПараметраСеанса, ЗначениеПараметраСеанса)");
+	ReturnData.Insert("s21a_ru", "ЯПерезаполняюПараметрСеансаЗначением(ИмяПараметраСеанса, ЗначениеПараметраСеанса)");
+	ReturnData.Insert("s21b_en", "ЯПерезаполняюПараметрСеансаЗначением");
+	ReturnData.Insert("s21b_ru", "ЯПерезаполняюПараметрСеансаЗначением");
+	ReturnData.Insert("s21c_en", "И я перезаполняю параметр сеанса %1 значением ""%2""");
+	ReturnData.Insert("s21c_ru", "И я перезаполняю параметр сеанса %1 значением ""%2""");
+	ReturnData.Insert("s21d_en", """ИмяПараметраСеанса""");
+	ReturnData.Insert("s21d_ru", """ИмяПараметраСеанса""");
+	ReturnData.Insert("s21f_en", "Перезаполняет параметр сеанса");
+	ReturnData.Insert("s21f_ru", "Перезаполняет параметр сеанса");
+	ReturnData.Insert("s21g_en", "Значение");
+	ReturnData.Insert("s21g_ru", "Значение");
 	
 	Return ReturnData;
 EndFunction
