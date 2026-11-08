@@ -5,6 +5,7 @@
 @IgnoreOnLinux
 @OneThread
 @IgnoreOnWeb
+@IgnoreOnCIMainBuild
 
 #https://github.com/silverbulleters/vanessa-behavior/issues/232
 

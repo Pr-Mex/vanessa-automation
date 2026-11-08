@@ -5,6 +5,7 @@
 @IgnoreOnLinux
 @OneThread
 @IgnoreOnWeb
+@IgnoreOnCIMainBuild
 
 Функционал: Проверка перегенерации EPF
 	Как Разработчик

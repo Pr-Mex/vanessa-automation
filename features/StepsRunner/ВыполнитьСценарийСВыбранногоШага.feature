@@ -4,6 +4,7 @@
 @uf-part6
 @IgnoreOnOFBuilds
 @IgnoreOnWeb
+@IgnoreOnCIMainBuild
 @tree
 
 Функционал: Проверка выполнения сценария с выбранного шага

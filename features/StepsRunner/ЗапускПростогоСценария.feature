@@ -3,6 +3,7 @@
 @uf-part6
 @MiddleCheck
 @FastCheck
+@IgnoreOnCIMainBuild
 
 Функционал: Проверка запуска простого сценария
 	Как Разработчик

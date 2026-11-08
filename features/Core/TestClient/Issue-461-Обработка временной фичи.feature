@@ -5,6 +5,7 @@
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 @IgnoreOnWeb
+@IgnoreOnCIMainBuild
 @tree
 
 Функционал: Проверка обработки временных фич

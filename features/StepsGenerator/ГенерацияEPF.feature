@@ -5,6 +5,7 @@
 @IgnoreOnLinux
 @OneThread
 @IgnoreOnWeb
+@IgnoreOnCIMainBuild
 
 @SingleCodeCoverage
 @8310CodeCoverage

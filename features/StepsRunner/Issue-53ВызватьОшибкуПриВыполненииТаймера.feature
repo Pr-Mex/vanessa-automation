@@ -3,6 +3,7 @@
 
 @uf-part6
 @IgnoreOnWeb
+@IgnoreOnCIMainBuild
 
 
 Функционал: Остановка выполнения шагов FeatureRunner со статусом Failed

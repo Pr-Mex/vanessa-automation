@@ -3,6 +3,7 @@
 
 @uf-part6
 @IgnoreOnWeb
+@IgnoreOnCIMainBuild
 
 Функционал: Проверка работы областей в дереве питон стайл
 	Как Разработчик

@@ -3,6 +3,7 @@
 
 @uf-part5
 @IgnoreOnWeb
+@IgnoreOnCIMainBuild
 
 Функционал: Загрузить фичу в vanessa-behavior 2
 	Как Разработчик

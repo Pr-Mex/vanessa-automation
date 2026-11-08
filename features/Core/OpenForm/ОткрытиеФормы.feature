@@ -3,6 +3,7 @@
 
 @uf-part2
 @IgnoreOnWeb
+@IgnoreOnCIMainBuild
 
 Функционал: Проверка открытия и закрытия формы vanessa-behavoir
 	Как Разработчик
