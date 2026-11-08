@@ -1,6 +1,7 @@
 # language: ru
 # encoding: utf-8
 
+@uf-part2
 @mcp
 @mcp-noclient
 @IgnoreOnWeb
