@@ -58,6 +58,9 @@
 * Now the table columns are aligned by width.
 		И Я делаю подсветку текста в редакторе VA в режиме обучения с 15 по 16 строку 'The table markup is aligned' подсценарий
 
+* Next to it there is a command that formats the whole feature: indentation, trailing spaces and Gherkin tables.
+		И Я делаю подсветку элемента формы VA по имени "VanessaEditorФорматироватьФичу" "Format feature file"
+
 * That's it, move on to the next lesson of the interactive help.
 
 
