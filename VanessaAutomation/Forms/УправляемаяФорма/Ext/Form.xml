@@ -36868,6 +36868,7 @@ Om alternativet är aktiverat visas två kolumner, annars visas skillnaderna i f
 																	<v8:content>Vanessa-redigerarinställningssida femte raden höger kolumn</v8:content>
 																</v8:item>
 															</Title>
+															<Group>Vertical</Group>
 															<Representation>None</Representation>
 															<ShowTitle>false</ShowTitle>
 															<ExtendedTooltip name="СтраницаНастройкиVanessaEditorПятаяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="3587"/>
@@ -36998,6 +36999,87 @@ Om alternativet är aktiverat visas två kolumner, annars visas skillnaderna i f
 																	<Events>
 																		<Event name="OnChange">ТемаРедактораVanessaEditorПриИзменении</Event>
 																	</Events>
+																</InputField>
+																<InputField name="СимволКомментарияСценария" id="4586">
+																	<DataPath>Объект.СимволКомментарияСценария</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Символ комментария сценария</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Scenario comment symbol</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>sv</v8:lang>
+																			<v8:content>Kommentarsymbol för scenariot</v8:content>
+																		</v8:item>
+																	</Title>
+																	<TitleLocation>Top</TitleLocation>
+																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																	<ListChoiceMode>true</ListChoiceMode>
+																	<ChoiceList>
+																		<xr:Item>
+																			<xr:Presentation/>
+																			<xr:CheckState>0</xr:CheckState>
+																			<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																				<Presentation>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>//</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>//</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>sv</v8:lang>
+																						<v8:content>//</v8:content>
+																					</v8:item>
+																				</Presentation>
+																				<Value xsi:type="xs:string">//</Value>
+																			</xr:Value>
+																		</xr:Item>
+																		<xr:Item>
+																			<xr:Presentation/>
+																			<xr:CheckState>0</xr:CheckState>
+																			<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																				<Presentation>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>#</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>#</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>sv</v8:lang>
+																						<v8:content>#</v8:content>
+																					</v8:item>
+																				</Presentation>
+																				<Value xsi:type="xs:string">#</Value>
+																			</xr:Value>
+																		</xr:Item>
+																	</ChoiceList>
+																	<ContextMenu name="СимволКомментарияСценарияКонтекстноеМеню" id="4588"/>
+																	<ExtendedTooltip name="СимволКомментарияСценарияРасширеннаяПодсказка" id="4587">
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Символ, которым команда "Комментарий строки сценария" комментирует выделенные строки. При снятии комментария распознаются оба символа: // и #.</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>The character sequence used to comment the selected scenario lines. When removing a comment, both // and # are recognized.</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>sv</v8:lang>
+																				<v8:content>Teckensekvensen som kommenterar de markerade raderna i scenariot. Vid borttagning av kommentaren känns både // och # igen.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
 																</InputField>
 															</ChildItems>
 														</UsualGroup>

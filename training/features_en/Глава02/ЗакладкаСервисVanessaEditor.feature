@@ -27,6 +27,7 @@
 			| 'ПоказыватьЗначенияПеременныхВСтрокахРедактора' |
 			| 'ОтображениеТабуляцииИПробелов'                 |
 			| 'ТемаРедактораVanessaEditor'                    |
+			| 'СимволКомментарияСценария'                     |
 			| 'НастройкаВидимостиКнопокПанелиРедактора'       |
 			| 'VanessaEditorНастройкиРедактора'               |
 	
@@ -85,6 +86,11 @@
 		И я делаю подсветку нескольких элементов VA с их заголовком "Editor theme" UI Automation
 			| 'Name'                        |
 			| 'ТемаРедактораVanessaEditor' |
+
+* This field allows to select the symbol used to comment scenario lines: "//" or "#". The default is "//".
+		И я делаю подсветку нескольких элементов VA с их заголовком "Scenario comment symbol" UI Automation
+			| 'Name'                      |
+			| 'СимволКомментарияСценария' |
 
 * This hyperlink allows to adjust the visibility of the buttons on the editor command panel.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Visibility of command panel buttons" UI Automation
