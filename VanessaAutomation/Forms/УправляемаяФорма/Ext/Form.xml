@@ -1964,6 +1964,30 @@
 								</Picture>
 								<ExtendedTooltip name="VanessaEditorПоказатьСкрытьДеревоКаталоговРасширеннаяПодсказка" id="2611"/>
 							</Button>
+							<Button name="ПанельVanessaEditorНайтиФичуВДеревеКаталогов" id="4592">
+								<Type>CommandBarButton</Type>
+								<Representation>Picture</Representation>
+								<CommandName>Form.Command.НайтиФичуВДеревеКаталогов</CommandName>
+								<Picture>
+									<xr:Abs>Picture.png</xr:Abs>
+									<xr:LoadTransparent>false</xr:LoadTransparent>
+								</Picture>
+								<Title>
+									<v8:item>
+										<v8:lang>ru</v8:lang>
+										<v8:content>Найти фичу в дереве каталогов</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>en</v8:lang>
+										<v8:content>Find feature in directory tree</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>sv</v8:lang>
+										<v8:content>Hitta feature-fil i filträd</v8:content>
+									</v8:item>
+								</Title>
+								<ExtendedTooltip name="ПанельVanessaEditorНайтиФичуВДеревеКаталоговРасширеннаяПодсказка" id="4593"/>
+							</Button>
 							<Button name="VanessaEditorПоказатьСкрытьДеревоGit" id="2796">
 								<Type>CommandBarButton</Type>
 								<CommandName>Form.Command.VanessaEditorПоказатьСкрытьДеревоGit</CommandName>
@@ -3924,7 +3948,7 @@
 								</Title>
 									<ExtendedTooltip name="VanessaEditorВыровнятьТаблицыGherkinРасширеннаяПодсказка" id="4146"/>
 								</Button>
-								<Button name="VanessaEditorФорматироватьФичу" id="4586">
+								<Button name="VanessaEditorФорматироватьФичу" id="4596">
 									<Type>CommandBarButton</Type>
 									<Representation>Picture</Representation>
 									<CommandName>Form.Command.ФорматироватьФичу</CommandName>
@@ -3946,7 +3970,7 @@
 											<v8:content>Formatera feature-fil</v8:content>
 										</v8:item>
 									</Title>
-									<ExtendedTooltip name="VanessaEditorФорматироватьФичуРасширеннаяПодсказка" id="4587"/>
+									<ExtendedTooltip name="VanessaEditorФорматироватьФичуРасширеннаяПодсказка" id="4597"/>
 								</Button>
 							</ChildItems>
 					</ButtonGroup>
@@ -7366,6 +7390,25 @@
 																						</Title>
 																						<ExtendedTooltip name="VanessaEditorКонтекстноеМенюОткрытьКаталогФичиРасширеннаяПодсказка" id="2489"/>
 																					</Button>
+																					<Button name="VanessaEditorКонтекстноеМенюНайтиФичуВДеревеКаталогов" id="4594">
+																						<Type>CommandBarButton</Type>
+																						<CommandName>Form.Command.НайтиФичуВДеревеКаталогов</CommandName>
+																						<Title>
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Найти фичу в дереве каталогов</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>Find feature in directory tree</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>sv</v8:lang>
+																								<v8:content>Hitta feature-fil i filträd</v8:content>
+																							</v8:item>
+																						</Title>
+																						<ExtendedTooltip name="VanessaEditorКонтекстноеМенюНайтиФичуВДеревеКаталоговРасширеннаяПодсказка" id="4595"/>
+																					</Button>
 																				</ChildItems>
 																			</ButtonGroup>
 																			<Popup name="ГруппаКонтекстногоМенюVanessaEditorВкладки" id="4559">
@@ -7772,7 +7815,7 @@
 																						</Title>
 																							<ExtendedTooltip name="VanessaEditorКонтекстноеМенюВыровнятьТаблицыGherkinРасширеннаяПодсказка" id="4148"/>
 																						</Button>
-																						<Button name="VanessaEditorКонтекстноеМенюФорматироватьФичу" id="4588">
+																						<Button name="VanessaEditorКонтекстноеМенюФорматироватьФичу" id="4598">
 																							<Type>CommandBarButton</Type>
 																							<CommandName>Form.Command.ФорматироватьФичу</CommandName>
 																							<Title>
@@ -7789,7 +7832,7 @@
 																									<v8:content>Formatera feature-fil</v8:content>
 																								</v8:item>
 																							</Title>
-																							<ExtendedTooltip name="VanessaEditorКонтекстноеМенюФорматироватьФичуРасширеннаяПодсказка" id="4589"/>
+																							<ExtendedTooltip name="VanessaEditorКонтекстноеМенюФорматироватьФичуРасширеннаяПодсказка" id="4599"/>
 																						</Button>
 																						<Button name="VanessaEditorКонтекстноеМенюПолучитьМакетПоТаблице" id="2510">
 																						<Type>CommandBarButton</Type>
@@ -52493,7 +52536,39 @@ Klicka på hyperlänken för mer detaljer.</v8:content>
 			</ToolTip>
 			<Action>ЗагрузитьПеременные</Action>
 		</Command>
-		<Command name="ФорматироватьФичу" id="199">
+		<Command name="НайтиФичуВДеревеКаталогов" id="199">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Найти фичу в дереве каталогов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Find feature in directory tree</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Hitta feature-fil i filträd</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Открыть дерево каталогов и перейти к фиче текущего шага</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Open the directory tree and go to the feature of the current step</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Öppna katalogträdet och gå till det aktuella stegets feature</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Shortcut>Ctrl+Shift+F7</Shortcut>
+			<Action>НайтиФичуВДеревеКаталогов</Action>
+		</Command>
+		<Command name="ФорматироватьФичу" id="200">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
