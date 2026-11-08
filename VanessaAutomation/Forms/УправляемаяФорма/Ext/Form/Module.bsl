@@ -46028,8 +46028,8 @@
 	Пункт.Вставить("PasswordMode", ПарольныйРежим);
 	Пункт.Вставить("InStructure", ВСтруктуре);
 
-	Классификация = MCPКлассификацияНастройкиНаСервере(Имя, Группа, ВСтруктуре, Тип);
-	Для Каждого КлючЗначение Из Классификация Цикл
+	MCPКлассификацияПункта = MCPКлассификацияНастройкиНаСервере(Имя, Группа, ВСтруктуре, Тип);
+	Для Каждого КлючЗначение Из MCPКлассификацияПункта Цикл
 		Пункт.Вставить(КлючЗначение.Ключ, КлючЗначение.Значение);
 	КонецЦикла;
 
@@ -46062,8 +46062,8 @@
 	Пункт.Вставить("PasswordMode", MCPПарольныйРежимРеквизитаНаСервере(Реквизит));
 	Пункт.Вставить("InStructure", Ложь);
 
-	Классификация = MCPКлассификацияНастройкиНаСервере(Имя, "", Ложь, Тип);
-	Для Каждого КлючЗначение Из Классификация Цикл
+	MCPКлассификацияПункта = MCPКлассификацияНастройкиНаСервере(Имя, "", Ложь, Тип);
+	Для Каждого КлючЗначение Из MCPКлассификацияПункта Цикл
 		Пункт.Вставить(КлючЗначение.Ключ, КлючЗначение.Значение);
 	КонецЦикла;
 
@@ -46075,83 +46075,85 @@
 Функция MCPКлассификацияНастройкиНаСервере(Имя, Группа, ВСтруктуре, Тип)
 
 	ИмяНРег = НРег(Имя);
-	Классификация = Новый Структура;
-	Классификация.Вставить("Kind", "setting");
-	Классификация.Вставить("Settable", Истина);
-	Классификация.Вставить("ApplySupported", Истина);
-	Классификация.Вставить("ReadOnlyReason", "");
-	Классификация.Вставить("Hint", "");
-	Классификация.Вставить("RequiresRestart", Ложь);
-	Классификация.Вставить("RequiresHandler", Ложь);
-	Классификация.Вставить("SideEffects", "");
-	Классификация.Вставить("Affects", "");
+	// Префикс MCP в имени обязателен: идентификатор модуля формы, совпадающий
+	// с реквизитом формы, разрешается в реквизит, а не в локальную переменную.
+	MCPКлассификацияПункта = Новый Структура;
+	MCPКлассификацияПункта.Вставить("Kind", "setting");
+	MCPКлассификацияПункта.Вставить("Settable", Истина);
+	MCPКлассификацияПункта.Вставить("ApplySupported", Истина);
+	MCPКлассификацияПункта.Вставить("ReadOnlyReason", "");
+	MCPКлассификацияПункта.Вставить("Hint", "");
+	MCPКлассификацияПункта.Вставить("RequiresRestart", Ложь);
+	MCPКлассификацияПункта.Вставить("RequiresHandler", Ложь);
+	MCPКлассификацияПункта.Вставить("SideEffects", "");
+	MCPКлассификацияПункта.Вставить("Affects", "");
 
 	Если ИмяНРег = "данныеаллюрметок" ИЛИ ИмяНРег = "настройкидругогодвижкаtts" Тогда
-		Классификация.Kind = "setting";
-		Классификация.Settable = Ложь;
-		Классификация.ApplySupported = Истина;
-		Классификация.ReadOnlyReason = "USE_APPLY";
-		Классификация.RequiresHandler = Истина;
+		MCPКлассификацияПункта.Kind = "setting";
+		MCPКлассификацияПункта.Settable = Ложь;
+		MCPКлассификацияПункта.ApplySupported = Истина;
+		MCPКлассификацияПункта.ReadOnlyReason = "USE_APPLY";
+		MCPКлассификацияПункта.RequiresHandler = Истина;
 	ИначеЕсли ИмяНРег = "каталогфич" Тогда
-		Классификация.Kind = "read_only";
-		Классификация.ReadOnlyReason = "USE_FEATURE_TOOLS";
-		Классификация.Hint = "use open_feature_file/load_features with filePath, or run_scenario with filePath";
-		Классификация.SideEffects = "feature tree state";
+		MCPКлассификацияПункта.Kind = "read_only";
+		MCPКлассификацияПункта.ReadOnlyReason = "USE_FEATURE_TOOLS";
+		MCPКлассификацияПункта.Hint = "use open_feature_file/load_features with filePath, or run_scenario with filePath";
+		MCPКлассификацияПункта.SideEffects = "feature tree state";
 	ИначеЕсли ИмяНРег = "выполнитьсценарии"
 			ИЛИ ИмяНРег = "завершитьработусистемы"
 			ИЛИ ИмяНРег = НРег("ВыполнитьСценарииСТекущегоШага")
 			ИЛИ ИмяНРег = "загрузитьсценарии"
 			ИЛИ ИмяНРег = НРег("НомерСтрокиДляЗапускаСТекущегоШагаСценария")
 			ИЛИ ИмяНРег = "startfeatureplayer" Тогда
-		Классификация.Kind = "action_only";
-		Классификация.ReadOnlyReason = "ACTION_ONLY";
-		Классификация.Hint = "use run_scenario, stop_scenario or restart_vanessa";
+		MCPКлассификацияПункта.Kind = "action_only";
+		MCPКлассификацияПункта.ReadOnlyReason = "ACTION_ONLY";
+		MCPКлассификацияПункта.Hint = "use run_scenario, stop_scenario or restart_vanessa";
 	ИначеЕсли ИмяНРег = "данныеклиентовтестирования"
 			ИЛИ ИмяНРег = "клиентытестирования"
 			ИЛИ НРег(СокрЛП(Группа)) = "клиенттестирования" Тогда
-		Классификация.Kind = "out_of_scope";
-		Классификация.ReadOnlyReason = "OUT_OF_SCOPE";
-		Классификация.Hint = "use manage_test_client_profiles or manage_test_client";
+		MCPКлассификацияПункта.Kind = "out_of_scope";
+		MCPКлассификацияПункта.ReadOnlyReason = "OUT_OF_SCOPE";
+		MCPКлассификацияПункта.Hint = "use manage_test_client_profiles or manage_test_client";
 	ИначеЕсли ИмяНРег = "globalvars" Тогда
-		Классификация.Kind = "out_of_scope";
-		Классификация.ReadOnlyReason = "OUT_OF_SCOPE";
-		Классификация.Hint = "use manage_variables";
+		MCPКлассификацияПункта.Kind = "out_of_scope";
+		MCPКлассификацияПункта.ReadOnlyReason = "OUT_OF_SCOPE";
+		MCPКлассификацияПункта.Hint = "use manage_variables";
 	ИначеЕсли ИмяНРег = "version" ИЛИ ИмяНРег = "версияva" ИЛИ ИмяНРег = "lang" Тогда
-		Классификация.Kind = "legacy";
-		Классификация.ReadOnlyReason = "LEGACY";
+		MCPКлассификацияПункта.Kind = "legacy";
+		MCPКлассификацияПункта.ReadOnlyReason = "LEGACY";
 		Если ИмяНРег = "lang" Тогда
-			Классификация.Hint = "use ЯзыкГенератораGherkin";
+			MCPКлассификацияПункта.Hint = "use ЯзыкГенератораGherkin";
 		КонецЕсли;
 	ИначеЕсли ИмяНРег = "выгрузитьpidtestmanager"
 			ИЛИ Лев(ИмяНРег, 13) = "каталогoutput" Тогда
-		Классификация.Kind = "legacy";
-		Классификация.ReadOnlyReason = "LEGACY";
+		MCPКлассификацияПункта.Kind = "legacy";
+		MCPКлассификацияПункта.ReadOnlyReason = "LEGACY";
 	ИначеЕсли ИмяНРег = "завершитьработусистемыпослевыполнениявсехсценариев" Тогда
-		Классификация.Kind = "setting";
-		Классификация.Affects = "system_shutdown";
+		MCPКлассификацияПункта.Kind = "setting";
+		MCPКлассификацияПункта.Affects = "system_shutdown";
 	ИначеЕсли ИмяНРег = "закрытьформупослевыполненияобработки" Тогда
-		Классификация.Kind = "launch_only";
-		Классификация.ReadOnlyReason = "LAUNCH_ONLY";
-		Классификация.Hint = "change VAParams and restart VA";
-		Классификация.RequiresRestart = Истина;
+		MCPКлассификацияПункта.Kind = "launch_only";
+		MCPКлассификацияПункта.ReadOnlyReason = "LAUNCH_ONLY";
+		MCPКлассификацияПункта.Hint = "change VAParams and restart VA";
+		MCPКлассификацияПункта.RequiresRestart = Истина;
 	ИначеЕсли НЕ ВСтруктуре Тогда
-		Классификация.Kind = "service";
-		Классификация.ReadOnlyReason = "SERVICE";
+		MCPКлассификацияПункта.Kind = "service";
+		MCPКлассификацияПункта.ReadOnlyReason = "SERVICE";
 	КонецЕсли;
 
-	Если Классификация.Kind <> "setting" Тогда
-		Классификация.Settable = Ложь;
-		Классификация.ApplySupported = Ложь;
+	Если MCPКлассификацияПункта.Kind <> "setting" Тогда
+		MCPКлассификацияПункта.Settable = Ложь;
+		MCPКлассификацияПункта.ApplySupported = Ложь;
 	КонецЕсли;
 
 	Если Тип = "valuelist" ИЛИ Тип = "array" Тогда
-		Классификация.Settable = Ложь;
-		Если ПустаяСтрока(Классификация.ReadOnlyReason) Тогда
-			Классификация.ReadOnlyReason = "USE_APPLY";
+		MCPКлассификацияПункта.Settable = Ложь;
+		Если ПустаяСтрока(MCPКлассификацияПункта.ReadOnlyReason) Тогда
+			MCPКлассификацияПункта.ReadOnlyReason = "USE_APPLY";
 		КонецЕсли;
-	ИначеЕсли Тип = "unknown" И Классификация.Kind = "setting" Тогда
-		Классификация.Settable = Ложь;
-		Классификация.ReadOnlyReason = "UNKNOWN_TYPE";
+	ИначеЕсли Тип = "unknown" И MCPКлассификацияПункта.Kind = "setting" Тогда
+		MCPКлассификацияПункта.Settable = Ложь;
+		MCPКлассификацияПункта.ReadOnlyReason = "UNKNOWN_TYPE";
 	КонецЕсли;
 
 	Если ИмяНРег = "загрузкафичприоткрытии"
@@ -46159,7 +46161,7 @@
 			ИЛИ ИмяНРег = "использоватькомпонентуvanessaext"
 			ИЛИ ИмяНРег = "дымовыетестыначальнаядатадляподборадокументов"
 			ИЛИ ИмяНРег = "дымовыетестысортироватьдокументыподатеубыв" Тогда
-		Классификация.RequiresHandler = Истина;
+		MCPКлассификацияПункта.RequiresHandler = Истина;
 	КонецЕсли;
 
 	Если ИмяНРег = "портсервераmcp"
@@ -46169,27 +46171,27 @@
 			ИЛИ ИмяНРег = "использоватьбраузерплюсwebsocket"
 			ИЛИ ИмяНРег = "использоватьредакторvanessaeditor"
 			ИЛИ ИмяНРег = "использоватьsikulixсервер" Тогда
-		Классификация.RequiresRestart = Истина;
+		MCPКлассификацияПункта.RequiresRestart = Истина;
 	КонецЕсли;
 
 	Если ИмяНРег = "языкгенератораgherkin" Тогда
-		Классификация.SideEffects = "generated step texts and editor behavior change; UI handler is not called";
+		MCPКлассификацияПункта.SideEffects = "generated step texts and editor behavior change; UI handler is not called";
 	ИначеЕсли ИмяНРег = "использоватькомпонентуvanessaext" Тогда
-		Классификация.SideEffects = "component initialization is not re-run; use restart_vanessa if the component state must be reset";
+		MCPКлассификацияПункта.SideEffects = "component initialization is not re-run; use restart_vanessa if the component state must be reset";
 	ИначеЕсли ИмяНРег = "каталогфич" Тогда
-		Классификация.SideEffects = "feature tree state";
+		MCPКлассификацияПункта.SideEffects = "feature tree state";
 	КонецЕсли;
 
 	ГруппаНРег = НРег(Группа);
 	Если ГруппаНРег = "клиенттестирования" Тогда
-		Классификация.Affects = "next_client_launch";
+		MCPКлассификацияПункта.Affects = "next_client_launch";
 	ИначеЕсли ГруппаНРег = "записьвидео" ИЛИ Найти(ГруппаНРег, "html") > 0
 			ИЛИ Найти(ГруппаНРег, "allure") > 0 ИЛИ Найти(ГруппаНРег, "junit") > 0
 			ИЛИ Найти(ГруппаНРег, "cucumber") > 0 ИЛИ Найти(ГруппаНРег, "сппр") > 0 Тогда
-		Классификация.Affects = "report_generation";
+		MCPКлассификацияПункта.Affects = "report_generation";
 	КонецЕсли;
 
-	Возврат Классификация;
+	Возврат MCPКлассификацияПункта;
 
 КонецФункции
 
