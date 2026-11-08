@@ -1094,6 +1094,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mcp-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Автотесты MCP-инструментов
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_16" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3235,6 +3246,17 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#mcp-" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Автотесты MCP-инструментов
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#_16" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -3288,7 +3310,7 @@
 <p><strong>Включите внешнюю компоненту VanessaExt</strong>. В Vanessa Automation необходимо включить использование внешней компоненты VanessaExt.</p>
 </li>
 <li>
-<p><strong>Установите расширение VAExtension</strong>. В базу клиента тестирования необходимо добавить расширение VAExtension.</p>
+<p><strong>Установите расширение VAExtension</strong>. В базу клиента тестирования необходимо добавить расширение VAExtension. Для MCP-инструмента restart_vanessa это же расширение должно быть установлено и активно в базе менеджера тестирования; чтобы перезапуск ждал фактического закрытия старой формы, нужна версия 1.44 или выше — с более старым расширением действует прежняя схема.</p>
 </li>
 <li>
 <p><strong>Настройка завершена</strong>. После выполнения всех шагов MCP готов к работе.</p>
@@ -3695,6 +3717,28 @@
 <a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a>features/*.feature, research/*.MD, rewiew/*.MD, restore/*.MD
 </code></pre></div>
 <hr />
+<h2 id="mcp-">Автотесты MCP-инструментов<a class="headerlink" href="#mcp-" title="Permanent link">&para;</a></h2>
+<p>Для MCP-слоя есть отдельный набор фич и тестовая библиотека. Они не требуют клиента
+тестирования и не выполняют реальных действий: инструмент сообщает намерение, а guard
+в продакшн-коде останавливает вызов до первого действия.</p>
+<p>Перед запуском нужны собранный <code>MCP.epf</code> и остановленный MCP-сервер: <code>Дано</code> проверяет
+<code>MCPСерверЗапущен()</code> как жёсткий gate.</p>
+<ul>
+<li>Фичи: <code>features/Core/MCPAutotests</code>.</li>
+<li>Библиотека шагов: <code>features/Libraries/MCP</code>.</li>
+<li>Запуск: стандартным проигрывателем фич Vanessa Automation после сборки <code>MCP.epf</code>.</li>
+</ul>
+<p>Шаги библиотеки:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nf">Дано я подготавливаю тестовый транспорт MCP</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="nf">Когда я вызываю MCP-инструмент "</span><span class="s">manage_form_elements</span><span class="nf">" в режиме "</span><span class="s">Намерение</span><span class="nf">" с параметрами</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="k">    |</span><span class="s"> Имя</span><span class="k">          |</span><span class="s"> Значение</span><span class="k">     |</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="k">    |</span><span class="s"> action</span><span class="k">       |</span><span class="s"> click_button</span><span class="k"> |</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="k">    |</span><span class="s"> element_name</span><span class="k"> |</span><span class="s"> КнопкаОК</span><span class="k">     |</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="nf">Тогда MCP-инструмент вернул намерение "</span><span class="s">client.form.action</span><span class="nf">"</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="k">И </span><span class="nf">MCP-инструмент не выполнял реальных действий</span>
+</code></pre></div>
+<p>Режимы: <code>Намерение</code> (тестовый транспорт), <code>Проверка</code> (валидация без реального действия),
+<code>План</code> (синоним <code>Намерение</code>). Режим <code>Выполнить</code> (L3) пока не реализован.</p>
 <h2 id="_16">Доступные инструменты:<a class="headerlink" href="#_16" title="Permanent link">&para;</a></h2>
 <p>Ниже приведена таблица всех доступных MCP инструментов Vanessa Automation, отсортированная по имени инструмента.</p>
 <table>
@@ -3779,7 +3823,7 @@
 </tr>
 <tr>
 <td><strong>get_info_about_line_scenario</strong></td>
-<td>Получает подробную информацию о указанной строке файла открытого в редакторе. Если в строке находится шаг сценария, то будет возвращена подробная информация о шаге. Параметр <strong>lineNumber</strong> обязателен: положительное целое число.</td>
+<td>Получает подробную информацию о указанной строке файла открытого в редакторе. Если в строке находится шаг сценария, то будет возвращена подробная информация о шаге. Параметр <strong>lineNumber</strong> обязателен: положительное целое число. Требует, чтобы дерево фич было построено для активной вкладки; при несоответствии возвращает ACTION_FAILED с просьбой загрузить фичу активной вкладки через <strong>open_feature_file</strong> или <strong>check_syntax</strong>.</td>
 </tr>
 <tr>
 <td><strong>get_object_attributes</strong></td>
@@ -3831,7 +3875,7 @@
 </tr>
 <tr>
 <td><strong>manage_breakpoints</strong></td>
-<td>Управление точками останова в Gherkin-сценариях; те же действия доступны через <strong>manage_editor</strong> (list_breakpoints, toggle_breakpoint, remove_all_breakpoints). Действия: <strong>toggle</strong> (по умолчанию), <strong>remove_all</strong>, <strong>list</strong>. Остановка на точке останова прекращает весь прогон: шаг с точкой останова не выполняется, сценарии после него тоже. Точки учитываются по паре (файл шага, строка), поэтому точка на шаге внутри вызванного сценария срабатывает и при вызове из другого сценария; для такого шага <strong>toggle</strong> возвращает примечание о семантике (при повторном выполнении шага точка сработает снова); любая строка вызова вложенного подсценария пока не проверяется. <strong>line</strong> — положительное целое число; без <strong>line</strong> переключается текущая строка курсора, некорректное значение (0, отрицательное, дробное, нечисловое, пустое) отклоняется как INVALID_PARAMS. <strong>list</strong> возвращает точки по данным редактора: переключение через <strong>toggle</strong> видно сразу, изменения мышью могут отображаться с запаздыванием; отдельной строкой выводится число участников следующего прогона. Точки других открытых вкладок показываются отдельным разделом: они учитываются по файлу шага и сработают, если в прогоне выполняются шаги из соответствующего файла; в счётчик текущей вкладки не входят, точки-вставки других вкладок в прогоне не участвуют. <strong>remove_all</strong> очищает только текущую вкладку; если в других вкладках остались точки, ответ об этом предупреждает. При загрузке или перезагрузке фичи точки останова не переносятся: номера строк могли измениться, поэтому проверьте их заново.</td>
+<td>Управление точками останова в Gherkin-сценариях; те же действия доступны через <strong>manage_editor</strong> (list_breakpoints, toggle_breakpoint, remove_all_breakpoints). Действия: <strong>toggle</strong> (по умолчанию), <strong>remove_all</strong>, <strong>list</strong>. Остановка на точке останова прекращает весь прогон: шаг с точкой останова не выполняется, сценарии после него тоже. Точки учитываются по паре (файл шага, строка), поэтому точка на шаге внутри вызванного сценария срабатывает и при вызове из другого сценария; для такого шага <strong>toggle</strong> возвращает примечание о семантике (при повторном выполнении шага точка сработает снова); любая строка вызова вложенного подсценария пока не проверяется. <strong>line</strong> — положительное целое число; без <strong>line</strong> переключается текущая строка курсора, некорректное значение (0, отрицательное, дробное, нечисловое, пустое) отклоняется как INVALID_PARAMS. <strong>list</strong> возвращает точки по данным редактора: переключение через <strong>toggle</strong> видно сразу, изменения мышью могут отображаться с запаздыванием; отдельной строкой выводится число участников следующего прогона. Точки других открытых вкладок показываются отдельным разделом: они учитываются по файлу шага и сработают, если в прогоне выполняются шаги из соответствующего файла; в счётчик текущей вкладки не входят, точки-вставки других вкладок в прогоне не участвуют. <strong>remove_all</strong> очищает только текущую вкладку; если в других вкладках остались точки, ответ об этом предупреждает. При загрузке или перезагрузке фичи точки останова не переносятся: номера строк могли измениться, поэтому проверьте их заново. Если дерево фич уже загружено, непусто и не соответствует активной вкладке, <strong>toggle</strong> ставит точку, но предупреждает, что проверка исполняемости строки не выполнялась.</td>
 </tr>
 <tr>
 <td><strong>manage_clipboard</strong></td>
@@ -3843,7 +3887,7 @@
 </tr>
 <tr>
 <td><strong>manage_editor</strong></td>
-<td>Управление редактором Vanessa Automation. Действия (параметр <strong>action</strong>): <strong>get_state</strong> — состояние редактора: вкладки, активный документ, позиция курсора, ошибки, дерево фич; параметры <strong>includeContent</strong>, <strong>includeDocument</strong>, <strong>includeTabs</strong> (по умолчанию true); <strong>list_tabs</strong> — компактный список вкладок; <strong>activate_tab</strong> — активировать вкладку; <strong>get_tab_content</strong> — текст вкладки; <strong>save_tab</strong> — сохранить edit-вкладку; для активной или деревой .feature-вкладки — как Ctrl+S: записать файл и перезагрузить дерево; пишет файл даже без изменений и возвращает saved, wasModified, treeReloaded, treeReady, treeError; фоновая вкладка другого файла сохраняется без переключения дерева; <strong>close_tab</strong> — закрыть вкладку; <strong>line_info</strong> — информация о строке сценария (обязательный <strong>lineNumber</strong> — положительное целое число); <strong>list_breakpoints</strong>, <strong>toggle_breakpoint</strong> (параметр <strong>line</strong>; без него — текущая строка курсора) и <strong>remove_all_breakpoints</strong> — точки останова. Для <strong>activate_tab</strong>, <strong>get_tab_content</strong>, <strong>save_tab</strong> и <strong>close_tab</strong> укажите ровно один селектор: <strong>index</strong> (с 0), <strong>filePath</strong> (точное имя файла, поддерживает memory:) или <strong>title</strong> (точный заголовок без учёта регистра); <strong>type</strong> — необязательный фильтр any/edit/diff/viewer. Для <strong>get_tab_content</strong> параметр <strong>maxLength</strong> ограничивает ответ (по умолчанию 20000 символов, 0 — весь текст). <strong>close_tab</strong> не закрывает изменённую edit-вкладку без <strong>saveChanges</strong>=true. <strong>activate_tab</strong> во время прогона отклоняется, если не передан <strong>allowDuringRun</strong>=true. Активация не перечитывает файл и не перезагружает дерево фич.</td>
+<td>Управление редактором Vanessa Automation. Действия (параметр <strong>action</strong>): <strong>get_state</strong> — состояние редактора: вкладки, активный документ, позиция курсора, ошибки, дерево фич; параметры <strong>includeContent</strong>, <strong>includeDocument</strong>, <strong>includeTabs</strong> (по умолчанию true); <strong>list_tabs</strong> — компактный список вкладок; <strong>activate_tab</strong> — активировать вкладку; <strong>get_tab_content</strong> — текст вкладки; <strong>save_tab</strong> — сохранить edit-вкладку; для активной или деревой .feature-вкладки — как Ctrl+S: записать файл и перезагрузить дерево; пишет файл даже без изменений и возвращает saved, wasModified, treeReloaded, treeReady, treeError; фоновая вкладка другого файла сохраняется без переключения дерева; <strong>close_tab</strong> — закрыть вкладку; <strong>line_info</strong> — информация о строке сценария (обязательный <strong>lineNumber</strong> — положительное целое число); <strong>list_breakpoints</strong>, <strong>toggle_breakpoint</strong> (параметр <strong>line</strong>; без него — текущая строка курсора) и <strong>remove_all_breakpoints</strong> — точки останова. Для <strong>activate_tab</strong>, <strong>get_tab_content</strong>, <strong>save_tab</strong> и <strong>close_tab</strong> укажите ровно один селектор: <strong>index</strong> (с 0), <strong>filePath</strong> (точное имя файла, поддерживает memory:) или <strong>title</strong> (точный заголовок без учёта регистра); <strong>type</strong> — необязательный фильтр any/edit/diff/viewer. Для <strong>get_tab_content</strong> параметр <strong>maxLength</strong> ограничивает ответ (по умолчанию 20000 символов, 0 — весь текст). <strong>close_tab</strong> не закрывает изменённую edit-вкладку без <strong>saveChanges</strong>=true. <strong>activate_tab</strong> во время прогона отклоняется, если не передан <strong>allowDuringRun</strong>=true. Активация не перечитывает файл и не перезагружает дерево фич. <strong>activate_tab</strong> и <strong>close_tab</strong> возвращают <strong>treeFile</strong>, <strong>activeTabFile</strong> и <strong>treeMatchesActiveTab</strong>; при несоответствии дерева активной .feature-вкладке добавляется предупреждение. <strong>get_state</strong> выводит предупреждение о несоответствии в разделе дерева фич. <strong>line_info</strong> при несоответствии дерева активной вкладке возвращает ACTION_FAILED: перед вызовом загрузите фичу активной вкладки через <strong>open_feature_file</strong> или <strong>check_syntax</strong>.</td>
 </tr>
 <tr>
 <td><strong>manage_form_elements</strong></td>
@@ -3875,11 +3919,11 @@
 </tr>
 <tr>
 <td><strong>restart_vanessa</strong></td>
-<td>Перезапускает Vanessa Automation из EPF, пересобранного на диске. Используйте, когда EPF обновлён, а в менеджере тестирования всё ещё работает старая запущенная копия. Инструмент сразу отвечает, что перезапуск начат; новую VA проверяйте через 30 секунд. Текущая форма закрывается без подтверждения, несохранённые изменения редактора теряются; после перезапуска клиент тестирования нужно подключить заново. Требует установленного и включённого расширения VAExtension с обработкой VAExtension_ПерезапускVA в базе менеджера тестирования. Работает для Vanessa Automation и Vanessa Automation Single, открытых из файла .epf.</td>
+<td>Перезапускает Vanessa Automation из EPF, пересобранного на диске. Используйте, когда EPF обновлён, а в менеджере тестирования всё ещё работает старая запущенная копия. Инструмент сразу отвечает, что перезапуск начат; новая VA открывается после фактического закрытия старой формы — обычно в течение 30–60 секунд. Если старая форма не закроется за 120 секунд, перезапуск отменяется, а вторая VA не открывается (причина пишется в журнал регистрации). Текущая форма закрывается без подтверждения, несохранённые изменения редактора теряются; после перезапуска клиент тестирования нужно подключить заново. Регистрируется при установленном и активном расширении VAExtension в базе менеджера тестирования; для работы в расширении должна быть обработка VAExtension_ПерезапускVA. Ожидание фактического закрытия работает в VAExtension 1.44 или выше; с более старым расширением действует прежняя схема. Без расширения инструмента нет в списке. Работает для Vanessa Automation и Vanessa Automation Single, открытых из файла .epf.</td>
 </tr>
 <tr>
 <td><strong>run_scenario</strong></td>
-<td>Запускает выполнение сценариев. Отправляет прогресс по каждому шагу (step N/M). Возвращает итоговый результат после завершения (при <strong>wait</strong>=true). Если указан <strong>filePath</strong> — загрузит фичу, откроет в редакторе и запустит. Режимы: <strong>all</strong> (по умолчанию — все сценарии; если просят выполнить все сценарии, используйте режим all), <strong>reloadAndRun</strong> (перечитать файл с диска и выполнить все его сценарии с начала), <strong>selected</strong> (выбранный в редакторе, перед этим надо вызвать <strong>select_scenario</strong>), <strong>fromCurrentStep</strong> (с текущего шага, перед этим нужно вызвать <strong>select_step</strong>), <strong>reloadAndRunFromLine</strong> (перечитать файл с диска и выполнить сценарий со строки <strong>lineNumber</strong>; параметр обязателен). В режимах <strong>reloadAndRun</strong> и <strong>reloadAndRunFromLine</strong> фича перечитывается с диска; точки останова не переносятся, так как номера строк могли измениться. <strong>filePath</strong> — только файл .feature, каталог не принимается. При <strong>wait</strong>=false в ответе возвращается идентификатор прогона (runId); он же доступен в <strong>get_vanessa_automation_state</strong> и <strong>get_test_results</strong>.</td>
+<td>Запускает выполнение сценариев. Отправляет прогресс по каждому шагу (step N/M). Возвращает итоговый результат после завершения (при <strong>wait</strong>=true). Если указан <strong>filePath</strong> — загрузит фичу, откроет в редакторе и запустит. Режимы: <strong>all</strong> (по умолчанию — все сценарии; если просят выполнить все сценарии, используйте режим all), <strong>reloadAndRun</strong> (перечитать файл с диска и выполнить все его сценарии с начала), <strong>selected</strong> (выбранный в редакторе, перед этим надо вызвать <strong>select_scenario</strong>), <strong>fromCurrentStep</strong> (с текущего шага, перед этим нужно вызвать <strong>select_step</strong>), <strong>reloadAndRunFromLine</strong> (перечитать файл с диска и выполнить сценарий со строки <strong>lineNumber</strong>; параметр обязателен). В режимах <strong>reloadAndRun</strong> и <strong>reloadAndRunFromLine</strong> фича перечитывается с диска; точки останова не переносятся, так как номера строк могли измениться. <strong>filePath</strong> — только файл .feature, каталог не принимается. При <strong>wait</strong>=false в ответе возвращается идентификатор прогона (runId); он же доступен в <strong>get_vanessa_automation_state</strong> и <strong>get_test_results</strong>. Перед запуском проверяется, что дерево фич построено для активной вкладки; при несоответствии возвращается ACTION_FAILED — загрузите фичу через <strong>open_feature_file</strong> или <strong>check_syntax</strong>. Проверка выполняется при включённой настройке ИспользоватьРедакторVanessaEditor.</td>
 </tr>
 <tr>
 <td><strong>save_table_document_to_file</strong></td>
@@ -3891,11 +3935,11 @@
 </tr>
 <tr>
 <td><strong>select_scenario</strong></td>
-<td>Делает сценарий текущим по его имени.</td>
+<td>Делает сценарий текущим по его имени. Требует, чтобы дерево фич было построено для активной вкладки; при несоответствии возвращает ACTION_FAILED с просьбой загрузить фичу активной вкладки через <strong>open_feature_file</strong> или <strong>check_syntax</strong>. Если сценарий с таким именем есть только в другом файле дерева-каталога, возвращает ACTION_FAILED с указанием файла.</td>
 </tr>
 <tr>
 <td><strong>select_step</strong></td>
-<td>Делает шаг текущим по номеру строки.</td>
+<td>Делает шаг текущим по номеру строки. Для структуры сценария допускаются строки примеров, строка «Примеры:» и заголовок таблицы примеров. Требует, чтобы дерево фич было построено для активной вкладки; при несоответствии возвращает ACTION_FAILED с просьбой загрузить фичу активной вкладки через <strong>open_feature_file</strong> или <strong>check_syntax</strong>.</td>
 </tr>
 <tr>
 <td><strong>speak_text</strong></td>
