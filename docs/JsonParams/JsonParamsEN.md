@@ -7,7 +7,7 @@
 * Special
 
       * **GlobalVars {GlobalVars}**:
-Структура, в которой будут находиться пары: ключ и значение. Данная структура будет загружена в глобальные переменные и эти переменные будут доступны при выполнении сценария в объекте КонтекстСохраняемый.
+A structure that will contain key and value pairs. This structure will be loaded into global variables, and these variables will be available when executing the script in the ContextPersisted object.
 
 ## Main settings
 
@@ -22,12 +22,20 @@
       * **filtertags**:
          Enter tags in the field. If the tag is NOT detected in the feature, the whole feature will not be uploaded. You can also upload only the feature scenarios, which contain the tags from the list.
 
-*  Scenario filter
+*  Scenario filter and feature filter
 
       * **scenariofilter**:
-         Allows you to set the order in which scripts are executed. The scripts will be executed in the order they are listed.
-         Plus allows you to set a filter for executing scripts. Only scripts from the list will be executed.
-         The script in the list is indicated by its name.
+         Allows you to set a filter for executing scripts - only scripts from the list will be executed.
+         Scripts will be executed in the order they are specified in the feature file.
+         A script in the list is specified using its name.
+
+      * **FeaturesToRun**:
+         Allows you to set the order of execution of feature files.
+         Also sets the selection - only feature files from the list will be launched.
+         You can pass the full path to the feature file (c:\temp\my.feature).
+         You can pass the feature name without the full path (my.feature).
+         You can pass the feature name without the full path and without the file extension (my).
+         The setting is applied only if feature files are loaded from the directory.
 
 *  Feature file language
 
@@ -46,6 +54,12 @@
 
       * **ShowWindowToStopRecordingUserActions**:
          Enables the display of an additional window for conveniently stopping the recording of user actions and switching to the Vanessa Automation window. You must enable the use of the VanessaExt component.
+
+      * **removespacebeforestarinwindowtitle**:
+         If the flag is set, the space before the trailing star in the window title is removed while recording user actions: the step contains "Title (creation)*".
+         Such a step matches both the modified and the unmodified form.
+         If the flag is unchecked, the title is recorded as the platform shows it: "Title (creation) *".
+         When recording user actions at the request of an AI agent, the space is always removed regardless of the flag.
 
 *  External component VanessaExt
 
@@ -71,20 +85,20 @@
 *  System directories
 
       * **projectpath**:
-         The catalog with the tested project files, which are necessary for test execution.
+         Project directory: the base for relative paths and $workspaceRoot, project files, Allure TestOps export, and MCP tools. Can be filled automatically by the user settings loader.
 
       * **UseTemplateForNewFeature**:
          If a template is specified (in *.txt format), then a new script will be created from it
 
       * **instrpath**:
-         The catalog of Vanessa Automation data processor. This field must be filled on the standard installation.
-         When working with Vanessa Automation Single it is allowed to leave the field blank.
+         Vanessa Automation tools directory. Base for framework files (libraries, plugins, vendor). Usually filled automatically with the directory of the main VA data processor; may be empty for Vanessa Automation Single.
 
       * **TemporaryFilesDirectory**:
          The directory in which temporary script files will be created.
          If a setting value is specified, then temporary script files will be created in it. If the setting value is not specified, then the user's temporary directory will be used. Usually this
          "C:\USERS%username%\APPDATA\LOCAL\TEMP".
          Setting is necessary because... Vanessa Automation can create bat files to run system commands, and some operating systems may prohibit running such files from the user's temporary directory.
+         The directory must exist in advance. In modes where synchronous calls are prohibited and the server-side optimization of file operations is unavailable, Vanessa Automation neither checks nor creates the directory.
 
 *  Smoke Tests
 
@@ -147,11 +161,13 @@
 
       * **starttestclientsessionagainonconnectionifitsprocessisnotfound**:
          Enables restarting the test client process if the previous run did not work (for example, if no license was obtained). For thick and thin clien only.
+         When VanessaExt supports process identity, the decision is made by the PID + StartTime pair: while the started process is alive, a second instance is not launched. A restart is performed only after the previous process started by this session is confirmed terminated; processes found by port are not terminated automatically.
 
       * **DetermineTheRealPortOnWhichTheTestingClientWasLaunched**:
          If this option is enabled, then when the testing client connects, an attempt will be made to determine the real port on which the testing client was launched.
          It is necessary. since the testing client can change the port on which it started, despite the passed parameters.
          This issue is relevant when running tests on Linux.
+         When the process identity (PID + StartTime) is known, the port is determined by PID on every connection wait iteration, starting from the first one, regardless of this option. The option controls the previous port detection mechanism based on a PID snapshot.
 
       * **testclientprocessstartinterval**:
          Specifies the interval at which an attempt will be made to start a testing client session.
@@ -166,12 +182,15 @@
          If the parameter is set, the /Out <FileName> parameter will be added when the test client is started.
          The file name will be generated according to the rule TestingClientName+LaunchDateTime.
 
-      * **DisableScheduledJobsExecutionForFileInfobase**:
-         If this option is enabled, scheduled jobs execution will be disabled when new test client will start for a file infobase. Uses command line key /AllowExecuteScheduledJobs -Off
+      * **AdditionalParametersForLaunchingTheTestingClient**:
+         The field specifies additional keys for launching the testing client, which will be transferred to the launched 1C session.
 
       * **OnlyOneTestClientAllowedToRun**:
          If this option is enabled, control will be enabled that more than one testing client cannot be connected at the same time.
          This can be useful if the computers on which the tests are run have a limited amount of RAM and you need to control the launch of unnecessary processes.
+
+      * **DisableScheduledJobsExecutionForFileInfobase**:
+         If this option is enabled, scheduled jobs execution will be disabled when new test client will start for a file infobase. Uses command line key /AllowExecuteScheduledJobs -Off
 
       * **CheckingServerCallsInEventHandlers**:
          Adds the string /EnableCheckServerCalls to the launch options of test clients.
@@ -196,6 +215,11 @@
       * **browserlaunchcommand**:
          This field indicates the command to launch the browser. If the field is empty, then the default browser will be used to start the web client.
          If there is a TestClientUrl string in the browser launch command, then it will be replaced with the test client connection string. Otherwise, the test client connection string will be appended to the end as the last parameter.
+         The "Chrome" and "Chrome+debug" buttons fill the command automatically and add keys for stable test runs: --disable-background-timer-throttling, --disable-renderer-backgrounding, --disable-backgrounding-occluded-windows and, on Windows, --disable-features=CalculateNativeWinOcclusion. These keys disable throttling of timers and lowering of the priority of background Chrome tabs: during a test run the browser window is often covered by the Vanessa Automation window, and without these keys Chrome treats the tab as background.
+         The "Chrome+debug" variant additionally adds the --remote-debugging-port=9222 and --user-data-dir keys (on Linux the profile directory is taken from the temporary files directory).
+         Starting with Chrome 136 the --remote-debugging-port key works only together with --user-data-dir, so in the "Use browser + web socket" mode the launch command must contain the --user-data-dir key.
+         If you need to add your own --disable-features key, append new features to the existing list separated by commas instead of repeating the key: when a key is repeated, only the last value takes effect.
+         An already saved command (in settings or in the launch parameters file) must be refilled with the button so that the new keys get into it.
 
       * **usebrowserwebsocket**:
          Allows to execute external commands in the browser using WebSocket.
@@ -209,6 +233,9 @@
       * **timeoutbeforeforciblyclosingtestclient**:
          The number of seconds to check that the testing client process completed on its own.
 
+      * **closetestclient**:
+         If the flag is set, then after all scenarios finish Vanessa Automation will close the testing clients from the testing clients table. Closing errors do not interrupt the completion: the client might have been closed normally inside the scenario itself. The setting is usually used when running from the command line (the closetestclient parameter in the VAParams.json file). The flag also applies to interactive runs; when settings are loaded from a file in interactive mode, it is reset. The setting has no effect in the web client.
+
 *  Mobile client
 
       * **PathToadb**:
@@ -220,6 +247,11 @@
 
       * **logtogr**:
          If the checkbox is on, scenario and steps beginning events will be written to the event log.
+
+      * **keeponlylastloopiteration**:
+         If the checkbox is on, only the last iteration of a loop remains in the step execution results.
+         Previous iterations are deleted together with their nested steps, and the Allure report shows the number of collapsed iterations in the loop step name.
+         The option can be changed while a scenario is running.
 
       * **soundnotificationwhenscriptends**:
          If this option is enabled, the following sound notification will be issued at the end of the script execution:
@@ -363,6 +395,10 @@
    * **outputscreenshot**:
       Screenshots directory.
 
+   * **ProcessesForTakingScreenshots**:
+      A semicolon-separated list of process names.
+      You can use the * character to escape one or more characters in a process name.
+
    * **screencaptureaddinmethod**:
       Full Screen - Gets a screenshot of the entire screen, including the operating system taskbar.
       Current Test Client Window - Gets a screenshot of only the active test client window.
@@ -433,15 +469,30 @@
          Vanessa Automation log file name.
          If the field is empty, then the log will not be output to a text file.
 
+      * **textlogbuffersize**:
+         How many records (steps) to accumulate in the buffer before writing to the text file in one file access.
+         0 or 1 - write as before, line by line.
+         More than 1 - accumulate in buffer and write in batches; the buffer is flushed when full and after each scenario finishes.
+         With a value greater than 1 the file writing is no longer fully line-by-line: the current step may appear in the file with a delay (until the buffer is full).
+
+      * **maskpwdinlog**:
+         The user's password is masked in the log /P="*****"
+
 *  Allure
 
    *  Main settings
 
          * **allurecreatereport**:
-            Create a scenario execution report in Allure format.
+            Create a scenario execution report in Allure format. The output directory is specified in the Allure settings.
+
+         * **MergeScenarioOutlineExamplesInAllure**:
+            Merge all examples of one scenario outline into a single test case with parameters in the Allure report. Works when the project directory is set and the feature file is inside it.
 
          * **setvariablevaluesinstepsallurereport**:
             If this option is enabled, then in the parameters of the steps in which the variables were used, the variable names will be replaced with their values.
+
+         * **allureexcludevars**:
+            Enter tags in the field. If the tag is detected in the feature, the whole feature will not be uploaded. If the tag is found in the scenario, only this scenario will not be uploaded.
 
          * **allurepath**:
             Allure reports directory. When run locally, the directory will be cleaned up each time the scripts are run.
@@ -533,6 +584,9 @@
          For everything to work correctly - the Screenshot Directory must be located inside the Project Directory.
          Save the screenshots folder as artifacts.
          https://docs.gitlab.com/ee/ci/unit_test_reports.html#viewing-junit-screenshots-on-gitlab
+
+      * **writescriptsinjunitviatestsuite**:
+         Enable to write each scenario of the jUnit report into its own testsuite named after the scenario. Run metadata is added to every testsuite.
 
 *  ASDS
 
@@ -725,6 +779,22 @@
          * **ttstype**:
             Specifies the narrator's voice.
 
+      *  Voiceover from 1C
+
+            * **1CttsLogin**:
+               Login for authorization in the speech synthesis service
+
+            * **1CttsVoice**:
+               Voice for speech generation in the service
+
+            * **1CttsPassword**:
+               Password for authorization in the speech synthesis service.
+               The password is specified in the text file.
+
+            * **1CttsSpeed**:
+               Speed (tempo) of synthesized speech.
+               Speech speed is specified by a fractional number in the range from 0.8 to 2.
+
       *  Microsoft TTS
 
             * **audioenginetts**:
@@ -766,7 +836,7 @@
                Speech rate is specified as a fractional number in the range from 0.1 to 3.0.
 
             * **yandexttsquerytype**:
-               Determines how the audio files will be received: through the official API or through the free interface. The recommended value is via the official API.
+               Determines how the audio files will be received: through the official API or through the web interface without authorization. The recommended value is via the official API.
 
          *  Authorization
 
@@ -851,13 +921,10 @@
    *  Audio cache
 
          * **cachettsfiles**:
-            Switchs on voice file cashing.
-            Makes video assembly process faster.
-            Reduces external voice generation servises usage.
-            Reduces voice generation costs.
+            Turns on caching of synthesized speech files on the local disk. Speeds up video assembly and reduces calls to speech synthesis services. When caching is enabled, the cache directory must be specified and exist.
 
          * **ttsfilescache**:
-            Voice cache files directory.
+            Directory for cached speech files. Must exist; subdirectories for voices and parameters are created automatically.
 
    *  Replacements dictionaries
 
@@ -893,7 +960,7 @@
                Sets shots per second number for the recording.
 
             * **tempfolderforvideo**:
-               The directory for temporary files created on video recording and composing. The directory is cleared before each recording!
+               Working directory for intermediate files during video recording and assembly, and for voice generation. The directory is cleared before each video build — do not store important files there.
 
             * **cachevideo**:
                If the flag is set then when the step is running
@@ -923,17 +990,17 @@
       *  Console commands
 
             * **ffmpegcomand**:
-               Video running and processing command. Also you can specify a full path to ffmpeg.exe file
+               Command for video processing. You can also specify the full path to ffmpeg.exe.
                Default: ffmpeg
 
             * **convertcomand**:
                The field describes how the Convert command will be invoked.
-               For ImageMagick 7, just specify "magick convert."
+               For ImageMagick 7, specify the value magick convert (without quotes).
                For older versions, you need to specify the path to the executable convert.exe file in the directory with the ImageMagick program.
                Example:
-               "C:\Program Files\ImageMagick-X.X.X-Q16\convert.exe"
+               C:\Program Files\ImageMagick-X.X.X-Q16\convert.exe
                Download: https://imagemagick.org/script/download.php
-               For versions earlier than 7 during the installation, the following item is required for installation: Install legacy utilities (e. G. Convert)
+               For versions earlier than 7 during the installation, the following item is required for installation: Install legacy utilities (e.g. convert)
                https://imagemagick.org/script/download.php
 
          * **comandrecvideo**:
@@ -974,6 +1041,10 @@
             Recommended value is 30%.
             Then in the example above the video will speed up (10 * (1-0.3)) from 10 to 7 seconds.
 
+         * **speedofspeechwithouttts**:
+            Speech rate of text (characters per second) used to calculate the duration of a video step when no voice-over is made.
+            Default value is 15.
+
          * **addsubtitles**:
             Switches on adding video subtitles.
 
@@ -988,13 +1059,13 @@
             Switches of video snippets scaling by time.
 
          * **turnofffeaturetitleslide**:
-            Switches off creating of video initial slide with feature file header.
+            Disables the intro slide with the feature header (text from the feature file header). It can also be disabled with the #[autodoc.ignore.featureslide] marker.
 
          * **turnoffscenarioslide**:
-            Switches off creating of video initial slide with scenario header.
+            Disables the video slide with the scenario title. It can also be disabled with the #[autodoc.ignore.scenarioslide] marker.
 
          * **turnofffinalslide**:
-            Switches off creating of video final slide with video total information.
+            Disables the final video slide with summary information (number of scenarios and steps, VA and build script versions, link). It can also be disabled with the #[autodoc.ignore.finalslide] marker.
 
          * **highlightmouseclicks**:
             Switches on mouse clicks highlighting. Project utility UIToolsFor1C is used.
@@ -1085,15 +1156,26 @@
    * **vanessaeditortheme**:
       Allows you to change the editor theme.
 
+## AI
+
+   * **StartMCPServerOnVAStartup**:
+      Determines whether to start the MCP server automatically at Vanessa Automation startup if it is not running yet. The server starts after MCP tools registration and only if the client_mcp extension is installed. If an external plugin has installed its own MCP transport, the setting has no effect.
+
+   * **MCPServerPort**:
+      Determines the port on which the MCP server is started at automatic startup. If the port is not set or is invalid, port 9874 is used. The setting has no effect if an external plugin has installed its own MCP transport.
+
+   * **WriteMCPServiceDataToEventLog**:
+      Enables writing MCP service data to the event log: calls to Vanessa Automation tools that had no start event are written as the `VanessaAutomation.MCP.Инструмент.Запрос` event (tool name, call id and parameter names without values). Events are written with the `VanessaAutomation.MCP.` prefix at the "Information" level. Disabled by default.
+
 ## Libraries
 
 *  Re-code library
 
       * **librarycatalogs**:
-         List of directories that contain epf files containing script steps and feature files containing export scripts.
+         List of directories containing epf files with scenario steps and feature files with export scenarios.
 
       * **stepsfrommetadata**:
-         The list contains paths to forms within the configuration containing step descriptions.
+         List of full names of configuration forms from which step descriptions are loaded.
 
 ## Test clients
 

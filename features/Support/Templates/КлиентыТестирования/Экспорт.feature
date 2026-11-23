@@ -1,9 +1,5 @@
 # language: ru
 # encoding: utf-8
-#parent uf:
-@UF4_Библиотека_шагов
-#parent ua:
-@UA6_Работать_с_подключением_Test_client
 @ExportScenarios
 @IgnoreOnCIMainBuild
 @tree

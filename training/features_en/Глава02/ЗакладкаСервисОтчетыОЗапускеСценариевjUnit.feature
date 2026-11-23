@@ -38,4 +38,9 @@
 			| 'Name'            |
 			| 'СкриншотыjUnit' |
 
+* If you need each scenario in the report to be written into its own testsuite, set this checkbox. Run metadata will be added to every testsuite.
+		И я делаю подсветку нескольких элементов VA с их заголовком "Writing scenarios via TestSuite" UI Automation
+			| 'Name'                                   |
+			| 'ЗаписыватьСценарииВJunitЧерезTestSuite' |
+
 * That's it, move on to the next lesson of the interactive help.

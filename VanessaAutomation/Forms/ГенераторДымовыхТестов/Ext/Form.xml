@@ -9,19 +9,18 @@
 			<v8:lang>en</v8:lang>
 			<v8:content>Smoke tests</v8:content>
 		</v8:item>
+		<v8:item>
+			<v8:lang>sv</v8:lang>
+			<v8:content>Röktest</v8:content>
+		</v8:item>
 	</Title>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
-			<Button name="ФормаСформироватьФайлы" id="7">
-				<Type>CommandBarButton</Type>
-				<DefaultButton>true</DefaultButton>
-				<CommandName>Form.Command.СформироватьФайлы</CommandName>
-				<ExtendedTooltip name="ФормаСформироватьФайлыРасширеннаяПодсказка" id="8"/>
-			</Button>
-			<Button name="ФормаЗакрытьФорму" id="110">
+			<Button name="ФормаЗакрытьФорму" id="209">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.Command.ЗакрытьФорму</CommandName>
-				<ExtendedTooltip name="ФормаЗакрытьФормуРасширеннаяПодсказка" id="111"/>
+				<ExtendedTooltip name="ФормаЗакрытьФормуРасширеннаяПодсказка" id="210"/>
 			</Button>
 			<Button name="ФормаСправка" id="17">
 				<Type>CommandBarButton</Type>
@@ -51,6 +50,10 @@
 							<v8:lang>en</v8:lang>
 							<v8:content>Basic Settings</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Grundinställningar</v8:content>
+						</v8:item>
 					</Title>
 					<ExtendedTooltip name="СтраницаОсновноеРасширеннаяПодсказка" id="22"/>
 					<ChildItems>
@@ -63,6 +66,10 @@
 								<v8:item>
 									<v8:lang>en</v8:lang>
 									<v8:content>Group two columns</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>sv</v8:lang>
+									<v8:content>Grupp två kolumner</v8:content>
 								</v8:item>
 							</Title>
 							<Representation>None</Representation>
@@ -78,6 +85,10 @@
 										<v8:item>
 											<v8:lang>en</v8:lang>
 											<v8:content>Left column group</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>sv</v8:lang>
+											<v8:content>Vänster kolumngrupp</v8:content>
 										</v8:item>
 									</Title>
 									<Group>Vertical</Group>
@@ -95,6 +106,10 @@
 													<v8:lang>en</v8:lang>
 													<v8:content>Group language steps</v8:content>
 												</v8:item>
+												<v8:item>
+													<v8:lang>sv</v8:lang>
+													<v8:content>Grupp stegspråk</v8:content>
+												</v8:item>
 											</Title>
 											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
 											<Representation>None</Representation>
@@ -109,6 +124,10 @@
 														<v8:lang>en</v8:lang>
 														<v8:content>The language in which feature file scripts will be generated.</v8:content>
 													</v8:item>
+													<v8:item>
+														<v8:lang>sv</v8:lang>
+														<v8:content>Språket som feature-filernas skript kommer att genereras på.</v8:content>
+													</v8:item>
 												</Title>
 											</ExtendedTooltip>
 											<ChildItems>
@@ -122,6 +141,10 @@
 														<v8:item>
 															<v8:lang>en</v8:lang>
 															<v8:content>Language of steps</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>sv</v8:lang>
+															<v8:content>Stegspråk</v8:content>
 														</v8:item>
 													</Title>
 													<RadioButtonType>Tumbler</RadioButtonType>
@@ -139,6 +162,10 @@
 																		<v8:lang>en</v8:lang>
 																		<v8:content>Russian</v8:content>
 																	</v8:item>
+																	<v8:item>
+																		<v8:lang>sv</v8:lang>
+																		<v8:content>Ryska</v8:content>
+																	</v8:item>
 																</Presentation>
 																<Value xsi:type="xs:string">ru</Value>
 															</xr:Value>
@@ -155,6 +182,10 @@
 																	<v8:item>
 																		<v8:lang>en</v8:lang>
 																		<v8:content>English</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>sv</v8:lang>
+																		<v8:content>Engelska</v8:content>
 																	</v8:item>
 																</Presentation>
 																<Value xsi:type="xs:string">en</Value>
@@ -184,9 +215,14 @@
 														<v8:lang>en</v8:lang>
 														<v8:content>The directory where the final feature files will be written.</v8:content>
 													</v8:item>
+													<v8:item>
+														<v8:lang>sv</v8:lang>
+														<v8:content>Katalogen dit de slutgiltiga feature-filerna skrivs.</v8:content>
+													</v8:item>
 												</Title>
 											</ExtendedTooltip>
 											<Events>
+												<Event name="OnChange">КаталогВыходныхФайловПриИзменении</Event>
 												<Event name="StartChoice">КаталогВыходныхФайловНачалоВыбора</Event>
 												<Event name="Opening">КаталогВыходныхФайловОткрытие</Event>
 											</Events>
@@ -203,11 +239,27 @@
 												<Title formatted="false">
 													<v8:item>
 														<v8:lang>ru</v8:lang>
-														<v8:content>Каталог, в котором хранятся текстовые файлы с объектами-исключениями. Для каждого вида объектов метаданных или события должен быть отдельный файл ("Справочники", "Документы" и т. д.).</v8:content>
+														<v8:content>Каталог, в котором хранятся текстовые файлы с объектами-исключениями. Для каждого вида объектов метаданных или события должен быть отдельный файл ("Справочники*", "Документы*" и т. д.). Доп.условием можно задать через "." тип теста (ФормаСписка, ФормаОбъекта, Запись, Копирование, ВводНаОсновании, Печать).
+Примеры:
+Документ1
+Документ2.ФормаОбъекта
+Документ3.Списка</v8:content>
 													</v8:item>
 													<v8:item>
 														<v8:lang>en</v8:lang>
-														<v8:content>The directory in which text files with exception objects are stored. For each type of metadata object or event there must be a separate file ("Directories", "Documents", etc.).</v8:content>
+														<v8:content>The directory in which text files with exception objects are stored. For each type of metadata object or event there must be a separate file ("Catalogs", "Documents", etc.). 
+Example:
+Document1
+Document2.ObjectForm
+Document3.ListForm</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>sv</v8:lang>
+														<v8:content>Katalogen där textfiler med undantagsobjekt lagras. För varje typ av metadataobjekt eller händelse måste det finnas en separat fil ("Kataloger", "Dokument" osv.).
+Exempel:
+Document1
+Document2.ObjectForm
+Document3.ListForm</v8:content>
 													</v8:item>
 												</Title>
 											</ExtendedTooltip>
@@ -228,11 +280,15 @@
 												<Title formatted="false">
 													<v8:item>
 														<v8:lang>ru</v8:lang>
-														<v8:content>Путь к файлу настройки сценариев (файл настройки можно сформировать на закладке "Настройка сценариев" в окне "Генератор дымовых тестов").</v8:content>
+														<v8:content>Путь к файлу настройки сценариев (файл настройки можно сформировать на закладке "Пакетное формирование фича-файлов" в окне "Генератор дымовых тестов").</v8:content>
 													</v8:item>
 													<v8:item>
 														<v8:lang>en</v8:lang>
-														<v8:content>Path to the script configuration file (the configuration file can be created on the "Script Settings" tab in the "Smoke Test Generator" window).</v8:content>
+														<v8:content>Path to the script configuration file (the configuration file can be created on the "Batch generation of feature files" tab in the "Smoke Test Generator" window).</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>sv</v8:lang>
+														<v8:content>Sökväg till skriptkonfigurationsfilen (konfigurationsfilen kan skapas på fliken "Batchgenerering av feature-filer" i fönstret "Röktestgenerator").</v8:content>
 													</v8:item>
 												</Title>
 											</ExtendedTooltip>
@@ -253,6 +309,10 @@
 											<v8:lang>en</v8:lang>
 											<v8:content>Right column group</v8:content>
 										</v8:item>
+										<v8:item>
+											<v8:lang>sv</v8:lang>
+											<v8:content>Höger kolumngrupp</v8:content>
+										</v8:item>
 									</Title>
 									<Group>Vertical</Group>
 									<Representation>None</Representation>
@@ -269,11 +329,15 @@
 												<Title formatted="false">
 													<v8:item>
 														<v8:lang>ru</v8:lang>
-														<v8:content>Если установлен, то feature-файлы в каталоге выходных файлов будут удалены перед началом формирования тестов.</v8:content>
+														<v8:content>Если установлен, то feature-файлы в каталоге выходных файлов будут удалены перед началом формирования тестов через "Пакетное формирование фича-файлов"</v8:content>
 													</v8:item>
 													<v8:item>
 														<v8:lang>en</v8:lang>
 														<v8:content>If set, feature files in the output files directory will be deleted before tests are generated.</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>sv</v8:lang>
+														<v8:content>Om detta är aktiverat raderas feature-filer i utdatakatalogen innan testerna genereras.</v8:content>
 													</v8:item>
 												</Title>
 											</ExtendedTooltip>
@@ -294,20 +358,24 @@
 														<v8:lang>en</v8:lang>
 														<v8:content>When this flag is enabled, only objects for which there is at least one element not marked for deletion in the current infobase will participate in the generation of feature files of extended actions.</v8:content>
 													</v8:item>
+													<v8:item>
+														<v8:lang>sv</v8:lang>
+														<v8:content>När denna flagga är aktiverad deltar endast objekt för vilka det finns minst ett element som inte är markerat för radering i den aktuella informationsbasen i genereringen av feature-filer för utökade åtgärder.</v8:content>
+													</v8:item>
 												</Title>
 											</ExtendedTooltip>
 										</CheckBoxField>
-										<CheckBoxField name="ТолькоИзмененныеОтностительноКонфигурацииПоставщика" id="14">
-											<DataPath>ТолькоИзмененныеОтностительноКонфигурацииПоставщика</DataPath>
+										<CheckBoxField name="ТолькоИзмененныеОтносительноКонфигурацииПоставщика" id="14">
+											<DataPath>ТолькоИзмененныеОтносительноКонфигурацииПоставщика</DataPath>
 											<TitleLocation>Right</TitleLocation>
 											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
 											<CheckBoxType>Auto</CheckBoxType>
-											<ContextMenu name="ТолькоИзмененныеОтностительноКонфигурацииПоставщикаКонтекстноеМеню" id="15"/>
-											<ExtendedTooltip name="ТолькоИзмененныеОтностительноКонфигурацииПоставщикаРасширеннаяПодсказка" id="16">
+											<ContextMenu name="ТолькоИзмененныеОтносительноКонфигурацииПоставщикаКонтекстноеМеню" id="15"/>
+											<ExtendedTooltip name="ТолькоИзмененныеОтносительноКонфигурацииПоставщикаРасширеннаяПодсказка" id="16">
 												<Title formatted="true">
 													<v8:item>
 														<v8:lang>ru</v8:lang>
-														<v8:content>При включении данного флага в формировании feature-файлов будут участвовать только объекты измененные относительно конфигурации поставщика. Для построения отчета о сравнении конфигураций будет &lt;b&gt;запущен конфигуратор&lt;/&gt; текущей информационной базы с &lt;b&gt;текущим пользователем&lt;/&gt; и &lt;b&gt;пустым паролем&lt;/&gt;. </v8:content>
+														<v8:content>При включении данного флага в формировании feature-файлов будут участвовать только объекты измененные относительно конфигурации поставщика. Для построения отчета о сравнении конфигураций будет &lt;b&gt;запущен конфигуратор&lt;/&gt; текущей информационной базы с &lt;b&gt;текущим пользователем&lt;/&gt; и &lt;b&gt;пустым паролем&lt;/&gt;.  Работает только для "Пакетное формирование фича-файлов"</v8:content>
 													</v8:item>
 													<v8:item>
 														<v8:lang>en</v8:lang>
@@ -316,7 +384,7 @@
 												</Title>
 											</ExtendedTooltip>
 											<Events>
-												<Event name="OnChange">ТолькоИзмененныеОтностительноКонфигурацииПоставщикаПриИзменении</Event>
+												<Event name="OnChange">ТолькоИзмененныеОтносительноКонфигурацииПоставщикаПриИзменении</Event>
 											</Events>
 										</CheckBoxField>
 										<InputField name="ИмяКонфигурацииПоставщика" id="11">
@@ -334,6 +402,10 @@
 														<v8:lang>en</v8:lang>
 														<v8:content>The name of the vendor configuration to compare configurations with.</v8:content>
 													</v8:item>
+													<v8:item>
+														<v8:lang>sv</v8:lang>
+														<v8:content>Namnet på leverantörskonfigurationen att jämföra konfigurationer med.</v8:content>
+													</v8:item>
 												</Title>
 											</ExtendedTooltip>
 										</InputField>
@@ -343,21 +415,26 @@
 						</UsualGroup>
 					</ChildItems>
 				</Page>
-				<Page name="СтраницаНастройкаСценариев" id="23">
+				<Page name="СтраницаФомированияСценариевФичаФайлами" id="23">
 					<Title>
 						<v8:item>
 							<v8:lang>ru</v8:lang>
-							<v8:content>Настройка сценариев</v8:content>
+							<v8:content>Пакетное формирование фича-файлов</v8:content>
 						</v8:item>
 						<v8:item>
 							<v8:lang>en</v8:lang>
-							<v8:content>Configuring Scripts</v8:content>
+							<v8:content>Batch generation of feature files</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Batchgenerering av feature-filer</v8:content>
 						</v8:item>
 					</Title>
-					<ExtendedTooltip name="СтраницаНастройкаСценариевРасширеннаяПодсказка" id="24"/>
+					<ExtendedTooltip name="СтраницаФомированияСценариевФичаФайламиРасширеннаяПодсказка" id="24"/>
 					<ChildItems>
 						<Table name="ТаблицаНастроек" id="25">
 							<Representation>List</Representation>
+							<ChangeRowOrder>false</ChangeRowOrder>
 							<AutoInsertNewRow>true</AutoInsertNewRow>
 							<EnableStartDrag>true</EnableStartDrag>
 							<EnableDrag>true</EnableDrag>
@@ -372,15 +449,15 @@
 										<CommandName>Form.Command.НастройкиСценариевПоУмолчанию</CommandName>
 										<ExtendedTooltip name="НастройкиСценариевПоУмолчаниюРасширеннаяПодсказка" id="107"/>
 									</Button>
-									<Button name="ТаблицаНастроекНастрокиСценариевСнятьВсе" id="112">
+									<Button name="ТаблицаНастроекНастройкиСценариевСнятьВсе" id="112">
 										<Type>CommandBarButton</Type>
 										<Representation>Picture</Representation>
-										<CommandName>Form.Command.НастрокиСценариевСнятьВсе</CommandName>
+										<CommandName>Form.Command.НастройкиСценариевСнятьВсе</CommandName>
 										<Picture>
 											<xr:Ref>StdPicture.UncheckAll</xr:Ref>
 											<xr:LoadTransparent>true</xr:LoadTransparent>
 										</Picture>
-										<ExtendedTooltip name="ТаблицаНастроекНастрокиСценариевСнятьВсеРасширеннаяПодсказка" id="113"/>
+										<ExtendedTooltip name="ТаблицаНастроекНастройкиСценариевСнятьВсеРасширеннаяПодсказка" id="113"/>
 									</Button>
 									<Button name="ТаблицаНастроекСохранитьНастройкиСценариевВФайл" id="75">
 										<Type>CommandBarButton</Type>
@@ -433,6 +510,7 @@
 										</PictureField>
 										<InputField name="ТаблицаНастроекПредставлениеОбъектаМетаданных" id="87">
 											<DataPath>ТаблицаНастроек.ПредставлениеОбъектаМетаданных</DataPath>
+											<ReadOnly>true</ReadOnly>
 											<Title>
 												<v8:item>
 													<v8:lang>ru</v8:lang>
@@ -440,6 +518,10 @@
 												</v8:item>
 												<v8:item>
 													<v8:lang>en</v8:lang>
+													<v8:content>Presentation</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>sv</v8:lang>
 													<v8:content>Presentation</v8:content>
 												</v8:item>
 											</Title>
@@ -464,6 +546,10 @@
 										<v8:item>
 											<v8:lang>en</v8:lang>
 											<v8:content>Basic actions</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>sv</v8:lang>
+											<v8:content>Grundläggande åtgärder</v8:content>
 										</v8:item>
 									</Title>
 									<Group>Horizontal</Group>
@@ -495,6 +581,10 @@
 										<v8:item>
 											<v8:lang>en</v8:lang>
 											<v8:content>Advanced Actions</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>sv</v8:lang>
+											<v8:content>Utökade åtgärder</v8:content>
 										</v8:item>
 									</Title>
 									<Group>Horizontal</Group>
@@ -533,6 +623,642 @@
 								</ColumnGroup>
 							</ChildItems>
 						</Table>
+						<UsualGroup name="СтраницаНастройкиОтбораДокументов" id="258">
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница настройки отбора документов</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Document Selection Settings page</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>sv</v8:lang>
+									<v8:content>Sida för dokumenturvalsinställningar</v8:content>
+								</v8:item>
+							</Title>
+							<ToolTip>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Страница настройки отбора документов</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>en</v8:lang>
+									<v8:content>Document Selection Settings page</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>sv</v8:lang>
+									<v8:content>Sida för dokumenturvalsinställningar</v8:content>
+								</v8:item>
+							</ToolTip>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="СтраницаНастройкиОтбораДокументовРасширеннаяПодсказка" id="259"/>
+							<ChildItems>
+								<InputField name="ДымовыеТестыНачальнаяДатаДляПодбораДокументов" id="255">
+									<DataPath>Объект.ДымовыеТестыНачальнаяДатаДляПодбораДокументов</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Начальная дата для подбора документов</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>The starting date for the selection of documents</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>sv</v8:lang>
+											<v8:content>Startdatumet för urval av dokument</v8:content>
+										</v8:item>
+									</Title>
+									<ContextMenu name="ДымовыеТестыНачальнаяДатаДляПодбораДокументовКонтекстноеМеню" id="256"/>
+									<ExtendedTooltip name="ДымовыеТестыНачальнаяДатаДляПодбораДокументовРасширеннаяПодсказка" id="257">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>При установке даты, подбор документов для дымовых тестов будет осуществлен от нее, то есть ДатаДокумента &gt;&gt;=  Начальная дата для подбора документов</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>When setting the date, the selection of documents for smoke tests will be carried out from it, that is, the DocumentDate &gt;&gt;= The starting date for the selection of documents</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">НачальнаяДатаДляПодбораДокументовПриИзменении</Event>
+									</Events>
+								</InputField>
+								<CheckBoxField name="ДымовыеТестыСортироватьДокументыПоДатеУбыв" id="263">
+									<DataPath>Объект.ДымовыеТестыСортироватьДокументыПоДатеУбыв</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Сортировать по убыванию</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Sort in descending order</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>sv</v8:lang>
+											<v8:content>Sortera i fallande ordning</v8:content>
+										</v8:item>
+									</Title>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ДымовыеТестыСортироватьДокументыПоДатеУбывКонтекстноеМеню" id="264"/>
+									<ExtendedTooltip name="ДымовыеТестыСортироватьДокументыПоДатеУбывРасширеннаяПодсказка" id="265">
+										<Title formatted="true">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>При установке флага, при отборе документов будут браться последние из списка</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>When the flag is set, the last documents from the list will be selected</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">ДымовыеТестыСортироватьДокументыПоДатеУбывПриИзменении</Event>
+									</Events>
+								</CheckBoxField>
+							</ChildItems>
+						</UsualGroup>
+						<Button name="ФормаСформироватьФайлы" id="7">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.СформироватьФайлы</CommandName>
+							<ExtendedTooltip name="ФормаСформироватьФайлыРасширеннаяПодсказка" id="8"/>
+						</Button>
+					</ChildItems>
+				</Page>
+				<Page name="СтраницаФормированияСценариевПоМетаданным" id="117">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Формирование сценариев по метаданным</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Generating scenarios from metadata</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Genererar scenarier från metadata</v8:content>
+						</v8:item>
+					</Title>
+					<Group>AlwaysHorizontal</Group>
+					<ExtendedTooltip name="СтраницаФормированияСценариевПоМетаданнымРасширеннаяПодсказка" id="118"/>
+					<ChildItems>
+						<UsualGroup name="ГруппаДеревоМетаданных" id="201">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаДеревоМетаданныхРасширеннаяПодсказка" id="202"/>
+							<ChildItems>
+								<InputField name="КаталогФайловИсключений1" id="203">
+									<DataPath>КаталогФайловИсключений</DataPath>
+									<TitleLocation>Top</TitleLocation>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<ChoiceButton>true</ChoiceButton>
+									<ClearButton>true</ClearButton>
+									<OpenButton>true</OpenButton>
+									<ContextMenu name="КаталогФайловИсключений1КонтекстноеМеню" id="204"/>
+									<ExtendedTooltip name="КаталогФайловИсключений1РасширеннаяПодсказка" id="205">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>The directory in which text files with exception objects are stored. For each type of metadata object or event there must be a separate file ("Directories", "Documents", etc.).</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Каталог файлов исключений</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>sv</v8:lang>
+												<v8:content>Katalogen där textfiler med undantagsobjekt lagras. För varje typ av metadataobjekt eller händelse måste det finnas en separat fil ("Kataloger", "Dokument" osv.).</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="StartChoice">КаталогФайловИсключенийНачалоВыбора</Event>
+										<Event name="Opening">КаталогФайловИсключенийОткрытие</Event>
+									</Events>
+								</InputField>
+								<CheckBoxField name="ТолькоВведенныеОбъекты1" id="206">
+									<DataPath>ТолькоВведенныеОбъекты</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Только введенные объекты (Справочники, Документы, ПВХ)</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Only entered objects (Directories, Documents and others)</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>sv</v8:lang>
+											<v8:content>Endast inmatade objekt (Kataloger, Dokument och andra)</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Right</TitleLocation>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<CheckBoxType>Auto</CheckBoxType>
+									<ContextMenu name="ТолькоВведенныеОбъекты1КонтекстноеМеню" id="207"/>
+									<ExtendedTooltip name="ТолькоВведенныеОбъекты1РасширеннаяПодсказка" id="208" DisplayImportance="VeryLow">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>When this flag is enabled, only objects for which there is at least one element not marked for deletion in the current infobase will participate in the generation of feature files of extended actions.</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Только введенные объекты (Справочники, Документы, ПВХ)</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>sv</v8:lang>
+												<v8:content>När denna flagga är aktiverad deltar endast objekt för vilka det finns minst ett element som inte är markerat för radering i den aktuella informationsbasen i genereringen av feature-filer för utökade åtgärder.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+								</CheckBoxField>
+								<Table name="ДеревоМетаданных" id="119">
+									<Representation>Tree</Representation>
+									<ChangeRowSet>false</ChangeRowSet>
+									<ChangeRowOrder>false</ChangeRowOrder>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<FileDragMode>AsFile</FileDragMode>
+									<DataPath>ДеревоМетаданных</DataPath>
+									<CommandSet>
+										<ExcludedCommand>Add</ExcludedCommand>
+										<ExcludedCommand>Change</ExcludedCommand>
+										<ExcludedCommand>Copy</ExcludedCommand>
+										<ExcludedCommand>Delete</ExcludedCommand>
+										<ExcludedCommand>EndEdit</ExcludedCommand>
+										<ExcludedCommand>MoveDown</ExcludedCommand>
+										<ExcludedCommand>MoveUp</ExcludedCommand>
+										<ExcludedCommand>ShowRowRearrangement</ExcludedCommand>
+										<ExcludedCommand>SortListAsc</ExcludedCommand>
+										<ExcludedCommand>SortListDesc</ExcludedCommand>
+									</CommandSet>
+									<ContextMenu name="ДеревоМетаданныхКонтекстноеМеню" id="120"/>
+									<AutoCommandBar name="ДеревоМетаданныхКоманднаяПанель" id="121">
+										<ChildItems>
+											<Button name="ДеревоМетаданныхОбновитьСтруктуруМетаданных" id="152">
+												<Type>CommandBarButton</Type>
+												<Representation>PictureAndText</Representation>
+												<CommandName>Form.Command.ОбновитьСтруктуруМетаданных</CommandName>
+												<ExtendedTooltip name="ДеревоМетаданныхОбновитьСтруктуруМетаданныхРасширеннаяПодсказка" id="153">
+													<Title formatted="false">
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Дополнительно используется каталог файлов исключений и "Только введенные объекты" из "Основные настройки"</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Additionally, the exclusion file directory and "Only entered objects" from "Basic settings" are used</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>sv</v8:lang>
+															<v8:content>Dessutom används katalogen för undantagsfiler och "Endast inmatade objekt" från "Grundinställningar"</v8:content>
+														</v8:item>
+													</Title>
+												</ExtendedTooltip>
+											</Button>
+										</ChildItems>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ДеревоМетаданныхРасширеннаяПодсказка" id="122"/>
+									<SearchStringAddition name="ДеревоМетаданныхСтрокаПоиска" id="123">
+										<AdditionSource>
+											<Item>ДеревоМетаданных</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ДеревоМетаданныхСтрокаПоискаКонтекстноеМеню" id="124"/>
+										<ExtendedTooltip name="ДеревоМетаданныхСтрокаПоискаРасширеннаяПодсказка" id="125"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ДеревоМетаданныхСостояниеПросмотра" id="126">
+										<AdditionSource>
+											<Item>ДеревоМетаданных</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ДеревоМетаданныхСостояниеПросмотраКонтекстноеМеню" id="127"/>
+										<ExtendedTooltip name="ДеревоМетаданныхСостояниеПросмотраРасширеннаяПодсказка" id="128"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ДеревоМетаданныхУправлениеПоиском" id="129">
+										<AdditionSource>
+											<Item>ДеревоМетаданных</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ДеревоМетаданныхУправлениеПоискомКонтекстноеМеню" id="130"/>
+										<ExtendedTooltip name="ДеревоМетаданныхУправлениеПоискомРасширеннаяПодсказка" id="131"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="Selection">ДеревоМетаданныхВыбор</Event>
+									</Events>
+									<ChildItems>
+										<ColumnGroup name="ДеревоМетаданныхГруппаОсновная" id="132">
+											<Group>InCell</Group>
+											<ExtendedTooltip name="ДеревоМетаданныхГруппаОсновнаяРасширеннаяПодсказка" id="133"/>
+											<ChildItems>
+												<CheckBoxField name="ДеревоМетаданныхПометка" id="168">
+													<DataPath>ДеревоМетаданных.Пометка</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<ShowInHeader>false</ShowInHeader>
+													<ShowInFooter>false</ShowInFooter>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ДеревоМетаданныхПометкаКонтекстноеМеню" id="169"/>
+													<ExtendedTooltip name="ДеревоМетаданныхПометкаРасширеннаяПодсказка" id="170"/>
+													<Events>
+														<Event name="OnChange">ДеревоМетаданныхПометкаПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<PictureField name="ДеревоМетаданныхКартинка" id="171">
+													<DataPath>ДеревоМетаданных.Картинка</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<TitleLocation>None</TitleLocation>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ДеревоМетаданныхКартинкаКонтекстноеМеню" id="172"/>
+													<ExtendedTooltip name="ДеревоМетаданныхКартинкаРасширеннаяПодсказка" id="173"/>
+												</PictureField>
+												<InputField name="ДеревоМетаданныхПредставление" id="156">
+													<DataPath>ДеревоМетаданных.Представление</DataPath>
+													<ReadOnly>true</ReadOnly>
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Представление</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Presentation</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>sv</v8:lang>
+															<v8:content>Presentation</v8:content>
+														</v8:item>
+													</Title>
+													<EditMode>EnterOnInput</EditMode>
+													<ContextMenu name="ДеревоМетаданныхПредставлениеКонтекстноеМеню" id="157"/>
+													<ExtendedTooltip name="ДеревоМетаданныхПредставлениеРасширеннаяПодсказка" id="158"/>
+												</InputField>
+											</ChildItems>
+										</ColumnGroup>
+										<InputField name="ДеревоМетаданныхДанные" id="159">
+											<DataPath>ДеревоМетаданных.Данные</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ДеревоМетаданныхДанныеКонтекстноеМеню" id="160"/>
+											<ExtendedTooltip name="ДеревоМетаданныхДанныеРасширеннаяПодсказка" id="161"/>
+										</InputField>
+										<CheckBoxField name="ДеревоМетаданныхЕстьЗаписи" id="211">
+											<DataPath>ДеревоМетаданных.ЕстьЗаписи</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ДеревоМетаданныхЕстьЗаписиКонтекстноеМеню" id="212"/>
+											<ExtendedTooltip name="ДеревоМетаданныхЕстьЗаписиРасширеннаяПодсказка" id="213"/>
+										</CheckBoxField>
+										<ColumnGroup name="ДеревоМетаданныхГруппаОсновныеДействия" id="174">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Основные действия</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Basic actions</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>sv</v8:lang>
+													<v8:content>Grundläggande åtgärder</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Group>Horizontal</Group>
+											<ShowInHeader>true</ShowInHeader>
+											<ExtendedTooltip name="ДеревоМетаданныхГруппаОсновныеДействияРасширеннаяПодсказка" id="175"/>
+											<ChildItems>
+												<CheckBoxField name="ДеревоМетаданныхФормаОбъекта" id="176">
+													<DataPath>ДеревоМетаданных.ФормаОбъекта</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ДеревоМетаданныхФормаОбъектаКонтекстноеМеню" id="177"/>
+													<ExtendedTooltip name="ДеревоМетаданныхФормаОбъектаРасширеннаяПодсказка" id="178"/>
+													<Events>
+														<Event name="OnChange">ДеревоМетаданныхДействиеПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<CheckBoxField name="ДеревоМетаданныхФормаСписка" id="179">
+													<DataPath>ДеревоМетаданных.ФормаСписка</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ДеревоМетаданныхФормаСпискаКонтекстноеМеню" id="180"/>
+													<ExtendedTooltip name="ДеревоМетаданныхФормаСпискаРасширеннаяПодсказка" id="181"/>
+													<Events>
+														<Event name="OnChange">ДеревоМетаданныхДействиеПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+											</ChildItems>
+										</ColumnGroup>
+										<ColumnGroup name="ДеревоМетаданныхГруппаРасширенныеДействий" id="182">
+											<Title>
+												<v8:item>
+													<v8:lang>ru</v8:lang>
+													<v8:content>Расширенные действий</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>en</v8:lang>
+													<v8:content>Advanced Actions</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>sv</v8:lang>
+													<v8:content>Utökade åtgärder</v8:content>
+												</v8:item>
+											</Title>
+											<HorizontalStretch>false</HorizontalStretch>
+											<Group>Horizontal</Group>
+											<ShowInHeader>true</ShowInHeader>
+											<ExtendedTooltip name="ДеревоМетаданныхГруппаРасширенныеДействийРасширеннаяПодсказка" id="183"/>
+											<ChildItems>
+												<CheckBoxField name="ДеревоМетаданныхЗапись" id="184">
+													<DataPath>ДеревоМетаданных.Запись</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ДеревоМетаданныхЗаписьКонтекстноеМеню" id="185"/>
+													<ExtendedTooltip name="ДеревоМетаданныхЗаписьРасширеннаяПодсказка" id="186"/>
+													<Events>
+														<Event name="OnChange">ДеревоМетаданныхДействиеПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<CheckBoxField name="ДеревоМетаданныхКопирование" id="187">
+													<DataPath>ДеревоМетаданных.Копирование</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ДеревоМетаданныхКопированиеКонтекстноеМеню" id="188"/>
+													<ExtendedTooltip name="ДеревоМетаданныхКопированиеРасширеннаяПодсказка" id="189"/>
+													<Events>
+														<Event name="OnChange">ДеревоМетаданныхДействиеПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<CheckBoxField name="ДеревоМетаданныхВводНаОсновании" id="190">
+													<DataPath>ДеревоМетаданных.ВводНаОсновании</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ДеревоМетаданныхВводНаОснованииКонтекстноеМеню" id="191"/>
+													<ExtendedTooltip name="ДеревоМетаданныхВводНаОснованииРасширеннаяПодсказка" id="192"/>
+													<Events>
+														<Event name="OnChange">ДеревоМетаданныхДействиеПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+												<CheckBoxField name="ДеревоМетаданныхПечать" id="193">
+													<DataPath>ДеревоМетаданных.Печать</DataPath>
+													<EditMode>EnterOnInput</EditMode>
+													<CheckBoxType>Auto</CheckBoxType>
+													<ContextMenu name="ДеревоМетаданныхПечатьКонтекстноеМеню" id="194"/>
+													<ExtendedTooltip name="ДеревоМетаданныхПечатьРасширеннаяПодсказка" id="195"/>
+													<Events>
+														<Event name="OnChange">ДеревоМетаданныхДействиеПриИзменении</Event>
+													</Events>
+												</CheckBoxField>
+											</ChildItems>
+										</ColumnGroup>
+									</ChildItems>
+								</Table>
+								<UsualGroup name="ГруппаПодвалаДереваМетаданных" id="247">
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаПодвалаДереваМетаданныхРасширеннаяПодсказка" id="248"/>
+									<ChildItems>
+										<CommandBar name="КоманднаяПанельПодготовкиДанных" id="266" DisplayImportance="VeryHigh">
+											<CommandSource>FormCommandPanelGlobalCommands</CommandSource>
+											<ExtendedTooltip name="КоманднаяПанельПодготовкиДанныхРасширеннаяПодсказка" id="267"/>
+											<ChildItems>
+												<Button name="ДеревоМетаданныхСформироватьСценарииПоМетаданным" id="199">
+													<Type>CommandBarButton</Type>
+													<DefaultButton>true</DefaultButton>
+													<CommandName>Form.Command.СформироватьСценарииПоМетаданным</CommandName>
+													<Font ref="style:NormalTextFont" bold="true" italic="false" underline="false" strikeout="false" kind="StyleItem" scale="100"/>
+													<RepresentationInContextMenu>None</RepresentationInContextMenu>
+													<LocationInCommandBar>InCommandBar</LocationInCommandBar>
+													<ExtendedTooltip name="ДеревоМетаданныхСформироватьСценарииПоМетаданнымРасширеннаяПодсказка" id="200"/>
+												</Button>
+												<Button name="ДеревоМетаданныхСформироватьСценарииПоОтсутствующимТестам" id="268">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.СформироватьСценарииПоОтсутствующимТестам</CommandName>
+													<ExtendedTooltip name="ДеревоМетаданныхСформироватьСценарииПоОтсутствующимТестамРасширеннаяПодсказка" id="269"/>
+												</Button>
+												<Button name="ПодготовкаДанных" id="251">
+													<Type>CommandBarButton</Type>
+													<CommandName>Form.Command.ПодготовкаДанных</CommandName>
+													<ExtendedTooltip name="ПодготовкаДанныхРасширеннаяПодсказка" id="252"/>
+												</Button>
+											</ChildItems>
+										</CommandBar>
+										<CheckBoxField name="ПоказатьПолныйТекстКодаСценария1С" id="244">
+											<DataPath>ПоказатьПолныйТекстКодаСценария1С</DataPath>
+											<TitleLocation>Right</TitleLocation>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ПоказатьПолныйТекстКодаСценария1СКонтекстноеМеню" id="245"/>
+											<ExtendedTooltip name="ПоказатьПолныйТекстКодаСценария1СРасширеннаяПодсказка" id="246"/>
+											<Events>
+												<Event name="OnChange">ПоказатьПолныйТекстКодаСценария1СПриИзменении</Event>
+											</Events>
+										</CheckBoxField>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
+						<UsualGroup name="ГруппаТекстовСценария" id="236">
+							<Group>Vertical</Group>
+							<Representation>None</Representation>
+							<ShowTitle>false</ShowTitle>
+							<ExtendedTooltip name="ГруппаТекстовСценарияРасширеннаяПодсказка" id="237"/>
+							<ChildItems>
+								<InputField name="КаталогВыходныхФайлов1" id="238">
+									<DataPath>КаталогВыходныхФайлов</DataPath>
+									<Title>
+										<v8:item>
+											<v8:lang>ru</v8:lang>
+											<v8:content>Каталог feature-файлов</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>en</v8:lang>
+											<v8:content>Catalog feature files</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>sv</v8:lang>
+											<v8:content>Katalog feature-filer</v8:content>
+										</v8:item>
+									</Title>
+									<TitleLocation>Top</TitleLocation>
+									<ToolTipRepresentation>None</ToolTipRepresentation>
+									<ChoiceButton>true</ChoiceButton>
+									<ClearButton>true</ClearButton>
+									<OpenButton>true</OpenButton>
+									<ContextMenu name="КаталогВыходныхФайлов1КонтекстноеМеню" id="239"/>
+									<ExtendedTooltip name="КаталогВыходныхФайлов1РасширеннаяПодсказка" id="240">
+										<Title formatted="false">
+											<v8:item>
+												<v8:lang>ru</v8:lang>
+												<v8:content>Каталог, в который будут записаны итоговые feature-файлы.</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>en</v8:lang>
+												<v8:content>The directory where the final feature files will be written.</v8:content>
+											</v8:item>
+											<v8:item>
+												<v8:lang>sv</v8:lang>
+												<v8:content>Katalogen dit de slutgiltiga feature-filerna skrivs.</v8:content>
+											</v8:item>
+										</Title>
+									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">КаталогВыходныхФайловПриИзменении</Event>
+										<Event name="StartChoice">КаталогВыходныхФайловНачалоВыбора</Event>
+										<Event name="Opening">КаталогВыходныхФайловОткрытие</Event>
+									</Events>
+								</InputField>
+								<Table name="ТаблицаКодаСценариев1С" id="214">
+									<Representation>List</Representation>
+									<ChangeRowOrder>false</ChangeRowOrder>
+									<AutoInsertNewRow>true</AutoInsertNewRow>
+									<EnableStartDrag>true</EnableStartDrag>
+									<EnableDrag>true</EnableDrag>
+									<DataPath>ТаблицаКодаСценариев1С</DataPath>
+									<CommandSet>
+										<ExcludedCommand>Add</ExcludedCommand>
+										<ExcludedCommand>Change</ExcludedCommand>
+										<ExcludedCommand>Copy</ExcludedCommand>
+									</CommandSet>
+									<RowFilter xsi:nil="true"/>
+									<ContextMenu name="ТаблицаКодаСценариев1СКонтекстноеМеню" id="215"/>
+									<AutoCommandBar name="ТаблицаКодаСценариев1СКоманднаяПанель" id="216">
+										<Autofill>false</Autofill>
+									</AutoCommandBar>
+									<ExtendedTooltip name="ТаблицаКодаСценариев1СРасширеннаяПодсказка" id="217"/>
+									<SearchStringAddition name="ТаблицаКодаСценариев1ССтрокаПоиска" id="218">
+										<AdditionSource>
+											<Item>ТаблицаКодаСценариев1С</Item>
+											<Type>SearchStringRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаКодаСценариев1ССтрокаПоискаКонтекстноеМеню" id="219"/>
+										<ExtendedTooltip name="ТаблицаКодаСценариев1ССтрокаПоискаРасширеннаяПодсказка" id="220"/>
+									</SearchStringAddition>
+									<ViewStatusAddition name="ТаблицаКодаСценариев1ССостояниеПросмотра" id="221">
+										<AdditionSource>
+											<Item>ТаблицаКодаСценариев1С</Item>
+											<Type>ViewStatusRepresentation</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаКодаСценариев1ССостояниеПросмотраКонтекстноеМеню" id="222"/>
+										<ExtendedTooltip name="ТаблицаКодаСценариев1ССостояниеПросмотраРасширеннаяПодсказка" id="223"/>
+									</ViewStatusAddition>
+									<SearchControlAddition name="ТаблицаКодаСценариев1СУправлениеПоиском" id="224">
+										<AdditionSource>
+											<Item>ТаблицаКодаСценариев1С</Item>
+											<Type>SearchControl</Type>
+										</AdditionSource>
+										<ContextMenu name="ТаблицаКодаСценариев1СУправлениеПоискомКонтекстноеМеню" id="225"/>
+										<ExtendedTooltip name="ТаблицаКодаСценариев1СУправлениеПоискомРасширеннаяПодсказка" id="226"/>
+									</SearchControlAddition>
+									<Events>
+										<Event name="Selection">ТаблицаКодаСценариев1СВыбор</Event>
+									</Events>
+									<ChildItems>
+										<PictureField name="ТаблицаКодаСценариев1СКартинка" id="241">
+											<DataPath>ТаблицаКодаСценариев1С.Картинка</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<TitleLocation>None</TitleLocation>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТаблицаКодаСценариев1СКартинкаКонтекстноеМеню" id="242"/>
+											<ExtendedTooltip name="ТаблицаКодаСценариев1СКартинкаРасширеннаяПодсказка" id="243"/>
+										</PictureField>
+										<InputField name="ТаблицаКодаСценариев1СЗаголовокКодаСценария" id="230">
+											<DataPath>ТаблицаКодаСценариев1С.ЗаголовокКодаСценария</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТаблицаКодаСценариев1СЗаголовокКодаСценарияКонтекстноеМеню" id="231"/>
+											<ExtendedTooltip name="ТаблицаКодаСценариев1СЗаголовокКодаСценарияРасширеннаяПодсказка" id="232"/>
+										</InputField>
+										<InputField name="ТаблицаКодаСценариев1СИмяФичаФайла" id="233">
+											<DataPath>ТаблицаКодаСценариев1С.ИмяФичаФайла</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<ContextMenu name="ТаблицаКодаСценариев1СИмяФичаФайлаКонтекстноеМеню" id="234"/>
+											<ExtendedTooltip name="ТаблицаКодаСценариев1СИмяФичаФайлаРасширеннаяПодсказка" id="235"/>
+										</InputField>
+										<CheckBoxField name="ТаблицаКодаСценариев1СЕстьТест" id="270">
+											<DataPath>ТаблицаКодаСценариев1С.ЕстьТест</DataPath>
+											<ReadOnly>true</ReadOnly>
+											<EditMode>EnterOnInput</EditMode>
+											<CheckBoxType>Auto</CheckBoxType>
+											<ContextMenu name="ТаблицаКодаСценариев1СЕстьТестКонтекстноеМеню" id="271"/>
+											<ExtendedTooltip name="ТаблицаКодаСценариев1СЕстьТестРасширеннаяПодсказка" id="272"/>
+										</CheckBoxField>
+									</ChildItems>
+								</Table>
+								<TextDocumentField name="ТекстКодСценария" id="196">
+									<DataPath>ТекстКодСценария</DataPath>
+									<Visible>false</Visible>
+									<ContextMenu name="ТекстКодСценарияКонтекстноеМеню" id="197"/>
+									<ExtendedTooltip name="ТекстКодСценарияРасширеннаяПодсказка" id="198"/>
+								</TextDocumentField>
+								<UsualGroup name="ГруппаКомандТекстовСценария" id="253">
+									<Group>AlwaysHorizontal</Group>
+									<Representation>None</Representation>
+									<ShowTitle>false</ShowTitle>
+									<ExtendedTooltip name="ГруппаКомандТекстовСценарияРасширеннаяПодсказка" id="254"/>
+									<ChildItems>
+										<Button name="СоздатьОбновитьФичаФайлы" id="249">
+											<Type>UsualButton</Type>
+											<CommandName>Form.Command.СоздатьОбновитьФичаФайлы</CommandName>
+											<ExtendedTooltip name="СоздатьОбновитьФичаФайлыРасширеннаяПодсказка" id="250"/>
+										</Button>
+									</ChildItems>
+								</UsualGroup>
+							</ChildItems>
+						</UsualGroup>
 					</ChildItems>
 				</Page>
 			</ChildItems>
@@ -555,6 +1281,10 @@
 					<v8:lang>en</v8:lang>
 					<v8:content>Exception files directory</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Katalog undantagsfiler</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>xs:string</v8:Type>
@@ -574,6 +1304,10 @@
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Output directory</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Utdatakatalog</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -595,6 +1329,10 @@
 					<v8:lang>en</v8:lang>
 					<v8:content>Vendor Configuration Name</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Leverantörskonfigurationens namn</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>xs:string</v8:Type>
@@ -605,7 +1343,7 @@
 			</Type>
 			<SavedData>true</SavedData>
 		</Attribute>
-		<Attribute name="ТолькоИзмененныеОтностительноКонфигурацииПоставщика" id="5">
+		<Attribute name="ТолькоИзмененныеОтносительноКонфигурацииПоставщика" id="5">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -614,6 +1352,10 @@
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Only changed relative to vendor configuration</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Endast ändrade i förhållande till leverantörskonfigurationen</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -631,6 +1373,10 @@
 					<v8:lang>en</v8:lang>
 					<v8:content>Settings table</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Inställningstabell</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>v8:ValueTable</v8:Type>
@@ -645,6 +1391,10 @@
 						<v8:item>
 							<v8:lang>en</v8:lang>
 							<v8:content>Open the list form</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Öppna listformuläret</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -661,6 +1411,10 @@
 							<v8:lang>en</v8:lang>
 							<v8:content>Open the object form</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Öppna objektformuläret</v8:content>
+						</v8:item>
 					</Title>
 					<Type>
 						<v8:Type>xs:boolean</v8:Type>
@@ -675,6 +1429,10 @@
 						<v8:item>
 							<v8:lang>en</v8:lang>
 							<v8:content>Metadata Object</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Metadataobjekt</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -695,6 +1453,10 @@
 							<v8:lang>en</v8:lang>
 							<v8:content>Save (Post) an existing</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Spara (bokför) ett befintligt</v8:content>
+						</v8:item>
 					</Title>
 					<Type>
 						<v8:Type>xs:boolean</v8:Type>
@@ -709,6 +1471,10 @@
 						<v8:item>
 							<v8:lang>en</v8:lang>
 							<v8:content>Copying and save (posting) a new</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Kopiera och spara (bokföra) ett nytt</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -725,6 +1491,10 @@
 							<v8:lang>en</v8:lang>
 							<v8:content>Generate</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Generera</v8:content>
+						</v8:item>
 					</Title>
 					<Type>
 						<v8:Type>xs:boolean</v8:Type>
@@ -739,6 +1509,10 @@
 						<v8:item>
 							<v8:lang>en</v8:lang>
 							<v8:content>Print</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Skriv ut</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -755,6 +1529,10 @@
 							<v8:lang>en</v8:lang>
 							<v8:content>Picture</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Bild</v8:content>
+						</v8:item>
 					</Title>
 					<Type>
 						<v8:Type>v8ui:Picture</v8:Type>
@@ -770,6 +1548,10 @@
 							<v8:lang>en</v8:lang>
 							<v8:content>Presentation of a metadata object</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Presentation av metadataobjekt</v8:content>
+						</v8:item>
 					</Title>
 					<Type>
 						<v8:Type>xs:string</v8:Type>
@@ -777,6 +1559,30 @@
 							<v8:Length>0</v8:Length>
 							<v8:AllowedLength>Variable</v8:AllowedLength>
 						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Приоритет" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приоритет</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Priority</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Prioritet</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>2</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
 					</Type>
 				</Column>
 			</Columns>
@@ -790,6 +1596,10 @@
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Only entered objects for advanced actions</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Endast inmatade objekt för utökade åtgärder</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -806,6 +1616,10 @@
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Language of steps</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Stegspråk</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -827,6 +1641,10 @@
 					<v8:lang>en</v8:lang>
 					<v8:content>Message text consistency</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Meddelandetextöverensstämmelse</v8:content>
+				</v8:item>
 			</Title>
 			<Type/>
 		</Attribute>
@@ -839,6 +1657,10 @@
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Path to script settings file</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Sökväg till skriptinställningsfil</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -865,6 +1687,10 @@
 					<v8:lang>en</v8:lang>
 					<v8:content>Clear output directory</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Rensa utdatakatalog</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
@@ -880,9 +1706,678 @@
 					<v8:lang>en</v8:lang>
 					<v8:content>Shut down the system</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Stäng av systemet</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ДеревоМетаданных" id="14">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дерево метаданных</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Metadata tree</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Metadataträd</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTree</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="Представление" id="43">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Представление</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Presentation</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Presentation</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Данные" id="50">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Данные</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Data</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Data</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Пометка" id="109">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Пометка</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Note</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Anteckning</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>10</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Any</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="Картинка" id="120">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинка</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8ui:Picture</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ФормаСписка" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Открыть форму списка</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Open the list form</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Öppna listformuläret</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ФормаОбъекта" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Открыть форму объекта</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Open the object form</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Öppna objektformuläret</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Запись" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Запись (проведение) существующего</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Save (Post) an existing</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Spara (bokför) ett befintligt</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Копирование" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Копирование и запись (проведение) нового</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Copying and save (posting) a new</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Kopiera och spara (bokföra) ett nytt</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВводНаОсновании" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Ввод на основании</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Generate</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Generera</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Печать" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Печать</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Print</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Skriv ut</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ТипОбъектаМетаданных" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип объекта метаданных</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Metadata object type</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Metadataobjekttyp</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="УровеньДерева" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Уровень дерева</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Level tree</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Trädnivå</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>1</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЕстьЗаписи" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Есть записи</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Records here</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Poster här</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="Приоритет" id="10">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Приоритет</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Priority</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Prioritet</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:decimal</v8:Type>
+						<v8:NumberQualifiers>
+							<v8:Digits>4</v8:Digits>
+							<v8:FractionDigits>0</v8:FractionDigits>
+							<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+						</v8:NumberQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТекстКодСценария" id="17">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Код сценария для вставки в фича-файл</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Script code to embed</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Skriptkod att bädda in</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/txtedt">d5p1:TextDocument</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ТаблицаИсключений" id="18">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица исключений</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Exceptions table</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Undantagstabell</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ТипОбъектаМетаданных" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип объекта метаданных</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Metadata object type</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Metadataobjekttyp</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ОбъектМетаданныхИсключение" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Объект метаданных исключение</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Metadata object exception</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Metadataobjektundantag</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="ТаблицаКодаСценариев1С" id="19">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица кода сценариев1 С</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Table script code to embed</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Tabellskriptkod att bädda in</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Columns>
+				<Column name="ТекстКодСценария" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Текст код сценария</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Script code to embed</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Skriptkod att bädda in</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЗаголовокКодаСценария" id="2">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Сценарий</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Title script code to embed</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Rubrikskriptkod att bädda in</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ПутьКФичаФайлу" id="3">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Путь к фича-файлу</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Path to feature file</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Sökväg till feature-fil</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ИмяФичаФайла" id="4">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Имя feature-файла для обновления</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Name feature file for update</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Namn på feature-fil för uppdatering</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="Картинка" id="5">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Картинка</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Picture</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Bild</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>v8ui:Picture</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ФичаФайлОбновлен" id="6">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Фича файл обновлен</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Feature file updated</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Feature-fil uppdaterad</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+				<Column name="ВидОбъектаМетаданных" id="7">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Вид объекта метаданных</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Type object of metadata</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Typ av metadataobjekt</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ТипТеста" id="8">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Тип теста</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>Type test</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Testtyp</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+				<Column name="ЕстьТест" id="9">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Есть тест</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>en</v8:lang>
+							<v8:content>This is a test</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:boolean</v8:Type>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="СписокФичаФайлов" id="20">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Список фича файлов</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>List of feature files</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Lista över feature-filer</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ПоказатьПолныйТекстКодаСценария1С" id="21">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Показать полный текст кода сценария 1С</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Show the full text of the 1C script code</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Visa den fullständiga texten för 1C-skriptkoden</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ВариантВстроенногоЯзыка" id="22">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вариант встроенного языка</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Script variant</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Skriptvariant</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
 			</Type>
 		</Attribute>
 		<ConditionalAppearance>
@@ -1056,6 +2551,243 @@
 					</dcscor:item>
 				</dcsset:appearance>
 			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоМетаданныхФормаОбъекта</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ДеревоМетаданных.ТипОбъектаМетаданных</dcsset:left>
+							<dcsset:comparisonType>Contains</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">РегистрыНакопления</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ДеревоМетаданных.ТипОбъектаМетаданных</dcsset:left>
+							<dcsset:comparisonType>Contains</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">РегистрыБухгалтерии</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ДеревоМетаданных.ТипОбъектаМетаданных</dcsset:left>
+							<dcsset:comparisonType>Contains</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">РегистрыРасчета</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#C0C0C0</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType"/>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Доступность</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>Отображать</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоМетаданныхФормаСписка</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ДеревоМетаданных.ТипОбъектаМетаданных</dcsset:left>
+							<dcsset:comparisonType>Contains</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">ЖурналыДокументов</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ДеревоМетаданных.ТипОбъектаМетаданных</dcsset:left>
+							<dcsset:comparisonType>Contains</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">Отчеты</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ДеревоМетаданных.ТипОбъектаМетаданных</dcsset:left>
+							<dcsset:comparisonType>Contains</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">Обработки</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#C0C0C0</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType"/>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Доступность</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>Отображать</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоМетаданныхЗапись</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоМетаданныхКопирование</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоМетаданныхВводНаОсновании</dcsset:field>
+					</dcsset:item>
+					<dcsset:item>
+						<dcsset:field>ДеревоМетаданныхПечать</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>OrGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ДеревоМетаданных.ТипОбъектаМетаданных</dcsset:left>
+							<dcsset:comparisonType>Contains</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">ЖурналыДокументов</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ДеревоМетаданных.ТипОбъектаМетаданных</dcsset:left>
+							<dcsset:comparisonType>Contains</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">Отчеты</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ДеревоМетаданных.ТипОбъектаМетаданных</dcsset:left>
+							<dcsset:comparisonType>Contains</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">Обработки</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ДеревоМетаданных.ТипОбъектаМетаданных</dcsset:left>
+							<dcsset:comparisonType>Contains</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">РегистрыСведений</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ДеревоМетаданных.ТипОбъектаМетаданных</dcsset:left>
+							<dcsset:comparisonType>Contains</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">РегистрыНакопления</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ДеревоМетаданных.ТипОбъектаМетаданных</dcsset:left>
+							<dcsset:comparisonType>Contains</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">РегистрыБухгалтерии</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ДеревоМетаданных.ТипОбъектаМетаданных</dcsset:left>
+							<dcsset:comparisonType>Contains</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">РегистрыРасчета</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#C0C0C0</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType"/>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Доступность</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>Отображать</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ДеревоМетаданныхЕстьЗаписи</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemGroup">
+						<dcsset:groupType>AndGroup</dcsset:groupType>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ДеревоМетаданных.ТипОбъектаМетаданных</dcsset:left>
+							<dcsset:comparisonType>NotContains</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">Справочники</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ДеревоМетаданных.ТипОбъектаМетаданных</dcsset:left>
+							<dcsset:comparisonType>NotContains</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">Документы</dcsset:right>
+						</dcsset:item>
+						<dcsset:item xsi:type="dcsset:FilterItemComparison">
+							<dcsset:left xsi:type="dcscor:Field">ДеревоМетаданных.ТипОбъектаМетаданных</dcsset:left>
+							<dcsset:comparisonType>NotContains</dcsset:comparisonType>
+							<dcsset:right xsi:type="xs:string">ПланыВидовХарактеристик</dcsset:right>
+						</dcsset:item>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>ЦветФона</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Color">#C0C0C0</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>Текст</dcscor:parameter>
+						<dcscor:value xsi:type="v8:LocalStringType"/>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Доступность</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:use>false</dcscor:use>
+						<dcscor:parameter>Отображать</dcscor:parameter>
+						<dcscor:value xsi:type="xs:boolean">false</dcscor:value>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
+			<dcsset:item>
+				<dcsset:selection>
+					<dcsset:item>
+						<dcsset:field>ТаблицаКодаСценариев1С</dcsset:field>
+					</dcsset:item>
+				</dcsset:selection>
+				<dcsset:filter>
+					<dcsset:item xsi:type="dcsset:FilterItemComparison">
+						<dcsset:left xsi:type="dcscor:Field">ТаблицаКодаСценариев1С.ФичаФайлОбновлен</dcsset:left>
+						<dcsset:comparisonType>Equal</dcsset:comparisonType>
+						<dcsset:right xsi:type="xs:boolean">true</dcsset:right>
+					</dcsset:item>
+				</dcsset:filter>
+				<dcsset:appearance>
+					<dcscor:item xsi:type="dcsset:SettingsParameterValue">
+						<dcscor:parameter>Шрифт</dcscor:parameter>
+						<dcscor:value xsi:type="v8ui:Font" ref="sys:DefaultGUIFont" bold="true" italic="false" underline="false" strikeout="false" kind="WindowsFont"/>
+					</dcscor:item>
+				</dcsset:appearance>
+			</dcsset:item>
 		</ConditionalAppearance>
 	</Attributes>
 	<Commands>
@@ -1068,6 +2800,10 @@
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Generate files</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Generera filer</v8:content>
 				</v8:item>
 			</Title>
 			<Action>СформироватьФайлы</Action>
@@ -1082,6 +2818,10 @@
 					<v8:lang>en</v8:lang>
 					<v8:content>Save script settings to a file</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Spara skriptinställningar till en fil</v8:content>
+				</v8:item>
 			</Title>
 			<Action>СохранитьНастройкиСценариевВФайл</Action>
 		</Command>
@@ -1094,6 +2834,10 @@
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Download script settings from a file</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Ladda ner skriptinställningar från en fil</v8:content>
 				</v8:item>
 			</Title>
 			<Action>ЗагрузитьНастройкиСценариевИзФайла</Action>
@@ -1108,6 +2852,10 @@
 					<v8:lang>en</v8:lang>
 					<v8:content>Default</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Standard</v8:content>
+				</v8:item>
 			</Title>
 			<Action>НастройкиСценариевПоУмолчанию</Action>
 		</Command>
@@ -1121,6 +2869,10 @@
 					<v8:lang>en</v8:lang>
 					<v8:content>Close</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Stäng</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
@@ -1131,10 +2883,14 @@
 					<v8:lang>en</v8:lang>
 					<v8:content>Close form</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Stäng formulär</v8:content>
+				</v8:item>
 			</ToolTip>
 			<Action>ЗакрытьФорму</Action>
 		</Command>
-		<Command name="НастрокиСценариевСнятьВсе" id="6">
+		<Command name="НастройкиСценариевСнятьВсе" id="6">
 			<Title>
 				<v8:item>
 					<v8:lang>ru</v8:lang>
@@ -1143,6 +2899,10 @@
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Remove all flags</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Ta bort alla flaggor</v8:content>
 				</v8:item>
 			</Title>
 			<ToolTip>
@@ -1154,8 +2914,165 @@
 					<v8:lang>en</v8:lang>
 					<v8:content>Remove all flags</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Ta bort alla flaggor</v8:content>
+				</v8:item>
 			</ToolTip>
-			<Action>НастрокиСценариевСнятьВсе</Action>
+			<Action>НастройкиСценариевСнятьВсе</Action>
+		</Command>
+		<Command name="ОбновитьСтруктуруМетаданных" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить структуру метаданных</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Update metadata structure</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Uppdatera metadatastruktur</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Update metadata structure</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Обновить структуру метаданных</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Uppdatera metadatastruktur</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Refresh</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>ОбновитьСтруктуруМетаданных</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СформироватьСценарииПоМетаданным" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать сценарии по метаданным</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Generate scenarios from metadata</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Generera scenarier från metadata</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать сценарии по метаданным</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Generate scenarios from metadata</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Generera scenarier från metadata</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.GenerateReport</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СформироватьСценарииПоМетаданным</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="СоздатьОбновитьФичаФайлы" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать/обновить feature-файлы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Create/update feature files</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Skapa/uppdatera feature-filer</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Создать или обновить фича-файлы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Create/update feature files</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Skapa/uppdatera feature-filer</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.Write</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СоздатьОбновитьФичаФайлы</Action>
+			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="ПодготовкаДанных" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Подготовка данных</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Prepare data</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Förbered data</v8:content>
+				</v8:item>
+			</Title>
+			<Action>ПодготовкаДанных</Action>
+		</Command>
+		<Command name="СформироватьСценарииПоОтсутствующимТестам" id="11">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать сценарии по отсутствующим тестам</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Generate scenarios for missing tests</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сформировать сценарии по отсутствующим тестам</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Generate scenarios from metadata</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Picture>
+				<xr:Ref>StdPicture.GenerateReport</xr:Ref>
+				<xr:LoadTransparent>true</xr:LoadTransparent>
+			</Picture>
+			<Action>СформироватьСценарииПоОтсутствующимТестам</Action>
+			<Representation>TextPicture</Representation>
 		</Command>
 	</Commands>
 </Form>

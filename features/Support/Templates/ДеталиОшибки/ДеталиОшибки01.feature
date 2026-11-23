@@ -1,9 +1,5 @@
 # language: ru
 # encoding: utf-8
-#parent uf:
-@UF9_Вспомогательные_фичи
-#parent ua:
-@UA29_Макеты_для_проверки_обработки_ошибок
 
 @IgnoreOnCIMainBuild
 @tree

@@ -45,12 +45,24 @@
 			<ContextMenu name="ЗначениеВыражениеКонтекстноеМеню" id="15"/>
 			<ExtendedTooltip name="ЗначениеВыражениеРасширеннаяПодсказка" id="16"/>
 		</InputField>
+		<InputField name="ОтборИмяПоля" id="26">
+			<DataPath>ОтборИмяПоля</DataPath>
+			<ContextMenu name="ОтборИмяПоляКонтекстноеМеню" id="27"/>
+			<ExtendedTooltip name="ОтборИмяПоляРасширеннаяПодсказка" id="28"/>
+		</InputField>
 		<InputField name="ЗначениеРезультат" id="9">
 			<DataPath>ЗначениеРезультат</DataPath>
 			<MultiLine>true</MultiLine>
 			<ContextMenu name="ЗначениеРезультатКонтекстноеМеню" id="10"/>
 			<ExtendedTooltip name="ЗначениеРезультатРасширеннаяПодсказка" id="11"/>
 		</InputField>
+		<CheckBoxField name="ИскатьПолеПоИмени" id="29">
+			<DataPath>ИскатьПолеПоИмени</DataPath>
+			<TitleLocation>Right</TitleLocation>
+			<CheckBoxType>Auto</CheckBoxType>
+			<ContextMenu name="ИскатьПолеПоИмениКонтекстноеМеню" id="30"/>
+			<ExtendedTooltip name="ИскатьПолеПоИмениРасширеннаяПодсказка" id="31"/>
+		</CheckBoxField>
 		<CheckBoxField name="ВыражениеВычислено" id="6">
 			<DataPath>ВыражениеВычислено</DataPath>
 			<TitleLocation>Right</TitleLocation>
@@ -134,6 +146,32 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Вызывать исключение</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="ОтборИмяПоля" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Отбор имя поля</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ИскатьПолеПоИмени" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Искать поле по имени</v8:content>
 				</v8:item>
 			</Title>
 			<Type>

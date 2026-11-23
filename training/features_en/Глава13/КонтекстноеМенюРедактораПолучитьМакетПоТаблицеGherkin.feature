@@ -16,7 +16,7 @@
 * This menu item gets a spreadsheet document from the Gherkin table.
 		И я делаю клик по элементу формы 'ЭтотСеанс' '' 'Document' правой кнопкой UI Automation
 		И Пауза 1
-		И Я делаю подсветку элемента VA "VanessaEditorКонтекстноеМенюПолучитьМакетПоТаблице" "Get template by table" и перемещаю курсор
+		И Я делаю подсветку элемента VA "VanessaEditorКонтекстноеМенюПолучитьМакетПоТаблице" "Convert Gherkin table to spreadsheet document" и перемещаю курсор
 
 * When executing the command, the template window will open.
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'VanessaEditorКонтекстноеМенюПолучитьМакетПоТаблице' UI Automation	

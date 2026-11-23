@@ -5,11 +5,12 @@ theme:
   logo: 'assets/images/logo.png'
   favicon: 'assets/images/logo.png'
   palette:
+    scheme: 'default'
     primary: 'white'
     accent: 'red'
   features:
-    - tabs
-    - instant
+    - navigation.tabs
+    - navigation.instant
 plugins:
   - search:
       separator: '[\s\-\.]+'
@@ -24,7 +25,9 @@ extra:
       link: https://t.me/VanessaAutomation
 markdown_extensions:
   - admonition
-  - codehilite
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.superfences
   - toc:
       permalink: true
 site_url: 'https://pr-mex.github.io/vanessa-automation'

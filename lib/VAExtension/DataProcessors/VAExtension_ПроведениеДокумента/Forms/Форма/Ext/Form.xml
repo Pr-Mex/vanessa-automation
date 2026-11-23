@@ -28,6 +28,11 @@
 				<CommandName>Form.Command.ЗакрытьФорму</CommandName>
 				<ExtendedTooltip name="ЗакрытьФормуРасширеннаяПодсказка" id="7"/>
 			</Button>
+			<Button name="ФормаПометитьНаУдалениеПоКомментарию" id="54">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.ПометитьНаУдалениеПоКомментарию</CommandName>
+				<ExtendedTooltip name="ФормаПометитьНаУдалениеПоКомментариюРасширеннаяПодсказка" id="55"/>
+			</Button>
 		</ChildItems>
 	</AutoCommandBar>
 	<ChildItems>
@@ -36,6 +41,16 @@
 			<MultiLine>true</MultiLine>
 			<ContextMenu name="НавСсылкаКонтекстноеМеню" id="25"/>
 			<ExtendedTooltip name="НавСсылкаРасширеннаяПодсказка" id="26"/>
+		</InputField>
+		<InputField name="ВидДокумента" id="48">
+			<DataPath>ВидДокумента</DataPath>
+			<ContextMenu name="ВидДокументаКонтекстноеМеню" id="49"/>
+			<ExtendedTooltip name="ВидДокументаРасширеннаяПодсказка" id="50"/>
+		</InputField>
+		<InputField name="ТекстКомментария" id="51">
+			<DataPath>ТекстКомментария</DataPath>
+			<ContextMenu name="ТекстКомментарияКонтекстноеМеню" id="52"/>
+			<ExtendedTooltip name="ТекстКомментарияРасширеннаяПодсказка" id="53"/>
 		</InputField>
 		<InputField name="КолСекундОжиданияФоновыхЗаданий" id="45">
 			<DataPath>КолСекундОжиданияФоновыхЗаданий</DataPath>
@@ -177,6 +192,36 @@
 				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
+		<Attribute name="ВидДокумента" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вид документа</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
+		<Attribute name="ТекстКомментария" id="10">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Текст комментария</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+		</Attribute>
 	</Attributes>
 	<Commands>
 		<Command name="ВыполнитьОбработку" id="1">
@@ -253,6 +298,21 @@
 				</v8:item>
 			</ToolTip>
 			<Action>ПометитьНаУдалениеНавссылки</Action>
+		</Command>
+		<Command name="ПометитьНаУдалениеПоКомментарию" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пометить на удаление по комментарию</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пометить на удаление по комментарию</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПометитьНаУдалениеПоКомментарию</Action>
 		</Command>
 	</Commands>
 </Form>

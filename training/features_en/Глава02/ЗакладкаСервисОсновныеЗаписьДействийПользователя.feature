@@ -18,6 +18,7 @@
 			| 'Name'                                               |
 			| 'ИскатьЭлементыФормыПоИмени'                        |
 			| 'ПоказыватьОкноОстановкиЗаписиДействийПользователя' |
+			| 'УбиратьПробелПередЗвездочкойВЗаголовкеОкна'        |
 
 * The first checkbox defines which steps will be generated based on the result of recording user actions.
 		И я делаю подсветку нескольких элементов VA с их заголовком "How to search for form elements in steps" UI Automation
@@ -46,6 +47,20 @@
 		И я делаю подсветку нескольких элементов VA с их заголовком "Show recording termination window" UI Automation
 			| 'Name'                                               |
 			| 'ПоказыватьОкноОстановкиЗаписиДействийПользователя' |
+
+* The third checkbox defines if the space before the star in the window title is removed while recording user actions.
+		И я делаю подсветку нескольких элементов VA с их заголовком "Remove space before the star in the window title" UI Automation
+			| 'Name'                                               |
+			| 'УбиратьПробелПередЗвездочкойВЗаголовкеОкна'        |
+* When a form has unsaved changes, a modification mark appears at the end of its title - a space and the star character.
+* If the checkbox is set, this space is removed while recording: the step contains "Title (creation)*".
+* Such a step matches both the modified and the unmodified form.
+* If the checkbox is removed, the title is recorded as the platform shows it: "Title (creation) *".
+* A significant point. When recording user actions at the request of an AI agent, the space is always removed regardless of the checkbox.
+* This checkbox is also recommended to leave enabled.
+		И я делаю подсветку нескольких элементов VA с их заголовком "Remove space before the star in the window title" UI Automation
+			| 'Name'                                               |
+			| 'УбиратьПробелПередЗвездочкойВЗаголовкеОкна'        |
 
 * That's it, move on to the next lesson of the interactive help.
 

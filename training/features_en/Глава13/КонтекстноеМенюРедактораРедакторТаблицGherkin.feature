@@ -24,6 +24,12 @@
 * This menu item starts editing the table in a special window. Hotkey Control plus Shift plus T.
 		И Я делаю подсветку элемента VA "VanessaEditorКонтекстноеМенюРедактироватьТаблицуТекст" "Edit table" и перемещаю курсор
 
+* And this menu item aligns the markup of all Gherkin tables in the feature text.
+		И Я делаю подсветку элемента VA "VanessaEditorКонтекстноеМенюВыровнятьТаблицыGherkin" "Align columns of Gherkin tables" и перемещаю курсор
+
+* This menu item formats the whole feature: indentation, trailing spaces and Gherkin tables.
+		И Я делаю подсветку элемента VA "VanessaEditorКонтекстноеМенюФорматироватьФичу" "Format feature file" и перемещаю курсор
+
 * When you select the menu item, the Gherkin Table editor opens.
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'VanessaEditorКонтекстноеМенюРедактироватьТаблицуТекст' UI Automation	
 		И Пауза 1
