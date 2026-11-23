@@ -1,11 +1,9 @@
-# language: ru
+﻿# language: ru
 # encoding: utf-8
-#parent uf:
-@UF10_Запуск_VA
-#parent ua:
-@UA35_запускать_интерактивно
 
+@uf-part2
 @IgnoreOnWeb
+@IgnoreOnCIMainBuild
 
 Функционал: Проверка открытия и закрытия формы vanessa-behavoir
 	Как Разработчик

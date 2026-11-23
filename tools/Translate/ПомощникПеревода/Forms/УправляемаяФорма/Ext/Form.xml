@@ -1,0 +1,511 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<Form xmlns="http://v8.1c.ru/8.3/xcf/logform" xmlns:app="http://v8.1c.ru/8.2/managed-application/core" xmlns:cfg="http://v8.1c.ru/8.1/data/enterprise/current-config" xmlns:dcscor="http://v8.1c.ru/8.1/data-composition-system/core" xmlns:dcsset="http://v8.1c.ru/8.1/data-composition-system/settings" xmlns:ent="http://v8.1c.ru/8.1/data/enterprise" xmlns:lf="http://v8.1c.ru/8.2/managed-application/logform" xmlns:style="http://v8.1c.ru/8.1/data/ui/style" xmlns:sys="http://v8.1c.ru/8.1/data/ui/fonts/system" xmlns:v8="http://v8.1c.ru/8.1/data/core" xmlns:v8ui="http://v8.1c.ru/8.1/data/ui" xmlns:web="http://v8.1c.ru/8.1/data/ui/colors/web" xmlns:win="http://v8.1c.ru/8.1/data/ui/colors/windows" xmlns:xr="http://v8.1c.ru/8.3/xcf/readable" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" version="2.10">
+	<Title>
+		<v8:item>
+			<v8:lang>ru</v8:lang>
+			<v8:content>Тест</v8:content>
+		</v8:item>
+	</Title>
+	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
+	<AutoTitle>false</AutoTitle>
+	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1"/>
+	<Events>
+		<Event name="OnOpen">ПриОткрытии</Event>
+	</Events>
+	<ChildItems>
+		<Pages name="Страницы" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Страницы</v8:content>
+				</v8:item>
+			</ToolTip>
+			<ExtendedTooltip name="СтраницыРасширеннаяПодсказка" id="29"/>
+			<ChildItems>
+				<Page name="Основное" id="30">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основное</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Основное</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ОсновноеРасширеннаяПодсказка" id="31"/>
+					<ChildItems>
+						<Button name="ДобавитьПереводПоТаблице" id="1">
+							<Type>UsualButton</Type>
+							<DefaultButton>true</DefaultButton>
+							<CommandName>Form.Command.ДобавитьПереводПоТаблице</CommandName>
+							<ExtendedTooltip name="ДобавитьПереводПоТаблицеРасширеннаяПодсказка" id="2"/>
+						</Button>
+						<InputField name="БратьДляПеревода" id="19">
+							<DataPath>БратьДляПеревода</DataPath>
+							<ContextMenu name="БратьДляПереводаКонтекстноеМеню" id="20"/>
+							<ExtendedTooltip name="БратьДляПереводаРасширеннаяПодсказка" id="21"/>
+						</InputField>
+						<InputField name="ПризнакЧтоНадоПереводить" id="25">
+							<DataPath>ПризнакЧтоНадоПереводить</DataPath>
+							<ContextMenu name="ПризнакЧтоНадоПереводитьКонтекстноеМеню" id="26"/>
+							<ExtendedTooltip name="ПризнакЧтоНадоПереводитьРасширеннаяПодсказка" id="27"/>
+						</InputField>
+						<InputField name="КаталогФайлов" id="22">
+							<DataPath>КаталогФайлов</DataPath>
+							<ContextMenu name="КаталогФайловКонтекстноеМеню" id="23"/>
+							<ExtendedTooltip name="КаталогФайловРасширеннаяПодсказка" id="24"/>
+						</InputField>
+						<Table name="ТаблицаЯзыков" id="3">
+							<Representation>List</Representation>
+							<AutoInsertNewRow>true</AutoInsertNewRow>
+							<EnableStartDrag>true</EnableStartDrag>
+							<EnableDrag>true</EnableDrag>
+							<FileDragMode>AsFile</FileDragMode>
+							<DataPath>ТаблицаЯзыков</DataPath>
+							<RowFilter xsi:nil="true"/>
+							<ContextMenu name="ТаблицаЯзыковКонтекстноеМеню" id="4"/>
+							<AutoCommandBar name="ТаблицаЯзыковКоманднаяПанель" id="5"/>
+							<ExtendedTooltip name="ТаблицаЯзыковРасширеннаяПодсказка" id="6"/>
+							<SearchStringAddition name="ТаблицаЯзыковСтрокаПоиска" id="7">
+								<AdditionSource>
+									<Item>ТаблицаЯзыков</Item>
+									<Type>SearchStringRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаЯзыковСтрокаПоискаКонтекстноеМеню" id="8"/>
+								<ExtendedTooltip name="ТаблицаЯзыковСтрокаПоискаРасширеннаяПодсказка" id="9"/>
+							</SearchStringAddition>
+							<ViewStatusAddition name="ТаблицаЯзыковСостояниеПросмотра" id="10">
+								<AdditionSource>
+									<Item>ТаблицаЯзыков</Item>
+									<Type>ViewStatusRepresentation</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаЯзыковСостояниеПросмотраКонтекстноеМеню" id="11"/>
+								<ExtendedTooltip name="ТаблицаЯзыковСостояниеПросмотраРасширеннаяПодсказка" id="12"/>
+							</ViewStatusAddition>
+							<SearchControlAddition name="ТаблицаЯзыковУправлениеПоиском" id="13">
+								<AdditionSource>
+									<Item>ТаблицаЯзыков</Item>
+									<Type>SearchControl</Type>
+								</AdditionSource>
+								<ContextMenu name="ТаблицаЯзыковУправлениеПоискомКонтекстноеМеню" id="14"/>
+								<ExtendedTooltip name="ТаблицаЯзыковУправлениеПоискомРасширеннаяПодсказка" id="15"/>
+							</SearchControlAddition>
+							<ChildItems>
+								<InputField name="ТаблицаЯзыковЯзык" id="16">
+									<DataPath>ТаблицаЯзыков.Язык</DataPath>
+									<EditMode>EnterOnInput</EditMode>
+									<ContextMenu name="ТаблицаЯзыковЯзыкКонтекстноеМеню" id="17"/>
+									<ExtendedTooltip name="ТаблицаЯзыковЯзыкРасширеннаяПодсказка" id="18"/>
+								</InputField>
+							</ChildItems>
+						</Table>
+					</ChildItems>
+				</Page>
+				<Page name="ПереводСообщений" id="32">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Перевод сообщений</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Перевод сообщений</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ПереводСообщенийРасширеннаяПодсказка" id="33"/>
+					<ChildItems>
+						<Button name="ДополнитьМакетСообщений" id="37">
+							<Type>UsualButton</Type>
+							<Visible>false</Visible>
+							<CommandName>Form.Command.ДополнитьМакетСообщений</CommandName>
+							<ExtendedTooltip name="ДополнитьМакетСообщенийРасширеннаяПодсказка" id="38"/>
+						</Button>
+						<InputField name="ПутьКОбработке" id="34">
+							<DataPath>ПутьКОбработке</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<ContextMenu name="ПутьКОбработкеКонтекстноеМеню" id="35"/>
+							<ExtendedTooltip name="ПутьКОбработкеРасширеннаяПодсказка" id="36"/>
+						</InputField>
+						<Button name="ЗаменитьВФайлахСообщениеНаВызовСлужебнойФункции" id="39">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ЗаменитьВФайлахСообщениеНаВызовСлужебнойФункции</CommandName>
+							<ExtendedTooltip name="ЗаменитьВФайлахСообщениеНаВызовСлужебнойФункцииРасширеннаяПодсказка" id="40"/>
+						</Button>
+						<Button name="СортировкаМакетаСообщенийПоАлфавиту" id="41">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.СортировкаМакетаСообщенийПоАлфавиту</CommandName>
+							<ExtendedTooltip name="СортировкаМакетаСообщенийПоАлфавитуРасширеннаяПодсказка" id="42"/>
+						</Button>
+						<Button name="ПеревестиМакетыСообщений" id="43">
+							<Type>UsualButton</Type>
+							<Visible>false</Visible>
+							<CommandName>Form.Command.ПеревестиМакетыСообщений</CommandName>
+							<ExtendedTooltip name="ПеревестиМакетыСообщенийРасширеннаяПодсказка" id="44"/>
+						</Button>
+						<Button name="ВставитьВМакетыСтрокиИзМассиваJson" id="63">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ВставитьВМакетыСтрокиИзМассиваJson</CommandName>
+							<ExtendedTooltip name="ВставитьВМакетыСтрокиИзМассиваJsonРасширеннаяПодсказка" id="64"/>
+						</Button>
+						<Button name="ВставитьВМакетыПереводовСообщенийСтроку" id="45">
+							<Type>UsualButton</Type>
+							<Visible>false</Visible>
+							<CommandName>Form.Command.ВставитьВМакетыПереводовСообщенийСтроку</CommandName>
+							<ExtendedTooltip name="ВставитьВМакетыПереводовСообщенийСтрокуРасширеннаяПодсказка" id="46"/>
+						</Button>
+						<InputField name="СтрокаДляВставкиВМакет" id="47">
+							<DataPath>СтрокаДляВставкиВМакет</DataPath>
+							<AutoMaxWidth>false</AutoMaxWidth>
+							<MultiLine>true</MultiLine>
+							<ContextMenu name="СтрокаДляВставкиВМакетКонтекстноеМеню" id="48"/>
+							<ExtendedTooltip name="СтрокаДляВставкиВМакетРасширеннаяПодсказка" id="49"/>
+						</InputField>
+					</ChildItems>
+				</Page>
+				<Page name="ЗаменаСтрокВМакетахИВМодулях" id="50">
+					<Visible>false</Visible>
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Замена строк в макетах и в модулях</v8:content>
+						</v8:item>
+					</Title>
+					<ToolTip>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Замена строк в макетах ИВМодулях</v8:content>
+						</v8:item>
+					</ToolTip>
+					<ExtendedTooltip name="ЗаменаСтрокВМакетахИВМодуляхРасширеннаяПодсказка" id="51"/>
+					<ChildItems>
+						<InputField name="ПутьКОбработке1" id="58">
+							<DataPath>ПутьКОбработке</DataPath>
+							<ContextMenu name="ПутьКОбработке1КонтекстноеМеню" id="59"/>
+							<ExtendedTooltip name="ПутьКОбработке1РасширеннаяПодсказка" id="60"/>
+						</InputField>
+						<InputField name="СтрокаИсходник" id="52">
+							<DataPath>СтрокаИсходник</DataPath>
+							<ContextMenu name="СтрокаИсходникКонтекстноеМеню" id="53"/>
+							<ExtendedTooltip name="СтрокаИсходникРасширеннаяПодсказка" id="54"/>
+						</InputField>
+						<InputField name="СтрокаЗамены" id="55">
+							<DataPath>СтрокаЗамены</DataPath>
+							<ContextMenu name="СтрокаЗаменыКонтекстноеМеню" id="56"/>
+							<ExtendedTooltip name="СтрокаЗаменыРасширеннаяПодсказка" id="57"/>
+						</InputField>
+						<Button name="ЗаменитьСтрокуВМакетахИВКоде" id="61">
+							<Type>UsualButton</Type>
+							<CommandName>Form.Command.ЗаменитьСтрокуВМакетахИВКоде</CommandName>
+							<ExtendedTooltip name="ЗаменитьСтрокуВМакетахИВКодеРасширеннаяПодсказка" id="62"/>
+						</Button>
+					</ChildItems>
+				</Page>
+			</ChildItems>
+		</Pages>
+	</ChildItems>
+	<Attributes>
+		<Attribute name="Объект" id="1">
+			<Type>
+				<v8:Type>cfg:ExternalDataProcessorObject.ПомощникПеревода</v8:Type>
+			</Type>
+			<MainAttribute>true</MainAttribute>
+		</Attribute>
+		<Attribute name="ТаблицаЯзыков" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Таблица языков</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>v8:ValueTable</v8:Type>
+			</Type>
+			<Save>
+				<Field>ТаблицаЯзыков</Field>
+			</Save>
+			<Columns>
+				<Column name="Язык" id="1">
+					<Title>
+						<v8:item>
+							<v8:lang>ru</v8:lang>
+							<v8:content>Язык</v8:content>
+						</v8:item>
+					</Title>
+					<Type>
+						<v8:Type>xs:string</v8:Type>
+						<v8:StringQualifiers>
+							<v8:Length>0</v8:Length>
+							<v8:AllowedLength>Variable</v8:AllowedLength>
+						</v8:StringQualifiers>
+					</Type>
+				</Column>
+			</Columns>
+		</Attribute>
+		<Attribute name="БратьДляПеревода" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Брать для перевода</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>БратьДляПеревода</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="КаталогФайлов" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Каталог файлов</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>КаталогФайлов</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ПризнакЧтоНадоПереводить" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Признак что надо переводить</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>ПризнакЧтоНадоПереводить</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="ПутьКОбработке" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Путь к обработке</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>ПутьКОбработке</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="СтрокаДляВставкиВМакет" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строка для вставки в макет</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>СтрокаДляВставкиВМакет</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="СтрокаИсходник" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строка исходник</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>СтрокаИсходник</Field>
+			</Save>
+		</Attribute>
+		<Attribute name="СтрокаЗамены" id="9">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Строка замены</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<Save>
+				<Field>СтрокаЗамены</Field>
+			</Save>
+		</Attribute>
+	</Attributes>
+	<Commands>
+		<Command name="ДобавитьПереводПоТаблице" id="1">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить перевод по таблице</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Добавить перевод по таблице</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДобавитьПереводПоТаблице</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ДополнитьМакетСообщений" id="2">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнить макет сообщений</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Дополнить макет сообщений</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ДополнитьМакетСообщений</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаменитьВФайлахСообщениеНаВызовСлужебнойФункции" id="3">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заменить в файлах сообщение на вызов служебной функции</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заменить в файлах сообщение на вызов служебной функции</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаменитьВФайлахСообщениеНаВызовСлужебнойФункции</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="СортировкаМакетаСообщенийПоАлфавиту" id="4">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сортировка макета сообщений по алфавиту</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сортировка макета сообщений по алфавиту</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СортировкаМакетаСообщенийПоАлфавиту</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ПеревестиМакетыСообщений" id="5">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перевести макеты сообщений</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Перевести макеты сообщений</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ПеревестиМакетыСообщений</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ВставитьВМакетыПереводовСообщенийСтроку" id="6">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить в макеты переводов сообщений строки</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить в макеты переводов сообщений строку</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВставитьВМакетыПереводовСообщенийСтроку</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
+		</Command>
+		<Command name="ЗаменитьСтрокуВМакетахИВКоде" id="7">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заменить строку в макетах и в коде</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Заменить строку в макетах ИВКоде</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ЗаменитьСтрокуВМакетахИВКоде</Action>
+		</Command>
+		<Command name="ВставитьВМакетыСтрокиИзМассиваJson" id="8">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить в макеты строки из массива json</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Вставить в макеты строки из массива json</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>ВставитьВМакетыСтрокиИзМассиваJson</Action>
+		</Command>
+	</Commands>
+</Form>

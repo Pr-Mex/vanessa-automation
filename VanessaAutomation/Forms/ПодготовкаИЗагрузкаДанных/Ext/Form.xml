@@ -9,6 +9,10 @@
 			<v8:lang>en</v8:lang>
 			<v8:content>Test data generator</v8:content>
 		</v8:item>
+		<v8:item>
+			<v8:lang>sv</v8:lang>
+			<v8:content>Testdatagenerator</v8:content>
+		</v8:item>
 	</Title>
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<SaveDataInSettings>UseList</SaveDataInSettings>
@@ -17,6 +21,7 @@
 	</AutoCommandBar>
 	<Events>
 		<Event name="OnOpen">OnOpen</Event>
+		<Event name="OnReopen">ПриПовторномОткрытии</Event>
 		<Event name="OnCreateAtServer">OnCreateAtServer</Event>
 	</Events>
 	<ChildItems>
@@ -29,6 +34,10 @@
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Main settings</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Huvudinställningar</v8:content>
 				</v8:item>
 			</Title>
 			<Behavior>Collapsible</Behavior>
@@ -47,6 +56,10 @@
 							<v8:lang>en</v8:lang>
 							<v8:content>Step language</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Stegspråk</v8:content>
+						</v8:item>
 					</Title>
 					<RadioButtonType>Tumbler</RadioButtonType>
 					<ChoiceList>
@@ -62,6 +75,10 @@
 									<v8:item>
 										<v8:lang>en</v8:lang>
 										<v8:content>English</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>sv</v8:lang>
+										<v8:content>Engelska</v8:content>
 									</v8:item>
 								</Presentation>
 								<Value xsi:type="xs:string">en</Value>
@@ -79,6 +96,10 @@
 									<v8:item>
 										<v8:lang>en</v8:lang>
 										<v8:content>Russian</v8:content>
+									</v8:item>
+									<v8:item>
+										<v8:lang>sv</v8:lang>
+										<v8:content>Ryska</v8:content>
 									</v8:item>
 								</Presentation>
 								<Value xsi:type="xs:string">ru</Value>
@@ -103,6 +124,10 @@
 							<v8:lang>en</v8:lang>
 							<v8:content>БЛ=No; БИ=Yes</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>БЛ=Nej; БИ=Ja</v8:content>
+						</v8:item>
 					</EditFormat>
 					<ContextMenu name="UseDataExhangeLoadTrueКонтекстноеМеню" id="156"/>
 					<ExtendedTooltip name="UseDataExhangeLoadTrueРасширеннаяПодсказка" id="157"/>
@@ -118,6 +143,10 @@
 							<v8:lang>en</v8:lang>
 							<v8:content>If in the object's metadata tree the attribute search attribute is specified and the attribute name is specified, then when generating data, the link will be replaced by the value of this attribute (with service prefixes). When loading data, the object will be searched for by the attribute and its value.</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Om attributet för sökning efter attribut anges i objektets metadataträd och attributnamnet anges, ersätts länken vid generering av data med värdet för detta attribut (med tjänsteprefix). Vid inläsning av data söks objektet efter attribut och dess värde.</v8:content>
+						</v8:item>
 					</ToolTip>
 					<ToolTipRepresentation>Button</ToolTipRepresentation>
 					<CheckBoxType>Tumbler</CheckBoxType>
@@ -129,6 +158,10 @@
 						<v8:item>
 							<v8:lang>en</v8:lang>
 							<v8:content>БЛ=No; БИ=Yes</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>БЛ=Nej; БИ=Ja</v8:content>
 						</v8:item>
 					</EditFormat>
 					<ContextMenu name="ReplaceRefByAttributeContextMenu" id="169"/>
@@ -149,6 +182,10 @@
 					<v8:lang>en</v8:lang>
 					<v8:content>Upload Storage to File</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Ladda upp lagring till fil</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
@@ -158,6 +195,10 @@
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Parameters for upload ValueStorage to files</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Parametrar för uppladdning av värdelagring till filer</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Group>AlwaysHorizontal</Group>
@@ -179,6 +220,10 @@
 							<v8:lang>en</v8:lang>
 							<v8:content>БЛ=No; БИ=Yes</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>БЛ=Nej; БИ=Ja</v8:content>
+						</v8:item>
 					</EditFormat>
 					<ContextMenu name="CreateFileForStorageКонтекстноеМеню" id="178"/>
 					<ExtendedTooltip name="CreateFileForStorageРасширеннаяПодсказка" id="179"/>
@@ -195,6 +240,10 @@
 						<v8:item>
 							<v8:lang>en</v8:lang>
 							<v8:content>Group path</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Gruppsökväg</v8:content>
 						</v8:item>
 					</Title>
 					<HorizontalStretch>true</HorizontalStretch>
@@ -224,6 +273,10 @@
 									<v8:lang>en</v8:lang>
 									<v8:content>БЛ=No; БИ=Yes</v8:content>
 								</v8:item>
+								<v8:item>
+									<v8:lang>sv</v8:lang>
+									<v8:content>БЛ=Nej; БИ=Ja</v8:content>
+								</v8:item>
 							</EditFormat>
 							<ContextMenu name="MakeAbsPathКонтекстноеМеню" id="189"/>
 							<ExtendedTooltip name="MakeAbsPathРасширеннаяПодсказка" id="190"/>
@@ -242,6 +295,10 @@
 					<v8:lang>en</v8:lang>
 					<v8:content>Group pages</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Gruppsidor</v8:content>
+				</v8:item>
 			</Title>
 			<ExtendedTooltip name="GroupPagesExtendedTooltip" id="73"/>
 			<ChildItems>
@@ -254,6 +311,10 @@
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Отбор по метаданным</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Huvudsida</v8:content>
 						</v8:item>
 					</Title>
 					<ExtendedTooltip name="GroupPageMainExtendedTooltip" id="75"/>
@@ -286,6 +347,10 @@
 																<v8:lang>en</v8:lang>
 																<v8:content>Metadata list group select</v8:content>
 															</v8:item>
+															<v8:item>
+																<v8:lang>sv</v8:lang>
+																<v8:content>Välj metadatalistgrupp</v8:content>
+															</v8:item>
 														</Title>
 														<ToolTip>
 															<v8:item>
@@ -295,6 +360,10 @@
 															<v8:item>
 																<v8:lang>en</v8:lang>
 																<v8:content>Metadata list group select</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>sv</v8:lang>
+																<v8:content>Välj metadatalistgrupp</v8:content>
 															</v8:item>
 														</ToolTip>
 														<Representation>Compact</Representation>
@@ -322,6 +391,10 @@
 																<v8:lang>en</v8:lang>
 																<v8:content>Metadata list group sort</v8:content>
 															</v8:item>
+															<v8:item>
+																<v8:lang>sv</v8:lang>
+																<v8:content>Sortera metadatalistgrupp</v8:content>
+															</v8:item>
 														</Title>
 														<ToolTip>
 															<v8:item>
@@ -331,6 +404,10 @@
 															<v8:item>
 																<v8:lang>en</v8:lang>
 																<v8:content>Metadata list group sort</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>sv</v8:lang>
+																<v8:content>Sortera metadatalistgrupp</v8:content>
 															</v8:item>
 														</ToolTip>
 														<Representation>Compact</Representation>
@@ -373,6 +450,10 @@
 															<v8:item>
 																<v8:lang>en</v8:lang>
 																<v8:content>Close</v8:content>
+															</v8:item>
+															<v8:item>
+																<v8:lang>sv</v8:lang>
+																<v8:content>Stäng</v8:content>
 															</v8:item>
 														</Title>
 														<ExtendedTooltip name="MetadataListCloseFormРасширеннаяПодсказка" id="161"/>
@@ -433,6 +514,10 @@
 															<v8:lang>en</v8:lang>
 															<v8:content>Metadata list picture and presentation</v8:content>
 														</v8:item>
+														<v8:item>
+															<v8:lang>sv</v8:lang>
+															<v8:content>Metadatalista bild och presentation</v8:content>
+														</v8:item>
 													</Title>
 													<ToolTip>
 														<v8:item>
@@ -442,6 +527,10 @@
 														<v8:item>
 															<v8:lang>en</v8:lang>
 															<v8:content>Metadata list picture and presentation</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>sv</v8:lang>
+															<v8:content>Metadatalista bild och presentation</v8:content>
 														</v8:item>
 													</ToolTip>
 													<Group>InCell</Group>
@@ -554,6 +643,10 @@
 							<v8:lang>ru</v8:lang>
 							<v8:content>Отбор по ссылкам</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Filtrera efter referenser</v8:content>
+						</v8:item>
 					</Title>
 					<ExtendedTooltip name="GroupPageFilterByRefsРасширеннаяПодсказка" id="94"/>
 					<ChildItems>
@@ -577,6 +670,10 @@
 									<v8:lang>en</v8:lang>
 									<v8:content>Group include dependencies</v8:content>
 								</v8:item>
+								<v8:item>
+									<v8:lang>sv</v8:lang>
+									<v8:content>Grupp inkludera beroenden</v8:content>
+								</v8:item>
 							</Title>
 							<ToolTip>
 								<v8:item>
@@ -586,6 +683,10 @@
 								<v8:item>
 									<v8:lang>en</v8:lang>
 									<v8:content>Group include dependencies</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>sv</v8:lang>
+									<v8:content>Grupp inkludera beroenden</v8:content>
 								</v8:item>
 							</ToolTip>
 							<Group>AlwaysHorizontal</Group>
@@ -613,6 +714,10 @@
 										<v8:item>
 											<v8:lang>en</v8:lang>
 											<v8:content>Recommended value is not more than 1</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>sv</v8:lang>
+											<v8:content>Rekommenderat värde är högst 1</v8:content>
 										</v8:item>
 									</ToolTip>
 									<ContextMenu name="MaxDownstreamDependenciesHierarchyLevelКонтекстноеМеню" id="129"/>
@@ -713,6 +818,10 @@
 							<v8:lang>ru</v8:lang>
 							<v8:content>Фича</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Feature</v8:content>
+						</v8:item>
 					</Title>
 					<ExtendedTooltip name="GroupPageFeatureExtendedTooltip" id="77"/>
 					<ChildItems>
@@ -726,6 +835,10 @@
 									<v8:lang>en</v8:lang>
 									<v8:content>Group feature command</v8:content>
 								</v8:item>
+								<v8:item>
+									<v8:lang>sv</v8:lang>
+									<v8:content>Grupp feature-kommando</v8:content>
+								</v8:item>
 							</Title>
 							<ToolTip>
 								<v8:item>
@@ -735,6 +848,10 @@
 								<v8:item>
 									<v8:lang>en</v8:lang>
 									<v8:content>Group feature command</v8:content>
+								</v8:item>
+								<v8:item>
+									<v8:lang>sv</v8:lang>
+									<v8:content>Grupp feature-kommando</v8:content>
 								</v8:item>
 							</ToolTip>
 							<Representation>None</Representation>
@@ -776,6 +893,10 @@
 					<v8:lang>en</v8:lang>
 					<v8:content>Metadata type</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Metadatatyp</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>v8:ValueListType</v8:Type>
@@ -792,6 +913,10 @@
 					<v8:lang>en</v8:lang>
 					<v8:content>Metadata list</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Metadatalista</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>v8:ValueTree</v8:Type>
@@ -806,6 +931,10 @@
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Имя</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Namn</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -826,6 +955,10 @@
 							<v8:lang>ru</v8:lang>
 							<v8:content>Использовать</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Använd</v8:content>
+						</v8:item>
 					</Title>
 					<Type>
 						<v8:Type>xs:boolean</v8:Type>
@@ -840,6 +973,10 @@
 						<v8:item>
 							<v8:lang>ru</v8:lang>
 							<v8:content>Представление</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Presentation</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -860,6 +997,10 @@
 							<v8:lang>ru</v8:lang>
 							<v8:content>Полное имя</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Fullständigt namn</v8:content>
+						</v8:item>
 					</Title>
 					<Type>
 						<v8:Type>xs:string</v8:Type>
@@ -879,6 +1020,10 @@
 							<v8:lang>en</v8:lang>
 							<v8:content>Use search by attribute</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Sök efter attribut</v8:content>
+						</v8:item>
 					</Title>
 					<Type>
 						<v8:Type>xs:boolean</v8:Type>
@@ -894,6 +1039,10 @@
 						<v8:item>
 							<v8:lang>en</v8:lang>
 							<v8:content>Search attribute</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Sökattribut</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -914,6 +1063,10 @@
 							<v8:lang>en</v8:lang>
 							<v8:content>Рicture</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Bild</v8:content>
+						</v8:item>
 					</Title>
 					<Type>
 						<v8:Type>v8ui:Picture</v8:Type>
@@ -928,6 +1081,10 @@
 						<v8:item>
 							<v8:lang>en</v8:lang>
 							<v8:content>Count</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Antal</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -951,6 +1108,10 @@
 					<v8:lang>en</v8:lang>
 					<v8:content>Data list</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Datalista</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>v8:ValueTable</v8:Type>
@@ -966,6 +1127,10 @@
 					<v8:lang>en</v8:lang>
 					<v8:content>Feature</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Feature</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type xmlns:d5p1="http://v8.1c.ru/8.1/data/txtedt">d5p1:TextDocument</v8:Type>
@@ -976,6 +1141,10 @@
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Steps language</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Stegspråk</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -999,6 +1168,10 @@
 					<v8:lang>en</v8:lang>
 					<v8:content>Initialized</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Initierad</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
@@ -1013,6 +1186,10 @@
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Include upstream dependencies (references in an object)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Inkludera uppåtgående beroenden (referenser i ett objekt)</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -1032,6 +1209,10 @@
 					<v8:lang>en</v8:lang>
 					<v8:content>Include downstream dependencies (object references)</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Inkludera nedåtgående beroenden (objektreferenser)</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
@@ -1050,6 +1231,10 @@
 					<v8:lang>en</v8:lang>
 					<v8:content>Don't add comments with metadata object names</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Lägg inte till kommentarer med metadataobjektnamn</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
@@ -1067,6 +1252,10 @@
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Max hierarchy level</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Max hierarkinivå</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -1091,6 +1280,10 @@
 					<v8:lang>en</v8:lang>
 					<v8:content>Data refs</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Datareferenser</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>v8:ValueTable</v8:Type>
@@ -1109,6 +1302,10 @@
 							<v8:lang>en</v8:lang>
 							<v8:content>Object</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Objekt</v8:content>
+						</v8:item>
 					</Title>
 					<Type/>
 				</Column>
@@ -1121,6 +1318,10 @@
 						<v8:item>
 							<v8:lang>en</v8:lang>
 							<v8:content>Include downstream dependencies</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Inkludera nedåtgående beroenden</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -1136,6 +1337,10 @@
 						<v8:item>
 							<v8:lang>en</v8:lang>
 							<v8:content>Include upstream dependencies</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Inkludera uppåtgående beroenden</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -1154,6 +1359,10 @@
 					<v8:lang>ru</v8:lang>
 					<v8:content>ОбменДанными.Загрузка</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>DataExhange.Load</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
@@ -1168,6 +1377,10 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Заменять ссылку на реквизит</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Ersätt referens med attribut</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -1187,6 +1400,10 @@
 					<v8:lang>en</v8:lang>
 					<v8:content>Upload</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Ladda upp</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
@@ -1204,6 +1421,10 @@
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Path</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Sökväg</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -1224,6 +1445,10 @@
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>File type</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Filtyp</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -1247,6 +1472,10 @@
 					<v8:lang>en</v8:lang>
 					<v8:content>Absolute path</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Absolut sökväg</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
@@ -1265,6 +1494,10 @@
 					<v8:lang>en</v8:lang>
 					<v8:content>Files to save</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Filer att spara</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>v8:ValueListType</v8:Type>
@@ -1282,6 +1515,10 @@
 					<v8:lang>ru</v8:lang>
 					<v8:content>Сгенерировать фичу</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Generera feature</v8:content>
+				</v8:item>
 			</Title>
 			<Action>GenerateFeature</Action>
 		</Command>
@@ -1294,6 +1531,10 @@
 				<v8:item>
 					<v8:lang>ru</v8:lang>
 					<v8:content>Выбрать зависимые элементы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Välj beroende objekt</v8:content>
 				</v8:item>
 			</Title>
 			<Action>SelectDependentItems</Action>
@@ -1308,6 +1549,10 @@
 					<v8:lang>en</v8:lang>
 					<v8:content>Generate feature</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Generera feature</v8:content>
+				</v8:item>
 			</Title>
 			<Action>GenerateFeatureForRefs</Action>
 		</Command>
@@ -1320,6 +1565,10 @@
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Add by link</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Lägg till via länk</v8:content>
 				</v8:item>
 			</Title>
 			<Action>AddObjectByURL</Action>
@@ -1334,6 +1583,10 @@
 					<v8:lang>en</v8:lang>
 					<v8:content>Close form</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Stäng formulär</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
@@ -1343,6 +1596,10 @@
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Close the data preparation and loading form</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Stäng formuläret för dataförberedelse och inläsning</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>CloseForm</Action>
@@ -1357,6 +1614,10 @@
 					<v8:lang>ru</v8:lang>
 					<v8:content>Заменить ссылки реквизитами</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Ersätt referens med attribut</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
@@ -1366,6 +1627,10 @@
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Process replace ref by attribute</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Bearbeta ersättning av referens med attribut</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ProcessReplaceRefByAttribute</Action>
@@ -1380,6 +1645,10 @@
 					<v8:lang>en</v8:lang>
 					<v8:content>Select all</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Markera alla</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
@@ -1389,6 +1658,10 @@
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Select all</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Markera alla</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>
@@ -1407,6 +1680,10 @@
 					<v8:lang>en</v8:lang>
 					<v8:content>Deselect all</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Avmarkera alla</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
@@ -1416,6 +1693,10 @@
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Deselect all</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Avmarkera alla</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Picture>
@@ -1434,6 +1715,10 @@
 					<v8:lang>en</v8:lang>
 					<v8:content>Update count</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Uppdatera antal</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
@@ -1443,6 +1728,10 @@
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Update metadata count</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Uppdatera metadataantal</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>UpdateMetadataCount</Action>

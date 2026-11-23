@@ -56,6 +56,8 @@
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'КомандаЗапускаChromeСОтладкой' UI Automation		
 		И Пауза 1
 
+* Both buttons add keys for stable test runs to the command: they disable throttling of timers and lowering of the priority of background Chrome tabs, as well as occluded window handling. During a test run the browser window is often covered by the Vanessa Automation window, and without these keys Chrome treats the tab as background.
+
 * That's it, move on to the next lesson of the interactive help.
 
 

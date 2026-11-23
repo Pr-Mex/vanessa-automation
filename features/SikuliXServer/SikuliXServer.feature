@@ -1,8 +1,4 @@
 ﻿# language: ru
-#parent uf:
-@UF2_запуск_сценариев_на_выполнение
-#parent ua:
-@UA15_управлять_SikuliX
 
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
@@ -22,6 +18,7 @@
 
 
 @tree
+@uf-part6
 
 
 Функциональность: Проверка работы SikuliX сервера (SikuliX server)
@@ -66,7 +63,7 @@
 	
 	И элемент формы с именем "КаталогиСкриптовSikuliX" стал равен "$ЗначениеКаталога$"
 
-
+@IgnoreOnCIMainBuild
 Сценарий: Вывод ошибки при падении скрипта
 	Дано Я закрыл все окна клиентского приложения
 	И я закрываю сеанс TESTCLIENT

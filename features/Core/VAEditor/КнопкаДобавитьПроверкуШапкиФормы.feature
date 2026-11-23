@@ -1,6 +1,7 @@
 ﻿# language: ru
 
 
+@uf-part4
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 @IgnoreOnUFSovm82Builds
@@ -45,7 +46,7 @@
 	* Установка нужной строки текущей
 		И я перехожу к закладке с именем "ГруппаСлужебная"
 		И я перехожу к закладке с именем "ГруппаСлужебноеВыполнитьКод"
-		И в поле с именем 'РеквизитПроизвольныйКод' я ввожу текст 'VanessaTabs.current.editor.setPosition(27, 1, \"\");'
+		И в поле с именем 'РеквизитПроизвольныйКод' я ввожу текст 'VanessaTabs.current.editor.setPosition(23, 1, \"\");'
 		И я нажимаю на кнопку с именем 'ВыполнитьПроизвольныйКод'
 		И пауза 1
 		И я перехожу к закладке с именем "ГруппаЗапускТестов"
@@ -59,9 +60,9 @@
 		И я перехожу к закладке с именем "ГруппаСлужебноеВыполнитьКод"
 		И в поле с именем 'РеквизитПроизвольныйКод' я ввожу текст
 		"""
-		Сообщить(СокрЛП(VanessaTabs.current.editor.getLineContent(27)));
-		Сообщить(СокрЛП(VanessaTabs.current.editor.getLineContent(28)));
-		Сообщить(СокрЛП(VanessaTabs.current.editor.getLineContent(38)));
+		Сообщить(СокрЛП(VanessaTabs.current.editor.getLineContent(23)));
+		Сообщить(СокрЛП(VanessaTabs.current.editor.getLineContent(24)));
+		Сообщить(СокрЛП(VanessaTabs.current.editor.getLineContent(34)));
 		"""
 		И я нажимаю на кнопку с именем 'ВыполнитьПроизвольныйКод'
 		И пауза 1

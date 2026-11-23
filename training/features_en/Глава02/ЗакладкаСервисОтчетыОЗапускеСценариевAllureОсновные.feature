@@ -19,8 +19,9 @@
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ГруппаAllureОсновныеНастройки' UI Automation
 		И Пауза 1
 		И я делаю подсветку нескольких элементов VA с их заголовком "Basic settings" UI Automation
-			| 'Name'                                            |
+			| 'Name'                                           |
 			| 'ДелатьОтчетВФорматеАллюр'                       |
+			| 'ОбъединятьПримерыСтруктурыСценарияВAllure'      |
 			| 'ПодставлятьВОтчетеAllureЗначенияПеременных'     |
 			| 'КаталогВыгрузкиAllure'                          |
 			| 'КаталогВыгрузкиAllureБазовый'                   |
@@ -35,6 +36,11 @@
 		И я делаю подсветку нескольких элементов VA с их заголовком "Generate a report in the Allure format" UI Automation
 			| 'Name'                      |
 			| 'ДелатьОтчетВФорматеАллюр' |
+
+* This flag merges all examples of one scenario outline into a single test case with parameters in the Allure report.
+		И я делаю подсветку нескольких элементов VA с их заголовком "Merge scenario outline examples in Allure" UI Automation
+			| 'Name'                                      |
+			| 'ОбъединятьПримерыСтруктурыСценарияВAllure' |
 			
 
 * Let's continue. This checkbox determines that variable values will be displayed in the generated report in steps, instead of variable names.

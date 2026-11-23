@@ -1,9 +1,6 @@
 ﻿# language: ru
-#parent uf:
-@UF5_формирование_результатов_выполнения_сценариев
-#parent ua:
-@UA18_формировать_отчёт_Allure
 
+@uf-part1
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 @IgnoreOnWeb

@@ -309,6 +309,17 @@
 							<ContextMenu name="РеквизитЧислоКонтекстноеМеню" id="54"/>
 							<ExtendedTooltip name="РеквизитЧислоРасширеннаяПодсказка" id="55"/>
 						</InputField>
+						<TrackBarField name="ПолосаРегулирования" id="389">
+							<DataPath>РеквизитПолосаРегулирования</DataPath>
+							<Title>
+								<v8:item>
+									<v8:lang>ru</v8:lang>
+									<v8:content>Полоса регулирования</v8:content>
+								</v8:item>
+							</Title>
+							<ContextMenu name="ПолосаРегулированияКонтекстноеМеню" id="390"/>
+							<ExtendedTooltip name="ПолосаРегулированияРасширеннаяПодсказка" id="391"/>
+						</TrackBarField>
 						<UsualGroup name="ГруппаРеквизитСтрока" id="255">
 							<Title>
 								<v8:item>
@@ -2252,6 +2263,16 @@
 			</Title>
 			<Type>
 				<v8:Type>v8:ValueListType</v8:Type>
+			</Type>
+		</Attribute>
+		<Attribute name="РеквизитПолосаРегулирования" id="20">
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>3</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Any</v8:AllowedSign>
+				</v8:NumberQualifiers>
 			</Type>
 		</Attribute>
 	</Attributes>

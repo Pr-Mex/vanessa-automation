@@ -14,20 +14,21 @@ jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - uses: actions/checkout@v6
 
     - name: Set up Python
-      uses: actions/setup-python@v1
+      uses: actions/setup-python@v6
       with:
         python-version: '3.11'
-        architecture: 'x64'
+        cache: pip
+        cache-dependency-path: requirements-docs.txt
 
     - name: Install dependencies
       run: |
         pip install --upgrade pip
-        pip install mkdocs mkdocs-material==5.0.0 pygments-bsl
+        pip install -r requirements-docs.txt
     
-    - name: Dowload latest GitHub Pages
+    - name: Download latest GitHub Pages
       run: |
         wget https://github.com/${{ github.repository }}/archive/gh-pages.zip || true
         unzip gh-pages.zip || true
@@ -72,8 +73,8 @@ jobs:
         cp -R temp/site/. public/dev
     
     - name: Deploy
-      uses: peaceiris/actions-gh-pages@v2.5.0
-      env:
-        ACTIONS_DEPLOY_KEY: ${{ secrets.ACTIONS_DEPLOY_KEY }}
-        PUBLISH_BRANCH: gh-pages
-        PUBLISH_DIR: ./public
+      uses: peaceiris/actions-gh-pages@v4
+      with:
+        deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+        publish_branch: gh-pages
+        publish_dir: ./public

@@ -58,7 +58,7 @@ oscript C:\Commons\rep\vanessa-automation\tools\onescript\AddMainPageMD.os "C:\T
 Скрипт для сборки одного большого HTML файла инструкции с оглавлением из нескольких HTML файлов. Также будут вставлены гиперссылки для перехода к видео для каждой инструкции.
 Как запускать:
 ```
-oscript MakeOneHTMLFromMany.os <ПутьККаталогуHTMLФайлов> <ПутьКMDФайлуОглавления> <КтаалогКудаБудетСохраненРезультат> <JsonФайлСодержащийДанныеПоВидеоФайлам>
+oscript MakeOneHTMLFromMany.os <ПутьККаталогуHTMLФайлов> <ПутьКMDФайлуОглавления> <КаталогКудаБудетСохраненРезультат> <JsonФайлСодержащийДанныеПоВидеоФайлам>
 ```
 Пример запуска:
 ```
@@ -101,6 +101,7 @@ oscript InsertLinksToVALessonsList.os <ПутьКСпискуУроковVA> <П
 ```
 oscript C:\Commons\rep\vanessa-automation\tools\onescript\InsertLinksToVALessonsList.os "C:\Commons\rep\vanessa-automation\training\List_of_lessons_ru.md" "C:\Commons\rep\vanessa-automation\docs\MainHelp\index.MD"
 ```
+Предполагается, что в "C:\Commons\rep\vanessa-automation\docs\MainHelp" ранее былы скопированы MD файлы
 
 
 #### MakePdfFromHtml.os

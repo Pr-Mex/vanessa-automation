@@ -21,6 +21,7 @@
 			| 'DebugLog'                                         |
 			| 'ЗвуковоеОповещениеПриОкончанииВыполненияСценария' |
 			| 'ДелатьЛогВыполненияСценариевВЖР'                  |
+			| 'ОставлятьТолькоПоследнююИтерациюЦикла'            |
 
 * This checkbox enables the output of additional information to the user's message window.
 		И я делаю подсветку нескольких элементов VA с их заголовком "Output of additional messages" UI Automation
@@ -46,6 +47,15 @@
 			| 'Name'                             |
 			| 'ДелатьЛогВыполненияСценариевВЖР' |
 * It is recommended to set this checkbox when running tests in the CI framework.
+
+
+* This checkbox keeps only the last loop iteration in the step execution results.
+		И я делаю подсветку нескольких элементов VA с их заголовком "Keep only the last loop iteration" UI Automation
+			| 'Name'                                  |
+			| 'ОставлятьТолькоПоследнююИтерациюЦикла' |
+* Previous iterations are deleted together with their nested steps, and the Allure2 report shows the number of collapsed iterations in the loop step name.
+* The setting can be switched on and off during scenario execution, so one loop can keep all iterations and another only the last one.
+* Note: iterations that failed inside Try/Except disappear from the results together with their attachments, and files attached to the scenario (event log, mxl, etc.) are still exported in full. In single-step execution mode the collapse is not performed.
 
 
 * That's it, move on to the next lesson of the interactive help.

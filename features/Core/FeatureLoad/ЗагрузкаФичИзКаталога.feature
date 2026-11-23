@@ -1,10 +1,7 @@
-# language: ru
+﻿# language: ru
 # encoding: utf-8
-#parent ua:
-@UA9_загружать_features
-#parent uf:
-@UF1_загрузка_и_обработка_features
 
+@uf-part1
 @IgnoreOnWeb
 
 Функционал: Проверка загрузки фич из каталога
@@ -12,6 +9,7 @@
 	Я Хочу чтобы я мог без ошибок загрузить фичи из каталога
  
 
+	@IgnoreOnCIMainBuild
 	Сценарий: Загрузка всех фич из каталога
 
 	Когда я открыл форму VanessaBehavoir в режиме самотестирования

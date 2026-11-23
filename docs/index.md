@@ -1,6 +1,6 @@
 # Vanessa Automation
 
-[![GitHub release](https://img.shields.io/github/release/Pr-Mex/vanessa-automation.svg)](docs/Changelog.md)
+[![GitHub release](https://img.shields.io/github/release/Pr-Mex/vanessa-automation.svg)](Changelog.md)
 [![Build Status](http://vanessa.bit-erp.ru/buildStatus/icon?job=VAFullCheck)](http://vanessa.bit-erp.ru/job/VAFullCheck/)
 [![GitHub Releases](https://img.shields.io/github/downloads/Pr-Mex/vanessa-automation/latest/total?style=flat-square)](https://github.com/Pr-Mex/vanessa-automation/releases)
 [![GitHub All Releases](https://img.shields.io/github/downloads/Pr-Mex/vanessa-automation/total?style=flat-square)](https://github.com/Pr-Mex/vanessa-automation/releases)
@@ -8,8 +8,8 @@
 
 ## BDD for 1С:Enterprise
 
-* Текущий **мажорный** релиз [1.2.042.1](https://github.com/Pr-Mex/vanessa-automation/releases/tag/1.2.042.1)
-* Текущий **минорный** релиз [1.2.042.19](https://github.com/Pr-Mex/vanessa-automation/releases/tag/1.2.042.19)
+* Текущий **мажорный** релиз [1.2.043.1](https://github.com/Pr-Mex/vanessa-automation/releases/tag/1.2.043.1)
+* Текущий **минорный** релиз [1.2.043.47](https://github.com/Pr-Mex/vanessa-automation/releases/tag/1.2.043.47)
 * Разработка ведется в ветке [Develop](https://github.com/Pr-Mex/vanessa-automation/tree/develop).
 * [Обсудить Ванессу](https://t.me/testspro1c) в телеграм группе, и обсудить всё, что связано с тестированием в 1С.
 * [Подписаться на новости о проекте](https://t.me/VanessaAutomation) в телеграм канале.
@@ -20,7 +20,7 @@
 
 #### Также можно посмотреть
 
-* [Интерактивная справка в формате видео](https://www.youtube.com/channel/UC-GC02tUKAXKWGZVaPKtg6w/playlists).
+* [Интерактивная справка в формате видео](https://vkvideo.ru/@club235354700).
 * [Интерактивная справка в формате видео (на английском)](https://www.youtube.com/channel/UCs9tix1nAJC8-yRQpmZ92fQ/playlists).
 * [Видео инструкции (разное)](https://www.youtube.com/channel/UC114RqHhG__1gET8pzs3AHA/playlists).
 * [Вебинар 2016 года](http://infostart.ru/webinars/537546/). 
@@ -44,11 +44,13 @@
 * [Леонид Паутов, Анастасия Андриянова. Промышленное тестирование конфигураций в 1С](https://infostart.ru/1c/articles/2299156/)
 * [Александр Кунташов. Автоматизация тестирования решений на 1С: Ожидания vs Реальность](https://infostart.ru/1c/articles/2407502/)
 * [Татьяна Головкина. От ручного тестирования до запусков в Docker: наш поиск идеального процесса](https://infostart.ru/1c/articles/2418640/)
+* [Пётр Стрелаев. Несколько способов как упросить анализ отчета Allure при работе с инструментом АТ в 1С Vanessa-Automation](https://habr.com/ru/articles/953962/)
+* [Илья Васильев. Использование Vanessa Automation в качестве RPA](https://infostart.ru/public/2719634/)
 
 ## СППР + Vanessa Automation
 
-* [Автоматизация тестирования в СППР 2.0. Часть 1](https://www.youtube.com/watch?v=1UBlV4kWx_o)
-* [Автоматизация тестирования в СППР 2.0. Часть 2](https://www.youtube.com/watch?v=gKJmJKIe-nA)
+* Автоматизация тестирования в СППР 2.0. Часть 1 [(ссылка vkvideo)](https://vkvideo.ru/video-63402641_456240263) [(ссылка youtube)](https://www.youtube.com/watch?v=1UBlV4kWx_o)
+* Автоматизация тестирования в СППР 2.0. Часть 2 [(ссылка vkvideo)](https://vkvideo.ru/video-63402641_456240264) [(ссылка youtube)](https://www.youtube.com/watch?v=gKJmJKIe-nA)
 
 ## Внешняя компонента VanessaExt
 
@@ -67,6 +69,7 @@
 * [Андрей Хашкин. Опыт применения Vanessa-Automation и других инструментов для обучения и тестирования](https://www.youtube.com/watch?v=v3FKzo86c8A)
 * [Леонид Паутов, Анастасия Андриянова. Промышленное тестирование конфигураций в 1С](https://infostart.ru/video/w2299237/)
 * [Александр Кунташов. Лучшие практики разработки сценариев на Vanessa Automation, которые должен знать каждый тимлид QA](https://vkvideo.ru/video-42867005_456240497)
+* Александр Кунташов. TurboGherkin — современный язык автоматизации тестирования решений на 1С (вебинар): [ВКВидео](https://vkvideo.ru/video-42867005_456241067), [YouTube](https://youtu.be/QOQ-OKbjr7o)
 
 ## Курсы
 

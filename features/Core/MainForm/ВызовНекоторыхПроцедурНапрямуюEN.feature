@@ -1,10 +1,7 @@
 ﻿# language: ru
 # encoding: utf-8
-#parent uf:
-@UF4_Библиотека_шагов
-#parent ua:
-@UA8_Прочее
 
+@uf-part2
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 @IgnoreOnWeb

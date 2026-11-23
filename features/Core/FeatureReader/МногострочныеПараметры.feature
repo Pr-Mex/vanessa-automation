@@ -1,10 +1,7 @@
 ﻿# language: ru
 # encoding: utf-8
-#parent ua:
-@UA16_парсить_features
-#parent uf:
-@UF1_загрузка_и_обработка_features
 
+@uf-part1
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 @IgnoreOnWeb
@@ -217,4 +214,6 @@
 			| 'И делаю сообщение по переданному параметру для теста Vanessa Automation' | 'Success' |
 		
 		
+Сценарий: Закрытие клиента тестирования
+	И я закрываю сеанс текущего клиента тестирования
 

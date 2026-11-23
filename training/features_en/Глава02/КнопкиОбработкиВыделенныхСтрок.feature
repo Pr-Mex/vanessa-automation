@@ -45,6 +45,22 @@
 * Now these lines have become a table in Gherkin format
 		И Я делаю подсветку текста в редакторе VA в режиме обучения с 8 по 10 строку 'Rows are now in Gherkin table format' подсценарий
 
+* Next to it there is a command that aligns the markup of all Gherkin tables in the feature text.
+		И Я делаю подсветку элемента формы VA по имени "VanessaEditorВыровнятьТаблицыGherkin" "Align columns of Gherkin tables"
+
+* Our example contains a table with broken markup.
+		И Я делаю подсветку текста в редакторе VA в режиме обучения с 15 по 16 строку 'The table markup is broken' подсценарий
+
+* You do not need to select lines for this command, it aligns all tables of the file at once.
+		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'VanessaEditorВыровнятьТаблицыGherkin'
+		И Пауза 1
+
+* Now the table columns are aligned by width.
+		И Я делаю подсветку текста в редакторе VA в режиме обучения с 15 по 16 строку 'The table markup is aligned' подсценарий
+
+* Next to it there is a command that formats the whole feature: indentation, trailing spaces and Gherkin tables.
+		И Я делаю подсветку элемента формы VA по имени "VanessaEditorФорматироватьФичу" "Format feature file"
+
 * That's it, move on to the next lesson of the interactive help.
 
 

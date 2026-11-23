@@ -1,10 +1,7 @@
 ﻿# language: ru
 # encoding: utf-8
-#parent ua:
-@UA9_загружать_features
-#parent uf:
-@UF1_загрузка_и_обработка_features
 
+@uf-part1
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 @IgnoreOnWeb
@@ -136,3 +133,5 @@
 		| 'И Я запоминаю значение выражения \'1\' в переменную "ИмяПеременной1"' |
 	
 		
+Сценарий: Закрытие клиента тестирования
+	И я закрываю сеанс текущего клиента тестирования

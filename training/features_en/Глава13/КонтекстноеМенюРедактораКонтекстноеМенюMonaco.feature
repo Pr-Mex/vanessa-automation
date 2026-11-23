@@ -17,7 +17,7 @@
 * To do this, there is a context menu command.
 		И я делаю клик по элементу формы 'ЭтотСеанс' '' 'Document' правой кнопкой UI Automation
 		И Пауза 1
-		И Я делаю подсветку элемента VA "VanessaEditorКонтекстноеМенюКонтекстноеМеню" "Monaco context menu" и перемещаю курсор
+		И Я делаю подсветку элемента VA "VanessaEditorКонтекстноеМенюКонтекстноеМеню" "Standard Monaco editor menu" и перемещаю курсор
 
 * This command opens the native context menu from the Monaco editor.
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'VanessaEditorКонтекстноеМенюКонтекстноеМеню' UI Automation	

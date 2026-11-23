@@ -1,9 +1,5 @@
 ﻿# language: ru
 # encoding: utf-8
-#parent uf:
-@UF6_текстовые_и_видео_инструкции
-#parent ua:
-@UA40_проверять_формирование_видеоинструкций
 
 @tree
 @IgnoreOnCIMainBuild

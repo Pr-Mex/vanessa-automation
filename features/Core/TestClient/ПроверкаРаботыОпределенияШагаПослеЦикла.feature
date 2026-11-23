@@ -1,9 +1,6 @@
-# language: ru
-#parent uf:
-@UF8_Turbo_Gherkin
-#parent ua:
-@UA22_Использовать_циклы_в_сценариях
+﻿# language: ru
 
+@uf-part4
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 @IgnoreOnWeb

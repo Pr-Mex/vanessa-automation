@@ -1,6 +1,7 @@
 ﻿# language: ru
 
 
+@uf-part5
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 @IgnoreOnUFSovm82Builds
@@ -91,7 +92,7 @@
 		И в поле с именем 'РеквизитПроизвольныйКод' я ввожу текст 'Сообщить(VanessaTabs.current.editor.getPosition().linenumber)'
 		И я нажимаю на кнопку с именем 'ВыполнитьПроизвольныйКод'
 		Тогда в логе сообщений TestClient есть строки:
-			|'17'|
+			|'13'|
 					
 
 

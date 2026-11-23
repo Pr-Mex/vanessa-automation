@@ -1,11 +1,8 @@
 ﻿# language: ru
-#parent uf:
-@UF2_запуск_сценариев_на_выполнение
-#parent ua:
-@UA14_Останавливать_выполнение_сценариев
 
 #https://github.com/silverbulleters/vanessa-behavior/issues/416
 
+@uf-part6
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 @IgnoreOnWeb

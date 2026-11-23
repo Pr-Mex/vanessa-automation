@@ -1,5 +1,6 @@
 ﻿# language: ru
 
+@uf-part5
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 @IgnoreOnUFSovm82Builds

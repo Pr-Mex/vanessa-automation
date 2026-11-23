@@ -1,11 +1,8 @@
-# language: ru
+﻿# language: ru
 # encoding: utf-8
-#parent uf:
-@UF8_Turbo_Gherkin
-#parent ua:
-@UA39_использовать_экспортные_и_параметризованные_сценарии
 
 @tree
+@uf-part1
 @IgnoreOnOFBuilds
 @IgnoreOn82Builds
 @IgnoreOnWeb
@@ -34,3 +31,7 @@
 		| ''                             |
 		| 'ЯЗакрываюСеансTESTCLIENT'     |
 		| 'ЯЗакрываюСеансTESTCLIENT'     |
+
+Сценарий: Закрытие клиента тестирования
+	И я закрываю сеанс текущего клиента тестирования
+

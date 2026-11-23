@@ -1,9 +1,5 @@
 ﻿# language: ru
 # encoding: utf-8
-#parent uf:
-@UF9_Вспомогательные_фичи
-#parent ua:
-@UA25_Макеты_для_отчетов_о_выполнении
 
 @tree
 @IgnoreOnCIMainBuild
@@ -20,7 +16,7 @@
 		И Пауза 0.1
 		И Пауза 0.2
 		@screenshot
-		И Пауза 0.22
+		И Пауза 0.3
 		
 
 	

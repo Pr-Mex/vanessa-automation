@@ -213,6 +213,10 @@
 							<v8:lang>en</v8:lang>
 							<v8:content>Search</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Sök</v8:content>
+						</v8:item>
 					</ToolTip>
 					<ClearButton>true</ClearButton>
 					<InputHint>
@@ -223,6 +227,10 @@
 						<v8:item>
 							<v8:lang>en</v8:lang>
 							<v8:content>Enter a search text or a phrase part</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Ange en söktext eller en del av en fras</v8:content>
 						</v8:item>
 					</InputHint>
 					<ContextMenu name="НайтиШагиКонтекстноеМеню" id="50"/>
@@ -248,6 +256,10 @@
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Visible steps setting group</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Inställningsgrupp för synliga steg</v8:content>
 				</v8:item>
 			</Title>
 			<Group>Horizontal</Group>
@@ -276,6 +288,10 @@
 						<v8:item>
 							<v8:lang>en</v8:lang>
 							<v8:content>Show steps in Russian</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Visa steg på ryska</v8:content>
 						</v8:item>
 					</ToolTip>
 					<CheckBoxType>Auto</CheckBoxType>
@@ -312,6 +328,10 @@
 					<v8:lang>en</v8:lang>
 					<v8:content>Group tree steps</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Gruppera trädsteg</v8:content>
+				</v8:item>
 			</Title>
 			<Group>Vertical</Group>
 			<Representation>None</Representation>
@@ -327,6 +347,10 @@
 						<v8:item>
 							<v8:lang>en</v8:lang>
 							<v8:content>Group tree with description</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Gruppträd med beskrivning</v8:content>
 						</v8:item>
 					</Title>
 					<Group>Horizontal</Group>
@@ -392,6 +416,10 @@
 											<v8:lang>ro</v8:lang>
 											<v8:content>Descriere pas</v8:content>
 										</v8:item>
+										<v8:item>
+											<v8:lang>sv</v8:lang>
+											<v8:content>Stegbeskrivning</v8:content>
+										</v8:item>
 									</Title>
 									<Group>Horizontal</Group>
 									<ExtendedTooltip name="ДеревоШаговГруппаРасширеннаяПодсказка" id="75"/>
@@ -412,6 +440,10 @@
 												<v8:item>
 													<v8:lang>en</v8:lang>
 													<v8:content>Step tree group step type and test view</v8:content>
+												</v8:item>
+												<v8:item>
+													<v8:lang>sv</v8:lang>
+													<v8:content>Stegträd gruppstegstyp och testvy</v8:content>
 												</v8:item>
 											</Title>
 											<Group>InCell</Group>
@@ -456,6 +488,10 @@
 									<v8:lang>en</v8:lang>
 									<v8:content>Additionally</v8:content>
 								</v8:item>
+								<v8:item>
+									<v8:lang>sv</v8:lang>
+									<v8:content>Ytterligare</v8:content>
+								</v8:item>
 							</Title>
 							<Group>Vertical</Group>
 							<ExtendedTooltip name="ГруппаОписанияРасширеннаяПодсказка" id="117"/>
@@ -471,6 +507,10 @@
 										<v8:item>
 											<v8:lang>en</v8:lang>
 											<v8:content>File</v8:content>
+										</v8:item>
+										<v8:item>
+											<v8:lang>sv</v8:lang>
+											<v8:content>Fil</v8:content>
 										</v8:item>
 									</Title>
 									<AutoMaxWidth>false</AutoMaxWidth>
@@ -500,6 +540,10 @@
 											<v8:lang>en</v8:lang>
 											<v8:content>Description original</v8:content>
 										</v8:item>
+										<v8:item>
+											<v8:lang>sv</v8:lang>
+											<v8:content>Beskrivning original</v8:content>
+										</v8:item>
 									</ToolTip>
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<MultiLine>true</MultiLine>
@@ -519,6 +563,10 @@
 											<v8:lang>en</v8:lang>
 											<v8:content>Description</v8:content>
 										</v8:item>
+										<v8:item>
+											<v8:lang>sv</v8:lang>
+											<v8:content>Beskrivning</v8:content>
+										</v8:item>
 									</ToolTip>
 									<AutoMaxWidth>false</AutoMaxWidth>
 									<MultiLine>true</MultiLine>
@@ -537,11 +585,16 @@
 											<v8:lang>en</v8:lang>
 											<v8:content>Description</v8:content>
 										</v8:item>
+										<v8:item>
+											<v8:lang>sv</v8:lang>
+											<v8:content>Beskrivning</v8:content>
+										</v8:item>
 									</ToolTip>
 									<ContextMenu name="MarkdownViewerКонтекстноеМеню" id="132"/>
 									<ExtendedTooltip name="MarkdownViewerРасширеннаяПодсказка" id="133"/>
 									<Events>
 										<Event name="DocumentComplete">MarkdownViewerДокументСформирован</Event>
+										<Event name="OnClick">MarkdownViewerПриНажатии</Event>
 									</Events>
 								</HTMLDocumentField>
 							</ChildItems>
@@ -567,6 +620,10 @@
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Steps tree</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Stegträd</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -1157,6 +1214,10 @@
 							<v8:lang>ro</v8:lang>
 							<v8:content>Limba</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Språk</v8:content>
+						</v8:item>
 					</Title>
 					<Type>
 						<v8:Type>xs:string</v8:Type>
@@ -1470,6 +1531,10 @@
 							<v8:lang>en</v8:lang>
 							<v8:content>Indent</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Indrag</v8:content>
+						</v8:item>
 					</Title>
 					<Type>
 						<v8:Type>xs:string</v8:Type>
@@ -1490,6 +1555,10 @@
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Known step definition table</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Tabell för kända stegdefinitioner</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -1605,6 +1674,10 @@
 							<v8:lang>ro</v8:lang>
 							<v8:content>Id</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>ID</v8:content>
+						</v8:item>
 					</Title>
 					<Type>
 						<v8:Type>xs:string</v8:Type>
@@ -1627,6 +1700,10 @@
 						<v8:item>
 							<v8:lang>vi</v8:lang>
 							<v8:content>Dòng thủ tục thực tế</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Verklig procedursträng</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -1651,6 +1728,10 @@
 							<v8:lang>ro</v8:lang>
 							<v8:content>Parametri</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Inställningar</v8:content>
+						</v8:item>
 					</Title>
 					<Type/>
 				</Column>
@@ -1663,6 +1744,10 @@
 						<v8:item>
 							<v8:lang>en</v8:lang>
 							<v8:content>String to search</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Sträng att söka</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -1682,6 +1767,10 @@
 						<v8:item>
 							<v8:lang>en</v8:lang>
 							<v8:content>Test view</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Testvy</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -1706,6 +1795,10 @@
 							<v8:lang>ro</v8:lang>
 							<v8:content>Tranzacția</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Transaktion</v8:content>
+						</v8:item>
 					</Title>
 					<Type>
 						<v8:Type>xs:string</v8:Type>
@@ -1728,6 +1821,10 @@
 						<v8:item>
 							<v8:lang>ro</v8:lang>
 							<v8:content>Descriere pas</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Stegbeskrivning</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -1752,6 +1849,10 @@
 							<v8:lang>ro</v8:lang>
 							<v8:content>Tipul pas</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Stegstyp</v8:content>
+						</v8:item>
 					</Title>
 					<Type>
 						<v8:Type>xs:string</v8:Type>
@@ -1771,6 +1872,10 @@
 							<v8:lang>en</v8:lang>
 							<v8:content>File version</v8:content>
 						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Filversion</v8:content>
+						</v8:item>
 					</Title>
 					<Type>
 						<v8:Type>xs:dateTime</v8:Type>
@@ -1788,6 +1893,10 @@
 						<v8:item>
 							<v8:lang>en</v8:lang>
 							<v8:content>The string was processed</v8:content>
+						</v8:item>
+						<v8:item>
+							<v8:lang>sv</v8:lang>
+							<v8:content>Strängen har bearbetats</v8:content>
 						</v8:item>
 					</Title>
 					<Type>
@@ -1905,6 +2014,10 @@
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Steps tree filter</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Stegträdsfilter</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -2024,6 +2137,10 @@
 					<v8:lang>vi</v8:lang>
 					<v8:content>Thư mục công cụ</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Verktygskatalog</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>xs:string</v8:Type>
@@ -2043,6 +2160,10 @@
 					<v8:lang>en</v8:lang>
 					<v8:content>Translation</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Översättning</v8:content>
+				</v8:item>
 			</Title>
 			<Type/>
 		</Attribute>
@@ -2055,6 +2176,10 @@
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Binary translation file data</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Binär översättningsfildata</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -2074,6 +2199,10 @@
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Translation table cache</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Översättningstabellcache</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -2097,6 +2226,10 @@
 				<v8:item>
 					<v8:lang>ro</v8:lang>
 					<v8:content>Este LINUX</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Detta är Linux</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -2204,6 +2337,10 @@
 					<v8:lang>en</v8:lang>
 					<v8:content>Show outdated steps</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Visa föråldrade steg</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
@@ -2218,6 +2355,10 @@
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Parameter snippet</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Parameterutdrag</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -2238,6 +2379,10 @@
 					<v8:lang>en</v8:lang>
 					<v8:content>Use markdown viewer</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Använd Markdown-visare</v8:content>
+				</v8:item>
 			</Title>
 			<Type>
 				<v8:Type>xs:boolean</v8:Type>
@@ -2252,6 +2397,10 @@
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Description (Markdown)</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Beskrivning (Markdown)</v8:content>
 				</v8:item>
 			</Title>
 			<Type>
@@ -2714,6 +2863,10 @@
 					<v8:lang>en</v8:lang>
 					<v8:content>Upload steps to JSON</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Exportera steg till JSON</v8:content>
+				</v8:item>
 			</ToolTip>
 			<Action>ВыгрузитьШагиВJSON</Action>
 			<CurrentRowUse>DontUse</CurrentRowUse>
@@ -2727,6 +2880,10 @@
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Find steps</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Hitta steg</v8:content>
 				</v8:item>
 			</Title>
 			<Picture>
@@ -2746,6 +2903,10 @@
 					<v8:lang>en</v8:lang>
 					<v8:content>Close</v8:content>
 				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Stäng</v8:content>
+				</v8:item>
 			</Title>
 			<ToolTip>
 				<v8:item>
@@ -2755,6 +2916,10 @@
 				<v8:item>
 					<v8:lang>en</v8:lang>
 					<v8:content>Close known steps form</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Stäng formuläret för kända steg</v8:content>
 				</v8:item>
 			</ToolTip>
 			<Action>ЗакрытьФорму</Action>

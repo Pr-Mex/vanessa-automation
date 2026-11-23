@@ -1,9 +1,5 @@
 # language: ru
 # encoding: utf-8
-#parent uf:
-@UF4_Библиотека_шагов
-#parent ua:
-@UA37_Работать_с_UI_командный_интерфейс
 
 @IgnoreOnCIMainBuild
 

@@ -1,10 +1,7 @@
-# language: ru
+﻿# language: ru
 # encoding: utf-8
-#parent uf:
-@UF4_Библиотека_шагов
-#parent ua:
-@UA6_Работать_с_подключением_Test_client
 
+@uf-part5
 @IgnoreOnOFBuilds
 @IgnoreOn82Builds
 @IgnoreOnWeb
@@ -33,4 +30,6 @@
 Сценарий: Подчистим после себя
 	Когда Я удаляю пользователя "VanessaUser1"
 	И я удаляю пользователя "VanessaUser2"
+	И я закрываю сеанс TESTCLIENT
+	И в таблице клиентов тестирования я активизирую строку 'Этот клиент'
 	

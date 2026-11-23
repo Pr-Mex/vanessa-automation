@@ -1,10 +1,7 @@
 ﻿# language: ru
 # encoding: utf-8
-#parent ua:
-@UA9_загружать_features
-#parent uf:
-@UF1_загрузка_и_обработка_features
 
+@uf-part1
 @IgnoreOn82Builds
 @IgnoreOnOFBuilds
 @IgnoreOnWeb
@@ -16,9 +13,7 @@
 
  
 Контекст: 
-	Если Файл "C:\Temp\Optimization" существует тогда
-	Иначе
-		Тогда я создаю каталог "C:\Temp\Optimization"
+	И я создаю каталог "C:\Temp\Optimization"
 	Дано Я запускаю сценарий открытия TestClient или подключаю уже существующий
 	Когда Я открываю VanessaAutomation в режиме TestClient со стандартной библиотекой
 
