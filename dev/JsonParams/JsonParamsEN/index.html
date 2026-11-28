@@ -1379,6 +1379,34 @@
   
   
     <li class="md-nav__item">
+      <a href="../../FAQ/%D0%97%D0%B0%D0%BC%D0%B5%D1%80%20%D0%BF%D0%BE%D0%BA%D1%80%D1%8B%D1%82%D0%B8%D1%8F%20%D0%BA%D0%BE%D0%B4%D0%B0/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Замер покрытия кода при выполнении сценариев
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
       <a href="../../FAQ/%D0%A0%D0%B5%D0%B6%D0%B8%D0%BC%20%D1%81%D0%BE%D0%B2%D0%BC%D0%B5%D1%81%D1%82%D0%B8%D0%BC%D0%BE%D1%81%D1%82%D0%B8%208.2/" class="md-nav__link">
         
   
@@ -2922,6 +2950,10 @@ A structure that will contain key and value pairs. This structure will be loaded
 <p><strong>SmokeTestsVendorConfigurationName</strong>:
      The name of the vendor configuration to compare configurations with.</p>
 </li>
+<li>
+<p><strong>SmokeTestsInfobaseUser</strong>:
+     Infobase user name whose rights filter the generated actions. Empty — no filter. VAParams for the command line uses the Russian key <code>ДымовыеТестыПользовательИнформационнойБазы</code>.</p>
+</li>
 </ul>
 </li>
 <li>
@@ -3212,6 +3244,7 @@ A structure that will contain key and value pairs. This structure will be loaded
 <li>
 <p><strong>MaximumExecutionTimeAction</strong>:
      Sets the maximum execution time for actions that return a value to the test manager.
+     The default value is 600 seconds.
      If the specified time is exceeded, the exception "The maximum execution time of the action on the testing client side has been exceeded" is generated. In this case, the action will continue.
      If the parameter is 0, commands wait until the end of execution without checking the elapsed time since the start of execution.</p>
 </li>
@@ -3265,6 +3298,11 @@ A structure that will contain key and value pairs. This structure will be loaded
 <p><strong>getlayoutsusingextensionvaextension</strong>:
      Enables retrieval of layout values (printable forms and reports) using the VAExtension.
      Allows you to receive the entire layout with the design in the web client.</p>
+</li>
+<li>
+<p><strong>treatnbspandspaceasequal</strong>:
+     If the checkbox is on, a regular space and a non-breaking space (Chars.NBSp) are treated as equal when comparing spreadsheet documents, form tables, and field values.
+     Clear the checkbox if the spaces must be distinguished.</p>
 </li>
 </ul>
 </li>
@@ -3403,6 +3441,10 @@ A structure that will contain key and value pairs. This structure will be loaded
 <p><strong>maskpwdinlog</strong>:
      The user's password is masked in the log /P="*****"</p>
 </li>
+<li>
+<p><strong>maskedvars</strong>:
+     List of variable names or patterns with * (for example, <code>PWD_*</code>, <code>*SECRET*</code>). Values of matching variables are replaced with <code>*****</code> in step names, parameters, errors, Allure, Cucumber, jUnit reports, text log, event log, and MCP. An empty list disables variable masking; recognized passwords in steps are always masked, and the connection string password is masked when "Mask password in log" is enabled; always in jUnit reports.</p>
+</li>
 </ul>
 </li>
 <li>
@@ -3420,7 +3462,7 @@ A structure that will contain key and value pairs. This structure will be loaded
     If this option is enabled, then in the parameters of the steps in which the variables were used, the variable names will be replaced with their values.
 
  * **allureexcludevars**:
-    Enter tags in the field. If the tag is detected in the feature, the whole feature will not be uploaded. If the tag is found in the scenario, only this scenario will not be uploaded.
+    List of variable names that are not replaced with their values in the Allure report.
 
  * **allurepath**:
     Allure reports directory. When run locally, the directory will be cleaned up each time the scripts are run.
@@ -4237,8 +4279,37 @@ A structure that will contain key and value pairs. This structure will be loaded
       Determines the port on which the MCP server is started at automatic startup. If the port is not set or is invalid, port 9874 is used. The setting has no effect if an external plugin has installed its own MCP transport.</p>
 </li>
 <li>
+<p><strong>MCPTools</strong>:
+      An array of objects like {"Name": "<tool name>", "Enabled": true|false}. Defines which MCP tools are registered. A tool absent from the array is enabled by default; tools hard-disabled in VA are not shown in the tree. An empty array means "setting is not specified". Example:
+      "MCPTools": [
+        {"Name": "check_syntax", "Enabled": true},
+        {"Name": "manage_uiautomation", "Enabled": false}
+      ]
+      The setting is also saved by the "Save settings" button and edited on the <strong>MCP</strong> tab in the tools tree.</p>
+</li>
+<li>
 <p><strong>WriteMCPServiceDataToEventLog</strong>:
       Enables writing MCP service data to the event log: calls to Vanessa Automation tools that had no start event are written as the <code>VanessaAutomation.MCP.Инструмент.Запрос</code> event (tool name, call id and parameter names without values). Events are written with the <code>VanessaAutomation.MCP.</code> prefix at the "Information" level. Disabled by default.</p>
+</li>
+<li>
+<p><strong>MCPCheckSpaceBeforeStarInWindowTitle</strong>:
+      If the flag is set, MCP treats a space before the last * in the window title as an error. Incorrect example: the mask "Title <em>". Correct example: the mask "Title</em>". Clear the flag if existing tests use a mask like "Title *": then check_syntax will not show this warning and run_scenario will not block the run.</p>
+</li>
+<li>
+<p><strong>MCPCheckEmptyStepGroups</strong>:
+      If the flag is set, a step group without executable steps (for example, If with a commented-out body) is considered an error and blocks the MCP run. Clear the flag to allow such groups.</p>
+</li>
+<li>
+<p><strong>MCPCheckStepUsedAsGroup</strong>:
+      If the flag is set, using a step as a step group is considered an error. This usually happens when a tab is accidentally placed under a step: the next step becomes nested, and the previous step turns into a group. The check protects against such an accidental change to the scenario structure, so it is not recommended to disable it.</p>
+</li>
+<li>
+<p><strong>MCPCheckGroupNameWithoutStar</strong>:
+      If the flag is set, the step group name must start with *. It is not recommended to disable: otherwise the engine may treat the group as a regular step.</p>
+</li>
+<li>
+<p><strong>MCPCheckPanelSequence</strong>:
+      If the flag is set, the section-panel selection step immediately followed by the function-panel selection step is considered an error. Incorrect: two consecutive steps — select a section-panel command, then select a function-panel command. Correct: one step that selects both commands in the command interface. Clear the flag if existing tests use this sequence intentionally.</p>
 </li>
 </ul>
 <h2 id="libraries">Libraries<a class="headerlink" href="#libraries" title="Permanent link">&para;</a></h2>
