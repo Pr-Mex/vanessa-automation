@@ -336,6 +336,7 @@ A structure that will contain key and value pairs. This structure will be loaded
 
       * **MaximumExecutionTimeAction**:
          Sets the maximum execution time for actions that return a value to the test manager.
+         The default value is 600 seconds.
          If the specified time is exceeded, the exception "The maximum execution time of the action on the testing client side has been exceeded" is generated. In this case, the action will continue.
          If the parameter is 0, commands wait until the end of execution without checking the elapsed time since the start of execution.
 
@@ -374,6 +375,7 @@ A structure that will contain key and value pairs. This structure will be loaded
       * **getlayoutsusingextensionvaextension**:
          Enables retrieval of layout values (printable forms and reports) using the VAExtension.
          Allows you to receive the entire layout with the design in the web client.
+
       * **treatnbspandspaceasequal**:
          If the checkbox is on, a regular space and a non-breaking space (Chars.NBSp) are treated as equal when comparing spreadsheet documents, form tables, and field values.
          Clear the checkbox if the spaces must be distinguished.
