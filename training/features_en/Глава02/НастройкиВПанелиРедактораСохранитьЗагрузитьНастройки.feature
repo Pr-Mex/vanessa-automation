@@ -39,8 +39,13 @@
 
 
 * Next is the mirror command, which loads the Vanessa Automation settings from a file.
-		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ГруппаVanessaEditorНастройкиРедактора' UI Automation	
-		И Пауза 1
+		# If the menu is already open, clicking the group again will close it.
+		И я запоминаю заголовок элемента формы Vanessa Automation с именем "VanessaEditorЗагрузитьНастройкиИзФайла" в переменную "ЗаголовокЗагрузитьНастройки"
+		Если существует элемент UI Automation "ЭтотСеанс" с именем "$ЗаголовокЗагрузитьНастройки$" и типом "" Тогда
+			И Пауза 0.1
+		Иначе
+			И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ГруппаVanessaEditorНастройкиРедактора' UI Automation	
+			И Пауза 1
 		И Я делаю подсветку элемента VA "VanessaEditorЗагрузитьНастройкиИзФайла" "Download settings from a file" и перемещаю курсор
 
 * A significant point. If json file does not contain a setting, it will take a default value when downloading from file.
