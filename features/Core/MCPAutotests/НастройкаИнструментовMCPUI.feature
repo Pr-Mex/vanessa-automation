@@ -2,6 +2,7 @@
 # encoding: utf-8
 
 @mcp
+@mcp-ui
 @uf-part2
 @IgnoreOnWeb
 @IgnoreOnOFBuilds
