@@ -38,6 +38,7 @@
 			| 'AIЗаписыватьСлужебныеДанныеВЖР' |
 
 * Below is the "MCP validation rules" group. It allows disabling individual checks that MCP performs in check_syntax and before run_scenario. Other checks, such as step existence or invalid keywords, remain mandatory.
+		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ГруппаПроверокMCP' UI Automation
 		И Пауза 1
 		И я делаю подсветку нескольких элементов VA с их заголовком "MCP validation rules" UI Automation
 			| 'Name'                                                    |
