@@ -478,6 +478,9 @@ A structure that will contain key and value pairs. This structure will be loaded
       * **maskpwdinlog**:
          The user's password is masked in the log /P="*****"
 
+      * **maskedvars**:
+         List of variable names or patterns with * (for example, `PWD_*`, `*SECRET*`). Values of matching variables are replaced with `*****` in step names, parameters, errors, Allure, Cucumber, jUnit reports, text log, event log, and MCP. An empty list disables variable masking; recognized passwords in steps are always masked, and the connection string password is masked when "Mask password in log" is enabled; always in jUnit reports.
+
 *  Allure
 
    *  Main settings
@@ -492,7 +495,7 @@ A structure that will contain key and value pairs. This structure will be loaded
             If this option is enabled, then in the parameters of the steps in which the variables were used, the variable names will be replaced with their values.
 
          * **allureexcludevars**:
-            Enter tags in the field. If the tag is detected in the feature, the whole feature will not be uploaded. If the tag is found in the scenario, only this scenario will not be uploaded.
+            List of variable names that are not replaced with their values in the Allure report.
 
          * **allurepath**:
             Allure reports directory. When run locally, the directory will be cleaned up each time the scripts are run.

@@ -16816,6 +16816,59 @@ Vid körning av tester från kommandoraden, för att skapa variabler, behöver d
 														</UsualGroup>
 													</ChildItems>
 												</UsualGroup>
+												<UsualGroup name="ГруппаБезопасностьМаскирование" id="4600">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Безопасность/Маскирование</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Security/Masking</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>sv</v8:lang>
+															<v8:content>Säkerhet/Maskering</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Vertical</Group>
+													<Behavior>Collapsible</Behavior>
+													<ExtendedTooltip name="ГруппаБезопасностьМаскированиеРасширеннаяПодсказка" id="4601"/>
+													<ChildItems>
+														<InputField name="МаскируемыеПеременные" id="4602">
+															<DataPath>Объект.МаскируемыеПеременные</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Маскируемые переменные</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Masked variables</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>sv</v8:lang>
+																	<v8:content>Maskerade variabler</v8:content>
+																</v8:item>
+															</Title>
+															<ContextMenu name="МаскируемыеПеременныеКонтекстноеМеню" id="4603"/>
+															<ExtendedTooltip name="МаскируемыеПеременныеРасширеннаяПодсказка" id="4604">
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Имена переменных или шаблоны с * (например, PWD_*, *SECRET*). Значения подходящих переменных заменяются на ***** в имени шага, параметрах, ошибках, Allure, Cucumber, jUnit, текстовом логе, журнале регистрации и MCP. Пустой список отключает маскирование переменных; распознанные пароли в шагах маскируются всегда, пароль в строке соединения — при включённой настройке «Маскировать пароль в логе»; в отчётах jUnit — всегда.</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>sv</v8:lang>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+														</InputField>
+													</ChildItems>
+												</UsualGroup>
 											</ChildItems>
 										</Page>
 										<Page name="СтраницаКлиентыТестирования" id="1838">
