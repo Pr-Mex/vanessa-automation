@@ -53,7 +53,6 @@
 		И в поле с именем 'РеквизитПроизвольныйКод' я ввожу текст 
 		"""bsl
 		Элементы.VanessaEditor.Document.defaultView.document.querySelector("a").click();
-		Сообщить(VanessaTabs.current.title);
 		"""
 		И я очищаю окно сообщений пользователю
 		И я нажимаю на кнопку с именем 'ВыполнитьПроизвольныйКод'

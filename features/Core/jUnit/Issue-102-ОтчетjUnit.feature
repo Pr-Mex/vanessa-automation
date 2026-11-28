@@ -14,7 +14,6 @@
 Контекст:
 	Дано я закрываю сеанс текущего клиента тестирования
 	Когда Я открываю VanessaAutomation в режиме TestClient со стандартной библиотекой
-	
 
 //https://github.com/Pr-Mex/vanessa-automation/issues/2523
 Сценарий: Формирование jUnit когда сценарию идёт установка Skipped
