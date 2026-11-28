@@ -1163,6 +1163,8 @@
 	Разрешённые = Новый Массив;
 	Разрешённые.Добавить("manage_form_elements");
 	Разрешённые.Добавить("execute_form_actions");
+	// В режиме Проверка не разрешён: валидный click_panel_item выполнил бы клик.
+	Разрешённые.Добавить("manage_command_interface");
 	Возврат Разрешённые.Найти(ИмяИнструмента) <> Неопределено;
 
 КонецФункции
@@ -1183,6 +1185,9 @@
 	Разрешённые.Добавить("search_for_steps_by_keywords");
 	Разрешённые.Добавить("get_form_analysis");
 	Разрешённые.Добавить("find_form_elements");
+	// Только чтение состояния окон; побочных действий нет.
+	Разрешённые.Добавить("get_active_window_data");
+	Разрешённые.Добавить("get_window_list_testclient");
 	Возврат Разрешённые.Найти(ИмяИнструмента) <> Неопределено;
 
 КонецФункции
@@ -1665,6 +1670,9 @@
 	ИначеЕсли Имя = "frequently_used_steps" Тогда
 		Возврат "mcp.steps.read";
 	ИначеЕсли Имя = "manage_command_interface" Тогда
+		Если (ДействиеНормализованное = "get_section_panel") ИЛИ (ДействиеНормализованное = "get_function_panel") ИЛИ (ДействиеНормализованное = "get_all") ИЛИ (ДействиеНормализованное = "get_panels") ИЛИ (ДействиеНормализованное = "get_panel_content") Тогда
+			Возврат "client.window.read";
+		КонецЕсли;
 		Возврат "client.window.manage";
 	ИначеЕсли Имя = "get_extension_list" Тогда
 		Возврат "mcp.extension.list";
@@ -1681,6 +1689,9 @@
 	ИначеЕсли Имя = "get_form_element_data" Тогда
 		Возврат "client.form.read";
 	ИначеЕсли Имя = "manage_form_elements" Тогда
+		Если (ДействиеНормализованное = "get_menu_presentation") ИЛИ (ДействиеНормализованное = "get_selected_rows") ИЛИ (ДействиеНормализованное = "get_dropdown_state") ИЛИ (ДействиеНормализованное = "current_opened") ИЛИ (ДействиеНормализованное = "current_modified") ИЛИ (ДействиеНормализованное = "get_current_area_address") ИЛИ (ДействиеНормализованное = "get_current_area_text") ИЛИ (ДействиеНормализованное = "get_doc_area_horizontal_size") ИЛИ (ДействиеНормализованное = "get_doc_area_vertical_size") ИЛИ (ДействиеНормализованное = "get_formatted_string_hyperlink_presentations") ИЛИ (ДействиеНормализованное = "is_expanded") Тогда
+			Возврат "client.form.read";
+		КонецЕсли;
 		Возврат "client.form.action";
 	ИначеЕсли Имя = "execute_form_actions" Тогда
 		Возврат "client.form.chain";

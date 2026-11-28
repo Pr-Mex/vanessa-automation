@@ -387,3 +387,63 @@
 		Тогда MCP-инструмент вернул намерение "client.form.read"
 		И MCP-инструмент не выполнял реальных действий
 
+@tool:manage_form_elements
+	Сценарий: manage_form_elements get_menu_presentation сообщает намерение чтения
+		Когда я вызываю MCP-инструмент "manage_form_elements" в режиме "Намерение" с параметрами
+			| Имя | Значение |
+			| action | get_menu_presentation |
+		Тогда MCP-инструмент вернул намерение "client.form.read"
+		И в намерении MCP-инструмента поле "action" равно "get_menu_presentation"
+		И MCP-инструмент не выполнял реальных действий
+
+@tool:get_form_analysis
+	Сценарий: get_form_analysis user_message сообщает намерение чтения
+		Когда я вызываю MCP-инструмент "get_form_analysis" в режиме "Намерение" с параметрами
+			| Имя | Значение |
+			| format | user_message |
+		Тогда MCP-инструмент вернул намерение "client.form.read"
+		И в намерении MCP-инструмента поле "format" равно "user_message"
+		И MCP-инструмент не выполнял реальных действий
+
+@tool:get_active_window_data
+	Сценарий: get_active_window_data blocking_window сообщает намерение чтения
+		Когда я вызываю MCP-инструмент "get_active_window_data" в режиме "Намерение" с параметрами
+			| Имя | Значение |
+			| type | blocking_window |
+		Тогда MCP-инструмент вернул намерение "client.window.read"
+		И в намерении MCP-инструмента поле "type" равно "blocking_window"
+		И MCP-инструмент не выполнял реальных действий
+
+@tool:manage_command_interface
+	Сценарий: manage_command_interface get_panels сообщает намерение чтения
+		Когда я вызываю MCP-инструмент "manage_command_interface" в режиме "Намерение" с параметрами
+			| Имя | Значение |
+			| action | get_panels |
+		Тогда MCP-инструмент вернул намерение "client.window.read"
+		И в намерении MCP-инструмента поле "action" равно "get_panels"
+		И MCP-инструмент не выполнял реальных действий
+
+@tool:manage_command_interface
+	Сценарий: manage_command_interface get_panel_content сообщает намерение чтения
+		Когда я вызываю MCP-инструмент "manage_command_interface" в режиме "Намерение" с параметрами
+			| Имя | Значение |
+			| action | get_panel_content |
+			| panel | ПанельРазделов |
+		Тогда MCP-инструмент вернул намерение "client.window.read"
+		И в намерении MCP-инструмента поле "action" равно "get_panel_content"
+		И в намерении MCP-инструмента поле "panel" равно "ПанельРазделов"
+		И MCP-инструмент не выполнял реальных действий
+
+@tool:manage_command_interface
+	Сценарий: manage_command_interface click_panel_item сообщает намерение действия
+		Когда я вызываю MCP-инструмент "manage_command_interface" в режиме "Намерение" с параметрами
+			| Имя | Значение |
+			| action | click_panel_item |
+			| panel | ПанельРазделов |
+			| command | Основная |
+		Тогда MCP-инструмент вернул намерение "client.window.manage"
+		И в намерении MCP-инструмента поле "action" равно "click_panel_item"
+		И в намерении MCP-инструмента поле "panel" равно "ПанельРазделов"
+		И в намерении MCP-инструмента поле "command" равно "Основная"
+		И MCP-инструмент не выполнял реальных действий
+
