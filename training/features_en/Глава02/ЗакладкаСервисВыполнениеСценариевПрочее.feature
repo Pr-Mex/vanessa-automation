@@ -18,10 +18,11 @@
 		И Пауза 1
 		И я делаю подсветку нескольких элементов VA с их заголовком "Other settings" UI Automation
 			| 'Name'                                         |
-			| 'ВыполнятьSleepЧерезPing'                     |
-			| 'ЗапрещатьПерезаписыватьПеременные'           |
-			| 'ОбновлятьТаблицыФормыПриПолученииЗначения'   |
-			| 'ПолучатьМакетыСПомощьюРасширенияVAExtension' |
+			| 'ВыполнятьSleepЧерезPing'                      |
+			| 'ЗапрещатьПерезаписыватьПеременные'            |
+			| 'ОбновлятьТаблицыФормыПриПолученииЗначения'    |
+			| 'ПолучатьМакетыСПомощьюРасширенияVAExtension'  |
+			| 'СчитатьОбычныйИНеразрывныйПробелыОдинаковыми' |
 
 * If this option is enabled, Vanessa Automation pause will be executed via ping command.
 		И я делаю подсветку нескольких элементов VA с их заголовком "How to perform sleep" UI Automation
@@ -48,5 +49,10 @@
 			| 'ПолучатьМакетыСПомощьюРасширенияVAExtension' |
 
 * This option is recommended for use. For its operation, it is necessary to install VAExtension extension to Test Client database.
+
+* Let's continue. If this checkbox is set, a regular space and a non-breaking space are treated as equal when comparing spreadsheet documents, form tables and field values. Clear the checkbox if the spaces must be distinguished.
+		И я делаю подсветку нескольких элементов VA с их заголовком "Space comparison" UI Automation
+			| 'Name'                                             |
+			| 'СчитатьОбычныйИНеразрывныйПробелыОдинаковыми'    |
 
 * That's it, move on to the next lesson of the interactive help.

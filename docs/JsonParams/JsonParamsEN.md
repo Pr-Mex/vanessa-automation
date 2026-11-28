@@ -374,6 +374,9 @@ A structure that will contain key and value pairs. This structure will be loaded
       * **getlayoutsusingextensionvaextension**:
          Enables retrieval of layout values (printable forms and reports) using the VAExtension.
          Allows you to receive the entire layout with the design in the web client.
+      * **treatnbspandspaceasequal**:
+         If the checkbox is on, a regular space and a non-breaking space (Chars.NBSp) are treated as equal when comparing spreadsheet documents, form tables, and field values.
+         Clear the checkbox if the spaces must be distinguished.
 
 ## Screenshots
 
