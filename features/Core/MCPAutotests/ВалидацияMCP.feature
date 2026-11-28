@@ -28,6 +28,13 @@
 		Тогда MCP-инструмент вернул ошибку "INVALID_PARAMS"
 
 	@mcp-validation
+	Сценарий: manage_test_client_profiles отвергает неизвестное действие
+		Когда я вызываю MCP-инструмент "manage_test_client_profiles" в режиме "Проверка" с параметрами
+			| Имя | Значение |
+			| action | __unknown__ |
+		Тогда MCP-инструмент вернул ошибку "INVALID_PARAMS"
+
+	@mcp-validation
 	Сценарий: user_actions_recording отвергает неизвестное действие
 		Когда я вызываю MCP-инструмент "user_actions_recording" в режиме "Проверка" с параметрами
 			| Имя | Значение |
