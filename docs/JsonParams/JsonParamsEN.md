@@ -1167,8 +1167,17 @@ A structure that will contain key and value pairs. This structure will be loaded
    * **MCPServerPort**:
       Determines the port on which the MCP server is started at automatic startup. If the port is not set or is invalid, port 9874 is used. The setting has no effect if an external plugin has installed its own MCP transport.
 
+   * **MCPTools**:
+      An array of objects like {"Name": "<tool name>", "Enabled": true|false}. Defines which MCP tools are registered. A tool absent from the array is enabled by default; tools hard-disabled in VA are not shown in the tree. An empty array means "setting is not specified". Example:
+      "MCPTools": [
+        {"Name": "check_syntax", "Enabled": true},
+        {"Name": "manage_uiautomation", "Enabled": false}
+      ]
+      The setting is also saved by the "Save settings" button and edited on the **MCP** tab in the tools tree.
+
    * **WriteMCPServiceDataToEventLog**:
       Enables writing MCP service data to the event log: calls to Vanessa Automation tools that had no start event are written as the `VanessaAutomation.MCP.Инструмент.Запрос` event (tool name, call id and parameter names without values). Events are written with the `VanessaAutomation.MCP.` prefix at the "Information" level. Disabled by default.
+
 
 ## Libraries
 

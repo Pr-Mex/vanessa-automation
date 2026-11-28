@@ -108,6 +108,7 @@
            - Vanessa Editor ![](mortarboard.png)[Запустить урок](ЗакладкаСервисVanessaEditor)
            - Learning ![](mortarboard.png)[Запустить урок](ЗакладкаСервисОбучение)
            - AI ![](mortarboard.png)[Запустить урок](ЗакладкаСервисAI)
+           - MCP tools settings ![](mortarboard.png)[Запустить урок](MCPToolsSettings)
            - Tab "Other" ![](mortarboard.png)[Запустить урок](ЗакладкаСервисПрочее)
            
 
