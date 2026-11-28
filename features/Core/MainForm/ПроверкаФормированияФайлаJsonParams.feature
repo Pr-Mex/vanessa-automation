@@ -29,9 +29,23 @@
 Сценарий: Проверка формирования файла JsonParams
 	Когда Я открываю VanessaAutomation в режиме TestClient
 
+	И я создаю каталог "C:\Temp\JsonParams"
+	И я копирую файл "$КаталогИнструментов$\docs\JsonParams\JsonParamsRU.md" "C:\Temp\JsonParams\JsonParamsRU.md"
+
 	И я перехожу к закладке с именем "ГруппаСлужебная"
-	И я нажимаю на кнопку с именем 'СоздатьИнструкциюПоОписаниюЭлементов'
-	И Пауза 3
+	Попытка
+		И я нажимаю на кнопку с именем 'СоздатьИнструкциюПоОписаниюЭлементов'
+		И Пауза 3
+	Исключение
+		И я запоминаю текст ошибки в переменную "ТекстОшибкиФормированияJsonParams"
+		Если файл "C:\Temp\JsonParams\JsonParamsRU.md" существует тогда
+			И я копирую файл "C:\Temp\JsonParams\JsonParamsRU.md" "$КаталогИнструментов$\docs\JsonParams\JsonParamsRU.md"
+		И я вызываю исключение '$ТекстОшибкиФормированияJsonParams$'
+
+	Если файл "C:\Temp\JsonParams\JsonParamsRU.md" существует тогда
+		И я копирую файл "C:\Temp\JsonParams\JsonParamsRU.md" "$КаталогИнструментов$\docs\JsonParams\JsonParamsRU.md"
+	Иначе
+		И я вызываю исключение 'Не найдена резервная копия JsonParamsRU.md — файл не восстановлен.'
 	Тогда не появилось окно предупреждения системы
 	
 	

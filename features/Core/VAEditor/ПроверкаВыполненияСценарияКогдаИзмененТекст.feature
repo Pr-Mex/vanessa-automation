@@ -41,6 +41,8 @@
 		И я перехожу в редактор Vanessa Automation из дерева
 
 		И я перехожу к закладке с именем "ГруппаСлужебная"
+		И я создаю каталог "C:\Temp\VAEditor17"
+		И я копирую файл "$КаталогИнструментов$\features\Support\Templates\VAEditor\VanessaEditor17.feature" "C:\Temp\VAEditor17\VanessaEditor17.feature"
 		Когда В поле с именем "КаталогФичСлужебный" я указываю путь к служебной фиче "VAEditor/VanessaEditor17"
 		И Я нажимаю на кнопку перезагрузить сценарии в Vanessa-Automation TestClient
 
@@ -63,13 +65,23 @@
 			|'  VanessaTabs.current.editor.insertText(ПоследняяСтрока + Символы.ПС + "		\| \'Сообщить(""Hello world 1."");\' \|", ЗаписатьОбъектJSON(Соответствие));'|
 		И я нажимаю на кнопку с именем 'ВыполнитьПроизвольныйКод'
 		И пауза 1
+		Попытка
+			И Я нажимаю на кнопку выполнить сценарии в Vanessa-Automation TestClient
+			Если файл "C:\Temp\VAEditor17\VanessaEditor17.feature" существует тогда
+				И я копирую файл "C:\Temp\VAEditor17\VanessaEditor17.feature" "$КаталогИнструментов$\features\Support\Templates\VAEditor\VanessaEditor17.feature"
+			Иначе
+				И я вызываю исключение 'Не найдена резервная копия VanessaEditor17.feature — файл не восстановлен.'
+		Исключение
+			И я запоминаю текст ошибки в переменную "ТекстОшибкиВосстановленияVAEditor1"
+			Если файл "C:\Temp\VAEditor17\VanessaEditor17.feature" существует тогда
+				И я копирую файл "C:\Temp\VAEditor17\VanessaEditor17.feature" "$КаталогИнструментов$\features\Support\Templates\VAEditor\VanessaEditor17.feature"
+			И я вызываю исключение '$ТекстОшибкиВосстановленияVAEditor1$'
 
 		И я нажимаю на кнопку с именем 'ПанельVanessaEditorФормаПерейтиВДеревоШагов'
 		И я нажимаю на кнопку с именем 'ФормаРазвернутьВсеСтрокиДереваСлужебный'
 		Тогда таблица "ДеревоТестов" содержит строки:
 			| 'Наименование' | 'Статус' |
 			| 'VAEditor17' | 'Success' |
-		И Я нажимаю на кнопку выполнить сценарии в Vanessa-Automation TestClient
 
 		Тогда в логе сообщений TestClient есть строки:
 			|'Hello world 1.'|
@@ -98,12 +110,22 @@
 		
 
 	* Проверка появления вторго сообщения
+		Попытка
+			И Я нажимаю на кнопку выполнить сценарии в Vanessa-Automation TestClient
+			Если файл "C:\Temp\VAEditor17\VanessaEditor17.feature" существует тогда
+				И я копирую файл "C:\Temp\VAEditor17\VanessaEditor17.feature" "$КаталогИнструментов$\features\Support\Templates\VAEditor\VanessaEditor17.feature"
+			Иначе
+				И я вызываю исключение 'Не найдена резервная копия VanessaEditor17.feature — файл не восстановлен.'
+		Исключение
+			И я запоминаю текст ошибки в переменную "ТекстОшибкиВосстановленияVAEditor2"
+			Если файл "C:\Temp\VAEditor17\VanessaEditor17.feature" существует тогда
+				И я копирую файл "C:\Temp\VAEditor17\VanessaEditor17.feature" "$КаталогИнструментов$\features\Support\Templates\VAEditor\VanessaEditor17.feature"
+			И я вызываю исключение '$ТекстОшибкиВосстановленияVAEditor2$'
 
 		И я нажимаю на кнопку с именем 'ФормаРазвернутьВсеСтрокиДереваСлужебный'
 		Тогда таблица "ДеревоТестов" содержит строки:
 			| 'Наименование' | 'Статус' |
 			| 'VAEditor17' | 'Success' |
-		И Я нажимаю на кнопку выполнить сценарии в Vanessa-Automation TestClient
 
 		Тогда в логе сообщений TestClient есть строки:
 			|'Hello world 2.'|

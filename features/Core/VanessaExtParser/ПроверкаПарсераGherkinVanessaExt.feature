@@ -11,10 +11,12 @@
 Функционал: Проверка парсера Gherkin VanessaExt
 
 
-Контекст: 
-	Дано Я запускаю сценарий открытия TestClient или подключаю уже существующий
-	Когда Я открываю VanessaAutomation в режиме TestClient со стандартной библиотекой
-
+Контекст:
+	Дано я открыл новый сеанс TestClient или подключил уже существующий
+	Если появилось окно с заголовком "*Vanessa Automation*" Тогда
+		И я активизирую окно "*Vanessa Automation*"
+	Иначе
+		Когда Я открываю VanessaAutomation в режиме TestClient со стандартной библиотекой
 
 
 // Тест обхода https://github.com/lintest/VanessaExt/issues/88
