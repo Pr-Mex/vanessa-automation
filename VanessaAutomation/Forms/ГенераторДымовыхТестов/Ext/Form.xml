@@ -307,6 +307,31 @@ Document3.ListForm</v8:content>
 												<Event name="Opening">ПутьКФайлуНастроекСценариевОткрытие</Event>
 											</Events>
 										</InputField>
+										<InputField name="ПользовательИнформационнойБазы" id="275">
+											<DataPath>ПользовательИнформационнойБазы</DataPath>
+											<TitleLocation>Top</TitleLocation>
+											<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+											<DropListButton>true</DropListButton>
+											<ClearButton>true</ClearButton>
+											<ContextMenu name="ПользовательИнформационнойБазыКонтекстноеМеню" id="276"/>
+											<ExtendedTooltip name="ПользовательИнформационнойБазыРасширеннаяПодсказка" id="277">
+												<Title formatted="false">
+													<v8:item>
+														<v8:lang>ru</v8:lang>
+														<v8:content>Пользователь информационной базы для фильтрации действий по правам. Пусто — без фильтра. Список доступен при наличии прав администратора; имя можно ввести вручную.</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>en</v8:lang>
+														<v8:content>Infobase user for filtering actions by rights. Empty — no filter. The list is available to administrators; the name can be entered manually.</v8:content>
+													</v8:item>
+													<v8:item>
+														<v8:lang>sv</v8:lang>
+														<v8:content>Infobasanvändare för filtrering av åtgärder efter rättigheter. Tom — utan filter. Listan är tillgänglig för administratörer; namnet kan anges manuellt.</v8:content>
+													</v8:item>
+												</Title>
+											</ExtendedTooltip>
+											<Events>
+												<Event name="OnChange">ПользовательИнформационнойБазыПриИзменении</Event>
 											</Events>
 										</InputField>
 									</ChildItems>
@@ -2432,6 +2457,172 @@ Document3.ListForm</v8:content>
 					<v8:AllowedLength>Variable</v8:AllowedLength>
 				</v8:StringQualifiers>
 			</Type>
+		</Attribute>
+		<Attribute name="ПользовательИнформационнойБазы" id="23">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Пользователь информационной базы</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Infobase user</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Infobasanvändare</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>false</SavedData>
+		</Attribute>
+		<Attribute name="ОшибкиПравПользователя" id="24">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Ошибки проверки прав пользователя</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>User rights check errors</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Fel vid kontroll av användarrättigheter</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>false</SavedData>
+		</Attribute>
+		<Attribute name="ЕстьОшибкиПроверкиПрав" id="25">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Есть ошибки проверки прав</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>User rights check has errors</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Det finns fel vid rättighetskontrollen</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:boolean</v8:Type>
+			</Type>
+			<SavedData>false</SavedData>
+		</Attribute>
+		<Attribute name="ПредупрежденияПравПользователя" id="26">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Предупреждения о правах пользователя</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>User rights warnings</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Varningar om användarrättigheter</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>false</SavedData>
+		</Attribute>
+		<Attribute name="СнятоОбъектовПоПравам" id="27">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снято объектов по правам</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Objects disabled by rights</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Objekt inaktiverade av rättigheter</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>false</SavedData>
+		</Attribute>
+		<Attribute name="СнятоДействийПоПравам" id="28">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Снято действий по правам</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Actions disabled by rights</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Åtgärder inaktiverade av rättigheter</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:decimal</v8:Type>
+				<v8:NumberQualifiers>
+					<v8:Digits>10</v8:Digits>
+					<v8:FractionDigits>0</v8:FractionDigits>
+					<v8:AllowedSign>Nonnegative</v8:AllowedSign>
+				</v8:NumberQualifiers>
+			</Type>
+			<SavedData>false</SavedData>
+		</Attribute>
+		<Attribute name="ВидыСДоступнымиДействиями" id="29">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Виды с доступными действиями</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Metadata kinds with available actions</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Metadatatyper med tillgängliga åtgärder</v8:content>
+				</v8:item>
+			</Title>
+			<Type>
+				<v8:Type>xs:string</v8:Type>
+				<v8:StringQualifiers>
+					<v8:Length>0</v8:Length>
+					<v8:AllowedLength>Variable</v8:AllowedLength>
+				</v8:StringQualifiers>
+			</Type>
+			<SavedData>false</SavedData>
 		</Attribute>
 		<ConditionalAppearance>
 			<dcsset:item>

@@ -123,6 +123,9 @@ A structure that will contain key and value pairs. This structure will be loaded
       * **SmokeTestsVendorConfigurationName**:
          The name of the vendor configuration to compare configurations with.
 
+      * **SmokeTestsInfobaseUser**:
+         Infobase user name whose rights filter the generated actions. Empty — no filter. VAParams for the command line uses the Russian key `ДымовыеТестыПользовательИнформационнойБазы`.
+
 *  System settings
 
       * **thetreetagisenabledbydefault**:
