@@ -981,6 +981,7 @@ Procedure ICheckOrCreateInformationRegisterRecordsAtServer(RegisterName, Values,
 	ObjectValues = GetValueTableFromVanessaTableArray(Values);	
 	ObjectAttributes = New ValueTable;
 	FillColumnsByStandardAttributes(ObjectAttributes, "InformationRegisters", RegisterName);
+	FillColumnsByCommonAttributes(ObjectAttributes, "InformationRegisters", RegisterName);
 	FillColumnsByDimensions(ObjectAttributes, "InformationRegisters", RegisterName);
 	FillColumnsByAttributes(ObjectAttributes, "InformationRegisters", RegisterName);
 	FillColumnsByResources(ObjectAttributes, "InformationRegisters", RegisterName);
@@ -1081,6 +1082,7 @@ Procedure ICheckOrCreateAccumulationRegisterRecordsAtServer(RegisterName, Values
 	ObjectValues = GetValueTableFromVanessaTableArray(Values);	
 	ObjectAttributes = New ValueTable;
 	FillColumnsByStandardAttributes(ObjectAttributes, "AccumulationRegisters", RegisterName);
+	FillColumnsByCommonAttributes(ObjectAttributes, "AccumulationRegisters", RegisterName);
 	FillColumnsByDimensions(ObjectAttributes, "AccumulationRegisters", RegisterName);
 	FillColumnsByAttributes(ObjectAttributes, "AccumulationRegisters", RegisterName);
 	FillColumnsByResources(ObjectAttributes, "AccumulationRegisters", RegisterName);
@@ -1774,8 +1776,7 @@ Procedure FillColumnsByCommonAttributes(DataListValue, Val MetadataTypeValue, Va
 	For Each Attribute In Metadata.CommonAttributes Do
 		If Attribute.Content.Contains(Metadata[MetadataTypeValue][MetadataValue]) Then
 			FindedCommonAttributeContentItem = Attribute.Content.Find(Metadata[MetadataTypeValue][MetadataValue]);
-			If FindedCommonAttributeContentItem <> Undefined And FindedCommonAttributeContentItem.Use
-				= Metadata.ObjectProperties.CommonAttributeUse.Use Then
+			If (FindedCommonAttributeContentItem <> Undefined) And CommonAttributeIsUsed(Attribute, FindedCommonAttributeContentItem) Then
 				AttributeType = Attribute.Type;
 				SupportedTypes = ExcludeUnsupportedType(AttributeType);
 				DataListValue.Columns.Add(Attribute.Name, SupportedTypes, Attribute.Synonym);
@@ -1783,6 +1784,19 @@ Procedure FillColumnsByCommonAttributes(DataListValue, Val MetadataTypeValue, Va
 		EndIf;
 	EndDo;
 EndProcedure
+
+&AtServer
+Function CommonAttributeIsUsed(Attribute, ContentItem)
+	If ContentItem.Use = Metadata.ObjectProperties.CommonAttributeUse.Use Then
+		Return True;
+	EndIf;
+	ReturnValue = False;
+	Попытка
+		ReturnValue = (ContentItem.Use = Metadata.ObjectProperties.CommonAttributeUse.Auto) And (Attribute.AutoUse = Metadata.ObjectProperties.CommonAttributeAutoUse.Use);
+	Исключение
+	КонецПопытки;
+	Return ReturnValue;
+EndFunction
 
 &AtServer
 Procedure FillColumnsByAttributes(DataListValue, Val MetadataTypeValue, Val MetadataValue)
