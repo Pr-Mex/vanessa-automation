@@ -20,6 +20,7 @@
            - Settings available when working with the editor (gear)
               - Saving and loading Vanessa Automation settings ![](mortarboard.png)[Запустить урок](НастройкиВПанелиРедактораСохранитьЗагрузитьНастройки)
               - Other settings ![](mortarboard.png)[Запустить урок](НастройкиВПанелиРедактораДругиеНастройки)
+              - Code coverage measurement ![](mortarboard.png)[Запустить урок](ЗамерПокрытияКода)
            - Buttons for creating, saving and launching scripts. Part1 ![](mortarboard.png)[Запустить урок](КнопкиЗапускаСценариевЧастьОдин)
            - Buttons for creating, saving and launching scripts. Part2 ![](mortarboard.png)[Запустить урок](КнопкиЗапускаСценариевЧастьДва)
            - Managing script voiceover and video recording. ![](mortarboard.png)[Запустить урок](КнопкиОзвучкиИЗаписиВидео)

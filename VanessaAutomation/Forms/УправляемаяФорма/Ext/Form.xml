@@ -25625,6 +25625,541 @@ Du kan läsa mer om varför detta kan behövas här
 														</CheckBoxField>
 													</ChildItems>
 												</UsualGroup>
+												<UsualGroup name="ГруппаЗамерПокрытияКода" id="4671">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Замер покрытия кода</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>Code coverage measurement</v8:content>
+														</v8:item>
+													</Title>
+													<Group>Vertical</Group>
+													<Behavior>Collapsible</Behavior>
+													<Collapsed>true</Collapsed>
+													<ControlRepresentation>Picture</ControlRepresentation>
+													<ExtendedTooltip name="ГруппаЗамерПокрытияКодаРасширеннаяПодсказка" id="4672"/>
+													<ChildItems>
+														<CheckBoxField name="СобиратьДанныеПоПокрытиюКода" id="4673">
+															<DataPath>Объект.СобиратьДанныеПоПокрытиюКода</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Собирать данные по покрытию кода</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Collect code coverage data</v8:content>
+																</v8:item>
+															</Title>
+															<TitleLocation>Right</TitleLocation>
+															<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="СобиратьДанныеПоПокрытиюКодаКонтекстноеМеню" id="4674"/>
+															<ExtendedTooltip name="СобиратьДанныеПоПокрытиюКодаРасширеннаяПодсказка" id="4675">
+																<AutoMaxWidth>false</AutoMaxWidth>
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Включает замер покрытия кода при выполнении сценариев. Требуется 1С:Предприятие 8.5.5 и права администратора. Для запуска и завершения замера вызывается конфигуратор тестируемой информационной базы.</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Enables code coverage measurement during scenario execution. Requires 1C:Enterprise 8.5.5 and administrator rights. The Designer of the tested infobase is launched to start and finish the measurement.</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+															<Events>
+																<Event name="OnChange">СобиратьДанныеПоПокрытиюКодаПриИзменении</Event>
+															</Events>
+														</CheckBoxField>
+														<UsualGroup name="ГруппаЗамерПокрытияКодаПерваяСтрока" id="4676">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа замер покрытия кода первая строка</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Code coverage measurement group first line</v8:content>
+																</v8:item>
+															</Title>
+															<Group>AlwaysHorizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаЗамерПокрытияКодаПерваяСтрокаРасширеннаяПодсказка" id="4677"/>
+															<ChildItems>
+																<UsualGroup name="ГруппаЗамерПокрытияКодаРежимЛевыйСтолбец" id="4678">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа замер покрытия кода режим левый столбец</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Code coverage measurement group mode left column</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Width>50</Width>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаЗамерПокрытияКодаРежимЛевыйСтолбецРасширеннаяПодсказка" id="4679"/>
+																	<ChildItems>
+																		<InputField name="РежимЗамераПокрытия" id="4680">
+																			<DataPath>Объект.РежимЗамераПокрытия</DataPath>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Режим замера</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>Measurement mode</v8:content>
+																				</v8:item>
+																			</Title>
+																			<TitleLocation>Top</TitleLocation>
+																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<ListChoiceMode>true</ListChoiceMode>
+																			<ChoiceList>
+																				<xr:Item>
+																					<xr:Presentation/>
+																					<xr:CheckState>0</xr:CheckState>
+																					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																						<Presentation>
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Отдельный замер для каждого сценария</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>Separate measurement for each scenario</v8:content>
+																							</v8:item>
+																						</Presentation>
+																						<Value xsi:type="xs:string">ЗамерДляКаждогоСценария</Value>
+																					</xr:Value>
+																				</xr:Item>
+																				<xr:Item>
+																					<xr:Presentation/>
+																					<xr:CheckState>0</xr:CheckState>
+																					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																						<Presentation>
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Один замер на весь прогон</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>One measurement for the whole run</v8:content>
+																							</v8:item>
+																						</Presentation>
+																						<Value xsi:type="xs:string">ЗамерДляВсегоПрогона</Value>
+																					</xr:Value>
+																				</xr:Item>
+																			</ChoiceList>
+																			<ContextMenu name="РежимЗамераПокрытияКонтекстноеМеню" id="4681"/>
+																			<ExtendedTooltip name="РежимЗамераПокрытияРасширеннаяПодсказка" id="4682">
+																				<AutoMaxWidth>false</AutoMaxWidth>
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Отдельный замер для каждого сценария сохраняет отдельный файл после каждого сценария. Один замер на весь прогон сохраняет общий файл после завершения всех сценариев.</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>A separate measurement for each scenario saves a separate file after each scenario. One measurement for the whole run saves a common file after all scenarios are completed.</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
+																			<Events>
+																				<Event name="OnChange">РежимЗамераПокрытияПриИзменении</Event>
+																			</Events>
+																		</InputField>
+																	</ChildItems>
+																</UsualGroup>
+																<UsualGroup name="ГруппаЗамерПокрытияКодаРежимПравыйСтолбец" id="4683">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа замер покрытия кода режим правый столбец</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Code coverage measurement group mode right column</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Width>50</Width>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаЗамерПокрытияКодаРежимПравыйСтолбецРасширеннаяПодсказка" id="4684"/>
+																	<ChildItems>
+																		<InputField name="ФорматРезультатаЗамеров" id="4685">
+																			<DataPath>Объект.ФорматРезультатаЗамеров</DataPath>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Формат результата</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>Result format</v8:content>
+																				</v8:item>
+																			</Title>
+																			<TitleLocation>Top</TitleLocation>
+																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<ListChoiceMode>true</ListChoiceMode>
+																			<ChoiceList>
+																				<xr:Item>
+																					<xr:Presentation/>
+																					<xr:CheckState>0</xr:CheckState>
+																					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																						<Presentation>
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>Стандартный</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>Standard</v8:content>
+																							</v8:item>
+																						</Presentation>
+																						<Value xsi:type="xs:string">Стандартный</Value>
+																					</xr:Value>
+																				</xr:Item>
+																				<xr:Item>
+																					<xr:Presentation/>
+																					<xr:CheckState>0</xr:CheckState>
+																					<xr:Value xsi:type="FormChoiceListDesTimeValue">
+																						<Presentation>
+																							<v8:item>
+																								<v8:lang>ru</v8:lang>
+																								<v8:content>SonarQube</v8:content>
+																							</v8:item>
+																							<v8:item>
+																								<v8:lang>en</v8:lang>
+																								<v8:content>SonarQube</v8:content>
+																							</v8:item>
+																						</Presentation>
+																						<Value xsi:type="xs:string">SonarQube</Value>
+																					</xr:Value>
+																				</xr:Item>
+																			</ChoiceList>
+																			<ContextMenu name="ФорматРезультатаЗамеровКонтекстноеМеню" id="4686"/>
+																			<ExtendedTooltip name="ФорматРезультатаЗамеровРасширеннаяПодсказка" id="4687">
+																				<AutoMaxWidth>false</AutoMaxWidth>
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Формат файла замера: стандартный или SonarQube.</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>Measurement file format: standard or SonarQube.</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
+																		</InputField>
+																	</ChildItems>
+																</UsualGroup>
+															</ChildItems>
+														</UsualGroup>
+														<InputField name="КаталогВыгрузкиЗамеров" id="4688">
+															<DataPath>Объект.КаталогВыгрузкиЗамеров</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Каталог выгрузки замеров</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Measurements output directory</v8:content>
+																</v8:item>
+															</Title>
+															<TitleLocation>Top</TitleLocation>
+															<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+															<ChoiceButton>true</ChoiceButton>
+															<ClearButton>true</ClearButton>
+															<ContextMenu name="КаталогВыгрузкиЗамеровКонтекстноеМеню" id="4689"/>
+															<ExtendedTooltip name="КаталогВыгрузкиЗамеровРасширеннаяПодсказка" id="4690">
+																<AutoMaxWidth>false</AutoMaxWidth>
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Каталог, в который сохраняются файлы замеров покрытия кода. Если каталог не указан, используется подкаталог ПокрытиеКода каталога проекта.</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>Directory where code coverage measurement files are saved. If the directory is not specified, the CodeCoverage subdirectory of the project directory is used.</v8:content>
+																	</v8:item>
+																</Title>
+															</ExtendedTooltip>
+															<Events>
+																<Event name="StartChoice">КаталогВыгрузкиЗамеровНачалоВыбора</Event>
+															</Events>
+														</InputField>
+														<UsualGroup name="ГруппаЗамерПокрытияКодаВтораяСтрока" id="4691">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа замер покрытия кода вторая строка</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Code coverage measurement group second line</v8:content>
+																</v8:item>
+															</Title>
+															<Group>AlwaysHorizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаЗамерПокрытияКодаВтораяСтрокаРасширеннаяПодсказка" id="4692"/>
+															<ChildItems>
+																<UsualGroup name="ГруппаЗамерПокрытияКодаВтораяСтрокаЛевыйСтолбец" id="4693">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа замер покрытия кода вторая строка левый столбец</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Code coverage measurement group second line left column</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Width>50</Width>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаЗамерПокрытияКодаВтораяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="4694"/>
+																	<ChildItems>
+																		<InputField name="ПутьККонфигуратору" id="4695">
+																			<DataPath>Объект.ПутьККонфигуратору</DataPath>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Путь к конфигуратору</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>Designer path</v8:content>
+																				</v8:item>
+																			</Title>
+																			<TitleLocation>Top</TitleLocation>
+																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<ChoiceButton>true</ChoiceButton>
+																			<ClearButton>true</ClearButton>
+																			<ContextMenu name="ПутьККонфигураторуКонтекстноеМеню" id="4696"/>
+																			<ExtendedTooltip name="ПутьККонфигураторуРасширеннаяПодсказка" id="4697">
+																				<AutoMaxWidth>false</AutoMaxWidth>
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Путь к исполняемому файлу 1cv8.exe. Если путь не указан, конфигуратор определяется автоматически по текущей версии платформы.</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>Path to the 1cv8.exe executable. If the path is not specified, the Designer is detected automatically by the current platform version.</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
+																			<Events>
+																				<Event name="StartChoice">ПутьККонфигураторуНачалоВыбора</Event>
+																			</Events>
+																		</InputField>
+																	</ChildItems>
+																</UsualGroup>
+																<UsualGroup name="ГруппаЗамерПокрытияКодаВтораяСтрокаПравыйСтолбец" id="4698">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа замер покрытия кода вторая строка правый столбец</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Code coverage measurement group second line right column</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Width>50</Width>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаЗамерПокрытияКодаВтораяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="4699"/>
+																	<ChildItems>
+																		<InputField name="СтрокаСоединенияСБазой" id="4700">
+																			<DataPath>Объект.СтрокаСоединенияСБазой</DataPath>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Строка соединения с базой</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>Infobase connection string</v8:content>
+																				</v8:item>
+																			</Title>
+																			<TitleLocation>Top</TitleLocation>
+																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<ContextMenu name="СтрокаСоединенияСБазойКонтекстноеМеню" id="4701"/>
+																			<ExtendedTooltip name="СтрокаСоединенияСБазойРасширеннаяПодсказка" id="4702">
+																				<AutoMaxWidth>false</AutoMaxWidth>
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Строка соединения с тестируемой информационной базой. Если строка не указана, используется строка соединения текущего профиля клиента тестирования.</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>Connection string of the tested infobase. If the string is not specified, the connection string of the current test client profile is used.</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
+																		</InputField>
+																	</ChildItems>
+																</UsualGroup>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="ГруппаЗамерПокрытияКодаТретьяСтрока" id="4703">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Группа замер покрытия кода третья строка</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Code coverage measurement group third line</v8:content>
+																</v8:item>
+															</Title>
+															<Group>AlwaysHorizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаЗамерПокрытияКодаТретьяСтрокаРасширеннаяПодсказка" id="4704"/>
+															<ChildItems>
+																<UsualGroup name="ГруппаЗамерПокрытияКодаТретьяСтрокаЛевыйСтолбец" id="4705">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа замер покрытия кода третья строка левый столбец</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Code coverage measurement group third line left column</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Width>50</Width>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаЗамерПокрытияКодаТретьяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="4706"/>
+																	<ChildItems>
+																		<InputField name="ЛогинАдминистраторСборДанныхПоПокрытию" id="4707">
+																			<DataPath>Объект.ЛогинАдминистраторСборДанныхПоПокрытию</DataPath>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Логин администратора сбора данных по покрытию</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>Code coverage data collection administrator login</v8:content>
+																				</v8:item>
+																			</Title>
+																			<TitleLocation>Top</TitleLocation>
+																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<ContextMenu name="ЛогинАдминистраторСборДанныхПоПокрытиюКонтекстноеМеню" id="4708"/>
+																			<ExtendedTooltip name="ЛогинАдминистраторСборДанныхПоПокрытиюРасширеннаяПодсказка" id="4709">
+																				<AutoMaxWidth>false</AutoMaxWidth>
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Пользователь с правами администратора для запуска конфигуратора и управления замером покрытия кода.</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>User with administrator rights for launching the Designer and managing code coverage measurement.</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
+																		</InputField>
+																	</ChildItems>
+																</UsualGroup>
+																<UsualGroup name="ГруппаЗамерПокрытияКодаТретьяСтрокаПравыйСтолбец" id="4710">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Группа замер покрытия кода третья строка правый столбец</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Code coverage measurement group third line right column</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Width>50</Width>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="ГруппаЗамерПокрытияКодаТретьяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="4711"/>
+																	<ChildItems>
+																		<InputField name="ПарольАдминистраторСборДанныхПоПокрытию" id="4712">
+																			<DataPath>Объект.ПарольАдминистраторСборДанныхПоПокрытию</DataPath>
+																			<Title>
+																				<v8:item>
+																					<v8:lang>ru</v8:lang>
+																					<v8:content>Пароль администратора сбора данных по покрытию</v8:content>
+																				</v8:item>
+																				<v8:item>
+																					<v8:lang>en</v8:lang>
+																					<v8:content>Code coverage data collection administrator password</v8:content>
+																				</v8:item>
+																			</Title>
+																			<TitleLocation>Top</TitleLocation>
+																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<PasswordMode>true</PasswordMode>
+																			<ContextMenu name="ПарольАдминистраторСборДанныхПоПокрытиюКонтекстноеМеню" id="4713"/>
+																			<ExtendedTooltip name="ПарольАдминистраторСборДанныхПоПокрытиюРасширеннаяПодсказка" id="4714">
+																				<AutoMaxWidth>false</AutoMaxWidth>
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Пароль пользователя с правами администратора. Хранится в настройках в открытом виде и маскируется при вводе.</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>Password of the user with administrator rights. Stored in settings as plain text and masked during input.</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
+																		</InputField>
+																	</ChildItems>
+																</UsualGroup>
+															</ChildItems>
+														</UsualGroup>
+														<CheckBoxField name="ОстанавливатьПрогонПриОшибкеЗамера" id="4715">
+															<DataPath>Объект.ОстанавливатьПрогонПриОшибкеЗамера</DataPath>
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Останавливать прогон при ошибке замера</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>Stop run on measurement error</v8:content>
+																</v8:item>
+															</Title>
+															<TitleLocation>Right</TitleLocation>
+															<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+															<CheckBoxType>Auto</CheckBoxType>
+															<ContextMenu name="ОстанавливатьПрогонПриОшибкеЗамераКонтекстноеМеню" id="4716"/>
+															<ExtendedTooltip name="ОстанавливатьПрогонПриОшибкеЗамераРасширеннаяПодсказка" id="4717">
+																<AutoMaxWidth>false</AutoMaxWidth>
+																<Title formatted="false">
+																	<v8:item>
+																		<v8:lang>ru</v8:lang>
+																		<v8:content>Если включено, ошибка запуска или завершения замера покрытия кода останавливает выполнение сценариев.</v8:content>
+																	</v8:item>
+																	<v8:item>
+																		<v8:lang>en</v8:lang>
+																		<v8:content>If enabled, an error starting or finishing code coverage measurement stops scenario execution.</v8:content>
 																	</v8:item>
 																</Title>
 															</ExtendedTooltip>
@@ -38169,7 +38704,6 @@ Om röstfilen inte hittas i katalogen startas processen för att generera röstn
 																				<v8:content>Determines the port on which the MCP server is started at automatic startup. If the port is not set or is invalid, port 9874 is used. The setting has no effect if an external plugin has installed its own MCP transport.</v8:content>
 																				<v8:content>Определяет порт, на котором будет запущен сервер MCP при автозапуске. Если порт не задан или задан неверно, используется порт 9874. Настройка не действует, если внешний плагин установил свой MCP-транспорт.</v8:content>
 																				<v8:content>Bestämmer porten där MCP-servern startas vid automatisk start. Om porten inte är angiven eller är ogiltig används port 9874. Inställningen har ingen effekt om ett externt plugin har installerat sin egen MCP-transport.</v8:content>
-																</InputField>
 														<UsualGroup name="СтраницаAIВтораяСтрокаПравыйСтолбец" id="4584">
 																	<v8:content>Страница AI вторая строка правый столбец</v8:content>
 																	<v8:content>AI page second row right column</v8:content>
