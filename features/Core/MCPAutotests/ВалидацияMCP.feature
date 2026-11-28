@@ -43,6 +43,42 @@
 			| Имя | Значение |
 			| action | __unknown__ |
 		Тогда MCP-инструмент вернул ошибку "INVALID_PARAMS"
+		И MCP-инструмент вернул ошибку "INVALID_PARAMS" с текстом, содержащим "\'get_list\', \'get\', \'add\', \'edit\', \'delete\'"
+
+	@mcp-validation
+	Сценарий: manage_test_client_profiles отвергает неизвестный параметр
+		# Проверка неизвестных параметров стоит до проверки action, поэтому
+		# action можно не передавать: режим "Проверка" разрешает только
+		# отсутствующий или заведомо неверный action.
+		Когда я вызываю MCP-инструмент "manage_test_client_profiles" в режиме "Проверка" с параметрами
+			| Имя | Значение |
+			| connectionString | x |
+			| additionalParameters | x |
+		Тогда MCP-инструмент вернул ошибку "INVALID_PARAMS"
+		И MCP-инструмент вернул ошибку "INVALID_PARAMS" с текстом, содержащим "connectionString"
+		И MCP-инструмент вернул ошибку "INVALID_PARAMS" с текстом, содержащим "additionalParameters"
+		И MCP-инструмент вернул ошибку "INVALID_PARAMS" с текстом, содержащим "infobase_path"
+
+	@mcp-validation
+	Сценарий: manage_test_client_profiles требует confirm для delete
+		# Режим "Намерение": проверка confirm стоит до boundary-guard,
+		# поэтому ошибка возвращается без реального удаления профиля.
+		Когда я вызываю MCP-инструмент "manage_test_client_profiles" в режиме "Намерение" с параметрами
+			| Имя | Значение |
+			| action | delete |
+			| name | __nonexistent__ |
+		Тогда MCP-инструмент вернул ошибку "INVALID_PARAMS"
+		И MCP-инструмент вернул ошибку "INVALID_PARAMS" с текстом, содержащим "confirm"
+
+	@mcp-validation
+	Сценарий: manage_test_client_profiles отвергает неверный confirm
+		Когда я вызываю MCP-инструмент "manage_test_client_profiles" в режиме "Намерение" с параметрами
+			| Имя | Значение |
+			| action | delete |
+			| name | __nonexistent__ |
+			| confirm | maybe |
+		Тогда MCP-инструмент вернул ошибку "INVALID_PARAMS"
+		И MCP-инструмент вернул ошибку "INVALID_PARAMS" с текстом, содержащим "confirm"
 
 	@mcp-validation
 	Сценарий: user_actions_recording отвергает неизвестное действие

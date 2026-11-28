@@ -244,6 +244,16 @@
 		И в намерении MCP-инструмента поле "action" равно "get"
 		И MCP-инструмент не выполнял реальных действий
 
+@tool:manage_test_client_profiles
+	Сценарий: manage_test_client_profiles действие delete сообщает намерение
+		Когда я вызываю MCP-инструмент "manage_test_client_profiles" в режиме "Намерение" с параметрами
+			| Имя | Значение |
+			| action | delete |
+			| name | __nonexistent__ |
+			| confirm | true |
+		Тогда MCP-инструмент вернул намерение "mcp.client.manage"
+		И в намерении MCP-инструмента поле "action" равно "delete"
+		И в намерении MCP-инструмента поле "name" равно "__nonexistent__"
 		И MCP-инструмент не выполнял реальных действий
 
 @tool:get_environment_data
