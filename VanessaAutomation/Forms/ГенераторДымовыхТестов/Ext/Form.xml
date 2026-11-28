@@ -17,6 +17,11 @@
 	<AutoSaveDataInSettings>Use</AutoSaveDataInSettings>
 	<AutoCommandBar name="ФормаКоманднаяПанель" id="-1">
 		<ChildItems>
+			<Button name="ФормаСохранитьНастройки" id="273">
+				<Type>CommandBarButton</Type>
+				<CommandName>Form.Command.СохранитьНастройки</CommandName>
+				<ExtendedTooltip name="ФормаСохранитьНастройкиРасширеннаяПодсказка" id="274"/>
+			</Button>
 			<Button name="ФормаЗакрытьФорму" id="209">
 				<Type>CommandBarButton</Type>
 				<CommandName>Form.Command.ЗакрытьФорму</CommandName>
@@ -194,6 +199,9 @@
 													</ChoiceList>
 													<ContextMenu name="ЯзыкШаговКонтекстноеМеню" id="85"/>
 													<ExtendedTooltip name="ЯзыкШаговРасширеннаяПодсказка" id="86"/>
+													<Events>
+														<Event name="OnChange">НастройкиПриИзменении</Event>
+													</Events>
 												</RadioButtonField>
 											</ChildItems>
 										</UsualGroup>
@@ -264,6 +272,7 @@ Document3.ListForm</v8:content>
 												</Title>
 											</ExtendedTooltip>
 											<Events>
+												<Event name="OnChange">НастройкиПриИзменении</Event>
 												<Event name="StartChoice">КаталогФайловИсключенийНачалоВыбора</Event>
 												<Event name="Opening">КаталогФайловИсключенийОткрытие</Event>
 											</Events>
@@ -293,8 +302,11 @@ Document3.ListForm</v8:content>
 												</Title>
 											</ExtendedTooltip>
 											<Events>
+												<Event name="OnChange">НастройкиПриИзменении</Event>
 												<Event name="StartChoice">ПутьКФайлуНастроекСценариевНачалоВыбора</Event>
 												<Event name="Opening">ПутьКФайлуНастроекСценариевОткрытие</Event>
+											</Events>
+										</InputField>
 											</Events>
 										</InputField>
 									</ChildItems>
@@ -341,6 +353,9 @@ Document3.ListForm</v8:content>
 													</v8:item>
 												</Title>
 											</ExtendedTooltip>
+											<Events>
+												<Event name="OnChange">НастройкиПриИзменении</Event>
+											</Events>
 										</CheckBoxField>
 										<CheckBoxField name="ТолькоВведенныеОбъекты" id="56">
 											<DataPath>ТолькоВведенныеОбъекты</DataPath>
@@ -364,6 +379,9 @@ Document3.ListForm</v8:content>
 													</v8:item>
 												</Title>
 											</ExtendedTooltip>
+											<Events>
+												<Event name="OnChange">НастройкиПриИзменении</Event>
+											</Events>
 										</CheckBoxField>
 										<CheckBoxField name="ТолькоИзмененныеОтносительноКонфигурацииПоставщика" id="14">
 											<DataPath>ТолькоИзмененныеОтносительноКонфигурацииПоставщика</DataPath>
@@ -412,6 +430,9 @@ Document3.ListForm</v8:content>
 													</v8:item>
 												</Title>
 											</ExtendedTooltip>
+											<Events>
+												<Event name="OnChange">НастройкиПриИзменении</Event>
+											</Events>
 										</InputField>
 									</ChildItems>
 								</UsualGroup>
@@ -808,6 +829,7 @@ Document3.ListForm</v8:content>
 										</Title>
 									</ExtendedTooltip>
 									<Events>
+										<Event name="OnChange">НастройкиПриИзменении</Event>
 										<Event name="StartChoice">КаталогФайловИсключенийНачалоВыбора</Event>
 										<Event name="Opening">КаталогФайловИсключенийОткрытие</Event>
 									</Events>
@@ -848,6 +870,9 @@ Document3.ListForm</v8:content>
 											</v8:item>
 										</Title>
 									</ExtendedTooltip>
+									<Events>
+										<Event name="OnChange">НастройкиПриИзменении</Event>
+									</Events>
 								</CheckBoxField>
 								<Table name="ДеревоМетаданных" id="119">
 									<Representation>Tree</Representation>
@@ -3101,6 +3126,38 @@ Document3.ListForm</v8:content>
 			</Picture>
 			<Action>СформироватьСценарииПоОтсутствующимТестам</Action>
 			<Representation>TextPicture</Representation>
+		</Command>
+		<Command name="СохранитьНастройки" id="12">
+			<Title>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить настройки</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Save settings</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Spara inställningar</v8:content>
+				</v8:item>
+			</Title>
+			<ToolTip>
+				<v8:item>
+					<v8:lang>ru</v8:lang>
+					<v8:content>Сохранить настройки генератора в общих настройках Vanessa Automation</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>en</v8:lang>
+					<v8:content>Save the generator settings to Vanessa Automation common settings</v8:content>
+				</v8:item>
+				<v8:item>
+					<v8:lang>sv</v8:lang>
+					<v8:content>Spara generatorinställningarna i Vanessa Automations gemensamma inställningar</v8:content>
+				</v8:item>
+			</ToolTip>
+			<Action>СохранитьНастройки</Action>
+			<CurrentRowUse>DontUse</CurrentRowUse>
 		</Command>
 	</Commands>
 </Form>
