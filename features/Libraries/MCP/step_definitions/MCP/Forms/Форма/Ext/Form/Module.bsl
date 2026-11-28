@@ -1562,6 +1562,8 @@
 		Аргументы.Вставить("action", "add");
 	ИначеЕсли Описание.Имя = "user_actions_recording" Тогда
 		Аргументы.Вставить("action", "start");
+	ИначеЕсли Описание.Имя = "manage_command_interface" Тогда
+		Аргументы.Вставить("action", "get_section_panel");
 	КонецЕсли;
 	Возврат Аргументы;
 
@@ -1818,7 +1820,7 @@
 	ДобавитьMCPМетаданные(КартаMCP, "get_info_about_line_scenario", "ПолучитьПодробнуюИнформациюОШагеВСтрокеСценария", "a", "нет", "VA", "va.editor.read", "");
 	ДобавитьMCPМетаданные(КартаMCP, "get_data_from_knowledge_base", "ПолучитьДанныеИзБазыЗнаний", "a", "нет", "Чтение", "mcp.knowledge.read", "");
 	ДобавитьMCPМетаданные(КартаMCP, "frequently_used_steps", "ПолучитьДанныеОЧастоИспользуемыхШагах", "a", "нет", "Чтение", "mcp.steps.read", "");
-	ДобавитьMCPМетаданные(КартаMCP, "manage_command_interface", "УправлениеКоманднымИнтерфейсом", "a", "нет", "КлиентТестирования", "client.window.manage", "TestClient");
+	ДобавитьMCPМетаданные(КартаMCP, "manage_command_interface", "УправлениеКоманднымИнтерфейсом", "b", "нет", "КлиентТестирования", "client.window.manage", "TestClient");
 	ДобавитьMCPМетаданные(КартаMCP, "get_extension_list", "ПолучитьСписокРасширений", "a", "нет", "VAExtension", "mcp.extension.list", "TestClient");
 	ДобавитьMCPМетаданные(КартаMCP, "manage_test_client_profiles", "УправлениеПрофилямиКлиентовТестирования", "b", "нет", "VA", "mcp.client.manage", "");
 	ДобавитьMCPМетаданные(КартаMCP, "get_environment_data", "ПолучитьДанныеОбОкружении", "a", "нет", "VA", "mcp.state.read", "");

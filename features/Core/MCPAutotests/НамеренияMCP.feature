@@ -212,6 +212,12 @@
 		И MCP-инструмент не выполнял реальных действий
 
 @tool:manage_command_interface
+	Сценарий: manage_command_interface get_all сообщает намерение чтения
+		Когда я вызываю MCP-инструмент "manage_command_interface" в режиме "Намерение" с параметрами
+			| Имя | Значение |
+			| action | get_all |
+		Тогда MCP-инструмент вернул намерение "client.window.read"
+		И в намерении MCP-инструмента поле "action" равно "get_all"
 	Сценарий: manage_command_interface сообщает намерение
 		Когда я вызываю MCP-инструмент "manage_command_interface" в режиме "Намерение"
 		Тогда MCP-инструмент вернул намерение "client.window.manage"
@@ -230,6 +236,8 @@
 			| action | add |
 		Тогда MCP-инструмент вернул намерение "mcp.client.manage"
 		И в намерении MCP-инструмента поле "action" равно "add"
+		И MCP-инструмент не выполнял реальных действий
+
 @tool:manage_test_client_profiles
 	Сценарий: manage_test_client_profiles действие get сообщает намерение чтения
 		Когда я вызываю MCP-инструмент "manage_test_client_profiles" в режиме "Намерение" с параметрами

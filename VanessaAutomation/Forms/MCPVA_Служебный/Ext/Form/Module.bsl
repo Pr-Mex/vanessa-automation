@@ -9214,6 +9214,12 @@
 		ТекстСообщения = Ванесса.Локализовать("Параметр action обязателен. Допустимые значения: 'get_section_panel', 'get_function_panel', 'click_section_panel', 'click_function_panel', 'close_function_panel', 'get_all', 'get_panels', 'get_panel_content', 'click_panel_item'.");
 	КонецЕсли;
 	
+	// MCP-GUARD-BOUNDARY
+	РезультатПерехватаMCP = ПерехватитьДействиеMCP("manage_command_interface", Запрос, Действие, Новый Структура("action", Действие));
+	Если РезультатПерехватаMCP <> Неопределено Тогда
+		Возврат РезультатПерехватаMCP;
+	КонецЕсли;
+
 	// Проверка подключения клиента тестирования
 	Попытка
 		АктивноеОкно = Ванесса.ПолучитьАктивноеОкноИзТестовоеПриложение();
