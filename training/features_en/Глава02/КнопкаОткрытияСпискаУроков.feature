@@ -32,23 +32,32 @@
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'VanessaEditorWelcome' UI Automation	
 		И Пауза 1
 		И я запоминаю строку "Открыть список уроков" в переменную "ИмяЭлементаФормыОткрытьСписокУроков"
-		Если существует элемент UI Automation "ЭтотСеанс" с именем "$ИмяЭлементаФормыОткрытьСписокУроков$" и типом "edit" Тогда
-
+		Если версия платформы ">=" "8.5.5" Тогда
 			И я делаю эффект затемнения у элементов формы UI Automation "ЭтотСеанс"
-				| 'Name'                                   | 'Type'  |
-				| '$ИмяЭлементаФормыОткрытьСписокУроков$' | 'edit' |
+				| 'Name'      | 'Type'      |
+				| 'VAEditor' | 'Document' |
 				
 				| 'Name'      | 'Value'              |
 				| 'text'     | 'Open lessons list' |
 				| 'duration' | 4000                    |
 		Иначе
-			И я делаю эффект затемнения у элементов формы UI Automation "ЭтотСеанс"
-				| 'Name'               | 'Type'  |
-				| 'Open lessons list' | 'edit' |
-				
-				| 'Name'      | 'Value'              |
-				| 'text'     | 'Open lessons list' |
-				| 'duration' | 4000                    |
+			Если существует элемент UI Automation "ЭтотСеанс" с именем "$ИмяЭлементаФормыОткрытьСписокУроков$" и типом "edit" Тогда
+
+				И я делаю эффект затемнения у элементов формы UI Automation "ЭтотСеанс"
+					| 'Name'                                   | 'Type'  |
+					| '$ИмяЭлементаФормыОткрытьСписокУроков$' | 'edit' |
+					
+					| 'Name'      | 'Value'              |
+					| 'text'     | 'Open lessons list' |
+					| 'duration' | 4000                    |
+			Иначе
+				И я делаю эффект затемнения у элементов формы UI Automation "ЭтотСеанс"
+					| 'Name'               | 'Type'  |
+					| 'Open lessons list' | 'edit' |
+					
+					| 'Name'      | 'Value'              |
+					| 'text'     | 'Open lessons list' |
+					| 'duration' | 4000                    |
 	
 		И Пауза 4		
 		

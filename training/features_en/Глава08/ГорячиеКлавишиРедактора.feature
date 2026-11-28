@@ -25,7 +25,6 @@
 		И Пауза 1
 		
 * To duplicate the current line, press the shortcut Alt, plus Shift, plus down.
-		И я нажимаю сочетание клавиш "ESC"
 		И Пауза 1
 		И Я делаю подсветку фрагмента текста в редакторе VA в режиме обучения подсценарий "alt+shift+Down" 'Alt+Shift+Down (duplicate the current line)'
 * In this case, the cursor will move to the line below.

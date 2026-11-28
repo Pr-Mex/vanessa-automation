@@ -26,6 +26,8 @@
 		И Я делаю подсветку элемента VA "VanessaEditorКонтекстноеМенюДобавитьПроверкуСообщенийПользователя" "Get user message verification" и перемещаю курсор
 * Get the step of opening the navigation link of the current window.
 		И Я делаю подсветку элемента VA "VanessaEditorКонтекстноеМенюПолучитьШагОткрытияНавигационнойСсылкиТекущегоОкна" "Get navigation link launch step" и перемещаю курсор
+		И я делаю клик по заголовку Vanessa Automation
+		И Пауза 1
 * These commands quickly get the test steps for the current Test Client form.
 * We will talk about this in more detail in the section "How to check form state
 

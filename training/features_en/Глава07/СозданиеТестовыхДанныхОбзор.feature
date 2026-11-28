@@ -12,9 +12,12 @@
 * Often, when creating new scripts, you need to fill the database with test data.
 * These can be companies, goods, organizations, and so on.
 * To quickly create test data during script execution, Vanessa Automation has a special tool - Data preparation and loading.
-		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ГруппаVanessaEditorИнструменты' UI Automation
+		И я запоминаю ID элемента формы Vanessa Automation с именем "ГруппаVanessaEditorИнструменты" в переменную "Id_ГруппаVanessaEditorИнструменты"
+		И я делаю клик в поле "$Id_ГруппаVanessaEditorИнструменты$" UI Automation
 		И пауза 1
-		И Я делаю подсветку элемента формы VA по имени и клик по нему "VanessaEditorОткрытьИнструментПодготовкаИЗагрузкаДанных" "Data preparation and loading"
+		И Я делаю подсветку элемента VA "VanessaEditorОткрытьИнструментПодготовкаИЗагрузкаДанных" "Data preparation and loading" и перемещаю курсор
+		И пауза 1
+		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'VanessaEditorОткрытьИнструментПодготовкаИЗагрузкаДанных' UI Automation
 
 * This tool allows custom steps generation that will then generate test data.
 * To generate test steps, mark the necessary metadata and click the feature generation button.
