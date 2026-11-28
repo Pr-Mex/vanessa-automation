@@ -63,7 +63,7 @@
 
 	* Проверка результата
 		И я перехожу к закладке с именем "ГруппаСлужебная"
-		И в поле с именем 'РеквизитПроизвольныйКод' я ввожу текст 'Сообщить(VanessaTabs.current.editor.getLineContent(VanessaTabs.current.editor.getPosition().LineNumber))'
+		И в поле с именем 'РеквизитПроизвольныйКод' я ввожу текст 'Сообщить(VanessaTabs.current.editor.getLineContent(VanessaTabs.current.editor.getPosition().lineNumber))'
 		И я нажимаю на кнопку с именем 'ВыполнитьПроизвольныйКод'
 		И пауза 1
 		И я перехожу к закладке с именем "ГруппаЗапускТестов"
@@ -102,7 +102,7 @@
 		* Проверка результата
 		
 			И я перехожу к закладке с именем "ГруппаСлужебная"
-			И в поле с именем 'РеквизитПроизвольныйКод' я ввожу текст 'Сообщить(VanessaTabs.current.editor.getLineContent(VanessaTabs.current.editor.getPosition().LineNumber))'
+			И в поле с именем 'РеквизитПроизвольныйКод' я ввожу текст 'Сообщить(VanessaTabs.current.editor.getLineContent(VanessaTabs.current.editor.getPosition().lineNumber))'
 			И я нажимаю на кнопку с именем 'ВыполнитьПроизвольныйКод'
 			И пауза 1
 			И я перехожу к закладке с именем "ГруппаЗапускТестов"
@@ -121,7 +121,7 @@
 		* Проверка результата
 		
 			И я перехожу к закладке с именем "ГруппаСлужебная"
-			И в поле с именем 'РеквизитПроизвольныйКод' я ввожу текст 'Сообщить(VanessaTabs.current.editor.getLineContent(VanessaTabs.current.editor.getPosition().LineNumber))'
+			И в поле с именем 'РеквизитПроизвольныйКод' я ввожу текст 'Сообщить(VanessaTabs.current.editor.getLineContent(VanessaTabs.current.editor.getPosition().lineNumber))'
 			И я нажимаю на кнопку с именем 'ВыполнитьПроизвольныйКод'
 			И пауза 1
 			И я перехожу к закладке с именем "ГруппаЗапускТестов"
@@ -140,7 +140,7 @@
 		* Проверка результата
 		
 			И я перехожу к закладке с именем "ГруппаСлужебная"
-			И в поле с именем 'РеквизитПроизвольныйКод' я ввожу текст 'Сообщить(VanessaTabs.current.editor.getLineContent(VanessaTabs.current.editor.getPosition().LineNumber))'
+			И в поле с именем 'РеквизитПроизвольныйКод' я ввожу текст 'Сообщить(VanessaTabs.current.editor.getLineContent(VanessaTabs.current.editor.getPosition().lineNumber))'
 			И я нажимаю на кнопку с именем 'ВыполнитьПроизвольныйКод'
 			И пауза 1
 			И я перехожу к закладке с именем "ГруппаЗапускТестов"
@@ -160,7 +160,7 @@
 		* Проверка результата
 		
 			И я перехожу к закладке с именем "ГруппаСлужебная"
-			И в поле с именем 'РеквизитПроизвольныйКод' я ввожу текст 'Сообщить(VanessaTabs.current.editor.getLineContent(VanessaTabs.current.editor.getPosition().LineNumber))'
+			И в поле с именем 'РеквизитПроизвольныйКод' я ввожу текст 'Сообщить(VanessaTabs.current.editor.getLineContent(VanessaTabs.current.editor.getPosition().lineNumber))'
 			И я нажимаю на кнопку с именем 'ВыполнитьПроизвольныйКод'
 			И пауза 1
 			И я перехожу к закладке с именем "ГруппаЗапускТестов"
@@ -180,7 +180,7 @@
 		* Проверка результата
 		
 			И я перехожу к закладке с именем "ГруппаСлужебная"
-			И в поле с именем 'РеквизитПроизвольныйКод' я ввожу текст 'Сообщить(VanessaTabs.current.editor.getLineContent(VanessaTabs.current.editor.getPosition().LineNumber))'
+			И в поле с именем 'РеквизитПроизвольныйКод' я ввожу текст 'Сообщить(VanessaTabs.current.editor.getLineContent(VanessaTabs.current.editor.getPosition().lineNumber))'
 			И я нажимаю на кнопку с именем 'ВыполнитьПроизвольныйКод'
 			И пауза 1
 			И я перехожу к закладке с именем "ГруппаЗапускТестов"
@@ -200,7 +200,7 @@
 		* Проверка результата
 		
 			И я перехожу к закладке с именем "ГруппаСлужебная"
-			И в поле с именем 'РеквизитПроизвольныйКод' я ввожу текст 'Сообщить(VanessaTabs.current.editor.getLineContent(VanessaTabs.current.editor.getPosition().LineNumber))'
+			И в поле с именем 'РеквизитПроизвольныйКод' я ввожу текст 'Сообщить(VanessaTabs.current.editor.getLineContent(VanessaTabs.current.editor.getPosition().lineNumber))'
 			И я нажимаю на кнопку с именем 'ВыполнитьПроизвольныйКод'
 			И пауза 1
 			И я перехожу к закладке с именем "ГруппаЗапускТестов"
@@ -237,7 +237,7 @@
 
 	* Проверка результата
 		И я перехожу к закладке с именем "ГруппаСлужебная"
-		И в поле с именем 'РеквизитПроизвольныйКод' я ввожу текст 'Сообщить(VanessaTabs.current.editor.getLineContent(VanessaTabs.current.editor.getPosition().LineNumber))'
+		И в поле с именем 'РеквизитПроизвольныйКод' я ввожу текст 'Сообщить(VanessaTabs.current.editor.getLineContent(VanessaTabs.current.editor.getPosition().lineNumber))'
 		И я нажимаю на кнопку с именем 'ВыполнитьПроизвольныйКод'
 		И пауза 1
 		И я перехожу к закладке с именем "ГруппаЗапускТестов"
