@@ -7,6 +7,16 @@
 @IgnoreOnWeb
 @IgnoreOnOFBuilds
 
+// Проверки execute_form_actions с actions_file.
+// Фикстуры лежат в репозитории: features/Core/MCPAutotests/files.
+// В actions_file передаётся путь относительно каталога проекта: обработчик
+// проверяет его как указано, затем от КаталогПроекта, и читает файл на машине
+// менеджера Vanessa Automation.
+// Режим "Выполнить" используется потому, что в режиме "Проверка"
+// execute_form_actions запрещён: валидный вызов выполнил бы действие.
+// Невалидный источник отсекается до проверки клиента тестирования,
+// поэтому сценарии не требуют подключённого клиента.
+
 Функционал: MCP-инструменты: валидация параметров
 
 	Контекст:
@@ -75,3 +85,82 @@
 			| only_visible | maybe |
 		Тогда MCP-инструмент вернул ошибку "INVALID_PARAMS"
 		И MCP-инструмент вернул ошибку "INVALID_PARAMS" с текстом, содержащим "only_visible"
+
+	@mcp-validation
+	Сценарий: execute_form_actions требует ровно один источник
+		Когда я вызываю MCP-инструмент "execute_form_actions" в режиме "Выполнить"
+		Тогда MCP-инструмент вернул ошибку "INVALID_PARAMS"
+		И MCP-инструмент вернул ошибку "INVALID_PARAMS" с текстом, содержащим "actions_json или actions_file"
+
+	@mcp-validation
+	Сценарий: execute_form_actions отвергает два источника
+		Когда я вызываю MCP-инструмент "execute_form_actions" в режиме "Выполнить" с параметрами
+			| Имя | Значение |
+			| actions_json | [] |
+			| actions_file | features/Core/MCPAutotests/files/actions_click_hyperlink.json |
+		Тогда MCP-инструмент вернул ошибку "INVALID_PARAMS"
+		И MCP-инструмент вернул ошибку "INVALID_PARAMS" с текстом, содержащим "только один параметр"
+
+	@mcp-validation
+	Сценарий: execute_form_actions считает пустой actions_file отсутствующим
+		Когда я вызываю MCP-инструмент "execute_form_actions" в режиме "Выполнить" с параметрами
+			| Имя | Значение |
+			| actions_file |  |
+		Тогда MCP-инструмент вернул ошибку "INVALID_PARAMS"
+		И MCP-инструмент вернул ошибку "INVALID_PARAMS" с текстом, содержащим "Укажите параметр actions_json или actions_file"
+
+	@mcp-validation
+	Сценарий: execute_form_actions отвергает несуществующий actions_file
+		Когда я вызываю MCP-инструмент "execute_form_actions" в режиме "Выполнить" с параметрами
+			| Имя | Значение |
+			| actions_file | features/Core/MCPAutotests/files/no_such_file.json |
+		Тогда MCP-инструмент вернул ошибку "INVALID_PARAMS"
+		И MCP-инструмент вернул ошибку "INVALID_PARAMS" с текстом, содержащим "не был найден"
+
+	@mcp-validation
+	Сценарий: execute_form_actions отвергает каталог в actions_file
+		Когда я вызываю MCP-инструмент "execute_form_actions" в режиме "Выполнить" с параметрами
+			| Имя | Значение |
+			| actions_file | features/Core/MCPAutotests/files |
+		Тогда MCP-инструмент вернул ошибку "INVALID_PARAMS"
+		И MCP-инструмент вернул ошибку "INVALID_PARAMS" с текстом, содержащим "а не каталог"
+
+	@mcp-validation
+	Сценарий: execute_form_actions отвергает пустой файл действий
+		Когда я вызываю MCP-инструмент "execute_form_actions" в режиме "Выполнить" с параметрами
+			| Имя | Значение |
+			| actions_file | features/Core/MCPAutotests/files/actions_empty.json |
+		Тогда MCP-инструмент вернул ошибку "INVALID_PARAMS"
+		И MCP-инструмент вернул ошибку "INVALID_PARAMS" с текстом, содержащим "Файл с действиями пуст."
+
+	@mcp-validation
+	Сценарий: execute_form_actions отвергает файл из пробелов
+		Когда я вызываю MCP-инструмент "execute_form_actions" в режиме "Выполнить" с параметрами
+			| Имя | Значение |
+			| actions_file | features/Core/MCPAutotests/files/actions_whitespace.json |
+		Тогда MCP-инструмент вернул ошибку "INVALID_PARAMS"
+		И MCP-инструмент вернул ошибку "INVALID_PARAMS" с текстом, содержащим "Файл с действиями пуст."
+
+	@mcp-validation
+	Сценарий: execute_form_actions отвергает битый JSON в файле
+		Когда я вызываю MCP-инструмент "execute_form_actions" в режиме "Выполнить" с параметрами
+			| Имя | Значение |
+			| actions_file | features/Core/MCPAutotests/files/actions_bad.json |
+		Тогда MCP-инструмент вернул ошибку "INVALID_PARAMS"
+		И MCP-инструмент вернул ошибку "INVALID_PARAMS" с текстом, содержащим "Ошибка парсинга JSON из файла"
+
+	@mcp-validation
+	Сценарий: execute_form_actions отвергает объект вместо массива
+		Когда я вызываю MCP-инструмент "execute_form_actions" в режиме "Выполнить" с параметрами
+			| Имя | Значение |
+			| actions_file | features/Core/MCPAutotests/files/actions_object.json |
+		Тогда MCP-инструмент вернул ошибку "INVALID_PARAMS"
+		И MCP-инструмент вернул ошибку "INVALID_PARAMS" с текстом, содержащим "должен содержать массив"
+
+	@mcp-validation
+	Сценарий: execute_form_actions отвергает пустой массив в файле
+		Когда я вызываю MCP-инструмент "execute_form_actions" в режиме "Выполнить" с параметрами
+			| Имя | Значение |
+			| actions_file | features/Core/MCPAutotests/files/actions_empty_array.json |
+		Тогда MCP-инструмент вернул ошибку "INVALID_PARAMS"
+		И MCP-инструмент вернул ошибку "INVALID_PARAMS" с текстом, содержащим "Массив действий пуст."
