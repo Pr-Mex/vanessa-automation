@@ -1181,6 +1181,20 @@ A structure that will contain key and value pairs. This structure will be loaded
    * **WriteMCPServiceDataToEventLog**:
       Enables writing MCP service data to the event log: calls to Vanessa Automation tools that had no start event are written as the `VanessaAutomation.MCP.Инструмент.Запрос` event (tool name, call id and parameter names without values). Events are written with the `VanessaAutomation.MCP.` prefix at the "Information" level. Disabled by default.
 
+   * **MCPCheckSpaceBeforeStarInWindowTitle**:
+      If the flag is set, MCP treats a space before the last * in the window title as an error. Incorrect example: the mask "Title *". Correct example: the mask "Title*". Clear the flag if existing tests use a mask like "Title *": then check_syntax will not show this warning and run_scenario will not block the run.
+
+   * **MCPCheckEmptyStepGroups**:
+      If the flag is set, a step group without executable steps (for example, If with a commented-out body) is considered an error and blocks the MCP run. Clear the flag to allow such groups.
+
+   * **MCPCheckStepUsedAsGroup**:
+      If the flag is set, using a step as a step group is considered an error. This usually happens when a tab is accidentally placed under a step: the next step becomes nested, and the previous step turns into a group. The check protects against such an accidental change to the scenario structure, so it is not recommended to disable it.
+
+   * **MCPCheckGroupNameWithoutStar**:
+      If the flag is set, the step group name must start with *. It is not recommended to disable: otherwise the engine may treat the group as a regular step.
+
+   * **MCPCheckPanelSequence**:
+      If the flag is set, the section-panel selection step immediately followed by the function-panel selection step is considered an error. Incorrect: two consecutive steps — select a section-panel command, then select a function-panel command. Correct: one step that selects both commands in the command interface. Clear the flag if existing tests use this sequence intentionally.
 
 ## Libraries
 

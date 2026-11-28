@@ -6,13 +6,14 @@
 
 Сценарий: Закладка AI
 
-* Hi! In this lesson, I will tell you about the AI tab settings. They control the automatic start of the Vanessa Automation MCP server and writing MCP service data to the event log. Let's open the second copy of Vanessa in training mode.
+* Hi! In this lesson, I will tell you about the AI tab settings. They control the automatic start of the Vanessa Automation MCP server, writing MCP service data to the event log, and MCP validation rules. Let's open the second copy of Vanessa in training mode.
 		И я открываю Vanessa Automation в режиме обучения
 		
-* These settings are located here.
+* These settings are in the "MCP main settings" group.
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'ГруппаНастройки' UI Automation
 		И Пауза 1
 		И я делаю клик по элементу формы VA UI Automation 'ЭтотСеанс' 'СтраницаAI' UI Automation
+		И Пауза 1
 		И Пауза 1
 		
 		И я делаю подсветку нескольких элементов VA с их заголовком "AI tab settings" UI Automation
@@ -35,5 +36,15 @@
 		И я делаю подсветку нескольких элементов VA с их заголовком "Write MCP service data to the event log" UI Automation
 			| 'Name'                           |
 			| 'AIЗаписыватьСлужебныеДанныеВЖР' |
+
+* Below is the "MCP validation rules" group. It allows disabling individual checks that MCP performs in check_syntax and before run_scenario. Other checks, such as step existence or invalid keywords, remain mandatory.
+		И Пауза 1
+		И я делаю подсветку нескольких элементов VA с их заголовком "MCP validation rules" UI Automation
+			| 'Name'                                                    |
+			| 'MCPПроверятьПробелПередЗвездочкойВЗаголовкеОкна'         |
+			| 'MCPПроверятьПустыеГруппыШагов'                           |
+			| 'MCPПроверятьШагКакГруппуШагов'                           |
+			| 'MCPПроверятьИмяГруппыБезЗвездочки'                       |
+			| 'MCPПроверятьПоследовательностьПанелей'                   |
 
 * That's it, move on to the next lesson of the interactive help.

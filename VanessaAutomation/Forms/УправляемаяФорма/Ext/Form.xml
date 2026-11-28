@@ -38379,80 +38379,484 @@ Om röstfilen inte hittas i katalogen startas processen för att generera röstn
 											</Title>
 											<ExtendedTooltip name="СтраницаAIРасширеннаяПодсказка" id="4546"/>
 											<ChildItems>
+												<UsualGroup name="ГруппаОсновныхНастроекMCP" id="4751">
 													<Title>
 														<v8:item>
 															<v8:lang>ru</v8:lang>
+															<v8:content>Основные настройки MCP</v8:content>
 														</v8:item>
 														<v8:item>
 															<v8:lang>en</v8:lang>
+															<v8:content>MCP main settings</v8:content>
 														</v8:item>
 														<v8:item>
 															<v8:lang>sv</v8:lang>
+															<v8:content>MCP-huvudinställningar</v8:content>
 														</v8:item>
 													</Title>
-													<Group>AlwaysHorizontal</Group>
-													<Representation>None</Representation>
-													<ShowTitle>false</ShowTitle>
-													<ExtendedTooltip name="СтраницаAIПерваяСтрокаРасширеннаяПодсказка" id="4548"/>
+													<Group>Vertical</Group>
+													<Behavior>Collapsible</Behavior>
+													<Collapsed>false</Collapsed>
+													<ControlRepresentation>Picture</ControlRepresentation>
+													<ExtendedTooltip name="ГруппаОсновныхНастроекMCPРасширеннаяПодсказка" id="4752"/>
 													<ChildItems>
+														<UsualGroup name="СтраницаAIПерваяСтрока" id="4547">
 															<Title>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
+																	<v8:content>Страница AI первая строка</v8:content>
 																</v8:item>
 																<v8:item>
 																	<v8:lang>en</v8:lang>
+																	<v8:content>AI page first line</v8:content>
 																</v8:item>
 																<v8:item>
 																	<v8:lang>sv</v8:lang>
+																	<v8:content>AI-sida första raden</v8:content>
+																</v8:item>
+															</Title>
+															<Group>AlwaysHorizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="СтраницаAIПерваяСтрокаРасширеннаяПодсказка" id="4548"/>
+															<ChildItems>
+																<UsualGroup name="СтраницаAIПерваяСтрокаЛевыйСтолбец" id="4549">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Страница AI первая строка левый столбец</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>AI page first row left column</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>sv</v8:lang>
+																			<v8:content>AI-sida första raden vänster kolumn</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Width>50</Width>
+																	<HorizontalStretch>false</HorizontalStretch>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="СтраницаAIПерваяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="4550"/>
+																	<ChildItems>
+																		<CheckBoxField name="ЗапускатьСерверMCPПриЗапускеVA" id="4551">
+																			<DataPath>Объект.ЗапускатьСерверMCPПриЗапускеVA</DataPath>
+																			<TitleLocation>Right</TitleLocation>
+																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="ЗапускатьСерверMCPПриЗапускеVAКонтекстноеМеню" id="4552"/>
+																			<ExtendedTooltip name="ЗапускатьСерверMCPПриЗапускеVAРасширеннаяПодсказка" id="4553">
+																				<AutoMaxWidth>false</AutoMaxWidth>
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>Determines whether to start the MCP server automatically at Vanessa Automation startup if it is not running yet. The server starts after MCP tools registration and only if the client_mcp extension is installed. If an external plugin has installed its own MCP transport, the setting has no effect.</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Определяет, нужно ли при запуске Vanessa Automation автоматически запускать сервер MCP, если он ещё не запущен. Сервер запускается после регистрации инструментов MCP и только если установлено расширение client_mcp. Если внешний плагин установил свой MCP-транспорт, настройка не действует.</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>sv</v8:lang>
+																						<v8:content>Bestämmer om MCP-servern ska startas automatiskt när Vanessa Automation startar, om den inte redan körs. Servern startas efter registreringen av MCP-verktyg och endast om tillägget client_mcp är installerat. Om ett externt plugin har installerat sin egen MCP-transport har inställningen ingen effekt.</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
+																		</CheckBoxField>
+																	</ChildItems>
+																</UsualGroup>
+																<UsualGroup name="СтраницаAIПерваяСтрокаПравыйСтолбец" id="4554">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Страница AI первая строка правый столбец</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>AI page first row right column</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>sv</v8:lang>
+																			<v8:content>AI-sida första raden höger kolumn</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="СтраницаAIПерваяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="4555"/>
+																	<ChildItems>
+																		<CheckBoxField name="AIЗаписыватьСлужебныеДанныеВЖР" id="4577">
+																			<DataPath>Объект.AIЗаписыватьСлужебныеДанныеВЖР</DataPath>
+																			<TitleLocation>Right</TitleLocation>
+																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<CheckBoxType>Auto</CheckBoxType>
+																			<ContextMenu name="AIЗаписыватьСлужебныеДанныеВЖРКонтекстноеМеню" id="4578"/>
+																			<ExtendedTooltip name="AIЗаписыватьСлужебныеДанныеВЖРРасширеннаяПодсказка" id="4579">
+																				<AutoMaxWidth>false</AutoMaxWidth>
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>Enables writing MCP service data to the event log: MCP tool calls, server startup and tool registration, run start and completion, feature loading, syntax checks, refusals, and errors. Disabled by default. Intended for MCP diagnostics; full form field values, entered text, and clipboard contents are not written to MCP events.</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Включает запись служебных данных MCP в журнал регистрации: вызовы инструментов MCP, запуск сервера и регистрацию инструментов, запуск и завершение прогонов, загрузку фич, проверку синтаксиса, отказы и ошибки. По умолчанию выключено. Предназначено для диагностики работы MCP; полные значения полей формы, вводимый текст и содержимое буфера обмена не записываются в события MCP.</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>sv</v8:lang>
+																						<v8:content>Aktiverar skrivning av MCP-tjänstdata till händelseloggen: MCP-verktygsanrop, serverstart och registrering av verktyg, start och avslut av körningar, inläsning av feature-filer, syntaxkontroller, avslag och fel. Inaktiverad som standard. Avsedd för MCP-diagnostik; fullständiga fältvärden, inmatad text och urklippsinnehåll loggas inte i MCP-händelser.</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
+																		</CheckBoxField>
+																	</ChildItems>
+																</UsualGroup>
+															</ChildItems>
+														</UsualGroup>
+														<UsualGroup name="СтраницаAIВтораяСтрока" id="4580">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Страница AI вторая строка</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>AI page second line</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>sv</v8:lang>
+																	<v8:content>AI-sida andra raden</v8:content>
+																</v8:item>
+															</Title>
+															<Group>AlwaysHorizontal</Group>
+															<Representation>None</Representation>
+															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="СтраницаAIВтораяСтрокаРасширеннаяПодсказка" id="4581"/>
+															<ChildItems>
+																<UsualGroup name="СтраницаAIВтораяСтрокаЛевыйСтолбец" id="4582">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Страница AI вторая строка левый столбец</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>AI page second row left column</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>sv</v8:lang>
+																			<v8:content>AI-sida andra raden vänster kolumn</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Width>50</Width>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="СтраницаAIВтораяСтрокаЛевыйСтолбецРасширеннаяПодсказка" id="4583"/>
+																	<ChildItems>
+																		<InputField name="ПортСервераMCP" id="4556">
+																			<DataPath>Объект.ПортСервераMCP</DataPath>
+																			<TitleLocation>Top</TitleLocation>
+																			<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																			<Width>30</Width>
+																			<HorizontalStretch>false</HorizontalStretch>
+																			<ContextMenu name="ПортСервераMCPКонтекстноеМеню" id="4557"/>
+																			<ExtendedTooltip name="ПортСервераMCPРасширеннаяПодсказка" id="4558">
+																				<AutoMaxWidth>false</AutoMaxWidth>
+																				<Title formatted="false">
+																					<v8:item>
+																						<v8:lang>en</v8:lang>
+																						<v8:content>Determines the port on which the MCP server is started at automatic startup. If the port is not set or is invalid, port 9874 is used. The setting has no effect if an external plugin has installed its own MCP transport.</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>ru</v8:lang>
+																						<v8:content>Определяет порт, на котором будет запущен сервер MCP при автозапуске. Если порт не задан или задан неверно, используется порт 9874. Настройка не действует, если внешний плагин установил свой MCP-транспорт.</v8:content>
+																					</v8:item>
+																					<v8:item>
+																						<v8:lang>sv</v8:lang>
+																						<v8:content>Bestämmer porten där MCP-servern startas vid automatisk start. Om porten inte är angiven eller är ogiltig används port 9874. Inställningen har ingen effekt om ett externt plugin har installerat sin egen MCP-transport.</v8:content>
+																					</v8:item>
+																				</Title>
+																			</ExtendedTooltip>
+																		</InputField>
+																	</ChildItems>
+																</UsualGroup>
+																<UsualGroup name="СтраницаAIВтораяСтрокаПравыйСтолбец" id="4584">
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Страница AI вторая строка правый столбец</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>AI page second row right column</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>sv</v8:lang>
+																			<v8:content>AI-sida andra raden höger kolumn</v8:content>
+																		</v8:item>
+																	</Title>
+																	<Representation>None</Representation>
+																	<ShowTitle>false</ShowTitle>
+																	<ExtendedTooltip name="СтраницаAIВтораяСтрокаПравыйСтолбецРасширеннаяПодсказка" id="4585"/>
+																</UsualGroup>
+															</ChildItems>
+														</UsualGroup>
+													</ChildItems>
+												</UsualGroup>
+												<UsualGroup name="ГруппаПроверокMCP" id="4730">
+													<Title>
+														<v8:item>
+															<v8:lang>ru</v8:lang>
+															<v8:content>Правила проверок MCP</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>en</v8:lang>
+															<v8:content>MCP validation rules</v8:content>
+														</v8:item>
+														<v8:item>
+															<v8:lang>sv</v8:lang>
+															<v8:content>MCP-valideringsregler</v8:content>
+														</v8:item>
+													</Title>
+													<Group>AlwaysHorizontal</Group>
+													<Behavior>Collapsible</Behavior>
+													<Collapsed>true</Collapsed>
+													<ControlRepresentation>Picture</ControlRepresentation>
+													<ExtendedTooltip name="ГруппаПроверокMCPРасширеннаяПодсказка" id="4731"/>
+													<ChildItems>
+														<UsualGroup name="ГруппаПроверокMCPЛевыйСтолбец" id="4732">
+															<Title>
+																<v8:item>
+																	<v8:lang>ru</v8:lang>
+																	<v8:content>Правила проверок MCP левый столбец</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>en</v8:lang>
+																	<v8:content>MCP validation rules left column</v8:content>
+																</v8:item>
+																<v8:item>
+																	<v8:lang>sv</v8:lang>
+																	<v8:content>MCP-valideringsregler vänster kolumn</v8:content>
 																</v8:item>
 															</Title>
 															<Width>50</Width>
 															<HorizontalStretch>false</HorizontalStretch>
+															<Group>Vertical</Group>
 															<Representation>None</Representation>
 															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаПроверокMCPЛевыйСтолбецРасширеннаяПодсказка" id="4733"/>
 															<ChildItems>
+																<CheckBoxField name="MCPПроверятьПробелПередЗвездочкойВЗаголовкеОкна" id="4734">
+																	<DataPath>Объект.MCPПроверятьПробелПередЗвездочкойВЗаголовкеОкна</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Проверять пробел перед * в заголовке окна</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Check space before * in window title</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>sv</v8:lang>
+																			<v8:content>Kontrollera mellanslag före * i fönstertiteln</v8:content>
+																		</v8:item>
+																	</Title>
 																	<TitleLocation>Right</TitleLocation>
 																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
 																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="MCPПроверятьПробелПередЗвездочкойВЗаголовкеОкнаКонтекстноеМеню" id="4735"/>
+																	<ExtendedTooltip name="MCPПроверятьПробелПередЗвездочкойВЗаголовкеОкнаРасширеннаяПодсказка" id="4736">
 																		<AutoMaxWidth>false</AutoMaxWidth>
 																		<Title formatted="false">
 																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Если флаг установлен, MCP считает ошибкой пробел перед последним символом * в заголовке окна. Неправильно: И я активизирую окно "Заголовок *". Правильно: И я активизирую окно "Заголовок*". Снимите флаг, если в существующих тестах используется маска вида "Заголовок *": тогда check_syntax не покажет это замечание, а run_scenario не заблокирует запуск.</v8:content>
 																			</v8:item>
 																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>If the flag is set, MCP treats a space before the last * in the window title as an error. Incorrect example: the mask "Title *". Correct example: the mask "Title*". Clear the flag if existing tests use a mask like "Title *": then check_syntax will not show this warning and run_scenario will not block the run.</v8:content>
 																			</v8:item>
 																			<v8:item>
 																				<v8:lang>sv</v8:lang>
+																				<v8:content>Om flaggan är satt behandlar MCP ett mellanslag före det sista * i fönstertiteln som ett fel. Fel: masken "Rubrik *". Rätt: masken "Rubrik*". Rensa flaggan om befintliga tester använder en mask som "Rubrik *": då visar check_syntax inte varningen och run_scenario blockerar inte körningen.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																</CheckBoxField>
+																<CheckBoxField name="MCPПроверятьПустыеГруппыШагов" id="4737">
+																	<DataPath>Объект.MCPПроверятьПустыеГруппыШагов</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Проверять пустые группы шагов</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Check empty step groups</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>sv</v8:lang>
+																			<v8:content>Kontrollera tomma steggrupper</v8:content>
+																		</v8:item>
+																	</Title>
+																	<TitleLocation>Right</TitleLocation>
+																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="MCPПроверятьПустыеГруппыШаговКонтекстноеМеню" id="4738"/>
+																	<ExtendedTooltip name="MCPПроверятьПустыеГруппыШаговРасширеннаяПодсказка" id="4739">
+																		<AutoMaxWidth>false</AutoMaxWidth>
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Если флаг установлен, группа шагов без исполняемых шагов (например, Если с закомментированным телом) считается ошибкой и блокирует запуск через MCP. Снимите флаг, чтобы разрешить такие группы.</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>If the flag is set, a step group without executable steps (for example, If with a commented-out body) is considered an error and blocks the MCP run. Clear the flag to allow such groups.</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>sv</v8:lang>
+																				<v8:content>Om flaggan är satt betraktas en steggrupp utan körbara steg (till exempel If med en kommenterad kropp) som ett fel och blockerar MCP-körningen. Rensa flaggan för att tillåta sådana grupper.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																</CheckBoxField>
+																<CheckBoxField name="MCPПроверятьШагКакГруппуШагов" id="4740">
+																	<DataPath>Объект.MCPПроверятьШагКакГруппуШагов</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Проверять шаг как группу шагов</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Check step used as a step group</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>sv</v8:lang>
+																			<v8:content>Kontrollera steg som används som steggrupp</v8:content>
+																		</v8:item>
+																	</Title>
+																	<TitleLocation>Right</TitleLocation>
+																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="MCPПроверятьШагКакГруппуШаговКонтекстноеМеню" id="4741"/>
+																	<ExtendedTooltip name="MCPПроверятьШагКакГруппуШаговРасширеннаяПодсказка" id="4742">
+																		<AutoMaxWidth>false</AutoMaxWidth>
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Если флаг установлен, попытка использовать шаг как группу шагов считается ошибкой. Обычно это происходит, когда под шагом случайно поставили таб: следующий шаг оказался вложенным, и предыдущий шаг стал группой. Проверка защищает от такого случайного изменения структуры сценария, поэтому отключать её не рекомендуется.</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>If the flag is set, using a step as a step group is considered an error. This usually happens when a tab is accidentally placed under a step: the next step becomes nested, and the previous step turns into a group. The check protects against such an accidental change to the scenario structure, so it is not recommended to disable it.</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>sv</v8:lang>
+																				<v8:content>Om flaggan är satt betraktas ett försök att använda ett steg som en steggrupp som ett fel. Detta händer vanligtvis när en tabb av misstag placeras under ett steg: nästa steg blir nästlat och det föregående steget blir en grupp. Kontrollen skyddar mot en sådan oavsiktlig ändring av scenariostrukturen, därför rekommenderas det inte att inaktivera den.</v8:content>
 																			</v8:item>
 																		</Title>
 																	</ExtendedTooltip>
 																</CheckBoxField>
 															</ChildItems>
 														</UsualGroup>
+														<UsualGroup name="ГруппаПроверокMCPПравыйСтолбец" id="4743">
 															<Title>
 																<v8:item>
 																	<v8:lang>ru</v8:lang>
+																	<v8:content>Правила проверок MCP правый столбец</v8:content>
 																</v8:item>
 																<v8:item>
 																	<v8:lang>en</v8:lang>
+																	<v8:content>MCP validation rules right column</v8:content>
 																</v8:item>
 																<v8:item>
 																	<v8:lang>sv</v8:lang>
+																	<v8:content>MCP-valideringsregler höger kolumn</v8:content>
 																</v8:item>
 															</Title>
+															<Width>50</Width>
+															<HorizontalStretch>false</HorizontalStretch>
+															<Group>Vertical</Group>
 															<Representation>None</Representation>
 															<ShowTitle>false</ShowTitle>
+															<ExtendedTooltip name="ГруппаПроверокMCPПравыйСтолбецРасширеннаяПодсказка" id="4744"/>
 															<ChildItems>
+																<CheckBoxField name="MCPПроверятьИмяГруппыБезЗвездочки" id="4745">
+																	<DataPath>Объект.MCPПроверятьИмяГруппыБезЗвездочки</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Проверять имя группы без *</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Check group name without *</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>sv</v8:lang>
+																			<v8:content>Kontrollera gruppnamn utan *</v8:content>
+																		</v8:item>
+																	</Title>
 																	<TitleLocation>Right</TitleLocation>
 																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
 																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="MCPПроверятьИмяГруппыБезЗвездочкиКонтекстноеМеню" id="4746"/>
+																	<ExtendedTooltip name="MCPПроверятьИмяГруппыБезЗвездочкиРасширеннаяПодсказка" id="4747">
 																		<AutoMaxWidth>false</AutoMaxWidth>
 																		<Title formatted="false">
 																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Если флаг установлен, имя группы шагов должно начинаться с символа *. Отключать не рекомендуется: иначе движок может принять группу за обычный шаг.</v8:content>
 																			</v8:item>
 																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>If the flag is set, the step group name must start with *. It is not recommended to disable: otherwise the engine may treat the group as a regular step.</v8:content>
 																			</v8:item>
 																			<v8:item>
 																				<v8:lang>sv</v8:lang>
+																				<v8:content>Om flaggan är satt måste steggruppens namn börja med *. Det rekommenderas inte att inaktivera: annars kan motorn behandla gruppen som ett vanligt steg.</v8:content>
+																			</v8:item>
+																		</Title>
+																	</ExtendedTooltip>
+																</CheckBoxField>
+																<CheckBoxField name="MCPПроверятьПоследовательностьПанелей" id="4748">
+																	<DataPath>Объект.MCPПроверятьПоследовательностьПанелей</DataPath>
+																	<Title>
+																		<v8:item>
+																			<v8:lang>ru</v8:lang>
+																			<v8:content>Проверять последовательность панелей</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>en</v8:lang>
+																			<v8:content>Check panel sequence</v8:content>
+																		</v8:item>
+																		<v8:item>
+																			<v8:lang>sv</v8:lang>
+																			<v8:content>Kontrollera panelordning</v8:content>
+																		</v8:item>
+																	</Title>
+																	<TitleLocation>Right</TitleLocation>
+																	<ToolTipRepresentation>ShowBottom</ToolTipRepresentation>
+																	<CheckBoxType>Auto</CheckBoxType>
+																	<ContextMenu name="MCPПроверятьПоследовательностьПанелейКонтекстноеМеню" id="4749"/>
+																	<ExtendedTooltip name="MCPПроверятьПоследовательностьПанелейРасширеннаяПодсказка" id="4750">
+																		<AutoMaxWidth>false</AutoMaxWidth>
+																		<Title formatted="false">
+																			<v8:item>
+																				<v8:lang>ru</v8:lang>
+																				<v8:content>Если флаг установлен, последовательность шагов "ВПанелиРазделовЯВыбираю" и сразу за ним "ВПанелиФункцийЯВыбираю" считается ошибкой. Неправильно: И В панели разделов я выбираю "Продажи", затем И В панели функций я выбираю "Заказы". Правильно: И В командном интерфейсе я выбираю "Продажи" "Заказы". Снимите флаг, если в существующих тестах такая последовательность используется намеренно.</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>en</v8:lang>
+																				<v8:content>If the flag is set, the section-panel selection step immediately followed by the function-panel selection step is considered an error. Incorrect: two consecutive steps — select a section-panel command, then select a function-panel command. Correct: one step that selects both commands in the command interface. Clear the flag if existing tests use this sequence intentionally.</v8:content>
+																			</v8:item>
+																			<v8:item>
+																				<v8:lang>sv</v8:lang>
+																				<v8:content>Om flaggan är satt betraktas steget för val av avdelningspanel omedelbart följt av steget för val av funktionspanel som ett fel. Fel: två steg i följd — välj ett kommando i avdelningspanelen och välj sedan ett kommando i funktionspanelen. Rätt: ett steg som väljer båda kommandona i kommandogränssnittet. Rensa flaggan om befintliga tester använder denna sekvens avsiktligt.</v8:content>
 																			</v8:item>
 																		</Title>
 																	</ExtendedTooltip>
@@ -38461,6 +38865,8 @@ Om röstfilen inte hittas i katalogen startas processen för att generera röstn
 														</UsualGroup>
 													</ChildItems>
 												</UsualGroup>
+											</ChildItems>
+										</Page>
 										<Page name="СтраницаAIИнструментыMCP" id="4620">
 											<Title>
 												<v8:item>
@@ -38664,9 +39070,6 @@ Om röstfilen inte hittas i katalogen startas processen för att generera röstn
 													<Events>
 														<Event name="BeforeDeleteRow">ТаблицаНастроекMCPИнструментовПередУдалением</Event>
 													</Events>
-													<Representation>None</Representation>
-													<ShowTitle>false</ShowTitle>
-													<ExtendedTooltip name="СтраницаAIВтораяСтрокаРасширеннаяПодсказка" id="4581"/>
 													<ChildItems>
 														<CheckBoxField name="ТаблицаНастроекMCPИнструментовВключен" id="4647">
 															<DataPath>ТаблицаНастроекMCPИнструментов.Включен</DataPath>
