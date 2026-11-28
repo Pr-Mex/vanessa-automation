@@ -48,3 +48,30 @@
 			| Имя | Значение |
 			| action | __unknown__ |
 		Тогда MCP-инструмент вернул ошибку "INVALID_PARAMS"
+
+	@mcp-validation
+	Сценарий: get_form_analysis не принимает only_visible для gherkin
+		Когда я вызываю MCP-инструмент "get_form_analysis" в режиме "Проверка" с параметрами
+			| Имя | Значение |
+			| format | gherkin |
+			| only_visible | true |
+		Тогда MCP-инструмент вернул ошибку "INVALID_PARAMS"
+		И MCP-инструмент вернул ошибку "INVALID_PARAMS" с текстом, содержащим "only_visible"
+
+	@mcp-validation
+	Сценарий: get_form_analysis не принимает max_depth для buttons
+		Когда я вызываю MCP-инструмент "get_form_analysis" в режиме "Проверка" с параметрами
+			| Имя | Значение |
+			| format | buttons |
+			| max_depth | 1 |
+		Тогда MCP-инструмент вернул ошибку "INVALID_PARAMS"
+		И MCP-инструмент вернул ошибку "INVALID_PARAMS" с текстом, содержащим "max_depth"
+
+	@mcp-validation
+	Сценарий: find_form_elements отвергает небулево only_visible
+		Когда я вызываю MCP-инструмент "find_form_elements" в режиме "Проверка" с параметрами
+			| Имя | Значение |
+			| search_string | * |
+			| only_visible | maybe |
+		Тогда MCP-инструмент вернул ошибку "INVALID_PARAMS"
+		И MCP-инструмент вернул ошибку "INVALID_PARAMS" с текстом, содержащим "only_visible"
